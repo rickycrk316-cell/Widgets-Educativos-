@@ -1,0 +1,481 @@
+[
+ {
+  "id": "post-oficio",
+  "nombre": "Post · El oficio (Voltéala)",
+  "formato": "1080×1350",
+  "pilar": "Oficio",
+  "combinacion": "molde (+ tinta, ladrillo)",
+  "arte_provisional": true,
+  "foto_real_prevista": "textura y costura: macro de una costura doble vista por dentro, luz de ventana lateral",
+  "copy": [
+   "Voltéala y mira la costura. Así se sabe.",
+   "Las puntadas parejas y el atraque firme se ven por dentro, no por fuera."
+  ],
+  "que_se_cambia": "Foto de la franja superior (el arte ocupa los 606 px de arriba), titular y cuerpo",
+  "que_nunca_se_mueve": "Sello (reducido, 150 px) con borde derecho en x = 960, área libre del 12 % del diámetro, abajo a la derecha · titular Fraunces ≥104 px · márgenes de 120 px · color de fondo del pilar · costura de pie de pieza",
+  "colores_visibles": [
+   "molde",
+   "ladrillo",
+   "tinta"
+  ],
+  "colores_nota": "3 tintas de paleta contando el fondo (sin sello, fotos ni hilo gris); un solo rojo",
+  "sello": {
+   "archivo": "logos/oficial/atavio-sello-reducido.svg",
+   "version": "reducido",
+   "diametro_px": 150,
+   "fondo": "molde",
+   "area_libre": "12 % del diámetro (18 px)",
+   "borde_derecho_x": 960,
+   "disco": "disco hueso 1,25x con pespunte ladrillo (guion 9/6, 3 px)"
+  }
+ },
+ {
+  "id": "post-percha",
+  "nombre": "Post · Ficha de percha",
+  "formato": "1080×1350",
+  "pilar": "Percha",
+  "combinacion": "hueso + etiqueta",
+  "arte_provisional": true,
+  "foto_real_prevista": "prenda con años no aplica: foto de la prenda en percha sobre fondo hueso (el arte es la etiqueta; la foto entra como pieza de apoyo junto al titular)",
+  "copy": [
+   "Pantalón bota recta",
+   "Tallas 28 a 36",
+   "Gabardina de algodón",
+   "$28",
+   "En los dos locales de Quito",
+   "Escríbenos para separar tu talla →"
+  ],
+  "que_se_cambia": "Nombre de prenda, tela, tallas, precio y local",
+  "que_nunca_se_mueve": "Sello (reducido, 150 px) con borde derecho en x = 960, área libre del 12 % del diámetro, abajo a la derecha · titular Fraunces ≥104 px · márgenes de 120 px · color de fondo del pilar · precio solo en etiqueta colgante · CTA como etiqueta de texto con costura de subrayado",
+  "colores_visibles": [
+   "hueso",
+   "molde",
+   "tinta",
+   "ladrillo"
+  ],
+  "colores_nota": "4 tintas de paleta contando el fondo (sin sello, fotos ni hilo gris); un solo rojo",
+  "sello": {
+   "archivo": "logos/oficial/atavio-sello-reducido.svg",
+   "version": "reducido",
+   "diametro_px": 150,
+   "fondo": "hueso",
+   "area_libre": "12 % del diámetro (18 px)",
+   "borde_derecho_x": 960
+  },
+  "datos_ejemplo": true
+ },
+ {
+  "id": "post-origen",
+  "nombre": "Post · El origen",
+  "formato": "1080×1350",
+  "pilar": "Origen",
+  "combinacion": "tinta",
+  "arte_provisional": true,
+  "foto_real_prevista": "taller y manos: máquina de coser y manos de la operaria, sin prendas ni etiquetas de clientes",
+  "copy": [
+   "En 1982 eran cinco máquinas en La Bahía.",
+   "Diseñado, cortado y terminado en Quito."
+  ],
+  "que_se_cambia": "Dibujo de la máquina (por foto del taller) y titular",
+  "que_nunca_se_mueve": "Sello (principal, 200 px) con borde derecho en x = 960, área libre del 12 % del diámetro, abajo a la derecha · titular Fraunces ≥104 px · márgenes de 120 px · color de fondo del pilar · sin prendas ni marcas de clientes",
+  "colores_visibles": [
+   "tinta",
+   "hueso",
+   "molde"
+  ],
+  "colores_nota": "3 tintas de paleta contando el fondo (sin sello, fotos ni hilo gris); un solo rojo",
+  "sello": {
+   "archivo": "logos/oficial/atavio-sello-principal.svg",
+   "version": "principal",
+   "diametro_px": 200,
+   "fondo": "tinta",
+   "area_libre": "12 % del diámetro (24 px)",
+   "borde_derecho_x": 960
+  }
+ },
+ {
+  "id": "post-calce",
+  "nombre": "Post · Mismo pantalón, tres cuerpos",
+  "formato": "1080×1350",
+  "pilar": "Calce",
+  "combinacion": "hueso + etiqueta",
+  "arte_provisional": true,
+  "foto_real_prevista": "calce en cuerpos distintos: el mismo pantalón en tallas 28, 32 y 36, con autorización de imagen",
+  "copy": [
+   "Mismo pantalón. Tres cuerpos.",
+   "Bota recta",
+   "$28",
+   "Gabardina de algodón",
+   "En los dos locales de Quito"
+  ],
+  "que_se_cambia": "Prenda, tela, tallas, precio; la gradación del arte se reemplaza por foto",
+  "que_nunca_se_mueve": "Sello (reducido, 150 px) con borde derecho en x = 960, área libre del 12 % del diámetro, abajo a la derecha · titular Fraunces ≥104 px · márgenes de 120 px · color de fondo del pilar · precio solo en etiqueta colgante · sin cinta numerada junto a las tallas",
+  "colores_visibles": [
+   "hueso",
+   "molde",
+   "ladrillo",
+   "tinta"
+  ],
+  "colores_nota": "4 tintas de paleta contando el fondo (sin sello, fotos ni hilo gris); un solo rojo",
+  "sello": {
+   "archivo": "logos/oficial/atavio-sello-reducido.svg",
+   "version": "reducido",
+   "diametro_px": 150,
+   "fondo": "hueso",
+   "area_libre": "12 % del diámetro (18 px)",
+   "borde_derecho_x": 960
+  },
+  "datos_ejemplo": true
+ },
+ {
+  "id": "post-mensaje",
+  "nombre": "Post · Mensaje fijado",
+  "formato": "1080×1350",
+  "pilar": "Marca",
+  "combinacion": "ladrillo",
+  "arte_provisional": true,
+  "foto_real_prevista": "taller y manos: manos sobre la mesa de corte con un molde",
+  "copy": [
+   "Aquí compras directo a quien la fabrica.",
+   "Diseñado, cortado y terminado en Quito, desde 1982."
+  ],
+  "que_se_cambia": "Titular (uno de los cinco mensajes clave) y línea de apoyo",
+  "que_nunca_se_mueve": "Sello (invertido, 200 px) con borde derecho en x = 960, área libre del 12 % del diámetro, abajo a la derecha · titular Fraunces ≥104 px · márgenes de 120 px · color de fondo del pilar · hebra que entra al anillo del logo",
+  "colores_visibles": [
+   "ladrillo",
+   "hueso"
+  ],
+  "colores_nota": "2 tintas de paleta contando el fondo (sin sello, fotos ni hilo gris); un solo rojo",
+  "sello": {
+   "archivo": "logos/oficial/atavio-sello-invertido.svg",
+   "version": "invertido",
+   "diametro_px": 200,
+   "fondo": "ladrillo",
+   "area_libre": "12 % del diámetro (24 px)",
+   "borde_derecho_x": 960
+  },
+  "datos_ejemplo": true
+ },
+ {
+  "id": "carrusel-durar-01",
+  "nombre": "Carrusel Durar · 01 Portada",
+  "formato": "1080×1350",
+  "pilar": "Oficio (serie Durar)",
+  "combinacion": "ladrillo",
+  "arte_provisional": true,
+  "foto_real_prevista": "textura y costura: macro de sarga de jean para la franja superior",
+  "copy": [
+   "4 cosas que mirar antes de comprar un pantalón",
+   "Cómo saber si… (marquilla)"
+  ],
+  "que_se_cambia": "Titular de la serie y rótulo de la marquilla",
+  "que_nunca_se_mueve": "Sello (invertido, 200 px) con borde derecho en x = 960, área libre del 12 % del diámetro, abajo a la derecha · hebra a la misma y en todas las láminas · cinta métrica con marcador arriba · titular Fraunces ≥104 px · márgenes de 120 px · color de fondo del pilar · flecha cosida sobre la hebra",
+  "colores_visibles": [
+   "ladrillo",
+   "hueso",
+   "tinta"
+  ],
+  "colores_nota": "3 tintas de paleta contando el fondo (sin sello, fotos ni hilo gris); un solo rojo",
+  "sello": {
+   "archivo": "logos/oficial/atavio-sello-invertido.svg",
+   "version": "invertido",
+   "diametro_px": 200,
+   "fondo": "ladrillo",
+   "area_libre": "12 % del diámetro (24 px)",
+   "borde_derecho_x": 960,
+   "disco": "disco ladrillo de apoyo 1,25x (el arte cruza la esquina)"
+  }
+ },
+ {
+  "id": "carrusel-durar-02",
+  "nombre": "Carrusel Durar · 02 Atraques",
+  "formato": "1080×1350",
+  "pilar": "Oficio (serie Durar)",
+  "combinacion": "hueso (+ molde, ladrillo)",
+  "arte_provisional": true,
+  "foto_real_prevista": "textura y costura: macro del atraque de un bolsillo, por dentro",
+  "copy": [
+   "1",
+   "Atraques en los bolsillos",
+   "Voltea el pantalón y mira las esquinas del bolsillo. Debe haber un refuerzo de puntadas apretadas."
+  ],
+  "que_se_cambia": "Número, título, cuerpo y la foto del recuadro del atraque",
+  "que_nunca_se_mueve": "Sello (reducido, 150 px) con borde derecho en x = 960, área libre del 12 % del diámetro, abajo a la derecha · hebra a la misma y en todas las láminas · cinta métrica con marcador arriba · titular Fraunces ≥104 px · márgenes de 120 px · color de fondo del pilar",
+  "colores_visibles": [
+   "hueso",
+   "molde",
+   "ladrillo",
+   "tinta"
+  ],
+  "colores_nota": "4 tintas de paleta contando el fondo (sin sello, fotos ni hilo gris); un solo rojo",
+  "sello": {
+   "archivo": "logos/oficial/atavio-sello-reducido.svg",
+   "version": "reducido",
+   "diametro_px": 150,
+   "fondo": "hueso",
+   "area_libre": "12 % del diámetro (18 px)",
+   "borde_derecho_x": 960
+  }
+ },
+ {
+  "id": "carrusel-durar-03",
+  "nombre": "Carrusel Durar · 03 Costura e hilo",
+  "formato": "1080×1350",
+  "pilar": "Oficio (serie Durar)",
+  "combinacion": "molde (+ hueso, ladrillo)",
+  "arte_provisional": true,
+  "foto_real_prevista": "textura y costura: macro de costura doble con dos hebras, regla de 1 cm",
+  "copy": [
+   "2",
+   "La costura y el hilo",
+   "El hilo se elige por calibre. La costura queda pareja, ni fruncida ni floja."
+  ],
+  "que_se_cambia": "Número, título, cuerpo y foto de la franja superior",
+  "que_nunca_se_mueve": "Sello (reducido, 150 px) con borde derecho en x = 960, área libre del 12 % del diámetro, abajo a la derecha · hebra a la misma y en todas las láminas · cinta métrica con marcador arriba · titular Fraunces ≥104 px · márgenes de 120 px · color de fondo del pilar",
+  "colores_visibles": [
+   "molde",
+   "hueso",
+   "ladrillo",
+   "tinta"
+  ],
+  "colores_nota": "4 tintas de paleta contando el fondo (sin sello, fotos ni hilo gris); un solo rojo",
+  "sello": {
+   "archivo": "logos/oficial/atavio-sello-reducido.svg",
+   "version": "reducido",
+   "diametro_px": 150,
+   "fondo": "molde",
+   "area_libre": "12 % del diámetro (18 px)",
+   "borde_derecho_x": 960,
+   "disco": "disco hueso 1,25x con pespunte ladrillo (guion 9/6, 3 px)"
+  }
+ },
+ {
+  "id": "carrusel-durar-04",
+  "nombre": "Carrusel Durar · 04 La tela",
+  "formato": "1080×1350",
+  "pilar": "Oficio (serie Durar)",
+  "combinacion": "hueso (+ tinta, molde, ladrillo)",
+  "arte_provisional": true,
+  "foto_real_prevista": "textura y costura: macro de la sarga con una cinta métrica encima",
+  "copy": [
+   "3",
+   "Tócala: debe sentirse firme",
+   "Y volver a su forma al estirarla. Escógela según el uso del pantalón."
+  ],
+  "que_se_cambia": "Número, titular, cuerpo y la foto de la tela (la cinta métrica del borde se mantiene sobre la tela)",
+  "que_nunca_se_mueve": "Sello (reducido, 150 px) con borde derecho en x = 960, área libre del 12 % del diámetro, abajo a la derecha · hebra a la misma y en todas las láminas · cinta métrica con marcador arriba · titular Fraunces ≥104 px · márgenes de 120 px · color de fondo del pilar",
+  "colores_visibles": [
+   "hueso",
+   "tinta",
+   "molde",
+   "ladrillo"
+  ],
+  "colores_nota": "4 tintas de paleta contando el fondo (sin sello, fotos ni hilo gris); un solo rojo",
+  "sello": {
+   "archivo": "logos/oficial/atavio-sello-reducido.svg",
+   "version": "reducido",
+   "diametro_px": 150,
+   "fondo": "hueso",
+   "area_libre": "12 % del diámetro (18 px)",
+   "borde_derecho_x": 960
+  }
+ },
+ {
+  "id": "carrusel-durar-05",
+  "nombre": "Carrusel Durar · 05 Cierres y botones",
+  "formato": "1080×1350",
+  "pilar": "Oficio (serie Durar)",
+  "combinacion": "molde (+ hueso, ladrillo)",
+  "arte_provisional": true,
+  "foto_real_prevista": "textura y costura: macros de botón de 4 agujeros y remache",
+  "copy": [
+   "4",
+   "Cierres, botones y broches",
+   "Busca cierres y botones que no se oxiden. Ábrelos varias veces antes de comprar."
+  ],
+  "que_se_cambia": "Número, título, cuerpo y las dos fotos de detalle",
+  "que_nunca_se_mueve": "Sello (reducido, 150 px) con borde derecho en x = 960, área libre del 12 % del diámetro, abajo a la derecha · hebra a la misma y en todas las láminas · cinta métrica con marcador arriba · titular Fraunces ≥104 px · márgenes de 120 px · color de fondo del pilar",
+  "colores_visibles": [
+   "molde",
+   "hueso",
+   "tinta",
+   "ladrillo"
+  ],
+  "colores_nota": "4 tintas de paleta contando el fondo (sin sello, fotos ni hilo gris); un solo rojo",
+  "sello": {
+   "archivo": "logos/oficial/atavio-sello-reducido.svg",
+   "version": "reducido",
+   "diametro_px": 150,
+   "fondo": "molde",
+   "area_libre": "12 % del diámetro (18 px)",
+   "borde_derecho_x": 960,
+   "disco": "disco hueso 1,25x con pespunte ladrillo (guion 9/6, 3 px)"
+  }
+ },
+ {
+  "id": "carrusel-durar-06",
+  "nombre": "Carrusel Durar · 06 Las cuatro cosas",
+  "formato": "1080×1350",
+  "pilar": "Oficio (serie Durar)",
+  "combinacion": "hueso (+ molde, ladrillo)",
+  "arte_provisional": true,
+  "foto_real_prevista": "textura y costura: cuatro miniaturas de 140 px recortadas de las fotos 02 a 05",
+  "copy": [
+   "Las 4 cosas, en una lista.",
+   "Atraques firmes en los bolsillos",
+   "Hilo por calibre y costura pareja",
+   "Tela escogida para tu uso: tócala",
+   "Cierres y botones que no se oxidan",
+   "Guárdalo para cuando vayas a comprar."
+  ],
+  "que_se_cambia": "Las cuatro filas y sus miniaturas",
+  "que_nunca_se_mueve": "Sello (reducido, 150 px) con borde derecho en x = 960, área libre del 12 % del diámetro, abajo a la derecha · hebra a la misma y en todas las láminas · cinta métrica con marcador arriba · titular Fraunces ≥104 px · márgenes de 120 px · color de fondo del pilar",
+  "colores_visibles": [
+   "hueso",
+   "molde",
+   "tinta",
+   "ladrillo"
+  ],
+  "colores_nota": "4 tintas de paleta contando el fondo (sin sello, fotos ni hilo gris); un solo rojo",
+  "sello": {
+   "archivo": "logos/oficial/atavio-sello-reducido.svg",
+   "version": "reducido",
+   "diametro_px": 150,
+   "fondo": "hueso",
+   "area_libre": "12 % del diámetro (18 px)",
+   "borde_derecho_x": 960
+  }
+ },
+ {
+  "id": "carrusel-durar-07",
+  "nombre": "Carrusel Durar · 07 Cierre",
+  "formato": "1080×1350",
+  "pilar": "Oficio (serie Durar)",
+  "combinacion": "ladrillo",
+  "arte_provisional": true,
+  "foto_real_prevista": "textura y costura: franja de sarga superior, opcional taller y manos",
+  "copy": [
+   "Ven a tocarla. Te separamos tu talla.",
+   "Av. República (El Jardín)",
+   "Av. Isidro Ayora (Carcelén)",
+   "Escríbenos por WhatsApp →"
+  ],
+  "que_se_cambia": "Titular y acción de cierre",
+  "que_nunca_se_mueve": "Sello (invertido, 200 px) con borde derecho en x = 960, área libre del 12 % del diámetro, abajo a la derecha · hebra a la misma y en todas las láminas · cinta métrica con marcador arriba · titular Fraunces ≥104 px · márgenes de 120 px · color de fondo del pilar · la hebra termina con remate antes del logo",
+  "colores_visibles": [
+   "ladrillo",
+   "hueso",
+   "tinta"
+  ],
+  "colores_nota": "3 tintas de paleta contando el fondo (sin sello, fotos ni hilo gris); un solo rojo",
+  "sello": {
+   "archivo": "logos/oficial/atavio-sello-invertido.svg",
+   "version": "invertido",
+   "diametro_px": 200,
+   "fondo": "ladrillo",
+   "area_libre": "12 % del diámetro (24 px)",
+   "borde_derecho_x": 960
+  }
+ },
+ {
+  "id": "carrusel-percha-01",
+  "nombre": "Carrusel Percha · 01 Portada",
+  "formato": "1080×1350",
+  "pilar": "Percha",
+  "combinacion": "molde (+ hueso, profundo)",
+  "arte_provisional": true,
+  "foto_real_prevista": "taller y manos: molde de pretina y mano sobre la mesa de corte (opcional)",
+  "copy": [
+   "La percha de la semana",
+   "5 al 10 (etiqueta) de octubre",
+   "Lo que hay hoy, con precio y tallas."
+  ],
+  "que_se_cambia": "Fechas de la etiqueta, bajada",
+  "que_nunca_se_mueve": "Sello (principal, 200 px) con borde derecho en x = 960, área libre del 12 % del diámetro, abajo a la derecha · hebra a la misma y en todas las láminas · cinta métrica con marcador arriba · titular Fraunces ≥104 px · márgenes de 120 px · color de fondo del pilar · cinta sin numerar en esta serie (no mezclar centímetros con tallas)",
+  "colores_visibles": [
+   "molde",
+   "hueso",
+   "tinta",
+   "ladrillo"
+  ],
+  "colores_nota": "4 tintas de paleta contando el fondo (sin sello, fotos ni hilo gris); un solo rojo",
+  "sello": {
+   "archivo": "logos/oficial/atavio-sello-principal.svg",
+   "version": "principal",
+   "diametro_px": 200,
+   "fondo": "molde",
+   "area_libre": "12 % del diámetro (24 px)",
+   "borde_derecho_x": 960,
+   "disco": "disco hueso 1,25x con pespunte ladrillo (guion 9/6, 3 px)"
+  },
+  "datos_ejemplo": true
+ },
+ {
+  "id": "carrusel-percha-02",
+  "nombre": "Carrusel Percha · 02 Producto",
+  "formato": "1080×1350",
+  "pilar": "Percha",
+  "combinacion": "hueso + etiqueta",
+  "arte_provisional": true,
+  "foto_real_prevista": "prenda con años no aplica: foto de la prenda colgada o doblada; el molde delantero es provisional",
+  "copy": [
+   "Pantalón bota recta",
+   "Tallas 28 a 36",
+   "Gabardina de algodón",
+   "$28",
+   "En los dos locales de Quito"
+  ],
+  "que_se_cambia": "Prenda, tela, tallas, precio y local; molde por foto de la prenda",
+  "que_nunca_se_mueve": "Sello (reducido, 150 px) con borde derecho en x = 960, área libre del 12 % del diámetro, abajo a la derecha · hebra a la misma y en todas las láminas · cinta métrica con marcador arriba · titular Fraunces ≥104 px · márgenes de 120 px · color de fondo del pilar · cinta sin numerar en esta serie (no mezclar centímetros con tallas)",
+  "colores_visibles": [
+   "hueso",
+   "molde",
+   "ladrillo",
+   "tinta"
+  ],
+  "colores_nota": "4 tintas de paleta contando el fondo (sin sello, fotos ni hilo gris); un solo rojo",
+  "sello": {
+   "archivo": "logos/oficial/atavio-sello-reducido.svg",
+   "version": "reducido",
+   "diametro_px": 150,
+   "fondo": "hueso",
+   "area_libre": "12 % del diámetro (18 px)",
+   "borde_derecho_x": 960
+  },
+  "datos_ejemplo": true
+ },
+ {
+  "id": "carrusel-percha-03",
+  "nombre": "Carrusel Percha · 03 Cierre",
+  "formato": "1080×1350",
+  "pilar": "Percha",
+  "combinacion": "hueso + etiqueta",
+  "arte_provisional": true,
+  "foto_real_prevista": "calce en cuerpos distintos: clienta probándose la prenda en el espejo, con autorización",
+  "copy": [
+   "Te separamos tu talla.",
+   "Pasas, te la pruebas y decides.",
+   "Av. República (El Jardín)",
+   "Av. Isidro Ayora (Carcelén)",
+   "Escríbenos para separar tu talla →"
+  ],
+  "que_se_cambia": "Rango de tallas de la etiqueta y locales",
+  "que_nunca_se_mueve": "Sello (principal, 200 px) con borde derecho en x = 960, área libre del 12 % del diámetro, abajo a la derecha · hebra a la misma y en todas las láminas · cinta métrica con marcador arriba · titular Fraunces ≥104 px · márgenes de 120 px · color de fondo del pilar · la hebra termina con remate antes del logo · cinta sin numerar en esta serie (no mezclar centímetros con tallas)",
+  "colores_visibles": [
+   "hueso",
+   "molde",
+   "ladrillo",
+   "tinta"
+  ],
+  "colores_nota": "4 tintas de paleta contando el fondo (sin sello, fotos ni hilo gris); un solo rojo",
+  "sello": {
+   "archivo": "logos/oficial/atavio-sello-principal.svg",
+   "version": "principal",
+   "diametro_px": 200,
+   "fondo": "hueso",
+   "area_libre": "12 % del diámetro (24 px)",
+   "borde_derecho_x": 960
+  },
+  "datos_ejemplo": true
+ }
+]
