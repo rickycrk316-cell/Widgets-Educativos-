@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-01T22:23:03.307195Z",
+  "title": "Design System: Widgets de estudio · Vademécum",
+  "extensions": {
+    "colorMeta": {
+      "accent": {
+        "role": "primary",
+        "displayName": "Tinta azul vademécum"
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papel frío"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta negra azulada"
+      },
+      "alarm": {
+        "role": "semantic",
+        "displayName": "Alarma"
+      },
+      "amber": {
+        "role": "semantic",
+        "displayName": "Precisión"
+      },
+      "green": {
+        "role": "semantic",
+        "displayName": "Perla"
+      },
+      "violet": {
+        "role": "semantic",
+        "displayName": "Discrepancia / guía rectora"
+      },
+      "coral": {
+        "role": "semantic",
+        "displayName": "Feynman"
+      },
+      "rose": {
+        "role": "semantic",
+        "displayName": "Remisión"
+      },
+      "night-paper": {
+        "role": "neutral",
+        "displayName": "Papel grafito (noche)"
+      }
+    },
+    "typographyMeta": {
+      "title": {
+        "displayName": "Título",
+        "purpose": "h1 del widget sobre filete de 2 px."
+      },
+      "section": {
+        "displayName": "Sección",
+        "purpose": "h2 con filete superior; títulos de etapa del Panorama."
+      },
+      "box-title": {
+        "displayName": "Título de recuadro",
+        "purpose": "hb-t, dc-t, fey-t."
+      },
+      "body": {
+        "displayName": "Cuerpo",
+        "purpose": "Lectura larga."
+      },
+      "label": {
+        "displayName": "Etiqueta en versalitas",
+        "purpose": "Cabeceras de tabla, dt de signos, etiquetas de simulador."
+      },
+      "tag": {
+        "displayName": "Etiqueta de paso",
+        "purpose": "Vocabulario cerrado de pasos (1.º, Confirma, Alarma…)."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "state",
+        "value": "150ms ease-out",
+        "purpose": "Color de botones, pestañas y chips."
+      },
+      {
+        "name": "reveal",
+        "value": "200ms",
+        "purpose": "Degradados de desborde y chevron de acordeón."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "stats-3col",
+        "value": "600px"
+      },
+      {
+        "name": "wide",
+        "value": "700px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Pestaña de índice",
+      "kind": "nav",
+      "refersTo": "tab",
+      "description": "Pestaña plana del índice de canto; la activa en tinta azul.",
+      "html": "<nav class=\"vd-tabs\"><button class=\"vd-tb on\">Panorama</button><button class=\"vd-tb\">Diferencial</button></nav>",
+      "css": ".vd-tabs{display:flex;gap:2px;border-bottom:2px solid #16181D;font-family:system-ui,sans-serif}.vd-tb{min-height:44px;padding:9px 15px 8px;border:1px solid #D7D9E0;border-bottom:0;border-radius:3px 3px 0 0;background:#F1F2F5;color:#3A3D46;font-weight:600;font-size:13px}.vd-tb.on{background:#2342A6;border-color:#2342A6;color:#fff}"
+    },
+    {
+      "name": "Botón Ir a",
+      "kind": "button",
+      "refersTo": "button-go",
+      "description": "Navega del Panorama a su pestaña.",
+      "html": "<button class=\"vd-go\">Ir a Cáncer gástrico →</button>",
+      "css": ".vd-go{min-height:44px;padding:8px 16px;border:1px solid #2342A6;border-radius:3px;background:#2342A6;color:#fff;font:600 13.5px system-ui,sans-serif}.vd-go:hover{background:#1B358A}"
+    },
+    {
+      "name": "Chip de simulador",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Opción del simulador; activa en azul.",
+      "html": "<button class=\"vd-chip\">Ictericia</button><button class=\"vd-chip on\">Pérdida de peso</button>",
+      "css": ".vd-chip{min-height:44px;padding:7px 13px;margin:3px 6px 3px 0;border:1px solid #D7D9E0;border-radius:3px;background:#F1F2F5;font:13.5px system-ui,sans-serif}.vd-chip.on{background:#2342A6;border-color:#2342A6;color:#fff;font-weight:600}"
+    },
+    {
+      "name": "Recuadro Preguntas guía",
+      "kind": "card",
+      "refersTo": "box-guide",
+      "description": "Primera caja de cada pestaña.",
+      "html": "<div class=\"vd-hb\"><div class=\"vd-hbt\">Preguntas guía</div><ol><li>¿Por qué…?</li></ol></div>",
+      "css": ".vd-hb{background:#EAEEFA;border:1px solid #2342A6;border-radius:3px;padding:12px 14px;font:15px/1.6 system-ui,sans-serif;color:#16181D}.vd-hbt{font:600 16px/1.35 ui-serif,Georgia,serif;color:#1B358A;margin-bottom:6px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Monografía de vademécum con índice de canto",
+    "overview": "Papel frío, tinta negra azulada y una sola tinta azul; la jerarquía la llevan filetes, serif y versalitas. Offline por contrato; clases y JS de la skill v10 sin cambios.",
+    "keyCharacteristics": [
+      "Índice de canto como barra de pestañas",
+      "Panorama como índice numerado",
+      "Roles clínicos como tintas planas con filete completo",
+      "Sin sombras de elevación"
+    ],
+    "rules": [
+      {
+        "name": "Una tinta de imprenta",
+        "body": "El azul es el único color de interacción.",
+        "section": "colors"
+      },
+      {
+        "name": "Campo con filete",
+        "body": "Todo campo de color lleva su filete completo del mismo rol.",
+        "section": "colors"
+      },
+      {
+        "name": "Sin mayúsculas sostenidas",
+        "body": "Títulos en tipo oración; versalitas solo en etiquetas cortas.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Separar con filetes",
+      "44 px en controles táctiles",
+      "Probar iPad, móvil y oscuro"
+    ],
+    "donts": [
+      "Sombras o tarjetas apiladas",
+      "Fuentes web",
+      "Roles clínicos como decoración"
+    ]
+  }
+}
