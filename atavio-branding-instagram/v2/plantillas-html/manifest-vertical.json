@@ -1,0 +1,267 @@
+[
+ {
+  "id": "reel-portada-tres-cuerpos",
+  "nombre": "Portada reel · Mismo pantalón, tres cuerpos",
+  "formato": "1080x1920",
+  "serie_pilar": "El Calce · Mismo pantalón, tres cuerpos",
+  "combinacion": "Hueso + molde de gradación 28-32-36 horizontal cortado por el borde inferior",
+  "arte_provisional": true,
+  "foto_real_prevista": "calce en cuerpos distintos",
+  "copy": [
+   "Tres cuerpos",
+   "Mismo pantalón. Tres cuerpos.",
+   "Bota recta en gabardina de algodón, tallas 28 a 36."
+  ],
+  "que_se_cambia": "Foto o video de calce y titular (máx. 3 líneas)",
+  "que_nunca_se_mueve": "Panel único de 888x580 en x=72, y=590 (misma posición en las 5 portadas y el cierre) · titular x=120 · marquilla arriba a la izquierda y símbolo (anillo 150 px) arriba a la derecha · zona segura y 288 a 1248 · colores y tipografías"
+ },
+ {
+  "id": "reel-portada-voltealo",
+  "nombre": "Portada reel · Voltéala",
+  "formato": "1080x1920",
+  "serie_pilar": "El Oficio · Voltéala",
+  "combinacion": "Molde + costura ampliada a sangrado (ladrillo solo como acento)",
+  "arte_provisional": true,
+  "foto_real_prevista": "textura y costura",
+  "copy": [
+   "Voltéala",
+   "Voltéala y mira la costura.",
+   "Dale la vuelta a tu pantalón y revisa cómo termina cada costura."
+  ],
+  "que_se_cambia": "Foto de la costura por dentro y titular",
+  "que_nunca_se_mueve": "Panel único de 888x580 en x=72, y=590 (misma posición en las 5 portadas y el cierre) · titular x=120 · marquilla arriba a la izquierda y símbolo (anillo 150 px) arriba a la derecha · zona segura y 288 a 1248 · colores y tipografías"
+ },
+ {
+  "id": "reel-portada-desde-1982",
+  "nombre": "Portada reel · Desde 1982",
+  "formato": "1080x1920",
+  "serie_pilar": "El Origen · Desde 1982",
+  "combinacion": "Tinta + molde de bolsillo en línea hueso cortado por el borde + cinta métrica vertical como línea de tiempo (marcador 1982)",
+  "arte_provisional": true,
+  "foto_real_prevista": "taller y manos",
+  "copy": [
+   "Desde 1982",
+   "Cinco máquinas en La Bahía.",
+   "Hoy cosemos en Quito lo que vendemos en nuestros dos locales.",
+   "1982"
+  ],
+  "que_se_cambia": "Foto del taller y titular",
+  "que_nunca_se_mueve": "Panel único de 888x580 en x=72, y=590 (misma posición en las 5 portadas y el cierre) · titular x=120 · marquilla arriba a la izquierda y símbolo (anillo 150 px) arriba a la derecha · zona segura y 288 a 1248 · colores y tipografías"
+ },
+ {
+  "id": "reel-portada-para-el",
+  "nombre": "Portada reel · Para él",
+  "formato": "1080x1920",
+  "serie_pilar": "El Calce · Para él",
+  "combinacion": "Hueso + molde delantero de hombre horizontal cortado por el borde",
+  "arte_provisional": true,
+  "foto_real_prevista": "calce en cuerpos distintos",
+  "copy": [
+   "Para él",
+   "El pantalón clásico, para él.",
+   "Pantalón clásico de hombre en drill, tallas 30 a 40."
+  ],
+  "que_se_cambia": "Foto de calce, titular y línea de producto",
+  "que_nunca_se_mueve": "Panel único de 888x580 en x=72, y=590 (misma posición en las 5 portadas y el cierre) · titular x=120 · marquilla arriba a la izquierda y símbolo (anillo 150 px) arriba a la derecha · zona segura y 288 a 1248 · colores y tipografías"
+ },
+ {
+  "id": "reel-portada-archivo",
+  "nombre": "Portada reel · Archivo Atavío",
+  "formato": "1080x1920",
+  "serie_pilar": "El Oficio · El Archivo Atavío",
+  "combinacion": "Molde + dibujo de la prenda (prenda-pantalon.svg, con remiendo y desgaste) + una costura continua vertical",
+  "arte_provisional": true,
+  "foto_real_prevista": "prenda con años",
+  "copy": [
+   "Archivo Atavío",
+   "Prendas con años y su historia.",
+   "Cada prenda guarda cuántos años lleva y lo que le tocó vivir."
+  ],
+  "que_se_cambia": "Foto de la prenda con años y titular",
+  "que_nunca_se_mueve": "Panel único de 888x580 en x=72, y=590 (misma posición en las 5 portadas y el cierre) · titular x=120 · marquilla arriba a la izquierda y símbolo (anillo 150 px) arriba a la derecha · zona segura y 288 a 1248 · colores y tipografías"
+ },
+ {
+  "id": "reel-overlay-dato",
+  "nombre": "Reel · Fotograma con chip de dato",
+  "formato": "1080x1920",
+  "serie_pilar": "El Calce · Mismo pantalón, tres cuerpos",
+  "combinacion": "Hueso + gradación; franja de molde con ojal como chip desde el segundo 0",
+  "arte_provisional": true,
+  "foto_real_prevista": "calce en cuerpos distintos",
+  "copy": [
+   "$28 talla 28 a 36",
+   "Gabardina de algodón · Quito",
+   "Mismo pantalón en tres cuerpos distintos."
+  ],
+  "que_se_cambia": "Video de fondo, texto del chip (máx. 2 líneas) y subtítulo",
+  "que_nunca_se_mueve": "Chip en x=65, y=640 a 850 · subtítulo Libre Franklin 600 46 px hueso sobre tinta sólida (no 90 % para no inventar un tono) · sin logo en el segundo 0 · zona segura"
+ },
+ {
+  "id": "reel-cierre",
+  "nombre": "Reel · Cierre con palabra clave",
+  "formato": "1080x1920",
+  "serie_pilar": "Transversal · cierre de reel",
+  "combinacion": "Ladrillo + tejido de sarga tono sobre tono + cinta métrica horizontal + una costura vertical",
+  "arte_provisional": true,
+  "foto_real_prevista": "taller y manos",
+  "copy": [
+   "Comenta TALLA y te escribimos.",
+   "Av. República (El Jardín)",
+   "Av. Isidro Ayora (Carcelén)"
+  ],
+  "que_se_cambia": "Palabra clave (distinta por video)",
+  "que_nunca_se_mueve": "Panel único de ladrillo en la misma posición que las portadas · titular x=120 · logo arriba a la derecha · locales · zona segura"
+ },
+ {
+  "id": "historia-percha",
+  "nombre": "Historia · Hoy en la percha",
+  "formato": "1080x1920",
+  "serie_pilar": "La Percha · Hoy en la percha",
+  "combinacion": "Hueso + molde delantero + etiqueta colgante con precio + cinta métrica",
+  "arte_provisional": true,
+  "foto_real_prevista": "calce en cuerpos distintos",
+  "copy": [
+   "Hoy en la percha",
+   "Pantalón bota recta",
+   "Gabardina de algodón. Tallas 28 a 36.",
+   "$28",
+   "Separa tu talla →",
+   "En los dos locales de Quito"
+  ],
+  "que_se_cambia": "Nombre, tela, tallas y precio; foto de la prenda reemplaza al molde",
+  "que_nunca_se_mueve": "Sin bloques sobre el arte: texto sobre fondo libre · «Separa tu talla →» es etiqueta de texto con costura, no simula botón táctil · logo abajo a la derecha dentro de y 1440 · zona segura 288 a 1440"
+ },
+ {
+  "id": "historia-outlet",
+  "nombre": "Historia · Rincón de fábrica",
+  "formato": "1080x1920",
+  "serie_pilar": "La Percha · Outlet (solo historias)",
+  "combinacion": "Tinta + molde trasero en línea hueso",
+  "arte_provisional": true,
+  "foto_real_prevista": "taller y manos",
+  "copy": [
+   "Rincón de fábrica.",
+   "Prendas de temporadas pasadas, a precio de salida. Solo en el local.",
+   "Av. República (El Jardín)",
+   "Av. Isidro Ayora (Carcelén)"
+  ],
+  "que_se_cambia": "Una línea de texto",
+  "que_nunca_se_mueve": "Sin foto, sin precio tachado, sin «remate» · zona segura 288 a 1440 · logo abajo a la derecha"
+ },
+ {
+  "id": "destacado-locales",
+  "nombre": "Portada de destacado · Locales",
+  "formato": "1080x1920",
+  "serie_pilar": "Perfil · destacados",
+  "combinacion": "Hueso + sarga tono sobre tono fuera del círculo + icono de trazo grueso + un marco de costura circular",
+  "arte_provisional": false,
+  "foto_real_prevista": "ninguna (icono propio)",
+  "copy": [
+   "(sin texto; el nombre lo pone Instagram)"
+  ],
+  "que_se_cambia": "Icono (set de 6)",
+  "que_nunca_se_mueve": "Icono centrado en el círculo seguro de ~700 px · un solo marco de costura circular · trazo grueso · fondo hueso"
+ },
+ {
+  "id": "destacado-separa",
+  "nombre": "Portada de destacado · Separa tu talla",
+  "formato": "1080x1920",
+  "serie_pilar": "Perfil · destacados",
+  "combinacion": "Hueso + sarga tono sobre tono fuera del círculo + icono de trazo grueso + un marco de costura circular",
+  "arte_provisional": false,
+  "foto_real_prevista": "ninguna (icono propio)",
+  "copy": [
+   "(sin texto; el nombre lo pone Instagram)"
+  ],
+  "que_se_cambia": "Icono (set de 6)",
+  "que_nunca_se_mueve": "Icono centrado en el círculo seguro de ~700 px · un solo marco de costura circular · trazo grueso · fondo hueso"
+ },
+ {
+  "id": "destacado-tallas",
+  "nombre": "Portada de destacado · Tallas y telas",
+  "formato": "1080x1920",
+  "serie_pilar": "Perfil · destacados",
+  "combinacion": "Hueso + sarga tono sobre tono fuera del círculo + icono de trazo grueso + un marco de costura circular",
+  "arte_provisional": false,
+  "foto_real_prevista": "ninguna (icono propio)",
+  "copy": [
+   "(sin texto; el nombre lo pone Instagram)"
+  ],
+  "que_se_cambia": "Icono (set de 6)",
+  "que_nunca_se_mueve": "Icono centrado en el círculo seguro de ~700 px · un solo marco de costura circular · trazo grueso · fondo hueso"
+ },
+ {
+  "id": "destacado-taller",
+  "nombre": "Portada de destacado · El taller",
+  "formato": "1080x1920",
+  "serie_pilar": "Perfil · destacados",
+  "combinacion": "Hueso + sarga tono sobre tono fuera del círculo + icono de trazo grueso + un marco de costura circular",
+  "arte_provisional": false,
+  "foto_real_prevista": "ninguna (icono propio)",
+  "copy": [
+   "(sin texto; el nombre lo pone Instagram)"
+  ],
+  "que_se_cambia": "Icono (set de 6)",
+  "que_nunca_se_mueve": "Icono centrado en el círculo seguro de ~700 px · un solo marco de costura circular · trazo grueso · fondo hueso"
+ },
+ {
+  "id": "destacado-uniformes",
+  "nombre": "Portada de destacado · Uniformes",
+  "formato": "1080x1920",
+  "serie_pilar": "Perfil · destacados",
+  "combinacion": "Hueso + sarga tono sobre tono fuera del círculo + icono de trazo grueso + un marco de costura circular",
+  "arte_provisional": false,
+  "foto_real_prevista": "ninguna (icono propio)",
+  "copy": [
+   "(sin texto; el nombre lo pone Instagram)"
+  ],
+  "que_se_cambia": "Icono (set de 6)",
+  "que_nunca_se_mueve": "Icono centrado en el círculo seguro de ~700 px · un solo marco de costura circular · trazo grueso · fondo hueso"
+ },
+ {
+  "id": "destacado-garantia",
+  "nombre": "Portada de destacado · Garantía (pendiente)",
+  "formato": "1080x1920",
+  "serie_pilar": "Perfil · destacados",
+  "combinacion": "Hueso + sarga tono sobre tono fuera del círculo + icono de trazo grueso + un marco de costura circular",
+  "arte_provisional": false,
+  "foto_real_prevista": "ninguna (icono propio)",
+  "copy": [
+   "(sin texto; el nombre lo pone Instagram)",
+   "pendiente: se activa cuando esté impresa"
+  ],
+  "que_se_cambia": "Icono (set de 6)",
+  "que_nunca_se_mueve": "Icono centrado en el círculo seguro de ~700 px · un solo marco de costura circular · trazo grueso · NO SE PUBLICA hasta que la garantía esté redactada e impresa en caja"
+ },
+ {
+  "id": "avatar",
+  "nombre": "Foto de perfil",
+  "formato": "1080x1080",
+  "serie_pilar": "Perfil",
+  "combinacion": "Hueso + anillo ladrillo con nombre + pespunte como marco exterior",
+  "arte_provisional": false,
+  "foto_real_prevista": "ninguna",
+  "copy": [
+   "Atavío"
+  ],
+  "que_se_cambia": "Nada",
+  "que_nunca_se_mueve": "Todo: anillo, nombre y marco de pespunte; legible a 110 px en círculo"
+ },
+ {
+  "id": "whatsapp-catalogo",
+  "nombre": "Catálogo de WhatsApp",
+  "formato": "800x800",
+  "serie_pilar": "La Percha · catálogo",
+  "combinacion": "Hueso + dibujo de la prenda (prenda-pantalon-molde.svg) centrado + precio Libre Franklin Medium tinta esquina inferior derecha",
+  "arte_provisional": true,
+  "foto_real_prevista": "calce en cuerpos distintos",
+  "copy": [
+   "Pantalón bota recta",
+   "Gabardina de algodón · Tallas 28 a 36",
+   "Av. República · Av. Isidro Ayora",
+   "$28"
+  ],
+  "que_se_cambia": "Arte o foto de la prenda, nombre, tela, tallas y precio",
+  "que_nunca_se_mueve": "Fondo hueso · prenda centrada · precio esquina inferior derecha · local abajo a la izquierda"
+ }
+]
