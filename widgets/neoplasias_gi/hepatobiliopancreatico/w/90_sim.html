@@ -1,0 +1,228 @@
+<script>
+function sP(t,l,cf){
+  var h="<p><b>"+t+"</b></p>";
+  if(l&&l.length){h+="<ul>";for(var i=0;i<l.length;i++){h+="<li>"+l[i]+"</li>";}h+="</ul>";}
+  return h+"<span class='cf'>"+cf+"</span>";
+}
+function sG(m){return "<p>"+m+"</p>";}
+
+function dcVis(dc){
+  var te=sel(dc,'te')[0], sg=sel(dc,'sg')[0], im=sel(dc,'im')[0];
+  if(!im){out(dc,sG("Elige el hallazgo de imagen; después añade el terreno y el signo para afinar la entidad."));return;}
+  var e,f,c,cf,x=[];
+  if(im==='nod'){
+    if(te==='cir'){
+      e="Carcinoma hepatocelular";
+      f="Falta la categoría LI-RADS y la AFP: un nódulo con realce arterial y lavado en cirrosis es LR-5 si cumple el tamaño [2].";
+      c="Estadificar con BCLC y discutir en comité; sin biopsia si es LR-5 [2].";
+      cf="Si el paciente no tuviera cirrosis ni hepatitis B de riesgo → la imagen no basta y se pide biopsia antes de tratar.";
+    } else {
+      e="Nódulo hepático fuera del terreno de riesgo: carcinoma hepatocelular no confirmado";
+      f="Falta el terreno: LI-RADS solo está validado en cirrosis, hepatitis B de riesgo o carcinoma previo [2].";
+      c="Biopsia, estudio de la hepatopatía y búsqueda de metástasis o de colangiocarcinoma intrahepático.";
+      cf="Si hubiera cirrosis o hepatitis B de riesgo → un nódulo LR-5 se acepta sin biopsia.";
+    }
+  } else if(im==='cab'){
+    e="Adenocarcinoma de páncreas";
+    f="Falta la confirmación histológica por ecoendoscopia y la relación con los vasos [1].";
+    c="CA 19-9 basal, punción por ecoendoscopia y comité HPB; drenar solo si hay colangitis [1].";
+    cf="Si no hubiera masa y solo dilatación biliar hasta el páncreas → ecoendoscopia o RM antes de descartar un tumor pequeño o un colangiocarcinoma distal.";
+    if(sg==='pal'){x.push("La vesícula palpable e indolora refuerza una causa no litiásica [6].");}
+    if(te==='dm'){x.push("La diabetes reciente desde los 50 años suma sospecha [1].");}
+  } else if(im==='ves'){
+    e="Cáncer de vesícula biliar";
+    f="Falta la profundidad de invasión y la extensión al hígado y a los ganglios.";
+    c="TC o RM con contraste y cirugía hepatobiliar; desde T1b se re-opera con intención radical [11].";
+    cf="Si hubiera cálculos sin masa ni engrosamiento → colecistectomía con estudio histológico de la pieza.";
+  } else if(im==='hil'){
+    e="Colangiocarcinoma perihiliar";
+    f="Falta la colangio-RM, la histología y el perfil molecular [10].";
+    c="Colangio-RM más TC; drenaje con plan solo si hay colangitis o ictericia que retrase el tratamiento; comité HPB.";
+    cf="Si la vesícula estuviera distendida y palpable → la obstrucción es distal: pensar en cabeza pancreática o colangiocarcinoma distal.";
+  } else if(im==='dis'){
+    e="Colangiocarcinoma distal o adenocarcinoma pequeño de la cabeza pancreática";
+    f="Falta la ecoendoscopia con punción, que detecta lesiones de 2–3 mm [1].";
+    c="Ecoendoscopia con punción y colangio-RM; comité HPB.";
+    cf="Si la TC mostrara masa hipodensa pancreática → adenocarcinoma de páncreas.";
+  } else {
+    e="Entidad aún indefinida";
+    f="Falta una imagen que localice la lesión.";
+    c="TC multifásica con protocolo pancreático y hepático; la ecografía solo confirma la dilatación.";
+    cf="Si la TC mostrara masa → se resuelve la entidad según su localización.";
+    if(te==='cir'){x.push("En cirrosis, la RM multifásica busca un nódulo [2].");}
+    if(te==='dm'){x.push("Con diabetes reciente desde los 50 años, prioriza la cabeza y el cuerpo del páncreas [1].");}
+    if(te==='lit'){x.push("Con litiasis crónica y dolor persistente, mira la pared de la vesícula.");}
+    if(te==='cep'){x.push("Con colangitis esclerosante, la colangio-RM compara la estenosis con estudios previos.");}
+  }
+  if(sg==='dec'&&te==='cir'&&im!=='nod'){x.push("Una descompensación en un cirrótico sin nódulo visible obliga a repetir la imagen multifásica y medir AFP [2].");}
+  if(sg==='dol'&&im!=='ves'){x.push("El dolor persistente de hipocondrio derecho obliga a mirar la vesícula.");}
+  var l=["Entidad compatible: "+e,f,"Conducta inicial: "+c].concat(x);
+  out(dc,sP("Resultado del razonamiento",l,cf));
+}
+
+function dcE1d(dc){
+  var cx=sel(dc,'cx')[0], tc=sel(dc,'tc')[0], en=sel(dc,'en')[0];
+  if(!cx){out(dc,sG("Elige el contexto clínico; después el resultado de la TC con protocolo pancreático."));return;}
+  var c,cf,l=[];
+  if(!tc||tc==='na'){
+    if(cx==='ict'||cx==='dol'){
+      c="TC multifásica con protocolo pancreático (fase arterial a ~30 s, portal a 60–70 s) y perfil colestásico; si hay fiebre, drenaje urgente [1].";
+    } else if(cx==='nod'){
+      c="Calcular el riesgo con ENDPAC (edad, cambio de glucemia y de peso): sin pérdida de peso ni cambio de glucemia, la imagen no se pide de entrada [1].";
+    } else {
+      c="Caracterizar el quiste con RM y colangio-RM; si hay dudas, ecoendoscopia [1].";
+    }
+    cf="Si la TC mostrara una masa hipodensa → ecoendoscopia con punción y CA 19-9 basal.";
+  } else if(tc==='masa'){
+    c="Masa sólida: ecoendoscopia con punción para confirmar, CA 19-9 basal y comité HPB para definir resecabilidad [1].";
+    cf="Si en vez de masa hubiera un quiste con nódulo mural → ecoendoscopia con punción y valorar cirugía.";
+  } else if(tc==='norm'){
+    if(cx==='nod'){
+      if(en==='alto'){c="ENDPAC muy alto (riesgo cercano a 4 % a 3 años): justifica imagen dirigida, con ecoendoscopia como la técnica más sensible [1].";}
+      else if(en==='bajo'){c="ENDPAC bajo (menos de 0,1 %) o intermedio (cerca de 0,5 %): no justifica aún estudio por imagen; seguir la glucemia y el peso [1].";}
+      else{c="Elige el riesgo ENDPAC para decidir si corresponde imagen dirigida [1].";}
+      cf="Si apareciera pérdida de peso o un salto de la glucemia → recalcular ENDPAC y reconsiderar la imagen.";
+    } else {
+      c="TC normal con sospecha alta: ecoendoscopia o RM, porque la TC puede perder tumores isoatenuantes o pequeños [1,5].";
+      cf="Si la ecoendoscopia mostrara masa → punción y comité; si fuera normal, repetir en el tiempo según la sospecha.";
+    }
+  } else if(tc==='qalto'){
+    c="Quiste con rasgos de alto riesgo: ecoendoscopia con punción (CEA, citología); un Wirsung de 10 mm o más es indicación absoluta de cirugía en las guías de Fukuoka y europea [1].";
+    cf="Si el quiste no tuviera nódulo mural ni dilatación del Wirsung → vigilancia con la misma técnica de imagen [1,9].";
+  } else {
+    c="Quiste sin rasgos de alto riesgo: vigilancia con RM, sin radiación; un crecimiento de más de 2 mm por año cambia el plan a ecoendoscopia [1].";
+    cf="Si apareciera un nódulo mural o el Wirsung superara 5 mm → ecoendoscopia con punción [1].";
+  }
+  out(dc,sP("Siguiente paso",["Conducta: "+c],cf));
+}
+
+function dcE1t(dc){
+  var es=sel(dc,'es')[0], ps=sel(dc,'ps')[0], si=sel(dc,'si')[0];
+  if(!es){out(dc,sG("Elige el estadio; después el estado funcional y la situación."));return;}
+  var FF="oxaliplatino 85 mg/m², irinotecán 180 mg/m², leucovorina 400 mg/m² y fluorouracilo en bolo 400 mg/m² seguido de 2 400 mg/m² en 46 h, IV cada 14 días";
+  var GN="gemcitabina 1 000 mg/m² y nab-paclitaxel 125 mg/m² IV los días 1, 8 y 15 de cada ciclo de 28 días";
+  var NL="irinotecán liposomal 50 mg/m², oxaliplatino 60 mg/m², leucovorina 400 mg/m² y fluorouracilo 2 400 mg/m² en 46 h, IV los días 1 y 15 de cada ciclo de 28 días";
+  var c,cf,l=[];
+  if(es==='res'){
+    if(ps==='a'){c="No apto para quimioterapia combinada: soporte y decisión del comité; no se simula posología.";cf="Si el estado funcional mejorara a ECOG 2 o menos → reconsiderar el tratamiento adyuvante.";}
+    else if(ps==='m'){c="Resección primaria y gemcitabina 1 000 mg/m² IV los días 1, 8 y 15 más capecitabina 830 mg/m² VO cada 12 h los días 1–21, ciclos de 28 días por 6 ciclos [5].";cf="Si el ECOG fuera 0–1 → mFOLFIRINOX adyuvante.";}
+    else{c="Resección primaria y mFOLFIRINOX: oxaliplatino 85 mg/m², irinotecán 150 mg/m², leucovorina 400 mg/m² y fluorouracilo 2 400 mg/m² en 46 h, IV cada 14 días por 12 ciclos (24 semanas) [5].";cf="Si no tolerara mFOLFIRINOX → gemcitabina con capecitabina.";}
+    l=["Conducta: "+c];
+  } else if(es==='bor'||es==='la'){
+    if(ps==='a'){c="No apto para quimioterapia intensiva: soporte y comité.";cf="Si mejorara el estado funcional → inducción y reevaluación.";}
+    else if(ps==='m'){c="Inducción con "+GN+"; reevaluar la resecabilidad cada 2–3 meses [5].";cf="Si el ECOG fuera 0–1 → FOLFIRINOX como inducción.";}
+    else{c="Inducción con FOLFIRINOX ("+FF+") o gemcitabina con nab-paclitaxel; reevaluar la resecabilidad cada 2–3 meses para cirugía de conversión [5].";cf="Si el tumor pasara a resecable → cirugía y adyuvancia; si progresara → cambiar de esquema.";}
+    l=["Conducta: "+c];
+    if(es==='bor'){l.push("En borderline la guía refuerza la quimioterapia previa a la cirugía [5].");}
+  } else {
+    if(si==='brca'){c="Olaparib 300 mg VO cada 12 h hasta progresión; solo con BRCA germinal y sin progresión tras 16 semanas de platino; mejora la supervivencia libre de progresión, no la global [5].";cf="Si no hubiera BRCA germinal → se continúa o se cambia la quimioterapia.";}
+    else if(si==='prog'){
+      if(ps==='a'){c="Soporte: sin beneficio esperado de más quimioterapia.";cf="Si el ECOG fuera 0–2 → gemcitabina con paclitaxel.";}
+      else{c="Tras FOLFIRINOX, con ECOG 0–2: gemcitabina 1 000 mg/m² y paclitaxel 80 mg/m² [VERIFICAR EN FUENTE] IV los días 1, 8 y 15 de cada ciclo de 28 días [8]. Tras NALIRIFOX, un esquema con gemcitabina (nivel V, C) [8].";cf="Si no tolerara paclitaxel → gemcitabina sola.";}
+    } else {
+      if(ps==='a'){c="Soporte: el estado funcional no permite quimioterapia.";cf="Si el ECOG mejorara → gemcitabina con nab-paclitaxel.";}
+      else if(ps==='m'){c=GN+" [8].";cf="Si el ECOG fuera 0–1 y tolerara el triplete → FOLFIRINOX o NALIRIFOX.";}
+      else{c="FOLFIRINOX ("+FF+") o NALIRIFOX ("+NL+") [8].";cf="Si hubiera toxicidad digestiva o no tolerara el triplete → gemcitabina con nab-paclitaxel.";}
+    }
+    l=["Conducta: "+c,"Pide BRCA germinal en todo estadio IV [5]."];
+  }
+  out(dc,sP("Esquema propuesto",l,cf));
+}
+
+function dcE2t(dc){
+  var tu=sel(dc,'tu')[0], fh=sel(dc,'fh')[0], ps=sel(dc,'ps')[0], bv=sel(dc,'bv')[0], kg=num(dc,'kg');
+  if(!tu||!fh){out(dc,sG("Elige el tumor y la función hepática; después el estado funcional y el riesgo con bevacizumab."));return;}
+  var c,cf,l=[];
+  if(fh==='c'){
+    c="Child-Pugh C: la prioridad es la evaluación de trasplante o los cuidados paliativos; el tratamiento sistémico no tiene datos en esta función [VERIFICAR EN FUENTE].";
+    cf="Si la función mejorara a Child-Pugh A o B → reevaluar según el tumor.";
+  } else if(tu==='pre'){
+    c="Resección si no hay hipertensión portal significativa (sin ascitis ni várices y plaquetas sobre 100 000 por µl), o ablación [2].";
+    cf="Si hubiera hipertensión portal → ablación o trasplante, no resección.";
+  } else if(tu==='mil'){
+    c="Trasplante hepático por estar dentro de los criterios de Milan; la resección arriesga la descompensación [2].";
+    cf="Si el tumor saliera de Milan → reducir el estadio con terapia locorregional antes de decidir.";
+  } else if(tu==='mul'){
+    c="Terapia locorregional (quimioembolización o radioembolización) con revisión del comité [2].";
+    cf="Si apareciera invasión vascular o metástasis → tratamiento sistémico.";
+  } else {
+    if(fh==='b'){
+      c="Child-Pugh B: hay pocos datos prospectivos; la inmunoterapia solo en pacientes bien seleccionados [2].";
+      cf="Si la función fuera Child-Pugh A → esquema de primera línea completo.";
+    } else if(ps==='m'){
+      c="ECOG 2 o más: la evidencia de los ensayos fue en ECOG 0–1; decidir en comité con enfoque paliativo [2].";
+      cf="Si el ECOG fuera 0–1 → atezolizumab con bevacizumab o durvalumab con tremelimumab.";
+    } else if(bv==='no'){
+      c="Durvalumab: tremelimumab 300 mg IV en dosis única en el primer ciclo más durvalumab 1 500 mg IV; durvalumab 1 500 mg IV cada 4 semanas hasta progresión [2].";
+      cf="Si la endoscopia mostrara várices tratadas y sin riesgo → atezolizumab con bevacizumab.";
+    } else if(bv==='ok'){
+      c="Atezolizumab 1 200 mg y bevacizumab 15 mg/kg, IV el día 1 cada 3 semanas, hasta progresión o toxicidad [2].";
+      cf="Si hubiera várices sin tratar o sangrado reciente → durvalumab con tremelimumab.";
+    } else {
+      c="Elige el riesgo con bevacizumab: sin endoscopia en los 6 meses previos, no se inicia [2].";
+      cf="Si la endoscopia fuera reciente y sin riesgo → atezolizumab con bevacizumab.";
+    }
+    if(!isNaN(kg)&&kg>0){
+      var p=Math.min(kg,200);
+      l.push("Alternativa sin inmunoterapia: lenvatinib "+(p>=60?12:8)+" mg VO cada 24 h para "+p+" kg [2].");
+    } else {
+      l.push("Alternativa sin inmunoterapia: lenvatinib 8 mg si pesa menos de 60 kg o 12 mg si pesa 60 kg o más, VO cada 24 h; escribe el peso para fijar la dosis [2].");
+    }
+  }
+  l.unshift("Conducta: "+c);
+  out(dc,sP("Tratamiento según BCLC",l,cf));
+}
+
+function dcE3t(dc){
+  var ha=sel(dc,'ha')[0], ap=sel(dc,'ap')[0];
+  if(!ha){out(dc,sG("Elige el hallazgo; después la aptitud para cirugía mayor."));return;}
+  var c,cf,l=[];
+  if(ha==='t1a'){
+    c="Colecistectomía simple suficiente con seguimiento; no requiere re-resección [11].";
+    cf="Si la invasión llegara a T1b o más → re-resección radical.";
+  } else if(ha==='t1b'){
+    if(ap==='si'){
+      c="Re-resección radical con segmentos IVb y V y linfadenectomía del ligamento hepatoduodenal [11], seguida de capecitabina 1 250 mg/m² VO cada 12 h los días 1–14 de cada ciclo de 21 días por 8 ciclos [11].";
+      cf="Si hubiera metástasis a distancia → no se re-opera: tratamiento sistémico.";
+    } else if(ap==='no'){
+      c="No apto para cirugía mayor: decisión del comité; la alternativa es el tratamiento sistémico [11].";
+      cf="Si el estado general mejorara y no hubiera metástasis → re-resección radical.";
+    } else {
+      c="Elige la aptitud: la re-resección radical solo es posible en pacientes aptos y sin metástasis [11].";
+      cf="Si el paciente fuera apto → re-resección radical.";
+    }
+  } else {
+    c="Cisplatino 25 mg/m² y gemcitabina 1 000 mg/m² los días 1 y 8 más durvalumab 1 500 mg el día 1, IV cada 21 días hasta 8 ciclos; luego durvalumab 1 500 mg cada 4 semanas [10]. Perfil molecular al iniciar [10].";
+    l.push("Alternativa equivalente: pembrolizumab 200 mg IV el día 1 cada 21 días en lugar de durvalumab [10].");
+    cf="Si el tumor fuera HER2 positivo y progresara → opciones dirigidas contra HER2 en segunda línea.";
+  }
+  l.unshift("Conducta: "+c);
+  out(dc,sP("Conducta tras el hallazgo",l,cf));
+}
+
+function dcE4t(dc){
+  var si=sel(dc,'si')[0], mo=sel(dc,'mo')[0];
+  if(!si){out(dc,sG("Elige la situación; después el perfil molecular si hay progresión."));return;}
+  var c,cf;
+  if(si==='res'){
+    c="Capecitabina 1 250 mg/m² VO cada 12 h los días 1–14 de cada ciclo de 21 días por 8 ciclos [11].";
+    cf="Si hubiera recaída → perfil molecular y tratamiento sistémico de enfermedad avanzada.";
+  } else if(si==='avz'){
+    c="Cisplatino 25 mg/m² y gemcitabina 1 000 mg/m² los días 1 y 8 más durvalumab 1 500 mg o pembrolizumab 200 mg el día 1, IV cada 21 días; perfil molecular al iniciar [10].";
+    cf="Si tuviera fusión de FGFR2 o HER2 positivo → se reserva la terapia dirigida para la segunda línea.";
+  } else if(mo==='fg'){
+    c="Pemigatinib 13,5 mg VO cada 24 h los días 1–14 de cada ciclo de 21 días, o futibatinib 20 mg VO cada 24 h, hasta progresión o toxicidad [10].";
+    cf="Si no hubiera fusión de FGFR2 → no corresponde este inhibidor.";
+  } else if(mo==='h2'){
+    c="Zanidatamab 20 mg/kg IV cada 2 semanas hasta progresión o toxicidad [10].";
+    cf="Si el HER2 no fuera positivo por IHC y FISH → no corresponde zanidatamab.";
+  } else if(mo==='nin'){
+    c="Sin diana: quimioterapia de segunda línea o cuidados paliativos según el estado funcional; las dianas raras (NTRK, RET) se tratan según la guía [10].";
+    cf="Si el panel molecular hallara una diana → terapia dirigida.";
+  } else {
+    c="Elige el perfil molecular: la segunda línea depende de la diana [10].";
+    cf="Si hubiera fusión de FGFR2 → pemigatinib o futibatinib.";
+  }
+  out(dc,sP("Línea propuesta",["Conducta: "+c],cf));
+}
+</script>

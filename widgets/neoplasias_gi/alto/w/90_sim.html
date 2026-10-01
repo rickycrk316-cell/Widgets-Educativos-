@@ -68,14 +68,14 @@ function dcE1tx(dc){
     x='Con la patología, clasificar la curabilidad: eCura A, control con endoscopia anual; eCura B, endoscopia anual o cada dos años con imagen; eCura C, cirugía adicional según el subtipo [3].'+hpt;
   } else if(s==='resec'){
     t='Gastrectomía con linfadenectomía D2 [3].';
-    x=frag?'Individualiza la quimioterapia perioperatoria según el estado funcional [3].':'Quimioterapia perioperatoria con FLOT: docetaxel 50 mg/m², oxaliplatino 85 mg/m², leucovorina 200 mg/m² y fluorouracilo 2 600 mg/m² en 24 h IV cada 14 días, 4 ciclos antes y 4 después de la cirugía [1][9] [VERIFICAR EN FUENTE].';
+    x=frag?'Individualiza la quimioterapia perioperatoria según el estado funcional [3].':'Quimioterapia perioperatoria con FLOT: docetaxel 50 mg/m², oxaliplatino 85 mg/m², leucovorina 200 mg/m² y fluorouracilo 2 600 mg/m² en 24 h IV cada 14 días, 4 ciclos antes y 4 después de la cirugía [1][9] [VERIFICAR EN FUENTE].';
     x+=hpt;
   } else if(s==='p2'){
     t='Quimioterapia adyuvante tras la gastrectomía D2 en pStage II.';
     x='S-1 por un año (40 mg/m² por dosis, dos veces al día, 4 semanas de cada 6) [3][9] [VERIFICAR EN FUENTE]; alternativa: CapeOX [3].'+hpt;
   } else if(s==='p3'){
     t='Quimioterapia adyuvante combinada tras la gastrectomía D2 en pStage III.';
-    x='CapeOX: capecitabina 1 000 mg/m² dos veces al día los días 1 a 14 y oxaliplatino 130 mg/m² el día 1, cada 21 días [3][9] [VERIFICAR EN FUENTE]; la guía japonesa admite S-1 solo como opción condicional.'+hpt;
+    x='CapeOX: capecitabina 1 000 mg/m² dos veces al día los días 1 a 14 y oxaliplatino 130 mg/m² el día 1, cada 21 días [3][9] [VERIFICAR EN FUENTE]; la guía japonesa admite S-1 solo como opción condicional.'+hpt;
   } else {
     t='Tratamiento sistémico; no operar para reducir el tumor si es asintomático [3].';
     if(msi){x='Microsatélites inestables: pembrolizumab 200 mg IV cada 3 semanas, tras estudiar el estado de microsatélites [3][9].';}
@@ -99,7 +99,7 @@ function dcE2(dc){
   else if(s==='npos'){c='Resección con disección terapéutica del cuello y adyuvancia según patología [VERIFICAR EN FUENTE].';}
   else{c='Equipo de cabeza y cuello: quimiorradioterapia o cuidados paliativos según el estado funcional [VERIFICAR EN FUENTE].';}
   if(s==='irres'){a='Si es candidato: cisplatino 100 mg/m² IV los días 1, 22 y 43 con radioterapia [9] [VERIFICAR EN FUENTE]; de lo contrario, paliación.';}
-  else if(mpos||ene){a=ren?'Márgenes positivos o extensión extranodal, pero no apto para cisplatino: discute la radioterapia sola o un esquema alternativo con el equipo [VERIFICAR EN FUENTE].':'Márgenes positivos o extensión extranodal: quimiorradioterapia con cisplatino 100 mg/m² IV los días 1, 22 y 43 [9] [VERIFICAR EN FUENTE]; ondansetrón 8 mg IV antes de cada dosis [9].';}
+  else if(mpos||ene){a=ren?'Márgenes positivos o extensión extranodal, pero no apto para cisplatino: discute la radioterapia sola o un esquema alternativo con el equipo [VERIFICAR EN FUENTE].':'Márgenes positivos o extensión extranodal: quimiorradioterapia con cisplatino 100 mg/m² IV los días 1, 22 y 43 [9] [VERIFICAR EN FUENTE].';}
   else if(pni){a='Invasión perineural o linfovascular: radioterapia postoperatoria [VERIFICAR EN FUENTE].';}
   else{a='Sin factores adversos en patología: observación con examen clínico seriado; la ecografía cervical añadida no mejora la supervivencia [12].';}
   out(dc,'<p><b>Cirugía y cuello:</b> '+c+'</p><p><b>Adyuvancia:</b> '+a+'</p><p><b>Analgesia:</b> paracetamol 1 g VO o IV cada 6 a 8 h, máximo 4 g al día [9].</p><span class="cf">Si aparecen márgenes positivos o extensión extranodal → la radioterapia sola pasa a quimiorradioterapia con cisplatino.</span>');
@@ -127,8 +127,8 @@ function dcE3(dc){
       c=res.length?'Quimiorradioterapia neoadyuvante y evaluación quirúrgica [2] [VERIFICAR EN FUENTE].':'Quimiorradioterapia definitiva o paliación según el estado funcional [2] [VERIFICAR EN FUENTE].';
       v='Carboplatino AUC 2 y paclitaxel 50 mg/m² IV semanal por 5 semanas con 41,4 Gy en 23 fracciones [2][9] [VERIFICAR EN FUENTE].';
     } else {
-      c=res.length?'Cirugía con terapia perioperatoria (FLOT) o quimiorradioterapia neoadyuvante [2] [VERIFICAR EN FUENTE].':'Tratamiento sistémico o paliación según el estado funcional [2] [VERIFICAR EN FUENTE].';
-      v=res.length?'FLOT: docetaxel 50 mg/m², oxaliplatino 85 mg/m², leucovorina 200 mg/m² y fluorouracilo 2 600 mg/m² en 24 h IV cada 14 días, 4 ciclos antes y 4 después de la cirugía [2][9] [VERIFICAR EN FUENTE].':'Esquema sistémico según el equipo de oncología [VERIFICAR EN FUENTE].';
+      c=res.length?'Cirugía con quimioterapia perioperatoria (esquema de la pestaña Cáncer gástrico) o quimiorradioterapia neoadyuvante [2] [VERIFICAR EN FUENTE].':'Tratamiento sistémico o paliación según el estado funcional [2] [VERIFICAR EN FUENTE].';
+      v=res.length?'Si opta por quimiorradioterapia: carboplatino AUC 2 y paclitaxel 50 mg/m² IV semanal por 5 semanas con 41,4 Gy en 23 fracciones [2][9] [VERIFICAR EN FUENTE].':'Esquema sistémico según el equipo de oncología [VERIFICAR EN FUENTE].';
     }
   }
   out(dc,'<p><b>Conducta:</b> '+c+'</p><p><b>Fármacos:</b> '+v+'</p><span class="cf">Si la biopsia pasa de displasia de bajo grado a alto grado o carcinoma intramucoso → la terapia endoscópica de erradicación pasa de sugerida a recomendada frente a la esofagectomía.</span>');
@@ -147,10 +147,10 @@ function dcE4(dc){
     x='Sin tratamiento farmacológico de rutina; resecar endoscópicamente los adenomas sin invasión [14] [VERIFICAR EN FUENTE].'+(paf?' Con poliposis: estudio genético y vigilancia de los familiares [VERIFICAR EN FUENTE].':'');
   } else if(s==='cap'){
     c=peri?'Pancreatoduodenectomía con vaciamiento ganglionar [14] [VERIFICAR EN FUENTE].':'Duodenoduodenostomía o resección segmentaria con vaciamiento ganglionar [14] [VERIFICAR EN FUENTE].';
-    x=npos?'Ganglios positivos: CapeOX, capecitabina 1 000 mg/m² dos veces al día los días 1 a 14 y oxaliplatino 130 mg/m² el día 1, cada 21 días [14][9] [VERIFICAR EN FUENTE]; en ampulares, el beneficio adyuvante se limitó al estadio IIB o mayor [15].':'Sin ganglios positivos: observación con imagen seriada; la quimioterapia adyuvante se discute según el estadio [15] [VERIFICAR EN FUENTE].';
+    x=npos?'Ganglios positivos: CapeOX, capecitabina 1 000 mg/m² dos veces al día los días 1 a 14 y oxaliplatino 130 mg/m² el día 1, cada 21 días [14][9] [VERIFICAR EN FUENTE]; en ampulares, el beneficio adyuvante se limitó al estadio IIB o mayor [15].':'Sin ganglios positivos: observación con imagen seriada; la quimioterapia adyuvante se discute según el estadio [15] [VERIFICAR EN FUENTE].';
   } else {
     c='Tratamiento sistémico; endoprótesis biliar o gastroyeyunostomía si hay obstrucción [VERIFICAR EN FUENTE].';
-    x=msi?'Microsatélites inestables: pembrolizumab 200 mg IV cada 3 semanas [14][9] [VERIFICAR EN FUENTE].':'FOLFOX: oxaliplatino 85 mg/m², leucovorina 400 mg/m², fluorouracilo 400 mg/m² en bolo y 2 400 mg/m² en 46 h IV cada 14 días [14][9] [VERIFICAR EN FUENTE].';
+    x=msi?'Microsatélites inestables: pembrolizumab 200 mg IV cada 3 semanas [14][9] [VERIFICAR EN FUENTE].':'FOLFOX: oxaliplatino 85 mg/m², leucovorina 400 mg/m², fluorouracilo 400 mg/m² en bolo y 2 400 mg/m² en 46 h IV cada 14 días [14][9] [VERIFICAR EN FUENTE].';
   }
   out(dc,'<p><b>Conducta:</b> '+c+'</p><p><b>Esquema:</b> '+x+'</p><span class="cf">Si hay ictericia con tumor en la segunda porción → es periampular: la resección pasa de segmentaria a pancreatoduodenectomía.</span>');
 }

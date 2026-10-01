@@ -114,7 +114,7 @@ tbody tr:last-child>*{border-bottom:1px solid var(--rule-strong)}
 .signo dd{margin:2px 0 0}
 .xref{display:inline-flex;align-items:center;min-height:44px;padding:4px 10px;margin:3px 6px 3px 0;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent-field);color:var(--accent-ink);font:600 12.5px/1.3 var(--f-sans);text-align:left}
 .xref:hover{background:var(--accent);color:var(--on-accent)}
-p .xref,td .xref,li .xref,dd .xref{display:inline;position:relative;min-height:0;padding:0 5px;margin:0 2px;line-height:inherit;border-radius:2px;white-space:nowrap}
+p .xref,td .xref,li .xref,dd .xref{display:inline;position:relative;min-height:0;padding:0 5px;margin:0 2px;line-height:inherit;border-radius:2px;white-space:normal;overflow-wrap:anywhere;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 p .xref::after,td .xref::after,li .xref::after,dd .xref::after{content:"";position:absolute;left:-4px;right:-4px;top:-12px;bottom:-12px}
 .hl{outline:2px solid var(--accent);background:var(--accent-field)!important;transition:background .3s}
 .acc{border:1px solid var(--rule);border-radius:var(--r);margin:12px 0;overflow:hidden}
@@ -209,7 +209,7 @@ table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index
 <div class="etapa" data-go="e1"><h3>Cáncer gástrico</h3><p class="res">El estómago es el punto de partida: la infección crónica por H. pylori produce gastritis atrófica, metaplasia intestinal y displasia, y de ahí el adenocarcinoma. Lo delata la anemia ferropénica con dispepsia, porque el tumor ulcerado sangra. La conducta decisiva depende del estadio: resección endoscópica en el cáncer precoz con indicación absoluta, gastrectomía con linfadenectomía D2 en el resecable y un esquema sistémico guiado por HER2 y PD-L1 en el avanzado [3][4][5]. El eje sigue hacia la boca, donde el tumor se ve.</p><p class="perla">Anemia ferropénica con dispepsia en un adulto: sangrado tumoral hasta demostrar lo contrario [1].</p><button type="button" class="go" data-go="e1" onclick="show('e1')">Ir a Cáncer gástrico →</button></div>
 <div class="etapa" data-go="e2"><h3>Cáncer de cavidad oral</h3><p class="res">En la boca el tumor se ve y se palpa: el tabaco y el alcohol dañan el epitelio, aparece una leucoplasia o una eritroplasia y, con displasia, el carcinoma. Lo delata la úlcera o placa que no cicatriza. Aquí la amenaza es el cuello: la profundidad de invasión se asocia con metástasis ganglionar oculta, y en tumores T1 a T2 sin ganglios la disección electiva mejoró la supervivencia [10][11][12]. Más abajo, el mismo terreno de tabaco y alcohol vuelve a actuar en el esófago.</p><p class="perla">La eritroplasia transforma mucho más que la leucoplasia: la placa roja merece biopsia [10].</p><button type="button" class="go" data-go="e2" onclick="show('e2')">Ir a Cáncer de cavidad oral →</button></div>
 <div class="etapa" data-go="e3"><h3>Cáncer de esófago</h3><p class="res">En el esófago la disfagia progresiva a sólidos aparece tarde, porque la luz debe estrecharse mucho. Hay dos enfermedades: el carcinoma escamoso, por tabaco y alcohol, y el adenocarcinoma, que nace del esófago de Barrett por reflujo crónico. La conducta decisiva en Barrett se apoya en la displasia: terapia endoscópica de erradicación en alto grado y vigilancia según la longitud del segmento si no la hay [2][13]. Hacia abajo, pasada la unión esofagogástrica, el eje termina en el duodeno.</p><p class="perla">Disfagia a sólidos que avanza es obstrucción orgánica hasta demostrar lo contrario; la acalasia afecta líquidos desde el inicio [2].</p><button type="button" class="go" data-go="e3" onclick="show('e3')">Ir a Cáncer de esófago →</button></div>
-<div class="etapa" data-go="e4"><h3>Cáncer de duodeno</h3><p class="res">En el extremo distal, el adenocarcinoma duodenal es poco frecuente. Nace de un adenoma, a menudo ligado a poliposis adenomatosa familiar, y su relación con la ampolla de Vater decide el síntoma: vómito de retención si obstruye la luz, ictericia si es periampular. La conducta decisiva es la resección quirúrgica completa, según la porción afectada, con quimioterapia si hay ganglios positivos [14][15]. Con él se cierra el recorrido del grupo.</p><p class="perla">Ictericia o vómito de retención en un paciente con poliposis adenomatosa familiar: busca un tumor duodenal [14].</p><button type="button" class="go" data-go="e4" onclick="show('e4')">Ir a Cáncer de duodeno →</button></div>
+<div class="etapa" data-go="e4"><h3>Cáncer de duodeno</h3><p class="res">En el extremo distal, el adenocarcinoma duodenal es poco frecuente. Nace de un adenoma, a menudo ligado a poliposis adenomatosa familiar, y su relación con la ampolla de Vater decide el síntoma: vómito de retención si obstruye la luz, ictericia si es periampular. La conducta decisiva es la resección quirúrgica completa, según la porción afectada, con quimioterapia si hay ganglios positivos [14][15]. Con él se cierra el recorrido del grupo, de la boca al duodeno, siempre con la histología como prueba que decide antes de cualquier tratamiento.</p><p class="perla">Ictericia o vómito de retención en un paciente con poliposis adenomatosa familiar: busca un tumor duodenal [14].</p><button type="button" class="go" data-go="e4" onclick="show('e4')">Ir a Cáncer de duodeno →</button></div>
 <p class="mini">Esto es el mapa, no el territorio: cada párrafo y cada perla se justifican en su pestaña.</p>
 </section>
 <section class="tab" data-tab="vis">
@@ -240,7 +240,7 @@ table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index
 <p>Displasia es la alteración celular y arquitectural previa a la invasión.</p>
 <p><b>Lesión premaligna</b> es el estado tisular con mayor riesgo de cáncer: leucoplasia y eritroplasia en boca, esófago de Barrett, gastritis atrófica con metaplasia intestinal y adenoma duodenal. Cada una se desarrolla en su pestaña, con su vigilancia.</p>
 <p><b>Presentación común.</b> Síntoma digestivo alto con pérdida de peso involuntaria o un signo de alarma: anemia ferropénica, hemorragia digestiva, vómito persistente o masa [1][2] [VERIFICAR EN FUENTE].</p>
-<p class="mini">Altitud (Quito, ~2 850 m): el valor de hemoglobina de referencia sube con la altitud, de modo que una hemoglobina «normal» a nivel del mar puede ser baja allí. Interpreta la anemia con el valor ajustado a la altitud antes de descartarla como señal de alarma [VERIFICAR EN FUENTE el ajuste].</p>
+<p class="mini">Altitud (Quito, ~2 850 m): el valor de hemoglobina de referencia sube con la altitud, de modo que una hemoglobina «normal» a nivel del mar puede ser baja allí. Interpreta la anemia con el valor ajustado a la altitud antes de descartarla como señal de alarma [VERIFICAR EN FUENTE el ajuste].</p>
 <p class="mini">Siglas: GIST tumor del estroma gastrointestinal; EDA endoscopia digestiva alta; TC tomografía computarizada.</p></div>
 <div class="hb ro"><div class="hb-t">Banderas rojas</div><ul>
 <li>Cáncer gástrico no reconocido: dispepsia de inicio tardío o anemia ferropénica sin causa en un adulto exige endoscopia con biopsia, no un inhibidor de la bomba de protones empírico [1].</li>
@@ -302,7 +302,7 @@ table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index
 </tbody></table></div>
 <h2>Epidemiología</h2>
 <div class="tw"><table><thead><tr><th>Dato</th><th>Detalle</th></tr></thead><tbody>
-<tr><th>Frecuencia</th><td>Tasa mundial estandarizada de 9,2 por 100 000 y mortalidad de 6,1 por 100 000 en 2022 [6]; en 24 países de Latinoamérica y el Caribe, la incidencia fue de 3,97 a 14,31 por 100 000 [7]. Cifra de Ecuador [VERIFICAR EN FUENTE].</td></tr>
+<tr><th>Frecuencia</th><td>Tasa mundial estandarizada de 9,2 por 100 000 y mortalidad de 6,1 por 100 000 en 2022 [6]; en 24 países de Latinoamérica y el Caribe, la incidencia fue de 3,97 a 14,31 por 100 000 [7]. Cifra de Ecuador [VERIFICAR EN FUENTE].</td></tr>
 <tr><th>Edad</th><td>Predomina después de los 50 años [VERIFICAR EN FUENTE]. En mujeres ecuatorianas menores de 40 años la incidencia aumentó entre 1980 y 2018 (cambio porcentual anual medio 6,05; IC 95% 1,40 a 10,92) [8].</td></tr>
 <tr><th>Sexo</th><td>El aumento en jóvenes de Ecuador se observó en mujeres [8]; razón hombre:mujer [VERIFICAR EN FUENTE].</td></tr>
 <tr><th>Factores clave</th><td>Infección por H. pylori, gastritis atrófica y metaplasia intestinal [4][5]; dieta rica en sal, tabaquismo y antecedente familiar [VERIFICAR EN FUENTE].</td></tr>
@@ -387,9 +387,9 @@ table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index
 </ol>
 <div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead><tbody>
 <tr><th>Terapia cuádruple con bismuto</th><td>Omeprazol 20 mg, subcitrato de bismuto 120 mg, tetraciclina 500 mg y metronidazol 500 mg [VERIFICAR EN FUENTE la posología exacta]</td><td>VO</td><td>Según el esquema de cada fármaco</td><td>14 días [VERIFICAR EN FUENTE]</td><td>Erradica la bacteria y detiene el estímulo inflamatorio. <button type="button" class="xref" data-ir="e1-m-1" onclick="ir('e1','e1-m-1')">← Paso</button> La resistencia a antibióticos crece: confirma la erradicación. Evita tetraciclina en embarazo.</td><td>[5][9]</td></tr>
-<tr><th>FLOT perioperatorio</th><td>Docetaxel 50 mg/m², oxaliplatino 85 mg/m², leucovorina 200 mg/m² y fluorouracilo 2 600 mg/m² en 24 h [VERIFICAR EN FUENTE]</td><td>IV</td><td>Cada 14 días</td><td>4 ciclos antes y 4 después de la cirugía</td><td>Los taxanos y el platino detienen la división de células tumorales que ya invadieron. <button type="button" class="xref" data-ir="e1-m-9" onclick="ir('e1','e1-m-9')">← Paso</button> Ajusta por neutropenia y neuropatía.</td><td>[1][9]</td></tr>
+<tr><th>FLOT perioperatorio</th><td>Docetaxel 50 mg/m², oxaliplatino 85 mg/m², leucovorina 200 mg/m² y fluorouracilo 2 600 mg/m² en 24 h [VERIFICAR EN FUENTE]</td><td>IV</td><td>Cada 14 días</td><td>4 ciclos antes y 4 después de la cirugía</td><td>Los taxanos y el platino detienen la división de células tumorales que ya invadieron. <button type="button" class="xref" data-ir="e1-m-9" onclick="ir('e1','e1-m-9')">← Paso</button> Ajusta por neutropenia y neuropatía.</td><td>[1][9]</td></tr>
 <tr><th>S-1 adyuvante</th><td>40 mg/m² por dosis [VERIFICAR EN FUENTE]</td><td>VO</td><td>Dos veces al día, 4 semanas de cada 6</td><td>Un año</td><td>Fluoropirimidina oral que detiene la síntesis de ADN en células residuales. <button type="button" class="xref" data-ir="e1-m-9" onclick="ir('e1','e1-m-9')">← Paso</button> Reduce la dosis si hay daño renal.</td><td>[3][9]</td></tr>
-<tr><th>CapeOX</th><td>Capecitabina 1 000 mg/m² dos veces al día los días 1 a 14 y oxaliplatino 130 mg/m² el día 1 [VERIFICAR EN FUENTE]</td><td>VO e IV</td><td>Cada 21 días</td><td>Adyuvante o primera línea metastásica [VERIFICAR EN FUENTE]</td><td>Fluoropirimidina y platino detienen la síntesis de ADN. <button type="button" class="xref" data-ir="e1-m-9" onclick="ir('e1','e1-m-9')">← Paso</button> Reduce la dosis si hay daño renal; evita con deficiencia de DPD.</td><td>[3][9]</td></tr>
+<tr><th>CapeOX</th><td>Capecitabina 1 000 mg/m² dos veces al día los días 1 a 14 y oxaliplatino 130 mg/m² el día 1 [VERIFICAR EN FUENTE]</td><td>VO e IV</td><td>Cada 21 días</td><td>Adyuvante o primera línea metastásica [VERIFICAR EN FUENTE]</td><td>Fluoropirimidina y platino detienen la síntesis de ADN. <button type="button" class="xref" data-ir="e1-m-9" onclick="ir('e1','e1-m-9')">← Paso</button> Reduce la dosis si hay daño renal; evita con deficiencia de DPD.</td><td>[3][9]</td></tr>
 <tr><th>Nivolumab con quimioterapia</th><td>Nivolumab 360 mg con CapeOX, o 240 mg con FOLFOX [VERIFICAR EN FUENTE]</td><td>IV</td><td>Cada 3 semanas con CapeOX; cada 2 con FOLFOX</td><td>Hasta progresión o toxicidad</td><td>Anti-PD-1: libera al linfocito T para atacar al tumor. <button type="button" class="xref" data-ir="e1-m-9" onclick="ir('e1','e1-m-9')">← Paso</button> Beneficio no demostrado con CPS menor de 5.</td><td>[3][9]</td></tr>
 <tr><th>Trastuzumab</th><td>8 mg/kg de carga y luego 6 mg/kg</td><td>IV</td><td>Cada 3 semanas</td><td>Hasta progresión</td><td>Bloquea HER2 en tumores positivos y se añade a fluoropirimidina y platino. <button type="button" class="xref" data-ir="e1-m-4" onclick="ir('e1','e1-m-4')">← Paso</button> Vigila la fracción de eyección.</td><td>[3][9]</td></tr>
 <tr><th>Ramucirumab con paclitaxel</th><td>Ramucirumab 8 mg/kg los días 1 y 15; paclitaxel 80 mg/m² los días 1, 8 y 15 [VERIFICAR EN FUENTE]</td><td>IV</td><td>Cada 28 días</td><td>Hasta progresión</td><td>Segunda línea: bloquea la angiogénesis del tumor. <button type="button" class="xref" data-ir="e1-m-5" onclick="ir('e1','e1-m-5')">← Paso</button> Evita con sangrado activo.</td><td>[3][9]</td></tr>
@@ -422,45 +422,36 @@ table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index
 </ul>
 </section>
 <section class="tab" data-tab="e2">
-<div class="hb az"><div class="hb-t">Frente a Cáncer de esófago</div><p>Se confunde con él porque ambos son carcinomas escamosos ligados al tabaco y al alcohol, y pueden coexistir; se separa porque el oral se ve y se palpa, y su amenaza es el cuello, no la luz.</p></div>
+<div class="hb az"><div class="hb-t">Frente a Cáncer de esófago</div><p>Se confunde con él porque ambos son carcinomas escamosos por tabaco y alcohol y pueden coexistir; se separa porque el oral se ve y se palpa, y su amenaza es el cuello.</p></div>
 <div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div><ol class="pg">
-<li>¿Por qué la leucoplasia y la eritroplasia tienen riesgos de transformación tan distintos, y qué hallazgo histológico reorienta la conducta?</li>
-<li>¿Qué explica el dolor referido al oído y la adenopatía cervical dura, y qué dato del tumor se asocia con la metástasis ganglionar oculta?</li>
-<li>¿Por qué se discute la disección del cuello aunque el cuello sea clínicamente negativo, y qué decide la radioterapia adyuvante?</li>
+<li>¿Por qué la leucoplasia y la eritroplasia tienen riesgos tan distintos, y qué hallazgo histológico reorienta la conducta?</li>
+<li>¿Qué explica el dolor referido al oído y la adenopatía dura, y qué dato del tumor se asocia con metástasis ganglionar oculta?</li>
+<li>¿Por qué se discute la disección del cuello aunque sea clínicamente negativo, y qué decide la radioterapia adyuvante?</li>
 </ol></div>
 <span class="badge b-pu">Sin guía leída (NCCN cabeza y cuello no accesible) · Iocca 2020 · D'Cruz 2021 y 2024 (solo resumen) [10][11][12]</span>
 <h2>Qué es</h2>
 <div class="card"><p>Carcinoma escamoso del epitelio de la cavidad oral: lengua móvil, piso de boca, encía, mucosa yugal, paladar duro y trígono retromolar. El diagnóstico es histológico. El estadio T incorpora la profundidad de invasión (DOI): un tumor con DOI de más de 10 mm es T3 [11] [VERIFICAR EN FUENTE el resto de la 8.ª edición].</p></div>
 <div class="tw"><table><thead><tr><th>Subtipo</th><th>Por qué existe</th><th>Cómo se distingue</th></tr></thead><tbody>
-<tr><th>Convencional</th><td>Carcinoma escamoso que invade desde displasia</td><td>Úlcera o masa indurada; el más frecuente [VERIFICAR EN FUENTE]</td></tr>
-<tr><th>Verrucoso</th><td>Variante bien diferenciada de crecimiento lento</td><td>Placa exofítica; rara vez metastatiza [VERIFICAR EN FUENTE]</td></tr>
-</tbody></table></div>
-<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead><tbody>
-<tr><th>Cáncer de orofaringe</th><td>Carcinoma escamoso y adenopatía cervical</td><td>Sitio: base de lengua y amígdala, no la boca; puede asociarse a VPH [VERIFICAR EN FUENTE]</td></tr>
-<tr><th>Úlcera traumática o aftosa</th><td>Úlcera dolorosa</td><td>Cicatriza al retirar la causa; la que persiste se biopsia</td></tr>
+<tr><th>Convencional</th><td>Carcinoma escamoso que invade desde displasia</td><td>Úlcera o masa indurada [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Verrucoso</th><td>Variante bien diferenciada de crecimiento lento</td><td>Placa exofítica, poco metastásica [VERIFICAR EN FUENTE]</td></tr>
 </tbody></table></div>
 <h2>Epidemiología</h2>
 <div class="tw"><table><thead><tr><th>Dato</th><th>Detalle</th></tr></thead><tbody>
-<tr><th>Frecuencia</th><td>Incidencia en Ecuador [VERIFICAR EN FUENTE]; entre las lesiones potencialmente malignas, 7,9% se transforma (IC 99% 4,9 a 11,5) [10].</td></tr>
-<tr><th>Edad</th><td>Predomina en adultos mayores [VERIFICAR EN FUENTE].</td></tr>
+<tr><th>Frecuencia</th><td>Incidencia en Ecuador [VERIFICAR EN FUENTE]; 7,9% de las lesiones potencialmente malignas se transforma [10].</td></tr>
+<tr><th>Edad</th><td>Adultos mayores [VERIFICAR EN FUENTE].</td></tr>
 <tr><th>Sexo</th><td>Razón hombre:mujer [VERIFICAR EN FUENTE].</td></tr>
-<tr><th>Factores clave</th><td>Tabaco y alcohol; lesiones potencialmente malignas y displasia moderada o grave [10].</td></tr>
+<tr><th>Factores clave</th><td>Tabaco, alcohol, lesiones potencialmente malignas y displasia [10].</td></tr>
 </tbody></table></div>
 <h2>Cadena</h2>
-<div class="tw"><table><thead><tr><th>Causa o grupo</th><th>Cómo entra en la cascada</th><th>Nodo</th><th>Ref.</th></tr></thead><tbody>
-<tr><th>Tabaco y alcohol</th><td>Dañan el ADN del epitelio de toda la vía aerodigestiva</td><td><button type="button" class="xref" data-ir="e2-m-1" onclick="ir('e2','e2-m-1')">Daño al epitelio</button></td><td>[10]</td></tr>
-<tr><th>Leucoplasia 9,5% (IC 99% 5,9 a 14,0); eritroplasia 33,1% (IC 99% 13,6 a 56,1); leucoplasia verrugosa proliferativa 49,5%</th><td>Transformación maligna agrupada de cada lesión</td><td><button type="button" class="xref" data-ir="e2-m-2" onclick="ir('e2','e2-m-2')">Placa blanca o roja</button></td><td>[10]</td></tr>
-<tr><th>Displasia moderada o grave</th><td>Razón de momios de 2,4 frente a la leve (IC 95% 1,5 a 3,8)</td><td><button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">Displasia</button></td><td>[10]</td></tr>
-</tbody></table></div>
 <ol class="tl">
-<li class="nodo" id="e2-m-1" data-clin="0" data-paso="Tabaco y alcohol lesionan el epitelio oral"><div class="det">El tabaco aporta nitrosaminas y el alcohol forma acetaldehído, que se une al ADN de las células basales del epitelio escamoso. El mismo daño actúa en toda la mucosa aerodigestiva (cancerización de campo): por eso puede haber un segundo tumor. Es el terreno.</div></li>
-<li class="nodo" id="e2-m-2" data-clin="0" data-paso="Un clon mutado forma leucoplasia o eritroplasia"><div class="det">Las células mutadas se expanden y forman una placa blanca (leucoplasia, por exceso de queratina) o roja (eritroplasia, epitelio delgado sobre vasos). Son lesiones potencialmente malignas, no cáncer, con riesgos muy distintos [10].</div></li>
-<li class="nodo" id="e2-m-3" data-clin="0" data-paso="Displasia pierde el control de maduración epitelial"><div class="det">En la displasia aparecen células inmaduras en capas superiores del epitelio. Es el grado histológico que predice el riesgo: la displasia moderada o grave se asocia con más transformación que la leve [10]. Es el paso previo a la invasión.</div></li>
+<li class="nodo" id="e2-m-1" data-clin="0" data-paso="Tabaco y alcohol lesionan el epitelio oral"><div class="det">El tabaco aporta nitrosaminas y el alcohol forma acetaldehído, que se une al ADN de las células basales. El daño actúa en toda la mucosa aerodigestiva (cancerización de campo): puede haber un segundo tumor. Es el terreno.</div></li>
+<li class="nodo" id="e2-m-2" data-clin="0" data-paso="Un clon mutado forma leucoplasia o eritroplasia"><div class="det">Las células mutadas forman una placa blanca (leucoplasia, por exceso de queratina) o roja (eritroplasia, epitelio delgado sobre vasos). Son lesiones potencialmente malignas: se transforman 9,5% de las leucoplasias y 33,1% de las eritroplasias [10].</div></li>
+<li class="nodo" id="e2-m-3" data-clin="0" data-paso="Displasia pierde el control de maduración epitelial"><div class="det">En la displasia aparecen células inmaduras en capas superiores del epitelio. Es el grado histológico que predice el riesgo: la moderada o grave transforma más que la leve (razón de momios 2,4) [10].</div></li>
 <li class="nodo" id="e2-m-4" data-clin="1" data-paso="Carcinoma invade el corion y el músculo"><div class="det">Al romper la membrana basal, el tumor invade el corion (tejido conectivo subyacente) y el músculo: forma una úlcera indurada de bordes elevados que no cicatriza. Es el dato que se ve y se biopsia.</div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-1" onclick="ir('e2','e2-s-1')">Úlcera o placa oral que no cicatriza</button></p></li>
 <li class="nodo" id="e2-m-5" data-clin="1" data-paso="Invasión perineural produce dolor referido"><div class="det">Las células siguen las vainas de nervios sensitivos (ramas del trigémino y del glosofaríngeo). Por las conexiones sensitivas compartidas, el dolor se percibe en el oído.</div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-2" onclick="ir('e2','e2-s-2')">Dolor oral con otalgia referida</button></p></li>
-<li class="nodo" id="e2-m-6" data-clin="1" data-paso="Profundidad de invasión predice metástasis cervical"><div class="det">Cuanto más profundo es el tumor, más linfáticos alcanza; los tumores de más de 10 mm de profundidad se asocian con factores adversos y metástasis ganglionar oculta [11]. Drenan a los niveles I a III del cuello, donde el ganglio se vuelve duro.</div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-3" onclick="ir('e2','e2-s-3')">Adenopatía cervical dura</button></p></li>
+<li class="nodo" id="e2-m-6" data-clin="1" data-paso="Profundidad de invasión predice metástasis cervical"><div class="det">Cuanto más profundo, más linfáticos alcanza; con más de 10 mm hay más factores adversos y metástasis ganglionar oculta [11]. Drena a los niveles I a III del cuello, donde el ganglio se endurece.</div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-3" onclick="ir('e2','e2-s-3')">Adenopatía cervical dura</button></p></li>
 </ol>
-<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la maleza y su raíz</span><p class="fey-b">En un jardín, lo que se ve de una maleza en el suelo es pequeño, pero la raíz puede ir muy hondo. Si la raíz es corta, se arranca fácil; si es larga, ya llegó a otros rincones sin que lo notes. Por eso importa más qué tan hondo llegó que cuánto se ve arriba. Y si el jardinero sigue pisando el mismo lugar, aparece otra maleza cerca.</p><p class="mini fey-c">En medicina esto se llama… profundidad de invasión, metástasis ganglionar oculta y cancerización de campo.</p><p class="mini fey-c">Dónde falla la comparación: la maleza no viaja por conductos que llevan sus semillas a otro jardín; el cáncer oral sí usa los linfáticos del cuello.</p></div>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la maleza y su raíz</span><p class="fey-b">De una maleza se ve poco en el suelo, pero la raíz puede ir muy hondo. Si la raíz es corta, se arranca fácil; si es larga, ya llegó a otros rincones. Importa más qué tan hondo llegó que cuánto se ve arriba. Y si el jardinero sigue pisando el mismo lugar, sale otra maleza cerca.</p><p class="mini fey-c">En medicina esto se llama… profundidad de invasión, metástasis ganglionar oculta y cancerización de campo.</p><p class="mini fey-c">Dónde falla la comparación: la maleza no viaja por conductos; el cáncer oral usa los linfáticos del cuello.</p></div>
 <h2>Qué verás</h2>
 <div class="qv">
 <p data-e="p">Lesión oral visible o palpable</p>
@@ -470,40 +461,39 @@ table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index
 <p data-e="a">Anemia ferropénica</p>
 <p data-e="k"><button type="button" class="xref" data-ir="e2-s-1" onclick="ir('e2','e2-s-1')">Úlcera o placa oral que no cicatriza</button></p>
 </div>
-<div class="signo" id="e2-s-1"><h4>Úlcera o placa oral que no cicatriza</h4><dl><dt>Cómo se reconoce</dt><dd>Úlcera indurada, placa blanca o roja en lengua, piso de boca o encía que persiste sin causa traumática.</dd><dt>Por qué aparece</dt><dd>El tumor invade el corion y destruye el epitelio. <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Mecanismo</button></dd><dt>Qué significa</dt><dd>Se biopsia; la eritroplasia o la placa mixta pesan más que la placa blanca homogénea [10].</dd></dl></div>
-<div class="signo" id="e2-s-2"><h4>Dolor oral con otalgia referida</h4><dl><dt>Cómo se reconoce</dt><dd>Dolor al comer o hablar que se irradia al oído, con oído normal.</dd><dt>Por qué aparece</dt><dd>La invasión perineural activa nervios que comparten vías sensitivas. <button type="button" class="xref" data-ir="e2-m-5" onclick="ir('e2','e2-m-5')">← Mecanismo</button></dd><dt>Qué significa</dt><dd>Tumor infiltrante; un oído normal con otalgia obliga a mirar la boca.</dd></dl></div>
-<div class="signo" id="e2-s-3"><h4>Adenopatía cervical dura</h4><dl><dt>Cómo se reconoce</dt><dd>Ganglio duro, fijo e indoloro en los niveles I a III del cuello.</dd><dt>Por qué aparece</dt><dd>Las células tumorales colonizan el ganglio por vía linfática. <button type="button" class="xref" data-ir="e2-m-6" onclick="ir('e2','e2-m-6')">← Mecanismo</button></dd><dt>Qué significa</dt><dd>Enfermedad ganglionar: cambia el estadio y obliga a tratar el cuello.</dd></dl></div>
+<div class="signo" id="e2-s-1"><h4>Úlcera o placa oral que no cicatriza</h4><dl><dt>Cómo se reconoce</dt><dd>Úlcera indurada, placa blanca o roja que persiste sin causa traumática.</dd><dt>Por qué aparece</dt><dd>El tumor invade el corion y destruye el epitelio. <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Mecanismo</button></dd><dt>Qué significa</dt><dd>Se biopsia; la eritroplasia pesa más que la placa blanca [10].</dd></dl></div>
+<div class="signo" id="e2-s-2"><h4>Dolor oral con otalgia referida</h4><dl><dt>Cómo se reconoce</dt><dd>Dolor al comer o hablar que se irradia al oído sano.</dd><dt>Por qué aparece</dt><dd>La invasión perineural activa nervios que comparten vías sensitivas. <button type="button" class="xref" data-ir="e2-m-5" onclick="ir('e2','e2-m-5')">← Mecanismo</button></dd><dt>Qué significa</dt><dd>Tumor infiltrante: revisa la boca.</dd></dl></div>
+<div class="signo" id="e2-s-3"><h4>Adenopatía cervical dura</h4><dl><dt>Cómo se reconoce</dt><dd>Ganglio duro, fijo e indoloro en el cuello.</dd><dt>Por qué aparece</dt><dd>Las células tumorales colonizan el ganglio por vía linfática. <button type="button" class="xref" data-ir="e2-m-6" onclick="ir('e2','e2-m-6')">← Mecanismo</button></dd><dt>Qué significa</dt><dd>Enfermedad ganglionar: cambia el estadio y obliga a tratar el cuello.</dd></dl></div>
 <h2>Diagnóstico <span class="rem">↓ En la tabla</span></h2>
 <ol class="steps tg">
 <li><span class="tg">1.º</span> Inspección y palpación completas de la cavidad oral y de los niveles ganglionares del cuello.</li>
-<li><span class="tg">Añade</span> Imagen del primario y del cuello (resonancia o tomografía) para profundidad, hueso y ganglios [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Añade</span> Resonancia o tomografía del primario y del cuello [VERIFICAR EN FUENTE].</li>
 <li><span class="tg">Confirma</span> Biopsia incisional con histología.</li>
-<li><span class="tg">Solo si</span> El estadio es avanzado: tomografía de tórax o PET-TC para metástasis, y examen de la vía aerodigestiva por posible segundo primario [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Solo si</span> Hay estadio avanzado: PET-TC o tomografía de tórax y examen de la vía aerodigestiva [VERIFICAR EN FUENTE].</li>
 <li><span class="tg">No pidas</span> Resección completa de una lesión sospechosa sin biopsia previa [VERIFICAR EN FUENTE].</li>
-<li><span class="tg">Alarma</span> Úlcera que persiste con adenopatía dura: referencia a cirugía de cabeza y cuello.</li>
+<li><span class="tg">Alarma</span> Úlcera persistente con adenopatía dura: referencia urgente.</li>
 </ol>
 <div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead><tbody>
-<tr><th>Biopsia incisional</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar</td><td>Debe incluir el borde de la lesión; su grado de displasia reorienta. <button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">← Paso</button></td><td>[10]</td></tr>
+<tr><th>Biopsia incisional</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar</td><td>Incluye el borde de la lesión; el grado de displasia reorienta. <button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">← Paso</button></td><td>[10]</td></tr>
 <tr><th>Resonancia o tomografía</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Estadiar T y N</td><td>Mide profundidad y ganglios. <button type="button" class="xref" data-ir="e2-m-6" onclick="ir('e2','e2-m-6')">← Paso</button></td><td>[11]</td></tr>
 </tbody></table></div>
-<p class="mini">S, E, VPP y VPN no establecidos en las fuentes leídas ni en Ecuador. Siglas: S sensibilidad; E especificidad; VPP valor predictivo positivo; VPN valor predictivo negativo; PET-TC tomografía por emisión de positrones. Posología en «Tratamiento».</p>
+<p class="mini">S, E, VPP y VPN no establecidos en las fuentes leídas. Siglas: S sensibilidad; E especificidad; VPP y VPN valores predictivos; PET-TC tomografía por emisión de positrones. Posología en «Tratamiento».</p>
 <h2>Tratamiento <span class="rem">↓ En la tabla</span></h2>
 <ol class="steps tg">
-<li><span class="tg">Principio</span> Resección quirúrgica con márgenes libres y control del cuello.</li>
+<li><span class="tg">Principio</span> Resecar con márgenes libres y controlar el cuello.</li>
 <li><span class="tg">De elección</span> Resección con márgenes libres más disección electiva del cuello en tumores T1 a T2 sin ganglios clínicos: mejoró la supervivencia frente a esperar la recaída [12].</li>
-<li><span class="tg">Alternativa</span> Radioterapia primaria en el paciente que no puede operarse [VERIFICAR EN FUENTE].</li>
-<li><span class="tg">Sintomático</span> Analgesia escalonada, nutrición enteral o gastrostomía y cuidado dental.</li>
-<li><span class="tg">Escala</span> Radioterapia postoperatoria con factores adversos, y quimiorradioterapia con cisplatino si hay márgenes positivos o extensión extranodal [VERIFICAR EN FUENTE].</li>
-<li><span class="tg">Reevalúa</span> Examen clínico seriado; la ecografía cervical añadida detecta antes la recaída ganglionar pero no mejora la supervivencia [12].</li>
+<li><span class="tg">Alternativa</span> Radioterapia primaria si no puede operarse [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Sintomático</span> Analgesia escalonada y nutrición enteral o gastrostomía.</li>
+<li><span class="tg">Escala</span> Radioterapia con factores adversos; quimiorradioterapia con cisplatino si hay márgenes positivos o extensión extranodal [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Reevalúa</span> Examen clínico seriado; la ecografía cervical detecta antes la recaída pero no mejora la supervivencia [12].</li>
 <li><span class="tg">Especialista</span> Cirugía de cabeza y cuello, oncología y radioterapia.</li>
 <li><span class="tg">Evita</span> Diferir la disección cervical en T1 a T2 sin ganglios cuando el seguimiento no es seguro [12].</li>
 </ol>
 <div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead><tbody>
-<tr><th>Cisplatino con radioterapia</th><td>100 mg/m² [VERIFICAR EN FUENTE]</td><td>IV</td><td>Días 1, 22 y 43</td><td>Tres dosis durante la radioterapia</td><td>El platino daña el ADN y radiosensibiliza al tumor residual. <button type="button" class="xref" data-ir="e2-m-6" onclick="ir('e2','e2-m-6')">← Paso</button> Evita con depuración de creatinina baja o hipoacusia.</td><td>[9]</td></tr>
-<tr><th>Ondansetrón</th><td>8 mg</td><td>IV</td><td>Antes del cisplatino</td><td>Según protocolo</td><td>Antiemético para la quimioterapia emetógena. <button type="button" class="xref" data-ir="e2-m-6" onclick="ir('e2','e2-m-6')">← Paso</button> Vigila el intervalo QT.</td><td>[9]</td></tr>
-<tr><th>Paracetamol</th><td>1 g</td><td>VO o IV</td><td>Cada 6 a 8 h</td><td>Máximo 4 g al día</td><td>Analgésico de primer escalón para el dolor tumoral. <button type="button" class="xref" data-ir="e2-m-5" onclick="ir('e2','e2-m-5')">← Paso</button> Reduce la dosis en hepatopatía.</td><td>[9]</td></tr>
+<tr><th>Cisplatino con radioterapia</th><td>100 mg/m² [VERIFICAR EN FUENTE]</td><td>IV</td><td>Días 1, 22 y 43</td><td>Tres dosis durante la radioterapia</td><td>El platino daña el ADN y radiosensibiliza. <button type="button" class="xref" data-ir="e2-m-6" onclick="ir('e2','e2-m-6')">← Paso</button> Evita con daño renal o hipoacusia.</td><td>[9]</td></tr>
+<tr><th>Paracetamol</th><td>1 g</td><td>VO o IV</td><td>Cada 6 a 8 h</td><td>Máximo 4 g al día</td><td>Analgésico de primer escalón. <button type="button" class="xref" data-ir="e2-m-5" onclick="ir('e2','e2-m-5')">← Paso</button> Reduce la dosis en hepatopatía.</td><td>[9]</td></tr>
 </tbody></table></div>
-<p class="mini">Posologías de ficha técnica y de protocolos, no leídas en esta sesión [VERIFICAR EN FUENTE]. Siglas: IV intravenosa; VO vía oral.</p>
+<p class="mini">Posologías no leídas en esta sesión [VERIFICAR EN FUENTE]. Siglas: IV intravenosa; VO vía oral.</p>
 <div class="dc" data-fn="dcE2"><div class="dc-t">Simulador · Decisión clínica — define la conducta antes de pulsar</div>
 <div class="dc-g"><span class="dc-l">Estadio clínico</span>
 <button type="button" class="chip" data-g="est" data-v="t12" onclick="ch(this)">T1 a T2 sin ganglios clínicos</button>
@@ -518,55 +508,47 @@ table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index
 <div class="out"></div></div>
 <h2>Seguimiento</h2>
 <ul>
-<li>Segundo primario en la vía aerodigestiva: el mismo daño por tabaco y alcohol actúa en todo el epitelio. <button type="button" class="xref" data-ir="e2-m-1" onclick="ir('e2','e2-m-1')">← Paso</button></li>
-<li>Recaída cervical: las células ya habían alcanzado ganglios; la ecografía la detecta antes pero no mejora la supervivencia [12]. <button type="button" class="xref" data-ir="e2-m-6" onclick="ir('e2','e2-m-6')">← Paso</button></li>
+<li>Segundo primario en la vía aerodigestiva por el mismo daño de campo. <button type="button" class="xref" data-ir="e2-m-1" onclick="ir('e2','e2-m-1')">← Paso</button></li>
+<li>Recaída cervical: las células ya habían alcanzado ganglios. <button type="button" class="xref" data-ir="e2-m-6" onclick="ir('e2','e2-m-6')">← Paso</button></li>
 </ul>
 </section>
 <section class="tab" data-tab="e3">
-<div class="hb az"><div class="hb-t">Frente a Cáncer gástrico</div><p>Se confunde con él en la unión esofagogástrica, donde ambos dan disfagia y dispepsia; se separa por el epicentro del tumor y porque aquí la disfagia progresiva a sólidos domina el cuadro, con dos tipos histológicos de terreno distinto.</p></div>
+<div class="hb az"><div class="hb-t">Frente a Cáncer gástrico</div><p>Se confunde con él en la unión esofagogástrica, donde ambos dan disfagia y dispepsia; se separa por el epicentro del tumor y porque aquí domina la disfagia a sólidos.</p></div>
 <div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div><ol class="pg">
-<li>¿Por qué el carcinoma escamoso y el adenocarcinoma esofágicos tienen terrenos y localizaciones distintos, aunque ambos produzcan disfagia?</li>
-<li>¿Qué cambia en la vigilancia y en el tratamiento de un esófago de Barrett según el grado de displasia, y por qué?</li>
+<li>¿Por qué el escamoso y el adenocarcinoma esofágicos tienen terrenos y localizaciones distintos, aunque ambos produzcan disfagia?</li>
+<li>¿Qué cambia en la vigilancia y el tratamiento de un esófago de Barrett según el grado de displasia, y por qué?</li>
 <li>¿Por qué la disfagia aparece tarde, y qué decide entre terapia endoscópica, quimiorradioterapia y cirugía?</li>
 </ol></div>
 <span class="badge b-pu">ESMO esofágico 2022 (solo cita) · ACG Barrett 2022 [2][13]</span>
 <h2>Qué es</h2>
-<div class="card"><p>Carcinoma que nace del epitelio del esófago. La histología separa dos enfermedades: el carcinoma escamoso, del epitelio nativo, y el adenocarcinoma, de un epitelio metaplásico, el de Barrett [13].</p></div>
+<div class="card"><p>Carcinoma del epitelio esofágico. La histología separa dos enfermedades: el escamoso, del epitelio nativo, y el adenocarcinoma, de un epitelio metaplásico, el de Barrett [13].</p></div>
 <div class="tw"><table><thead><tr><th>Estadiaje TNM</th><th>Criterio</th></tr></thead><tbody>
-<tr><th>T</th><td>T1a mucosa; T1b submucosa; T2 muscular propia; T3 adventicia; T4a estructuras resecables; T4b no resecables [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>T</th><td>T1a mucosa; T1b submucosa; T2 muscular propia; T3 adventicia; T4 órganos vecinos [VERIFICAR EN FUENTE]</td></tr>
 <tr><th>N</th><td>N1: 1 a 2 ganglios regionales; N2: 3 a 6; N3: 7 o más [VERIFICAR EN FUENTE]</td></tr>
 </tbody></table></div>
 <div class="tw"><table><thead><tr><th>Subtipo</th><th>Por qué existe</th><th>Cómo se distingue</th></tr></thead><tbody>
-<tr><th>Escamoso</th><td>Agresión del epitelio nativo por tabaco y alcohol</td><td>Tercio superior y medio; histología escamosa [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Escamoso</th><td>Agresión del epitelio nativo por tabaco y alcohol</td><td>Tercio superior y medio [VERIFICAR EN FUENTE]</td></tr>
 <tr><th>Adenocarcinoma</th><td>Reflujo que sustituye el epitelio por Barrett [13]</td><td>Tercio distal y unión esofagogástrica [VERIFICAR EN FUENTE]</td></tr>
-</tbody></table></div>
-<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead><tbody>
-<tr><th>Acalasia</th><td>Disfagia y pérdida de peso</td><td>Disfagia a sólidos y líquidos desde el inicio, sin masa; la endoscopia y la manometría la separan [VERIFICAR EN FUENTE]</td></tr>
-<tr><th>Estenosis péptica</th><td>Disfagia a sólidos con reflujo previo</td><td>Estenosis lisa en la endoscopia con biopsia benigna [VERIFICAR EN FUENTE]</td></tr>
 </tbody></table></div>
 <h2>Epidemiología</h2>
 <div class="tw"><table><thead><tr><th>Dato</th><th>Detalle</th></tr></thead><tbody>
-<tr><th>Frecuencia</th><td>La incidencia del adenocarcinoma aumentó rápidamente durante cuatro décadas en Estados Unidos y su supervivencia a 5 años es menor de 20% [13]. Cifras de Ecuador [VERIFICAR EN FUENTE].</td></tr>
-<tr><th>Edad</th><td>Mayor de 50 años: factor de riesgo de Barrett, con prevalencia de 6,1% [13].</td></tr>
+<tr><th>Frecuencia</th><td>La incidencia del adenocarcinoma aumentó rápidamente en cuatro décadas en Estados Unidos; la supervivencia a 5 años es menor de 20% [13].</td></tr>
+<tr><th>Edad</th><td>Más de 50 años: prevalencia de Barrett de 6,1% [13].</td></tr>
 <tr><th>Sexo</th><td>Sexo masculino: prevalencia de Barrett de 6,8% [13].</td></tr>
-<tr><th>Factores clave</th><td>Adenocarcinoma: reflujo crónico, obesidad central, tabaquismo y antecedente familiar [13]. Escamoso: tabaco y alcohol [VERIFICAR EN FUENTE].</td></tr>
+<tr><th>Factores clave</th><td>Adenocarcinoma: reflujo, obesidad central y tabaquismo [13]. Escamoso: tabaco y alcohol [VERIFICAR EN FUENTE].</td></tr>
 </tbody></table></div>
 <h2>Cadena</h2>
-<div class="tw"><table><thead><tr><th>Causa o grupo</th><th>Cómo entra en la cascada</th><th>Nodo</th><th>Ref.</th></tr></thead><tbody>
-<tr><th>Tabaco y alcohol</th><td>Dañan el epitelio escamoso nativo</td><td><button type="button" class="xref" data-ir="e3-m-1" onclick="ir('e3','e3-m-1')">Rama A</button></td><td>[2]</td></tr>
-<tr><th>Reflujo crónico, obesidad y tabaquismo</th><td>Agreden el esófago distal y favorecen el Barrett</td><td><button type="button" class="xref" data-ir="e3-m-3" onclick="ir('e3','e3-m-3')">Rama B</button></td><td>[13]</td></tr>
-</tbody></table></div>
 <ol class="tl">
-<li class="nodo" id="e3-m-1" data-clin="0" data-rama="Rama A" data-paso="Tabaco y alcohol lesionan el epitelio escamoso"><div class="det">Rama A, carcinoma escamoso: el tabaco aporta carcinógenos y el alcohol forma acetaldehído, que daña el ADN del epitelio escamoso estratificado del esófago. Es el terreno.</div></li>
-<li class="nodo" id="e3-m-2" data-clin="0" data-rama="Rama A" data-paso="Displasia escamosa progresa a carcinoma"><div class="det">Con el daño repetido, las células basales acumulan mutaciones, aparece displasia y luego invasión de la membrana basal [VERIFICAR EN FUENTE].</div></li>
-<li class="nodo" id="e3-m-3" data-clin="0" data-rama="Rama B" data-paso="Reflujo crónico agrede el esófago distal"><div class="det">Rama B, adenocarcinoma: el ácido y la bilis del reflujo inflaman el epitelio escamoso distal, que no está hecho para ese contacto. Es el terreno.</div></li>
-<li class="nodo" id="e3-m-4" data-clin="0" data-rama="Rama B" data-paso="Metaplasia intestinal sustituye al epitelio escamoso"><div class="det">La mucosa se repara con epitelio columnar de tipo intestinal: es el esófago de Barrett, el único precursor conocido del adenocarcinoma [13]. Es lesión premaligna.</div></li>
-<li class="nodo" id="e3-m-5" data-clin="0" data-rama="Rama B" data-paso="Displasia del Barrett progresa a adenocarcinoma"><div class="det">El epitelio de Barrett acumula mutaciones: displasia de bajo y de alto grado, y luego carcinoma invasor. La progresión a displasia de alto grado o adenocarcinoma fue de 7,9 por 1 000 personas-año en una cohorte [13]. Es el desencadenante.</div></li>
-<li class="nodo" id="e3-m-6" data-clin="1" data-paso="Tumor estrecha la luz del esófago"><div class="det">El tumor crece hacia la luz y la infiltra de forma circunferencial; el esófago es un tubo muscular distensible y la luz debe reducirse mucho para dar síntomas, por eso aparece tarde. El bolo sólido se detiene primero.</div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-1" onclick="ir('e3','e3-s-1')">Disfagia progresiva a sólidos</button></p></li>
-<li class="nodo" id="e3-m-7" data-clin="1" data-paso="Sin serosa, el tumor invade estructuras vecinas"><div class="det">El esófago carece de serosa, la capa externa que contiene la invasión: el tumor alcanza con facilidad el nervio laríngeo recurrente, la tráquea y el pulmón.</div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-2" onclick="ir('e3','e3-s-2')">Ronquera o tos al deglutir</button></p></li>
-<li class="nodo" id="e3-m-8" data-clin="1" data-paso="Menor ingesta y catabolismo adelgazan"><div class="det">La disfagia limita lo que se puede tragar y el tumor aumenta el gasto de energía por mediadores inflamatorios: se pierde grasa y músculo.</div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-3" onclick="ir('e3','e3-s-3')">Pérdida de peso involuntaria</button></p></li>
+<li class="nodo" id="e3-m-1" data-clin="0" data-rama="Rama A" data-paso="Tabaco y alcohol lesionan el epitelio escamoso"><div class="det">Rama A, escamoso: el tabaco aporta carcinógenos y el alcohol forma acetaldehído, que daña el ADN del epitelio escamoso. Es el terreno [VERIFICAR EN FUENTE].</div></li>
+<li class="nodo" id="e3-m-2" data-clin="0" data-rama="Rama A" data-paso="Displasia escamosa progresa a carcinoma"><div class="det">Con el daño repetido, las células basales acumulan mutaciones, aparece displasia y luego invasión de la membrana basal.</div></li>
+<li class="nodo" id="e3-m-3" data-clin="0" data-rama="Rama B" data-paso="Reflujo crónico agrede el esófago distal"><div class="det">Rama B, adenocarcinoma: el ácido y la bilis del reflujo inflaman el epitelio escamoso distal. Es el terreno.</div></li>
+<li class="nodo" id="e3-m-4" data-clin="0" data-rama="Rama B" data-paso="Metaplasia intestinal sustituye al epitelio escamoso"><div class="det">La mucosa se repara con epitelio columnar de tipo intestinal: el esófago de Barrett, único precursor conocido del adenocarcinoma [13]. Es lesión premaligna.</div></li>
+<li class="nodo" id="e3-m-5" data-clin="0" data-rama="Rama B" data-paso="Displasia del Barrett progresa a adenocarcinoma"><div class="det">El epitelio de Barrett acumula mutaciones: displasia de bajo y alto grado, y carcinoma invasor. En una cohorte, la progresión fue de 7,9 por 1 000 personas-año [13]. Es el desencadenante.</div></li>
+<li class="nodo" id="e3-m-6" data-clin="1" data-paso="Tumor estrecha la luz del esófago"><div class="det">El tumor crece de forma circunferencial; el esófago es distensible y la luz debe reducirse mucho para dar síntomas, por eso aparece tarde.</div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-1" onclick="ir('e3','e3-s-1')">Disfagia progresiva a sólidos</button></p></li>
+<li class="nodo" id="e3-m-7" data-clin="1" data-paso="Sin serosa, el tumor invade estructuras vecinas"><div class="det">El esófago carece de serosa, la capa externa que contiene la invasión: el tumor alcanza con facilidad el nervio laríngeo recurrente y la tráquea.</div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-2" onclick="ir('e3','e3-s-2')">Ronquera o tos al deglutir</button></p></li>
+<li class="nodo" id="e3-m-8" data-clin="1" data-paso="Menor ingesta y catabolismo adelgazan"><div class="det">La disfagia limita lo que se puede tragar y el tumor aumenta el gasto de energía: se pierde grasa y músculo.</div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-3" onclick="ir('e3','e3-s-3')">Pérdida de peso involuntaria</button></p></li>
 </ol>
-<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — el túnel que se estrecha</span><p class="fey-b">Un túnel ancho deja pasar un camión aunque tenga un derrumbe en una pared; solo cuando el derrumbe ocupa casi todo, el camión se atasca. Primero se atasca la carga grande, luego la pequeña. Y como el túnel no tiene una pared gruesa por fuera, el derrumbe puede romper también el túnel de al lado. Por eso se nota tarde y, cuando se nota, ya hay problemas cerca.</p><p class="mini fey-c">En medicina esto se llama… disfagia progresiva, invasión mediastínica y esófago sin serosa.</p><p class="mini fey-c">Dónde falla la comparación: un túnel no cambia de revestimiento por el calor o los gases; el esófago sí lo hace cuando el ácido lo agrede y aparece Barrett.</p></div>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — el túnel que se estrecha</span><p class="fey-b">Un túnel ancho deja pasar un camión aunque tenga un derrumbe en una pared; solo cuando el derrumbe ocupa casi todo, el camión se atasca, primero con la carga grande. Como el túnel no tiene una pared gruesa por fuera, el derrumbe puede romper el túnel de al lado.</p><p class="mini fey-c">En medicina esto se llama… disfagia progresiva, invasión mediastínica y esófago sin serosa.</p><p class="mini fey-c">Dónde falla la comparación: un túnel no cambia de revestimiento; el esófago sí.</p></div>
 <h2>Qué verás</h2>
 <div class="qv">
 <p data-e="p">Disfagia a sólidos que avanza a semipastosos</p>
@@ -576,41 +558,39 @@ table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index
 <p data-e="a">Dolor epigástrico con anemia</p>
 <p data-e="k"><button type="button" class="xref" data-ir="e3-s-1" onclick="ir('e3','e3-s-1')">Disfagia progresiva a sólidos</button></p>
 </div>
-<div class="signo" id="e3-s-1"><h4>Disfagia progresiva a sólidos</h4><dl><dt>Cómo se reconoce</dt><dd>Los alimentos sólidos se detienen tras tragar; luego los semisólidos y, al final, los líquidos.</dd><dt>Por qué aparece</dt><dd>El tumor estrecha la luz de forma circunferencial. <button type="button" class="xref" data-ir="e3-m-6" onclick="ir('e3','e3-m-6')">← Mecanismo</button></dd><dt>Qué significa</dt><dd>Obstrucción mecánica orgánica hasta demostrar lo contrario; contrasta con la acalasia, que afecta sólidos y líquidos desde el inicio.</dd></dl></div>
-<div class="signo" id="e3-s-2"><h4>Ronquera o tos al deglutir</h4><dl><dt>Cómo se reconoce</dt><dd>Voz ronca persistente o tos al tragar líquidos.</dd><dt>Por qué aparece</dt><dd>El tumor invade el nervio laríngeo recurrente o comunica el esófago con la tráquea. <button type="button" class="xref" data-ir="e3-m-7" onclick="ir('e3','e3-m-7')">← Mecanismo</button></dd><dt>Qué significa</dt><dd>Invasión de estructuras vecinas: enfermedad local avanzada.</dd></dl></div>
-<div class="signo" id="e3-s-3"><h4>Pérdida de peso involuntaria</h4><dl><dt>Cómo se reconoce</dt><dd>Descenso de peso sin dieta, en un paciente que come menos por la disfagia.</dd><dt>Por qué aparece</dt><dd>Menos ingesta y más gasto de energía. <button type="button" class="xref" data-ir="e3-m-8" onclick="ir('e3','e3-m-8')">← Mecanismo</button></dd><dt>Qué significa</dt><dd>Desnutrición: indica soporte nutricional antes de cualquier tratamiento.</dd></dl></div>
+<div class="signo" id="e3-s-1"><h4>Disfagia progresiva a sólidos</h4><dl><dt>Cómo se reconoce</dt><dd>Se detienen los sólidos; luego los semisólidos y al final los líquidos.</dd><dt>Por qué aparece</dt><dd>El tumor estrecha la luz de forma circunferencial. <button type="button" class="xref" data-ir="e3-m-6" onclick="ir('e3','e3-m-6')">← Mecanismo</button></dd><dt>Qué significa</dt><dd>Obstrucción orgánica hasta demostrar lo contrario; la acalasia afecta líquidos desde el inicio.</dd></dl></div>
+<div class="signo" id="e3-s-2"><h4>Ronquera o tos al deglutir</h4><dl><dt>Cómo se reconoce</dt><dd>Voz ronca persistente o tos al tragar.</dd><dt>Por qué aparece</dt><dd>El tumor invade el nervio laríngeo recurrente o comunica el esófago con la tráquea. <button type="button" class="xref" data-ir="e3-m-7" onclick="ir('e3','e3-m-7')">← Mecanismo</button></dd><dt>Qué significa</dt><dd>Invasión de vecinos: enfermedad local avanzada.</dd></dl></div>
+<div class="signo" id="e3-s-3"><h4>Pérdida de peso involuntaria</h4><dl><dt>Cómo se reconoce</dt><dd>Descenso de peso sin dieta.</dd><dt>Por qué aparece</dt><dd>Menos ingesta y más gasto de energía. <button type="button" class="xref" data-ir="e3-m-8" onclick="ir('e3','e3-m-8')">← Mecanismo</button></dd><dt>Qué significa</dt><dd>Desnutrición: soporte nutricional antes de tratar.</dd></dl></div>
 <h2>Diagnóstico <span class="rem">↓ En la tabla</span></h2>
 <ol class="steps tg">
-<li><span class="tg">1.º</span> Endoscopia con biopsias: al menos 8 en un esófago con hallazgos de posible Barrett, con protocolo de Seattle si el segmento mide más de 4 cm [13].</li>
-<li><span class="tg">Añade</span> En el cáncer confirmado: tomografía y ecoendoscopia para T y N, y PET-TC para metástasis según el estadio [2] [VERIFICAR EN FUENTE].</li>
-<li><span class="tg">Confirma</span> Histología: escamoso o adenocarcinoma; el grado de displasia define la conducta en Barrett [13].</li>
-<li><span class="tg">Solo si</span> Hay reflujo crónico y 3 o más factores de riesgo (sexo masculino, edad mayor de 50 años, raza blanca, tabaquismo, obesidad, familiar con Barrett o adenocarcinoma): una endoscopia de cribado única; la cápsula esponja con biomarcador es alternativa aceptable [13].</li>
+<li><span class="tg">1.º</span> Endoscopia con biopsias: al menos 8 en un esófago con hallazgos de posible Barrett, con protocolo de Seattle si mide más de 4 cm [13].</li>
+<li><span class="tg">Añade</span> Tomografía, ecoendoscopia y PET-TC según el estadio [2] [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Confirma</span> Histología: escamoso o adenocarcinoma; en Barrett, el grado de displasia define la conducta [13].</li>
+<li><span class="tg">Solo si</span> Hay reflujo crónico con 3 o más factores de riesgo: una endoscopia de cribado; la cápsula esponja con biomarcador es alternativa [13].</li>
 <li><span class="tg">No pidas</span> Repetir la endoscopia de cribado en quien tuvo un primer examen negativo para Barrett [13].</li>
 <li><span class="tg">Alarma</span> Disfagia progresiva o pérdida de peso: endoscopia preferente, no cribado [2].</li>
 </ol>
 <div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead><tbody>
 <tr><th>Endoscopia con biopsias</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar el cáncer y el Barrett</td><td>Ve el tumor y toma tejido. <button type="button" class="xref" data-ir="e3-m-6" onclick="ir('e3','e3-m-6')">← Paso</button></td><td>[13]</td></tr>
-<tr><th>Cápsula esponja con biomarcador</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Cribar Barrett sin endoscopia</td><td>Alternativa en reflujo crónico con factores de riesgo. <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Paso</button></td><td>[13]</td></tr>
-<tr><th>Ecoendoscopia y tomografía</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Estadiar</td><td>Mide la profundidad y los ganglios. <button type="button" class="xref" data-ir="e3-m-7" onclick="ir('e3','e3-m-7')">← Paso</button></td><td>[2]</td></tr>
+<tr><th>Cápsula esponja con biomarcador</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Cribar Barrett sin endoscopia</td><td>Alternativa en reflujo con factores de riesgo. <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Paso</button></td><td>[13]</td></tr>
 </tbody></table></div>
-<p class="mini">S, E, VPP y VPN no establecidos en las fuentes leídas ni en Ecuador. Siglas: S sensibilidad; E especificidad; VPP valor predictivo positivo; VPN valor predictivo negativo; PET-TC tomografía por emisión de positrones. Posología en «Tratamiento».</p>
+<p class="mini">S, E, VPP y VPN no establecidos en las fuentes leídas. Siglas: S sensibilidad; E especificidad; VPP y VPN valores predictivos; PET-TC tomografía por emisión de positrones. Posología en «Tratamiento».</p>
 <h2>Tratamiento <span class="rem">↓ En la tabla</span></h2>
 <ol class="steps tg">
-<li><span class="tg">Principio</span> Curar con terapia endoscópica en lesiones superficiales y con tratamiento multimodal en las invasivas; reducir el reflujo en Barrett.</li>
+<li><span class="tg">Principio</span> Terapia endoscópica en lesiones superficiales y multimodal en las invasivas.</li>
 <li><span class="tg">De elección</span> Barrett con displasia de alto grado o carcinoma intramucoso: terapia endoscópica de erradicación (resección y ablación) antes que esofagectomía [13].</li>
-<li><span class="tg">Alternativa</span> Displasia de bajo grado confirmada: terapia endoscópica, con vigilancia endoscópica como alternativa aceptable [13].</li>
-<li><span class="tg">Sintomático</span> Dilatación, endoprótesis o nutrición enteral para la disfagia en enfermedad avanzada [VERIFICAR EN FUENTE].</li>
-<li><span class="tg">Escala</span> Tumor invasivo resecable: quimiorradioterapia neoadyuvante y cirugía, o FLOT perioperatorio en adenocarcinoma [2] [VERIFICAR EN FUENTE].</li>
-<li><span class="tg">Reevalúa</span> Tras la erradicación, un programa de vigilancia endoscópica; en Barrett sin displasia, cada 3 años si el segmento mide 3 cm o más y cada 5 años si mide menos [13].</li>
-<li><span class="tg">Especialista</span> Gastroenterología endoscópica, cirugía torácica o esofagogástrica, oncología y radioterapia.</li>
+<li><span class="tg">Alternativa</span> Displasia de bajo grado confirmada: terapia endoscópica, con vigilancia como alternativa aceptable [13].</li>
+<li><span class="tg">Sintomático</span> Endoprótesis o nutrición enteral [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Escala</span> Invasivo resecable: quimiorradioterapia neoadyuvante y cirugía, o quimioterapia perioperatoria en adenocarcinoma [2] [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Reevalúa</span> Barrett sin displasia: vigilancia cada 3 años si el segmento mide 3 cm o más y cada 5 si mide menos; tras erradicar, vigilancia endoscópica [13].</li>
+<li><span class="tg">Especialista</span> Endoscopia, cirugía, oncología y radioterapia.</li>
 <li><span class="tg">Evita</span> Cirugía antirreflujo como medida para prevenir cáncer en Barrett [13].</li>
 </ol>
 <div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead><tbody>
-<tr><th>Omeprazol</th><td>20 mg</td><td>VO</td><td>Cada 24 h, al menos</td><td>Prolongada en Barrett</td><td>Reduce el ácido que agrede el epitelio. <button type="button" class="xref" data-ir="e3-m-3" onclick="ir('e3','e3-m-3')">← Paso</button> Al menos una vez al día en Barrett.</td><td>[13][9]</td></tr>
-<tr><th>Carboplatino con paclitaxel y radioterapia</th><td>Carboplatino AUC 2 y paclitaxel 50 mg/m² más 41,4 Gy en 23 fracciones [VERIFICAR EN FUENTE]</td><td>IV</td><td>Semanal por 5 semanas</td><td>5 semanas</td><td>Radiosensibiliza al tumor. <button type="button" class="xref" data-ir="e3-m-6" onclick="ir('e3','e3-m-6')">← Paso</button> Ajusta por neutropenia.</td><td>[2][9]</td></tr>
-<tr><th>FLOT (adenocarcinoma)</th><td>Docetaxel 50 mg/m², oxaliplatino 85 mg/m², leucovorina 200 mg/m², fluorouracilo 2 600 mg/m² en 24 h [VERIFICAR EN FUENTE]</td><td>IV</td><td>Cada 14 días</td><td>4 ciclos antes y 4 después de la cirugía</td><td>Detiene la división de células tumorales. <button type="button" class="xref" data-ir="e3-m-5" onclick="ir('e3','e3-m-5')">← Paso</button> Ajusta por neuropatía.</td><td>[2][9]</td></tr>
+<tr><th>Omeprazol</th><td>20 mg</td><td>VO</td><td>Cada 24 h, al menos</td><td>Prolongada en Barrett</td><td>Reduce el ácido que agrede el epitelio. <button type="button" class="xref" data-ir="e3-m-3" onclick="ir('e3','e3-m-3')">← Paso</button></td><td>[13][9]</td></tr>
+<tr><th>Carboplatino con paclitaxel y radioterapia</th><td>Carboplatino AUC 2 y paclitaxel 50 mg/m² más 41,4 Gy en 23 fracciones [VERIFICAR EN FUENTE]</td><td>IV</td><td>Semanal</td><td>5 semanas</td><td>Radiosensibiliza al tumor. <button type="button" class="xref" data-ir="e3-m-6" onclick="ir('e3','e3-m-6')">← Paso</button> Ajusta por neutropenia.</td><td>[2][9]</td></tr>
 </tbody></table></div>
-<p class="mini">Posologías de ficha técnica y de ensayos pivotales, no leídas en esta sesión [VERIFICAR EN FUENTE]. Siglas: AUC área bajo la curva; VO vía oral; IV intravenosa.</p>
+<p class="mini">Posologías no leídas [VERIFICAR EN FUENTE]. Siglas: AUC área bajo la curva; VO vía oral; IV intravenosa.</p>
 <div class="dc" data-fn="dcE3"><div class="dc-t">Simulador · Decisión clínica — define la conducta antes de pulsar</div>
 <div class="dc-g"><span class="dc-l">Situación</span>
 <button type="button" class="chip" data-g="sit" data-v="nd" onclick="ch(this)">Barrett sin displasia</button>
@@ -623,60 +603,50 @@ table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index
 <button type="button" class="chip" data-g="len" data-v="short" onclick="ch(this)">Menos de 3 cm</button></div>
 <div class="dc-g"><span class="dc-l">Si es invasivo</span>
 <button type="button" class="chip" data-g="hist" data-v="sq" onclick="ch(this)">Escamoso</button>
-<button type="button" class="chip" data-g="hist" data-v="ad" onclick="ch(this)">Adenocarcinoma</button>
-</div>
+<button type="button" class="chip" data-g="hist" data-v="ad" onclick="ch(this)">Adenocarcinoma</button></div>
 <div class="dc-g"><span class="dc-l">Resecabilidad</span>
 <button type="button" class="chip" data-g="res" data-v="res" data-m="1" onclick="ch(this)">Resecable</button></div>
 <div class="out"></div></div>
 <h2>Seguimiento</h2>
 <ul>
-<li>Recurrencia de la metaplasia tras la erradicación: obliga a vigilancia endoscópica continua [13]. <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Paso</button></li>
-<li>Fístula traqueoesofágica o parálisis de cuerdas vocales por invasión de estructuras vecinas. <button type="button" class="xref" data-ir="e3-m-7" onclick="ir('e3','e3-m-7')">← Paso</button></li>
-<li>Desnutrición por disfagia y catabolismo: soporte nutricional. <button type="button" class="xref" data-ir="e3-m-8" onclick="ir('e3','e3-m-8')">← Paso</button></li>
+<li>Recurrencia de la metaplasia tras la erradicación: vigilancia endoscópica continua [13]. <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Paso</button></li>
+<li>Fístula traqueoesofágica por invasión. <button type="button" class="xref" data-ir="e3-m-7" onclick="ir('e3','e3-m-7')">← Paso</button></li>
+<li>Desnutrición por disfagia y catabolismo. <button type="button" class="xref" data-ir="e3-m-8" onclick="ir('e3','e3-m-8')">← Paso</button></li>
 </ul>
 </section>
 <section class="tab" data-tab="e4">
-<div class="hb az"><div class="hb-t">Frente a Cáncer gástrico</div><p>Se confunde con él por el vómito, la saciedad y la anemia; se separa porque nace de un adenoma, se asocia a síndromes hereditarios y, si es periampular, produce ictericia obstructiva, algo raro en el gástrico.</p></div>
+<div class="hb az"><div class="hb-t">Frente a Cáncer gástrico</div><p>Se confunde con él por el vómito y la anemia; se separa porque nace de un adenoma, se asocia a síndromes hereditarios y, si es periampular, da ictericia obstructiva, que no es propia del gástrico.</p></div>
 <div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div><ol class="pg">
-<li>¿Por qué el adenocarcinoma duodenal se diagnostica tarde, y qué síntoma depende de su relación con la ampolla de Vater?</li>
-<li>¿Qué relación hay entre adenoma duodenal, poliposis adenomatosa familiar y vigilancia endoscópica, y qué mide la clasificación de Spigelman?</li>
+<li>¿Por qué el adenocarcinoma duodenal se diagnostica tarde, y qué síntoma depende de su relación con la ampolla?</li>
+<li>¿Qué relación hay entre adenoma duodenal, poliposis adenomatosa familiar y vigilancia, y qué mide la clasificación de Spigelman?</li>
 <li>¿Qué decide entre resección segmentaria, pancreatoduodenectomía y tratamiento sistémico?</li>
 </ol></div>
 <span class="badge b-pu">NCCN adenocarcinoma de intestino delgado 2024, versión para pacientes (solo resumen) · Bonet 2020 [14][15]</span>
 <p class="mini">Vigencia no verificada: no se leyó la guía NCCN completa para profesionales.</p>
 <h2>Qué es</h2>
-<div class="card"><p>Adenocarcinoma que nace del epitelio del duodeno. La mayoría de los adenocarcinomas del intestino delgado empieza en el duodeno [14]. El estadio T sigue la invasión de la pared y el N, el número de ganglios [VERIFICAR EN FUENTE].</p></div>
+<div class="card"><p>Adenocarcinoma del epitelio duodenal. La mayoría de los adenocarcinomas del intestino delgado empieza en el duodeno [14]. El estadio T sigue la invasión de la pared y el N, el número de ganglios [VERIFICAR EN FUENTE].</p></div>
 <div class="tw"><table><thead><tr><th>Subtipo</th><th>Por qué existe</th><th>Cómo se distingue</th></tr></thead><tbody>
-<tr><th>Esporádico</th><td>Adenoma aislado que se transforma</td><td>Sin antecedente familiar; en edad avanzada [VERIFICAR EN FUENTE]</td></tr>
-<tr><th>Hereditario</th><td>Poliposis adenomatosa familiar, síndrome de Lynch o Peutz-Jeghers [14]</td><td>Antecedente familiar y pólipos en otros sitios</td></tr>
-<tr><th>Periampular</th><td>Tumor en la segunda porción, junto a la ampolla</td><td>Da ictericia obstructiva; los de otras porciones, obstrucción o sangrado</td></tr>
-</tbody></table></div>
-<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead><tbody>
-<tr><th>Adenocarcinoma de páncreas</th><td>Ictericia, dolor y pérdida de peso</td><td>Masa pancreática en la imagen; widget hepatobiliopancreático</td></tr>
-<tr><th>Cáncer de la ampolla de Vater</th><td>Ictericia obstructiva y tumor periampular</td><td>Tumor que nace de la ampolla; la histología lo define [VERIFICAR EN FUENTE]</td></tr>
-<tr><th>Colangiocarcinoma distal</th><td>Ictericia obstructiva</td><td>Estenosis del colédoco sin tumor duodenal</td></tr>
+<tr><th>Esporádico</th><td>Adenoma aislado que se transforma</td><td>Sin antecedente familiar [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Hereditario</th><td>Poliposis adenomatosa familiar, síndrome de Lynch o Peutz-Jeghers [14]</td><td>Antecedente familiar y pólipos</td></tr>
+<tr><th>Periampular</th><td>Tumor en la segunda porción, junto a la ampolla</td><td>Ictericia; los demás, obstrucción o sangrado</td></tr>
 </tbody></table></div>
 <h2>Epidemiología</h2>
 <div class="tw"><table><thead><tr><th>Dato</th><th>Detalle</th></tr></thead><tbody>
-<tr><th>Frecuencia</th><td>Poco frecuente; la mayoría de los adenocarcinomas del intestino delgado nace en el duodeno [14]. Cifras de Ecuador [VERIFICAR EN FUENTE].</td></tr>
-<tr><th>Edad</th><td>Predomina en adultos mayores, y antes en poliposis adenomatosa familiar [VERIFICAR EN FUENTE].</td></tr>
-<tr><th>Sexo</th><td>Sin predominio establecido en las fuentes leídas [VERIFICAR EN FUENTE].</td></tr>
+<tr><th>Frecuencia</th><td>Poco frecuente; la mayoría de los adenocarcinomas del intestino delgado nace en el duodeno [14].</td></tr>
+<tr><th>Edad</th><td>Adultos mayores [VERIFICAR EN FUENTE].</td></tr>
+<tr><th>Sexo</th><td>[VERIFICAR EN FUENTE]</td></tr>
 <tr><th>Factores clave</th><td>Poliposis adenomatosa familiar, síndrome de Lynch y Peutz-Jeghers [14].</td></tr>
 </tbody></table></div>
 <h2>Cadena</h2>
-<div class="tw"><table><thead><tr><th>Causa o grupo</th><th>Cómo entra en la cascada</th><th>Nodo</th><th>Ref.</th></tr></thead><tbody>
-<tr><th>Poliposis adenomatosa familiar</th><td>Mutación germinal de APC que inicia adenomas</td><td><button type="button" class="xref" data-ir="e4-m-1" onclick="ir('e4','e4-m-1')">Clon con APC mutado</button></td><td>[14]</td></tr>
-<tr><th>Lynch y Peutz-Jeghers</th><td>Predisposición hereditaria al adenocarcinoma de intestino delgado</td><td><button type="button" class="xref" data-ir="e4-m-3" onclick="ir('e4','e4-m-3')">Displasia</button></td><td>[14]</td></tr>
-</tbody></table></div>
 <ol class="tl">
-<li class="nodo" id="e4-m-1" data-clin="0" data-paso="Mutación de APC inicia un clon adenomatoso"><div class="det">APC es un gen que frena la señal de proliferación de la vía Wnt; si falla (de forma germinal en la poliposis, o somática en el adenoma esporádico), las células del epitelio duodenal proliferan sin control. Es el terreno [VERIFICAR EN FUENTE].</div></li>
-<li class="nodo" id="e4-m-2" data-clin="0" data-paso="Adenoma duodenal crece cerca de la ampolla"><div class="det">En la poliposis casi todos los pacientes desarrollan adenomas duodenales, sobre todo en la región periampular [VERIFICAR EN FUENTE]. La clasificación de Spigelman estadifica el adenoma según número, tamaño, histología y displasia.</div></li>
-<li class="nodo" id="e4-m-3" data-clin="0" data-paso="Displasia avanza hacia el adenocarcinoma"><div class="det">El adenoma acumula displasia de alto grado y, con nuevas mutaciones, atraviesa la membrana basal. El cáncer de intestino delgado proximal se desarrolla desde adenomas preexistentes [VERIFICAR EN FUENTE]. Es el desencadenante.</div></li>
-<li class="nodo" id="e4-m-4" data-clin="1" data-paso="Tumor estrecha la luz duodenal"><div class="det">El tumor crece hacia la luz y obstruye el tránsito; el duodeno proximal y el estómago se dilatan y el alimento retenido se vomita.</div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-1" onclick="ir('e4','e4-s-1')">Vómito de retención por obstrucción duodenal</button></p></li>
-<li class="nodo" id="e4-m-5" data-clin="1" data-paso="Tumor ulcerado sangra de forma crónica"><div class="det">La mucosa tumoral es friable y pierde sangre de forma lenta; se agota el hierro y aparece anemia ferropénica, a veces con melena. Es dato de alarma.</div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-2" onclick="ir('e4','e4-s-2')">Anemia ferropénica o melena</button></p></li>
-<li class="nodo" id="e4-m-6" data-clin="1" data-paso="Tumor periampular bloquea la ampolla de Vater"><div class="det">La ampolla es donde el colédoco y el conducto pancreático desembocan en el duodeno. Un tumor allí retiene la bilis, que regurgita a la sangre: ictericia obstructiva, orina oscura y heces claras.</div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-3" onclick="ir('e4','e4-s-3')">Ictericia obstructiva</button></p></li>
+<li class="nodo" id="e4-m-1" data-clin="0" data-paso="Mutación de APC inicia un clon adenomatoso"><div class="det">APC es un gen que frena la señal de proliferación de la vía Wnt; si falla (germinal en la poliposis, somático en el adenoma esporádico), las células duodenales proliferan sin control. Es el terreno [VERIFICAR EN FUENTE].</div></li>
+<li class="nodo" id="e4-m-2" data-clin="0" data-paso="Adenoma duodenal crece cerca de la ampolla"><div class="det">En la poliposis casi todos desarrollan adenomas duodenales, sobre todo periampulares [VERIFICAR EN FUENTE]. Spigelman estadifica el adenoma por número, tamaño, histología y displasia.</div></li>
+<li class="nodo" id="e4-m-3" data-clin="0" data-paso="Displasia avanza hacia el adenocarcinoma"><div class="det">El adenoma acumula displasia de alto grado y, con nuevas mutaciones, atraviesa la membrana basal [VERIFICAR EN FUENTE]. Es el desencadenante.</div></li>
+<li class="nodo" id="e4-m-4" data-clin="1" data-paso="Tumor estrecha la luz duodenal"><div class="det">El tumor obstruye la luz; el estómago se dilata y el alimento retenido se vomita.</div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-1" onclick="ir('e4','e4-s-1')">Vómito de retención por obstrucción duodenal</button></p></li>
+<li class="nodo" id="e4-m-5" data-clin="1" data-paso="Tumor ulcerado sangra de forma crónica"><div class="det">La mucosa tumoral es friable y pierde sangre lentamente; se agota el hierro: anemia ferropénica, a veces con melena. Es dato de alarma.</div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-2" onclick="ir('e4','e4-s-2')">Anemia ferropénica o melena</button></p></li>
+<li class="nodo" id="e4-m-6" data-clin="1" data-paso="Tumor periampular bloquea la ampolla de Vater"><div class="det">La ampolla es donde desembocan el colédoco y el conducto pancreático. Un tumor allí retiene la bilis, que regurgita a la sangre: ictericia obstructiva.</div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-3" onclick="ir('e4','e4-s-3')">Ictericia obstructiva</button></p></li>
 </ol>
-<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la esquina del embudo</span><p class="fey-b">En un embudo, el líquido entra por arriba y sale por una boquilla. Si crece algo en el embudo, el líquido sube y puede salirse. Pero si lo que crece está justo en la esquina donde se juntan dos canalitos, tapa los dos y el líquido de cada uno se devuelve. El mismo bulto da problemas distintos según el lugar donde nazca.</p><p class="mini fey-c">En medicina esto se llama… obstrucción duodenal, ictericia obstructiva y tumor periampular.</p><p class="mini fey-c">Dónde falla la comparación: un bulto de embudo no sangra ni se disemina por la sangre; el tumor duodenal sí.</p></div>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la esquina del embudo</span><p class="fey-b">En un embudo, el líquido entra por arriba y sale por una boquilla. Si crece algo dentro, el líquido sube. Si lo que crece está justo en la esquina donde se juntan dos canalitos, tapa los dos y el líquido de cada uno se devuelve. El mismo bulto da problemas distintos según dónde nazca.</p><p class="mini fey-c">En medicina esto se llama… obstrucción duodenal, ictericia obstructiva y tumor periampular.</p><p class="mini fey-c">Dónde falla la comparación: un bulto de embudo no sangra; el tumor duodenal sí.</p></div>
 <h2>Qué verás</h2>
 <div class="qv">
 <p data-e="p">Vómito o dolor epigástrico</p>
@@ -686,40 +656,40 @@ table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index
 <p data-e="a">Disfagia</p>
 <p data-e="k"><button type="button" class="xref" data-ir="e4-s-1" onclick="ir('e4','e4-s-1')">Vómito de retención por obstrucción duodenal</button></p>
 </div>
-<div class="signo" id="e4-s-1"><h4>Vómito de retención por obstrucción duodenal</h4><dl><dt>Cómo se reconoce</dt><dd>Vómito de alimento retenido, horas después de comer, con distensión epigástrica.</dd><dt>Por qué aparece</dt><dd>El tumor obstruye la luz y el contenido no avanza. <button type="button" class="xref" data-ir="e4-m-4" onclick="ir('e4','e4-m-4')">← Mecanismo</button></dd><dt>Qué significa</dt><dd>Obstrucción mecánica del duodeno hasta demostrar lo contrario.</dd></dl></div>
-<div class="signo" id="e4-s-2"><h4>Anemia ferropénica o melena</h4><dl><dt>Cómo se reconoce</dt><dd>Palidez, fatiga, hierro bajo y heces oscuras.</dd><dt>Por qué aparece</dt><dd>La mucosa tumoral sangra de forma crónica. <button type="button" class="xref" data-ir="e4-m-5" onclick="ir('e4','e4-m-5')">← Mecanismo</button></dd><dt>Qué significa</dt><dd>Sangrado digestivo alto: indica endoscopia con duodenoscopio y revisión de la segunda porción.</dd></dl></div>
-<div class="signo" id="e4-s-3"><h4>Ictericia obstructiva</h4><dl><dt>Cómo se reconoce</dt><dd>Piel y escleras amarillas, orina oscura y heces claras, a menudo indolora.</dd><dt>Por qué aparece</dt><dd>El tumor periampular retiene la bilis, que regurgita a la sangre. <button type="button" class="xref" data-ir="e4-m-6" onclick="ir('e4','e4-m-6')">← Mecanismo</button></dd><dt>Qué significa</dt><dd>Tumor periampular: duodenal, ampular, pancreático o biliar; la histología separa.</dd></dl></div>
+<div class="signo" id="e4-s-1"><h4>Vómito de retención por obstrucción duodenal</h4><dl><dt>Cómo se reconoce</dt><dd>Vómito de alimento retenido, horas después de comer.</dd><dt>Por qué aparece</dt><dd>El tumor obstruye la luz y el contenido no avanza. <button type="button" class="xref" data-ir="e4-m-4" onclick="ir('e4','e4-m-4')">← Mecanismo</button></dd><dt>Qué significa</dt><dd>Obstrucción mecánica del duodeno.</dd></dl></div>
+<div class="signo" id="e4-s-2"><h4>Anemia ferropénica o melena</h4><dl><dt>Cómo se reconoce</dt><dd>Palidez, fatiga, hierro bajo y heces oscuras.</dd><dt>Por qué aparece</dt><dd>La mucosa tumoral sangra de forma crónica. <button type="button" class="xref" data-ir="e4-m-5" onclick="ir('e4','e4-m-5')">← Mecanismo</button></dd><dt>Qué significa</dt><dd>Sangrado digestivo alto: endoscopia con revisión de la segunda porción.</dd></dl></div>
+<div class="signo" id="e4-s-3"><h4>Ictericia obstructiva</h4><dl><dt>Cómo se reconoce</dt><dd>Piel amarilla, orina oscura y heces claras, a menudo indolora.</dd><dt>Por qué aparece</dt><dd>El tumor periampular retiene la bilis, que regurgita a la sangre. <button type="button" class="xref" data-ir="e4-m-6" onclick="ir('e4','e4-m-6')">← Mecanismo</button></dd><dt>Qué significa</dt><dd>Tumor periampular; la histología separa su origen.</dd></dl></div>
 <h2>Diagnóstico <span class="rem">↓ En la tabla</span></h2>
 <ol class="steps tg">
-<li><span class="tg">1.º</span> Endoscopia con duodenoscopio de visión lateral: revisa la segunda porción y la papila, y toma biopsias de la lesión [VERIFICAR EN FUENTE].</li>
-<li><span class="tg">Añade</span> Hemograma, ferritina, bilirrubina y fosfatasa alcalina: anemia por sangrado y colestasis por obstrucción.</li>
-<li><span class="tg">Confirma</span> Histología del adenocarcinoma; en adenoma, grado de displasia y clasificación de Spigelman.</li>
-<li><span class="tg">Solo si</span> El tumor es resecable: tomografía de tórax y abdomen con contraste y, según el sitio, ecoendoscopia; en sospecha hereditaria, estudio genético [VERIFICAR EN FUENTE].</li>
-<li><span class="tg">No pidas</span> Biopsia a ciegas con endoscopio de visión frontal en una lesión de la segunda porción: puede pasar por alto la papila [VERIFICAR EN FUENTE].</li>
-<li><span class="tg">Alarma</span> Ictericia, vómito de retención o melena en un paciente con poliposis adenomatosa familiar: endoscopia preferente.</li>
+<li><span class="tg">1.º</span> Endoscopia con duodenoscopio de visión lateral: revisa la segunda porción y la papila [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Añade</span> Hemograma, ferritina, bilirrubina y fosfatasa alcalina.</li>
+<li><span class="tg">Confirma</span> Histología; en adenoma, displasia y clasificación de Spigelman.</li>
+<li><span class="tg">Solo si</span> Es resecable: tomografía con contraste y, según el sitio, ecoendoscopia; si sospechas herencia, estudio genético [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">No pidas</span> Endoscopio de visión frontal solo, en una lesión de la segunda porción: puede pasar por alto la papila [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Alarma</span> Ictericia, vómito de retención o melena en poliposis: endoscopia preferente.</li>
 </ol>
 <div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead><tbody>
 <tr><th>Endoscopia con visión lateral y biopsia</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar y clasificar el adenoma</td><td>Muestra el tumor y la papila. <button type="button" class="xref" data-ir="e4-m-2" onclick="ir('e4','e4-m-2')">← Paso</button></td><td>[14]</td></tr>
 <tr><th>Tomografía con contraste</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Estadiar</td><td>Muestra la obstrucción y la invasión pancreática. <button type="button" class="xref" data-ir="e4-m-6" onclick="ir('e4','e4-m-6')">← Paso</button></td><td>[14]</td></tr>
 </tbody></table></div>
-<p class="mini">S, E, VPP y VPN no establecidos en las fuentes leídas ni en Ecuador. Siglas: S sensibilidad; E especificidad; VPP valor predictivo positivo; VPN valor predictivo negativo. Posología en «Tratamiento».</p>
+<p class="mini">S, E, VPP y VPN no establecidos en las fuentes leídas. Siglas: S sensibilidad; E especificidad; VPP y VPN valores predictivos. Posología en «Tratamiento».</p>
 <h2>Tratamiento <span class="rem">↓ En la tabla</span></h2>
 <ol class="steps tg">
-<li><span class="tg">Principio</span> Resecar de forma completa, con vaciamiento ganglionar, y complementar con quimioterapia si hay ganglios o estadio avanzado.</li>
-<li><span class="tg">De elección</span> Resección quirúrgica: duodenoduodenostomía o resección segmentaria con vaciamiento ganglionar en la primera, segunda y cuarta porción, y pancreatoduodenectomía si el tumor es periampular [14] [VERIFICAR EN FUENTE].</li>
-<li><span class="tg">Alternativa</span> Resección endoscópica de adenomas sin invasión [14] [VERIFICAR EN FUENTE].</li>
-<li><span class="tg">Sintomático</span> Endoprótesis biliar o gastroyeyunostomía en enfermedad irresecable [VERIFICAR EN FUENTE].</li>
-<li><span class="tg">Escala</span> Con ganglios positivos: quimioterapia con oxaliplatino y fluoropirimidina; en enfermedad avanzada, el mismo esquema, o pembrolizumab si hay microsatélites inestables [VERIFICAR EN FUENTE]. En tumores ampulares, el beneficio adyuvante se limitó al estadio IIB o mayor [15].</li>
-<li><span class="tg">Reevalúa</span> En adenomas de la poliposis, endoscopia periódica según Spigelman; en cáncer resecado, imagen y examen clínico seriados.</li>
-<li><span class="tg">Especialista</span> Cirugía hepatobiliar o pancreática, gastroenterología endoscópica y oncología médica.</li>
-<li><span class="tg">Evita</span> Resecar un adenoma de alto riesgo sin estudiar la papila ni el resto del duodeno.</li>
+<li><span class="tg">Principio</span> Resecar de forma completa con vaciamiento ganglionar y añadir quimioterapia si hay ganglios.</li>
+<li><span class="tg">De elección</span> Resección quirúrgica con vaciamiento ganglionar: segmentaria en la tercera y cuarta porción; pancreatoduodenectomía si el tumor está en la primera o segunda porción o es periampular [14] [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Alternativa</span> Resección endoscópica de adenomas sin invasión [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Sintomático</span> Endoprótesis biliar o gastroyeyunostomía [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Escala</span> Con ganglios positivos: oxaliplatino y fluoropirimidina; en avanzada, pembrolizumab si hay microsatélites inestables [VERIFICAR EN FUENTE]. En ampulares, el beneficio adyuvante se limitó al estadio IIB o mayor [15].</li>
+<li><span class="tg">Reevalúa</span> Adenomas: endoscopia periódica según Spigelman; cáncer resecado: imagen seriada.</li>
+<li><span class="tg">Especialista</span> Cirugía hepatobiliar, endoscopia y oncología.</li>
+<li><span class="tg">Evita</span> Resecar un adenoma sin estudiar la papila.</li>
 </ol>
 <div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead><tbody>
-<tr><th>CapeOX</th><td>Capecitabina 1 000 mg/m² dos veces al día los días 1 a 14 y oxaliplatino 130 mg/m² el día 1 [VERIFICAR EN FUENTE]</td><td>VO e IV</td><td>Cada 21 días</td><td>Adyuvante: unos 6 meses [VERIFICAR EN FUENTE]</td><td>Detiene la síntesis de ADN del tumor residual. <button type="button" class="xref" data-ir="e4-m-3" onclick="ir('e4','e4-m-3')">← Paso</button> Evita con deficiencia de DPD.</td><td>[14][9]</td></tr>
-<tr><th>FOLFOX</th><td>Oxaliplatino 85 mg/m², leucovorina 400 mg/m², fluorouracilo 400 mg/m² en bolo y 2 400 mg/m² en 46 h [VERIFICAR EN FUENTE]</td><td>IV</td><td>Cada 14 días</td><td>Hasta progresión o toxicidad</td><td>Alternativa en enfermedad avanzada. <button type="button" class="xref" data-ir="e4-m-3" onclick="ir('e4','e4-m-3')">← Paso</button> Ajusta por neuropatía.</td><td>[14][9]</td></tr>
-<tr><th>Pembrolizumab</th><td>200 mg</td><td>IV</td><td>Cada 3 semanas</td><td>Hasta progresión o toxicidad</td><td>Para tumores con microsatélites inestables. <button type="button" class="xref" data-ir="e4-m-3" onclick="ir('e4','e4-m-3')">← Paso</button></td><td>[14][9]</td></tr>
+<tr><th>CapeOX</th><td>Capecitabina 1 000 mg/m² dos veces al día los días 1 a 14 y oxaliplatino 130 mg/m² el día 1 [VERIFICAR EN FUENTE]</td><td>VO e IV</td><td>Cada 21 días</td><td>Unos 6 meses [VERIFICAR EN FUENTE]</td><td>Detiene la síntesis de ADN. <button type="button" class="xref" data-ir="e4-m-3" onclick="ir('e4','e4-m-3')">← Paso</button> Evita con deficiencia de DPD.</td><td>[14][9]</td></tr>
+<tr><th>FOLFOX</th><td>Oxaliplatino 85 mg/m², leucovorina 400 mg/m², fluorouracilo 400 mg/m² en bolo y 2 400 mg/m² en 46 h [VERIFICAR EN FUENTE]</td><td>IV</td><td>Cada 14 días</td><td>Hasta progresión o toxicidad</td><td>Alternativa avanzada. <button type="button" class="xref" data-ir="e4-m-3" onclick="ir('e4','e4-m-3')">← Paso</button> Ajusta por neuropatía.</td><td>[14][9]</td></tr>
+<tr><th>Pembrolizumab</th><td>200 mg</td><td>IV</td><td>Cada 3 semanas</td><td>Hasta progresión o toxicidad</td><td>Con microsatélites inestables. <button type="button" class="xref" data-ir="e4-m-3" onclick="ir('e4','e4-m-3')">← Paso</button></td><td>[14][9]</td></tr>
 </tbody></table></div>
-<p class="mini">Posologías de ficha técnica y de protocolos, no leídas en esta sesión [VERIFICAR EN FUENTE]. Siglas: DPD dihidropirimidina deshidrogenasa; VO vía oral; IV intravenosa; FOLFOX oxaliplatino, leucovorina y fluorouracilo.</p>
+<p class="mini">Posologías no leídas [VERIFICAR EN FUENTE]. Siglas: DPD dihidropirimidina deshidrogenasa; VO vía oral; IV intravenosa; FOLFOX oxaliplatino, leucovorina y fluorouracilo.</p>
 <div class="dc" data-fn="dcE4"><div class="dc-t">Simulador · Decisión clínica — define la conducta antes de pulsar</div>
 <div class="dc-g"><span class="dc-l">Situación</span>
 <button type="button" class="chip" data-g="sit" data-v="ade" onclick="ch(this)">Adenoma duodenal sin cáncer</button>
@@ -738,16 +708,16 @@ table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index
 <div class="out"></div></div>
 <h2>Seguimiento</h2>
 <ul>
-<li>Colangitis o pancreatitis por bloqueo de la ampolla: el tumor periampular obstruye los dos conductos. <button type="button" class="xref" data-ir="e4-m-6" onclick="ir('e4','e4-m-6')">← Paso</button></li>
-<li>Obstrucción duodenal recurrente o progresiva con vómito de retención: soporte nutricional. <button type="button" class="xref" data-ir="e4-m-4" onclick="ir('e4','e4-m-4')">← Paso</button></li>
-<li>Sangrado crónico y anemia por la lesión ulcerada. <button type="button" class="xref" data-ir="e4-m-5" onclick="ir('e4','e4-m-5')">← Paso</button></li>
-<li>En la poliposis, tras la colectomía profiláctica el duodeno sigue en riesgo: vigilancia endoscópica continua [VERIFICAR EN FUENTE]. <button type="button" class="xref" data-ir="e4-m-2" onclick="ir('e4','e4-m-2')">← Paso</button></li>
+<li>Colangitis o pancreatitis por bloqueo de la ampolla. <button type="button" class="xref" data-ir="e4-m-6" onclick="ir('e4','e4-m-6')">← Paso</button></li>
+<li>Obstrucción duodenal recurrente con vómito de retención. <button type="button" class="xref" data-ir="e4-m-4" onclick="ir('e4','e4-m-4')">← Paso</button></li>
+<li>Sangrado crónico y anemia. <button type="button" class="xref" data-ir="e4-m-5" onclick="ir('e4','e4-m-5')">← Paso</button></li>
+<li>En la poliposis, tras la colectomía el duodeno sigue en riesgo [VERIFICAR EN FUENTE]. <button type="button" class="xref" data-ir="e4-m-2" onclick="ir('e4','e4-m-2')">← Paso</button></li>
 </ul>
 </section>
 <section class="tab" data-tab="sin">
 <div class="hb ro"><div class="hb-t">Errores que no se pueden cometer</div><ul>
 <li>Tratar con un inhibidor de la bomba de protones, sin endoscopia, a un adulto con dispepsia de inicio tardío, anemia ferropénica o pérdida de peso: se pierde el cáncer gástrico [1].</li>
-<li>Dar por normal una hemoglobina en el límite a ~2 850 m, sin ajustar por altitud, en un paciente con sospecha de pérdida de sangre digestiva [VERIFICAR EN FUENTE].</li>
+<li>Dar por normal una hemoglobina en el límite a ~2 850 m, sin ajustar por altitud, en un paciente con sospecha de pérdida de sangre digestiva [VERIFICAR EN FUENTE].</li>
 <li>Dejar sin biopsia una úlcera o una placa oral que persiste, o resecar una lesión sospechosa sin diagnóstico histológico previo [10].</li>
 <li>Repetir el cribado endoscópico de Barrett en quien tuvo un primer examen negativo, o dejar sin terapia endoscópica una displasia de alto grado o un carcinoma intramucoso [13].</li>
 <li>Indicar una gastrectomía de reducción en un tumor metastásico asintomático que puede recibir quimioterapia [3].</li>
@@ -841,14 +811,14 @@ function dcE1tx(dc){
     x='Con la patología, clasificar la curabilidad: eCura A, control con endoscopia anual; eCura B, endoscopia anual o cada dos años con imagen; eCura C, cirugía adicional según el subtipo [3].'+hpt;
   } else if(s==='resec'){
     t='Gastrectomía con linfadenectomía D2 [3].';
-    x=frag?'Individualiza la quimioterapia perioperatoria según el estado funcional [3].':'Quimioterapia perioperatoria con FLOT: docetaxel 50 mg/m², oxaliplatino 85 mg/m², leucovorina 200 mg/m² y fluorouracilo 2 600 mg/m² en 24 h IV cada 14 días, 4 ciclos antes y 4 después de la cirugía [1][9] [VERIFICAR EN FUENTE].';
+    x=frag?'Individualiza la quimioterapia perioperatoria según el estado funcional [3].':'Quimioterapia perioperatoria con FLOT: docetaxel 50 mg/m², oxaliplatino 85 mg/m², leucovorina 200 mg/m² y fluorouracilo 2 600 mg/m² en 24 h IV cada 14 días, 4 ciclos antes y 4 después de la cirugía [1][9] [VERIFICAR EN FUENTE].';
     x+=hpt;
   } else if(s==='p2'){
     t='Quimioterapia adyuvante tras la gastrectomía D2 en pStage II.';
     x='S-1 por un año (40 mg/m² por dosis, dos veces al día, 4 semanas de cada 6) [3][9] [VERIFICAR EN FUENTE]; alternativa: CapeOX [3].'+hpt;
   } else if(s==='p3'){
     t='Quimioterapia adyuvante combinada tras la gastrectomía D2 en pStage III.';
-    x='CapeOX: capecitabina 1 000 mg/m² dos veces al día los días 1 a 14 y oxaliplatino 130 mg/m² el día 1, cada 21 días [3][9] [VERIFICAR EN FUENTE]; la guía japonesa admite S-1 solo como opción condicional.'+hpt;
+    x='CapeOX: capecitabina 1 000 mg/m² dos veces al día los días 1 a 14 y oxaliplatino 130 mg/m² el día 1, cada 21 días [3][9] [VERIFICAR EN FUENTE]; la guía japonesa admite S-1 solo como opción condicional.'+hpt;
   } else {
     t='Tratamiento sistémico; no operar para reducir el tumor si es asintomático [3].';
     if(msi){x='Microsatélites inestables: pembrolizumab 200 mg IV cada 3 semanas, tras estudiar el estado de microsatélites [3][9].';}
@@ -872,7 +842,7 @@ function dcE2(dc){
   else if(s==='npos'){c='Resección con disección terapéutica del cuello y adyuvancia según patología [VERIFICAR EN FUENTE].';}
   else{c='Equipo de cabeza y cuello: quimiorradioterapia o cuidados paliativos según el estado funcional [VERIFICAR EN FUENTE].';}
   if(s==='irres'){a='Si es candidato: cisplatino 100 mg/m² IV los días 1, 22 y 43 con radioterapia [9] [VERIFICAR EN FUENTE]; de lo contrario, paliación.';}
-  else if(mpos||ene){a=ren?'Márgenes positivos o extensión extranodal, pero no apto para cisplatino: discute la radioterapia sola o un esquema alternativo con el equipo [VERIFICAR EN FUENTE].':'Márgenes positivos o extensión extranodal: quimiorradioterapia con cisplatino 100 mg/m² IV los días 1, 22 y 43 [9] [VERIFICAR EN FUENTE]; ondansetrón 8 mg IV antes de cada dosis [9].';}
+  else if(mpos||ene){a=ren?'Márgenes positivos o extensión extranodal, pero no apto para cisplatino: discute la radioterapia sola o un esquema alternativo con el equipo [VERIFICAR EN FUENTE].':'Márgenes positivos o extensión extranodal: quimiorradioterapia con cisplatino 100 mg/m² IV los días 1, 22 y 43 [9] [VERIFICAR EN FUENTE].';}
   else if(pni){a='Invasión perineural o linfovascular: radioterapia postoperatoria [VERIFICAR EN FUENTE].';}
   else{a='Sin factores adversos en patología: observación con examen clínico seriado; la ecografía cervical añadida no mejora la supervivencia [12].';}
   out(dc,'<p><b>Cirugía y cuello:</b> '+c+'</p><p><b>Adyuvancia:</b> '+a+'</p><p><b>Analgesia:</b> paracetamol 1 g VO o IV cada 6 a 8 h, máximo 4 g al día [9].</p><span class="cf">Si aparecen márgenes positivos o extensión extranodal → la radioterapia sola pasa a quimiorradioterapia con cisplatino.</span>');
@@ -900,8 +870,8 @@ function dcE3(dc){
       c=res.length?'Quimiorradioterapia neoadyuvante y evaluación quirúrgica [2] [VERIFICAR EN FUENTE].':'Quimiorradioterapia definitiva o paliación según el estado funcional [2] [VERIFICAR EN FUENTE].';
       v='Carboplatino AUC 2 y paclitaxel 50 mg/m² IV semanal por 5 semanas con 41,4 Gy en 23 fracciones [2][9] [VERIFICAR EN FUENTE].';
     } else {
-      c=res.length?'Cirugía con terapia perioperatoria (FLOT) o quimiorradioterapia neoadyuvante [2] [VERIFICAR EN FUENTE].':'Tratamiento sistémico o paliación según el estado funcional [2] [VERIFICAR EN FUENTE].';
-      v=res.length?'FLOT: docetaxel 50 mg/m², oxaliplatino 85 mg/m², leucovorina 200 mg/m² y fluorouracilo 2 600 mg/m² en 24 h IV cada 14 días, 4 ciclos antes y 4 después de la cirugía [2][9] [VERIFICAR EN FUENTE].':'Esquema sistémico según el equipo de oncología [VERIFICAR EN FUENTE].';
+      c=res.length?'Cirugía con quimioterapia perioperatoria (esquema de la pestaña Cáncer gástrico) o quimiorradioterapia neoadyuvante [2] [VERIFICAR EN FUENTE].':'Tratamiento sistémico o paliación según el estado funcional [2] [VERIFICAR EN FUENTE].';
+      v=res.length?'Si opta por quimiorradioterapia: carboplatino AUC 2 y paclitaxel 50 mg/m² IV semanal por 5 semanas con 41,4 Gy en 23 fracciones [2][9] [VERIFICAR EN FUENTE].':'Esquema sistémico según el equipo de oncología [VERIFICAR EN FUENTE].';
     }
   }
   out(dc,'<p><b>Conducta:</b> '+c+'</p><p><b>Fármacos:</b> '+v+'</p><span class="cf">Si la biopsia pasa de displasia de bajo grado a alto grado o carcinoma intramucoso → la terapia endoscópica de erradicación pasa de sugerida a recomendada frente a la esofagectomía.</span>');
@@ -920,10 +890,10 @@ function dcE4(dc){
     x='Sin tratamiento farmacológico de rutina; resecar endoscópicamente los adenomas sin invasión [14] [VERIFICAR EN FUENTE].'+(paf?' Con poliposis: estudio genético y vigilancia de los familiares [VERIFICAR EN FUENTE].':'');
   } else if(s==='cap'){
     c=peri?'Pancreatoduodenectomía con vaciamiento ganglionar [14] [VERIFICAR EN FUENTE].':'Duodenoduodenostomía o resección segmentaria con vaciamiento ganglionar [14] [VERIFICAR EN FUENTE].';
-    x=npos?'Ganglios positivos: CapeOX, capecitabina 1 000 mg/m² dos veces al día los días 1 a 14 y oxaliplatino 130 mg/m² el día 1, cada 21 días [14][9] [VERIFICAR EN FUENTE]; en ampulares, el beneficio adyuvante se limitó al estadio IIB o mayor [15].':'Sin ganglios positivos: observación con imagen seriada; la quimioterapia adyuvante se discute según el estadio [15] [VERIFICAR EN FUENTE].';
+    x=npos?'Ganglios positivos: CapeOX, capecitabina 1 000 mg/m² dos veces al día los días 1 a 14 y oxaliplatino 130 mg/m² el día 1, cada 21 días [14][9] [VERIFICAR EN FUENTE]; en ampulares, el beneficio adyuvante se limitó al estadio IIB o mayor [15].':'Sin ganglios positivos: observación con imagen seriada; la quimioterapia adyuvante se discute según el estadio [15] [VERIFICAR EN FUENTE].';
   } else {
     c='Tratamiento sistémico; endoprótesis biliar o gastroyeyunostomía si hay obstrucción [VERIFICAR EN FUENTE].';
-    x=msi?'Microsatélites inestables: pembrolizumab 200 mg IV cada 3 semanas [14][9] [VERIFICAR EN FUENTE].':'FOLFOX: oxaliplatino 85 mg/m², leucovorina 400 mg/m², fluorouracilo 400 mg/m² en bolo y 2 400 mg/m² en 46 h IV cada 14 días [14][9] [VERIFICAR EN FUENTE].';
+    x=msi?'Microsatélites inestables: pembrolizumab 200 mg IV cada 3 semanas [14][9] [VERIFICAR EN FUENTE].':'FOLFOX: oxaliplatino 85 mg/m², leucovorina 400 mg/m², fluorouracilo 400 mg/m² en bolo y 2 400 mg/m² en 46 h IV cada 14 días [14][9] [VERIFICAR EN FUENTE].';
   }
   out(dc,'<p><b>Conducta:</b> '+c+'</p><p><b>Esquema:</b> '+x+'</p><span class="cf">Si hay ictericia con tumor en la segunda porción → es periampular: la resección pasa de segmentaria a pancreatoduodenectomía.</span>');
 }
