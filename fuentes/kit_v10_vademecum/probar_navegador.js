@@ -12,6 +12,7 @@ const fails = [], notes = [];
     { name: 'ipad', width: 820, height: 1180, scheme: 'light' },
     { name: 'ipad-oscuro', width: 820, height: 1180, scheme: 'dark' },
     { name: 'movil', width: 390, height: 844, scheme: 'light' },
+    { name: 'movil-oscuro', width: 390, height: 844, scheme: 'dark' },
   ];
   for (const v of views) {
     const ctx = await browser.newContext({ viewport: { width: v.width, height: v.height }, colorScheme: v.scheme, deviceScaleFactor: 1 });
@@ -77,6 +78,20 @@ const fails = [], notes = [];
         const a = lum(fg), b = lum(bg); return ((Math.max(a, b) + .05) / (Math.min(a, b) + .05)).toFixed(1);
       });
       notes.push(`contraste texto/fondo: ${contrast}:1`);
+    }
+    if (v.name === 'ipad' || v.name === 'ipad-oscuro') {
+      // capturas de componentes que el primer viewport no muestra
+      for (const sel of ['.signo', '.fey', '.hb.vi', '.hb.ro', '.qv', 'ol.steps.tg', '.dc']) {
+        const el = await page.evaluateHandle(s => { const e = document.querySelector(s); if (e) { show(e.closest('section.tab').dataset.tab); e.scrollIntoView({ block: 'center' }); } return e; }, sel);
+        if (await el.evaluate(e => !!e)) { await page.waitForTimeout(250); await el.asElement().screenshot({ path: `${outDir}/${v.name}_comp_${sel.replace(/[^a-z]/g, '')}.png` }); }
+      }
+      await page.evaluate(() => { const s = [...document.querySelectorAll('section.tab')].find(s => s.querySelector('ol.tl')); show(s.dataset.tab); recon(s.dataset.tab, true); document.getElementById('rec-bar-' + s.dataset.tab).scrollIntoView({ block: 'start' }); });
+      await page.waitForTimeout(250); await page.screenshot({ path: `${outDir}/${v.name}_recon.png` });
+      await page.evaluate(() => { document.querySelectorAll('section.recon').forEach(s => recon(s.dataset.tab, false)); });
+      if (await page.evaluate(() => !!document.querySelector('table.vis'))) {
+        await page.evaluate(() => { const t = document.querySelector('table.vis'); show(t.closest('section').dataset.tab); tabla(true); document.getElementById('vb-bar').scrollIntoView({ block: 'start' }); const c = document.querySelectorAll('td.tap'); if (c[1]) c[1].click(); });
+        await page.waitForTimeout(250); await page.screenshot({ path: `${outDir}/${v.name}_tabla.png` }); await page.evaluate(() => tabla(false));
+      }
     }
     if (errs.length) fails.push(`${v.name}: errores de consola: ${[...new Set(errs)].slice(0, 3).join(' | ')}`);
     await ctx.close();
