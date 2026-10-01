@@ -99,14 +99,14 @@ function dcE1d(dc){
 function dcE1t(dc){
   var es=sel(dc,'es')[0], ps=sel(dc,'ps')[0], si=sel(dc,'si')[0];
   if(!es){out(dc,sG("Elige el estadio; después el estado funcional y la situación."));return;}
-  var FF="oxaliplatino 85 mg/m², irinotecán 180 mg/m², leucovorina 400 mg/m² y fluorouracilo en bolo 400 mg/m² seguido de 2 400 mg/m² en 46 h, IV cada 14 días";
-  var GN="gemcitabina 1 000 mg/m² y nab-paclitaxel 125 mg/m² IV los días 1, 8 y 15 de cada ciclo de 28 días";
-  var NL="irinotecán liposomal 50 mg/m², oxaliplatino 60 mg/m², leucovorina 400 mg/m² y fluorouracilo 2 400 mg/m² en 46 h, IV los días 1 y 15 de cada ciclo de 28 días";
+  var FF="oxaliplatino 85 mg/m², irinotecán 180 mg/m², leucovorina 400 mg/m² y fluorouracilo en bolo 400 mg/m² seguido de 2 400 mg/m² en 46 h, IV cada 14 días";
+  var GN="gemcitabina 1 000 mg/m² y nab-paclitaxel 125 mg/m² IV los días 1, 8 y 15 de cada ciclo de 28 días";
+  var NL="irinotecán liposomal 50 mg/m², oxaliplatino 60 mg/m², leucovorina 400 mg/m² y fluorouracilo 2 400 mg/m² en 46 h, IV los días 1 y 15 de cada ciclo de 28 días";
   var c,cf,l=[];
   if(es==='res'){
     if(ps==='a'){c="No apto para quimioterapia combinada: soporte y decisión del comité; no se simula posología.";cf="Si el estado funcional mejorara a ECOG 2 o menos → reconsiderar el tratamiento adyuvante.";}
-    else if(ps==='m'){c="Resección primaria y gemcitabina 1 000 mg/m² IV los días 1, 8 y 15 más capecitabina 830 mg/m² VO cada 12 h los días 1–21, ciclos de 28 días por 6 ciclos [5].";cf="Si el ECOG fuera 0–1 → mFOLFIRINOX adyuvante.";}
-    else{c="Resección primaria y mFOLFIRINOX: oxaliplatino 85 mg/m², irinotecán 150 mg/m², leucovorina 400 mg/m² y fluorouracilo 2 400 mg/m² en 46 h, IV cada 14 días por 12 ciclos (24 semanas) [5].";cf="Si no tolerara mFOLFIRINOX → gemcitabina con capecitabina.";}
+    else if(ps==='m'){c="Resección primaria y gemcitabina 1 000 mg/m² IV los días 1, 8 y 15 más capecitabina 830 mg/m² VO cada 12 h los días 1–21, ciclos de 28 días por 6 ciclos [5].";cf="Si el ECOG fuera 0–1 → mFOLFIRINOX adyuvante.";}
+    else{c="Resección primaria y mFOLFIRINOX: oxaliplatino 85 mg/m², irinotecán 150 mg/m², leucovorina 400 mg/m² y fluorouracilo 2 400 mg/m² en 46 h, IV cada 14 días por 12 ciclos (24 semanas) [5].";cf="Si no tolerara mFOLFIRINOX → gemcitabina con capecitabina.";}
     l=["Conducta: "+c];
   } else if(es==='bor'||es==='la'){
     if(ps==='a'){c="No apto para quimioterapia intensiva: soporte y comité.";cf="Si mejorara el estado funcional → inducción y reevaluación.";}
@@ -118,7 +118,7 @@ function dcE1t(dc){
     if(si==='brca'){c="Olaparib 300 mg VO cada 12 h hasta progresión; solo con BRCA germinal y sin progresión tras 16 semanas de platino; mejora la supervivencia libre de progresión, no la global [5].";cf="Si no hubiera BRCA germinal → se continúa o se cambia la quimioterapia.";}
     else if(si==='prog'){
       if(ps==='a'){c="Soporte: sin beneficio esperado de más quimioterapia.";cf="Si el ECOG fuera 0–2 → gemcitabina con paclitaxel.";}
-      else{c="Tras FOLFIRINOX, con ECOG 0–2: gemcitabina 1 000 mg/m² y paclitaxel 80 mg/m² [VERIFICAR EN FUENTE] IV los días 1, 8 y 15 de cada ciclo de 28 días [8]. Tras NALIRIFOX, un esquema con gemcitabina (nivel V, C) [8].";cf="Si no tolerara paclitaxel → gemcitabina sola.";}
+      else{c="Tras FOLFIRINOX, con ECOG 0–2: gemcitabina 1 000 mg/m² y paclitaxel 80 mg/m² [VERIFICAR EN FUENTE] IV los días 1, 8 y 15 de cada ciclo de 28 días [8]. Tras NALIRIFOX, un esquema con gemcitabina (nivel V, C) [8].";cf="Si no tolerara paclitaxel → gemcitabina sola.";}
     } else {
       if(ps==='a'){c="Soporte: el estado funcional no permite quimioterapia.";cf="Si el ECOG mejorara → gemcitabina con nab-paclitaxel.";}
       else if(ps==='m'){c=GN+" [8].";cf="Si el ECOG fuera 0–1 y tolerara el triplete → FOLFIRINOX o NALIRIFOX.";}
@@ -137,7 +137,7 @@ function dcE2t(dc){
     c="Child-Pugh C: la prioridad es la evaluación de trasplante o los cuidados paliativos; el tratamiento sistémico no tiene datos en esta función [VERIFICAR EN FUENTE].";
     cf="Si la función mejorara a Child-Pugh A o B → reevaluar según el tumor.";
   } else if(tu==='pre'){
-    c="Resección si no hay hipertensión portal significativa (sin ascitis ni várices y plaquetas sobre 100 000 por µl), o ablación [2].";
+    c="Resección si no hay hipertensión portal significativa (sin ascitis ni várices y plaquetas sobre 100 000 por µl), o ablación [2].";
     cf="Si hubiera hipertensión portal → ablación o trasplante, no resección.";
   } else if(tu==='mil'){
     c="Trasplante hepático por estar dentro de los criterios de Milan; la resección arriesga la descompensación [2].";
@@ -153,10 +153,10 @@ function dcE2t(dc){
       c="ECOG 2 o más: la evidencia de los ensayos fue en ECOG 0–1; decidir en comité con enfoque paliativo [2].";
       cf="Si el ECOG fuera 0–1 → atezolizumab con bevacizumab o durvalumab con tremelimumab.";
     } else if(bv==='no'){
-      c="Durvalumab: tremelimumab 300 mg IV en dosis única en el primer ciclo más durvalumab 1 500 mg IV; durvalumab 1 500 mg IV cada 4 semanas hasta progresión [2].";
+      c="Durvalumab: tremelimumab 300 mg IV en dosis única en el primer ciclo más durvalumab 1 500 mg IV; durvalumab 1 500 mg IV cada 4 semanas hasta progresión [2].";
       cf="Si la endoscopia mostrara várices tratadas y sin riesgo → atezolizumab con bevacizumab.";
     } else if(bv==='ok'){
-      c="Atezolizumab 1 200 mg y bevacizumab 15 mg/kg, IV el día 1 cada 3 semanas, hasta progresión o toxicidad [2].";
+      c="Atezolizumab 1 200 mg y bevacizumab 15 mg/kg, IV el día 1 cada 3 semanas, hasta progresión o toxicidad [2].";
       cf="Si hubiera várices sin tratar o sangrado reciente → durvalumab con tremelimumab.";
     } else {
       c="Elige el riesgo con bevacizumab: sin endoscopia en los 6 meses previos, no se inicia [2].";
@@ -182,7 +182,7 @@ function dcE3t(dc){
     cf="Si la invasión llegara a T1b o más → re-resección radical.";
   } else if(ha==='t1b'){
     if(ap==='si'){
-      c="Re-resección radical con segmentos IVb y V y linfadenectomía del ligamento hepatoduodenal [11], seguida de capecitabina 1 250 mg/m² VO cada 12 h los días 1–14 de cada ciclo de 21 días por 8 ciclos [11].";
+      c="Re-resección radical con segmentos IVb y V y linfadenectomía del ligamento hepatoduodenal [11], seguida de capecitabina 1 250 mg/m² VO cada 12 h los días 1–14 de cada ciclo de 21 días por 8 ciclos [11].";
       cf="Si hubiera metástasis a distancia → no se re-opera: tratamiento sistémico.";
     } else if(ap==='no'){
       c="No apto para cirugía mayor: decisión del comité; la alternativa es el tratamiento sistémico [11].";
@@ -192,7 +192,7 @@ function dcE3t(dc){
       cf="Si el paciente fuera apto → re-resección radical.";
     }
   } else {
-    c="Cisplatino 25 mg/m² y gemcitabina 1 000 mg/m² los días 1 y 8 más durvalumab 1 500 mg el día 1, IV cada 21 días hasta 8 ciclos; luego durvalumab 1 500 mg cada 4 semanas [10]. Perfil molecular al iniciar [10].";
+    c="Cisplatino 25 mg/m² y gemcitabina 1 000 mg/m² los días 1 y 8 más durvalumab 1 500 mg el día 1, IV cada 21 días hasta 8 ciclos; luego durvalumab 1 500 mg cada 4 semanas [10]. Perfil molecular al iniciar [10].";
     l.push("Alternativa equivalente: pembrolizumab 200 mg IV el día 1 cada 21 días en lugar de durvalumab [10].");
     cf="Si el tumor fuera HER2 positivo y progresara → opciones dirigidas contra HER2 en segunda línea.";
   }
@@ -205,10 +205,10 @@ function dcE4t(dc){
   if(!si){out(dc,sG("Elige la situación; después el perfil molecular si hay progresión."));return;}
   var c,cf;
   if(si==='res'){
-    c="Capecitabina 1 250 mg/m² VO cada 12 h los días 1–14 de cada ciclo de 21 días por 8 ciclos [11].";
+    c="Capecitabina 1 250 mg/m² VO cada 12 h los días 1–14 de cada ciclo de 21 días por 8 ciclos [11].";
     cf="Si hubiera recaída → perfil molecular y tratamiento sistémico de enfermedad avanzada.";
   } else if(si==='avz'){
-    c="Cisplatino 25 mg/m² y gemcitabina 1 000 mg/m² los días 1 y 8 más durvalumab 1 500 mg o pembrolizumab 200 mg el día 1, IV cada 21 días; perfil molecular al iniciar [10].";
+    c="Cisplatino 25 mg/m² y gemcitabina 1 000 mg/m² los días 1 y 8 más durvalumab 1 500 mg o pembrolizumab 200 mg el día 1, IV cada 21 días; perfil molecular al iniciar [10].";
     cf="Si tuviera fusión de FGFR2 o HER2 positivo → se reserva la terapia dirigida para la segunda línea.";
   } else if(mo==='fg'){
     c="Pemigatinib 13,5 mg VO cada 24 h los días 1–14 de cada ciclo de 21 días, o futibatinib 20 mg VO cada 24 h, hasta progresión o toxicidad [10].";
