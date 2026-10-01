@@ -20,3 +20,15 @@ Widgets HTML de estudio (skill `widget-ensenanza` v10) para Quirúrgica 2 · PUC
 - **Abdomen agudo médico**: hipopotasemia con íleo (principal), saturnismo, porfiria aguda intermitente (amenaza).
 
 Los datos marcados `[VERIFICAR EN FUENTE]` no se pudieron leer en una fuente durante la generación y deben comprobarse antes de estudiar con ellos.
+
+## Widgets de neoplasias gastrointestinales (kit «Vademécum»)
+
+- **Cáncer del tubo digestivo alto**: gástrico (principal y amenaza), cavidad oral, esófago, duodeno.
+- **Cáncer hepatobiliopancreático**: páncreas (principal y amenaza), hepatocelular, vesícula, colangiocarcinoma.
+- **Cáncer colorrectal** (mono) con pestaña de tamizaje, lesiones premalignas y algoritmo ante cribado positivo.
+
+Usan el kit rediseñado en `fuentes/kit_v10_vademecum/` (mismas clases y JS que la v10; sistema documentado en `DESIGN.md`). Pruebas del orquestador: `auditar_diseno.py` (reglas de diseño y router) y `probar_navegador.js` (desborde, simuladores, enlaces, modos en blanco, capturas en `.impeccable/review/`).
+
+## Skills instaladas (`.claude/skills/`)
+
+taste-skill (13 skills, MIT), impeccable (Apache-2.0), awesome-design-md (MIT, con SKILL.md propio) y playwright-cli (Apache-2.0; requiere `npm install -g @playwright/cli` y el Chromium de `/opt/pw-browsers`).
