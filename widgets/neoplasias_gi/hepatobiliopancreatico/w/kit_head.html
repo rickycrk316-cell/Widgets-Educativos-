@@ -86,12 +86,12 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{
 .go{min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent);color:var(--on-accent);font:600 13.5px/1.2 var(--f-sans)}
 .go:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
 /* tablas de monografía */
-.tw{overflow-x:auto;margin:10px 0;-webkit-overflow-scrolling:touch;border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong)}
+.tw{overflow-x:auto;margin:12px 0;-webkit-overflow-scrolling:touch}
 table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.5;font-variant-numeric:tabular-nums}
 th,td{border:0;border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
 th{background:var(--paper-2);font-weight:700;color:var(--ink)}
-thead th{font:700 12px/1.35 var(--f-sans);letter-spacing:.04em;text-transform:uppercase;color:var(--ink-2);border-bottom:1px solid var(--rule-strong)}
-tbody tr:last-child>*{border-bottom:0}
+thead th{font:700 13px/1.35 var(--f-sans);color:var(--ink-2);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong)}
+tbody tr:last-child>*{border-bottom:1px solid var(--rule-strong)}
 .stats{display:grid;grid-template-columns:1fr;gap:10px;margin:12px 0}
 @media (min-width:600px){.stats{grid-template-columns:repeat(3,1fr)}}
 .stat{background:transparent;border:0;border-top:2px solid var(--accent);border-radius:0;padding:8px 2px}
@@ -110,7 +110,7 @@ tbody tr:last-child>*{border-bottom:0}
 .signo{background:var(--paper);border:1px solid var(--rule);border-top:2px solid var(--rule-strong);border-radius:0 0 var(--r) var(--r);padding:12px 14px;margin:12px 0;font-size:14px;line-height:1.55}
 .signo h4{margin:0 0 6px;font:600 15.5px/1.35 var(--f-serif)}
 .signo dl{margin:0}
-.signo dt{font:700 11.5px/1.4 var(--f-sans);letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);margin-top:8px}
+.signo dt{font:700 12.5px/1.4 var(--f-sans);color:var(--ink-3);margin-top:8px}
 .signo dd{margin:2px 0 0}
 .xref{display:inline-flex;align-items:center;min-height:44px;padding:4px 10px;margin:3px 6px 3px 0;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent-field);color:var(--accent-ink);font:600 12.5px/1.3 var(--f-sans);text-align:left}
 .xref:hover{background:var(--accent);color:var(--on-accent)}
