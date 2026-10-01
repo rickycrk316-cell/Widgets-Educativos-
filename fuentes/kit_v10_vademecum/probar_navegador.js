@@ -29,7 +29,7 @@ const fails = [], notes = [];
         const r = e.getBoundingClientRect(); return r.width > 0 && r.right > document.documentElement.clientWidth + 1 && !e.closest('.tw') && !e.closest('nav');
       }).slice(0, 3).map(e => e.tagName + '.' + e.className));
       if (bad.length) fails.push(`${v.name}/${k}: elementos fuera del ancho ${bad.join(', ')}`);
-      if (k === 'pan' || /^(e1|def|vis)$/.test(k)) await page.screenshot({ path: `${outDir}/${v.name}_${k}.png` });
+      if (k === 'pan' || /^(e1|def|vis)$/.test(k)) await page.waitForTimeout(300), await page.screenshot({ path: `${outDir}/${v.name}_${k}.png` });
     }
     if (v.name === 'ipad') {
       // simuladores: cada .dc reacciona a su primer control

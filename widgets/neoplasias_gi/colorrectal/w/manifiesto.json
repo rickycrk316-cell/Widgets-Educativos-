@@ -1,0 +1,52 @@
+{
+  "modo": "mono",
+  "tabs": [
+    "pan",
+    "def",
+    "fis",
+    "cli",
+    "dx",
+    "tx",
+    "seg",
+    "tam"
+  ],
+  "pg": {
+    "def": 4,
+    "fis": 4,
+    "cli": 4,
+    "dx": 4,
+    "tx": 4,
+    "seg": 4,
+    "tam": 4
+  },
+  "fey": {
+    "def": 1,
+    "fis": 2,
+    "dx": 1,
+    "tx": 1,
+    "seg": 1,
+    "tam": 1
+  },
+  "nodos": 15,
+  "signos": 5,
+  "dc": [
+    "dx",
+    "tx",
+    "seg",
+    "tam"
+  ],
+  "nucleo": [
+    "Ulceración tumoral con sangrado crónico",
+    "Crecimiento circunferencial que estrecha la luz",
+    "Tumor rectal que irrita pared y esfínter",
+    "Diseminación venosa portal al hígado",
+    "Citocinas tumorales que reducen el apetito",
+    "Anemia ferropénica sin sangrado visible",
+    "Colonoscopia completa con biopsia",
+    "Estadio III: cirugía y oxaliplatino con fluoropirimidina",
+    "Tamizaje desde los 45 años; FIT anual o colonoscopia cada 10 años",
+    "FIT positivo: colonoscopia completa",
+    "Adenoma de 10 mm o más, componente velloso o displasia de alto grado: vigilancia a los 3 años",
+    "Más de 10 adenomas acumulados: considerar estudio genético"
+  ]
+}
