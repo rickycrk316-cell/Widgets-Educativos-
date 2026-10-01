@@ -1,0 +1,32 @@
+{
+  "fuentes/Prompt Widget Ensenanza V10.md": {
+    "mtime": 1790824349.776393,
+    "seen": 1790825577.5603156,
+    "ast_hash": "4cde6d8490763f6adb23c188eb7822a0",
+    "semantic_hash": "4cde6d8490763f6adb23c188eb7822a0"
+  },
+  "fuentes/Syllabus_primera_rotacion_10mo.md": {
+    "mtime": 1790824349.773842,
+    "seen": 1790825577.560319,
+    "ast_hash": "971fd2257a29bab4c59e8a4cf0dd3d4d",
+    "semantic_hash": "971fd2257a29bab4c59e8a4cf0dd3d4d"
+  },
+  "widgets/dolor_abdominal/Abdomen_agudo_medico_widget_v10.html": {
+    "mtime": 1790825203.5825095,
+    "seen": 1790825577.5603213,
+    "ast_hash": "a84c9cc2ac2d12c47469e9b01fab94c6",
+    "semantic_hash": "a84c9cc2ac2d12c47469e9b01fab94c6"
+  },
+  "widgets/dolor_abdominal/Abdomen_agudo_quirurgico_widget_v10.html": {
+    "mtime": 1790825377.638038,
+    "seen": 1790825577.5603225,
+    "ast_hash": "2ad6cdf2e07d953109b750c007876179",
+    "semantic_hash": "2ad6cdf2e07d953109b750c007876179"
+  },
+  "widgets/dolor_abdominal/Dolor_biliopancreatico_widget_v10.html": {
+    "mtime": 1790825236.7705503,
+    "seen": 1790825577.5603242,
+    "ast_hash": "1d71ff020aea3c2a22bebe40f1cd4c85",
+    "semantic_hash": "1d71ff020aea3c2a22bebe40f1cd4c85"
+  }
+}
