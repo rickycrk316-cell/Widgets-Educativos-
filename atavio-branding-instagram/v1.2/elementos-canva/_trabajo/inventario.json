@@ -1,0 +1,2574 @@
+{
+ "version": "v1.2",
+ "elementos": [
+  {
+   "id": "sello-principal",
+   "nombre": "Sello principal (con bajada «La tienda de la fábrica»)",
+   "categoria": "01-logo",
+   "uso": "Logo oficial con bajada. Versión rojo sobre hueso o tinta; invertido (círculo hueso) solo sobre ladrillo y rojos; una tinta para impresión barata, bordado y grabado. Sobre molde va dentro del disco hueso (carpeta 08).",
+   "regla": "Mínimo 172 px en pantalla (45 mm en impresión). Área libre de 12 % del diámetro por lado. No abrirlo, rotarlo, deformarlo ni cambiar el rojo.",
+   "variantes": [
+    {
+     "archivo": "atavio-sello-principal",
+     "etiqueta": "rojo",
+     "fondo_recomendado": "hueso",
+     "svg": "01-logo/atavio-sello-principal.svg",
+     "png": "01-logo/atavio-sello-principal.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "",
+     "fuente": "logo/atavio-sello-principal.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 2456897,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-sello-principal-invertido",
+     "etiqueta": "invertido",
+     "fondo_recomendado": "ladrillo",
+     "svg": "01-logo/atavio-sello-principal-invertido.svg",
+     "png": "01-logo/atavio-sello-principal-invertido.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "",
+     "fuente": "logo/atavio-sello-invertido.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 2546337,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-sello-principal-una-tinta-tinta",
+     "etiqueta": "una tinta (tinta)",
+     "fondo_recomendado": "hueso",
+     "svg": "01-logo/atavio-sello-principal-una-tinta-tinta.svg",
+     "png": "01-logo/atavio-sello-principal-una-tinta-tinta.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "",
+     "fuente": "logo/atavio-sello-una-tinta-tinta.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 2457962,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-sello-principal-una-tinta-hueso",
+     "etiqueta": "una tinta (hueso)",
+     "fondo_recomendado": "tinta",
+     "svg": "01-logo/atavio-sello-principal-una-tinta-hueso.svg",
+     "png": "01-logo/atavio-sello-principal-una-tinta-hueso.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "",
+     "fuente": "logo/atavio-sello-una-tinta-hueso.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 2457799,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "sello-reducido",
+   "nombre": "Sello reducido (sin bajada)",
+   "categoria": "01-logo",
+   "uso": "Logo oficial sin bajada, para tamaños pequeños (láminas interiores, esquina de post). Mismas versiones por fondo que el principal.",
+   "regla": "Mínimo 48 px / 12 mm (64 px recomendado). Área libre de 12 % del diámetro por lado. No abrirlo, rotarlo ni deformarlo.",
+   "variantes": [
+    {
+     "archivo": "atavio-sello-reducido",
+     "etiqueta": "rojo",
+     "fondo_recomendado": "hueso",
+     "svg": "01-logo/atavio-sello-reducido.svg",
+     "png": "01-logo/atavio-sello-reducido.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "",
+     "fuente": "logo/atavio-sello-reducido.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 2476250,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-sello-reducido-invertido",
+     "etiqueta": "invertido",
+     "fondo_recomendado": "ladrillo",
+     "svg": "01-logo/atavio-sello-reducido-invertido.svg",
+     "png": "01-logo/atavio-sello-reducido-invertido.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "",
+     "fuente": "logo/atavio-sello-invertido-reducido.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 2546337,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-sello-reducido-una-tinta-tinta",
+     "etiqueta": "una tinta (tinta)",
+     "fondo_recomendado": "hueso",
+     "svg": "01-logo/atavio-sello-reducido-una-tinta-tinta.svg",
+     "png": "01-logo/atavio-sello-reducido-una-tinta-tinta.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "",
+     "fuente": "logo/atavio-sello-una-tinta-tinta-reducido.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 2476916,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-sello-reducido-una-tinta-hueso",
+     "etiqueta": "una tinta (hueso)",
+     "fondo_recomendado": "tinta",
+     "svg": "01-logo/atavio-sello-reducido-una-tinta-hueso.svg",
+     "png": "01-logo/atavio-sello-reducido-una-tinta-hueso.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "",
+     "fuente": "logo/atavio-sello-una-tinta-hueso-reducido.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 2476778,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "wordmark",
+   "nombre": "Wordmark «Atavío» (solo el nombre)",
+   "categoria": "01-logo",
+   "uso": "Solo el nombre, para usos lineales (encabezados, firmas). Rojo sobre hueso o tinta, tinta sobre hueso, hueso sobre tinta.",
+   "regla": "Ancho mínimo 90 px / 25 mm. No recomponer con fuente: es un dibujo.",
+   "variantes": [
+    {
+     "archivo": "atavio-wordmark",
+     "etiqueta": "rojo",
+     "fondo_recomendado": "hueso",
+     "svg": "01-logo/atavio-wordmark.svg",
+     "png": "01-logo/atavio-wordmark.png",
+     "png_px": [
+      2400,
+      718
+     ],
+     "modo": "svg+png",
+     "nota": "",
+     "fuente": "logo/atavio-wordmark.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 144759,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-wordmark-tinta",
+     "etiqueta": "tinta",
+     "fondo_recomendado": "hueso",
+     "svg": "01-logo/atavio-wordmark-tinta.svg",
+     "png": "01-logo/atavio-wordmark-tinta.png",
+     "png_px": [
+      2400,
+      718
+     ],
+     "modo": "svg+png",
+     "nota": "",
+     "fuente": "logo/atavio-wordmark-tinta.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 144975,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-wordmark-hueso",
+     "etiqueta": "hueso",
+     "fondo_recomendado": "tinta",
+     "svg": "01-logo/atavio-wordmark-hueso.svg",
+     "png": "01-logo/atavio-wordmark-hueso.png",
+     "png_px": [
+      2400,
+      718
+     ],
+     "modo": "svg+png",
+     "nota": "",
+     "fuente": "logo/atavio-wordmark-hueso.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 144845,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "avatar-instagram",
+   "nombre": "Avatar de Instagram",
+   "categoria": "01-logo",
+   "uso": "Sello reducido a sangre, cuadrado, para la foto de perfil (Instagram lo recorta en círculo). Sin marco de pespunte y sin bajada.",
+   "regla": "Subir tal cual a Instagram; no añadir marco ni bajada.",
+   "variantes": [
+    {
+     "archivo": "atavio-avatar-instagram",
+     "etiqueta": "a sangre",
+     "fondo_recomendado": "hueso",
+     "svg": "01-logo/atavio-avatar-instagram.svg",
+     "png": "01-logo/atavio-avatar-instagram.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "",
+     "fuente": "logo/avatar-instagram.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 3170075,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "costura-horizontal-1080",
+   "nombre": "Costura horizontal 1080 (una lámina)",
+   "categoria": "02-costura",
+   "uso": "Pespunte recto de borde a borde de una lámina de 1080 px de ancho. Empieza en x = 5,25 y termina en 1074,75.",
+   "regla": "Una costura por pieza, una sola hebra: entra por un borde y sale por otro. Nunca como borde de caja, precio, botón o foto; nunca en diagonal. Guion 9 / espacio 6, trazo 4,5. En carrusel, usar siempre el mismo alto de lámina a lámina: la hebra continúa sin salto.",
+   "variantes": [
+    {
+     "archivo": "atavio-costura-horizontal-1080-ladrillo",
+     "etiqueta": "ladrillo",
+     "fondo_recomendado": "hueso",
+     "svg": "02-costura/atavio-costura-horizontal-1080-ladrillo.svg",
+     "png": "02-costura/atavio-costura-horizontal-1080-ladrillo.png",
+     "png_px": [
+      3240,
+      120
+     ],
+     "modo": "svg+png",
+     "nota": "Ladrillo sobre fondo claro (hueso, molde).",
+     "fuente": "motifs/costura-horizontal-1080-claro.svg",
+     "puntadas_convertidas": 72,
+     "verificacion": {
+      "ink_px": 8568,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-costura-horizontal-1080-hueso",
+     "etiqueta": "hueso",
+     "fondo_recomendado": "tinta",
+     "svg": "02-costura/atavio-costura-horizontal-1080-hueso.svg",
+     "png": "02-costura/atavio-costura-horizontal-1080-hueso.png",
+     "png_px": [
+      3240,
+      120
+     ],
+     "modo": "svg+png",
+     "nota": "Hueso sobre fondo oscuro (tinta, ladrillo).",
+     "fuente": "motifs/costura-horizontal-1080-oscuro.svg",
+     "puntadas_convertidas": 72,
+     "verificacion": {
+      "ink_px": 8568,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "costura-horizontal-2160",
+   "nombre": "Costura horizontal 2160 (dos láminas)",
+   "categoria": "02-costura",
+   "uso": "Pespunte recto continuo para dos láminas de carrusel seguidas (2160 px).",
+   "regla": "Una costura por pieza, una sola hebra: entra por un borde y sale por otro. Nunca como borde de caja, precio, botón o foto; nunca en diagonal. Guion 9 / espacio 6, trazo 4,5.",
+   "variantes": [
+    {
+     "archivo": "atavio-costura-horizontal-2160-ladrillo",
+     "etiqueta": "ladrillo",
+     "fondo_recomendado": "hueso",
+     "svg": "02-costura/atavio-costura-horizontal-2160-ladrillo.svg",
+     "png": "02-costura/atavio-costura-horizontal-2160-ladrillo.png",
+     "png_px": [
+      4320,
+      80
+     ],
+     "modo": "svg+png",
+     "nota": "Ladrillo sobre fondo claro (hueso, molde).",
+     "fuente": "motifs/costura-horizontal-2160-claro.svg",
+     "puntadas_convertidas": 144,
+     "verificacion": {
+      "ink_px": 4644,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-costura-horizontal-2160-hueso",
+     "etiqueta": "hueso",
+     "fondo_recomendado": "tinta",
+     "svg": "02-costura/atavio-costura-horizontal-2160-hueso.svg",
+     "png": "02-costura/atavio-costura-horizontal-2160-hueso.png",
+     "png_px": [
+      4320,
+      80
+     ],
+     "modo": "svg+png",
+     "nota": "Hueso sobre fondo oscuro (tinta, ladrillo).",
+     "fuente": "motifs/costura-horizontal-2160-oscuro.svg",
+     "puntadas_convertidas": 144,
+     "verificacion": {
+      "ink_px": 4590,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "costura-vertical-1920",
+   "nombre": "Costura vertical 1920 (reel e historia)",
+   "categoria": "02-costura",
+   "uso": "Pespunte vertical de borde a borde para formato 1080 × 1920 (reel, historia). Periodo 15 px desde y = 5,25.",
+   "regla": "Una costura por pieza, una sola hebra: entra por un borde y sale por otro. Nunca como borde de caja, precio, botón o foto; nunca en diagonal. Guion 9 / espacio 6, trazo 4,5.",
+   "variantes": [
+    {
+     "archivo": "atavio-costura-vertical-1920-ladrillo",
+     "etiqueta": "ladrillo",
+     "fondo_recomendado": "hueso",
+     "svg": "02-costura/atavio-costura-vertical-1920-ladrillo.svg",
+     "png": "02-costura/atavio-costura-vertical-1920-ladrillo.png",
+     "png_px": [
+      80,
+      3840
+     ],
+     "modo": "svg+png",
+     "nota": "Ladrillo sobre fondo claro (hueso, molde).",
+     "fuente": "motifs/costura-vertical-1920-claro.svg",
+     "puntadas_convertidas": 128,
+     "verificacion": {
+      "ink_px": 4288,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-costura-vertical-1920-hueso",
+     "etiqueta": "hueso",
+     "fondo_recomendado": "tinta",
+     "svg": "02-costura/atavio-costura-vertical-1920-hueso.svg",
+     "png": "02-costura/atavio-costura-vertical-1920-hueso.png",
+     "png_px": [
+      80,
+      3840
+     ],
+     "modo": "svg+png",
+     "nota": "Hueso sobre fondo oscuro (tinta, ladrillo).",
+     "fuente": "motifs/costura-vertical-1920-oscuro.svg",
+     "puntadas_convertidas": 128,
+     "verificacion": {
+      "ink_px": 4288,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "costura-subrayado",
+   "nombre": "Costura subrayado (con remates)",
+   "categoria": "02-costura",
+   "uso": "Línea corta de pespunte con puntada atrás en ambos extremos, para subrayar un llamado a la acción. Recortar, no estirar.",
+   "regla": "No estirar (alterarías la puntada). Ancho útil 1080 × 80.",
+   "variantes": [
+    {
+     "archivo": "atavio-costura-subrayado-ladrillo",
+     "etiqueta": "ladrillo",
+     "fondo_recomendado": "hueso",
+     "svg": "02-costura/atavio-costura-subrayado-ladrillo.svg",
+     "png": "02-costura/atavio-costura-subrayado-ladrillo.png",
+     "png_px": [
+      2400,
+      178
+     ],
+     "modo": "svg+png",
+     "nota": "Ladrillo sobre fondo claro (hueso, molde).",
+     "fuente": "motifs/costura-subrayado-claro.svg",
+     "puntadas_convertidas": 63,
+     "verificacion": {
+      "ink_px": 8445,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-costura-subrayado-hueso",
+     "etiqueta": "hueso",
+     "fondo_recomendado": "tinta",
+     "svg": "02-costura/atavio-costura-subrayado-hueso.svg",
+     "png": "02-costura/atavio-costura-subrayado-hueso.png",
+     "png_px": [
+      2400,
+      178
+     ],
+     "modo": "svg+png",
+     "nota": "Hueso sobre fondo oscuro (tinta, ladrillo).",
+     "fuente": "motifs/costura-subrayado-oscuro.svg",
+     "puntadas_convertidas": 63,
+     "verificacion": {
+      "ink_px": 8401,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "costura-curva-s",
+   "nombre": "Costura curva en S",
+   "categoria": "02-costura",
+   "uso": "Hebra curva que cruza la lámina en S (1080 × 1350), entra por el borde izquierdo y sale por el derecho.",
+   "regla": "Una costura por pieza, una sola hebra: entra por un borde y sale por otro. Nunca como borde de caja, precio, botón o foto; nunca en diagonal. Guion 9 / espacio 6, trazo 4,5.",
+   "variantes": [
+    {
+     "archivo": "atavio-costura-curva-s-ladrillo",
+     "etiqueta": "ladrillo",
+     "fondo_recomendado": "hueso",
+     "svg": "02-costura/atavio-costura-curva-s-ladrillo.svg",
+     "png": "02-costura/atavio-costura-curva-s-ladrillo.png",
+     "png_px": [
+      1920,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Ladrillo sobre fondo claro (hueso, molde).",
+     "fuente": "motifs/costura-curva-s-claro.svg",
+     "puntadas_convertidas": 100,
+     "verificacion": {
+      "ink_px": 7247,
+      "diff90_px": 10,
+      "diff90_pct_of_ink": 0.138
+     }
+    },
+    {
+     "archivo": "atavio-costura-curva-s-hueso",
+     "etiqueta": "hueso",
+     "fondo_recomendado": "tinta",
+     "svg": "02-costura/atavio-costura-curva-s-hueso.svg",
+     "png": "02-costura/atavio-costura-curva-s-hueso.png",
+     "png_px": [
+      1920,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Hueso sobre fondo oscuro (tinta, ladrillo).",
+     "fuente": "motifs/costura-curva-s-oscuro.svg",
+     "puntadas_convertidas": 100,
+     "verificacion": {
+      "ink_px": 7185,
+      "diff90_px": 5,
+      "diff90_pct_of_ink": 0.07
+     }
+    }
+   ]
+  },
+  {
+   "id": "costura-esquina-l",
+   "nombre": "Costura esquina en L",
+   "categoria": "02-costura",
+   "uso": "Hebra que baja desde el borde superior y gira a la derecha con esquina redondeada (1080 × 1350).",
+   "regla": "Una costura por pieza, una sola hebra: entra por un borde y sale por otro. Nunca como borde de caja, precio, botón o foto; nunca en diagonal. Guion 9 / espacio 6, trazo 4,5.",
+   "variantes": [
+    {
+     "archivo": "atavio-costura-esquina-l-ladrillo",
+     "etiqueta": "ladrillo",
+     "fondo_recomendado": "hueso",
+     "svg": "02-costura/atavio-costura-esquina-l-ladrillo.svg",
+     "png": "02-costura/atavio-costura-esquina-l-ladrillo.png",
+     "png_px": [
+      1920,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Ladrillo sobre fondo claro (hueso, molde).",
+     "fuente": "motifs/costura-esquina-l-claro.svg",
+     "puntadas_convertidas": 107,
+     "verificacion": {
+      "ink_px": 7492,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-costura-esquina-l-hueso",
+     "etiqueta": "hueso",
+     "fondo_recomendado": "tinta",
+     "svg": "02-costura/atavio-costura-esquina-l-hueso.svg",
+     "png": "02-costura/atavio-costura-esquina-l-hueso.png",
+     "png_px": [
+      1920,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Hueso sobre fondo oscuro (tinta, ladrillo).",
+     "fuente": "motifs/costura-esquina-l-oscuro.svg",
+     "puntadas_convertidas": 107,
+     "verificacion": {
+      "ink_px": 7483,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "costura-anillo",
+   "nombre": "Costura en anillo",
+   "categoria": "02-costura",
+   "uso": "Hebra que entra por la izquierda, da una vuelta en círculo y sale por la derecha (1080 × 1080). El punto central se puede borrar. No es el anillo del logo descartado.",
+   "regla": "Una costura por pieza, una sola hebra: entra por un borde y sale por otro. Nunca como borde de caja, precio, botón o foto; nunca en diagonal. Guion 9 / espacio 6, trazo 4,5.",
+   "variantes": [
+    {
+     "archivo": "atavio-costura-anillo-ladrillo",
+     "etiqueta": "ladrillo",
+     "fondo_recomendado": "hueso",
+     "svg": "02-costura/atavio-costura-anillo-ladrillo.svg",
+     "png": "02-costura/atavio-costura-anillo-ladrillo.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Ladrillo sobre fondo claro (hueso, molde).",
+     "fuente": "motifs/costura-anillo-claro.svg",
+     "puntadas_convertidas": 156,
+     "verificacion": {
+      "ink_px": 19643,
+      "diff90_px": 860,
+      "diff90_pct_of_ink": 4.378
+     }
+    },
+    {
+     "archivo": "atavio-costura-anillo-hueso",
+     "etiqueta": "hueso",
+     "fondo_recomendado": "tinta",
+     "svg": "02-costura/atavio-costura-anillo-hueso.svg",
+     "png": "02-costura/atavio-costura-anillo-hueso.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Hueso sobre fondo oscuro (tinta, ladrillo).",
+     "fuente": "motifs/costura-anillo-oscuro.svg",
+     "puntadas_convertidas": 156,
+     "verificacion": {
+      "ink_px": 19511,
+      "diff90_px": 785,
+      "diff90_pct_of_ink": 4.023
+     }
+    }
+   ]
+  },
+  {
+   "id": "costura-cierre-remate",
+   "nombre": "Costura de cierre con remate",
+   "categoria": "02-costura",
+   "uso": "Hebra que se detiene a mitad de lámina y remata con una puntada atrás: cierre de carrusel (última lámina). Entra por el borde izquierdo.",
+   "regla": "Una costura por pieza, una sola hebra: entra por un borde y sale por otro. Nunca como borde de caja, precio, botón o foto; nunca en diagonal. Guion 9 / espacio 6, trazo 4,5.",
+   "variantes": [
+    {
+     "archivo": "atavio-costura-cierre-remate-ladrillo",
+     "etiqueta": "ladrillo",
+     "fondo_recomendado": "hueso",
+     "svg": "02-costura/atavio-costura-cierre-remate-ladrillo.svg",
+     "png": "02-costura/atavio-costura-cierre-remate-ladrillo.png",
+     "png_px": [
+      2148,
+      120
+     ],
+     "modo": "svg+png",
+     "nota": "",
+     "fuente": "generado a partir de plantillas (gen_feed.py / vertical.py / HTML)",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 12681,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-costura-cierre-remate-hueso",
+     "etiqueta": "hueso",
+     "fondo_recomendado": "tinta",
+     "svg": "02-costura/atavio-costura-cierre-remate-hueso.svg",
+     "png": "02-costura/atavio-costura-cierre-remate-hueso.png",
+     "png_px": [
+      2148,
+      120
+     ],
+     "modo": "svg+png",
+     "nota": "",
+     "fuente": "generado a partir de plantillas (gen_feed.py / vertical.py / HTML)",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 12645,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "molde-delantero",
+   "nombre": "Molde delantero de pantalón",
+   "categoria": "03-moldes",
+   "uso": "Pieza delantera del patrón de molde, con hilo, cotas y marcas de oficio. Se puede cortar por el borde del lienzo o girar 90°.",
+   "regla": "No escalar de forma no uniforme. Las cotas son de pantalón de mujer talla 32, bota recta. El número de talla y los rótulos son decoración (≥ 24 px a 1080).",
+   "variantes": [
+    {
+     "archivo": "atavio-molde-delantero-claro",
+     "etiqueta": "claro",
+     "fondo_recomendado": "hueso",
+     "svg": "03-moldes/atavio-molde-delantero-claro.svg",
+     "png": "03-moldes/atavio-molde-delantero-claro.png",
+     "png_px": [
+      957,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Para fondo hueso o molde. ",
+     "fuente": "motifs/molde-delantero-claro.svg",
+     "puntadas_convertidas": 219,
+     "verificacion": {
+      "ink_px": 524295,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-molde-delantero-oscuro",
+     "etiqueta": "oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "03-moldes/atavio-molde-delantero-oscuro.svg",
+     "png": "03-moldes/atavio-molde-delantero-oscuro.png",
+     "png_px": [
+      957,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Para fondo tinta o ladrillo. ",
+     "fuente": "motifs/molde-delantero-oscuro.svg",
+     "puntadas_convertidas": 219,
+     "verificacion": {
+      "ink_px": 43083,
+      "diff90_px": 4,
+      "diff90_pct_of_ink": 0.009
+     }
+    }
+   ]
+  },
+  {
+   "id": "molde-trasero",
+   "nombre": "Molde trasero de pantalón",
+   "categoria": "03-moldes",
+   "uso": "Pieza trasera del patrón de molde con pinza, hilo y cotas.",
+   "regla": "No escalar de forma no uniforme. Las cotas son de pantalón de mujer talla 32, bota recta. El número de talla y los rótulos son decoración (≥ 24 px a 1080).",
+   "variantes": [
+    {
+     "archivo": "atavio-molde-trasero-claro",
+     "etiqueta": "claro",
+     "fondo_recomendado": "hueso",
+     "svg": "03-moldes/atavio-molde-trasero-claro.svg",
+     "png": "03-moldes/atavio-molde-trasero-claro.png",
+     "png_px": [
+      951,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Para fondo hueso o molde. ",
+     "fuente": "motifs/molde-trasero-claro.svg",
+     "puntadas_convertidas": 227,
+     "verificacion": {
+      "ink_px": 543344,
+      "diff90_px": 2,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-molde-trasero-oscuro",
+     "etiqueta": "oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "03-moldes/atavio-molde-trasero-oscuro.svg",
+     "png": "03-moldes/atavio-molde-trasero-oscuro.png",
+     "png_px": [
+      951,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Para fondo tinta o ladrillo. ",
+     "fuente": "motifs/molde-trasero-oscuro.svg",
+     "puntadas_convertidas": 227,
+     "verificacion": {
+      "ink_px": 44477,
+      "diff90_px": 4,
+      "diff90_pct_of_ink": 0.009
+     }
+    }
+   ]
+  },
+  {
+   "id": "molde-bolsillo",
+   "nombre": "Molde de bolsillo",
+   "categoria": "03-moldes",
+   "uso": "Pieza de bolsillo con doblez, hilo y cotas.",
+   "regla": "No escalar de forma no uniforme. Las cotas son de pantalón de mujer talla 32, bota recta. El número de talla y los rótulos son decoración (≥ 24 px a 1080).",
+   "variantes": [
+    {
+     "archivo": "atavio-molde-bolsillo-claro",
+     "etiqueta": "claro",
+     "fondo_recomendado": "hueso",
+     "svg": "03-moldes/atavio-molde-bolsillo-claro.svg",
+     "png": "03-moldes/atavio-molde-bolsillo-claro.png",
+     "png_px": [
+      2007,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Para fondo hueso o molde. ",
+     "fuente": "motifs/molde-bolsillo-claro.svg",
+     "puntadas_convertidas": 161,
+     "verificacion": {
+      "ink_px": 1442055,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-molde-bolsillo-oscuro",
+     "etiqueta": "oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "03-moldes/atavio-molde-bolsillo-oscuro.svg",
+     "png": "03-moldes/atavio-molde-bolsillo-oscuro.png",
+     "png_px": [
+      2007,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Para fondo tinta o ladrillo. ",
+     "fuente": "motifs/molde-bolsillo-oscuro.svg",
+     "puntadas_convertidas": 161,
+     "verificacion": {
+      "ink_px": 66852,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "molde-pretina",
+   "nombre": "Molde de pretina",
+   "categoria": "03-moldes",
+   "uso": "Pretina del pantalón, pieza larga y baja (2056 × ~700), buena como franja inferior.",
+   "regla": "No escalar de forma no uniforme. Las cotas son de pantalón de mujer talla 32, bota recta. El número de talla y los rótulos son decoración (≥ 24 px a 1080).",
+   "variantes": [
+    {
+     "archivo": "atavio-molde-pretina-claro",
+     "etiqueta": "claro",
+     "fondo_recomendado": "hueso",
+     "svg": "03-moldes/atavio-molde-pretina-claro.svg",
+     "png": "03-moldes/atavio-molde-pretina-claro.png",
+     "png_px": [
+      2400,
+      819
+     ],
+     "modo": "svg+png",
+     "nota": "Para fondo hueso o molde. ",
+     "fuente": "motifs/molde-pretina-claro.svg",
+     "puntadas_convertidas": 235,
+     "verificacion": {
+      "ink_px": 237545,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-molde-pretina-oscuro",
+     "etiqueta": "oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "03-moldes/atavio-molde-pretina-oscuro.svg",
+     "png": "03-moldes/atavio-molde-pretina-oscuro.png",
+     "png_px": [
+      2400,
+      819
+     ],
+     "modo": "svg+png",
+     "nota": "Para fondo tinta o ladrillo. ",
+     "fuente": "motifs/molde-pretina-oscuro.svg",
+     "puntadas_convertidas": 235,
+     "verificacion": {
+      "ink_px": 41169,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "molde-gradacion-28-32-36",
+   "nombre": "Molde con gradación 28 · 32 · 36",
+   "categoria": "03-moldes",
+   "uso": "Tres tallas superpuestas (28 punteado, 32 guiones, 36 continuo) con diferencias de cintura, tiro, largo, bajo y rodilla. Para «Mismo pantalón, tres cuerpos».",
+   "regla": "No escalar de forma no uniforme. Las cotas son de pantalón de mujer talla 32, bota recta. El número de talla y los rótulos son decoración (≥ 24 px a 1080). Escala 14,2 px/cm.",
+   "variantes": [
+    {
+     "archivo": "atavio-molde-gradacion-28-32-36-claro",
+     "etiqueta": "claro",
+     "fondo_recomendado": "hueso",
+     "svg": "03-moldes/atavio-molde-gradacion-28-32-36-claro.svg",
+     "png": "03-moldes/atavio-molde-gradacion-28-32-36-claro.png",
+     "png_px": [
+      1350,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Para fondo hueso o molde. ",
+     "fuente": "motifs/molde-gradacion-28-32-36-claro.svg",
+     "puntadas_convertidas": 419,
+     "verificacion": {
+      "ink_px": 473444,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-molde-gradacion-28-32-36-oscuro",
+     "etiqueta": "oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "03-moldes/atavio-molde-gradacion-28-32-36-oscuro.svg",
+     "png": "03-moldes/atavio-molde-gradacion-28-32-36-oscuro.png",
+     "png_px": [
+      1350,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Para fondo tinta o ladrillo. ",
+     "fuente": "motifs/molde-gradacion-28-32-36-oscuro.svg",
+     "puntadas_convertidas": 419,
+     "verificacion": {
+      "ink_px": 67603,
+      "diff90_px": 1,
+      "diff90_pct_of_ink": 0.001
+     }
+    }
+   ]
+  },
+  {
+   "id": "prenda-pantalon",
+   "nombre": "Prenda: pantalón de frente (con pespunte)",
+   "categoria": "03-moldes",
+   "uso": "Pantalón visto de frente con pretina, pasadores, bolsillos y pespunte. Claro: hueso para fondo molde; molde para fondo hueso; oscuro: solo línea para fondo tinta o ladrillo.",
+   "regla": "No escalar de forma no uniforme. Solo pantalón: no usarlo para anunciar blusas.",
+   "variantes": [
+    {
+     "archivo": "atavio-prenda-pantalon-claro",
+     "etiqueta": "hueso",
+     "fondo_recomendado": "molde",
+     "svg": "03-moldes/atavio-prenda-pantalon-claro.svg",
+     "png": "03-moldes/atavio-prenda-pantalon-claro.png",
+     "png_px": [
+      1067,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Relleno hueso, para fondo molde.",
+     "fuente": "motifs/prenda-pantalon-claro.svg",
+     "puntadas_convertidas": 447,
+     "verificacion": {
+      "ink_px": 804416,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-prenda-pantalon-molde",
+     "etiqueta": "molde",
+     "fondo_recomendado": "hueso",
+     "svg": "03-moldes/atavio-prenda-pantalon-molde.svg",
+     "png": "03-moldes/atavio-prenda-pantalon-molde.png",
+     "png_px": [
+      1067,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Relleno papel de molde, para fondo hueso.",
+     "fuente": "motifs/prenda-pantalon-molde.svg",
+     "puntadas_convertidas": 447,
+     "verificacion": {
+      "ink_px": 806199,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-prenda-pantalon-oscuro",
+     "etiqueta": "oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "03-moldes/atavio-prenda-pantalon-oscuro.svg",
+     "png": "03-moldes/atavio-prenda-pantalon-oscuro.png",
+     "png_px": [
+      1067,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Solo línea, para fondo tinta o ladrillo.",
+     "fuente": "motifs/prenda-pantalon-oscuro.svg",
+     "puntadas_convertidas": 447,
+     "verificacion": {
+      "ink_px": 83294,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "prenda-pantalon-simple",
+   "nombre": "Prenda: pantalón de frente (simple)",
+   "categoria": "03-moldes",
+   "uso": "Versión limpia del pantalón de frente, sin dobladillo marcado ni bolsillo trasero, para el catálogo de WhatsApp (hueso, prenda centrada).",
+   "regla": "No escalar de forma no uniforme.",
+   "variantes": [
+    {
+     "archivo": "atavio-prenda-pantalon-simple",
+     "etiqueta": "molde",
+     "fondo_recomendado": "hueso",
+     "svg": "03-moldes/atavio-prenda-pantalon-simple.svg",
+     "png": "03-moldes/atavio-prenda-pantalon-simple.png",
+     "png_px": [
+      1067,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Relleno papel de molde, para fondo hueso.",
+     "fuente": "motifs/prenda-pantalon-limpia.svg",
+     "puntadas_convertidas": 414,
+     "verificacion": {
+      "ink_px": 824772,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "etiqueta-colgante",
+   "nombre": "Etiqueta colgante",
+   "categoria": "04-etiqueta-y-cinta",
+   "uso": "Etiqueta de cartón con cordel. El precio vive solo aquí. Zona de nombre x 130 a 510, y 330 a 440; zona de precio x 130 a 510, y 480 a 720 (viewBox 640 × 980). El texto se pone en Canva.",
+   "regla": "El precio solo en la etiqueta. Precio en Libre Franklin Medium gris tinta (hasta ~170 px de cifra), nombre en SemiBold. Puede ir girada 3° a 5°.",
+   "variantes": [
+    {
+     "archivo": "atavio-etiqueta-colgante-claro",
+     "etiqueta": "claro",
+     "fondo_recomendado": "hueso",
+     "svg": "04-etiqueta-y-cinta/atavio-etiqueta-colgante-claro.svg",
+     "png": "04-etiqueta-y-cinta/atavio-etiqueta-colgante-claro.png",
+     "png_px": [
+      1567,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Cartón papel de molde, para fondo hueso.",
+     "fuente": "motifs/etiqueta-colgante.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 1200774,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-etiqueta-colgante-oscuro",
+     "etiqueta": "oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "04-etiqueta-y-cinta/atavio-etiqueta-colgante-oscuro.svg",
+     "png": "04-etiqueta-y-cinta/atavio-etiqueta-colgante-oscuro.png",
+     "png_px": [
+      1567,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Cartón hueso, para fondo molde, tinta o ladrillo.",
+     "fuente": "motifs/etiqueta-colgante-oscura.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 1157255,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "cinta-metrica-horizontal",
+   "nombre": "Cinta métrica horizontal",
+   "categoria": "04-etiqueta-y-cinta",
+   "uso": "Cinta de 45 cm pegada al borde superior (1080 × 136): 0 cm en x = 18, 23,2 px por cm, numeración cada 5.",
+   "regla": "Indicador de lámina del carrusel: el marcador se coloca en la posición de la lámina. Marcas del borde al interior de la lámina. Una cinta por pieza.",
+   "variantes": [
+    {
+     "archivo": "atavio-cinta-metrica-horizontal-claro",
+     "etiqueta": "claro",
+     "fondo_recomendado": "hueso",
+     "svg": "04-etiqueta-y-cinta/atavio-cinta-metrica-horizontal-claro.svg",
+     "png": "04-etiqueta-y-cinta/atavio-cinta-metrica-horizontal-claro.png",
+     "png_px": [
+      2400,
+      302
+     ],
+     "modo": "svg+png",
+     "nota": "Para fondo hueso o molde. ",
+     "fuente": "motifs/cinta-metrica-horizontal-claro.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 408600,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-cinta-metrica-horizontal-oscuro",
+     "etiqueta": "oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "04-etiqueta-y-cinta/atavio-cinta-metrica-horizontal-oscuro.svg",
+     "png": "04-etiqueta-y-cinta/atavio-cinta-metrica-horizontal-oscuro.png",
+     "png_px": [
+      2400,
+      302
+     ],
+     "modo": "svg+png",
+     "nota": "Para fondo tinta o ladrillo. ",
+     "fuente": "motifs/cinta-metrica-horizontal-oscuro.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 374789,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "cinta-metrica-horizontal-sin-numeros",
+   "nombre": "Cinta métrica horizontal sin numeración",
+   "categoria": "04-etiqueta-y-cinta",
+   "uso": "Franja de cinta de 74 px de alto (solo marcas), usada en el carrusel «La percha de la semana».",
+   "regla": "Indicador de lámina del carrusel: el marcador se coloca en la posición de la lámina. Marcas del borde al interior de la lámina. Una cinta por pieza.",
+   "variantes": [
+    {
+     "archivo": "atavio-cinta-metrica-horizontal-sin-numeros-claro",
+     "etiqueta": "claro",
+     "fondo_recomendado": "hueso",
+     "svg": "04-etiqueta-y-cinta/atavio-cinta-metrica-horizontal-sin-numeros-claro.svg",
+     "png": "04-etiqueta-y-cinta/atavio-cinta-metrica-horizontal-sin-numeros-claro.png",
+     "png_px": [
+      2400,
+      164
+     ],
+     "modo": "svg+png",
+     "nota": "Para fondo hueso o molde.",
+     "fuente": "generado a partir de plantillas (gen_feed.py / vertical.py / HTML)",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 220908,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-cinta-metrica-horizontal-sin-numeros-oscuro",
+     "etiqueta": "oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "04-etiqueta-y-cinta/atavio-cinta-metrica-horizontal-sin-numeros-oscuro.svg",
+     "png": "04-etiqueta-y-cinta/atavio-cinta-metrica-horizontal-sin-numeros-oscuro.png",
+     "png_px": [
+      2400,
+      164
+     ],
+     "modo": "svg+png",
+     "nota": "Para fondo tinta o ladrillo.",
+     "fuente": "generado a partir de plantillas (gen_feed.py / vertical.py / HTML)",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 205938,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "cinta-metrica-vertical",
+   "nombre": "Cinta métrica vertical",
+   "categoria": "04-etiqueta-y-cinta",
+   "uso": "Cinta de 80 cm para reels e historias (136 × 1920): 0 cm en y = 32.",
+   "regla": "Indicador de lámina del carrusel: el marcador se coloca en la posición de la lámina. Marcas del borde al interior de la lámina. Una cinta por pieza.",
+   "variantes": [
+    {
+     "archivo": "atavio-cinta-metrica-vertical-claro",
+     "etiqueta": "claro",
+     "fondo_recomendado": "hueso",
+     "svg": "04-etiqueta-y-cinta/atavio-cinta-metrica-vertical-claro.svg",
+     "png": "04-etiqueta-y-cinta/atavio-cinta-metrica-vertical-claro.png",
+     "png_px": [
+      170,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Para fondo hueso o molde. ",
+     "fuente": "motifs/cinta-metrica-vertical-claro.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 230400,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-cinta-metrica-vertical-oscuro",
+     "etiqueta": "oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "04-etiqueta-y-cinta/atavio-cinta-metrica-vertical-oscuro.svg",
+     "png": "04-etiqueta-y-cinta/atavio-cinta-metrica-vertical-oscuro.png",
+     "png_px": [
+      170,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Para fondo tinta o ladrillo. ",
+     "fuente": "motifs/cinta-metrica-vertical-oscuro.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 213868,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "marcador-cinta",
+   "nombre": "Marcador de cinta (horizontal)",
+   "categoria": "04-etiqueta-y-cinta",
+   "uso": "Banderín ladrillo que señala la lámina actual sobre la cinta horizontal. Punta en (36,170) del viewBox 72 × 176; la línea de referencia es x = 36.",
+   "regla": "Sobre cinta horizontal: colocar la punta en x = 18 + cm × 23,2 y el borde superior en el borde del lienzo. Un solo marcador por cinta.",
+   "variantes": [
+    {
+     "archivo": "atavio-marcador-cinta",
+     "etiqueta": "ladrillo",
+     "fondo_recomendado": "hueso",
+     "svg": "04-etiqueta-y-cinta/atavio-marcador-cinta.svg",
+     "png": "04-etiqueta-y-cinta/atavio-marcador-cinta.png",
+     "png_px": [
+      982,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Sirve sobre hueso, molde y tinta (es ladrillo con línea hueso).",
+     "fuente": "motifs/marcador.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 934746,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "marcador-cinta-vertical",
+   "nombre": "Marcador de cinta (vertical)",
+   "categoria": "04-etiqueta-y-cinta",
+   "uso": "Banderín ladrillo para la cinta vertical (176 × 72), punta a la izquierda en (6,36).",
+   "regla": "Sobre cinta vertical: punta en y = 32 + cm × 23,2, apoyado en el borde derecho de la lámina.",
+   "variantes": [
+    {
+     "archivo": "atavio-marcador-cinta-vertical",
+     "etiqueta": "ladrillo",
+     "fondo_recomendado": "hueso",
+     "svg": "04-etiqueta-y-cinta/atavio-marcador-cinta-vertical.svg",
+     "png": "04-etiqueta-y-cinta/atavio-marcador-cinta-vertical.png",
+     "png_px": [
+      2400,
+      982
+     ],
+     "modo": "svg+png",
+     "nota": "Sirve sobre hueso, molde y tinta.",
+     "fuente": "motifs/marcador-vertical.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 934736,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "detalle-atraque-en-x",
+   "nombre": "Detalle: atraque en X",
+   "categoria": "05-detalles-de-oficio",
+   "uso": "Refuerzo de bolsillo ampliado, con marco de tela y cruz de registro. Para «Cómo saber si… te va a durar».",
+   "regla": "Se pueden recortar a sangrado; los marcos de tela son parte del dibujo. En fondo claro la hebra es ladrillo (un solo rojo de paleta).",
+   "variantes": [
+    {
+     "archivo": "atavio-detalle-atraque-en-x-claro",
+     "etiqueta": "claro",
+     "fondo_recomendado": "hueso",
+     "svg": "05-detalles-de-oficio/atavio-detalle-atraque-en-x-claro.svg",
+     "png": "05-detalles-de-oficio/atavio-detalle-atraque-en-x-claro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Marco papel de molde, hebra ladrillo; para fondo hueso o molde.",
+     "fuente": "motifs/detalle-atraque-x-claro.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 2534464,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-detalle-atraque-en-x-oscuro",
+     "etiqueta": "oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "05-detalles-de-oficio/atavio-detalle-atraque-en-x-oscuro.svg",
+     "png": "05-detalles-de-oficio/atavio-detalle-atraque-en-x-oscuro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Solo línea hueso, para fondo tinta o ladrillo.",
+     "fuente": "motifs/detalle-atraque-x-oscuro.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 475209,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "detalle-boton-4-agujeros",
+   "nombre": "Detalle: botón de 4 agujeros",
+   "categoria": "05-detalles-de-oficio",
+   "uso": "Botón de cuatro agujeros con hilo cruzado, ampliado.",
+   "regla": "Se pueden recortar a sangrado; los marcos de tela son parte del dibujo. En fondo claro la hebra es ladrillo (un solo rojo de paleta).",
+   "variantes": [
+    {
+     "archivo": "atavio-detalle-boton-4-agujeros-claro",
+     "etiqueta": "claro",
+     "fondo_recomendado": "hueso",
+     "svg": "05-detalles-de-oficio/atavio-detalle-boton-4-agujeros-claro.svg",
+     "png": "05-detalles-de-oficio/atavio-detalle-boton-4-agujeros-claro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Marco papel de molde, hebra ladrillo; para fondo hueso o molde.",
+     "fuente": "motifs/detalle-boton-4-agujeros-claro.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 1837077,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-detalle-boton-4-agujeros-oscuro",
+     "etiqueta": "oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "05-detalles-de-oficio/atavio-detalle-boton-4-agujeros-oscuro.svg",
+     "png": "05-detalles-de-oficio/atavio-detalle-boton-4-agujeros-oscuro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Solo línea hueso, para fondo tinta o ladrillo.",
+     "fuente": "motifs/detalle-boton-4-agujeros-oscuro.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 389319,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "detalle-costura-ampliada",
+   "nombre": "Detalle: costura ampliada",
+   "categoria": "05-detalles-de-oficio",
+   "uso": "Doble pespunte ampliado con escala de 1 cm. Para «Voltéala» y los carruseles de costura.",
+   "regla": "Se pueden recortar a sangrado; los marcos de tela son parte del dibujo. En fondo claro la hebra es ladrillo (un solo rojo de paleta).",
+   "variantes": [
+    {
+     "archivo": "atavio-detalle-costura-ampliada-claro",
+     "etiqueta": "claro",
+     "fondo_recomendado": "hueso",
+     "svg": "05-detalles-de-oficio/atavio-detalle-costura-ampliada-claro.svg",
+     "png": "05-detalles-de-oficio/atavio-detalle-costura-ampliada-claro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Marco papel de molde, hebra ladrillo; para fondo hueso o molde.",
+     "fuente": "motifs/detalle-costura-ampliada-claro.svg",
+     "puntadas_convertidas": 98,
+     "verificacion": {
+      "ink_px": 2534464,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-detalle-costura-ampliada-oscuro",
+     "etiqueta": "oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "05-detalles-de-oficio/atavio-detalle-costura-ampliada-oscuro.svg",
+     "png": "05-detalles-de-oficio/atavio-detalle-costura-ampliada-oscuro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Solo línea hueso, para fondo tinta o ladrillo.",
+     "fuente": "motifs/detalle-costura-ampliada-oscuro.svg",
+     "puntadas_convertidas": 98,
+     "verificacion": {
+      "ink_px": 441897,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "detalle-ojal",
+   "nombre": "Detalle: ojal",
+   "categoria": "05-detalles-de-oficio",
+   "uso": "Ojal con pasada de hilo, ampliado.",
+   "regla": "Se pueden recortar a sangrado; los marcos de tela son parte del dibujo. En fondo claro la hebra es ladrillo (un solo rojo de paleta).",
+   "variantes": [
+    {
+     "archivo": "atavio-detalle-ojal-claro",
+     "etiqueta": "claro",
+     "fondo_recomendado": "hueso",
+     "svg": "05-detalles-de-oficio/atavio-detalle-ojal-claro.svg",
+     "png": "05-detalles-de-oficio/atavio-detalle-ojal-claro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Marco papel de molde, hebra ladrillo; para fondo hueso o molde.",
+     "fuente": "motifs/detalle-ojal-claro.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 2481314,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-detalle-ojal-oscuro",
+     "etiqueta": "oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "05-detalles-de-oficio/atavio-detalle-ojal-oscuro.svg",
+     "png": "05-detalles-de-oficio/atavio-detalle-ojal-oscuro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Solo línea hueso, para fondo tinta o ladrillo.",
+     "fuente": "motifs/detalle-ojal-oscuro.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 466859,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "detalle-remache",
+   "nombre": "Detalle: remache",
+   "categoria": "05-detalles-de-oficio",
+   "uso": "Remache con dobles costuras, ampliado.",
+   "regla": "Se pueden recortar a sangrado; los marcos de tela son parte del dibujo. En fondo claro la hebra es ladrillo (un solo rojo de paleta).",
+   "variantes": [
+    {
+     "archivo": "atavio-detalle-remache-claro",
+     "etiqueta": "claro",
+     "fondo_recomendado": "hueso",
+     "svg": "05-detalles-de-oficio/atavio-detalle-remache-claro.svg",
+     "png": "05-detalles-de-oficio/atavio-detalle-remache-claro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Marco papel de molde, hebra ladrillo; para fondo hueso o molde.",
+     "fuente": "motifs/detalle-remache-claro.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 2341503,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-detalle-remache-oscuro",
+     "etiqueta": "oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "05-detalles-de-oficio/atavio-detalle-remache-oscuro.svg",
+     "png": "05-detalles-de-oficio/atavio-detalle-remache-oscuro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Solo línea hueso, para fondo tinta o ladrillo.",
+     "fuente": "motifs/detalle-remache-oscuro.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 390993,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "textura-sarga",
+   "nombre": "Textura de sarga (1080 × 1920)",
+   "categoria": "06-texturas",
+   "uso": "Trama de sarga en diagonal. Claro: líneas papel de molde sobre transparente (pónla sobre hueso). Oscuro: fondo tinta con líneas gris hilo. Cubre feed 1080 × 1350 y reel/historia 1080 × 1920 (recortar según formato).",
+   "regla": "Tono sobre tono: textura de fondo, nunca protagonista. Debajo de un panel de texto o de un disco, no como fondo de párrafos.",
+   "variantes": [
+    {
+     "archivo": "atavio-textura-sarga-claro",
+     "etiqueta": "claro",
+     "fondo_recomendado": "hueso",
+     "svg": null,
+     "png": "06-texturas/atavio-textura-sarga-claro.png",
+     "png_px": [
+      1350,
+      2400
+     ],
+     "modo": "solo png",
+     "nota": "Solo PNG: la trama de sarga se construye con <pattern> y miles de trazos; convertirla a vectores real pesaría más de 1 MB y Canva la pintaría distinta.",
+     "fuente": "generado a partir de plantillas (gen_feed.py / vertical.py / HTML)",
+     "puntadas_convertidas": 0,
+     "verificacion": null
+    },
+    {
+     "archivo": "atavio-textura-sarga-oscuro",
+     "etiqueta": "oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": null,
+     "png": "06-texturas/atavio-textura-sarga-oscuro.png",
+     "png_px": [
+      1350,
+      2400
+     ],
+     "modo": "solo png",
+     "nota": "Solo PNG: la trama de sarga se construye con <pattern> y miles de trazos; convertirla a vectores real pesaría más de 1 MB y Canva la pintaría distinta.",
+     "fuente": "generado a partir de plantillas (gen_feed.py / vertical.py / HTML)",
+     "puntadas_convertidas": 0,
+     "verificacion": null
+    }
+   ]
+  },
+  {
+   "id": "textura-sarga-ladrillo",
+   "nombre": "Textura de sarga sobre ladrillo (1080 × 1920)",
+   "categoria": "06-texturas",
+   "uso": "Sarga tono sobre tono: fondo ladrillo con trama tinta al 38 %. Portadas de carrusel y cierres.",
+   "regla": "Tono sobre tono: textura de fondo, nunca protagonista. Debajo de un panel de texto o de un disco, no como fondo de párrafos. Con este fondo el sello va invertido.",
+   "variantes": [
+    {
+     "archivo": "atavio-textura-sarga-ladrillo",
+     "etiqueta": "ladrillo",
+     "fondo_recomendado": "ladrillo",
+     "svg": null,
+     "png": "06-texturas/atavio-textura-sarga-ladrillo.png",
+     "png_px": [
+      1350,
+      2400
+     ],
+     "modo": "solo png",
+     "nota": "Solo PNG: la trama de sarga se construye con <pattern> y miles de trazos; convertirla a vectores real pesaría más de 1 MB y Canva la pintaría distinta. Usa tinta al 38 % sobre ladrillo, igual que las plantillas v1.2 (un solo rojo).",
+     "fuente": "generado a partir de plantillas (gen_feed.py / vertical.py / HTML)",
+     "puntadas_convertidas": 0,
+     "verificacion": null
+    }
+   ]
+  },
+  {
+   "id": "textura-sarga-bloque",
+   "nombre": "Muestra de tejido con orilla dentada",
+   "categoria": "06-texturas",
+   "uso": "Retazo de tela de sarga con orilla de pique (zigzag), hilo ladrillo y hueso en el borde izquierdo y puntada de borde. Para «Tócala: debe sentirse firme».",
+   "regla": "Se puede recortar a sangrado. Una sola muestra por lámina.",
+   "variantes": [
+    {
+     "archivo": "atavio-textura-sarga-bloque-claro",
+     "etiqueta": "claro",
+     "fondo_recomendado": "hueso",
+     "svg": null,
+     "png": "06-texturas/atavio-textura-sarga-bloque-claro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "solo png",
+     "nota": "Solo PNG: la trama de sarga se construye con <pattern> y miles de trazos; convertirla a vectores real pesaría más de 1 MB y Canva la pintaría distinta.",
+     "fuente": "motifs/tejido-sarga-bloque-claro.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": null
+    },
+    {
+     "archivo": "atavio-textura-sarga-bloque-oscuro",
+     "etiqueta": "oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": null,
+     "png": "06-texturas/atavio-textura-sarga-bloque-oscuro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "solo png",
+     "nota": "Solo PNG: la trama de sarga se construye con <pattern> y miles de trazos; convertirla a vectores real pesaría más de 1 MB y Canva la pintaría distinta.",
+     "fuente": "motifs/tejido-sarga-bloque-oscuro.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": null
+    }
+   ]
+  },
+  {
+   "id": "icono-locales",
+   "nombre": "Icono: Locales",
+   "categoria": "07-iconos-destacados",
+   "uso": "Pin de ubicación con hebra interior y línea de piso: destacado «Locales».",
+   "regla": "Trazo fino (7 px) para uso grande; trazo grueso (16 px) para destacados de 110 px. Un icono por destacado, centrado en el disco.",
+   "variantes": [
+    {
+     "archivo": "atavio-icono-locales-claro",
+     "etiqueta": "fino · claro",
+     "fondo_recomendado": "hueso",
+     "svg": "07-iconos-destacados/atavio-icono-locales-claro.svg",
+     "png": "07-iconos-destacados/atavio-icono-locales-claro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Trazo 7 px. Para fondo hueso o molde.",
+     "fuente": "motifs/iconos/icono-locales-claro.svg",
+     "puntadas_convertidas": 54,
+     "verificacion": {
+      "ink_px": 174519,
+      "diff90_px": 52,
+      "diff90_pct_of_ink": 0.03
+     }
+    },
+    {
+     "archivo": "atavio-icono-locales-oscuro",
+     "etiqueta": "fino · oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "07-iconos-destacados/atavio-icono-locales-oscuro.svg",
+     "png": "07-iconos-destacados/atavio-icono-locales-oscuro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Trazo 7 px. Para fondo tinta o ladrillo.",
+     "fuente": "motifs/iconos/icono-locales-oscuro.svg",
+     "puntadas_convertidas": 54,
+     "verificacion": {
+      "ink_px": 173965,
+      "diff90_px": 4,
+      "diff90_pct_of_ink": 0.002
+     }
+    },
+    {
+     "archivo": "atavio-icono-locales-trazo-grueso-claro",
+     "etiqueta": "grueso · claro",
+     "fondo_recomendado": "hueso",
+     "svg": "07-iconos-destacados/atavio-icono-locales-trazo-grueso-claro.svg",
+     "png": "07-iconos-destacados/atavio-icono-locales-trazo-grueso-claro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Trazo 16 px, el de los destacados de las plantillas. Para fondo hueso o molde.",
+     "fuente": "motifs/iconos/icono-locales-claro.svg",
+     "puntadas_convertidas": 54,
+     "verificacion": {
+      "ink_px": 433264,
+      "diff90_px": 15,
+      "diff90_pct_of_ink": 0.003
+     }
+    },
+    {
+     "archivo": "atavio-icono-locales-trazo-grueso-oscuro",
+     "etiqueta": "grueso · oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "07-iconos-destacados/atavio-icono-locales-trazo-grueso-oscuro.svg",
+     "png": "07-iconos-destacados/atavio-icono-locales-trazo-grueso-oscuro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Trazo 16 px, el de los destacados de las plantillas. Para fondo tinta o ladrillo.",
+     "fuente": "motifs/iconos/icono-locales-oscuro.svg",
+     "puntadas_convertidas": 54,
+     "verificacion": {
+      "ink_px": 432552,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "icono-separa-tu-talla",
+   "nombre": "Icono: Separa tu talla",
+   "categoria": "07-iconos-destacados",
+   "uso": "Etiqueta con cordel y cinta métrica: destacado «Separa».",
+   "regla": "Trazo fino (7 px) para uso grande; trazo grueso (16 px) para destacados de 110 px. Un icono por destacado, centrado en el disco.",
+   "variantes": [
+    {
+     "archivo": "atavio-icono-separa-tu-talla-claro",
+     "etiqueta": "fino · claro",
+     "fondo_recomendado": "hueso",
+     "svg": "07-iconos-destacados/atavio-icono-separa-tu-talla-claro.svg",
+     "png": "07-iconos-destacados/atavio-icono-separa-tu-talla-claro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Trazo 7 px. Para fondo hueso o molde.",
+     "fuente": "motifs/iconos/icono-separa-tu-talla-claro.svg",
+     "puntadas_convertidas": 17,
+     "verificacion": {
+      "ink_px": 131215,
+      "diff90_px": 5,
+      "diff90_pct_of_ink": 0.004
+     }
+    },
+    {
+     "archivo": "atavio-icono-separa-tu-talla-oscuro",
+     "etiqueta": "fino · oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "07-iconos-destacados/atavio-icono-separa-tu-talla-oscuro.svg",
+     "png": "07-iconos-destacados/atavio-icono-separa-tu-talla-oscuro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Trazo 7 px. Para fondo tinta o ladrillo.",
+     "fuente": "motifs/iconos/icono-separa-tu-talla-oscuro.svg",
+     "puntadas_convertidas": 17,
+     "verificacion": {
+      "ink_px": 131015,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-icono-separa-tu-talla-trazo-grueso-claro",
+     "etiqueta": "grueso · claro",
+     "fondo_recomendado": "hueso",
+     "svg": "07-iconos-destacados/atavio-icono-separa-tu-talla-trazo-grueso-claro.svg",
+     "png": "07-iconos-destacados/atavio-icono-separa-tu-talla-trazo-grueso-claro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Trazo 16 px, el de los destacados de las plantillas. Para fondo hueso o molde.",
+     "fuente": "motifs/iconos/icono-separa-tu-talla-claro.svg",
+     "puntadas_convertidas": 17,
+     "verificacion": {
+      "ink_px": 301440,
+      "diff90_px": 2,
+      "diff90_pct_of_ink": 0.001
+     }
+    },
+    {
+     "archivo": "atavio-icono-separa-tu-talla-trazo-grueso-oscuro",
+     "etiqueta": "grueso · oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "07-iconos-destacados/atavio-icono-separa-tu-talla-trazo-grueso-oscuro.svg",
+     "png": "07-iconos-destacados/atavio-icono-separa-tu-talla-trazo-grueso-oscuro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Trazo 16 px, el de los destacados de las plantillas. Para fondo tinta o ladrillo.",
+     "fuente": "motifs/iconos/icono-separa-tu-talla-oscuro.svg",
+     "puntadas_convertidas": 17,
+     "verificacion": {
+      "ink_px": 301295,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "icono-tallas-y-telas",
+   "nombre": "Icono: Tallas y telas",
+   "categoria": "07-iconos-destacados",
+   "uso": "Rollo de cinta métrica: destacado «Tallas».",
+   "regla": "Trazo fino (7 px) para uso grande; trazo grueso (16 px) para destacados de 110 px. Un icono por destacado, centrado en el disco.",
+   "variantes": [
+    {
+     "archivo": "atavio-icono-tallas-y-telas-claro",
+     "etiqueta": "fino · claro",
+     "fondo_recomendado": "hueso",
+     "svg": "07-iconos-destacados/atavio-icono-tallas-y-telas-claro.svg",
+     "png": "07-iconos-destacados/atavio-icono-tallas-y-telas-claro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Trazo 7 px. Para fondo hueso o molde.",
+     "fuente": "motifs/iconos/icono-tallas-y-telas-claro.svg",
+     "puntadas_convertidas": 26,
+     "verificacion": {
+      "ink_px": 189129,
+      "diff90_px": 204,
+      "diff90_pct_of_ink": 0.108
+     }
+    },
+    {
+     "archivo": "atavio-icono-tallas-y-telas-oscuro",
+     "etiqueta": "fino · oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "07-iconos-destacados/atavio-icono-tallas-y-telas-oscuro.svg",
+     "png": "07-iconos-destacados/atavio-icono-tallas-y-telas-oscuro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Trazo 7 px. Para fondo tinta o ladrillo.",
+     "fuente": "motifs/iconos/icono-tallas-y-telas-oscuro.svg",
+     "puntadas_convertidas": 26,
+     "verificacion": {
+      "ink_px": 188831,
+      "diff90_px": 73,
+      "diff90_pct_of_ink": 0.039
+     }
+    },
+    {
+     "archivo": "atavio-icono-tallas-y-telas-trazo-grueso-claro",
+     "etiqueta": "grueso · claro",
+     "fondo_recomendado": "hueso",
+     "svg": "07-iconos-destacados/atavio-icono-tallas-y-telas-trazo-grueso-claro.svg",
+     "png": "07-iconos-destacados/atavio-icono-tallas-y-telas-trazo-grueso-claro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Trazo 16 px, el de los destacados de las plantillas. Para fondo hueso o molde.",
+     "fuente": "motifs/iconos/icono-tallas-y-telas-claro.svg",
+     "puntadas_convertidas": 26,
+     "verificacion": {
+      "ink_px": 433484,
+      "diff90_px": 82,
+      "diff90_pct_of_ink": 0.019
+     }
+    },
+    {
+     "archivo": "atavio-icono-tallas-y-telas-trazo-grueso-oscuro",
+     "etiqueta": "grueso · oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "07-iconos-destacados/atavio-icono-tallas-y-telas-trazo-grueso-oscuro.svg",
+     "png": "07-iconos-destacados/atavio-icono-tallas-y-telas-trazo-grueso-oscuro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Trazo 16 px, el de los destacados de las plantillas. Para fondo tinta o ladrillo.",
+     "fuente": "motifs/iconos/icono-tallas-y-telas-oscuro.svg",
+     "puntadas_convertidas": 26,
+     "verificacion": {
+      "ink_px": 433127,
+      "diff90_px": 11,
+      "diff90_pct_of_ink": 0.003
+     }
+    }
+   ]
+  },
+  {
+   "id": "icono-el-taller",
+   "nombre": "Icono: El taller",
+   "categoria": "07-iconos-destacados",
+   "uso": "Máquina de coser con hebra: destacado «Taller».",
+   "regla": "Trazo fino (7 px) para uso grande; trazo grueso (16 px) para destacados de 110 px. Un icono por destacado, centrado en el disco.",
+   "variantes": [
+    {
+     "archivo": "atavio-icono-el-taller-claro",
+     "etiqueta": "fino · claro",
+     "fondo_recomendado": "hueso",
+     "svg": "07-iconos-destacados/atavio-icono-el-taller-claro.svg",
+     "png": "07-iconos-destacados/atavio-icono-el-taller-claro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Trazo 7 px. Para fondo hueso o molde.",
+     "fuente": "motifs/iconos/icono-el-taller-claro.svg",
+     "puntadas_convertidas": 27,
+     "verificacion": {
+      "ink_px": 196326,
+      "diff90_px": 3,
+      "diff90_pct_of_ink": 0.002
+     }
+    },
+    {
+     "archivo": "atavio-icono-el-taller-oscuro",
+     "etiqueta": "fino · oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "07-iconos-destacados/atavio-icono-el-taller-oscuro.svg",
+     "png": "07-iconos-destacados/atavio-icono-el-taller-oscuro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Trazo 7 px. Para fondo tinta o ladrillo.",
+     "fuente": "motifs/iconos/icono-el-taller-oscuro.svg",
+     "puntadas_convertidas": 27,
+     "verificacion": {
+      "ink_px": 196161,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-icono-el-taller-trazo-grueso-claro",
+     "etiqueta": "grueso · claro",
+     "fondo_recomendado": "hueso",
+     "svg": "07-iconos-destacados/atavio-icono-el-taller-trazo-grueso-claro.svg",
+     "png": "07-iconos-destacados/atavio-icono-el-taller-trazo-grueso-claro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Trazo 16 px, el de los destacados de las plantillas. Para fondo hueso o molde.",
+     "fuente": "motifs/iconos/icono-el-taller-claro.svg",
+     "puntadas_convertidas": 27,
+     "verificacion": {
+      "ink_px": 424359,
+      "diff90_px": 132,
+      "diff90_pct_of_ink": 0.031
+     }
+    },
+    {
+     "archivo": "atavio-icono-el-taller-trazo-grueso-oscuro",
+     "etiqueta": "grueso · oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "07-iconos-destacados/atavio-icono-el-taller-trazo-grueso-oscuro.svg",
+     "png": "07-iconos-destacados/atavio-icono-el-taller-trazo-grueso-oscuro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Trazo 16 px, el de los destacados de las plantillas. Para fondo tinta o ladrillo.",
+     "fuente": "motifs/iconos/icono-el-taller-oscuro.svg",
+     "puntadas_convertidas": 27,
+     "verificacion": {
+      "ink_px": 424243,
+      "diff90_px": 112,
+      "diff90_pct_of_ink": 0.026
+     }
+    }
+   ]
+  },
+  {
+   "id": "icono-uniformes",
+   "nombre": "Icono: Uniformes",
+   "categoria": "07-iconos-destacados",
+   "uso": "Camisa con bolsillo y botones: destacado «Uniformes».",
+   "regla": "Trazo fino (7 px) para uso grande; trazo grueso (16 px) para destacados de 110 px. Un icono por destacado, centrado en el disco.",
+   "variantes": [
+    {
+     "archivo": "atavio-icono-uniformes-claro",
+     "etiqueta": "fino · claro",
+     "fondo_recomendado": "hueso",
+     "svg": "07-iconos-destacados/atavio-icono-uniformes-claro.svg",
+     "png": "07-iconos-destacados/atavio-icono-uniformes-claro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Trazo 7 px. Para fondo hueso o molde.",
+     "fuente": "motifs/iconos/icono-uniformes-claro.svg",
+     "puntadas_convertidas": 27,
+     "verificacion": {
+      "ink_px": 220617,
+      "diff90_px": 1,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-icono-uniformes-oscuro",
+     "etiqueta": "fino · oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "07-iconos-destacados/atavio-icono-uniformes-oscuro.svg",
+     "png": "07-iconos-destacados/atavio-icono-uniformes-oscuro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Trazo 7 px. Para fondo tinta o ladrillo.",
+     "fuente": "motifs/iconos/icono-uniformes-oscuro.svg",
+     "puntadas_convertidas": 27,
+     "verificacion": {
+      "ink_px": 220405,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-icono-uniformes-trazo-grueso-claro",
+     "etiqueta": "grueso · claro",
+     "fondo_recomendado": "hueso",
+     "svg": "07-iconos-destacados/atavio-icono-uniformes-trazo-grueso-claro.svg",
+     "png": "07-iconos-destacados/atavio-icono-uniformes-trazo-grueso-claro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Trazo 16 px, el de los destacados de las plantillas. Para fondo hueso o molde.",
+     "fuente": "motifs/iconos/icono-uniformes-claro.svg",
+     "puntadas_convertidas": 27,
+     "verificacion": {
+      "ink_px": 479256,
+      "diff90_px": 1,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-icono-uniformes-trazo-grueso-oscuro",
+     "etiqueta": "grueso · oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "07-iconos-destacados/atavio-icono-uniformes-trazo-grueso-oscuro.svg",
+     "png": "07-iconos-destacados/atavio-icono-uniformes-trazo-grueso-oscuro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Trazo 16 px, el de los destacados de las plantillas. Para fondo tinta o ladrillo.",
+     "fuente": "motifs/iconos/icono-uniformes-oscuro.svg",
+     "puntadas_convertidas": 27,
+     "verificacion": {
+      "ink_px": 479021,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "marquilla-serie",
+   "nombre": "Marquilla de serie",
+   "categoria": "08-apoyos",
+   "uso": "Etiqueta cosida de serie (viewBox 640 × 310) con marco de puntada. Zona de texto x 190 a 536, y 100 a 212. Rotula la serie, p. ej. «Tres cuerpos». El texto va en Canva.",
+   "regla": "Rótulo en Libre Franklin SemiBold: hueso sobre ladrillo (claro) o tinta sobre hueso (oscuro). Tamaño y medidas en el LEEME. Única excepción a «nunca en diagonal» entre los motivos.",
+   "variantes": [
+    {
+     "archivo": "atavio-marquilla-serie-claro",
+     "etiqueta": "claro",
+     "fondo_recomendado": "hueso",
+     "svg": "08-apoyos/atavio-marquilla-serie-claro.svg",
+     "png": "08-apoyos/atavio-marquilla-serie-claro.png",
+     "png_px": [
+      2400,
+      1163
+     ],
+     "modo": "svg+png",
+     "nota": "Fondo ladrillo, texto hueso; para fondos hueso y molde.",
+     "fuente": "motifs/marquilla-serie-claro.svg",
+     "puntadas_convertidas": 68,
+     "verificacion": {
+      "ink_px": 690021,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-marquilla-serie-oscuro",
+     "etiqueta": "oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "08-apoyos/atavio-marquilla-serie-oscuro.svg",
+     "png": "08-apoyos/atavio-marquilla-serie-oscuro.png",
+     "png_px": [
+      2400,
+      1163
+     ],
+     "modo": "svg+png",
+     "nota": "Fondo hueso, texto tinta; para fondos tinta y ladrillo.",
+     "fuente": "motifs/marquilla-serie-oscuro.svg",
+     "puntadas_convertidas": 68,
+     "verificacion": {
+      "ink_px": 661614,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "cruz-registro",
+   "nombre": "Cruz de registro",
+   "categoria": "08-apoyos",
+   "uso": "Marca de registro de imprenta (círculo y cruz) como detalle de esquina del patrón de molde.",
+   "regla": "Decoración pequeña, esquina inferior o superior; una por pieza.",
+   "variantes": [
+    {
+     "archivo": "atavio-cruz-registro-claro",
+     "etiqueta": "claro",
+     "fondo_recomendado": "hueso",
+     "svg": "08-apoyos/atavio-cruz-registro-claro.svg",
+     "png": "08-apoyos/atavio-cruz-registro-claro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Para fondo hueso o molde. ",
+     "fuente": "motifs/cruz-registro-claro.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 137514,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-cruz-registro-oscuro",
+     "etiqueta": "oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "08-apoyos/atavio-cruz-registro-oscuro.svg",
+     "png": "08-apoyos/atavio-cruz-registro-oscuro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Para fondo tinta o ladrillo. ",
+     "fuente": "motifs/cruz-registro-oscuro.svg",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 137482,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "disco-sello-hueso-costura-principal",
+   "nombre": "Disco hueso con costura para el sello principal",
+   "categoria": "08-apoyos",
+   "uso": "Disco de apoyo del sello sobre papel de molde (1,25 × el diámetro del sello, 250 px para el sello de 200 px) con costura fina ladrillo. Se lee como parche cosido.",
+   "regla": "Centrar el sello en el disco; el disco no cuenta como tinta. Sobre molde el sello va siempre sobre este disco (contraste 2,06 sin él).",
+   "variantes": [
+    {
+     "archivo": "atavio-disco-sello-hueso-costura-principal",
+     "etiqueta": "hueso + costura",
+     "fondo_recomendado": "molde",
+     "svg": "08-apoyos/atavio-disco-sello-hueso-costura-principal.svg",
+     "png": "08-apoyos/atavio-disco-sello-hueso-costura-principal.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Disco de 250 px (sello de 200 px).",
+     "fuente": "generado a partir de plantillas (gen_feed.py / vertical.py / HTML)",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 2544239,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "disco-sello-hueso-costura-reducido",
+   "nombre": "Disco hueso con costura para el sello reducido",
+   "categoria": "08-apoyos",
+   "uso": "Igual que el anterior pero para el sello reducido de 150 px (disco de 187,5 px).",
+   "regla": "Centrar el sello en el disco. Sello reducido sobre molde: siempre con disco.",
+   "variantes": [
+    {
+     "archivo": "atavio-disco-sello-hueso-costura-reducido",
+     "etiqueta": "hueso + costura",
+     "fondo_recomendado": "molde",
+     "svg": "08-apoyos/atavio-disco-sello-hueso-costura-reducido.svg",
+     "png": "08-apoyos/atavio-disco-sello-hueso-costura-reducido.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "Disco de 187,5 px (sello de 150 px).",
+     "fuente": "generado a partir de plantillas (gen_feed.py / vertical.py / HTML)",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 2544214,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "sello-principal-sobre-disco",
+   "nombre": "Sello principal sobre disco hueso con costura",
+   "categoria": "08-apoyos",
+   "uso": "El sello principal ya centrado en su disco con costura: colocación oficial sobre fondo molde. Un solo archivo, sin alinear nada.",
+   "regla": "Solo sobre molde (o foto ocupada). Sobre hueso, tinta y ladrillo usar el sello solo. Mantener 12 % de aire alrededor del círculo del sello.",
+   "variantes": [
+    {
+     "archivo": "atavio-sello-principal-sobre-disco",
+     "etiqueta": "sobre molde",
+     "fondo_recomendado": "molde",
+     "svg": "08-apoyos/atavio-sello-principal-sobre-disco.svg",
+     "png": "08-apoyos/atavio-sello-principal-sobre-disco.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "250 × 250 px, sello de 200 px.",
+     "fuente": "generado a partir de plantillas (gen_feed.py / vertical.py / HTML)",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 2544030,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "sello-reducido-sobre-disco",
+   "nombre": "Sello reducido sobre disco hueso con costura",
+   "categoria": "08-apoyos",
+   "uso": "El sello reducido centrado en su disco con costura (187,5 px, sello de 150 px).",
+   "regla": "Solo sobre molde (o foto ocupada).",
+   "variantes": [
+    {
+     "archivo": "atavio-sello-reducido-sobre-disco",
+     "etiqueta": "sobre molde",
+     "fondo_recomendado": "molde",
+     "svg": "08-apoyos/atavio-sello-reducido-sobre-disco.svg",
+     "png": "08-apoyos/atavio-sello-reducido-sobre-disco.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "187,5 × 187,5 px, sello de 150 px.",
+     "fuente": "generado a partir de plantillas (gen_feed.py / vertical.py / HTML)",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 2544005,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "disco-destacado",
+   "nombre": "Disco de destacado con costura",
+   "categoria": "08-apoyos",
+   "uso": "Disco hueso con anillo de costura ladrillo (744 px de diámetro) para las portadas de destacados; va sobre la textura de sarga y lleva el icono centrado.",
+   "regla": "Un icono por disco, centrado, recortado al círculo interior (radio 336). Fondo: textura de sarga claro. Una costura por pieza: es la del anillo.",
+   "variantes": [
+    {
+     "archivo": "atavio-disco-destacado",
+     "etiqueta": "hueso + costura",
+     "fondo_recomendado": "molde",
+     "svg": "08-apoyos/atavio-disco-destacado.svg",
+     "png": "08-apoyos/atavio-disco-destacado.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "744 × 744 px.",
+     "fuente": "generado a partir de plantillas (gen_feed.py / vertical.py / HTML)",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 2544110,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "chip-de-dato",
+   "nombre": "Chip de dato",
+   "categoria": "08-apoyos",
+   "uso": "Chip papel de molde con esquina cortada y ojal (830 × 210), para overlays de dato en reels (precio, talla, tela). El texto va en Canva.",
+   "regla": "Precio 500 · 112 px y talla 600 · 44 px en Libre Franklin, gris tinta; tela 400 · 32 px debajo. Texto siempre gris tinta, nunca sobre el ojal.",
+   "variantes": [
+    {
+     "archivo": "atavio-chip-de-dato",
+     "etiqueta": "papel de molde",
+     "fondo_recomendado": "hueso",
+     "svg": "08-apoyos/atavio-chip-de-dato.svg",
+     "png": "08-apoyos/atavio-chip-de-dato.png",
+     "png_px": [
+      2400,
+      607
+     ],
+     "modo": "svg+png",
+     "nota": "830 × 210 px sobre fondo hueso o foto.",
+     "fuente": "generado a partir de plantillas (gen_feed.py / vertical.py / HTML)",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 803861,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "bloque-titular",
+   "nombre": "Bloque sólido de titular",
+   "categoria": "08-apoyos",
+   "uso": "Panel liso de 888 × 580 donde se asienta el titular de las portadas de reel (hueso, molde, tinta o ladrillo).",
+   "regla": "Titular a 120 px (≥ 118) en Fraunces SemiBold; hueso/molde con texto tinta, tinta/ladrillo con texto hueso. Dejar 72 px a cada lado.",
+   "variantes": [
+    {
+     "archivo": "atavio-bloque-titular-hueso",
+     "etiqueta": "hueso",
+     "fondo_recomendado": "molde",
+     "svg": "08-apoyos/atavio-bloque-titular-hueso.svg",
+     "png": "08-apoyos/atavio-bloque-titular-hueso.png",
+     "png_px": [
+      2400,
+      1568
+     ],
+     "modo": "svg+png",
+     "nota": "",
+     "fuente": "generado a partir de plantillas (gen_feed.py / vertical.py / HTML)",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 2116800,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-bloque-titular-molde",
+     "etiqueta": "molde",
+     "fondo_recomendado": "hueso",
+     "svg": "08-apoyos/atavio-bloque-titular-molde.svg",
+     "png": "08-apoyos/atavio-bloque-titular-molde.png",
+     "png_px": [
+      2400,
+      1568
+     ],
+     "modo": "svg+png",
+     "nota": "",
+     "fuente": "generado a partir de plantillas (gen_feed.py / vertical.py / HTML)",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 2116800,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-bloque-titular-tinta",
+     "etiqueta": "tinta",
+     "fondo_recomendado": "hueso",
+     "svg": "08-apoyos/atavio-bloque-titular-tinta.svg",
+     "png": "08-apoyos/atavio-bloque-titular-tinta.png",
+     "png_px": [
+      2400,
+      1568
+     ],
+     "modo": "svg+png",
+     "nota": "",
+     "fuente": "generado a partir de plantillas (gen_feed.py / vertical.py / HTML)",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 2116800,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    },
+    {
+     "archivo": "atavio-bloque-titular-ladrillo",
+     "etiqueta": "ladrillo",
+     "fondo_recomendado": "hueso",
+     "svg": "08-apoyos/atavio-bloque-titular-ladrillo.svg",
+     "png": "08-apoyos/atavio-bloque-titular-ladrillo.png",
+     "png_px": [
+      2400,
+      1568
+     ],
+     "modo": "svg+png",
+     "nota": "",
+     "fuente": "generado a partir de plantillas (gen_feed.py / vertical.py / HTML)",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 2116800,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "filete-tinta",
+   "nombre": "Filete tinta",
+   "categoria": "08-apoyos",
+   "uso": "Línea sólida de 5 px a todo el ancho (1080), separa foto o detalle del texto en los posts de oficio. Girada 90° sirve de divisor vertical.",
+   "regla": "Gris tinta, 5 px. Nunca como borde de caja, precio o botón.",
+   "variantes": [
+    {
+     "archivo": "atavio-filete-tinta",
+     "etiqueta": "tinta",
+     "fondo_recomendado": "hueso",
+     "svg": "08-apoyos/atavio-filete-tinta.svg",
+     "png": "08-apoyos/atavio-filete-tinta.png",
+     "png_px": [
+      2400,
+      11
+     ],
+     "modo": "svg+png",
+     "nota": "",
+     "fuente": "generado a partir de plantillas (gen_feed.py / vertical.py / HTML)",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 13824,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "flecha-hebra",
+   "nombre": "Flecha de la hebra",
+   "categoria": "08-apoyos",
+   "uso": "Punta de flecha hueso que remata la costura en la portada del carrusel, junto al borde derecho (68 × 68).",
+   "regla": "Solo sobre ladrillo o tinta, al final de la hebra. En los demás casos la flecha es texto «→» en Libre Franklin.",
+   "variantes": [
+    {
+     "archivo": "atavio-flecha-hebra",
+     "etiqueta": "hueso",
+     "fondo_recomendado": "ladrillo",
+     "svg": "08-apoyos/atavio-flecha-hebra.svg",
+     "png": "08-apoyos/atavio-flecha-hebra.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "",
+     "fuente": "generado a partir de plantillas (gen_feed.py / vertical.py / HTML)",
+     "puntadas_convertidas": 0,
+     "verificacion": {
+      "ink_px": 374452,
+      "diff90_px": 0,
+      "diff90_pct_of_ink": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "id": "icono-garantia",
+   "nombre": "Icono: Garantía (PENDIENTE)",
+   "categoria": "_pendiente",
+   "uso": "Pendiente: no publicar hasta que la garantía esté redactada e impresa en caja.",
+   "regla": "",
+   "variantes": [
+    {
+     "archivo": "atavio-icono-garantia-claro",
+     "etiqueta": "claro",
+     "fondo_recomendado": "hueso",
+     "svg": "_pendiente/atavio-icono-garantia-claro.svg",
+     "png": "_pendiente/atavio-icono-garantia-claro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "",
+     "fuente": "motifs/iconos/icono-garantia-claro.svg",
+     "puntadas_convertidas": 27,
+     "verificacion": {
+      "ink_px": 188105,
+      "diff90_px": 41,
+      "diff90_pct_of_ink": 0.022
+     }
+    },
+    {
+     "archivo": "atavio-icono-garantia-oscuro",
+     "etiqueta": "oscuro",
+     "fondo_recomendado": "tinta",
+     "svg": "_pendiente/atavio-icono-garantia-oscuro.svg",
+     "png": "_pendiente/atavio-icono-garantia-oscuro.png",
+     "png_px": [
+      2400,
+      2400
+     ],
+     "modo": "svg+png",
+     "nota": "",
+     "fuente": "motifs/iconos/icono-garantia-oscuro.svg",
+     "puntadas_convertidas": 27,
+     "verificacion": {
+      "ink_px": 187683,
+      "diff90_px": 5,
+      "diff90_pct_of_ink": 0.003
+     }
+    }
+   ]
+  }
+ ],
+ "descartados": [
+  [
+   "logo-reducida-hueso.svg",
+   "feed-assets: variante de logo descartada"
+  ],
+  [
+   "logo-simbolo-hueso.svg",
+   "feed-assets: variante de logo descartada"
+  ],
+  [
+   "atavio-etiqueta-colgante-oscuro.svg",
+   "duplicado exacto de etiqueta-colgante-oscura"
+  ],
+  [
+   "motifs/*.svg sin sufijo (costura-anillo.svg, molde-delantero.svg, ...)",
+   "duplicados exactos de la variante -claro"
+  ],
+  [
+   "tejido-sarga-ladrillo.svg (profundo sobre ladrillo)",
+   "dos rojos de paleta en una pieza; se usa la variante 1rojo de las plantillas"
+  ],
+  [
+   "icono-garantia (claro/oscuro)",
+   "garantía pendiente: no se publica; queda en _pendiente/"
+  ],
+  [
+   "destacado-garantia.html",
+   "garantía pendiente"
+  ],
+  [
+   "prenda-pantalon.svg",
+   "duplicado exacto de prenda-pantalon-claro.svg"
+  ],
+  [
+   "sarga de reel-cierre (patrón inline de 1080 × 1920)",
+   "se cubre con textura-sarga-ladrillo 1080 × 1920"
+  ]
+ ],
+ "nota": "claro = para fondo hueso o molde; oscuro = para fondo tinta o ladrillo; costuras: ladrillo = fondo claro, hueso = fondo oscuro"
+}

@@ -25,7 +25,7 @@ Sistema vigente: **v2 «patrón de molde»** (molde, costura, etiqueta colgante,
 - Versiones: **principal** (con bajada; mín. 172 px / 45 mm) · **reducido** (sin bajada; 64 px recomendado, mínimo absoluto 48 px / 12 mm) · **invertido** (círculo hueso, letras #DA3732; solo sobre ladrillo y rojos) · **una tinta** (tinta o hueso; impresión barata, bordado, grabado) · **wordmark** (solo nombre; mín. 90 px / 25 mm).
 - Mínimos medidos sobre el diámetro del círculo, sin el área de seguridad.
 - **Área de seguridad:** 2X = 12 % del diámetro por cada lado (X = 6 %).
-- **Por fondo:** hueso → sello rojo · tinta → sello rojo · ladrillo → invertido · molde → sello rojo sobre disco hueso (≈ 1,25 × el diámetro, con costura fina en gris hilo opcional).
+- **Por fondo:** hueso → sello rojo · tinta → sello rojo · ladrillo → invertido · molde → sello rojo sobre disco hueso (≈ 1,25 × el diámetro, con costura fina en rojo ladrillo, como en las plantillas).
 - **Avatar de Instagram:** sello reducido a sangre, sin marco de pespunte y sin bajada.
 - Usos incorrectos: abrirlo o convertirlo en anillo · cambiar el rojo (incluido #A31A0E) · letras que no sean blancas (salvo invertido y una tinta) · la bajada «Un nuevo concepto en moda» · deformar · rotar · sombra · degradado · contorno · encerrarlo en otra caja · ponerlo sobre foto ocupada sin disco de apoyo · usarlo bajo el mínimo · recrearlo con una fuente.
 
