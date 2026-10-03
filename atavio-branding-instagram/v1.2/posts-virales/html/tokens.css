@@ -1,0 +1,31 @@
+/* ATAVÍO v2 · tokens compartidos. Lienzo en px reales (1080). No editar sin avisar al orquestador. */
+@font-face{font-family:"Fraunces";src:url("assets/f/Fraunces.ttf") format("truetype");font-weight:100 900;font-style:normal}
+@font-face{font-family:"Libre Franklin";src:url("assets/f/LibreFranklin.ttf") format("truetype");font-weight:100 900;font-style:normal}
+:root{
+  --ladrillo:#A31A0E;  /* marca y acción: portadas, costura, titular grande */
+  --profundo:#7C0A02;  /* solo texto rojo pequeño */
+  --hueso:#F3EDE1;     /* lienzo por defecto */
+  --molde:#C8A97E;     /* hoja de patrón, etiqueta, Percha, Archivo. Nunca texto */
+  --tinta:#2B2B2B;     /* información y precio */
+  --hilo:#8A8178;      /* texto secundario ≥ 28 px solo sobre hueso */
+  --serif:"Fraunces",Georgia,serif; --sans:"Libre Franklin",system-ui,sans-serif;
+  --m:120px; /* margen lateral feed */
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg,#F3EDE1);overflow:hidden}
+body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.cv{position:relative;overflow:hidden;background:var(--bg);color:var(--fg);font-family:var(--sans)}
+.hueso{--bg:#F3EDE1;--fg:#2B2B2B;--acc:#A31A0E}
+.ladrillo{--bg:#A31A0E;--fg:#F3EDE1;--acc:#F3EDE1}
+.tinta{--bg:#2B2B2B;--fg:#F3EDE1;--acc:#F3EDE1}
+.molde{--bg:#C8A97E;--fg:#2B2B2B;--acc:#7C0A02}
+.abs{position:absolute}
+.h{font-family:var(--serif);font-weight:600;font-variation-settings:"opsz" 144,"SOFT" 50,"WONK" 0;letter-spacing:-.01em;text-wrap:balance}
+.h1{font-size:112px;line-height:1.03}   /* feed: 104-120 */
+.h1v{font-size:124px;line-height:1.02}  /* reels/historias: 118-132 */
+.h2{font-size:64px;line-height:1.1}
+.body{font:400 36px/1.38 var(--sans);text-wrap:pretty}
+.note{font:500 28px/1.3 var(--sans)}
+.price{font:500 96px/1 var(--sans);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.red{color:var(--ladrillo)} .ink{color:var(--tinta)} .bone{color:var(--hueso)}
+svg{display:block}
