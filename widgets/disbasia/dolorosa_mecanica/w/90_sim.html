@@ -1,0 +1,88 @@
+<script>
+function dcPut(dc,h){var o=dc.querySelector('.out');if(o){o.innerHTML=h;}return h;}
+function dcF(x){return String(x).replace('.',',');}
+function dcMil(x){var s=String(Math.round(x));return s.length>4?s.slice(0,s.length-3)+' '+s.slice(-3):s;}
+function dcAnalg(kg,ib,tope){
+  if(!(kg>=5&&kg<=150)){return '<p>Indica el peso del niño en kilogramos (de 5 a 150) para calcular la analgesia.</p>';}
+  var pa=Math.min(Math.round(15*kg/5)*5,1000);
+  var pad=Math.min(Math.round(75*kg),4000);
+  var ibd=Math.min(Math.round(40*kg),1200);
+  return '<p>Analgesia para '+dcF(kg)+' kg: paracetamol VO '+dcMil(pa)+' mg por dosis cada 6 h (15 mg/kg; tope adulto 1 000 mg por dosis; máximo diario '+dcMil(pad)+' mg, tope 4 000 mg).</p><p>Alternativa: ibuprofeno VO '+dcMil(ib)+' mg por dosis cada 6 a 8 h (10 mg/kg; '+tope+'; máximo diario '+dcMil(ibd)+' mg, tope 1 200 mg).</p>';
+}
+function dcVis(dc){
+  var ed=sel(dc,'edad'),si=sel(dc,'sitio'),ha=sel(dc,'hall');
+  if(!ed.length&&!si.length&&!ha.length){return dcPut(dc,'<p>Selecciona la edad, el sitio del dolor y los hallazgos para ver la entidad compatible.</p>');}
+  var h=function(v){return ha.indexOf(v)>=0;};
+  var e=ed[0],s=si[0],r;
+  if(h('dreh')||h('noapoya')||e==='ob'){
+    r='<p><b>Compatible con epifisiólisis de la cabeza femoral</b>, la amenaza del grupo.</p><p>Hallazgo que falta: desplazamiento de la epífisis en la radiografía AP de pelvis y axial en rana [1][5].</p><p>Conducta inicial: retirar el apoyo, radiografía de ambas caderas y ortopedia pediátrica urgente'+(h('noapoya')?'; si no apoya ni con muletas, tratar como inestable [1]':' [1]')+'.</p><span class="cf">Si la rotación interna es normal, no hay rotación externa obligada y el dolor se reproduce en la tuberosidad tibial → piensa en Osgood-Schlatter.</span>';
+  }else if(h('tub')&&s==='rod'&&!h('rotlim')){
+    r='<p><b>Compatible con enfermedad de Osgood-Schlatter</b>.</p><p>Hallazgo que falta: cadera con rotación interna normal y sin signos de alarma; la radiografía solo si hay atipia [2].</p><p>Conducta inicial: modificar la actividad, estiramientos y analgesia a demanda; manejo ambulatorio [2][10].</p><span class="cf">Si la rotación interna de la cadera está limitada → examina la cadera y pide radiografía de pelvis antes de rotular una apofisitis.</span>';
+  }else if(h('rotlim')||e==='esc'){
+    r='<p><b>Compatible con enfermedad de Legg-Calvé-Perthes</b>.</p><p>Hallazgo que falta: fragmentación o colapso de la epífisis en la radiografía AP de pelvis y axial de cadera [3][4].</p><p>Conducta inicial: descarga relativa, analgesia y derivación a ortopedia pediátrica programada [3].</p><span class="cf">Si hay fiebre o dolor en reposo → no es Perthes hasta descartar infección o tumor.</span>';
+  }else if(e==='dep'||s==='rod'){
+    r='<p><b>Compatible con enfermedad de Osgood-Schlatter</b>, si la cadera es normal.</p><p>Hallazgo que falta: dolor puntual en la tuberosidad tibial y cadera con rotación interna normal [2].</p><p>Conducta inicial: examinar primero la cadera; si es normal, medidas conservadoras [2].</p><span class="cf">Si la rotación interna está limitada o hay obesidad → trata como epifisiólisis hasta ver la radiografía de pelvis.</span>';
+  }else{
+    r='<p>Con estos datos no se separa una entidad. Añade la edad, el sitio del dolor y el examen de la cadera.</p><span class="cf">Si añades rotación externa obligada → la conducta pasa a sin apoyo y ortopedia urgente.</span>';
+  }
+  return dcPut(dc,r);
+}
+function dcE1dx(dc){
+  var f=sel(dc,'fase')[0],p=sel(dc,'pil')[0];
+  if(!f&&!p){return dcPut(dc,'<p>Selecciona la fase y el grupo del pilar lateral para ver la clasificación y su implicación.</p>');}
+  var fm={ini:'fase inicial: el hueso muere y la sinovia se inflama',fra:'fase de fragmentación: el hueso necrótico se reabsorbe y es el momento de asignar el grupo',reo:'fase de reosificación: hueso nuevo reemplaza al necrótico',rem:'fase de remodelación: la cabeza adquiere su forma definitiva'};
+  var pm={A:'Grupo A: pronóstico en general bueno [VERIFICAR EN FUENTE] [3].',B:'Grupo B: con inicio mayor de ocho años, la cirugía de contención mejora el resultado [3][4].',BC:'Grupo B/C: igual que B con inicio tardío; con inicio entre cuatro y seis años el pronóstico es menos favorable [6].',C:'Grupo C: entre cuatro y seis años el pronóstico es menos favorable [6]; la decisión es de ortopedia.'};
+  var r='<p><b>Clasificación</b>: '+(f?fm[f]:'fase no indicada')+'.</p>';
+  r+='<p>'+(p?pm[p]:'Grupo de pilar lateral no indicado: se asigna en la radiografía de fragmentación.')+'</p>';
+  r+='<p>Conducta: ortopedia pediátrica define contención con la edad de inicio [3][4].</p>';
+  r+='<span class="cf">Si la radiografía es normal y la cojera persiste → pide resonancia antes de descartar Perthes.</span>';
+  return dcPut(dc,r);
+}
+function dcE1tx(dc){
+  var kg0=num(dc,'kg'),ib0=Math.min(Math.round(10*kg0/5)*5,400),tope0='tope adulto 400 mg por dosis';
+  var e=sel(dc,'edad')[0],p=sel(dc,'pil')[0],kg=num(dc,'kg');
+  if(!e||!p){return dcPut(dc,'<p>Selecciona la edad de inicio y el grupo del pilar lateral para ver la conducta y la analgesia.</p>');}
+  var c;
+  if(e==='may8'&&(p==='B'||p==='BC')){c='cirugía de contención (osteotomía varizante femoral u osteotomía innominada de Salter) [3][4]';}
+  else if(e==='men6'&&(p==='BC'||p==='C')){c='vigilancia estrecha por ortopedia: con inicio entre cuatro y seis años el pronóstico es menos favorable [6]';}
+  else if(e==='men6'){c='observación con alivio del dolor; el pronóstico antes de los seis años suele ser favorable [6]';}
+  else if(e==='s68'){c='decisión individual de ortopedia; mayores de seis años con afectación amplia tuvieron mejores resultados con cirugía en un estudio [3] [VERIFICAR EN FUENTE]';}
+  else{c='ortopedia decide: el beneficio de la cirugía en grupo A o C no está establecido en las fuentes leídas [VERIFICAR EN FUENTE] [3][4]';}
+  var r='<p><b>Conducta</b>: '+c+'.</p><p>Evita el tratamiento no quirúrgico como única estrategia en mayores de ocho años con grupo B o B/C [4].</p>'+dcAnalg(kg,ib0,tope0);
+  r+='<span class="cf">Si el niño tiene más de ocho años y el grupo es B o B/C → pasa de observar a cirugía de contención.</span>';
+  return dcPut(dc,r);
+}
+function dcE2tx(dc){
+  var kg0=num(dc,'kg'),ib0=Math.min(Math.round(10*kg0/5)*5,400),tope0='tope adulto 400 mg por dosis';
+  var a=sel(dc,'apoyo')[0],kg=num(dc,'kg');
+  if(!a){return dcPut(dc,'<p>Selecciona la capacidad de apoyo para ver la conducta; añade el peso para calcular la analgesia.</p>');}
+  var r;
+  if(a==='no'){
+    r='<p><b>Deslizamiento inestable</b> [VERIFICAR EN FUENTE]: sin apoyo, traslado sin carga y ortopedia el mismo día para fijación con tornillo in situ [1][8].</p><p>Mayor riesgo de lesión vascular y osteonecrosis [5].</p>';
+  }else{
+    r='<p><b>Deslizamiento estable</b> [VERIFICAR EN FUENTE]: retirar el apoyo de inmediato y derivar a ortopedia urgente para fijación in situ [1][8].</p><p>Examina y radiografía la cadera contraria [5].</p>';
+  }
+  r+=dcAnalg(kg,ib0,tope0);
+  r+='<span class="cf">Si el niño que caminaba deja de poder apoyar → pasa de estable a inestable y la urgencia es del mismo día.</span>';
+  return dcPut(dc,r);
+}
+function dcE3tx(dc){
+  var kg0=num(dc,'kg'),ib0=Math.min(Math.round(10*kg0/5)*5,400),tope0='tope adulto 400 mg por dosis';
+  var s=sel(dc,'sit')[0],kg=num(dc,'kg');
+  if(!s){return dcPut(dc,'<p>Selecciona la situación clínica para ver la conducta; añade el peso para calcular la analgesia.</p>');}
+  var r;
+  if(s==='alarma'){
+    r='<p><b>No es un Osgood-Schlatter típico</b>: dolor nocturno o en reposo obliga a buscar tumor óseo o infección y a referir [2].</p>';
+    r+='<span class="cf">Si el dolor cede con el reposo y la cadera es normal → vuelve al manejo conservador.</span>';
+    return dcPut(dc,r);
+  }
+  if(s==='adulto'){
+    r='<p><b>Osículo doloroso residual</b>: ortopedia valora cirugía si fracasa el tratamiento conservador [2].</p>'+dcAnalg(kg,ib0,tope0);
+    r+='<span class="cf">Si el paciente aún crece → no se opera; se mantiene el manejo conservador.</span>';
+    return dcPut(dc,r);
+  }
+  r='<p><b>Manejo conservador</b>: '+(s==='leve'?'continuar el deporte con carga graduada, estiramientos del cuádriceps y analgesia a demanda':'reducir la actividad que provoca el dolor, estiramientos y analgesia a demanda')+' [2][10].</p>'+dcAnalg(kg,ib0,tope0);
+  r+='<span class="cf">Si el dolor aparece en reposo o de noche → deja de pensar en apofisitis y busca tumor o infección.</span>';
+  return dcPut(dc,r);
+}
+</script>
