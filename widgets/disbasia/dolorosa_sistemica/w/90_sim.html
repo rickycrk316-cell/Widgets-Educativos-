@@ -58,7 +58,7 @@ function dcT1(dc){
 var p=num(dc,'peso'),ai=sel(dc,'ai')[0],rs=sel(dc,'rs')[0];
 if(isNaN(p)||!ai||!rs){dcGuia(dc,'Indica el peso, si tolera antiinflamatorio y el nivel de riesgo para ver la posología de la cadera irritable.');return;}
 if(p<3||p>120){dcGuia(dc,'El peso debe estar entre 3 y 120 kg.');return;}
-if(rs==='alto'){dcPut(dc,'<p><b>No es manejo ambulatorio.</b></p><p>Con fiebre o rechazo del apoyo, aplica Kocher y valora artrocentesis antes de cualquier analgésico de alta; no indiques antibiótico sin cultivo [6].</p><p><span class="cf">Si la fiebre cede y el niño apoya con cojera → vuelve al manejo sintomático con reevaluación precoz [6].</span></p>');return;}
+if(rs==='alto'){dcPut(dc,'<p><b>No es manejo ambulatorio.</b></p><p>Con fiebre o rechazo del apoyo, aplica Kocher y valora artrocentesis; no indiques antibiótico sin cultivo [6].</p><p><span class="cf">Si la fiebre cede y el niño apoya con cojera → vuelve al manejo sintomático con reevaluación precoz [6].</span></p>');return;}
 var h;
 if(ai==='ok'){
 var d=Math.min(10*p,400);
@@ -100,7 +100,7 @@ var r=dcAb(dc);if(!r){return;}
 var p=num(dc,'peso'),ev=sel(dc,'ev')[0],mr=sel(dc,'mr')[0],h='<p><b>'+r.f+'</b></p><p>'+r.t+'</p>';
 if(ev==='mej'){
 var x;
-if(mr==='clin'){x='Clindamicina oral: '+rd(Math.min(10*p,600))+' mg por dosis cada 8 horas (30 mg/kg al día; tope 600 mg por dosis).';}
+if(mr==='clin'){x='Clindamicina oral: '+rd(Math.min(10*p,900))+' mg por dosis cada 8 horas (30 mg/kg al día; tope 900 mg por dosis).';}
 else{x='Cefalexina oral: '+rd(Math.min(25*p,1000))+' mg por dosis cada 6 horas (100 mg/kg al día; tope 1 000 mg por dosis) [VERIFICAR EN FUENTE].';}
 if(mr==='alta'){x='SAMR con clindamicina resistente: el paso a vía oral depende del antibiograma; decide con infectología [4].';}
 h+='<p>Paso a vía oral permitido por la evolución: '+x+'</p>';
