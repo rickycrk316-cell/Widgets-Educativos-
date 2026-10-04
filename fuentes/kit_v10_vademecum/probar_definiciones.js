@@ -8,7 +8,7 @@ const fails = [], notes = [];
 
 async function runDeck(page, sec) {
   // recorre el mazo de la sección visible: Mostrar respuesta → La sabía, hasta el final
-  for (let i = 0; i < 80; i++) {
+  for (let i = 0; i < 400; i++) {
     const st = await page.evaluate(sec => {
       const s = document.getElementById(sec), rc = s.querySelector('.rc');
       if (!rc) return 'sin-rc';

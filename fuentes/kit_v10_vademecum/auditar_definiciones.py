@@ -28,7 +28,7 @@ js = '\n'.join(s.string or '' for s in S.find_all('script'))
 used |= set(re.findall(r"classList\.(?:add|toggle|remove)\('([\w-]+)'", js))
 used |= {c for m in re.findall(r'class="([^"]+)"', js) for c in m.split()}
 used |= {c for m in re.findall(r"className\s*=\s*'([^']+)'", js) for c in m.split()}
-extra = sorted(c for c in used - allowed if not c.startswith('$'))
+extra = sorted(c for c in used - allowed if not re.search(r"[+'\"$]", c))
 if extra: fail(f'regla 1: clases fuera de def_head: {extra}')
 
 tabs = S.select('section.tab')

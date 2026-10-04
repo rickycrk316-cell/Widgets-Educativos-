@@ -1,0 +1,51 @@
+{
+  "modo": "multi",
+  "entidades": {
+    "e1": "Hiperplasia prostática benigna",
+    "e2": "Prostatitis",
+    "e3": "Cáncer de próstata",
+    "e4": "Cistitis",
+    "e5": "Uretritis"
+  },
+  "principal": "e1",
+  "amenaza": "e3",
+  "tabs": ["pan", "vis", "e1", "e2", "e3", "e4", "e5", "sin"],
+  "pg": {"vis": 4, "e1": 5, "e2": 3, "e3": 3, "e4": 3, "e5": 3},
+  "fey": {"e1": 2, "e2": 1, "e3": 1, "e4": 1, "e5": 1},
+  "nodos": {"e1": 7, "e2": 6, "e3": 6, "e4": 5, "e5": 5},
+  "signos": {"e1": 5, "e2": 4, "e3": 4, "e4": 3, "e5": 3},
+  "dc": ["vis", "e1", "e2", "e3", "e4", "e5"],
+  "nucleo": {
+    "vis": [
+      "Eje 1 — Consistencia y dolor de la próstata al tacto rectal: blanda, dolorosa o dura separa hiperplasia, prostatitis y cáncer.",
+      "Eje 2 — Disuria, fiebre y piuria apuntan a infección de vejiga, próstata o uretra y piden urocultivo o NAAT antes de tratar.",
+      "Eje 3 — Secreción en el meato señala uretra; dolor suprapúbico, vejiga; síntomas sin dolor, glándula."
+    ],
+    "e1": [
+      "Próstata aumentada, blanda y simétrica al tacto rectal",
+      "Obstrucción al flujo de salida",
+      "I-PSS, tacto rectal y uroanálisis",
+      "Alfabloqueante si hay síntomas moderados a graves de vaciado o mixtos",
+      "Evita antimuscarínicos o antiespasmódicos anticolinérgicos si hay vaciado incompleto"
+    ],
+    "e2": [
+      "Próstata dolorosa, caliente y edematosa al tacto rectal",
+      "Uroanálisis y urocultivo antes del antibiótico",
+      "No pidas masaje prostático en la forma aguda"
+    ],
+    "e3": [
+      "Nódulo duro o próstata pétrea al tacto rectal",
+      "Resonancia prostática y biopsia dirigida con grupo de grado",
+      "No pidas PSA sin decisión compartida previa",
+      "Evita tratar con intención curativa el tumor de bajo riesgo"
+    ],
+    "e4": [
+      "Dolor suprapúbico con piuria en el uroanálisis",
+      "Urocultivo con uroanálisis previo al antibiótico"
+    ],
+    "e5": [
+      "Secreción uretral purulenta o mucoide en el meato",
+      "NAAT de primera orina para gonococo y clamidia"
+    ]
+  }
+}
