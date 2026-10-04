@@ -32,3 +32,9 @@ Usan el kit rediseñado en `fuentes/kit_v10_vademecum/` (mismas clases y JS que 
 ## Skills instaladas (`.claude/skills/`)
 
 taste-skill (13 skills, MIT), impeccable (Apache-2.0), awesome-design-md (MIT, con SKILL.md propio) y playwright-cli (Apache-2.0; requiere `npm install -g @playwright/cli` y el Chromium de `/opt/pw-browsers`).
+
+## Patología urinaria baja (caso de Carlos)
+
+- **Patología urinaria baja** (widget-ensenanza v10, multi): hiperplasia prostática benigna (principal), prostatitis, cáncer de próstata (amenaza), cistitis, uretritis; caso de Carlos como ancla.
+- **Definiciones · Patología urinaria baja** (skill definiciones v5.1): 9 términos + repaso global, con la cabecera `fuentes/kit_v10_vademecum/def_head.html`.
+- Caso transcrito en `fuentes/casos/`. Pruebas: `auditar_definiciones.py` y `probar_definiciones.js`.
