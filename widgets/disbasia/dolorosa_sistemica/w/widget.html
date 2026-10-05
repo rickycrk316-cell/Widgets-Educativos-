@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cojera dolorosa con fiebre</title>
+<style>
+/* Vademécum: monografía impresa con índice de canto; filetes y tinta llevan la jerarquía, no las sombras */
+:root{
+--paper:#FBFBFC;--paper-2:#F1F2F5;--ink:#16181D;--ink-2:#3A3D46;--ink-3:#686C78;--rule:#D7D9E0;--rule-strong:#16181D;
+--accent:#2342A6;--accent-ink:#1B358A;--accent-field:#EAEEFA;--on-accent:#FFFFFF;
+--am:#7A4A06;--am-f:#FBF1DF;--ro:#9E1F1F;--ro-f:#FBE9E7;--ve:#2F5E12;--ve-f:#EBF3E1;--pu:#4C3FA8;--pu-f:#EEECFB;--co:#8E3517;--co-f:#FAEDE6;--rs:#8A2C52;--rs-f:#FAEAF1;
+--f-serif:ui-serif,"New York","Iowan Old Style","Charter","Source Serif Pro",Georgia,"Times New Roman",serif;
+--f-sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+--r:3px;
+/* alias de la v10 para compatibilidad */
+--surface-0:var(--paper);--surface-1:var(--paper-2);--border:var(--rule);--border-accent:var(--accent);--bg-accent:var(--accent-field);--text-primary:var(--ink);--text-secondary:var(--ink-2);--text-muted:var(--ink-3);--text-accent:var(--accent-ink);--radius:var(--r);--font-sans:var(--f-sans);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}
+html{color-scheme:light dark;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:var(--accent);color:var(--on-accent)}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--f-sans);-webkit-text-size-adjust:100%;font-feature-settings:"kern" 1;text-rendering:optimizeLegibility;caret-color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:18px 16px 56px;background:transparent}
+h1{font:600 26px/1.2 var(--f-serif);letter-spacing:-.012em;margin:6px 0 14px;padding-bottom:12px;border-bottom:2px solid var(--rule-strong);text-wrap:balance}
+h2{font:600 19px/1.3 var(--f-serif);letter-spacing:-.006em;margin:40px 0 14px;padding-top:12px;border-top:1px solid var(--rule-strong);text-wrap:balance}
+h3{font:600 16px/1.35 var(--f-serif);margin:20px 0 6px;text-wrap:balance}
+p{margin:0 0 12px;text-wrap:pretty}
+a{color:var(--accent-ink);text-underline-offset:3px}
+button{font:inherit;color:inherit;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,color .15s ease-out}
+button:active{transform:translateY(1px)}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* índice de canto */
+.tabs{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 0 0;border-bottom:2px solid var(--rule-strong);margin-bottom:16px;position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);scroll-snap-type:x proximity;scroll-padding-inline:56px}
+.tabs-w{position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper)}
+.tabs-w::before,.tabs-w::after{content:"";position:absolute;top:0;bottom:2px;width:56px;pointer-events:none;opacity:0;transition:opacity .2s;z-index:6}
+.tabs-w::before{left:0;background:linear-gradient(to left,transparent,var(--paper) 85%)}
+.tabs-w::after{right:0;background:linear-gradient(to right,transparent,var(--paper) 85%)}
+.tabs-w.ov-l::before,.tabs-w.ov-r::after{opacity:1}
+.nodo,.signo,.qv,.dc,h2{scroll-margin-top:84px}
+.tabs::-webkit-scrollbar{display:none}
+.tb{flex:0 0 auto;min-height:44px;padding:9px 15px 8px;border:1px solid var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;background:var(--paper-2);color:var(--ink-2);font:600 13px/1.2 var(--f-sans);letter-spacing:.01em;white-space:nowrap;scroll-snap-align:start}
+.tb:hover{background:var(--accent-field);color:var(--accent-ink)}
+.tb.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+.tab{display:none}
+.tab.on{display:block}
+/* recuadros */
+.card{background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;margin:12px 0;font-size:15px;line-height:1.6}
+.card p{margin:0 0 8px}
+.card p:last-child{margin-bottom:0}
+.mini{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:6px 0}
+.hb{border-radius:var(--r);padding:12px 14px;margin:14px 0;border:1px solid transparent;font-size:15px;line-height:1.6}
+.hb.az{background:var(--accent-field);color:var(--ink);border-color:var(--accent)}
+.hb.am{background:var(--am-f);color:var(--am);border-color:var(--am)}
+.hb.ro{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.hb.ve{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+.hb.am .mini,.hb.ro .mini,.hb.ve .mini{color:inherit;opacity:.88}
+.hb-t{font:600 16px/1.35 var(--f-serif);margin-bottom:6px;text-wrap:balance}
+.hb.az .hb-t{color:var(--accent-ink)}
+.pg{margin:0;padding-left:22px}
+.pg li{margin:5px 0}
+.pg li::marker{color:var(--accent-ink);font-weight:700}
+.hb.az:has(.pg){margin-bottom:24px}
+.hb.az:not(:has(.pg)):not(.rec-go){background:transparent;border-left-color:transparent;border-right-color:transparent;border-radius:0;padding-left:0;padding-right:0}
+.hb.az:not(:has(.pg))+.etapa{border-top:0}
+h2+.card,h2+.hb,h2+.tw{margin-top:0}
+.badge{display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.04em;padding:2px 7px;border-radius:2px;margin:0 4px 4px 0;vertical-align:middle;border:1px solid currentColor}
+.b-az{background:var(--accent-field);color:var(--accent-ink)}
+.b-ro{background:var(--ro-f);color:var(--ro)}
+.b-am{background:var(--am-f);color:var(--am)}
+.b-ve{background:var(--ve-f);color:var(--ve)}
+.b-pu{background:var(--pu-f);color:var(--pu)}
+.badge.b-pu{display:block;width:fit-content;max-width:100%;white-space:normal;font-size:12px;line-height:1.5;font-weight:600;letter-spacing:.01em;margin:14px 0}
+.b-co{background:var(--co-f);color:var(--co)}
+.b-rs{background:var(--rs-f);color:var(--rs)}
+.rem{display:inline-block;font-size:12.5px;background:var(--rs-f);color:var(--rs);border:1px dashed var(--rs);border-radius:2px;padding:1px 7px;margin:4px 0}
+/* Feynman */
+.fey{background:var(--co-f);border:1px solid var(--co);border-radius:var(--r);padding:14px 16px;margin:18px 0 26px}
+.fey-t{display:inline-block;font:600 15px/1.35 var(--f-serif);color:var(--co);margin-bottom:8px}
+.fey-b{margin:0 0 10px;font:400 16px/1.6 var(--f-serif);color:var(--ink)}
+.fey-c{margin:2px 0;color:var(--ink-2)}
+/* Panorama: entradas de índice */
+.tab{counter-reset:et}
+.etapa{counter-increment:et;background:transparent;border:0;border-top:1px solid var(--rule);border-radius:0;padding:18px 0 8px;margin:4px 0}
+.etapa h3{font-size:19px;line-height:1.3;margin:0 0 8px}
+.etapa h3::before{content:counter(et,decimal-leading-zero);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;letter-spacing:.04em;color:var(--accent-ink);margin-right:10px;vertical-align:2px}
+.res{margin:0 0 10px}
+.perla{border-top:1px dotted var(--rule);padding-top:8px;margin:0 0 10px;font-weight:500}
+.perla::before{content:"Perla";display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;background:var(--ve-f);color:var(--ve);border:1px solid var(--ve);border-radius:2px;padding:1px 6px;margin-right:8px;vertical-align:1px}
+.go{min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent);color:var(--on-accent);font:600 13.5px/1.2 var(--f-sans)}
+.go:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+/* tablas de monografía */
+.tw{overflow-x:auto;margin:12px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.5;font-variant-numeric:tabular-nums}
+th,td{border:0;border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--paper-2);font-weight:700;color:var(--ink)}
+thead th{font:700 14.5px/1.35 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong)}
+tbody tr:last-child>*{border-bottom:1px solid var(--rule-strong)}
+.stats{display:grid;grid-template-columns:1fr;gap:10px;margin:12px 0}
+@media (min-width:600px){.stats{grid-template-columns:repeat(3,1fr)}}
+.stat{background:transparent;border:0;border-top:2px solid var(--accent);border-radius:0;padding:8px 2px}
+.stat b{display:block;font:600 22px/1.25 var(--f-serif);color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--ink-2);line-height:1.4;display:block}
+.steps{list-style:none;counter-reset:st;padding:0;margin:10px 0}
+.steps>li{counter-increment:st;position:relative;padding:5px 0 9px 40px}
+.steps>li::before{content:counter(st);position:absolute;left:0;top:3px;width:26px;height:26px;border-radius:2px;background:var(--ink);color:var(--paper);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;display:flex;align-items:center;justify-content:center}
+/* cascada */
+.tl{list-style:none;margin:14px 0;padding:0 0 0 20px;border-left:2px solid var(--accent)}
+.nodo{position:relative;margin:0 0 14px;padding:11px 13px;background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);font-size:14px;line-height:1.55}
+.nodo::before{content:"";position:absolute;left:-27px;top:15px;width:12px;height:12px;border-radius:1px;background:var(--accent);box-shadow:0 0 0 3px var(--paper)}
+.paso{display:block;font:600 15px/1.4 var(--f-serif);margin-bottom:5px}
+.pn{color:var(--accent-ink);margin-right:4px;font-variant-numeric:tabular-nums}
+.man{margin:8px 0 0;font-size:13px;color:var(--ink-2)}
+.signo{background:var(--paper);border:1px solid var(--rule);border-top:2px solid var(--rule-strong);border-radius:0 0 var(--r) var(--r);padding:12px 14px;margin:12px 0;font-size:14px;line-height:1.55}
+.signo h4{margin:0 0 6px;font:600 15.5px/1.35 var(--f-serif)}
+.signo dl{margin:0}
+.signo dt{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-3);margin-top:8px}
+.signo dd{margin:2px 0 0}
+.xref{display:inline-flex;align-items:center;min-height:44px;padding:4px 10px;margin:3px 6px 3px 0;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent-field);color:var(--accent-ink);font:600 12.5px/1.3 var(--f-sans);text-align:left}
+.xref:hover{background:var(--accent);color:var(--on-accent)}
+p .xref,td .xref,li .xref,dd .xref{display:inline;position:relative;min-height:0;padding:0 5px;margin:0 2px;line-height:inherit;border-radius:2px;white-space:normal;overflow-wrap:anywhere;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+p .xref::after,td .xref::after,li .xref::after,dd .xref::after{content:"";position:absolute;left:-4px;right:-4px;top:-12px;bottom:-12px}
+.hl{outline:2px solid var(--accent);background:var(--accent-field)!important;transition:background .3s}
+.acc{border:1px solid var(--rule);border-radius:var(--r);margin:12px 0;overflow:hidden}
+.acc-h{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:44px;padding:9px 14px;border:0;background:var(--paper-2);font:600 14px/1.35 var(--f-sans);text-align:left}
+.acc-h:hover{background:var(--accent-field)}
+.chev{transition:transform .2s;color:var(--accent-ink)}
+.acc.op .chev{transform:rotate(180deg)}
+.acc-b{display:none;padding:10px 14px;font-size:14px;line-height:1.55}
+.acc.op .acc-b{display:block}
+.vanc{font-size:12.5px;line-height:1.5;padding-left:24px}
+.vanc li{margin:5px 0;word-break:break-word}
+.vanc li::marker{font-variant-numeric:tabular-nums;color:var(--ink-3)}
+/* simulador */
+.dc{border:1px solid var(--rule-strong);border-radius:var(--r);padding:14px 16px;margin:22px 0;background:var(--paper)}
+.dc-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.dc-g{margin:10px 0}
+.dc-l{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);margin-bottom:5px;display:block}
+.chip{min-height:44px;padding:7px 13px;margin:3px 6px 3px 0;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);font-size:13.5px}
+.chip:hover{border-color:var(--accent);color:var(--accent-ink)}
+.chip.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:600}
+.dc input[type=number]{min-height:44px;width:120px;padding:6px 10px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper);color:var(--ink);font:15px var(--f-sans);font-variant-numeric:tabular-nums}
+.out{margin-top:12px;padding:12px 14px;border-radius:var(--r);background:var(--paper-2);border:1px solid var(--rule);font-size:14px;line-height:1.58;min-height:44px}
+.tag{display:inline-block;font:600 11px/1.4 var(--f-sans);padding:1px 7px;border-radius:2px;background:var(--accent-field);color:var(--accent-ink);margin:4px 4px 0 0}
+.rec-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.rec-bar textarea{width:100%;min-height:120px;margin-top:8px;padding:9px 11px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper-2);color:var(--ink);font:14px/1.55 var(--f-sans);resize:vertical}
+.chip:disabled{cursor:default;opacity:.85}
+.rec-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.rec-ctl{display:none;gap:6px;margin-top:6px}
+.recon .rec-ctl{display:flex}
+.recon>*:not(.rec-bar):not(.tl){display:none}
+.recon .nodo:not(.rev) .pt{display:none}
+.recon .nodo:not(.rev) .pn::after{content:" ?"}
+.recon .nodo:not(.rev) .det{display:none}
+.recon .nodo.pis:not(.rev) .det{display:block}
+.recon .nodo.pis:not(.rev) .det>*:not(.man){display:none}
+.recon .nodo:not(.pis):not(.rev) .man{display:none}
+.recon .nodo.rev{border-color:var(--accent)}
+.rec-go{margin:22px 0}
+.steps.tg>li{padding-left:40px}
+span.tg{display:inline-block;font:700 11px/1.4 var(--f-mono);letter-spacing:.02em;padding:2px 7px;margin:0 6px 2px 0;border-radius:2px;background:var(--paper-2);border:1px solid var(--rule);color:var(--ink-2);white-space:nowrap;vertical-align:1px}
+span.tg[data-t="clave"]{background:var(--accent-field);color:var(--accent-ink);border-color:var(--accent)}
+span.tg[data-t="ok"]{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+span.tg[data-t="cond"]{background:var(--am-f);color:var(--am);border-color:var(--am)}
+span.tg[data-t="no"]{background:var(--rs-f);color:var(--rs);border-color:var(--rs)}
+span.tg[data-t="alarma"]{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.qv{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:12px 0}
+.qv p{margin:0;padding:9px 11px;border-radius:var(--r);border:1px solid var(--rule);background:var(--paper-2);font-size:13.5px;line-height:1.45}
+.qv p::before{display:block;font:700 10.5px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px;color:var(--ink-3)}
+.qv p[data-e="p"]{background:var(--accent-field);border-color:var(--accent)}
+.qv p[data-e="p"]::before{content:"Presente";color:var(--accent-ink)}
+.qv p[data-e="v"]::before{content:"Variable"}
+.qv p[data-e="a"]{border:1px dashed var(--rule);color:var(--ink-3);background:transparent}
+.qv p[data-e="a"]::before{content:"Ausente"}
+.qv p[data-e="k"]{grid-column:1/-1;border:2px solid var(--accent);background:var(--accent-field);font-size:14.5px}
+.qv p[data-e="k"]::before{content:"Signo clave";color:var(--accent-ink)}
+.hb.vi{background:var(--pu-f);color:var(--pu);border-color:var(--pu)}
+.hb.vi .mini{color:inherit;opacity:.88}
+table.vis{min-width:620px}
+table.vis td{min-width:140px}
+table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index:1;background:var(--paper-2);min-width:118px;max-width:150px;font-weight:700;border-right:1px solid var(--rule)}
+.vb-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.tbl>*:not(.vb-bar):not(.vis-w){display:none}
+.tbl td.tap{cursor:pointer}
+.tbl td.tap:not(.rev){color:transparent;background:repeating-linear-gradient(135deg,var(--paper-2),var(--paper-2) 7px,var(--accent-field) 7px,var(--accent-field) 14px)}
+.tbl td.tap:not(.rev) *{visibility:hidden}
+.tbl td.tap.rev{box-shadow:inset 0 0 0 1px var(--accent)}
+.cf{display:block;margin-top:10px;padding-top:8px;border-top:1px dashed var(--accent);font-style:italic;color:var(--ink-2)}
+.cf::before{content:"Contrafactual · ";font-style:normal;font-weight:700;color:var(--accent-ink)}
+.fig{margin:14px 0}
+.fig img{display:block;max-width:100%;height:auto;border-radius:var(--r);border:1px solid var(--rule)}
+.fig figcaption{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin-top:6px}
+@media (min-width:700px){body{font-size:15.5px}.wrap{padding:22px 24px 64px}h1{font-size:28px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- /KIT_HEAD -->
+<h1>Cojera dolorosa con fiebre</h1>
+<nav class="tabs">
+<button type="button" class="tb" data-tab="pan" onclick="show('pan')">Panorama</button>
+<button type="button" class="tb" data-tab="vis" onclick="show('vis')">Diferencial</button>
+<button type="button" class="tb" data-tab="e1" onclick="show('e1')">Sinovitis transitoria de cadera</button>
+<button type="button" class="tb" data-tab="e2" onclick="show('e2')">Artritis séptica</button>
+<button type="button" class="tb" data-tab="e3" onclick="show('e3')">Osteomielitis</button>
+<button type="button" class="tb" data-tab="e4" onclick="show('e4')">Neoplasia ósea maligna</button>
+<button type="button" class="tb" data-tab="sin" onclick="show('sin')">Síntesis</button>
+</nav>
+<section class="tab" data-tab="pan">
+<div class="hb az"><div class="hb-t">El grupo en una frase</div>
+<p>Un niño que cojea con dolor y quizá con fiebre puede tener una irritación benigna, una infección articular u ósea o un tumor; la urgencia es no perder la artritis séptica.</p></div>
+
+<div class="etapa" data-go="vis">
+<h3>Lo que une y lo que separa</h3>
+<p class="res">Un niño que cojea o rechaza apoyar, con dolor y quizá con fiebre, puede tener cuatro enfermedades que se ordenan de benigna a grave: una irritación estéril de la cadera, una infección articular, una infección ósea o un tumor. Tres ejes las separan: la velocidad de evolución, el movimiento pasivo de la cadera y el aspecto general del niño. La amenaza es la artritis séptica, que destruye la articulación en horas. Por eso se aprende primero a reconocer esa urgencia y después a ordenar el resto, empezando por la más frecuente.</p>
+<p class="perla">Fiebre con rechazo del apoyo es artritis séptica hasta demostrar lo contrario.</p>
+<button type="button" class="go" data-go="vis" onclick="show('vis')">Ir a Diferencial →</button>
+</div>
+
+<div class="etapa" data-go="e1">
+<h3>Sinovitis transitoria de cadera: la benigna</h3>
+<p class="res">Cae en el extremo benigno del eje. Es un derrame estéril y autolimitado que sigue a una infección viral: el líquido distiende la cápsula, el niño adopta la posición de menor presión y siente dolor en la cadera o en la rodilla. La rotación interna limitada, con buen aspecto general, la delata. Se confirma por exclusión, con los predictores de Kocher y la ecografía, y se trata con reposo y antiinflamatorio, vigilando de cerca para no pasar por alto una infección, que es la entidad siguiente.</p>
+<p class="perla">Si el niño tiene fiebre alta o no apoya, no es sinovitis.</p>
+<button type="button" class="go" data-go="e1" onclick="show('e1')">Ir a Sinovitis transitoria de cadera →</button>
+</div>
+
+<div class="etapa" data-go="e2">
+<h3>Artritis séptica: la amenaza</h3>
+<p class="res">Es la infección bacteriana del espacio articular. El pus eleva la presión dentro de la cápsula, comprime los vasos de la epífisis y las enzimas destruyen el cartílago en horas. El signo que la delata es el dolor extremo con cualquier movimiento pasivo de la cadera, junto con fiebre y rechazo total del apoyo. Se confirma con artrocentesis y se trata con drenaje urgente y antibiótico. Si la infección nace en el hueso vecino y rompe hacia la articulación, la entidad siguiente es la osteomielitis.</p>
+<p class="perla">Drena en horas: el cartílago destruido no se recupera.</p>
+<button type="button" class="go" data-go="e2" onclick="show('e2')">Ir a Artritis séptica →</button>
+</div>
+
+<div class="etapa" data-go="e3">
+<h3>Osteomielitis: la infección del hueso</h3>
+<p class="res">Las bacterias llegan por la sangre a la metáfisis, donde el flujo lento favorece su siembra. El pus queda atrapado en un hueso rígido, la presión corta la irrigación y el hueso puede morir y formar un secuestro. El signo que la delata es el dolor a la palpación puntual de la metáfisis, con la articulación vecina libre. Se confirma con hemocultivo y resonancia, y se trata con antiestafilocócico y drenaje si hay colección. Cuando el dolor es nocturno, persistente y sin fiebre, hay que pensar en el tumor.</p>
+<p class="perla">Una radiografía normal en los primeros días no descarta osteomielitis.</p>
+<button type="button" class="go" data-go="e3" onclick="show('e3')">Ir a Osteomielitis →</button>
+</div>
+
+<div class="etapa" data-go="e4">
+<h3>Neoplasia ósea maligna: el extremo grave</h3>
+<p class="res">Una célula mesenquimatosa con alteración genética prolifera sin freno en el hueso que más crece y lo destruye. El signo que la delata es el dolor óseo persistente y nocturno que no cede con reposo, a menudo con masa dura. La radiografía sospecha, la resonancia delimita y la biopsia, hecha en el centro que tratará al niño, confirma. El tratamiento combina quimioterapia con cirugía o radioterapia, porque las micrometástasis pulmonares existen desde el inicio. Aquí se cierra el eje: la conducta es derivar.</p>
+<p class="perla">El dolor nocturno con masa dura se deriva sin biopsiar ni drenar.</p>
+<button type="button" class="go" data-go="e4" onclick="show('e4')">Ir a Neoplasia ósea maligna →</button>
+</div>
+
+<p class="mini">Esto es el mapa, no el territorio: cada párrafo y cada perla se justifican en su pestaña.</p>
+</section>
+<section class="tab" data-tab="vis">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>Ante un niño que cojea con dolor y quizá con fiebre, ¿qué datos de la historia y del examen separan una irritación benigna de la cadera de una infección que destruye la articulación?</li>
+<li>¿Por qué la fiebre y el rechazo del apoyo orientan a infección, y cómo cambia esa lectura si el niño ya recibió antibiótico o es menor de tres años?</li>
+<li>¿Cómo ayuda el tipo de marcha a ubicar el problema, y por qué una marcha antálgica no prueba que la cadera sea el sitio enfermo?</li>
+<li>¿En qué se apoya la elección entre radiografía, ecografía de cadera y resonancia magnética, y qué cambia si el dolor es nocturno y persistente?</li>
+<li>¿Qué signos de alarma obligan a derivar el mismo día, a quién y por qué?</li>
+</ol></div>
+<span class="badge b-pu">Base: Nelson 22e [1] · Kocher 1999 [2] y Caird 2006 [3] · PIDS/IDSA 2021 [4] · ESMO-EURACAN 2021 [5] (solo resumen o solo cita)</span>
+<div class="hb am"><div class="hb-t">Alcance</div>
+<p>Cubre la cojera dolorosa con fiebre o signos sistémicos. El dolor mecánico según la edad y la marcha sin dolor se estudian en otros widgets. Las neoplasias se limitan a osteosarcoma y sarcoma de Ewing; la leucemia es solo diferencial.</p></div>
+
+<h2>Cómo se separan las cuatro entidades</h2>
+<p>Las cuatro entidades comparten una entrada: un niño que cojea o rechaza apoyar, con dolor. Se ordenan de benigna a grave; la artritis séptica es la amenaza.</p>
+<div class="tw"><table class="vis">
+<thead><tr><th>Eje</th><th>Sinovitis transitoria de cadera</th><th>Artritis séptica</th><th>Osteomielitis</th><th>Neoplasia ósea maligna</th></tr></thead>
+<tbody>
+<tr><th>Falla central</th><td>Derrame inflamatorio estéril y autolimitado de la cápsula de la cadera</td><td>Bacterias en el espacio articular destruyen el cartílago en horas</td><td>Bacterias en la metáfisis forman pus a presión e isquemia ósea</td><td>Proliferación clonal maligna destruye hueso y forma matriz anómala</td></tr>
+<tr><th>Terreno típico</th><td>Niño de buen aspecto, con infección viral o respiratoria reciente</td><td>Lactante o preescolar; bacteriemia, punción o foco contiguo</td><td>Escolar; trauma menor previo; metáfisis de fémur o tibia</td><td>Adolescente o escolar; rodilla, fémur proximal o pelvis</td></tr>
+<tr><th>Inicio y curso</th><td>Agudo; cede en pocos días con reposo y antiinflamatorio</td><td>Horas a un día; empeora rápido sin drenaje</td><td>Días; fiebre y dolor focal progresivos, o curso subagudo</td><td>Semanas a meses; dolor progresivo atribuido a un golpe</td></tr>
+<tr><th>Síntoma compartido aquí</th><td>Dolor inguinal o de rodilla con marcha antálgica</td><td>Dolor intenso y rechazo total del apoyo</td><td>Dolor focal con cojera o pseudoparálisis del miembro</td><td>Dolor persistente con cojera, también en reposo</td></tr>
+<tr><th>Signo que la delata</th><td>Limita la rotación interna, con buen aspecto general</td><td>Dolor extremo con cualquier movimiento pasivo de la cadera</td><td>Dolor a la palpación puntual de la metáfisis</td><td>Dolor óseo persistente y nocturno que no cede con reposo</td></tr>
+<tr><th>Negativo pertinente</th><td>Sin fiebre alta ni rechazo total del apoyo</td><td>Sin movimiento pasivo indoloro de la cadera</td><td>Articulación vecina sin derrame ni dolor pasivo</td><td>Sin fiebre alta ni inflamación local aguda</td></tr>
+<tr><th>Prueba que decide</th><td>Predictores de Kocher y ecografía de cadera con derrame</td><td>Artrocentesis con recuento celular, Gram y cultivo</td><td>Hemocultivo y resonancia del segmento doloroso</td><td>Radiografía simple, luego resonancia y biopsia en centro de referencia</td></tr>
+<tr><th>Conducta inicial y quién maneja</th><td>Reposo y antiinflamatorio; reevaluación precoz; pediatría</td><td>Drenaje urgente y antibiótico; ortopedia e infectología pediátricas</td><td>Hemocultivo y antiestafilocócico; ortopedia si hay colección</td><td>Derivar a oncología ortopédica pediátrica; no biopsiar antes</td></tr>
+<tr><th>Amenaza si se pierde</th><td>Pasar por alto una artritis séptica</td><td>Destrucción articular y necrosis de la cabeza femoral</td><td>Secuestro óseo, cronicidad y daño de la placa de crecimiento</td><td>Metástasis pulmonar y pérdida de la ventana curativa</td></tr>
+</tbody></table></div>
+
+<div class="card"><b>Común al grupo</b>
+<h3>Historia clínica dirigida</h3>
+<ul>
+<li>Dolor: sitio, inicio, ritmo (nocturno o de reposo); la cadera puede doler en la rodilla.</li>
+<li>Cojera o rechazo del apoyo, y evolución en horas, días o semanas.</li>
+<li>Fiebre, escalofríos, malestar, pérdida de peso o sudoración nocturna.</li>
+<li>Infección viral reciente, trauma menor, antibiótico previo, punción o catéter.</li>
+<li>Terreno: drepanocitosis, inmunodeficiencia, vacunación incompleta.</li>
+<li>Respuesta al analgésico y si el dolor despierta al niño [1].</li>
+</ul>
+<h3>Examen de la marcha</h3>
+<p>Observa al niño caminar y compara con el lado sano. La marcha orienta el nivel, no el diagnóstico: cualquier dolor produce marcha antálgica [1].</p>
+<div class="tw"><table>
+<thead><tr><th>Tipo de marcha</th><th>Mecanismo</th><th>Qué sugiere</th></tr></thead>
+<tbody>
+<tr><th>Antálgica</th><td>Acorta el apoyo del lado doloroso para descargarlo</td><td>Dolor en cadera, rodilla, pie o hueso</td></tr>
+<tr><th>Trendelenburg</th><td>Abductores débiles: la pelvis cae hacia el lado sano</td><td>Dolor de cadera, debilidad glútea</td></tr>
+<tr><th>Estepaje</th><td>Flexiona cadera y rodilla porque el pie cae</td><td>Debilidad de dorsiflexores o neuropatía periférica</td></tr>
+<tr><th>Equina</th><td>Apoya la punta por contractura del tríceps sural</td><td>Parálisis cerebral, distrofia o hábito</td></tr>
+<tr><th>Atáxica</th><td>Base amplia por fallo cerebeloso o sensitivo</td><td>Lesión cerebelosa o sensitiva</td></tr>
+</tbody></table></div>
+<p class="mini">Los tipos sin dolor se desarrollan en el widget de marcha sin dolor.</p>
+<h3>Signos de alarma y referencia</h3>
+<ul>
+<li>No apoya el miembro, o la cadera duele con cualquier movimiento pasivo.</li>
+<li>Fiebre con dolor óseo o articular, o mal aspecto general.</li>
+<li>Dolor nocturno o de reposo persistente, masa ósea, pérdida de peso o palidez con petequias.</li>
+<li>Cojera sin mejoría tras un tratamiento sintomático o tras antibiótico parcial.</li>
+</ul>
+<p>Refiere el mismo día a ortopedia pediátrica ante fiebre con rechazo del apoyo; a oncología ortopédica ante masa o dolor nocturno persistente; y a neurología ante debilidad o arreflexia [1].</p>
+<h3>Interpretación de estudios</h3>
+<div class="tw"><table>
+<thead><tr><th>Estudio</th><th>Qué muestra</th><th>Cuándo pedirlo</th></tr></thead>
+<tbody>
+<tr><th>Radiografía simple</th><td>Fracturas, lesiones líticas, reacción perióstica; normal los primeros días de una infección</td><td>Primero ante dolor persistente, trauma o sospecha tumoral</td></tr>
+<tr><th>Ecografía de cadera</th><td>Derrame articular; no distingue líquido estéril de purulento</td><td>Cadera irritable; guía la punción</td></tr>
+<tr><th>Resonancia magnética</th><td>Edema medular, absceso, extensión local y compromiso articular [4]</td><td>Dolor óseo focal con fiebre o sospecha tumoral</td></tr>
+<tr><th>Estudios neurológicos</th><td>Debilidad, arreflexia o ataxia: CK, conducción nerviosa o punción lumbar</td><td>Cojera sin dolor con déficit motor o sensitivo</td></tr>
+</tbody></table></div>
+<p class="mini">La sensibilidad y la especificidad de cada prueba están en cada entidad. <span class="rem">↪ Propiedades en «Diagnóstico»</span></p>
+<h3>Analgesia común</h3>
+<p>Controla el dolor desde el inicio sin retrasar el cultivo ni el drenaje. <span class="rem">↪ Posología en «Tratamiento»</span></p>
+</div>
+
+<div class="hb ro"><div class="hb-t">Banderas rojas del grupo</div>
+<ul>
+<li>Artritis séptica: niño con fiebre que rechaza apoyar y no tolera el movimiento pasivo de la cadera; drenar en horas [1].</li>
+<li>Menor de tres años con cadera irritable: no descartes Kingella aunque no tenga fiebre ni reactantes altos [2].</li>
+<li>Dolor óseo nocturno con masa dura: no drenes ni biopsies; deriva al centro de sarcomas [5].</li>
+<li>Radiografía normal con fiebre y dolor focal: no descarta osteomielitis; pide resonancia [4].</li>
+</ul></div>
+
+<h2>Pasos diagnósticos del diferencial</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span> Examina de pie y acostado: aspecto general, temperatura, rechazo del apoyo, rango pasivo de la cadera y palpación metafisaria, comparando con el lado sano.</li>
+<li><span class="tg">Añade</span> Hemograma, VSG y PCR; hemocultivo antes de cualquier antibiótico; ecografía de cadera si hay limitación del movimiento [3].</li>
+<li><span class="tg">Confirma</span> Artrocentesis de cadera con cultivo y recuento celular cuando el riesgo es alto; resonancia ante dolor óseo focal con fiebre [4].</li>
+<li><span class="tg">Solo si</span> Radiografía en dos proyecciones ante trauma, dolor persistente o dolor nocturno; biopsia solo en el centro que tratará el tumor [5].</li>
+<li><span class="tg">No pidas</span> TC como estudio inicial: irradia y rinde menos que la resonancia para médula ósea y partes blandas.</li>
+<li><span class="tg">Alarma</span> Fiebre, rechazo total del apoyo o mal aspecto: trata como artritis séptica hasta demostrar lo contrario [2].</li>
+</ol>
+
+<div class="dc" data-fn="dcVis">
+<div class="dc-t">Simulador · Decisión clínica — predice la entidad antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Examen osteoarticular</span>
+<button type="button" class="chip" data-g="ex" data-v="dolor" onclick="ch(this)">Dolor extremo con cualquier movimiento pasivo de la cadera</button>
+<button type="button" class="chip" data-g="ex" data-v="limit" onclick="ch(this)">Limitación leve de la rotación interna, tolerada</button>
+<button type="button" class="chip" data-g="ex" data-v="foco" onclick="ch(this)">Dolor puntual en la metáfisis con cadera móvil</button>
+<button type="button" class="chip" data-g="ex" data-v="masa" onclick="ch(this)">Masa ósea dura y dolorosa</button></div>
+<div class="dc-g"><span class="dc-l">Fiebre</span>
+<button type="button" class="chip" data-g="fi" data-v="alta" onclick="ch(this)">Fiebre ≥38,5 °C</button>
+<button type="button" class="chip" data-g="fi" data-v="no" onclick="ch(this)">Afebril o febrícula</button></div>
+<div class="dc-g"><span class="dc-l">Apoyo del miembro</span>
+<button type="button" class="chip" data-g="ap" data-v="no" onclick="ch(this)">No apoya</button>
+<button type="button" class="chip" data-g="ap" data-v="si" onclick="ch(this)">Apoya con cojera</button></div>
+<div class="dc-g"><span class="dc-l">Curso</span>
+<button type="button" class="chip" data-g="cu" data-v="ag" onclick="ch(this)">Horas a días</button>
+<button type="button" class="chip" data-g="cu" data-v="cr" onclick="ch(this)">Semanas a meses, con dolor nocturno</button></div>
+<div class="out"></div>
+</div>
+</section>
+<section class="tab" data-tab="e1">
+<div class="hb az"><div class="hb-t">Frente a Artritis séptica</div>
+<p>Se confunde con la artritis séptica porque ambas dan cadera dolorosa, cojera y limitación del movimiento. Se separa por el buen aspecto general, la ausencia de fiebre alta y de rechazo total del apoyo, y por los predictores de Kocher bajos.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué la sinovitis transitoria es un diagnóstico de exclusión, y qué hallazgos obligan a dudar de ella?</li>
+<li>¿Cómo explica el derrame la postura de la cadera, la marcha antálgica y el dolor que se siente en la rodilla?</li>
+<li>¿En qué se apoyan los predictores de Kocher para separar sinovitis de artritis séptica, y por qué su rendimiento cae en otra población o en lactantes?</li>
+<li>¿Qué cambia en la conducta si el niño tiene fiebre alta y no apoya la pierna?</li>
+<li>¿Por qué el tratamiento es solo sintomático, y qué datos del seguimiento obligan a replantear el diagnóstico?</li>
+</ol></div>
+<span class="badge b-pu">Base: Nelson 22e [1] · Kocher 2004 [6] · Luhmann 2004 [7] · Sultan 2010 [8] · Yagupsky 2014 [9]</span>
+
+<h2>Qué es</h2>
+<p>La sinovitis transitoria de cadera es una inflamación aguda, estéril y autolimitada de la sinovial de la cadera que causa dolor y cojera sin daño del hueso ni del cartílago; se diagnostica por exclusión [1].</p>
+<div class="card"><p>Criterios de consenso, no formales [1]: niño de buen aspecto general, sin fiebre alta, con inicio agudo, dolor inguinal, del muslo o de la rodilla, limitación de la rotación interna y de la abducción, y mejoría en pocos días. Solo se acepta tras descartar artritis séptica y otras causas.</p></div>
+<p class="mini">No tiene subtipos clínicos: «cadera irritable» describe el síndrome de entrada, no una entidad separada.</p>
+<h3>No confundir con…</h3>
+<div class="tw"><table>
+<thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Enfermedad de Perthes</th><td>Cojera e irritabilidad de la cadera en edad escolar</td><td>Curso subagudo y alteración de la epífisis en la radiografía</td></tr>
+<tr><th>Artritis idiopática juvenil</th><td>Dolor articular y limitación del movimiento</td><td>Curso de semanas, rigidez matinal y afectación de otras articulaciones</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table>
+<thead><tr><th>Dimensión</th><th>Dato</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>Causa más común de cadera dolorosa aguda en el niño que cojea [VERIFICAR EN FUENTE]</td><td>[1]</td></tr>
+<tr><th>Edad</th><td>Preescolares y escolares tempranos [VERIFICAR EN FUENTE]</td><td>[1]</td></tr>
+<tr><th>Sexo</th><td>Algo más frecuente en varones [VERIFICAR EN FUENTE]</td><td>[1]</td></tr>
+<tr><th>Factores clave</th><td>Infección viral o respiratoria reciente y trauma menor [VERIFICAR EN FUENTE]</td><td>[1]</td></tr>
+</tbody></table></div>
+<p class="mini">No hay datos ecuatorianos sostenibles; el texto base no se consultó en esta sesión, por eso cada dato lleva marca de verificación.</p>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e1-m-1" data-clin="0" data-paso="Infección viral o trauma menor previo"><div class="det"><p>Una infección viral o respiratoria reciente, o un trauma menor, actúa como desencadenante; el mecanismo exacto no está establecido [1].</p></div></li>
+<li class="nodo" id="e1-m-2" data-clin="0" data-paso="Sinovitis con síntesis de prostaglandinas"><div class="det"><p>Las células de la sinovial, membrana que tapiza la cápsula y produce el líquido lubricante, liberan prostaglandinas (mediadores del dolor y la inflamación, sintetizados por la enzima ciclooxigenasa) y atraen células inflamatorias. La ciclooxigenasa es el blanco de los antiinflamatorios no esteroideos. <span class="rem">↪ Posología en «Tratamiento»</span></p></div></li>
+<li class="nodo" id="e1-m-3" data-clin="1" data-paso="Derrame estéril distiende la cápsula"><div class="det"><p>La sinovial inflamada produce líquido seroso estéril que distiende la cápsula. El niño coloca la cadera en flexión, abducción y rotación externa, la posición en que la cápsula tiene más volumen y menos presión.</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-1" onclick="ir('e1','e1-s-1')">Posición de flexión, abducción y rotación externa</button></p></div></li>
+<li class="nodo" id="e1-m-4" data-clin="1" data-paso="Tensión capsular excita nervios sensitivos"><div class="det"><p>La cápsula está inervada por ramas del nervio obturador, que también recoge la sensibilidad de la cara medial de la rodilla. Su estiramiento envía la señal dolorosa por esa vía y el cerebro la proyecta al muslo o la rodilla.</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-2" onclick="ir('e1','e1-s-2')">Dolor referido al muslo o la rodilla</button></p></div></li>
+<li class="nodo" id="e1-m-5" data-clin="1" data-paso="Acorta la fase de apoyo doloroso"><div class="det"><p>Al cargar, el peso comprime la cápsula tensa y aumenta el dolor; el niño acorta el tiempo de apoyo del lado afectado para descargar la cadera.</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-3" onclick="ir('e1','e1-s-3')">Marcha antálgica</button></p></div></li>
+<li class="nodo" id="e1-m-6" data-clin="1" data-paso="Espasmo muscular limita el rango"><div class="det"><p>Los músculos periarticulares (aductores y psoas) se contraen de forma refleja para inmovilizar la cadera dolorosa. Esto limita sobre todo la rotación interna y la abducción, que son los movimientos que más aumentan la presión.</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-4" onclick="ir('e1','e1-s-4')">Rotación interna limitada con buen aspecto general</button></p></div></li>
+<li class="nodo" id="e1-m-7" data-clin="0" data-paso="Resolución espontánea de la inflamación"><div class="det"><p>Al ceder el estímulo, la sinovial reabsorbe el líquido y el rango se recupera; por eso el cuadro es autolimitado y el curso es la mejor prueba retrospectiva [1].</p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — Por qué el niño dobla la pierna</span>
+<p class="fey-b">La cadera es como una bolsa cerrada con un poquito de líquido resbaloso. Si se irrita, la bolsa fabrica más líquido y se estira. El niño dobla y separa la pierna porque así la bolsa tiene más espacio y duele menos. Cuando la irritación pasa, el líquido se absorbe y la pierna vuelve a moverse bien.</p>
+<p class="mini fey-c">En medicina esto se llama… sinovitis, derrame articular y posición antálgica.</p>
+<p class="mini fey-c">Dónde falla la comparación: la cápsula tiene nervios que duelen al estirarse; una bolsa de plástico no siente nada.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Dolor inguinal o referido al muslo o a la rodilla</p>
+<p data-e="p">Marcha antálgica</p>
+<p data-e="p">Cadera en flexión, abducción y rotación externa</p>
+<p data-e="v">Febrícula o fiebre baja</p>
+<p data-e="a">Fiebre alta con aspecto tóxico</p>
+<p data-e="a">Rechazo total del apoyo</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e1-s-4" onclick="ir('e1','e1-s-4')">Limita la rotación interna, con buen aspecto general</button></p>
+</div>
+<div class="signo" id="e1-s-1"><h4>Posición de flexión, abducción y rotación externa</h4><dl>
+<dt>Cómo se reconoce</dt><dd>El niño acostado mantiene la cadera ligeramente flexionada, separada y rotada hacia fuera, y resiste que se la estire.</dd>
+<dt>Por qué aparece</dt><dd>Es la posición de menor presión dentro de la cápsula distendida. <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Hay derrame de la cadera, sea estéril o purulento; no distingue sinovitis de artritis séptica.</dd></dl></div>
+<div class="signo" id="e1-s-2"><h4>Dolor referido al muslo o la rodilla</h4><dl>
+<dt>Cómo se reconoce</dt><dd>El niño señala la rodilla o el muslo, pero la palpación de la rodilla es normal y la cadera duele al moverla.</dd>
+<dt>Por qué aparece</dt><dd>La cápsula y la cara medial de la rodilla comparten la vía del obturador. <button type="button" class="xref" data-ir="e1-m-4" onclick="ir('e1','e1-m-4')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Examina siempre la cadera ante un dolor de rodilla sin hallazgos locales.</dd></dl></div>
+<div class="signo" id="e1-s-3"><h4>Marcha antálgica</h4><dl>
+<dt>Cómo se reconoce</dt><dd>El niño apoya poco tiempo el miembro afectado y camina con paso corto, con el tronco inclinado hacia ese lado.</dd>
+<dt>Por qué aparece</dt><dd>Reduce la carga sobre la cápsula tensa. <button type="button" class="xref" data-ir="e1-m-5" onclick="ir('e1','e1-m-5')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Hay dolor en el miembro; la marcha no localiza el diagnóstico, y un rechazo completo del apoyo cambia la sospecha.</dd></dl></div>
+<div class="signo" id="e1-s-4"><h4>Rotación interna limitada con buen aspecto general</h4><dl>
+<dt>Cómo se reconoce</dt><dd>En decúbito prono o con la cadera flexionada, la rotación interna y la abducción están limitadas y duelen al final del rango; el niño sonríe y juega.</dd>
+<dt>Por qué aparece</dt><dd>El espasmo protege la cadera de los movimientos que aumentan la presión. <button type="button" class="xref" data-ir="e1-m-6" onclick="ir('e1','e1-m-6')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Con aspecto general bueno y movimiento posible, orienta a sinovitis; con dolor extremo a cualquier movimiento, orienta a artritis séptica.</dd></dl></div>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — Por qué duele la rodilla si el problema está en la cadera</span>
+<p class="fey-b">Piensa en dos vecinos que comparten la misma línea de teléfono. Cuando uno llama, el cerebro recibe la señal por el mismo cable y no sabe cuál de las dos casas la envió. Por eso el niño dice que le duele la rodilla, aunque quien está irritada es la cadera. El médico lo sabe y revisa siempre la cadera.</p>
+<p class="mini fey-c">En medicina esto se llama… dolor referido, por convergencia de vías sensitivas.</p>
+<p class="mini fey-c">Dónde falla la comparación: el cruce ocurre en la médula espinal y en el cerebro, no en un cable externo que pueda repararse.</p></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span> Predictores de Kocher y ecografía de cadera con derrame, en un niño de buen aspecto [6].</li>
+<li><span class="tg">Añade</span> Hemograma, VSG y PCR; una PCR mayor de 20 mg/L suma un predictor [3].</li>
+<li><span class="tg">Confirma</span> Artrocentesis guiada por ecografía si el riesgo es alto; en menores de tres años, hemocultivo y amplificación de ácidos nucleicos para Kingella [9].</li>
+<li><span class="tg">Solo si</span> Radiografía de cadera en dos proyecciones ante trauma, dolor persistente o edad atípica; resonancia si hay dolor óseo focal.</li>
+<li><span class="tg">No pidas</span> Gammagrafía ni TC de rutina ante una cadera irritable de bajo riesgo: no cambian la conducta.</li>
+<li><span class="tg">Alarma</span> Fiebre alta, rechazo total del apoyo o mal aspecto: maneja como artritis séptica hasta demostrar lo contrario [6].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table>
+<thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Predictores de Kocher (fiebre ≥38,5 °C, no apoya, VSG ≥40 mm/h, leucocitos &gt;12,0 ×10⁹/L)</th><td>No establecida</td><td>No establecida</td><td>Probabilidad publicada, no VPP: en el estudio original 0 predictores &lt;0,2 %, 1 3,0 %, 2 40,0 %, 3 93,1 %, 4 99,6 %</td><td>Estratificar el riesgo</td><td>El área bajo la curva fue 0,96 en el original y 0,86 en la validación; en otras poblaciones, 4 predictores dieron 59 %. Con baja prevalencia de artritis séptica, el valor predictivo cae.</td><td>[2] [6] [7] [8]</td></tr>
+<tr><th>PCR &gt;20 mg/L</th><td>No establecida</td><td>No establecida</td><td>No establecida en Ecuador</td><td>Descartar o sumar riesgo</td><td>Predictor independiente en niños con sospecha alta de artritis séptica.</td><td>[3]</td></tr>
+<tr><th>Ecografía de cadera</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar derrame y guiar la punción</td><td>No distingue líquido estéril de purulento; un derrame no prueba sinovitis.</td><td>[1]</td></tr>
+<tr><th>Hemocultivo y amplificación de ácidos nucleicos</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar germen</td><td>En menores de tres años el algoritmo de Kocher pierde sensibilidad por Kingella; pídelos aunque no haya fiebre.</td><td>[9]</td></tr>
+<tr><th>Radiografía de cadera</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Descartar</td><td>Normal en sinovitis; descarta fractura, tumor y alteración epifisaria de Perthes.</td><td>[1]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad. E: especificidad. VPP/VPN: valores predictivos positivo y negativo. VSG: velocidad de sedimentación globular. PCR: proteína C reactiva.</p>
+<div class="dc" data-fn="dcK">
+<div class="dc-t">Simulador · Decisión clínica — escala de Kocher: banda y conducta</div>
+<div class="dc-g"><span class="dc-l">Fiebre</span>
+<button type="button" class="chip" data-g="fi" data-v="s" onclick="ch(this)">Fiebre ≥38,5 °C</button>
+<button type="button" class="chip" data-g="fi" data-v="n" onclick="ch(this)">Sin fiebre ≥38,5 °C</button></div>
+<div class="dc-g"><span class="dc-l">Apoyo</span>
+<button type="button" class="chip" data-g="ap" data-v="s" onclick="ch(this)">No apoya</button>
+<button type="button" class="chip" data-g="ap" data-v="n" onclick="ch(this)">Apoya</button></div>
+<div class="dc-g"><span class="dc-l">VSG</span>
+<button type="button" class="chip" data-g="vs" data-v="s" onclick="ch(this)">VSG ≥40 mm/h</button>
+<button type="button" class="chip" data-g="vs" data-v="n" onclick="ch(this)">VSG menor de 40 mm/h</button></div>
+<div class="dc-g"><span class="dc-l">Leucocitos</span>
+<button type="button" class="chip" data-g="le" data-v="s" onclick="ch(this)">Más de 12,0 ×10⁹/L</button>
+<button type="button" class="chip" data-g="le" data-v="n" onclick="ch(this)">12,0 ×10⁹/L o menos</button></div>
+<div class="dc-g"><span class="dc-l">PCR (opcional)</span>
+<button type="button" class="chip" data-g="pc" data-v="s" onclick="ch(this)">PCR &gt;20 mg/L</button>
+<button type="button" class="chip" data-g="pc" data-v="n" onclick="ch(this)">PCR ≤20 mg/L</button></div>
+<div class="dc-g"><span class="dc-l">Edad (años, opcional)</span>
+<input type="number" data-n="edad" min="0" max="18" step="0.5" oninput="ch(this)"></div>
+<div class="out"></div>
+</div>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span> Aliviar la inflamación sinovial mientras se vigila la evolución: el cuadro cede solo y no necesita antibiótico [1].</li>
+<li><span class="tg">De elección</span> Reposo relativo y antiinflamatorio no esteroideo oral, con reevaluación precoz [1].</li>
+<li><span class="tg">Alternativa</span> Paracetamol si el antiinflamatorio está contraindicado.</li>
+<li><span class="tg">Sintomático</span> Apoyo progresivo según el dolor, sin inmovilización ni tracción de rutina.</li>
+<li><span class="tg">Reevalúa</span> Reexamina al día siguiente; si aparece fiebre o el dolor no cede, repite examen, análisis e imágenes y busca otra causa [6].</li>
+<li><span class="tg">Especialista</span> Ortopedia pediátrica si hay duda con artritis séptica o falta de mejoría.</li>
+<li><span class="tg">Evita</span> Antibiótico empírico sin cultivo: enmascara una artritis séptica.</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table>
+<thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Ibuprofeno</th><td>10 mg/kg por dosis; tope 400 mg por dosis y 1 200 mg al día</td><td>Oral</td><td>Cada 8 horas</td><td>Mientras dure el dolor, habitualmente pocos días</td><td>Inhibe la ciclooxigenasa y reduce las prostaglandinas de la sinovial <button type="button" class="xref" data-ir="e1-m-2" onclick="ir('e1','e1-m-2')">← Paso</button>. Evitar con deshidratación, sangrado digestivo, enfermedad renal o alergia a antiinflamatorios; dar con alimento.</td><td>[1]</td></tr>
+<tr><th>Paracetamol</th><td>15 mg/kg por dosis; tope 1 000 mg por dosis y 75 mg/kg al día</td><td>Oral</td><td>Cada 6 horas</td><td>Mientras dure el dolor</td><td>Analgésico central sin efecto antiinflamatorio periférico <button type="button" class="xref" data-ir="e1-m-4" onclick="ir('e1','e1-m-4')">← Paso</button>. Opción si el antiinflamatorio está contraindicado; respeta el tope diario.</td><td>[1]</td></tr>
+</tbody></table></div>
+<p class="mini">Dosis estándar de ficha técnica pediátrica.</p>
+<div class="dc" data-fn="dcT1">
+<div class="dc-t">Simulador · Decisión clínica — analgesia de la cadera irritable de bajo riesgo</div>
+<div class="dc-g"><span class="dc-l">Peso (kg)</span>
+<input type="number" data-n="peso" min="3" max="120" step="0.1" oninput="ch(this)"></div>
+<div class="dc-g"><span class="dc-l">Antiinflamatorio</span>
+<button type="button" class="chip" data-g="ai" data-v="ok" onclick="ch(this)">Tolerado</button>
+<button type="button" class="chip" data-g="ai" data-v="no" onclick="ch(this)">Contraindicado</button></div>
+<div class="dc-g"><span class="dc-l">Riesgo</span>
+<button type="button" class="chip" data-g="rs" data-v="bajo" onclick="ch(this)">Kocher bajo, buen aspecto</button>
+<button type="button" class="chip" data-g="rs" data-v="alto" onclick="ch(this)">Fiebre o rechazo del apoyo</button></div>
+<div class="out"></div>
+</div>
+
+<h2>Seguimiento</h2>
+<p>Reevalúa al niño al día siguiente y, si mejora, en una segunda revisión clínica; no se necesitan imágenes de rutina. La evolución es parte del diagnóstico: una sinovitis verdadera cede a medida que se reabsorbe el derrame <button type="button" class="xref" data-ir="e1-m-7" onclick="ir('e1','e1-m-7')">← Paso</button>.</p>
+<p>Recurrencia: el mismo desencadenante viral puede reactivar la sinovial y repetir el cuadro <button type="button" class="xref" data-ir="e1-m-1" onclick="ir('e1','e1-m-1')">← Paso</button>. Un segundo episodio no cambia el manejo, pero obliga a revisar la radiografía.</p>
+<p>Diagnóstico enmascarado: la sinovitis reactiva aparece también al inicio de la enfermedad de Perthes y de la artritis idiopática juvenil <button type="button" class="xref" data-ir="e1-m-2" onclick="ir('e1','e1-m-2')">← Paso</button>. Si la cojera persiste o empeora, repite el examen y pide radiografía, y si aparece fiebre vuelve a aplicar Kocher [6].</p>
+</section>
+<section class="tab" data-tab="e2">
+<div class="hb az"><div class="hb-t">Frente a Sinovitis transitoria de cadera</div>
+<p>Se confunde con ella por la cadera dolorosa y limitada. Se separa por la fiebre, el rechazo total del apoyo y el dolor extremo ante cualquier movimiento pasivo.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué el pus intraarticular destruye el cartílago y la irrigación de la epífisis en horas, y cómo eso fija la urgencia del drenaje?</li>
+<li>¿Qué datos de la historia y del examen elevan la sospecha sobre la sinovitis, y en qué niños fallan?</li>
+<li>¿Cómo se elige el antibiótico empírico según el germen probable y la resistencia local?</li>
+</ol></div>
+<span class="badge b-pu">Nelson 22e [1] · Kocher 1999 [2] · Caird 2006 [3] · PIDS/IDSA 2021 extrapolada [4] · Yagupsky 2014 [9]</span>
+
+<h2>Qué es</h2>
+<p>La artritis séptica es la infección bacteriana del espacio articular; el pus y las enzimas destruyen sinovial y cartílago en horas, y exige drenaje urgente [1] [2].</p>
+<p>Los subtipos existen porque la vía de entrada y el germen cambian el curso.</p>
+<div class="tw"><table>
+<thead><tr><th>Forma</th><th>Cómo llega</th><th>Qué la distingue</th></tr></thead>
+<tbody>
+<tr><th>Por Staphylococcus aureus</th><td>Bacteriemia siembra la sinovial</td><td>Fiebre y dolor extremo; la más temida</td></tr>
+<tr><th>Por Kingella kingae</th><td>Bacteriemia en lactantes y preescolares</td><td>Cuadro leve, sin fiebre ni reactantes altos [9]</td></tr>
+<tr><th>Por extensión ósea</th><td>La metáfisis es intraarticular en cadera, hombro, codo y tobillo</td><td>Pus óseo rompe hacia la articulación [4]</td></tr>
+</tbody></table></div>
+<h3>No confundir con…</h3>
+<div class="tw"><table>
+<thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Artritis reactiva</th><td>Derrame tras una infección</td><td>Cultivo estéril y menos leucocitos en el líquido</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table>
+<thead><tr><th>Dimensión</th><th>Dato</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>Menos frecuente que la sinovitis; cadera y rodilla [VERIFICAR EN FUENTE]</td><td>[1]</td></tr>
+<tr><th>Edad</th><td>Lactantes y preescolares [VERIFICAR EN FUENTE]</td><td>[9]</td></tr>
+<tr><th>Sexo</th><td>Algo más en varones [VERIFICAR EN FUENTE]</td><td>[1]</td></tr>
+<tr><th>Factores clave</th><td>Bacteriemia, catéter, inmunodeficiencia, osteomielitis [VERIFICAR EN FUENTE]</td><td>[1]</td></tr>
+</tbody></table></div>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e2-m-1" data-clin="0" data-paso="Bacteriemia siembra la sinovial"><div class="det"><p>Staphylococcus aureus o Kingella kingae pasan a la sangre; la sinovial, muy vascularizada y sin membrana basal, deja salir las bacterias al líquido articular [1].</p></div></li>
+<li class="nodo" id="e2-m-2" data-clin="1" data-paso="Neutrófilos y citocinas generan pus"><div class="det"><p>Los neutrófilos (leucocitos que fagocitan bacterias) llegan atraídos por citocinas, mensajeros que amplifican la inflamación, y forman pus. Esas citocinas actúan en el hipotálamo y el hígado: fiebre y proteína C reactiva. <span class="rem">↪ Propiedades en «Diagnóstico»</span></p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-1" onclick="ir('e2','e2-s-1')">Fiebre y malestar general</button></p></div></li>
+<li class="nodo" id="e2-m-3" data-clin="1" data-paso="Pus eleva la presión intraarticular"><div class="det"><p>El pus llena una cápsula poco distensible; la presión estira sus terminaciones nerviosas y cualquier movimiento pasivo la aumenta.</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-2" onclick="ir('e2','e2-s-2')">Dolor extremo con cualquier movimiento pasivo de la cadera</button></p></div></li>
+<li class="nodo" id="e2-m-4" data-clin="1" data-paso="El dolor impide cargar el miembro"><div class="det"><p>Cargar comprime la articulación; el niño evita todo apoyo y sostiene la cadera en la posición de mayor volumen capsular.</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-3" onclick="ir('e2','e2-s-3')">Rechazo total del apoyo</button></p></div></li>
+<li class="nodo" id="e2-m-5" data-clin="0" data-paso="Presión comprime los vasos de la epífisis"><div class="det"><p>La presión comprime los vasos que cruzan la cápsula y nutren la cabeza femoral: isquemia de la epífisis.</p></div></li>
+<li class="nodo" id="e2-m-6" data-clin="0" data-paso="Proteasas degradan el cartílago"><div class="det"><p>Las metaloproteinasas, enzimas que rompen colágeno y proteoglicanos, liberadas por neutrófilos y bacterias, degradan el cartílago de forma irreversible.</p></div></li>
+<li class="nodo" id="e2-m-7" data-clin="0" data-paso="Secuela: condrólisis y necrosis avascular"><div class="det"><p>Isquemia y pérdida de cartílago producen necrosis avascular, subluxación y deformidad.</p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — Por qué hay que vaciar la articulación</span>
+<p class="fey-b">Una articulación infectada es como una olla tapada llena de líquido espeso. El líquido aprieta las paredes, y por ellas pasan los tubitos que dan sangre al hueso. Si sigue cerrada, todo se daña. Por eso se abre y se vacía pronto, además de dar medicina.</p>
+<p class="mini fey-c">En medicina esto se llama… artritis séptica y drenaje quirúrgico.</p>
+<p class="mini fey-c">Dónde falla la comparación: además de las bacterias, las defensas liberan enzimas que destruyen el cartílago.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Fiebre y malestar general</p>
+<p data-e="p">Rechazo total del apoyo</p>
+<p data-e="p">Cadera en flexión, abducción y rotación externa</p>
+<p data-e="v">Reactantes normales en lactantes con Kingella</p>
+<p data-e="a">Movimiento pasivo indoloro de la cadera</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e2-s-2" onclick="ir('e2','e2-s-2')">Dolor extremo con cualquier movimiento pasivo de la cadera</button></p>
+</div>
+<div class="signo" id="e2-s-1"><h4>Fiebre y malestar general</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Temperatura elevada, irritabilidad y aspecto de enfermo.</dd>
+<dt>Por qué aparece</dt><dd>Las citocinas del pus actúan en el hipotálamo. <button type="button" class="xref" data-ir="e2-m-2" onclick="ir('e2','e2-m-2')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Respuesta sistémica; su ausencia no descarta Kingella [9].</dd></dl></div>
+<div class="signo" id="e2-s-2"><h4>Dolor extremo con cualquier movimiento pasivo de la cadera</h4><dl>
+<dt>Cómo se reconoce</dt><dd>El niño llora al mover suavemente la cadera, que queda rígida.</dd>
+<dt>Por qué aparece</dt><dd>El pus sube la presión y el movimiento la aumenta. <button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Es el signo que más separa de la sinovitis, donde el movimiento limitado se tolera.</dd></dl></div>
+<div class="signo" id="e2-s-3"><h4>Rechazo total del apoyo</h4><dl>
+<dt>Cómo se reconoce</dt><dd>No se pone de pie sobre el miembro; el lactante deja de mover la pierna.</dd>
+<dt>Por qué aparece</dt><dd>El dolor al cargar impide el apoyo. <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Predictor de Kocher; obliga a descartar artritis séptica [2].</dd></dl></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span> Artrocentesis con recuento celular, Gram y cultivo del líquido sinovial, guiada por ecografía en la cadera [1].</li>
+<li><span class="tg">Añade</span> Hemocultivo antes del antibiótico, hemograma, PCR y VSG [3].</li>
+<li><span class="tg">Confirma</span> Líquido purulento o cultivo positivo; en menores de tres años, amplificación de ácidos nucleicos para Kingella [9].</li>
+<li><span class="tg">Solo si</span> Resonancia ante sospecha de osteomielitis asociada [4].</li>
+<li><span class="tg">No pidas</span> Gammagrafía ni esperes laboratorio para decidir el drenaje con sospecha alta.</li>
+<li><span class="tg">Alarma</span> Fiebre, rechazo del apoyo y dolor pasivo extremo: ortopedia el mismo día [2].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table>
+<thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Líquido sinovial: recuento, Gram y cultivo</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar</td><td>Referencia; cultivo negativo tras antibiótico no la descarta.</td><td>[2]</td></tr>
+<tr><th>Hemocultivo</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar germen</td><td>Antes del antibiótico.</td><td>[1]</td></tr>
+<tr><th>PCR &gt;20 mg/L</th><td>No establecida</td><td>No establecida</td><td>No establecida en Ecuador</td><td>Sumar riesgo</td><td>Predictor independiente más fuerte en una serie prospectiva; no la uses sola.</td><td>[3]</td></tr>
+<tr><th>Amplificación de ácidos nucleicos</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar Kingella</td><td>Pídela en menores de tres años aunque no haya fiebre.</td><td>[9]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad. E: especificidad. VPP/VPN: valores predictivos. VSG: velocidad de sedimentación. PCR: proteína C reactiva.</p>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span> Drenar el pus y esterilizar el espacio: drenaje y antibiótico son un solo acto [1].</li>
+<li><span class="tg">De elección</span> Drenaje quirúrgico urgente y antibiótico antiestafilocócico intravenoso tras tomar los cultivos [1].</li>
+<li><span class="tg">Alternativa</span> Clindamicina si el SAMR tiene baja resistencia local; vancomicina si es alta, extrapolando la guía de osteomielitis [4].</li>
+<li><span class="tg">Sintomático</span> Analgesia y reposo articular.</li>
+<li><span class="tg">Escala</span> Vancomicina, con cobertura adicional si hay shock.</li>
+<li><span class="tg">Reevalúa</span> A las 48 a 72 horas; sin mejoría, repite el drenaje [4].</li>
+<li><span class="tg">Especialista</span> Ortopedia e infectología pediátricas.</li>
+<li><span class="tg">Evita</span> Retrasar el drenaje para completar imágenes o esperar el cultivo.</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table>
+<thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Cefazolina</th><td>100 a 150 mg/kg al día; tope 2 g por dosis (6 g al día)</td><td>Intravenosa</td><td>Cada 8 horas</td><td>Total 2 a 3 semanas con paso a vía oral [VERIFICAR EN FUENTE]</td><td>Bloquea la pared bacteriana <button type="button" class="xref" data-ir="e2-m-2" onclick="ir('e2','e2-m-2')">← Paso</button>. Cubre SAMS y Kingella; ajusta en insuficiencia renal.</td><td>[4]</td></tr>
+<tr><th>Clindamicina</th><td>30 a 40 mg/kg al día; tope 900 mg por dosis (2 700 mg al día)</td><td>Intravenosa</td><td>Cada 8 horas</td><td>Igual</td><td>Inhibe la síntesis proteica <button type="button" class="xref" data-ir="e2-m-2" onclick="ir('e2','e2-m-2')">← Paso</button>. Solo con resistencia local baja; riesgo de diarrea por Clostridioides difficile.</td><td>[4]</td></tr>
+<tr><th>Vancomicina</th><td>15 mg/kg por dosis; tope 2 000 mg, por niveles</td><td>Intravenosa</td><td>Cada 6 horas</td><td>Igual</td><td>Bloquea la pared bacteriana del SAMR <button type="button" class="xref" data-ir="e2-m-2" onclick="ir('e2','e2-m-2')">← Paso</button>. Vigila riñón y niveles.</td><td>[4]</td></tr>
+</tbody></table></div>
+<p class="mini">SAMS y SAMR: Staphylococcus aureus sensible y resistente a meticilina. Dosis de ficha técnica.</p>
+<div class="dc" data-fn="dcE2">
+<div class="dc-t">Simulador · Decisión clínica — antibiótico empírico de la artritis séptica</div>
+<div class="dc-g"><span class="dc-l">Peso (kg)</span>
+<input type="number" data-n="peso" min="3" max="120" step="0.1" oninput="ch(this)"></div>
+<div class="dc-g"><span class="dc-l">Estado</span>
+<button type="button" class="chip" data-g="es" data-v="est" onclick="ch(this)">Estable</button>
+<button type="button" class="chip" data-g="es" data-v="gra" onclick="ch(this)">Grave</button></div>
+<div class="dc-g"><span class="dc-l">Germen local</span>
+<button type="button" class="chip" data-g="mr" data-v="sams" onclick="ch(this)">SAMS</button>
+<button type="button" class="chip" data-g="mr" data-v="clin" onclick="ch(this)">SAMR, clindamicina sensible</button>
+<button type="button" class="chip" data-g="mr" data-v="alta" onclick="ch(this)">SAMR, clindamicina resistente</button></div>
+<div class="out"></div>
+</div>
+
+<h2>Seguimiento</h2>
+<p>Pasa a vía oral con el niño afebril, sin dolor y con PCR en descenso; controla marcha y crecimiento durante meses [4].</p>
+<p>Necrosis avascular de la cabeza femoral <button type="button" class="xref" data-ir="e2-m-5" onclick="ir('e2','e2-m-5')">← Paso</button>; condrólisis <button type="button" class="xref" data-ir="e2-m-6" onclick="ir('e2','e2-m-6')">← Paso</button>; subluxación, deformidad y dismetría <button type="button" class="xref" data-ir="e2-m-7" onclick="ir('e2','e2-m-7')">← Paso</button>. Se vigilan con radiografía seriada.</p>
+</section>
+<section class="tab" data-tab="e3">
+<div class="hb az"><div class="hb-t">Frente a Artritis séptica</div>
+<p>Se confunde con ella por la fiebre, el dolor y la cojera. Se separa por el dolor focal sobre la metáfisis, la articulación vecina sin dolor pasivo y la resonancia con edema medular.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué la metáfisis es el sitio de siembra y por qué el pus a presión produce isquemia, secuestro y cronicidad?</li>
+<li>¿Por qué una radiografía normal no descarta una osteomielitis aguda, y qué cambia en la imagen y el cultivo en la forma subaguda?</li>
+<li>¿Cómo se decide el antibiótico empírico y el paso a vía oral?</li>
+</ol></div>
+<span class="badge b-pu">Guía: PIDS/IDSA 2021, osteomielitis aguda hematógena [4] (solo resumen)</span>
+
+<h2>Qué es</h2>
+<p>La osteomielitis aguda hematógena es la infección bacteriana del hueso por siembra desde la sangre; en el niño empieza en la metáfisis de los huesos largos [4].</p>
+<p>Los subtipos existen porque el curso cambia con el germen y la respuesta del huésped.</p>
+<div class="tw"><table>
+<thead><tr><th>Forma</th><th>Por qué se presenta así</th><th>Qué la distingue</th></tr></thead>
+<tbody>
+<tr><th>Aguda hematógena</th><td>Siembra reciente por S. aureus virulento</td><td>Fiebre, dolor focal y reactantes altos</td></tr>
+<tr><th>Subaguda</th><td>Germen poco virulento</td><td>Sin fiebre; lesión lítica con esclerosis (absceso de Brodie)</td></tr>
+<tr><th>Crónica</th><td>Hueso necrótico mantiene la infección</td><td>Fístula, secuestro e involucro; exige cirugía</td></tr>
+</tbody></table></div>
+<h3>No confundir con…</h3>
+<div class="tw"><table>
+<thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Piomiositis del psoas</th><td>Fiebre y flexión antálgica de cadera</td><td>Hueso y articulación sin dolor; absceso muscular en resonancia</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table>
+<thead><tr><th>Dimensión</th><th>Dato</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>Infección ósea hematógena más común en la infancia [VERIFICAR EN FUENTE]</td><td>[4]</td></tr>
+<tr><th>Edad</th><td>Escolares y lactantes [VERIFICAR EN FUENTE]</td><td>[4]</td></tr>
+<tr><th>Sexo</th><td>Predominio masculino [VERIFICAR EN FUENTE]</td><td>[4]</td></tr>
+<tr><th>Factores clave</th><td>Trauma menor, bacteriemia, catéter, drepanocitosis [VERIFICAR EN FUENTE]</td><td>[4]</td></tr>
+</tbody></table></div>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e3-m-1" data-clin="0" data-paso="Bacteriemia llega a la metáfisis"><div class="det"><p>En la metáfisis, de crecimiento rápido, los capilares forman asas de flujo lento y sinusoides fenestrados; las bacterias se atascan allí [4].</p></div></li>
+<li class="nodo" id="e3-m-2" data-clin="0" data-paso="S. aureus se adhiere al hueso"><div class="det"><p>Staphylococcus aureus usa adhesinas, proteínas de superficie que se unen al colágeno y la fibronectina, para colonizar la matriz ósea.</p></div></li>
+<li class="nodo" id="e3-m-3" data-clin="1" data-paso="Neutrófilos y citocinas forman pus"><div class="det"><p>Neutrófilos y macrófagos liberan citocinas, mensajeros que actúan en el hipotálamo y el hígado: fiebre y proteína C reactiva. <span class="rem">↪ Propiedades en «Diagnóstico»</span></p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-1" onclick="ir('e3','e3-s-1')">Fiebre y malestar</button></p></div></li>
+<li class="nodo" id="e3-m-4" data-clin="1" data-paso="Pus eleva la presión intraósea"><div class="det"><p>El pus ocupa un compartimiento rígido; la presión estimula los nociceptores del periostio, que sienten la tensión, y el niño evita usar el miembro.</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-2" onclick="ir('e3','e3-s-2')">Dolor a la palpación puntual de la metáfisis</button> <button type="button" class="xref" data-ir="e3-s-3" onclick="ir('e3','e3-s-3')">Cojera o pseudoparálisis</button></p></div></li>
+<li class="nodo" id="e3-m-5" data-clin="1" data-paso="Pus rompe la cortical y levanta el periostio"><div class="det"><p>El pus sale por la cortical fina y levanta el periostio: absceso subperióstico que llega a los tejidos blandos.</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-4" onclick="ir('e3','e3-s-4')">Edema, calor y eritema local</button></p></div></li>
+<li class="nodo" id="e3-m-6" data-clin="0" data-paso="Compresión vascular causa isquemia ósea"><div class="det"><p>La presión corta la irrigación medular y perióstica; el hueso queda sin sangre y el antibiótico no llega.</p></div></li>
+<li class="nodo" id="e3-m-7" data-clin="0" data-paso="Isquemia forma secuestro óseo"><div class="det"><p>El hueso sin sangre se necrosa: secuestro, donde las bacterias forman biopelículas y escapan al antibiótico.</p></div></li>
+<li class="nodo" id="e3-m-8" data-clin="0" data-paso="Hueso nuevo rodea el secuestro y cronifica"><div class="det"><p>El periostio forma hueso nuevo (involucro) y la infección persiste, quizá con fístula; si alcanza la fisis o una articulación, daña el crecimiento o causa artritis.</p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — Por qué el hueso infectado duele y cuesta curar</span>
+<p class="fey-b">El hueso es como una caja rígida de zapatos. Si se llena de pus, no hay espacio y la presión aprieta los tubitos de sangre. Sin sangre esa parte se muere, y las medicinas, que viajan por la sangre, no llegan.</p>
+<p class="mini fey-c">En medicina esto se llama… osteomielitis y secuestro óseo.</p>
+<p class="mini fey-c">Dónde falla la comparación: el hueso vivo forma hueso nuevo; una caja no.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Dolor focal sobre un hueso largo</p>
+<p data-e="p">Fiebre y malestar</p>
+<p data-e="p">Cojera o pseudoparálisis</p>
+<p data-e="v">Edema, calor y eritema local</p>
+<p data-e="a">Dolor extremo al movimiento de la articulación vecina</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e3-s-2" onclick="ir('e3','e3-s-2')">Dolor a la palpación puntual de la metáfisis</button></p>
+</div>
+<div class="signo" id="e3-s-1"><h4>Fiebre y malestar</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Temperatura elevada y decaimiento; puede faltar en la forma subaguda.</dd>
+<dt>Por qué aparece</dt><dd>Las citocinas del pus actúan en el hipotálamo. <button type="button" class="xref" data-ir="e3-m-3" onclick="ir('e3','e3-m-3')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Infección profunda.</dd></dl></div>
+<div class="signo" id="e3-s-2"><h4>Dolor a la palpación puntual de la metáfisis</h4><dl>
+<dt>Cómo se reconoce</dt><dd>La palpación suave de la metáfisis duele y la articulación vecina se mueve sin dolor.</dd>
+<dt>Por qué aparece</dt><dd>La presión intraósea estimula el periostio. <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Localiza el foco en el hueso, no en la articulación.</dd></dl></div>
+<div class="signo" id="e3-s-3"><h4>Cojera o pseudoparálisis</h4><dl>
+<dt>Cómo se reconoce</dt><dd>El niño evita usar el miembro o lo deja inmóvil, sin déficit neurológico.</dd>
+<dt>Por qué aparece</dt><dd>El uso aumenta el dolor de la presión. <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>En el lactante es la forma frecuente de presentación.</dd></dl></div>
+<div class="signo" id="e3-s-4"><h4>Edema, calor y eritema local</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Tumefacción, calor y enrojecimiento sobre el hueso.</dd>
+<dt>Por qué aparece</dt><dd>El pus llegó a los tejidos blandos. <button type="button" class="xref" data-ir="e3-m-5" onclick="ir('e3','e3-m-5')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Sugiere absceso.</dd></dl></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span> Hemocultivo y resonancia del segmento doloroso, antes del antibiótico si el niño está estable [4].</li>
+<li><span class="tg">Añade</span> PCR y VSG; radiografía simple, que puede ser normal los primeros días [4].</li>
+<li><span class="tg">Confirma</span> Cultivo de aspirado óseo o de absceso si hay colección o el hemocultivo es negativo [4] [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Solo si</span> Gammagrafía sin resonancia o con varios focos; biopsia si la imagen sugiere tumor [4].</li>
+<li><span class="tg">No pidas</span> TC como estudio inicial: irradia y rinde menos que la resonancia.</li>
+<li><span class="tg">Alarma</span> Shock, trombosis o extensión articular: ingreso y cirugía urgente [4].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table>
+<thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Hemocultivo</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar germen</td><td>Antes del antibiótico.</td><td>[4]</td></tr>
+<tr><th>PCR y VSG</th><td>No establecida</td><td>No establecida</td><td>No establecida en Ecuador</td><td>Diagnóstico y seguimiento</td><td>La PCR guía el paso a vía oral <button type="button" class="xref" data-ir="e3-m-3" onclick="ir('e3','e3-m-3')">← Paso</button>.</td><td>[4]</td></tr>
+<tr><th>Radiografía simple</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Descartar otras causas</td><td>Normal los primeros días.</td><td>[4]</td></tr>
+<tr><th>Resonancia magnética</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar y delimitar</td><td>Edema medular, absceso y compromiso articular.</td><td>[4]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad. E: especificidad. VPP/VPN: valores predictivos. VSG: velocidad de sedimentación. PCR: proteína C reactiva.</p>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span> Erradicar S. aureus de un hueso mal irrigado: antibiótico bactericida y drenaje de colecciones [4].</li>
+<li><span class="tg">De elección</span> Betalactámico antiestafilocócico intravenoso (cefazolina) donde predomina el SAMS [4].</li>
+<li><span class="tg">Alternativa</span> Clindamicina si el SAMR tiene baja resistencia local; vancomicina si es alta o hay gravedad [4].</li>
+<li><span class="tg">Reevalúa</span> Vía oral con niño afebril, mejoría clínica y PCR en descenso [4].</li>
+<li><span class="tg">Evita</span> Pasar a vía oral sin mejoría clínica ni descenso de la PCR.</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table>
+<thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Cefazolina</th><td>100 a 150 mg/kg al día; tope 2 g por dosis (6 g al día)</td><td>Intravenosa</td><td>Cada 8 horas</td><td>Total 3 a 4 semanas con vía oral [VERIFICAR EN FUENTE]</td><td>Bloquea la pared bacteriana del germen adherido <button type="button" class="xref" data-ir="e3-m-2" onclick="ir('e3','e3-m-2')">← Paso</button>. Ajusta en insuficiencia renal.</td><td>[4]</td></tr>
+<tr><th>Clindamicina</th><td>30 a 40 mg/kg al día; tope 900 mg por dosis (2 700 mg al día)</td><td>Intravenosa u oral</td><td>Cada 8 horas</td><td>Igual</td><td>Inhibe la síntesis proteica y penetra en hueso <button type="button" class="xref" data-ir="e3-m-2" onclick="ir('e3','e3-m-2')">← Paso</button>. Solo con resistencia local baja; riesgo de diarrea por Clostridioides difficile.</td><td>[4]</td></tr>
+<tr><th>Vancomicina</th><td>15 mg/kg por dosis; tope 2 000 mg, por niveles</td><td>Intravenosa</td><td>Cada 6 horas</td><td>Igual</td><td>Glucopéptido para SAMR <button type="button" class="xref" data-ir="e3-m-2" onclick="ir('e3','e3-m-2')">← Paso</button>. Vigila riñón y niveles.</td><td>[4]</td></tr>
+<tr><th>Cefalexina</th><td>75 a 100 mg/kg al día; tope 1 000 mg por dosis (4 g al día)</td><td>Oral</td><td>Cada 6 horas</td><td>Completa el tratamiento</td><td>Paso a vía oral con PCR en descenso <button type="button" class="xref" data-ir="e3-m-6" onclick="ir('e3','e3-m-6')">← Paso</button>. Para SAMS.</td><td>[4]</td></tr>
+</tbody></table></div>
+<p class="mini">SAMS y SAMR: Staphylococcus aureus sensible y resistente a meticilina. Dosis de ficha técnica.</p>
+<div class="dc" data-fn="dcE3">
+<div class="dc-t">Simulador · Decisión clínica — antibiótico empírico y paso a vía oral</div>
+<div class="dc-g"><span class="dc-l">Peso (kg)</span>
+<input type="number" data-n="peso" min="3" max="120" step="0.1" oninput="ch(this)"></div>
+<div class="dc-g"><span class="dc-l">Estado</span>
+<button type="button" class="chip" data-g="es" data-v="est" onclick="ch(this)">Estable</button>
+<button type="button" class="chip" data-g="es" data-v="gra" onclick="ch(this)">Grave</button></div>
+<div class="dc-g"><span class="dc-l">Germen local</span>
+<button type="button" class="chip" data-g="mr" data-v="sams" onclick="ch(this)">SAMS</button>
+<button type="button" class="chip" data-g="mr" data-v="clin" onclick="ch(this)">SAMR, clindamicina sensible</button>
+<button type="button" class="chip" data-g="mr" data-v="alta" onclick="ch(this)">SAMR, clindamicina resistente</button></div>
+<div class="dc-g"><span class="dc-l">Evolución</span>
+<button type="button" class="chip" data-g="ev" data-v="mej" onclick="ch(this)">Mejora, PCR baja</button>
+<button type="button" class="chip" data-g="ev" data-v="nom" onclick="ch(this)">Sin mejoría</button></div>
+<div class="out"></div>
+</div>
+
+<h2>Seguimiento</h2>
+<p>Absceso subperióstico <button type="button" class="xref" data-ir="e3-m-5" onclick="ir('e3','e3-m-5')">← Paso</button>; secuestro y cronicidad <button type="button" class="xref" data-ir="e3-m-7" onclick="ir('e3','e3-m-7')">← Paso</button>; fístula, daño fisario o artritis contigua <button type="button" class="xref" data-ir="e3-m-8" onclick="ir('e3','e3-m-8')">← Paso</button>. El absceso y el secuestro requieren drenaje o desbridamiento quirúrgico.</p>
+</section>
+<section class="tab" data-tab="e4">
+<div class="hb az"><div class="hb-t">Frente a Osteomielitis</div>
+<p>Se confunde con ella por el dolor óseo, la cojera y a veces la fiebre. Se separa por el dolor nocturno persistente, la masa dura, la reacción perióstica y el curso de semanas.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué un dolor óseo nocturno que no cede con reposo sugiere tumor más que infección, y qué cambia si hay fiebre?</li>
+<li>¿Por qué se pide radiografía antes que cualquier otro estudio y la biopsia se planifica con el equipo que tratará el tumor?</li>
+<li>¿Por qué el tratamiento combina quimioterapia con cirugía o radioterapia aunque el tumor parezca localizado?</li>
+</ol></div>
+<span class="badge b-pu">Guía: ESMO-EURACAN-GENTURIS-ERN PaedCan 2021 [5] (solo cita)</span>
+<div class="hb am"><div class="hb-t">Precisión sobre el sílabo</div>
+<p>El sílabo dice «neoplasias malignas óseas». Las primarias de la infancia son osteosarcoma (la más frecuente, de contraste) y sarcoma de Ewing; las metástasis son secundarias [5] [VERIFICAR EN FUENTE].</p></div>
+
+<h2>Qué es</h2>
+<p>Las neoplasias óseas malignas primarias son proliferaciones clonales de células mesenquimatosas que destruyen el hueso y metastatizan al pulmón; la biopsia las confirma [5].</p>
+<p>Los subtipos existen porque la célula de origen cambia el hueso afectado, la imagen y el esquema.</p>
+<div class="tw"><table>
+<thead><tr><th>Subtipo</th><th>Origen</th><th>Qué lo distingue</th></tr></thead>
+<tbody>
+<tr><th>Osteosarcoma</th><td>Osteoblastos malignos producen matriz osteoide</td><td>Adolescente, metáfisis de rodilla; triángulo de Codman</td></tr>
+<tr><th>Sarcoma de Ewing</th><td>Célula pequeña redonda, fusión EWSR1::FLI1 [VERIFICAR EN FUENTE]</td><td>Diáfisis y pelvis; fiebre y VSG alta imitan infección</td></tr>
+</tbody></table></div>
+<h3>No confundir con…</h3>
+<div class="tw"><table>
+<thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Leucemia linfoblástica aguda</th><td>Dolor óseo, cojera y fiebre</td><td>Palidez, petequias, citopenias y blastos en médula</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table>
+<thead><tr><th>Dimensión</th><th>Dato</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>Poco frecuentes; osteosarcoma el más común [VERIFICAR EN FUENTE]</td><td>[5]</td></tr>
+<tr><th>Edad</th><td>Osteosarcoma en adolescentes; Ewing en escolares y adolescentes [VERIFICAR EN FUENTE]</td><td>[5]</td></tr>
+<tr><th>Sexo</th><td>Ligero predominio masculino [VERIFICAR EN FUENTE]</td><td>[5]</td></tr>
+<tr><th>Factores clave</th><td>Brote de crecimiento, radioterapia previa, síndromes hereditarios [VERIFICAR EN FUENTE]</td><td>[5]</td></tr>
+</tbody></table></div>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e4-m-1" data-clin="0" data-paso="Alteración genética en célula mesenquimatosa"><div class="det"><p>Una célula precursora pierde sus frenos: en el osteosarcoma, de TP53 o RB1, genes que detienen el ciclo celular dañado; en el Ewing, por la fusión EWSR1::FLI1, factor de transcripción anómalo que activa la proliferación [5] [VERIFICAR EN FUENTE].</p></div></li>
+<li class="nodo" id="e4-m-2" data-clin="0" data-paso="Proliferación clonal en hueso en crecimiento"><div class="det"><p>El clon prolifera sin control donde el recambio óseo es mayor: la metáfisis en el brote de crecimiento.</p></div></li>
+<li class="nodo" id="e4-m-3" data-clin="1" data-paso="El tumor destruye y remodela el hueso"><div class="det"><p>El tumor y los osteoclastos destruyen el hueso, estiran el periostio y liberan prostaglandinas: dolor continuo, de reposo y nocturno.</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-1" onclick="ir('e4','e4-s-1')">Dolor óseo persistente y nocturno</button></p></div></li>
+<li class="nodo" id="e4-m-4" data-clin="1" data-paso="Reacción perióstica y masa de partes blandas"><div class="det"><p>El periostio levantado deposita hueso en capas (triángulo de Codman, capas de cebolla) y el tumor crece hacia las partes blandas.</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-2" onclick="ir('e4','e4-s-2')">Masa dura y dolorosa</button></p></div></li>
+<li class="nodo" id="e4-m-5" data-clin="1" data-paso="Hueso debilitado cede ante la carga"><div class="det"><p>El hueso destruido pierde resistencia; el apoyo causa microfracturas o fractura patológica con trauma mínimo.</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-3" onclick="ir('e4','e4-s-3')">Cojera progresiva o fractura con trauma mínimo</button></p></div></li>
+<li class="nodo" id="e4-m-6" data-clin="1" data-paso="Citocinas tumorales causan síntomas sistémicos"><div class="det"><p>Sobre todo en el Ewing, las células liberan interleucina 6, que actúa en el hipotálamo y el hígado: fiebre, pérdida de peso y VSG alta, como en una infección.</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-4" onclick="ir('e4','e4-s-4')">Fiebre, pérdida de peso y malestar</button></p></div></li>
+<li class="nodo" id="e4-m-7" data-clin="0" data-paso="Invasión vascular y diseminación al pulmón"><div class="det"><p>Las células invaden las venas del tumor y llegan con la sangre venosa al primer lecho capilar, el pulmón.</p></div></li>
+<li class="nodo" id="e4-m-8" data-clin="0" data-paso="Micrometástasis presentes desde el diagnóstico"><div class="det"><p>Aunque la imagen no las muestre, se asumen micrometástasis; por eso la cirugía sola no cura y se añade quimioterapia.</p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — Por qué no basta con quitar el tumor</span>
+<p class="fey-b">Imagina una maleza que crece sin control y rompe el suelo. Manda semillas por el río. Aunque arranques la planta grande, algunas semillas ya llegaron río abajo, y la primera orilla es el pulmón. Por eso se da además una medicina que viaja por todo el cuerpo.</p>
+<p class="mini fey-c">En medicina esto se llama… neoplasia maligna, metástasis y quimioterapia.</p>
+<p class="mini fey-c">Dónde falla la comparación: el tumor está hecho de células del propio niño con instrucciones alteradas.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Dolor óseo cerca de la rodilla, el fémur o la pelvis</p>
+<p data-e="p">Masa dura y dolorosa</p>
+<p data-e="p">Cojera progresiva</p>
+<p data-e="v">Fiebre, pérdida de peso y malestar</p>
+<p data-e="a">Eritema y calor locales intensos</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e4-s-1" onclick="ir('e4','e4-s-1')">Dolor óseo persistente y nocturno que no cede con reposo</button></p>
+</div>
+<div class="signo" id="e4-s-1"><h4>Dolor óseo persistente y nocturno que no cede con reposo</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Dolor profundo y progresivo que despierta al niño.</dd>
+<dt>Por qué aparece</dt><dd>La destrucción ósea y el estiramiento del periostio son un estímulo continuo. <button type="button" class="xref" data-ir="e4-m-3" onclick="ir('e4','e4-m-3')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Lesión ósea destructiva: pide radiografía primero [5].</dd></dl></div>
+<div class="signo" id="e4-s-2"><h4>Masa dura y dolorosa</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Tumefacción ósea dura, fija y de crecimiento progresivo.</dd>
+<dt>Por qué aparece</dt><dd>El tumor y su reacción perióstica crecen hacia las partes blandas. <button type="button" class="xref" data-ir="e4-m-4" onclick="ir('e4','e4-m-4')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Sospecha de tumor; no se drena ni se biopsia fuera del centro.</dd></dl></div>
+<div class="signo" id="e4-s-3"><h4>Cojera progresiva o fractura con trauma mínimo</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Cojera que empeora en semanas o dolor tras un golpe leve.</dd>
+<dt>Por qué aparece</dt><dd>El hueso destruido no soporta la carga. <button type="button" class="xref" data-ir="e4-m-5" onclick="ir('e4','e4-m-5')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Riesgo de fractura patológica: sin carga y sin manipular.</dd></dl></div>
+<div class="signo" id="e4-s-4"><h4>Fiebre, pérdida de peso y malestar</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Fiebre sin foco y adelgazamiento, más en el Ewing.</dd>
+<dt>Por qué aparece</dt><dd>Las citocinas tumorales actúan en el hipotálamo. <button type="button" class="xref" data-ir="e4-m-6" onclick="ir('e4','e4-m-6')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Imita infección; el curso de semanas y la radiografía orientan a tumor.</dd></dl></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span> Radiografía simple del segmento doloroso en dos proyecciones [5].</li>
+<li><span class="tg">Añade</span> Resonancia del hueso completo y TC de tórax para metástasis [5] [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Confirma</span> Biopsia planificada con el cirujano, en el centro de sarcomas que tratará al niño [5].</li>
+<li><span class="tg">Solo si</span> Gammagrafía ósea o PET para otros focos, según el centro.</li>
+<li><span class="tg">No pidas</span> Biopsia, drenaje ni resección fuera del centro de referencia: contamina el trayecto y compromete la cirugía conservadora [5].</li>
+<li><span class="tg">Alarma</span> Dolor nocturno con masa dura o fractura con trauma mínimo: derivación urgente.</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table>
+<thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Radiografía simple</th><td>No establecida</td><td>No establecida</td><td>No establecida en Ecuador</td><td>Sospechar</td><td>Lesión lítica o blástica y reacción perióstica; no confirma.</td><td>[5]</td></tr>
+<tr><th>Resonancia magnética</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Delimitar extensión</td><td>Planifica la cirugía.</td><td>[5]</td></tr>
+<tr><th>TC de tórax</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Estadificar</td><td>Busca metástasis pulmonares <button type="button" class="xref" data-ir="e4-m-7" onclick="ir('e4','e4-m-7')">← Paso</button>.</td><td>[5]</td></tr>
+<tr><th>Biopsia</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar</td><td>Diagnóstico definitivo; el trayecto se reseca con el tumor.</td><td>[5]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad. E: especificidad. VPP/VPN: valores predictivos. TC: tomografía computarizada. PET: tomografía por emisión de positrones.</p>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span> Controlar la enfermedad local y la sistémica con quimioterapia y resección o radioterapia [5].</li>
+<li><span class="tg">De elección</span> Tratamiento multimodal en un centro de sarcomas: osteosarcoma con quimioterapia y cirugía; Ewing con quimioterapia multiagente y control local [5] [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Sintomático</span> Analgesia escalonada y miembro sin carga.</li>
+<li><span class="tg">Especialista</span> Oncología pediátrica y ortopédica desde la sospecha.</li>
+<li><span class="tg">Evita</span> Yeso, drenaje o biopsia como si fuera infección, y antibiótico sin imágenes.</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table>
+<thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Esquema de osteosarcoma (metotrexato, doxorrubicina, cisplatino)</th><td>Según protocolo del centro oncológico [VERIFICAR EN FUENTE]</td><td>Intravenosa</td><td>Según protocolo</td><td>Según protocolo</td><td>Frena el clon <button type="button" class="xref" data-ir="e4-m-2" onclick="ir('e4','e4-m-2')">← Paso</button>. Toxicidad cardíaca, auditiva y renal.</td><td>[5]</td></tr>
+<tr><th>Esquema de Ewing (multiagente)</th><td>Según protocolo del centro oncológico [VERIFICAR EN FUENTE]</td><td>Intravenosa</td><td>Según protocolo</td><td>Según protocolo</td><td>Actúa sobre el clon <button type="button" class="xref" data-ir="e4-m-2" onclick="ir('e4','e4-m-2')">← Paso</button>; riesgo de neutropenia febril.</td><td>[5]</td></tr>
+<tr><th>Paracetamol</th><td>15 mg/kg por dosis; tope 1 000 mg por dosis y 75 mg/kg al día</td><td>Oral</td><td>Cada 6 horas</td><td>Mientras dure el dolor</td><td>Analgésico central sin riesgo hemorrágico <button type="button" class="xref" data-ir="e4-m-3" onclick="ir('e4','e4-m-3')">← Paso</button>.</td><td>[5]</td></tr>
+<tr><th>Ibuprofeno</th><td>10 mg/kg por dosis; tope 400 mg por dosis y 1 200 mg al día</td><td>Oral</td><td>Cada 8 horas</td><td>Mientras dure el dolor</td><td>Reduce las prostaglandinas del periostio <button type="button" class="xref" data-ir="e4-m-3" onclick="ir('e4','e4-m-3')">← Paso</button>. Solo con plaquetas normales; consulta con oncología.</td><td>[5]</td></tr>
+</tbody></table></div>
+<p class="mini">Analgésicos: dosis de ficha técnica. La quimioterapia la define el centro oncológico.</p>
+<div class="dc" data-fn="dcE4">
+<div class="dc-t">Simulador · Decisión clínica — analgesia y derivación ante un dolor óseo sospechoso de tumor</div>
+<div class="dc-g"><span class="dc-l">Peso (kg)</span>
+<input type="number" data-n="peso" min="3" max="120" step="0.1" oninput="ch(this)"></div>
+<div class="dc-g"><span class="dc-l">Dolor</span>
+<button type="button" class="chip" data-g="dl" data-v="leve" onclick="ch(this)">Leve</button>
+<button type="button" class="chip" data-g="dl" data-v="mod" onclick="ch(this)">Moderado</button>
+<button type="button" class="chip" data-g="dl" data-v="sev" onclick="ch(this)">Intenso</button></div>
+<div class="dc-g"><span class="dc-l">Fractura</span>
+<button type="button" class="chip" data-g="fx" data-v="si" onclick="ch(this)">Sospechada</button>
+<button type="button" class="chip" data-g="fx" data-v="no" onclick="ch(this)">No sospechada</button></div>
+<div class="dc-g"><span class="dc-l">Plaquetas</span>
+<button type="button" class="chip" data-g="pl" data-v="ok" onclick="ch(this)">Normales</button>
+<button type="button" class="chip" data-g="pl" data-v="bajas" onclick="ch(this)">Bajas o desconocidas</button></div>
+<div class="out"></div>
+</div>
+
+<h2>Seguimiento</h2>
+<p>Metástasis pulmonar <button type="button" class="xref" data-ir="e4-m-7" onclick="ir('e4','e4-m-7')">← Paso</button>: tos, disnea o nódulos en la TC. Recaída por micrometástasis residuales <button type="button" class="xref" data-ir="e4-m-8" onclick="ir('e4','e4-m-8')">← Paso</button>. Toxicidad: antraciclinas dañan el miocardio, cisplatino la audición y metotrexato el riñón.</p>
+</section>
+<section class="tab" data-tab="sin">
+<div class="hb ro"><div class="hb-t">Errores que no se pueden cometer</div>
+<ul>
+<li>Dar el alta como sinovitis transitoria a un niño con fiebre que rechaza el apoyo, sin aplicar Kocher ni considerar la artrocentesis.</li>
+<li>Retrasar el drenaje de una artritis séptica para completar imágenes o esperar resultados de laboratorio.</li>
+<li>Descartar infección por Kingella en un menor de tres años porque no tiene fiebre ni reactantes altos.</li>
+<li>Iniciar antibiótico sin hemocultivo ni cultivo de líquido o hueso en un niño estable.</li>
+<li>Descartar osteomielitis con una radiografía normal en los primeros días.</li>
+<li>Pasar a vía oral sin mejoría clínica ni descenso de la PCR.</li>
+<li>Tratar como infección, con yeso, drenaje o biopsia local, un dolor óseo nocturno con masa dura.</li>
+</ul></div>
+<div class="acc refs"><button type="button" class="acc-h" onclick="tog(this)">Referencias <span class="chev">▾</span></button>
+<div class="acc-b"><ol class="vanc">
+<li>Kliegman RM, St Geme JW, Blum NJ, et al., editors. Nelson Textbook of Pediatrics. 22nd ed. Philadelphia: Elsevier. Texto base del curso; no consultado en esta sesión y año de edición por verificar. Texto de referencia.</li>
+<li>Kocher MS, Zurakowski D, Kasser JR. Differentiating between septic arthritis and transient synovitis of the hip in children: an evidence-based clinical prediction algorithm. J Bone Joint Surg Am. 1999;81(12):1662-70. doi:10.2106/00004623-199912000-00002. PMID: 10608376. Estudio de cohorte retrospectivo; desarrolla el algoritmo.</li>
+<li>Caird MS, Flynn JM, Leung YL, Millman JE, D'Italia JG, Dormans JP. Factors distinguishing septic arthritis from transient synovitis of the hip in children. A prospective study. J Bone Joint Surg Am. 2006;88(6):1251-7. doi:10.2106/JBJS.E.00216. PMID: 16757758. Estudio prospectivo.</li>
+<li>Woods CR, Bradley JS, Chatterjee A, Copley LA, Robinson J, Kronman MP, et al. Clinical Practice Guideline by the Pediatric Infectious Diseases Society and the Infectious Diseases Society of America: 2021 Guideline on Diagnosis and Management of Acute Hematogenous Osteomyelitis in Pediatrics. J Pediatric Infect Dis Soc. 2021;10(8):801-44. doi:10.1093/jpids/piab027. PMID: 34350458. Guía de práctica clínica con método GRADE; leída solo en resumen.</li>
+<li>Strauss SJ, Frezza AM, Abecassis N, Bajpai J, Bauer S, Biagini R, et al. Bone sarcomas: ESMO-EURACAN-GENTURIS-ERN PaedCan Clinical Practice Guideline for diagnosis, treatment and follow-up. Ann Oncol. 2021;32(12):1520-36. doi:10.1016/j.annonc.2021.08.1995. PMID: 34500044. Guía de práctica clínica; solo cita, resumen no disponible.</li>
+<li>Kocher MS, Mandiga R, Zurakowski D, Barnewolt C, Kasser JR. Validation of a clinical prediction rule for the differentiation between septic arthritis and transient synovitis of the hip in children. J Bone Joint Surg Am. 2004;86(8):1629-35. doi:10.2106/00004623-200408000-00005. PMID: 15292409. Estudio de validación prospectivo.</li>
+<li>Luhmann SJ, Jones A, Schootman M, Gordon JE, Schoenecker PL, Luhmann JD. Differentiation between septic arthritis and transient synovitis of the hip in children with clinical prediction algorithms. J Bone Joint Surg Am. 2004;86(5):956-62. doi:10.2106/00004623-200405000-00011. PMID: 15118038. Estudio retrospectivo.</li>
+<li>Sultan J, Hughes PJ. Septic arthritis or transient synovitis of the hip in children: the value of clinical prediction algorithms. J Bone Joint Surg Br. 2010;92(9):1289-93. doi:10.1302/0301-620X.92B9.24286. PMID: 20798450. Estudio retrospectivo.</li>
+<li>Yagupsky P, Dubnov-Raz G, Gené A, Ephros M. Differentiating Kingella kingae septic arthritis of the hip from transient synovitis in young children. J Pediatr. 2014;165(5):985-9.e1. doi:10.1016/j.jpeds.2014.07.060. PMID: 25217199. Estudio retrospectivo multicéntrico.</li>
+</ol></div></div>
+</section>
+<script>
+function dcPut(dc,h){dc.querySelector('.out').innerHTML=h;}
+function dcGuia(dc,t){dcPut(dc,'<p>'+t+'</p>');}
+function dcVis(dc){
+var ex=sel(dc,'ex')[0],fi=sel(dc,'fi')[0],ap=sel(dc,'ap')[0],cu=sel(dc,'cu')[0];
+if(!ex){dcGuia(dc,'Elige el hallazgo del examen osteoarticular; luego añade fiebre, apoyo y curso para ver qué entidad es compatible.');return;}
+var e,falta,cond,cf;
+if(ex==='masa'||(cu==='cr'&&!(ex==='foco'&&fi==='alta'))){
+e='Neoplasia ósea maligna (sospecha)';
+falta='Falta para confirmarla: radiografía y resonancia, y biopsia en el centro de referencia [5].';
+cond='Radiografía en dos proyecciones y derivación a oncología ortopédica pediátrica; no biopsies, no drenes y no inmovilices fuera del centro [5].';
+cf='Si hay fiebre alta, signos inflamatorios locales y un curso de días en vez de semanas → piensa en osteomielitis: hemocultivo y resonancia [4].';
+}else if(ex==='dolor'){
+e='Artritis séptica (amenaza del grupo)';
+falta='Falta para confirmarla: líquido sinovial purulento o cultivo positivo [1].';
+cond='Hemocultivo, PCR y VSG, artrocentesis guiada por ecografía y drenaje urgente con ortopedia pediátrica, sin esperar imágenes adicionales [1].';
+cf='Si el movimiento pasivo deja de doler y el niño apoya con cojera leve → piensa en sinovitis transitoria y aplica Kocher [2].';
+}else if(ex==='foco'){
+e='Osteomielitis (compatible)';
+falta='Falta para confirmarla: resonancia con edema medular o colección, y hemocultivo o cultivo del aspirado [4].';
+cond='Hemocultivo antes del antibiótico, resonancia del segmento doloroso y antiestafilocócico intravenoso; ortopedia si hay colección [4].';
+cf='Si el dolor pasivo de la cadera es extremo y la cadera no se mueve → piensa en artritis séptica o en extensión articular [1].';
+}else{
+if(fi==='alta'||ap==='no'){
+e='Compatible con sinovitis, pero con señales de infección: trata como artritis séptica hasta demostrar lo contrario';
+falta='Falta para decidir: Kocher completo con VSG y leucocitos, y ecografía de cadera [2].';
+cond='Aplica la escala de Kocher y valora artrocentesis; no des el alta como sinovitis [2].';
+cf='Si la fiebre cede y el niño apoya con cojera → desciende a sinovitis con reevaluación precoz [2].';
+}else{
+e='Sinovitis transitoria de cadera (diagnóstico de exclusión)';
+falta='Falta para confirmarla: ecografía con derrame y predictores de Kocher bajos [2].';
+cond='Reposo relativo, antiinflamatorio y reevaluación precoz, sin antibiótico; pediatría [1].';
+cf='Si aparece fiebre ≥38,5 °C o rechazo total del apoyo → pasa a artritis séptica: Kocher y artrocentesis [2].';
+}}
+dcPut(dc,'<p><b>'+e+'</b></p><p>'+falta+'</p><p>'+cond+'</p><p><span class="cf">'+cf+'</span></p>');
+}
+function dcK(dc){
+var fi=sel(dc,'fi')[0],ap=sel(dc,'ap')[0],vs=sel(dc,'vs')[0],le=sel(dc,'le')[0],pc=sel(dc,'pc')[0],ed=num(dc,'edad');
+if(!fi||!ap||!vs||!le){dcGuia(dc,'Marca los cuatro predictores de Kocher (fiebre, apoyo, VSG y leucocitos) para obtener la banda de riesgo y la conducta.');return;}
+var n=(fi==='s'?1:0)+(ap==='s'?1:0)+(vs==='s'?1:0)+(le==='s'?1:0);
+var b=n<=1?0:(n===2?1:2);
+var sube=(pc==='s'&&b<2);
+if(sube){b=b+1;}
+var nom=['baja','intermedia','alta'][b];
+var cond=[
+'Reposo y antiinflamatorio con reevaluación clínica al día siguiente; sin antibiótico [2] [6].',
+'Ecografía de cadera con PCR; si hay derrame, artrocentesis, o ingreso con observación estrecha y repetición del examen y los marcadores [6].',
+'Artrocentesis urgente guiada por ecografía con ortopedia pediátrica y drenaje quirúrgico si hay pus, sin esperar más estudios [2] [6].'][b];
+var h='<p><b>Predictores presentes: '+n+' de 4. Banda '+nom+'.</b></p>';
+if(sube){h+='<p>Una PCR mayor de 20 mg/L sube la banda un nivel [3].</p>';}
+h+='<p>'+cond+'</p>';
+if(!isNaN(ed)&&ed<3){h+='<p>Por debajo de los tres años el algoritmo pierde sensibilidad: pide hemocultivo y amplificación de ácidos nucleicos para Kingella aunque la banda sea baja [9].</p>';}
+h+='<p>El rendimiento de la escala cae en otras poblaciones; úsala para decidir la prueba, no para descartar infección [7] [8].</p>';
+h+='<p><span class="cf">Si cambia un solo predictor (por ejemplo, el niño deja de apoyar) → sube una banda: baja pasa a intermedia e intermedia a alta [2].</span></p>';
+dcPut(dc,h);
+}
+function dcT1(dc){
+var p=num(dc,'peso'),ai=sel(dc,'ai')[0],rs=sel(dc,'rs')[0];
+if(isNaN(p)||!ai||!rs){dcGuia(dc,'Indica el peso, si tolera antiinflamatorio y el nivel de riesgo para ver la posología de la cadera irritable.');return;}
+if(p<3||p>120){dcGuia(dc,'El peso debe estar entre 3 y 120 kg.');return;}
+if(rs==='alto'){dcPut(dc,'<p><b>No es manejo ambulatorio.</b></p><p>Con fiebre o rechazo del apoyo, aplica Kocher y valora artrocentesis; no indiques antibiótico sin cultivo [6].</p><p><span class="cf">Si la fiebre cede y el niño apoya con cojera → vuelve al manejo sintomático con reevaluación precoz [6].</span></p>');return;}
+var h;
+if(ai==='ok'){
+var d=Math.min(10*p,400);
+h='<p><b>Ibuprofeno oral: '+rd(d)+' mg por dosis cada 8 horas.</b></p><p>Dosis de 10 mg/kg; tope de 400 mg por dosis y 1 200 mg al día'+(10*p>400?' (tope aplicado)':'')+' [1].</p>';
+}else{
+var q=Math.min(15*p,1000),dia=Math.min(75*p,4000);
+h='<p><b>Paracetamol oral: '+rd(q)+' mg por dosis cada 6 horas.</b></p><p>Dosis de 15 mg/kg; tope de 1 000 mg por dosis y de '+rd(dia)+' mg al día (el menor entre 75 mg/kg y 4 000 mg)'+(15*p>1000?'; tope aplicado':'')+' [1].</p>';
+}
+h+='<p>Reposo relativo, apoyo progresivo según el dolor y reevaluación al día siguiente [1].</p>';
+h+='<p><span class="cf">Si aparece fiebre ≥38,5 °C o el niño deja de apoyar → no es sinovitis de bajo riesgo: aplica Kocher y valora artrocentesis [6].</span></p>';
+dcPut(dc,h);
+}
+function dcAb(dc,nombre){
+var p=num(dc,'peso'),es=sel(dc,'es')[0],mr=sel(dc,'mr')[0];
+if(isNaN(p)||!es||!mr){dcGuia(dc,'Indica el peso, el estado del niño y el germen probable local para ver el antibiótico empírico y su posología.');return null;}
+if(p<3||p>120){dcGuia(dc,'El peso debe estar entre 3 y 120 kg.');return null;}
+var f,t;
+if(es==='gra'||mr==='alta'){
+var v=Math.min(15*p,2000);
+f='Vancomicina intravenosa: '+rd(v)+' mg por dosis cada 6 horas (15 mg/kg; tope 2 000 mg por dosis'+(15*p>2000?', aplicado':'')+'), ajustada por niveles y función renal.';
+t=es==='gra'?'Niño grave: ingreso monitorizado, vancomicina y valorar cobertura adicional [4].':'SAMR con clindamicina resistente: vancomicina [4].';
+}else if(mr==='clin'){
+var c=Math.min(40*p/3,900);
+f='Clindamicina intravenosa: '+rd(c)+' mg por dosis cada 8 horas (40 mg/kg al día; tope 900 mg por dosis'+(40*p/3>900?', aplicado':'')+').';
+t='SAMR con clindamicina sensible: clindamicina, vigilando diarrea por Clostridioides difficile [4].';
+}else{
+var z=Math.min(150*p/3,2000);
+f='Cefazolina intravenosa: '+rd(z)+' mg por dosis cada 8 horas (150 mg/kg al día; tope 2 000 mg por dosis'+(150*p/3>2000?', aplicado':'')+').';
+t='Predomina el SAMS: cefazolina; también cubre Kingella [4].';
+}
+return {f:f,t:t};
+}
+function dcE2(dc){
+var r=dcAb(dc);if(!r){return;}
+dcPut(dc,'<p><b>'+r.f+'</b></p><p>'+r.t+'</p><p>Drenaje quirúrgico urgente, hemocultivo y cultivo del líquido antes del antibiótico si el niño está estable, y ortopedia e infectología pediátricas [1].</p><p><span class="cf">Si no hay mejoría de fiebre, dolor y PCR a las 48 a 72 horas → repite el drenaje y escala a vancomicina [4].</span></p>');
+}
+function dcE3(dc){
+var r=dcAb(dc);if(!r){return;}
+var p=num(dc,'peso'),ev=sel(dc,'ev')[0],mr=sel(dc,'mr')[0],h='<p><b>'+r.f+'</b></p><p>'+r.t+'</p>';
+if(ev==='mej'){
+var x;
+if(mr==='clin'){x='Clindamicina oral: '+rd(Math.min(10*p,900))+' mg por dosis cada 8 horas (30 mg/kg al día; tope 900 mg por dosis).';}
+else{x='Cefalexina oral: '+rd(Math.min(25*p,1000))+' mg por dosis cada 6 horas (100 mg/kg al día; tope 1 000 mg por dosis) [VERIFICAR EN FUENTE].';}
+if(mr==='alta'){x='SAMR con clindamicina resistente: el paso a vía oral depende del antibiograma; decide con infectología [4].';}
+h+='<p>Paso a vía oral permitido por la evolución: '+x+'</p>';
+}else if(ev==='nom'){
+h+='<p>Sin mejoría no se pasa a vía oral: repite imagen en busca de colección y valora drenaje [4].</p>';
+}else{
+h+='<p>Indica la evolución para decidir el paso a vía oral.</p>';
+}
+h+='<p><span class="cf">Si el niño queda afebril, mejora y la PCR baja → pasa a vía oral; si no mejora → repite resonancia y valora drenaje [4].</span></p>';
+dcPut(dc,h);
+}
+function dcE4(dc){
+var p=num(dc,'peso'),dl=sel(dc,'dl')[0],fx=sel(dc,'fx')[0],pl=sel(dc,'pl')[0];
+if(isNaN(p)||!dl||!fx||!pl){dcGuia(dc,'Indica peso, intensidad del dolor, sospecha de fractura y plaquetas para ver la analgesia puente y la derivación.');return;}
+if(p<3||p>120){dcGuia(dc,'El peso debe estar entre 3 y 120 kg.');return;}
+var h='<p><b>Derivación hoy a oncología ortopédica pediátrica.</b> Radiografía en dos proyecciones; no biopsies, no drenes y no inmovilices con yeso [5].</p>';
+var q=Math.min(15*p,1000);
+h+='<p>Paracetamol oral: '+rd(q)+' mg por dosis cada 6 horas (15 mg/kg; tope 1 000 mg por dosis'+(15*p>1000?', aplicado':'')+').</p>';
+if(dl!=='leve'){
+if(pl==='ok'){h+='<p>Ibuprofeno oral: '+rd(Math.min(10*p,400))+' mg por dosis cada 8 horas (10 mg/kg; tope 400 mg por dosis), tras consultar con oncología.</p>';}
+else{h+='<p>Con plaquetas bajas o desconocidas no uses antiinflamatorio.</p>';}
+}
+if(dl==='sev'){h+='<p>Dolor intenso: el equipo de oncología indica el opioide en el centro de referencia; este simulador no lo dosifica.</p>';}
+if(fx==='si'){h+='<p>Fractura sospechada: sin carga, inmoviliza sin reducir ni manipular, y traslada.</p>';}
+h+='<p><span class="cf">Si hay fiebre alta, calor y eritema locales y un curso de días → reconsidera osteomielitis: hemocultivo, resonancia y antiestafilocócico [4].</span></p>';
+dcPut(dc,h);
+}
+</script>
+<!-- KIT_SCRIPT -->
+</div>
+<script>
+(function(){
+'use strict';
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+function secK(k){return $('section.tab[data-tab="'+k+'"]')}
+function secOf(el){return el&&el.closest?el.closest('section.tab'):null}
+function nameOf(k){var b=$('button.tb[data-tab="'+k+'"]');return b?b.textContent.replace(/\s+/g,' ').replace(/^\s+|\s+$/g,''):k}
+function btn(t,f,c){var b=document.createElement('button');b.type='button';b.className=c||'chip';b.textContent=t;b.addEventListener('click',f);return b}
+function recon(s,on){if(!s)return;s.classList.toggle('recon',!!on);$$('.nodo',s).forEach(function(n){n.classList.remove('rev');n.classList.remove('pis')});var st=$('.rec-state',s);if(st)st.textContent=on?'Modo reconstrucción activo':'Modo lectura';var a=$('.rec-bar [data-act="rec"]',s);if(a){a.disabled=!!on;a.classList.toggle('on',!!on);a.textContent=on?'Reconstrucción activa':'Activar reconstrucción'}}
+window.recon=function(k,on){recon(secK(k),on)};
+function navOv(){var n=$('nav.tabs');if(!n)return;var sl=n.scrollLeft,mx=n.scrollWidth-n.clientWidth,w=n.parentNode;[n,w].forEach(function(e){if(e===n||e.classList.contains('tabs-w')){e.classList.toggle('ov-l',sl>2);e.classList.toggle('ov-r',sl<mx-2)}})}
+function tabla(on){var t=$('table.vis'),s=secOf(t);if(!s)return;s.classList.toggle('tbl',!!on);$$('td.tap',t).forEach(function(c){c.classList.remove('rev')});var st=$('.vb-state',s);if(st)st.textContent=on?'Tabla tapada: toca cada celda para revelarla':'Modo lectura'}
+window.tabla=tabla;
+window.show=function(k){var ns=secK(k);if(!ns)return;$$('section.tab.on').forEach(function(s){if(s!==ns){if(s.classList.contains('recon'))recon(s,false);if(s.classList.contains('tbl'))tabla(false)}});$$('.tb,.tab').forEach(function(e){e.classList.toggle('on',e.getAttribute('data-tab')===k)});window.scrollTo(0,0);var b=$('.tb.on');if(b&&b.scrollIntoView){try{b.scrollIntoView({inline:'nearest',block:'nearest'})}catch(e){}}navOv()};
+window.ir=function(k,id){var el=document.getElementById(id),s=secOf(el);if(!s)return;var nodo=el.classList.contains('nodo');if(s.classList.contains('recon')&&!nodo)recon(s,false);if(s.classList.contains('tbl')&&!el.closest('.vis-w'))tabla(false);show(s.getAttribute('data-tab'));if(nodo&&s.classList.contains('recon'))el.classList.add('rev');var a=el.closest('.acc');if(a)a.classList.add('op');el.scrollIntoView({block:'start'});el.classList.add('hl');setTimeout(function(){el.classList.remove('hl')},1500)};
+window.tog=function(b){var a=b.closest('.acc');if(a)a.classList.toggle('op')};
+window.sel=function(dc,g){return $$('.chip.on[data-g="'+g+'"]',dc).map(function(c){return c.getAttribute('data-v')})};
+window.num=function(dc,n){var i=$('input[data-n="'+n+'"]',dc);if(!i||i.value==='')return NaN;return parseFloat(String(i.value).replace(',','.'))};
+window.out=function(dc,h){var o=$('.out',dc);if(o)o.innerHTML=h};
+window.rd=function(x,d){var p=Math.pow(10,d||0);return Math.round(x*p)/p};
+function outErr(dc,e){var o=$('.out',dc);if(o)o.textContent='Error de cálculo: '+(e&&e.message?e.message:String(e))}
+function runDc(dc){var fn=window[dc.getAttribute('data-fn')];if(typeof fn==='function'){try{fn(dc)}catch(e){outErr(dc,e)}}}
+window.ch=function(el){var dc=el.closest('.dc');if(!dc)return;if(el.classList.contains('chip')){var g=el.getAttribute('data-g');if(el.getAttribute('data-m')==='1'){el.classList.toggle('on')}else{var was=el.classList.contains('on');$$('.chip[data-g="'+g+'"]',dc).forEach(function(c){c.classList.remove('on')});if(!was)el.classList.add('on')}}runDc(dc)};
+function initNodos(f){var k=f.getAttribute('data-tab');$$('.nodo',f).forEach(function(n,i){var p=document.createElement('b');p.className='paso';var pn=document.createElement('span');pn.className='pn';pn.textContent=(i+1)+' ·';var pt=document.createElement('span');pt.className='pt';pt.textContent=n.getAttribute('data-paso')||'';p.appendChild(pn);p.appendChild(pt);var ra=n.getAttribute('data-rama');if(ra){var b=document.createElement('span');b.className='badge b-az rama';b.textContent=ra;p.appendChild(document.createTextNode(' '));p.appendChild(b)}n.insertBefore(p,n.firstChild);var c=document.createElement('div');c.className='rec-ctl';if($('.man',n))c.appendChild(btn('Pista',function(){n.classList.toggle('pis')}));c.appendChild(btn('Revelar',function(){n.classList.toggle('rev')}));n.appendChild(c)});
+var tl=$('ol.tl',f);if(!tl)return;var bar=document.createElement('div');bar.className='rec-bar';bar.id='rec-bar-'+k;var t=document.createElement('div');t.innerHTML='<b>Timeline en blanco</b> · <span class="rec-state">Modo lectura</span><p class="mini">Reconstruye la cascada sin mirar: escribe cada paso en orden, luego usa Pista (signos que produce) y Revelar nodo por nodo. Nada se guarda.</p>';bar.appendChild(t);var ta=document.createElement('textarea');ta.setAttribute('aria-label','Escribe aquí la cascada en orden');var bs=document.createElement('div');bs.className='rec-btns';var ab=btn('Activar reconstrucción',function(){recon(f,true);ta.focus()});ab.setAttribute('data-act','rec');bs.appendChild(ab);bs.appendChild(btn('Revelar todo',function(){$$('.nodo',f).forEach(function(n){n.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){recon(f,false)}));bar.appendChild(bs);bar.appendChild(ta);tl.parentNode.insertBefore(bar,tl)}
+var TGT={'1.º':'clave','De elección':'clave','Confirma':'ok','Solo si':'cond','Escala':'cond','Reevalúa':'cond','No pidas':'no','Evita':'no','Alarma':'alarma'};
+function initTg(){$$('ol.tg span.tg').forEach(function(s){var v=TGT[s.textContent.replace(/^\s+|\s+$/g,'')];if(v)s.setAttribute('data-t',v)})}
+function initTabla(){var t=$('table.vis'),s=secOf(t);if(!s)return;var w=t.parentNode;if(!w.classList.contains('tw')){w=document.createElement('div');w.className='tw';t.parentNode.insertBefore(w,t);w.appendChild(t)}w.classList.add('vis-w');var rows=$$('tbody tr',t);if(!rows.length)rows=$$('tr',t).slice(1);rows.forEach(function(r){Array.prototype.slice.call(r.children,1).forEach(function(c){c.classList.add('tap');c.addEventListener('click',function(){if(s.classList.contains('tbl'))c.classList.add('rev')})})});
+var bar=document.createElement('div');bar.className='vb-bar';bar.id='vb-bar';var h=document.createElement('div');h.innerHTML='<b>Tabla en blanco</b> · <span class="vb-state">Modo lectura</span><p class="mini">Tapa todas las celdas de las entidades (quedan visibles las cabeceras y los ejes). Di cada celda antes de tocarla; un toque la revela. Nada se guarda.</p>';bar.appendChild(h);var bs=document.createElement('div');bs.className='rec-btns';bs.appendChild(btn('Tapar la tabla',function(){tabla(true)}));bs.appendChild(btn('Revelar todo',function(){$$('td.tap',t).forEach(function(c){c.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){tabla(false)}));bar.appendChild(bs);w.parentNode.insertBefore(bar,w)}
+function initRecGo(){var TL=$$('section.tab').filter(function(s){return!!$('ol.tl',s)}),sin=secK('sin'),dst=sin||secK('seg');if(!dst)return;var ord=sin?TL.filter(function(s,i){return i%2===0}).concat(TL.filter(function(s,i){return i%2===1})):TL;var vt=$('table.vis');if(!ord.length&&!(sin&&vt))return;
+var w=document.createElement('div');w.className='hb az rec-go';w.innerHTML='<div class="hb-t">Antes de cerrar: recupera sin mirar</div><p class="mini">Cada botón te lleva a la función en blanco correspondiente. Intenta la respuesta completa antes de revelar.</p>';var bs=document.createElement('div');bs.className='rec-btns';w.appendChild(bs);
+if(sin&&vt){var vs=secOf(vt),vk=vs.getAttribute('data-tab'),b0=btn('Tabla en blanco — '+nameOf(vk),function(){show(vk);tabla(true);var b=document.getElementById('vb-bar');if(b)b.scrollIntoView({block:'start'})},'go');b0.setAttribute('data-rec',vk);bs.appendChild(b0)}
+ord.forEach(function(s){var k=s.getAttribute('data-tab'),b=btn('Reconstruir la cascada — '+nameOf(k),function(){show(k);recon(s,true);var r=document.getElementById('rec-bar-'+k);if(r)r.scrollIntoView({block:'start'})},'go');b.setAttribute('data-rec',k);bs.appendChild(b)});
+var rf=$('.acc.refs',dst);if(rf)dst.insertBefore(w,rf);else dst.appendChild(w)}
+function init(){var f=$('.tb'),ph=[function(){var n=$('nav.tabs');if(n){var w=document.createElement('div');w.className='tabs-w';n.parentNode.insertBefore(w,n);w.appendChild(n);n.addEventListener('scroll',navOv);window.addEventListener('resize',navOv)}},function(){$$('section.tab').forEach(function(s){if($('ol.tl',s))initNodos(s)})},initTg,initTabla,initRecGo,function(){$$('.dc').forEach(runDc)},function(){show(secK('pan')?'pan':(f?f.getAttribute('data-tab'):''))}];ph.forEach(function(p){try{p()}catch(e){if(window.console)console.error('kit v10:',e)}})}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+</body>
+</html>
