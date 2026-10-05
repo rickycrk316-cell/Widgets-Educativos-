@@ -38,3 +38,10 @@ taste-skill (13 skills, MIT), impeccable (Apache-2.0), awesome-design-md (MIT, c
 - **Patología urinaria baja** (widget-ensenanza v10, multi): hiperplasia prostática benigna (principal), prostatitis, cáncer de próstata (amenaza), cistitis, uretritis; caso de Carlos como ancla.
 - **Definiciones · Patología urinaria baja** (skill definiciones v5.1): 9 términos + repaso global, con la cabecera `fuentes/kit_v10_vademecum/def_head.html`.
 - Caso transcrito en `fuentes/casos/`. Pruebas: `auditar_definiciones.py` y `probar_definiciones.js`.
+
+## Disbasia en la infancia (4 widgets multi, kit Vademécum)
+
+- **Cojera dolorosa con fiebre**: sinovitis transitoria (principal), artritis séptica (amenaza), osteomielitis, neoplasia ósea maligna.
+- **Cojera dolorosa mecánica**: Perthes (principal), epifisiólisis (amenaza), Osgood-Schlatter.
+- **Marcha alterada sin dolor**: displasia del desarrollo de la cadera (principal), dismetría, enfermedad neuromuscular, Guillain-Barré (amenaza).
+- **Forma de piernas y pies**: genu varo/valgo (principal), anteversión femoral, pie plano, pie cavo, pie equinovaro (amenaza).
