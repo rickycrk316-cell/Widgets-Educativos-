@@ -31,7 +31,7 @@ TIMEOUT = 300
 def fetch(api_key, account=None):
     params = {"date_preset": "last_7d", "fields": ",".join(FIELDS), "api_key": api_key}
     if account:
-        params["select_accounts"] = f"instagram_public__{account}"
+        params["select_accounts"] = account
     url = f"{BASE_URL}?{urllib.parse.urlencode(params)}"
     try:
         with urllib.request.urlopen(url, timeout=TIMEOUT) as r:
