@@ -1,0 +1,143 @@
+<script>
+const TERMS={t1:'Patología urinaria baja',t2:'Frecuencia miccional',t3:'Insomnio',t4:'Tenesmo vesical',t5:'Incontinencia urinaria',t6:'Clortalidona',t7:'Sertal',t8:'Colon irritable',t9:'Próstata aumentada de tamaño'};
+const DECKS={
+t1:[
+{q:'¿Qué relación anatómica explica que el crecimiento de la próstata altere el vaciado y qué signo exploras para ver si queda orina?',a:'La uretra prostática atraviesa la glándula, que al crecer la comprime; se palpa y percute el hipogastrio en busca de globo vesical.',h:'Piensa por dónde pasa la uretra en su porción inicial.'},
+{q:'Durante el llenado, ¿qué inervación contrae el detrusor y cuál lo relaja y cierra el cuello?',a:'Contrae el parasimpático pélvico (S2–S4); relaja y cierra el cuello el simpático hipogástrico (T10–L2).',h:'Un sistema domina el vaciado y el otro el llenado.'},
+{q:'¿En qué tres grupos clasifica la ICS los STUI?',a:'Síntomas de llenado, de vaciado y posmiccionales.',h:'Siguen el orden del ciclo miccional: antes, durante y después.'},
+{q:'Carlos se levanta 5 veces por la noche a orinar. ¿A qué grupo de STUI pertenece la nicturia?',a:'A los síntomas de llenado (almacenamiento).',h:'Ocurre mientras la vejiga se está llenando.'},
+{q:'¿Qué diferencia a la vejiga hiperactiva del término STUI?',a:'La vejiga hiperactiva es un síndrome definido por urgencia (con o sin incontinencia, habitualmente con frecuencia y nicturia); STUI es el conjunto amplio de síntomas, sea cual sea la causa.',h:'Uno es un síndrome con un síntoma central; el otro es un grupo de síntomas.'},
+{q:'Un varón refiere pérdida de gotas justo al terminar de orinar. ¿Cómo lo llama la ICS y a qué grupo pertenece?',a:'Goteo posmiccional; síntoma posmiccional.',h:'El nombre dice cuándo ocurre.'}
+],
+t2:[
+{q:'En un vaciado normal, ¿qué hacen el detrusor y el esfínter externo, y qué estructura coordina a ambos?',a:'El detrusor se contrae (parasimpático sacro) mientras el esfínter externo se relaja; los coordina el centro pontino de la micción.',h:'Uno empuja y el otro abre; la coordinación está en el tronco encefálico.'},
+{q:'Si la ADH nocturna es insuficiente, ¿qué ocurre con el volumen de orina durante el sueño y qué síntoma produce?',a:'Aumenta la orina nocturna y despierta al paciente: nicturia con volúmenes grandes.',h:'La ADH retiene agua en el túbulo colector.'},
+{q:'¿Cómo define la ICS el aumento de la frecuencia diurna?',a:'Queja de orinar más veces durante la vigilia de lo que el paciente considera normal.',h:'La definición parte de la percepción del paciente.'},
+{q:'En un diario miccional, ¿qué datos separan la frecuencia por baja capacidad de la poliuria?',a:'El volumen por micción y el volumen total en 24 horas: poca orina por vez con total normal indica baja capacidad; total aumentado indica poliuria.',h:'Mira cuánto sale cada vez y cuánto en el día.'},
+{q:'¿Qué separa la frecuencia de la urgencia?',a:'La frecuencia cuenta cuántas veces se orina; la urgencia es un deseo súbito e imperioso, difícil de demorar. Pueden darse por separado.',h:'Una cuenta veces; la otra mide la intensidad del deseo.'}
+],
+t3:[
+{q:'¿Por qué importa que el sueño se interrumpa y no solo cuántas horas dura?',a:'Porque cada despertar reinicia el ciclo desde el sueño ligero y no se completan el sueño profundo ni el REM: queda sueño no reparador y somnolencia diurna.',h:'Piensa en el ciclo de unos 90 minutos.'},
+{q:'¿Qué dos procesos regulan cuándo se duerme y qué estructura marca el ritmo circadiano?',a:'La presión de sueño (proceso homeostático, adenosina) y el reloj circadiano; este lo marca el núcleo supraquiasmático, sincronizado por la luz.',h:'Uno depende del tiempo despierto; el otro, de la hora del día.'},
+{q:'Insomnio crónico: dificultad para iniciar o mantener el sueño pese a {{oportunidad adecuada}}, con consecuencias diurnas, al menos tres veces por semana durante {{tres meses}}.',a:'oportunidad adecuada; tres meses',h:'Una condición excluye la simple falta de tiempo para dormir.'},
+{q:'Carlos se despierta 5 veces para orinar y retoma el sueño. ¿Qué dato falta para saber si además hay insomnio de inicio?',a:'Si tarda en conciliar el sueño al acostarse.',h:'El caso describe la permanencia, no la entrada.'},
+{q:'¿Qué separa el insomnio de la privación de sueño?',a:'En la privación falta oportunidad de dormir (horarios, decisión); en el insomnio hay oportunidad adecuada y aun así no se duerme o no se mantiene el sueño.',h:'Se diferencian por la oportunidad de dormir.'}
+],
+t4:[
+{q:'Si la inflamación del urotelio sensibiliza las fibras C, ¿cómo cambia la señal que llega al cerebro?',a:'La vejiga avisa de deseo o de dolor con poco volumen, o sigue avisando tras vaciarse.',h:'Las fibras C conducen irritación y dolor.'},
+{q:'¿Qué fibras conducen el estiramiento fisiológico de la vejiga y cuáles la irritación o el dolor?',a:'Estiramiento: fibras Aδ (mielínicas). Irritación y dolor: fibras C (amielínicas).',h:'Una de las dos es mielínica y más rápida.'},
+{q:'Tenesmo vesical: deseo {{doloroso}} de seguir orinando aunque la vejiga esté {{vacía o casi vacía}}.',a:'doloroso; vacía o casi vacía',h:'Se distingue de la urgencia porque persiste tras vaciar.'},
+{q:'¿Qué separa el tenesmo de la sensación de vaciado incompleto?',a:'El tenesmo es un deseo doloroso y persistente; el vaciado incompleto es la impresión posmiccional de que quedó orina, sin dolor ni deseo imperioso necesarios.',h:'Uno exige dolor y deseo continuo; el otro es una impresión al terminar.'},
+{q:'¿Qué dato clínico convierte «siento que no vacié» en tenesmo vesical?',a:'El dolor o la molestia con deseo continuo de orinar, aun con la vejiga casi vacía.',h:'Falta un componente que Carlos niega.'}
+],
+t5:[
+{q:'Al toser sube la presión abdominal. ¿Qué debe cumplirse para que no haya pérdida y qué estructuras lo aseguran?',a:'La presión de cierre uretral debe seguir por encima de la presión de la vejiga; la aseguran el esfínter uretral externo y el soporte del suelo pélvico.',h:'Es una comparación entre dos presiones.'},
+{q:'Si fallan el esfínter externo y el soporte pélvico, ¿qué síntoma aparece y con qué maniobra se provoca?',a:'Pérdida de orina con esfuerzo; se provoca con la prueba de la tos con la vejiga llena.',h:'Es la maniobra que sube la presión abdominal de golpe.'},
+{q:'¿Cómo define la ICS la incontinencia urinaria?',a:'Queja de pérdida involuntaria de orina.',h:'No depende de la cantidad ni de la causa.'},
+{q:'¿Qué criterio separa la incontinencia de esfuerzo de la de urgencia?',a:'El desencadenante: esfuerzo físico (tos, ejercicio) en la de esfuerzo; deseo imperioso previo en la de urgencia.',h:'Pregunta qué ocurrió justo antes de la pérdida.'},
+{q:'¿Por qué el goteo posmiccional no se clasifica como incontinencia de esfuerzo ni de urgencia?',a:'Porque la pérdida ocurre al terminar la micción, sin esfuerzo ni urgencia que la desencadene; es un síntoma posmiccional.',h:'Mira el momento en que ocurre.'},
+{q:'Pérdida constante de pequeñas cantidades con globo vesical palpable: ¿qué mecanismo explica la pérdida?',a:'Rebosamiento: la vejiga no vacía, se llena y gotea al superar su capacidad.',h:'El globo vesical indica que la vejiga está llena.'}
+],
+t6:[
+{q:'¿Qué transportador del túbulo distal bloquea la clortalidona y por qué aumenta la diuresis?',a:'El cotransportador Na+–Cl- (NCC): sodio y cloro quedan en la luz tubular y arrastran agua.',h:'Cotransporta dos iones en la membrana apical.'},
+{q:'Con el NCC bloqueado llega más sodio al colector, donde se intercambia por potasio. ¿Qué alteración de laboratorio puede aparecer?',a:'Hipopotasemia (también puede bajar el sodio plasmático).',h:'El potasio sale con la orina.'},
+{q:'¿A qué grupo pertenece la clortalidona y dónde actúa?',a:'Diurético tiazídico-símil; túbulo contorneado distal (NCC).',h:'Es primo de la hidroclorotiazida.'},
+{q:'¿En qué se distingue el sitio de acción de la furosemida del de la clortalidona?',a:'Furosemida: rama ascendente gruesa del asa de Henle (NKCC2). Clortalidona: túbulo contorneado distal (NCC).',h:'Un diurético actúa antes en la nefrona que el otro.'},
+{q:'Un paciente con clortalidona orina a menudo y en volúmenes grandes. ¿El fármaco explica un aumento del volumen total o una baja capacidad de la vejiga?',a:'Un aumento del volumen total (poliuria por natriuresis), no una baja capacidad vesical.',h:'Piensa dónde actúa el fármaco: riñón o vejiga.'}
+],
+t7:[
+{q:'Si un antimuscarínico bloquea los receptores M3 del detrusor, ¿qué pasa con la contracción y qué signo puedes hallar?',a:'La contracción se debilita: vaciado incompleto o retención, con globo vesical palpable.',h:'La acetilcolina contrae el detrusor mediante M3.'},
+{q:'¿Por qué inhibir la ciclooxigenasa reduce el dolor?',a:'Porque baja la síntesis de prostaglandinas, que sensibilizan los nociceptores.',h:'Las prostaglandinas bajan el umbral del nociceptor.'},
+{q:'¿Qué componentes tiene Sertal compuesto y a qué clase pertenece cada uno?',a:'Propinox (antiespasmódico antimuscarínico) y clonixinato de lisina (AINE).',h:'Uno actúa sobre el músculo liso y el otro sobre la COX.'},
+{q:'¿Qué distingue al clonixinato de lisina del paracetamol?',a:'El clonixinato es un AINE que inhibe la COX y tiene efecto antiinflamatorio; el paracetamol no tiene efecto antiinflamatorio periférico relevante.',h:'Se separan por la inflamación.'},
+{q:'Un varón con próstata aumentada toma un antimuscarínico, nota el chorro más débil y siente que vacía menos. ¿Qué mecanismo explica el cambio?',a:'Bloqueo M3: menor contracción del detrusor y vaciado incompleto.',h:'Piensa qué músculo empuja la orina.'}
+],
+t8:[
+{q:'¿Qué plexo coordina la peristalsis del colon y entre qué capas está?',a:'El plexo mientérico, entre las capas musculares circular y longitudinal.',h:'Lleva el nombre de la capa muscular que lo rodea.'},
+{q:'Tras una comida, ¿qué reflejo aumenta la motilidad del colon y qué síntoma puede desencadenar en el intestino irritable?',a:'El reflejo gastrocólico; urgencia de defecar o dolor ligado a la defecación.',h:'Une estómago y colon.'},
+{q:'Roma IV: dolor abdominal recurrente al menos {{un día por semana}} durante los últimos {{tres meses}}, asociado a dos o más criterios sobre defecación, frecuencia o forma de las heces.',a:'un día por semana; tres meses',h:'El síntoma debe ser recurrente y reciente, pero el inicio es anterior.'},
+{q:'¿Qué separa el colon irritable de la enfermedad inflamatoria intestinal?',a:'En el colon irritable no hay lesión estructural ni signos de alarma (sangre en heces, pérdida de peso); en la enfermedad inflamatoria hay inflamación visible.',h:'Uno es funcional y el otro estructural.'},
+{q:'Un paciente de 30 años refiere dolor abdominal recurrente que se relaciona con defecar, sin sangre ni pérdida de peso. ¿Qué criterio de Roma IV cumple esa relación?',a:'Dolor relacionado con la defecación, uno de los tres criterios asociados.',h:'Los otros dos hablan de frecuencia y forma de las heces.'}
+],
+t9:[
+{q:'¿Qué zona prostática rodea la uretra proximal y por qué su crecimiento comprime la uretra?',a:'La zona de transición y las glándulas periuretrales; la cápsula limita el crecimiento hacia afuera, así que el tejido nuevo avanza hacia la luz.',h:'Piensa qué limita la expansión externa.'},
+{q:'En el tacto rectal, ¿qué parte de la próstata se palpa y qué crecimiento puede pasar inadvertido?',a:'La cara posterior (sobre todo zona periférica); el crecimiento hacia la vejiga (lóbulo medio) no se palpa.',h:'El dedo solo alcanza lo que toca la pared rectal.'},
+{q:'¿Qué tres conceptos distingue la terminología ICS alrededor de la próstata grande?',a:'Aumento de tamaño (hallazgo), hiperplasia prostática benigna (diagnóstico histológico) y obstrucción infravesical (consecuencia funcional).',h:'Un hallazgo, un diagnóstico y una consecuencia.'},
+{q:'¿Qué hallazgo del tacto separa un patrón benigno de uno sospechoso de neoplasia?',a:'Lisa, de contornos regulares y simétrica orienta a benigno; dura, nodular o asimétrica orienta a neoplasia.',h:'Mira consistencia y contornos.'},
+{q:'Además del tamaño, ¿qué propiedades describe el tacto rectal de la próstata?',a:'Consistencia, contornos, simetría, nódulos y dolor.',h:'Carlos tenía una blanda y de contornos regulares.'},
+{q:'Un paciente con chorro débil tiene la próstata de tamaño normal al tacto. ¿Por qué el tamaño no descarta obstrucción?',a:'Porque el tacto no alcanza el crecimiento hacia la vejiga y la obstrucción depende del cuello y de la uretra, no solo del tamaño.',h:'El tacto palpa solo una cara de la glándula.'}
+]
+};
+DECKS.tg=[].concat.apply([],Object.keys(TERMS).map(function(k){return DECKS[k].map(function(c){return {q:c.q,a:c.a,h:c.h,t:k};});}));
+const RC={};
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function el(k,s){return document.getElementById('rc-'+k+'-'+s);}
+function isCloze(c){return c.q.indexOf('{{')>=0;}
+function front(c){return esc(c.q).replace(/\{\{[^}]*\}\}/g,'[ ? ]');}
+function back(c){return esc(c.q).replace(/\{\{([^}]*)\}\}/g,'<b>$1</b>');}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function show(id,btn){
+  document.querySelectorAll('.tab').forEach(function(s){s.classList.toggle('active',s.id===id);});
+  document.querySelectorAll('.tb').forEach(function(b){b.classList.toggle('active',b===btn);});
+  try{btn.scrollIntoView({inline:'center',block:'nearest'});}catch(e){}
+}
+function tog(b){b.parentElement.classList.toggle('op');}
+function rc_reset(k){
+  var n=DECKS[k].length,idx=[];
+  for(var i=0;i<n;i++)idx.push(i);
+  RC[k]={queue:shuffle(idx),first:{},fails:{},shown:false,done:0,n:n};
+  if(el(k,'e'))el(k,'e').innerHTML='';
+  rc_render(k);
+}
+function rc_render(k){
+  var s=RC[k],card=el(k,'c');
+  if(!card)return;
+  if(!s.queue.length){rc_end(k);return;}
+  var c=DECKS[k][s.queue[0]],f=s.fails[s.queue[0]]||0;
+  el(k,'n').textContent='Tarjeta '+(s.done+1)+' de '+s.n+(k==='tg'?' · '+TERMS[c.t]:'');
+  var h='<p class="rc-q">'+(s.shown&&isCloze(c)?back(c):front(c))+'</p>';
+  if(s.shown&&!isCloze(c))h+='<p class="rc-a"><b>Respuesta.</b> '+esc(c.a)+'</p>';
+  if(!s.shown&&f>=2)h+='<p class="rc-hint">Pista: '+esc(c.h)+'</p>';
+  card.innerHTML=h;
+  var b='';
+  if(!s.shown){b+='<button class="go" onclick="rc_show(\''+k+'\')">Mostrar respuesta</button>';}
+  else{
+    b+='<button class="gr ok" onclick="rc_grade(\''+k+'\',\'ok\')">La sabía</button>';
+    b+='<button class="gr mid" onclick="rc_grade(\''+k+'\',\'mid\')">A medias</button>';
+    b+='<button class="gr ko" onclick="rc_grade(\''+k+'\',\'ko\')">No la sabía</button>';
+  }
+  b+='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  el(k,'b').innerHTML=b;
+}
+function rc_show(k){RC[k].shown=true;rc_render(k);}
+function rc_grade(k,g){
+  var s=RC[k],i=s.queue.shift();
+  if(s.first[i]===undefined)s.first[i]=(g==='ok');
+  if(g==='ok'){s.done++;}
+  else{s.fails[i]=(s.fails[i]||0)+1;s.queue.push(i);}
+  s.shown=false;
+  rc_render(k);
+}
+function rc_verdict(p){return p>=80?['ok','Término consolidado']:['rep','Repasar hoy'];}
+function rc_end(k){
+  var s=RC[k],ok=0,i,rows='';
+  for(i=0;i<s.n;i++)if(s.first[i])ok++;
+  var p=Math.round(100*ok/s.n),v=rc_verdict(p);
+  el(k,'n').textContent='Mazo completado';
+  el(k,'c').innerHTML='<p class="rc-q">Cola agotada: todas las tarjetas se resolvieron.</p>';
+  el(k,'b').innerHTML='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  var h='<div class="rc-end '+v[0]+'">Aciertos al primer intento: '+ok+' de '+s.n+' ('+p+' %). <b>'+v[1]+'</b>.</div>';
+  if(k==='tg'){
+    Object.keys(TERMS).forEach(function(t){
+      var tot=0,hit=0;
+      for(i=0;i<s.n;i++){if(DECKS.tg[i].t===t){tot++;if(s.first[i])hit++;}}
+      var pp=Math.round(100*hit/tot),vv=rc_verdict(pp);
+      rows+='<tr><td>'+esc(TERMS[t])+'</td><td>'+hit+' de '+tot+' ('+pp+' %)</td><td>'+vv[1]+'</td></tr>';
+    });
+    h+='<div class="tw"><table><thead><tr><th>Término</th><th>Aciertos 1er intento</th><th>Veredicto</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  }
+  el(k,'e').innerHTML=h;
+}
+Object.keys(DECKS).forEach(rc_reset);
+</script>
+</div></body></html>

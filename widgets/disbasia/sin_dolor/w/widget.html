@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marcha alterada sin dolor</title>
+<style>
+/* Vademécum: monografía impresa con índice de canto; filetes y tinta llevan la jerarquía, no las sombras */
+:root{
+--paper:#FBFBFC;--paper-2:#F1F2F5;--ink:#16181D;--ink-2:#3A3D46;--ink-3:#686C78;--rule:#D7D9E0;--rule-strong:#16181D;
+--accent:#2342A6;--accent-ink:#1B358A;--accent-field:#EAEEFA;--on-accent:#FFFFFF;
+--am:#7A4A06;--am-f:#FBF1DF;--ro:#9E1F1F;--ro-f:#FBE9E7;--ve:#2F5E12;--ve-f:#EBF3E1;--pu:#4C3FA8;--pu-f:#EEECFB;--co:#8E3517;--co-f:#FAEDE6;--rs:#8A2C52;--rs-f:#FAEAF1;
+--f-serif:ui-serif,"New York","Iowan Old Style","Charter","Source Serif Pro",Georgia,"Times New Roman",serif;
+--f-sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+--r:3px;
+/* alias de la v10 para compatibilidad */
+--surface-0:var(--paper);--surface-1:var(--paper-2);--border:var(--rule);--border-accent:var(--accent);--bg-accent:var(--accent-field);--text-primary:var(--ink);--text-secondary:var(--ink-2);--text-muted:var(--ink-3);--text-accent:var(--accent-ink);--radius:var(--r);--font-sans:var(--f-sans);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}
+html{color-scheme:light dark;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:var(--accent);color:var(--on-accent)}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--f-sans);-webkit-text-size-adjust:100%;font-feature-settings:"kern" 1;text-rendering:optimizeLegibility;caret-color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:18px 16px 56px;background:transparent}
+h1{font:600 26px/1.2 var(--f-serif);letter-spacing:-.012em;margin:6px 0 14px;padding-bottom:12px;border-bottom:2px solid var(--rule-strong);text-wrap:balance}
+h2{font:600 19px/1.3 var(--f-serif);letter-spacing:-.006em;margin:40px 0 14px;padding-top:12px;border-top:1px solid var(--rule-strong);text-wrap:balance}
+h3{font:600 16px/1.35 var(--f-serif);margin:20px 0 6px;text-wrap:balance}
+p{margin:0 0 12px;text-wrap:pretty}
+a{color:var(--accent-ink);text-underline-offset:3px}
+button{font:inherit;color:inherit;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,color .15s ease-out}
+button:active{transform:translateY(1px)}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* índice de canto */
+.tabs{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 0 0;border-bottom:2px solid var(--rule-strong);margin-bottom:16px;position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);scroll-snap-type:x proximity;scroll-padding-inline:56px}
+.tabs-w{position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper)}
+.tabs-w::before,.tabs-w::after{content:"";position:absolute;top:0;bottom:2px;width:56px;pointer-events:none;opacity:0;transition:opacity .2s;z-index:6}
+.tabs-w::before{left:0;background:linear-gradient(to left,transparent,var(--paper) 85%)}
+.tabs-w::after{right:0;background:linear-gradient(to right,transparent,var(--paper) 85%)}
+.tabs-w.ov-l::before,.tabs-w.ov-r::after{opacity:1}
+.nodo,.signo,.qv,.dc,h2{scroll-margin-top:84px}
+.tabs::-webkit-scrollbar{display:none}
+.tb{flex:0 0 auto;min-height:44px;padding:9px 15px 8px;border:1px solid var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;background:var(--paper-2);color:var(--ink-2);font:600 13px/1.2 var(--f-sans);letter-spacing:.01em;white-space:nowrap;scroll-snap-align:start}
+.tb:hover{background:var(--accent-field);color:var(--accent-ink)}
+.tb.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+.tab{display:none}
+.tab.on{display:block}
+/* recuadros */
+.card{background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;margin:12px 0;font-size:15px;line-height:1.6}
+.card p{margin:0 0 8px}
+.card p:last-child{margin-bottom:0}
+.mini{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:6px 0}
+.hb{border-radius:var(--r);padding:12px 14px;margin:14px 0;border:1px solid transparent;font-size:15px;line-height:1.6}
+.hb.az{background:var(--accent-field);color:var(--ink);border-color:var(--accent)}
+.hb.am{background:var(--am-f);color:var(--am);border-color:var(--am)}
+.hb.ro{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.hb.ve{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+.hb.am .mini,.hb.ro .mini,.hb.ve .mini{color:inherit;opacity:.88}
+.hb-t{font:600 16px/1.35 var(--f-serif);margin-bottom:6px;text-wrap:balance}
+.hb.az .hb-t{color:var(--accent-ink)}
+.pg{margin:0;padding-left:22px}
+.pg li{margin:5px 0}
+.pg li::marker{color:var(--accent-ink);font-weight:700}
+.hb.az:has(.pg){margin-bottom:24px}
+.hb.az:not(:has(.pg)):not(.rec-go){background:transparent;border-left-color:transparent;border-right-color:transparent;border-radius:0;padding-left:0;padding-right:0}
+.hb.az:not(:has(.pg))+.etapa{border-top:0}
+h2+.card,h2+.hb,h2+.tw{margin-top:0}
+.badge{display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.04em;padding:2px 7px;border-radius:2px;margin:0 4px 4px 0;vertical-align:middle;border:1px solid currentColor}
+.b-az{background:var(--accent-field);color:var(--accent-ink)}
+.b-ro{background:var(--ro-f);color:var(--ro)}
+.b-am{background:var(--am-f);color:var(--am)}
+.b-ve{background:var(--ve-f);color:var(--ve)}
+.b-pu{background:var(--pu-f);color:var(--pu)}
+.badge.b-pu{display:block;width:fit-content;max-width:100%;white-space:normal;font-size:12px;line-height:1.5;font-weight:600;letter-spacing:.01em;margin:14px 0}
+.b-co{background:var(--co-f);color:var(--co)}
+.b-rs{background:var(--rs-f);color:var(--rs)}
+.rem{display:inline-block;font-size:12.5px;background:var(--rs-f);color:var(--rs);border:1px dashed var(--rs);border-radius:2px;padding:1px 7px;margin:4px 0}
+/* Feynman */
+.fey{background:var(--co-f);border:1px solid var(--co);border-radius:var(--r);padding:14px 16px;margin:18px 0 26px}
+.fey-t{display:inline-block;font:600 15px/1.35 var(--f-serif);color:var(--co);margin-bottom:8px}
+.fey-b{margin:0 0 10px;font:400 16px/1.6 var(--f-serif);color:var(--ink)}
+.fey-c{margin:2px 0;color:var(--ink-2)}
+/* Panorama: entradas de índice */
+.tab{counter-reset:et}
+.etapa{counter-increment:et;background:transparent;border:0;border-top:1px solid var(--rule);border-radius:0;padding:18px 0 8px;margin:4px 0}
+.etapa h3{font-size:19px;line-height:1.3;margin:0 0 8px}
+.etapa h3::before{content:counter(et,decimal-leading-zero);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;letter-spacing:.04em;color:var(--accent-ink);margin-right:10px;vertical-align:2px}
+.res{margin:0 0 10px}
+.perla{border-top:1px dotted var(--rule);padding-top:8px;margin:0 0 10px;font-weight:500}
+.perla::before{content:"Perla";display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;background:var(--ve-f);color:var(--ve);border:1px solid var(--ve);border-radius:2px;padding:1px 6px;margin-right:8px;vertical-align:1px}
+.go{min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent);color:var(--on-accent);font:600 13.5px/1.2 var(--f-sans)}
+.go:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+/* tablas de monografía */
+.tw{overflow-x:auto;margin:12px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.5;font-variant-numeric:tabular-nums}
+th,td{border:0;border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--paper-2);font-weight:700;color:var(--ink)}
+thead th{font:700 14.5px/1.35 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong)}
+tbody tr:last-child>*{border-bottom:1px solid var(--rule-strong)}
+.stats{display:grid;grid-template-columns:1fr;gap:10px;margin:12px 0}
+@media (min-width:600px){.stats{grid-template-columns:repeat(3,1fr)}}
+.stat{background:transparent;border:0;border-top:2px solid var(--accent);border-radius:0;padding:8px 2px}
+.stat b{display:block;font:600 22px/1.25 var(--f-serif);color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--ink-2);line-height:1.4;display:block}
+.steps{list-style:none;counter-reset:st;padding:0;margin:10px 0}
+.steps>li{counter-increment:st;position:relative;padding:5px 0 9px 40px}
+.steps>li::before{content:counter(st);position:absolute;left:0;top:3px;width:26px;height:26px;border-radius:2px;background:var(--ink);color:var(--paper);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;display:flex;align-items:center;justify-content:center}
+/* cascada */
+.tl{list-style:none;margin:14px 0;padding:0 0 0 20px;border-left:2px solid var(--accent)}
+.nodo{position:relative;margin:0 0 14px;padding:11px 13px;background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);font-size:14px;line-height:1.55}
+.nodo::before{content:"";position:absolute;left:-27px;top:15px;width:12px;height:12px;border-radius:1px;background:var(--accent);box-shadow:0 0 0 3px var(--paper)}
+.paso{display:block;font:600 15px/1.4 var(--f-serif);margin-bottom:5px}
+.pn{color:var(--accent-ink);margin-right:4px;font-variant-numeric:tabular-nums}
+.man{margin:8px 0 0;font-size:13px;color:var(--ink-2)}
+.signo{background:var(--paper);border:1px solid var(--rule);border-top:2px solid var(--rule-strong);border-radius:0 0 var(--r) var(--r);padding:12px 14px;margin:12px 0;font-size:14px;line-height:1.55}
+.signo h4{margin:0 0 6px;font:600 15.5px/1.35 var(--f-serif)}
+.signo dl{margin:0}
+.signo dt{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-3);margin-top:8px}
+.signo dd{margin:2px 0 0}
+.xref{display:inline-flex;align-items:center;min-height:44px;padding:4px 10px;margin:3px 6px 3px 0;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent-field);color:var(--accent-ink);font:600 12.5px/1.3 var(--f-sans);text-align:left}
+.xref:hover{background:var(--accent);color:var(--on-accent)}
+p .xref,td .xref,li .xref,dd .xref{display:inline;position:relative;min-height:0;padding:0 5px;margin:0 2px;line-height:inherit;border-radius:2px;white-space:normal;overflow-wrap:anywhere;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+p .xref::after,td .xref::after,li .xref::after,dd .xref::after{content:"";position:absolute;left:-4px;right:-4px;top:-12px;bottom:-12px}
+.hl{outline:2px solid var(--accent);background:var(--accent-field)!important;transition:background .3s}
+.acc{border:1px solid var(--rule);border-radius:var(--r);margin:12px 0;overflow:hidden}
+.acc-h{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:44px;padding:9px 14px;border:0;background:var(--paper-2);font:600 14px/1.35 var(--f-sans);text-align:left}
+.acc-h:hover{background:var(--accent-field)}
+.chev{transition:transform .2s;color:var(--accent-ink)}
+.acc.op .chev{transform:rotate(180deg)}
+.acc-b{display:none;padding:10px 14px;font-size:14px;line-height:1.55}
+.acc.op .acc-b{display:block}
+.vanc{font-size:12.5px;line-height:1.5;padding-left:24px}
+.vanc li{margin:5px 0;word-break:break-word}
+.vanc li::marker{font-variant-numeric:tabular-nums;color:var(--ink-3)}
+/* simulador */
+.dc{border:1px solid var(--rule-strong);border-radius:var(--r);padding:14px 16px;margin:22px 0;background:var(--paper)}
+.dc-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.dc-g{margin:10px 0}
+.dc-l{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);margin-bottom:5px;display:block}
+.chip{min-height:44px;padding:7px 13px;margin:3px 6px 3px 0;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);font-size:13.5px}
+.chip:hover{border-color:var(--accent);color:var(--accent-ink)}
+.chip.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:600}
+.dc input[type=number]{min-height:44px;width:120px;padding:6px 10px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper);color:var(--ink);font:15px var(--f-sans);font-variant-numeric:tabular-nums}
+.out{margin-top:12px;padding:12px 14px;border-radius:var(--r);background:var(--paper-2);border:1px solid var(--rule);font-size:14px;line-height:1.58;min-height:44px}
+.tag{display:inline-block;font:600 11px/1.4 var(--f-sans);padding:1px 7px;border-radius:2px;background:var(--accent-field);color:var(--accent-ink);margin:4px 4px 0 0}
+.rec-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.rec-bar textarea{width:100%;min-height:120px;margin-top:8px;padding:9px 11px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper-2);color:var(--ink);font:14px/1.55 var(--f-sans);resize:vertical}
+.chip:disabled{cursor:default;opacity:.85}
+.rec-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.rec-ctl{display:none;gap:6px;margin-top:6px}
+.recon .rec-ctl{display:flex}
+.recon>*:not(.rec-bar):not(.tl){display:none}
+.recon .nodo:not(.rev) .pt{display:none}
+.recon .nodo:not(.rev) .pn::after{content:" ?"}
+.recon .nodo:not(.rev) .det{display:none}
+.recon .nodo.pis:not(.rev) .det{display:block}
+.recon .nodo.pis:not(.rev) .det>*:not(.man){display:none}
+.recon .nodo:not(.pis):not(.rev) .man{display:none}
+.recon .nodo.rev{border-color:var(--accent)}
+.rec-go{margin:22px 0}
+.steps.tg>li{padding-left:40px}
+span.tg{display:inline-block;font:700 11px/1.4 var(--f-mono);letter-spacing:.02em;padding:2px 7px;margin:0 6px 2px 0;border-radius:2px;background:var(--paper-2);border:1px solid var(--rule);color:var(--ink-2);white-space:nowrap;vertical-align:1px}
+span.tg[data-t="clave"]{background:var(--accent-field);color:var(--accent-ink);border-color:var(--accent)}
+span.tg[data-t="ok"]{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+span.tg[data-t="cond"]{background:var(--am-f);color:var(--am);border-color:var(--am)}
+span.tg[data-t="no"]{background:var(--rs-f);color:var(--rs);border-color:var(--rs)}
+span.tg[data-t="alarma"]{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.qv{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:12px 0}
+.qv p{margin:0;padding:9px 11px;border-radius:var(--r);border:1px solid var(--rule);background:var(--paper-2);font-size:13.5px;line-height:1.45}
+.qv p::before{display:block;font:700 10.5px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px;color:var(--ink-3)}
+.qv p[data-e="p"]{background:var(--accent-field);border-color:var(--accent)}
+.qv p[data-e="p"]::before{content:"Presente";color:var(--accent-ink)}
+.qv p[data-e="v"]::before{content:"Variable"}
+.qv p[data-e="a"]{border:1px dashed var(--rule);color:var(--ink-3);background:transparent}
+.qv p[data-e="a"]::before{content:"Ausente"}
+.qv p[data-e="k"]{grid-column:1/-1;border:2px solid var(--accent);background:var(--accent-field);font-size:14.5px}
+.qv p[data-e="k"]::before{content:"Signo clave";color:var(--accent-ink)}
+.hb.vi{background:var(--pu-f);color:var(--pu);border-color:var(--pu)}
+.hb.vi .mini{color:inherit;opacity:.88}
+table.vis{min-width:620px}
+table.vis td{min-width:140px}
+table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index:1;background:var(--paper-2);min-width:118px;max-width:150px;font-weight:700;border-right:1px solid var(--rule)}
+.vb-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.tbl>*:not(.vb-bar):not(.vis-w){display:none}
+.tbl td.tap{cursor:pointer}
+.tbl td.tap:not(.rev){color:transparent;background:repeating-linear-gradient(135deg,var(--paper-2),var(--paper-2) 7px,var(--accent-field) 7px,var(--accent-field) 14px)}
+.tbl td.tap:not(.rev) *{visibility:hidden}
+.tbl td.tap.rev{box-shadow:inset 0 0 0 1px var(--accent)}
+.cf{display:block;margin-top:10px;padding-top:8px;border-top:1px dashed var(--accent);font-style:italic;color:var(--ink-2)}
+.cf::before{content:"Contrafactual · ";font-style:normal;font-weight:700;color:var(--accent-ink)}
+.fig{margin:14px 0}
+.fig img{display:block;max-width:100%;height:auto;border-radius:var(--r);border:1px solid var(--rule)}
+.fig figcaption{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin-top:6px}
+@media (min-width:700px){body{font-size:15.5px}.wrap{padding:22px 24px 64px}h1{font-size:28px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- /KIT_HEAD -->
+<h1>Marcha alterada sin dolor</h1>
+<nav class="tabs">
+<button type="button" class="tb" data-tab="pan" onclick="show('pan')">Panorama</button>
+<button type="button" class="tb" data-tab="vis" onclick="show('vis')">Diferencial</button>
+<button type="button" class="tb" data-tab="e1" onclick="show('e1')">Displasia del desarrollo de la cadera</button>
+<button type="button" class="tb" data-tab="e2" onclick="show('e2')">Dismetría de miembros inferiores</button>
+<button type="button" class="tb" data-tab="e3" onclick="show('e3')">Enfermedad neuromuscular</button>
+<button type="button" class="tb" data-tab="e4" onclick="show('e4')">Síndrome de Guillain-Barré</button>
+<button type="button" class="tb" data-tab="sin" onclick="show('sin')">Errores</button>
+</nav>
+<section class="tab" data-tab="pan">
+<div class="hb az"><div class="hb-t">El grupo en una frase</div>
+<p>Cuatro causas explican la marcha alterada sin dolor; la maniobra de cadera, la longitud, la fuerza proximal y los reflejos las separan, y el síndrome de Guillain-Barré es la amenaza.</p></div>
+<div class="etapa" data-go="vis"><h3>Los ejes que separan las cuatro causas</h3>
+<p class="res">Un niño que camina de forma anormal sin dolor puede tener una cadera mal centrada, un miembro más corto, un músculo que se debilita o un nervio atacado por el propio sistema inmune. Tres ejes las separan: el examen dirigido, que combina maniobra de cadera, longitud con cinta, fuerza proximal y reflejos; el curso, que va desde el nacimiento hasta días; y la urgencia, porque la debilidad ascendente con arreflexia o disnea no espera [1][2][3][4]. Se empieza por la cadera, la causa principal del grupo.</p>
+<p class="perla">Debilidad ascendente con reflejos ausentes es urgencia aunque el niño no refiera dolor.</p>
+<button type="button" class="go" data-go="vis" onclick="show('vis')">Ir a Diferencial →</button></div>
+<div class="etapa" data-go="e1"><h3>Displasia del desarrollo de la cadera, el extremo estructural</h3>
+<p class="res">La displasia del desarrollo de la cadera es un espectro que va de una cadera inmadura a la luxación. La cabeza descentrada deja sin estímulo al acetábulo, que crece plano. La señal es un Ortolani o Barlow positivo en el lactante y, después de caminar, una marcha de Trendelenburg o de pato sin dolor [1]. La conducta decisiva es examinar con maniobras, pedir ecografía de Graf según la edad, usar arnés de Pavlik si la cadera es reducible y referir la luxación [1][7]. Sigue la dismetría, otra causa estructural.</p>
+<p class="perla">Una cadera que parece normal no excluye displasia: los factores de riesgo piden ecografía.</p>
+<button type="button" class="go" data-go="e1" onclick="show('e1')">Ir a Displasia del desarrollo de la cadera →</button></div>
+<div class="etapa" data-go="e2"><h3>Dismetría de miembros inferiores, la diferencia de longitud</h3>
+<p class="res">La dismetría es la diferencia de longitud entre ambas piernas: es real si los huesos miden distinto y aparente si la pelvis o la columna la simulan. Una fisis que crece distinto acumula la diferencia con los años; si supera 2 cm, inclina la pelvis y curva la columna [4][9]. La señal es la cresta ilíaca más baja del lado corto, que se corrige con tacos. La conducta decisiva es medir con cinta y ortorradiografía, compensar con alza y referir lo que supera 2 cm o progresa [4]. Después se estudia la debilidad muscular.</p>
+<p class="perla">Antes de poner un alza, confirma que la dismetría es real y no una pelvis inclinada por contractura.</p>
+<button type="button" class="go" data-go="e2" onclick="show('e2')">Ir a Dismetría de miembros inferiores →</button></div>
+<div class="etapa" data-go="e3"><h3>Enfermedad neuromuscular, el músculo que se debilita</h3>
+<p class="res">La enfermedad neuromuscular es la falla de la unidad motora; la distrofia de Duchenne es su forma prototípica, y la parálisis cerebral y la atrofia muscular espinal son vecinas [2][5]. Sin distrofina, la fibra se rompe con cada esfuerzo y se reemplaza por grasa: falla la cintura pélvica, el niño usa el signo de Gowers y camina de pato. La conducta decisiva es medir la CK, confirmar con el estudio genético del gen de distrofina e iniciar un glucocorticoide con un equipo multidisciplinario [2]. Sigue la causa neurológica aguda, el síndrome de Guillain-Barré.</p>
+<p class="perla">Transaminasas altas en un niño con debilidad piden CK antes que ecografía hepática.</p>
+<button type="button" class="go" data-go="e3" onclick="show('e3')">Ir a Enfermedad neuromuscular →</button></div>
+<div class="etapa" data-go="e4"><h3>Síndrome de Guillain-Barré, la amenaza neurológica aguda</h3>
+<p class="res">El síndrome de Guillain-Barré es un ataque autoinmune a raíces y nervios periféricos que suele seguir a una diarrea o a una infección respiratoria [3]. Los anticuerpos dañan la mielina o el axón y bloquean la conducción: aparecen debilidad ascendente con arreflexia y, en los casos graves, falla respiratoria. La conducta decisiva es ingresar para vigilar la respiración y dar inmunoglobulina intravenosa o plasmaféresis si no camina sin ayuda y está dentro de la ventana; los corticoides orales no se usan [3]. Es la amenaza del grupo: perderlo mata por falla respiratoria.</p>
+<p class="perla">Debilidad ascendente con arreflexia es una emergencia: vigila la respiración antes de buscar la causa.</p>
+<button type="button" class="go" data-go="e4" onclick="show('e4')">Ir a Síndrome de Guillain-Barré →</button></div>
+<p class="mini">Esto es el mapa, no el territorio: cada párrafo y cada perla se justifican en su pestaña.</p>
+</section>
+<section class="tab" data-tab="vis">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>Ante un niño que camina de forma anormal sin dolor, ¿qué datos de la historia y del examen de la marcha separan una causa de cadera, de longitud, muscular y neurológica aguda?</li>
+<li>¿Por qué una misma marcha con caída de la pelvis puede venir de una cadera mal centrada, de un miembro corto o de una debilidad proximal, y qué maniobra distingue cada una?</li>
+<li>¿Qué signos de alarma cambian la urgencia de la consulta y cuándo corresponde referir al especialista?</li>
+<li>¿Qué prueba responde a cada sospecha y qué no puede responder?</li>
+</ol></div>
+<p><span class="badge b-pu">AAP displasia de cadera 2016, solo resumen [1]</span> <span class="badge b-pu">Cuidados de Duchenne 2018, texto completo [2]</span> <span class="badge b-pu">EAN/PNS Guillain-Barré 2023, solo resumen [3]</span> <span class="badge b-pu">Dismetría y escoliosis 2025, solo resumen [4]</span> <span class="badge b-pu">Estándares de AME 2018, solo resumen [5]</span></p>
+<div class="hb am"><div class="hb-t">Alcance</div>
+<p>Este grupo cubre cuatro causas de disbasia, la alteración de la forma de caminar, sin dolor articular: displasia del desarrollo de la cadera, dismetría de miembros inferiores, enfermedad neuromuscular y síndrome de Guillain-Barré. Quedan fuera, y solo aparecen como diferencial, las cojeras con dolor o fiebre y las alteraciones de la forma de piernas y pies.</p>
+<p>Nelson 22e, Harrison y Farreras no se consultaron en esta sesión: las cifras salen de las guías citadas. El sílabo nombra «patología neuromuscular» sin precisarla; la precisión está en la pestaña de esa entidad.</p></div>
+<div class="tw"><table class="vis"><thead><tr><th>Rasgo</th><th>Displasia del desarrollo de la cadera</th><th>Dismetría de miembros inferiores</th><th>Enfermedad neuromuscular</th><th>Síndrome de Guillain-Barré</th></tr></thead>
+<tbody>
+<tr><th>Falla central</th><td>Cabeza femoral mal centrada en un acetábulo poco profundo</td><td>La fisis de un miembro crece distinto: diferencia real de longitud ósea</td><td>Músculo sin distrofina que se rompe y se debilita de forma progresiva</td><td>Ataque autoinmune a raíces y nervios periféricos tras una infección</td></tr>
+<tr><th>Terreno típico</th><td>Lactante, sobre todo niña, podálica, primer hijo o familiar afectado</td><td>Niño con secuela de fractura, infección, parálisis o malformación</td><td>Varón preescolar con debilidad proximal y posible historia familiar</td><td>Niño previamente sano con diarrea o infección respiratoria reciente</td></tr>
+<tr><th>Inicio y curso</th><td>Silente al nacer; cojera indolora al caminar si no se detecta</td><td>Gradual, progresa con el crecimiento del niño</td><td>Meses o años: caídas, torpeza y declive lento</td><td>Días a pocas semanas, ascendente, con pico precoz</td></tr>
+<tr><th>Síntoma compartido aquí</th><td>Marcha de pato o cojera sin dolor</td><td>Cojera sin dolor con pelvis inclinada</td><td>Marcha de pato y caídas frecuentes sin dolor articular</td><td>Caídas y dificultad para caminar; el dolor puede faltar</td></tr>
+<tr><th>Signo que la delata</th><td>Ortolani o Barlow positivo en el lactante</td><td>Cresta ilíaca más baja del lado corto, corregida con tacos</td><td>Signo de Gowers con debilidad proximal</td><td>Debilidad simétrica ascendente con arreflexia</td></tr>
+<tr><th>Negativo pertinente</th><td>Caderas estables y simétricas con ecografía normal</td><td>Pelvis nivelada y longitudes iguales con cinta</td><td>CK normal: busca otra causa de debilidad</td><td>Reflejos conservados hacen improbable el síndrome</td></tr>
+<tr><th>Prueba que decide</th><td>Ortolani y Barlow con ecografía de cadera por Graf según la edad</td><td>Cinta métrica y bloques, ortorradiografía de miembros inferiores en bipedestación</td><td>CK sérica y estudio genético del gen de distrofina</td><td>Examen de fuerza y reflejos, y estudios de LCR y neuroconducción</td></tr>
+<tr><th>Conducta inicial y quién maneja</th><td>Arnés de Pavlik; maneja ortopedia pediátrica</td><td>Alza o vigilancia; ortopedia pediátrica si pasa de 2 cm</td><td>Glucocorticoide y equipo multidisciplinario; lidera neurología neuromuscular</td><td>Inmunoglobulina o plasmaféresis; UCI si hay riesgo respiratorio</td></tr>
+<tr><th>Amenaza si se pierde</th><td>Luxación irreductible y artrosis precoz de cadera</td><td>Escoliosis funcional y progresión del acortamiento</td><td>Pérdida temprana de la marcha y falla cardiorrespiratoria</td><td>Insuficiencia respiratoria y disautonomía con riesgo de muerte</td></tr>
+</tbody></table></div>
+<div class="card"><p><b>Común al grupo</b>: toda disbasia sin dolor se aborda con una historia dirigida, la observación de la marcha, los signos de alarma y las pruebas que responden a cada sospecha.</p>
+<p class="mini">Historia clínica dirigida</p>
+<div class="tw"><table><thead><tr><th>Dato</th><th>Qué preguntar</th><th>Qué orienta</th></tr></thead>
+<tbody>
+<tr><th>Embarazo y parto</th><td>Presentación podálica, primer hijo, antecedente familiar de cadera o de enfermedad muscular</td><td>Displasia de cadera y enfermedad neuromuscular hereditaria [1][2]</td></tr>
+<tr><th>Antecedentes del niño</th><td>Fractura, infección o cirugía de un miembro; diarrea o infección respiratoria reciente</td><td>Dismetría adquirida; síndrome de Guillain-Barré [3][4]</td></tr>
+<tr><th>Desarrollo motor</th><td>Edad al caminar, caídas, dificultad para subir escaleras o levantarse del suelo</td><td>Enfermedad neuromuscular [2]</td></tr>
+<tr><th>Evolución temporal</th><td>Desde el nacimiento, progresiva en años o instalada en días</td><td>Cadera o longitud desde siempre; neuromuscular en años; Guillain-Barré en días</td></tr>
+<tr><th>Caracterización del dolor</th><td>Ausente en el grupo; con dolor intenso, fiebre o rechazo a apoyar, sal del grupo</td><td>Cojera dolorosa; en Guillain-Barré el dolor puede acompañar [3]</td></tr>
+</tbody></table></div>
+<p class="mini">Evaluación semiológica de la marcha</p>
+<div class="tw"><table><thead><tr><th>Marcha</th><th>Qué falla</th><th>Cómo se ve</th><th>Dónde aparece</th></tr></thead>
+<tbody>
+<tr><th>Antálgica</th><td>El dolor acorta la fase de apoyo</td><td>Paso corto del lado doloroso</td><td>Fuera del grupo: cojera dolorosa</td></tr>
+<tr><th>De Trendelenburg</th><td>Abductores incapaces de sostener la pelvis</td><td>La pelvis cae hacia el lado que no apoya</td><td>Displasia de cadera; enfermedad neuromuscular</td></tr>
+<tr><th>De pato</th><td>Trendelenburg bilateral con lordosis lumbar</td><td>Balanceo alternante de la pelvis</td><td>Displasia bilateral; Duchenne [2]</td></tr>
+<tr><th>En estepaje</th><td>Dorsiflexores del pie débiles</td><td>Pie caído; levanta la rodilla de más</td><td>Guillain-Barré y otras neuropatías</td></tr>
+<tr><th>Equina</th><td>Tríceps sural acortado o espástico</td><td>Camina de puntillas</td><td>Duchenne [2]; lado corto en dismetría</td></tr>
+<tr><th>Atáxica</th><td>Cerebelo o sensibilidad profunda alterados</td><td>Base ancha y pasos irregulares</td><td>Guillain-Barré, variante Miller Fisher [3]</td></tr>
+<tr><th>Por dismetría</th><td>Un miembro más corto</td><td>Inclina el tronco o camina de puntillas del lado corto</td><td>Dismetría de miembros inferiores [4]</td></tr>
+</tbody></table></div>
+<p class="mini">Signos de alarma y criterios de referencia</p>
+<div class="tw"><table><thead><tr><th>Hallazgo</th><th>Por qué alarma</th><th>Dónde y cuándo referir</th></tr></thead>
+<tbody>
+<tr><th>Debilidad ascendente simétrica con arreflexia</th><td>Posible Guillain-Barré con riesgo respiratorio</td><td>Urgencias el mismo día; UCI si hay disnea o disfagia [3]</td></tr>
+<tr><th>Cadera inestable o luxada</th><td>La luxación sin tratar daña el crecimiento de la cadera</td><td>Ortopedia pediátrica; meta: detectar la luxación antes de los 6 a 12 meses [1]</td></tr>
+<tr><th>Gowers, CK muy elevada o retraso motor</th><td>Posible distrofia, con tratamiento que prolonga la marcha</td><td>Neurología neuromuscular sin demora [2]</td></tr>
+<tr><th>Diferencia de longitud mayor de 2 cm o progresiva</th><td>Inclina la pelvis y curva la columna</td><td>Ortopedia pediátrica [4]</td></tr>
+<tr><th>Pérdida de habilidades ya adquiridas</th><td>Sugiere enfermedad neurológica progresiva</td><td>Neurología pediátrica urgente [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Dolor intenso, fiebre o rechazo a apoyar</th><td>Infección u otra urgencia ortopédica fuera del grupo</td><td>Cambia al diferencial de la cojera dolorosa y descarta primero infección</td></tr>
+</tbody></table></div>
+<p class="mini">Interpretación de pruebas</p>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>Qué muestra aquí</th><th>Límite</th></tr></thead>
+<tbody>
+<tr><th>Radiografía</th><td>Relación entre cabeza femoral y acetábulo cuando aparece el núcleo de osificación; longitud ósea en la ortorradiografía</td><td>En el lactante pequeño la cabeza es cartilaginosa y no se ve [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Ecografía de cadera</th><td>Forma del acetábulo y centrado de la cabeza, con la clasificación de Graf [6]</td><td>Depende del operador y de la edad del lactante</td></tr>
+<tr><th>Resonancia magnética</th><td>Raíces nerviosas en casos atípicos de Guillain-Barré [3]; músculo y médula</td><td>No es de primera línea en la displasia típica ni en la dismetría</td></tr>
+<tr><th>Estudios neurológicos</th><td>CK y genética en la distrofia [2]; LCR y neuroconducción en Guillain-Barré [3]</td><td>Un solo estudio normal y temprano no cierra el diagnóstico [VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+<p class="mini">Términos que el grupo da por sabidos</p>
+<div class="tw"><table><thead><tr><th>Término</th><th>Qué significa</th></tr></thead>
+<tbody>
+<tr><th>Disbasia</th><td>Alteración de la forma de caminar</td></tr>
+<tr><th>Fisis</th><td>Cartílago de crecimiento en el extremo de los huesos largos, que los alarga</td></tr>
+<tr><th>Ortolani y Barlow</th><td>Maniobras que detectan si la cabeza femoral entra o sale del acetábulo</td></tr>
+<tr><th>Graf</th><td>Clasificación ecográfica de la cadera según la forma del acetábulo [6]</td></tr>
+<tr><th>CK</th><td>Creatina cinasa, enzima del músculo que pasa a la sangre cuando la fibra se lesiona [2]</td></tr>
+<tr><th>LCR</th><td>Líquido cefalorraquídeo, que se obtiene por punción lumbar</td></tr>
+<tr><th>Neuroconducción</th><td>Estudio eléctrico de la velocidad con que conduce el nervio [3]</td></tr>
+<tr><th>Signo de Gowers</th><td>Para levantarse del suelo, el niño se apoya con las manos en sus propios muslos [2]</td></tr>
+</tbody></table></div>
+<ul>
+<li>Eje 1 — El examen dirigido separa las causas: maniobra de cadera, longitud con cinta, fuerza proximal con Gowers y reflejos.</li>
+<li>Eje 2 — El curso orienta: desde el nacimiento, con el crecimiento, durante años o en días.</li>
+<li>Eje 3 — Debilidad ascendente con arreflexia o disnea es una urgencia, aunque no haya dolor.</li>
+</ul></div>
+<div class="hb ro"><div class="hb-t">Banderas rojas ante una marcha sin dolor</div>
+<ul>
+<li>Síndrome de Guillain-Barré: debilidad ascendente con arreflexia, disfagia o disnea exige ingreso y vigilancia respiratoria [3].</li>
+<li>Cadera inestable o luxada en un lactante: no esperes a que camine para confirmarla [1].</li>
+<li>Debilidad proximal con Gowers o CK muy elevada: refiere a neurología neuromuscular y no atribuyas las transaminasas altas al hígado [2].</li>
+<li>Diferencia de longitud mayor de 2 cm o que progresa: refiere para vigilar la pelvis y la columna [4].</li>
+<li>Pérdida de habilidades ya adquiridas: pide valoración neurológica urgente [VERIFICAR EN FUENTE].</li>
+<li>Dolor intenso o fiebre: sal de este grupo y descarta primero una infección articular.</li>
+</ul></div>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Observa la marcha y pregunta por el inicio, la infección previa, los hitos motores y los antecedentes perinatales [1][2][3].</li>
+<li><span class="tg">Añade</span>Examina cadera, longitud de los miembros, fuerza proximal y reflejos en la misma consulta [2][4].</li>
+<li><span class="tg">Confirma</span>Confirma con ecografía de cadera, ortorradiografía, CK con genética o estudios de LCR y neuroconducción según la rama [2][3][6].</li>
+<li><span class="tg">Solo si</span>Pide resonancia solo si el cuadro es atípico para neuropatía o hay signos medulares [3].</li>
+<li><span class="tg">No pidas</span>No pidas radiografía de pelvis en el recién nacido para decidir sobre la cadera: la cabeza femoral aún no se ve [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Alarma</span>Debilidad ascendente con arreflexia o disnea: deriva a urgencias el mismo día [3].</li>
+</ol>
+<div class="dc" data-fn="dcVis"><div class="dc-t">Simulador · Decisión clínica — predice la entidad antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Edad</span>
+<button type="button" class="chip" data-g="edad" data-v="lact" onclick="ch(this)">Lactante menor de 1 año</button>
+<button type="button" class="chip" data-g="edad" data-v="prees" onclick="ch(this)">De 1 a 5 años</button>
+<button type="button" class="chip" data-g="edad" data-v="esc" onclick="ch(this)">Mayor de 5 años</button></div>
+<div class="dc-g"><span class="dc-l">Hallazgos</span>
+<button type="button" class="chip" data-g="hall" data-v="ort" data-m="1" onclick="ch(this)">Ortolani o Barlow positivo</button>
+<button type="button" class="chip" data-g="hall" data-v="abd" data-m="1" onclick="ch(this)">Abducción de cadera limitada</button>
+<button type="button" class="chip" data-g="hall" data-v="cresta" data-m="1" onclick="ch(this)">Cresta ilíaca más baja de un lado</button>
+<button type="button" class="chip" data-g="hall" data-v="gowers" data-m="1" onclick="ch(this)">Gowers o pantorrillas grandes</button>
+<button type="button" class="chip" data-g="hall" data-v="asc" data-m="1" onclick="ch(this)">Debilidad ascendente simétrica</button>
+<button type="button" class="chip" data-g="hall" data-v="arr" data-m="1" onclick="ch(this)">Reflejos ausentes</button></div>
+<div class="dc-g"><span class="dc-l">Contexto</span>
+<button type="button" class="chip" data-g="ctx" data-v="inf" data-m="1" onclick="ch(this)">Diarrea o infección respiratoria reciente</button>
+<button type="button" class="chip" data-g="ctx" data-v="fam" data-m="1" onclick="ch(this)">Familiar con cadera o enfermedad muscular</button>
+<button type="button" class="chip" data-g="ctx" data-v="ant" data-m="1" onclick="ch(this)">Fractura, infección o cirugía previa de un miembro</button>
+<button type="button" class="chip" data-g="ctx" data-v="resp" data-m="1" onclick="ch(this)">Dificultad para respirar o tragar</button>
+<button type="button" class="chip" data-g="ctx" data-v="dolor" data-m="1" onclick="ch(this)">Dolor intenso o fiebre</button></div>
+<div class="out"></div></div>
+</section>
+<section class="tab" data-tab="e1">
+<div class="hb az"><div class="hb-t">Frente a Enfermedad neuromuscular</div>
+<p>Se confunde con la enfermedad neuromuscular porque ambas dan marcha de pato sin dolor. Se separa por la edad de inicio, la maniobra de cadera anormal en el lactante y la fuerza proximal conservada al levantarse del suelo.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué una cadera inmadura o inestable al nacer puede normalizarse sola o evolucionar a luxación, y de qué depende?</li>
+<li>¿Qué detecta cada maniobra y cada tipo de Graf, y por qué la edad del lactante cambia la prueba que conviene?</li>
+<li>¿Por qué el arnés de Pavlik funciona en el lactante pequeño con cadera reducible y qué hallazgo obliga a escalar?</li>
+<li>¿Cómo se explica una marcha de pato o de Trendelenburg sin dolor en el niño que ya camina, y qué complicaciones de la vida adulta previene tratar a tiempo?</li>
+</ol></div>
+<p><span class="badge b-pu">AAP displasia de cadera 2016, solo resumen [1]</span> <span class="badge b-pu">Revisión de displasia 2022, solo resumen [6]</span> <span class="badge b-pu">Cribado ecográfico 2016, solo resumen [7]</span> <span class="badge b-pu">Seguimiento tras arnés 2023, solo resumen [8]</span></p>
+<p class="mini">Vigencia no verificada: no se comprobó si la AAP actualizó su informe de 2016.</p>
+<div class="hb am"><div class="hb-t">Alcance</div>
+<p>Esta pestaña trata la displasia típica del lactante y del niño que camina. Quedan fuera la luxación teratológica, presente al nacer y asociada a otras malformaciones, y los detalles quirúrgicos de la reducción abierta.</p></div>
+
+<h2>Qué es</h2>
+<div class="card"><p>La displasia del desarrollo de la cadera (DDH) abarca un espectro, desde una cadera inmadura o con acetábulo poco profundo hasta la luxación completa de la cabeza femoral [1].</p>
+<p>Rasgos que la definen:</p>
+<ul>
+<li>Inestabilidad clínica de la cadera con las maniobras de Ortolani o Barlow [1].</li>
+<li>Acetábulo displásico o cabeza descentrada en la imagen [6].</li>
+<li>Muchas formas leves se resuelven sin tratamiento, y no hay acuerdo sobre qué criterio ecográfico la separa de una variante normal [1].</li>
+</ul></div>
+<p>Los subtipos existen porque la ecografía gradúa un espectro: de la cadera madura a la luxada. El tipo de Graf decide si se vigila, se pone arnés o se refiere.</p>
+<div class="tw"><table><thead><tr><th>Tipo de Graf</th><th>Qué muestra la ecografía</th><th>Conducta</th></tr></thead>
+<tbody>
+<tr><th>I</th><td>Cadera madura y centrada</td><td>Alta sin tratamiento [6]</td></tr>
+<tr><th>IIa, IIb, IIc y D</th><td>Acetábulo inmaduro o displásico; el tipo D está en el límite de descentrarse</td><td>IIa: observar y repetir; IIb, IIc y D: arnés [1][7]</td></tr>
+<tr><th>III y IV</th><td>Cabeza descentrada o luxada</td><td>Referir a ortopedia pediátrica [7] [VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+<p class="mini">Los ángulos que separan cada tipo no se leyeron [VERIFICAR EN FUENTE].</p>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Luxación teratológica</th><td>Cadera luxada desde el nacimiento</td><td>Es rígida, no se reduce con la maniobra y se asocia a otras malformaciones [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Artritis séptica de cadera</th><td>Rechazo a mover o apoyar la pierna</td><td>Hay dolor intenso y fiebre; se estudia en la cojera dolorosa</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Dato</th><th>Valor en la fuente</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>Inestabilidad clínica en 1 % a 2 % de los recién nacidos a término; hasta 15 % con inestabilidad o inmadurez en imagen [1]. En un cribado ecográfico universal turco, 9,9 % tuvo tipos IIa, IIc o D [7]</td></tr>
+<tr><th>Edad</th><td>Clínicamente silente el primer año; la meta es detectar la luxación antes de los 6 a 12 meses [1]</td></tr>
+<tr><th>Sexo</th><td>Más frecuente en niñas [6]</td></tr>
+<tr><th>Factores clave</th><td>Podálica, antecedente familiar y primer hijo [6]; asociación con otras deformidades congénitas [6]</td></tr>
+</tbody></table></div>
+<p class="mini">No se leyeron cifras de Ecuador ni de Latinoamérica.</p>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e1-m-1" data-clin="0" data-paso="Terreno de laxitud y posición intrauterina" data-rama="Rama A"><div class="det"><p>Terreno: cápsula y ligamentos laxos en una niña, con posición podálica o antecedente familiar. Desencadenante: el feto o el recién nacido mantiene la cadera en una posición que la deja inestable [6].</p></div></li>
+<li class="nodo" id="e1-m-2" data-clin="1" data-paso="Cabeza femoral mal centrada o inestable" data-rama="Rama A"><div class="det"><p>La cabeza femoral, la esfera del fémur, no queda asentada en el acetábulo, la copa de la pelvis, y entra y sale con la maniobra. Es el dato que busca el examen del lactante. <span class="rem">↪ Propiedades en «Diagnóstico»</span></p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-1" onclick="ir('e1','e1-s-1')">Ortolani o Barlow positivo en el lactante</button></p></div></li>
+<li class="nodo" id="e1-m-3" data-clin="0" data-paso="Cabeza sin presión sobre el acetábulo" data-rama="Rama A"><div class="det"><p>El cartílago acetabular, el techo en crecimiento de la copa, se moldea por la presión de la cabeza. Si esta queda descentrada, la copa pierde su estímulo. Este es el blanco del arnés. <span class="rem">↪ Posología en «Tratamiento»</span></p></div></li>
+<li class="nodo" id="e1-m-4" data-clin="0" data-paso="Acetábulo poco profundo y techo inclinado" data-rama="Rama A"><div class="det"><p>Sin estímulo, el acetábulo crece plano; el acetábulo permanece poco profundo y la cabeza crece en mala posición [6]. La ecografía mide esta forma. <span class="rem">↪ Propiedades en «Diagnóstico»</span></p></div></li>
+<li class="nodo" id="e1-m-5" data-clin="1" data-paso="Cabeza asciende y se luxa" data-rama="Rama A"><div class="det"><p>Los músculos del muslo, abductores y aductores, tiran de la cabeza hacia arriba y atrás sobre el borde de la copa. La pierna queda más corta, con menos abducción y con pliegues del muslo asimétricos.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-2" onclick="ir('e1','e1-s-2')">Limitación de la abducción de la cadera</button> <button type="button" class="xref" data-ir="e1-s-3" onclick="ir('e1','e1-s-3')">Pliegues asimétricos y signo de Galeazzi</button></p></div></li>
+<li class="nodo" id="e1-m-6" data-clin="1" data-paso="Abductores ineficaces y pelvis cae al caminar" data-rama="Rama A"><div class="det"><p>Con la cabeza arriba, los glúteos medio y menor, abductores que sostienen la pelvis al apoyar, trabajan con una palanca acortada y fallan. El niño que ya camina deja caer la pelvis hacia el lado sano.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-4" onclick="ir('e1','e1-s-4')">Marcha de Trendelenburg o de pato sin dolor</button></p></div></li>
+<li class="nodo" id="e1-m-7" data-clin="0" data-paso="Cartílago se desgasta: artrosis precoz" data-rama="Rama A"><div class="det"><p>La cadera sin cobertura soporta la carga en un área pequeña y el cartílago articular se desgasta. La displasia es la causa más frecuente de artrosis de cadera en mujeres menores de 40 años [1].</p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la pelota y el cuenco</span>
+<p class="fey-b">Imagina una pelota que debe asentarse en un cuenco blando mientras el niño crece. El cuenco toma su forma de la pelota que lo presiona: si la pelota está bien centrada, el cuenco se hace hondo. Si queda fuera de centro, el cuenco se queda plano y la pelota se sale con facilidad.</p>
+<p class="mini fey-c">En medicina esto se llama… displasia del desarrollo de la cadera (DDH), cabeza femoral y acetábulo.</p>
+<p class="mini fey-c">Dónde falla la comparación: el cuenco es hueso y cartílago vivos, y solo se moldea mientras el niño crece, por eso importa actuar pronto.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Limitación de la abducción de la cadera</p>
+<p data-e="p">Pliegues del muslo asimétricos</p>
+<p data-e="p">Marcha de pato o cojera sin dolor en el niño que camina</p>
+<p data-e="v">Acortamiento aparente de un miembro</p>
+<p data-e="a">Dolor articular</p>
+<p data-e="a">Fiebre</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e1-s-1" onclick="ir('e1','e1-s-1')">Ortolani o Barlow positivo en el lactante</button></p>
+</div>
+<div class="signo" id="e1-s-1"><h4>Ortolani o Barlow positivo en el lactante</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Con el bebé relajado, en Ortolani se abduce y eleva el trocánter y la cabeza luxada entra con un resalto; en Barlow se aduce con presión posterior y la cabeza sale. Un chasquido sin movimiento de la cabeza no cuenta.</dd>
+<dt>Por qué aparece</dt><dd>La cabeza no está asentada en la copa y se desliza sobre su borde. <button type="button" class="xref" data-ir="e1-m-2" onclick="ir('e1','e1-m-2')">← Cabeza mal centrada o inestable</button></dd>
+<dt>Qué significa</dt><dd>Indica cadera inestable y pide ecografía y referencia a ortopedia pediátrica.</dd></dl></div>
+<div class="signo" id="e1-s-2"><h4>Limitación de la abducción de la cadera</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Con caderas y rodillas flexionadas, una rodilla no baja hasta la camilla como la otra.</dd>
+<dt>Por qué aparece</dt><dd>La cabeza luxada y los aductores tensos frenan el movimiento. <button type="button" class="xref" data-ir="e1-m-5" onclick="ir('e1','e1-m-5')">← Cabeza asciende y se luxa</button></dd>
+<dt>Qué significa</dt><dd>En el lactante mayor sustituye a Ortolani y Barlow, que dejan de ser positivos, y obliga a estudiar la cadera por imagen.</dd></dl></div>
+<div class="signo" id="e1-s-3"><h4>Pliegues asimétricos y signo de Galeazzi</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Los pliegues del muslo difieren entre lados; con las caderas flexionadas, una rodilla queda más baja (Galeazzi).</dd>
+<dt>Por qué aparece</dt><dd>El fémur sube con la cabeza luxada y el muslo se acorta. <button type="button" class="xref" data-ir="e1-m-5" onclick="ir('e1','e1-m-5')">← Cabeza asciende y se luxa</button></dd>
+<dt>Qué significa</dt><dd>Sugiere luxación unilateral; en la bilateral no hay asimetría que lo delate.</dd></dl></div>
+<div class="signo" id="e1-s-4"><h4>Marcha de Trendelenburg o de pato sin dolor</h4><dl>
+<dt>Cómo se reconoce</dt><dd>La pelvis cae hacia el lado que no apoya; si es bilateral, se balancea como un pato con lordosis lumbar.</dd>
+<dt>Por qué aparece</dt><dd>Los abductores trabajan con una palanca acortada. <button type="button" class="xref" data-ir="e1-m-6" onclick="ir('e1','e1-m-6')">← Abductores ineficaces</button></dd>
+<dt>Qué significa</dt><dd>En un niño que camina sin dolor, obliga a descartar luxación de cadera antes de pensar en enfermedad muscular.</dd></dl></div>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la puerta floja</span>
+<p class="fey-b">Una puerta mal encajada se mueve de más: al empujarla entra con un golpecito y al soltarla sale de nuevo. En el bebé, el médico mueve la cadera con suavidad y siente ese golpecito cuando la cabeza entra o sale de su sitio. Cuando el niño ya camina, la pierna floja se cansa y la pelvis cae al apoyar.</p>
+<p class="mini fey-c">En medicina esto se llama… maniobras de Ortolani y Barlow, y marcha de Trendelenburg.</p>
+<p class="mini fey-c">Dónde falla la comparación: la maniobra no duele ni fuerza la cadera; un chasquido sin movimiento de la cabeza no cuenta.</p></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Ortolani y Barlow con ecografía de cadera por Graf según la edad [1][6].</li>
+<li><span class="tg">Añade</span>Busca factores de riesgo (podálica, antecedente familiar, primer hijo) y asimetrías: abducción limitada y pliegues [6].</li>
+<li><span class="tg">Confirma</span>Confirma con ecografía en el lactante pequeño y con radiografía de pelvis cuando aparece el núcleo de osificación [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Solo si</span>Repite la ecografía en el control solo si la cadera queda dudosa: muchas formas leves se resuelven sin tratamiento [1].</li>
+<li><span class="tg">No pidas</span>No pidas radiografía de pelvis en el recién nacido para decidir: la cabeza femoral aún es cartilaginosa y no se ve [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Alarma</span>Cadera irreductible, luxada o marcha de Trendelenburg en el niño que camina: refiere a ortopedia pediátrica [1].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Examen con Ortolani y Barlow</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Detectar inestabilidad; no descarta la displasia leve</td><td>Útil sobre todo en el lactante pequeño <button type="button" class="xref" data-ir="e1-m-2" onclick="ir('e1','e1-m-2')">← Cabeza mal centrada o inestable</button></td><td>[1][6]</td></tr>
+<tr><th>Ecografía de cadera (Graf)</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar y graduar la displasia</td><td>Mide la forma del acetábulo y el centrado de la cabeza <button type="button" class="xref" data-ir="e1-m-4" onclick="ir('e1','e1-m-4')">← Acetábulo poco profundo</button></td><td>[6][7]</td></tr>
+<tr><th>Radiografía de pelvis</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar en el lactante mayor y en el niño que camina</td><td>Muestra la cabeza ya osificada <button type="button" class="xref" data-ir="e1-m-5" onclick="ir('e1','e1-m-5')">← Cabeza asciende y se luxa</button></td><td>[VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos. No se leyeron cifras de rendimiento ni la prevalencia local.</p>
+<div class="dc" data-fn="dcE1dx"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Edad</span>
+<button type="button" class="chip" data-g="edad" data-v="lact" onclick="ch(this)">Menor de 6 meses</button>
+<button type="button" class="chip" data-g="edad" data-v="mayor" onclick="ch(this)">De 6 meses en adelante</button>
+<button type="button" class="chip" data-g="edad" data-v="camina" onclick="ch(this)">Camina con marcha anormal sin dolor</button></div>
+<div class="dc-g"><span class="dc-l">Examen</span>
+<button type="button" class="chip" data-g="ex" data-v="ort" data-m="1" onclick="ch(this)">Ortolani positivo</button>
+<button type="button" class="chip" data-g="ex" data-v="bar" data-m="1" onclick="ch(this)">Barlow positivo</button>
+<button type="button" class="chip" data-g="ex" data-v="abd" data-m="1" onclick="ch(this)">Abducción limitada</button>
+<button type="button" class="chip" data-g="ex" data-v="norm" data-m="1" onclick="ch(this)">Cadera estable y simétrica</button></div>
+<div class="dc-g"><span class="dc-l">Factores de riesgo</span>
+<button type="button" class="chip" data-g="riesgo" data-v="podal" data-m="1" onclick="ch(this)">Podálica</button>
+<button type="button" class="chip" data-g="riesgo" data-v="fam" data-m="1" onclick="ch(this)">Antecedente familiar</button>
+<button type="button" class="chip" data-g="riesgo" data-v="primer" data-m="1" onclick="ch(this)">Primer hijo</button>
+<button type="button" class="chip" data-g="riesgo" data-v="nina" data-m="1" onclick="ch(this)">Sexo femenino</button></div>
+<div class="dc-g"><span class="dc-l">Ecografía de Graf</span>
+<button type="button" class="chip" data-g="graf" data-v="no" onclick="ch(this)">No realizada</button>
+<button type="button" class="chip" data-g="graf" data-v="I" onclick="ch(this)">Tipo I</button>
+<button type="button" class="chip" data-g="graf" data-v="IIa" onclick="ch(this)">Tipo IIa</button>
+<button type="button" class="chip" data-g="graf" data-v="IIb" onclick="ch(this)">Tipo IIb, IIc o D</button>
+<button type="button" class="chip" data-g="graf" data-v="III" onclick="ch(this)">Tipo III o IV</button></div>
+<div class="out"></div></div>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Mantén la cabeza centrada en el acetábulo para que el estímulo de su presión moldee la copa [6].</li>
+<li><span class="tg">De elección</span>Arnés de Pavlik en el lactante pequeño con cadera reducible [1][7].</li>
+<li><span class="tg">Alternativa</span>Reducción cerrada o abierta con yeso pelvipédico si el arnés falla o el diagnóstico es tardío [6] [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Escala</span>Con cadera irreductible o luxada que no responde, refiere para decidir la reducción [6].</li>
+<li><span class="tg">Reevalúa</span>Reevalúa con ecografía hasta normalizar la cadera y vigila hasta los 2 años [8].</li>
+<li><span class="tg">Especialista</span>Ortopedia pediátrica maneja todo grado de inestabilidad confirmada y toda luxación [1].</li>
+<li><span class="tg">Evita</span>Evita la abducción forzada en el arnés: puede lesionar la irrigación de la cabeza femoral [VERIFICAR EN FUENTE].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Arnés de Pavlik (dispositivo, no fármaco)</th><td>No aplica</td><td>Externa</td><td>Uso continuo según el protocolo del servicio [VERIFICAR EN FUENTE]</td><td>Hasta normalizar la cadera en la ecografía [VERIFICAR EN FUENTE]</td><td>Mantiene la cabeza flexionada y centrada, y restituye el estímulo al acetábulo <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Cabeza sin presión</button>. Riesgo de necrosis avascular si la abducción es forzada [VERIFICAR EN FUENTE]</td><td>[1][7]</td></tr>
+<tr><th>Yeso pelvipédico (dispositivo)</th><td>No aplica</td><td>Externa</td><td>Colocación única tras la reducción</td><td>[VERIFICAR EN FUENTE]</td><td>Mantiene la cabeza reducida cuando el arnés no basta <button type="button" class="xref" data-ir="e1-m-5" onclick="ir('e1','e1-m-5')">← Cabeza asciende y se luxa</button></td><td>[6]</td></tr>
+</tbody></table></div>
+<p class="mini">Ninguna de las dos intervenciones es un fármaco: no hay dosis por peso en esta entidad.</p>
+<div class="dc" data-fn="dcE1tx"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Edad</span>
+<button type="button" class="chip" data-g="edad" data-v="lact" onclick="ch(this)">Lactante pequeño</button>
+<button type="button" class="chip" data-g="edad" data-v="mayor" onclick="ch(this)">Lactante mayor</button>
+<button type="button" class="chip" data-g="edad" data-v="camina" onclick="ch(this)">Niño que camina</button></div>
+<div class="dc-g"><span class="dc-l">Estado de la cadera</span>
+<button type="button" class="chip" data-g="est" data-v="inma" onclick="ch(this)">Inmadura, tipo IIa de Graf</button>
+<button type="button" class="chip" data-g="est" data-v="red" onclick="ch(this)">Inestable o displásica, reducible</button>
+<button type="button" class="chip" data-g="est" data-v="irr" onclick="ch(this)">Luxada o irreductible</button></div>
+<div class="dc-g"><span class="dc-l">Evolución</span>
+<button type="button" class="chip" data-g="evo" data-v="mejora" onclick="ch(this)">Mejora con el arnés</button>
+<button type="button" class="chip" data-g="evo" data-v="falla" onclick="ch(this)">No se reduce con el arnés</button></div>
+<div class="out"></div></div>
+
+<h2>Seguimiento</h2>
+<p>Vigila la cadera con ecografía hasta normalizarla; tras un tratamiento exitoso, la vigilancia radiográfica temprana aporta poco antes de los 2 años [8].</p>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Displasia residual</th><td>El acetábulo no recupera su profundidad</td><td><button type="button" class="xref" data-ir="e1-m-4" onclick="ir('e1','e1-m-4')">← Acetábulo poco profundo</button></td></tr>
+<tr><th>Luxación persistente</th><td>La cabeza sigue ascendiendo sobre el borde de la copa</td><td><button type="button" class="xref" data-ir="e1-m-5" onclick="ir('e1','e1-m-5')">← Cabeza asciende y se luxa</button></td></tr>
+<tr><th>Artrosis precoz</th><td>El cartílago soporta la carga en un área reducida</td><td><button type="button" class="xref" data-ir="e1-m-7" onclick="ir('e1','e1-m-7')">← Cartílago se desgasta</button></td></tr>
+<tr><th>Necrosis avascular</th><td>Presión o abducción forzada comprometen la irrigación de la cabeza [VERIFICAR EN FUENTE]</td><td>Sin nodo en la cadena</td></tr>
+</tbody></table></div>
+</section>
+<section class="tab" data-tab="e2">
+<div class="hb az"><div class="hb-t">Frente a Displasia del desarrollo de la cadera</div>
+<p>Se confunde con la displasia de cadera porque ambas inclinan la pelvis y alteran la marcha sin dolor. Se separa porque en la dismetría las maniobras de cadera son normales y la diferencia aparece al medir los miembros.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué un miembro más corto inclina la pelvis y puede arrastrar la columna?</li>
+<li>¿En qué se diferencia la dismetría real de la aparente y qué maniobra o estudio las separa?</li>
+<li>¿Qué decide si se observa, se compensa con alza o se corrige con cirugía?</li>
+</ol></div>
+<p><span class="badge b-pu">Dismetría y escoliosis 2025, solo resumen [4]</span> <span class="badge b-pu">Serie de tibia congénita 2020, solo resumen [9]</span></p>
+
+<h2>Qué es</h2>
+<div class="card"><p>La dismetría de miembros inferiores es la diferencia de longitud entre ambas piernas. Se considera significativa cuando supera 2 cm, porque inclina la pelvis y genera una escoliosis funcional [4].</p></div>
+<p>Los subtipos existen porque la misma diferencia aparente exige conductas opuestas.</p>
+<div class="tw"><table><thead><tr><th>Subtipo</th><th>Qué domina</th><th>Cómo se reconoce</th></tr></thead>
+<tbody>
+<tr><th>Real</th><td>Los huesos del miembro miden distinto, por causa congénita o adquirida [9]</td><td>La cinta y la ortorradiografía difieren entre lados</td></tr>
+<tr><th>Aparente</th><td>La pelvis se inclina por contractura o escoliosis con huesos iguales [4]</td><td>La cinta es igual y la diferencia se corrige al enderezar la postura</td></tr>
+</tbody></table></div>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Escoliosis idiopática</th><td>Pelvis inclinada y curva de la columna</td><td>La curva estructural no se corrige al nivelar la pelvis; la funcional sí [4]</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Dato</th><th>Valor en la fuente</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>Las diferencias menores son comunes en la población; la significativa, mayor de 2 cm, es menos habitual [4]</td></tr>
+<tr><th>Edad</th><td>En la serie de tibia congénita el acortamiento aumentó con el crecimiento [9]</td></tr>
+<tr><th>Sexo</th><td>Sin distribución leída [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Factores clave</th><td>Malformaciones congénitas del hueso [9]; fractura de la fisis, infección, tumor y parálisis [VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e2-m-1" data-clin="0" data-paso="Lesión o crecimiento asimétrico de la fisis" data-rama="Rama A"><div class="det"><p>La fisis, el cartílago de crecimiento que alarga el hueso, de un miembro crece menos o más que la contraria por una malformación, fractura, infección o tumor [9] [VERIFICAR EN FUENTE]. Terreno: un hueso con fisis afectada. Desencadenante: el crecimiento del niño.</p></div></li>
+<li class="nodo" id="e2-m-2" data-clin="0" data-paso="Diferencia de longitud ósea que se acumula" data-rama="Rama A"><div class="det"><p>Cada año de crecimiento suma la diferencia entre ambas fisis. En la serie de tibia congénita, el acortamiento aumentó con la edad [9]. Este es el blanco de la epifisiodesis y del alargamiento. <span class="rem">↪ Posología en «Tratamiento»</span></p></div></li>
+<li class="nodo" id="e2-m-3" data-clin="1" data-paso="Pelvis se inclina hacia el lado corto" data-rama="Rama A"><div class="det"><p>Al apoyar los dos pies, la pelvis, el anillo óseo que sostiene el tronco, cae del lado del miembro corto, y la cresta ilíaca de ese lado queda más baja [4].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-1" onclick="ir('e2','e2-s-1')">Cresta ilíaca más baja del lado corto, corregida con tacos</button></p></div></li>
+<li class="nodo" id="e2-m-4" data-clin="1" data-paso="Tronco inclinado o puntillas del lado corto" data-rama="Rama A"><div class="det"><p>Para compensar, el niño inclina el tronco hacia el lado corto o apoya de puntillas con ese pie, y el tríceps sural, el músculo de la pantorrilla, se acorta con el tiempo.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-2" onclick="ir('e2','e2-s-2')">Inclinación del tronco o puntillas del lado corto</button></p></div></li>
+<li class="nodo" id="e2-m-5" data-clin="1" data-paso="Columna se curva para nivelar los hombros" data-rama="Rama A"><div class="det"><p>La columna lumbar se curva hacia el lado contrario para nivelar los hombros: es una escoliosis funcional que suele corregirse al corregir la diferencia [4].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-3" onclick="ir('e2','e2-s-3')">Curva lumbar que se corrige al nivelar la pelvis</button></p></div></li>
+<li class="nodo" id="e2-m-6" data-clin="0" data-paso="Contractura o escoliosis simulan acortamiento" data-rama="Rama B"><div class="det"><p>En la dismetría aparente, una contractura de cadera o una escoliosis estructural inclina la pelvis con huesos de igual longitud, y reproduce los mismos signos sin diferencia real [4].</p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la mesa coja</span>
+<p class="fey-b">Una mesa con una pata más corta se inclina hacia ese lado. Quien la usa pone un libro debajo para igualarla. El cuerpo del niño hace lo mismo: la cadera cae hacia la pierna corta y la espalda se curva para que los hombros queden rectos. A veces la pata es igual, pero el suelo está torcido: parece coja sin serlo.</p>
+<p class="mini fey-c">En medicina esto se llama… dismetría real y aparente, y escoliosis funcional.</p>
+<p class="mini fey-c">Dónde falla la comparación: la pierna sigue creciendo, y la diferencia puede aumentar con los años.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Cojera sin dolor</p>
+<p data-e="p">Pelvis o hombros desnivelados</p>
+<p data-e="v">Dolor lumbar</p>
+<p data-e="a">Ortolani o Barlow positivo</p>
+<p data-e="a">Reflejos ausentes</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e2-s-1" onclick="ir('e2','e2-s-1')">Cresta ilíaca más baja del lado corto, corregida con tacos</button></p>
+</div>
+<div class="signo" id="e2-s-1"><h4>Cresta ilíaca más baja del lado corto, corregida con tacos</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Con el niño de pie y las rodillas rectas, las manos del examinador sobre las crestas muestran el desnivel; se colocan tacos bajo el pie corto hasta nivelarlas.</dd>
+<dt>Por qué aparece</dt><dd>La pelvis cae hacia el miembro corto. <button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">← Pelvis se inclina hacia el lado corto</button></dd>
+<dt>Qué significa</dt><dd>La altura del taco estima la diferencia; se confirma con ortorradiografía.</dd></dl></div>
+<div class="signo" id="e2-s-2"><h4>Inclinación del tronco o puntillas del lado corto</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Al caminar, el hombro del lado corto baja o ese pie se apoya solo con la punta.</dd>
+<dt>Por qué aparece</dt><dd>El cuerpo compensa la diferencia de altura. <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Tronco inclinado o puntillas</button></dd>
+<dt>Qué significa</dt><dd>Una marcha de puntillas de un solo lado orienta a dismetría; si es bilateral, piensa en enfermedad neuromuscular.</dd></dl></div>
+<div class="signo" id="e2-s-3"><h4>Curva lumbar que se corrige al nivelar la pelvis</h4><dl>
+<dt>Cómo se reconoce</dt><dd>La curva lumbar desaparece cuando se colocan los tacos y reaparece al quitarlos.</dd>
+<dt>Por qué aparece</dt><dd>La columna se curva para nivelar los hombros sobre una pelvis inclinada. <button type="button" class="xref" data-ir="e2-m-5" onclick="ir('e2','e2-m-5')">← Columna se curva</button></dd>
+<dt>Qué significa</dt><dd>Indica escoliosis funcional; una curva que persiste al nivelar es estructural y se estudia aparte [4].</dd></dl></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Cinta métrica y bloques, ortorradiografía de miembros inferiores en bipedestación [4].</li>
+<li><span class="tg">Añade</span>Compara la longitud real, de la espina ilíaca al maléolo, con la aparente, del ombligo al maléolo, y explora cadera y columna [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Confirma</span>Confirma con la ortorradiografía de miembros inferiores en bipedestación y la edad ósea para proyectar el crecimiento [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">No pidas</span>No pidas resonancia ni tomografía para medir la longitud de rutina: la ortorradiografía basta [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Alarma</span>Diferencia progresiva sin causa, dolor o signos neurológicos: refiere a ortopedia pediátrica [4][9].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Medición con cinta métrica</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Orientar entre real y aparente</td><td>Compara la longitud real con la aparente <button type="button" class="xref" data-ir="e2-m-6" onclick="ir('e2','e2-m-6')">← Contractura o escoliosis simulan acortamiento</button></td><td>[4]</td></tr>
+<tr><th>Prueba de tacos en bipedestación</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Cuantificar la inclinación pélvica</td><td>El taco nivela la pelvis <button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">← Pelvis se inclina hacia el lado corto</button></td><td>[4]</td></tr>
+<tr><th>Ortorradiografía de miembros inferiores</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar la diferencia ósea real</td><td>Mide cada hueso <button type="button" class="xref" data-ir="e2-m-2" onclick="ir('e2','e2-m-2')">← Diferencia de longitud ósea</button></td><td>[VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos. No se leyeron cifras de rendimiento.</p>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Corrige la causa de la inclinación pélvica: la diferencia mayor de 2 cm la produce y su corrección resuelve la escoliosis funcional [4].</li>
+<li><span class="tg">De elección</span>Alza en el calzado para la diferencia real que inclina la pelvis o curva la columna [4].</li>
+<li><span class="tg">Alternativa</span>Corrección quirúrgica de la longitud: epifisiodesis del miembro largo o alargamiento del corto, según la diferencia proyectada [4][9] [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Escala</span>En diferencias grandes o progresivas, planifica alargamiento por etapas con ortopedia pediátrica [9].</li>
+<li><span class="tg">Especialista</span>Refiere a ortopedia pediátrica si la diferencia supera 2 cm, progresa o hay escoliosis [4].</li>
+<li><span class="tg">Evita</span>Evita tratar con alza una dismetría aparente: la causa es la contractura o la escoliosis [VERIFICAR EN FUENTE].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Alza en el calzado (dispositivo, no fármaco)</th><td>Altura según la diferencia medida con tacos [VERIFICAR EN FUENTE]</td><td>Externa</td><td>Uso diario</td><td>Mientras dure la diferencia</td><td>Nivela la pelvis y suprime la curva funcional <button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">← Pelvis se inclina hacia el lado corto</button></td><td>[4]</td></tr>
+<tr><th>Epifisiodesis o alargamiento (procedimiento)</th><td>No aplica</td><td>Quirúrgica</td><td>Única o por etapas</td><td>Hasta igualar la longitud proyectada [VERIFICAR EN FUENTE]</td><td>Frena o corrige la discrepancia acumulada <button type="button" class="xref" data-ir="e2-m-2" onclick="ir('e2','e2-m-2')">← Diferencia de longitud ósea</button></td><td>[4][9]</td></tr>
+</tbody></table></div>
+<p class="mini">Ninguna de las dos opciones es un fármaco: no hay dosis por peso en esta entidad.</p>
+<div class="dc" data-fn="dcE2"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Diferencia en cm</span><input type="number" data-n="dif" min="0" max="15" step="0.5" oninput="ch(this)"></div>
+<div class="dc-g"><span class="dc-l">Tipo</span>
+<button type="button" class="chip" data-g="tipo" data-v="real" onclick="ch(this)">Real, con ortorradiografía</button>
+<button type="button" class="chip" data-g="tipo" data-v="apar" onclick="ch(this)">Aparente, con huesos iguales</button></div>
+<div class="dc-g"><span class="dc-l">Crecimiento restante</span>
+<button type="button" class="chip" data-g="crec" data-v="mucho" onclick="ch(this)">Mucho</button>
+<button type="button" class="chip" data-g="crec" data-v="poco" onclick="ch(this)">Poco o terminado</button></div>
+<div class="dc-g"><span class="dc-l">Otros datos</span>
+<button type="button" class="chip" data-g="otros" data-v="esco" data-m="1" onclick="ch(this)">Curva que se corrige al nivelar</button>
+<button type="button" class="chip" data-g="otros" data-v="prog" data-m="1" onclick="ch(this)">Diferencia que aumenta en los controles</button></div>
+<div class="out"></div></div>
+
+<h2>Seguimiento</h2>
+<p>Mide la diferencia en cada control mientras el niño crece, porque puede aumentar [9], y revisa la columna en cada visita [4].</p>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Progresión del acortamiento</th><td>Cada año de crecimiento suma la diferencia entre fisis</td><td><button type="button" class="xref" data-ir="e2-m-2" onclick="ir('e2','e2-m-2')">← Diferencia de longitud ósea</button></td></tr>
+<tr><th>Escoliosis funcional</th><td>La columna se curva sobre una pelvis inclinada</td><td><button type="button" class="xref" data-ir="e2-m-5" onclick="ir('e2','e2-m-5')">← Columna se curva</button></td></tr>
+</tbody></table></div>
+</section>
+<section class="tab" data-tab="e3">
+<div class="hb az"><div class="hb-t">Frente a Displasia del desarrollo de la cadera</div>
+<p>Se confunde con la displasia bilateral porque ambas dan marcha de pato sin dolor. Se separa por el signo de Gowers y la CK elevada; la cadera es estable.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué la ausencia de una proteína del músculo produce debilidad proximal, marcha de pato y pantorrillas grandes?</li>
+<li>¿Qué orden siguen las pruebas y por qué las transaminasas altas no siempre son del hígado?</li>
+<li>¿Por qué los glucocorticoides prolongan la marcha, qué precio pagan y por qué no se suspenden de golpe?</li>
+</ol></div>
+<p><span class="badge b-pu">Cuidados de Duchenne 2018, texto completo [2]</span> <span class="badge b-pu">Estándares de AME 2018, solo resumen [5]</span></p>
+<div class="hb am"><div class="hb-t">Precisión sobre el sílabo</div>
+<p>El sílabo nombra «patología neuromuscular» sin precisarla. La clasificación completa distingue el nivel de la unidad motora: encéfalo, motoneurona, nervio, unión neuromuscular y músculo [VERIFICAR EN FUENTE]. Aquí se desarrolla la distrofia de Duchenne, que encaja con marcha de pato y caídas. La más frecuente, como contraste, es la parálisis cerebral [VERIFICAR EN FUENTE].</p></div>
+
+<h2>Qué es</h2>
+<div class="card"><p>La enfermedad neuromuscular es la falla de la unidad motora que debilita al niño. La distrofia muscular de Duchenne (DMD) es recesiva y ligada al X, por ausencia de distrofina; produce debilidad progresiva, pérdida de la marcha y compromiso respiratorio y cardíaco [2].</p></div>
+<p>Los subtipos existen porque el nivel de la falla cambia la prueba y el tratamiento.</p>
+<div class="tw"><table><thead><tr><th>Subtipo</th><th>Qué domina</th><th>Cómo se reconoce</th></tr></thead>
+<tbody>
+<tr><th>Distrofia de Duchenne</th><td>Músculo sin distrofina [2]</td><td>Debilidad proximal, Gowers y CK muy elevada [2]</td></tr>
+<tr><th>Atrofia muscular espinal</th><td>Motoneurona con defecto del gen SMN1 [5]</td><td>Debilidad proximal simétrica; la genética confirma [5]</td></tr>
+<tr><th>Parálisis cerebral</th><td>Lesión estática del encéfalo inmaduro</td><td>Espasticidad y marcha equina [VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Dato</th><th>Valor en la fuente</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>15,9 por 100&#8201;000 varones nacidos vivos en EE. UU. y 19,5 en el Reino Unido [2]</td></tr>
+<tr><th>Edad</th><td>Primera infancia, por torpeza o marcha de puntillas [2]</td></tr>
+<tr><th>Sexo</th><td>Varones; las portadoras necesitan evaluación [2]</td></tr>
+<tr><th>Factores clave</th><td>Mutación del gen de la distrofina, sobre todo deleciones [2]</td></tr>
+</tbody></table></div>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e3-m-1" data-clin="0" data-paso="Mutación del gen de la distrofina" data-rama="Rama A"><div class="det"><p>Terreno: una mutación recesiva en el cromosoma X. Desencadenante: el esfuerzo muscular diario [2].</p></div></li>
+<li class="nodo" id="e3-m-2" data-clin="0" data-paso="Ausencia de distrofina en la fibra muscular" data-rama="Rama A"><div class="det"><p>La distrofina es una proteína del citoesqueleto que ancla la fibra muscular y le da resistencia [2]. Sin ella, la fibra pierde soporte.</p></div></li>
+<li class="nodo" id="e3-m-3" data-clin="0" data-paso="Membrana frágil se daña con cada contracción" data-rama="Rama A"><div class="det"><p>La membrana se rompe en cada contracción y la creatina cinasa (CK), enzima del músculo, pasa a la sangre. <span class="rem">↪ Propiedades en «Diagnóstico»</span></p></div></li>
+<li class="nodo" id="e3-m-4" data-clin="1" data-paso="Necrosis y reemplazo por grasa y fibrosis" data-rama="Rama A"><div class="det"><p>La fibra necrótica se pierde y el músculo se llena de grasa y fibrosis. Aquí actúan los glucocorticoides. <span class="rem">↪ Posología en «Tratamiento»</span></p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-1" onclick="ir('e3','e3-s-1')">Pseudohipertrofia de las pantorrillas</button></p></div></li>
+<li class="nodo" id="e3-m-5" data-clin="1" data-paso="Debilidad de cintura pélvica y muslos" data-rama="Rama A"><div class="det"><p>Los glúteos y cuádriceps, que más cargan, pierden fibras primero: el niño no sostiene la pelvis ni se levanta con las piernas.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-2" onclick="ir('e3','e3-s-2')">Signo de Gowers con debilidad proximal</button> <button type="button" class="xref" data-ir="e3-s-3" onclick="ir('e3','e3-s-3')">Marcha de pato</button></p></div></li>
+<li class="nodo" id="e3-m-6" data-clin="1" data-paso="Acortamiento del tendón de Aquiles" data-rama="Rama A"><div class="det"><p>El tríceps sural, el músculo de la pantorrilla, se fibrosa y se acorta [2].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-4" onclick="ir('e3','e3-s-4')">Marcha de puntillas</button></p></div></li>
+<li class="nodo" id="e3-m-7" data-clin="0" data-paso="Compromiso respiratorio y cardíaco" data-rama="Rama A"><div class="det"><p>El diafragma y el miocardio también pierden fibras; la muerte suele ser cardíaca o respiratoria [2].</p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la carpa sin cuerdas</span>
+<p class="fey-b">Una carpa se sujeta al suelo con cuerdas. Sin ellas, cada ráfaga rasga la tela hasta que solo queda relleno blando. Así se rompe el músculo con cada esfuerzo: piernas y cadera, que más cargan, fallan primero y el niño trepa con las manos para levantarse.</p>
+<p class="mini fey-c">En medicina esto se llama… distrofina, distrofia muscular de Duchenne (DMD) y signo de Gowers.</p>
+<p class="mini fey-c">Dónde falla la comparación: la carpa se repara con tela nueva; el músculo, con grasa y cicatriz.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Caídas frecuentes y torpeza</p>
+<p data-e="p">Dificultad para subir escaleras</p>
+<p data-e="v">Retraso del desarrollo motor</p>
+<p data-e="a">Dolor articular</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e3-s-2" onclick="ir('e3','e3-s-2')">Signo de Gowers con debilidad proximal</button></p>
+</div>
+<div class="signo" id="e3-s-1"><h4>Pseudohipertrofia de las pantorrillas</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Pantorrillas grandes y firmes con debilidad.</dd>
+<dt>Por qué aparece</dt><dd>La grasa y la fibrosis agrandan el volumen sin fuerza. <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Necrosis y reemplazo por grasa</button></dd>
+<dt>Qué significa</dt><dd>Sugiere distrofia y pide CK.</dd></dl></div>
+<div class="signo" id="e3-s-2"><h4>Signo de Gowers con debilidad proximal</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Para levantarse del suelo, el niño se apoya con las manos en sus propios muslos [2].</dd>
+<dt>Por qué aparece</dt><dd>Cadera y muslo no bastan para extender las piernas. <button type="button" class="xref" data-ir="e3-m-5" onclick="ir('e3','e3-m-5')">← Debilidad de cintura pélvica</button></dd>
+<dt>Qué significa</dt><dd>Obliga a medir la CK y a referir [2].</dd></dl></div>
+<div class="signo" id="e3-s-3"><h4>Marcha de pato</h4><dl>
+<dt>Cómo se reconoce</dt><dd>La pelvis se balancea a ambos lados con lordosis, sin dolor.</dd>
+<dt>Por qué aparece</dt><dd>Los abductores débiles no sostienen la pelvis. <button type="button" class="xref" data-ir="e3-m-5" onclick="ir('e3','e3-m-5')">← Debilidad de cintura pélvica</button></dd>
+<dt>Qué significa</dt><dd>Imita la displasia bilateral; el Gowers orienta.</dd></dl></div>
+<div class="signo" id="e3-s-4"><h4>Marcha de puntillas</h4><dl>
+<dt>Cómo se reconoce</dt><dd>El niño apoya la punta del pie y el talón no toca el suelo [2].</dd>
+<dt>Por qué aparece</dt><dd>La pantorrilla se acorta. <button type="button" class="xref" data-ir="e3-m-6" onclick="ir('e3','e3-m-6')">← Acortamiento del tendón de Aquiles</button></dd>
+<dt>Qué significa</dt><dd>Pista temprana; de un solo lado, piensa en dismetría.</dd></dl></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>CK sérica y estudio genético del gen de distrofina [2].</li>
+<li><span class="tg">Añade</span>Recuerda que ALT, AST o LDH altas pueden venir del músculo [2].</li>
+<li><span class="tg">Confirma</span>Confirma con deleción y duplicación del gen; si es negativa, secuencia el gen [2].</li>
+<li><span class="tg">Solo si</span>Haz biopsia muscular con estudio de distrofina solo si la genética no confirma [2].</li>
+<li><span class="tg">No pidas</span>No pidas biopsia muscular como primera prueba ni busques causa hepática sin medir la CK [2].</li>
+<li><span class="tg">Alarma</span>Sospecha de distrofia o CK muy alta: refiere sin esperar [2].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>CK sérica</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Orientar</td><td>Sale de la fibra rota <button type="button" class="xref" data-ir="e3-m-3" onclick="ir('e3','e3-m-3')">← Membrana frágil se daña</button></td><td>[2]</td></tr>
+<tr><th>Deleción y duplicación del gen</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar</td><td>Detecta cerca del 70 %; si es negativa, se secuencia el gen <button type="button" class="xref" data-ir="e3-m-1" onclick="ir('e3','e3-m-1')">← Mutación del gen</button></td><td>[2]</td></tr>
+<tr><th>Biopsia muscular</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar si la genética no basta</td><td>Busca distrofina en el tejido <button type="button" class="xref" data-ir="e3-m-2" onclick="ir('e3','e3-m-2')">← Ausencia de distrofina</button></td><td>[2]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos. No se leyeron cifras de rendimiento.</p>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>El especialista neuromuscular lidera; fisioterapia y glucocorticoides son los pilares, incluso sin marcha [2].</li>
+<li><span class="tg">De elección</span>Glucocorticoide diario: prednisona o deflazacort [2].</li>
+<li><span class="tg">Sintomático</span>Estiramientos diarios y natación; sin ejercicio excéntrico ni de alta resistencia [2].</li>
+<li><span class="tg">Especialista</span>Refiere a endocrinología si la talla cruza percentiles o no hay pubertad a los 14 años [2].</li>
+<li><span class="tg">Evita</span>Evita suspender el glucocorticoide de golpe: puede causar insuficiencia suprarrenal; retíralo en semanas a meses [2].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Prednisona</th><td>0,75 mg/kg; tope diario 40 mg [VERIFICAR EN FUENTE]</td><td>VO</td><td>Cada 24 h</td><td>Sostenida, también sin marcha [2]</td><td>Frena la inflamación de la fibra necrótica <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Necrosis y reemplazo por grasa</button>. Aumenta el peso, retrasa crecimiento y pubertad, suprime el eje suprarrenal [2]</td><td>[2]</td></tr>
+<tr><th>Deflazacort</th><td>0,9 mg/kg; tope diario 39 mg [VERIFICAR EN FUENTE]</td><td>VO</td><td>Cada 24 h</td><td>Sostenida, también sin marcha [2]</td><td>Mismo blanco <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Necrosis y reemplazo por grasa</button>; ganó menos peso que la prednisona [2]</td><td>[2]</td></tr>
+<tr><th>Hidrocortisona de emergencia</th><td>50 mg si tiene menos de 2 años; 100 mg desde los 2 años [2]</td><td>IM</td><td>Dosis única</td><td>Hasta llegar a urgencias</td><td>Repone el cortisol si se suspende el glucocorticoide o hay vómitos; en enfermedad grave se usa dosis de estrés [2]</td><td>[2]</td></tr>
+</tbody></table></div>
+<p class="mini">VO: vía oral; IM: intramuscular. Los topes diarios no se leyeron en la fuente.</p>
+<div class="dc" data-fn="dcE3"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Peso en kg</span><input type="number" data-n="peso" min="5" max="150" step="1" oninput="ch(this)"></div>
+<div class="dc-g"><span class="dc-l">Glucocorticoide</span>
+<button type="button" class="chip" data-g="farm" data-v="pred" onclick="ch(this)">Prednisona</button>
+<button type="button" class="chip" data-g="farm" data-v="def" onclick="ch(this)">Deflazacort</button></div>
+<div class="dc-g"><span class="dc-l">Situación</span>
+<button type="button" class="chip" data-g="sit" data-v="mant" onclick="ch(this)">Mantenimiento</button>
+<button type="button" class="chip" data-g="sit" data-v="grave" onclick="ch(this)">Enfermedad grave o cirugía</button>
+<button type="button" class="chip" data-g="sit" data-v="susp" onclick="ch(this)">Vómitos o suspensión</button></div>
+<div class="dc-g"><span class="dc-l">Edad</span>
+<button type="button" class="chip" data-g="edad" data-v="men2" onclick="ch(this)">Menor de 2 años</button>
+<button type="button" class="chip" data-g="edad" data-v="may2" onclick="ch(this)">De 2 años en adelante</button></div>
+<div class="out"></div></div>
+
+<h2>Seguimiento</h2>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Falla respiratoria y cardíaca</th><td>Diafragma y miocardio pierden fibras</td><td><button type="button" class="xref" data-ir="e3-m-7" onclick="ir('e3','e3-m-7')">← Compromiso respiratorio y cardíaco</button></td></tr>
+<tr><th>Insuficiencia suprarrenal</th><td>El glucocorticoide suprime el eje suprarrenal [2]</td><td>Sin nodo en la cadena</td></tr>
+</tbody></table></div>
+</section>
+<section class="tab" data-tab="e4">
+<div class="hb az"><div class="hb-t">Frente a Enfermedad neuromuscular</div>
+<p>Se confunde con la enfermedad neuromuscular porque ambas debilitan las piernas sin dolor articular. Se separa por el curso en días y la arreflexia.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué una infección previa puede dirigir el sistema inmune contra el nervio y causar debilidad con arreflexia?</li>
+<li>¿Qué decide el tratamiento y qué se vigila para anticipar la insuficiencia respiratoria?</li>
+<li>¿Cuándo se sospecha un curso crónico?</li>
+</ol></div>
+<p><span class="badge b-pu">EAN/PNS Guillain-Barré 2023, solo resumen [3]</span></p>
+<div class="hb am"><div class="hb-t">Alcance</div>
+<p>La guía EAN/PNS es general. Las dosis pediátricas, la plasmaféresis en niños y los criterios de Brighton no se leyeron [VERIFICAR EN FUENTE].</p></div>
+
+<h2>Qué es</h2>
+<div class="card"><p>El síndrome de Guillain-Barré (SGB) es una poliradiculoneuropatía aguda autoinmune: inflama raíces y nervios periféricos, debilita y puede comprometer la respiración [3].</p>
+<ul>
+<li>Debilidad progresiva y simétrica de las piernas, con arreflexia.</li>
+<li>Diarrea o infección respiratoria reciente [3].</li>
+</ul></div>
+<p>Los subtipos existen porque el ataque puede dirigirse a la mielina, al axón o a los nervios craneales.</p>
+<div class="tw"><table><thead><tr><th>Subtipo</th><th>Qué domina</th><th>Cómo se reconoce</th></tr></thead>
+<tbody>
+<tr><th>Desmielinizante (AIDP)</th><td>Daño de la mielina</td><td>Debilidad ascendente con arreflexia [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Axonal (AMAN y AMSAN)</th><td>Daño del axón</td><td>La electrofisiología lo separa [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Miller Fisher</th><td>Nervios craneales y sensibilidad profunda</td><td>Oftalmoplejía, ataxia y arreflexia; anti-GQ1b [3]</td></tr>
+</tbody></table></div>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Polirradiculoneuropatía crónica de inicio agudo (A-CIDP)</th><td>Inicio que imita al SGB</td><td>Progresa más de 8 semanas; en cerca del 5 % de los diagnosticados al inicio [3]</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Dato</th><th>Valor en la fuente</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>Sin cifras leídas [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Edad</th><td>Sin distribución leída [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Sexo</th><td>Sin distribución leída [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Factores clave</th><td>Diarrea o infección respiratoria reciente [3]</td></tr>
+</tbody></table></div>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e4-m-1" data-clin="0" data-paso="Infección previa activa el sistema inmune" data-rama="Rama A"><div class="det"><p>Terreno: un niño sano con respuesta inmune cruzada. Desencadenante: una infección intestinal o respiratoria reciente [3].</p></div></li>
+<li class="nodo" id="e4-m-2" data-clin="0" data-paso="Anticuerpos reconocen gangliósidos del nervio" data-rama="Rama A"><div class="det"><p>Los gangliósidos son lípidos de la membrana del nervio; los anticuerpos contra el microbio se les parecen y atacan el nervio (mimetismo molecular). <span class="rem">↪ Propiedades en «Diagnóstico»</span></p></div></li>
+<li class="nodo" id="e4-m-3" data-clin="0" data-paso="Complemento y macrófagos lesionan mielina o axón" data-rama="Rama A"><div class="det"><p>El complemento, proteínas de defensa que perforan membranas, y los macrófagos, células que fagocitan, dañan mielina o axón. Es el blanco de la inmunoterapia. <span class="rem">↪ Posología en «Tratamiento»</span></p></div></li>
+<li class="nodo" id="e4-m-4" data-clin="1" data-paso="Bloqueo de conducción en raíces y nervios" data-rama="Rama A"><div class="det"><p>El impulso no llega al músculo. La debilidad suele empezar en las piernas y ascender, y los reflejos desaparecen porque el arco reflejo se interrumpe.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-1" onclick="ir('e4','e4-s-1')">Debilidad simétrica ascendente con arreflexia</button></p></div></li>
+<li class="nodo" id="e4-m-5" data-clin="1" data-paso="Fibras sensitivas y autonómicas afectadas" data-rama="Rama A"><div class="det"><p>Las fibras sensitivas llevan tacto y dolor; las autonómicas regulan pulso y presión [3].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-2" onclick="ir('e4','e4-s-2')">Parestesias y dolor</button> <button type="button" class="xref" data-ir="e4-s-3" onclick="ir('e4','e4-s-3')">Disautonomía</button></p></div></li>
+<li class="nodo" id="e4-m-6" data-clin="1" data-paso="Músculos respiratorios y bulbares se debilitan" data-rama="Rama A"><div class="det"><p>Si el ataque alcanza diafragma, intercostales y deglución, el niño no ventila ni protege la vía aérea. La escala mEGRIS anticipa la ventilación [3].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-4" onclick="ir('e4','e4-s-4')">Disnea, tos débil y disfagia</button></p></div></li>
+<li class="nodo" id="e4-m-7" data-clin="0" data-paso="Pico de debilidad y recuperación lenta" data-rama="Rama A"><div class="det"><p>La debilidad alcanza su máximo en pocas semanas y luego mejora al remielinizarse o regenerar el axón. Si progresa más de 8 semanas, se reconsidera A-CIDP [3].</p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — el cable sin funda</span>
+<p class="fey-b">Piensa en un cable de luz con su funda de plástico. Tras una infección, las defensas confunden la funda con el microbio y la atacan. Sin funda, la señal se pierde: primero fallan las piernas y, si el ataque sube, puede fallar la respiración.</p>
+<p class="mini fey-c">En medicina esto se llama… síndrome de Guillain-Barré, desmielinización y arreflexia.</p>
+<p class="mini fey-c">Dónde falla la comparación: en algunos casos se daña el propio cable, no la funda, y la recuperación es más lenta.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Dificultad para caminar o levantarse</p>
+<p data-e="p">Parestesias o dolor en las piernas</p>
+<p data-e="v">Debilidad facial o de la deglución</p>
+<p data-e="a">Nivel sensitivo en el tronco</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e4-s-1" onclick="ir('e4','e4-s-1')">Debilidad simétrica ascendente con arreflexia</button></p>
+</div>
+<div class="signo" id="e4-s-1"><h4>Debilidad simétrica ascendente con arreflexia</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Las piernas fallan primero y por igual; los reflejos no se obtienen.</dd>
+<dt>Por qué aparece</dt><dd>Las fibras motoras y el arco reflejo no conducen. <button type="button" class="xref" data-ir="e4-m-4" onclick="ir('e4','e4-m-4')">← Bloqueo de conducción</button></dd>
+<dt>Qué significa</dt><dd>Es una urgencia: vigila la respiración aunque no haya disnea.</dd></dl></div>
+<div class="signo" id="e4-s-2"><h4>Parestesias y dolor</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Hormigueo o dolor en piernas y espalda.</dd>
+<dt>Por qué aparece</dt><dd>Se dañan las fibras sensitivas. <button type="button" class="xref" data-ir="e4-m-5" onclick="ir('e4','e4-m-5')">← Fibras sensitivas y autonómicas</button></dd>
+<dt>Qué significa</dt><dd>El dolor no excluye el diagnóstico y puede requerir analgesia específica [3].</dd></dl></div>
+<div class="signo" id="e4-s-3"><h4>Disautonomía</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Pulso y presión muy variables o arritmias.</dd>
+<dt>Por qué aparece</dt><dd>Las fibras autonómicas no regulan corazón ni vasos. <button type="button" class="xref" data-ir="e4-m-5" onclick="ir('e4','e4-m-5')">← Fibras sensitivas y autonómicas</button></dd>
+<dt>Qué significa</dt><dd>Exige monitorización continua [3].</dd></dl></div>
+<div class="signo" id="e4-s-4"><h4>Disnea, tos débil y disfagia</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Respiración superficial y atoramiento con la comida.</dd>
+<dt>Por qué aparece</dt><dd>Se debilitan los músculos respiratorios y bulbares. <button type="button" class="xref" data-ir="e4-m-6" onclick="ir('e4','e4-m-6')">← Músculos respiratorios y bulbares</button></dd>
+<dt>Qué significa</dt><dd>Anuncia insuficiencia respiratoria: cuidados intensivos y mEGRIS [3].</dd></dl></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Examen de fuerza y reflejos, y estudios de LCR y neuroconducción [3].</li>
+<li><span class="tg">Añade</span>Pregunta por diarrea o infección respiratoria reciente [3].</li>
+<li><span class="tg">Confirma</span>Confirma con electrofisiología y LCR, sobre todo si hay duda [3].</li>
+<li><span class="tg">Solo si</span>Pide anti-GQ1b si sospechas Miller Fisher, y resonancia o ecografía en casos atípicos [3].</li>
+<li><span class="tg">No pidas</span>No pidas anticuerpos antigangliósidos de rutina en el síndrome típico: aportan poco [3].</li>
+<li><span class="tg">Alarma</span>Disnea, tos débil, disfagia, disautonomía o progresión rápida: ingresa a cuidados intensivos [3].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>LCR</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Apoyar, sobre todo si es incierto</td><td>Valioso en el cuadro atípico <button type="button" class="xref" data-ir="e4-m-4" onclick="ir('e4','e4-m-4')">← Bloqueo de conducción</button></td><td>[3]</td></tr>
+<tr><th>Estudios electrofisiológicos</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Apoyar y subtipificar</td><td>Muestran el bloqueo <button type="button" class="xref" data-ir="e4-m-4" onclick="ir('e4','e4-m-4')">← Bloqueo de conducción</button></td><td>[3]</td></tr>
+<tr><th>Anticuerpo anti-GQ1b</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar Miller Fisher</td><td>Solo con oftalmoplejía y ataxia <button type="button" class="xref" data-ir="e4-m-2" onclick="ir('e4','e4-m-2')">← Anticuerpos reconocen gangliósidos</button></td><td>[3]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos. No se leyeron cifras de rendimiento.</p>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Trata temprano con inmunoterapia y vigila respiración, autonomía y dolor [3].</li>
+<li><span class="tg">De elección</span>Inmunoglobulina intravenosa si no camina sin ayuda y la debilidad empezó hace menos de 2 semanas [3].</li>
+<li><span class="tg">Alternativa</span>Plasmaféresis si no camina sin ayuda y la debilidad empezó hace menos de 4 semanas [3].</li>
+<li><span class="tg">Sintomático</span>Gabapentinoides, tricíclicos o carbamazepina para el dolor [3].</li>
+<li><span class="tg">Reevalúa</span>Reevalúa con mEGOS y mEGRIS; reconsidera A-CIDP si progresa más de 8 semanas [3].</li>
+<li><span class="tg">Especialista</span>Neurología y cuidados intensivos manejan al niño que no camina [3].</li>
+<li><span class="tg">Evita</span>Evita los corticoides orales; no repitas la inmunoglobulina con mal pronóstico ni encadenes plasmaféresis con ella [3].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Inmunoglobulina intravenosa</th><td>0,4 g/kg al día (2 g/kg en total); tope operativo del widget de 30 g al día, un adulto de 75 kg [VERIFICAR EN FUENTE]</td><td>IV</td><td>Cada 24 h</td><td>5 días [3]</td><td>Neutraliza anticuerpos <button type="button" class="xref" data-ir="e4-m-3" onclick="ir('e4','e4-m-3')">← Complemento y macrófagos</button>; mecanismo exacto no establecido. Dosis pediátricas y adversos no leídos [VERIFICAR EN FUENTE]</td><td>[3]</td></tr>
+<tr><th>Plasmaféresis (procedimiento)</th><td>12 a 15 L de plasma en total en el adulto [3]; en el niño, unos 200 a 250 mL/kg [VERIFICAR EN FUENTE]</td><td>Extracorpórea</td><td>4 a 5 recambios</td><td>1 a 2 semanas [3]</td><td>Retira anticuerpos circulantes <button type="button" class="xref" data-ir="e4-m-2" onclick="ir('e4','e4-m-2')">← Anticuerpos reconocen gangliósidos</button></td><td>[3]</td></tr>
+<tr><th>Gabapentina (o tricíclico o carbamazepina)</th><td>[VERIFICAR EN FUENTE]</td><td>VO</td><td>[VERIFICAR EN FUENTE]</td><td>Mientras dure el dolor</td><td>Calma el dolor neuropático <button type="button" class="xref" data-ir="e4-m-5" onclick="ir('e4','e4-m-5')">← Fibras sensitivas y autonómicas</button>; la guía recomienda la clase [3]</td><td>[3]</td></tr>
+</tbody></table></div>
+<p class="mini">IV: intravenosa; VO: vía oral; mEGOS y mEGRIS: escalas de pronóstico y de insuficiencia respiratoria. La guía no fija un tope de inmunoglobulina.</p>
+<div class="dc" data-fn="dcE4"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Peso en kg</span><input type="number" data-n="peso" min="5" max="150" step="1" oninput="ch(this)"></div>
+<div class="dc-g"><span class="dc-l">Tiempo desde el inicio</span>
+<button type="button" class="chip" data-g="tiempo" data-v="s2" onclick="ch(this)">Hasta 2 semanas</button>
+<button type="button" class="chip" data-g="tiempo" data-v="s4" onclick="ch(this)">Entre 2 y 4 semanas</button>
+<button type="button" class="chip" data-g="tiempo" data-v="m4" onclick="ch(this)">Más de 4 semanas</button></div>
+<div class="dc-g"><span class="dc-l">Marcha</span>
+<button type="button" class="chip" data-g="marcha" data-v="no" onclick="ch(this)">No camina sin ayuda</button>
+<button type="button" class="chip" data-g="marcha" data-v="si" onclick="ch(this)">Camina sin ayuda</button></div>
+<div class="dc-g"><span class="dc-l">Otros datos</span>
+<button type="button" class="chip" data-g="otros" data-v="resp" data-m="1" onclick="ch(this)">Disnea, tos débil o disfagia</button>
+<button type="button" class="chip" data-g="otros" data-v="pron" data-m="1" onclick="ch(this)">Mal pronóstico tras una primera tanda</button>
+<button type="button" class="chip" data-g="otros" data-v="a8" data-m="1" onclick="ch(this)">Progresión más allá de 8 semanas</button></div>
+<div class="out"></div></div>
+
+<h2>Seguimiento</h2>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Insuficiencia respiratoria</th><td>Se debilitan diafragma y deglución</td><td><button type="button" class="xref" data-ir="e4-m-6" onclick="ir('e4','e4-m-6')">← Músculos respiratorios y bulbares</button></td></tr>
+<tr><th>Curso crónico (A-CIDP)</th><td>La inflamación persiste más de 8 semanas</td><td><button type="button" class="xref" data-ir="e4-m-7" onclick="ir('e4','e4-m-7')">← Pico de debilidad y recuperación lenta</button></td></tr>
+</tbody></table></div>
+</section>
+<section class="tab" data-tab="sin">
+<div class="hb ro"><div class="hb-t">Errores que no se pueden cometer</div>
+<ul>
+<li>Dejar sin vigilancia respiratoria a un niño con debilidad ascendente y arreflexia, o darle corticoides orales en el síndrome de Guillain-Barré [3].</li>
+<li>Esperar a que el niño camine para confirmar una cadera inestable del lactante [1].</li>
+<li>Atribuir las transaminasas elevadas al hígado en un niño con debilidad proximal sin medir la CK, o pedir biopsia muscular antes del estudio genético [2].</li>
+<li>Suspender de golpe el glucocorticoide en la distrofia de Duchenne: puede causar insuficiencia suprarrenal [2].</li>
+<li>Tratar con alza una dismetría aparente en lugar de su causa, o pasar por alto una escoliosis estructural detrás de una diferencia pequeña [4].</li>
+<li>Seguir en este grupo ante dolor intenso, fiebre o rechazo a apoyar, sin descartar una infección articular.</li>
+</ul></div>
+<div class="acc refs"><button type="button" class="acc-h" onclick="tog(this)">Referencias <span class="chev">▾</span></button>
+<div class="acc-b"><ol class="vanc">
+<li>Shaw BA, Segal LS, et al. Evaluation and referral for developmental dysplasia of the hip in infants. Pediatrics. 2016;138(6). doi:10.1542/peds.2016-3107. Informe clínico de la AAP; solo se leyó el resumen. Vigencia no verificada.</li>
+<li>Birnkrant DJ, Bushby K, Bann CM, Apkon SD, Blackwell A, Brumbaugh D, et al. Diagnosis and management of Duchenne muscular dystrophy, part 1: diagnosis, and neuromuscular, rehabilitation, endocrine, and gastrointestinal and nutritional management. Lancet Neurol. 2018;17(3):251-67. doi:10.1016/S1474-4422(18)30024-3. Guía de consenso de expertos (método RAND/UCLA); texto completo leído.</li>
+<li>van Doorn PA, Van den Bergh PYK, Hadden RDM, Avau B, Vankrunkelsven P, Attarian S, et al. European Academy of Neurology/Peripheral Nerve Society guideline on diagnosis and treatment of Guillain-Barré syndrome. Eur J Neurol. 2023;30(12):3646-74. doi:10.1111/ene.16073. Guía con metodología GRADE; solo se leyó el resumen.</li>
+<li>Mateo FM, Egea-Gámez RM, Mahboob OM. Scoliosis, leg length discrepancy, or both? Curr Opin Pediatr. 2025;38(1):93-9. doi:10.1097/MOP.0000000000001528. Revisión; solo se leyó el resumen.</li>
+<li>Mercuri E, Finkel RS, Muntoni F, Wirth B, Montes J, Main M, et al. Diagnosis and management of spinal muscular atrophy: part 1: recommendations for diagnosis, rehabilitation, orthopedic and nutritional care. Neuromuscul Disord. 2018;28(2):103-15. doi:10.1016/j.nmd.2017.11.005. Guía de consenso; solo se leyó el resumen.</li>
+<li>Sioutis S, Kolovos S, Papakonstantinou ME, Reppas L, Koulalis D, Mavrogenis AF. Developmental dysplasia of the hip: a review. J Long Term Eff Med Implants. 2022;32(3):39-56. doi:10.1615/JLongTermEffMedImplants.2022040393. Revisión; solo se leyó el resumen.</li>
+<li>Güler O, Şeker A, Mutlu S, Çerçi MH, Kömür B, Mahiroğulları M. Results of a universal ultrasonographic hip screening program at a single institution. Acta Orthop Traumatol Turc. 2016;50(1):42-8. doi:10.3944/AOTT.2016.15.0024. Estudio observacional; solo se leyó el resumen.</li>
+<li>Aw AAL, Wong KPL, Lee NKL, Mahadev A. The utility of ultrasound and plain radiographs in the management of developmental dysplasia of the hip. J Pediatr Orthop B. 2024;33(1):9-15. doi:10.1097/BPB.0000000000001078. Estudio retrospectivo de nivel II; solo se leyó el resumen.</li>
+<li>Di Gennaro GL, Gallone G, Martinez Vazquez EA, Marchesini Reggiani L, Racano C, Olivotto E, et al. Deformity progression in congenital posteromedial bowing of the tibia: a report of 44 cases. BMC Musculoskelet Disord. 2020;21(1):430. doi:10.1186/s12891-020-03408-w. Serie de casos de nivel IV; solo se leyó el resumen.</li>
+</ol></div></div>
+</section>
+<script>
+function par(t){return '<p>'+t+'</p>';}
+function hv(a,v){return a.indexOf(v)>-1;}
+function vacio(dc,t){out(dc,par(t));}
+
+function dcVis(dc){
+  var e=sel(dc,'edad'),h=sel(dc,'hall'),c=sel(dc,'ctx');
+  if(!(e.length||h.length||c.length)){
+    vacio(dc,'Elige la edad, los hallazgos y el contexto. El simulador propone qué entidad es compatible, qué dato falta para confirmarla y la conducta inicial; no calcula probabilidades.');return;}
+  var r=[],n=0;
+  if(hv(h,'asc')||hv(h,'arr')){n++;
+    var both=hv(h,'asc')&&hv(h,'arr');
+    r.push(par('<b>Síndrome de Guillain-Barré</b>: '+(both?'la debilidad ascendente con reflejos ausentes':'este hallazgo')+(hv(c,'inf')?', con infección reciente,':'')+' lo hace compatible'+(both?'':'; falta documentar el otro dato (debilidad simétrica o arreflexia)')+'. Falta confirmar con LCR y neuroconducción [3]. Conducta inicial: ingreso para vigilar la respiración y la autonomía; la inmunoterapia depende de la ventana y de si camina sin ayuda.'));
+    if(hv(c,'resp')) r.push(par('La dificultad para respirar o tragar exige cuidados intensivos y estratificar el riesgo de ventilación [3].'));
+  }
+  if(hv(h,'ort')||hv(h,'abd')){n++;
+    if(hv(e,'lact')) r.push(par('<b>Displasia del desarrollo de la cadera</b>: la maniobra o la abducción limitada en el lactante la hace compatible. Falta la ecografía de cadera por Graf [1][6]. Conducta inicial: referir a ortopedia pediátrica y definir arnés según el tipo de Graf.'));
+    else r.push(par('<b>Displasia del desarrollo de la cadera</b>: hallazgo compatible, pero Ortolani y Barlow pierden valor fuera del período de lactante pequeño. Falta la radiografía de pelvis [VERIFICAR EN FUENTE]. Conducta inicial: referir a ortopedia pediátrica [1].'));
+  }
+  if(hv(h,'gowers')){n++;
+    r.push(par('<b>Enfermedad neuromuscular (Duchenne)</b>: el Gowers o las pantorrillas grandes la hacen compatible'+(hv(c,'fam')?', y el antecedente familiar la refuerza':'')+'. Falta la CK y el estudio genético del gen de distrofina [2]. Conducta inicial: referir a neurología neuromuscular sin demora.'));
+  }
+  if(hv(h,'cresta')||(hv(c,'ant')&&!hv(h,'ort')&&!hv(h,'gowers')&&!hv(h,'asc')&&!hv(h,'arr'))){n++;
+    r.push(par('<b>Dismetría de miembros inferiores</b>: '+(hv(h,'cresta')?'la cresta ilíaca baja la hace compatible':'el antecedente de un miembro afectado la hace posible, pero falta el signo')+'. Falta medir la longitud real y la aparente y pedir ortorradiografía [4]. Conducta inicial: alza si la diferencia es significativa y referir a ortopedia pediátrica si supera 2 cm.'));
+  }
+  if(hv(c,'dolor')) r.push(par('El dolor intenso o la fiebre sacan al niño de este grupo: descarta primero una infección articular o una urgencia ortopédica.'));
+  if(!n) r.push(par('Los hallazgos elegidos no bastan para sostener una sola entidad. Completa el examen de la cadera, la longitud de los miembros, la fuerza proximal y los reflejos.'));
+  r.push('<span class="cf">Si a la debilidad simétrica se suman los reflejos ausentes → la conducta cambia de estudio ambulatorio a ingreso por posible síndrome de Guillain-Barré [3].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE1dx(dc){
+  var e=sel(dc,'edad'),x=sel(dc,'ex'),k=sel(dc,'riesgo'),g=sel(dc,'graf');
+  if(!(e.length||x.length||k.length||g.length)){
+    vacio(dc,'Elige la edad, el examen, los factores de riesgo y el tipo de Graf para obtener la clasificación y la conducta.');return;}
+  var r=[],anor=hv(x,'ort')||hv(x,'bar')||hv(x,'abd');
+  if(hv(x,'norm')&&anor) r.push(par('Elegiste un examen normal y otro anormal a la vez: revisa los datos.'));
+  if(anor){
+    r.push(par('<b>Examen anormal</b>: la cadera es inestable o está limitada ['+(hv(e,'lact')?'1':'1')+']. '+(hv(e,'lact')?'Pide ecografía de cadera por Graf y refiere a ortopedia pediátrica sin esperar a que el niño camine [1][6] [VERIFICAR EN FUENTE].':'Fuera del lactante pequeño, la maniobra pierde valor: pide radiografía de pelvis y refiere a ortopedia pediátrica [VERIFICAR EN FUENTE].')));
+  } else if(hv(x,'norm')&&k.length){
+    r.push(par('Examen normal con factores de riesgo ('+k.length+'): el examen solo no descarta displasia; pide ecografía de cadera según la edad [1][6] [VERIFICAR EN FUENTE].'));
+  } else if(hv(x,'norm')){
+    r.push(par('Examen normal sin factores de riesgo: continúa el control periódico; muchas formas leves se resuelven sin tratamiento [1].'));
+  }
+  if(hv(e,'camina')) r.push(par('Marcha de pato o de Trendelenburg sin dolor en el niño que camina: descarta luxación de cadera con radiografía de pelvis antes de pensar en enfermedad muscular [1] [VERIFICAR EN FUENTE].'));
+  if(hv(g,'I')) r.push(par('Graf I: cadera madura y centrada. Alta sin tratamiento [6].'));
+  if(hv(g,'IIa')) r.push(par('Graf IIa: acetábulo inmaduro. Observa y repite la ecografía; muchas formas leves se resuelven solas [1][8].'));
+  if(hv(g,'IIb')) r.push(par('Graf IIb, IIc o D: displasia o cadera en el límite de descentrarse. Arnés de Pavlik y control ecográfico [7].'));
+  if(hv(g,'III')) r.push(par('Graf III o IV: cabeza descentrada o luxada. Refiere a ortopedia pediátrica para decidir la reducción [7] [VERIFICAR EN FUENTE].'));
+  if(hv(g,'no')&&hv(e,'lact')&&(anor||k.length)) r.push(par('Aún no hay ecografía: es la prueba que decide en este lactante [6].'));
+  if(!r.length) r.push(par('Con esos datos no hay una conducta clara: completa el examen de la cadera y la edad.'));
+  r.push('<span class="cf">Si el Ortolani pasa de negativo a positivo → la conducta cambia de control clínico a ecografía y referencia a ortopedia pediátrica [1].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE1tx(dc){
+  var e=sel(dc,'edad'),s=sel(dc,'est'),v=sel(dc,'evo');
+  if(!(e.length||s.length||v.length)){
+    vacio(dc,'Elige la edad, el estado de la cadera y la evolución para obtener la conducta.');return;}
+  var r=[];
+  if(hv(s,'inma')) r.push(par('Cadera inmadura, Graf IIa: observa con ecografía de control sin arnés inicial [1][8].'));
+  if(hv(s,'red')){
+    if(hv(e,'lact')){
+      r.push(par('<b>Arnés de Pavlik</b> en el lactante pequeño con cadera reducible [1][7]. Uso continuo y duración según el protocolo del servicio [VERIFICAR EN FUENTE]; control ecográfico hasta normalizar [8].'));
+      if(hv(v,'mejora')) r.push(par('Con buena respuesta, continúa hasta normalizar la cadera y vigila hasta los 2 años [8].'));
+      if(hv(v,'falla')) r.push(par('Si no se reduce con el arnés, suspéndelo y refiere para reducción cerrada o abierta con yeso pelvipédico [6] [VERIFICAR EN FUENTE].'));
+    } else r.push(par('Fuera del lactante pequeño el arnés pierde utilidad: refiere a ortopedia pediátrica para reducción con yeso o cirugía [6] [VERIFICAR EN FUENTE].'));
+  }
+  if(hv(s,'irr')) r.push(par('Cadera luxada o irreductible: refiere a ortopedia pediátrica para reducción cerrada o abierta con yeso pelvipédico [6] [VERIFICAR EN FUENTE].'));
+  if(hv(e,'camina')&&!s.length) r.push(par('El niño que camina con displasia o luxación no responde al arnés: refiere para decidir la cirugía [VERIFICAR EN FUENTE].'));
+  if(!r.length) r.push(par('Con esos datos no hay una conducta clara: define el estado de la cadera.'));
+  r.push('<span class="cf">Si la cadera deja de reducirse con el arnés → se suspende y la conducta pasa a reducción con yeso o cirugía [6] [VERIFICAR EN FUENTE].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE2(dc){
+  var d=num(dc,'dif'),t=sel(dc,'tipo'),c=sel(dc,'crec'),o=sel(dc,'otros');
+  if(isNaN(d)&&!t.length&&!c.length&&!o.length){
+    vacio(dc,'Escribe la diferencia en centímetros y elige el tipo, el crecimiento restante y los otros datos para obtener la conducta.');return;}
+  var r=[];
+  if(hv(t,'apar')){
+    r.push(par('Dismetría aparente: los huesos miden igual. Trata la contractura de cadera o la escoliosis que inclina la pelvis y no pongas alza [4] [VERIFICAR EN FUENTE].'));
+  } else {
+    if(isNaN(d)) r.push(par('Falta la diferencia en centímetros medida con ortorradiografía.'));
+    else if(d<0||d>15) r.push(par('Revisa el valor: la diferencia debe estar entre 0 y 15 cm.'));
+    else if(d<2) r.push(par('Diferencia de '+rd(d,1)+' cm, menor de 2 cm: vigila en cada control; si hay escoliosis, una diferencia menor también puede contribuir y su corrección puede reducir la curva [4]. Alza opcional.'));
+    else r.push(par('Diferencia de '+rd(d,1)+' cm, mayor de 2 cm, significativa: inclina la pelvis y genera escoliosis funcional [4]. Alza en el calzado y referencia a ortopedia pediátrica.'));
+    if(!isNaN(d)&&d>=2&&hv(c,'mucho')) r.push(par('Con mucho crecimiento restante la diferencia puede aumentar [9]: ortopedia pediátrica decide epifisiodesis del miembro largo o alargamiento [4] [VERIFICAR EN FUENTE].'));
+    if(!isNaN(d)&&d>=2&&hv(c,'poco')) r.push(par('Con poco crecimiento restante, la corrección quirúrgica depende de la diferencia final [VERIFICAR EN FUENTE].'));
+  }
+  if(hv(o,'esco')) r.push(par('La curva que se corrige al nivelar es una escoliosis funcional; se espera que mejore al corregir la diferencia [4].'));
+  if(hv(o,'prog')) r.push(par('Una diferencia que aumenta pide referencia a ortopedia pediátrica y vigilancia de la columna [9].'));
+  if(!r.length) r.push(par('Con esos datos no hay una conducta clara: define si la dismetría es real o aparente.'));
+  r.push('<span class="cf">Si la diferencia pasa de menos a más de 2 cm → la conducta cambia de vigilancia a alza con referencia a ortopedia pediátrica [4].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE3(dc){
+  var w=num(dc,'peso'),f=sel(dc,'farm'),s=sel(dc,'sit'),e=sel(dc,'edad');
+  if(isNaN(w)&&!f.length&&!s.length&&!e.length){
+    vacio(dc,'Escribe el peso y elige el glucocorticoide y la situación para obtener la posología.');return;}
+  var r=[];
+  if(hv(s,'mant')||(!s.length&&f.length)){
+    if(isNaN(w)||!f.length) r.push(par('Escribe el peso y elige prednisona o deflazacort para calcular la dosis de mantenimiento.'));
+    else if(w<5||w>150) r.push(par('Revisa el peso: debe estar entre 5 y 150 kg.'));
+    else{
+      var pred=hv(f,'pred'),cap=pred?40:39,mgkg=pred?0.75:0.9,calc=mgkg*w,dosis=Math.min(calc,cap);
+      r.push(par('<b>'+(pred?'Prednisona':'Deflazacort')+'</b>: '+rd(dosis,1)+' mg VO cada 24 h ('+(pred?'0,75':'0,9')+' mg/kg al día con tope diario de '+cap+' mg'+(calc>cap?'; el cálculo de '+rd(calc,1)+' mg se limitó al tope':'')+') [2] [VERIFICAR EN FUENTE]. Sostenido, también tras perder la marcha; no lo suspendas de golpe [2].'));
+    }
+  }
+  if(hv(s,'grave')) r.push(par('Enfermedad grave, trauma o cirugía con más de 12 mg/m² al día de prednisona o deflazacort: añade dosis de estrés con hidrocortisona de 50 a 100 mg/m² al día [2].'));
+  if(hv(s,'susp')){
+    if(hv(e,'men2')) r.push(par('Vómitos o suspensión: riesgo de crisis suprarrenal. Hidrocortisona 50 mg IM y atención de urgencia [2].'));
+    else if(hv(e,'may2')) r.push(par('Vómitos o suspensión: riesgo de crisis suprarrenal. Hidrocortisona 100 mg IM y atención de urgencia [2].'));
+    else r.push(par('Vómitos o suspensión: riesgo de crisis suprarrenal. Hidrocortisona IM de emergencia, 50 mg si tiene menos de 2 años y 100 mg desde los 2 años; elige la edad para ver la dosis [2].'));
+  }
+  if(!r.length) r.push(par('Con esos datos no hay una conducta clara: define la situación clínica.'));
+  r.push('<span class="cf">Si el niño pasa de tolerar la vía oral a vomitar → deja la dosis oral y la conducta pasa a hidrocortisona IM de emergencia [2].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE4(dc){
+  var w=num(dc,'peso'),t=sel(dc,'tiempo'),m=sel(dc,'marcha'),o=sel(dc,'otros');
+  if(isNaN(w)&&!t.length&&!m.length&&!o.length){
+    vacio(dc,'Escribe el peso y elige el tiempo de evolución, la marcha y los otros datos para obtener el esquema con su posología.');return;}
+  var r=[];
+  if(hv(m,'si')) r.push(par('Camina sin ayuda: la indicación de inmunoterapia de la guía es para quien no camina sin ayuda; vigila y reevalúa con frecuencia [3] [VERIFICAR EN FUENTE].'));
+  if(hv(m,'no')){
+    if(!t.length) r.push(par('Falta el tiempo desde el inicio de la debilidad para elegir entre inmunoglobulina y plasmaféresis [3].'));
+    if(hv(t,'s2')||hv(t,'s4')){
+      var plas='<b>Plasmaféresis</b>: 12 a 15 L de plasma en 4 a 5 recambios durante 1 a 2 semanas en el adulto (en el niño, unos 200 a 250 mL/kg en total [VERIFICAR EN FUENTE]), dentro de las 4 primeras semanas [3].';
+      if(isNaN(w)) r.push(par('Escribe el peso para calcular la inmunoglobulina intravenosa.'));
+      else if(w<5||w>150) r.push(par('Revisa el peso: debe estar entre 5 y 150 kg.'));
+      else{
+        var calc=0.4*w,dia=Math.min(calc,30);
+        r.push(par('<b>Inmunoglobulina intravenosa</b>: '+rd(dia,1)+' g IV cada 24 h por 5 días, en total '+rd(dia*5,1)+' g (0,4 g/kg al día, 2 g/kg en total; tope operativo del widget de 30 g al día'+(calc>30?'; el cálculo de '+rd(calc,1)+' g se limitó al tope':'')+') [3] [VERIFICAR EN FUENTE].'));
+      }
+      if(hv(t,'s2')) r.push(par('Dentro de las 2 primeras semanas: la inmunoglobulina es la opción de elección y la plasmaféresis es la alternativa [3].'));
+      else r.push(par('Entre 2 y 4 semanas: la inmunoglobulina entra como punto de buena práctica y la plasmaféresis sigue indicada [3].'));
+      r.push(par(plas));
+    }
+    if(hv(t,'m4')) r.push(par('Más de 4 semanas desde el inicio: fuera de las ventanas de la guía; decide con neurología y reconsidera el diagnóstico [3] [VERIFICAR EN FUENTE].'));
+  }
+  if(hv(o,'resp')) r.push(par('Disnea, tos débil o disfagia: ingreso a cuidados intensivos y estratificación del riesgo de ventilación con mEGRIS [3].'));
+  if(hv(o,'pron')) r.push(par('Mal pronóstico tras una primera tanda: no repitas la inmunoglobulina [3].'));
+  if(hv(o,'a8')) r.push(par('Progresión más allá de 8 semanas: considera poliradiculoneuropatía crónica de inicio agudo (A-CIDP) [3].'));
+  if(m.length||t.length) r.push(par('No uses corticoides orales; los intravenosos tienen recomendación débil en contra [3].'));
+  if(!r.length) r.push(par('Con esos datos no hay una conducta clara: define la marcha y el tiempo de evolución.'));
+  r.push('<span class="cf">Si aparecen disnea o disfagia → la conducta cambia de sala general a vigilancia en cuidados intensivos [3].</span>');
+  out(dc,r.join(''));
+}
+</script>
+<!-- KIT_SCRIPT -->
+</div>
+<script>
+(function(){
+'use strict';
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+function secK(k){return $('section.tab[data-tab="'+k+'"]')}
+function secOf(el){return el&&el.closest?el.closest('section.tab'):null}
+function nameOf(k){var b=$('button.tb[data-tab="'+k+'"]');return b?b.textContent.replace(/\s+/g,' ').replace(/^\s+|\s+$/g,''):k}
+function btn(t,f,c){var b=document.createElement('button');b.type='button';b.className=c||'chip';b.textContent=t;b.addEventListener('click',f);return b}
+function recon(s,on){if(!s)return;s.classList.toggle('recon',!!on);$$('.nodo',s).forEach(function(n){n.classList.remove('rev');n.classList.remove('pis')});var st=$('.rec-state',s);if(st)st.textContent=on?'Modo reconstrucción activo':'Modo lectura';var a=$('.rec-bar [data-act="rec"]',s);if(a){a.disabled=!!on;a.classList.toggle('on',!!on);a.textContent=on?'Reconstrucción activa':'Activar reconstrucción'}}
+window.recon=function(k,on){recon(secK(k),on)};
+function navOv(){var n=$('nav.tabs');if(!n)return;var sl=n.scrollLeft,mx=n.scrollWidth-n.clientWidth,w=n.parentNode;[n,w].forEach(function(e){if(e===n||e.classList.contains('tabs-w')){e.classList.toggle('ov-l',sl>2);e.classList.toggle('ov-r',sl<mx-2)}})}
+function tabla(on){var t=$('table.vis'),s=secOf(t);if(!s)return;s.classList.toggle('tbl',!!on);$$('td.tap',t).forEach(function(c){c.classList.remove('rev')});var st=$('.vb-state',s);if(st)st.textContent=on?'Tabla tapada: toca cada celda para revelarla':'Modo lectura'}
+window.tabla=tabla;
+window.show=function(k){var ns=secK(k);if(!ns)return;$$('section.tab.on').forEach(function(s){if(s!==ns){if(s.classList.contains('recon'))recon(s,false);if(s.classList.contains('tbl'))tabla(false)}});$$('.tb,.tab').forEach(function(e){e.classList.toggle('on',e.getAttribute('data-tab')===k)});window.scrollTo(0,0);var b=$('.tb.on');if(b&&b.scrollIntoView){try{b.scrollIntoView({inline:'nearest',block:'nearest'})}catch(e){}}navOv()};
+window.ir=function(k,id){var el=document.getElementById(id),s=secOf(el);if(!s)return;var nodo=el.classList.contains('nodo');if(s.classList.contains('recon')&&!nodo)recon(s,false);if(s.classList.contains('tbl')&&!el.closest('.vis-w'))tabla(false);show(s.getAttribute('data-tab'));if(nodo&&s.classList.contains('recon'))el.classList.add('rev');var a=el.closest('.acc');if(a)a.classList.add('op');el.scrollIntoView({block:'start'});el.classList.add('hl');setTimeout(function(){el.classList.remove('hl')},1500)};
+window.tog=function(b){var a=b.closest('.acc');if(a)a.classList.toggle('op')};
+window.sel=function(dc,g){return $$('.chip.on[data-g="'+g+'"]',dc).map(function(c){return c.getAttribute('data-v')})};
+window.num=function(dc,n){var i=$('input[data-n="'+n+'"]',dc);if(!i||i.value==='')return NaN;return parseFloat(String(i.value).replace(',','.'))};
+window.out=function(dc,h){var o=$('.out',dc);if(o)o.innerHTML=h};
+window.rd=function(x,d){var p=Math.pow(10,d||0);return Math.round(x*p)/p};
+function outErr(dc,e){var o=$('.out',dc);if(o)o.textContent='Error de cálculo: '+(e&&e.message?e.message:String(e))}
+function runDc(dc){var fn=window[dc.getAttribute('data-fn')];if(typeof fn==='function'){try{fn(dc)}catch(e){outErr(dc,e)}}}
+window.ch=function(el){var dc=el.closest('.dc');if(!dc)return;if(el.classList.contains('chip')){var g=el.getAttribute('data-g');if(el.getAttribute('data-m')==='1'){el.classList.toggle('on')}else{var was=el.classList.contains('on');$$('.chip[data-g="'+g+'"]',dc).forEach(function(c){c.classList.remove('on')});if(!was)el.classList.add('on')}}runDc(dc)};
+function initNodos(f){var k=f.getAttribute('data-tab');$$('.nodo',f).forEach(function(n,i){var p=document.createElement('b');p.className='paso';var pn=document.createElement('span');pn.className='pn';pn.textContent=(i+1)+' ·';var pt=document.createElement('span');pt.className='pt';pt.textContent=n.getAttribute('data-paso')||'';p.appendChild(pn);p.appendChild(pt);var ra=n.getAttribute('data-rama');if(ra){var b=document.createElement('span');b.className='badge b-az rama';b.textContent=ra;p.appendChild(document.createTextNode(' '));p.appendChild(b)}n.insertBefore(p,n.firstChild);var c=document.createElement('div');c.className='rec-ctl';if($('.man',n))c.appendChild(btn('Pista',function(){n.classList.toggle('pis')}));c.appendChild(btn('Revelar',function(){n.classList.toggle('rev')}));n.appendChild(c)});
+var tl=$('ol.tl',f);if(!tl)return;var bar=document.createElement('div');bar.className='rec-bar';bar.id='rec-bar-'+k;var t=document.createElement('div');t.innerHTML='<b>Timeline en blanco</b> · <span class="rec-state">Modo lectura</span><p class="mini">Reconstruye la cascada sin mirar: escribe cada paso en orden, luego usa Pista (signos que produce) y Revelar nodo por nodo. Nada se guarda.</p>';bar.appendChild(t);var ta=document.createElement('textarea');ta.setAttribute('aria-label','Escribe aquí la cascada en orden');var bs=document.createElement('div');bs.className='rec-btns';var ab=btn('Activar reconstrucción',function(){recon(f,true);ta.focus()});ab.setAttribute('data-act','rec');bs.appendChild(ab);bs.appendChild(btn('Revelar todo',function(){$$('.nodo',f).forEach(function(n){n.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){recon(f,false)}));bar.appendChild(bs);bar.appendChild(ta);tl.parentNode.insertBefore(bar,tl)}
+var TGT={'1.º':'clave','De elección':'clave','Confirma':'ok','Solo si':'cond','Escala':'cond','Reevalúa':'cond','No pidas':'no','Evita':'no','Alarma':'alarma'};
+function initTg(){$$('ol.tg span.tg').forEach(function(s){var v=TGT[s.textContent.replace(/^\s+|\s+$/g,'')];if(v)s.setAttribute('data-t',v)})}
+function initTabla(){var t=$('table.vis'),s=secOf(t);if(!s)return;var w=t.parentNode;if(!w.classList.contains('tw')){w=document.createElement('div');w.className='tw';t.parentNode.insertBefore(w,t);w.appendChild(t)}w.classList.add('vis-w');var rows=$$('tbody tr',t);if(!rows.length)rows=$$('tr',t).slice(1);rows.forEach(function(r){Array.prototype.slice.call(r.children,1).forEach(function(c){c.classList.add('tap');c.addEventListener('click',function(){if(s.classList.contains('tbl'))c.classList.add('rev')})})});
+var bar=document.createElement('div');bar.className='vb-bar';bar.id='vb-bar';var h=document.createElement('div');h.innerHTML='<b>Tabla en blanco</b> · <span class="vb-state">Modo lectura</span><p class="mini">Tapa todas las celdas de las entidades (quedan visibles las cabeceras y los ejes). Di cada celda antes de tocarla; un toque la revela. Nada se guarda.</p>';bar.appendChild(h);var bs=document.createElement('div');bs.className='rec-btns';bs.appendChild(btn('Tapar la tabla',function(){tabla(true)}));bs.appendChild(btn('Revelar todo',function(){$$('td.tap',t).forEach(function(c){c.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){tabla(false)}));bar.appendChild(bs);w.parentNode.insertBefore(bar,w)}
+function initRecGo(){var TL=$$('section.tab').filter(function(s){return!!$('ol.tl',s)}),sin=secK('sin'),dst=sin||secK('seg');if(!dst)return;var ord=sin?TL.filter(function(s,i){return i%2===0}).concat(TL.filter(function(s,i){return i%2===1})):TL;var vt=$('table.vis');if(!ord.length&&!(sin&&vt))return;
+var w=document.createElement('div');w.className='hb az rec-go';w.innerHTML='<div class="hb-t">Antes de cerrar: recupera sin mirar</div><p class="mini">Cada botón te lleva a la función en blanco correspondiente. Intenta la respuesta completa antes de revelar.</p>';var bs=document.createElement('div');bs.className='rec-btns';w.appendChild(bs);
+if(sin&&vt){var vs=secOf(vt),vk=vs.getAttribute('data-tab'),b0=btn('Tabla en blanco — '+nameOf(vk),function(){show(vk);tabla(true);var b=document.getElementById('vb-bar');if(b)b.scrollIntoView({block:'start'})},'go');b0.setAttribute('data-rec',vk);bs.appendChild(b0)}
+ord.forEach(function(s){var k=s.getAttribute('data-tab'),b=btn('Reconstruir la cascada — '+nameOf(k),function(){show(k);recon(s,true);var r=document.getElementById('rec-bar-'+k);if(r)r.scrollIntoView({block:'start'})},'go');b.setAttribute('data-rec',k);bs.appendChild(b)});
+var rf=$('.acc.refs',dst);if(rf)dst.insertBefore(w,rf);else dst.appendChild(w)}
+function init(){var f=$('.tb'),ph=[function(){var n=$('nav.tabs');if(n){var w=document.createElement('div');w.className='tabs-w';n.parentNode.insertBefore(w,n);w.appendChild(n);n.addEventListener('scroll',navOv);window.addEventListener('resize',navOv)}},function(){$$('section.tab').forEach(function(s){if($('ol.tl',s))initNodos(s)})},initTg,initTabla,initRecGo,function(){$$('.dc').forEach(runDc)},function(){show(secK('pan')?'pan':(f?f.getAttribute('data-tab'):''))}];ph.forEach(function(p){try{p()}catch(e){if(window.console)console.error('kit v10:',e)}})}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+</body>
+</html>

@@ -1,1 +1,47 @@
 # Widgets-Educativos-
+
+Widgets HTML de estudio (skill `widget-ensenanza` v10) para Quirúrgica 2 · PUCE, 10.º nivel, y grafo de conocimiento del curso (graphify).
+
+## Contenido
+
+| Ruta | Qué es |
+|---|---|
+| `fuentes/` | Sílabo de la rotación y documento del kit v10 (fuente del kit fijo). |
+| `widgets/dolor_abdominal/PLAN.md` | Partición del caso «Dolor abdominal agudo» en 3 widgets multi y decisión del router. |
+| `widgets/dolor_abdominal/*_widget_v10.html` | Widgets listos para abrir en el navegador (autocontenidos). |
+| `widgets/dolor_abdominal/<widget>/w/` | Partes, `manifiesto.json` (núcleo para Anki) y validador de cada widget. |
+| `graphify-out/graph.html` | Grafo interactivo: sílabo + kit + los 3 widgets. |
+| `graphify-out/GRAPH_REPORT.md` | Informe del grafo (nodos centrales, comunidades, preguntas sugeridas). |
+
+## Widgets de dolor abdominal
+
+- **Abdomen agudo quirúrgico**: apendicitis (principal), obstrucción intestinal, perforación de víscera hueca, isquemia mesentérica, aneurisma de aorta abdominal roto (amenaza).
+- **Dolor biliopancreático**: colelitiasis y colecistitis (principal), coledocolitiasis, colangitis (amenaza), pancreatitis aguda con Ranson modificado.
+- **Abdomen agudo médico**: hipopotasemia con íleo (principal), saturnismo, porfiria aguda intermitente (amenaza).
+
+Los datos marcados `[VERIFICAR EN FUENTE]` no se pudieron leer en una fuente durante la generación y deben comprobarse antes de estudiar con ellos.
+
+## Widgets de neoplasias gastrointestinales (kit «Vademécum»)
+
+- **Cáncer del tubo digestivo alto**: gástrico (principal y amenaza), cavidad oral, esófago, duodeno.
+- **Cáncer hepatobiliopancreático**: páncreas (principal y amenaza), hepatocelular, vesícula, colangiocarcinoma.
+- **Cáncer colorrectal** (mono) con pestaña de tamizaje, lesiones premalignas y algoritmo ante cribado positivo.
+
+Usan el kit rediseñado en `fuentes/kit_v10_vademecum/` (mismas clases y JS que la v10; sistema documentado en `DESIGN.md`). Pruebas del orquestador: `auditar_diseno.py` (reglas de diseño y router) y `probar_navegador.js` (desborde, simuladores, enlaces, modos en blanco, capturas en `.impeccable/review/`).
+
+## Skills instaladas (`.claude/skills/`)
+
+taste-skill (13 skills, MIT), impeccable (Apache-2.0), awesome-design-md (MIT, con SKILL.md propio) y playwright-cli (Apache-2.0; requiere `npm install -g @playwright/cli` y el Chromium de `/opt/pw-browsers`).
+
+## Patología urinaria baja (caso de Carlos)
+
+- **Patología urinaria baja** (widget-ensenanza v10, multi): hiperplasia prostática benigna (principal), prostatitis, cáncer de próstata (amenaza), cistitis, uretritis; caso de Carlos como ancla.
+- **Definiciones · Patología urinaria baja** (skill definiciones v5.1): 9 términos + repaso global, con la cabecera `fuentes/kit_v10_vademecum/def_head.html`.
+- Caso transcrito en `fuentes/casos/`. Pruebas: `auditar_definiciones.py` y `probar_definiciones.js`.
+
+## Disbasia en la infancia (4 widgets multi, kit Vademécum)
+
+- **Cojera dolorosa con fiebre**: sinovitis transitoria (principal), artritis séptica (amenaza), osteomielitis, neoplasia ósea maligna.
+- **Cojera dolorosa mecánica**: Perthes (principal), epifisiólisis (amenaza), Osgood-Schlatter.
+- **Marcha alterada sin dolor**: displasia del desarrollo de la cadera (principal), dismetría, enfermedad neuromuscular, Guillain-Barré (amenaza).
+- **Forma de piernas y pies**: genu varo/valgo (principal), anteversión femoral, pie plano, pie cavo, pie equinovaro (amenaza).

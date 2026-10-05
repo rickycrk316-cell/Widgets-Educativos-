@@ -1,0 +1,56 @@
+{
+  "modo": "multi",
+  "entidades": {
+    "e1": "Sinovitis transitoria de cadera",
+    "e2": "Artritis séptica",
+    "e3": "Osteomielitis",
+    "e4": "Neoplasia ósea maligna"
+  },
+  "principal": "e1",
+  "amenaza": "e2",
+  "tabs": ["pan", "vis", "e1", "e2", "e3", "e4", "sin"],
+  "pg": {"vis": 5, "e1": 5, "e2": 3, "e3": 3, "e4": 3},
+  "fey": {"e1": 2, "e2": 1, "e3": 1, "e4": 1},
+  "nodos": {"e1": 7, "e2": 7, "e3": 8, "e4": 8},
+  "signos": {"e1": 4, "e2": 3, "e3": 4, "e4": 4},
+  "dc": ["vis", "e1", "e2", "e3", "e4"],
+  "nucleo": {
+    "vis": ["Falla central", "Inicio y curso", "Signo que la delata", "Prueba que decide", "Amenaza si se pierde"],
+    "e1": [
+      "Derrame estéril distiende la cápsula",
+      "Tensión capsular excita nervios sensitivos",
+      "Acorta la fase de apoyo doloroso",
+      "Espasmo muscular limita el rango",
+      "Limita la rotación interna, con buen aspecto general",
+      "Predictores de Kocher y ecografía de cadera con derrame, en un niño de buen aspecto",
+      "Reposo relativo y antiinflamatorio no esteroideo oral, con reevaluación precoz"
+    ],
+    "e2": [
+      "Neutrófilos y citocinas generan pus",
+      "Pus eleva la presión intraarticular",
+      "El dolor impide cargar el miembro",
+      "Dolor extremo con cualquier movimiento pasivo de la cadera",
+      "Artrocentesis con recuento celular, Gram y cultivo del líquido sinovial, guiada por ecografía en la cadera",
+      "Drenaje quirúrgico urgente y antibiótico antiestafilocócico intravenoso tras tomar los cultivos",
+      "Evita Retrasar el drenaje para completar imágenes o esperar el cultivo."
+    ],
+    "e3": [
+      "Neutrófilos y citocinas forman pus",
+      "Pus eleva la presión intraósea",
+      "Pus rompe la cortical y levanta el periostio",
+      "Dolor a la palpación puntual de la metáfisis",
+      "Hemocultivo y resonancia del segmento doloroso, antes del antibiótico si el niño está estable",
+      "Betalactámico antiestafilocócico intravenoso (cefazolina) donde predomina el SAMS",
+      "Evita Pasar a vía oral sin mejoría clínica ni descenso de la PCR."
+    ],
+    "e4": [
+      "El tumor destruye y remodela el hueso",
+      "Reacción perióstica y masa de partes blandas",
+      "Hueso debilitado cede ante la carga",
+      "Citocinas tumorales causan síntomas sistémicos",
+      "Dolor óseo persistente y nocturno que no cede con reposo",
+      "Radiografía simple del segmento doloroso en dos proyecciones",
+      "Tratamiento multimodal en un centro de sarcomas: osteosarcoma con quimioterapia y cirugía; Ewing con quimioterapia multiagente y control local"
+    ]
+  }
+}

@@ -1,0 +1,157 @@
+<script>
+function dcGuide(dc,t){out(dc,'<p>'+t+'</p>');}
+function dcVis(dc){
+  var s=sel(dc,'h');
+  if(!s.length){dcGuide(dc,'Marca los hallazgos del paciente y la herramienta propone la entidad más compatible, qué falta para confirmarla y la conducta inicial.');return;}
+  var h=function(k){return s.indexOf(k)>=0;};
+  var e,falta,cond,cf;
+  if(h('oral')){
+    e='Cáncer de cavidad oral';
+    falta='Biopsia incisional de la lesión y estadio con imagen del primario y del cuello [VERIFICAR EN FUENTE].';
+    cond=(h('gang')?'Con adenopatía dura, referencia a cirugía de cabeza y cuello sin demora; ':'')+'biopsia incisional y estadificación; la disección del cuello se decide en la pestaña de la entidad.';
+    cf='Si no hay lesión visible tras inspección completa y el cuadro es disfagia → cáncer de esófago.';
+  } else if(h('disf')){
+    e=h('reflujo')?'Cáncer de esófago, probable adenocarcinoma sobre esófago de Barrett':(h('tabaco')?'Cáncer de esófago, probable carcinoma escamoso':'Cáncer de esófago (tipo histológico por definir)');
+    falta='Endoscopia con biopsias para la histología y estadificación con ecoendoscopia y tomografía [2] [VERIFICAR EN FUENTE].';
+    cond='Endoscopia preferente con biopsias, soporte nutricional y referencia a un equipo de oncología, cirugía y radioterapia [2].';
+    cf='Si la disfagia afecta líquidos y sólidos desde el inicio y la endoscopia es normal → trastorno motor, como acalasia.';
+  } else if(h('paf')||h('ict')){
+    e='Cáncer de duodeno, periampular si hay ictericia';
+    falta='Endoscopia con duodenoscopio de visión lateral y biopsia; tomografía para separar el tumor pancreático y biliar [14] [VERIFICAR EN FUENTE].';
+    cond='Endoscopia preferente con biopsia y referencia a cirugía hepatobiliar; en poliposis, clasificar los adenomas con Spigelman [14].';
+    cf='Si no hay lesión duodenal y hay masa pancreática → adenocarcinoma de páncreas, en el widget hepatobiliopancreático.';
+  } else if(h('vom')&&!h('dys')&&!h('anem')){
+    e='Obstrucción de salida: cáncer de duodeno o cáncer gástrico antral';
+    falta='Endoscopia con biopsia para ubicar el tumor y la histología [VERIFICAR EN FUENTE].';
+    cond='Descompresión gástrica, corrección de líquidos y electrólitos y endoscopia con biopsia; soporte nutricional.';
+    cf='Si hay saciedad precoz, dispepsia o anemia antes del vómito → cáncer gástrico antral más probable.';
+  } else if(h('dys')||h('anem')||h('peso')||h('vom')){
+    e='Cáncer gástrico';
+    falta=h('anem')?'Endoscopia con biopsia de la lesión y mapeo de la mucosa; prueba de H. pylori [1][4].':'Anemia, hierro y albúmina, y endoscopia con biopsia [1][4].';
+    cond='Endoscopia digestiva alta preferente con biopsias; si se confirma, estadificar con tomografía y ecoendoscopia y valorar HER2, microsatélites y PD-L1 [1][3].';
+    cf='Si aparece disfagia progresiva con el epicentro en el cardias → piensa en tumor de la unión esofagogástrica y estadifica como esófago.';
+  } else if(h('gang')){
+    e='Adenopatía cervical dura sin foco digestivo claro';
+    falta='Inspección de la boca y la orofaringe, y endoscopia digestiva alta si hay síntomas digestivos [VERIFICAR EN FUENTE].';
+    cond='Examen completo de cabeza y cuello y biopsia del ganglio o de la lesión primaria; no esperes.';
+    cf='Si el ganglio es supraclavicular izquierdo → piensa en un primario abdominal, sobre todo gástrico.';
+  } else {
+    e='Sin una entidad dominante con los hallazgos marcados';
+    falta='Historia dirigida con peso perdido, signos de alarma y antecedentes de reflujo, tabaco y alcohol.';
+    cond='Examen de boca, cuello y abdomen y endoscopia si hay alarma.';
+    cf='Si aparece anemia ferropénica, disfagia o vómito persistente → endoscopia preferente.';
+  }
+  out(dc,'<p><b>Entidad compatible:</b> '+e+'</p><p><b>Qué falta para confirmarla:</b> '+falta+'</p><p><b>Conducta inicial:</b> '+cond+'</p><span class="cf">'+cf+'</span>');
+}
+function dcE1dx(dc){
+  var l=sel(dc,'lesion'),m=sel(dc,'mod');
+  if(!l.length&&!m.length){dcGuide(dc,'Elige el hallazgo de la biopsia y los modificadores; la herramienta propone la vigilancia o el tratamiento según MAPS II.');return;}
+  var hp=m.indexOf('hp')>=0,fam=m.indexOf('fam')>=0,inc=m.indexOf('incom')>=0,per=m.indexOf('persis')>=0;
+  var c='',v='';
+  if(!l.length){c='Elige también el hallazgo de la biopsia.';}
+  else if(l[0]==='lesionvisible'){c='Estadificar y tratar: tomografía y ecoendoscopia; resección endoscópica si cumple la indicación absoluta (T1a diferenciado de hasta 2 cm sin úlcera, entre otras), o cirugía [3][4].';}
+  else if(l[0]==='displasiasinlesion'){c='Reevaluación endoscópica inmediata de alta calidad con cromoendoscopia para buscar una lesión [4].';}
+  else if(l[0]==='atrofiaavanz'){c='Endoscopia de alta calidad cada 3 años [4].';}
+  else if(l[0]==='imfocal'){c=(fam||inc||per)?'Vigilancia con cromoendoscopia y biopsias dirigidas en 3 años [4].':'Sin factores de riesgo adicionales, la guía no establece vigilancia sistemática [VERIFICAR EN FUENTE].';}
+  else if(l[0]==='atrofiaantro'){c='Atrofia leve o moderada limitada al antro: sin evidencia para recomendar vigilancia [4].';}
+  v=hp?'H. pylori positivo: erradicar y confirmar la erradicación [4][5].':'Si no se ha estudiado H. pylori, hacer la prueba y tratar si es positivo [4][5].';
+  out(dc,'<p><b>Conducta:</b> '+c+'</p><p><b>H. pylori:</b> '+v+'</p><span class="cf">Si la biopsia muestra displasia o carcinoma en una lesión visible → deja de ser vigilancia y pasa a estadificación y tratamiento.</span>');
+}
+function dcE1tx(dc){
+  var sit=sel(dc,'sit'),mod=sel(dc,'mod');
+  if(!sit.length){dcGuide(dc,'Elige la situación; la herramienta propone la conducta con esquema y posología, según biomarcadores y contexto.');return;}
+  var her2=mod.indexOf('her2')>=0,cps=mod.indexOf('cps5')>=0,msi=mod.indexOf('msi')>=0,hp=mod.indexOf('hp')>=0,obs=mod.indexOf('obs')>=0,frag=mod.indexOf('frag')>=0;
+  var hpt=hp?' Erradicar H. pylori con terapia cuádruple con bismuto, 14 días, y confirmar la erradicación [5][9] [VERIFICAR EN FUENTE].':'';
+  var t,x,s=sit[0];
+  if(s==='esd'){
+    t='Resección endoscópica (ESD).';
+    x='Con la patología, clasificar la curabilidad: eCura A, control con endoscopia anual; eCura B, endoscopia anual o cada dos años con imagen; eCura C, cirugía adicional según el subtipo [3].'+hpt;
+  } else if(s==='resec'){
+    t='Gastrectomía con linfadenectomía D2 [3].';
+    x=frag?'Individualiza la quimioterapia perioperatoria según el estado funcional [3].':'Quimioterapia perioperatoria con FLOT: docetaxel 50 mg/m², oxaliplatino 85 mg/m², leucovorina 200 mg/m² y fluorouracilo 2 600 mg/m² en 24 h IV cada 14 días, 4 ciclos antes y 4 después de la cirugía [1][9] [VERIFICAR EN FUENTE].';
+    x+=hpt;
+  } else if(s==='p2'){
+    t='Quimioterapia adyuvante tras la gastrectomía D2 en pStage II.';
+    x='S-1 por un año (40 mg/m² por dosis, dos veces al día, 4 semanas de cada 6) [3][9] [VERIFICAR EN FUENTE]; alternativa: CapeOX [3].'+hpt;
+  } else if(s==='p3'){
+    t='Quimioterapia adyuvante combinada tras la gastrectomía D2 en pStage III.';
+    x='CapeOX: capecitabina 1 000 mg/m² dos veces al día los días 1 a 14 y oxaliplatino 130 mg/m² el día 1, cada 21 días [3][9] [VERIFICAR EN FUENTE]; la guía japonesa admite S-1 solo como opción condicional.'+hpt;
+  } else {
+    t='Tratamiento sistémico; no operar para reducir el tumor si es asintomático [3].';
+    if(msi){x='Microsatélites inestables: pembrolizumab 200 mg IV cada 3 semanas, tras estudiar el estado de microsatélites [3][9].';}
+    else if(her2){x='HER2 positivo: trastuzumab 8 mg/kg de carga y luego 6 mg/kg IV cada 3 semanas, con fluoropirimidina y platino (por ejemplo, CapeOX) [3][9] [VERIFICAR EN FUENTE].';}
+    else if(cps){x='PD-L1 CPS de 5 o más: CapeOX más nivolumab 360 mg IV cada 3 semanas [3][9] [VERIFICAR EN FUENTE].';}
+    else{x='HER2 negativo y CPS menor de 5 o no medido: CapeOX; el nivolumab es opcional con consentimiento informado [3][9].';}
+    x+=' Segunda línea: ramucirumab 8 mg/kg los días 1 y 15 con paclitaxel 80 mg/m² los días 1, 8 y 15, cada 28 días [3][9] [VERIFICAR EN FUENTE].';
+    if(obs){x+=' Con obstrucción pilórica sintomática: gastroyeyunostomía o gastrectomía paliativa según el riesgo [3].';}
+    if(frag){x+=' Paciente frágil: no hay un esquema estándar; usa un régimen condicional e individualiza [3].';}
+    x+=hpt;
+  }
+  out(dc,'<p><b>Conducta:</b> '+t+'</p><p><b>Esquema:</b> '+x+'</p><span class="cf">Si el HER2 resulta positivo o el PD-L1 CPS es de 5 o más → el esquema de primera línea cambia: se añade trastuzumab o nivolumab a la quimioterapia.</span>');
+}
+function dcE2(dc){
+  var est=sel(dc,'est'),pat=sel(dc,'pat');
+  if(!est.length){dcGuide(dc,'Elige el estadio clínico y los hallazgos de patología; la herramienta propone cirugía, cuello, adyuvancia y posología.');return;}
+  var mpos=pat.indexOf('mpos')>=0,ene=pat.indexOf('ene')>=0,pni=pat.indexOf('pni')>=0,ren=pat.indexOf('renal')>=0;
+  var c,a,s=est[0];
+  if(s==='t12'){c='Resección con márgenes libres y disección electiva del cuello: mejoró la supervivencia frente a la disección terapéutica [12].';}
+  else if(s==='t34'){c='Resección con márgenes libres y disección del cuello; adyuvancia según patología [VERIFICAR EN FUENTE].';}
+  else if(s==='npos'){c='Resección con disección terapéutica del cuello y adyuvancia según patología [VERIFICAR EN FUENTE].';}
+  else{c='Equipo de cabeza y cuello: quimiorradioterapia o cuidados paliativos según el estado funcional [VERIFICAR EN FUENTE].';}
+  if(s==='irres'){a='Si es candidato: cisplatino 100 mg/m² IV los días 1, 22 y 43 con radioterapia [9] [VERIFICAR EN FUENTE]; de lo contrario, paliación.';}
+  else if(mpos||ene){a=ren?'Márgenes positivos o extensión extranodal, pero no apto para cisplatino: discute la radioterapia sola o un esquema alternativo con el equipo [VERIFICAR EN FUENTE].':'Márgenes positivos o extensión extranodal: quimiorradioterapia con cisplatino 100 mg/m² IV los días 1, 22 y 43 [9] [VERIFICAR EN FUENTE].';}
+  else if(pni){a='Invasión perineural o linfovascular: radioterapia postoperatoria [VERIFICAR EN FUENTE].';}
+  else{a='Sin factores adversos en patología: observación con examen clínico seriado; la ecografía cervical añadida no mejora la supervivencia [12].';}
+  out(dc,'<p><b>Cirugía y cuello:</b> '+c+'</p><p><b>Adyuvancia:</b> '+a+'</p><p><b>Analgesia:</b> paracetamol 1 g VO o IV cada 6 a 8 h, máximo 4 g al día [9].</p><span class="cf">Si aparecen márgenes positivos o extensión extranodal → la radioterapia sola pasa a quimiorradioterapia con cisplatino.</span>');
+}
+function dcE3(dc){
+  var sit=sel(dc,'sit'),len=sel(dc,'len'),hist=sel(dc,'hist'),res=sel(dc,'res');
+  if(!sit.length){dcGuide(dc,'Elige la situación; la herramienta propone la terapia, la vigilancia o el esquema con posología.');return;}
+  var ppi='Omeprazol 20 mg VO cada 24 h, al menos una vez al día [13][9].';
+  var c,v,s=sit[0];
+  if(s==='nd'){
+    c=len.length?(len[0]==='long'?'Vigilancia endoscópica cada 3 años (segmento de 3 cm o más) [13].':'Vigilancia endoscópica cada 5 años (segmento menor de 3 cm) [13].'):'Elige la longitud del segmento para fijar el intervalo [13].';
+    v=ppi+' No se indica cirugía antirreflujo como medida antineoplásica [13].';
+  } else if(s==='lgd'){
+    c='Terapia endoscópica de erradicación, con vigilancia endoscópica como alternativa aceptable [13].';
+    v=ppi;
+  } else if(s==='hgd'){
+    c='Terapia endoscópica de erradicación antes que esofagectomía; resecar primero toda lesión visible [13].';
+    v=ppi;
+  } else if(s==='post'){
+    c='Programa de vigilancia endoscópica tras la erradicación; el intervalo depende del grado de displasia inicial [13] [VERIFICAR EN FUENTE].';
+    v=ppi;
+  } else {
+    if(!hist.length){c='Elige la histología para definir el esquema.';v='';}
+    else if(hist[0]==='sq'){
+      c=res.length?'Quimiorradioterapia neoadyuvante y evaluación quirúrgica [2] [VERIFICAR EN FUENTE].':'Quimiorradioterapia definitiva o paliación según el estado funcional [2] [VERIFICAR EN FUENTE].';
+      v='Carboplatino AUC 2 y paclitaxel 50 mg/m² IV semanal por 5 semanas con 41,4 Gy en 23 fracciones [2][9] [VERIFICAR EN FUENTE].';
+    } else {
+      c=res.length?'Cirugía con quimioterapia perioperatoria (esquema de la pestaña Cáncer gástrico) o quimiorradioterapia neoadyuvante [2] [VERIFICAR EN FUENTE].':'Tratamiento sistémico o paliación según el estado funcional [2] [VERIFICAR EN FUENTE].';
+      v=res.length?'Si opta por quimiorradioterapia: carboplatino AUC 2 y paclitaxel 50 mg/m² IV semanal por 5 semanas con 41,4 Gy en 23 fracciones [2][9] [VERIFICAR EN FUENTE].':'Esquema sistémico según el equipo de oncología [VERIFICAR EN FUENTE].';
+    }
+  }
+  out(dc,'<p><b>Conducta:</b> '+c+'</p><p><b>Fármacos:</b> '+v+'</p><span class="cf">Si la biopsia pasa de displasia de bajo grado a alto grado o carcinoma intramucoso → la terapia endoscópica de erradicación pasa de sugerida a recomendada frente a la esofagectomía.</span>');
+}
+function dcE4(dc){
+  var sit=sel(dc,'sit'),mod=sel(dc,'mod'),sp=sel(dc,'sp');
+  if(!sit.length){dcGuide(dc,'Elige la situación; la herramienta propone vigilancia, cirugía o esquema con posología.');return;}
+  var peri=mod.indexOf('peri')>=0,npos=mod.indexOf('npos')>=0,msi=mod.indexOf('msi')>=0,paf=mod.indexOf('paf')>=0;
+  var c,x,s=sit[0];
+  if(s==='ade'){
+    if(!sp.length){c='Elige el estadio de Spigelman para fijar el intervalo.';}
+    else if(sp[0]==='01'){c='Endoscopia con visión lateral cada 5 años [VERIFICAR EN FUENTE].';}
+    else if(sp[0]==='2'){c='Endoscopia con visión lateral cada 3 años [VERIFICAR EN FUENTE].';}
+    else if(sp[0]==='3'){c='Endoscopia con visión lateral cada año [VERIFICAR EN FUENTE].';}
+    else{c='Cirugía o vigilancia cada 6 meses; individualiza [VERIFICAR EN FUENTE].';}
+    x='Sin tratamiento farmacológico de rutina; resecar endoscópicamente los adenomas sin invasión [14] [VERIFICAR EN FUENTE].'+(paf?' Con poliposis: estudio genético y vigilancia de los familiares [VERIFICAR EN FUENTE].':'');
+  } else if(s==='cap'){
+    c=peri?'Pancreatoduodenectomía con vaciamiento ganglionar [14] [VERIFICAR EN FUENTE].':'Duodenoduodenostomía o resección segmentaria con vaciamiento ganglionar [14] [VERIFICAR EN FUENTE].';
+    x=npos?'Ganglios positivos: CapeOX, capecitabina 1 000 mg/m² dos veces al día los días 1 a 14 y oxaliplatino 130 mg/m² el día 1, cada 21 días [14][9] [VERIFICAR EN FUENTE]; en ampulares, el beneficio adyuvante se limitó al estadio IIB o mayor [15].':'Sin ganglios positivos: observación con imagen seriada; la quimioterapia adyuvante se discute según el estadio [15] [VERIFICAR EN FUENTE].';
+  } else {
+    c='Tratamiento sistémico; endoprótesis biliar o gastroyeyunostomía si hay obstrucción [VERIFICAR EN FUENTE].';
+    x=msi?'Microsatélites inestables: pembrolizumab 200 mg IV cada 3 semanas [14][9] [VERIFICAR EN FUENTE].':'FOLFOX: oxaliplatino 85 mg/m², leucovorina 400 mg/m², fluorouracilo 400 mg/m² en bolo y 2 400 mg/m² en 46 h IV cada 14 días [14][9] [VERIFICAR EN FUENTE].';
+  }
+  out(dc,'<p><b>Conducta:</b> '+c+'</p><p><b>Esquema:</b> '+x+'</p><span class="cf">Si hay ictericia con tumor en la segunda porción → es periampular: la resección pasa de segmentaria a pancreatoduodenectomía.</span>');
+}
+</script>
