@@ -1,0 +1,7 @@
+{
+  "pkg": "@atavio/ui",
+  "globalName": "AtavioUI",
+  "shape": "package",
+  "buildCmd": "npm run build",
+  "cssEntry": "dist/style.css"
+}

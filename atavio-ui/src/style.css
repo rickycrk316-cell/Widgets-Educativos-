@@ -1,0 +1,52 @@
+/* @atavio/ui · tokens y estilos del sistema v1.2 «patrón de molde». */
+@font-face{font-family:"Fraunces";src:url("./fonts/Fraunces-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Fraunces";src:url("./fonts/Fraunces-SemiBold.ttf") format("truetype");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Libre Franklin";src:url("./fonts/LibreFranklin-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Libre Franklin";src:url("./fonts/LibreFranklin-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Libre Franklin";src:url("./fonts/LibreFranklin-SemiBold.ttf") format("truetype");font-weight:600;font-style:normal;font-display:swap}
+
+:root{
+  --atv-ladrillo:#A31A0E;  /* marca y acción: portadas, costura, titular grande */
+  --atv-profundo:#7C0A02;  /* solo texto rojo pequeño */
+  --atv-hueso:#F3EDE1;     /* lienzo por defecto */
+  --atv-molde:#C8A97E;     /* hoja de patrón, etiqueta. Nunca texto */
+  --atv-tinta:#2B2B2B;     /* información y precio */
+  --atv-hilo:#8A8178;      /* texto secundario ≥ 28 px solo sobre hueso */
+  --atv-rojo-sello:#DA3732;/* exclusivo del sello */
+  --atv-serif:"Fraunces",Georgia,serif;
+  --atv-sans:"Libre Franklin",system-ui,sans-serif;
+  --atv-margen:120px;
+}
+
+.atv-lamina-caja{position:relative;overflow:hidden;flex:none}
+.atv-lamina{position:absolute;top:0;left:0;transform-origin:0 0;overflow:hidden;
+  background:var(--atv-bg);color:var(--atv-fg);font-family:var(--atv-sans);
+  display:flex;flex-direction:column;box-sizing:border-box;
+  padding:var(--atv-margen);-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.atv-lamina *{box-sizing:border-box}
+.atv-fondo-hueso{--atv-bg:#F3EDE1;--atv-fg:#2B2B2B;--atv-acc:#A31A0E}
+.atv-fondo-ladrillo{--atv-bg:#A31A0E;--atv-fg:#F3EDE1;--atv-acc:#F3EDE1}
+.atv-fondo-tinta{--atv-bg:#2B2B2B;--atv-fg:#F3EDE1;--atv-acc:#F3EDE1}
+.atv-fondo-molde{--atv-bg:#C8A97E;--atv-fg:#2B2B2B;--atv-acc:#7C0A02}
+.atv-guia{position:absolute;left:0;right:0;border:0;border-top:3px dashed rgba(0,0,0,.35);pointer-events:none}
+.atv-guia span{position:absolute;right:16px;top:6px;font:500 24px/1 var(--atv-sans);color:rgba(0,0,0,.55)}
+
+.atv-titular{margin:0;font-family:var(--atv-serif);font-weight:600;font-variation-settings:"opsz" 144,"SOFT" 50,"WONK" 0;
+  letter-spacing:-.01em;text-wrap:balance;color:var(--atv-acc,var(--atv-ladrillo))}
+.atv-titular-portada{font-size:140px;line-height:1.02}
+.atv-titular-feed{font-size:112px;line-height:1.03}
+.atv-titular-seccion{font-size:64px;line-height:1.1}
+.atv-cuerpo{margin:0;font-family:var(--atv-sans);font-weight:400;font-size:36px;line-height:1.38;text-wrap:pretty;color:var(--atv-fg,var(--atv-tinta))}
+.atv-cuerpo-nota{font-weight:500;font-size:28px;line-height:1.3}
+
+.atv-svg{display:block;flex:none;max-width:none}
+.atv-etiqueta,.atv-marquilla,.atv-cinta{position:relative;display:block;flex:none}
+.atv-etiqueta>svg,.atv-marquilla>svg,.atv-cinta>svg{display:block;width:100%;height:auto}
+.atv-etiqueta-zona{position:absolute;display:flex;flex-direction:column;justify-content:flex-end;font-family:var(--atv-sans);color:var(--atv-tinta);overflow:hidden}
+.atv-etiqueta-nombre{font-weight:500;letter-spacing:.01em}
+.atv-etiqueta-precio{font-weight:500;font-variant-numeric:tabular-nums;letter-spacing:-.01em;line-height:1}
+.atv-marquilla-texto{position:absolute;display:flex;align-items:center;font-family:var(--atv-sans);font-weight:600;text-transform:uppercase;letter-spacing:.06em;line-height:1.1}
+.atv-marcador{position:absolute;top:0;height:auto}
+.atv-disco{position:relative;display:inline-block;flex:none}
+.atv-disco>svg.atv-disco-aro{position:absolute;inset:0;width:100%;height:100%}
+.atv-disco>.atv-sello{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
