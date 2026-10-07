@@ -1,0 +1,98 @@
+<script>
+function par(t){return '<p>'+t+'</p>';}
+function hv(a,v){return a.indexOf(v)>-1;}
+function vacio(dc,t){out(dc,par(t));}
+
+function dcVis(dc){
+  var p=sel(dc,'pac'),h=sel(dc,'h'),o=sel(dc,'o');
+  if(!(p.length||h.length||o.length)){
+    vacio(dc,'Elige el paciente, los hallazgos y los datos de orina. El simulador propone la entidad compatible, el dato que falta para confirmarla y la conducta inicial; no calcula probabilidades.');return;}
+  var r=[],n=0;
+  if(hv(h,'lumbar')||(hv(h,'fiebre')&&!hv(h,'perine')&&!hv(p,'varon'))){n++;
+    r.push(par('<b>Fuera del grupo: pielonefritis</b>. La fiebre o el dolor lumbar indican que la infección subió al riñón. Falta urocultivo y valorar sepsis [2]. Conducta: antibiótico con penetración renal; la nitrofurantoína no sirve.'));}
+  if(hv(p,'varon')&&(hv(h,'perine')||hv(h,'fiebre'))){n++;
+    r.push(par('<b>Prostatitis aguda</b>: varón con '+(hv(h,'fiebre')?'fiebre':'')+(hv(h,'fiebre')&&hv(h,'perine')?' y ':'')+(hv(h,'perine')?'dolor perineal o próstata dolorosa':'')+'. Falta el urocultivo antes del antibiótico y el tacto rectal suave [1]. Conducta: antibiótico que penetre la próstata; ingreso si hay sepsis o retención; sin masaje prostático.'));}
+  if(hv(h,'hema')&&(hv(o,'tabaco')||hv(o,'cultneg')||!hv(o,'piuria'))){n++;
+    r.push(par('<b>Cáncer vesical</b>: hematuria macroscópica'+(hv(o,'tabaco')?' en un fumador o expuesto':'')+(hv(o,'cultneg')?' con urocultivo negativo':'')+'. Falta la cistoscopia y la urotomografía [3]. Conducta: derivar a urología.'));}
+  else if(hv(h,'irrit')&&hv(o,'cultneg')){n++;
+    r.push(par('<b>Cáncer vesical (carcinoma in situ)</b>: síntomas irritativos con urocultivo negativo. Falta citología urinaria y cistoscopia [3]. Conducta: no repetir antibióticos; derivar a urología.'));}
+  if(hv(h,'flujo')){n++;
+    r.push(par('<b>Fuera del grupo: vaginitis o infección de transmisión sexual</b>. El flujo vaginal resta valor a la disuria como signo de cistitis [2]. Conducta: examen ginecológico y pruebas dirigidas.'));}
+  if(hv(h,'irrit')&&!hv(h,'fiebre')&&!hv(h,'lumbar')&&!hv(h,'perine')&&!hv(h,'flujo')&&!hv(o,'cultneg')){n++;
+    if(hv(p,'varon')) r.push(par('<b>Cistitis infecciosa del varón</b>: síndrome miccional sin fiebre ni próstata dolorosa. Falta el urocultivo y buscar la causa (residuo, obstrucción) [1]. Conducta: antibiótico guiado por cultivo y curso más largo que en la mujer.'));
+    else r.push(par('<b>Cistitis infecciosa no complicada</b>: disuria, polaquiuria y urgencia sin fiebre, dolor lumbar ni flujo. No falta ninguna prueba: el diagnóstico es clínico [2]. Conducta: nitrofurantoína o fosfomicina (ver «Cistitis infecciosa»).'));}
+  if(!n) r.push(par('Los hallazgos elegidos no sostienen una sola entidad. Añade los síntomas miccionales, la fiebre, el dolor y el resultado de la orina.'));
+  r.push('<span class="cf">Si la disuria sin fiebre de una mujer pasa a hematuria macroscópica con urocultivo negativo en un fumador → la conducta cambia de antibiótico corto a cistoscopia y urotomografía [3].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE1dx(dc){
+  var t=sel(dc,'t'),d=sel(dc,'d');
+  if(!t.length&&!d.length){vacio(dc,'Elige el terreno y los datos acompañantes para clasificar la infección y decidir si hace falta urocultivo.');return;}
+  var r=[];
+  if(hv(d,'flujo')) r.push(par('El flujo vaginal resta valor a la disuria: explora vaginitis o infección de transmisión sexual antes de diagnosticar cistitis [2].'));
+  if(hv(d,'fiebre')) r.push(par('Clasificación: <b>infección sistémica</b> (la guía europea 2025 separa localizadas de sistémicas) [1]. Ya no es cistitis: trata como pielonefritis o urosepsis, con urocultivo y hemocultivos.'));
+  else if(hv(t,'mujer')) r.push(par('Clasificación: <b>cistitis localizada en mujer sana no embarazada</b> [1][2]. Diagnóstico clínico; sin urocultivo salvo recurrencia o fracaso.'));
+  else if(t.length) r.push(par('Clasificación: <b>cistitis localizada con factor de riesgo</b> ('+(hv(t,'varon')?'varón':hv(t,'emb')?'embarazo':'sonda u obstrucción')+'). Urocultivo antes del antibiótico'+(hv(t,'varon')?' y búsqueda de obstrucción o foco prostático':'')+(hv(t,'emb')?'; en el embarazo también se trata la bacteriuria asintomática':'')+' [1].'));
+  if(hv(d,'recur')) r.push(par('Cistitis recurrente: documenta cada episodio con urocultivo, busca causas corregibles y plantea profilaxis [1].'));
+  r.push('<span class="cf">Si la misma mujer añade fiebre o dolor lumbar → deja de ser cistitis y pasa a infección sistémica con cultivo y antibiótico con penetración renal [1][2].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE1tx(dc){
+  var s=sel(dc,'s'),c=sel(dc,'c');
+  if(!s.length){vacio(dc,'Elige la situación clínica y las condiciones del paciente para obtener el antibiótico y su posología.');return;}
+  var r=[];
+  if(hv(s,'nc')){
+    if(hv(c,'adh')||hv(c,'renal')) r.push(par('<b>Fosfomicina trometamol 3 g VO en dosis única</b> [2]'+(hv(c,'renal')?': evita la nitrofurantoína con filtrado glomerular bajo.':': una sola toma resuelve la adherencia.')));
+    else r.push(par('<b>Nitrofurantoína 100 mg VO cada 12 h por 5 días</b> [2]. Alternativa: fosfomicina trometamol 3 g VO en dosis única.'));
+    if(hv(c,'sens')) r.push(par('Con germen sensible: trimetoprima-sulfametoxazol 160 mg/800 mg VO cada 12 h por 3 días es otra opción [2].'));
+    r.push(par('Analgesia: ibuprofeno 400 mg VO cada 8 h por 2 a 3 días si no hay contraindicación [1].'));
+  } else {
+    r.push(par('<b>Varón</b>: urocultivo antes de empezar y antibiótico según sensibilidad durante 7 días [1] [VERIFICAR EN FUENTE]. Busca residuo y foco prostático; si hay fiebre o próstata dolorosa, trátalo como prostatitis.'));
+    if(hv(c,'sens')) r.push(par('Con germen sensible: trimetoprima-sulfametoxazol 160 mg/800 mg VO cada 12 h por 7 días [1] [VERIFICAR EN FUENTE].'));
+  }
+  r.push('<span class="cf">Si el filtrado glomerular cae por debajo del umbral de la ficha técnica → cambia la nitrofurantoína por fosfomicina [2].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE2(dc){
+  var f=sel(dc,'forma'),o=sel(dc,'otros');
+  if(!f.length){vacio(dc,'Elige el tipo NIH de prostatitis y los datos adicionales para obtener la conducta.');return;}
+  var r=[],v=f[0];
+  if(v==='aguda'){
+    if(hv(o,'fq')) r.push(par('<b>Tipo I estable</b>: urocultivo y luego, si el germen es sensible, trimetoprima-sulfametoxazol 160 mg/800 mg VO cada 12 h durante 2 a 4 semanas [1] [VERIFICAR EN FUENTE].'));
+    else r.push(par('<b>Tipo I estable</b>: urocultivo y ciprofloxacino 500 mg VO cada 12 h (o levofloxacino 500 mg VO cada 24 h) durante 2 a 4 semanas [1] [VERIFICAR EN FUENTE]. Tamsulosina 0,4 mg VO cada 24 h si el vaciado es doloroso.'));
+  } else if(v==='grave'){
+    r.push(par('<b>Tipo I con sepsis o retención</b>: ingreso, hemocultivos y ceftriaxona 2 g IV cada 24 h; paso a vía oral al mejorar hasta completar 2 a 4 semanas [1] [VERIFICAR EN FUENTE]. Retención: catéter suprapúbico, no sonda uretral.'));
+  } else if(v==='cronica'){
+    r.push(par('<b>Tipo II</b>: confirma el germen con la prueba de dos vasos y trata '+(hv(o,'fq')?'con trimetoprima-sulfametoxazol 160 mg/800 mg VO cada 12 h si es sensible':'con levofloxacino 500 mg VO cada 24 h')+' durante 4 a 6 semanas [1][4] [VERIFICAR EN FUENTE].'));
+  } else if(v==='cppc'){
+    r.push(par('<b>Tipo III</b>: cultivos negativos, sin antibiótico repetido. Manejo por fenotipo de síntomas (urinario, psicosocial, órgano, infección, neurológico, sensibilidad muscular); alfabloqueante como tamsulosina 0,4 mg VO cada 24 h si domina el vaciado; derivación a urología [1][4].'));
+  } else {
+    r.push(par('<b>Tipo IV</b>: hallazgo casual sin síntomas; no se trata [4].'));
+  }
+  if(hv(o,'abs')&&v!=='asint'&&v!=='cppc') r.push(par('Fiebre que no cede en 48 h: ecografía transrectal o tomografía para buscar absceso y drenaje por urología [1].'));
+  r.push('<span class="cf">Si el tipo I estable añade hipotensión o retención → la conducta pasa de vía oral ambulatoria a ingreso con ceftriaxona IV y catéter suprapúbico [1].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE3(dc){
+  var g=sel(dc,'r'),p=sel(dc,'p');
+  if(!g.length){vacio(dc,'Elige el resultado de la resección transuretral y las condiciones del paciente para obtener la conducta.');return;}
+  var r=[],v=g[0];
+  if(v==='mi'){
+    if(hv(p,'nocis')) r.push(par('<b>Músculo-invasivo, no apto para cisplatino</b>: cistectomía radical sin neoadyuvancia o protocolo de preservación vesical en urología oncológica [5].'));
+    else r.push(par('<b>Músculo-invasivo</b>: tomografía de estadificación y gemcitabina 1 000 mg/m² IV días 1 y 8 más cisplatino 70 mg/m² IV día 1, cada 21 días por 4 ciclos [VERIFICAR EN FUENTE], seguidos de cistectomía radical con linfadenectomía [5].'));
+  } else {
+    if(hv(p,'perf')) r.push(par('Sospecha de perforación: <b>no</b> instiles quimioterapia inmediata [3].'));
+    else if(v==='bajo') r.push(par('Instilación única de mitomicina C 40 mg intravesical dentro de las 24 h tras la resección [3].'));
+    if(v==='bajo') r.push(par('<b>Bajo riesgo</b>: no requiere más instilaciones; cistoscopia a los 3 meses [3].'));
+    if(v==='inter') r.push(par('<b>Riesgo intermedio</b>: BCG intravesical a dosis completa, semanal ×6 de inducción y mantenimiento por 1 año [3] [VERIFICAR EN FUENTE].'));
+    if(v==='alto') r.push(par('<b>Alto riesgo</b>: segunda resección si es T1, luego BCG intravesical semanal ×6 de inducción y mantenimiento de 1 a 3 años; valora cistectomía precoz si el riesgo es muy alto [3] [VERIFICAR EN FUENTE].'));
+  }
+  r.push(par('En todos: dejar de fumar [3].'));
+  r.push('<span class="cf">Si la muestra de un tumor de alto grado no incluye detrusor → no se puede descartar T2: repite la resección antes de decidir [3].</span>');
+  out(dc,r.join(''));
+}
+</script>
