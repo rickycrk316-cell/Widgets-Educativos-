@@ -1,0 +1,49 @@
+<section class="tab" data-tab="seg">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué el umbral de PSA que define la recaída es distinto tras la cirugía y tras la radioterapia?</li>
+<li>¿Qué efectos adversos de la privación androgénica hay que vigilar y por qué aparecen?</li>
+<li>¿Cómo se reconoce la resistencia a la castración y qué cambia cuando aparece?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: EAU cáncer de próstata 2024, solo resumen [1]</span></p>
+<h2>Ciclo revisar, evaluar y ajustar</h2>
+<div class="card"><p>Tras el tratamiento curativo, PSA periódico (cada pocos meses al inicio y luego más espaciado) con interrogatorio de síntomas urinarios, sexuales y óseos [1]. En privación androgénica, además, testosterona, glucosa, lípidos, presión arterial y densitometría ósea.</p></div>
+<div class="tw"><table><thead><tr><th>Situación</th><th>Qué define la recaída o el fracaso</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Tras prostatectomía radical</th><td>PSA mayor de 0,2 ng/mL confirmado (debería ser indetectable)</td><td>[1]</td></tr>
+<tr><th>Tras radioterapia</th><td>PSA 2 ng/mL por encima del nadir (criterio de Phoenix)</td><td>[1]</td></tr>
+<tr><th>En privación androgénica</th><td>PSA en ascenso o progresión radiológica con testosterona menor de 50 ng/dL: resistencia a la castración</td><td>[1]</td></tr>
+</tbody></table></div>
+
+<h2>Complicaciones por mecanismo</h2>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Incontinencia y disfunción eréctil</th><td>Lesión del esfínter y de los nervios cavernosos al operar o irradiar</td><td><button type="button" class="xref" data-ir="m-7" onclick="ir('fis','m-7')">← Extensión extracapsular</button></td></tr>
+<tr><th>Osteoporosis y fracturas</th><td>Sin testosterona ni estrógenos derivados, el hueso pierde masa</td><td><button type="button" class="xref" data-ir="m-1" onclick="ir('fis','m-1')">← Andrógenos activan el receptor</button></td></tr>
+<tr><th>Síndrome metabólico y riesgo cardiovascular</th><td>La castración aumenta la grasa y la resistencia a la insulina</td><td><button type="button" class="xref" data-ir="m-1" onclick="ir('fis','m-1')">← Andrógenos activan el receptor</button></td></tr>
+<tr><th>Resistencia a la castración</th><td>Reactivación del receptor androgénico</td><td><button type="button" class="xref" data-ir="m-10" onclick="ir('fis','m-10')">← Receptor se reactiva</button></td></tr>
+<tr><th>Compresión medular</th><td>Metástasis vertebral que invade el canal</td><td><button type="button" class="xref" data-ir="m-9" onclick="ir('fis','m-9')">← Compresión medular</button></td></tr>
+</tbody></table></div>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — vigilar el marcador</span>
+<p class="fey-b">Después de sacar la próstata, el análisis debería quedar casi en cero, porque ya no hay quien lo fabrique. Si vuelve a subir, quedaron células escondidas. Después de los rayos la próstata sigue ahí y produce un poquito, así que se mira si sube bastante desde el punto más bajo.</p>
+<p class="mini fey-c">En medicina esto se llama… recurrencia bioquímica tras prostatectomía y criterio de Phoenix tras radioterapia.</p>
+<p class="mini fey-c">Dónde falla la comparación: un ascenso pequeño puede ser ruido del laboratorio; por eso se confirma.</p></div>
+<div class="dc" data-fn="dcSeg"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Tratamiento previo</span>
+<button type="button" class="chip" data-g="t" data-v="pr" onclick="ch(this)">Prostatectomía radical</button>
+<button type="button" class="chip" data-g="t" data-v="rt" onclick="ch(this)">Radioterapia</button>
+<button type="button" class="chip" data-g="t" data-v="tda" onclick="ch(this)">Privación androgénica por metástasis</button></div>
+<div class="dc-g"><span class="dc-l">PSA actual en ng/mL</span><input type="number" data-n="psa" min="0" max="5000" step="0.01" oninput="ch(this)"></div>
+<div class="dc-g"><span class="dc-l">Nadir de PSA en ng/mL (si radioterapia)</span><input type="number" data-n="nadir" min="0" max="100" step="0.01" oninput="ch(this)"></div>
+<div class="dc-g"><span class="dc-l">Testosterona</span>
+<button type="button" class="chip" data-g="te" data-v="cast" onclick="ch(this)">Menor de 50 ng/dL</button>
+<button type="button" class="chip" data-g="te" data-v="nocast" onclick="ch(this)">50 ng/dL o más</button></div>
+<div class="out"></div></div>
+<div class="acc refs"><button type="button" class="acc-h" onclick="tog(this)">Referencias <span class="chev">▾</span></button>
+<div class="acc-b"><ol class="vanc">
+<li>Cornford P, van den Bergh RCN, Briers E, Van den Broeck T, Brunckhorst O, Darraugh J, et al. EAU-EANM-ESTRO-ESUR-ISUP-SIOG guidelines on prostate cancer—2024 update. Part I: screening, diagnosis, and local treatment with curative intent. Eur Urol. 2024;86(2):148-63. doi:10.1016/j.eururo.2024.03.027. Guía; solo se leyó el resumen. Existe edición 2026 (actualización limitada) no leída.</li>
+<li>Wei JT, Barocas D, Carlsson S, Coakley F, Eggener S, Etzioni R, et al. Early detection of prostate cancer: AUA/SUO guideline part I: prostate cancer screening. J Urol. 2023;210(1):46-53. doi:10.1097/JU.0000000000003491. Guía.</li>
+<li>Epstein JI, Egevad L, Amin MB, Delahunt B, Srigley JR, Humphrey PA. The 2014 International Society of Urological Pathology (ISUP) consensus conference on Gleason grading of prostatic carcinoma: definition of grading patterns and proposal for a new grading system. Am J Surg Pathol. 2016;40(2):244-52. doi:10.1097/PAS.0000000000000530. Consenso.</li>
+<li>Loscalzo J, Fauci AS, Kasper DL, Hauser SL, Longo DL, Jameson JL, editores. Harrison's Principles of Internal Medicine. 21.ª ed. Nueva York: McGraw-Hill; 2022. Texto de referencia.</li>
+</ol></div></div>
+</section>
