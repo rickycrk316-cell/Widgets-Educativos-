@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Patología urinaria baja</title>
+<style>
+/* Vademécum: monografía impresa con índice de canto; filetes y tinta llevan la jerarquía, no las sombras */
+:root{
+--paper:#FBFBFC;--paper-2:#F1F2F5;--ink:#16181D;--ink-2:#3A3D46;--ink-3:#686C78;--rule:#D7D9E0;--rule-strong:#16181D;
+--accent:#2342A6;--accent-ink:#1B358A;--accent-field:#EAEEFA;--on-accent:#FFFFFF;
+--am:#7A4A06;--am-f:#FBF1DF;--ro:#9E1F1F;--ro-f:#FBE9E7;--ve:#2F5E12;--ve-f:#EBF3E1;--pu:#4C3FA8;--pu-f:#EEECFB;--co:#8E3517;--co-f:#FAEDE6;--rs:#8A2C52;--rs-f:#FAEAF1;
+--f-serif:ui-serif,"New York","Iowan Old Style","Charter","Source Serif Pro",Georgia,"Times New Roman",serif;
+--f-sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+--r:3px;
+/* alias de la v10 para compatibilidad */
+--surface-0:var(--paper);--surface-1:var(--paper-2);--border:var(--rule);--border-accent:var(--accent);--bg-accent:var(--accent-field);--text-primary:var(--ink);--text-secondary:var(--ink-2);--text-muted:var(--ink-3);--text-accent:var(--accent-ink);--radius:var(--r);--font-sans:var(--f-sans);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}
+html{color-scheme:light dark;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:var(--accent);color:var(--on-accent)}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--f-sans);-webkit-text-size-adjust:100%;font-feature-settings:"kern" 1;text-rendering:optimizeLegibility;caret-color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:18px 16px 56px;background:transparent}
+h1{font:600 26px/1.2 var(--f-serif);letter-spacing:-.012em;margin:6px 0 14px;padding-bottom:12px;border-bottom:2px solid var(--rule-strong);text-wrap:balance}
+h2{font:600 19px/1.3 var(--f-serif);letter-spacing:-.006em;margin:40px 0 14px;padding-top:12px;border-top:1px solid var(--rule-strong);text-wrap:balance}
+h3{font:600 16px/1.35 var(--f-serif);margin:20px 0 6px;text-wrap:balance}
+p{margin:0 0 12px;text-wrap:pretty}
+a{color:var(--accent-ink);text-underline-offset:3px}
+button{font:inherit;color:inherit;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,color .15s ease-out}
+button:active{transform:translateY(1px)}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* índice de canto */
+.tabs{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 0 0;border-bottom:2px solid var(--rule-strong);margin-bottom:16px;position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);scroll-snap-type:x proximity;scroll-padding-inline:56px}
+.tabs-w{position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper)}
+.tabs-w::before,.tabs-w::after{content:"";position:absolute;top:0;bottom:2px;width:56px;pointer-events:none;opacity:0;transition:opacity .2s;z-index:6}
+.tabs-w::before{left:0;background:linear-gradient(to left,transparent,var(--paper) 85%)}
+.tabs-w::after{right:0;background:linear-gradient(to right,transparent,var(--paper) 85%)}
+.tabs-w.ov-l::before,.tabs-w.ov-r::after{opacity:1}
+.nodo,.signo,.qv,.dc,h2{scroll-margin-top:84px}
+.tabs::-webkit-scrollbar{display:none}
+.tb{flex:0 0 auto;min-height:44px;padding:9px 15px 8px;border:1px solid var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;background:var(--paper-2);color:var(--ink-2);font:600 13px/1.2 var(--f-sans);letter-spacing:.01em;white-space:nowrap;scroll-snap-align:start}
+.tb:hover{background:var(--accent-field);color:var(--accent-ink)}
+.tb.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+.tab{display:none}
+.tab.on{display:block}
+/* recuadros */
+.card{background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;margin:12px 0;font-size:15px;line-height:1.6}
+.card p{margin:0 0 8px}
+.card p:last-child{margin-bottom:0}
+.mini{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:6px 0}
+.hb{border-radius:var(--r);padding:12px 14px;margin:14px 0;border:1px solid transparent;font-size:15px;line-height:1.6}
+.hb.az{background:var(--accent-field);color:var(--ink);border-color:var(--accent)}
+.hb.am{background:var(--am-f);color:var(--am);border-color:var(--am)}
+.hb.ro{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.hb.ve{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+.hb.am .mini,.hb.ro .mini,.hb.ve .mini{color:inherit;opacity:.88}
+.hb-t{font:600 16px/1.35 var(--f-serif);margin-bottom:6px;text-wrap:balance}
+.hb.az .hb-t{color:var(--accent-ink)}
+.pg{margin:0;padding-left:22px}
+.pg li{margin:5px 0}
+.pg li::marker{color:var(--accent-ink);font-weight:700}
+.hb.az:has(.pg){margin-bottom:24px}
+.hb.az:not(:has(.pg)):not(.rec-go){background:transparent;border-left-color:transparent;border-right-color:transparent;border-radius:0;padding-left:0;padding-right:0}
+.hb.az:not(:has(.pg))+.etapa{border-top:0}
+h2+.card,h2+.hb,h2+.tw{margin-top:0}
+.badge{display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.04em;padding:2px 7px;border-radius:2px;margin:0 4px 4px 0;vertical-align:middle;border:1px solid currentColor}
+.b-az{background:var(--accent-field);color:var(--accent-ink)}
+.b-ro{background:var(--ro-f);color:var(--ro)}
+.b-am{background:var(--am-f);color:var(--am)}
+.b-ve{background:var(--ve-f);color:var(--ve)}
+.b-pu{background:var(--pu-f);color:var(--pu)}
+.badge.b-pu{display:block;width:fit-content;max-width:100%;white-space:normal;font-size:12px;line-height:1.5;font-weight:600;letter-spacing:.01em;margin:14px 0}
+.b-co{background:var(--co-f);color:var(--co)}
+.b-rs{background:var(--rs-f);color:var(--rs)}
+.rem{display:inline-block;font-size:12.5px;background:var(--rs-f);color:var(--rs);border:1px dashed var(--rs);border-radius:2px;padding:1px 7px;margin:4px 0}
+/* Feynman */
+.fey{background:var(--co-f);border:1px solid var(--co);border-radius:var(--r);padding:14px 16px;margin:18px 0 26px}
+.fey-t{display:inline-block;font:600 15px/1.35 var(--f-serif);color:var(--co);margin-bottom:8px}
+.fey-b{margin:0 0 10px;font:400 16px/1.6 var(--f-serif);color:var(--ink)}
+.fey-c{margin:2px 0;color:var(--ink-2)}
+/* Panorama: entradas de índice */
+.tab{counter-reset:et}
+.etapa{counter-increment:et;background:transparent;border:0;border-top:1px solid var(--rule);border-radius:0;padding:18px 0 8px;margin:4px 0}
+.etapa h3{font-size:19px;line-height:1.3;margin:0 0 8px}
+.etapa h3::before{content:counter(et,decimal-leading-zero);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;letter-spacing:.04em;color:var(--accent-ink);margin-right:10px;vertical-align:2px}
+.res{margin:0 0 10px}
+.perla{border-top:1px dotted var(--rule);padding-top:8px;margin:0 0 10px;font-weight:500}
+.perla::before{content:"Perla";display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;background:var(--ve-f);color:var(--ve);border:1px solid var(--ve);border-radius:2px;padding:1px 6px;margin-right:8px;vertical-align:1px}
+.go{min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent);color:var(--on-accent);font:600 13.5px/1.2 var(--f-sans)}
+.go:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+/* tablas de monografía */
+.tw{overflow-x:auto;margin:12px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.5;font-variant-numeric:tabular-nums}
+th,td{border:0;border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--paper-2);font-weight:700;color:var(--ink)}
+thead th{font:700 14.5px/1.35 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong)}
+tbody tr:last-child>*{border-bottom:1px solid var(--rule-strong)}
+.stats{display:grid;grid-template-columns:1fr;gap:10px;margin:12px 0}
+@media (min-width:600px){.stats{grid-template-columns:repeat(3,1fr)}}
+.stat{background:transparent;border:0;border-top:2px solid var(--accent);border-radius:0;padding:8px 2px}
+.stat b{display:block;font:600 22px/1.25 var(--f-serif);color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--ink-2);line-height:1.4;display:block}
+.steps{list-style:none;counter-reset:st;padding:0;margin:10px 0}
+.steps>li{counter-increment:st;position:relative;padding:5px 0 9px 40px}
+.steps>li::before{content:counter(st);position:absolute;left:0;top:3px;width:26px;height:26px;border-radius:2px;background:var(--ink);color:var(--paper);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;display:flex;align-items:center;justify-content:center}
+/* cascada */
+.tl{list-style:none;margin:14px 0;padding:0 0 0 20px;border-left:2px solid var(--accent)}
+.nodo{position:relative;margin:0 0 14px;padding:11px 13px;background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);font-size:14px;line-height:1.55}
+.nodo::before{content:"";position:absolute;left:-27px;top:15px;width:12px;height:12px;border-radius:1px;background:var(--accent);box-shadow:0 0 0 3px var(--paper)}
+.paso{display:block;font:600 15px/1.4 var(--f-serif);margin-bottom:5px}
+.pn{color:var(--accent-ink);margin-right:4px;font-variant-numeric:tabular-nums}
+.man{margin:8px 0 0;font-size:13px;color:var(--ink-2)}
+.signo{background:var(--paper);border:1px solid var(--rule);border-top:2px solid var(--rule-strong);border-radius:0 0 var(--r) var(--r);padding:12px 14px;margin:12px 0;font-size:14px;line-height:1.55}
+.signo h4{margin:0 0 6px;font:600 15.5px/1.35 var(--f-serif)}
+.signo dl{margin:0}
+.signo dt{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-3);margin-top:8px}
+.signo dd{margin:2px 0 0}
+.xref{display:inline-flex;align-items:center;min-height:44px;padding:4px 10px;margin:3px 6px 3px 0;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent-field);color:var(--accent-ink);font:600 12.5px/1.3 var(--f-sans);text-align:left}
+.xref:hover{background:var(--accent);color:var(--on-accent)}
+p .xref,td .xref,li .xref,dd .xref{display:inline;position:relative;min-height:0;padding:0 5px;margin:0 2px;line-height:inherit;border-radius:2px;white-space:normal;overflow-wrap:anywhere;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+p .xref::after,td .xref::after,li .xref::after,dd .xref::after{content:"";position:absolute;left:-4px;right:-4px;top:-12px;bottom:-12px}
+.hl{outline:2px solid var(--accent);background:var(--accent-field)!important;transition:background .3s}
+.acc{border:1px solid var(--rule);border-radius:var(--r);margin:12px 0;overflow:hidden}
+.acc-h{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:44px;padding:9px 14px;border:0;background:var(--paper-2);font:600 14px/1.35 var(--f-sans);text-align:left}
+.acc-h:hover{background:var(--accent-field)}
+.chev{transition:transform .2s;color:var(--accent-ink)}
+.acc.op .chev{transform:rotate(180deg)}
+.acc-b{display:none;padding:10px 14px;font-size:14px;line-height:1.55}
+.acc.op .acc-b{display:block}
+.vanc{font-size:12.5px;line-height:1.5;padding-left:24px}
+.vanc li{margin:5px 0;word-break:break-word}
+.vanc li::marker{font-variant-numeric:tabular-nums;color:var(--ink-3)}
+/* simulador */
+.dc{border:1px solid var(--rule-strong);border-radius:var(--r);padding:14px 16px;margin:22px 0;background:var(--paper)}
+.dc-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.dc-g{margin:10px 0}
+.dc-l{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);margin-bottom:5px;display:block}
+.chip{min-height:44px;padding:7px 13px;margin:3px 6px 3px 0;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);font-size:13.5px}
+.chip:hover{border-color:var(--accent);color:var(--accent-ink)}
+.chip.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:600}
+.dc input[type=number]{min-height:44px;width:120px;padding:6px 10px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper);color:var(--ink);font:15px var(--f-sans);font-variant-numeric:tabular-nums}
+.out{margin-top:12px;padding:12px 14px;border-radius:var(--r);background:var(--paper-2);border:1px solid var(--rule);font-size:14px;line-height:1.58;min-height:44px}
+.tag{display:inline-block;font:600 11px/1.4 var(--f-sans);padding:1px 7px;border-radius:2px;background:var(--accent-field);color:var(--accent-ink);margin:4px 4px 0 0}
+.rec-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.rec-bar textarea{width:100%;min-height:120px;margin-top:8px;padding:9px 11px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper-2);color:var(--ink);font:14px/1.55 var(--f-sans);resize:vertical}
+.chip:disabled{cursor:default;opacity:.85}
+.rec-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.rec-ctl{display:none;gap:6px;margin-top:6px}
+.recon .rec-ctl{display:flex}
+.recon>*:not(.rec-bar):not(.tl){display:none}
+.recon .nodo:not(.rev) .pt{display:none}
+.recon .nodo:not(.rev) .pn::after{content:" ?"}
+.recon .nodo:not(.rev) .det{display:none}
+.recon .nodo.pis:not(.rev) .det{display:block}
+.recon .nodo.pis:not(.rev) .det>*:not(.man){display:none}
+.recon .nodo:not(.pis):not(.rev) .man{display:none}
+.recon .nodo.rev{border-color:var(--accent)}
+.rec-go{margin:22px 0}
+.steps.tg>li{padding-left:40px}
+span.tg{display:inline-block;font:700 11px/1.4 var(--f-mono);letter-spacing:.02em;padding:2px 7px;margin:0 6px 2px 0;border-radius:2px;background:var(--paper-2);border:1px solid var(--rule);color:var(--ink-2);white-space:nowrap;vertical-align:1px}
+span.tg[data-t="clave"]{background:var(--accent-field);color:var(--accent-ink);border-color:var(--accent)}
+span.tg[data-t="ok"]{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+span.tg[data-t="cond"]{background:var(--am-f);color:var(--am);border-color:var(--am)}
+span.tg[data-t="no"]{background:var(--rs-f);color:var(--rs);border-color:var(--rs)}
+span.tg[data-t="alarma"]{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.qv{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:12px 0}
+.qv p{margin:0;padding:9px 11px;border-radius:var(--r);border:1px solid var(--rule);background:var(--paper-2);font-size:13.5px;line-height:1.45}
+.qv p::before{display:block;font:700 10.5px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px;color:var(--ink-3)}
+.qv p[data-e="p"]{background:var(--accent-field);border-color:var(--accent)}
+.qv p[data-e="p"]::before{content:"Presente";color:var(--accent-ink)}
+.qv p[data-e="v"]::before{content:"Variable"}
+.qv p[data-e="a"]{border:1px dashed var(--rule);color:var(--ink-3);background:transparent}
+.qv p[data-e="a"]::before{content:"Ausente"}
+.qv p[data-e="k"]{grid-column:1/-1;border:2px solid var(--accent);background:var(--accent-field);font-size:14.5px}
+.qv p[data-e="k"]::before{content:"Signo clave";color:var(--accent-ink)}
+.hb.vi{background:var(--pu-f);color:var(--pu);border-color:var(--pu)}
+.hb.vi .mini{color:inherit;opacity:.88}
+table.vis{min-width:620px}
+table.vis td{min-width:140px}
+table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index:1;background:var(--paper-2);min-width:118px;max-width:150px;font-weight:700;border-right:1px solid var(--rule)}
+.vb-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.tbl>*:not(.vb-bar):not(.vis-w){display:none}
+.tbl td.tap{cursor:pointer}
+.tbl td.tap:not(.rev){color:transparent;background:repeating-linear-gradient(135deg,var(--paper-2),var(--paper-2) 7px,var(--accent-field) 7px,var(--accent-field) 14px)}
+.tbl td.tap:not(.rev) *{visibility:hidden}
+.tbl td.tap.rev{box-shadow:inset 0 0 0 1px var(--accent)}
+.cf{display:block;margin-top:10px;padding-top:8px;border-top:1px dashed var(--accent);font-style:italic;color:var(--ink-2)}
+.cf::before{content:"Contrafactual · ";font-style:normal;font-weight:700;color:var(--accent-ink)}
+.fig{margin:14px 0}
+.fig img{display:block;max-width:100%;height:auto;border-radius:var(--r);border:1px solid var(--rule)}
+.fig figcaption{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin-top:6px}
+@media (min-width:700px){body{font-size:15.5px}.wrap{padding:22px 24px 64px}h1{font-size:28px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- /KIT_HEAD -->
+<h1>Patología urinaria baja</h1>
+<nav class="tabs">
+<button type="button" class="tb" data-tab="pan" onclick="show('pan')">Panorama</button>
+<button type="button" class="tb" data-tab="vis" onclick="show('vis')">Diferencial</button>
+<button type="button" class="tb" data-tab="e1" onclick="show('e1')">Hiperplasia prostática benigna</button>
+<button type="button" class="tb" data-tab="e2" onclick="show('e2')">Prostatitis</button>
+<button type="button" class="tb" data-tab="e3" onclick="show('e3')">Cáncer de próstata</button>
+<button type="button" class="tb" data-tab="e4" onclick="show('e4')">Cistitis</button>
+<button type="button" class="tb" data-tab="e5" onclick="show('e5')">Uretritis</button>
+<button type="button" class="tb" data-tab="sin" onclick="show('sin')">Errores</button>
+</nav>
+<section class="tab" data-tab="pan">
+<div class="hb az"><div class="hb-t">El grupo en una frase</div>
+<p>Cinco causas explican los síntomas urinarios bajos del varón; el tacto rectal, la disuria con fiebre y el uroanálisis las separan, y el cáncer es la amenaza.</p></div>
+<div class="etapa" data-go="vis"><h3>Los ejes que separan las cinco causas</h3>
+<p class="res">Un varón con nicturia, chorro débil o disuria presenta síntomas urinarios bajos (STUI) que pueden venir de una próstata benigna, inflamada o neoplásica, o de una infección de vejiga o uretra. Tres ejes los separan: la consistencia y el dolor de la próstata al tacto rectal, la presencia de disuria, fiebre y piuria, y el sitio donde duele o escurre. El tacto y el uroanálisis ordenan la ruta; el antígeno prostático (PSA) se pide solo si cambia la conducta y tras decisión compartida [3][5]. Se empieza por la hiperplasia, la causa más frecuente.</p>
+<p class="perla">Un nódulo duro no se tranquiliza: pide estudio aunque no haya síntomas.</p>
+<button type="button" class="go" data-go="vis" onclick="show('vis')">Ir a Diferencial →</button></div>
+<div class="etapa" data-go="e1"><h3>Hiperplasia prostática benigna, el extremo benigno</h3>
+<p class="res">La hiperplasia crece con la edad y es la causa principal de STUI en mayores de 50 años [5]. La zona de transición comprime la uretra y el detrusor responde con irritabilidad, de modo que aparecen síntomas de vaciado, de llenado y posmiccionales. La señal es una próstata aumentada, blanda y simétrica. La conducta decisiva es medir con el I-PSS, separar la nicturia por próstata de la poliuria nocturna y tratar con alfabloqueante si los síntomas son moderados a graves [2]. Después se estudia la inflamación del mismo órgano.</p>
+<p class="perla">Antes de recetar, revisa el diurético y el residuo: un antimuscarínico puede precipitar retención.</p>
+<button type="button" class="go" data-go="e1" onclick="show('e1')">Ir a Hiperplasia prostática benigna →</button></div>
+<div class="etapa" data-go="e2"><h3>Prostatitis, la inflamación de la glándula</h3>
+<p class="res">Las bacterias llegan a la próstata por la uretra o por reflujo de orina, y el edema comprime la uretra. La señal es una próstata dolorosa, caliente y edematosa, con fiebre y dolor perineal en la forma aguda. La conducta decisiva es pedir uroanálisis y urocultivo antes del antibiótico, ingresar si hay sepsis y no masajear la próstata. Las formas crónica bacteriana y de dolor pélvico crónico exigen derivar a urología [4]. El siguiente paso del eje glandular es la neoplasia, que no da dolor ni fiebre.</p>
+<p class="perla">Con fiebre y próstata dolorosa, cultivo primero y sin masaje.</p>
+<button type="button" class="go" data-go="e2" onclick="show('e2')">Ir a Prostatitis →</button></div>
+<div class="etapa" data-go="e3"><h3>Cáncer de próstata, la amenaza silenciosa</h3>
+<p class="res">El cáncer nace en la zona periférica y endurece la cara posterior; el PSA sube cuando se desorganiza la arquitectura glandular. La señal es un nódulo duro o una próstata pétrea. La conducta decisiva es una decisión compartida sobre PSA según la edad y el antecedente familiar, y luego resonancia y biopsia dirigida con grupo de grado. Un hermano afectado cambia esa conversación [3]. Se pierde porque no da síntomas hasta que está avanzado. Desde aquí el eje pasa a la vía urinaria baja, que empieza en la vejiga.</p>
+<p class="perla">Un tacto blando no excluye el cáncer; el antecedente familiar cambia la decisión sobre PSA.</p>
+<button type="button" class="go" data-go="e3" onclick="show('e3')">Ir a Cáncer de próstata →</button></div>
+<div class="etapa" data-go="e4"><h3>Cistitis, la infección de la vejiga</h3>
+<p class="res">En el varón la cistitis casi siempre es complicada, porque una obstrucción o un residuo estanca la orina y deja crecer bacterias [5]. Las bacterias se adhieren al urotelio y la mucosa inflamada produce urgencia, polaquiuria, disuria y dolor suprapúbico con piuria. La conducta decisiva es el urocultivo antes del antibiótico y la búsqueda de la causa con tacto rectal y residuo posmiccional. Si el cultivo es negativo con dolor vesical, se piensa en otras entidades. La última etapa del eje es la uretra.</p>
+<p class="perla">En el varón, tratar la cistitis sin buscar la obstrucción garantiza la recaída.</p>
+<button type="button" class="go" data-go="e4" onclick="show('e4')">Ir a Cistitis →</button></div>
+<div class="etapa" data-go="e5"><h3>Uretritis, la inflamación del extremo distal</h3>
+<p class="res">Un patógeno de transmisión sexual invade el epitelio uretral y la respuesta de neutrófilos forma la secreción. La señal es una secreción purulenta o mucoide con disuria y poca polaquiuria. La conducta decisiva es pedir NAAT de primera orina, tratar de forma presuntiva con doxiciclina, añadir ceftriaxona si hay gonococo y tratar a las parejas [4]. Si la infección asciende causa epididimitis, con un dolor escrotal que la hiperplasia no explica.</p>
+<p class="perla">Un dolor escrotal súbito exige descartar torsión antes de pensar en infección.</p>
+<button type="button" class="go" data-go="e5" onclick="show('e5')">Ir a Uretritis →</button></div>
+<p class="mini">Esto es el mapa, no el territorio: cada párrafo y cada perla se justifican en su pestaña.</p>
+</section>
+<section class="tab" data-tab="vis">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>Ante un varón con síntomas urinarios bajos, ¿qué datos del interrogatorio y del tacto rectal orientan hacia una próstata benigna, inflamatoria o neoplásica?</li>
+<li>¿Por qué la disuria, la fiebre y el dolor al tacto desplazan el razonamiento hacia una causa infecciosa, y qué prueba lo confirma antes de tratar?</li>
+<li>¿Cómo decides entre tratar, estudiar o derivar cuando un cuadro obstructivo convive con un antecedente familiar de cáncer de próstata?</li>
+<li>¿Qué hallazgos de la consulta no encajan en ninguna entidad del grupo y cómo los investigas sin forzar el diagnóstico?</li>
+</ol></div>
+<p><span class="badge b-pu">EAU STUI masculinos no neurogénicos 2023, solo resumen [1]</span> <span class="badge b-pu">AUA HPB/STUI 2021, solo resumen [2]</span> <span class="badge b-pu">AUA/SUO detección de cáncer de próstata 2023 [3]</span> <span class="badge b-pu">CDC ITS 2021 [4]</span></p>
+<div class="hb am"><div class="hb-t">Alcance</div>
+<p>Este grupo cubre cinco entidades que se presentan con síntomas del tracto urinario inferior (STUI) en el varón adulto. Quedan fuera, y solo aparecen como diferencial, la vejiga hiperactiva idiopática, la vejiga neurógena, el cáncer vesical y la litiasis.</p>
+<p>El caso de Carlos trae hallazgos ajenos al eje urinario: StO₂ de 89 % en Quito (a unos 2&#8201;850 m) y tabaquismo previo de unos 29 paquetes-año. Se repiten y se estudian aparte; el valor esperado de StO₂ a esa altitud no se verificó en fuente [VERIFICAR EN FUENTE]. De la bibliografía del sílabo, DynaMed 2024 no se consultó; Epstein 2016 se usa en «Cáncer de próstata».</p></div>
+<div class="tw"><table class="vis"><thead><tr><th>Rasgo</th><th>Hiperplasia prostática benigna</th><th>Prostatitis</th><th>Cáncer de próstata</th><th>Cistitis</th><th>Uretritis</th></tr></thead>
+<tbody>
+<tr><th>Falla central</th><td>Crecimiento de la zona de transición que comprime la uretra</td><td>Inflamación o infección del tejido prostático</td><td>Proliferación maligna del epitelio glandular, sobre todo periférico</td><td>Inflamación de la mucosa vesical, casi siempre infecciosa</td><td>Inflamación de la uretra por un patógeno de transmisión sexual</td></tr>
+<tr><th>Terreno típico</th><td>Varón mayor de 50 años</td><td>Varón con obstrucción, instrumentación o infección de transmisión sexual</td><td>Varón mayor de 50 años o con familiar de primer grado afectado</td><td>Varón con obstrucción, residuo o instrumentación urinaria</td><td>Varón joven sexualmente activo con pareja nueva</td></tr>
+<tr><th>Inicio y curso</th><td>Años de progresión lenta</td><td>Agudo con fiebre o crónico recurrente</td><td>Silencioso durante años; síntomas en fases tardías</td><td>Días, con disuria de inicio brusco</td><td>Días tras la exposición, con secreción</td></tr>
+<tr><th>Síntoma compartido aquí</th><td>Nicturia, chorro débil y goteo posmiccional</td><td>Polaquiuria, urgencia y disuria con dolor perineal</td><td>Los mismos STUI cuando ya obstruye</td><td>Urgencia, polaquiuria y disuria</td><td>Disuria con poca polaquiuria</td></tr>
+<tr><th>Signo que la delata</th><td>Próstata aumentada, blanda y simétrica al tacto rectal</td><td>Próstata dolorosa, caliente y edematosa al tacto rectal</td><td>Nódulo duro o próstata pétrea al tacto rectal</td><td>Dolor suprapúbico con piuria en el uroanálisis</td><td>Secreción uretral purulenta o mucoide en el meato</td></tr>
+<tr><th>Negativo pertinente</th><td>Sin fiebre, disuria ni nódulo duro</td><td>Sin fiebre ni dolor al tacto: la forma aguda cae</td><td>Un tacto blando no lo excluye</td><td>Sin disuria ni piuria: busca otra causa</td><td>Sin secreción ni leucocitos uretrales: cae</td></tr>
+<tr><th>Prueba que decide</th><td>I-PSS, tacto rectal y uroanálisis</td><td>Uroanálisis y urocultivo antes del antibiótico</td><td>Resonancia prostática y biopsia dirigida con grupo de grado</td><td>Urocultivo con uroanálisis previo al antibiótico</td><td>NAAT de primera orina para gonococo y clamidia</td></tr>
+<tr><th>Conducta inicial y quién maneja</th><td>Alfabloqueante en primer nivel; urología si falla</td><td>Antibiótico según gravedad; ingreso si hay sepsis</td><td>Decisión compartida; urología biopsia y estadifica</td><td>Antibiótico según cultivo y búsqueda de obstrucción</td><td>Tratar según agente y estudiar a la pareja</td></tr>
+<tr><th>Amenaza si se pierde</th><td>Retención aguda y daño renal obstructivo</td><td>Sepsis y absceso prostático</td><td>Diagnóstico tardío con enfermedad diseminada</td><td>Pielonefritis, prostatitis y bacteriemia</td><td>Epididimitis, estenosis y transmisión a la pareja</td></tr>
+</tbody></table></div>
+<div class="card"><p><b>Común al grupo</b>: los STUI del varón se agrupan por la fase de la micción que falla, y esa fase señala la estructura comprometida [5].</p>
+<div class="tw"><table><thead><tr><th>Fase</th><th>Síntomas</th><th>Estructura que falla</th></tr></thead>
+<tbody>
+<tr><th>Llenado</th><td>Polaquiuria, urgencia, nicturia</td><td>Vejiga y su músculo detrusor</td></tr>
+<tr><th>Vaciado</th><td>Chorro débil, espera inicial, esfuerzo</td><td>Salida de la vejiga y uretra prostática</td></tr>
+<tr><th>Posmiccional</th><td>Goteo y sensación de vaciado incompleto</td><td>Residuo vesical y uretra bulbar</td></tr>
+</tbody></table></div>
+<div class="tw"><table><thead><tr><th>Término</th><th>Qué significa</th></tr></thead>
+<tbody>
+<tr><th>Nicturia</th><td>Despertarse a orinar durante el sueño; la causa puede ser la próstata o la poliuria nocturna</td></tr>
+<tr><th>I-PSS</th><td>Cuestionario de siete preguntas que puntúa la gravedad de los STUI de 0 a 35 [2]</td></tr>
+<tr><th>Residuo posmiccional</th><td>Orina que queda en la vejiga tras orinar; se mide con ecografía [5]</td></tr>
+<tr><th>PSA</th><td>Antígeno prostático específico, proteasa del epitelio prostático; sube en cáncer, hiperplasia e inflamación</td></tr>
+<tr><th>NAAT</th><td>Prueba de amplificación de ácidos nucleicos que detecta el material genético del patógeno [4]</td></tr>
+<tr><th>Diario miccional</th><td>Registro de horas y volúmenes de cada micción [1]</td></tr>
+</tbody></table></div>
+<ul>
+<li>Eje 1 — Consistencia y dolor de la próstata al tacto rectal: blanda, dolorosa o dura separa hiperplasia, prostatitis y cáncer.</li>
+<li>Eje 2 — Disuria, fiebre y piuria apuntan a infección de vejiga, próstata o uretra y piden urocultivo o NAAT antes de tratar.</li>
+<li>Eje 3 — Secreción en el meato señala uretra; dolor suprapúbico, vejiga; síntomas sin dolor, glándula.</li>
+</ul></div>
+<div class="card"><p><b>Hallazgos del caso de Carlos frente al diferencial</b>: ejemplo de uso del cuadro, no resolución del caso.</p>
+<div class="tw"><table><thead><tr><th>Hallazgo</th><th>Qué sostiene</th><th>Qué falta para decidir</th></tr></thead>
+<tbody>
+<tr><th>Nicturia, vaciado incompleto y goteo posmiccional</th><td>Obstrucción prostática con vejiga irritable</td><td>Diario miccional: la clortalidona puede sumar poliuria nocturna</td></tr>
+<tr><th>Próstata aumentada, blanda y de contornos regulares</th><td>Hiperplasia benigna; no descarta cáncer</td><td>Decisión compartida sobre PSA</td></tr>
+<tr><th>Niega disuria, fiebre y mal olor</th><td>Debilita cistitis, prostatitis aguda y uretritis</td><td>Uroanálisis sin piuria</td></tr>
+<tr><th>Dolor a la palpación del escroto izquierdo</th><td>No lo explica la hiperplasia: epididimitis, varicocele o hernia</td><td>Examen escrotal; si fue súbito, descarta torsión [4]</td></tr>
+<tr><th>Sertal compuesto ocasional</th><td>Antimuscarínico: riesgo de retención en próstata aumentada</td><td>Frecuencia de uso y residuo posmiccional</td></tr>
+<tr><th>Hermano con cáncer de próstata</th><td>Familiar de primer grado: cambia la conversación sobre PSA [3]</td><td>Edad al diagnóstico y gravedad en el hermano</td></tr>
+</tbody></table></div></div>
+<div class="hb ro"><div class="hb-t">Banderas rojas ante síntomas urinarios bajos</div>
+<ul>
+<li>Cáncer de próstata: un nódulo duro, una próstata pétrea o un PSA elevado nunca se tranquilizan; piden estudio dirigido y urología [3].</li>
+<li>Retención aguda o globo vesical: dolor suprapúbico con imposibilidad de orinar exige sondaje y derivación [5].</li>
+<li>Fiebre con próstata dolorosa: sospecha sepsis, ingresa y evita masajear la próstata.</li>
+<li>Hematuria macroscópica, sobre todo con tabaquismo previo: estudia la vejiga y las vías altas antes de culpar a la próstata [5].</li>
+<li>Dolor escrotal de inicio súbito: sospecha torsión testicular, urgencia quirúrgica [4].</li>
+<li>Antimuscarínicos o antiespasmódicos en un varón con vaciado incompleto: pueden precipitar retención; revisa los medicamentos [2].</li>
+</ul></div>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Clasifica los STUI en llenado, vaciado y posmiccionales y pregunta por fiebre y disuria [1].</li>
+<li><span class="tg">Añade</span>Tacto rectal y uroanálisis con tira y sedimento en la misma consulta [1][5].</li>
+<li><span class="tg">Confirma</span>Confirma la causa con urocultivo, NAAT o estudio prostático dirigido según la rama elegida [1][4].</li>
+<li><span class="tg">Solo si</span>Pide PSA solo si un diagnóstico de cáncer cambiaría la conducta y tras decisión compartida [1][3].</li>
+<li><span class="tg">No pidas</span>No pidas PSA durante una infección activa ni tras un sondaje reciente: sube sin cáncer y confunde [3][5].</li>
+<li><span class="tg">Alarma</span>Retención, sepsis, hematuria macroscópica o nódulo duro: deriva el mismo día [3][5].</li>
+</ol>
+<div class="dc" data-fn="dcVis"><div class="dc-t">Simulador · Decisión clínica — predice la entidad antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Tacto rectal</span>
+<button type="button" class="chip" data-g="tacto" data-v="blando" onclick="ch(this)">Aumentada, blanda y simétrica</button>
+<button type="button" class="chip" data-g="tacto" data-v="dolor" onclick="ch(this)">Dolorosa y caliente</button>
+<button type="button" class="chip" data-g="tacto" data-v="duro" onclick="ch(this)">Nódulo duro o pétrea</button>
+<button type="button" class="chip" data-g="tacto" data-v="normal" onclick="ch(this)">Sin alteración</button></div>
+<div class="dc-g"><span class="dc-l">Síntomas</span>
+<button type="button" class="chip" data-g="sint" data-v="obs" data-m="1" onclick="ch(this)">Chorro débil, goteo y nicturia</button>
+<button type="button" class="chip" data-g="sint" data-v="disuria" data-m="1" onclick="ch(this)">Disuria con urgencia</button>
+<button type="button" class="chip" data-g="sint" data-v="secrecion" data-m="1" onclick="ch(this)">Secreción por el meato</button>
+<button type="button" class="chip" data-g="sint" data-v="perineal" data-m="1" onclick="ch(this)">Dolor perineal o pélvico</button></div>
+<div class="dc-g"><span class="dc-l">Fiebre</span>
+<button type="button" class="chip" data-g="fiebre" data-v="si" onclick="ch(this)">Con fiebre</button>
+<button type="button" class="chip" data-g="fiebre" data-v="no" onclick="ch(this)">Afebril</button></div>
+<div class="dc-g"><span class="dc-l">Uroanálisis</span>
+<button type="button" class="chip" data-g="orina" data-v="piuria" onclick="ch(this)">Piuria y bacteriuria</button>
+<button type="button" class="chip" data-g="orina" data-v="normal" onclick="ch(this)">Sin piuria</button></div>
+<div class="dc-g"><span class="dc-l">Otros datos</span>
+<button type="button" class="chip" data-g="otros" data-v="escroto" data-m="1" onclick="ch(this)">Dolor escrotal</button>
+<button type="button" class="chip" data-g="otros" data-v="famca" data-m="1" onclick="ch(this)">Familiar de primer grado con cáncer de próstata</button>
+<button type="button" class="chip" data-g="otros" data-v="hematuria" data-m="1" onclick="ch(this)">Hematuria macroscópica</button>
+<button type="button" class="chip" data-g="otros" data-v="retencion" data-m="1" onclick="ch(this)">Imposibilidad de orinar</button></div>
+<div class="out"></div></div>
+</section>
+<section class="tab" data-tab="e1">
+<div class="hb az"><div class="hb-t">Frente a Cáncer de próstata</div>
+<p>Se confunde con el cáncer de próstata porque ambos aparecen con la edad y producen STUI obstructivos. Se separa por el tacto rectal (blando y simétrico frente a duro y nodular) y porque el cáncer exige decisión compartida sobre PSA y confirmación con biopsia.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué un mismo crecimiento prostático produce síntomas de llenado, de vaciado y posmiccionales, y en qué orden se instalan?</li>
+<li>¿En qué se apoya distinguir una nicturia por próstata de una nicturia por poliuria nocturna, y qué cambia en el tratamiento?</li>
+<li>¿Por qué un alfabloqueante alivia síntomas sin reducir la próstata mientras un inhibidor de la reductasa hace lo contrario, y cuándo conviene cada uno?</li>
+<li>¿Qué medicamentos de uso común pueden precipitar retención en una próstata aumentada y por qué?</li>
+<li>¿Qué hallazgos del tacto rectal y del seguimiento obligan a pensar en cáncer o en otra causa?</li>
+</ol></div>
+<p><span class="badge b-pu">AUA HPB/STUI 2021, solo resumen [2]</span> <span class="badge b-pu">Enmienda AUA 2023, solo resumen [6]</span> <span class="badge b-pu">EAU STUI masculinos no neurogénicos 2023, solo resumen [1]</span></p>
+
+<h2>Qué es</h2>
+<div class="card"><p>La hiperplasia prostática benigna (HPB) es la proliferación de células musculares lisas y epiteliales de la zona de transición de la próstata. Pasa a ser enfermedad cuando la obstrucción que provoca genera STUI [2].</p>
+<p>Criterios de consenso para llamar HPB a los STUI:</p>
+<ul>
+<li>STUI en un varón adulto, valorados con I-PSS [1][2].</li>
+<li>Próstata aumentada al tacto rectal o a la imagen.</li>
+<li>Causas alternativas descartadas: infección, estenosis, vejiga neurógena y cáncer.</li>
+</ul></div>
+<div class="tw"><table><thead><tr><th>Concepto</th><th>Qué describe</th><th>Cómo se establece</th></tr></thead>
+<tbody>
+<tr><th>Hiperplasia prostática benigna</th><td>Proliferación celular de la zona de transición</td><td>Histología; rara vez se necesita para actuar [2]</td></tr>
+<tr><th>Agrandamiento prostático benigno</th><td>Tamaño de la glándula</td><td>Tacto rectal o ecografía</td></tr>
+<tr><th>Obstrucción prostática</th><td>Resistencia aumentada al flujo de salida</td><td>Flujometría o urodinamia en casos seleccionados [1]</td></tr>
+</tbody></table></div>
+<p>Los subtipos existen porque los STUI dependen de qué componente domina: la obstrucción mecánica, la vejiga irritable que ella genera o las complicaciones del residuo.</p>
+<div class="tw"><table><thead><tr><th>Subtipo</th><th>Qué domina</th><th>Cómo se reconoce</th></tr></thead>
+<tbody>
+<tr><th>Obstructiva</th><td>Síntomas de vaciado</td><td>Chorro débil, espera inicial, goteo</td></tr>
+<tr><th>Con vejiga irritable</th><td>Síntomas de llenado</td><td>Urgencia, polaquiuria, nicturia</td></tr>
+<tr><th>Complicada</th><td>Residuo sostenido</td><td>Retención, infección recurrente, litiasis, daño renal</td></tr>
+</tbody></table></div>
+<p>No confundir con las vecinas que quedan fuera del grupo:</p>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Estenosis o trauma uretral</th><td>Chorro débil y vaciado incompleto</td><td>Antecedente de trauma, sondaje o uretritis; la uretrografía o uretroscopia la muestra</td></tr>
+<tr><th>Vejiga hiperactiva</th><td>Urgencia, polaquiuria y nicturia</td><td>Sin obstrucción ni residuo; síntomas de llenado aislados</td></tr>
+<tr><th>Poliuria nocturna</th><td>Nicturia</td><td>El diario miccional muestra volumen nocturno aumentado con vejiga de capacidad normal [1]</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Dato</th><th>Valor en la fuente</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>Causa principal de STUI en varones mayores de 50 años [5]; la prevalencia y la gravedad progresan con la edad [2]</td></tr>
+<tr><th>Edad</th><td>Los STUI por hiperplasia predominan desde los 50 años [5]; la prevalencia progresa con la edad [2]</td></tr>
+<tr><th>Sexo</th><td>Solo en varones, que tienen próstata [2]</td></tr>
+<tr><th>Factores clave</th><td>Edad y andrógenos funcionantes [2]; el efecto de dieta, líquidos, cafeína, alcohol y tabaco sobre los STUI no se verificó [VERIFICAR EN FUENTE] [1]</td></tr>
+</tbody></table></div>
+<p class="mini">No se leyeron cifras de prevalencia de Ecuador ni de Latinoamérica; no se aportan estimaciones.</p>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e1-m-1" data-clin="0" data-paso="Dihidrotestosterona activa el estroma prostático" data-rama="Rama A"><div class="det"><p>Primer golpe, el terreno: la edad y un testículo funcionante. La enzima 5α-reductasa tipo 2, presente en las células estromales de la próstata, convierte la testosterona en dihidrotestosterona (DHT), un andrógeno más potente que se une al receptor androgénico del núcleo y activa la proliferación de estroma y epitelio. Segundo golpe, el desencadenante: señales locales de crecimiento. Es el blanco de los inhibidores de la reductasa. <span class="rem">↪ Posología en «Tratamiento»</span></p></div></li>
+<li class="nodo" id="e1-m-2" data-clin="1" data-paso="Zona de transición comprime la uretra" data-rama="Rama A"><div class="det"><p>La zona de transición rodea la uretra prostática como un manguito. Sus nódulos crecen hacia la luz y la estrechan: es el componente estático de la obstrucción. El tacto rectal palpa sobre todo la cara posterior, que es otra zona (la periférica); por eso la zona que explica el cuadro no es la que se toca y el tamaño palpado estima mal la obstrucción.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-1" onclick="ir('e1','e1-s-1')">Próstata aumentada, blanda y simétrica</button></p></div></li>
+<li class="nodo" id="e1-m-3" data-clin="0" data-paso="Tono alfa-1 del músculo liso prostático" data-rama="Rama A"><div class="det"><p>El músculo liso del estroma, de la cápsula y del cuello vesical tiene receptores α1A, receptores de membrana que la noradrenalina de los nervios simpáticos activa para contraerlo. Es el componente dinámico: aprieta la uretra aunque la glándula no crezca más. Es el blanco de los alfabloqueantes. <span class="rem">↪ Posología en «Tratamiento»</span></p></div></li>
+<li class="nodo" id="e1-m-4" data-clin="1" data-paso="Obstrucción al flujo de salida" data-rama="Rama A"><div class="det"><p>La suma del componente estático y del dinámico eleva la resistencia uretral. La vejiga necesita más presión para vencerla: el chorro sale débil, tarda en iniciar y se corta. Es el eslabón común de los síntomas de vaciado.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-2" onclick="ir('e1','e1-s-2')">Chorro débil e intermitente</button></p></div></li>
+<li class="nodo" id="e1-m-5" data-clin="1" data-paso="Detrusor hipertrofiado se vuelve irritable" data-rama="Rama A"><div class="det"><p>El detrusor, el músculo de la pared vesical que expulsa la orina, trabaja contra resistencia y se hipertrofia. Con el tiempo responde a estímulos pequeños con contracciones involuntarias y tolera menos volumen. Eso genera urgencia, polaquiuria y nicturia, síntomas de llenado que persisten si solo se alivia la próstata.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-3" onclick="ir('e1','e1-s-3')">Polaquiuria, urgencia y nicturia</button></p></div></li>
+<li class="nodo" id="e1-m-6" data-clin="1" data-paso="Residuo posmiccional y vaciado incompleto" data-rama="Rama A"><div class="det"><p>Cuando el detrusor no logra vaciar, queda orina en la vejiga (residuo posmiccional). La capacidad útil baja y obliga a orinar más veces, y la orina atrapada en la uretra bulbar escurre al terminar. El residuo sostenido favorece infección, cálculos y daño renal (ver «Seguimiento»).</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-4" onclick="ir('e1','e1-s-4')">Goteo posmiccional y vaciado incompleto</button> <button type="button" class="xref" data-ir="e1-s-5" onclick="ir('e1','e1-s-5')">Globo vesical palpable</button></p></div></li>
+<li class="nodo" id="e1-m-7" data-clin="1" data-paso="Producción nocturna de orina aumentada" data-rama="Rama B"><div class="det"><p>La nicturia no siempre nace en la próstata. Si el riñón produce una parte desproporcionada de la orina durante la noche (poliuria nocturna), la vejiga se llena aunque no haya obstrucción. Un diurético como la clortalidona, que reduce la reabsorción de sodio en el túbulo distal del riñón, tomado por la tarde desplaza diuresis al sueño; el diario miccional lo detecta. <span class="rem">↪ Posología en «Tratamiento»</span></p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-3" onclick="ir('e1','e1-s-3')">Polaquiuria, urgencia y nicturia</button></p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la próstata que crece</span>
+<p class="fey-b">Imagina una manguera de jardín con un anillo de plastilina alrededor. Si la plastilina crece, aprieta la manguera y el agua sale con poca fuerza. La bolsa que empuja el agua se pone más fuerte para compensar y, de tanto esfuerzo, se vuelve nerviosa: pide vaciarse a cada rato. Además nunca termina de vaciarse del todo, así que siempre queda un poco que gotea después.</p>
+<p class="mini fey-c">En medicina esto se llama… hiperplasia prostática benigna (HPB), obstrucción al flujo de salida y vejiga irritable secundaria.</p>
+<p class="mini fey-c">Dónde falla la comparación: la plastilina es rígida y pasiva; la próstata además tiene músculo que se contrae y que los fármacos pueden relajar.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Chorro débil e intermitente</p>
+<p data-e="p">Polaquiuria y nicturia</p>
+<p data-e="p">Goteo posmiccional y vaciado incompleto</p>
+<p data-e="v">Urgencia con o sin incontinencia</p>
+<p data-e="v">Hematuria macroscópica</p>
+<p data-e="a">Fiebre</p>
+<p data-e="a">Disuria</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e1-s-1" onclick="ir('e1','e1-s-1')">Próstata aumentada, blanda y simétrica al tacto rectal</button></p>
+</div>
+<div class="signo" id="e1-s-1"><h4>Próstata aumentada, blanda y simétrica al tacto rectal</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Al tacto rectal la glándula ocupa más espacio, con superficie lisa, consistencia elástica y surco medio conservado. En Carlos se describe aumentada, blanda y de contornos regulares.</dd>
+<dt>Por qué aparece</dt><dd>Los nódulos de la zona de transición empujan la glándula y la agrandan; el epitelio sin invasión conserva la textura. <button type="button" class="xref" data-ir="e1-m-2" onclick="ir('e1','e1-m-2')">← Zona de transición comprime la uretra</button></dd>
+<dt>Qué significa</dt><dd>Es compatible con hiperplasia, pero no descarta un cáncer coexistente en la zona periférica. El tamaño no mide cuánto obstruye.</dd></dl></div>
+<div class="signo" id="e1-s-2"><h4>Chorro débil e intermitente</h4><dl>
+<dt>Cómo se reconoce</dt><dd>El paciente describe espera para iniciar, chorro fino, esfuerzo y cortes durante la micción.</dd>
+<dt>Por qué aparece</dt><dd>La resistencia uretral aumentada obliga a la vejiga a vencerla con más presión y el flujo cae. <button type="button" class="xref" data-ir="e1-m-4" onclick="ir('e1','e1-m-4')">← Obstrucción al flujo de salida</button></dd>
+<dt>Qué significa</dt><dd>Indica obstrucción funcional; orienta a tratar el componente dinámico o el estático según el tamaño de la glándula.</dd></dl></div>
+<div class="signo" id="e1-s-3"><h4>Polaquiuria, urgencia y nicturia</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Muchas micciones de poco volumen de día y varios despertares nocturnos. El diario miccional las cuantifica.</dd>
+<dt>Por qué aparece</dt><dd>Un detrusor irritable se contrae con volúmenes pequeños, y una producción nocturna alta llena la vejiga durante el sueño. <button type="button" class="xref" data-ir="e1-m-5" onclick="ir('e1','e1-m-5')">← Detrusor hipertrofiado se vuelve irritable</button> <button type="button" class="xref" data-ir="e1-m-7" onclick="ir('e1','e1-m-7')">← Producción nocturna de orina aumentada</button></dd>
+<dt>Qué significa</dt><dd>La nicturia obliga a separar próstata de poliuria nocturna; tratar solo la próstata puede dejarla intacta.</dd></dl></div>
+<div class="signo" id="e1-s-4"><h4>Goteo posmiccional y vaciado incompleto</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Manchas de orina en la ropa interior tras orinar y sensación de que la vejiga no se vació.</dd>
+<dt>Por qué aparece</dt><dd>Queda orina en la vejiga y en la uretra bulbar, y escurre al terminar. <button type="button" class="xref" data-ir="e1-m-6" onclick="ir('e1','e1-m-6')">← Residuo posmiccional y vaciado incompleto</button></dd>
+<dt>Qué significa</dt><dd>Sugiere residuo: conviene medirlo antes de usar fármacos que relajan el detrusor.</dd></dl></div>
+<div class="signo" id="e1-s-5"><h4>Globo vesical palpable</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Masa suprapúbica dolorosa y mate a la percusión. En Carlos no se palpa globo vesical.</dd>
+<dt>Por qué aparece</dt><dd>El residuo crece hasta superar la capacidad del detrusor para vaciar. <button type="button" class="xref" data-ir="e1-m-6" onclick="ir('e1','e1-m-6')">← Residuo posmiccional y vaciado incompleto</button></dd>
+<dt>Qué significa</dt><dd>Retención con residuo alto: exige sondaje y derivación [5].</dd></dl></div>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — por qué la noche es peor</span>
+<p class="fey-b">De día te distraes y aguantas, pero de noche el cuerpo está quieto y la bolsa nerviosa manda mensajes a cada rato. Además, a veces el cuerpo fabrica más orina de noche, como una llave que gotea más cuando todo está en silencio. Por eso hay que saber si el problema es el aro que aprieta o la cantidad de agua que llega.</p>
+<p class="mini fey-c">En medicina esto se llama… nicturia, poliuria nocturna y vejiga irritable.</p>
+<p class="mini fey-c">Dónde falla la comparación: la llave gotea por una pieza floja; la poliuria nocturna depende de hormonas, de líquidos y de medicamentos.</p></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>I-PSS, tacto rectal y uroanálisis</li>
+<li><span class="tg">Añade</span>Diario miccional si hay nicturia o predominio de llenado: mide volúmenes nocturnos y la hora de toma del diurético [1].</li>
+<li><span class="tg">Añade</span>Residuo posmiccional por ecografía si hay vaciado incompleto [1][5].</li>
+<li><span class="tg">Confirma</span>Confirma el patrón obstructivo con flujometría libre y residuo antes de indicar cirugía [1].</li>
+<li><span class="tg">Solo si</span>Pide PSA solo si un diagnóstico de cáncer cambiaría la conducta y tras decisión compartida [1][3].</li>
+<li><span class="tg">No pidas</span>No pidas urodinamia de rutina: se reserva para casos seleccionados [1].</li>
+<li><span class="tg">Alarma</span>Retención, hematuria macroscópica, infección recurrente o nódulo duro en el tacto: deriva a urología [2][5].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>I-PSS</th><td>No establecida</td><td>No establecida</td><td>No aplica: cuantifica, no diagnostica</td><td>Medir gravedad y respuesta</td><td>Leve 0 a 7, moderado 8 a 19, grave 20 a 35; puntúa los síntomas de <button type="button" class="xref" data-ir="e1-m-5" onclick="ir('e1','e1-m-5')">← Detrusor hipertrofiado se vuelve irritable</button></td><td>[2]</td></tr>
+<tr><th>Tacto rectal</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Descartar nódulo y estimar tamaño</td><td>Subestima la zona que obstruye <button type="button" class="xref" data-ir="e1-m-2" onclick="ir('e1','e1-m-2')">← Zona de transición comprime la uretra</button></td><td>[1][3]</td></tr>
+<tr><th>Uroanálisis con tira y sedimento</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Descartar infección y hematuria</td><td>Piuria o hematuria cambian la ruta diagnóstica</td><td>[1][5]</td></tr>
+<tr><th>Diario miccional</th><td>No establecida</td><td>No establecida</td><td>No aplica</td><td>Separar poliuria nocturna de vejiga pequeña</td><td>Registra la hora del diurético <button type="button" class="xref" data-ir="e1-m-7" onclick="ir('e1','e1-m-7')">← Producción nocturna de orina aumentada</button></td><td>[1]</td></tr>
+<tr><th>Flujometría y residuo posmiccional</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar obstrucción funcional y residuo</td><td>Un residuo mayor de 100 mL es criterio de referencia en el estudio de la infección urinaria masculina</td><td>[1][5]</td></tr>
+<tr><th>PSA</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Solo si cambia la conducta</td><td>También sube con hiperplasia, infección y sondaje</td><td>[1][3]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos positivo y negativo; I-PSS: International Prostate Symptom Score; PSA: antígeno prostático específico. No se aportan VPP ni VPN porque no se leyó prevalencia ecuatoriana ni cifras de rendimiento; las bandas del I-PSS provienen del conocimiento de la guía, de la que solo se leyó el resumen.</p>
+<div class="dc" data-fn="dcE1dx"><div class="dc-t">Simulador · Decisión clínica — predice la banda antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">I-PSS (0 a 35)</span><input type="number" data-n="ipss" min="0" max="35" step="1" oninput="ch(this)"></div>
+<div class="dc-g"><span class="dc-l">Patrón predominante</span>
+<button type="button" class="chip" data-g="pred" data-v="vaciado" onclick="ch(this)">Vaciado</button>
+<button type="button" class="chip" data-g="pred" data-v="llenado" onclick="ch(this)">Llenado</button>
+<button type="button" class="chip" data-g="pred" data-v="noct" onclick="ch(this)">Nicturia</button></div>
+<div class="dc-g"><span class="dc-l">Diario miccional</span>
+<button type="button" class="chip" data-g="diario" data-v="poli" onclick="ch(this)">Volumen nocturno aumentado</button>
+<button type="button" class="chip" data-g="diario" data-v="norm" onclick="ch(this)">Volumen nocturno normal</button></div>
+<div class="dc-g"><span class="dc-l">Datos de alarma</span>
+<button type="button" class="chip" data-g="ala" data-v="ret" data-m="1" onclick="ch(this)">Retención o globo vesical</button>
+<button type="button" class="chip" data-g="ala" data-v="hem" data-m="1" onclick="ch(this)">Hematuria macroscópica</button>
+<button type="button" class="chip" data-g="ala" data-v="itu" data-m="1" onclick="ch(this)">Infección urinaria recurrente</button>
+<button type="button" class="chip" data-g="ala" data-v="res" data-m="1" onclick="ch(this)">Residuo mayor de 100 mL</button>
+<button type="button" class="chip" data-g="ala" data-v="nod" data-m="1" onclick="ch(this)">Nódulo duro al tacto</button></div>
+<div class="out"></div></div>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Trata la molestia y las complicaciones del paciente, no el tamaño de la próstata; ofrece primero medidas conductuales [1][2].</li>
+<li><span class="tg">De elección</span>Alfabloqueante si hay síntomas moderados a graves de vaciado o mixtos [2].</li>
+<li><span class="tg">Alternativa</span>Inhibidor de la reductasa si la próstata está aumentada; tadalafilo si coexiste disfunción eréctil [2].</li>
+<li><span class="tg">Escala</span>Combina alfabloqueante con inhibidor de la reductasa si hay síntomas y próstata aumentada [2][6].</li>
+<li><span class="tg">Sintomático</span>Mueve el diurético a la mañana y reduce líquidos y cafeína antes de dormir si el diario muestra poliuria nocturna [1].</li>
+<li><span class="tg">Reevalúa</span>Reevalúa con el mismo I-PSS y revisa efectos adversos; cambia de clase si no hay respuesta [2].</li>
+<li><span class="tg">Especialista</span>Deriva a urología ante retención, hematuria, infección recurrente o falla del tratamiento médico [2][5].</li>
+<li><span class="tg">Evita</span>Evita antimuscarínicos o antiespasmódicos anticolinérgicos si hay vaciado incompleto: pueden precipitar retención [2].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Tamsulosina</th><td>0,4 mg</td><td>VO</td><td>Cada 24 h, después de la misma comida</td><td>Continua mientras haya beneficio</td><td>Bloquea receptores α1A y relaja el músculo liso <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Tono alfa-1 del músculo liso prostático</button>. Hipotensión ortostática y eyaculación retrógrada; vigilar la presión si ya usa antihipertensivos como clortalidona. Avisar antes de una cirugía de catarata</td><td>[2]</td></tr>
+<tr><th>Alfuzosina</th><td>10 mg de liberación prolongada</td><td>VO</td><td>Cada 24 h, tras una comida</td><td>Continua</td><td>Mismo mecanismo <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Tono alfa-1 del músculo liso prostático</button>; menos efecto sobre la eyaculación</td><td>[2]</td></tr>
+<tr><th>Doxazosina</th><td>1 mg al inicio; subir a 2 mg y luego 4 a 8 mg según respuesta (máximo 8 mg)</td><td>VO</td><td>Cada 24 h, de preferencia de noche</td><td>Continua</td><td>Requiere titulación por hipotensión de primera dosis <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Tono alfa-1 del músculo liso prostático</button>; también baja la presión arterial</td><td>[2]</td></tr>
+<tr><th>Finasterida</th><td>5 mg</td><td>VO</td><td>Cada 24 h</td><td>Continua; efecto lento sobre el volumen</td><td>Inhibe la reductasa y reduce el volumen <button type="button" class="xref" data-ir="e1-m-1" onclick="ir('e1','e1-m-1')">← Dihidrotestosterona activa el estroma prostático</button>. Reduce el PSA a cerca de la mitad: interpretar con ese factor [VERIFICAR EN FUENTE]. Disminuye libido y erección</td><td>[2][6]</td></tr>
+<tr><th>Dutasterida</th><td>0,5 mg</td><td>VO</td><td>Cada 24 h</td><td>Continua; efecto lento sobre el volumen</td><td>Mismo mecanismo que finasterida <button type="button" class="xref" data-ir="e1-m-1" onclick="ir('e1','e1-m-1')">← Dihidrotestosterona activa el estroma prostático</button>; también afecta la interpretación del PSA</td><td>[2][6]</td></tr>
+<tr><th>Tadalafilo</th><td>5 mg</td><td>VO</td><td>Cada 24 h</td><td>Continua mientras haya beneficio</td><td>Relaja el músculo liso por vía del GMP cíclico <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Tono alfa-1 del músculo liso prostático</button>. Contraindicado con nitratos; ajustar en insuficiencia renal grave según ficha</td><td>[2]</td></tr>
+</tbody></table></div>
+<p class="mini">VO: vía oral; GMP: guanosina monofosfato; PSA: antígeno prostático específico. Dosis de ficha técnica; las guías leídas solo en resumen recomiendan la clase de fármaco, no la dosis.</p>
+<div class="dc" data-fn="dcE1tx"><div class="dc-t">Simulador · Decisión clínica — predice el fármaco antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Síntoma que más molesta</span>
+<button type="button" class="chip" data-g="sint" data-v="vaciado" onclick="ch(this)">Vaciado</button>
+<button type="button" class="chip" data-g="sint" data-v="llenado" onclick="ch(this)">Llenado</button>
+<button type="button" class="chip" data-g="sint" data-v="noct" onclick="ch(this)">Nicturia</button></div>
+<div class="dc-g"><span class="dc-l">Próstata</span>
+<button type="button" class="chip" data-g="vol" data-v="grande" onclick="ch(this)">Aumentada</button>
+<button type="button" class="chip" data-g="vol" data-v="normal" onclick="ch(this)">No aumentada o sin dato</button></div>
+<div class="dc-g"><span class="dc-l">Otros datos</span>
+<button type="button" class="chip" data-g="otros" data-v="de" data-m="1" onclick="ch(this)">Disfunción eréctil</button>
+<button type="button" class="chip" data-g="otros" data-v="pa" data-m="1" onclick="ch(this)">Hipotensión ortostática o antihipertensivos</button>
+<button type="button" class="chip" data-g="otros" data-v="res" data-m="1" onclick="ch(this)">Residuo elevado o retención previa</button>
+<button type="button" class="chip" data-g="otros" data-v="poli" data-m="1" onclick="ch(this)">Poliuria nocturna con diurético vespertino</button></div>
+<div class="out"></div></div>
+
+<h2>Seguimiento</h2>
+<p>El ciclo es revisar, evaluar y ajustar: repite el I-PSS y revisa efectos adversos, mide el residuo si cambian los síntomas y ajusta la clase de fármaco o deriva. Un nódulo duro, una asimetría o un PSA que sube sin explicación cambian la pregunta: el cáncer entra de nuevo al diferencial [3].</p>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Retención aguda</th><td>El residuo supera la capacidad del detrusor para vaciar</td><td><button type="button" class="xref" data-ir="e1-m-6" onclick="ir('e1','e1-m-6')">← Residuo posmiccional y vaciado incompleto</button></td></tr>
+<tr><th>Infección recurrente y litiasis vesical</th><td>La orina estancada permite crecer bacterias y precipitar cristales</td><td><button type="button" class="xref" data-ir="e1-m-6" onclick="ir('e1','e1-m-6')">← Residuo posmiccional y vaciado incompleto</button></td></tr>
+<tr><th>Epididimitis</th><td>La bacteriuria por obstrucción asciende al epidídimo; puede explicar el dolor escrotal (diferencial: varicocele, hernia, torsión) [4]</td><td><button type="button" class="xref" data-ir="e1-m-6" onclick="ir('e1','e1-m-6')">← Residuo posmiccional y vaciado incompleto</button></td></tr>
+<tr><th>Daño renal obstructivo</th><td>La presión vesical alta y sostenida dificulta el paso de orina desde los uréteres</td><td><button type="button" class="xref" data-ir="e1-m-5" onclick="ir('e1','e1-m-5')">← Detrusor hipertrofiado se vuelve irritable</button></td></tr>
+</tbody></table></div>
+</section>
+<section class="tab" data-tab="e2">
+<div class="hb az"><div class="hb-t">Frente a Hiperplasia prostática benigna</div>
+<p>Se confunde con la hiperplasia porque ambas dan STUI. Se separa por el dolor perineal, la disuria, la fiebre y la próstata dolorosa al tacto rectal.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué las tres formas de prostatitis comparten síntomas pero exigen manejos distintos?</li>
+<li>¿Qué hallazgos del tacto y del uroanálisis separan la forma aguda de las crónicas, y qué cambia en la conducta?</li>
+<li>¿Por qué el antibiótico debe alcanzar el tejido prostático y qué decide su duración?</li>
+</ol></div>
+<p><span class="badge b-pu">CDC ITS 2021 [4]</span> <span class="badge b-pu">EAU infecciones urológicas, solo resumen de búsqueda [7]</span></p>
+<p class="mini">Vigencia no verificada: la edición de la guía de infecciones urológicas no se leyó.</p>
+<div class="hb am"><div class="hb-t">Precisión sobre el sílabo</div>
+<p>El sílabo nombra «prostatitis» sin clasificarla. La clasificación completa incluye la aguda bacteriana, la crónica bacteriana, el dolor pélvico crónico y la asintomática [VERIFICAR EN FUENTE]. Ninguna forma sintomática encaja con el caso; la más frecuente en consulta, como contraste, es el dolor pélvico crónico [VERIFICAR EN FUENTE].</p></div>
+
+<h2>Qué es</h2>
+<div class="card"><p>La prostatitis es la inflamación de la próstata, con infección o sin ella, que causa dolor pélvico, síntomas urinarios y, en la forma aguda, fiebre.</p>
+<ul>
+<li>Aguda: fiebre, dolor perineal, STUI, próstata dolorosa y cultivo positivo.</li>
+<li>Crónica bacteriana: bacteriuria recurrente por el mismo germen.</li>
+<li>Dolor pélvico crónico: dolor perineal, peniano o pélvico persistente sin infección demostrada [4].</li>
+</ul></div>
+<p>Los subtipos existen porque el germen y el curso cambian el antibiótico.</p>
+<div class="tw"><table><thead><tr><th>Subtipo</th><th>Qué domina</th><th>Cómo se reconoce</th></tr></thead>
+<tbody>
+<tr><th>Bacteriana aguda</th><td>Infección sistémica</td><td>Fiebre y próstata dolorosa</td></tr>
+<tr><th>Bacteriana crónica</th><td>Infección persistente</td><td>Recaídas con el mismo germen</td></tr>
+<tr><th>Dolor pélvico crónico</th><td>Dolor sin infección</td><td>Cultivos negativos</td></tr>
+</tbody></table></div>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Tuberculosis genitourinaria</th><td>Prostatitis crónica y síntomas urinarios</td><td>Piuria con cultivo convencional negativo; se busca el bacilo [4]</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Dato</th><th>Valor en la fuente</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>Sin prevalencia leída [VERIFICAR EN FUENTE]; entra en el diferencial de STUI [5]</td></tr>
+<tr><th>Edad</th><td>Sin distribución leída; el PSA puede seguir elevado unos 3 meses tras la infección [5]</td></tr>
+<tr><th>Sexo</th><td>Solo varones [5]</td></tr>
+<tr><th>Factores clave</th><td>Obstrucción, instrumentación e infecciones de transmisión sexual [4][5]</td></tr>
+</tbody></table></div>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e2-m-1" data-clin="0" data-paso="Bacterias alcanzan el tejido prostático" data-rama="Rama A"><div class="det"><p>Terreno: obstrucción, instrumentación o infección sexual. Desencadenante: bacterias entéricas o sexuales ascienden por la uretra hacia los ductos prostáticos. <span class="rem">↪ Posología en «Tratamiento»</span></p></div></li>
+<li class="nodo" id="e2-m-2" data-clin="0" data-paso="Reflujo intraprostático de orina infectada" data-rama="Rama A"><div class="det"><p>Al orinar contra resistencia, la orina contaminada entra por los ductos a los acinos, las unidades secretoras, y allí inicia la inflamación.</p></div></li>
+<li class="nodo" id="e2-m-3" data-clin="1" data-paso="Respuesta inflamatoria aguda del parénquima" data-rama="Rama A"><div class="det"><p>Los neutrófilos y las citocinas, señales que reclutan defensa, inundan la glándula: causan edema, calor, dolor y, al pasar a la sangre, fiebre.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-1" onclick="ir('e2','e2-s-1')">Próstata dolorosa y caliente</button> <button type="button" class="xref" data-ir="e2-s-2" onclick="ir('e2','e2-s-2')">Fiebre y dolor perineal</button></p></div></li>
+<li class="nodo" id="e2-m-4" data-clin="1" data-paso="Edema prostático estrecha la uretra" data-rama="Rama A"><div class="det"><p>La glándula hinchada comprime la uretra prostática e irrita el cuello vesical.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-3" onclick="ir('e2','e2-s-3')">Disuria y chorro débil</button></p></div></li>
+<li class="nodo" id="e2-m-5" data-clin="0" data-paso="Bacterias pasan a sangre o forman absceso" data-rama="Rama A"><div class="det"><p>Si la defensa no contiene el foco, hay bacteriemia o un absceso encapsulado: la vía de la sepsis.</p></div></li>
+<li class="nodo" id="e2-m-6" data-clin="1" data-paso="Infección persistente o inflamación crónica" data-rama="Rama B"><div class="det"><p>Las bacterias persisten en biopelículas y cálculos, donde el antibiótico llega mal. En el dolor pélvico crónico no hay infección demostrada y su mecanismo no está establecido.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-4" onclick="ir('e2','e2-s-4')">Dolor pélvico con recaídas</button></p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la próstata inflamada</span>
+<p class="fey-b">Piensa en un rasguño infectado: rojo, caliente, hinchado y dolorido. La próstata inflamada hace lo mismo, escondida alrededor del conducto de la orina; al hincharse lo aprieta. Si dura meses, a veces ya no hay microbios y la zona sigue sensible.</p>
+<p class="mini fey-c">En medicina esto se llama… prostatitis aguda y crónica, y síndrome de dolor pélvico crónico.</p>
+<p class="mini fey-c">Dónde falla la comparación: la próstata no se ve y los antibióticos llegan con dificultad.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Disuria y urgencia</p>
+<p data-e="p">Dolor perineal</p>
+<p data-e="p">Fiebre en la forma aguda</p>
+<p data-e="v">Retención</p>
+<p data-e="a">Secreción uretral</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e2-s-1" onclick="ir('e2','e2-s-1')">Próstata dolorosa, caliente y edematosa al tacto rectal</button></p>
+</div>
+<div class="signo" id="e2-s-1"><h4>Próstata dolorosa, caliente y edematosa al tacto rectal</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Dolor intenso al tacto; glándula tensa y tibia. Se examina sin masaje.</dd>
+<dt>Por qué aparece</dt><dd>El tejido se llena de líquido y células. <button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">← Respuesta inflamatoria aguda</button></dd>
+<dt>Qué significa</dt><dd>Indica la forma aguda y pide cultivo antes del antibiótico.</dd></dl></div>
+<div class="signo" id="e2-s-2"><h4>Fiebre y dolor perineal</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Temperatura elevada y dolor entre escroto y ano.</dd>
+<dt>Por qué aparece</dt><dd>Las citocinas llegan al centro térmico del cerebro. <button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">← Respuesta inflamatoria aguda</button></dd>
+<dt>Qué significa</dt><dd>Obliga a valorar signos de sepsis antes de elegir ambulatorio u hospital.</dd></dl></div>
+<div class="signo" id="e2-s-3"><h4>Disuria y chorro débil</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Ardor al orinar, urgencia y chorro fino o retención.</dd>
+<dt>Por qué aparece</dt><dd>El edema comprime la uretra. <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Edema prostático</button></dd>
+<dt>Qué significa</dt><dd>Mezcla infección y obstrucción; con retención, el vaciado es urgente.</dd></dl></div>
+<div class="signo" id="e2-s-4"><h4>Dolor pélvico con recaídas</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Dolor perineal, peniano o pélvico persistente, con episodios que vuelven.</dd>
+<dt>Por qué aparece</dt><dd>Bacterias persistentes o inflamación sin infección sostienen el dolor. <button type="button" class="xref" data-ir="e2-m-6" onclick="ir('e2','e2-m-6')">← Infección persistente</button></dd>
+<dt>Qué significa</dt><dd>Obliga a documentar el cultivo y a derivar a un urólogo con experiencia en dolor pélvico [4].</dd></dl></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Uroanálisis y urocultivo antes del antibiótico</li>
+<li><span class="tg">Añade</span>Examen escrotal y NAAT para gonococo y clamidia si hay secreción uretral [4].</li>
+<li><span class="tg">Confirma</span>Confirma la forma crónica bacteriana con cultivos repetidos del mismo germen [7] [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">No pidas</span>No pidas masaje prostático en la forma aguda: puede diseminar bacterias a la sangre.</li>
+<li><span class="tg">Alarma</span>Fiebre alta, hipotensión, retención o dolor intenso: ingresa por sospecha de sepsis.</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Uroanálisis</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Orientar a infección</td><td>Piuria y bacteriuria <button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">← Respuesta inflamatoria aguda</button></td><td>[5]</td></tr>
+<tr><th>Urocultivo</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar germen y guiar el antibiótico</td><td>Antes de la primera dosis</td><td>[7]</td></tr>
+<tr><th>NAAT de primera orina</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar gonococo y clamidia</td><td>Con secreción o riesgo sexual <button type="button" class="xref" data-ir="e2-m-1" onclick="ir('e2','e2-m-1')">← Bacterias alcanzan la próstata</button></td><td>[4]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos; NAAT: amplificación de ácidos nucleicos. No se leyeron cifras de rendimiento.</p>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Trata según gravedad y forma, con antibióticos que penetren la próstata [7] [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">De elección</span>Fluoroquinolona oral en la forma aguda estable sin sospecha de infección sexual [7] [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Alternativa</span>Trimetoprima-sulfametoxazol si el germen es sensible [7] [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Sintomático</span>Alfabloqueante para el vaciado doloroso [2].</li>
+<li><span class="tg">Escala</span>Con sepsis o intolerancia oral, ingresa con antibiótico parenteral según la guía local [7] [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Especialista</span>Deriva ante absceso, retención, recaídas o dolor pélvico crónico [4].</li>
+<li><span class="tg">Evita</span>Evita el sondaje uretral en la forma aguda; con retención, prefiere el cateterismo suprapúbico [VERIFICAR EN FUENTE].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Ciprofloxacino</th><td>500 mg</td><td>VO</td><td>Cada 12 h</td><td>Al menos 14 días en la aguda [VERIFICAR EN FUENTE]</td><td>Penetra la próstata y mata las bacterias <button type="button" class="xref" data-ir="e2-m-1" onclick="ir('e2','e2-m-1')">← Bacterias alcanzan la próstata</button>. Tendinopatía y QT largo; ajustar en insuficiencia renal</td><td>[7]</td></tr>
+<tr><th>Trimetoprima-sulfametoxazol</th><td>160 mg/800 mg</td><td>VO</td><td>Cada 12 h</td><td>[VERIFICAR EN FUENTE]</td><td>Solo con germen sensible <button type="button" class="xref" data-ir="e2-m-1" onclick="ir('e2','e2-m-1')">← Bacterias alcanzan la próstata</button>. Hiperpotasemia; ajustar en insuficiencia renal</td><td>[7]</td></tr>
+<tr><th>Tamsulosina</th><td>0,4 mg</td><td>VO</td><td>Cada 24 h tras la misma comida</td><td>Mientras dure el vaciado doloroso</td><td>Relaja el músculo liso <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Edema prostático</button>. Hipotensión ortostática</td><td>[2]</td></tr>
+</tbody></table></div>
+<p class="mini">VO: vía oral; QT: intervalo del electrocardiograma. Dosis de ficha técnica.</p>
+<div class="dc" data-fn="dcE2"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Forma</span>
+<button type="button" class="chip" data-g="forma" data-v="aguda" onclick="ch(this)">Aguda estable</button>
+<button type="button" class="chip" data-g="forma" data-v="grave" onclick="ch(this)">Aguda con sepsis o retención</button>
+<button type="button" class="chip" data-g="forma" data-v="cronica" onclick="ch(this)">Crónica bacteriana</button>
+<button type="button" class="chip" data-g="forma" data-v="cppc" onclick="ch(this)">Dolor pélvico crónico</button></div>
+<div class="dc-g"><span class="dc-l">Otros datos</span>
+<button type="button" class="chip" data-g="otros" data-v="its" data-m="1" onclick="ch(this)">Riesgo sexual</button>
+<button type="button" class="chip" data-g="otros" data-v="fq" data-m="1" onclick="ch(this)">No tolera fluoroquinolonas</button></div>
+<div class="out"></div></div>
+
+<h2>Seguimiento</h2>
+<p>Revisa la respuesta, ajusta al antibiograma y no interpretes el PSA durante la infección ni en los meses siguientes [5].</p>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Absceso y sepsis</th><td>El foco se encapsula o pasa a la sangre</td><td><button type="button" class="xref" data-ir="e2-m-5" onclick="ir('e2','e2-m-5')">← Bacterias pasan a sangre</button></td></tr>
+<tr><th>Retención aguda</th><td>El edema comprime la uretra</td><td><button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Edema prostático</button></td></tr>
+</tbody></table></div>
+</section>
+<section class="tab" data-tab="e3">
+<div class="hb az"><div class="hb-t">Frente a Hiperplasia prostática benigna</div>
+<p>Se confunde con la hiperplasia porque ambas elevan el PSA en mayores. Se separa por el tacto duro, el curso silencioso y la biopsia con grupo de grado.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué el cáncer de próstata suele ser silencioso mientras la hiperplasia da síntomas tempranos?</li>
+<li>¿Qué cambia en la decisión sobre el PSA con un familiar de primer grado afectado y qué significa decidir de forma compartida?</li>
+<li>¿En qué se apoya clasificar el riesgo con el grupo de grado y qué conducta sigue a cada nivel?</li>
+</ol></div>
+<p><span class="badge b-pu">AUA/SUO detección de cáncer de próstata 2023 [3]</span> <span class="badge b-pu">EAU-EANM-ESTRO-ESUR-ISUP-SIOG 2024, solo resumen [8]</span> <span class="badge b-pu">Consenso ISUP 2014, solo resumen [9]</span></p>
+
+<h2>Qué es</h2>
+<div class="card"><p>El cáncer de próstata es una neoplasia maligna del epitelio glandular, casi siempre adenocarcinoma, que nace sobre todo en la zona periférica. Se confirma por biopsia y se gradúa con el grupo de grado ISUP [9].</p>
+</div>
+<p>Los subtipos existen porque el patrón de crecimiento más agresivo define el pronóstico; los cinco grupos reemplazan el puntaje de Gleason [9].</p>
+<div class="tw"><table><thead><tr><th>Subtipo</th><th>Equivalente de Gleason</th><th>Implicación</th></tr></thead>
+<tbody>
+<tr><th>Grupo de grado 1</th><td>3+3 = 6</td><td>Riesgo de muerte extremadamente bajo; vigilancia [3][8]</td></tr>
+<tr><th>Grupos de grado 2 y 3</th><td>3+4 y 4+3 = 7</td><td>El patrón 4+3 es peor que el 3+4 [9]</td></tr>
+<tr><th>Grupos de grado 4 y 5</th><td>8 a 10</td><td>Mayor agresividad; manejo curativo o sistémico [8]</td></tr>
+</tbody></table></div>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Cáncer vesical</th><td>Hematuria y síntomas de llenado</td><td>Cistoscopia; el tabaquismo previo suma riesgo</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Dato</th><th>Valor en la fuente</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>Neoplasia no cutánea más diagnosticada en varones de EE. UU.: 288&#8201;300 casos y 34&#8201;700 muertes estimados en 2023 [3]</td></tr>
+<tr><th>Edad</th><td>El cribado empieza a los 45 a 50 años, y a los 40 a 45 con riesgo aumentado [3]</td></tr>
+<tr><th>Sexo</th><td>Solo varones [3]</td></tr>
+<tr><th>Factores clave</th><td>Ascendencia negra, mutaciones germinales y antecedente familiar fuerte; con dos o más familiares, riesgo cuatro veces mayor [3]</td></tr>
+</tbody></table></div>
+<p class="mini">Antecedente fuerte: familiar con diagnóstico antes de los 60 años, muerte por el cáncer o metástasis [3].</p>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e3-m-1" data-clin="0" data-paso="Daño genético acumulado en el epitelio periférico"><div class="det"><p>Terreno: edad y herencia, incluidas mutaciones germinales de reparación del ADN [3]. Desencadenante: mutaciones somáticas que liberan a las células de sus frenos de crecimiento.</p></div></li>
+<li class="nodo" id="e3-m-2" data-clin="0" data-paso="Expansión clonal dependiente de andrógenos"><div class="det"><p>El receptor androgénico, proteína nuclear que la dihidrotestosterona activa para encender genes de crecimiento, sostiene el clon: es el blanco de la privación androgénica. <span class="rem">↪ Posología en «Tratamiento»</span></p></div></li>
+<li class="nodo" id="e3-m-3" data-clin="1" data-paso="Tumor periférico endurece la glándula"><div class="det"><p>Las células malignas y la fibrosis endurecen la cara posterior, la zona periférica que alcanza el dedo: aquí la zona que explica el cuadro sí es la que se palpa.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-1" onclick="ir('e3','e3-s-1')">Nódulo duro o próstata pétrea</button></p></div></li>
+<li class="nodo" id="e3-m-4" data-clin="1" data-paso="Células tumorales liberan PSA a la sangre"><div class="det"><p>El PSA es una proteasa del epitelio que licúa el semen; al desorganizarse la arquitectura y su barrera basal, pasa a la sangre. Es un dato de laboratorio. <span class="rem">↪ Propiedades en «Diagnóstico»</span></p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-2" onclick="ir('e3','e3-s-2')">PSA elevado</button></p></div></li>
+<li class="nodo" id="e3-m-5" data-clin="1" data-paso="Tumor invade uretra y cuello vesical"><div class="det"><p>Al crecer hacia la uretra prostática el tumor eleva la resistencia al flujo; es un evento tardío porque nace lejos de la uretra.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-3" onclick="ir('e3','e3-s-3')">STUI obstructivos nuevos</button></p></div></li>
+<li class="nodo" id="e3-m-6" data-clin="1" data-paso="Diseminación a ganglios y hueso"><div class="det"><p>Las células viajan por linfáticos a los ganglios y por sangre al hueso, donde provocan formación ósea frágil y dolorosa.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-4" onclick="ir('e3','e3-s-4')">Dolor óseo</button></p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la célula que no obedece</span>
+<p class="fey-b">Imagina un jardín donde cada planta sabe cuándo parar. Algunas se saltan esa regla y crecen sin pausa; cuanto más desordenadas, más peligrosas. Al principio crecen lejos de la tubería y nadie se entera.</p>
+<p class="mini fey-c">En medicina esto se llama… cáncer de próstata y grupo de grado.</p>
+<p class="mini fey-c">Dónde falla la comparación: las plantas no se juzgan a ojo; hace falta una biopsia.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">PSA elevado en un análisis</p>
+<p data-e="p">Ausencia de síntomas al inicio</p>
+<p data-e="p">STUI obstructivos nuevos</p>
+<p data-e="v">Dolor óseo</p>
+<p data-e="a">Fiebre</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e3-s-1" onclick="ir('e3','e3-s-1')">Nódulo duro o próstata pétrea al tacto rectal</button></p>
+</div>
+<div class="signo" id="e3-s-1"><h4>Nódulo duro o próstata pétrea al tacto rectal</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Zona pétrea, asimétrica o nodular. En Carlos fue blando y regular, lo que no lo descarta.</dd>
+<dt>Por qué aparece</dt><dd>Células malignas y fibrosis endurecen la cara posterior. <button type="button" class="xref" data-ir="e3-m-3" onclick="ir('e3','e3-m-3')">← Tumor endurece la glándula</button></dd>
+<dt>Qué significa</dt><dd>Exige estudio dirigido aunque el PSA sea normal.</dd></dl></div>
+<div class="signo" id="e3-s-2"><h4>PSA elevado</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Resultado sobre el umbral para la edad.</dd>
+<dt>Por qué aparece</dt><dd>La proteasa pasa del tejido desorganizado a la sangre. <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Células tumorales liberan PSA</button></dd>
+<dt>Qué significa</dt><dd>Se repite antes de actuar: hiperplasia, infección y sondaje también lo elevan [3].</dd></dl></div>
+<div class="signo" id="e3-s-3"><h4>STUI obstructivos nuevos</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Chorro débil de aparición reciente o progresión rápida.</dd>
+<dt>Por qué aparece</dt><dd>El tumor alcanzó la uretra o el cuello. <button type="button" class="xref" data-ir="e3-m-5" onclick="ir('e3','e3-m-5')">← Tumor invade la uretra</button></dd>
+<dt>Qué significa</dt><dd>Signo tardío; un cambio brusco obliga a reevaluar.</dd></dl></div>
+<div class="signo" id="e3-s-4"><h4>Dolor óseo</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Dolor persistente en columna o pelvis.</dd>
+<dt>Por qué aparece</dt><dd>Las metástasis alteran el hueso. <button type="button" class="xref" data-ir="e3-m-6" onclick="ir('e3','e3-m-6')">← Diseminación a hueso</button></dd>
+<dt>Qué significa</dt><dd>Sugiere diseminación; la debilidad de piernas es urgencia.</dd></dl></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Decisión compartida sobre PSA según edad y riesgo familiar [3].</li>
+<li><span class="tg">Añade</span>PSA primero y repetido si sale elevado, antes de biomarcador, imagen o biopsia [3].</li>
+<li><span class="tg">Confirma</span>Resonancia prostática y biopsia dirigida con grupo de grado</li>
+<li><span class="tg">No pidas</span>No pidas PSA sin decisión compartida previa: el paciente debe saber qué se busca [3].</li>
+<li><span class="tg">Alarma</span>Dolor óseo, debilidad de piernas, retención o hematuria con nódulo duro: deriva el mismo día [8].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>PSA</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Tamizaje inicial</td><td>Umbral según la edad: de 2,5 a 6,5 ng/mL entre los 40 y los 70 años; entre 25 y 40 % normaliza al repetir <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Células tumorales liberan PSA</button></td><td>[3]</td></tr>
+<tr><th>Tacto rectal</th><td>No establecida</td><td>No establecida</td><td>VPP de un tacto sospechoso: 0,87 % a los 50 años y 4,9 % a los 55 a 59</td><td>Complementar al PSA</td><td>Útil con PSA de 2 ng/mL o más <button type="button" class="xref" data-ir="e3-m-3" onclick="ir('e3','e3-m-3')">← Tumor endurece la glándula</button></td><td>[3]</td></tr>
+<tr><th>Biopsia dirigida y regional</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar y graduar</td><td>Informa el grupo de grado</td><td>[8][9]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos. No se leyeron sensibilidades ni especificidades.</p>
+<div class="dc" data-fn="dcE3dx"><div class="dc-t">Simulador · Decisión clínica — predice la recomendación antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Edad en años</span><input type="number" data-n="edad" min="18" max="100" step="1" oninput="ch(this)"></div>
+<div class="dc-g"><span class="dc-l">Antecedente familiar</span>
+<button type="button" class="chip" data-g="fam" data-v="ninguno" onclick="ch(this)">Ninguno</button>
+<button type="button" class="chip" data-g="fam" data-v="uno" onclick="ch(this)">Un familiar de primer grado</button>
+<button type="button" class="chip" data-g="fam" data-v="fuerte" onclick="ch(this)">Antecedente fuerte</button></div>
+<div class="dc-g"><span class="dc-l">Otros factores</span>
+<button type="button" class="chip" data-g="riesgo" data-v="negra" data-m="1" onclick="ch(this)">Ascendencia negra</button>
+<button type="button" class="chip" data-g="riesgo" data-v="germinal" data-m="1" onclick="ch(this)">Mutación germinal</button></div>
+<div class="dc-g"><span class="dc-l">PSA</span>
+<button type="button" class="chip" data-g="psa" data-v="previo" onclick="ch(this)">Sin PSA previo</button>
+<button type="button" class="chip" data-g="psa" data-v="elevado" onclick="ch(this)">Recién elevado</button>
+<button type="button" class="chip" data-g="psa" data-v="bajo" onclick="ch(this)">Previo bajo</button></div>
+<div class="out"></div></div>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Asigna el manejo por riesgo y grupo de grado, con decisión compartida [8].</li>
+<li><span class="tg">De elección</span>Vigilancia activa en bajo riesgo y en riesgo intermedio favorable con grupo de grado 2 [8].</li>
+<li><span class="tg">Alternativa</span>Prostatectomía radical o radioterapia cuando se indica tratamiento local [8].</li>
+<li><span class="tg">Escala</span>Con ganglios afectados (cN1), combina el tratamiento local con privación androgénica prolongada [8].</li>
+<li><span class="tg">Evita</span>Evita el tratamiento radical inmediato en el tumor de bajo riesgo: vigilancia activa [8].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Privación androgénica (agonista o antagonista de GnRH)</th><td>[VERIFICAR EN FUENTE]</td><td>IM o SC según formulación</td><td>[VERIFICAR EN FUENTE]</td><td>Prolongada con tratamiento local en cN1 [8]</td><td>Corta la señal androgénica <button type="button" class="xref" data-ir="e3-m-2" onclick="ir('e3','e3-m-2')">← Expansión clonal</button>. Sofocos, pérdida de libido, osteoporosis y riesgo metabólico</td><td>[8]</td></tr>
+</tbody></table></div>
+<p class="mini">GnRH: hormona liberadora de gonadotropinas; IM: intramuscular; SC: subcutánea. La dosis no se leyó.</p>
+<div class="dc" data-fn="dcE3tx"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Riesgo</span>
+<button type="button" class="chip" data-g="riesgo" data-v="bajo" onclick="ch(this)">Bajo, grupo 1</button>
+<button type="button" class="chip" data-g="riesgo" data-v="fav" onclick="ch(this)">Intermedio favorable, grupo 2</button>
+<button type="button" class="chip" data-g="riesgo" data-v="desf" onclick="ch(this)">Intermedio desfavorable o alto</button>
+<button type="button" class="chip" data-g="riesgo" data-v="n1" onclick="ch(this)">Ganglios afectados</button></div>
+<div class="out"></div></div>
+
+<h2>Seguimiento</h2>
+<p>En vigilancia activa se repite el PSA; la progresión lleva a tratamiento activo [8].</p>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Retención urinaria</th><td>El tumor estrecha la uretra</td><td><button type="button" class="xref" data-ir="e3-m-5" onclick="ir('e3','e3-m-5')">← Tumor invade la uretra</button></td></tr>
+<tr><th>Compresión medular</th><td>Las metástasis vertebrales comprimen la médula</td><td><button type="button" class="xref" data-ir="e3-m-6" onclick="ir('e3','e3-m-6')">← Diseminación a hueso</button></td></tr>
+</tbody></table></div>
+</section>
+<section class="tab" data-tab="e4">
+<div class="hb az"><div class="hb-t">Frente a Prostatitis</div>
+<p>Se confunde con la prostatitis porque ambas dan disuria y urgencia. Se separa por el dolor suprapúbico, sin dolor perineal ni próstata dolorosa, y porque en el varón obliga a buscar la causa.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué la cistitis en el varón se considera complicada y qué debes buscar antes de darla por resuelta?</li>
+<li>¿Qué datos del uroanálisis y del urocultivo confirman la infección y por qué el cultivo precede al antibiótico?</li>
+<li>¿En qué se diferencia el síndrome de dolor vesical de una cistitis infecciosa?</li>
+</ol></div>
+<p><span class="badge b-pu">EAU infecciones urológicas, solo resumen de búsqueda [7]</span> <span class="badge b-pu">Revisión sobre infección urinaria masculina 2026, solo resumen [5]</span></p>
+<p class="mini">Vigencia no verificada: la edición de la guía de infecciones urológicas no se leyó.</p>
+<div class="hb am"><div class="hb-t">Precisión sobre el sílabo</div>
+<p>El sílabo nombra «cistitis» sin clasificarla. La clasificación completa distingue la no complicada, la complicada, la recurrente y el síndrome de dolor vesical. En el varón encaja la complicada, por alteraciones anatómicas o funcionales [5]. Como contraste, la cistitis no complicada de la mujer sana es la más frecuente [VERIFICAR EN FUENTE].</p></div>
+
+<h2>Qué es</h2>
+<div class="card"><p>La cistitis es la inflamación de la vejiga, casi siempre por una infección bacteriana que asciende por la uretra.</p>
+<p>Criterios de consenso: disuria, urgencia, polaquiuria y dolor suprapúbico, con piuria y bacteriuria; en el varón, además, se busca la causa predisponente [5].</p></div>
+<p>Los subtipos existen porque el huésped y la anatomía cambian el germen y el estudio.</p>
+<div class="tw"><table><thead><tr><th>Subtipo</th><th>Qué lo define</th><th>Cómo se maneja</th></tr></thead>
+<tbody>
+<tr><th>No complicada</th><td>Mujer sana, sin anomalía urinaria</td><td>Ciclo corto de antibiótico [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Complicada</th><td>Varón, obstrucción, residuo o sondaje</td><td>Cultivo, antibiótico dirigido y estudio de la causa [5]</td></tr>
+<tr><th>Síndrome de dolor vesical</th><td>Dolor con el llenado sin infección; mecanismo no establecido</td><td>Manejo escalonado por urología [VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Tuberculosis vesical</th><td>Síntomas de llenado y piuria</td><td>Cultivo convencional negativo; se busca el bacilo [4]</td></tr>
+<tr><th>Cáncer vesical</th><td>Hematuria y urgencia</td><td>Persiste tras tratar la infección; cistoscopia</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Dato</th><th>Valor en la fuente</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>En el varón surge casi siempre por anomalías anatómicas o funcionales [5]</td></tr>
+<tr><th>Edad</th><td>La hiperplasia es la causa principal de obstrucción en mayores de 50 años [5]</td></tr>
+<tr><th>Sexo</th><td>En el varón se considera complicada [5]</td></tr>
+<tr><th>Factores clave</th><td>Obstrucción, residuo posmiccional, sondaje y litiasis [5]</td></tr>
+</tbody></table></div>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e4-m-1" data-clin="0" data-paso="Estasis urinaria por obstrucción o residuo"><div class="det"><p>Terreno: la obstrucción o el residuo dejan orina estancada, y el chorro ya no arrastra bacterias. En el varón casi siempre existe [5].</p></div></li>
+<li class="nodo" id="e4-m-2" data-clin="0" data-paso="Bacterias uropatógenas se adhieren al urotelio"><div class="det"><p>Desencadenante: bacterias intestinales, sobre todo Escherichia coli con fimbrias, apéndices que se pegan a receptores del urotelio, la mucosa vesical. Son el blanco del antibiótico. <span class="rem">↪ Posología en «Tratamiento»</span></p></div></li>
+<li class="nodo" id="e4-m-3" data-clin="1" data-paso="Respuesta inflamatoria de la mucosa vesical"><div class="det"><p>El urotelio libera señales que reclutan neutrófilos y sensibilizan las fibras de la pared: poco volumen se vuelve urgente y la orina irritante arde.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-1" onclick="ir('e4','e4-s-1')">Urgencia, polaquiuria y disuria</button> <button type="button" class="xref" data-ir="e4-s-2" onclick="ir('e4','e4-s-2')">Dolor suprapúbico con piuria</button></p></div></li>
+<li class="nodo" id="e4-m-4" data-clin="1" data-paso="Leucocitos y bacterias pasan a la orina"><div class="det"><p>Los neutrófilos y las bacterias se desprenden a la luz y salen con la orina: piuria y bacteriuria. <span class="rem">↪ Propiedades en «Diagnóstico»</span></p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-2" onclick="ir('e4','e4-s-2')">Dolor suprapúbico con piuria</button> <button type="button" class="xref" data-ir="e4-s-3" onclick="ir('e4','e4-s-3')">Orina turbia</button></p></div></li>
+<li class="nodo" id="e4-m-5" data-clin="0" data-paso="Ascenso a próstata, epidídimo o riñón"><div class="det"><p>Sin corrección, las bacterias suben por los uréteres o entran por los ductos eyaculadores: pielonefritis, prostatitis o bacteriemia.</p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la vejiga irritada</span>
+<p class="fey-b">La vejiga es como un globo que se llena y se vacía. Si entran microbios que se pegan a sus paredes, se irrita, como una garganta con tos: pide vaciarse con poquito y al pasar la orina arde. Si el globo no se vacía bien, los microbios se quedan; por eso importa saber por qué.</p>
+<p class="mini fey-c">En medicina esto se llama… cistitis y disuria.</p>
+<p class="mini fey-c">Dónde falla la comparación: la garganta mejora con descanso; la vejiga necesita antibiótico y corregir el estancamiento.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Disuria y urgencia</p>
+<p data-e="p">Dolor suprapúbico</p>
+<p data-e="p">Orina turbia</p>
+<p data-e="v">Hematuria</p>
+<p data-e="a">Secreción uretral</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e4-s-2" onclick="ir('e4','e4-s-2')">Dolor suprapúbico con piuria en el uroanálisis</button></p>
+</div>
+<div class="signo" id="e4-s-1"><h4>Urgencia, polaquiuria y disuria</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Ganas urgentes, poco volumen y ardor al orinar.</dd>
+<dt>Por qué aparece</dt><dd>La mucosa inflamada sensibiliza la pared. <button type="button" class="xref" data-ir="e4-m-3" onclick="ir('e4','e4-m-3')">← Respuesta inflamatoria vesical</button></dd>
+<dt>Qué significa</dt><dd>Orienta a infección o irritación; no descarta obstrucción asociada.</dd></dl></div>
+<div class="signo" id="e4-s-2"><h4>Dolor suprapúbico con piuria en el uroanálisis</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Dolor sobre el pubis y sedimento con leucocitos y bacterias.</dd>
+<dt>Por qué aparece</dt><dd>La pared duele al distenderse y los leucocitos salen en la orina. <button type="button" class="xref" data-ir="e4-m-3" onclick="ir('e4','e4-m-3')">← Respuesta inflamatoria vesical</button> <button type="button" class="xref" data-ir="e4-m-4" onclick="ir('e4','e4-m-4')">← Leucocitos en la orina</button></dd>
+<dt>Qué significa</dt><dd>Sostiene la infección y justifica el cultivo; sin piuria, busca otra causa.</dd></dl></div>
+<div class="signo" id="e4-s-3"><h4>Orina turbia</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Orina opaca o de olor fuerte; Carlos niega mal olor.</dd>
+<dt>Por qué aparece</dt><dd>Células y bacterias la enturbian. <button type="button" class="xref" data-ir="e4-m-4" onclick="ir('e4','e4-m-4')">← Leucocitos en la orina</button></dd>
+<dt>Qué significa</dt><dd>Es inespecífico: se confirma con uroanálisis.</dd></dl></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Urocultivo con uroanálisis previo al antibiótico</li>
+<li><span class="tg">Añade</span>Tacto rectal y residuo posmiccional por ecografía para buscar la causa predisponente [5].</li>
+<li><span class="tg">Confirma</span>Confirma con cultivo positivo y sensibilidad a antibióticos [7] [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Solo si</span>Tomografía o resonancia solo con sospecha de obstrucción, cuadro grave o falla del tratamiento [5].</li>
+<li><span class="tg">No pidas</span>No pidas PSA como rutina tras una infección urinaria masculina: puede elevarse sin cáncer [5].</li>
+<li><span class="tg">Alarma</span>Fiebre, dolor lumbar, retención, hematuria macroscópica o infección recurrente: deriva [5].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Uroanálisis</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Orientar a infección</td><td>Piuria y bacteriuria <button type="button" class="xref" data-ir="e4-m-4" onclick="ir('e4','e4-m-4')">← Leucocitos en la orina</button></td><td>[5]</td></tr>
+<tr><th>Urocultivo</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar germen y sensibilidad</td><td>Antes de la primera dosis</td><td>[7]</td></tr>
+<tr><th>Ecografía con residuo</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Buscar la causa predisponente</td><td>Residuo mayor de 100 mL es criterio de referencia <button type="button" class="xref" data-ir="e4-m-1" onclick="ir('e4','e4-m-1')">← Estasis urinaria</button></td><td>[5]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos. No se leyeron cifras de rendimiento.</p>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Trata como infección complicada: cultivo primero y causa predisponente después [5][7].</li>
+<li><span class="tg">De elección</span>Trimetoprima-sulfametoxazol según cultivo y sensibilidad local [7] [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Alternativa</span>Fluoroquinolona oral si la sensibilidad lo permite [7] [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Reevalúa</span>Reevalúa respuesta y cultivo; si recae, busca prostatitis u obstrucción [5].</li>
+<li><span class="tg">Especialista</span>Deriva ante recurrencia, retención, hematuria macroscópica o pielonefritis [5].</li>
+<li><span class="tg">Evita</span>Evita tratar la bacteriuria sin síntomas y evita pedir PSA como seguimiento [5] [VERIFICAR EN FUENTE].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Trimetoprima-sulfametoxazol</th><td>160 mg/800 mg</td><td>VO</td><td>Cada 12 h</td><td>[VERIFICAR EN FUENTE]</td><td>Elimina bacterias adheridas <button type="button" class="xref" data-ir="e4-m-2" onclick="ir('e4','e4-m-2')">← Bacterias se adhieren al urotelio</button>. Hiperpotasemia; ajustar en insuficiencia renal</td><td>[7]</td></tr>
+<tr><th>Ciprofloxacino</th><td>500 mg</td><td>VO</td><td>Cada 12 h</td><td>[VERIFICAR EN FUENTE]</td><td>Mismo blanco <button type="button" class="xref" data-ir="e4-m-2" onclick="ir('e4','e4-m-2')">← Bacterias se adhieren al urotelio</button>. Tendinopatía y QT largo; ajustar en insuficiencia renal</td><td>[7]</td></tr>
+</tbody></table></div>
+<p class="mini">VO: vía oral; QT: intervalo del electrocardiograma. Dosis de ficha técnica; la duración no se leyó.</p>
+<div class="dc" data-fn="dcE4"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Presentación</span>
+<button type="button" class="chip" data-g="pres" data-v="local" onclick="ch(this)">Disuria sin fiebre</button>
+<button type="button" class="chip" data-g="pres" data-v="sist" onclick="ch(this)">Fiebre o dolor lumbar</button>
+<button type="button" class="chip" data-g="pres" data-v="neg" onclick="ch(this)">Cultivo negativo</button></div>
+<div class="dc-g"><span class="dc-l">Otros datos</span>
+<button type="button" class="chip" data-g="otros" data-v="obs" data-m="1" onclick="ch(this)">Obstrucción o residuo</button>
+<button type="button" class="chip" data-g="otros" data-v="rec" data-m="1" onclick="ch(this)">Episodios previos</button>
+<button type="button" class="chip" data-g="otros" data-v="tmp" data-m="1" onclick="ch(this)">No tolera sulfa</button></div>
+<div class="out"></div></div>
+
+<h2>Seguimiento</h2>
+<p>Repite el cultivo si los síntomas persisten. Tras un primer episodio, completa el estudio con tacto rectal, I-PSS y ecografía con residuo [5].</p>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Pielonefritis o prostatitis</th><td>Las bacterias suben por uréteres o ductos</td><td><button type="button" class="xref" data-ir="e4-m-5" onclick="ir('e4','e4-m-5')">← Ascenso de la infección</button></td></tr>
+<tr><th>Recurrencia</th><td>La estasis persiste y recoloniza la vejiga</td><td><button type="button" class="xref" data-ir="e4-m-1" onclick="ir('e4','e4-m-1')">← Estasis urinaria</button></td></tr>
+</tbody></table></div>
+</section>
+<section class="tab" data-tab="e5">
+<div class="hb az"><div class="hb-t">Frente a Cistitis</div>
+<p>Se confunde con la cistitis porque ambas dan disuria. Se separa por la secreción uretral, la poca polaquiuria y la exposición sexual reciente.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué la uretritis gonocócica y la no gonocócica se parecen y qué las separa?</li>
+<li>¿Qué hallazgos distinguen una uretritis de una cistitis, y por qué las parejas entran en el tratamiento?</li>
+<li>¿Cómo explica la uretritis un dolor escrotal y cómo se trata antes del resultado microbiológico?</li>
+</ol></div>
+<p><span class="badge b-pu">CDC ITS 2021 [4]</span></p>
+<div class="hb am"><div class="hb-t">Precisión sobre el sílabo</div>
+<p>El sílabo nombra «uretritis» sin clasificarla. La clasificación completa separa la gonocócica de la no gonocócica, que es la más amplia: incluye clamidia, Mycoplasma genitalium, tricomonas y otros, y en cerca de la mitad no se identifica patógeno [4]. Carlos, afebril y sin secreción descrita, no encaja.</p></div>
+
+<h2>Qué es</h2>
+<div class="card"><p>La uretritis es la inflamación de la uretra, casi siempre infecciosa y de transmisión sexual.</p>
+<p>Criterios de la guía: secreción, disuria o prurito del meato con inflamación objetiva: Gram con al menos 2 leucocitos por campo de inmersión, o primera orina con leucocito esterasa positiva o 10 o más leucocitos por campo de alto poder [4].</p></div>
+<p>Los subtipos existen porque el agente cambia el antibiótico: diplococos gramnegativos intracelulares indican gonococo [4].</p>
+<div class="tw"><table><thead><tr><th>Subtipo</th><th>Agente</th><th>Cómo se reconoce</th></tr></thead>
+<tbody>
+<tr><th>Gonocócica</th><td>Neisseria gonorrhoeae</td><td>Secreción purulenta y diplococos en el Gram</td></tr>
+<tr><th>No gonocócica</th><td>Clamidia (menos de la mitad), M. genitalium (10 a 25 %), tricomonas (1 a 8 %) [4]</td><td>Inflamación sin diplococos</td></tr>
+</tbody></table></div>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Trauma o estenosis uretral</th><td>Disuria, chorro débil y goteo</td><td>Antecedente de trauma o sondaje, sin leucocitos uretrales; la uretrografía la muestra</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Dato</th><th>Valor en la fuente</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>Síndrome frecuente; la clamidia explica menos de la mitad de las no gonocócicas [4]</td></tr>
+<tr><th>Edad</th><td>Sin distribución leída; se asocia a la actividad sexual [4] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Sexo</th><td>Este widget trata la uretritis del varón [4]</td></tr>
+<tr><th>Factores clave</th><td>Pareja nueva o infectada en los 60 días previos [4]</td></tr>
+</tbody></table></div>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e5-m-1" data-clin="0" data-paso="Exposición sexual a un patógeno uretral"><div class="det"><p>Terreno: relaciones sin barrera con pareja nueva o infectada en los últimos 60 días [4]. Desencadenante: el inóculo de gonococo, clamidia u otro patógeno llega a la uretra.</p></div></li>
+<li class="nodo" id="e5-m-2" data-clin="0" data-paso="Patógeno invade el epitelio uretral"><div class="det"><p>El gonococo se adhiere con pili, filamentos de superficie, al epitelio uretral; la clamidia entra a las células como cuerpo elemental y se replica dentro. Son el blanco del antibiótico. <span class="rem">↪ Posología en «Tratamiento»</span></p></div></li>
+<li class="nodo" id="e5-m-3" data-clin="1" data-paso="Respuesta neutrofílica del epitelio uretral"><div class="det"><p>Las células infectadas atraen neutrófilos; ellos y las células muertas forman el exudado que sale por el meato, y la mucosa arde al paso de la orina. <span class="rem">↪ Propiedades en «Diagnóstico»</span></p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e5-s-1" onclick="ir('e5','e5-s-1')">Secreción uretral</button> <button type="button" class="xref" data-ir="e5-s-2" onclick="ir('e5','e5-s-2')">Disuria y prurito del meato</button></p></div></li>
+<li class="nodo" id="e5-m-4" data-clin="1" data-paso="Ascenso por los conductos a epidídimo y próstata"><div class="det"><p>Sin tratamiento, el agente sube por los conductos al epidídimo, donde maduran los espermatozoides. La epididimitis sexual suele acompañarse de uretritis [4].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e5-s-3" onclick="ir('e5','e5-s-3')">Dolor escrotal unilateral</button></p></div></li>
+<li class="nodo" id="e5-m-5" data-clin="0" data-paso="Cicatrización fibrosa de la uretra"><div class="det"><p>La inflamación repetida sustituye mucosa por fibrosis que estrecha la luz: la estenosis imita la obstrucción prostática.</p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la tubería con visitantes</span>
+<p class="fey-b">La uretra es el tubo por donde sale la orina. Si unos microbios se pegan a sus paredes, el cuerpo manda soldados y la zona se hincha: arde al orinar y sale líquido por la punta. Si nadie lo trata, los microbios suben hasta la bolsa de abajo, donde duele.</p>
+<p class="mini fey-c">En medicina esto se llama… uretritis y epididimitis.</p>
+<p class="mini fey-c">Dónde falla la comparación: estos microbios pasan entre personas, y una tubería de casa no tiene pareja que tratar.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Disuria</p>
+<p data-e="p">Prurito del meato</p>
+<p data-e="p">Poca polaquiuria</p>
+<p data-e="v">Dolor escrotal</p>
+<p data-e="a">Fiebre</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e5-s-1" onclick="ir('e5','e5-s-1')">Secreción uretral purulenta o mucoide en el meato</button></p>
+</div>
+<div class="signo" id="e5-s-1"><h4>Secreción uretral purulenta o mucoide en el meato</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Exudado en el meato; purulento en la gonocócica, mucoide en la no gonocócica.</dd>
+<dt>Por qué aparece</dt><dd>Neutrófilos y células muertas drenan por la uretra. <button type="button" class="xref" data-ir="e5-m-3" onclick="ir('e5','e5-m-3')">← Respuesta neutrofílica</button></dd>
+<dt>Qué significa</dt><dd>Indica uretritis y pide NAAT; su ausencia no la excluye.</dd></dl></div>
+<div class="signo" id="e5-s-2"><h4>Disuria y prurito del meato</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Ardor distal y picazón del meato, con poca polaquiuria.</dd>
+<dt>Por qué aparece</dt><dd>La mucosa inflamada irrita las terminaciones sensitivas. <button type="button" class="xref" data-ir="e5-m-3" onclick="ir('e5','e5-m-3')">← Respuesta neutrofílica</button></dd>
+<dt>Qué significa</dt><dd>Es inespecífico: se separa de la cistitis por la secreción y la ausencia de urgencia marcada.</dd></dl></div>
+<div class="signo" id="e5-s-3"><h4>Dolor escrotal unilateral</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Dolor a la palpación de un escroto, con epidídimo engrosado; en Carlos, el izquierdo.</dd>
+<dt>Por qué aparece</dt><dd>La infección ascendente distiende el epidídimo. <button type="button" class="xref" data-ir="e5-m-4" onclick="ir('e5','e5-m-4')">← Ascenso al epidídimo</button></dd>
+<dt>Qué significa</dt><dd>Si fue súbito, descarta torsión, una urgencia quirúrgica; la hiperplasia no lo explica [4].</dd></dl></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>NAAT de primera orina para gonococo y clamidia</li>
+<li><span class="tg">Añade</span>Gram de la secreción o leucocito esterasa en primera orina para confirmar inflamación [4].</li>
+<li><span class="tg">Añade</span>Ofrece pruebas de VIH y sífilis [4].</li>
+<li><span class="tg">Confirma</span>Confirma el agente con NAAT; diplococos gramnegativos intracelulares indican gonococo [4].</li>
+<li><span class="tg">No pidas</span>No pidas retratamiento sin documentar la inflamación uretral: los síntomas solos no bastan [4].</li>
+<li><span class="tg">Alarma</span>Dolor escrotal súbito: descarta torsión testicular, urgencia quirúrgica [4].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>NAAT de primera orina</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar gonococo y clamidia</td><td>Toda uretritis la requiere <button type="button" class="xref" data-ir="e5-m-2" onclick="ir('e5','e5-m-2')">← Patógeno invade el epitelio</button></td><td>[4]</td></tr>
+<tr><th>Gram de secreción</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar inflamación y gonococo</td><td>Al menos 2 leucocitos por campo de inmersión <button type="button" class="xref" data-ir="e5-m-3" onclick="ir('e5','e5-m-3')">← Respuesta neutrofílica</button></td><td>[4]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos; NAAT: amplificación de ácidos nucleicos. No se leyeron cifras de rendimiento.</p>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Trata de forma presuntiva al diagnosticar y ajusta con el resultado; observa la primera dosis [4].</li>
+<li><span class="tg">Principio</span>Trata a las parejas de los últimos 60 días [4].</li>
+<li><span class="tg">De elección</span>Doxiciclina oral por 7 días para la uretritis no gonocócica [4].</li>
+<li><span class="tg">Alternativa</span>Azitromicina oral si no es posible usar doxiciclina [4].</li>
+<li><span class="tg">Escala</span>Con gonococo o diplococos en el Gram, añade ceftriaxona intramuscular en dosis única [4].</li>
+<li><span class="tg">Reevalúa</span>Si persisten los síntomas, confirma inflamación, cumplimiento y reexposición antes de retratar [4].</li>
+<li><span class="tg">Evita</span>Evita la eritromicina y la levofloxacina en la uretritis no gonocócica: se toleran peor o son menos eficaces [4].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Doxiciclina</th><td>100 mg</td><td>VO</td><td>Cada 12 h</td><td>7 días; 10 en epididimitis</td><td>Frena la síntesis de proteínas bacterianas <button type="button" class="xref" data-ir="e5-m-2" onclick="ir('e5','e5-m-2')">← Patógeno invade el epitelio</button>. Fotosensibilidad; se añade si la clamidia no está excluida</td><td>[4]</td></tr>
+<tr><th>Azitromicina</th><td>1 g, o 500 mg y luego 250 mg</td><td>VO</td><td>Dosis única, o cada 24 h por 4 días</td><td>1 o 5 días</td><td>Alternativa <button type="button" class="xref" data-ir="e5-m-2" onclick="ir('e5','e5-m-2')">← Patógeno invade el epitelio</button>; hay resistencia a macrólidos en M. genitalium</td><td>[4]</td></tr>
+<tr><th>Ceftriaxona</th><td>500 mg (1 g si pesa 150 kg o más)</td><td>IM</td><td>Dosis única</td><td>1 día</td><td>Mata al gonococo <button type="button" class="xref" data-ir="e5-m-2" onclick="ir('e5','e5-m-2')">← Patógeno invade el epitelio</button>; reacción cruzada con penicilina mínima</td><td>[4]</td></tr>
+<tr><th>Levofloxacino</th><td>500 mg</td><td>VO</td><td>Cada 24 h</td><td>10 días</td><td>Solo en epididimitis por organismos entéricos o gonococo improbable <button type="button" class="xref" data-ir="e5-m-4" onclick="ir('e5','e5-m-4')">← Ascenso al epidídimo</button></td><td>[4]</td></tr>
+<tr><th>Moxifloxacino</th><td>400 mg</td><td>VO</td><td>Cada 24 h</td><td>7 días, tras 7 de doxiciclina</td><td>M. genitalium persistente sin prueba de resistencia <button type="button" class="xref" data-ir="e5-m-2" onclick="ir('e5','e5-m-2')">← Patógeno invade el epitelio</button></td><td>[4]</td></tr>
+<tr><th>Metronidazol</th><td>2 g</td><td>VO</td><td>Dosis única</td><td>1 día</td><td>Tricomonas en uretritis persistente donde es prevalente <button type="button" class="xref" data-ir="e5-m-2" onclick="ir('e5','e5-m-2')">← Patógeno invade el epitelio</button></td><td>[4]</td></tr>
+</tbody></table></div>
+<p class="mini">VO: vía oral; IM: intramuscular.</p>
+<div class="dc" data-fn="dcE5"><div class="dc-t">Simulador · Decisión clínica — predice el esquema antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Peso en kg</span><input type="number" data-n="peso" min="30" max="300" step="1" oninput="ch(this)"></div>
+<div class="dc-g"><span class="dc-l">Cuadro</span>
+<button type="button" class="chip" data-g="cuadro" data-v="ngu" onclick="ch(this)">Sin diplococos</button>
+<button type="button" class="chip" data-g="cuadro" data-v="gono" onclick="ch(this)">Gonococo</button>
+<button type="button" class="chip" data-g="cuadro" data-v="pers" onclick="ch(this)">Persiste tras tratar</button></div>
+<div class="dc-g"><span class="dc-l">Otros datos</span>
+<button type="button" class="chip" data-g="otros" data-v="epi" data-m="1" onclick="ch(this)">Epididimitis</button>
+<button type="button" class="chip" data-g="otros" data-v="anal" data-m="1" onclick="ch(this)">Sexo anal insertivo</button>
+<button type="button" class="chip" data-g="otros" data-v="tv" data-m="1" onclick="ch(this)">Tricomonas prevalentes</button></div>
+<div class="out"></div></div>
+
+<h2>Seguimiento</h2>
+<p>Entrega los resultados y repite la prueba a los 3 meses si hubo clamidia, gonococo o tricomonas, por la reinfección; ante dolor pélvico persistente, sospecha prostatitis crónica [4].</p>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Epididimitis</th><td>El agente asciende por los conductos</td><td><button type="button" class="xref" data-ir="e5-m-4" onclick="ir('e5','e5-m-4')">← Ascenso al epidídimo</button></td></tr>
+</tbody></table></div>
+</section>
+<section class="tab" data-tab="sin">
+<div class="hb ro"><div class="hb-t">Errores que no se pueden cometer</div>
+<ul>
+<li>Tranquilizar a un varón con un nódulo duro o un PSA elevado sin estudio dirigido ni decisión compartida [3].</li>
+<li>Pedir PSA durante una infección activa o tras un sondaje y actuar sobre ese valor [3][5].</li>
+<li>Dar un antimuscarínico o un antiespasmódico anticolinérgico a un varón con vaciado incompleto sin medir el residuo [2].</li>
+<li>Tratar la nicturia solo con fármacos prostáticos, sin diario miccional y sin revisar la hora del diurético [1].</li>
+<li>Indicar antibiótico sin urocultivo en un varón con cistitis o prostatitis, o masajear la próstata en la forma aguda [5][7].</li>
+<li>Tratar una uretritis sin NAAT ni estudio de la pareja, o pasar por alto una torsión testicular en el dolor escrotal súbito [4].</li>
+</ul></div>
+<div class="acc refs"><button type="button" class="acc-h" onclick="tog(this)">Referencias <span class="chev">▾</span></button>
+<div class="acc-b"><ol class="vanc">
+<li>Gravas S, Gacci M, Gratzke C, Herrmann TRW, Karavitakis M, Kyriazis I, et al. Summary paper on the 2023 European Association of Urology guidelines on the management of non-neurogenic male lower urinary tract symptoms. Eur Urol. 2023;84(2):207-22. doi:10.1016/j.eururo.2023.04.008. Guía basada en consenso Delphi; solo se leyó el resumen.</li>
+<li>Lerner LB, McVary KT, Barry MJ, Bixler BR, Dahm P, Das AK, et al. Management of lower urinary tract symptoms attributed to benign prostatic hyperplasia: AUA guideline part I—initial work-up and medical management. J Urol. 2021;206(4):806-17. doi:10.1097/JU.0000000000002183. Guía; solo se leyó el resumen.</li>
+<li>Wei JT, Barocas D, Carlsson S, Coakley F, Eggener S, Etzioni R, et al. Early detection of prostate cancer: AUA/SUO guideline part I: prostate cancer screening. J Urol. 2023;210(1):46-53. doi:10.1097/JU.0000000000003491. Guía; texto completo leído.</li>
+<li>Workowski KA, Bachmann LH, Chan PA, Johnston CM, Muzny CA, Park I, et al. Sexually transmitted infections treatment guidelines, 2021. MMWR Recomm Rep. 2021;70(4):1-187. doi:10.15585/mmwr.rr7004a1. Guía; se leyeron las secciones de uretritis y epididimitis.</li>
+<li>Soudais B, Bruyère F, Forestier E, Lesprit P, Putot A, Lafaurie M, et al. Which investigations should be performed after a first episode of urinary tract infection in men? Infect Dis Now. 2026;56(6S):105315. doi:10.1016/j.idnow.2026.105315. Revisión; solo se leyó el resumen.</li>
+<li>Sandhu JS, Bixler BR, Dahm P, Goueli R, Kirkby E, Stoffel JT, et al. Management of lower urinary tract symptoms attributed to benign prostatic hyperplasia (BPH): AUA guideline amendment 2023. J Urol. 2024;211(1):11-9. doi:10.1097/JU.0000000000003698. Guía; solo se leyó el resumen.</li>
+<li>European Association of Urology. EAU guidelines on urological infections. Arnhem: EAU; edición no verificada. Guía; solo se conoció un resumen de búsqueda web y no se leyó el texto.</li>
+<li>Cornford P, van den Bergh RCN, Briers E, Van den Broeck T, Brunckhorst O, Darraugh J, et al. EAU-EANM-ESTRO-ESUR-ISUP-SIOG guidelines on prostate cancer—2024 update. Part I: screening, diagnosis, and local treatment with curative intent. Eur Urol. 2024;86(2):148-63. doi:10.1016/j.eururo.2024.03.027. Guía; solo se leyó el resumen.</li>
+<li>Epstein JI, Egevad L, Amin MB, Delahunt B, Srigley JR, Humphrey PA. The 2014 International Society of Urological Pathology (ISUP) consensus conference on Gleason grading of prostatic carcinoma: definition of grading patterns and proposal for a new grading system. Am J Surg Pathol. 2016;40(2):244-52. doi:10.1097/PAS.0000000000000530. Consenso; solo se leyó el resumen.</li>
+</ol></div></div>
+</section>
+<script>
+function par(t){return '<p>'+t+'</p>';}
+function hv(a,v){return a.indexOf(v)>-1;}
+function vacio(dc,t){out(dc,par(t));}
+
+function dcVis(dc){
+  var t=sel(dc,'tacto'),s=sel(dc,'sint'),f=sel(dc,'fiebre'),u=sel(dc,'orina'),o=sel(dc,'otros');
+  if(!(t.length||s.length||f.length||u.length||o.length)){
+    vacio(dc,'Elige los hallazgos de la consulta. El simulador propone qué entidad es compatible, qué dato falta para confirmarla y la conducta inicial; no calcula probabilidades.');return;}
+  var r=[],n=0;
+  if(hv(s,'secrecion')){n++;
+    r.push(par('<b>Uretritis</b>: la secreción por el meato la hace compatible. Falta confirmar con NAAT de primera orina y Gram uretral [4]. Conducta inicial: tratar según el agente y estudiar a la pareja.'));
+    if(hv(o,'escroto')) r.push(par('El dolor escrotal sugiere epididimitis asociada; si el inicio fue súbito, descarta torsión testicular, urgencia quirúrgica [4].'));
+  }
+  if(hv(t,'dolor')){n++;
+    r.push(par('<b>Prostatitis aguda</b>: la próstata dolorosa y caliente la hace compatible'+(hv(f,'si')?', y la fiebre la refuerza':'')+'. Falta el urocultivo antes del antibiótico [7]. Conducta inicial: antibiótico según gravedad, ingreso si hay sepsis o retención y sin masaje prostático.'));
+  } else if(hv(s,'perineal')&&!hv(f,'si')&&hv(u,'normal')){n++;
+    r.push(par('<b>Prostatitis crónica o dolor pélvico crónico</b>: dolor perineal sin fiebre ni piuria. Falta documentar cultivos y descartar otras causas. Conducta inicial: no repetir antibióticos sin cultivo y derivar a urología [4].'));
+  }
+  if(hv(s,'disuria')&&hv(u,'piuria')&&!hv(t,'dolor')&&!hv(s,'secrecion')){n++;
+    r.push(par('<b>Cistitis</b>: disuria con piuria y bacteriuria sin dolor prostático. En el varón es complicada: falta el urocultivo y la causa predisponente (residuo y tacto rectal) [5]. Conducta inicial: antibiótico dirigido por cultivo.'));
+  }
+  if(hv(t,'duro')){n++;
+    r.push(par('<b>Cáncer de próstata</b>: el nódulo duro o la próstata pétrea lo hace compatible aunque falten síntomas. Falta el PSA repetido y la resonancia con biopsia dirigida tras decisión compartida [3][8]. Conducta inicial: derivar a urología.'));
+  }
+  if(hv(t,'blando')&&hv(s,'obs')&&!hv(f,'si')&&!hv(u,'piuria')){n++;
+    r.push(par('<b>Hiperplasia prostática benigna</b>: STUI obstructivos con próstata aumentada y blanda, sin fiebre ni piuria. Falta cuantificar con I-PSS, uroanálisis y residuo [1][2]. Conducta inicial: medidas conductuales y alfabloqueante si los síntomas son moderados a graves.'));
+    if(hv(o,'famca')) r.push(par('El antecedente familiar de primer grado abre la conversación sobre PSA aunque el tacto sea blando [3].'));
+  }
+  if(hv(o,'retencion')) r.push(par('Imposibilidad de orinar: sondaje y derivación sin demora [5].'));
+  if(hv(o,'hematuria')) r.push(par('Hematuria macroscópica: estudia la vejiga y las vías altas antes de atribuirla a la próstata [5].'));
+  if(!n) r.push(par('Los hallazgos elegidos no bastan para sostener una sola entidad. Completa el tacto rectal, el uroanálisis y los síntomas, y revisa las banderas rojas.'));
+  r.push('<span class="cf">Si el tacto blando pasa a nódulo duro → la conducta cambia de manejo del vaciado a PSA repetido y estudio dirigido [3].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE1dx(dc){
+  var ip=num(dc,'ipss'),pr=sel(dc,'pred'),di=sel(dc,'diario'),al=sel(dc,'ala');
+  if(isNaN(ip)&&!pr.length&&!di.length&&!al.length){
+    vacio(dc,'Escribe el I-PSS y elige el patrón, el diario miccional y los datos de alarma para obtener la banda y la conducta.');return;}
+  var r=[];
+  if(isNaN(ip)){r.push(par('Falta el I-PSS: aplica el cuestionario antes de decidir [2].'));}
+  else if(ip<0||ip>35){r.push(par('El I-PSS va de 0 a 35: revisa el valor.'));}
+  else{
+    var b=ip<=7?'leve':(ip<=19?'moderada':'grave');
+    r.push(par('Banda <b>'+b+'</b> (I-PSS '+ip+'; leve 0 a 7, moderada 8 a 19, grave 20 a 35) [2].'));
+    if(b==='leve') r.push(par('Conducta: vigilancia con medidas conductuales (líquidos, cafeína y hora del diurético) [1].'));
+    else r.push(par('Conducta: tratamiento médico según el patrón (ver «Tratamiento»).'));
+  }
+  if(hv(pr,'noct')&&hv(di,'poli')) r.push(par('La nicturia con volumen nocturno aumentado sugiere poliuria nocturna: ajusta la hora del diurético y los líquidos antes de añadir un fármaco prostático [1].'));
+  if(hv(pr,'noct')&&hv(di,'norm')) r.push(par('La nicturia con volumen nocturno normal apunta a vejiga pequeña o irritable: la próstata es candidata a explicarla [1].'));
+  if(hv(pr,'llenado')) r.push(par('El predominio de llenado exige descartar infección con uroanálisis y medir el residuo antes de tratar [1].'));
+  if(al.length){
+    var a=[];
+    if(hv(al,'ret')) a.push('retención o globo vesical');
+    if(hv(al,'hem')) a.push('hematuria macroscópica');
+    if(hv(al,'itu')) a.push('infección urinaria recurrente');
+    if(hv(al,'res')) a.push('residuo mayor de 100 mL');
+    if(hv(al,'nod')) a.push('nódulo duro al tacto');
+    r.push(par('Datos de alarma ('+a.join(', ')+'): deriva a urología [2][5].'));
+    if(hv(al,'nod')) r.push(par('El nódulo duro desplaza el razonamiento hacia el cáncer: PSA tras decisión compartida y estudio dirigido [3].'));
+  }
+  r.push('<span class="cf">Si el diario muestra volumen nocturno aumentado → trata primero la poliuria nocturna; si aparece retención → derivación inmediata [1][5].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE1tx(dc){
+  var s=sel(dc,'sint'),v=sel(dc,'vol'),o=sel(dc,'otros');
+  if(!s.length&&!v.length&&!o.length){
+    vacio(dc,'Elige el síntoma que más molesta, el tamaño de la próstata y los otros datos para obtener el fármaco con su posología.');return;}
+  var r=[];
+  if(hv(o,'poli')) r.push(par('Primero: mueve el diurético a la mañana y reduce líquidos y cafeína antes de dormir; repite el diario antes de añadir un fármaco prostático [1].'));
+  if(hv(o,'res')) r.push(par('Residuo elevado o retención previa: deriva a urología y evita antimuscarínicos y antiespasmódicos anticolinérgicos, que pueden precipitar retención [2].'));
+  var ala=(hv(s,'vaciado')||hv(s,'llenado')||hv(s,'noct'))&&!hv(o,'poli');
+  if(ala||hv(o,'res')){
+    if(hv(o,'pa')) r.push(par('Alfabloqueante: tamsulosina 0,4 mg VO cada 24 h después de la misma comida, de forma continua; vigila la presión ortostática porque ya usa antihipertensivos y evita iniciar con doxazosina [2].'));
+    else r.push(par('Alfabloqueante: tamsulosina 0,4 mg VO cada 24 h después de la misma comida, de forma continua; alternativa: alfuzosina 10 mg de liberación prolongada VO cada 24 h tras una comida [2].'));
+  }
+  if(hv(v,'grande')) r.push(par('Con próstata aumentada, añade un inhibidor de la reductasa: dutasterida 0,5 mg o finasterida 5 mg VO cada 24 h, de forma continua y con efecto lento; la combinación con el alfabloqueante se reserva para síntomas con riesgo de progresión [2][6]. Interpreta el PSA con ese tratamiento [VERIFICAR EN FUENTE].'));
+  if(hv(o,'de')) r.push(par('Si coexiste disfunción eréctil, tadalafilo 5 mg VO cada 24 h puede cubrir ambos problemas; no lo uses con nitratos [2].'));
+  if(hv(s,'llenado')&&!hv(o,'res')) r.push(par('Si el llenado persiste tras el alfabloqueante, deriva a urología para valorar otros fármacos de llenado [2].'));
+  if(!r.length) r.push(par('Con esos datos no hay un fármaco claro: define el síntoma predominante y revisa el diario miccional.'));
+  r.push('<span class="cf">Si el residuo está elevado → no se usan antimuscarínicos y se deriva a urología [2].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE2(dc){
+  var f=sel(dc,'forma'),o=sel(dc,'otros');
+  if(!f.length&&!o.length){
+    vacio(dc,'Elige la forma de prostatitis y los otros datos para obtener la conducta y la posología.');return;}
+  var r=[];
+  if(hv(f,'aguda')){
+    if(hv(o,'fq')) r.push(par('Prostatitis aguda estable sin fluoroquinolonas: trimetoprima-sulfametoxazol 160 mg/800 mg VO cada 12 h con germen sensible; duración [VERIFICAR EN FUENTE]; urocultivo antes de la primera dosis [7].'));
+    else r.push(par('Prostatitis aguda estable: ciprofloxacino 500 mg VO cada 12 h, al menos 14 días [VERIFICAR EN FUENTE]; urocultivo antes de la primera dosis; alternativa con germen sensible: trimetoprima-sulfametoxazol 160 mg/800 mg VO cada 12 h [7].'));
+  }
+  if(hv(f,'grave')) r.push(par('Sepsis o retención: ingresa con antibiótico parenteral de amplio espectro según la guía local [7] [VERIFICAR EN FUENTE]; evita el sondaje uretral y prefiere el cateterismo suprapúbico [VERIFICAR EN FUENTE].'));
+  if(hv(f,'cronica')) r.push(par('Crónica bacteriana: antibiótico dirigido por cultivos repetidos, por ejemplo ciprofloxacino 500 mg VO cada 12 h durante un ciclo prolongado [VERIFICAR EN FUENTE] [7]; deriva a urología [4].'));
+  if(hv(f,'cppc')) r.push(par('Dolor pélvico crónico sin infección: no repitas antibióticos; tamsulosina 0,4 mg VO cada 24 h después de la misma comida si hay síntomas miccionales [2] [VERIFICAR EN FUENTE]; deriva a un urólogo con experiencia en dolor pélvico [4].'));
+  if(hv(o,'its')) r.push(par('Riesgo de infección de transmisión sexual: trata como uretritis o epididimitis (ver «Uretritis») y estudia a la pareja; una fluoroquinolona sola no cubre bien al gonococo [4][7].'));
+  if(!r.length) r.push(par('Elige una forma de prostatitis para ver la conducta.'));
+  r.push('<span class="cf">Si aparecen fiebre alta, hipotensión o retención → la conducta pasa de ambulatoria a ingreso con antibiótico parenteral [7].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE3dx(dc){
+  var ed=num(dc,'edad'),fa=sel(dc,'fam'),rk=sel(dc,'riesgo'),vi=sel(dc,'vida'),ps=sel(dc,'psa');
+  if(isNaN(ed)){
+    vacio(dc,'Escribe la edad y elige los antecedentes para ver qué recomienda la guía. Es una decisión compartida: el simulador no calcula probabilidades.');return;}
+  var alto=hv(fa,'fuerte')||hv(rk,'negra')||hv(rk,'germinal');
+  var r=[];
+  if(ed<40) r.push(par('Menor de 40 años: la guía leída no recomienda cribado de rutina; con antecedente fuerte o mutación germinal valora un estudio genético [3].'));
+  else if(ed<45) r.push(par(alto?'Entre 40 y 45 años con riesgo aumentado: ofrece cribado con PSA tras decisión compartida [3].':'Entre 40 y 45 años con riesgo promedio: no hay evidencia aleatorizada de beneficio antes de los 45 años [3].'));
+  else if(ed<50) r.push(par(alto?'Con riesgo aumentado, ofrece cribado desde ahora y valora un intervalo más corto [3].':'Con riesgo promedio puedes iniciar el cribado y ofrecer un PSA basal entre los 45 y 50 años, tras decisión compartida [3].'));
+  else if(ed<70) r.push(par('Ofrece cribado regular cada 2 a 4 años entre los 50 y 69 años, tras decisión compartida'+(alto?'; con riesgo aumentado, un intervalo más corto':'')+' [3].'));
+  else if(ed<75) r.push(par('Entre 70 y 74 años individualiza según salud y expectativa de vida; el cribado solo aporta beneficio si la expectativa supera los 10 años [3].'));
+  else r.push(par('Con 75 años o más puedes suspender o alargar el intervalo si el PSA es menor de 3 ng/mL [3].'));
+  if(hv(vi,'corta')&&ed>=50) r.push(par('Con expectativa de vida menor de 10 años el cribado probablemente no aporta beneficio [3].'));
+  if(hv(fa,'uno')) r.push(par('Un familiar de primer grado: pregunta la edad al diagnóstico, la gravedad y si falleció; si cumple los criterios de la guía, el antecedente es fuerte [3].'));
+  if(hv(fa,'fuerte')) r.push(par('Antecedente fuerte: ofrece cribado desde los 40 a 45 años y considera un estudio genético [3].'));
+  if(hv(ps,'previo')) r.push(par('Sin PSA previo: el PSA es la primera prueba de cribado [3].'));
+  if(hv(ps,'elevado')) r.push(par('PSA recién elevado: repítelo antes de pedir biomarcador, imagen o biopsia, y no lo interpretes tras infección o instrumentación reciente; con 2 ng/mL o más considera el tacto rectal [3][5].'));
+  if(hv(ps,'bajo')&&!alto) r.push(par('PSA previo bajo sin riesgo aumentado: puedes alargar el intervalo de cribado [3].'));
+  r.push(par('Decide con el paciente según sus valores y preferencias, y apóyate en una calculadora de riesgo antes de indicar la biopsia [3].'));
+  r.push('<span class="cf">Si el familiar fue diagnosticado antes de los 60 años, murió por el cáncer o tuvo metástasis → el antecedente pasa a fuerte y el cribado se ofrece desde los 40 a 45 años [3].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE3tx(dc){
+  var k=sel(dc,'riesgo'),p=sel(dc,'pref');
+  if(!k.length){
+    vacio(dc,'Elige el grupo de riesgo y la preferencia del paciente para obtener la conducta.');return;}
+  var r=[];
+  if(hv(k,'bajo')) r.push(par('Bajo riesgo, grupo de grado 1: vigilancia activa con PSA seriado según protocolo; evita el tratamiento curativo inmediato [8].'));
+  if(hv(k,'fav')) r.push(par('Intermedio favorable con grupo de grado 2: la vigilancia activa es una opción seleccionada; si el paciente prefiere tratar, prostatectomía radical o radioterapia con hipofraccionamiento [8].'));
+  if(hv(k,'desf')) r.push(par('Intermedio desfavorable o alto, localizado: tratamiento local con prostatectomía radical o radioterapia tras decisión compartida sobre efectos adversos [8].'));
+  if(hv(k,'n1')) r.push(par('Ganglios afectados: tratamiento local combinado con terapia de privación androgénica prolongada; dosis y esquema [VERIFICAR EN FUENTE] [8].'));
+  if(hv(p,'vigilar')&&(hv(k,'desf')||hv(k,'n1'))) r.push(par('Con ese riesgo la vigilancia no es la conducta estándar: revisa con el paciente por qué la prefiere [8].'));
+  if(hv(p,'tratar')&&hv(k,'bajo')) r.push(par('Un paciente de bajo riesgo que pide tratar debe conocer que la vigilancia tiene excelente pronóstico y que el tratamiento trae efectos adversos [8].'));
+  r.push('<span class="cf">Si el grupo de grado sube de 1 a 2 → deja de ser candidato automático a vigilancia y se revalora el riesgo [8].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE4(dc){
+  var p=sel(dc,'pres'),o=sel(dc,'otros');
+  if(!p.length&&!o.length){
+    vacio(dc,'Elige la presentación y los otros datos para obtener la conducta y la posología.');return;}
+  var r=[];
+  if(hv(p,'local')){
+    if(hv(o,'tmp')) r.push(par('Cistitis complicada del varón: urocultivo antes del antibiótico [5]; ciprofloxacino 500 mg VO cada 12 h si el cultivo es sensible; duración [VERIFICAR EN FUENTE] [7].'));
+    else r.push(par('Cistitis complicada del varón: urocultivo antes del antibiótico [5]; trimetoprima-sulfametoxazol 160 mg/800 mg VO cada 12 h según sensibilidad; duración [VERIFICAR EN FUENTE]; alternativa: ciprofloxacino 500 mg VO cada 12 h [7].'));
+    r.push(par('Completa el estudio con tacto rectal y ecografía con residuo posmiccional [5].'));
+  }
+  if(hv(p,'sist')) r.push(par('Fiebre o dolor lumbar sugieren que la infección ascendió: toma urocultivo y deriva o ingresa según la gravedad [5].'));
+  if(hv(p,'neg')) r.push(par('Dolor vesical con cultivo negativo: considera síndrome de dolor vesical y no indiques antibiótico [VERIFICAR EN FUENTE]; descarta tuberculosis vesical y cáncer vesical, y deriva a urología.'));
+  if(hv(o,'obs')) r.push(par('Obstrucción o residuo: es la causa predisponente; trátala o deriva para evitar la recurrencia [5].'));
+  if(hv(o,'rec')) r.push(par('Episodios previos: busca prostatitis o una causa obstructiva y deriva a urología [5].'));
+  if(!r.length) r.push(par('Elige una presentación para ver la conducta.'));
+  r.push('<span class="cf">Si el cultivo es negativo con síntomas persistentes → piensa en síndrome de dolor vesical, tuberculosis vesical o cáncer vesical en lugar de repetir el antibiótico [VERIFICAR EN FUENTE].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE5(dc){
+  var w=num(dc,'peso'),c=sel(dc,'cuadro'),o=sel(dc,'otros');
+  if(!c.length&&!o.length){
+    vacio(dc,'Escribe el peso y elige el cuadro para obtener el esquema con su posología.');return;}
+  var cefMg=Math.min(1000,(!isNaN(w)&&w>=150)?1000:500);
+  var cef=(cefMg>=1000?'1 g':'500 mg')+' (dosis máxima 1 g)';
+  var nota=isNaN(w)?'; escribe el peso: 1 g si pesa 150 kg o más':'';
+  var r=[];
+  if(hv(c,'ngu')) r.push(par('Uretritis no gonocócica: doxiciclina 100 mg VO cada 12 h por 7 días; alternativa: azitromicina 1 g VO en dosis única, o 500 mg el primer día y 250 mg cada 24 h por 4 días más [4]. Observa la primera dosis y trata a las parejas de los últimos 60 días.'));
+  if(hv(c,'gono')) r.push(par('Gonococo: ceftriaxona '+cef+' IM en dosis única'+nota+'; si la clamidia no está excluida, añade doxiciclina 100 mg VO cada 12 h por 7 días [4].'));
+  if(hv(c,'pers')){
+    r.push(par('Persistente tras tratamiento completo: confirma inflamación uretral, cumplimiento y reexposición antes de retratar [4].'));
+    if(hv(o,'tv')) r.push(par('Con tricomonas prevalentes: metronidazol 2 g VO en dosis única [4].'));
+    else r.push(par('Sin prueba de resistencia para Mycoplasma genitalium: doxiciclina 100 mg VO cada 12 h por 7 días y después moxifloxacino 400 mg VO cada 24 h por 7 días [4].'));
+  }
+  if(hv(o,'epi')){
+    if(hv(o,'anal')) r.push(par('Epididimitis con sexo anal insertivo: ceftriaxona '+cef+' IM en dosis única más levofloxacino 500 mg VO cada 24 h por 10 días [4].'));
+    else r.push(par('Epididimitis de probable causa sexual: ceftriaxona '+cef+' IM en dosis única más doxiciclina 100 mg VO cada 12 h por 10 días [4]. Si el inicio fue súbito, descarta torsión testicular.'));
+  }
+  if(!r.length) r.push(par('Elige un cuadro para ver el esquema.'));
+  r.push('<span class="cf">Si hay diplococos gramnegativos intracelulares o NAAT positiva para gonococo → se añade ceftriaxona al esquema de la uretritis no gonocócica [4].</span>');
+  out(dc,r.join(''));
+}
+</script>
+<!-- KIT_SCRIPT -->
+</div>
+<script>
+(function(){
+'use strict';
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+function secK(k){return $('section.tab[data-tab="'+k+'"]')}
+function secOf(el){return el&&el.closest?el.closest('section.tab'):null}
+function nameOf(k){var b=$('button.tb[data-tab="'+k+'"]');return b?b.textContent.replace(/\s+/g,' ').replace(/^\s+|\s+$/g,''):k}
+function btn(t,f,c){var b=document.createElement('button');b.type='button';b.className=c||'chip';b.textContent=t;b.addEventListener('click',f);return b}
+function recon(s,on){if(!s)return;s.classList.toggle('recon',!!on);$$('.nodo',s).forEach(function(n){n.classList.remove('rev');n.classList.remove('pis')});var st=$('.rec-state',s);if(st)st.textContent=on?'Modo reconstrucción activo':'Modo lectura';var a=$('.rec-bar [data-act="rec"]',s);if(a){a.disabled=!!on;a.classList.toggle('on',!!on);a.textContent=on?'Reconstrucción activa':'Activar reconstrucción'}}
+window.recon=function(k,on){recon(secK(k),on)};
+function navOv(){var n=$('nav.tabs');if(!n)return;var sl=n.scrollLeft,mx=n.scrollWidth-n.clientWidth,w=n.parentNode;[n,w].forEach(function(e){if(e===n||e.classList.contains('tabs-w')){e.classList.toggle('ov-l',sl>2);e.classList.toggle('ov-r',sl<mx-2)}})}
+function tabla(on){var t=$('table.vis'),s=secOf(t);if(!s)return;s.classList.toggle('tbl',!!on);$$('td.tap',t).forEach(function(c){c.classList.remove('rev')});var st=$('.vb-state',s);if(st)st.textContent=on?'Tabla tapada: toca cada celda para revelarla':'Modo lectura'}
+window.tabla=tabla;
+window.show=function(k){var ns=secK(k);if(!ns)return;$$('section.tab.on').forEach(function(s){if(s!==ns){if(s.classList.contains('recon'))recon(s,false);if(s.classList.contains('tbl'))tabla(false)}});$$('.tb,.tab').forEach(function(e){e.classList.toggle('on',e.getAttribute('data-tab')===k)});window.scrollTo(0,0);var b=$('.tb.on');if(b&&b.scrollIntoView){try{b.scrollIntoView({inline:'nearest',block:'nearest'})}catch(e){}}navOv()};
+window.ir=function(k,id){var el=document.getElementById(id),s=secOf(el);if(!s)return;var nodo=el.classList.contains('nodo');if(s.classList.contains('recon')&&!nodo)recon(s,false);if(s.classList.contains('tbl')&&!el.closest('.vis-w'))tabla(false);show(s.getAttribute('data-tab'));if(nodo&&s.classList.contains('recon'))el.classList.add('rev');var a=el.closest('.acc');if(a)a.classList.add('op');el.scrollIntoView({block:'start'});el.classList.add('hl');setTimeout(function(){el.classList.remove('hl')},1500)};
+window.tog=function(b){var a=b.closest('.acc');if(a)a.classList.toggle('op')};
+window.sel=function(dc,g){return $$('.chip.on[data-g="'+g+'"]',dc).map(function(c){return c.getAttribute('data-v')})};
+window.num=function(dc,n){var i=$('input[data-n="'+n+'"]',dc);if(!i||i.value==='')return NaN;return parseFloat(String(i.value).replace(',','.'))};
+window.out=function(dc,h){var o=$('.out',dc);if(o)o.innerHTML=h};
+window.rd=function(x,d){var p=Math.pow(10,d||0);return Math.round(x*p)/p};
+function outErr(dc,e){var o=$('.out',dc);if(o)o.textContent='Error de cálculo: '+(e&&e.message?e.message:String(e))}
+function runDc(dc){var fn=window[dc.getAttribute('data-fn')];if(typeof fn==='function'){try{fn(dc)}catch(e){outErr(dc,e)}}}
+window.ch=function(el){var dc=el.closest('.dc');if(!dc)return;if(el.classList.contains('chip')){var g=el.getAttribute('data-g');if(el.getAttribute('data-m')==='1'){el.classList.toggle('on')}else{var was=el.classList.contains('on');$$('.chip[data-g="'+g+'"]',dc).forEach(function(c){c.classList.remove('on')});if(!was)el.classList.add('on')}}runDc(dc)};
+function initNodos(f){var k=f.getAttribute('data-tab');$$('.nodo',f).forEach(function(n,i){var p=document.createElement('b');p.className='paso';var pn=document.createElement('span');pn.className='pn';pn.textContent=(i+1)+' ·';var pt=document.createElement('span');pt.className='pt';pt.textContent=n.getAttribute('data-paso')||'';p.appendChild(pn);p.appendChild(pt);var ra=n.getAttribute('data-rama');if(ra){var b=document.createElement('span');b.className='badge b-az rama';b.textContent=ra;p.appendChild(document.createTextNode(' '));p.appendChild(b)}n.insertBefore(p,n.firstChild);var c=document.createElement('div');c.className='rec-ctl';if($('.man',n))c.appendChild(btn('Pista',function(){n.classList.toggle('pis')}));c.appendChild(btn('Revelar',function(){n.classList.toggle('rev')}));n.appendChild(c)});
+var tl=$('ol.tl',f);if(!tl)return;var bar=document.createElement('div');bar.className='rec-bar';bar.id='rec-bar-'+k;var t=document.createElement('div');t.innerHTML='<b>Timeline en blanco</b> · <span class="rec-state">Modo lectura</span><p class="mini">Reconstruye la cascada sin mirar: escribe cada paso en orden, luego usa Pista (signos que produce) y Revelar nodo por nodo. Nada se guarda.</p>';bar.appendChild(t);var ta=document.createElement('textarea');ta.setAttribute('aria-label','Escribe aquí la cascada en orden');var bs=document.createElement('div');bs.className='rec-btns';var ab=btn('Activar reconstrucción',function(){recon(f,true);ta.focus()});ab.setAttribute('data-act','rec');bs.appendChild(ab);bs.appendChild(btn('Revelar todo',function(){$$('.nodo',f).forEach(function(n){n.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){recon(f,false)}));bar.appendChild(bs);bar.appendChild(ta);tl.parentNode.insertBefore(bar,tl)}
+var TGT={'1.º':'clave','De elección':'clave','Confirma':'ok','Solo si':'cond','Escala':'cond','Reevalúa':'cond','No pidas':'no','Evita':'no','Alarma':'alarma'};
+function initTg(){$$('ol.tg span.tg').forEach(function(s){var v=TGT[s.textContent.replace(/^\s+|\s+$/g,'')];if(v)s.setAttribute('data-t',v)})}
+function initTabla(){var t=$('table.vis'),s=secOf(t);if(!s)return;var w=t.parentNode;if(!w.classList.contains('tw')){w=document.createElement('div');w.className='tw';t.parentNode.insertBefore(w,t);w.appendChild(t)}w.classList.add('vis-w');var rows=$$('tbody tr',t);if(!rows.length)rows=$$('tr',t).slice(1);rows.forEach(function(r){Array.prototype.slice.call(r.children,1).forEach(function(c){c.classList.add('tap');c.addEventListener('click',function(){if(s.classList.contains('tbl'))c.classList.add('rev')})})});
+var bar=document.createElement('div');bar.className='vb-bar';bar.id='vb-bar';var h=document.createElement('div');h.innerHTML='<b>Tabla en blanco</b> · <span class="vb-state">Modo lectura</span><p class="mini">Tapa todas las celdas de las entidades (quedan visibles las cabeceras y los ejes). Di cada celda antes de tocarla; un toque la revela. Nada se guarda.</p>';bar.appendChild(h);var bs=document.createElement('div');bs.className='rec-btns';bs.appendChild(btn('Tapar la tabla',function(){tabla(true)}));bs.appendChild(btn('Revelar todo',function(){$$('td.tap',t).forEach(function(c){c.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){tabla(false)}));bar.appendChild(bs);w.parentNode.insertBefore(bar,w)}
+function initRecGo(){var TL=$$('section.tab').filter(function(s){return!!$('ol.tl',s)}),sin=secK('sin'),dst=sin||secK('seg');if(!dst)return;var ord=sin?TL.filter(function(s,i){return i%2===0}).concat(TL.filter(function(s,i){return i%2===1})):TL;var vt=$('table.vis');if(!ord.length&&!(sin&&vt))return;
+var w=document.createElement('div');w.className='hb az rec-go';w.innerHTML='<div class="hb-t">Antes de cerrar: recupera sin mirar</div><p class="mini">Cada botón te lleva a la función en blanco correspondiente. Intenta la respuesta completa antes de revelar.</p>';var bs=document.createElement('div');bs.className='rec-btns';w.appendChild(bs);
+if(sin&&vt){var vs=secOf(vt),vk=vs.getAttribute('data-tab'),b0=btn('Tabla en blanco — '+nameOf(vk),function(){show(vk);tabla(true);var b=document.getElementById('vb-bar');if(b)b.scrollIntoView({block:'start'})},'go');b0.setAttribute('data-rec',vk);bs.appendChild(b0)}
+ord.forEach(function(s){var k=s.getAttribute('data-tab'),b=btn('Reconstruir la cascada — '+nameOf(k),function(){show(k);recon(s,true);var r=document.getElementById('rec-bar-'+k);if(r)r.scrollIntoView({block:'start'})},'go');b.setAttribute('data-rec',k);bs.appendChild(b)});
+var rf=$('.acc.refs',dst);if(rf)dst.insertBefore(w,rf);else dst.appendChild(w)}
+function init(){var f=$('.tb'),ph=[function(){var n=$('nav.tabs');if(n){var w=document.createElement('div');w.className='tabs-w';n.parentNode.insertBefore(w,n);w.appendChild(n);n.addEventListener('scroll',navOv);window.addEventListener('resize',navOv)}},function(){$$('section.tab').forEach(function(s){if($('ol.tl',s))initNodos(s)})},initTg,initTabla,initRecGo,function(){$$('.dc').forEach(runDc)},function(){show(secK('pan')?'pan':(f?f.getAttribute('data-tab'):''))}];ph.forEach(function(p){try{p()}catch(e){if(window.console)console.error('kit v10:',e)}})}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+</body>
+</html>

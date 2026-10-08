@@ -1,0 +1,81 @@
+{
+ "titulo": "Abdomen agudo médico",
+ "salida": "../Abdomen_agudo_medico_widget_v10.html",
+ "modo": "multi",
+ "entidades": {
+  "e1": "Hipopotasemia con íleo paralítico",
+  "e2": "Saturnismo",
+  "e3": "Porfiria aguda intermitente"
+ },
+ "principal": "e1",
+ "amenaza": "e3",
+ "tabs": [
+  "pan",
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "sin"
+ ],
+ "pg": {
+  "vis": 3,
+  "e1": 4,
+  "e2": 3,
+  "e3": 3
+ },
+ "fey": {
+  "e1": 2,
+  "e2": 1,
+  "e3": 1
+ },
+ "nodos": {
+  "e1": 6,
+  "e2": 6,
+  "e3": 6
+ },
+ "signos": {
+  "e1": 4,
+  "e2": 3,
+  "e3": 5
+ },
+ "dc": [
+  "vis",
+  "e1",
+  "e2",
+  "e3"
+ ],
+ "nucleo": {
+  "vis": [
+   "K⁺ sérico y ECG",
+   "Plomo en sangre venosa",
+   "PBG y ALA en orina puntual",
+   "Suspender fármacos de riesgo, glucosa y hemina; especialista",
+   "Parálisis bulbar y convulsiones por hiponatremia"
+  ],
+  "e1": [
+   "Músculo liso intestinal sin peristalsis",
+   "Músculo esquelético y respiratorio débil",
+   "Repolarización ventricular alterada con arritmias",
+   "Íleo: distensión con ruidos ausentes",
+   "K⁺ sérico y ECG: confirman la hipopotasemia y miden su gravedad.",
+   "KCl oral si tolera la vía oral y el K⁺ está entre 2,5 y 3,5; IV con monitoreo ECG si es menor de 2,5, hay vómito o íleo."
+  ],
+  "e2": [
+   "ALA deshidratasa y ferroquelatasa inhibidas",
+   "Espasmo del músculo liso intestinal",
+   "Daño de nervios motores periféricos",
+   "Anemia con punteado basófilo",
+   "Plomo en sangre venosa: confirma y gradúa la intoxicación.",
+   "Quelación oral con succímero si el plomo es de 80 a 99 µg/dL, o de 50 a 79 con síntomas; casi siempre si es de 100 o más."
+  ],
+  "e3": [
+   "Acumulación de ALA y PBG",
+   "Neurotoxicidad autonómica visceral",
+   "Hiponatremia y compromiso encefálico",
+   "Neuropatía motora ascendente",
+   "Dolor intenso con abdomen blando",
+   "PBG y ALA en orina puntual: muestra protegida de la luz y tomada durante el ataque.",
+   "Hemina IV diaria en el ataque grave, por vía central de alto flujo; no la retrases."
+  ]
+ }
+}

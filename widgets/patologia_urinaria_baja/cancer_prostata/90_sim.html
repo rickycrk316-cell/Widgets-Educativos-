@@ -1,0 +1,63 @@
+<script>
+function par(t){return '<p>'+t+'</p>';}
+function hv(a,v){return a.indexOf(v)>-1;}
+function vacio(dc,t){out(dc,par(t));}
+
+function dcDx(dc){
+  var p=num(dc,'psa'),g=sel(dc,'gg'),c=sel(dc,'ct');
+  if(isNaN(p)&&!g.length&&!c.length){vacio(dc,'Escribe el PSA y elige el grupo ISUP y el estadio clínico para obtener el grupo de riesgo EAU y los estudios de extensión.');return;}
+  if(isNaN(p)||!g.length||!c.length){vacio(dc,'Faltan datos: el grupo de riesgo necesita PSA, grupo ISUP y estadio clínico [1].');return;}
+  var gg=parseInt(g[0],10),ct=c[0],r=[],grupo;
+  if(ct==='t3') grupo='localmente avanzado';
+  else if(p>20||gg>=4||ct==='t2c') grupo='alto';
+  else if(p>=10||gg>=2||ct==='t2b') grupo='intermedio';
+  else grupo='bajo';
+  r.push(par('Grupo de riesgo EAU: <b>'+grupo+'</b> (PSA '+p+' ng/mL, ISUP '+gg+') [1].'));
+  if(grupo==='bajo') r.push(par('Sin estudios de extensión: el riesgo de metástasis es mínimo [1]. Conducta: vigilancia activa (ver «Plan de tratamiento»).'));
+  else if(grupo==='intermedio'&&gg===2&&p<10) r.push(par('Intermedio con ISUP 2: suele ser favorable; la extensión por imagen no es obligatoria y la vigilancia activa es una opción en casos seleccionados [1].'));
+  else r.push(par('Estudio de extensión: PET-PSMA, o tomografía de abdomen y pelvis con gammagrafía ósea si no hay PET [1].'));
+  r.push('<span class="cf">Si el grupo ISUP sube de 1 a 4 con el mismo PSA → el riesgo pasa a alto y se añaden estudios de extensión antes de tratar [1].</span>');
+  out(dc,r.join(''));
+}
+
+function dcTx(dc){
+  var g=sel(dc,'r'),p=sel(dc,'p');
+  if(!g.length){vacio(dc,'Elige el grupo de riesgo y las condiciones del paciente para obtener la conducta y la posología.');return;}
+  var v=g[0],r=[];
+  if(v==='bajo') r.push(par('<b>Vigilancia activa</b>: PSA periódico, resonancia y nuevas biopsias programadas; tratamiento radical solo si progresa [1].'));
+  if(v==='int'){
+    if(hv(p,'ev')) r.push(par('<b>Esperanza de vida menor de 10 años</b>: observación (espera vigilante) con tratamiento hormonal si aparecen síntomas [1].'));
+    else r.push(par('<b>Prostatectomía radical o radioterapia</b>; con radioterapia en intermedio desfavorable, leuprorelina 22,5 mg IM cada 3 meses durante 4 a 6 meses [1] [VERIFICAR EN FUENTE].'));
+  }
+  if(v==='alto') r.push(par('<b>Radioterapia con privación androgénica prolongada</b>: leuprorelina 22,5 mg IM cada 3 meses durante 2 a 3 años [1] [VERIFICAR EN FUENTE]; la prostatectomía con linfadenectomía es alternativa en pacientes seleccionados.'));
+  if(v==='met'){
+    if(hv(p,'med')) r.push(par('<b>Compresión medular inminente</b>: degarelix 240 mg SC de carga (sin pico de testosterona), dexametasona 10 mg IV de carga [VERIFICAR EN FUENTE] y resonancia con radioterapia o cirugía urgentes [4].'));
+    else r.push(par('<b>Privación androgénica</b>: leuprorelina 22,5 mg IM cada 3 meses, precedida de bicalutamida 50 mg VO cada 24 h para cubrir el pico inicial [4]; o degarelix 240 mg SC de carga y 80 mg SC cada 28 días [1].'));
+    r.push(par('Intensificación desde el inicio: abiraterona 1 000 mg VO cada 24 h en ayunas con prednisona 5 mg VO cada 24 h, o enzalutamida 160 mg VO cada 24 h [1].'));
+    if(hv(p,'vol')) r.push(par('Alto volumen: considera añadir docetaxel 75 mg/m² IV cada 21 días por 6 ciclos si el estado general lo permite [1].'));
+  }
+  r.push('<span class="cf">Si el riesgo intermedio pasa a esperanza de vida menor de 10 años → la conducta cambia de tratamiento radical a observación [1].</span>');
+  out(dc,r.join(''));
+}
+
+function dcSeg(dc){
+  var t=sel(dc,'t'),p=num(dc,'psa'),n=num(dc,'nadir'),te=sel(dc,'te');
+  if(!t.length){vacio(dc,'Elige el tratamiento previo y escribe el PSA actual (y el nadir si hubo radioterapia) para saber si hay recaída.');return;}
+  var r=[];
+  if(isNaN(p)){vacio(dc,'Falta el PSA actual.');return;}
+  if(t[0]==='pr'){
+    if(p>0.2) r.push(par('<b>Recurrencia bioquímica</b> tras prostatectomía (PSA '+p+' ng/mL, mayor de 0,2): confírmala, pide PET-PSMA y valora radioterapia de rescate [1].'));
+    else r.push(par('PSA '+p+' ng/mL: sin recurrencia bioquímica. Sigue con PSA periódico [1].'));
+  } else if(t[0]==='rt'){
+    if(isNaN(n)) r.push(par('Falta el nadir: el criterio de Phoenix compara con el valor más bajo tras la radioterapia [1].'));
+    else if(p>=n+2) r.push(par('<b>Recurrencia bioquímica</b> tras radioterapia (PSA '+p+' ≥ nadir '+n+' + 2 ng/mL, Phoenix): estudia con PET-PSMA y biopsia si se plantea rescate local [1].'));
+    else r.push(par('PSA '+p+' ng/mL: por debajo de nadir + 2; sin recurrencia según Phoenix [1].'));
+  } else {
+    if(!te.length) r.push(par('Falta la testosterona: la resistencia a la castración exige confirmar niveles de castración [1].'));
+    else if(hv(te,'nocast')) r.push(par('Testosterona no castrada: revisa adherencia y la dosis de leuprorelina 22,5 mg IM cada 3 meses antes de hablar de resistencia [1].'));
+    else r.push(par('<b>Si el PSA sube</b> con testosterona menor de 50 ng/dL: resistencia a la castración. Mantén la castración y cambia de línea: enzalutamida 160 mg VO cada 24 h o abiraterona 1 000 mg VO cada 24 h con prednisona 5 mg cada 12 h si no los recibió, o docetaxel 75 mg/m² IV cada 21 días; con metástasis óseas, denosumab 120 mg SC cada 4 semanas con calcio y vitamina D [1] [VERIFICAR EN FUENTE].'));
+  }
+  r.push('<span class="cf">Si tras prostatectomía el PSA pasa de indetectable a más de 0,2 ng/mL confirmado → la conducta cambia de vigilancia a estudio con PET-PSMA y radioterapia de rescate [1].</span>');
+  out(dc,r.join(''));
+}
+</script>

@@ -1,0 +1,130 @@
+<script>
+function dcGuide(dc,t){out(dc,'<p>'+t+'</p>');}
+function dcVis(dc){
+  var s=sel(dc,'h');
+  if(!s.length){dcGuide(dc,'Marca los hallazgos del paciente y la herramienta propone la entidad más compatible, qué falta para confirmarla y la conducta inicial.');return;}
+  var h=function(k){return s.indexOf(k)>=0;};
+  var e,falta,cond,cf;
+  if(h('shock')&&(h('fie')||h('ict')||h('dil'))){
+    e='Colangitis aguda con probable disfunción orgánica (grado III de TG18)';
+    falta='Imagen de la vía biliar (dilatación mayor de 7 mm, cálculo u obstrucción) y laboratorio para completar los criterios A, B y C [1].';
+    cond='Soporte hemodinámico, antibiótico y drenaje biliar urgente tras estabilizar [1][3]; posología en la pestaña Colangitis aguda.';
+    cf='Si desaparece la hipotensión o la confusión → grado I o II y el drenaje pasa de urgente a lo antes posible.';
+  } else if(h('fie')&&h('ict')){
+    e='Colangitis aguda';
+    falta='Imagen de la vía biliar (dilatación mayor de 7 mm, cálculo u obstrucción) y bilirrubina para confirmar los criterios [1].';
+    cond='Antibiótico empírico, hemocultivos y drenaje biliar según el grado [3]; posología en la pestaña Colangitis aguda.';
+    cf='Si no hay fiebre → coledocolitiasis sin infección: se estratifica el riesgo ASGE en vez de drenar de urgencia.';
+  } else if(h('lip')){
+    e=(h('ict')||h('dil'))?'Pancreatitis aguda probablemente biliar':'Pancreatitis aguda';
+    falta=(h('esp')?'Ecografía para la causa biliar y clasificación de gravedad por falla orgánica [2][5].':'El dolor típico epigástrico irradiado a la espalda y la ecografía para la causa [VERIFICAR EN FUENTE].');
+    cond='Lactato de Ringer, analgesia y nutrición temprana; CPRE en 24 h solo si hay colangitis [5].';
+    cf='Si aparece fiebre con ictericia → colangitis asociada y CPRE en 24 h; sin ella, CPRE urgente no está indicada [5].';
+  } else if(h('ict')){
+    e='Coledocolitiasis (obstrucción biliar sin infección)';
+    falta='Bilirrubina total y diámetro del colédoco para el riesgo ASGE: alto si hay cálculo visible o bilirrubina mayor de 4 mg/dL con colédoco mayor de 6 mm [4].';
+    cond=h('dil')?'Riesgo alto: CPRE con esfinterotomía y extracción del cálculo [4].':'Ecografía y bilirrubina; luego CPRE o USE según el riesgo [4].';
+    cf='Si aparece fiebre → colangitis: el drenaje deja de poder esperar al estudio de riesgo.';
+  } else if(h('murphy')||h('vesi')){
+    e='Colecistitis aguda';
+    falta=h('fie')?'Ecografía con criterios de colecistitis para el diagnóstico definitivo [6].':'Criterio sistémico (fiebre, PCR o leucocitos) y ecografía [6].';
+    cond='Analgesia, antibiótico y colecistectomía laparoscópica precoz; cirugía general [6].';
+    cf='Si aparece ictericia → piensa además en un cálculo coledociano y estratifica con ASGE [4].';
+  } else if(h('esp')){
+    e='Pancreatitis aguda sospechada';
+    falta='Lipasa sérica para confirmar el diagnóstico [VERIFICAR EN FUENTE].';
+    cond='Mientras se confirma, líquidos y analgesia; clasificación de Atlanta cuando se confirme [2][5].';
+    cf='Si la lipasa está normal y el dolor es desproporcionado → reconsidera otra causa abdominal.';
+  } else {
+    e='Cólico biliar o dolor biliar sin signos de inflamación';
+    falta='Ecografía abdominal y perfil hepático para ubicar el nivel de la vía [6].';
+    cond='Analgesia y colecistectomía electiva si hay litiasis sintomática [VERIFICAR EN FUENTE].';
+    cf='Si aparecen Murphy o fiebre → colecistitis aguda; si aparece ictericia → coledocolitiasis.';
+  }
+  out(dc,'<p><b>Entidad compatible:</b> '+e+'</p><p><b>Qué falta para confirmarla:</b> '+falta+'</p><p><b>Conducta inicial:</b> '+cond+'</p><span class="cf">'+cf.replace('Si ','Si ').replace(' → ',' → ')+'</span>');
+}
+function dcE1dx(dc){
+  var loc=sel(dc,'loc'),sis=sel(dc,'sis'),img=sel(dc,'img'),g2=sel(dc,'g2'),org=sel(dc,'org'),rie=sel(dc,'rie');
+  if(!loc.length&&!sis.length&&!img.length&&!g2.length&&!org.length){dcGuide(dc,'Marca los criterios del paciente y la herramienta indica el diagnóstico y el grado según TG18.');return;}
+  var A=loc.length>0,B=sis.length>0,C=img.length>0;
+  var dx=(A&&B)?(C?'Colecistitis aguda definitiva (A, B y C) [6]':'Colecistitis aguda sospechada (A y B); falta la imagen característica [6] [VERIFICAR EN FUENTE]'):'No se cumplen los criterios A y B; con dolor biliar aislado considera cólico biliar [6]';
+  var gr,cond;
+  if(!(A&&B)){gr='No aplica';cond='Completa criterios: examen local, PCR y leucocitos y ecografía.';}
+  else if(org.length){gr='III';cond=rie.length?'Soporte orgánico y drenaje vesicular por riesgo quirúrgico alto [6].':'Soporte orgánico; colecistectomía precoz solo en centro avanzado y sin factores adversos [6] [VERIFICAR EN FUENTE].';}
+  else if(g2.length){gr='II';cond=rie.length?'Drenaje vesicular por riesgo alto [6].':'Colecistectomía laparoscópica precoz o drenaje según centro [6] [VERIFICAR EN FUENTE].';}
+  else{gr='I';cond=rie.length?'Riesgo alto: individualiza entre tratamiento médico y drenaje [VERIFICAR EN FUENTE].':'Colecistectomía laparoscópica precoz, idealmente dentro de las 72 h del inicio [6].';}
+  out(dc,'<p><b>Diagnóstico:</b> '+dx+'</p><p><b>Grado:</b> '+gr+'</p><p><b>Conducta:</b> '+cond+'</p><span class="cf">Si aparece disfunción orgánica → grado III y la conducta pasa de cirugía precoz a soporte y, con riesgo alto, drenaje vesicular.</span>');
+}
+function dcE1tx(dc){
+  var sit=sel(dc,'sit'),gr=sel(dc,'gr'),mod=sel(dc,'mod'),edad=num(dc,'edad');
+  if(!sit.length){dcGuide(dc,'Elige la situación clínica y, si es colecistitis, el grado; la herramienta propone analgesia, antibiótico y momento de la cirugía con posología.');return;}
+  var ren=mod.indexOf('ren')>=0,rie=mod.indexOf('rie')>=0,ale=mod.indexOf('ale')>=0;
+  var dolor;
+  if(ren){dolor='Hioscina butilbromuro 20 mg IV cada 8 h, máximo 100 mg al día; evita el ketorolaco por el riesgo renal, ulceroso o fetal [8].';}
+  else{var dk=(!isNaN(edad)&&edad>65)?15:30;dolor='Ketorolaco '+dk+' mg IV cada 6 h, máximo 5 días y 120 mg al día'+((!isNaN(edad)&&edad>65)?' (dosis reducida por edad mayor de 65 años)':'')+', con hioscina butilbromuro 20 mg IV cada 8 h si hay espasmo [8].';}
+  if(sit[0]==='colico'){
+    out(dc,'<p><b>Analgesia:</b> '+dolor+'</p><p><b>Antibiótico:</b> no indicado sin inflamación [VERIFICAR EN FUENTE].</p><p><b>Cirugía:</b> colecistectomía electiva si es sintomático [VERIFICAR EN FUENTE].</p><span class="cf">Si el dolor no cede en pocas horas o aparece fiebre → colecistitis aguda: añade antibiótico y define el grado.</span>');
+    return;
+  }
+  if(!gr.length){dcGuide(dc,'Elige el grado de la colecistitis (I, II o III) para completar la conducta.');return;}
+  var g=gr[0],atb,cir;
+  if(g==='3'){atb='Piperacilina-tazobactam 4,5 g IV cada 6 a 8 h (o meropenem 1 g IV cada 8 h), con ajuste por función renal [8] [VERIFICAR EN FUENTE el esquema].';cir=rie?'Soporte orgánico y drenaje vesicular urgente [6].':'Soporte orgánico; colecistectomía precoz solo en centro avanzado y sin factores adversos [6] [VERIFICAR EN FUENTE].';}
+  else{atb=ale?'Alergia a betalactámicos: esquema alternativo [VERIFICAR EN FUENTE]; consulta a infectología.':'Ceftriaxona 2 g IV cada 24 h más metronidazol 500 mg IV cada 8 h [8].';cir=(g==='1')?(rie?'Individualiza entre manejo médico y drenaje por riesgo alto [VERIFICAR EN FUENTE].':'Colecistectomía laparoscópica precoz, idealmente dentro de las 72 h del inicio [6].'):(rie?'Drenaje vesicular por riesgo alto [6].':'Colecistectomía precoz o drenaje según centro [6] [VERIFICAR EN FUENTE].');}
+  out(dc,'<p><b>Analgesia:</b> '+dolor+'</p><p><b>Antibiótico:</b> '+atb+' Duración: hasta controlar el foco; 4 a 7 días tras el control si la infección es complicada [7] [VERIFICAR EN FUENTE].</p><p><b>Control del foco:</b> '+cir+'</p><span class="cf">Si hay alto riesgo quirúrgico (CCI de 4 o más o ASA de 3 o más) → drenaje vesicular en vez de colecistectomía precoz.</span>');
+}
+function dcE2(dc){
+  var h=sel(dc,'h'),bili=num(dc,'bili'),cbd=num(dc,'cbd');
+  if(!h.length&&isNaN(bili)&&isNaN(cbd)){dcGuide(dc,'Marca los hallazgos y escribe bilirrubina y diámetro del colédoco; la herramienta estratifica el riesgo ASGE y propone la conducta.');return;}
+  var calc=h.indexOf('calc')>=0,col=h.indexOf('col')>=0,vesi=h.indexOf('vesi')>=0,alt=h.indexOf('alt')>=0;
+  var altoBD=(!isNaN(bili)&&bili>4&&!isNaN(cbd)&&cbd>6&&vesi);
+  var r,c;
+  if(calc||col||altoBD){
+    r='Riesgo alto (ASGE 2019): '+(calc?'cálculo visible':col?'colangitis ascendente':'bilirrubina mayor de 4 mg/dL con colédoco mayor de 6 mm y vesícula in situ')+' [4].';
+    c='CPRE con esfinterotomía y extracción del cálculo, sin estudio previo; analgesia con hioscina butilbromuro 20 mg IV cada 8 h, máximo 100 mg al día [4][8]'+(col?'; si hay fiebre o hipotensión, manejo de colangitis y drenaje urgente [1].':'; colecistectomía tras resolver el colédoco.');
+  } else if(alt||(!isNaN(bili)&&bili>0&&bili<=4)||(!isNaN(cbd)&&cbd>6)){
+    r='No cumple el riesgo alto de ASGE 2019; la alteración bioquímica o la dilatación sugieren riesgo intermedio [4] [VERIFICAR EN FUENTE].';
+    c='USE o CRM para confirmar o descartar el cálculo antes de decidir CPRE [4] [VERIFICAR EN FUENTE]; analgesia con hioscina butilbromuro 20 mg IV cada 8 h [8].';
+  } else {
+    r='Sin criterios de riesgo alto ni alteraciones que sugieran riesgo intermedio [VERIFICAR EN FUENTE el riesgo bajo].';
+    c='Colecistectomía según el plan de la litiasis; vigila la aparición de ictericia o fiebre [VERIFICAR EN FUENTE].';
+  }
+  out(dc,'<p><b>Estratificación:</b> '+r+'</p><p><b>Conducta:</b> '+c+'</p><span class="cf">Si aparece fiebre → colangitis: pasa de CPRE programada a antibiótico y drenaje biliar según el grado.</span>');
+}
+function dcE3(dc){
+  var a=sel(dc,'a'),b=sel(dc,'b'),c=sel(dc,'c'),g=sel(dc,'g'),t=num(dc,'temp'),bi=num(dc,'bili'),ed=num(dc,'edad');
+  if(!a.length&&!b.length&&!c.length&&!g.length&&isNaN(t)&&isNaN(bi)&&isNaN(ed)){dcGuide(dc,'Marca los criterios A, B y C y los marcadores de grado; la herramienta clasifica la colangitis según TG18 y define el drenaje y el antibiótico.');return;}
+  var A=a.length>0||(!isNaN(t)&&t>38),B=b.length>0||(!isNaN(bi)&&bi>=2),C=c.length>0;
+  var dx=(A&&B&&C)?'Colangitis aguda definitiva (A, B y C) [1]':((A&&(B||C))?'Colangitis aguda sospechada; falta un criterio para el diagnóstico definitivo [1] [VERIFICAR EN FUENTE]':'No se cumplen los criterios de colangitis [1]');
+  var n=0;
+  if(g.indexOf('leu')>=0)n++;
+  if(!isNaN(t)&&t>=39)n++;
+  if(!isNaN(ed)&&ed>=75)n++;
+  if(!isNaN(bi)&&bi>=5)n++;
+  if(g.indexOf('alb')>=0)n++;
+  var gr,cond,atb;
+  if(g.indexOf('org')>=0){gr='III (grave)';cond='Soporte orgánico y drenaje biliar urgente, endoscópico o percutáneo, tras estabilizar [3].';atb='Piperacilina-tazobactam 4,5 g IV cada 6 a 8 h o meropenem 1 g IV cada 8 h, con ajuste renal; noradrenalina titulada si hay hipotensión [8] [VERIFICAR EN FUENTE]; 4 a 7 días tras el drenaje exitoso [3].';}
+  else if(n>=2){gr='II (moderado)';cond='Drenaje biliar lo antes posible, con soporte y antibiótico [3].';atb='Ceftriaxona 2 g IV cada 24 h más metronidazol 500 mg IV cada 8 h, o piperacilina-tazobactam 4,5 g IV cada 6 a 8 h [8] [VERIFICAR EN FUENTE]; 4 a 7 días tras el drenaje exitoso [3].';}
+  else{gr='I (leve)';cond='Antibiótico y drenaje si no hay respuesta [VERIFICAR EN FUENTE el tiempo].';atb='Ceftriaxona 2 g IV cada 24 h más metronidazol 500 mg IV cada 8 h [8]; 4 a 7 días tras el drenaje exitoso [3].';}
+  out(dc,'<p><b>Diagnóstico:</b> '+dx+'</p><p><b>Grado:</b> '+gr+' ('+n+' marcadores de grado II) [1]</p><p><b>Drenaje:</b> '+cond+'</p><p><b>Antibiótico:</b> '+atb+'</p><span class="cf">Si aparece disfunción de algún órgano → grado III: el drenaje pasa a ser urgente tras estabilizar.</span>');
+}
+function dcE4(dc){
+  var of=sel(dc,'of'),x=sel(dc,'x'),r=num(dc,'ranson'),b=num(dc,'bisap');
+  if(!of.length&&!x.length&&isNaN(r)&&isNaN(b)){dcGuide(dc,'Indica la falla orgánica y los hallazgos; la herramienta clasifica según Atlanta revisada y propone la conducta.');return;}
+  if(!of.length){dcGuide(dc,'Indica si hay falla orgánica y cuánto dura: la clasificación de Atlanta depende de ello [2].');return;}
+  var loc=x.indexOf('loc')>=0,bil=x.indexOf('bil')>=0,col=x.indexOf('col')>=0,obs=x.indexOf('obs')>=0;
+  var cl;
+  if(of[0]==='pers')cl='Grave (falla orgánica persistente mayor de 48 h) [2]';
+  else if(of[0]==='trans'||loc)cl='Moderadamente grave (falla transitoria o complicación local o sistémica) [2]';
+  else cl='Leve (sin falla orgánica ni complicaciones) [2]';
+  var cond='Lactato de Ringer: 1,5 mL/kg/h si está euvolémico o bolo de 10 mL/kg si hay hipovolemia, con reevaluación a las 6 h y a las 24 a 48 h [5]; morfina 2 a 4 mg IV cada 4 h si hay dolor intenso [8] [VERIFICAR EN FUENTE el opioide].';
+  if(col)cond+=' Colangitis: CPRE en 24 h [5].';
+  else if(obs)cond+=' Obstrucción biliar persistente: CPRE justificada [5] [VERIFICAR EN FUENTE].';
+  else if(bil)cond+=' Causa biliar sin colangitis ni obstrucción persistente: no hagas CPRE urgente [5].';
+  if(bil&&cl.indexOf('Leve')===0)cond+=' Colecistectomía en el mismo ingreso, antes del alta [5].';
+  if(of[0]==='pers')cond+=' Cuidados intensivos y soporte de órganos.';
+  var esc='';
+  if(!isNaN(r))esc+='<p><b>Ranson modificado:</b> '+r+' de 10; el corte habitual es 3 o más, pero un resumen lo da como mayor de 3 [7] [VERIFICAR EN FUENTE]. Predice, no clasifica.</p>';
+  if(!isNaN(b))esc+='<p><b>BISAP:</b> '+b+' de 5 puntos [7]; corte [VERIFICAR EN FUENTE]. Predice, no clasifica.</p>';
+  out(dc,'<p><b>Clasificación (Atlanta):</b> '+cl+'</p><p><b>Conducta:</b> '+cond+'</p>'+esc+'<span class="cf">Si la falla orgánica persiste más de 48 h → grave: pasa de sala a cuidados intensivos.</span>');
+}
+</script>

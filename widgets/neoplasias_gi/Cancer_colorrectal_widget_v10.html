@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cáncer colorrectal</title>
+<style>
+/* Vademécum: monografía impresa con índice de canto; filetes y tinta llevan la jerarquía, no las sombras */
+:root{
+--paper:#FBFBFC;--paper-2:#F1F2F5;--ink:#16181D;--ink-2:#3A3D46;--ink-3:#686C78;--rule:#D7D9E0;--rule-strong:#16181D;
+--accent:#2342A6;--accent-ink:#1B358A;--accent-field:#EAEEFA;--on-accent:#FFFFFF;
+--am:#7A4A06;--am-f:#FBF1DF;--ro:#9E1F1F;--ro-f:#FBE9E7;--ve:#2F5E12;--ve-f:#EBF3E1;--pu:#4C3FA8;--pu-f:#EEECFB;--co:#8E3517;--co-f:#FAEDE6;--rs:#8A2C52;--rs-f:#FAEAF1;
+--f-serif:ui-serif,"New York","Iowan Old Style","Charter","Source Serif Pro",Georgia,"Times New Roman",serif;
+--f-sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+--r:3px;
+/* alias de la v10 para compatibilidad */
+--surface-0:var(--paper);--surface-1:var(--paper-2);--border:var(--rule);--border-accent:var(--accent);--bg-accent:var(--accent-field);--text-primary:var(--ink);--text-secondary:var(--ink-2);--text-muted:var(--ink-3);--text-accent:var(--accent-ink);--radius:var(--r);--font-sans:var(--f-sans);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}
+html{color-scheme:light dark;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:var(--accent);color:var(--on-accent)}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--f-sans);-webkit-text-size-adjust:100%;font-feature-settings:"kern" 1;text-rendering:optimizeLegibility;caret-color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:18px 16px 56px;background:transparent}
+h1{font:600 26px/1.2 var(--f-serif);letter-spacing:-.012em;margin:6px 0 14px;padding-bottom:12px;border-bottom:2px solid var(--rule-strong);text-wrap:balance}
+h2{font:600 19px/1.3 var(--f-serif);letter-spacing:-.006em;margin:40px 0 14px;padding-top:12px;border-top:1px solid var(--rule-strong);text-wrap:balance}
+h3{font:600 16px/1.35 var(--f-serif);margin:20px 0 6px;text-wrap:balance}
+p{margin:0 0 12px;text-wrap:pretty}
+a{color:var(--accent-ink);text-underline-offset:3px}
+button{font:inherit;color:inherit;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,color .15s ease-out}
+button:active{transform:translateY(1px)}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* índice de canto */
+.tabs{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 0 0;border-bottom:2px solid var(--rule-strong);margin-bottom:16px;position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);scroll-snap-type:x proximity;scroll-padding-inline:56px}
+.tabs-w{position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper)}
+.tabs-w::before,.tabs-w::after{content:"";position:absolute;top:0;bottom:2px;width:56px;pointer-events:none;opacity:0;transition:opacity .2s;z-index:6}
+.tabs-w::before{left:0;background:linear-gradient(to left,transparent,var(--paper) 85%)}
+.tabs-w::after{right:0;background:linear-gradient(to right,transparent,var(--paper) 85%)}
+.tabs-w.ov-l::before,.tabs-w.ov-r::after{opacity:1}
+.nodo,.signo,.qv,.dc,h2{scroll-margin-top:84px}
+.tabs::-webkit-scrollbar{display:none}
+.tb{flex:0 0 auto;min-height:44px;padding:9px 15px 8px;border:1px solid var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;background:var(--paper-2);color:var(--ink-2);font:600 13px/1.2 var(--f-sans);letter-spacing:.01em;white-space:nowrap;scroll-snap-align:start}
+.tb:hover{background:var(--accent-field);color:var(--accent-ink)}
+.tb.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+.tab{display:none}
+.tab.on{display:block}
+/* recuadros */
+.card{background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;margin:12px 0;font-size:15px;line-height:1.6}
+.card p{margin:0 0 8px}
+.card p:last-child{margin-bottom:0}
+.mini{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:6px 0}
+.hb{border-radius:var(--r);padding:12px 14px;margin:14px 0;border:1px solid transparent;font-size:15px;line-height:1.6}
+.hb.az{background:var(--accent-field);color:var(--ink);border-color:var(--accent)}
+.hb.am{background:var(--am-f);color:var(--am);border-color:var(--am)}
+.hb.ro{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.hb.ve{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+.hb.am .mini,.hb.ro .mini,.hb.ve .mini{color:inherit;opacity:.88}
+.hb-t{font:600 16px/1.35 var(--f-serif);margin-bottom:6px;text-wrap:balance}
+.hb.az .hb-t{color:var(--accent-ink)}
+.pg{margin:0;padding-left:22px}
+.pg li{margin:5px 0}
+.pg li::marker{color:var(--accent-ink);font-weight:700}
+.hb.az:has(.pg){margin-bottom:24px}
+.hb.az:not(:has(.pg)):not(.rec-go){background:transparent;border-left-color:transparent;border-right-color:transparent;border-radius:0;padding-left:0;padding-right:0}
+.hb.az:not(:has(.pg))+.etapa{border-top:0}
+h2+.card,h2+.hb,h2+.tw{margin-top:0}
+.badge{display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.04em;padding:2px 7px;border-radius:2px;margin:0 4px 4px 0;vertical-align:middle;border:1px solid currentColor}
+.b-az{background:var(--accent-field);color:var(--accent-ink)}
+.b-ro{background:var(--ro-f);color:var(--ro)}
+.b-am{background:var(--am-f);color:var(--am)}
+.b-ve{background:var(--ve-f);color:var(--ve)}
+.b-pu{background:var(--pu-f);color:var(--pu)}
+.badge.b-pu{display:block;width:fit-content;max-width:100%;white-space:normal;font-size:12px;line-height:1.5;font-weight:600;letter-spacing:.01em;margin:14px 0}
+.b-co{background:var(--co-f);color:var(--co)}
+.b-rs{background:var(--rs-f);color:var(--rs)}
+.rem{display:inline-block;font-size:12.5px;background:var(--rs-f);color:var(--rs);border:1px dashed var(--rs);border-radius:2px;padding:1px 7px;margin:4px 0}
+/* Feynman */
+.fey{background:var(--co-f);border:1px solid var(--co);border-radius:var(--r);padding:14px 16px;margin:18px 0 26px}
+.fey-t{display:inline-block;font:600 15px/1.35 var(--f-serif);color:var(--co);margin-bottom:8px}
+.fey-b{margin:0 0 10px;font:400 16px/1.6 var(--f-serif);color:var(--ink)}
+.fey-c{margin:2px 0;color:var(--ink-2)}
+/* Panorama: entradas de índice */
+.tab{counter-reset:et}
+.etapa{counter-increment:et;background:transparent;border:0;border-top:1px solid var(--rule);border-radius:0;padding:18px 0 8px;margin:4px 0}
+.etapa h3{font-size:19px;line-height:1.3;margin:0 0 8px}
+.etapa h3::before{content:counter(et,decimal-leading-zero);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;letter-spacing:.04em;color:var(--accent-ink);margin-right:10px;vertical-align:2px}
+.res{margin:0 0 10px}
+.perla{border-top:1px dotted var(--rule);padding-top:8px;margin:0 0 10px;font-weight:500}
+.perla::before{content:"Perla";display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;background:var(--ve-f);color:var(--ve);border:1px solid var(--ve);border-radius:2px;padding:1px 6px;margin-right:8px;vertical-align:1px}
+.go{min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent);color:var(--on-accent);font:600 13.5px/1.2 var(--f-sans)}
+.go:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+/* tablas de monografía */
+.tw{overflow-x:auto;margin:12px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.5;font-variant-numeric:tabular-nums}
+th,td{border:0;border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--paper-2);font-weight:700;color:var(--ink)}
+thead th{font:700 14.5px/1.35 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong)}
+tbody tr:last-child>*{border-bottom:1px solid var(--rule-strong)}
+.stats{display:grid;grid-template-columns:1fr;gap:10px;margin:12px 0}
+@media (min-width:600px){.stats{grid-template-columns:repeat(3,1fr)}}
+.stat{background:transparent;border:0;border-top:2px solid var(--accent);border-radius:0;padding:8px 2px}
+.stat b{display:block;font:600 22px/1.25 var(--f-serif);color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--ink-2);line-height:1.4;display:block}
+.steps{list-style:none;counter-reset:st;padding:0;margin:10px 0}
+.steps>li{counter-increment:st;position:relative;padding:5px 0 9px 40px}
+.steps>li::before{content:counter(st);position:absolute;left:0;top:3px;width:26px;height:26px;border-radius:2px;background:var(--ink);color:var(--paper);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;display:flex;align-items:center;justify-content:center}
+/* cascada */
+.tl{list-style:none;margin:14px 0;padding:0 0 0 20px;border-left:2px solid var(--accent)}
+.nodo{position:relative;margin:0 0 14px;padding:11px 13px;background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);font-size:14px;line-height:1.55}
+.nodo::before{content:"";position:absolute;left:-27px;top:15px;width:12px;height:12px;border-radius:1px;background:var(--accent);box-shadow:0 0 0 3px var(--paper)}
+.paso{display:block;font:600 15px/1.4 var(--f-serif);margin-bottom:5px}
+.pn{color:var(--accent-ink);margin-right:4px;font-variant-numeric:tabular-nums}
+.man{margin:8px 0 0;font-size:13px;color:var(--ink-2)}
+.signo{background:var(--paper);border:1px solid var(--rule);border-top:2px solid var(--rule-strong);border-radius:0 0 var(--r) var(--r);padding:12px 14px;margin:12px 0;font-size:14px;line-height:1.55}
+.signo h4{margin:0 0 6px;font:600 15.5px/1.35 var(--f-serif)}
+.signo dl{margin:0}
+.signo dt{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-3);margin-top:8px}
+.signo dd{margin:2px 0 0}
+.xref{display:inline-flex;align-items:center;min-height:44px;padding:4px 10px;margin:3px 6px 3px 0;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent-field);color:var(--accent-ink);font:600 12.5px/1.3 var(--f-sans);text-align:left}
+.xref:hover{background:var(--accent);color:var(--on-accent)}
+p .xref,td .xref,li .xref,dd .xref{display:inline;position:relative;min-height:0;padding:0 5px;margin:0 2px;line-height:inherit;border-radius:2px;white-space:normal;overflow-wrap:anywhere;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+p .xref::after,td .xref::after,li .xref::after,dd .xref::after{content:"";position:absolute;left:-4px;right:-4px;top:-12px;bottom:-12px}
+.hl{outline:2px solid var(--accent);background:var(--accent-field)!important;transition:background .3s}
+.acc{border:1px solid var(--rule);border-radius:var(--r);margin:12px 0;overflow:hidden}
+.acc-h{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:44px;padding:9px 14px;border:0;background:var(--paper-2);font:600 14px/1.35 var(--f-sans);text-align:left}
+.acc-h:hover{background:var(--accent-field)}
+.chev{transition:transform .2s;color:var(--accent-ink)}
+.acc.op .chev{transform:rotate(180deg)}
+.acc-b{display:none;padding:10px 14px;font-size:14px;line-height:1.55}
+.acc.op .acc-b{display:block}
+.vanc{font-size:12.5px;line-height:1.5;padding-left:24px}
+.vanc li{margin:5px 0;word-break:break-word}
+.vanc li::marker{font-variant-numeric:tabular-nums;color:var(--ink-3)}
+/* simulador */
+.dc{border:1px solid var(--rule-strong);border-radius:var(--r);padding:14px 16px;margin:22px 0;background:var(--paper)}
+.dc-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.dc-g{margin:10px 0}
+.dc-l{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);margin-bottom:5px;display:block}
+.chip{min-height:44px;padding:7px 13px;margin:3px 6px 3px 0;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);font-size:13.5px}
+.chip:hover{border-color:var(--accent);color:var(--accent-ink)}
+.chip.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:600}
+.dc input[type=number]{min-height:44px;width:120px;padding:6px 10px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper);color:var(--ink);font:15px var(--f-sans);font-variant-numeric:tabular-nums}
+.out{margin-top:12px;padding:12px 14px;border-radius:var(--r);background:var(--paper-2);border:1px solid var(--rule);font-size:14px;line-height:1.58;min-height:44px}
+.tag{display:inline-block;font:600 11px/1.4 var(--f-sans);padding:1px 7px;border-radius:2px;background:var(--accent-field);color:var(--accent-ink);margin:4px 4px 0 0}
+.rec-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.rec-bar textarea{width:100%;min-height:120px;margin-top:8px;padding:9px 11px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper-2);color:var(--ink);font:14px/1.55 var(--f-sans);resize:vertical}
+.chip:disabled{cursor:default;opacity:.85}
+.rec-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.rec-ctl{display:none;gap:6px;margin-top:6px}
+.recon .rec-ctl{display:flex}
+.recon>*:not(.rec-bar):not(.tl){display:none}
+.recon .nodo:not(.rev) .pt{display:none}
+.recon .nodo:not(.rev) .pn::after{content:" ?"}
+.recon .nodo:not(.rev) .det{display:none}
+.recon .nodo.pis:not(.rev) .det{display:block}
+.recon .nodo.pis:not(.rev) .det>*:not(.man){display:none}
+.recon .nodo:not(.pis):not(.rev) .man{display:none}
+.recon .nodo.rev{border-color:var(--accent)}
+.rec-go{margin:22px 0}
+.steps.tg>li{padding-left:40px}
+span.tg{display:inline-block;font:700 11px/1.4 var(--f-mono);letter-spacing:.02em;padding:2px 7px;margin:0 6px 2px 0;border-radius:2px;background:var(--paper-2);border:1px solid var(--rule);color:var(--ink-2);white-space:nowrap;vertical-align:1px}
+span.tg[data-t="clave"]{background:var(--accent-field);color:var(--accent-ink);border-color:var(--accent)}
+span.tg[data-t="ok"]{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+span.tg[data-t="cond"]{background:var(--am-f);color:var(--am);border-color:var(--am)}
+span.tg[data-t="no"]{background:var(--rs-f);color:var(--rs);border-color:var(--rs)}
+span.tg[data-t="alarma"]{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.qv{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:12px 0}
+.qv p{margin:0;padding:9px 11px;border-radius:var(--r);border:1px solid var(--rule);background:var(--paper-2);font-size:13.5px;line-height:1.45}
+.qv p::before{display:block;font:700 10.5px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px;color:var(--ink-3)}
+.qv p[data-e="p"]{background:var(--accent-field);border-color:var(--accent)}
+.qv p[data-e="p"]::before{content:"Presente";color:var(--accent-ink)}
+.qv p[data-e="v"]::before{content:"Variable"}
+.qv p[data-e="a"]{border:1px dashed var(--rule);color:var(--ink-3);background:transparent}
+.qv p[data-e="a"]::before{content:"Ausente"}
+.qv p[data-e="k"]{grid-column:1/-1;border:2px solid var(--accent);background:var(--accent-field);font-size:14.5px}
+.qv p[data-e="k"]::before{content:"Signo clave";color:var(--accent-ink)}
+.hb.vi{background:var(--pu-f);color:var(--pu);border-color:var(--pu)}
+.hb.vi .mini{color:inherit;opacity:.88}
+table.vis{min-width:620px}
+table.vis td{min-width:140px}
+table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index:1;background:var(--paper-2);min-width:118px;max-width:150px;font-weight:700;border-right:1px solid var(--rule)}
+.vb-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.tbl>*:not(.vb-bar):not(.vis-w){display:none}
+.tbl td.tap{cursor:pointer}
+.tbl td.tap:not(.rev){color:transparent;background:repeating-linear-gradient(135deg,var(--paper-2),var(--paper-2) 7px,var(--accent-field) 7px,var(--accent-field) 14px)}
+.tbl td.tap:not(.rev) *{visibility:hidden}
+.tbl td.tap.rev{box-shadow:inset 0 0 0 1px var(--accent)}
+.cf{display:block;margin-top:10px;padding-top:8px;border-top:1px dashed var(--accent);font-style:italic;color:var(--ink-2)}
+.cf::before{content:"Contrafactual · ";font-style:normal;font-weight:700;color:var(--accent-ink)}
+.fig{margin:14px 0}
+.fig img{display:block;max-width:100%;height:auto;border-radius:var(--r);border:1px solid var(--rule)}
+.fig figcaption{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin-top:6px}
+@media (min-width:700px){body{font-size:15.5px}.wrap{padding:22px 24px 64px}h1{font-size:28px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- /KIT_HEAD -->
+<h1>Cáncer colorrectal</h1>
+<nav class="tabs">
+<button type="button" class="tb" data-tab="pan" onclick="show('pan')">Panorama</button>
+<button type="button" class="tb" data-tab="def" onclick="show('def')">Definición y epidemiología</button>
+<button type="button" class="tb" data-tab="fis" onclick="show('fis')">Etiología y fisiopatología</button>
+<button type="button" class="tb" data-tab="cli" onclick="show('cli')">Clínica</button>
+<button type="button" class="tb" data-tab="dx" onclick="show('dx')">Plan diagnóstico</button>
+<button type="button" class="tb" data-tab="tx" onclick="show('tx')">Plan de tratamiento</button>
+<button type="button" class="tb" data-tab="seg" onclick="show('seg')">Seguimiento y complicaciones</button>
+<button type="button" class="tb" data-tab="tam" onclick="show('tam')">Tamizaje y lesiones premalignas</button>
+</nav>
+<section class="tab" data-tab="pan">
+<div class="hb az"><div class="hb-t">El tema en una frase</div><p>El cáncer colorrectal nace de un adenoma o de un pólipo serrado que acumula alteraciones genéticas durante años, y esa lentitud permite detectarlo y extirparlo antes de que invada.</p></div>
+<div class="etapa" data-go="def"><h3>Definición</h3><p class="res">Es un adenocarcinoma del epitelio del colon o del recto que cruza la muscularis mucosae. La frontera importa porque la mucosa casi no tiene linfáticos: antes de cruzarla basta la resección local; después, el tumor alcanza ganglios y vasos. Por eso se separa la displasia de alto grado del carcinoma invasor, y por eso no se confunde con hemorroides, enfermedad inflamatoria o cáncer anal, aunque compartan la sangre en las heces. Para saber a quién afecta, sigue con la epidemiología.</p><p class="perla">Una rectorragia con hemorroides visibles no excluye el tumor: ambos coexisten.</p><button type="button" class="go" data-go="def" onclick="show('def')">Ir a Definición y epidemiología →</button></div>
+<div class="etapa" data-go="def"><h3>Epidemiología</h3><p class="res">Es la tercera causa de muerte por cáncer en Estados Unidos y el 10,5 % de los casos ocurre antes de los 50 años [1]. Ese aumento en adultos jóvenes llevó a adelantar el tamizaje a los 45 años en personas de riesgo promedio. Unos factores no se modifican, como la edad y la herencia; otros sí, como la dieta y el tabaco. Cada factor entra en la cascada por un punto distinto, y eso se explica en la fisiopatología.</p><p class="perla">El riesgo promedio excluye cáncer, adenomas, enfermedad inflamatoria y síndromes genéticos previos.</p><button type="button" class="go" data-go="def" onclick="show('def')">Ir a Definición y epidemiología →</button></div>
+<div class="etapa" data-go="fis"><h3>Etiología y fisiopatología</h3><p class="res">Una célula de la cripta pierde APC, la β-catenina libre activa la proliferación y nace el adenoma; KRAS y la pérdida de TP53 lo llevan a carcinoma. Otra vía parte de un pólipo serrado con BRAF mutado y metilación que silencia MLH1. En el síndrome de Lynch el defecto de reparación se hereda. El disparador es acumulativo y el intervalo es largo; después el tumor produce los síntomas que describe la clínica.</p><p class="perla">El tumor con inestabilidad de microsatélites sugiere defecto de reparación y obliga a pensar en Lynch.</p><button type="button" class="go" data-go="fis" onclick="show('fis')">Ir a Etiología y fisiopatología →</button></div>
+<div class="etapa" data-go="cli"><h3>Clínica</h3><p class="res">Cada síntoma refleja un mecanismo local: el tumor del colon derecho sangra sin obstruir y causa anemia ferropénica; el del izquierdo estrecha una luz ya estrecha y causa cambio de hábito con cólico; el rectal irrita la pared y causa tenesmo. La pérdida de peso viene de las citocinas y la hepatomegalia, de las metástasis portales. Los síntomas indican fase intermedia o tardía, así que el diagnóstico exige una prueba que vea la mucosa.</p><p class="perla">La anemia ferropénica en un adulto sin otra causa se estudia con colonoscopia.</p><button type="button" class="go" data-go="cli" onclick="show('cli')">Ir a Clínica →</button></div>
+<div class="etapa" data-go="dx"><h3>Diagnóstico</h3><p class="res">La prueba inicial ante síntomas es la colonoscopia completa con biopsia, porque ve toda la mucosa y detecta lesiones sincrónicas; el FIT es de tamizaje y no se usa ante síntomas de alarma. La prueba confirmatoria es la histología de adenocarcinoma, con inmunohistoquímica de reparación. Después se estadifica con tomografía de tórax, abdomen y pelvis, y con resonancia en el recto. El estadio fija la intención y el esquema del tratamiento que sigue.</p><p class="perla">El antígeno carcinoembrionario no tamiza: sirve de comparación y de seguimiento.</p><button type="button" class="go" data-go="dx" onclick="show('dx')">Ir a Plan diagnóstico →</button></div>
+<div class="etapa" data-go="tx"><h3>Tratamiento</h3><p class="res">La intención es curativa en los estadios I a III: resección en bloque del segmento con su pedículo vascular y los ganglios regionales. El estadio patológico decide la quimioterapia posterior: ninguna en el estadio I, individualizada en el II y con oxaliplatino más una fluoropirimidina en el III. El recto suma un tratamiento previo a la cirugía, y la enfermedad metastásica se decide en comité. Después de operar, comienza la vigilancia de la recaída.</p><p class="perla">El tumor con reparación deficiente en estadio II rara vez se beneficia de fluoropirimidina sola.</p><button type="button" class="go" data-go="tx" onclick="show('tx')">Ir a Plan de tratamiento →</button></div>
+<div class="etapa" data-go="seg"><h3>Seguimiento y complicaciones</h3><p class="res">Tras la resección curativa se vigila con marcador e imagen durante los primeros años, cuando se concentra la recaída. La complicación más temida es la obstrucción con perforación del ciego, cuya señal es distensión, vómito y ausencia de gases. La metástasis hepática, por el drenaje portal, es el primer sitio de diseminación. Cuando el cáncer ya se trató, queda la prevención de nuevas lesiones, que se aborda en el tamizaje.</p><p class="perla">Un antígeno en ascenso con tomografía normal no tranquiliza: se amplía el estudio.</p><button type="button" class="go" data-go="seg" onclick="show('seg')">Ir a Seguimiento y complicaciones →</button></div>
+<div class="etapa" data-go="tam"><h3>Tamizaje y lesiones premalignas</h3><p class="res">El tamizaje aprovecha la ventana entre la lesión premaligna y el cáncer. En riesgo promedio se inicia a los 45 años con FIT anual o colonoscopia cada 10 años, y un FIT positivo exige colonoscopia completa. Tras una polipectomía, el intervalo de vigilancia depende del tipo, el número y el tamaño de los pólipos. Los síndromes de Lynch y de poliposis adenomatosa familiar siguen una ruta propia, con derivación a genética.</p><p class="perla">Más de 10 adenomas acumulados obliga a considerar un síndrome hereditario.</p><button type="button" class="go" data-go="tam" onclick="show('tam')">Ir a Tamizaje y lesiones premalignas →</button></div>
+<p class="mini">Esto es el mapa, no el territorio: cada párrafo y cada perla se justifican en su pestaña.</p>
+</section>
+<section class="tab" data-tab="def">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Qué diferencia histológica separa una displasia de alto grado de un carcinoma invasor y por qué esa frontera cambia el riesgo de diseminación?</li>
+<li>¿Qué estructura normal del colon se altera primero y por qué el recambio constante de la cripta la hace vulnerable?</li>
+<li>¿En qué se diferencia el cáncer colorrectal de las hemorroides, la enfermedad inflamatoria intestinal y el cáncer anal ante un paciente con rectorragia?</li>
+<li>¿Qué cambio epidemiológico reciente justifica adelantar la edad de inicio del tamizaje y qué grupos quedan fuera de esa lógica?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: USPSTF 2021 [1] (solo resumen)</span></p>
+<div class="hb am"><div class="hb-t">Precisión sobre el sílabo</div>
+<p>El caso del sílabo nombra «colon» entre los cánceres digestivos [2]. Este widget cubre el cáncer colorrectal completo (colon y recto), cuya forma más frecuente es el adenocarcinoma, y lo separa de los tumores poco frecuentes del colon (neuroendocrino, linfoma, estromal) y del cáncer anal.</p></div>
+<div class="hb am"><div class="hb-t">Alcance</div>
+<p>Cubre el recorrido de la enfermedad desde la definición hasta el seguimiento, con el tratamiento del tumor resecable, y suma una pestaña adicional de tamizaje y lesiones premalignas. No desarrolla la enfermedad metastásica, el esquema rectal con dosis ni los tumores raros. No incluye cifras de Ecuador porque no se leyó una fuente sostenible.</p></div>
+
+<h2>Definición</h2>
+<div class="card"><p><b>Cáncer colorrectal</b>: neoplasia maligna del epitelio glandular del colon o del recto que atraviesa la muscularis mucosae e invade la submucosa o capas más profundas. El adenocarcinoma es el tipo histológico predominante. Es una redacción propia, sin frase literal de una fuente.</p>
+<span class="badge b-am">Fuente por verificar</span></div>
+<div class="card"><p>El revestimiento normal del colon es un epitelio con criptas (invaginaciones tubulares). En el fondo de la cripta están las células madre; sus hijas ascienden, absorben agua y sodio, y mueren por apoptosis al llegar a la superficie. Ese recambio continuo obliga a copiar ADN millones de veces y expone a errores acumulables.</p>
+<span class="rem">↪ Mecanismo en «Etiología y fisiopatología»</span></div>
+<div class="card"><p>Criterio central: invasión más allá de la muscularis mucosae. La mucosa casi no tiene linfáticos funcionales; al cruzar esa capa, las células tienen acceso a vasos linfáticos y venosos. Por eso la displasia de alto grado sin invasión se cura con resección local y el carcinoma invasor exige estadificar.</p>
+<ul>
+<li>Histológicos: adenocarcinoma habitual, mucinoso y de células en anillo de sello.</li>
+<li>Moleculares: inestabilidad cromosómica, deficiencia de reparación de apareamientos (MMR) y vía serrada.</li>
+<li>Por origen: esporádico o hereditario (Lynch, PAF).</li>
+<li>Por sitio: colon derecho, colon izquierdo y recto.</li>
+</ul></div>
+
+<h3>No confundir con…</h3>
+<div class="tw"><table>
+<thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Hemorroides</th><td>Sangre roja con la deposición</td><td>Sangre roja brillante al final de la deposición y exploración anorrectal concordante; en adultos con anemia o cambio de hábito no excluyen un tumor y requieren colonoscopia</td></tr>
+<tr><th>Enfermedad inflamatoria intestinal</th><td>Diarrea con sangre, anemia, pérdida de peso</td><td>Curso crónico recurrente y lesión continua con biopsia inflamatoria; es además un factor de riesgo de cáncer</td></tr>
+<tr><th>Cáncer anal</th><td>Rectorragia, dolor y tenesmo</td><td>Carcinoma escamoso del canal anal, distal a la línea pectínea; se trata con quimiorradioterapia, no con resección</td></tr>
+</tbody></table></div>
+
+<div class="card"><p>Ejemplo de anclaje: varón de 62 años con cansancio de tres meses, heces más delgadas, dolor cólico y pérdida de 6 kg sin dieta. Hemoglobina baja con volumen corpuscular medio bajo.</p></div>
+
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — el cáncer colorrectal</span>
+<p class="fey-b">Imagina el intestino como un tobogán con un tapiz que se renueva solo: las piezas viejas se caen y otras nuevas suben desde unos huecos del fondo. Si una pieza nueva sale con la orden de copiarse sin parar y nadie la frena, forma un bulto que crece. Con el tiempo, el bulto atraviesa la pared como una raíz que rompe el suelo.</p>
+<p class="mini fey-c">En medicina esto se llama… cripta intestinal (el hueco), epitelio (el tapiz), adenoma (el bulto benigno) y carcinoma invasor (cuando atraviesa la pared).</p>
+<p class="mini fey-c">Dónde falla la comparación: el cáncer no nace de una sola orden equivocada; necesita varios cambios genéticos acumulados durante años.</p></div>
+
+<h2>Epidemiología</h2>
+<div class="stats">
+<div class="stat"><b>3.ª</b><span>causa de muerte por cáncer en EE. UU. (2021) [1]</span></div>
+<div class="stat"><b>10,5 %</b><span>de los casos nuevos ocurre en menores de 50 años [1]</span></div>
+<div class="stat"><b>≈15 %</b><span>aumento de la incidencia de adenocarcinoma a los 40–49 años, entre 2000-2002 y 2014-2016 [1]</span></div>
+</div>
+<p>El aumento en adultos jóvenes llevó al USPSTF a recomendar el tamizaje desde los 45 años [1]. Esa recomendación cubre adultos asintomáticos de riesgo promedio: sin cáncer, adenomas o enfermedad inflamatoria previos y sin síndrome genético conocido [1]. Quienes no cumplen esas condiciones siguen otra ruta, descrita en «Tamizaje y lesiones premalignas».</p>
+<div class="tw"><table>
+<thead><tr><th>Factor de riesgo</th><th>¿Modificable?</th><th>Dónde se explica el mecanismo</th></tr></thead>
+<tbody>
+<tr><th>Edad creciente</th><td>No</td><td>Etiología y fisiopatología, vía cromosómica</td></tr>
+<tr><th>Familiar de primer grado con cáncer o adenoma avanzado</th><td>No</td><td>Tamizaje y lesiones premalignas</td></tr>
+<tr><th>Síndromes hereditarios (Lynch, PAF)</th><td>No</td><td>Etiología y fisiopatología, rama hereditaria</td></tr>
+<tr><th>Enfermedad inflamatoria intestinal prolongada</th><td>Parcial</td><td>Etiología y fisiopatología, tabla de causas</td></tr>
+<tr><th>Carnes procesadas, obesidad y sedentarismo</th><td>Sí</td><td>Etiología y fisiopatología, tabla de causas</td></tr>
+<tr><th>Tabaco y alcohol</th><td>Sí</td><td>Etiología y fisiopatología, vía serrada</td></tr>
+</tbody></table></div>
+<p class="mini">Ecuador y Latinoamérica: no se leyó una estimación sostenible en esta sesión; consultar el Registro Nacional de Tumores y SOLCA [VERIFICAR EN FUENTE].</p>
+</section>
+<section class="tab" data-tab="fis">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Qué eventos genéticos, y en qué orden, convierten una cripta normal en un adenoma y luego en un carcinoma invasor?</li>
+<li>¿Por qué un pólipo serrado y un adenoma convencional terminan en cánceres con perfil molecular distinto?</li>
+<li>¿Cómo un defecto germinal único, como el del síndrome de Lynch, acelera la carcinogénesis y por qué ese tumor es inestable en sus microsatélites?</li>
+<li>¿Por qué la localización del tumor y su vía de diseminación determinan la forma en que el paciente consulta?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: ESMO 2020, cáncer de colon localizado [3] (solo resumen)</span></p>
+<p class="mini">Los mecanismos moleculares siguen el modelo clásico de los textos base (Harrison, Farreras-Rozman), que no se consultaron en esta sesión: sin cita numerada. Vigencia no verificada.</p>
+
+<h2>De la cripta normal al carcinoma</h2>
+<ol class="tl">
+<li class="nodo" id="m-1" data-clin="0" data-paso="Pérdida de APC en la cripta" data-rama="Rama A · Vía cromosómica"><div class="det"><p>El gen <i>APC</i> (supresor de tumores) codifica una proteína que, junto con la quinasa GSK-3β, forma en el citoplasma del enterocito un complejo que marca la β-catenina para su destrucción. Una célula de la cripta pierde los dos alelos: uno por mutación y el otro por mutación o pérdida. Sin APC útil, la β-catenina deja de degradarse.</p></div></li>
+<li class="nodo" id="m-2" data-clin="0" data-paso="β-catenina libre activa proliferación y forma adenoma" data-rama="Rama A · Vía cromosómica"><div class="det"><p>La β-catenina (proteína de adhesión que, libre, viaja al núcleo) se une a los factores TCF y activa genes de proliferación como <i>MYC</i> y ciclina D1. La célula sigue en ciclo en lugar de migrar y morir en la superficie. El resultado es el adenoma: epitelio displásico, todavía benigno, que forma un pólipo.</p></div></li>
+<li class="nodo" id="m-3" data-clin="0" data-paso="KRAS activo expande el adenoma" data-rama="Rama A · Vía cromosómica"><div class="det"><p>KRAS (GTPasa de la cara interna de la membrana que transmite la señal del receptor EGFR hacia la vía MAPK) mutado queda activo sin recibir señal. Impulsa la proliferación, y el adenoma crece, se hace velloso y gana displasia. Es un dato para el tratamiento del cáncer metastásico: ver «Plan de tratamiento».</p></div></li>
+<li class="nodo" id="m-4" data-clin="0" data-paso="Pérdida de TP53 y 18q forma el carcinoma" data-rama="Rama A · Vía cromosómica"><div class="det"><p>TP53 (guardián del genoma: detiene el ciclo ante daño del ADN o induce apoptosis) y la región 18q (contiene SMAD4, mediador de la señal inhibidora de TGF-β) se pierden. La célula ya no se frena ni muere, y la clona maligna cruza la muscularis mucosae: carcinoma invasor.</p></div></li>
+<li class="nodo" id="m-5" data-clin="0" data-paso="BRAF mutado bloquea la muerte celular en pólipo serrado" data-rama="Rama B · Vía serrada"><div class="det"><p>BRAF (quinasa de la vía MAPK) con la mutación V600E queda activo y mantiene a los enterocitos vivos en lugar de dejarlos morir en la superficie. Las células se acumulan y dan al epitelio un contorno en dientes de sierra: pólipo serrado sésil. El tabaquismo se asocia a esta vía.</p></div></li>
+<li class="nodo" id="m-6" data-clin="0" data-paso="Hipermetilación CIMP silencia MLH1" data-rama="Rama B · Vía serrada"><div class="det"><p>CIMP es el fenotipo de metilación masiva de islas CpG (zonas ricas en citosina y guanina) en los promotores de genes. La metilación apaga el gen sin cambiar su secuencia. Cuando alcanza el promotor de <i>MLH1</i> (gen de reparación de apareamientos erróneos), la célula pierde esa proteína.</p></div></li>
+<li class="nodo" id="m-7" data-clin="0" data-paso="Reparación de apareamientos deficiente e inestabilidad de microsatélites" data-rama="Rama B · Vía serrada"><div class="det"><p>Sin el sistema de reparación de apareamientos erróneos (MMR), los errores de copia en secuencias repetidas cortas (microsatélites) no se corrigen: inestabilidad de microsatélites alta (MSI-H). Los errores caen también en genes como <i>TGFBR2</i>, que frenan el crecimiento. Es un dato diagnóstico (inmunohistoquímica de MMR) y terapéutico: ver «Plan diagnóstico» y «Plan de tratamiento».</p></div></li>
+</ol>
+
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — varios frenos que fallan</span>
+<p class="fey-b">Una célula del intestino tiene varios frenos, como una bicicleta con freno delantero, trasero y de pie. Si falla uno, todavía se detiene. El cáncer aparece cuando fallan varios, uno tras otro, y cada falla le da a la célula una ventaja para crecer. Por eso el bulto tarda años en volverse peligroso, y ese tiempo es una oportunidad para encontrarlo.</p>
+<p class="mini fey-c">En medicina esto se llama… oncogén (acelerador pegado), gen supresor (freno roto) y secuencia adenoma-carcinoma.</p>
+<p class="mini fey-c">Dónde falla la comparación: en la célula no hay un conductor que note los frenos rotos, y algunas fallas se heredan desde el nacimiento.</p></div>
+
+<h2>Defecto hereditario en la reparación</h2>
+<ol class="tl">
+<li class="nodo" id="m-8" data-clin="0" data-paso="Mutación germinal de un gen de reparación" data-rama="Rama C · Síndrome de Lynch"><div class="det"><p>En el síndrome de Lynch (herencia autosómica dominante) todas las células nacen con un alelo defectuoso de <i>MLH1</i>, <i>MSH2</i>, <i>MSH6</i> o <i>PMS2</i>, genes cuyas proteínas detectan y corrigen apareamientos erróneos de bases tras la replicación. Una deleción de <i>EPCAM</i> puede silenciar a <i>MSH2</i>, su vecino.</p></div></li>
+<li class="nodo" id="m-9" data-clin="0" data-paso="Segundo golpe somático elimina el alelo sano" data-rama="Rama C · Síndrome de Lynch"><div class="det"><p>En una célula epitelial se pierde, por mutación o metilación, el alelo que quedaba sano. Esa célula queda sin MMR en edad temprana y entra en el mismo estado MSI-H del nodo anterior de la vía serrada. La diferencia con la vía serrada esporádica es el primer golpe heredado, no la metilación.</p></div></li>
+</ol>
+
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — el corrector de ortografía</span>
+<p class="fey-b">Cada vez que una célula se divide, copia un libro enorme. Un corrector revisa la copia y arregla las erratas, sobre todo en las frases que se repiten. Si el corrector está roto, las erratas se acumulan. Hay familias que nacen con un corrector ya dañado en una de las dos copias del programa; basta que se rompa la otra para que las erratas se multipliquen.</p>
+<p class="mini fey-c">En medicina esto se llama… reparación de apareamientos erróneos, inestabilidad de microsatélites y síndrome de Lynch.</p>
+<p class="mini fey-c">Dónde falla la comparación: el corrector molecular revisa el ADN recién copiado sin entender su significado, y no todas las erratas dañan.</p></div>
+
+<h2>Causas y puntos de entrada</h2>
+<div class="tw"><table>
+<thead><tr><th>Causa / grupo</th><th>Cómo entra en la cascada</th><th>Nodo</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Edad creciente</th><td>Más divisiones de las células madre, más errores de copia acumulados</td><td><button type="button" class="xref" data-ir="m-1" onclick="ir('fis','m-1')">Pérdida de APC</button></td><td>[1]</td></tr>
+<tr><th>Carnes procesadas, obesidad, alcohol</th><td>Inflamación crónica de bajo grado y compuestos mutágenos en el contenido colónico dañan el ADN epitelial</td><td><button type="button" class="xref" data-ir="m-3" onclick="ir('fis','m-3')">KRAS activo</button></td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Tabaquismo</th><td>Se asocia a pólipos serrados con BRAF mutado y metilación</td><td><button type="button" class="xref" data-ir="m-5" onclick="ir('fis','m-5')">BRAF mutado</button></td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Enfermedad inflamatoria intestinal</th><td>La inflamación crónica causa displasia plana y daño de TP53 desde edades más tempranas</td><td><button type="button" class="xref" data-ir="m-4" onclick="ir('fis','m-4')">Pérdida de TP53</button></td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Poliposis adenomatosa familiar (PAF)</th><td>El primer golpe de APC se hereda, y basta perder el otro alelo en cada célula</td><td><button type="button" class="xref" data-ir="m-1" onclick="ir('fis','m-1')">Pérdida de APC</button></td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Síndrome de Lynch</th><td>Alelo MMR defectuoso desde el nacimiento; el segundo golpe causa MSI-H</td><td><button type="button" class="xref" data-ir="m-8" onclick="ir('fis','m-8')">Mutación germinal</button></td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+
+<h2>Del tumor a la presentación clínica</h2>
+<ol class="tl">
+<li class="nodo" id="m-10" data-clin="1" data-paso="Ulceración tumoral con sangrado crónico" data-rama="Rama D · Efecto local"><div class="det"><p>La superficie del carcinoma, con vasos nuevos frágiles, se ulcera por el roce del bolo fecal. Pierde sangre en cantidad pequeña y constante, mezclada con las heces. La luz del colon derecho es ancha y las heces son líquidas: el tumor crece sin obstruir y sangra durante meses. El hierro se pierde con la sangre.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="s-1" onclick="ir('cli','s-1')">Anemia ferropénica sin sangrado visible</button></p></div></li>
+<li class="nodo" id="m-11" data-clin="1" data-paso="Crecimiento circunferencial que estrecha la luz" data-rama="Rama D · Efecto local"><div class="det"><p>En el colon izquierdo la luz es estrecha y las heces ya son sólidas. El tumor rodea la pared, la rigidiza y la estrecha como un anillo. El músculo liso proximal se contrae con más fuerza para empujar el contenido y causa cólico. Si la válvula ileocecal es competente, el asa cerrada puede distenderse hasta perforarse en el ciego.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="s-2" onclick="ir('cli','s-2')">Cambio del hábito con dolor cólico</button></p></div></li>
+<li class="nodo" id="m-12" data-clin="1" data-paso="Tumor rectal que irrita pared y esfínter" data-rama="Rama D · Efecto local"><div class="det"><p>En el recto el tumor está cerca del ano y la sangre llega sin mezclarse con las heces. La masa estimula los receptores de distensión de la pared rectal, que el cerebro interpreta como necesidad de evacuar. Después de la deposición la sensación persiste porque la causa, el tumor, sigue ahí.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="s-3" onclick="ir('cli','s-3')">Rectorragia con tenesmo</button></p></div></li>
+<li class="nodo" id="m-13" data-clin="0" data-paso="Invasión linfática y venosa regional" data-rama="Rama E · Diseminación y efecto sistémico"><div class="det"><p>Tras cruzar la muscularis mucosae, las células alcanzan los linfáticos de la submucosa y las venas de la pared. Los ganglios regionales siguen el trayecto de los vasos que irrigan el segmento, y las venas desembocan en la circulación mesentérica. Por eso la cirugía reseca el segmento junto con su pedículo vascular.</p></div></li>
+<li class="nodo" id="m-14" data-clin="1" data-paso="Diseminación venosa portal al hígado" data-rama="Rama E · Diseminación y efecto sistémico"><div class="det"><p>La sangre venosa del colon y del recto alto drena por la vena mesentérica y la porta al hígado, donde los sinusoides atrapan las células tumorales. Allí forman nódulos que reemplazan parénquima y comprimen conductos biliares intrahepáticos. El hígado es el primer sitio de metástasis a distancia.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="s-4" onclick="ir('cli','s-4')">Hepatomegalia nodular o ictericia</button></p></div></li>
+<li class="nodo" id="m-15" data-clin="1" data-paso="Citocinas tumorales que reducen el apetito" data-rama="Rama E · Diseminación y efecto sistémico"><div class="det"><p>El tumor y la reacción inflamatoria liberan citocinas (mensajeros del sistema inmune, como el factor de necrosis tumoral α y la interleucina 6). Actúan sobre el hipotálamo, reducen el apetito y aumentan el gasto de energía; en el músculo aceleran su degradación. Se suma el sangrado crónico y la menor ingesta por el dolor.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="s-5" onclick="ir('cli','s-5')">Pérdida de peso inexplicada</button></p></div></li>
+</ol>
+</section>
+<section class="tab" data-tab="cli">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué el tumor del colon derecho se presenta con anemia y el del colon izquierdo con obstrucción?</li>
+<li>¿Por qué un adulto con anemia ferropénica y sin síntomas digestivos necesita estudio del colon?</li>
+<li>¿Cómo se relacionan el dolor abdominal y la pérdida de peso con mecanismos distintos del tumor?</li>
+<li>¿Qué manifestaciones separan la enfermedad temprana de la tardía y cuáles obligan a derivar con urgencia?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: ESMO 2020, cáncer de colon localizado [3] (solo resumen)</span></p>
+<div class="qv">
+<p data-e="p">Pérdida de peso inexplicada</p>
+<p data-e="p">Cambio del hábito intestinal</p>
+<p data-e="p">Dolor abdominal cólico</p>
+<p data-e="v">Rectorragia o heces con sangre</p>
+<p data-e="v">Masa abdominal palpable</p>
+<p data-e="a">Fiebre alta con escalofríos</p>
+<p data-e="k"><button type="button" class="xref" data-ir="s-1" onclick="ir('cli','s-1')">Anemia ferropénica sin sangrado visible</button></p>
+</div>
+
+<h2>Signos por mecanismo</h2>
+<div class="signo" id="s-1"><h4>Anemia ferropénica sin sangrado visible</h4>
+<dl>
+<dt>Cómo se reconoce</dt><dd>Palidez, cansancio y disnea de esfuerzo; hemoglobina baja con volumen corpuscular medio bajo y ferritina baja. Las heces pueden verse normales.</dd>
+<dt>Por qué aparece</dt><dd>La ulceración del tumor pierde sangre en pequeñas cantidades y de forma continua; el hierro se agota antes de que la médula compense. <button type="button" class="xref" data-ir="m-10" onclick="ir('fis','m-10')">← Ulceración tumoral</button></dd>
+<dt>Qué significa</dt><dd>En un varón adulto o en una mujer posmenopáusica, la causa digestiva se descarta hasta demostrar lo contrario. El tumor del colon derecho es la fuente clásica porque no obstruye.</dd>
+</dl></div>
+<div class="signo" id="s-2"><h4>Cambio del hábito con dolor cólico</h4>
+<dl>
+<dt>Cómo se reconoce</dt><dd>Estreñimiento de reciente inicio, alternancia con diarrea, heces delgadas y dolor en cólico que cede con la evacuación o la expulsión de gases.</dd>
+<dt>Por qué aparece</dt><dd>La estrechez de la luz obliga al músculo proximal a contraerse con más fuerza; el cólico es esa contracción contra una resistencia fija. <button type="button" class="xref" data-ir="m-11" onclick="ir('fis','m-11')">← Crecimiento circunferencial</button></dd>
+<dt>Qué significa</dt><dd>Lesión sobre todo del colon izquierdo. Si añade distensión, vómito y ausencia de gases, hay obstrucción y es una urgencia quirúrgica.</dd>
+</dl></div>
+<div class="signo" id="s-3"><h4>Rectorragia con tenesmo</h4>
+<dl>
+<dt>Cómo se reconoce</dt><dd>Sangre roja que cubre las heces o sale sola, con deseo de evacuar sin resultado y sensación de vaciado incompleto.</dd>
+<dt>Por qué aparece</dt><dd>El tumor próximo al ano sangra sin mezclarse con las heces y estimula los receptores de distensión de la pared. <button type="button" class="xref" data-ir="m-12" onclick="ir('fis','m-12')">← Tumor rectal</button></dd>
+<dt>Qué significa</dt><dd>Obliga a tacto rectal y colonoscopia incluso si hay hemorroides visibles, porque pueden coexistir.</dd>
+</dl></div>
+<div class="signo" id="s-4"><h4>Hepatomegalia nodular o ictericia</h4>
+<dl>
+<dt>Cómo se reconoce</dt><dd>Borde hepático palpable, duro e irregular; en fase tardía, ictericia, ascitis y dolor en hipocondrio derecho.</dd>
+<dt>Por qué aparece</dt><dd>Las metástasis reemplazan parénquima y comprimen los conductos biliares intrahepáticos. <button type="button" class="xref" data-ir="m-14" onclick="ir('fis','m-14')">← Diseminación portal</button></dd>
+<dt>Qué significa</dt><dd>Enfermedad avanzada o en estadio IV; cambia la intención del tratamiento y requiere equipo multidisciplinario.</dd>
+</dl></div>
+<div class="signo" id="s-5"><h4>Pérdida de peso inexplicada</h4>
+<dl>
+<dt>Cómo se reconoce</dt><dd>Pérdida de peso sin dieta ni aumento de actividad, con anorexia y debilidad muscular.</dd>
+<dt>Por qué aparece</dt><dd>Las citocinas tumorales reducen el apetito y degradan músculo; se suman el sangrado crónico y la menor ingesta por el dolor. <button type="button" class="xref" data-ir="m-15" onclick="ir('fis','m-15')">← Citocinas tumorales</button></dd>
+<dt>Qué significa</dt><dd>Es un síntoma de alarma inespecífico: con dolor abdominal y anemia orienta a neoplasia digestiva, pero no localiza el órgano.</dd>
+</dl></div>
+
+<h3>Signos menores</h3>
+<div class="tw"><table>
+<thead><tr><th>Signo</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Masa abdominal palpable</th><td>Tumor voluminoso del ciego o del colon derecho, que crece sin obstruir hasta hacerse palpable</td><td>Ulceración tumoral con sangrado crónico</td></tr>
+<tr><th>Dolor continuo en fosa ilíaca o hipogastrio</th><td>Invasión de peritoneo o estructuras vecinas, con fibras sensitivas somáticas</td><td>Invasión linfática y venosa regional</td></tr>
+<tr><th>Heces con moco</th><td>Tumor velloso que secreta moco abundante</td><td>Mecanismo no establecido</td></tr>
+</tbody></table></div>
+
+<h2>Presentación temprana y tardía</h2>
+<div class="tw"><table>
+<thead><tr><th>Fase</th><th>Manifestaciones</th><th>Mecanismo</th></tr></thead>
+<tbody>
+<tr><th>Temprana</th><td>Asintomática, sangre oculta en heces o anemia leve</td><td>Tumor pequeño con sangrado intermitente que no estrecha la luz</td></tr>
+<tr><th>Intermedia</th><td>Cambio del hábito, cólico, rectorragia o tenesmo</td><td>Estrechez de la luz o irritación rectal</td></tr>
+<tr><th>Tardía</th><td>Pérdida de peso, hepatomegalia, ascitis, masa o complicación aguda</td><td>Diseminación y efecto sistémico</td></tr>
+</tbody></table></div>
+<p>Una complicación aguda, como la obstrucción o la perforación, puede ser la primera presentación. Por eso el tamizaje busca la fase asintomática: la enfermedad temprana no da síntomas y los síntomas ya indican fase intermedia o tardía.</p>
+</section>
+<section class="tab" data-tab="dx">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Cómo se decide entre una prueba inicial y una confirmatoria ante un paciente con síntomas y ante uno con tamizaje positivo?</li>
+<li>¿Por qué la colonoscopia debe ser completa aunque ya se haya visto la lesión?</li>
+<li>¿Qué aportan la inmunohistoquímica de reparación, el antígeno carcinoembrionario y la tomografía, y por qué el antígeno no sirve para tamizar?</li>
+<li>¿Cómo se define el estadio y qué cambia en el estudio por imagen entre el colon y el recto?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: ESMO 2020 [3] (solo resumen); tamizaje: USMSTF 2017 [4] (solo resumen)</span></p>
+<ol class="steps tg">
+<li><span class="tg">1.º</span> Colonoscopia completa con biopsia ante anemia ferropénica, rectorragia, cambio del hábito o pérdida de peso: ve toda la mucosa, toma tejido y detecta lesiones sincrónicas.</li>
+<li><span class="tg">Confirma</span> Histología de adenocarcinoma, con estudio inmunohistoquímico de MMR en la pieza.</li>
+<li><span class="tg">Añade</span> Tomografía de tórax, abdomen y pelvis con contraste, antígeno carcinoembrionario basal, hemograma y ferritina.</li>
+<li><span class="tg">Solo si</span> Tumor rectal: resonancia de pelvis o ecoendoscopia; colonoscopia incompleta: colonografía por tomografía.</li>
+<li><span class="tg">No pidas</span> FIT en un paciente con síntomas de alarma, ni el antígeno carcinoembrionario como prueba de tamizaje.</li>
+<li><span class="tg">Alarma</span> Distensión, vómito y ausencia de gases, o dolor con signos peritoneales: obstrucción o perforación, derivación quirúrgica urgente.</li>
+</ol>
+
+<h2>Pruebas diagnósticas</h2>
+<p class="mini">VPP y VPN dependen de la prevalencia; no se leyeron estimaciones de Ecuador, por eso se escribe «No establecida» [VERIFICAR EN FUENTE]. Glosario: S, sensibilidad; E, especificidad; VPP y VPN, valores predictivos; FIT, prueba inmunoquímica fecal; MMR, reparación de apareamientos erróneos; MSI, inestabilidad de microsatélites; dMMR, MMR deficiente.</p>
+<div class="tw"><table>
+<thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad (descartar/confirmar)</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Colonoscopia con biopsia</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirma el tumor y descarta lesiones sincrónicas</td><td>Visualiza todo el colon, toma tejido y permite polipectomía. Requiere preparación adecuada. Un tumor estenosante obliga a estudiar el colon proximal después.</td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>FIT</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Tamizaje: no confirma ni descarta en un paciente sintomático</td><td>Detecta globina humana en heces. Un resultado positivo exige colonoscopia completa; un resultado negativo no excluye cáncer si hay síntomas.</td><td>[4]</td></tr>
+<tr><th>Tomografía de tórax, abdomen y pelvis</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Estadifica: busca metástasis hepáticas, pulmonares y ganglios a distancia</td><td>Menos exacta que la resonancia para la invasión local del recto. Se pide con tumor ya confirmado.</td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Antígeno carcinoembrionario</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>No confirma ni descarta; marcador basal y de seguimiento</td><td>Glucoproteína de la superficie celular que sube con tumor, tabaquismo e inflamación. Un valor basal alto antes de operar da un punto de comparación para la vigilancia.</td><td>[3]</td></tr>
+<tr><th>Inmunohistoquímica de MMR o MSI</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Clasifica el tumor y orienta la sospecha de Lynch</td><td>La pérdida de proteínas MMR indica dMMR. Mecanismo: <button type="button" class="xref" data-ir="m-7" onclick="ir('fis','m-7')">← Reparación deficiente</button></td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Resonancia de pelvis o ecoendoscopia</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Define invasión local y ganglios en tumor rectal</td><td>Su resultado decide si el recto recibe tratamiento antes de la cirugía.</td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Colonografía por tomografía</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Alternativa si la colonoscopia es incompleta o no es posible</td><td>No toma biopsia; una lesión visible exige colonoscopia. Es una prueba de tamizaje de segundo nivel.</td><td>[4]</td></tr>
+</tbody></table></div>
+
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — saber hasta dónde llegó</span>
+<p class="fey-b">Si descubres una mancha de humedad en la pared, no basta con ver la mancha: necesitas saber si viene de una gotera pequeña o de una tubería rota en el piso de arriba. Con el tumor pasa igual. Primero se mira cuánto atravesó la pared del intestino, luego se revisan los vecinos cercanos y al final se busca si hay manchas lejos, por ejemplo en el hígado.</p>
+<p class="mini fey-c">En medicina esto se llama… estadificación (sistema TNM: tumor, ganglios y metástasis).</p>
+<p class="mini fey-c">Dónde falla la comparación: una gotera no se desplaza por sí sola a otra casa; el tumor sí envía células por los vasos.</p></div>
+
+<h2>Estadios</h2>
+<p class="mini">Clasificación TNM, 8.ª edición del AJCC; no se leyó el manual en esta sesión [VERIFICAR EN FUENTE].</p>
+<div class="tw"><table>
+<thead><tr><th>Estadio</th><th>Criterio</th><th>Qué decide</th></tr></thead>
+<tbody>
+<tr><th>I</th><td>Invade submucosa o muscular propia, sin ganglios</td><td>Cirugía sola</td></tr>
+<tr><th>II</th><td>Atraviesa la muscular propia o invade estructuras vecinas, sin ganglios</td><td>Cirugía; adyuvancia según factores de riesgo</td></tr>
+<tr><th>III</th><td>Ganglios regionales afectados, con cualquier invasión</td><td>Cirugía y adyuvancia</td></tr>
+<tr><th>IV</th><td>Metástasis a distancia</td><td>Equipo multidisciplinario; resección de metástasis o tratamiento sistémico</td></tr>
+</tbody></table></div>
+
+<div class="dc" data-fn="dcDx"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Contexto</span>
+<button type="button" class="chip" data-g="ctx" data-v="sint" onclick="ch(this)">Síntomas o anemia</button>
+<button type="button" class="chip" data-g="ctx" data-v="fit" onclick="ch(this)">FIT positivo</button>
+<button type="button" class="chip" data-g="ctx" data-v="lesion" onclick="ch(this)">Tumor ya biopsiado</button>
+<button type="button" class="chip" data-g="ctx" data-v="obs" onclick="ch(this)">Obstrucción o peritonitis</button></div>
+<div class="dc-g"><span class="dc-l">Localización</span>
+<button type="button" class="chip" data-g="loc" data-v="colon" onclick="ch(this)">Colon</button>
+<button type="button" class="chip" data-g="loc" data-v="recto" onclick="ch(this)">Recto</button></div>
+<div class="dc-g"><span class="dc-l">Resultado de colonoscopia</span>
+<button type="button" class="chip" data-g="col" data-v="inc" onclick="ch(this)">Incompleta</button>
+<button type="button" class="chip" data-g="col" data-v="comp" onclick="ch(this)">Completa</button></div>
+<div class="out"></div></div>
+</section>
+<section class="tab" data-tab="tx">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Qué determina que el tratamiento sea curativo o paliativo y qué dato patológico decide si se añade quimioterapia después de la cirugía?</li>
+<li>¿Por qué la cirugía de colon reseca el segmento junto con su pedículo vascular, y por qué el recto necesita un enfoque distinto?</li>
+<li>¿Cómo interrumpe cada fármaco la proliferación tumoral y qué toxicidad cambia la elección entre esquemas?</li>
+<li>¿Qué subgrupo molecular modifica la estrategia y por qué?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: ESMO 2020, cáncer de colon localizado [3] (solo resumen)</span></p>
+<ol class="steps tg">
+<li><span class="tg">Principio</span> Intención curativa en estadios I a III: resección oncológica en bloque del segmento con su pedículo vascular, tras estadificación completa.</li>
+<li><span class="tg">De elección</span> Estadio III: cirugía y oxaliplatino con fluoropirimidina.</li>
+<li><span class="tg">Alternativa</span> Fluoropirimidina sola si hay contraindicación para el oxaliplatino, por ejemplo neuropatía previa.</li>
+<li><span class="tg">Sintomático</span> Obstrucción: descompresión y cirugía urgente, analgesia y soporte nutricional.</li>
+<li><span class="tg">Escala</span> Estadio IV: equipo multidisciplinario; resección de metástasis o tratamiento sistémico según RAS, BRAF y MMR.</li>
+<li><span class="tg">Reevalúa</span> La patología final (estadio, márgenes, ganglios y MMR) confirma o cambia la indicación de adyuvancia.</li>
+<li><span class="tg">Especialista</span> Cirugía oncológica o coloproctología y oncología clínica; el recto suma oncología radioterápica.</li>
+<li><span class="tg">Evita</span> Iniciar quimioterapia sin estadio patológico ni función renal y hepática, y diferir la adyuvancia sin una causa.</li>
+</ol>
+
+<h2>Conducta según estadio</h2>
+<div class="tw"><table>
+<thead><tr><th>Situación</th><th>Conducta</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Estadio I</th><td>Cirugía sola</td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Estadio II sin factores de riesgo</th><td>Cirugía y vigilancia</td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Estadio II con factores de riesgo</th><td>Quimioterapia en riesgo intermedio y alto; factores: T4, menos de 12 ganglios examinados, invasión linfovascular o perineural, perforación u obstrucción <span class="rem">↓ En la tabla</span></td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Estadio II con dMMR de bajo riesgo</th><td>Vigilancia sin fluoropirimidina sola</td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Estadio III de menor riesgo (T1–T3 y N1)</th><td>CAPOX o FOLFOX; la duración se acorta con CAPOX <span class="rem">↓ En la tabla</span></td><td>[3]</td></tr>
+<tr><th>Estadio III de mayor riesgo (T4 o N2)</th><td>Esquema con oxaliplatino y duración completa <span class="rem">↓ En la tabla</span></td><td>[3]</td></tr>
+<tr><th>Tumor rectal</th><td>Estadificación con resonancia y definición, con oncología radioterápica, de tratamiento previo a la cirugía</td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — por qué se da quimioterapia</span>
+<p class="fey-b">Después de cortar el pasto grande, pueden quedar semillas pequeñas que no se ven. El medicamento actúa sobre lo que crece rápido: busca las células que se están copiando y les rompe la receta antes de que terminen. Por eso también afecta otras partes que se renuevan mucho, como el pelo o la mucosa de la boca, y por eso se cuida cada ciclo.</p>
+<p class="mini fey-c">En medicina esto se llama… quimioterapia adyuvante, citotóxico y enfermedad residual microscópica.</p>
+<p class="mini fey-c">Dónde falla la comparación: el medicamento no distingue una semilla de una planta sana; su efecto sobre el tumor depende del momento del ciclo celular y de su dosis.</p></div>
+
+<h2>Fármacos de adyuvancia</h2>
+<p class="mini">Las dosis siguen la ficha técnica habitual de cada fármaco; ESMO [3] respalda las duraciones. Glosario: CAPOX, capecitabina con oxaliplatino; FOLFOX, 5-fluorouracilo, leucovorina y oxaliplatino; DPD, dihidropirimidina deshidrogenasa; ClCr, depuración de creatinina; SC, superficie corporal.</p>
+<div class="tw"><table>
+<thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Oxaliplatino (en CAPOX)</th><td>130 mg/m² de SC</td><td>IV en 2 h</td><td>Día 1 de cada ciclo de 21 días</td><td>3 meses (T1–T3 y N1) o 6 meses (T4 o N2)</td><td>Forma aductos de platino en el ADN y bloquea su replicación. Neuropatía sensitiva acumulativa (frío) que obliga a reducir o suspender; reacciones de hipersensibilidad. <button type="button" class="xref" data-ir="m-3" onclick="ir('fis','m-3')">← Expansión del adenoma</button></td><td>[3]</td></tr>
+<tr><th>Capecitabina (en CAPOX)</th><td>1000 mg/m² de SC por dosis</td><td>VO</td><td>Cada 12 h los días 1 a 14, descanso hasta el día 21</td><td>La del esquema CAPOX</td><td>Profármaco que se convierte en 5-fluorouracilo y bloquea la timidilato sintasa; el tumor activa más esa conversión. Síndrome mano-pie y diarrea. Contraindicada con ClCr menor de 30 mL/min; reducir dosis con ClCr de 30 a 50 mL/min. Potencia el efecto de la warfarina. La deficiencia de DPD causa toxicidad grave. <button type="button" class="xref" data-ir="m-4" onclick="ir('fis','m-4')">← Carcinoma proliferante</button></td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>mFOLFOX6: oxaliplatino, leucovorina y 5-fluorouracilo</th><td>Oxaliplatino 85 mg/m²; leucovorina 400 mg/m²; 5-fluorouracilo en bolo 400 mg/m² y luego 2400 mg/m² en infusión de 46 h</td><td>IV (bolo e infusión continua por bomba)</td><td>Cada 14 días</td><td>6 meses; con FOLFOX, 3 meses fue inferior</td><td>La leucovorina estabiliza la unión del 5-fluorouracilo a la timidilato sintasa. Neutropenia, mucositis y neuropatía. <button type="button" class="xref" data-ir="m-4" onclick="ir('fis','m-4')">← Carcinoma proliferante</button></td><td>[3]</td></tr>
+<tr><th>Capecitabina sola</th><td>1250 mg/m² de SC por dosis</td><td>VO</td><td>Cada 12 h los días 1 a 14, descanso hasta el día 21</td><td>6 meses</td><td>Alternativa si el oxaliplatino está contraindicado. Mismos ajustes renales y de DPD que en CAPOX. <button type="button" class="xref" data-ir="m-3" onclick="ir('fis','m-3')">← Expansión del adenoma</button></td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+
+<h2>Subgrupos moleculares</h2>
+<p>En el tumor con dMMR la inestabilidad de microsatélites genera muchas proteínas anómalas que el sistema inmune reconoce; por eso estos tumores responden a la inmunoterapia con inhibidores de punto de control en enfermedad avanzada [VERIFICAR EN FUENTE]. La fluoropirimidina sola tiene menos beneficio en estadio II con dMMR. El resultado de RAS y BRAF en la enfermedad metastásica guía el uso de anticuerpos anti-EGFR. Mecanismo: <button type="button" class="xref" data-ir="m-7" onclick="ir('fis','m-7')">← Reparación deficiente</button></p>
+
+<div class="dc" data-fn="dcTx"><div class="dc-t">Simulador · Decisión clínica — predice el esquema antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Estadio patológico</span>
+<button type="button" class="chip" data-g="est" data-v="i" onclick="ch(this)">I</button>
+<button type="button" class="chip" data-g="est" data-v="ii" onclick="ch(this)">II sin factores de riesgo</button>
+<button type="button" class="chip" data-g="est" data-v="iir" onclick="ch(this)">II con factores de riesgo</button>
+<button type="button" class="chip" data-g="est" data-v="iiib" onclick="ch(this)">III de menor riesgo</button>
+<button type="button" class="chip" data-g="est" data-v="iiia" onclick="ch(this)">III de mayor riesgo</button>
+<button type="button" class="chip" data-g="est" data-v="iv" onclick="ch(this)">IV</button></div>
+<div class="dc-g"><span class="dc-l">Sitio</span>
+<button type="button" class="chip" data-g="sit" data-v="colon" onclick="ch(this)">Colon</button>
+<button type="button" class="chip" data-g="sit" data-v="recto" onclick="ch(this)">Recto</button></div>
+<div class="dc-g"><span class="dc-l">Reparación</span>
+<button type="button" class="chip" data-g="mmr" data-v="d" onclick="ch(this)">dMMR</button>
+<button type="button" class="chip" data-g="mmr" data-v="p" onclick="ch(this)">MMR conservado</button></div>
+<div class="dc-g"><span class="dc-l">Oxaliplatino</span>
+<button type="button" class="chip" data-g="ox" data-v="no" data-m="1" onclick="ch(this)">Contraindicado (neuropatía previa)</button>
+<button type="button" class="chip" data-g="reg" data-v="folfox" data-m="1" onclick="ch(this)">Prefiere esquema parenteral</button></div>
+<div class="out"></div></div>
+</section>
+<section class="tab" data-tab="seg">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Qué se vigila tras una resección curativa, con qué prueba y a qué intervalo, y por qué esos intervalos siguen el patrón de recaída?</li>
+<li>¿Por qué el drenaje venoso explica que el hígado sea el primer sitio de metástasis del colon y que el recto bajo pueda enviar células al pulmón?</li>
+<li>¿Cuál es el mecanismo y cuál la señal de cada complicación local del tumor?</li>
+<li>¿Qué hallazgos patológicos pronostican la recaída y cuáles cambian la intensidad del seguimiento?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: ESMO 2020, cáncer de colon localizado [3] (solo resumen)</span></p>
+
+<h2>Ciclo de seguimiento</h2>
+<p>El seguimiento repite tres pasos: revisar los síntomas y el examen, evaluar con marcador e imagen, y ajustar la conducta según el hallazgo. La recaída se concentra en los primeros años, y la intensidad de la vigilancia se concentra en ese período [3].</p>
+<div class="tw"><table>
+<thead><tr><th>Prueba</th><th>Frecuencia</th><th>Período</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Antígeno carcinoembrionario</th><td>Cada 3 a 6 meses</td><td>3 primeros años; luego cada 6 a 12 meses hasta el año 5</td><td>[3]</td></tr>
+<tr><th>Tomografía de tórax, abdomen y pelvis</th><td>Cada 6 a 12 meses</td><td>3 primeros años</td><td>[3]</td></tr>
+<tr><th>Colonoscopia</th><td>Al año de la cirugía; los intervalos siguientes dependen de los hallazgos</td><td>Según resultado</td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+
+<h2>Índices pronósticos</h2>
+<div class="tw"><table>
+<thead><tr><th>Hallazgo</th><th>Por qué pesa en el pronóstico</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Estadio patológico</th><td>Resume profundidad de invasión, ganglios y metástasis: es el predictor principal</td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Número de ganglios examinados</th><td>Pocos ganglios examinados pueden ocultar enfermedad ganglionar y subestadificar</td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Invasión linfovascular o perineural</th><td>Indica que las células ya usan vasos y nervios para diseminarse</td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>dMMR en estadio II</th><td>Se asocia a menor recaída porque el sistema inmune reconoce el tumor</td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Antígeno carcinoembrionario preoperatorio alto</th><td>Marca mayor carga tumoral y sirve de comparación</td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — por qué el hígado primero</span>
+<p class="fey-b">Piensa en un río con muchos afluentes que, antes de llegar al mar, pasa por un gran filtro. Todo lo que cae en el afluente del intestino llega primero a ese filtro. Si una semilla de tumor cae al agua, la red del filtro la atrapa y ahí empieza a crecer. Por eso el hígado es el primer lugar donde se mira.</p>
+<p class="mini fey-c">En medicina esto se llama… circulación portal, metástasis hepática y primer filtro hepático.</p>
+<p class="mini fey-c">Dónde falla la comparación: el filtro hepático no es una malla pasiva; sus células también facilitan que algunas células tumorales se instalen.</p></div>
+
+<h2>Complicaciones por mecanismo</h2>
+<div class="tw"><table>
+<thead><tr><th>Complicación</th><th>Mecanismo</th><th>Señal</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Obstrucción</th><td>El tumor anular cierra la luz y las heces no avanzan</td><td>Distensión, vómito y ausencia de gases</td><td><button type="button" class="xref" data-ir="m-11" onclick="ir('fis','m-11')">← Crecimiento circunferencial</button></td></tr>
+<tr><th>Perforación</th><td>Con válvula ileocecal competente, el asa cerrada se distiende y la pared del ciego se rompe; también puede perforar el propio tumor</td><td>Dolor súbito y signos peritoneales</td><td><button type="button" class="xref" data-ir="m-11" onclick="ir('fis','m-11')">← Crecimiento circunferencial</button></td></tr>
+<tr><th>Hemorragia y anemia</th><td>La ulceración pierde sangre de forma crónica y, raras veces, masiva</td><td>Hemoglobina que cae, melena o rectorragia</td><td><button type="button" class="xref" data-ir="m-10" onclick="ir('fis','m-10')">← Ulceración tumoral</button></td></tr>
+<tr><th>Metástasis hepática</th><td>La vena porta lleva células al hígado y los sinusoides las atrapan</td><td>Antígeno carcinoembrionario ascendente, hepatomegalia</td><td><button type="button" class="xref" data-ir="m-14" onclick="ir('fis','m-14')">← Diseminación portal</button></td></tr>
+<tr><th>Metástasis pulmonar del recto bajo</th><td>Las venas rectales media e inferior drenan a la cava y evitan el filtro hepático [VERIFICAR EN FUENTE]</td><td>Nódulos pulmonares en la tomografía</td><td>Sin nodo propio</td></tr>
+<tr><th>Caquexia</th><td>Citocinas tumorales, sangrado y menor ingesta</td><td>Pérdida de peso progresiva</td><td><button type="button" class="xref" data-ir="m-15" onclick="ir('fis','m-15')">← Citocinas tumorales</button></td></tr>
+</tbody></table></div>
+
+<h2>Efectos tardíos y comorbilidad</h2>
+<p>La neuropatía por oxaliplatino puede persistir meses después del último ciclo; el síndrome mano-pie y la diarrea mejoran al reducir la dosis. Un estoma exige educación y apoyo. La comorbilidad condiciona la tolerancia a cada ciclo y la posibilidad de operar una recaída.</p>
+
+<div class="dc" data-fn="dcSeg"><div class="dc-t">Simulador · Decisión clínica — predice el seguimiento antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Estadio operado</span>
+<button type="button" class="chip" data-g="est" data-v="i" onclick="ch(this)">I</button>
+<button type="button" class="chip" data-g="est" data-v="iiiii" onclick="ch(this)">II o III</button></div>
+<div class="dc-g"><span class="dc-l">Tiempo desde la cirugía</span>
+<button type="button" class="chip" data-g="t" data-v="t3" onclick="ch(this)">Hasta 3 años</button>
+<button type="button" class="chip" data-g="t" data-v="t5" onclick="ch(this)">Años 4 y 5</button></div>
+<div class="dc-g"><span class="dc-l">Hallazgo en la visita</span>
+<button type="button" class="chip" data-g="h" data-v="ninguno" onclick="ch(this)">Nada nuevo</button>
+<button type="button" class="chip" data-g="h" data-v="cea" onclick="ch(this)">Antígeno en ascenso</button>
+<button type="button" class="chip" data-g="h" data-v="sint" onclick="ch(this)">Síntomas o anemia</button></div>
+<div class="out"></div></div>
+
+<div class="acc refs"><button type="button" class="acc-h" onclick="tog(this)">Referencias <span class="chev">▾</span></button>
+<div class="acc-b"><ol class="vanc">
+<li>US Preventive Services Task Force, Davidson KW, Barry MJ, Mangione CM, Cabana M, Caughey AB, et al. Screening for colorectal cancer: US Preventive Services Task Force recommendation statement. JAMA. 2021;325(19):1965-77. doi:10.1001/jama.2021.6238. PMID 34003218. Guía; recomendaciones A, B y C; se leyó solo el resumen.</li>
+<li>Sílabo de la primera rotación, 10.º nivel. Caso «Dolor abdominal y pérdida de peso sin causa aparente (neoplasias gastrointestinales)». Documento institucional.</li>
+<li>Argilés G, Tabernero J, Labianca R, Hochhauser D, Salazar R, Iveson T, et al. Localised colon cancer: ESMO Clinical Practice Guidelines for diagnosis, treatment and follow-up. Ann Oncol. 2020;31(10):1291-305. doi:10.1016/j.annonc.2020.06.022. PMID 32702383. Guía; no se leyó el texto completo: las recomendaciones proceden de resúmenes indexados.</li>
+<li>Rex DK, Boland CR, Dominitz JA, Giardiello FM, Johnson DA, Kaltenbach T, et al. Colorectal cancer screening: recommendations for physicians and patients from the U.S. Multi-Society Task Force on Colorectal Cancer. Gastroenterology. 2017;153(1):307-23. doi:10.1053/j.gastro.2017.05.013. PMID 28600072. Consenso; se leyó solo el resumen.</li>
+<li>Gupta S, Lieberman D, Anderson JC, Burke CA, Dominitz JA, Kaltenbach T, et al. Recommendations for follow-up after colonoscopy and polypectomy: a consensus update by the US Multi-Society Task Force on Colorectal Cancer. Gastroenterology. 2020;158(4):1131-53.e5. doi:10.1053/j.gastro.2019.10.026. PMID 32044092. Consenso; texto completo.</li>
+</ol>
+<p class="mini">Harrison 22.ª ed. y Farreras-Rozman no se consultaron en esta sesión. Vigencia no verificada para ESMO 2020: existe una guía ESMO de cáncer rectal más reciente que no se leyó.</p></div></div>
+</section>
+<section class="tab" data-tab="tam">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué la secuencia adenoma-carcinoma y la vía serrada ofrecen una ventana para tamizar, y qué pólipos la aprovechan mejor?</li>
+<li>¿Cómo se elige entre FIT y colonoscopia, a qué edad se empieza y con qué intervalo se repite?</li>
+<li>¿Qué se hace ante un tamizaje positivo y cómo se fija el intervalo de vigilancia después de una polipectomía?</li>
+<li>¿Cuándo se sospecha un síndrome hereditario y en qué se diferencian el síndrome de Lynch y la poliposis adenomatosa familiar?</li>
+</ol></div>
+<p><span class="badge b-pu">Guías rectoras: USPSTF 2021 [1] (solo resumen); USMSTF 2017 [4] (solo resumen); USMSTF 2020 [5] (texto completo)</span></p>
+<div class="hb am"><div class="hb-t">Alcance</div>
+<p>Esta pestaña cubre el tamizaje de riesgo promedio, la vigilancia tras polipectomía y la sospecha de síndromes hereditarios. No se leyeron normas del programa de tamizaje de Ecuador; se aplican guías estadounidenses [VERIFICAR EN FUENTE].</p></div>
+
+<h2>Lesiones premalignas y ventana de oportunidad</h2>
+<p>El adenoma y el pólipo serrado tardan en progresar a carcinoma (nodos de la vía cromosómica y de la vía serrada en «Etiología y fisiopatología»). Ese intervalo permite detectar y extirpar la lesión antes de que invada. El tamizaje busca la lesión premaligna, no solo el cáncer temprano.</p>
+<div class="tw"><table>
+<thead><tr><th>Lesión</th><th>Histología</th><th>Riesgo</th><th>Notas</th></tr></thead>
+<tbody>
+<tr><th>Adenoma tubular</th><td>Glándulas tubulares con displasia de bajo grado</td><td>Bajo si mide menos de 10 mm</td><td>Precursor de la vía cromosómica</td></tr>
+<tr><th>Adenoma velloso o tubulovelloso</th><td>Arquitectura con proyecciones vellosas</td><td>Alto: se considera avanzado</td><td>Tiende a mayor displasia y a secretar moco</td></tr>
+<tr><th>Adenoma avanzado</th><td>10 mm o más, componente velloso o displasia de alto grado</td><td>Alto</td><td>Vigilancia a los 3 años [5]</td></tr>
+<tr><th>Pólipo serrado sésil</th><td>Criptas dilatadas con aspecto serrado, sin displasia convencional</td><td>Según tamaño y displasia</td><td>Es plano y está cubierto de moco, por eso se pasa por alto; precursor de la vía serrada [5]</td></tr>
+<tr><th>Adenoma serrado tradicional</th><td>Patrón serrado con displasia</td><td>Alto</td><td>Vigilancia a los 3 años [5]</td></tr>
+<tr><th>Pólipo hiperplásico</th><td>Epitelio serrado sin displasia</td><td>Bajo si es pequeño; el de 10 mm o más se trata aparte</td><td>No se considera examen normal cuando mide 10 mm o más [5]</td></tr>
+</tbody></table></div>
+
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la ventana para cortar a tiempo</span>
+<p class="fey-b">Un árbol no aparece de un día para otro: primero es una semilla y luego un arbusto pequeño. Si en el jardín cortas el arbusto cuando todavía es chico, nunca habrá árbol. Pasear por el jardín cada cierto tiempo es mucho más barato que talar un árbol enorme. Algunos arbustos crecen más rápido o se esconden bajo las hojas, por eso se vuelve a mirar.</p>
+<p class="mini fey-c">En medicina esto se llama… tamizaje, lesión premaligna y polipectomía.</p>
+<p class="mini fey-c">Dónde falla la comparación: el jardinero ve el arbusto; en el intestino hace falta preparar el colon y mirar con un endoscopio, y no todos los arbustos tienen la misma velocidad.</p></div>
+
+<h2>Síndromes hereditarios</h2>
+<p><b>Más de 10 adenomas acumulados: considerar estudio genético</b> [5]. Los dos síndromes principales cambian la edad de inicio y el intervalo, y se explican por el defecto germinal descrito en «Etiología y fisiopatología».</p>
+<div class="tw"><table>
+<thead><tr><th>Síndrome</th><th>Gen y herencia</th><th>Mecanismo</th><th>Qué hace sospecharlo</th><th>Conducta</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Síndrome de Lynch</th><td>MLH1, MSH2, MSH6, PMS2 o EPCAM; autosómico dominante</td><td>Reparación de apareamientos deficiente desde el nacimiento</td><td>Cáncer a edad temprana, familiares con cáncer de colon o de endometrio, tumor con dMMR</td><td>Derivar a genética; vigilancia colonoscópica más frecuente y desde edad más temprana [VERIFICAR EN FUENTE]</td><td>[5] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Poliposis adenomatosa familiar</th><td>APC; autosómico dominante</td><td>Primer golpe de APC heredado en cada célula</td><td>Muchísimos adenomas colónicos desde la adolescencia</td><td>Derivar a genética; la colectomía profiláctica es el eje del manejo [VERIFICAR EN FUENTE]</td><td>[5] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Poliposis asociada a MUTYH</th><td>MUTYH; autosómico recesivo</td><td>Falla de la reparación por escisión de bases</td><td>Múltiples adenomas sin patrón familiar vertical</td><td>Derivar a genética [VERIFICAR EN FUENTE]</td><td>[5] [VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+
+<h2>Estrategias de tamizaje</h2>
+<div class="card"><p><b>Tamizaje desde los 45 años; FIT anual o colonoscopia cada 10 años</b> en adultos asintomáticos de riesgo promedio [1] [4].</p>
+<span class="rem">↪ Propiedades en «Plan diagnóstico»</span></div>
+<div class="tw"><table>
+<thead><tr><th>Estrategia</th><th>Intervalo</th><th>Nivel</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>FIT</th><td>Cada año</td><td>Primer nivel</td><td>[4]</td></tr>
+<tr><th>Colonoscopia</th><td>Cada 10 años</td><td>Primer nivel</td><td>[4]</td></tr>
+<tr><th>Colonografía por tomografía</th><td>Cada 5 años</td><td>Segundo nivel</td><td>[4]</td></tr>
+<tr><th>FIT con ADN fecal</th><td>Cada 3 años</td><td>Segundo nivel</td><td>[4]</td></tr>
+<tr><th>Sigmoidoscopia flexible</th><td>Cada 5 a 10 años</td><td>Segundo nivel</td><td>[4]</td></tr>
+<tr><th>Colonoscopia por cápsula</th><td>Cada 5 años</td><td>Tercer nivel</td><td>[4]</td></tr>
+</tbody></table></div>
+<div class="tw"><table>
+<thead><tr><th>Grupo</th><th>Conducta</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>45 a 49 años, riesgo promedio</th><td>Tamizar (recomendación B)</td><td>[1]</td></tr>
+<tr><th>50 a 75 años, riesgo promedio</th><td>Tamizar (recomendación A)</td><td>[1]</td></tr>
+<tr><th>76 a 85 años</th><td>Ofrecer según salud, tamizaje previo y preferencias (recomendación C)</td><td>[1]</td></tr>
+<tr><th>Familiar de primer grado con cáncer o adenoma avanzado antes de los 60 años, o dos familiares a cualquier edad</th><td>Colonoscopia cada 5 años, desde 10 años antes del diagnóstico del familiar más joven o desde los 40 años, lo que ocurra primero</td><td>[4]</td></tr>
+<tr><th>Un familiar de primer grado con diagnóstico a los 60 años o más</th><td>Opciones de riesgo promedio desde los 40 años</td><td>[4]</td></tr>
+<tr><th>Suspender el tamizaje</th><td>Hacia los 75 años si hubo tamizaje previo negativo, o con esperanza de vida menor de 10 años; sin tamizaje previo, valorar hasta los 85</td><td>[4]</td></tr>
+</tbody></table></div>
+<p class="mini">Discrepancia entre fuentes: el USPSTF 2021 inicia el tamizaje a los 45 años [1]; el USMSTF 2017 lo inicia a los 50, y a los 45 solo en personas afroamericanas [4]. Se señalan sin armonizar.</p>
+
+<h2>Algoritmo ante tamizaje positivo</h2>
+<div class="tw"><table>
+<thead><tr><th>Paso</th><th>Qué hacer</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>FIT positivo</th><td>FIT positivo: colonoscopia completa</td><td>[1] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Examen de calidad</th><td>Preparación adecuada, ciego alcanzado y polipectomía completa; si no se cumple, repetir o usar colonografía por tomografía</td><td>[5] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Pólipos</th><td>Resecar, enviar histología y fijar el intervalo con la tabla de vigilancia</td><td>[5]</td></tr>
+<tr><th>Cáncer</th><td>Estadificar y derivar a cirugía y oncología sin demora (ver «Plan diagnóstico»)</td><td>[3]</td></tr>
+<tr><th>Colonoscopia normal tras FIT positivo</th><td>Intervalo para reanudar el tamizaje [VERIFICAR EN FUENTE]</td><td>[4] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Síntomas de alarma en cualquier momento</th><td>Colonoscopia diagnóstica; no repetir FIT</td><td>[3] [VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+
+<h2>Vigilancia tras polipectomía</h2>
+<div class="card"><p><b>Adenoma de 10 mm o más, componente velloso o displasia de alto grado: vigilancia a los 3 años</b> [5]. La vigilancia solo vale si el examen basal fue de calidad: tasa de detección de adenomas mayor de 30 % en hombres y de 20 % en mujeres, preparación adecuada en más de 85 % y ciego alcanzado en más de 95 % [5].</p></div>
+<div class="tw"><table>
+<thead><tr><th>Hallazgo basal</th><th>Intervalo</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Examen normal</th><td>10 años</td><td>[5]</td></tr>
+<tr><th>1 o 2 adenomas tubulares de menos de 10 mm</th><td>7 a 10 años</td><td>[5]</td></tr>
+<tr><th>3 o 4 adenomas de menos de 10 mm</th><td>3 a 5 años</td><td>[5]</td></tr>
+<tr><th>5 a 10 adenomas de menos de 10 mm</th><td>3 años</td><td>[5]</td></tr>
+<tr><th>Más de 10 adenomas en un examen</th><td>1 año; considerar estudio genético</td><td>[5]</td></tr>
+<tr><th>1 o 2 pólipos serrados sésiles de menos de 10 mm</th><td>5 a 10 años</td><td>[5]</td></tr>
+<tr><th>3 o 4 pólipos serrados sésiles de menos de 10 mm</th><td>3 a 5 años</td><td>[5]</td></tr>
+<tr><th>5 a 10 pólipos serrados, uno de 10 mm o más, o displasia</th><td>3 años</td><td>[5]</td></tr>
+<tr><th>Adenoma serrado tradicional</th><td>3 años</td><td>[5]</td></tr>
+<tr><th>Pólipo hiperplásico de 10 mm o más</th><td>Más corto que con examen normal; intervalo exacto [VERIFICAR EN FUENTE]</td><td>[5] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Lesión de 20 mm o más resecada en fragmentos</th><td>6 meses; luego 1 año; luego 3 años</td><td>[5]</td></tr>
+</tbody></table></div>
+
+<div class="dc" data-fn="dcTam"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Situación</span>
+<button type="button" class="chip" data-g="ctx" data-v="avg" onclick="ch(this)">Sin síntomas ni factores</button>
+<button type="button" class="chip" data-g="ctx" data-v="fit" onclick="ch(this)">FIT positivo</button>
+<button type="button" class="chip" data-g="ctx" data-v="pol" onclick="ch(this)">Polipectomía reciente</button>
+<button type="button" class="chip" data-g="ctx" data-v="fam" onclick="ch(this)">Familiar con cáncer</button></div>
+<div class="dc-g"><span class="dc-l">Edad en años</span>
+<input type="number" data-n="edad" min="18" max="100" oninput="ch(this)"></div>
+<div class="dc-g"><span class="dc-l">Hallazgo en la polipectomía</span>
+<button type="button" class="chip" data-g="hal" data-v="nor" onclick="ch(this)">Examen normal</button>
+<button type="button" class="chip" data-g="hal" data-v="ta12" onclick="ch(this)">1 o 2 adenomas menores de 10 mm</button>
+<button type="button" class="chip" data-g="hal" data-v="ta34" onclick="ch(this)">3 o 4 adenomas menores de 10 mm</button>
+<button type="button" class="chip" data-g="hal" data-v="ta510" onclick="ch(this)">5 a 10 adenomas menores de 10 mm</button>
+<button type="button" class="chip" data-g="hal" data-v="adv" onclick="ch(this)">Adenoma avanzado</button>
+<button type="button" class="chip" data-g="hal" data-v="mas10" onclick="ch(this)">Más de 10 adenomas</button>
+<button type="button" class="chip" data-g="hal" data-v="ssp12" onclick="ch(this)">1 o 2 serrados menores de 10 mm</button>
+<button type="button" class="chip" data-g="hal" data-v="ssp34" onclick="ch(this)">3 o 4 serrados menores de 10 mm</button>
+<button type="button" class="chip" data-g="hal" data-v="sspa" onclick="ch(this)">Serrado de 10 mm o más, con displasia o 5 a 10</button>
+<button type="button" class="chip" data-g="hal" data-v="piece" onclick="ch(this)">Lesión de 20 mm o más en fragmentos</button></div>
+<div class="dc-g"><span class="dc-l">Familiar</span>
+<button type="button" class="chip" data-g="fdr" data-v="lt60" onclick="ch(this)">Primer grado antes de 60 años, o dos familiares</button>
+<button type="button" class="chip" data-g="fdr" data-v="ge60" onclick="ch(this)">Un primer grado a los 60 años o más</button></div>
+<div class="out"></div></div>
+</section>
+<script>
+function dcDx(dc){
+  var c=sel(dc,'ctx')[0], l=sel(dc,'loc')[0], k=sel(dc,'col')[0], h='';
+  if(!c){out(dc,'<p>Elige el contexto clínico para ver la prueba y la conducta.</p>');return;}
+  if(c==='obs'){
+    h='<p><b>Conducta:</b> urgencia quirúrgica. No indiques colonoscopia con preparación oral; pide tomografía de abdomen con contraste, reanima, descomprime y llama a cirugía [3] [VERIFICAR EN FUENTE].</p>'
+     +'<p>El diagnóstico histológico y la estadificación se completan después de resolver la obstrucción o la perforación.</p>'
+     +'<span class="cf">Si el paciente estuviera estable y sin signos peritoneales → colonoscopia diagnóstica con biopsia.</span>';
+    out(dc,h);return;
+  }
+  if(c==='sint'){
+    h='<p><b>Prueba inicial:</b> colonoscopia completa con biopsia [3] [VERIFICAR EN FUENTE]. No pidas FIT en un paciente con síntomas de alarma [4].</p>';
+  } else if(c==='fit'){
+    h='<p><b>Prueba confirmatoria:</b> colonoscopia completa tras un FIT positivo [1] [VERIFICAR EN FUENTE]. No repitas el FIT.</p>';
+  } else {
+    h='<p><b>Siguiente paso:</b> el tumor ya tiene histología; ahora corresponde estadificar [3].</p>';
+  }
+  if(c!=='lesion'){
+    if(k==='inc'){
+      h+='<p>Colonoscopia incompleta: completa con colonografía por tomografía o repite con mejor preparación [4] [VERIFICAR EN FUENTE].</p>';
+    } else if(k==='comp'){
+      h+='<p>Colonoscopia completa: si hay adenocarcinoma, sigue con estadificación; si hay pólipos, aplica la tabla de vigilancia [5].</p>';
+    } else {
+      h+='<p>Indica el resultado de la colonoscopia para continuar el algoritmo.</p>';
+    }
+  }
+  if(c==='lesion'||k==='comp'){
+    h+='<ul><li>Tomografía de tórax, abdomen y pelvis con contraste y antígeno carcinoembrionario basal [3] [VERIFICAR EN FUENTE].</li><li>Inmunohistoquímica de MMR en la pieza [3] [VERIFICAR EN FUENTE].</li>';
+    if(l==='recto'){h+='<li>Resonancia de pelvis o ecoendoscopia para la invasión local y los ganglios [3] [VERIFICAR EN FUENTE].</li>';}
+    else if(!l){h+='<li>Indica la localización: si es recto se añade resonancia de pelvis.</li>';}
+    h+='</ul>';
+  }
+  h+='<span class="cf">Si la colonoscopia no llega al ciego → el colon proximal queda sin estudiar y debe completarse antes de operar.</span>';
+  out(dc,h);
+}
+
+function dcTx(dc){
+  var e=sel(dc,'est')[0], s=sel(dc,'sit')[0], m=sel(dc,'mmr')[0], nox=sel(dc,'ox').indexOf('no')>=0, par=sel(dc,'reg').indexOf('folfox')>=0, h='';
+  var capox='<li>CAPOX: oxaliplatino 130 mg/m² IV en 2 h el día 1, más capecitabina 1000 mg/m² VO cada 12 h los días 1 a 14, ciclo de 21 días [3].</li>';
+  var fol='<li>mFOLFOX6: oxaliplatino 85 mg/m² y leucovorina 400 mg/m² IV el día 1, 5-fluorouracilo en bolo de 400 mg/m² y luego 2400 mg/m² en infusión de 46 h, cada 14 días, por 6 meses [3].</li>';
+  var cap='<li>Capecitabina sola: 1250 mg/m² VO cada 12 h los días 1 a 14, ciclo de 21 días, por 6 meses [3] [VERIFICAR EN FUENTE].</li>';
+  if(!e){out(dc,'<p>Elige el estadio patológico para ver el esquema.</p>');return;}
+  if(e==='iv'){
+    out(dc,'<p><b>Estadio IV:</b> sin esquema único. Decide un comité multidisciplinario según la resecabilidad de las metástasis y el estado de RAS, BRAF y MMR [3] [VERIFICAR EN FUENTE].</p><span class="cf">Si las metástasis fueran resecables y el paciente fuera apto → se plantea resección con intención curativa.</span>');return;
+  }
+  if(e==='i'){
+    h='<p><b>Estadio I:</b> cirugía sola, sin quimioterapia adyuvante [3] [VERIFICAR EN FUENTE].</p>';
+  } else if(e==='ii'){
+    h='<p><b>Estadio II sin factores de riesgo:</b> cirugía y vigilancia, sin quimioterapia [3] [VERIFICAR EN FUENTE].</p>';
+  } else if(e==='iir'){
+    if(m==='d'){
+      h='<p><b>Estadio II con factores de riesgo y dMMR:</b> el dMMR no equivale a bajo riesgo si hay T4; la decisión se lleva a comité [3] [VERIFICAR EN FUENTE].</p>';
+    } else {
+      h='<p><b>Estadio II con factores de riesgo:</b> se recomienda quimioterapia adyuvante en riesgo intermedio y alto [3].</p><ul>'+(nox?cap:capox+cap)+'</ul>';
+    }
+  } else {
+    var alto=(e==='iiia');
+    h='<p><b>Estadio III '+(alto?'de mayor riesgo (T4 o N2)':'de menor riesgo (T1 a T3 y N1)')+':</b> cirugía y adyuvancia [3].</p><ul>';
+    if(nox){h+=cap;}
+    else if(par){h+=fol;}
+    else if(alto){h+='<li>CAPOX por 6 meses (misma posología) o mFOLFOX6 por 6 meses [3].</li>'+capox+fol;}
+    else{h+='<li>CAPOX por 3 meses (la duración corta es no inferior en este subgrupo) o mFOLFOX6 por 6 meses [3].</li>'+capox+fol;}
+    h+='</ul>';
+  }
+  if(s==='recto'){h+='<p>Tumor rectal: el tratamiento previo a la cirugía lo define el equipo con oncología radioterápica según la resonancia [3] [VERIFICAR EN FUENTE].</p>';}
+  if(e!=='i'&&e!=='ii'){h+='<p>Antes de capecitabina revisa la depuración de creatinina (contraindicada por debajo de 30 mL/min), la warfarina y el riesgo de deficiencia de DPD.</p>';}
+  h+='<span class="cf">'+(e==='iiib'?'Si el tumor fuera T4 o N2 → CAPOX pasa de 3 a 6 meses.':'Si hubiera neuropatía previa → se omite el oxaliplatino y se usa capecitabina sola.')+'</span>';
+  out(dc,h);
+}
+
+function dcSeg(dc){
+  var e=sel(dc,'est')[0], t=sel(dc,'t')[0], g=sel(dc,'h')[0], h='';
+  if(!e||!t){out(dc,'<p>Elige el estadio operado y el tiempo desde la cirugía para ver el plan.</p>');return;}
+  if(e==='i'){
+    h='<p><b>Estadio I:</b> la vigilancia es menos intensa; mantén el control clínico y la colonoscopia al año [3] [VERIFICAR EN FUENTE].</p>';
+  } else if(t==='t3'){
+    h='<p><b>Estadio II o III, primeros 3 años:</b></p><ul><li>Antígeno carcinoembrionario cada 3 a 6 meses.</li><li>Tomografía de tórax, abdomen y pelvis cada 6 a 12 meses.</li><li>Colonoscopia al año de la cirugía [3] [VERIFICAR EN FUENTE].</li></ul>';
+  } else {
+    h='<p><b>Estadio II o III, años 4 y 5:</b> antígeno carcinoembrionario cada 6 a 12 meses; la tomografía sistemática se concentra en los primeros 3 años [3].</p>';
+  }
+  if(g==='cea'){
+    h+='<p>Antígeno en ascenso: confirma con una segunda medición y pide tomografía de tórax, abdomen y pelvis, con colonoscopia si no se hizo [3] [VERIFICAR EN FUENTE].</p>';
+  } else if(g==='sint'){
+    h+='<p>Síntomas o anemia: no esperes al siguiente control; pide colonoscopia y tomografía [3] [VERIFICAR EN FUENTE].</p>';
+  } else if(!g){
+    h+='<p>Indica el hallazgo de la visita para ajustar la conducta.</p>';
+  }
+  h+='<span class="cf">Si el antígeno sube y la tomografía es normal → se amplía el estudio con imagen funcional o resonancia hepática [VERIFICAR EN FUENTE].</span>';
+  out(dc,h);
+}
+
+function dcTam(dc){
+  var c=sel(dc,'ctx')[0], ed=num(dc,'edad'), hl=sel(dc,'hal')[0], f=sel(dc,'fdr')[0], h='';
+  if(!c){out(dc,'<p>Elige la situación para ver la conducta de tamizaje o vigilancia.</p>');return;}
+  if(c==='avg'){
+    if(isNaN(ed)){out(dc,'<p>Escribe la edad del paciente.</p>');return;}
+    if(ed<45){h='<p><b>Menor de 45 años:</b> no corresponde el tamizaje de riesgo promedio [1]. Si hay síntomas, anemia o antecedentes, estudia con colonoscopia diagnóstica.</p>';}
+    else if(ed<50){h='<p><b>45 a 49 años:</b> tamizaje recomendado (B). FIT cada año o colonoscopia cada 10 años [1] [4].</p>';}
+    else if(ed<=75){h='<p><b>50 a 75 años:</b> tamizaje recomendado (A). FIT cada año o colonoscopia cada 10 años [1] [4].</p>';}
+    else if(ed<=85){h='<p><b>76 a 85 años:</b> ofrece el tamizaje según salud, tamizaje previo y preferencias (C). Quien nunca se tamizó es el que más se beneficia [1].</p>';}
+    else{h='<p><b>Mayor de 85 años:</b> el resumen leído no cubre este grupo [VERIFICAR EN FUENTE].</p>';}
+    h+='<span class="cf">Si hubiera síntomas de alarma → colonoscopia diagnóstica, no tamizaje.</span>';
+    out(dc,h);return;
+  }
+  if(c==='fit'){
+    out(dc,'<p><b>FIT positivo:</b> colonoscopia completa [1] [VERIFICAR EN FUENTE]. No repitas el FIT ni lo sustituyas por otra prueba de heces.</p><ul><li>Con pólipos: resección e intervalo según histología [5].</li><li>Con cáncer: estadificación y derivación [3].</li></ul><span class="cf">Si la colonoscopia fuera incompleta o con mala preparación → repetir o completar con colonografía [5] [VERIFICAR EN FUENTE].</span>');return;
+  }
+  if(c==='fam'){
+    if(!f){out(dc,'<p>Indica el parentesco y la edad del familiar afectado.</p>');return;}
+    if(f==='lt60'){h='<p><b>Familiar de alto riesgo:</b> colonoscopia cada 5 años, desde 10 años antes del diagnóstico del familiar más joven o desde los 40 años, lo que ocurra primero [4].</p><span class="cf">Si el familiar fuera de 60 años o más → opciones de riesgo promedio desde los 40 años.</span>';}
+    else{h='<p><b>Un familiar de 60 años o más:</b> se ofrecen las opciones de riesgo promedio desde los 40 años [4].</p><span class="cf">Si fueran dos familiares o uno menor de 60 años → colonoscopia cada 5 años.</span>';}
+    out(dc,h);return;
+  }
+  if(!hl){out(dc,'<p>Elige el hallazgo de la polipectomía para ver el intervalo.</p>');return;}
+  var T={
+    nor:['Examen normal','10 años',''],
+    ta12:['1 o 2 adenomas menores de 10 mm','7 a 10 años',''],
+    ta34:['3 o 4 adenomas menores de 10 mm','3 a 5 años',''],
+    ta510:['5 a 10 adenomas menores de 10 mm','3 años',''],
+    adv:['Adenoma de 10 mm o más, componente velloso o displasia de alto grado','3 años',''],
+    mas10:['Más de 10 adenomas','1 año','Considera estudio genético por la posibilidad de un síndrome hereditario.'],
+    ssp12:['1 o 2 pólipos serrados menores de 10 mm','5 a 10 años',''],
+    ssp34:['3 o 4 pólipos serrados menores de 10 mm','3 a 5 años',''],
+    sspa:['Pólipo serrado de 10 mm o más, con displasia, o 5 a 10 pólipos','3 años',''],
+    piece:['Lesión de 20 mm o más resecada en fragmentos','6 meses; luego 1 año; luego 3 años','']
+  };
+  var r=T[hl];
+  h='<p><b>'+r[0]+':</b> vigilancia '+(r[1]==='1 año'?'al año':'en '+r[1])+' [5].</p>';
+  if(hl==='piece'){h='<p><b>'+r[0]+':</b> primera vigilancia a los 6 meses, segunda un año después y tercera a los 3 años de la segunda [5].</p>';}
+  if(r[2]){h+='<p>'+r[2]+' [5]</p>';}
+  h+='<p>Esto aplica solo si el examen basal fue de calidad y la resección fue completa [5].</p>';
+  h+='<span class="cf">Si el examen basal hubiera tenido mala preparación o resección incompleta → se acorta el intervalo y se repite el estudio antes.</span>';
+  out(dc,h);
+}
+</script>
+<!-- KIT_SCRIPT -->
+</div>
+<script>
+(function(){
+'use strict';
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+function secK(k){return $('section.tab[data-tab="'+k+'"]')}
+function secOf(el){return el&&el.closest?el.closest('section.tab'):null}
+function nameOf(k){var b=$('button.tb[data-tab="'+k+'"]');return b?b.textContent.replace(/\s+/g,' ').replace(/^\s+|\s+$/g,''):k}
+function btn(t,f,c){var b=document.createElement('button');b.type='button';b.className=c||'chip';b.textContent=t;b.addEventListener('click',f);return b}
+function recon(s,on){if(!s)return;s.classList.toggle('recon',!!on);$$('.nodo',s).forEach(function(n){n.classList.remove('rev');n.classList.remove('pis')});var st=$('.rec-state',s);if(st)st.textContent=on?'Modo reconstrucción activo':'Modo lectura';var a=$('.rec-bar [data-act="rec"]',s);if(a){a.disabled=!!on;a.classList.toggle('on',!!on);a.textContent=on?'Reconstrucción activa':'Activar reconstrucción'}}
+window.recon=function(k,on){recon(secK(k),on)};
+function navOv(){var n=$('nav.tabs');if(!n)return;var sl=n.scrollLeft,mx=n.scrollWidth-n.clientWidth,w=n.parentNode;[n,w].forEach(function(e){if(e===n||e.classList.contains('tabs-w')){e.classList.toggle('ov-l',sl>2);e.classList.toggle('ov-r',sl<mx-2)}})}
+function tabla(on){var t=$('table.vis'),s=secOf(t);if(!s)return;s.classList.toggle('tbl',!!on);$$('td.tap',t).forEach(function(c){c.classList.remove('rev')});var st=$('.vb-state',s);if(st)st.textContent=on?'Tabla tapada: toca cada celda para revelarla':'Modo lectura'}
+window.tabla=tabla;
+window.show=function(k){var ns=secK(k);if(!ns)return;$$('section.tab.on').forEach(function(s){if(s!==ns){if(s.classList.contains('recon'))recon(s,false);if(s.classList.contains('tbl'))tabla(false)}});$$('.tb,.tab').forEach(function(e){e.classList.toggle('on',e.getAttribute('data-tab')===k)});window.scrollTo(0,0);var b=$('.tb.on');if(b&&b.scrollIntoView){try{b.scrollIntoView({inline:'nearest',block:'nearest'})}catch(e){}}navOv()};
+window.ir=function(k,id){var el=document.getElementById(id),s=secOf(el);if(!s)return;var nodo=el.classList.contains('nodo');if(s.classList.contains('recon')&&!nodo)recon(s,false);if(s.classList.contains('tbl')&&!el.closest('.vis-w'))tabla(false);show(s.getAttribute('data-tab'));if(nodo&&s.classList.contains('recon'))el.classList.add('rev');var a=el.closest('.acc');if(a)a.classList.add('op');el.scrollIntoView({block:'start'});el.classList.add('hl');setTimeout(function(){el.classList.remove('hl')},1500)};
+window.tog=function(b){var a=b.closest('.acc');if(a)a.classList.toggle('op')};
+window.sel=function(dc,g){return $$('.chip.on[data-g="'+g+'"]',dc).map(function(c){return c.getAttribute('data-v')})};
+window.num=function(dc,n){var i=$('input[data-n="'+n+'"]',dc);if(!i||i.value==='')return NaN;return parseFloat(String(i.value).replace(',','.'))};
+window.out=function(dc,h){var o=$('.out',dc);if(o)o.innerHTML=h};
+window.rd=function(x,d){var p=Math.pow(10,d||0);return Math.round(x*p)/p};
+function outErr(dc,e){var o=$('.out',dc);if(o)o.textContent='Error de cálculo: '+(e&&e.message?e.message:String(e))}
+function runDc(dc){var fn=window[dc.getAttribute('data-fn')];if(typeof fn==='function'){try{fn(dc)}catch(e){outErr(dc,e)}}}
+window.ch=function(el){var dc=el.closest('.dc');if(!dc)return;if(el.classList.contains('chip')){var g=el.getAttribute('data-g');if(el.getAttribute('data-m')==='1'){el.classList.toggle('on')}else{var was=el.classList.contains('on');$$('.chip[data-g="'+g+'"]',dc).forEach(function(c){c.classList.remove('on')});if(!was)el.classList.add('on')}}runDc(dc)};
+function initNodos(f){var k=f.getAttribute('data-tab');$$('.nodo',f).forEach(function(n,i){var p=document.createElement('b');p.className='paso';var pn=document.createElement('span');pn.className='pn';pn.textContent=(i+1)+' ·';var pt=document.createElement('span');pt.className='pt';pt.textContent=n.getAttribute('data-paso')||'';p.appendChild(pn);p.appendChild(pt);var ra=n.getAttribute('data-rama');if(ra){var b=document.createElement('span');b.className='badge b-az rama';b.textContent=ra;p.appendChild(document.createTextNode(' '));p.appendChild(b)}n.insertBefore(p,n.firstChild);var c=document.createElement('div');c.className='rec-ctl';if($('.man',n))c.appendChild(btn('Pista',function(){n.classList.toggle('pis')}));c.appendChild(btn('Revelar',function(){n.classList.toggle('rev')}));n.appendChild(c)});
+var tl=$('ol.tl',f);if(!tl)return;var bar=document.createElement('div');bar.className='rec-bar';bar.id='rec-bar-'+k;var t=document.createElement('div');t.innerHTML='<b>Timeline en blanco</b> · <span class="rec-state">Modo lectura</span><p class="mini">Reconstruye la cascada sin mirar: escribe cada paso en orden, luego usa Pista (signos que produce) y Revelar nodo por nodo. Nada se guarda.</p>';bar.appendChild(t);var ta=document.createElement('textarea');ta.setAttribute('aria-label','Escribe aquí la cascada en orden');var bs=document.createElement('div');bs.className='rec-btns';var ab=btn('Activar reconstrucción',function(){recon(f,true);ta.focus()});ab.setAttribute('data-act','rec');bs.appendChild(ab);bs.appendChild(btn('Revelar todo',function(){$$('.nodo',f).forEach(function(n){n.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){recon(f,false)}));bar.appendChild(bs);bar.appendChild(ta);tl.parentNode.insertBefore(bar,tl)}
+var TGT={'1.º':'clave','De elección':'clave','Confirma':'ok','Solo si':'cond','Escala':'cond','Reevalúa':'cond','No pidas':'no','Evita':'no','Alarma':'alarma'};
+function initTg(){$$('ol.tg span.tg').forEach(function(s){var v=TGT[s.textContent.replace(/^\s+|\s+$/g,'')];if(v)s.setAttribute('data-t',v)})}
+function initTabla(){var t=$('table.vis'),s=secOf(t);if(!s)return;var w=t.parentNode;if(!w.classList.contains('tw')){w=document.createElement('div');w.className='tw';t.parentNode.insertBefore(w,t);w.appendChild(t)}w.classList.add('vis-w');var rows=$$('tbody tr',t);if(!rows.length)rows=$$('tr',t).slice(1);rows.forEach(function(r){Array.prototype.slice.call(r.children,1).forEach(function(c){c.classList.add('tap');c.addEventListener('click',function(){if(s.classList.contains('tbl'))c.classList.add('rev')})})});
+var bar=document.createElement('div');bar.className='vb-bar';bar.id='vb-bar';var h=document.createElement('div');h.innerHTML='<b>Tabla en blanco</b> · <span class="vb-state">Modo lectura</span><p class="mini">Tapa todas las celdas de las entidades (quedan visibles las cabeceras y los ejes). Di cada celda antes de tocarla; un toque la revela. Nada se guarda.</p>';bar.appendChild(h);var bs=document.createElement('div');bs.className='rec-btns';bs.appendChild(btn('Tapar la tabla',function(){tabla(true)}));bs.appendChild(btn('Revelar todo',function(){$$('td.tap',t).forEach(function(c){c.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){tabla(false)}));bar.appendChild(bs);w.parentNode.insertBefore(bar,w)}
+function initRecGo(){var TL=$$('section.tab').filter(function(s){return!!$('ol.tl',s)}),sin=secK('sin'),dst=sin||secK('seg');if(!dst)return;var ord=sin?TL.filter(function(s,i){return i%2===0}).concat(TL.filter(function(s,i){return i%2===1})):TL;var vt=$('table.vis');if(!ord.length&&!(sin&&vt))return;
+var w=document.createElement('div');w.className='hb az rec-go';w.innerHTML='<div class="hb-t">Antes de cerrar: recupera sin mirar</div><p class="mini">Cada botón te lleva a la función en blanco correspondiente. Intenta la respuesta completa antes de revelar.</p>';var bs=document.createElement('div');bs.className='rec-btns';w.appendChild(bs);
+if(sin&&vt){var vs=secOf(vt),vk=vs.getAttribute('data-tab'),b0=btn('Tabla en blanco — '+nameOf(vk),function(){show(vk);tabla(true);var b=document.getElementById('vb-bar');if(b)b.scrollIntoView({block:'start'})},'go');b0.setAttribute('data-rec',vk);bs.appendChild(b0)}
+ord.forEach(function(s){var k=s.getAttribute('data-tab'),b=btn('Reconstruir la cascada — '+nameOf(k),function(){show(k);recon(s,true);var r=document.getElementById('rec-bar-'+k);if(r)r.scrollIntoView({block:'start'})},'go');b.setAttribute('data-rec',k);bs.appendChild(b)});
+var rf=$('.acc.refs',dst);if(rf)dst.insertBefore(w,rf);else dst.appendChild(w)}
+function init(){var f=$('.tb'),ph=[function(){var n=$('nav.tabs');if(n){var w=document.createElement('div');w.className='tabs-w';n.parentNode.insertBefore(w,n);w.appendChild(n);n.addEventListener('scroll',navOv);window.addEventListener('resize',navOv)}},function(){$$('section.tab').forEach(function(s){if($('ol.tl',s))initNodos(s)})},initTg,initTabla,initRecGo,function(){$$('.dc').forEach(runDc)},function(){show(secK('pan')?'pan':(f?f.getAttribute('data-tab'):''))}];ph.forEach(function(p){try{p()}catch(e){if(window.console)console.error('kit v10:',e)}})}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<script>
+function dcVis(dc){
+  var fx=sel(dc,'fx'),cx=sel(dc,'ctx'),o=dc.querySelector('.out');
+  if(!fx.length){o.innerHTML='<p>Marca al menos un hallazgo del examen para ver la entidad compatible, el hallazgo que falta y la conducta inicial.</p>';return;}
+  var E={
+    shock:{k:'e5',n:'Aneurisma de aorta abdominal roto',f:'Confirmar el aneurisma por angio-TC si el paciente está estable; si está inestable la tríada basta para ir a quirófano.',c:'Cirugía vascular urgente con hipotensión permisiva y sangre disponible; angio-TC solo si está estable [5].',x:'Si el dolor es lumbar con presión normal y sin masa, pide angio-TC aórtica antes de decidir → sigue pensando en rotura contenida [5].',ctx:'aaa'},
+    desp:{k:'e4',n:'Isquemia mesentérica aguda',f:'Angio-TC que muestre oclusión arterial o venosa, o isquemia con vasos permeables.',c:'Angio-TC sin demora, reanimación, antibiótico amplio y heparina; avisar a cirugía general y vascular [4].',x:'Si aparece peritonismo difuso → quirófano (laparoscopia o laparotomía) sin esperar más estudios [4].',ctx:'fa'},
+    tabla:{k:'e3',n:'Perforación de víscera hueca',f:'Aire libre o fuga de contraste en la TC (o en la radiografía si no hay TC).',c:'Reanimación, antibiótico de amplio espectro y laparotomía o laparoscopia urgente [3].',x:'Si el abdomen está blando, hay antecedente ulceroso y no se ve aire libre → pide contraste hidrosoluble antes de descartar [3].',ctx:'ulc'},
+    colico:{k:'e2',n:'Obstrucción intestinal',f:'Zona de transición, asa cerrada o signos de isquemia en la TC.',c:'Ayuno, sonda de descompresión, líquidos y electrolitos; TC con contraste hidrosoluble [2].',x:'Si hay peritonitis o signos de estrangulación → cirugía sin intentar manejo no operatorio [2].',ctx:'cx'},
+    loc:{k:'e1',n:'Apendicitis aguda',f:'Puntaje de riesgo e imagen (ecografía o TC) o laparoscopia.',c:'Estratificar con AIR o AAS, pedir imagen si el riesgo es intermedio y operar en menos de 24 h si se confirma [1].',x:'Si el dolor aparece de golpe con abdomen en tabla en un paciente ulceroso → piensa en perforación, no en apendicitis [1,3].',ctx:'jov'}
+  };
+  var order=['shock','desp','tabla','colico','loc'],i,first=null,otros=[];
+  for(i=0;i<order.length;i++){if(fx.indexOf(order[i])>-1){if(!first){first=order[i];}else{otros.push(E[order[i]].n);}}}
+  var e=E[first],h='<p><b>Entidad compatible (la de mayor amenaza entre las marcadas):</b> '+e.n+'</p>';
+  if(otros.length){h+='<p><b>También compatible con:</b> '+otros.join(', ')+'. Se descartan en ese orden con la imagen.</p>';}
+  h+='<p><b>Contexto:</b> '+(cx.indexOf(e.ctx)>-1?'el terreno marcado refuerza esta entidad.':'el terreno marcado no la apoya o no se marcó; no la descarta.')+'</p>';
+  h+='<p><b>Hallazgo que falta para confirmarla:</b> '+e.f+'</p><p><b>Conducta inicial:</b> '+e.c+'</p><span class="cf">'+e.x.replace(/^Si /,'Si ')+'</span>';
+  o.innerHTML=h;
+}
+function dcE1dx(dc){
+  var av=sel(dc,'av'),emb=sel(dc,'emb')[0],edad=num(dc,'edad'),o=dc.querySelector('.out'),s=0,i;
+  if(!av.length&&!emb&&isNaN(edad)){o.innerHTML='<p>Marca los puntos de Alvarado que tiene el paciente, el embarazo y la edad para ver la banda de riesgo y la conducta.</p>';return;}
+  for(i=0;i<av.length;i++){s+=parseInt(av[i],10);}
+  var b=s<5?'bajo':(s<9?'intermedio':'alto'),h='<p><b>Alvarado:</b> '+s+' puntos. <b>Banda:</b> '+b+'. Los puntajes AIR y AAS rinden mejor; aquí se usa Alvarado por su sencillez [1].</p>';
+  if(emb==='si'){h+='<p><b>Embarazo:</b> no diagnostiques por síntomas; pide siempre PCR, ecografía de compresión graduada y resonancia si es inconclusa; no trates sin cirugía [1].</p>';}
+  if(b==='bajo'){h+='<p><b>Conducta:</b> apendicitis improbable (Alvarado menor de 5 sirve para excluir); observación sin imagen sistemática y busca otra causa [1].</p>';}
+  else if(b==='intermedio'){h+='<p><b>Conducta:</b> imagen sistemática y oportuna: ecografía con los datos clínicos y TC de baja dosis con contraste si la ecografía es negativa o dudosa [1].</p>';}
+  else if(emb!=='si'&&!isNaN(edad)&&edad<40){h+='<p><b>Conducta:</b> riesgo alto en menor de 40 años: la TC puede omitirse antes de una laparoscopia diagnóstica con o sin tratamiento (recomendación débil) [1].</p>';}
+  else{h+='<p><b>Conducta:</b> riesgo alto: imagen antes de operar'+(isNaN(edad)?' (indica la edad: en menores de 40 años puede omitirse)':' por ser mayor de 40 años o estar embarazada')+' [1].</p>';}
+  h+='<span class="cf">Si el dolor progresa o persiste tras una imagen negativa → laparoscopia exploradora [1].</span>';
+  o.innerHTML=h;
+}
+function dcE1tx(dc){
+  var f=sel(dc,'forma')[0],c=sel(dc,'ctx'),o=dc.querySelector('.out');
+  if(!f){o.innerHTML='<p>Elige la forma de apendicitis para ver la conducta y la posología completa.</p>';return;}
+  var emb=c.indexOf('emb')>-1,al=c.indexOf('alerg')>-1,nl=c.indexOf('nolap')>-1;
+  var ab=al?'ciprofloxacino 400 mg IV cada 12 h más metronidazol 500 mg IV cada 8 h':'ceftriaxona 2 g IV cada 24 h más metronidazol 500 mg IV cada 8 h';
+  var dose=al?'ciprofloxacino 400 mg más metronidazol 500 mg IV en dosis única':'ceftriaxona 2 g más metronidazol 500 mg IV en dosis única';
+  var h='',x='';
+  if(f==='nc'||f==='nca'){
+    h+='<p><b>Conducta:</b> apendicectomía laparoscópica en las siguientes 24 h; no la retrases más de 24 h [1].</p><p><b>Antibiótico:</b> '+dose+', de 0 a 60 min antes de la incisión; sin antibiótico posoperatorio [1].</p>';
+    if(f==='nc'&&!emb){h+='<p><b>Alternativa:</b> antibióticos sin cirugía tras advertir del riesgo de fracaso; esquema y dosis [VERIFICAR EN FUENTE] [1].</p>';}
+    if(f==='nca'){h+='<p><b>Apendicolito:</b> aumenta el fracaso del tratamiento sin cirugía, de modo que se opera [1].</p>';}
+    x='Si la imagen muestra absceso o perforación → pasa a la vía de apendicitis complicada y el antibiótico dura hasta 3 a 5 días [1].';
+  }else if(f==='abs'){
+    if(nl){h+='<p><b>Conducta:</b> antibióticos y, si hay colección accesible, drenaje percutáneo, porque no hay experiencia laparoscópica avanzada [1].</p>';}
+    else{h+='<p><b>Conducta:</b> abordaje laparoscópico como opción de elección con experiencia avanzada [1].</p>';}
+    h+='<p><b>Antibiótico:</b> '+ab+', hasta 3 a 5 días con control adecuado del foco; sin drenes tras la apendicectomía en adultos [1].</p><p><b>Después:</b> sin apendicectomía de intervalo sistemática en menores de 40 años; en mayores de 40 se sugiere colonoscopia y TC [1].</p>';
+    x='Si hay sepsis o el paciente empeora con el manejo sin cirugía → cirugía inmediata y piperacilina-tazobactam 4,5 g IV cada 6 h [1].';
+  }else{
+    h+='<p><b>Conducta:</b> cirugía inmediata, laparoscópica si hay equipo; aspirar sin irrigar [1].</p><p><b>Antibiótico:</b> '+ab+', hasta 3 a 5 días tras el control del foco; con sepsis, piperacilina-tazobactam 4,5 g IV cada 6 h [1].</p>';
+    x='Si persisten fiebre o marcadores inflamatorios tras 3 a 5 días con foco controlado → busca una colección residual antes de prolongar el antibiótico [1].';
+  }
+  if(emb){h+='<p><b>Embarazo:</b> no se recomienda tratar sin cirugía; se prefiere laparoscopia; el ciprofloxacino se evita en el embarazo, elige otra alternativa según la guía local [VERIFICAR EN FUENTE] [1].</p>';}
+  o.innerHTML=h+'<span class="cf">'+x+'</span>';
+}
+function dcE2tx(dc){
+  var g=sel(dc,'grav')[0],ct=sel(dc,'cont')[0],hr=num(dc,'horas'),o=dc.querySelector('.out'),h='',x;
+  if(!g){o.innerHTML='<p>Indica si hay signos de gravedad para ver la conducta.</p>';return;}
+  if(g==='si'){
+    h='<p><b>Conducta:</b> cirugía sin intentar manejo no operatorio; reanimar, corregir potasio y electrolitos y operar [2].</p>';
+    x='Si no hubiera signos de gravedad y la causa fuera adhesiva → se intentaría el manejo no operatorio hasta 72 h [2].';
+  }else if(ct==='no'){
+    h='<p><b>Conducta:</b> el contraste no llegó al colon a las 24 h: falla del manejo no operatorio; indica cirugía [2].</p>';
+    x='Si el contraste hubiera llegado al colon → se continuaría el manejo no operatorio y se reiniciaría la vía oral [2].';
+  }else if(!isNaN(hr)&&hr>72){
+    h='<p><b>Conducta:</b> superó el límite de 72 h aceptado por consenso: reevalúa y decide cirugía; continuar solo con débito persistente sin deterioro es debatido [2].</p>';
+    x='Si aparecen dolor continuo, fiebre o defensa → opera sin esperar [2].';
+  }else if(ct==='llego'){
+    h='<p><b>Conducta:</b> el contraste llegó al colon: probable resolución; reinicia la vía oral de forma progresiva y vigila [2].</p>';
+    x='Si reaparecen vómito, distensión o dolor continuo → repite imagen y valora cirugía [2].';
+  }else{
+    h='<p><b>Conducta:</b> manejo no operatorio: nada por vía oral, sonda nasogástrica o tubo largo, cristaloides y electrolitos; cloruro de potasio IV según el potasio sérico, hasta 10 mEq por hora por vía periférica [2].</p><p><b>Contraste:</b> hidrosoluble oral o por sonda y radiografía a las 24 h; dosis [VERIFICAR EN FUENTE] [2].</p>';
+    x='Si el contraste no llega al colon a las 24 h o aparecen signos de peritonitis → cirugía [2].';
+  }
+  o.innerHTML=h+'<span class="cf">'+x+'</span>';
+}
+function dcE3tx(dc){
+  var e=sel(dc,'est')[0],t=sel(dc,'tam')[0],c=sel(dc,'ctx'),o=dc.querySelector('.out');
+  if(!e||!t){o.innerHTML='<p>Elige la estabilidad y la localización o tamaño para ver la conducta.</p>';return;}
+  var lap=c.indexOf('lap')>-1,al=c.indexOf('alerg')>-1,se=c.indexOf('sellada')>-1,h='';
+  h+='<p><b>Abordaje:</b> '+(e==='inestable'?'cirugía abierta por la inestabilidad':(lap?'laparoscopia en paciente estable con equipo experto':'cirugía abierta por falta de equipo laparoscópico'))+' [3].</p>';
+  if(t==='menor'){h+='<p><b>Técnica:</b> sutura primaria; el parche de epiplón no ofrece un beneficio demostrado [3].</p>';}
+  else if(t==='gastrica'){h+='<p><b>Técnica:</b> según la localización; si sospechas malignidad, resección con congelación [3].</p>';}
+  else if(t==='duodenal'){h+='<p><b>Técnica:</b> reparación con o sin exclusión pilórica y drenaje biliar; duodenostomía solo en situación extrema [3].</p>';}
+  else{h+='<p><b>Técnica:</b> perforación intestinal: control del foco por principios generales (resección, sutura o estoma según el hallazgo); sin guía específica leída [VERIFICAR EN FUENTE].</p>';}
+  h+='<p><b>Antibiótico:</b> '+(al?'ciprofloxacino 400 mg IV cada 12 h más metronidazol 500 mg IV cada 8 h':'piperacilina-tazobactam 4,5 g IV cada 6 h')+', de 3 a 5 días o hasta normalizar los marcadores inflamatorios; ajustar a la función renal [3].</p>';
+  h+='<p><b>Supresión ácida:</b> pantoprazol 40 mg IV cada 12 h hasta tolerar la vía oral [VERIFICAR EN FUENTE] [3].</p>';
+  if(se){h+='<p><b>Perforación sellada:</b> el manejo no operatorio es excepcional y solo en casos extremadamente seleccionados; no se recomienda de rutina [3].</p>';}
+  o.innerHTML=h+'<span class="cf">Si el paciente se inestabiliza durante la laparoscopia → conversión a cirugía abierta [3].</span>';
+}
+function dcE4dx(dc){
+  var q=sel(dc,'cuadro')[0],d=sel(dc,'dat'),o=dc.querySelector('.out'),h='';
+  if(!q){o.innerHTML='<p>Elige el cuadro clínico para ver la conducta diagnóstica.</p>';return;}
+  if(q==='desp'){h+='<p><b>Conducta:</b> asume isquemia mesentérica y pide angio-TC sin demora, con reanimación en paralelo [4].</p>';}
+  else if(q==='peri'){h+='<p><b>Conducta:</b> peritonitis evidente: laparoscopia o laparotomía sin demora; la imagen no debe retrasarla [4].</p>';}
+  else{h+='<p><b>Conducta:</b> vigilancia y reexamen; si el dolor resulta desproporcionado o el lactato sube, pide angio-TC [4].</p>';}
+  if(d.indexOf('renal')>-1){h+='<p><b>Lesión renal:</b> no justifica omitir la angio-TC; la demora pesa más que el contraste [4].</p>';}
+  if(d.indexOf('lact')>-1){h+='<p><b>Lactato elevado:</b> con dolor intenso y examen blando refuerza la sospecha; no basta solo por la deshidratación [4].</p>';}
+  if(d.indexOf('rx')>-1){h+='<p><b>Radiografía normal:</b> no excluye isquemia mesentérica y no está recomendada para evaluarla [4].</p>';}
+  o.innerHTML=h+'<span class="cf">Si el cuadro cambia a peritonitis evidente → quirófano sin esperar la angio-TC [4].</span>';
+}
+function dcE4tx(dc){
+  var t=sel(dc,'tipo')[0],c=sel(dc,'ctx'),kg=num(dc,'kg'),o=dc.querySelector('.out'),h='',x;
+  if(!t){o.innerHTML='<p>Elige el mecanismo para ver la conducta y la posología.</p>';return;}
+  var pe=c.indexOf('peri')>-1,en=c.indexOf('endo')>-1;
+  if(t==='arterial'){
+    if(pe){h+='<p><b>Conducta:</b> laparotomía con revascularización (embolectomía, bypass o stent retrógrado abierto) y resección de lo necrótico; control de daños y segunda mirada a las 24 a 48 h [4].</p>';x='Si no hubiera peritonitis y hubiera experiencia endovascular → la revascularización endovascular sería la primera opción [4].';}
+    else if(en){h+='<p><b>Conducta:</b> revascularización endovascular como opción primaria si hay experiencia; laparotomía si aparece peritonitis [4].</p>';x='Si aparece peritonitis → laparotomía sin demora [4].';}
+    else{h+='<p><b>Conducta:</b> sin recurso endovascular: revascularización abierta (embolectomía o bypass) y valoración de viabilidad intestinal [4].</p>';x='Si hubiera experiencia endovascular → sería la opción primaria [4].';}
+  }else if(t==='venosa'){
+    if(pe){h+='<p><b>Conducta:</b> laparotomía con resección solo de lo claramente necrótico, con técnica de control de daños, y heparina [4].</p>';x='Sin peritonitis → anticoagulación y manejo sin operar [4].';}
+    else{h+='<p><b>Conducta:</b> anticoagulación como primera línea y manejo sin operar; no usar trombólisis por la arteria mesentérica [4].</p>';x='Si aparece peritonitis → laparotomía con resección mínima [4].';}
+  }else{
+    h+='<p><b>Conducta:</b> tratar la causa, optimizar el gasto cardiaco, retirar vasopresores y considerar papaverina intraarterial; dosis [VERIFICAR EN FUENTE] [4].</p>';
+    if(pe){h+='<p>Con peritonitis: laparotomía y resección de lo necrótico con control de daños [4].</p>';}
+    x='Si aparece peritonitis o perforación → laparotomía [4].';
+  }
+  if(isNaN(kg)){h+='<p><b>Heparina:</b> indica el peso para calcular el bolo y la infusión.</p>';}
+  else{var bolo=Math.min(rd(80*kg),10000),inf=rd(18*kg);h+='<p><b>Heparina no fraccionada:</b> bolo de '+bolo+' UI IV (80 UI/kg con tope de 10 000 UI) y '+inf+' UI por hora en infusión; ajustar a TTPa de 40 a 60 s [VERIFICAR EN FUENTE] [4].</p>';}
+  h+='<p><b>Antibiótico:</b> piperacilina-tazobactam 4,5 g IV cada 6 h, al menos 4 días si el paciente es estable e inmunocompetente; ajustar a cultivos [4].</p>';
+  o.innerHTML=h+'<span class="cf">'+x+'</span>';
+}
+function dcE5tx(dc){
+  var e=sel(dc,'est')[0],a=sel(dc,'anat')[0],r=sel(dc,'rec'),o=dc.querySelector('.out'),h='',x;
+  if(!e){o.innerHTML='<p>Elige la estabilidad para ver la conducta.</p>';return;}
+  var en=r.indexOf('endo')>-1,rn=r.indexOf('renal')>-1;
+  if(e==='inestable'){
+    h+='<p><b>Conducta:</b> quirófano sin imagen y control proximal de la aorta; hipotensión permisiva con presión objetivo [VERIFICAR EN FUENTE]; balón de oclusión aórtica como puente, indicaciones [VERIFICAR EN FUENTE] [5].</p>';
+    h+='<p><b>Reparación:</b> '+(en&&a==='apta'?'endovascular si la anatomía es conocida y apta':'abierta, por falta de equipo o de anatomía conocida')+' [5].</p>';
+    x='Si el paciente estuviera estable → angio-TC inmediata antes de elegir la técnica [5].';
+  }else if(!a||a==='sinimagen'){
+    h+='<p><b>Conducta:</b> angio-TC inmediata de la aorta toracoabdominal y de los vasos de acceso, con hipotensión permisiva y sangre disponible [5].</p>';
+    x='Si se vuelve inestable antes o durante la TC → quirófano sin imagen [5].';
+  }else if(a==='apta'&&en){
+    h+='<p><b>Conducta:</b> reparación endovascular; dispositivo bifurcado en preferencia al aorto-uniilíaco si la anatomía lo permite y sobredimensionamiento de hasta 30 % si la imagen se hizo en hipotensión permisiva [5].</p>';
+    x='Si la anatomía resultara no apta → reparación abierta [5].';
+  }else{
+    h+='<p><b>Conducta:</b> reparación abierta'+(a==='apta'?', por no contar con equipo endovascular; no traslades si el retraso es inseguro':', por anatomía no apta')+' [5].</p>';
+    x='Si hubiera equipo endovascular y anatomía apta → reparación endovascular [5].';
+  }
+  h+='<p><b>Después del control:</b> considerar heparina sistémica intraoperatoria, dosis [VERIFICAR EN FUENTE], y profilaxis posoperatoria con enoxaparina '+(rn?'20 mg':'40 mg')+' SC cada 24 h [5].</p>';
+  o.innerHTML=h+'<span class="cf">'+x+'</span>';
+}
+</script>
