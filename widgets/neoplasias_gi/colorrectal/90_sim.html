@@ -1,0 +1,135 @@
+<script>
+function dcDx(dc){
+  var c=sel(dc,'ctx')[0], l=sel(dc,'loc')[0], k=sel(dc,'col')[0], h='';
+  if(!c){out(dc,'<p>Elige el contexto clínico para ver la prueba y la conducta.</p>');return;}
+  if(c==='obs'){
+    h='<p><b>Conducta:</b> urgencia quirúrgica. No indiques colonoscopia con preparación oral; pide tomografía de abdomen con contraste, reanima, descomprime y llama a cirugía [3] [VERIFICAR EN FUENTE].</p>'
+     +'<p>El diagnóstico histológico y la estadificación se completan después de resolver la obstrucción o la perforación.</p>'
+     +'<span class="cf">Si el paciente estuviera estable y sin signos peritoneales → colonoscopia diagnóstica con biopsia.</span>';
+    out(dc,h);return;
+  }
+  if(c==='sint'){
+    h='<p><b>Prueba inicial:</b> colonoscopia completa con biopsia [3] [VERIFICAR EN FUENTE]. No pidas FIT en un paciente con síntomas de alarma [4].</p>';
+  } else if(c==='fit'){
+    h='<p><b>Prueba confirmatoria:</b> colonoscopia completa tras un FIT positivo [1] [VERIFICAR EN FUENTE]. No repitas el FIT.</p>';
+  } else {
+    h='<p><b>Siguiente paso:</b> el tumor ya tiene histología; ahora corresponde estadificar [3].</p>';
+  }
+  if(c!=='lesion'){
+    if(k==='inc'){
+      h+='<p>Colonoscopia incompleta: completa con colonografía por tomografía o repite con mejor preparación [4] [VERIFICAR EN FUENTE].</p>';
+    } else if(k==='comp'){
+      h+='<p>Colonoscopia completa: si hay adenocarcinoma, sigue con estadificación; si hay pólipos, aplica la tabla de vigilancia [5].</p>';
+    } else {
+      h+='<p>Indica el resultado de la colonoscopia para continuar el algoritmo.</p>';
+    }
+  }
+  if(c==='lesion'||k==='comp'){
+    h+='<ul><li>Tomografía de tórax, abdomen y pelvis con contraste y antígeno carcinoembrionario basal [3] [VERIFICAR EN FUENTE].</li><li>Inmunohistoquímica de MMR en la pieza [3] [VERIFICAR EN FUENTE].</li>';
+    if(l==='recto'){h+='<li>Resonancia de pelvis o ecoendoscopia para la invasión local y los ganglios [3] [VERIFICAR EN FUENTE].</li>';}
+    else if(!l){h+='<li>Indica la localización: si es recto se añade resonancia de pelvis.</li>';}
+    h+='</ul>';
+  }
+  h+='<span class="cf">Si la colonoscopia no llega al ciego → el colon proximal queda sin estudiar y debe completarse antes de operar.</span>';
+  out(dc,h);
+}
+
+function dcTx(dc){
+  var e=sel(dc,'est')[0], s=sel(dc,'sit')[0], m=sel(dc,'mmr')[0], nox=sel(dc,'ox').indexOf('no')>=0, par=sel(dc,'reg').indexOf('folfox')>=0, h='';
+  var capox='<li>CAPOX: oxaliplatino 130 mg/m² IV en 2 h el día 1, más capecitabina 1000 mg/m² VO cada 12 h los días 1 a 14, ciclo de 21 días [3].</li>';
+  var fol='<li>mFOLFOX6: oxaliplatino 85 mg/m² y leucovorina 400 mg/m² IV el día 1, 5-fluorouracilo en bolo de 400 mg/m² y luego 2400 mg/m² en infusión de 46 h, cada 14 días, por 6 meses [3].</li>';
+  var cap='<li>Capecitabina sola: 1250 mg/m² VO cada 12 h los días 1 a 14, ciclo de 21 días, por 6 meses [3] [VERIFICAR EN FUENTE].</li>';
+  if(!e){out(dc,'<p>Elige el estadio patológico para ver el esquema.</p>');return;}
+  if(e==='iv'){
+    out(dc,'<p><b>Estadio IV:</b> sin esquema único. Decide un comité multidisciplinario según la resecabilidad de las metástasis y el estado de RAS, BRAF y MMR [3] [VERIFICAR EN FUENTE].</p><span class="cf">Si las metástasis fueran resecables y el paciente fuera apto → se plantea resección con intención curativa.</span>');return;
+  }
+  if(e==='i'){
+    h='<p><b>Estadio I:</b> cirugía sola, sin quimioterapia adyuvante [3] [VERIFICAR EN FUENTE].</p>';
+  } else if(e==='ii'){
+    h='<p><b>Estadio II sin factores de riesgo:</b> cirugía y vigilancia, sin quimioterapia [3] [VERIFICAR EN FUENTE].</p>';
+  } else if(e==='iir'){
+    if(m==='d'){
+      h='<p><b>Estadio II con factores de riesgo y dMMR:</b> el dMMR no equivale a bajo riesgo si hay T4; la decisión se lleva a comité [3] [VERIFICAR EN FUENTE].</p>';
+    } else {
+      h='<p><b>Estadio II con factores de riesgo:</b> se recomienda quimioterapia adyuvante en riesgo intermedio y alto [3].</p><ul>'+(nox?cap:capox+cap)+'</ul>';
+    }
+  } else {
+    var alto=(e==='iiia');
+    h='<p><b>Estadio III '+(alto?'de mayor riesgo (T4 o N2)':'de menor riesgo (T1 a T3 y N1)')+':</b> cirugía y adyuvancia [3].</p><ul>';
+    if(nox){h+=cap;}
+    else if(par){h+=fol;}
+    else if(alto){h+='<li>CAPOX por 6 meses (misma posología) o mFOLFOX6 por 6 meses [3].</li>'+capox+fol;}
+    else{h+='<li>CAPOX por 3 meses (la duración corta es no inferior en este subgrupo) o mFOLFOX6 por 6 meses [3].</li>'+capox+fol;}
+    h+='</ul>';
+  }
+  if(s==='recto'){h+='<p>Tumor rectal: el tratamiento previo a la cirugía lo define el equipo con oncología radioterápica según la resonancia [3] [VERIFICAR EN FUENTE].</p>';}
+  if(e!=='i'&&e!=='ii'){h+='<p>Antes de capecitabina revisa la depuración de creatinina (contraindicada por debajo de 30 mL/min), la warfarina y el riesgo de deficiencia de DPD.</p>';}
+  h+='<span class="cf">'+(e==='iiib'?'Si el tumor fuera T4 o N2 → CAPOX pasa de 3 a 6 meses.':'Si hubiera neuropatía previa → se omite el oxaliplatino y se usa capecitabina sola.')+'</span>';
+  out(dc,h);
+}
+
+function dcSeg(dc){
+  var e=sel(dc,'est')[0], t=sel(dc,'t')[0], g=sel(dc,'h')[0], h='';
+  if(!e||!t){out(dc,'<p>Elige el estadio operado y el tiempo desde la cirugía para ver el plan.</p>');return;}
+  if(e==='i'){
+    h='<p><b>Estadio I:</b> la vigilancia es menos intensa; mantén el control clínico y la colonoscopia al año [3] [VERIFICAR EN FUENTE].</p>';
+  } else if(t==='t3'){
+    h='<p><b>Estadio II o III, primeros 3 años:</b></p><ul><li>Antígeno carcinoembrionario cada 3 a 6 meses.</li><li>Tomografía de tórax, abdomen y pelvis cada 6 a 12 meses.</li><li>Colonoscopia al año de la cirugía [3] [VERIFICAR EN FUENTE].</li></ul>';
+  } else {
+    h='<p><b>Estadio II o III, años 4 y 5:</b> antígeno carcinoembrionario cada 6 a 12 meses; la tomografía sistemática se concentra en los primeros 3 años [3].</p>';
+  }
+  if(g==='cea'){
+    h+='<p>Antígeno en ascenso: confirma con una segunda medición y pide tomografía de tórax, abdomen y pelvis, con colonoscopia si no se hizo [3] [VERIFICAR EN FUENTE].</p>';
+  } else if(g==='sint'){
+    h+='<p>Síntomas o anemia: no esperes al siguiente control; pide colonoscopia y tomografía [3] [VERIFICAR EN FUENTE].</p>';
+  } else if(!g){
+    h+='<p>Indica el hallazgo de la visita para ajustar la conducta.</p>';
+  }
+  h+='<span class="cf">Si el antígeno sube y la tomografía es normal → se amplía el estudio con imagen funcional o resonancia hepática [VERIFICAR EN FUENTE].</span>';
+  out(dc,h);
+}
+
+function dcTam(dc){
+  var c=sel(dc,'ctx')[0], ed=num(dc,'edad'), hl=sel(dc,'hal')[0], f=sel(dc,'fdr')[0], h='';
+  if(!c){out(dc,'<p>Elige la situación para ver la conducta de tamizaje o vigilancia.</p>');return;}
+  if(c==='avg'){
+    if(isNaN(ed)){out(dc,'<p>Escribe la edad del paciente.</p>');return;}
+    if(ed<45){h='<p><b>Menor de 45 años:</b> no corresponde el tamizaje de riesgo promedio [1]. Si hay síntomas, anemia o antecedentes, estudia con colonoscopia diagnóstica.</p>';}
+    else if(ed<50){h='<p><b>45 a 49 años:</b> tamizaje recomendado (B). FIT cada año o colonoscopia cada 10 años [1] [4].</p>';}
+    else if(ed<=75){h='<p><b>50 a 75 años:</b> tamizaje recomendado (A). FIT cada año o colonoscopia cada 10 años [1] [4].</p>';}
+    else if(ed<=85){h='<p><b>76 a 85 años:</b> ofrece el tamizaje según salud, tamizaje previo y preferencias (C). Quien nunca se tamizó es el que más se beneficia [1].</p>';}
+    else{h='<p><b>Mayor de 85 años:</b> el resumen leído no cubre este grupo [VERIFICAR EN FUENTE].</p>';}
+    h+='<span class="cf">Si hubiera síntomas de alarma → colonoscopia diagnóstica, no tamizaje.</span>';
+    out(dc,h);return;
+  }
+  if(c==='fit'){
+    out(dc,'<p><b>FIT positivo:</b> colonoscopia completa [1] [VERIFICAR EN FUENTE]. No repitas el FIT ni lo sustituyas por otra prueba de heces.</p><ul><li>Con pólipos: resección e intervalo según histología [5].</li><li>Con cáncer: estadificación y derivación [3].</li></ul><span class="cf">Si la colonoscopia fuera incompleta o con mala preparación → repetir o completar con colonografía [5] [VERIFICAR EN FUENTE].</span>');return;
+  }
+  if(c==='fam'){
+    if(!f){out(dc,'<p>Indica el parentesco y la edad del familiar afectado.</p>');return;}
+    if(f==='lt60'){h='<p><b>Familiar de alto riesgo:</b> colonoscopia cada 5 años, desde 10 años antes del diagnóstico del familiar más joven o desde los 40 años, lo que ocurra primero [4].</p><span class="cf">Si el familiar fuera de 60 años o más → opciones de riesgo promedio desde los 40 años.</span>';}
+    else{h='<p><b>Un familiar de 60 años o más:</b> se ofrecen las opciones de riesgo promedio desde los 40 años [4].</p><span class="cf">Si fueran dos familiares o uno menor de 60 años → colonoscopia cada 5 años.</span>';}
+    out(dc,h);return;
+  }
+  if(!hl){out(dc,'<p>Elige el hallazgo de la polipectomía para ver el intervalo.</p>');return;}
+  var T={
+    nor:['Examen normal','10 años',''],
+    ta12:['1 o 2 adenomas menores de 10 mm','7 a 10 años',''],
+    ta34:['3 o 4 adenomas menores de 10 mm','3 a 5 años',''],
+    ta510:['5 a 10 adenomas menores de 10 mm','3 años',''],
+    adv:['Adenoma de 10 mm o más, componente velloso o displasia de alto grado','3 años',''],
+    mas10:['Más de 10 adenomas','1 año','Considera estudio genético por la posibilidad de un síndrome hereditario.'],
+    ssp12:['1 o 2 pólipos serrados menores de 10 mm','5 a 10 años',''],
+    ssp34:['3 o 4 pólipos serrados menores de 10 mm','3 a 5 años',''],
+    sspa:['Pólipo serrado de 10 mm o más, con displasia, o 5 a 10 pólipos','3 años',''],
+    piece:['Lesión de 20 mm o más resecada en fragmentos','6 meses; luego 1 año; luego 3 años','']
+  };
+  var r=T[hl];
+  h='<p><b>'+r[0]+':</b> vigilancia '+(r[1]==='1 año'?'al año':'en '+r[1])+' [5].</p>';
+  if(hl==='piece'){h='<p><b>'+r[0]+':</b> primera vigilancia a los 6 meses, segunda un año después y tercera a los 3 años de la segunda [5].</p>';}
+  if(r[2]){h+='<p>'+r[2]+' [5]</p>';}
+  h+='<p>Esto aplica solo si el examen basal fue de calidad y la resección fue completa [5].</p>';
+  h+='<span class="cf">Si el examen basal hubiera tenido mala preparación o resección incompleta → se acorta el intervalo y se repite el estudio antes.</span>';
+  out(dc,h);
+}
+</script>

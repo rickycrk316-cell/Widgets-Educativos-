@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abdomen agudo quirúrgico</title>
+<style>
+/* Vademécum: monografía impresa con índice de canto; filetes y tinta llevan la jerarquía, no las sombras */
+:root{
+--paper:#FBFBFC;--paper-2:#F1F2F5;--ink:#16181D;--ink-2:#3A3D46;--ink-3:#686C78;--rule:#D7D9E0;--rule-strong:#16181D;
+--accent:#2342A6;--accent-ink:#1B358A;--accent-field:#EAEEFA;--on-accent:#FFFFFF;
+--am:#7A4A06;--am-f:#FBF1DF;--ro:#9E1F1F;--ro-f:#FBE9E7;--ve:#2F5E12;--ve-f:#EBF3E1;--pu:#4C3FA8;--pu-f:#EEECFB;--co:#8E3517;--co-f:#FAEDE6;--rs:#8A2C52;--rs-f:#FAEAF1;
+--f-serif:ui-serif,"New York","Iowan Old Style","Charter","Source Serif Pro",Georgia,"Times New Roman",serif;
+--f-sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+--r:3px;
+/* alias de la v10 para compatibilidad */
+--surface-0:var(--paper);--surface-1:var(--paper-2);--border:var(--rule);--border-accent:var(--accent);--bg-accent:var(--accent-field);--text-primary:var(--ink);--text-secondary:var(--ink-2);--text-muted:var(--ink-3);--text-accent:var(--accent-ink);--radius:var(--r);--font-sans:var(--f-sans);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}
+html{color-scheme:light dark;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:var(--accent);color:var(--on-accent)}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--f-sans);-webkit-text-size-adjust:100%;font-feature-settings:"kern" 1;text-rendering:optimizeLegibility;caret-color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:18px 16px 56px;background:transparent}
+h1{font:600 26px/1.2 var(--f-serif);letter-spacing:-.012em;margin:6px 0 14px;padding-bottom:12px;border-bottom:2px solid var(--rule-strong);text-wrap:balance}
+h2{font:600 19px/1.3 var(--f-serif);letter-spacing:-.006em;margin:40px 0 14px;padding-top:12px;border-top:1px solid var(--rule-strong);text-wrap:balance}
+h3{font:600 16px/1.35 var(--f-serif);margin:20px 0 6px;text-wrap:balance}
+p{margin:0 0 12px;text-wrap:pretty}
+a{color:var(--accent-ink);text-underline-offset:3px}
+button{font:inherit;color:inherit;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,color .15s ease-out}
+button:active{transform:translateY(1px)}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* índice de canto */
+.tabs{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 0 0;border-bottom:2px solid var(--rule-strong);margin-bottom:16px;position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);scroll-snap-type:x proximity;scroll-padding-inline:56px}
+.tabs-w{position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper)}
+.tabs-w::before,.tabs-w::after{content:"";position:absolute;top:0;bottom:2px;width:56px;pointer-events:none;opacity:0;transition:opacity .2s;z-index:6}
+.tabs-w::before{left:0;background:linear-gradient(to left,transparent,var(--paper) 85%)}
+.tabs-w::after{right:0;background:linear-gradient(to right,transparent,var(--paper) 85%)}
+.tabs-w.ov-l::before,.tabs-w.ov-r::after{opacity:1}
+.nodo,.signo,.qv,.dc,h2{scroll-margin-top:84px}
+.tabs::-webkit-scrollbar{display:none}
+.tb{flex:0 0 auto;min-height:44px;padding:9px 15px 8px;border:1px solid var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;background:var(--paper-2);color:var(--ink-2);font:600 13px/1.2 var(--f-sans);letter-spacing:.01em;white-space:nowrap;scroll-snap-align:start}
+.tb:hover{background:var(--accent-field);color:var(--accent-ink)}
+.tb.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+.tab{display:none}
+.tab.on{display:block}
+/* recuadros */
+.card{background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;margin:12px 0;font-size:15px;line-height:1.6}
+.card p{margin:0 0 8px}
+.card p:last-child{margin-bottom:0}
+.mini{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:6px 0}
+.hb{border-radius:var(--r);padding:12px 14px;margin:14px 0;border:1px solid transparent;font-size:15px;line-height:1.6}
+.hb.az{background:var(--accent-field);color:var(--ink);border-color:var(--accent)}
+.hb.am{background:var(--am-f);color:var(--am);border-color:var(--am)}
+.hb.ro{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.hb.ve{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+.hb.am .mini,.hb.ro .mini,.hb.ve .mini{color:inherit;opacity:.88}
+.hb-t{font:600 16px/1.35 var(--f-serif);margin-bottom:6px;text-wrap:balance}
+.hb.az .hb-t{color:var(--accent-ink)}
+.pg{margin:0;padding-left:22px}
+.pg li{margin:5px 0}
+.pg li::marker{color:var(--accent-ink);font-weight:700}
+.hb.az:has(.pg){margin-bottom:24px}
+.hb.az:not(:has(.pg)):not(.rec-go){background:transparent;border-left-color:transparent;border-right-color:transparent;border-radius:0;padding-left:0;padding-right:0}
+.hb.az:not(:has(.pg))+.etapa{border-top:0}
+h2+.card,h2+.hb,h2+.tw{margin-top:0}
+.badge{display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.04em;padding:2px 7px;border-radius:2px;margin:0 4px 4px 0;vertical-align:middle;border:1px solid currentColor}
+.b-az{background:var(--accent-field);color:var(--accent-ink)}
+.b-ro{background:var(--ro-f);color:var(--ro)}
+.b-am{background:var(--am-f);color:var(--am)}
+.b-ve{background:var(--ve-f);color:var(--ve)}
+.b-pu{background:var(--pu-f);color:var(--pu)}
+.badge.b-pu{display:block;width:fit-content;max-width:100%;white-space:normal;font-size:12px;line-height:1.5;font-weight:600;letter-spacing:.01em;margin:14px 0}
+.b-co{background:var(--co-f);color:var(--co)}
+.b-rs{background:var(--rs-f);color:var(--rs)}
+.rem{display:inline-block;font-size:12.5px;background:var(--rs-f);color:var(--rs);border:1px dashed var(--rs);border-radius:2px;padding:1px 7px;margin:4px 0}
+/* Feynman */
+.fey{background:var(--co-f);border:1px solid var(--co);border-radius:var(--r);padding:14px 16px;margin:18px 0 26px}
+.fey-t{display:inline-block;font:600 15px/1.35 var(--f-serif);color:var(--co);margin-bottom:8px}
+.fey-b{margin:0 0 10px;font:400 16px/1.6 var(--f-serif);color:var(--ink)}
+.fey-c{margin:2px 0;color:var(--ink-2)}
+/* Panorama: entradas de índice */
+.tab{counter-reset:et}
+.etapa{counter-increment:et;background:transparent;border:0;border-top:1px solid var(--rule);border-radius:0;padding:18px 0 8px;margin:4px 0}
+.etapa h3{font-size:19px;line-height:1.3;margin:0 0 8px}
+.etapa h3::before{content:counter(et,decimal-leading-zero);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;letter-spacing:.04em;color:var(--accent-ink);margin-right:10px;vertical-align:2px}
+.res{margin:0 0 10px}
+.perla{border-top:1px dotted var(--rule);padding-top:8px;margin:0 0 10px;font-weight:500}
+.perla::before{content:"Perla";display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;background:var(--ve-f);color:var(--ve);border:1px solid var(--ve);border-radius:2px;padding:1px 6px;margin-right:8px;vertical-align:1px}
+.go{min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent);color:var(--on-accent);font:600 13.5px/1.2 var(--f-sans)}
+.go:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+/* tablas de monografía */
+.tw{overflow-x:auto;margin:12px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.5;font-variant-numeric:tabular-nums}
+th,td{border:0;border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--paper-2);font-weight:700;color:var(--ink)}
+thead th{font:700 14.5px/1.35 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong)}
+tbody tr:last-child>*{border-bottom:1px solid var(--rule-strong)}
+.stats{display:grid;grid-template-columns:1fr;gap:10px;margin:12px 0}
+@media (min-width:600px){.stats{grid-template-columns:repeat(3,1fr)}}
+.stat{background:transparent;border:0;border-top:2px solid var(--accent);border-radius:0;padding:8px 2px}
+.stat b{display:block;font:600 22px/1.25 var(--f-serif);color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--ink-2);line-height:1.4;display:block}
+.steps{list-style:none;counter-reset:st;padding:0;margin:10px 0}
+.steps>li{counter-increment:st;position:relative;padding:5px 0 9px 40px}
+.steps>li::before{content:counter(st);position:absolute;left:0;top:3px;width:26px;height:26px;border-radius:2px;background:var(--ink);color:var(--paper);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;display:flex;align-items:center;justify-content:center}
+/* cascada */
+.tl{list-style:none;margin:14px 0;padding:0 0 0 20px;border-left:2px solid var(--accent)}
+.nodo{position:relative;margin:0 0 14px;padding:11px 13px;background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);font-size:14px;line-height:1.55}
+.nodo::before{content:"";position:absolute;left:-27px;top:15px;width:12px;height:12px;border-radius:1px;background:var(--accent);box-shadow:0 0 0 3px var(--paper)}
+.paso{display:block;font:600 15px/1.4 var(--f-serif);margin-bottom:5px}
+.pn{color:var(--accent-ink);margin-right:4px;font-variant-numeric:tabular-nums}
+.man{margin:8px 0 0;font-size:13px;color:var(--ink-2)}
+.signo{background:var(--paper);border:1px solid var(--rule);border-top:2px solid var(--rule-strong);border-radius:0 0 var(--r) var(--r);padding:12px 14px;margin:12px 0;font-size:14px;line-height:1.55}
+.signo h4{margin:0 0 6px;font:600 15.5px/1.35 var(--f-serif)}
+.signo dl{margin:0}
+.signo dt{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-3);margin-top:8px}
+.signo dd{margin:2px 0 0}
+.xref{display:inline-flex;align-items:center;min-height:44px;padding:4px 10px;margin:3px 6px 3px 0;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent-field);color:var(--accent-ink);font:600 12.5px/1.3 var(--f-sans);text-align:left}
+.xref:hover{background:var(--accent);color:var(--on-accent)}
+p .xref,td .xref,li .xref,dd .xref{display:inline;position:relative;min-height:0;padding:0 5px;margin:0 2px;line-height:inherit;border-radius:2px;white-space:normal;overflow-wrap:anywhere;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+p .xref::after,td .xref::after,li .xref::after,dd .xref::after{content:"";position:absolute;left:-4px;right:-4px;top:-12px;bottom:-12px}
+.hl{outline:2px solid var(--accent);background:var(--accent-field)!important;transition:background .3s}
+.acc{border:1px solid var(--rule);border-radius:var(--r);margin:12px 0;overflow:hidden}
+.acc-h{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:44px;padding:9px 14px;border:0;background:var(--paper-2);font:600 14px/1.35 var(--f-sans);text-align:left}
+.acc-h:hover{background:var(--accent-field)}
+.chev{transition:transform .2s;color:var(--accent-ink)}
+.acc.op .chev{transform:rotate(180deg)}
+.acc-b{display:none;padding:10px 14px;font-size:14px;line-height:1.55}
+.acc.op .acc-b{display:block}
+.vanc{font-size:12.5px;line-height:1.5;padding-left:24px}
+.vanc li{margin:5px 0;word-break:break-word}
+.vanc li::marker{font-variant-numeric:tabular-nums;color:var(--ink-3)}
+/* simulador */
+.dc{border:1px solid var(--rule-strong);border-radius:var(--r);padding:14px 16px;margin:22px 0;background:var(--paper)}
+.dc-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.dc-g{margin:10px 0}
+.dc-l{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);margin-bottom:5px;display:block}
+.chip{min-height:44px;padding:7px 13px;margin:3px 6px 3px 0;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);font-size:13.5px}
+.chip:hover{border-color:var(--accent);color:var(--accent-ink)}
+.chip.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:600}
+.dc input[type=number]{min-height:44px;width:120px;padding:6px 10px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper);color:var(--ink);font:15px var(--f-sans);font-variant-numeric:tabular-nums}
+.out{margin-top:12px;padding:12px 14px;border-radius:var(--r);background:var(--paper-2);border:1px solid var(--rule);font-size:14px;line-height:1.58;min-height:44px}
+.tag{display:inline-block;font:600 11px/1.4 var(--f-sans);padding:1px 7px;border-radius:2px;background:var(--accent-field);color:var(--accent-ink);margin:4px 4px 0 0}
+.rec-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.rec-bar textarea{width:100%;min-height:120px;margin-top:8px;padding:9px 11px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper-2);color:var(--ink);font:14px/1.55 var(--f-sans);resize:vertical}
+.chip:disabled{cursor:default;opacity:.85}
+.rec-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.rec-ctl{display:none;gap:6px;margin-top:6px}
+.recon .rec-ctl{display:flex}
+.recon>*:not(.rec-bar):not(.tl){display:none}
+.recon .nodo:not(.rev) .pt{display:none}
+.recon .nodo:not(.rev) .pn::after{content:" ?"}
+.recon .nodo:not(.rev) .det{display:none}
+.recon .nodo.pis:not(.rev) .det{display:block}
+.recon .nodo.pis:not(.rev) .det>*:not(.man){display:none}
+.recon .nodo:not(.pis):not(.rev) .man{display:none}
+.recon .nodo.rev{border-color:var(--accent)}
+.rec-go{margin:22px 0}
+.steps.tg>li{padding-left:40px}
+span.tg{display:inline-block;font:700 11px/1.4 var(--f-mono);letter-spacing:.02em;padding:2px 7px;margin:0 6px 2px 0;border-radius:2px;background:var(--paper-2);border:1px solid var(--rule);color:var(--ink-2);white-space:nowrap;vertical-align:1px}
+span.tg[data-t="clave"]{background:var(--accent-field);color:var(--accent-ink);border-color:var(--accent)}
+span.tg[data-t="ok"]{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+span.tg[data-t="cond"]{background:var(--am-f);color:var(--am);border-color:var(--am)}
+span.tg[data-t="no"]{background:var(--rs-f);color:var(--rs);border-color:var(--rs)}
+span.tg[data-t="alarma"]{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.qv{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:12px 0}
+.qv p{margin:0;padding:9px 11px;border-radius:var(--r);border:1px solid var(--rule);background:var(--paper-2);font-size:13.5px;line-height:1.45}
+.qv p::before{display:block;font:700 10.5px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px;color:var(--ink-3)}
+.qv p[data-e="p"]{background:var(--accent-field);border-color:var(--accent)}
+.qv p[data-e="p"]::before{content:"Presente";color:var(--accent-ink)}
+.qv p[data-e="v"]::before{content:"Variable"}
+.qv p[data-e="a"]{border:1px dashed var(--rule);color:var(--ink-3);background:transparent}
+.qv p[data-e="a"]::before{content:"Ausente"}
+.qv p[data-e="k"]{grid-column:1/-1;border:2px solid var(--accent);background:var(--accent-field);font-size:14.5px}
+.qv p[data-e="k"]::before{content:"Signo clave";color:var(--accent-ink)}
+.hb.vi{background:var(--pu-f);color:var(--pu);border-color:var(--pu)}
+.hb.vi .mini{color:inherit;opacity:.88}
+table.vis{min-width:620px}
+table.vis td{min-width:140px}
+table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index:1;background:var(--paper-2);min-width:118px;max-width:150px;font-weight:700;border-right:1px solid var(--rule)}
+.vb-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.tbl>*:not(.vb-bar):not(.vis-w){display:none}
+.tbl td.tap{cursor:pointer}
+.tbl td.tap:not(.rev){color:transparent;background:repeating-linear-gradient(135deg,var(--paper-2),var(--paper-2) 7px,var(--accent-field) 7px,var(--accent-field) 14px)}
+.tbl td.tap:not(.rev) *{visibility:hidden}
+.tbl td.tap.rev{box-shadow:inset 0 0 0 1px var(--accent)}
+.cf{display:block;margin-top:10px;padding-top:8px;border-top:1px dashed var(--accent);font-style:italic;color:var(--ink-2)}
+.cf::before{content:"Contrafactual · ";font-style:normal;font-weight:700;color:var(--accent-ink)}
+.fig{margin:14px 0}
+.fig img{display:block;max-width:100%;height:auto;border-radius:var(--r);border:1px solid var(--rule)}
+.fig figcaption{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin-top:6px}
+@media (min-width:700px){body{font-size:15.5px}.wrap{padding:22px 24px 64px}h1{font-size:28px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- /KIT_HEAD -->
+<h1>Abdomen agudo quirúrgico</h1>
+<nav class="tabs">
+<button type="button" class="tb" data-tab="pan" onclick="show('pan')">Panorama</button>
+<button type="button" class="tb" data-tab="vis" onclick="show('vis')">Visión de conjunto</button>
+<button type="button" class="tb" data-tab="e1" onclick="show('e1')">Apendicitis aguda</button>
+<button type="button" class="tb" data-tab="e2" onclick="show('e2')">Obstrucción intestinal</button>
+<button type="button" class="tb" data-tab="e3" onclick="show('e3')">Perforación de víscera hueca</button>
+<button type="button" class="tb" data-tab="e4" onclick="show('e4')">Isquemia mesentérica aguda</button>
+<button type="button" class="tb" data-tab="e5" onclick="show('e5')">Aneurisma de aorta abdominal roto</button>
+<button type="button" class="tb" data-tab="sin" onclick="show('sin')">Errores clave y referencias</button>
+</nav>
+<section class="tab" data-tab="pan">
+<div class="hb az"><div class="hb-t">El grupo en una frase</div>
+<p>Cinco causas quirúrgicas de dolor abdominal agudo, ordenadas de inflamatoria localizada a vascular grave, que se separan por el inicio, el signo clave y la prueba que decide.</p></div>
+<div class="etapa" data-go="vis"><h3>Visión de conjunto</h3>
+<p class="res">Todas llegan como dolor abdominal agudo en el que hay que decidir en horas si se opera. Las separan tres ejes: el inicio y el curso del dolor, el signo que la delata en el examen y la prueba que decide. Un abdomen blando no tranquiliza, porque la isquemia mesentérica y la rotura aórtica duelen antes de dar peritonismo, mientras que el peritonismo localiza o generaliza según la capa del peritoneo que se irrita. Con ese mapa, la entidad más frecuente en cirugía es la apendicitis, y conviene conocerla a fondo primero.</p>
+<p class="perla">Un abdomen blando con dolor desproporcionado no es benigno: puede ser isquemia o rotura aórtica.</p>
+<button type="button" class="go" data-go="vis" onclick="show('vis')">Ir a Visión de conjunto →</button></div>
+<div class="etapa" data-go="e1"><h3>Apendicitis aguda</h3>
+<p class="res">La apendicitis es la entidad inflamatoria y localizada del grupo, la más benigna del eje. Una luz obstruida eleva la presión, la pared se congestiona y se infecta, y el peritoneo parietal acaba inflamado. El signo que la delata es la defensa en la fosa ilíaca derecha, después de un dolor periumbilical que migra. La conducta decisiva es estratificar con puntajes, pedir imagen si el riesgo es intermedio y operar por laparoscopia en menos de 24 h. Si el dolor no migra sino que viene en oleadas con distensión, el siguiente escalón del eje es mecánico: la obstrucción.</p>
+<p class="perla">Un Alvarado bajo excluye apendicitis; uno alto no la confirma, eso lo hace la imagen o la laparoscopia.</p>
+<button type="button" class="go" data-go="e1" onclick="show('e1')">Ir a Apendicitis aguda →</button></div>
+<div class="etapa" data-go="e2"><h3>Obstrucción intestinal</h3>
+<p class="res">La obstrucción es el escalón mecánico: un obstáculo, casi siempre una brida, una hernia o un tumor, detiene el tránsito. Gas y líquido se acumulan por delante, el intestino se contrae contra la barrera y duele en oleadas. El signo que la delata es la distensión con vómito y sin gases. La conducta decisiva es descomprimir y reponer volumen, y operar si hay peritonismo, estrangulación o isquemia, o si el contraste no avanza. Cuando el problema deja de ser un obstáculo y pasa a ser la propia pared que se abre, el cuadro cambia a una perforación.</p>
+<p class="perla">Heces o diarrea no excluyen obstrucción: la incompleta puede parecer una gastroenteritis.</p>
+<button type="button" class="go" data-go="e2" onclick="show('e2')">Ir a Obstrucción intestinal →</button></div>
+<div class="etapa" data-go="e3"><h3>Perforación de víscera hueca</h3>
+<p class="res">La perforación es el escalón en que la pared se rompe y el contenido pasa a la cavidad. Primero hay peritonitis química por ácido y bilis y luego infección bacteriana con sepsis. El signo que la delata es el abdomen en tabla de inicio súbito. La conducta decisiva es reanimar, dar un antibiótico de amplio espectro y operar sin demora, porque cada hora de retraso pesa en la supervivencia. Cuando la pared no cede por una úlcera sino porque deja de recibir sangre, aparece la rama vascular del eje, que empieza en la isquemia mesentérica.</p>
+<p class="perla">Una radiografía sin aire libre no descarta perforación: si la sospecha persiste, se amplía con TC o contraste.</p>
+<button type="button" class="go" data-go="e3" onclick="show('e3')">Ir a Perforación de víscera hueca →</button></div>
+<div class="etapa" data-go="e4"><h3>Isquemia mesentérica aguda</h3>
+<p class="res">La isquemia mesentérica es la primera entidad vascular: el flujo al intestino se interrumpe por un émbolo, una trombosis, una vena ocluida o un bajo flujo. La isquemia empieza en la mucosa, de modo que el dolor es intenso mientras el examen aún es blando. El signo que la delata es esa desproporción. La conducta decisiva es la angio-TC sin demora, la reanimación y la heparina, y la revascularización con resección de lo necrótico en equipo. Si la falla vascular no está en las ramas viscerales sino en la propia aorta, se llega a la entidad más amenazante.</p>
+<p class="perla">Dolor desproporcionado con abdomen blando: se asume isquemia hasta demostrar lo contrario, y la radiografía simple no ayuda.</p>
+<button type="button" class="go" data-go="e4" onclick="show('e4')">Ir a Isquemia mesentérica aguda →</button></div>
+<div class="etapa" data-go="e5"><h3>Aneurisma de aorta abdominal roto</h3>
+<p class="res">El aneurisma roto es el extremo grave del eje y la amenaza del grupo. Una pared aórtica degenerada no soporta la tensión y se rompe; el hematoma retroperitoneal contiene el sangrado un tiempo, y por eso el paciente puede parecer estable. El signo que lo delata es la masa pulsátil con hipotensión. La conducta decisiva depende de la estabilidad: si está inestable, quirófano sin imagen; si está estable, angio-TC inmediata y reparación endovascular o abierta según la anatomía, con hipotensión permisiva hasta controlar la hemorragia.</p>
+<p class="perla">La estabilidad inicial no excluye rotura contenida: en el inestable el tiempo se gasta en quirófano, no en imágenes.</p>
+<button type="button" class="go" data-go="e5" onclick="show('e5')">Ir a Aneurisma de aorta abdominal roto →</button></div>
+<p class="mini">Esto es el mapa, no el territorio: cada párrafo y cada perla se justifican en su pestaña.</p>
+</section>
+<section class="tab" data-tab="vis">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>Ante un dolor abdominal agudo con peritonismo, obstrucción o dolor desproporcionado, ¿qué rasgo del inicio y del examen orienta hacia cada entidad?</li>
+<li>¿Por qué la isquemia mesentérica y la rotura aórtica pueden presentarse con un abdomen blando o poco localizado, y qué cambia en la conducta por eso?</li>
+<li>¿Qué diferencia un abdomen agudo clínico de uno quirúrgico, y por qué el peritonismo no es el único criterio para operar?</li>
+<li>¿Cómo se explican los signos peritoneales por la capa del peritoneo que se compromete?</li>
+<li>¿Qué hallazgo que falta separa a cada entidad de su vecina más confundible y qué prueba decide?</li>
+</ol></div>
+<span class="badge b-pu">Guías: WSES Jerusalem 2020 [1] · WSES Bologna 2017 [2] · WSES úlcera perforada 2020 [3] · WSES isquemia mesentérica 2022 [4] · ESVS aneurismas aorto-ilíacos 2024 (solo resumen) [5]</span>
+<div class="hb am"><div class="hb-t">Alcance</div>
+<p>Este widget cubre cinco causas quirúrgicas; la patología biliopancreática y las causas médicas de abdomen agudo se remiten a los widgets B y C. No se incluyen datos epidemiológicos ecuatorianos porque no se verificó ninguno. La perforación intestinal (no gastroduodenal) se desarrolla por principios generales de control del foco: no se leyó una guía rectora específica para ella. De la guía ESVS solo se leyó el resumen, de modo que los umbrales numéricos de aneurisma roto quedan marcados para verificar.</p></div>
+<h2>Cómo se separan las cinco entidades</h2>
+<div class="tw"><table class="vis">
+<thead><tr><th></th><th>Apendicitis aguda</th><th>Obstrucción intestinal</th><th>Perforación de víscera hueca</th><th>Isquemia mesentérica aguda</th><th>Aneurisma de aorta abdominal roto</th></tr></thead>
+<tbody>
+<tr><th>Falla central</th><td>Obstrucción de la luz apendicular con inflamación y luego isquemia de pared</td><td>Detención mecánica del tránsito con distensión proximal y riesgo de estrangulación</td><td>Solución de continuidad de la pared con fuga luminal al peritoneo</td><td>Flujo mesentérico insuficiente que lleva a isquemia y necrosis de pared intestinal</td><td>Rotura de la pared aórtica con hemorragia retroperitoneal o libre</td></tr>
+<tr><th>Terreno típico</th><td>Niño o adulto joven; cualquier edad</td><td>Cirugía abdominal previa, hernia o tumor</td><td>Úlcera péptica, AINE o esteroides; divertículo, tumor o isquemia</td><td>Adulto mayor con fibrilación auricular, aterosclerosis o bajo gasto</td><td>Adulto mayor con aneurisma aórtico conocido o no</td></tr>
+<tr><th>Inicio y curso</th><td>Horas a días; migra de epigastrio a fosa ilíaca derecha</td><td>Subagudo; cólico intermitente, vómitos y ausencia de gases</td><td>Súbito, intenso, desde un instante preciso</td><td>Súbito o insidioso; dolor intenso con examen pobre al inicio</td><td>Súbito, dolor abdominal o lumbar con hipotensión</td></tr>
+<tr><th>Síntoma compartido aquí</th><td>Dolor que se localiza y se agrava al moverse</td><td>Dolor cólico con distensión y vómito</td><td>Dolor generalizado que no cede con reposo</td><td>Dolor desproporcionado al examen físico</td><td>Dolor abdominal o lumbar con colapso circulatorio</td></tr>
+<tr><th>Signo que la delata</th><td>Defensa en fosa ilíaca derecha</td><td>Distensión con vómito y sin gases</td><td>Abdomen en tabla</td><td>Dolor desproporcionado con examen blando</td><td>Masa pulsátil con hipotensión</td></tr>
+<tr><th>Negativo pertinente</th><td>Alvarado menor de 5 la hace muy improbable [1]</td><td>Heces o gases conservados no excluyen obstrucción parcial [2]</td><td>Sin aire libre en radiografía no excluye perforación [3]</td><td>Radiografía normal no excluye isquemia mesentérica [4]</td><td>Estabilidad inicial no excluye rotura contenida</td></tr>
+<tr><th>Prueba que decide</th><td>Puntaje clínico más ecografía; TC si duda</td><td>TC con contraste hidrosoluble</td><td>TC abdominal; radiografía si no hay TC</td><td>Angio-TC sin demora</td><td>Angio-TC si estable; quirófano si inestable</td></tr>
+<tr><th>Conducta inicial y quién maneja</th><td>Cirugía general: apendicectomía laparoscópica en menos de 24 h</td><td>Reposo digestivo, sonda y líquidos; cirugía si peritonismo</td><td>Reanimación, antibiótico amplio y laparotomía urgente; cirugía</td><td>Reanimación, heparina, angio-TC; cirugía vascular y general</td><td>Cirugía vascular urgente con hipotensión permisiva</td></tr>
+<tr><th>Amenaza si se pierde</th><td>Perforación, absceso y peritonitis</td><td>Estrangulación, necrosis y perforación</td><td>Sepsis y choque séptico por peritonitis</td><td>Necrosis intestinal irreversible y muerte</td><td>Exsanguinación y muerte</td></tr>
+</tbody></table></div>
+<div class="card"><b>Común al grupo</b>
+<p><b>Qué es un abdomen agudo.</b> Es el síndrome de dolor abdominal de inicio reciente, de horas a pocos días, que obliga a decidir en horas si la causa necesita una intervención. <span class="badge b-am">⚠ Fuente por verificar</span> Redacción propia a partir del sílabo; no se atribuyó a una definición formal.</p>
+<p><b>Clínico frente a quirúrgico.</b> Es quirúrgico cuando la causa se corrige o se frena con una operación o un procedimiento intervencionista (las cinco entidades de este widget); es clínico o médico cuando se maneja sin operar y operar causaría daño (widget C). El peritonismo orienta, pero no basta: la isquemia mesentérica y la rotura aórtica son quirúrgicas con un abdomen todavía blando.</p>
+<p><b>Signos peritoneales y su mecanismo.</b> El dolor visceral nace de la distensión o la isquemia de un órgano hueco, es difuso y de línea media porque las fibras viscerales no localizan. Cuando la inflamación o el contenido irritante toca el peritoneo parietal, que tiene inervación somática precisa, el dolor se localiza, se agrava con la tos o el movimiento y la pared se contrae por reflejo (defensa); si todo el peritoneo está irritado, el abdomen se vuelve rígido (en tabla).</p>
+<p><b>Criterios de gravedad.</b> Hipotensión o signos de choque, sospecha de sepsis (la guía de úlcera perforada propone SOFA y qSOFA para evaluarla [3]) y acidosis láctica: en isquemia mesentérica un lactato mayor de 2 mmol/L se asoció a isquemia intestinal irreversible [4]. Cualquiera de ellos acorta el tiempo disponible antes de operar.</p>
+<p><b>Remisión.</b> Dolor biliar y pancreático (colecistitis, coledocolitiasis, colangitis, pancreatitis): widget B. Dolor sin causa quirúrgica (hipopotasemia con íleo, saturnismo, porfiria): widget C.</p></div>
+<div class="hb ro"><div class="hb-t">Banderas rojas</div>
+<ul>
+<li>Aneurisma de aorta abdominal roto: hipotensión con dolor abdominal o lumbar y masa pulsátil; pierde minutos, no horas.</li>
+<li>Dolor intenso desproporcionado al examen: se asume isquemia mesentérica hasta demostrar lo contrario y se pide angio-TC sin demora [4].</li>
+<li>Abdomen en tabla de inicio súbito o signos de sepsis: perforación hasta demostrar lo contrario.</li>
+<li>Cólico con peritonismo, fiebre o taquicardia en un obstruido: sospecha de estrangulación.</li>
+</ul></div>
+<h2>Pasos del diagnóstico diferencial</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Estabilidad hemodinámica y examen peritoneal: deciden si el paciente va a quirófano o a imagen.</li>
+<li><span class="tg">Añade</span>Lactato, gasometría y hemograma; ECG si hay sospecha de fibrilación auricular como fuente embólica.</li>
+<li><span class="tg">Confirma</span>TC con contraste según la sospecha: angio-TC si se piensa en isquemia o aorta; TC abdominal si se piensa en perforación, obstrucción o apendicitis dudosa [2,3,4,5].</li>
+<li><span class="tg">Solo si</span>Radiografía de tórax o abdomen solo si no hay TC pronta y se sospecha perforación [3].</li>
+<li><span class="tg">No pidas</span>Radiografía simple para descartar isquemia mesentérica: no se recomienda [4].</li>
+<li><span class="tg">Alarma</span>Dolor intenso con abdomen blando, hipotensión con masa pulsátil o peritonitis difusa: quirófano o angio-TC sin esperar más estudios.</li>
+</ol>
+<div class="dc" data-fn="dcVis">
+<div class="dc-t">Simulador · Decisión clínica — predice la entidad antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Hallazgos del examen</span>
+<button type="button" class="chip" data-g="fx" data-v="loc" data-m="1" onclick="ch(this)">Dolor localizado en fosa ilíaca derecha con defensa</button>
+<button type="button" class="chip" data-g="fx" data-v="tabla" data-m="1" onclick="ch(this)">Abdomen en tabla de inicio súbito</button>
+<button type="button" class="chip" data-g="fx" data-v="colico" data-m="1" onclick="ch(this)">Cólico con distensión, vómito y sin gases</button>
+<button type="button" class="chip" data-g="fx" data-v="desp" data-m="1" onclick="ch(this)">Dolor desproporcionado con examen blando</button>
+<button type="button" class="chip" data-g="fx" data-v="shock" data-m="1" onclick="ch(this)">Hipotensión con masa pulsátil o dolor lumbar</button>
+</div>
+<div class="dc-g"><span class="dc-l">Contexto</span>
+<button type="button" class="chip" data-g="ctx" data-v="cx" data-m="1" onclick="ch(this)">Cirugía abdominal previa o hernia</button>
+<button type="button" class="chip" data-g="ctx" data-v="fa" data-m="1" onclick="ch(this)">Fibrilación auricular o aterosclerosis</button>
+<button type="button" class="chip" data-g="ctx" data-v="ulc" data-m="1" onclick="ch(this)">Úlcera, AINE o esteroides</button>
+<button type="button" class="chip" data-g="ctx" data-v="aaa" data-m="1" onclick="ch(this)">Aneurisma aórtico conocido</button>
+<button type="button" class="chip" data-g="ctx" data-v="jov" data-m="1" onclick="ch(this)">Adolescente o adulto joven</button>
+</div>
+<div class="out"></div></div>
+</section>
+<section class="tab" data-tab="e1">
+<div class="hb az"><div class="hb-t">Frente a Perforación de víscera hueca</div>
+<p>Se confunde con ella cuando el líquido de una úlcera perforada desciende hasta la fosa ilíaca derecha; se separa por la migración progresiva del dolor y la defensa localizada, frente al inicio súbito y la rigidez generalizada de la perforación.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué el dolor de la apendicitis empieza vago y luego se localiza, y qué capa de la pared comprometida explica cada fase?</li>
+<li>¿En qué se apoya decidir entre observar, pedir imagen u operar según el riesgo clínico, y qué cambia si el riesgo es bajo o alto?</li>
+<li>¿Por qué los antibióticos pueden sustituir a la cirugía en algunos casos y qué hallazgo lo impide?</li>
+<li>¿Qué cambia en el manejo antibiótico y quirúrgico cuando la apendicitis es complicada?</li>
+</ol></div>
+<span class="badge b-pu">WSES Jerusalem 2020, actualización de la guía de apendicitis aguda, World Society of Emergency Surgery [1]</span>
+<h2>Qué es</h2>
+<p>Inflamación aguda del apéndice vermiforme que, ante la obstrucción de su luz, progresa desde la mucosa hasta la serosa y puede terminar en perforación.</p>
+<div class="card"><b>Criterios.</b> El diagnóstico es clínico, estratificado por puntajes (AIR y AAS rinden mejor que Alvarado), apoyado por ecografía o TC y confirmado en cirugía y por histología rutinaria [1]. En cirugía se gradúa con un sistema intraoperatorio (WSES 2015 o AAST) [1]. <span class="rem">↪ Peritonismo y criterios de gravedad en «Visión de conjunto»</span></div>
+<div class="tw"><table>
+<thead><tr><th>Subtipo</th><th>Por qué existe</th><th>Cómo se reconoce</th></tr></thead>
+<tbody>
+<tr><td>No complicada</td><td>La inflamación queda confinada a la pared antes de que la isquemia la rompa</td><td>Sin gangrena, perforación, flemón ni absceso en imagen o cirugía</td></tr>
+<tr><td>Complicada</td><td>La isquemia transmural rompe la pared y el contenido contamina o se bloquea en flemón o absceso</td><td>Gangrena, perforación, flemón o absceso periapendicular</td></tr>
+</tbody></table></div>
+<p><b>No confundir con…</b></p>
+<div class="tw"><table>
+<thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><td>Patología anexial (quiste torcido, enfermedad pélvica inflamatoria, embarazo ectópico)</td><td>Dolor en fosa ilíaca derecha</td><td>Prueba de embarazo y ecografía ginecológica; antecedentes ginecológicos</td></tr>
+<tr><td>Adenitis mesentérica o ileítis infecciosa</td><td>Dolor en fosa ilíaca derecha y fiebre</td><td>Diarrea, adenopatías en ecografía y apéndice normal en imagen</td></tr>
+<tr><td>Cólico ureteral derecho</td><td>Dolor en fosa ilíaca derecha o flanco</td><td>Hematuria, irradiación a genitales, litiasis en imagen</td></tr>
+</tbody></table></div>
+<h2>Epidemiología</h2>
+<div class="tw"><table>
+<tbody>
+<tr><th>Frecuencia</th><td>5,7 a 50 casos por 100 000 habitantes al año en países desarrollados; riesgo de por vida 9 % en EE. UU., 8 % en Europa y 2 % en África [1]</td></tr>
+<tr><th>Edad</th><td>Pico entre los 10 y los 30 años [1]</td></tr>
+<tr><th>Sexo</th><td>No leído en la fuente de la sesión [VERIFICAR EN FUENTE] [1]</td></tr>
+<tr><th>Factores clave</th><td>La perforación ocurre en 16 a 40 % de los casos; la mortalidad es menor de 0,1 % si no hay gangrena, 0,6 % en la gangrenosa y cercana a 5 % en la perforada [1]</td></tr>
+</tbody></table></div>
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e1-m-1" data-clin="0" data-paso="Obstrucción de la luz apendicular"><div class="det"><p>La luz del apéndice, estrecha y de fondo ciego, se tapa por un apendicolito (concreción de heces endurecidas), hiperplasia del tejido linfoide de la pared o, más raro, un tumor. Hay dos golpes: el terreno (luz estrecha y mucho tejido linfoide en el joven) y el desencadenante (la obstrucción). La presencia de apendicolito aumenta el fracaso del tratamiento sin cirugía [1].</p></div></li>
+<li class="nodo" id="e1-m-2" data-clin="0" data-paso="Moco atrapado eleva la presión luminal"><div class="det"><p>Las células caliciformes de la mucosa siguen secretando moco hacia una luz cerrada, de modo que el volumen y la presión interna suben. Ese estiramiento es el estímulo que se transmite en el nodo siguiente.</p></div></li>
+<li class="nodo" id="e1-m-3" data-clin="1" data-paso="Distensión estimula fibras viscerales: dolor periumbilical"><div class="det"><p>Los aferentes viscerales (fibras nerviosas autónomas que recogen el estiramiento de la pared del apéndice) llevan el aviso a la médula sin precisión de lugar, por eso el dolor se percibe vago en la región periumbilical o epigástrica, con anorexia y náuseas.</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-1" onclick="ir('e1','e1-s-1')">Dolor periumbilical vago con anorexia y náuseas</button></p></div></li>
+<li class="nodo" id="e1-m-4" data-clin="0" data-paso="Congestión venosa y proliferación bacteriana"><div class="det"><p>La presión comprime primero las venas de la pared, de baja presión, y después las arterias; la mucosa isquémica pierde su barrera y las bacterias del propio apéndice invaden la pared mientras los neutrófilos la infiltran. Aquí actúan los antibióticos. <span class="rem">↪ Posología en «Tratamiento»</span></p></div></li>
+<li class="nodo" id="e1-m-5" data-clin="1" data-paso="Inflamación alcanza el peritoneo parietal"><div class="det"><p>El peritoneo parietal, que recubre la pared abdominal, tiene inervación somática precisa: al inflamarse cerca del apéndice (fosa ilíaca derecha), el dolor se localiza, se agrava con el movimiento y la pared se contrae por reflejo.</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-2" onclick="ir('e1','e1-s-2')">Defensa en fosa ilíaca derecha</button> <button type="button" class="xref" data-ir="e1-s-3" onclick="ir('e1','e1-s-3')">Rebote y dolor al toser o moverse</button></p></div></li>
+<li class="nodo" id="e1-m-6" data-clin="1" data-paso="Isquemia transmural con necrosis y perforación"><div class="det"><p>Cuando la arteria apendicular, terminal y sin colaterales, se ocluye por la presión y la inflamación, la pared se necrosa y se rompe; el pus y las heces pasan a la cavidad y se forma un flemón, un absceso o una peritonitis difusa.</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-4" onclick="ir('e1','e1-s-4')">Fiebre, taquicardia y abdomen rígido difuso</button></p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — Por qué se rompe el apéndice</span>
+<p class="fey-b">El apéndice es como un dedo de guante que termina en fondo cerrado. Si algo tapa la entrada, lo que produce por dentro no tiene salida y se acumula, como el agua en una manguera con la punta cerrada: se hincha, la sangre le llega con dificultad, los microbios se multiplican y al final la pared cede.</p>
+<p class="mini fey-c">En medicina esto se llama… obstrucción luminal, distensión, isquemia transmural y perforación.</p>
+<p class="mini fey-c">Dónde falla la comparación: la manguera no se infecta; en el apéndice la propia inflamación también daña la pared, no solo la presión.</p></div>
+<h2>Qué verás</h2>
+<p><span class="rem">↪ Peritonismo y criterios de gravedad en «Visión de conjunto»</span></p>
+<div class="qv">
+<p data-e="p">Anorexia y náuseas</p>
+<p data-e="p">Dolor que empieza periumbilical y migra a la fosa ilíaca derecha</p>
+<p data-e="v">Fiebre baja</p>
+<p data-e="v">Un episodio de vómito</p>
+<p data-e="a">Distensión abdominal marcada</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e1-s-2" onclick="ir('e1','e1-s-2')">Defensa en fosa ilíaca derecha</button></p>
+</div>
+<div class="signo" id="e1-s-1"><h4>Dolor periumbilical vago con anorexia y náuseas</h4><dl>
+<dt>Cómo se reconoce</dt><dd>El paciente señala la zona del ombligo o el epigastrio con la mano abierta, sin un punto exacto, y rechaza comer.</dd>
+<dt>Por qué aparece</dt><dd>La distensión de la luz estimula fibras viscerales que no localizan. <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Distensión estimula fibras viscerales: dolor periumbilical</button></dd>
+<dt>Qué significa</dt><dd>Es la fase inicial, antes de que el peritoneo parietal se afecte; el examen aún puede ser pobre y por eso se estratifica con puntaje.</dd></dl></div>
+<div class="signo" id="e1-s-2"><h4>Defensa en fosa ilíaca derecha</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Al palpar la fosa ilíaca derecha la pared se contrae involuntariamente y el dolor es máximo en ese punto.</dd>
+<dt>Por qué aparece</dt><dd>La inflamación toca el peritoneo parietal, de inervación somática precisa, y el reflejo contrae el músculo. <button type="button" class="xref" data-ir="e1-m-5" onclick="ir('e1','e1-m-5')">← Inflamación alcanza el peritoneo parietal</button></dd>
+<dt>Qué significa</dt><dd>La inflamación ya llegó a la serosa; sube la probabilidad clínica y empuja a imagen o a laparoscopia.</dd></dl></div>
+<div class="signo" id="e1-s-3"><h4>Rebote y dolor al toser o moverse</h4><dl>
+<dt>Cómo se reconoce</dt><dd>El dolor aumenta al soltar la presión de la mano, al toser o al saltar sobre el talón, y el paciente permanece quieto.</dd>
+<dt>Por qué aparece</dt><dd>Cualquier movimiento sacude el peritoneo parietal inflamado y activa sus fibras somáticas. <button type="button" class="xref" data-ir="e1-m-5" onclick="ir('e1','e1-m-5')">← Inflamación alcanza el peritoneo parietal</button></dd>
+<dt>Qué significa</dt><dd>Irritación peritoneal localizada; no distingue por sí sola entre apendicitis no complicada y complicada.</dd></dl></div>
+<div class="signo" id="e1-s-4"><h4>Fiebre, taquicardia y abdomen rígido difuso</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Paciente febril, con frecuencia cardiaca alta y abdomen duro y doloroso en todos los cuadrantes.</dd>
+<dt>Por qué aparece</dt><dd>La perforación esparce contenido infectado por toda la cavidad y la respuesta inflamatoria sistémica sube la temperatura y el pulso. <button type="button" class="xref" data-ir="e1-m-6" onclick="ir('e1','e1-m-6')">← Isquemia transmural con necrosis y perforación</button></dd>
+<dt>Qué significa</dt><dd>Apendicitis complicada con peritonitis: cambia a cirugía urgente y antibiótico con control del foco.</dd></dl></div>
+<div class="tw"><table>
+<thead><tr><th>Signo</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><td>Rovsing (dolor en fosa ilíaca derecha al palpar la izquierda)</td><td>La palpación desplaza gas hacia el ciego y distiende el apéndice inflamado</td><td>Inflamación alcanza el peritoneo parietal</td></tr>
+<tr><td>Psoas (dolor al extender la cadera derecha)</td><td>Un apéndice retrocecal inflamado irrita el músculo psoas al estirarlo</td><td>Inflamación alcanza el peritoneo parietal</td></tr>
+<tr><td>Obturador (dolor al rotar la cadera flexionada)</td><td>Un apéndice pélvico inflamado roza el músculo obturador interno</td><td>Inflamación alcanza el peritoneo parietal</td></tr>
+</tbody></table></div>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — Por qué el dolor cambia de lugar</span>
+<p class="fey-b">Los órganos de adentro avisan como una alarma general en un edificio: sabes que pasa algo, pero no en qué cuarto. Cuando la inflamación toca la pared que recubre el abdomen, que tiene cableado fino, la alarma indica la habitación exacta. Por eso primero duele el centro y después un punto preciso.</p>
+<p class="mini fey-c">En medicina esto se llama… dolor visceral y dolor somático parietal, o irritación peritoneal.</p>
+<p class="mini fey-c">Dónde falla la comparación: una alarma se apaga cuando se arregla el cuarto; si el apéndice se perfora, el dolor puede mejorar un momento y luego generalizarse.</p></div>
+<h2>Diagnóstico <span class="rem">↓ En la tabla</span></h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Estratifica con AIR o AAS; Alvarado solo para excluir.</li>
+<li><span class="tg">Añade</span>Ecografía de compresión graduada junto con los datos clínicos para reducir la TC; TC de baja dosis con contraste si la ecografía es negativa o dudosa [1].</li>
+<li><span class="tg">Confirma</span>Imagen compatible o laparoscopia diagnóstica; la histología cierra el diagnóstico [1].</li>
+<li><span class="tg">Solo si</span>En embarazo: ecografía primero y resonancia si es inconclusa; no diagnostiques solo por síntomas y pide siempre PCR [1].</li>
+<li><span class="tg">No pidas</span>Alvarado para confirmar, ni TC sistemática en bajo riesgo [1].</li>
+<li><span class="tg">Alarma</span>Dolor progresivo o persistente tras imagen negativa, o peritonitis difusa: laparoscopia exploradora sin esperar [1].</li>
+</ol>
+<div class="tw"><table>
+<thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad (descartar/confirmar)</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><td>Alvarado menor de 5</td><td>99 %</td><td>No suficientemente específica</td><td>No establecida; depende de la prevalencia local, sin dato ecuatoriano verificado</td><td>Descartar (SnNout)</td><td>Excluye, no confirma; menos fiable en ancianos y en VIH; en embarazo sube por leucocitosis y náuseas</td><td>[1]</td></tr>
+<tr><td>AIR (Appendicitis Inflammatory Response)</td><td>92 %</td><td>63 %</td><td>No establecida</td><td>Estratificar en bajo, intermedio y alto riesgo</td><td>Mejor desempeño global en una revisión; en bajo riesgo redujo imagen, ingresos y exploraciones negativas; en varones el corte de 2 o menos tuvo E 24,7 % y fallo 2,4 %</td><td>[1]</td></tr>
+<tr><td>AAS (Adult Appendicitis Score)</td><td>No establecida</td><td>93,3 % con 16 puntos o más</td><td>No establecida</td><td>Estratificar; descartar si es bajo</td><td>Menos de 11 puntos: 4 % de las apendicitis y ninguna complicada; en mujeres el corte de 8 o menos tuvo E 63,1 % y fallo 3,7 %</td><td>[1]</td></tr>
+<tr><td>Ecografía de compresión graduada</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar</td><td>Con datos clínicos reduce la TC; método inicial recomendado en embarazo</td><td>[1]</td></tr>
+<tr><td>TC con contraste de baja dosis</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar</td><td>No inferior a la TC de dosis estándar para diagnosticar y distinguir complicada; preferida si la ecografía es negativa</td><td>[1]</td></tr>
+<tr><td>Resonancia magnética</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar en embarazo</td><td>Tras ecografía inconclusa; una resonancia negativa o dudosa no excluye si la sospecha clínica es alta</td><td>[1]</td></tr>
+</tbody></table></div>
+<p class="mini">Glosario: S sensibilidad; E especificidad; VPP y VPN valores predictivos positivo y negativo; SnNout, sensibilidad alta con prueba negativa descarta; TC tomografía computarizada; PCR proteína C reactiva.</p>
+<div class="dc" data-fn="dcE1dx">
+<div class="dc-t">Simulador · Decisión clínica — predice la banda de riesgo antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Puntos de Alvarado</span>
+<button type="button" class="chip" data-g="av" data-v="1" data-m="1" onclick="ch(this)">Dolor que migra a la fosa ilíaca derecha (1)</button>
+<button type="button" class="chip" data-g="av" data-v="1" data-m="1" onclick="ch(this)">Anorexia (1)</button>
+<button type="button" class="chip" data-g="av" data-v="1" data-m="1" onclick="ch(this)">Náuseas o vómito (1)</button>
+<button type="button" class="chip" data-g="av" data-v="2" data-m="1" onclick="ch(this)">Dolor en fosa ilíaca derecha (2)</button>
+<button type="button" class="chip" data-g="av" data-v="1" data-m="1" onclick="ch(this)">Rebote (1)</button>
+<button type="button" class="chip" data-g="av" data-v="1" data-m="1" onclick="ch(this)">Temperatura de 37,3 °C o más (1)</button>
+<button type="button" class="chip" data-g="av" data-v="2" data-m="1" onclick="ch(this)">Leucocitos mayores de 10 000 (2)</button>
+<button type="button" class="chip" data-g="av" data-v="1" data-m="1" onclick="ch(this)">Desviación a la izquierda (1)</button>
+</div>
+<div class="dc-g"><span class="dc-l">Embarazo</span>
+<button type="button" class="chip" data-g="emb" data-v="si" onclick="ch(this)">Embarazada</button>
+<button type="button" class="chip" data-g="emb" data-v="no" onclick="ch(this)">No embarazada</button>
+</div>
+<div class="dc-g"><span class="dc-l">Edad en años</span><input type="number" data-n="edad" min="0" max="110" oninput="ch(this)"></div>
+<div class="out"></div></div>
+<h2>Tratamiento <span class="rem">↓ En la tabla</span></h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Controlar el foco: operar sin demora y cubrir con antibiótico la flora que invade la pared [1].</li>
+<li><span class="tg">De elección</span>Apendicectomía laparoscópica en menos de 24 h con una dosis antibiótica preoperatoria.</li>
+<li><span class="tg">Alternativa</span>Antibióticos sin cirugía en apendicitis no complicada sin apendicolito, tras advertir del riesgo de fracaso; en absceso periapendicular, antibiótico con drenaje percutáneo si no hay experiencia laparoscópica [1].</li>
+<li><span class="tg">Sintomático</span>Analgesia sistémica mientras se completa el estudio.</li>
+<li><span class="tg">Escala</span>Con flemón o absceso, abordaje laparoscópico donde haya experiencia avanzada; con peritonitis difusa, cirugía inmediata [1].</li>
+<li><span class="tg">Reevalúa</span>Tratamiento sin cirugía: si el dolor persiste o progresa, se opera; el antibiótico posoperatorio no pasa de 3 a 5 días con control adecuado del foco [1].</li>
+<li><span class="tg">Especialista</span>Cirugía general; radiología intervencionista para el drenaje percutáneo.</li>
+<li><span class="tg">Evita</span>Operar después de 24 h del ingreso, usar drenes tras apendicectomía complicada en adultos o hacer apendicectomía de intervalo sistemática en menores de 40 años [1].</li>
+</ol>
+<div class="tw"><table>
+<thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><td>Ceftriaxona más metronidazol (profilaxis)</td><td>Ceftriaxona 2 g y metronidazol 500 mg</td><td>IV</td><td>Dosis única</td><td>0 a 60 min antes de la incisión</td><td>Esquema ejemplo de espectro amplio: la guía no nombra fármacos; elegir según la guía local de antibióticos. Cubre la flora entérica que invade la pared. <button type="button" class="xref" data-ir="e1-m-4" onclick="ir('e1','e1-m-4')">← Congestión venosa y proliferación bacteriana</button></td><td>[1]</td></tr>
+<tr><td>Ceftriaxona más metronidazol (apendicitis complicada)</td><td>Ceftriaxona 2 g y metronidazol 500 mg</td><td>IV</td><td>Ceftriaxona cada 24 h; metronidazol cada 8 h</td><td>Hasta 3 a 5 días tras el control del foco</td><td>No prolongar más allá de 3 a 5 días con control adecuado. Evitar en alergia grave a betalactámicos. Ajustar según la guía local. <button type="button" class="xref" data-ir="e1-m-6" onclick="ir('e1','e1-m-6')">← Isquemia transmural con necrosis y perforación</button></td><td>[1]</td></tr>
+<tr><td>Piperacilina-tazobactam (grave o crítico)</td><td>4,5 g</td><td>IV</td><td>Cada 6 h</td><td>Hasta 3 a 5 días tras el control del foco</td><td>Alternativa si hay sepsis; reducir la dosis en insuficiencia renal según la ficha técnica. <button type="button" class="xref" data-ir="e1-m-6" onclick="ir('e1','e1-m-6')">← Isquemia transmural con necrosis y perforación</button></td><td>[1]</td></tr>
+<tr><td>Ciprofloxacino más metronidazol (alergia a betalactámicos)</td><td>Ciprofloxacino 400 mg y metronidazol 500 mg</td><td>IV</td><td>Ciprofloxacino cada 12 h; metronidazol cada 8 h</td><td>Como el esquema de su indicación</td><td>Evitar en embarazo; ajustar en insuficiencia renal según la ficha técnica. <button type="button" class="xref" data-ir="e1-m-4" onclick="ir('e1','e1-m-4')">← Congestión venosa y proliferación bacteriana</button></td><td>[1]</td></tr>
+<tr><td>Antibiótico sin cirugía (apendicitis no complicada)</td><td>Esquema y dosis [VERIFICAR EN FUENTE]</td><td>[VERIFICAR EN FUENTE]</td><td>[VERIFICAR EN FUENTE]</td><td>[VERIFICAR EN FUENTE]</td><td>La guía recomienda discutirlo solo sin apendicolito y no en embarazo; la fuente leída no detalla el esquema. <button type="button" class="xref" data-ir="e1-m-4" onclick="ir('e1','e1-m-4')">← Congestión venosa y proliferación bacteriana</button></td><td>[1]</td></tr>
+<tr><td>Paracetamol</td><td>1 g</td><td>IV</td><td>Cada 6 h, máximo 4 g al día</td><td>Mientras dure el dolor</td><td>Con menos de 50 kg se ajusta por peso según la ficha técnica; no modifica el nodo causal, solo el dolor. <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Distensión estimula fibras viscerales: dolor periumbilical</button></td><td>[1]</td></tr>
+</tbody></table></div>
+<p class="mini">Glosario: IV intravenosa. La referencia [1] sostiene la indicación y la duración, no las dosis, que son de ficha técnica.</p>
+<div class="dc" data-fn="dcE1tx">
+<div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Forma de apendicitis</span>
+<button type="button" class="chip" data-g="forma" data-v="nc" onclick="ch(this)">No complicada sin apendicolito</button>
+<button type="button" class="chip" data-g="forma" data-v="nca" onclick="ch(this)">No complicada con apendicolito</button>
+<button type="button" class="chip" data-g="forma" data-v="abs" onclick="ch(this)">Flemón o absceso periapendicular</button>
+<button type="button" class="chip" data-g="forma" data-v="per" onclick="ch(this)">Peritonitis difusa</button>
+</div>
+<div class="dc-g"><span class="dc-l">Contexto</span>
+<button type="button" class="chip" data-g="ctx" data-v="emb" data-m="1" onclick="ch(this)">Embarazo</button>
+<button type="button" class="chip" data-g="ctx" data-v="alerg" data-m="1" onclick="ch(this)">Alergia grave a betalactámicos</button>
+<button type="button" class="chip" data-g="ctx" data-v="nolap" data-m="1" onclick="ch(this)">Sin experiencia laparoscópica avanzada</button>
+</div>
+<div class="out"></div></div>
+<h2>Seguimiento</h2>
+<p>Cada complicación nace de un nodo de la cadena.</p>
+<div class="card"><b>Absceso intraabdominal o infección de herida.</b> Nacen de la contaminación al romperse la pared. <button type="button" class="xref" data-ir="e1-m-6" onclick="ir('e1','e1-m-6')">← Isquemia transmural con necrosis y perforación</button> Los drenes tras apendicectomía complicada en adultos no previenen el absceso y alargan la estancia, y irrigar tampoco lo evita: se aspira sin lavar [1].</div>
+<div class="card"><b>Recaída tras tratamiento sin cirugía y neoplasia apendicular.</b> Si una concreción o un tumor obstruye de nuevo la luz, el ciclo se repite. <button type="button" class="xref" data-ir="e1-m-1" onclick="ir('e1','e1-m-1')">← Obstrucción de la luz apendicular</button> En mayores de 40 años con apendicitis complicada tratada sin cirugía, la incidencia de neoplasias apendiculares es de 3 a 17 %, de modo que se sugiere colonoscopia y TC con contraste de intervalo; en menores de 40 años no se recomienda apendicectomía de intervalo sistemática salvo síntomas recurrentes [1].</div>
+<div class="card"><b>Histología.</b> Se recomienda histopatología rutinaria tras apendicectomía porque revela neoplasias inesperadas [1].</div>
+</section>
+<section class="tab" data-tab="e2">
+<div class="hb az"><div class="hb-t">Frente a Apendicitis aguda</div>
+<p>Se confunde con ella cuando el dolor es difuso y hay náuseas; se separa por el cólico en oleadas con distensión y ausencia de gases, y por el antecedente de cirugía abdominal previa.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué un obstáculo mecánico produce distensión, vómito y cólico, y cómo la presión intraluminal lleva a la estrangulación?</li>
+<li>¿En qué se apoya intentar el manejo no operatorio y qué hallazgos obligan a operar sin intentarlo?</li>
+<li>¿Por qué el contraste hidrosoluble sirve a la vez para predecir el fracaso y para tratar?</li>
+</ol></div>
+<span class="badge b-pu">WSES Bologna 2017, actualización de la guía de obstrucción adhesiva de intestino delgado, World Society of Emergency Surgery [2]</span>
+<p class="mini">La guía rectora cubre la obstrucción adhesiva; la hernia incarcerada y el tumor se juzgan con los mismos criterios de estrangulación, pero sin recomendaciones específicas leídas.</p>
+<h2>Qué es</h2>
+<p>Detención del paso del contenido intestinal por un obstáculo mecánico, con dolor cólico, distensión, vómito y estreñimiento [2].</p>
+<div class="card"><b>Criterios.</b> Cólico intermitente, distensión y náuseas con o sin vómito, con o sin ausencia de heces; la causa adhesiva se confirma en cirugía o por exclusión de otras causas con TC [2]. <span class="rem">↪ Peritonismo y criterios de gravedad en «Visión de conjunto»</span></div>
+<div class="tw"><table>
+<thead><tr><th>Subtipo</th><th>Por qué existe</th><th>Cómo se reconoce</th></tr></thead>
+<tbody>
+<tr><td>Alta (yeyuno e íleon proximal)</td><td>Hay poco intestino por delante del estómago que llenar, así que el contenido regresa pronto</td><td>Vómito precoz y poca distensión; pueden quedar heces en las primeras horas [2]</td></tr>
+<tr><td>Baja (íleon distal y colon)</td><td>Un tramo largo de intestino se llena antes de que el contenido vuelva a salir</td><td>Distensión marcada, vómito tardío y ausencia de gases y heces</td></tr>
+<tr><td>Según la causa: bridas, hernia o tumor</td><td>El obstáculo es una adherencia, un defecto de pared que atrapa un asa o una masa que ocupa la luz</td><td>Cirugía previa, hernia en el examen o masa en imagen</td></tr>
+</tbody></table></div>
+<p><b>No confundir con…</b></p>
+<div class="tw"><table>
+<thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><td>Íleo paralítico (por ejemplo, hipopotasemia: widget C)</td><td>Distensión y vómito</td><td>Sin cólico ni borborigmos y sin zona de transición en TC</td></tr>
+<tr><td>Gastroenteritis</td><td>Dolor y vómito; la obstrucción incompleta puede dar diarrea acuosa [2]</td><td>Cirugía previa, distensión y zona de transición en TC</td></tr>
+</tbody></table></div>
+<h2>Epidemiología</h2>
+<div class="tw"><table>
+<tbody>
+<tr><th>Frecuencia</th><td>Las adherencias causan 60 % de las obstrucciones de intestino delgado; 20 a 30 % de los casos adhesivos requieren cirugía; la mortalidad hospitalaria es de 3 % por episodio [2]</td></tr>
+<tr><th>Edad</th><td>El riesgo dura toda la vida; la mayoría aparece en los primeros 2 años tras la cirugía y en niños operados alcanzó 12,6 % a los 14,7 años [2]</td></tr>
+<tr><th>Sexo</th><td>No leído en la fuente de la sesión [VERIFICAR EN FUENTE] [2]</td></tr>
+<tr><th>Factores clave</th><td>Cirugía colorrectal, ginecológica oncológica o pediátrica; uno de cada diez pacientes tras colectomía tiene un episodio en 3 años [2]</td></tr>
+</tbody></table></div>
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e2-m-1" data-clin="0" data-paso="Obstáculo mecánico detiene el tránsito"><div class="det"><p>Una brida (cordón fibroso que une asas que normalmente están separadas, huella de una cirugía previa), una hernia que atrapa un asa o un tumor ocluyen la luz. Hay dos golpes: el terreno (adherencias o defecto de pared) y el desencadenante (el asa se angula o queda atrapada).</p></div></li>
+<li class="nodo" id="e2-m-2" data-clin="1" data-paso="Gas y líquido se acumulan antes del obstáculo"><div class="det"><p>Por delante del obstáculo se acumulan el aire deglutido y las secreciones digestivas que el intestino no puede reabsorber; el asa se dilata, el paciente vomita y pierde líquido y potasio, y el potasio bajo debe corregirse [2].</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-2" onclick="ir('e2','e2-s-2')">Distensión con vómito y sin gases</button></p></div></li>
+<li class="nodo" id="e2-m-3" data-clin="1" data-paso="Peristalsis intensa contra el obstáculo"><div class="det"><p>El músculo liso de la pared, estirado, se contrae con más fuerza para vencer la barrera; cada oleada comprime un asa cerrada y genera dolor en cólico y ruidos hidroaéreos aumentados.</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-1" onclick="ir('e2','e2-s-1')">Dolor cólico intermitente con borborigmos</button></p></div></li>
+<li class="nodo" id="e2-m-4" data-clin="0" data-paso="Presión intraluminal comprime vasos de la pared"><div class="det"><p>La presión dentro del asa colapsa primero las venas y los capilares de la pared; sigue el edema del mesenterio (un predictor de cirugía [2]) y, en un asa cerrada, falla también el flujo arterial. Es el paso que decide si el cuadro es reversible.</p></div></li>
+<li class="nodo" id="e2-m-5" data-clin="1" data-paso="Estrangulación: isquemia, necrosis y perforación"><div class="det"><p>La pared sin riego muere, pierde su barrera y las bacterias pasan a la cavidad; la perforación causa peritonitis. El examen físico detecta la estrangulación con baja sensibilidad, por eso se apoya en TC y lactato [2].</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-3" onclick="ir('e2','e2-s-3')">Dolor continuo con fiebre y peritonismo</button></p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — Por qué duele y por qué puede morir el intestino</span>
+<p class="fey-b">Es como un túnel con un camión atravesado. Detrás se juntan los coches y la presión sube; los motores aceleran contra el atasco, y eso duele en oleadas. Si el atasco se prolonga o el camión aprieta las calles que dan sangre al barrio, ese tramo se queda sin alimento y se echa a perder.</p>
+<p class="mini fey-c">En medicina esto se llama… obstrucción mecánica, distensión proximal, cólico y estrangulación.</p>
+<p class="mini fey-c">Dónde falla la comparación: los coches no producen líquido propio que agrande el atasco; el intestino sí secreta y se inflama.</p></div>
+<h2>Qué verás</h2>
+<p><span class="rem">↪ Peritonismo y criterios de gravedad en «Visión de conjunto»</span></p>
+<div class="qv">
+<p data-e="p">Dolor cólico en oleadas</p>
+<p data-e="p">Náuseas con o sin vómito</p>
+<p data-e="v">Diarrea acuosa si la obstrucción es incompleta</p>
+<p data-e="v">Fiebre</p>
+<p data-e="a">Rigidez abdominal</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e2-s-2" onclick="ir('e2','e2-s-2')">Distensión con vómito y sin gases</button></p>
+</div>
+<div class="signo" id="e2-s-1"><h4>Dolor cólico intermitente con borborigmos</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Dolor que viene y va en oleadas, con ruidos intestinales fuertes que el paciente o el examinador oyen.</dd>
+<dt>Por qué aparece</dt><dd>El intestino se contrae contra el obstáculo y cada oleada comprime un asa cerrada. <button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">← Peristalsis intensa contra el obstáculo</button></dd>
+<dt>Qué significa</dt><dd>La pared aún tiene fuerza y el asa sigue viva; si el dolor se vuelve continuo, sospecha estrangulación.</dd></dl></div>
+<div class="signo" id="e2-s-2"><h4>Distensión con vómito y sin gases</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Abdomen distendido y timpánico, vómito y falta de salida de gases o heces; la diarrea acuosa y las heces presentes no la excluyen [2].</dd>
+<dt>Por qué aparece</dt><dd>El contenido se acumula por delante del obstáculo y no avanza. <button type="button" class="xref" data-ir="e2-m-2" onclick="ir('e2','e2-m-2')">← Gas y líquido se acumulan antes del obstáculo</button></dd>
+<dt>Qué significa</dt><dd>Obstrucción mecánica probable; la distensión marcada con adherencias complejas desaconseja la laparoscopia.</dd></dl></div>
+<div class="signo" id="e2-s-3"><h4>Dolor continuo con fiebre y peritonismo</h4><dl>
+<dt>Cómo se reconoce</dt><dd>El dolor deja de ser cólico, aparecen defensa, fiebre y taquicardia.</dd>
+<dt>Por qué aparece</dt><dd>La pared isquémica inflama el peritoneo o se perfora. <button type="button" class="xref" data-ir="e2-m-5" onclick="ir('e2','e2-m-5')">← Estrangulación: isquemia, necrosis y perforación</button></dd>
+<dt>Qué significa</dt><dd>Contraindica el manejo no operatorio y obliga a operar [2].</dd></dl></div>
+<h2>Diagnóstico <span class="rem">↓ En la tabla</span></h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>TC con contraste oral hidrosoluble si hay duda diagnóstica o riesgo de isquemia.</li>
+<li><span class="tg">Añade</span>Hemograma, lactato, electrolitos, PCR y urea con creatinina; el potasio bajo es frecuente y se corrige [2].</li>
+<li><span class="tg">Confirma</span>Zona de transición con causa identificable en TC; la causa adhesiva es por exclusión [2].</li>
+<li><span class="tg">Solo si</span>Basta el contraste hidrosoluble con radiografía a las 24 h si el diagnóstico es seguro y no hay indicación de cirugía inmediata; ecografía y resonancia en embarazo [2].</li>
+<li><span class="tg">No pidas</span>Radiografía simple como estudio definitivo: no detecta peritonitis ni estrangulación temprana [2].</li>
+<li><span class="tg">Alarma</span>Asa cerrada, isquemia, líquido libre o peritonismo: cirugía sin demora [2].</li>
+</ol>
+<div class="tw"><table>
+<thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad (descartar/confirmar)</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><td>Examen físico</td><td>48 % para estrangulación</td><td>No establecida</td><td>No establecida; depende de la prevalencia local sin dato ecuatoriano</td><td>No descarta estrangulación</td><td>Baja sensibilidad incluso en manos expertas; busca peritonismo y hernias</td><td>[2]</td></tr>
+<tr><td>Radiografía simple</td><td>Cerca de 70 %</td><td>Baja</td><td>No establecida</td><td>Orienta, no confirma</td><td>Niveles hidroaéreos, asas dilatadas y ausencia de gas en colon; detecta neumoperitoneo; no distingue causas</td><td>[2]</td></tr>
+<tr><td>Contraste hidrosoluble con radiografía a las 24 h</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar fracaso del manejo no operatorio</td><td>Si no llega al colon en 24 h predice la necesidad de cirugía y acorta la estancia</td><td>[2]</td></tr>
+<tr><td>TC con contraste hidrosoluble</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar la causa y decidir</td><td>Cerca de 90 % de precisión para predecir estrangulación; asa cerrada, isquemia y líquido libre indican operar</td><td>[2]</td></tr>
+<tr><td>Laboratorio (PCR, leucocitos, lactato)</td><td>Baja</td><td>Baja</td><td>No establecida</td><td>Apoyo</td><td>PCR mayor de 75 y leucocitos mayores de 10 000 sugieren peritonitis, con sensibilidad y especificidad bajas</td><td>[2]</td></tr>
+</tbody></table></div>
+<p class="mini">Glosario: S sensibilidad; E especificidad; VPP y VPN valores predictivos; TC tomografía computarizada; PCR proteína C reactiva.</p>
+<h2>Tratamiento <span class="rem">↓ En la tabla</span></h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Descomprimir el asa y reponer volumen mientras se vigila la estrangulación [2].</li>
+<li><span class="tg">De elección</span>Manejo no operatorio: nada por vía oral, descompresión y reposición hídrica y electrolítica.</li>
+<li><span class="tg">Alternativa</span>Sonda nasogástrica o tubo intestinal largo; un ensayo pequeño favoreció el tubo largo, pero se interpreta con cautela [2].</li>
+<li><span class="tg">Sintomático</span>Corregir deshidratación, desequilibrio electrolítico y prevenir aspiración [2].</li>
+<li><span class="tg">Escala</span>Si el contraste no llega al colon a las 24 h, o hay peritonitis, estrangulación o isquemia, operar [2].</li>
+<li><span class="tg">Reevalúa</span>Tolerar hasta 72 h de manejo no operatorio como límite aceptado por consenso; más allá es debatido si el débito persiste [2].</li>
+<li><span class="tg">Especialista</span>Cirugía general; laparoscopia solo en casos simples y seleccionados [2].</li>
+<li><span class="tg">Evita</span>Operar con laparoscopia cuando hay mucha distensión y adherencias complejas por el riesgo de lesión intestinal [2].</li>
+</ol>
+<div class="tw"><table>
+<thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><td>Cloruro de potasio</td><td>Según potasio sérico; hasta 10 mEq por hora por vía periférica</td><td>IV</td><td>Infusión continua</td><td>Hasta normalizar el potasio</td><td>Repone lo perdido por vómito y secuestro; vigilar función renal. <button type="button" class="xref" data-ir="e2-m-2" onclick="ir('e2','e2-m-2')">← Gas y líquido se acumulan antes del obstáculo</button></td><td>[2]</td></tr>
+<tr><td>Cristaloide intravenoso</td><td>Volumen [VERIFICAR EN FUENTE]</td><td>IV</td><td>Según hemodinamia y diuresis</td><td>Hasta euvolemia</td><td>La guía exige reposición hídrica sin fijar volumen; corrige la pérdida del nodo de acumulación. <button type="button" class="xref" data-ir="e2-m-2" onclick="ir('e2','e2-m-2')">← Gas y líquido se acumulan antes del obstáculo</button></td><td>[2]</td></tr>
+<tr><td>Contraste hidrosoluble oral o por sonda</td><td>Dosis [VERIFICAR EN FUENTE]</td><td>Oral o por sonda nasogástrica</td><td>Una vez</td><td>Radiografía de control a las 24 h</td><td>Predice el fracaso y puede tener efecto terapéutico; mejora el rendimiento de la TC. <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Presión intraluminal comprime vasos de la pared</button></td><td>[2]</td></tr>
+</tbody></table></div>
+<p class="mini">Glosario: IV intravenosa; mEq miliequivalentes; TC tomografía computarizada.</p>
+<div class="dc" data-fn="dcE2tx">
+<div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Signos de gravedad</span>
+<button type="button" class="chip" data-g="grav" data-v="si" onclick="ch(this)">Peritonitis, estrangulación o isquemia en examen o TC</button>
+<button type="button" class="chip" data-g="grav" data-v="no" onclick="ch(this)">Sin signos de gravedad</button>
+</div>
+<div class="dc-g"><span class="dc-l">Contraste a las 24 h</span>
+<button type="button" class="chip" data-g="cont" data-v="llego" onclick="ch(this)">Llegó al colon</button>
+<button type="button" class="chip" data-g="cont" data-v="no" onclick="ch(this)">No llegó al colon</button>
+<button type="button" class="chip" data-g="cont" data-v="na" onclick="ch(this)">Aún no se evaluó</button>
+</div>
+<div class="dc-g"><span class="dc-l">Horas de manejo no operatorio</span><input type="number" data-n="horas" min="0" max="240" oninput="ch(this)"></div>
+<div class="out"></div></div>
+<h2>Seguimiento</h2>
+<div class="card"><b>Recurrencia.</b> Como las adherencias persisten, 12 % de los tratados sin cirugía reingresa al año y 20 % a los 5 años; tras cirugía, 8 % y 16 %. <button type="button" class="xref" data-ir="e2-m-1" onclick="ir('e2','e2-m-1')">← Obstáculo mecánico detiene el tránsito</button> La laparoscopia en la cirugía previa reduce la formación de adherencias de forma modesta y las barreras de ácido hialurónico y carboximetilcelulosa redujeron las reoperaciones por obstrucción en cirugía colorrectal [2].</div>
+<div class="card"><b>Deshidratación, lesión renal y aspiración.</b> Nacen de la pérdida de líquido y de la distensión gástrica retrógrada. <button type="button" class="xref" data-ir="e2-m-2" onclick="ir('e2','e2-m-2')">← Gas y líquido se acumulan antes del obstáculo</button></div>
+<div class="card"><b>Necrosis y perforación.</b> Si se retrasa la cirugía en un asa estrangulada aumentan la morbilidad y la mortalidad. <button type="button" class="xref" data-ir="e2-m-5" onclick="ir('e2','e2-m-5')">← Estrangulación: isquemia, necrosis y perforación</button> En embarazo el fracaso del manejo no operatorio fue muy frecuente en una serie pequeña, y en ancianos pesan la fragilidad y las comorbilidades [2].</div>
+</section>
+<section class="tab" data-tab="e3">
+<div class="hb az"><div class="hb-t">Frente a Apendicitis aguda</div>
+<p>Se confunde con ella cuando el contenido de una úlcera perforada desciende hasta la fosa ilíaca derecha; se separa por el inicio súbito, la rigidez generalizada y el aire libre en la imagen.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué la fuga de contenido produce primero una peritonitis química y después una infecciosa, y cómo se refleja eso en la clínica?</li>
+<li>¿En qué se apoya operar sin demora y qué empeora el pronóstico con cada hora de retraso?</li>
+<li>¿Por qué se repara con sutura una perforación menor de 2 cm y se individualiza una mayor, y cuándo se elige laparoscopia o cirugía abierta?</li>
+</ol></div>
+<span class="badge b-pu">WSES úlcera péptica perforada y sangrante 2020 (parte de úlcera perforada), World Society of Emergency Surgery [3]</span>
+<p class="mini">La guía rectora cubre la perforación gastroduodenal por úlcera; la perforación intestinal se aborda por principios generales de control del foco, sin guía específica leída.</p>
+<h2>Qué es</h2>
+<p>Solución de continuidad en la pared de una víscera hueca que vierte su contenido a la cavidad peritoneal y produce peritonitis.</p>
+<div class="card"><b>Criterios.</b> Dolor súbito con signos de peritonitis; con neumoperitoneo significativo, fuga de contraste o peritonitis se recomienda el tratamiento operatorio [3]. <span class="rem">↪ Peritonismo y criterios de gravedad en «Visión de conjunto»</span></div>
+<div class="tw"><table>
+<thead><tr><th>Subtipo</th><th>Por qué existe</th><th>Cómo se reconoce</th></tr></thead>
+<tbody>
+<tr><td>Gastroduodenal (úlcera péptica)</td><td>Una mucosa debilitada por antiinflamatorios no esteroideos, esteroides o infección se erosiona hasta atravesar toda la pared; el contenido es ácido y biliar</td><td>Dolor epigástrico súbito, antecedente ulceroso o de AINE, aire libre en imagen</td></tr>
+<tr><td>Intestinal (delgado o colon)</td><td>Un divertículo inflamado, un tumor, la isquemia o la presión de una obstrucción cerrada rompen la pared; el contenido tiene bacterias desde el inicio</td><td>Peritonitis con contaminación fecal; causa subyacente visible en TC</td></tr>
+</tbody></table></div>
+<p><b>No confundir con…</b></p>
+<div class="tw"><table>
+<thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><td>Pancreatitis aguda (widget B)</td><td>Dolor epigástrico intenso y vómito</td><td>Sin aire libre y con elevación de enzimas pancreáticas</td></tr>
+<tr><td>Infarto agudo de miocardio inferior</td><td>Dolor epigástrico y náuseas</td><td>Cambios en el ECG y abdomen blando</td></tr>
+</tbody></table></div>
+<h2>Epidemiología</h2>
+<div class="tw"><table>
+<tbody>
+<tr><th>Frecuencia</th><td>La úlcera péptica tiene una prevalencia de por vida de 5 a 10 % y una incidencia de 0,1 a 0,3 % por año; entre 10 y 20 % presentan complicaciones [3]</td></tr>
+<tr><th>Edad</th><td>En mayores de 70 años se recomienda operar lo antes posible [3]</td></tr>
+<tr><th>Sexo</th><td>No leído en la fuente de la sesión [VERIFICAR EN FUENTE] [3]</td></tr>
+<tr><th>Factores clave</th><td>El uso de AINE o esteroides, la edad avanzada y la comorbilidad se asocian a mayor mortalidad; también el choque, la acidosis, la albúmina baja y el retraso mayor de 24 h [3]</td></tr>
+</tbody></table></div>
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e3-m-1" data-clin="0" data-paso="Úlcera o isquemia debilita la pared"><div class="det"><p>Hay dos golpes: el terreno, una mucosa debilitada, y el desencadenante, la erosión que atraviesa toda la pared. En la úlcera, los AINE inhiben la ciclooxigenasa-1 (enzima de la mucosa gástrica que produce prostaglandinas protectoras), con menos moco y bicarbonato, y el ácido y la infección completan la erosión; en el intestino, el divertículo, el tumor o la isquemia cumplen ese papel.</p></div></li>
+<li class="nodo" id="e3-m-2" data-clin="1" data-paso="Pared rota: contenido sale al peritoneo"><div class="det"><p>La pared se abre y el contenido luminal pasa a la cavidad de forma brusca, en el instante de la rotura; ese es el comienzo súbito del dolor.</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-1" onclick="ir('e3','e3-s-1')">Dolor súbito e intenso, en puñalada</button></p></div></li>
+<li class="nodo" id="e3-m-3" data-clin="1" data-paso="Peritonitis química por ácido y bilis"><div class="det"><p>El ácido gástrico y la bilis irritan el peritoneo parietal, de inervación somática precisa, y contraen reflejamente toda la musculatura de la pared. Aquí actúa la supresión ácida. <span class="rem">↪ Posología en «Tratamiento»</span></p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-2" onclick="ir('e3','e3-s-2')">Abdomen en tabla</button></p></div></li>
+<li class="nodo" id="e3-m-4" data-clin="1" data-paso="Aire libre bajo el diafragma"><div class="det"><p>El gas que sale del lumen asciende hasta la parte más alta de la cavidad, bajo el diafragma, y es visible en la radiografía de tórax en bipedestación o en la TC como neumoperitoneo.</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-3" onclick="ir('e3','e3-s-3')">Aire libre en la imagen</button></p></div></li>
+<li class="nodo" id="e3-m-5" data-clin="1" data-paso="Contaminación bacteriana causa sepsis"><div class="det"><p>Con las horas, la flora polimicrobiana (Gram negativos, Gram positivos, anaerobios y levaduras) se multiplica en la cavidad, pasa a la sangre y desencadena sepsis. Aquí actúan los antibióticos y el control quirúrgico del foco [3]. <span class="rem">↪ Posología en «Tratamiento»</span></p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-4" onclick="ir('e3','e3-s-4')">Fiebre, taquicardia e hipotensión</button></p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — Qué pasa cuando algo se rompe por dentro</span>
+<p class="fey-b">Imagina una bolsa de jugo muy ácido que se rompe dentro de una mochila cerrada. Primero el jugo quema todo lo que toca y el aire de la bolsa queda atrapado arriba. Más tarde, los microbios que vivían en el jugo se multiplican y estropean todo el contenido de la mochila.</p>
+<p class="mini fey-c">En medicina esto se llama… peritonitis química, neumoperitoneo y peritonitis bacteriana secundaria.</p>
+<p class="mini fey-c">Dónde falla la comparación: la mochila no se defiende; el peritoneo responde con líquido y a veces el epiplón tapa el agujero y sella la perforación.</p></div>
+<h2>Qué verás</h2>
+<p><span class="rem">↪ Peritonismo y criterios de gravedad en «Visión de conjunto»</span></p>
+<div class="qv">
+<p data-e="p">Dolor súbito en epigastrio o en el abdomen</p>
+<p data-e="p">Inmovilidad del paciente porque cualquier movimiento duele</p>
+<p data-e="v">Vómito</p>
+<p data-e="v">Fiebre tardía</p>
+<p data-e="a">Cólico intermitente</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e3-s-2" onclick="ir('e3','e3-s-2')">Abdomen en tabla</button></p>
+</div>
+<div class="signo" id="e3-s-1"><h4>Dolor súbito e intenso, en puñalada</h4><dl>
+<dt>Cómo se reconoce</dt><dd>El paciente recuerda la hora exacta en que empezó y describe un dolor que lo detuvo.</dd>
+<dt>Por qué aparece</dt><dd>La pared se rompe y el contenido irritante llega de golpe al peritoneo. <button type="button" class="xref" data-ir="e3-m-2" onclick="ir('e3','e3-m-2')">← Pared rota: contenido sale al peritoneo</button></dd>
+<dt>Qué significa</dt><dd>Perforación hasta demostrar lo contrario; el comienzo instantáneo la separa de la apendicitis, que progresa en horas.</dd></dl></div>
+<div class="signo" id="e3-s-2"><h4>Abdomen en tabla</h4><dl>
+<dt>Cómo se reconoce</dt><dd>La pared abdominal está dura de forma uniforme, el paciente no tolera la palpación y respira superficialmente.</dd>
+<dt>Por qué aparece</dt><dd>El contenido ácido irrita todo el peritoneo parietal y el reflejo contrae toda la pared. <button type="button" class="xref" data-ir="e3-m-3" onclick="ir('e3','e3-m-3')">← Peritonitis química por ácido y bilis</button></dd>
+<dt>Qué significa</dt><dd>Peritonitis difusa: indica operar tras reanimar [3].</dd></dl></div>
+<div class="signo" id="e3-s-3"><h4>Aire libre en la imagen</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Gas bajo el diafragma en la radiografía de tórax o neumoperitoneo en la TC; su ausencia no excluye perforación.</dd>
+<dt>Por qué aparece</dt><dd>El gas del lumen sube hasta el punto más alto de la cavidad. <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Aire libre bajo el diafragma</button></dd>
+<dt>Qué significa</dt><dd>Confirma solución de continuidad; si no se ve y la sospecha persiste, se añade contraste hidrosoluble [3].</dd></dl></div>
+<div class="signo" id="e3-s-4"><h4>Fiebre, taquicardia e hipotensión</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Paciente febril, con pulso rápido, presión baja y a veces confusión.</dd>
+<dt>Por qué aparece</dt><dd>La infección peritoneal pasa a la sangre y causa sepsis. <button type="button" class="xref" data-ir="e3-m-5" onclick="ir('e3','e3-m-5')">← Contaminación bacteriana causa sepsis</button></dd>
+<dt>Qué significa</dt><dd>La sepsis exige reconocimiento precoz para evitar la disfunción de órganos y reducir la mortalidad [3].</dd></dl></div>
+<h2>Diagnóstico <span class="rem">↓ En la tabla</span></h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>TC abdominal; radiografía solo si no hay TC pronta.</li>
+<li><span class="tg">Añade</span>Laboratorio de rutina y gasometría arterial; SOFA o qSOFA para evaluar la sepsis [3].</li>
+<li><span class="tg">Confirma</span>Aire libre o fuga de contraste en la TC [3].</li>
+<li><span class="tg">Solo si</span>Si no se ve aire libre y persiste la sospecha, repetir la imagen con contraste hidrosoluble oral o por sonda [3].</li>
+<li><span class="tg">No pidas</span>Ninguna radiografía como argumento para descartar: una imagen sin aire libre no la excluye [3].</li>
+<li><span class="tg">Alarma</span>Sepsis o choque: reanimar y operar sin retrasar [3].</li>
+</ol>
+<div class="tw"><table>
+<thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad (descartar/confirmar)</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><td>TC abdominal</td><td>No establecida</td><td>No establecida</td><td>No establecida; depende de la prevalencia local sin dato ecuatoriano</td><td>Confirmar</td><td>Recomendada en abdomen agudo con sospecha de úlcera perforada; la triple vía con contraste oral hidrosoluble puede mejorar el rendimiento</td><td>[3]</td></tr>
+<tr><td>Radiografía de tórax o abdomen</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar si hay aire libre; no descarta</td><td>Estudio inicial solo si no hay TC pronta; busca gas bajo el diafragma</td><td>[3]</td></tr>
+<tr><td>Contraste hidrosoluble</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar fuga o sellado</td><td>Se suma si no hay aire libre y persiste la sospecha; también define perforación sellada para un manejo no operatorio excepcional</td><td>[3]</td></tr>
+<tr><td>Escalas Boey, PULP y ASA</td><td>No aplica</td><td>No aplica</td><td>No aplica</td><td>Pronóstico, no diagnóstico</td><td>ASA y PULP predijeron la mortalidad igual y mejor que Boey; la hipoalbuminemia fue el mejor predictor único</td><td>[3]</td></tr>
+</tbody></table></div>
+<p class="mini">Glosario: S sensibilidad; E especificidad; VPP y VPN valores predictivos; TC tomografía computarizada; SOFA y qSOFA escalas de fallo orgánico; ASA clasificación de la Sociedad Americana de Anestesiólogos; PULP escala pronóstica de úlcera perforada.</p>
+<h2>Tratamiento <span class="rem">↓ En la tabla</span></h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Reanimar, iniciar antibiótico y controlar el foco quirúrgicamente lo antes posible [3].</li>
+<li><span class="tg">De elección</span>Reparación quirúrgica urgente tras reanimar y dar antibiótico amplio.</li>
+<li><span class="tg">Alternativa</span>Manejo no operatorio solo en casos extremadamente seleccionados con perforación sellada en el contraste hidrosoluble; no es de rutina [3].</li>
+<li><span class="tg">Sintomático</span>Reanimación con líquidos y soporte hemodinámico guiado por monitorización según la sepsis [3].</li>
+<li><span class="tg">Escala</span>Menor de 2 cm: sutura primaria; el parche de epiplón no ofrece beneficio demostrado. De 2 cm o más: según la localización; gástrica con sospecha de malignidad, resección con congelación; duodenal grande, reparación con o sin exclusión pilórica y drenaje biliar [3].</li>
+<li><span class="tg">Reevalúa</span>Antibiótico de 3 a 5 días o hasta normalizar los marcadores inflamatorios [3].</li>
+<li><span class="tg">Especialista</span>Cirugía general urgente; en paciente estable y con equipo experto se sugiere laparoscopia, en inestable cirugía abierta [3].</li>
+<li><span class="tg">Evita</span>Retrasar la cirugía, la duodenostomía salvo situación extrema y la reparación sin sutura, para la que no hay recomendación [3].</li>
+</ol>
+<div class="tw"><table>
+<thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><td>Piperacilina-tazobactam</td><td>4,5 g</td><td>IV</td><td>Cada 6 h</td><td>3 a 5 días o hasta normalizar los marcadores inflamatorios</td><td>Cubre Gram negativos, Gram positivos y anaerobios; la guía pide un esquema empírico de amplio espectro sin nombrar fármaco; reducir dosis en insuficiencia renal según ficha y desescalar con cultivos. <button type="button" class="xref" data-ir="e3-m-5" onclick="ir('e3','e3-m-5')">← Contaminación bacteriana causa sepsis</button></td><td>[3]</td></tr>
+<tr><td>Ciprofloxacino más metronidazol (alergia a betalactámicos)</td><td>Ciprofloxacino 400 mg y metronidazol 500 mg</td><td>IV</td><td>Ciprofloxacino cada 12 h; metronidazol cada 8 h</td><td>3 a 5 días</td><td>Alternativa con igual cobertura; ajustar en insuficiencia renal. <button type="button" class="xref" data-ir="e3-m-5" onclick="ir('e3','e3-m-5')">← Contaminación bacteriana causa sepsis</button></td><td>[3]</td></tr>
+<tr><td>Pantoprazol</td><td>40 mg [VERIFICAR EN FUENTE]</td><td>IV</td><td>Cada 12 h [VERIFICAR EN FUENTE]</td><td>Hasta tolerar la vía oral</td><td>Esquema habitual; la guía leída no fija la dosis en perforación. Reduce la producción de ácido que irrita el peritoneo. <button type="button" class="xref" data-ir="e3-m-3" onclick="ir('e3','e3-m-3')">← Peritonitis química por ácido y bilis</button></td><td>[3]</td></tr>
+</tbody></table></div>
+<p class="mini">Glosario: IV intravenosa; h horas.</p>
+<div class="dc" data-fn="dcE3tx">
+<div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Estabilidad</span>
+<button type="button" class="chip" data-g="est" data-v="estable" onclick="ch(this)">Hemodinámicamente estable</button>
+<button type="button" class="chip" data-g="est" data-v="inestable" onclick="ch(this)">Inestable o en choque</button>
+</div>
+<div class="dc-g"><span class="dc-l">Localización y tamaño</span>
+<button type="button" class="chip" data-g="tam" data-v="menor" onclick="ch(this)">Úlcera gastroduodenal menor de 2 cm</button>
+<button type="button" class="chip" data-g="tam" data-v="gastrica" onclick="ch(this)">Úlcera gástrica de 2 cm o más</button>
+<button type="button" class="chip" data-g="tam" data-v="duodenal" onclick="ch(this)">Úlcera duodenal de 2 cm o más</button>
+<button type="button" class="chip" data-g="tam" data-v="intestinal" onclick="ch(this)">Perforación intestinal</button>
+</div>
+<div class="dc-g"><span class="dc-l">Contexto</span>
+<button type="button" class="chip" data-g="ctx" data-v="lap" data-m="1" onclick="ch(this)">Hay equipo y experiencia laparoscópica</button>
+<button type="button" class="chip" data-g="ctx" data-v="alerg" data-m="1" onclick="ch(this)">Alergia grave a betalactámicos</button>
+<button type="button" class="chip" data-g="ctx" data-v="sellada" data-m="1" onclick="ch(this)">Perforación sellada en el contraste hidrosoluble</button>
+</div>
+<div class="out"></div></div>
+<h2>Seguimiento</h2>
+<div class="card"><b>Fuga de la sutura y absceso residual.</b> Nacen de la contaminación y del tiempo con la pared rota. <button type="button" class="xref" data-ir="e3-m-2" onclick="ir('e3','e3-m-2')">← Pared rota: contenido sale al peritoneo</button> Un retraso de presentación mayor de 9 h aumentó las fugas de la sutura y un intervalo mayor de 36 h hasta la cirugía aumentó la mortalidad; en las primeras 24 h cada hora de retraso se asoció a una caída de 2,4 % en la probabilidad de supervivencia [3].</div>
+<div class="card"><b>Sepsis y disfunción orgánica.</b> Siguen a la contaminación bacteriana no controlada. <button type="button" class="xref" data-ir="e3-m-5" onclick="ir('e3','e3-m-5')">← Contaminación bacteriana causa sepsis</button> Se vigilan con escalas de sepsis y se ajusta el antibiótico a cultivos.</div>
+<div class="card"><b>Causa de fondo.</b> Tras la reparación se busca y se trata la causa que debilitó la pared, y se suspende el AINE; la erradicación de Helicobacter pylori se recomienda para la úlcera sangrante y para la perforada [VERIFICAR EN FUENTE] [3]. <button type="button" class="xref" data-ir="e3-m-1" onclick="ir('e3','e3-m-1')">← Úlcera o isquemia debilita la pared</button></div>
+</section>
+<section class="tab" data-tab="e4">
+<div class="hb az"><div class="hb-t">Frente a Obstrucción intestinal</div>
+<p>Se confunde con ella cuando hay vómito, distensión o diarrea; se separa por el dolor desproporcionado con examen blando al inicio y por el terreno vascular (fibrilación auricular, aterosclerosis, bajo gasto).</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué el dolor es desproporcionado al examen en la fase inicial y qué significa que aparezca peritonismo?</li>
+<li>¿Qué cambia en la conducta según el mecanismo: embólico, trombótico, venoso o no oclusivo?</li>
+<li>¿Por qué cada hora de retraso empeora el pronóstico y qué justifica pedir angio-TC aun con lesión renal?</li>
+</ol></div>
+<span class="badge b-pu">WSES isquemia mesentérica aguda 2022, actualización de la guía, World Society of Emergency Surgery [4]</span>
+<h2>Qué es</h2>
+<p>Interrupción brusca del flujo sanguíneo a una porción del intestino que, sin reperfusión, avanza a necrosis; sin tratamiento la mortalidad ronda el 50 % [4].</p>
+<div class="card"><b>Criterios.</b> El dolor abdominal intenso desproporcionado al examen debe asumirse isquemia mesentérica hasta demostrar lo contrario, y la angio-TC confirma el diagnóstico y el mecanismo [4]. <span class="rem">↪ Peritonismo y criterios de gravedad en «Visión de conjunto»</span></div>
+<div class="tw"><table>
+<thead><tr><th>Subtipo</th><th>Por qué existe</th><th>Cómo se reconoce</th></tr></thead>
+<tbody>
+<tr><td>Oclusiva arterial (embólica y trombótica)</td><td>Un émbolo se aloja a 3 a 10 cm del origen de la arteria mesentérica superior y respeta el yeyuno proximal y el colon; la trombosis ocurre sobre una estenosis aterosclerótica en el origen [4]</td><td>Fibrilación auricular y embolias previas en la embólica; dolor posprandial y pérdida de peso previos en la trombótica</td></tr>
+<tr><td>Venosa (trombosis venosa mesentérica)</td><td>Estasis, hipercoagulabilidad y daño endotelial (tríada de Virchow) ocluyen la vena [4]</td><td>Trombo en la vena mesentérica superior (signo del blanco) en la angio-TC</td></tr>
+<tr><td>No oclusiva (NOMI)</td><td>La vasoconstricción esplácnica por bajo flujo contrae la arteria mesentérica superior sin trombo [4]</td><td>Paciente crítico con insuficiencia cardiaca, sepsis o vasopresores y vasos permeables en imagen</td></tr>
+</tbody></table></div>
+<p><b>No confundir con…</b></p>
+<div class="tw"><table>
+<thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><td>Pancreatitis aguda (widget B)</td><td>Dolor intenso con examen pobre; la amilasa se eleva en cerca de la mitad de las isquemias [4]</td><td>Angio-TC con oclusión o isquemia, y fuentes de émbolo o aterosclerosis</td></tr>
+<tr><td>Gastroenteritis o enfermedad inflamatoria intestinal</td><td>Dolor, náuseas y diarrea</td><td>Terreno vascular, dolor desproporcionado y acidosis láctica</td></tr>
+</tbody></table></div>
+<h2>Epidemiología</h2>
+<div class="tw"><table>
+<tbody>
+<tr><th>Frecuencia</th><td>0,09 a 0,2 % de los ingresos agudos, con mortalidad mayor de 50 %; entre los casos recientes, la embolia causa 25 %, la trombosis arterial hasta 40 %, la NOMI 25 % y la trombosis venosa menos de 10 % [4]</td></tr>
+<tr><th>Edad</th><td>La incidencia crece exponencialmente con la edad: en mayores de 75 años es una causa de abdomen agudo más prevalente que la apendicitis y a los 80 años es cerca de diez veces la de los 60 [4]</td></tr>
+<tr><th>Sexo</th><td>No leído en la fuente de la sesión [VERIFICAR EN FUENTE] [4]</td></tr>
+<tr><th>Factores clave</th><td>Fibrilación auricular (cerca de 50 % de las embólicas), aterosclerosis con síntomas crónicos previos, bajo gasto cardiaco, hemodiálisis, vasopresores, trombofilia y cirugía reciente [4]</td></tr>
+</tbody></table></div>
+<p class="mini">Discrepancia interna de la fuente: da 0,09 a 0,2 % de los ingresos a urgencias en su cuerpo y de los ingresos quirúrgicos agudos en su resumen; no se armonizó.</p>
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e4-m-1" data-clin="0" data-paso="Interrupción del flujo mesentérico"><div class="det"><p>Hay dos golpes: el terreno (aterosclerosis, fibrilación auricular, bajo gasto) y el desencadenante (émbolo, trombosis sobre una placa, vasoconstricción por vasopresores o trombosis venosa). La arteria mesentérica superior, grande y de poco ángulo respecto a la aorta, recibe con facilidad los émbolos de origen cardiaco [4].</p></div></li>
+<li class="nodo" id="e4-m-2" data-clin="1" data-paso="Isquemia mucosa con dolor visceral intenso"><div class="det"><p>La isquemia empieza en la mucosa y avanza hacia la serosa; el estímulo doloroso viene de la pared y no del peritoneo parietal, por eso hay dolor intenso mientras el examen aún es pobre [4].</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-1" onclick="ir('e4','e4-s-1')">Dolor desproporcionado con examen blando</button></p></div></li>
+<li class="nodo" id="e4-m-3" data-clin="1" data-paso="Hiperperistalsis y vaciamiento intestinal"><div class="det"><p>El intestino sin riego se contrae con fuerza y se vacía, y la mucosa dañada sangra, lo que explica vómito, diarrea y sangre por el recto [4].</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-2" onclick="ir('e4','e4-s-2')">Vómito, diarrea o sangre por el recto</button></p></div></li>
+<li class="nodo" id="e4-m-4" data-clin="0" data-paso="Necrosis transmural y pérdida de la barrera mucosa"><div class="det"><p>Cuando la isquemia atraviesa toda la pared, la mucosa pierde su barrera y las bacterias de la luz pasan a la cavidad y a la sangre. Aquí actúa el antibiótico de amplio espectro. <span class="rem">↪ Posología en «Tratamiento»</span></p></div></li>
+<li class="nodo" id="e4-m-5" data-clin="1" data-paso="Translocación bacteriana, peritonitis y sepsis"><div class="det"><p>La pared necrótica inflama el peritoneo y la translocación bacteriana y la liberación de productos tóxicos causan sepsis, acidosis láctica y fallo multiorgánico; la reperfusión puede agravarlo con hiperpotasemia y acidosis [4].</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-3" onclick="ir('e4','e4-s-3')">Peritonismo, acidosis láctica y choque</button></p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — Por qué duele mucho y el examen no lo muestra</span>
+<p class="fey-b">Es como cortar el agua a un jardín. Por fuera las hojas todavía se ven verdes, pero por dentro las raíces ya sufren. El aviso del dolor llega antes que la marchitez visible. Cuando por fuera se ve el daño, esa parte ya murió y los microbios entran por donde estaban las defensas.</p>
+<p class="mini fey-c">En medicina esto se llama… isquemia mucosa, necrosis transmural y translocación bacteriana.</p>
+<p class="mini fey-c">Dónde falla la comparación: una planta no vomita ni sangra; el intestino sí, y esas señales son otro aviso temprano.</p></div>
+<h2>Qué verás</h2>
+<p><span class="rem">↪ Peritonismo y criterios de gravedad en «Visión de conjunto»</span></p>
+<div class="qv">
+<p data-e="p">Dolor abdominal intenso de inicio brusco</p>
+<p data-e="p">Náuseas y vómito</p>
+<p data-e="v">Diarrea</p>
+<p data-e="v">Sangre por el recto</p>
+<p data-e="a">Rigidez abdominal al inicio</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e4-s-1" onclick="ir('e4','e4-s-1')">Dolor desproporcionado con examen blando</button></p>
+</div>
+<div class="signo" id="e4-s-1"><h4>Dolor desproporcionado con examen blando</h4><dl>
+<dt>Cómo se reconoce</dt><dd>El paciente sufre un dolor muy intenso mientras el abdomen se deja palpar sin defensa; la presentación clásica es cada vez menos frecuente y son comunes las formas sobre una isquemia crónica [4].</dd>
+<dt>Por qué aparece</dt><dd>La isquemia empieza en la mucosa y todavía no toca el peritoneo. <button type="button" class="xref" data-ir="e4-m-2" onclick="ir('e4','e4-m-2')">← Isquemia mucosa con dolor visceral intenso</button></dd>
+<dt>Qué significa</dt><dd>Ventana de tiempo: se asume isquemia mesentérica y se pide angio-TC sin demora [4].</dd></dl></div>
+<div class="signo" id="e4-s-2"><h4>Vómito, diarrea o sangre por el recto</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Náuseas, vómito o diarrea, y en una parte de los casos sangre rectal, con dolor abdominal.</dd>
+<dt>Por qué aparece</dt><dd>El intestino isquémico se vacía por hiperactividad y la mucosa dañada sangra. <button type="button" class="xref" data-ir="e4-m-3" onclick="ir('e4','e4-m-3')">← Hiperperistalsis y vaciamiento intestinal</button></dd>
+<dt>Qué significa</dt><dd>Sugiere mucosa lesionada; no distingue entre mecanismos y no debe retrasar la imagen.</dd></dl></div>
+<div class="signo" id="e4-s-3"><h4>Peritonismo, acidosis láctica y choque</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Defensa o rigidez, lactato elevado y signos de choque.</dd>
+<dt>Por qué aparece</dt><dd>La necrosis transmural inflama el peritoneo y la sepsis eleva el lactato. <button type="button" class="xref" data-ir="e4-m-5" onclick="ir('e4','e4-m-5')">← Translocación bacteriana, peritonitis y sepsis</button></dd>
+<dt>Qué significa</dt><dd>Probable infarto intestinal: laparoscopia o laparotomía sin demora [4].</dd></dl></div>
+<h2>Diagnóstico <span class="rem">↓ En la tabla</span></h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Angio-TC sin demora ante dolor desproporcionado.</li>
+<li><span class="tg">Añade</span>Lactato, gasometría, hemograma y D-dimer; una amilasa elevada no excluye isquemia [4].</li>
+<li><span class="tg">Confirma</span>Angio-TC bifásica sin contraste oral y aun con lesión renal aguda: la demora o el no diagnóstico pesan más que el contraste [4].</li>
+<li><span class="tg">Solo si</span>Angiografía diagnóstica o duplex intraoperatorio si queda duda, sobre todo en quirófano híbrido [4].</li>
+<li><span class="tg">No pidas</span>Radiografía simple para evaluar isquemia: no se recomienda y una radiografía negativa no la excluye [4].</li>
+<li><span class="tg">Alarma</span>Peritonitis evidente: laparoscopia o laparotomía sin demora [4].</li>
+</ol>
+<div class="tw"><table>
+<thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad (descartar/confirmar)</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><td>Angio-TC</td><td>93 %</td><td>100 %</td><td>VPP 100 % y VPN 94 % en una serie; prevalencia local sin dato ecuatoriano</td><td>Confirmar y decidir mecanismo</td><td>Estudio de elección; sin contraste oral; en otro estudio acertó 27 de 28 casos con E de 97,9 %; en NOMI muestra isquemia con vasos permeables</td><td>[4]</td></tr>
+<tr><td>Lactato mayor de 2 mmol/L</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>No descarta; marca gravedad</td><td>Se asoció a isquemia irreversible con HR 4,1 (IC 95 % 1,4 a 11,5); la deshidratación también eleva el lactato, por eso no basta solo</td><td>[4]</td></tr>
+<tr><td>D-dimer mayor de 0,9 mg/L</td><td>60 %</td><td>82 %</td><td>No establecida</td><td>Descartar si es normal</td><td>Exactitud de 79 %; en un estudio ningún paciente con D-dimer normal tuvo isquemia intestinal; no hay un biomarcador diagnóstico exacto</td><td>[4]</td></tr>
+<tr><td>Leucocitos y gasometría</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Apoyo</td><td>Leucocitosis en más de 90 % y acidosis metabólica con lactato elevado en 88 %</td><td>[4]</td></tr>
+<tr><td>Radiografía simple</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>No recomendada</td><td>Solo es positiva cuando ya hay perforación con aire libre</td><td>[4]</td></tr>
+</tbody></table></div>
+<p class="mini">Glosario: S sensibilidad; E especificidad; VPP y VPN valores predictivos; NOMI isquemia mesentérica no oclusiva; HR razón de riesgos; IC intervalo de confianza.</p>
+<div class="dc" data-fn="dcE4dx">
+<div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Cuadro</span>
+<button type="button" class="chip" data-g="cuadro" data-v="desp" onclick="ch(this)">Dolor desproporcionado, abdomen blando</button>
+<button type="button" class="chip" data-g="cuadro" data-v="peri" onclick="ch(this)">Peritonitis evidente</button>
+<button type="button" class="chip" data-g="cuadro" data-v="otro" onclick="ch(this)">Dolor leve con examen normal</button>
+</div>
+<div class="dc-g"><span class="dc-l">Datos</span>
+<button type="button" class="chip" data-g="dat" data-v="renal" data-m="1" onclick="ch(this)">Lesión renal aguda</button>
+<button type="button" class="chip" data-g="dat" data-v="lact" data-m="1" onclick="ch(this)">Lactato elevado</button>
+<button type="button" class="chip" data-g="dat" data-v="rx" data-m="1" onclick="ch(this)">Radiografía normal</button>
+</div>
+<div class="out"></div></div>
+<h2>Tratamiento <span class="rem">↓ En la tabla</span></h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Reperfundir el intestino viable y resecar lo necrótico, con reanimación, antibiótico y heparina en paralelo, en un equipo multidisciplinario [4].</li>
+<li><span class="tg">De elección</span>Revascularización, endovascular si hay experiencia, y resección de lo necrótico.</li>
+<li><span class="tg">Alternativa</span>Embolectomía, bypass o stent retrógrado abierto durante la laparotomía cuando no hay recurso endovascular; en NOMI, tratar la causa y considerar vasodilatador intraarterial; en trombosis venosa, anticoagulación [4].</li>
+<li><span class="tg">Sintomático</span>Cristaloides y hemoderivados, corrección de electrolitos, sonda nasogástrica y evitar vasopresores; dobutamina, dopamina a dosis bajas o milrinona alteran menos el flujo mesentérico [4].</li>
+<li><span class="tg">Escala</span>Cirugía de control de daños con cierre temporal cuando hay duda sobre la viabilidad, y segunda mirada a las 24 a 48 h [4].</li>
+<li><span class="tg">Reevalúa</span>Lactato, hemodinamia y electrolitos tras la reperfusión; trombosis venosa sin peritonitis puede manejarse sin operar [4].</li>
+<li><span class="tg">Especialista</span>Cirujano de urgencias o general, cirujano vascular, radiólogo intervencionista e intensivista [4].</li>
+<li><span class="tg">Evita</span>Retrasar la angio-TC, el contraste oral, la trombólisis por la arteria mesentérica en trombosis venosa, que es ineficaz y sangra, y resecciones sistemáticas sin segunda mirada [4].</li>
+</ol>
+<div class="tw"><table>
+<thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><td>Heparina no fraccionada</td><td>80 UI/kg en bolo, máximo 10 000 UI, y 18 UI/kg/h [VERIFICAR EN FUENTE]</td><td>IV</td><td>Infusión continua con ajuste al TTPa</td><td>Antes de la cirugía y después; TTPa de 40 a 60 s</td><td>La guía indica anticoagulación a dosis plena en todos antes del procedimiento; es fácil de manejar en insuficiencia renal; la dosis es del nomograma habitual. Frena el crecimiento del trombo. <button type="button" class="xref" data-ir="e4-m-1" onclick="ir('e4','e4-m-1')">← Interrupción del flujo mesentérico</button></td><td>[4]</td></tr>
+<tr><td>Piperacilina-tazobactam</td><td>4,5 g</td><td>IV</td><td>Cada 6 h</td><td>Al menos 4 días en pacientes estables e inmunocompetentes</td><td>Esquema ejemplo de amplio espectro; la guía no nombra fármaco; ajustar a cultivos y a la función renal según ficha. <button type="button" class="xref" data-ir="e4-m-4" onclick="ir('e4','e4-m-4')">← Necrosis transmural y pérdida de la barrera mucosa</button></td><td>[4]</td></tr>
+<tr><td>Papaverina intraarterial (NOMI)</td><td>[VERIFICAR EN FUENTE]</td><td>Intraarterial por catéter en la arteria mesentérica superior</td><td>[VERIFICAR EN FUENTE]</td><td>[VERIFICAR EN FUENTE]</td><td>Vasodilatador y antiespasmódico; se mencionó en la guía junto con prostaglandina E1 intravenosa. <button type="button" class="xref" data-ir="e4-m-1" onclick="ir('e4','e4-m-1')">← Interrupción del flujo mesentérico</button></td><td>[4]</td></tr>
+<tr><td>Clopidogrel más ácido acetilsalicílico (tras stent)</td><td>Clopidogrel 75 mg y ácido acetilsalicílico 100 mg</td><td>VO</td><td>Cada 24 h</td><td>Clopidogrel 6 meses; ácido acetilsalicílico de por vida</td><td>Esquema basado en la experiencia coronaria; no hay datos de doble antiagregación tras stent mesentérico. Evita la reoclusión del stent. <button type="button" class="xref" data-ir="e4-m-1" onclick="ir('e4','e4-m-1')">← Interrupción del flujo mesentérico</button></td><td>[4]</td></tr>
+<tr><td>Anticoagulante oral (DOAC o antagonista de vitamina K)</td><td>Según ficha del fármaco; INR de 2 a 3 si es antagonista de vitamina K</td><td>VO</td><td>Según el fármaco</td><td>6 meses; de por vida si hay hipercoagulabilidad</td><td>Se pasa a la vía oral tras la fase aguda. <button type="button" class="xref" data-ir="e4-m-1" onclick="ir('e4','e4-m-1')">← Interrupción del flujo mesentérico</button></td><td>[4]</td></tr>
+</tbody></table></div>
+<p class="mini">Glosario: IV intravenosa; VO vía oral; UI unidades internacionales; TTPa tiempo de tromboplastina parcial activada; NOMI isquemia mesentérica no oclusiva; DOAC anticoagulante oral directo; INR índice internacional normalizado.</p>
+<div class="dc" data-fn="dcE4tx">
+<div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Mecanismo</span>
+<button type="button" class="chip" data-g="tipo" data-v="arterial" onclick="ch(this)">Oclusión arterial (embolia o trombosis)</button>
+<button type="button" class="chip" data-g="tipo" data-v="venosa" onclick="ch(this)">Trombosis venosa mesentérica</button>
+<button type="button" class="chip" data-g="tipo" data-v="nomi" onclick="ch(this)">No oclusiva (NOMI)</button>
+</div>
+<div class="dc-g"><span class="dc-l">Contexto</span>
+<button type="button" class="chip" data-g="ctx" data-v="peri" data-m="1" onclick="ch(this)">Peritonitis</button>
+<button type="button" class="chip" data-g="ctx" data-v="endo" data-m="1" onclick="ch(this)">Hay experiencia endovascular</button>
+</div>
+<div class="dc-g"><span class="dc-l">Peso en kg</span><input type="number" data-n="kg" min="30" max="250" oninput="ch(this)"></div>
+<div class="out"></div></div>
+<h2>Seguimiento</h2>
+<div class="card"><b>Intestino no viable tras la reperfusión.</b> El intestino dudoso puede mejorar tras la reperfusión; por eso se deja en discontinuidad y se reexplora a las 24 a 48 h, y en una serie 11 de 23 reexplorados requirieron resección. <button type="button" class="xref" data-ir="e4-m-4" onclick="ir('e4','e4-m-4')">← Necrosis transmural y pérdida de la barrera mucosa</button> La segunda mirada es obligatoria si la afectación es extensa [4].</div>
+<div class="card"><b>Disfunción orgánica por reperfusión.</b> Los productos tóxicos del intestino lesionado y la fuga capilar causan hiperpotasemia, acidosis y fallo multiorgánico. <button type="button" class="xref" data-ir="e4-m-5" onclick="ir('e4','e4-m-5')">← Translocación bacteriana, peritonitis y sepsis</button> Se continúan antibiótico, heparina y soporte, y la nutrición enteral es preferible [4].</div>
+<div class="card"><b>Síndrome de intestino corto y recidiva.</b> La pérdida extensa de intestino causa fallo intestinal; el análogo de GLP-2 teduglutida redujo la dependencia de nutrición parenteral y se remite a trasplante si la reconstrucción no es posible. Tras revascularizar, el duplex de vigilancia se hace al mes, a los 6 y a los 12 meses y luego cada año, y la isquemia mesentérica tras revascularización causa 6 a 8 % de las muertes tardías [4]. <button type="button" class="xref" data-ir="e4-m-1" onclick="ir('e4','e4-m-1')">← Interrupción del flujo mesentérico</button></div>
+</section>
+<section class="tab" data-tab="e5">
+<div class="hb az"><div class="hb-t">Frente a Isquemia mesentérica aguda</div>
+<p>Se confunde con ella cuando el dolor abdominal intenso se acompaña de colapso circulatorio; se separa por la masa pulsátil, el dolor lumbar y el aneurisma conocido, con hipotensión desde el inicio.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué la rotura retroperitoneal puede contenerse un tiempo y por qué la estabilidad inicial engaña?</li>
+<li>¿Por qué se tolera una presión baja antes del control proximal y qué riesgo se asume con eso?</li>
+<li>¿En qué se apoya elegir reparación endovascular o abierta y qué debe estar disponible para decidir?</li>
+</ol></div>
+<span class="badge b-pu">ESVS 2024, guía de aneurismas aorto-ilíacos abdominales, European Society for Vascular Surgery (solo resumen) [5]</span>
+<p class="mini">Solo se leyó el resumen de la guía y recomendaciones citadas en reseñas; los umbrales numéricos y los grados de recomendación quedan marcados para verificar en la fuente.</p>
+<h2>Qué es</h2>
+<p>Rotura de la pared de un aneurisma de la aorta abdominal (dilatación permanente del vaso) con hemorragia retroperitoneal o libre; es una emergencia en la que el tiempo hasta el control de la hemorragia decide la supervivencia.</p>
+<div class="card"><b>Criterios.</b> Dolor abdominal o lumbar súbito con hipotensión y masa pulsátil en un paciente con aneurisma conocido o probable; ante sospecha de rotura, angio-TC de la aorta toracoabdominal y de los vasos de acceso sin demora si el paciente lo permite [5]. <span class="rem">↪ Peritonismo y criterios de gravedad en «Visión de conjunto»</span></div>
+<div class="tw"><table>
+<thead><tr><th>Subtipo</th><th>Por qué existe</th><th>Cómo se reconoce</th></tr></thead>
+<tbody>
+<tr><td>Sintomático no roto</td><td>La guía agrupa el aneurisma roto y el sintomático porque ambos se reparan con urgencia [5]</td><td>Dolor sin hemorragia en la imagen</td></tr>
+<tr><td>Roto</td><td>La pared se abre y la sangre sale al retroperitoneo o a la cavidad</td><td>Hematoma periaórtico o líquido libre en angio-TC; hipotensión</td></tr>
+</tbody></table></div>
+<p><b>No confundir con…</b></p>
+<div class="tw"><table>
+<thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><td>Cólico renal</td><td>Dolor lumbar o de flanco intenso y agitación</td><td>Hematuria, sin hipotensión ni masa pulsátil, y litiasis en imagen</td></tr>
+<tr><td>Disección aórtica aguda</td><td>Dolor intenso y posible hipotensión</td><td>Colgajo intimal en angio-TC y dolor lacerante migratorio</td></tr>
+</tbody></table></div>
+<h2>Epidemiología</h2>
+<div class="tw"><table>
+<tbody>
+<tr><th>Frecuencia</th><td>No leído en la fuente de la sesión [VERIFICAR EN FUENTE] [5]</td></tr>
+<tr><th>Edad</th><td>No leído en la fuente de la sesión [VERIFICAR EN FUENTE] [5]</td></tr>
+<tr><th>Sexo</th><td>No leído en la fuente de la sesión [VERIFICAR EN FUENTE] [5]</td></tr>
+<tr><th>Factores clave</th><td>La fuente leída trata el diámetro de reparación, la vigilancia y la reducción del riesgo cardiovascular, sin cifras recuperadas [VERIFICAR EN FUENTE] [5]</td></tr>
+</tbody></table></div>
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e5-m-1" data-clin="0" data-paso="Degeneración de la pared aórtica"><div class="det"><p>La pared de la aorta pierde elastina y colágeno, las proteínas que le dan elasticidad y resistencia, por inflamación y aterosclerosis; se adelgaza y se dilata. Ese es el terreno: un aneurisma que crece sin dolor.</p></div></li>
+<li class="nodo" id="e5-m-2" data-clin="0" data-paso="Tensión de pared supera su resistencia"><div class="det"><p>Según la ley de Laplace, la tensión de la pared sube con la presión y con el radio del vaso: mientras más grande el aneurisma y más alta la presión arterial, mayor la tensión. Un pico de presión o el crecimiento sobrepasan la resistencia de una pared ya débil; ese es el desencadenante.</p></div></li>
+<li class="nodo" id="e5-m-3" data-clin="1" data-paso="Rotura de pared con sangrado retroperitoneal"><div class="det"><p>La pared se desgarra y la sangre pasa al espacio retroperitoneal, detrás de la cavidad abdominal, estirando tejidos y raíces nerviosas lumbares.</p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e5-s-1" onclick="ir('e5','e5-s-1')">Dolor abdominal o lumbar súbito e intenso</button></p></div></li>
+<li class="nodo" id="e5-m-4" data-clin="0" data-paso="Hematoma retroperitoneal contiene el sangrado"><div class="det"><p>El retroperitoneo y el propio hematoma pueden taponar transitoriamente la salida de sangre y mantener la presión; es una ventana breve y no fiable, la causa de que el paciente parezca estable.</p></div></li>
+<li class="nodo" id="e5-m-5" data-clin="1" data-paso="Choque hemorrágico por pérdida de volumen"><div class="det"><p>Cuando el taponamiento cede o el sangrado es libre, el volumen circulante cae, la presión baja y los órganos dejan de recibir oxígeno. Aquí actúa el control de la hemorragia y la reposición con hemoderivados. <span class="rem">↪ Posología en «Tratamiento»</span></p><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e5-s-2" onclick="ir('e5','e5-s-2')">Masa pulsátil con hipotensión</button> <button type="button" class="xref" data-ir="e5-s-3" onclick="ir('e5','e5-s-3')">Piel fría, sudorosa y síncope</button></p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — Por qué revienta y por qué a veces espera</span>
+<p class="fey-b">Es como un globo que se infla en un tramo de manguera: cuanto más grande, más fina queda su pared y más fuerza soporta por cada pedacito. Con un empujón de agua, revienta. Al principio, lo de alrededor lo envuelve como una funda y la fuga parece pequeña, pero esa funda aguanta muy poco.</p>
+<p class="mini fey-c">En medicina esto se llama… aneurisma, rotura con hematoma retroperitoneal contenido y choque hemorrágico.</p>
+<p class="mini fey-c">Dónde falla la comparación: el globo es de un material uniforme; la aorta se debilita por dentro, con inflamación y pérdida de proteínas, y la sangre no se detiene por sí sola.</p></div>
+<h2>Qué verás</h2>
+<p><span class="rem">↪ Peritonismo y criterios de gravedad en «Visión de conjunto»</span></p>
+<div class="qv">
+<p data-e="p">Dolor abdominal o lumbar súbito</p>
+<p data-e="p">Hipotensión o mareo</p>
+<p data-e="v">Dolor irradiado a la ingle o al muslo</p>
+<p data-e="v">Síncope</p>
+<p data-e="a">Diarrea o sangre por el recto</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e5-s-2" onclick="ir('e5','e5-s-2')">Masa pulsátil con hipotensión</button></p>
+</div>
+<div class="signo" id="e5-s-1"><h4>Dolor abdominal o lumbar súbito e intenso</h4><dl>
+<dt>Cómo se reconoce</dt><dd>El paciente describe un dolor muy intenso, en abdomen o espalda baja, de inicio brusco.</dd>
+<dt>Por qué aparece</dt><dd>La sangre en el retroperitoneo estira tejidos y raíces nerviosas lumbares. <button type="button" class="xref" data-ir="e5-m-3" onclick="ir('e5','e5-m-3')">← Rotura de pared con sangrado retroperitoneal</button></dd>
+<dt>Qué significa</dt><dd>Sospecha de rotura si hay aneurisma conocido; el dolor lumbar con estabilidad inicial no la excluye.</dd></dl></div>
+<div class="signo" id="e5-s-2"><h4>Masa pulsátil con hipotensión</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Masa abdominal pulsátil y dolorosa con presión arterial baja; cuando falta algún elemento de la tríada, la rotura no se descarta.</dd>
+<dt>Por qué aparece</dt><dd>La masa es el aneurisma con hematoma y la presión baja es la pérdida de volumen. <button type="button" class="xref" data-ir="e5-m-5" onclick="ir('e5','e5-m-5')">← Choque hemorrágico por pérdida de volumen</button></dd>
+<dt>Qué significa</dt><dd>Rotura hasta demostrar lo contrario: quirófano sin demorar por estudios.</dd></dl></div>
+<div class="signo" id="e5-s-3"><h4>Piel fría, sudorosa y síncope</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Piel pálida, fría y sudorosa, pulso rápido y desmayo o confusión.</dd>
+<dt>Por qué aparece</dt><dd>El cuerpo desvía la sangre hacia los órganos vitales y el cerebro recibe poca. <button type="button" class="xref" data-ir="e5-m-5" onclick="ir('e5','e5-m-5')">← Choque hemorrágico por pérdida de volumen</button></dd>
+<dt>Qué significa</dt><dd>El taponamiento cedió o el sangrado es libre: tiempo mínimo para el control.</dd></dl></div>
+<h2>Diagnóstico <span class="rem">↓ En la tabla</span></h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Inestable: quirófano sin imagen; estable: angio-TC inmediata.</li>
+<li><span class="tg">Añade</span>Hemoglobina, grupo sanguíneo con pruebas cruzadas y lactato.</li>
+<li><span class="tg">Confirma</span>Angio-TC de la aorta toracoabdominal y de los vasos de acceso, para planificar la reparación [5].</li>
+<li><span class="tg">Solo si</span>Ecografía a la cabecera si el paciente está inestable y hay duda de aneurisma [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">No pidas</span>Estudios que retrasen el quirófano en un paciente inestable con la tríada completa.</li>
+<li><span class="tg">Alarma</span>Hipotensión con dolor y masa pulsátil: quirófano de inmediato.</li>
+</ol>
+<div class="tw"><table>
+<thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad (descartar/confirmar)</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><td>Angio-TC de aorta toracoabdominal y vasos de acceso</td><td>No establecida</td><td>No establecida</td><td>No establecida; prevalencia local sin dato ecuatoriano</td><td>Confirmar y planificar</td><td>La guía recomienda imagen pronta en sospecha de rotura; define anatomía para reparación endovascular y permite dimensionar el dispositivo</td><td>[5]</td></tr>
+<tr><td>Ecografía a la cabecera</td><td>[VERIFICAR EN FUENTE]</td><td>[VERIFICAR EN FUENTE]</td><td>[VERIFICAR EN FUENTE]</td><td>Confirmar aneurisma en inestable</td><td>No confirma la rotura; no se leyó su rendimiento en la fuente</td><td>[5]</td></tr>
+<tr><td>Hemoglobina, lactato y pruebas cruzadas</td><td>No aplica</td><td>No aplica</td><td>No aplica</td><td>Soporte</td><td>Orientan la reposición con hemoderivados; no descartan la rotura</td><td>[5]</td></tr>
+</tbody></table></div>
+<p class="mini">Glosario: S sensibilidad; E especificidad; VPP y VPN valores predictivos; TC tomografía computarizada.</p>
+<h2>Tratamiento <span class="rem">↓ En la tabla</span></h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Controlar la hemorragia con reanimación restrictiva, aceptando hipotensión permisiva hasta el control proximal; la presión objetivo es [VERIFICAR EN FUENTE] [5].</li>
+<li><span class="tg">De elección</span>Reparación endovascular si la anatomía lo permite; si no, abierta. La preferencia endovascular y su grado de recomendación: [VERIFICAR EN FUENTE] [5].</li>
+<li><span class="tg">Alternativa</span>Reparación abierta; en la endovascular, dispositivo bifurcado en preferencia al aorto-uniilíaco si la anatomía lo permite y sobredimensionamiento de hasta 30 % si la imagen se hizo en hipotensión permisiva [5].</li>
+<li><span class="tg">Sintomático</span>Hemoderivados y reposición según pérdida; relación de componentes [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Escala</span>Balón de oclusión aórtica como puente al control proximal; la guía lo aborda y sus indicaciones quedan por verificar [VERIFICAR EN FUENTE] [5].</li>
+<li><span class="tg">Reevalúa</span>Síndrome compartimental abdominal e isquemia colónica tras la reparación [5].</li>
+<li><span class="tg">Especialista</span>Cirugía vascular, en quirófano con capacidad endovascular y hemoderivados.</li>
+<li><span class="tg">Evita</span>Normalizar la presión antes del control, retrasar el quirófano por imágenes en el inestable o trasladar sin necesidad a un centro sin capacidad de reparación.</li>
+</ol>
+<div class="tw"><table>
+<thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><td>Heparina no fraccionada intraoperatoria</td><td>[VERIFICAR EN FUENTE]</td><td>IV</td><td>Dosis única o según protocolo</td><td>Durante la reparación</td><td>La guía sugiere considerar anticoagulación sistémica una vez controlado el sangrado; evita la trombosis del injerto y de los vasos distales. <button type="button" class="xref" data-ir="e5-m-5" onclick="ir('e5','e5-m-5')">← Choque hemorrágico por pérdida de volumen</button></td><td>[5]</td></tr>
+<tr><td>Enoxaparina (profilaxis posoperatoria)</td><td>40 mg; 20 mg si el aclaramiento de creatinina es menor de 30 mL/min</td><td>SC</td><td>Cada 24 h</td><td>Mientras dure la movilidad reducida</td><td>La guía sugiere considerar profilaxis de trombosis venosa profunda tras la reparación; dosis de ficha técnica. <button type="button" class="xref" data-ir="e5-m-5" onclick="ir('e5','e5-m-5')">← Choque hemorrágico por pérdida de volumen</button></td><td>[5]</td></tr>
+<tr><td>Hemoderivados (concentrado de eritrocitos, plasma, plaquetas)</td><td>Proporción y volumen [VERIFICAR EN FUENTE]</td><td>IV</td><td>Según pérdida y coagulopatía</td><td>Hasta control de la hemorragia</td><td>Reponen el volumen y los factores perdidos en el nodo de choque; no se leyó la estrategia en la fuente. <button type="button" class="xref" data-ir="e5-m-5" onclick="ir('e5','e5-m-5')">← Choque hemorrágico por pérdida de volumen</button></td><td>[5]</td></tr>
+</tbody></table></div>
+<p class="mini">Glosario: IV intravenosa; SC subcutánea; mL/min mililitros por minuto.</p>
+<div class="dc" data-fn="dcE5tx">
+<div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Estabilidad</span>
+<button type="button" class="chip" data-g="est" data-v="inestable" onclick="ch(this)">Inestable o en choque</button>
+<button type="button" class="chip" data-g="est" data-v="estable" onclick="ch(this)">Estable</button>
+</div>
+<div class="dc-g"><span class="dc-l">Anatomía y recursos</span>
+<button type="button" class="chip" data-g="anat" data-v="apta" onclick="ch(this)">Anatomía apta para endovascular en angio-TC</button>
+<button type="button" class="chip" data-g="anat" data-v="noapta" onclick="ch(this)">Anatomía no apta</button>
+<button type="button" class="chip" data-g="anat" data-v="sinimagen" onclick="ch(this)">Sin imagen todavía</button>
+</div>
+<div class="dc-g"><span class="dc-l">Recursos</span>
+<button type="button" class="chip" data-g="rec" data-v="endo" data-m="1" onclick="ch(this)">Hay equipo endovascular</button>
+<button type="button" class="chip" data-g="rec" data-v="renal" data-m="1" onclick="ch(this)">Aclaramiento menor de 30 mL/min</button>
+</div>
+<div class="out"></div></div>
+<h2>Seguimiento</h2>
+<div class="card"><b>Síndrome compartimental abdominal.</b> El hematoma retroperitoneal y la reanimación masiva aumentan la presión dentro del abdomen y comprometen la perfusión de órganos y la ventilación. <button type="button" class="xref" data-ir="e5-m-5" onclick="ir('e5','e5-m-5')">← Choque hemorrágico por pérdida de volumen</button> La guía lo incluye entre las complicaciones tempranas [5].</div>
+<div class="card"><b>Isquemia colónica.</b> La hipotensión y la interrupción de la irrigación colónica durante la reparación dejan al colon sin flujo suficiente; la guía lo cita como complicación temprana [5]. <button type="button" class="xref" data-ir="e5-m-3" onclick="ir('e5','e5-m-3')">← Rotura de pared con sangrado retroperitoneal</button></div>
+<div class="card"><b>Seguimiento a largo plazo.</b> La guía trata la infección del injerto, los endoleaks (flujo persistente en el saco aneurismático) y las rutinas de seguimiento; los intervalos no se leyeron [VERIFICAR EN FUENTE] [5].</div>
+</section>
+<section class="tab" data-tab="sin">
+<div class="hb ro"><div class="hb-t">Errores que no se pueden cometer</div>
+<ul>
+<li>Dejar para después la imagen en un paciente con dolor desproporcionado y abdomen blando: es isquemia mesentérica hasta demostrar lo contrario, y la demora es lo que mata [4].</li>
+<li>Pedir estudios que retrasen el quirófano en un paciente inestable con masa pulsátil, dolor e hipotensión; y normalizar su presión antes del control de la hemorragia.</li>
+<li>Descartar una perforación porque la radiografía no muestra aire libre; o demorar la cirugía de una peritonitis, porque cada hora cuenta [3].</li>
+<li>Insistir en el manejo no operatorio de una obstrucción con peritonitis, estrangulación o isquemia, o más allá del límite razonable sin progresión del contraste [2].</li>
+<li>Usar el puntaje de Alvarado para confirmar apendicitis, pedir TC sistemática en bajo riesgo u operar tarde una apendicitis con indicación quirúrgica [1].</li>
+<li>Prolongar el antibiótico más de lo necesario tras un control adecuado del foco, en apendicitis o en perforación [1,3].</li>
+</ul></div>
+<div class="acc refs"><button type="button" class="acc-h" onclick="tog(this)">Referencias <span class="chev">▾</span></button>
+<div class="acc-b"><ol class="vanc">
+<li>Di Saverio S, Podda M, De Simone B, Ceresoli M, Augustin G, Gori A, et al. Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines. World J Emerg Surg. 2020;15(1):27. doi:10.1186/s13017-020-00306-3. PMID 32295644. Guía de consenso con metodología GRADE.</li>
+<li>Ten Broek RPG, Krielen P, Di Saverio S, Coccolini F, Biffl WL, Ansaloni L, et al. Bologna guidelines for diagnosis and management of adhesive small bowel obstruction (ASBO): 2017 update of the evidence-based guidelines from the World Society of Emergency Surgery ASBO working group. World J Emerg Surg. 2018;13:24. doi:10.1186/s13017-018-0185-2. PMID 29946347. Guía basada en evidencia.</li>
+<li>Tarasconi A, Coccolini F, Biffl WL, Tomasoni M, Ansaloni L, Picetti E, et al. Perforated and bleeding peptic ulcer: WSES guidelines. World J Emerg Surg. 2020;15:3. doi:10.1186/s13017-019-0283-9. PMID 31921329. Guía de consenso con metodología GRADE.</li>
+<li>Bala M, Catena F, Kashuk J, De Simone B, Gomes CA, Weber D, et al. Acute mesenteric ischemia: updated guidelines of the World Society of Emergency Surgery. World J Emerg Surg. 2022;17(1):54. doi:10.1186/s13017-022-00443-x. PMID 36261857. Guía de consenso con metodología GRADE.</li>
+<li>Wanhainen A, Van Herzeele I, Bastos Goncalves F, Bellmunt Montoya S, Berard X, Boyle JR, et al. Editor's Choice – European Society for Vascular Surgery (ESVS) 2024 clinical practice guidelines on the management of abdominal aorto-iliac artery aneurysms. Eur J Vasc Endovasc Surg. 2024;67(2):192-331. doi:10.1016/j.ejvs.2023.11.002. PMID 38307694. Guía de práctica clínica; solo se leyó el resumen.</li>
+</ol></div></div>
+</section>
+<script>
+function dcVis(dc){
+  var fx=sel(dc,'fx'),cx=sel(dc,'ctx'),o=dc.querySelector('.out');
+  if(!fx.length){o.innerHTML='<p>Marca al menos un hallazgo del examen para ver la entidad compatible, el hallazgo que falta y la conducta inicial.</p>';return;}
+  var E={
+    shock:{k:'e5',n:'Aneurisma de aorta abdominal roto',f:'Confirmar el aneurisma por angio-TC si el paciente está estable; si está inestable la tríada basta para ir a quirófano.',c:'Cirugía vascular urgente con hipotensión permisiva y sangre disponible; angio-TC solo si está estable [5].',x:'Si el dolor es lumbar con presión normal y sin masa, pide angio-TC aórtica antes de decidir → sigue pensando en rotura contenida [5].',ctx:'aaa'},
+    desp:{k:'e4',n:'Isquemia mesentérica aguda',f:'Angio-TC que muestre oclusión arterial o venosa, o isquemia con vasos permeables.',c:'Angio-TC sin demora, reanimación, antibiótico amplio y heparina; avisar a cirugía general y vascular [4].',x:'Si aparece peritonismo difuso → quirófano (laparoscopia o laparotomía) sin esperar más estudios [4].',ctx:'fa'},
+    tabla:{k:'e3',n:'Perforación de víscera hueca',f:'Aire libre o fuga de contraste en la TC (o en la radiografía si no hay TC).',c:'Reanimación, antibiótico de amplio espectro y laparotomía o laparoscopia urgente [3].',x:'Si el abdomen está blando, hay antecedente ulceroso y no se ve aire libre → pide contraste hidrosoluble antes de descartar [3].',ctx:'ulc'},
+    colico:{k:'e2',n:'Obstrucción intestinal',f:'Zona de transición, asa cerrada o signos de isquemia en la TC.',c:'Ayuno, sonda de descompresión, líquidos y electrolitos; TC con contraste hidrosoluble [2].',x:'Si hay peritonitis o signos de estrangulación → cirugía sin intentar manejo no operatorio [2].',ctx:'cx'},
+    loc:{k:'e1',n:'Apendicitis aguda',f:'Puntaje de riesgo e imagen (ecografía o TC) o laparoscopia.',c:'Estratificar con AIR o AAS, pedir imagen si el riesgo es intermedio y operar en menos de 24 h si se confirma [1].',x:'Si el dolor aparece de golpe con abdomen en tabla en un paciente ulceroso → piensa en perforación, no en apendicitis [1,3].',ctx:'jov'}
+  };
+  var order=['shock','desp','tabla','colico','loc'],i,first=null,otros=[];
+  for(i=0;i<order.length;i++){if(fx.indexOf(order[i])>-1){if(!first){first=order[i];}else{otros.push(E[order[i]].n);}}}
+  var e=E[first],h='<p><b>Entidad compatible (la de mayor amenaza entre las marcadas):</b> '+e.n+'</p>';
+  if(otros.length){h+='<p><b>También compatible con:</b> '+otros.join(', ')+'. Se descartan en ese orden con la imagen.</p>';}
+  h+='<p><b>Contexto:</b> '+(cx.indexOf(e.ctx)>-1?'el terreno marcado refuerza esta entidad.':'el terreno marcado no la apoya o no se marcó; no la descarta.')+'</p>';
+  h+='<p><b>Hallazgo que falta para confirmarla:</b> '+e.f+'</p><p><b>Conducta inicial:</b> '+e.c+'</p><span class="cf">'+e.x.replace(/^Si /,'Si ')+'</span>';
+  o.innerHTML=h;
+}
+function dcE1dx(dc){
+  var av=sel(dc,'av'),emb=sel(dc,'emb')[0],edad=num(dc,'edad'),o=dc.querySelector('.out'),s=0,i;
+  if(!av.length&&!emb&&isNaN(edad)){o.innerHTML='<p>Marca los puntos de Alvarado que tiene el paciente, el embarazo y la edad para ver la banda de riesgo y la conducta.</p>';return;}
+  for(i=0;i<av.length;i++){s+=parseInt(av[i],10);}
+  var b=s<5?'bajo':(s<9?'intermedio':'alto'),h='<p><b>Alvarado:</b> '+s+' puntos. <b>Banda:</b> '+b+'. Los puntajes AIR y AAS rinden mejor; aquí se usa Alvarado por su sencillez [1].</p>';
+  if(emb==='si'){h+='<p><b>Embarazo:</b> no diagnostiques por síntomas; pide siempre PCR, ecografía de compresión graduada y resonancia si es inconclusa; no trates sin cirugía [1].</p>';}
+  if(b==='bajo'){h+='<p><b>Conducta:</b> apendicitis improbable (Alvarado menor de 5 sirve para excluir); observación sin imagen sistemática y busca otra causa [1].</p>';}
+  else if(b==='intermedio'){h+='<p><b>Conducta:</b> imagen sistemática y oportuna: ecografía con los datos clínicos y TC de baja dosis con contraste si la ecografía es negativa o dudosa [1].</p>';}
+  else if(emb!=='si'&&!isNaN(edad)&&edad<40){h+='<p><b>Conducta:</b> riesgo alto en menor de 40 años: la TC puede omitirse antes de una laparoscopia diagnóstica con o sin tratamiento (recomendación débil) [1].</p>';}
+  else{h+='<p><b>Conducta:</b> riesgo alto: imagen antes de operar'+(isNaN(edad)?' (indica la edad: en menores de 40 años puede omitirse)':' por ser mayor de 40 años o estar embarazada')+' [1].</p>';}
+  h+='<span class="cf">Si el dolor progresa o persiste tras una imagen negativa → laparoscopia exploradora [1].</span>';
+  o.innerHTML=h;
+}
+function dcE1tx(dc){
+  var f=sel(dc,'forma')[0],c=sel(dc,'ctx'),o=dc.querySelector('.out');
+  if(!f){o.innerHTML='<p>Elige la forma de apendicitis para ver la conducta y la posología completa.</p>';return;}
+  var emb=c.indexOf('emb')>-1,al=c.indexOf('alerg')>-1,nl=c.indexOf('nolap')>-1;
+  var ab=al?'ciprofloxacino 400 mg IV cada 12 h más metronidazol 500 mg IV cada 8 h':'ceftriaxona 2 g IV cada 24 h más metronidazol 500 mg IV cada 8 h';
+  var dose=al?'ciprofloxacino 400 mg más metronidazol 500 mg IV en dosis única':'ceftriaxona 2 g más metronidazol 500 mg IV en dosis única';
+  var h='',x='';
+  if(f==='nc'||f==='nca'){
+    h+='<p><b>Conducta:</b> apendicectomía laparoscópica en las siguientes 24 h; no la retrases más de 24 h [1].</p><p><b>Antibiótico:</b> '+dose+', de 0 a 60 min antes de la incisión; sin antibiótico posoperatorio [1].</p>';
+    if(f==='nc'&&!emb){h+='<p><b>Alternativa:</b> antibióticos sin cirugía tras advertir del riesgo de fracaso; esquema y dosis [VERIFICAR EN FUENTE] [1].</p>';}
+    if(f==='nca'){h+='<p><b>Apendicolito:</b> aumenta el fracaso del tratamiento sin cirugía, de modo que se opera [1].</p>';}
+    x='Si la imagen muestra absceso o perforación → pasa a la vía de apendicitis complicada y el antibiótico dura hasta 3 a 5 días [1].';
+  }else if(f==='abs'){
+    if(nl){h+='<p><b>Conducta:</b> antibióticos y, si hay colección accesible, drenaje percutáneo, porque no hay experiencia laparoscópica avanzada [1].</p>';}
+    else{h+='<p><b>Conducta:</b> abordaje laparoscópico como opción de elección con experiencia avanzada [1].</p>';}
+    h+='<p><b>Antibiótico:</b> '+ab+', hasta 3 a 5 días con control adecuado del foco; sin drenes tras la apendicectomía en adultos [1].</p><p><b>Después:</b> sin apendicectomía de intervalo sistemática en menores de 40 años; en mayores de 40 se sugiere colonoscopia y TC [1].</p>';
+    x='Si hay sepsis o el paciente empeora con el manejo sin cirugía → cirugía inmediata y piperacilina-tazobactam 4,5 g IV cada 6 h [1].';
+  }else{
+    h+='<p><b>Conducta:</b> cirugía inmediata, laparoscópica si hay equipo; aspirar sin irrigar [1].</p><p><b>Antibiótico:</b> '+ab+', hasta 3 a 5 días tras el control del foco; con sepsis, piperacilina-tazobactam 4,5 g IV cada 6 h [1].</p>';
+    x='Si persisten fiebre o marcadores inflamatorios tras 3 a 5 días con foco controlado → busca una colección residual antes de prolongar el antibiótico [1].';
+  }
+  if(emb){h+='<p><b>Embarazo:</b> no se recomienda tratar sin cirugía; se prefiere laparoscopia; el ciprofloxacino se evita en el embarazo, elige otra alternativa según la guía local [VERIFICAR EN FUENTE] [1].</p>';}
+  o.innerHTML=h+'<span class="cf">'+x+'</span>';
+}
+function dcE2tx(dc){
+  var g=sel(dc,'grav')[0],ct=sel(dc,'cont')[0],hr=num(dc,'horas'),o=dc.querySelector('.out'),h='',x;
+  if(!g){o.innerHTML='<p>Indica si hay signos de gravedad para ver la conducta.</p>';return;}
+  if(g==='si'){
+    h='<p><b>Conducta:</b> cirugía sin intentar manejo no operatorio; reanimar, corregir potasio y electrolitos y operar [2].</p>';
+    x='Si no hubiera signos de gravedad y la causa fuera adhesiva → se intentaría el manejo no operatorio hasta 72 h [2].';
+  }else if(ct==='no'){
+    h='<p><b>Conducta:</b> el contraste no llegó al colon a las 24 h: falla del manejo no operatorio; indica cirugía [2].</p>';
+    x='Si el contraste hubiera llegado al colon → se continuaría el manejo no operatorio y se reiniciaría la vía oral [2].';
+  }else if(!isNaN(hr)&&hr>72){
+    h='<p><b>Conducta:</b> superó el límite de 72 h aceptado por consenso: reevalúa y decide cirugía; continuar solo con débito persistente sin deterioro es debatido [2].</p>';
+    x='Si aparecen dolor continuo, fiebre o defensa → opera sin esperar [2].';
+  }else if(ct==='llego'){
+    h='<p><b>Conducta:</b> el contraste llegó al colon: probable resolución; reinicia la vía oral de forma progresiva y vigila [2].</p>';
+    x='Si reaparecen vómito, distensión o dolor continuo → repite imagen y valora cirugía [2].';
+  }else{
+    h='<p><b>Conducta:</b> manejo no operatorio: nada por vía oral, sonda nasogástrica o tubo largo, cristaloides y electrolitos; cloruro de potasio IV según el potasio sérico, hasta 10 mEq por hora por vía periférica [2].</p><p><b>Contraste:</b> hidrosoluble oral o por sonda y radiografía a las 24 h; dosis [VERIFICAR EN FUENTE] [2].</p>';
+    x='Si el contraste no llega al colon a las 24 h o aparecen signos de peritonitis → cirugía [2].';
+  }
+  o.innerHTML=h+'<span class="cf">'+x+'</span>';
+}
+function dcE3tx(dc){
+  var e=sel(dc,'est')[0],t=sel(dc,'tam')[0],c=sel(dc,'ctx'),o=dc.querySelector('.out');
+  if(!e||!t){o.innerHTML='<p>Elige la estabilidad y la localización o tamaño para ver la conducta.</p>';return;}
+  var lap=c.indexOf('lap')>-1,al=c.indexOf('alerg')>-1,se=c.indexOf('sellada')>-1,h='';
+  h+='<p><b>Abordaje:</b> '+(e==='inestable'?'cirugía abierta por la inestabilidad':(lap?'laparoscopia en paciente estable con equipo experto':'cirugía abierta por falta de equipo laparoscópico'))+' [3].</p>';
+  if(t==='menor'){h+='<p><b>Técnica:</b> sutura primaria; el parche de epiplón no ofrece un beneficio demostrado [3].</p>';}
+  else if(t==='gastrica'){h+='<p><b>Técnica:</b> según la localización; si sospechas malignidad, resección con congelación [3].</p>';}
+  else if(t==='duodenal'){h+='<p><b>Técnica:</b> reparación con o sin exclusión pilórica y drenaje biliar; duodenostomía solo en situación extrema [3].</p>';}
+  else{h+='<p><b>Técnica:</b> perforación intestinal: control del foco por principios generales (resección, sutura o estoma según el hallazgo); sin guía específica leída [VERIFICAR EN FUENTE].</p>';}
+  h+='<p><b>Antibiótico:</b> '+(al?'ciprofloxacino 400 mg IV cada 12 h más metronidazol 500 mg IV cada 8 h':'piperacilina-tazobactam 4,5 g IV cada 6 h')+', de 3 a 5 días o hasta normalizar los marcadores inflamatorios; ajustar a la función renal [3].</p>';
+  h+='<p><b>Supresión ácida:</b> pantoprazol 40 mg IV cada 12 h hasta tolerar la vía oral [VERIFICAR EN FUENTE] [3].</p>';
+  if(se){h+='<p><b>Perforación sellada:</b> el manejo no operatorio es excepcional y solo en casos extremadamente seleccionados; no se recomienda de rutina [3].</p>';}
+  o.innerHTML=h+'<span class="cf">Si el paciente se inestabiliza durante la laparoscopia → conversión a cirugía abierta [3].</span>';
+}
+function dcE4dx(dc){
+  var q=sel(dc,'cuadro')[0],d=sel(dc,'dat'),o=dc.querySelector('.out'),h='';
+  if(!q){o.innerHTML='<p>Elige el cuadro clínico para ver la conducta diagnóstica.</p>';return;}
+  if(q==='desp'){h+='<p><b>Conducta:</b> asume isquemia mesentérica y pide angio-TC sin demora, con reanimación en paralelo [4].</p>';}
+  else if(q==='peri'){h+='<p><b>Conducta:</b> peritonitis evidente: laparoscopia o laparotomía sin demora; la imagen no debe retrasarla [4].</p>';}
+  else{h+='<p><b>Conducta:</b> vigilancia y reexamen; si el dolor resulta desproporcionado o el lactato sube, pide angio-TC [4].</p>';}
+  if(d.indexOf('renal')>-1){h+='<p><b>Lesión renal:</b> no justifica omitir la angio-TC; la demora pesa más que el contraste [4].</p>';}
+  if(d.indexOf('lact')>-1){h+='<p><b>Lactato elevado:</b> con dolor intenso y examen blando refuerza la sospecha; no basta solo por la deshidratación [4].</p>';}
+  if(d.indexOf('rx')>-1){h+='<p><b>Radiografía normal:</b> no excluye isquemia mesentérica y no está recomendada para evaluarla [4].</p>';}
+  o.innerHTML=h+'<span class="cf">Si el cuadro cambia a peritonitis evidente → quirófano sin esperar la angio-TC [4].</span>';
+}
+function dcE4tx(dc){
+  var t=sel(dc,'tipo')[0],c=sel(dc,'ctx'),kg=num(dc,'kg'),o=dc.querySelector('.out'),h='',x;
+  if(!t){o.innerHTML='<p>Elige el mecanismo para ver la conducta y la posología.</p>';return;}
+  var pe=c.indexOf('peri')>-1,en=c.indexOf('endo')>-1;
+  if(t==='arterial'){
+    if(pe){h+='<p><b>Conducta:</b> laparotomía con revascularización (embolectomía, bypass o stent retrógrado abierto) y resección de lo necrótico; control de daños y segunda mirada a las 24 a 48 h [4].</p>';x='Si no hubiera peritonitis y hubiera experiencia endovascular → la revascularización endovascular sería la primera opción [4].';}
+    else if(en){h+='<p><b>Conducta:</b> revascularización endovascular como opción primaria si hay experiencia; laparotomía si aparece peritonitis [4].</p>';x='Si aparece peritonitis → laparotomía sin demora [4].';}
+    else{h+='<p><b>Conducta:</b> sin recurso endovascular: revascularización abierta (embolectomía o bypass) y valoración de viabilidad intestinal [4].</p>';x='Si hubiera experiencia endovascular → sería la opción primaria [4].';}
+  }else if(t==='venosa'){
+    if(pe){h+='<p><b>Conducta:</b> laparotomía con resección solo de lo claramente necrótico, con técnica de control de daños, y heparina [4].</p>';x='Sin peritonitis → anticoagulación y manejo sin operar [4].';}
+    else{h+='<p><b>Conducta:</b> anticoagulación como primera línea y manejo sin operar; no usar trombólisis por la arteria mesentérica [4].</p>';x='Si aparece peritonitis → laparotomía con resección mínima [4].';}
+  }else{
+    h+='<p><b>Conducta:</b> tratar la causa, optimizar el gasto cardiaco, retirar vasopresores y considerar papaverina intraarterial; dosis [VERIFICAR EN FUENTE] [4].</p>';
+    if(pe){h+='<p>Con peritonitis: laparotomía y resección de lo necrótico con control de daños [4].</p>';}
+    x='Si aparece peritonitis o perforación → laparotomía [4].';
+  }
+  if(isNaN(kg)){h+='<p><b>Heparina:</b> indica el peso para calcular el bolo y la infusión.</p>';}
+  else{var bolo=Math.min(rd(80*kg),10000),inf=rd(18*kg);h+='<p><b>Heparina no fraccionada:</b> bolo de '+bolo+' UI IV (80 UI/kg con tope de 10 000 UI) y '+inf+' UI por hora en infusión; ajustar a TTPa de 40 a 60 s [VERIFICAR EN FUENTE] [4].</p>';}
+  h+='<p><b>Antibiótico:</b> piperacilina-tazobactam 4,5 g IV cada 6 h, al menos 4 días si el paciente es estable e inmunocompetente; ajustar a cultivos [4].</p>';
+  o.innerHTML=h+'<span class="cf">'+x+'</span>';
+}
+function dcE5tx(dc){
+  var e=sel(dc,'est')[0],a=sel(dc,'anat')[0],r=sel(dc,'rec'),o=dc.querySelector('.out'),h='',x;
+  if(!e){o.innerHTML='<p>Elige la estabilidad para ver la conducta.</p>';return;}
+  var en=r.indexOf('endo')>-1,rn=r.indexOf('renal')>-1;
+  if(e==='inestable'){
+    h+='<p><b>Conducta:</b> quirófano sin imagen y control proximal de la aorta; hipotensión permisiva con presión objetivo [VERIFICAR EN FUENTE]; balón de oclusión aórtica como puente, indicaciones [VERIFICAR EN FUENTE] [5].</p>';
+    h+='<p><b>Reparación:</b> '+(en&&a==='apta'?'endovascular si la anatomía es conocida y apta':'abierta, por falta de equipo o de anatomía conocida')+' [5].</p>';
+    x='Si el paciente estuviera estable → angio-TC inmediata antes de elegir la técnica [5].';
+  }else if(!a||a==='sinimagen'){
+    h+='<p><b>Conducta:</b> angio-TC inmediata de la aorta toracoabdominal y de los vasos de acceso, con hipotensión permisiva y sangre disponible [5].</p>';
+    x='Si se vuelve inestable antes o durante la TC → quirófano sin imagen [5].';
+  }else if(a==='apta'&&en){
+    h+='<p><b>Conducta:</b> reparación endovascular; dispositivo bifurcado en preferencia al aorto-uniilíaco si la anatomía lo permite y sobredimensionamiento de hasta 30 % si la imagen se hizo en hipotensión permisiva [5].</p>';
+    x='Si la anatomía resultara no apta → reparación abierta [5].';
+  }else{
+    h+='<p><b>Conducta:</b> reparación abierta'+(a==='apta'?', por no contar con equipo endovascular; no traslades si el retraso es inseguro':', por anatomía no apta')+' [5].</p>';
+    x='Si hubiera equipo endovascular y anatomía apta → reparación endovascular [5].';
+  }
+  h+='<p><b>Después del control:</b> considerar heparina sistémica intraoperatoria, dosis [VERIFICAR EN FUENTE], y profilaxis posoperatoria con enoxaparina '+(rn?'20 mg':'40 mg')+' SC cada 24 h [5].</p>';
+  o.innerHTML=h+'<span class="cf">'+x+'</span>';
+}
+</script>
+<!-- KIT_SCRIPT -->
+</div>
+<script>
+(function(){
+'use strict';
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+function secK(k){return $('section.tab[data-tab="'+k+'"]')}
+function secOf(el){return el&&el.closest?el.closest('section.tab'):null}
+function nameOf(k){var b=$('button.tb[data-tab="'+k+'"]');return b?b.textContent.replace(/\s+/g,' ').replace(/^\s+|\s+$/g,''):k}
+function btn(t,f,c){var b=document.createElement('button');b.type='button';b.className=c||'chip';b.textContent=t;b.addEventListener('click',f);return b}
+function recon(s,on){if(!s)return;s.classList.toggle('recon',!!on);$$('.nodo',s).forEach(function(n){n.classList.remove('rev');n.classList.remove('pis')});var st=$('.rec-state',s);if(st)st.textContent=on?'Modo reconstrucción activo':'Modo lectura';var a=$('.rec-bar [data-act="rec"]',s);if(a){a.disabled=!!on;a.classList.toggle('on',!!on);a.textContent=on?'Reconstrucción activa':'Activar reconstrucción'}}
+window.recon=function(k,on){recon(secK(k),on)};
+function navOv(){var n=$('nav.tabs');if(!n)return;var sl=n.scrollLeft,mx=n.scrollWidth-n.clientWidth,w=n.parentNode;[n,w].forEach(function(e){if(e===n||e.classList.contains('tabs-w')){e.classList.toggle('ov-l',sl>2);e.classList.toggle('ov-r',sl<mx-2)}})}
+function tabla(on){var t=$('table.vis'),s=secOf(t);if(!s)return;s.classList.toggle('tbl',!!on);$$('td.tap',t).forEach(function(c){c.classList.remove('rev')});var st=$('.vb-state',s);if(st)st.textContent=on?'Tabla tapada: toca cada celda para revelarla':'Modo lectura'}
+window.tabla=tabla;
+window.show=function(k){var ns=secK(k);if(!ns)return;$$('section.tab.on').forEach(function(s){if(s!==ns){if(s.classList.contains('recon'))recon(s,false);if(s.classList.contains('tbl'))tabla(false)}});$$('.tb,.tab').forEach(function(e){e.classList.toggle('on',e.getAttribute('data-tab')===k)});window.scrollTo(0,0);var b=$('.tb.on');if(b&&b.scrollIntoView){try{b.scrollIntoView({inline:'nearest',block:'nearest'})}catch(e){}}navOv()};
+window.ir=function(k,id){var el=document.getElementById(id),s=secOf(el);if(!s)return;var nodo=el.classList.contains('nodo');if(s.classList.contains('recon')&&!nodo)recon(s,false);if(s.classList.contains('tbl')&&!el.closest('.vis-w'))tabla(false);show(s.getAttribute('data-tab'));if(nodo&&s.classList.contains('recon'))el.classList.add('rev');var a=el.closest('.acc');if(a)a.classList.add('op');el.scrollIntoView({block:'start'});el.classList.add('hl');setTimeout(function(){el.classList.remove('hl')},1500)};
+window.tog=function(b){var a=b.closest('.acc');if(a)a.classList.toggle('op')};
+window.sel=function(dc,g){return $$('.chip.on[data-g="'+g+'"]',dc).map(function(c){return c.getAttribute('data-v')})};
+window.num=function(dc,n){var i=$('input[data-n="'+n+'"]',dc);if(!i||i.value==='')return NaN;return parseFloat(String(i.value).replace(',','.'))};
+window.out=function(dc,h){var o=$('.out',dc);if(o)o.innerHTML=h};
+window.rd=function(x,d){var p=Math.pow(10,d||0);return Math.round(x*p)/p};
+function outErr(dc,e){var o=$('.out',dc);if(o)o.textContent='Error de cálculo: '+(e&&e.message?e.message:String(e))}
+function runDc(dc){var fn=window[dc.getAttribute('data-fn')];if(typeof fn==='function'){try{fn(dc)}catch(e){outErr(dc,e)}}}
+window.ch=function(el){var dc=el.closest('.dc');if(!dc)return;if(el.classList.contains('chip')){var g=el.getAttribute('data-g');if(el.getAttribute('data-m')==='1'){el.classList.toggle('on')}else{var was=el.classList.contains('on');$$('.chip[data-g="'+g+'"]',dc).forEach(function(c){c.classList.remove('on')});if(!was)el.classList.add('on')}}runDc(dc)};
+function initNodos(f){var k=f.getAttribute('data-tab');$$('.nodo',f).forEach(function(n,i){var p=document.createElement('b');p.className='paso';var pn=document.createElement('span');pn.className='pn';pn.textContent=(i+1)+' ·';var pt=document.createElement('span');pt.className='pt';pt.textContent=n.getAttribute('data-paso')||'';p.appendChild(pn);p.appendChild(pt);var ra=n.getAttribute('data-rama');if(ra){var b=document.createElement('span');b.className='badge b-az rama';b.textContent=ra;p.appendChild(document.createTextNode(' '));p.appendChild(b)}n.insertBefore(p,n.firstChild);var c=document.createElement('div');c.className='rec-ctl';if($('.man',n))c.appendChild(btn('Pista',function(){n.classList.toggle('pis')}));c.appendChild(btn('Revelar',function(){n.classList.toggle('rev')}));n.appendChild(c)});
+var tl=$('ol.tl',f);if(!tl)return;var bar=document.createElement('div');bar.className='rec-bar';bar.id='rec-bar-'+k;var t=document.createElement('div');t.innerHTML='<b>Timeline en blanco</b> · <span class="rec-state">Modo lectura</span><p class="mini">Reconstruye la cascada sin mirar: escribe cada paso en orden, luego usa Pista (signos que produce) y Revelar nodo por nodo. Nada se guarda.</p>';bar.appendChild(t);var ta=document.createElement('textarea');ta.setAttribute('aria-label','Escribe aquí la cascada en orden');var bs=document.createElement('div');bs.className='rec-btns';var ab=btn('Activar reconstrucción',function(){recon(f,true);ta.focus()});ab.setAttribute('data-act','rec');bs.appendChild(ab);bs.appendChild(btn('Revelar todo',function(){$$('.nodo',f).forEach(function(n){n.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){recon(f,false)}));bar.appendChild(bs);bar.appendChild(ta);tl.parentNode.insertBefore(bar,tl)}
+var TGT={'1.º':'clave','De elección':'clave','Confirma':'ok','Solo si':'cond','Escala':'cond','Reevalúa':'cond','No pidas':'no','Evita':'no','Alarma':'alarma'};
+function initTg(){$$('ol.tg span.tg').forEach(function(s){var v=TGT[s.textContent.replace(/^\s+|\s+$/g,'')];if(v)s.setAttribute('data-t',v)})}
+function initTabla(){var t=$('table.vis'),s=secOf(t);if(!s)return;var w=t.parentNode;if(!w.classList.contains('tw')){w=document.createElement('div');w.className='tw';t.parentNode.insertBefore(w,t);w.appendChild(t)}w.classList.add('vis-w');var rows=$$('tbody tr',t);if(!rows.length)rows=$$('tr',t).slice(1);rows.forEach(function(r){Array.prototype.slice.call(r.children,1).forEach(function(c){c.classList.add('tap');c.addEventListener('click',function(){if(s.classList.contains('tbl'))c.classList.add('rev')})})});
+var bar=document.createElement('div');bar.className='vb-bar';bar.id='vb-bar';var h=document.createElement('div');h.innerHTML='<b>Tabla en blanco</b> · <span class="vb-state">Modo lectura</span><p class="mini">Tapa todas las celdas de las entidades (quedan visibles las cabeceras y los ejes). Di cada celda antes de tocarla; un toque la revela. Nada se guarda.</p>';bar.appendChild(h);var bs=document.createElement('div');bs.className='rec-btns';bs.appendChild(btn('Tapar la tabla',function(){tabla(true)}));bs.appendChild(btn('Revelar todo',function(){$$('td.tap',t).forEach(function(c){c.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){tabla(false)}));bar.appendChild(bs);w.parentNode.insertBefore(bar,w)}
+function initRecGo(){var TL=$$('section.tab').filter(function(s){return!!$('ol.tl',s)}),sin=secK('sin'),dst=sin||secK('seg');if(!dst)return;var ord=sin?TL.filter(function(s,i){return i%2===0}).concat(TL.filter(function(s,i){return i%2===1})):TL;var vt=$('table.vis');if(!ord.length&&!(sin&&vt))return;
+var w=document.createElement('div');w.className='hb az rec-go';w.innerHTML='<div class="hb-t">Antes de cerrar: recupera sin mirar</div><p class="mini">Cada botón te lleva a la función en blanco correspondiente. Intenta la respuesta completa antes de revelar.</p>';var bs=document.createElement('div');bs.className='rec-btns';w.appendChild(bs);
+if(sin&&vt){var vs=secOf(vt),vk=vs.getAttribute('data-tab'),b0=btn('Tabla en blanco — '+nameOf(vk),function(){show(vk);tabla(true);var b=document.getElementById('vb-bar');if(b)b.scrollIntoView({block:'start'})},'go');b0.setAttribute('data-rec',vk);bs.appendChild(b0)}
+ord.forEach(function(s){var k=s.getAttribute('data-tab'),b=btn('Reconstruir la cascada — '+nameOf(k),function(){show(k);recon(s,true);var r=document.getElementById('rec-bar-'+k);if(r)r.scrollIntoView({block:'start'})},'go');b.setAttribute('data-rec',k);bs.appendChild(b)});
+var rf=$('.acc.refs',dst);if(rf)dst.insertBefore(w,rf);else dst.appendChild(w)}
+function init(){var f=$('.tb'),ph=[function(){var n=$('nav.tabs');if(n){var w=document.createElement('div');w.className='tabs-w';n.parentNode.insertBefore(w,n);w.appendChild(n);n.addEventListener('scroll',navOv);window.addEventListener('resize',navOv)}},function(){$$('section.tab').forEach(function(s){if($('ol.tl',s))initNodos(s)})},initTg,initTabla,initRecGo,function(){$$('.dc').forEach(runDc)},function(){show(secK('pan')?'pan':(f?f.getAttribute('data-tab'):''))}];ph.forEach(function(p){try{p()}catch(e){if(window.console)console.error('kit v10:',e)}})}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+</body>
+</html>

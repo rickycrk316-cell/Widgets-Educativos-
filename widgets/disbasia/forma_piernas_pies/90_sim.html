@@ -1,0 +1,145 @@
+<script>
+function dcVis(dc){
+var h=sel(dc,'h');
+if(!h.length){out(dc,'<p class="mini">Marca al menos un hallazgo para ver la entidad compatible.</p>');return;}
+var s=function(k){return h.indexOf(k)>-1;};
+var E={
+e5:{n:'Pie equinovaro (pie zambo)',f:'Que el pie no se corrija con una maniobra suave y que no haya causa sindrómica ni neurológica de base',c:'Derivar en los primeros días a ortopedia pediátrica para iniciar yesos seriados, idealmente en las primeras 2–6 semanas [8]',cf:'Si el pie se corrigiera con una maniobra suave → sería un pie posicional y bastaría el seguimiento'},
+e4:{n:'Pie cavo con causa neurológica por descartar',f:'Examen neurológico completo y los estudios que defina neurología pediátrica [6][7]',c:'Derivar a neurología y ortopedia pediátrica antes de operar el pie [7]',cf:'Si no hubiera ningún hallazgo neurológico tras la evaluación completa → cavo idiopático, un diagnóstico de exclusión [7]'},
+e3r:{n:'Pie plano rígido (coalición tarsal o astrágalo vertical)',f:'Radiografía en carga y tomografía o resonancia para confirmar la coalición [5]',c:'Derivar a ortopedia pediátrica y tratar el dolor mientras tanto [4][5]',cf:'Si el arco reapareciera de puntillas → sería un pie plano flexible y bastaría observar [1]'},
+e3:{n:'Pie plano flexible',f:'Arco que reaparece de puntillas y subtalar móvil [1]',c:'Observar sin ortesis si es asintomático [4]',cf:'Si el pie plano fuera rígido o doloroso → pensar en coalición tarsal o astrágalo vertical y derivar [4][5]'},
+e2:{n:'Anteversión femoral',f:'Rotación interna de cadera mayor de 70° con externa reducida y ausencia de dolor de cadera [1]',c:'Tranquilizar, observar y reevaluar cada 6–12 meses [1]',cf:'Si el pie mirara hacia fuera de forma reciente con dolor en un adolescente → radiografía urgente por posible epifisiólisis [1]'},
+e1:{n:'Genu varo o genu valgo',f:'Medición simétrica de la distancia intercondílea o intermaleolar acorde con la edad; radiografía si es atípico [1]',c:'Observar y reevaluar; derivar a ortopedia si es asimétrico, progresivo o doloroso [1]',cf:'Si fuera unilateral o progresivo → radiografía y derivación a ortopedia pediátrica [1]'}
+};
+var k=[];
+if(s('equino'))k.push('e5');
+if(s('neuro')||s('cavus'))k.push('e4');
+if(s('rigid'))k.push('e3r');
+else if(s('flat'))k.push('e3');
+if(s('rotint')||s('intoe'))k.push('e2');
+if(s('rod'))k.push('e1');
+if(!k.length){out(dc,'<p>La asimetría sola no ubica la entidad: completa el perfil rotacional, el eje de la rodilla y el examen del pie, y deriva a ortopedia pediátrica [1].</p><span class="cf">Si añadieras un hallazgo del pie, de la cadera o de la rodilla → la entidad compatible quedaría definida</span>');return;}
+var m=E[k[0]],o='';
+if(k.length>1){var l=[];for(var i=1;i<k.length;i++)l.push(E[k[i]].n);o='<p>También compatible: '+l.join('; ')+'. Se atiende primero la de mayor amenaza.</p>';}
+var u=s('uni')?'<p>La asimetría obliga a pedir radiografía y valoración ortopédica [1].</p>':'';
+out(dc,'<p><b>'+m.n+'</b></p><p>Hallazgo que falta para confirmarla: '+m.f+'.</p><p>Conducta inicial: '+m.c+'.</p>'+o+u+'<span class="cf">'+m.cf+'</span>');
+}
+function dcE1a(dc){
+var e=sel(dc,'edad')[0],t=sel(dc,'tipo')[0],f=sel(dc,'f');
+if(!e||!t){out(dc,'<p class="mini">Elige la edad y el tipo de deformidad para ver la conducta.</p>');return;}
+var has=function(x){return f.indexOf(x)>-1;};
+var esp=(t==='varo'&&e==='a')||(t==='valgo'&&(e==='b'||e==='c'));
+var r,cf;
+if(f.length){
+r='<p><b>Rasgos de alarma: radiografía y derivación a ortopedia pediátrica.</b></p><p>Pide una radiografía en dos planos o de miembros inferiores en bipedestación [1].'+(has('talla')?' Añade calcio, fosfatasa alcalina y vitamina D por la talla baja o las muñecas ensanchadas [1].':'')+(has('trauma')?' El valgo tras una fractura tibial proximal suele ser leve y resolverse, pero se evalúa en ortopedia [1].':'')+'</p>';
+cf='Si no hubiera ningún rasgo asociado y la edad coincidiera con el patrón → observar y reevaluar cada 6–12 meses [1]';
+}else if(esp){
+r='<p><b>Variante fisiológica probable: observar sin imagen.</b></p><p>El patrón coincide con la edad: varo hasta los 2 años o valgo entre los 3 y los 6 años [1]. Reevalúa cada 6–12 meses y no uses plantillas ni calzado especial [1][2].</p>';
+cf='Si la deformidad fuera unilateral o progresiva → radiografía y derivación aunque la edad coincida [1]';
+}else if(t==='varo'&&e==='b'){
+r='<p><b>Varo persistente tras los 2 años: vigilar de cerca.</b></p><p>Piensa en tibia vara o raquitismo si es persistente o progresivo pasados los 2–3 años; controla cada 3–6 meses y pide radiografía si no mejora [1].</p>';
+cf='Si apareciera asimetría, dolor o talla baja → radiografía y laboratorio en la primera visita [1]';
+}else{
+r='<p><b>Patrón fuera de la edad esperada: radiografía y derivación.</b></p><p>El '+t+' a esta edad no corresponde al patrón fisiológico; se pide radiografía y se deriva a ortopedia pediátrica [1].</p>';
+cf='Si el patrón coincidiera con la edad (varo hasta los 2 años, valgo de 3 a 6) → observar y reevaluar cada 6–12 meses [1]';
+}
+out(dc,r+'<span class="cf">'+cf+'</span>');
+}
+function dcE1b(dc){
+var c=sel(dc,'causa')[0],g=sel(dc,'crec')[0];
+if(!c){out(dc,'<p class="mini">Elige la causa para ver la conducta.</p>');return;}
+if((c==='blount'||c==='idio')&&!g){out(dc,'<p class="mini">Indica si hay crecimiento remanente.</p>');return;}
+var r,cf;
+if(c==='fis'){
+r='<p><b>Observar y tranquilizar.</b></p><p>La variante fisiológica se corrige con el crecimiento; reevalúa cada 6–12 meses y evita ortesis, cuñas y calzado especial [1][2].</p>';
+cf='Si el varo fuera asimétrico o progresivo → radiografía y derivación a ortopedia [1]';
+}else if(c==='rach'){
+r='<p><b>Tratar la causa y reevaluar la alineación.</b></p><p>Vitamina D y calcio con el esquema de la guía de raquitismo; la dosis no se leyó en la sesión [VERIFICAR EN FUENTE]. Controla la calcemia y revisa el eje al corregir la carencia [1].</p>';
+cf='Si el eje no mejorara tras corregir la carencia → derivar a ortopedia pediátrica por posible deformidad estructural [1]';
+}else if(c==='blount'){
+r=g==='si'?'<p><b>Derivar a ortopedia pediátrica.</b></p><p>Con crecimiento remanente se considera el crecimiento guiado con hemiepifisiodesis; una tibia vara progresiva no se resuelve con observación [1][3].</p>':'<p><b>Derivar a ortopedia pediátrica para osteotomía.</b></p><p>Con las fisis cerradas, la corrección del eje exige osteotomía [1].</p>';
+cf='Si las fisis siguieran abiertas → crecimiento guiado en lugar de osteotomía [3]';
+}else{
+r=g==='si'?'<p><b>Crecimiento guiado en deformidad idiopática persistente.</b></p><p>Con crecimiento remanente, la hemiepifisiodesis corrige el eje con una cirugía de bajo riesgo [1][3].</p>':'<p><b>Osteotomía si la desviación supera 2 desviaciones estándar.</b></p><p>Con fisis cerradas, la corrección del eje requiere osteotomía [1].</p>';
+cf='Si la desviación fuera leve y sin síntomas → seguir observando [1]';
+}
+out(dc,r+'<span class="cf">'+cf+'</span>');
+}
+function dcE2(dc){
+var e=sel(dc,'edad')[0],f=sel(dc,'f');
+if(!e){out(dc,'<p class="mini">Elige la edad para ver la conducta.</p>');return;}
+var has=function(x){return f.indexOf(x)>-1;};
+var r,cf;
+if(has('scfe')){
+r='<p><b>Epifisiólisis hasta demostrar lo contrario.</b></p><p>Pide radiografía urgente de pelvis y deriva de inmediato a ortopedia pediátrica [1].</p>';
+cf='Si el pie mirara hacia dentro, sin dolor y con rotación interna conservada → anteversión femoral y observación [1]';
+}else if(has('asim')||has('sec')||has('de2')||has('sint')){
+r='<p><b>Derivar a ortopedia pediátrica.</b></p><p>La asimetría, el dolor, la enfermedad neuromuscular de base o las medidas a más de 2 desviaciones estándar salen del patrón fisiológico [1][2].</p>';
+cf='Si fuera simétrico, indoloro y con medidas acordes a la edad → observar y reevaluar cada 6–12 meses [1]';
+}else if(e==='M'){
+r='<p><b>Persistencia después de los 8 años: seguir y valorar derivación.</b></p><p>Sin síntomas se observa; la intervención se reserva para casos graves y sintomáticos que persisten pasados los 8 años [1].</p>';
+cf='Si apareciera dolor o limitación funcional → derivar a ortopedia pediátrica [2]';
+}else{
+r='<p><b>Observar y tranquilizar.</b></p><p>La anteversión disminuye con el crecimiento; reevalúa cada 6–12 meses y no uses ortesis, cuñas ni calzado especial [1][2].</p>';
+cf='Si hubiera dolor, asimetría o un pie hacia fuera reciente → derivar y pedir radiografía [1]';
+}
+out(dc,r+'<span class="cf">'+cf+'</span>');
+}
+function dcE3(dc){
+var r=sel(dc,'rig')[0],d=sel(dc,'dol')[0],kg=num(dc,'kg');
+if(!r||!d){out(dc,'<p class="mini">Elige si el pie es flexible o rígido y si hay dolor.</p>');return;}
+var dosis='';
+if(d==='si'){
+if(isNaN(kg)||kg<=0){dosis='<p class="mini">Escribe el peso en kilogramos para calcular la dosis de ibuprofeno.</p>';}
+else{var u=Math.min(10*kg,400);dosis='<p>Ibuprofeno VO '+rd(u,0)+' mg por dosis cada 8 h, máximo 1 200 mg al día, durante 3 a 5 días y reevaluar; el cálculo es 10 mg/kg con tope de 400 mg por dosis'+(10*kg>400?', y el tope se aplica con este peso':'')+' [5].</p>';}
+}
+var t,cf;
+if(r==='flex'&&d==='no'){
+t='<p><b>Observar sin ortesis.</b></p><p>El pie flexible asintomático no se trata y casi no hay evidencia de que las ortesis cambien su evolución [4].</p>';
+cf='Si apareciera dolor o rigidez → reevaluar en busca de una causa rígida [1][5]';
+}else if(r==='flex'){
+t='<p><b>Medidas conservadoras.</b></p><p>Modifica la actividad, indica estiramientos y valora una plantilla; añade un antiinflamatorio por tiempo corto [1][5].</p>'+dosis;
+cf='Si el arco dejara de reaparecer de puntillas → pensar en coalición y derivar [4][5]';
+}else if(d==='no'){
+t='<p><b>Derivar a ortopedia pediátrica.</b></p><p>El pie rígido sugiere astrágalo vertical en el lactante o coalición tarsal en el mayor; confirma con radiografía en carga y, si hace falta, tomografía o resonancia [4][5].</p>';
+cf='Si apareciera dolor o esguinces → antiinflamatorio, ortesis o yeso sin apoyo y valorar la resección [5]';
+}else{
+t='<p><b>Derivar a ortopedia pediátrica y tratar el dolor.</b></p><p>Antiinflamatorio, ortesis y yeso sin apoyo; si el dolor persiste, resección de la coalición con o sin reconstrucción [5].</p>'+dosis;
+cf='Si el arco reapareciera de puntillas → sería un pie flexible sintomático y bastarían medidas conservadoras [1]';
+}
+out(dc,t+'<span class="cf">'+cf+'</span>');
+}
+function dcE4(dc){
+var x=sel(dc,'flex')[0],n=sel(dc,'n');
+if(!x){out(dc,'<p class="mini">Elige si el retropié es flexible o rígido para ver la conducta.</p>');return;}
+var t,cf;
+var q=x==='flex'?'Flexible: técnicas de partes blandas [7].':'Rígido: osteotomías o tarsectomía, preferibles a la artrodesis [7].';
+if(n.length){
+t='<p><b>Derivar a neurología pediátrica y a ortopedia antes de tratar el pie.</b></p><p>Hay hallazgos que sugieren causa neurológica: se piden los estudios que defina neurología [6][7]'+(n.indexOf('espina')>-1?'; ante signos de columna o médula se valora imagen medular [VERIFICAR EN FUENTE]':'')+'. '+q+' No se opera el pie antes de esa evaluación [7].</p>';
+cf='Si todos los hallazgos neurológicos fueran normales tras la evaluación completa → cavo idiopático y manejo ortopédico [7]';
+}else{
+t='<p><b>Completar el examen neurológico antes de llamarlo idiopático.</b></p><p>Sin hallazgos, el cavo idiopático es un diagnóstico de exclusión [7]. '+q+'</p>';
+cf='Si apareciera debilidad, reflejos alterados o progresión → derivar a neurología pediátrica [6][7]';
+}
+out(dc,t+'<span class="cf">'+cf+'</span>');
+}
+function dcE5(dc){
+var tp=sel(dc,'tipo')[0],ini=sel(dc,'ini')[0],fa=sel(dc,'fase')[0],fe=sel(dc,'fer')[0];
+if(!tp||!ini||!fa){out(dc,'<p class="mini">Elige el tipo, el momento de inicio y la fase para ver la conducta.</p>');return;}
+if(fa==='ferula'&&!fe){out(dc,'<p class="mini">Indica si la férula es tolerada.</p>');return;}
+var t,cf;
+if(fa==='yeso'){
+t='<p><b>Continuar los yesos seriados.</b></p><p>Se sigue el método de Ponseti y se valora la tenotomía del Aquiles si persiste el equino [8].</p>';
+cf='Si el equino cediera por completo con los yesos → pasar a la férula de abducción sin tenotomía [8]';
+}else if(fa==='ferula'){
+t=fe==='tol'?'<p><b>Mantener la férula y vigilar.</b></p><p>La férula sostiene la corrección frente a los tejidos que tienden a acortarse [10].</p>':'<p><b>Intervenir de inmediato en la adherencia.</b></p><p>La intolerancia a la férula es el mayor predictor de recaída; revisa el ajuste, la piel y el apoyo de los cuidadores [9][10].</p>';
+cf='Si la férula dejara de tolerarse → alto riesgo de recaída: actuar sobre la adherencia antes de que reaparezca el equino [9][10]';
+}else{
+t='<p><b>Tratar la recaída.</b></p><p>Se repiten los yesos y, si fracasan, se indica cirugía limitada [8].</p>';
+cf='Si hubiera una férula mal tolerada previa → reforzar la adherencia después de la corrección [9][10]';
+}
+var a=tp==='sind'?'<p>En la forma sindrómica o neurogénica la recaída esperable es de 30–40 % y el éxito a largo plazo de 68 % [8].</p>':'<p>En la forma idiopática la recaída es de 20–30 % [8].</p>';
+var b=ini==='tard'?'<p>No esperes: inicia el tratamiento ya; el retraso se asocia con más recaída [9].</p>':'';
+out(dc,t+a+b+'<span class="cf">'+cf+'</span>');
+}
+</script>

@@ -1,0 +1,106 @@
+<script>
+function dcVis(dc){
+var h=sel(dc,'h');
+if(!h.length){out(dc,'Elige los hallazgos del paciente para ver qué entidad es compatible, qué falta para confirmarla y la conducta inicial.');return;}
+var def={
+e1:{n:'Hipopotasemia con íleo paralítico',f:['dist','vom','ecg'],falta:'K⁺ sérico y ECG',cond:'reponer K⁺ y Mg²⁺ con monitoreo ECG y tratar la causa de la pérdida',cf:'Si además hubiera hiponatremia, orina oscura o psicosis, el cuadro pasaría a porfiria y se pediría PBG urinario'},
+e2:{n:'Saturnismo',f:['pb','anem'],falta:'plomo en sangre venosa',cond:'retirar la exposición y decidir la quelación según plomo y síntomas',cf:'Si el K⁺ estuviera bajo y no hubiera exposición ni anemia, el cuadro pasaría a hipopotasemia'},
+e3:{n:'Porfiria aguda intermitente',f:['orina','na','neuro','trig'],falta:'PBG y ALA en orina puntual protegida de la luz',cond:'suspender fármacos de riesgo, dar glucosa y hemina IV, y derivar a especialista',cf:'Si el PBG urinario fuera normal durante el ataque, se descartaría porfiria aguda y se buscarían plomo o K⁺ bajo'}
+};
+var best=[],bs=-1,k,s,rows='';
+for(k in def){s=0;def[k].f.forEach(function(x){if(h.indexOf(x)>=0)s++});def[k].s=s;rows+='<li>'+def[k].n+': '+s+' de '+def[k].f.length+' hallazgos compatibles</li>';if(s>bs){bs=s;best=[k]}else if(s===bs){best.push(k)}}
+var w='';
+if(h.indexOf('perit')>=0){w='<p><b>Defensa o rebote:</b> no es abdomen médico; es abdomen quirúrgico hasta demostrar lo contrario (widget quirúrgico).</p>';}
+if(bs===0){out(dc,w+'<p>Los hallazgos elegidos no apuntan a ninguna de las tres entidades. Amplía la anamnesis y mide K⁺, Na⁺, ECG y plomo.</p><span class="cf">Si agregas distensión con ruidos ausentes → hipopotasemia; si agregas exposición a plomo → saturnismo; si agregas orina oscura → porfiria.</span>');return;}
+var e=def[best[0]];
+var t=best.length>1?'<p>Empate entre: '+best.map(function(x){return def[x].n}).join(' y ')+'. Pide la prueba que decide de cada una.</p>':'<p><b>Entidad compatible:</b> '+e.n+'.</p>';
+var mas='';
+if(best[0]!=='e3'&&(h.indexOf('na')>=0||h.indexOf('orina')>=0||h.indexOf('neuro')>=0)){mas='<p>Hay datos de porfiria: pide PBG urinario antes de operar o sedar y evita fármacos porfirinogénicos.</p>';}
+out(dc,w+t+'<ul>'+rows+'</ul><p><b>Prueba que falta:</b> '+e.falta+'.</p><p><b>Conducta inicial:</b> '+e.cond+'. Ver tabla de la entidad.</p>'+mas+'<span class="cf">'+e.cf+'.</span>');
+}
+function dcE1D(dc){
+var k=num(dc,'k'),d=sel(dc,'d');
+if(isNaN(k)){out(dc,'Ingresa el potasio sérico para clasificar la gravedad y elegir la vía.');return;}
+var g,r;
+if(k>=3.5){out(dc,'<p>K⁺ de '+k+' mEq/L: dentro de lo normal (3,5–5,0). No explica el íleo: busca otra causa (Mg²⁺, obstrucción mecánica, otros fármacos).</p><span class="cf">Si el K⁺ fuera menor de 3,5 con íleo y abdomen blando, sería hipopotasemia a corregir [2].</span>');return;}
+g=k<2.5?'grave (menor de 2,5 mEq/L)':'leve a moderada (2,5–3,5 mEq/L)';
+var iv=k<2.5||d.indexOf('vo')>=0||d.indexOf('ecg')>=0||d.indexOf('deb')>=0;
+r='<p><b>Gravedad:</b> hipopotasemia '+g+' [2].</p>';
+r+='<p><b>Vía:</b> '+(iv?'intravenosa con monitoreo ECG continuo y K⁺ seriado':'oral con abundante agua, con o después de comidas')+' [2].</p>';
+r+='<p><b>Déficit aproximado:</b> '+rd((3.5-k)*200,0)+'–'+rd((3.5-k)*400,0)+' mEq (estimación imprecisa) [2].</p>';
+r+='<p><b>Siempre:</b> medir y corregir Mg²⁺; ECG a todo paciente; tratar la causa [2].</p>';
+if(d.indexOf('ren')>=0){r+='<p><b>Insuficiencia renal:</b> reposición muy cautelosa y aviso a nefrología [2].</p>';}
+if(d.indexOf('deb')>=0){r+='<p><b>Debilidad respiratoria:</b> vigila ventilación; considera cuidados intensivos.</p>';}
+r+='<span class="cf">'+(k<2.5?'Si el K⁺ fuera 2,5 o más y tolerara la vía oral, bastaría reposición oral con control [2].':'Si el K⁺ cayera por debajo de 2,5, pasarías a vía IV con ECG continuo [2].')+'</span>';
+out(dc,r);
+}
+function dcE1T(dc){
+var k=num(dc,'k'),q=num(dc,'q'),rt=num(dc,'r'),via=sel(dc,'via')[0],mon=sel(dc,'mon');
+if(isNaN(k)||!via){out(dc,'Ingresa el K⁺ y elige la vía de acceso para calcular el tope de velocidad y la concentración.');return;}
+if(k>=3.5){out(dc,'<p>K⁺ de '+k+' mEq/L: no hay indicación de reposición IV.</p><span class="cf">Si el K⁺ fuera menor de 2,5, se repondría por vía IV con ECG continuo [2][5].</span>');return;}
+var ecg=mon.indexOf('ecg')>=0,ren=mon.indexOf('ren')>=0;
+var cap=via==='cen'?(ecg?20:10):10;
+var r='';
+if(k<2.5&&!ecg){out(dc,'<p><b>No inicies la reposición IV sin ECG continuo:</b> con K⁺ menor de 2,5 mEq/L el monitoreo es obligatorio [2][5]. Traslada al paciente a un área monitorizada.</p><span class="cf">Con ECG continuo disponible, el tope de velocidad pasaría a '+(via==='cen'?'20':'10')+' mEq/h [5].</span>');return;}
+var want=isNaN(rt)||rt<=0?cap:rt;
+var ap=Math.min(want,cap);
+r+='<p><b>Velocidad aplicada:</b> '+ap+' mEq/h'+(want>cap?' (tope; pediste '+want+' mEq/h)':'')+' [5] [VERIFICAR EN FUENTE].</p>';
+var conc=via==='cen'?100:40;
+r+='<p><b>Concentración máxima:</b> '+(via==='cen'?'hasta 100 mEq/L (0,1 mmol/mL) por vía central, catéter con la punta fuera de la aurícula derecha':'40 mEq/L por vía periférica (otra fuente indica 20 mmol/L; manda el protocolo local)')+' [5].</p>';
+r+='<p><b>Diluyente:</b> NaCl 0,9 %, no suero glucosado [2].</p>';
+if(!isNaN(q)&&q>0){
+r+='<p><b>Cantidad de este ciclo:</b> '+q+' mEq en un volumen mínimo de '+rd(q/conc*1000,0)+' mL; duración '+rd(q/ap,1)+' h a '+ap+' mEq/h.</p>';
+r+='<p><b>Flujo con la concentración máxima:</b> '+rd(ap/conc*1000,0)+' mL/h.</p>';
+}
+r+='<p>Repite K⁺ y Mg²⁺ al terminar el ciclo; corrige el Mg²⁺ [2].</p>';
+if(ren){r+='<p><b>Insuficiencia renal:</b> reposición muy cautelosa y aviso a nefrología [2].</p>';}
+r+='<span class="cf">'+(via==='per'?'Si pasaras a vía central con ECG continuo, el tope subiría de 10 a 20 mEq/h [5].':'Si no hubiera ECG continuo, el tope bajaría de 20 a 10 mEq/h y con K⁺ menor de 2,5 no se iniciaría [5].')+'</span>';
+out(dc,r);
+}
+function dcE2(dc){
+var pb=num(dc,'pb'),pe=num(dc,'peso'),sx=sel(dc,'sx')[0];
+if(isNaN(pb)||!sx){out(dc,'Ingresa el plomo en sangre venosa y elige el estado clínico para decidir entre retirar de la exposición y quelar.');return;}
+var r='<p><b>Siempre:</b> retirar de toda fuente de plomo, laboral y doméstica [3].</p>',chel=false,cf;
+if(sx==='enc'){
+r+='<p><b>Encefalopatía o convulsiones:</b> emergencia. Hospitalizar y quelar por vía parenteral con toxicología (EDTA cálcico disódico o dimercaprol; dosis por el especialista) [3].</p>';
+cf='Si no hubiera encefalopatía y el plomo fuera menor de 80, bastaría retirar la exposición';
+}else if(pb>=100){
+r+='<p><b>Plomo de 100 µg/dL o más:</b> casi siempre se quela; riesgo de encefalopatía o convulsiones; manejo hospitalario con especialista [3].</p>';chel=true;
+cf='Si el plomo fuera de 79 o menos, solo se quelaría a algunos sintomáticos';
+}else if(pb>=80){
+r+='<p><b>Plomo de 80 a 99 µg/dL:</b> se puede considerar la quelación, con o sin síntomas, decidida caso a caso con toxicología [3].</p>';chel=true;
+cf='Si el plomo llegara a 100 o más, casi siempre se quelaría [3]';
+}else if(pb>=50&&sx==='sint'){
+r+='<p><b>Plomo de 50 a 79 µg/dL con síntomas:</b> algunos pacientes sintomáticos pueden quelarse; decisión con especialista [3].</p>';chel=true;
+cf='Si el paciente estuviera asintomático, solo se retiraría de la exposición';
+}else{
+r+='<p><b>Sin indicación de quelar:</b> la quelación no se recomienda en asintomáticos con plomo bajo, ni por cabello u orina [3]. Controlar plomo seriado.</p>';
+cf='Si el plomo subiera a 80 o más, se podría considerar la quelación [3]';
+}
+if(chel&&sx!=='enc'){
+if(isNaN(pe)){r+='<p>Ingresa el peso para calcular la dosis de succímero.</p>';}
+else{var pc=Math.min(pe,100);r+='<p><b>Succímero oral:</b> '+rd(pc*10,0)+' mg por dosis cada 8 h durante 5 días y luego cada 12 h durante 14 días (10 mg/kg; peso de cálculo con tope de 100 kg'+(pe>100?'; tu peso de '+pe+' kg se limitó':'')+') [VERIFICAR EN FUENTE].</p>';}
+}
+out(dc,r+'<span class="cf">'+cf+'.</span>');
+}
+function dcE3(dc){
+var sev=sel(dc,'sev')[0],a=sel(dc,'a'),pe=num(dc,'peso');
+if(!sev){out(dc,'Elige la gravedad del ataque para ver la conducta: suspender gatillos, glucosa y hemina.');return;}
+var r='<p><b>Siempre:</b> suspender fármacos porfirinogénicos y evitar ayuno y alcohol; analgesia con morfina y fármacos de la lista de seguros [4].</p>';
+if(a.indexOf('farm')>=0){r+='<p><b>Fármaco de riesgo en curso:</b> suspéndelo ahora y revisa la lista de seguros antes de indicar otro [4].</p>';}
+r+='<p><b>Glucosa IV:</b> hasta 450–600 g/día [4] [VERIFICAR EN FUENTE: otras fuentes dan 300–500 g/día]; vigila el sodio porque puede precipitar hiponatremia.</p>';
+var cf;
+if(sev==='grave'||a.indexOf('deb')>=0||a.indexOf('na')>=0){
+r+='<p><b>Hemina IV:</b> 3–4 mg/kg/día por vía central de alto flujo, al menos 4–5 días; no la retrases en el ataque grave [4][6] [VERIFICAR EN FUENTE].</p>';
+if(isNaN(pe)){r+='<p>Ingresa el peso para calcular los mg diarios.</p>';}
+else{var pc=Math.min(pe,100);r+='<p>Para '+pc+' kg: '+rd(pc*3,0)+'–'+rd(pc*4,0)+' mg al día (peso de cálculo con tope de 100 kg'+(pe>100?'; tu peso de '+pe+' kg se limitó':'')+').</p>';}
+if(a.indexOf('na')>=0){r+='<p><b>Hiponatremia:</b> controla el sodio de forma seriada; riesgo de convulsiones [4].</p>';}
+if(a.indexOf('deb')>=0){r+='<p><b>Debilidad progresiva:</b> cuidados intensivos y vigilancia de la función respiratoria [4].</p>';}
+cf=sev==='grave'?'Si el ataque fuera leve y sin hiponatremia ni debilidad, bastaría glucosa IV con vigilancia y hemina si no mejora':'Si no hubiera debilidad ni hiponatremia, el ataque leve se manejaría con glucosa; con estos datos se trata como grave';
+}else{
+r+='<p>Ataque leve: glucosa y analgesia; si no mejora, se escala a hemina [4].</p>';
+cf='Si apareciera debilidad, hiponatremia o dolor que exige opioide, sería ataque grave y se indicaría hemina IV';
+}
+out(dc,r+'<span class="cf">'+cf+'.</span>');
+}
+</script>

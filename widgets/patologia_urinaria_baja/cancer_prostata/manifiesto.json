@@ -1,0 +1,46 @@
+{
+ "titulo": "Cáncer de próstata",
+ "salida": "../Cancer_de_prostata_widget_v10.html",
+ "modo": "mono",
+ "tabs": [
+  "pan",
+  "def",
+  "fis",
+  "cli",
+  "dx",
+  "tx",
+  "seg"
+ ],
+ "pg": {
+  "def": 3,
+  "fis": 3,
+  "cli": 3,
+  "dx": 3,
+  "tx": 3,
+  "seg": 3
+ },
+ "fey": {
+  "def": 1,
+  "fis": 2,
+  "dx": 1,
+  "tx": 1,
+  "seg": 1
+ },
+ "nodos": 10,
+ "signos": 5,
+ "dc": [
+  "dx",
+  "tx",
+  "seg"
+ ],
+ "nucleo": [
+  "Carcinoma invade el estroma periférico",
+  "Arquitectura rota libera PSA a la sangre",
+  "Tumor avanza hacia uretra y cuello vesical",
+  "Células viajan por el plexo venoso vertebral",
+  "Metástasis vertebral comprime la médula",
+  "Nódulo duro o próstata pétrea al tacto rectal",
+  "Decisión compartida sobre PSA según edad y riesgo",
+  "Vigilancia activa en el riesgo bajo"
+ ]
+}

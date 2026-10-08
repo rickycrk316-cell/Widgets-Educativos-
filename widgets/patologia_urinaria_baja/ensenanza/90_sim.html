@@ -1,0 +1,185 @@
+<script>
+function par(t){return '<p>'+t+'</p>';}
+function hv(a,v){return a.indexOf(v)>-1;}
+function vacio(dc,t){out(dc,par(t));}
+
+function dcVis(dc){
+  var t=sel(dc,'tacto'),s=sel(dc,'sint'),f=sel(dc,'fiebre'),u=sel(dc,'orina'),o=sel(dc,'otros');
+  if(!(t.length||s.length||f.length||u.length||o.length)){
+    vacio(dc,'Elige los hallazgos de la consulta. El simulador propone qué entidad es compatible, qué dato falta para confirmarla y la conducta inicial; no calcula probabilidades.');return;}
+  var r=[],n=0;
+  if(hv(s,'secrecion')){n++;
+    r.push(par('<b>Uretritis</b>: la secreción por el meato la hace compatible. Falta confirmar con NAAT de primera orina y Gram uretral [4]. Conducta inicial: tratar según el agente y estudiar a la pareja.'));
+    if(hv(o,'escroto')) r.push(par('El dolor escrotal sugiere epididimitis asociada; si el inicio fue súbito, descarta torsión testicular, urgencia quirúrgica [4].'));
+  }
+  if(hv(t,'dolor')){n++;
+    r.push(par('<b>Prostatitis aguda</b>: la próstata dolorosa y caliente la hace compatible'+(hv(f,'si')?', y la fiebre la refuerza':'')+'. Falta el urocultivo antes del antibiótico [7]. Conducta inicial: antibiótico según gravedad, ingreso si hay sepsis o retención y sin masaje prostático.'));
+  } else if(hv(s,'perineal')&&!hv(f,'si')&&hv(u,'normal')){n++;
+    r.push(par('<b>Prostatitis crónica o dolor pélvico crónico</b>: dolor perineal sin fiebre ni piuria. Falta documentar cultivos y descartar otras causas. Conducta inicial: no repetir antibióticos sin cultivo y derivar a urología [4].'));
+  }
+  if(hv(s,'disuria')&&hv(u,'piuria')&&!hv(t,'dolor')&&!hv(s,'secrecion')){n++;
+    r.push(par('<b>Cistitis</b>: disuria con piuria y bacteriuria sin dolor prostático. En el varón es complicada: falta el urocultivo y la causa predisponente (residuo y tacto rectal) [5]. Conducta inicial: antibiótico dirigido por cultivo.'));
+  }
+  if(hv(t,'duro')){n++;
+    r.push(par('<b>Cáncer de próstata</b>: el nódulo duro o la próstata pétrea lo hace compatible aunque falten síntomas. Falta el PSA repetido y la resonancia con biopsia dirigida tras decisión compartida [3][8]. Conducta inicial: derivar a urología.'));
+  }
+  if(hv(t,'blando')&&hv(s,'obs')&&!hv(f,'si')&&!hv(u,'piuria')){n++;
+    r.push(par('<b>Hiperplasia prostática benigna</b>: STUI obstructivos con próstata aumentada y blanda, sin fiebre ni piuria. Falta cuantificar con I-PSS, uroanálisis y residuo [1][2]. Conducta inicial: medidas conductuales y alfabloqueante si los síntomas son moderados a graves.'));
+    if(hv(o,'famca')) r.push(par('El antecedente familiar de primer grado abre la conversación sobre PSA aunque el tacto sea blando [3].'));
+  }
+  if(hv(o,'retencion')) r.push(par('Imposibilidad de orinar: sondaje y derivación sin demora [5].'));
+  if(hv(o,'hematuria')) r.push(par('Hematuria macroscópica: estudia la vejiga y las vías altas antes de atribuirla a la próstata [5].'));
+  if(!n) r.push(par('Los hallazgos elegidos no bastan para sostener una sola entidad. Completa el tacto rectal, el uroanálisis y los síntomas, y revisa las banderas rojas.'));
+  r.push('<span class="cf">Si el tacto blando pasa a nódulo duro → la conducta cambia de manejo del vaciado a PSA repetido y estudio dirigido [3].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE1dx(dc){
+  var ip=num(dc,'ipss'),pr=sel(dc,'pred'),di=sel(dc,'diario'),al=sel(dc,'ala');
+  if(isNaN(ip)&&!pr.length&&!di.length&&!al.length){
+    vacio(dc,'Escribe el I-PSS y elige el patrón, el diario miccional y los datos de alarma para obtener la banda y la conducta.');return;}
+  var r=[];
+  if(isNaN(ip)){r.push(par('Falta el I-PSS: aplica el cuestionario antes de decidir [2].'));}
+  else if(ip<0||ip>35){r.push(par('El I-PSS va de 0 a 35: revisa el valor.'));}
+  else{
+    var b=ip<=7?'leve':(ip<=19?'moderada':'grave');
+    r.push(par('Banda <b>'+b+'</b> (I-PSS '+ip+'; leve 0 a 7, moderada 8 a 19, grave 20 a 35) [2].'));
+    if(b==='leve') r.push(par('Conducta: vigilancia con medidas conductuales (líquidos, cafeína y hora del diurético) [1].'));
+    else r.push(par('Conducta: tratamiento médico según el patrón (ver «Tratamiento»).'));
+  }
+  if(hv(pr,'noct')&&hv(di,'poli')) r.push(par('La nicturia con volumen nocturno aumentado sugiere poliuria nocturna: ajusta la hora del diurético y los líquidos antes de añadir un fármaco prostático [1].'));
+  if(hv(pr,'noct')&&hv(di,'norm')) r.push(par('La nicturia con volumen nocturno normal apunta a vejiga pequeña o irritable: la próstata es candidata a explicarla [1].'));
+  if(hv(pr,'llenado')) r.push(par('El predominio de llenado exige descartar infección con uroanálisis y medir el residuo antes de tratar [1].'));
+  if(al.length){
+    var a=[];
+    if(hv(al,'ret')) a.push('retención o globo vesical');
+    if(hv(al,'hem')) a.push('hematuria macroscópica');
+    if(hv(al,'itu')) a.push('infección urinaria recurrente');
+    if(hv(al,'res')) a.push('residuo mayor de 100 mL');
+    if(hv(al,'nod')) a.push('nódulo duro al tacto');
+    r.push(par('Datos de alarma ('+a.join(', ')+'): deriva a urología [2][5].'));
+    if(hv(al,'nod')) r.push(par('El nódulo duro desplaza el razonamiento hacia el cáncer: PSA tras decisión compartida y estudio dirigido [3].'));
+  }
+  r.push('<span class="cf">Si el diario muestra volumen nocturno aumentado → trata primero la poliuria nocturna; si aparece retención → derivación inmediata [1][5].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE1tx(dc){
+  var s=sel(dc,'sint'),v=sel(dc,'vol'),o=sel(dc,'otros');
+  if(!s.length&&!v.length&&!o.length){
+    vacio(dc,'Elige el síntoma que más molesta, el tamaño de la próstata y los otros datos para obtener el fármaco con su posología.');return;}
+  var r=[];
+  if(hv(o,'poli')) r.push(par('Primero: mueve el diurético a la mañana y reduce líquidos y cafeína antes de dormir; repite el diario antes de añadir un fármaco prostático [1].'));
+  if(hv(o,'res')) r.push(par('Residuo elevado o retención previa: deriva a urología y evita antimuscarínicos y antiespasmódicos anticolinérgicos, que pueden precipitar retención [2].'));
+  var ala=(hv(s,'vaciado')||hv(s,'llenado')||hv(s,'noct'))&&!hv(o,'poli');
+  if(ala||hv(o,'res')){
+    if(hv(o,'pa')) r.push(par('Alfabloqueante: tamsulosina 0,4 mg VO cada 24 h después de la misma comida, de forma continua; vigila la presión ortostática porque ya usa antihipertensivos y evita iniciar con doxazosina [2].'));
+    else r.push(par('Alfabloqueante: tamsulosina 0,4 mg VO cada 24 h después de la misma comida, de forma continua; alternativa: alfuzosina 10 mg de liberación prolongada VO cada 24 h tras una comida [2].'));
+  }
+  if(hv(v,'grande')) r.push(par('Con próstata aumentada, añade un inhibidor de la reductasa: dutasterida 0,5 mg o finasterida 5 mg VO cada 24 h, de forma continua y con efecto lento; la combinación con el alfabloqueante se reserva para síntomas con riesgo de progresión [2][6]. Interpreta el PSA con ese tratamiento [VERIFICAR EN FUENTE].'));
+  if(hv(o,'de')) r.push(par('Si coexiste disfunción eréctil, tadalafilo 5 mg VO cada 24 h puede cubrir ambos problemas; no lo uses con nitratos [2].'));
+  if(hv(s,'llenado')&&!hv(o,'res')) r.push(par('Si el llenado persiste tras el alfabloqueante, deriva a urología para valorar otros fármacos de llenado [2].'));
+  if(!r.length) r.push(par('Con esos datos no hay un fármaco claro: define el síntoma predominante y revisa el diario miccional.'));
+  r.push('<span class="cf">Si el residuo está elevado → no se usan antimuscarínicos y se deriva a urología [2].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE2(dc){
+  var f=sel(dc,'forma'),o=sel(dc,'otros');
+  if(!f.length&&!o.length){
+    vacio(dc,'Elige la forma de prostatitis y los otros datos para obtener la conducta y la posología.');return;}
+  var r=[];
+  if(hv(f,'aguda')){
+    if(hv(o,'fq')) r.push(par('Prostatitis aguda estable sin fluoroquinolonas: trimetoprima-sulfametoxazol 160 mg/800 mg VO cada 12 h con germen sensible; duración [VERIFICAR EN FUENTE]; urocultivo antes de la primera dosis [7].'));
+    else r.push(par('Prostatitis aguda estable: ciprofloxacino 500 mg VO cada 12 h, al menos 14 días [VERIFICAR EN FUENTE]; urocultivo antes de la primera dosis; alternativa con germen sensible: trimetoprima-sulfametoxazol 160 mg/800 mg VO cada 12 h [7].'));
+  }
+  if(hv(f,'grave')) r.push(par('Sepsis o retención: ingresa con antibiótico parenteral de amplio espectro según la guía local [7] [VERIFICAR EN FUENTE]; evita el sondaje uretral y prefiere el cateterismo suprapúbico [VERIFICAR EN FUENTE].'));
+  if(hv(f,'cronica')) r.push(par('Crónica bacteriana: antibiótico dirigido por cultivos repetidos, por ejemplo ciprofloxacino 500 mg VO cada 12 h durante un ciclo prolongado [VERIFICAR EN FUENTE] [7]; deriva a urología [4].'));
+  if(hv(f,'cppc')) r.push(par('Dolor pélvico crónico sin infección: no repitas antibióticos; tamsulosina 0,4 mg VO cada 24 h después de la misma comida si hay síntomas miccionales [2] [VERIFICAR EN FUENTE]; deriva a un urólogo con experiencia en dolor pélvico [4].'));
+  if(hv(o,'its')) r.push(par('Riesgo de infección de transmisión sexual: trata como uretritis o epididimitis (ver «Uretritis») y estudia a la pareja; una fluoroquinolona sola no cubre bien al gonococo [4][7].'));
+  if(!r.length) r.push(par('Elige una forma de prostatitis para ver la conducta.'));
+  r.push('<span class="cf">Si aparecen fiebre alta, hipotensión o retención → la conducta pasa de ambulatoria a ingreso con antibiótico parenteral [7].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE3dx(dc){
+  var ed=num(dc,'edad'),fa=sel(dc,'fam'),rk=sel(dc,'riesgo'),vi=sel(dc,'vida'),ps=sel(dc,'psa');
+  if(isNaN(ed)){
+    vacio(dc,'Escribe la edad y elige los antecedentes para ver qué recomienda la guía. Es una decisión compartida: el simulador no calcula probabilidades.');return;}
+  var alto=hv(fa,'fuerte')||hv(rk,'negra')||hv(rk,'germinal');
+  var r=[];
+  if(ed<40) r.push(par('Menor de 40 años: la guía leída no recomienda cribado de rutina; con antecedente fuerte o mutación germinal valora un estudio genético [3].'));
+  else if(ed<45) r.push(par(alto?'Entre 40 y 45 años con riesgo aumentado: ofrece cribado con PSA tras decisión compartida [3].':'Entre 40 y 45 años con riesgo promedio: no hay evidencia aleatorizada de beneficio antes de los 45 años [3].'));
+  else if(ed<50) r.push(par(alto?'Con riesgo aumentado, ofrece cribado desde ahora y valora un intervalo más corto [3].':'Con riesgo promedio puedes iniciar el cribado y ofrecer un PSA basal entre los 45 y 50 años, tras decisión compartida [3].'));
+  else if(ed<70) r.push(par('Ofrece cribado regular cada 2 a 4 años entre los 50 y 69 años, tras decisión compartida'+(alto?'; con riesgo aumentado, un intervalo más corto':'')+' [3].'));
+  else if(ed<75) r.push(par('Entre 70 y 74 años individualiza según salud y expectativa de vida; el cribado solo aporta beneficio si la expectativa supera los 10 años [3].'));
+  else r.push(par('Con 75 años o más puedes suspender o alargar el intervalo si el PSA es menor de 3 ng/mL [3].'));
+  if(hv(vi,'corta')&&ed>=50) r.push(par('Con expectativa de vida menor de 10 años el cribado probablemente no aporta beneficio [3].'));
+  if(hv(fa,'uno')) r.push(par('Un familiar de primer grado: pregunta la edad al diagnóstico, la gravedad y si falleció; si cumple los criterios de la guía, el antecedente es fuerte [3].'));
+  if(hv(fa,'fuerte')) r.push(par('Antecedente fuerte: ofrece cribado desde los 40 a 45 años y considera un estudio genético [3].'));
+  if(hv(ps,'previo')) r.push(par('Sin PSA previo: el PSA es la primera prueba de cribado [3].'));
+  if(hv(ps,'elevado')) r.push(par('PSA recién elevado: repítelo antes de pedir biomarcador, imagen o biopsia, y no lo interpretes tras infección o instrumentación reciente; con 2 ng/mL o más considera el tacto rectal [3][5].'));
+  if(hv(ps,'bajo')&&!alto) r.push(par('PSA previo bajo sin riesgo aumentado: puedes alargar el intervalo de cribado [3].'));
+  r.push(par('Decide con el paciente según sus valores y preferencias, y apóyate en una calculadora de riesgo antes de indicar la biopsia [3].'));
+  r.push('<span class="cf">Si el familiar fue diagnosticado antes de los 60 años, murió por el cáncer o tuvo metástasis → el antecedente pasa a fuerte y el cribado se ofrece desde los 40 a 45 años [3].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE3tx(dc){
+  var k=sel(dc,'riesgo'),p=sel(dc,'pref');
+  if(!k.length){
+    vacio(dc,'Elige el grupo de riesgo y la preferencia del paciente para obtener la conducta.');return;}
+  var r=[];
+  if(hv(k,'bajo')) r.push(par('Bajo riesgo, grupo de grado 1: vigilancia activa con PSA seriado según protocolo; evita el tratamiento curativo inmediato [8].'));
+  if(hv(k,'fav')) r.push(par('Intermedio favorable con grupo de grado 2: la vigilancia activa es una opción seleccionada; si el paciente prefiere tratar, prostatectomía radical o radioterapia con hipofraccionamiento [8].'));
+  if(hv(k,'desf')) r.push(par('Intermedio desfavorable o alto, localizado: tratamiento local con prostatectomía radical o radioterapia tras decisión compartida sobre efectos adversos [8].'));
+  if(hv(k,'n1')) r.push(par('Ganglios afectados: tratamiento local combinado con terapia de privación androgénica prolongada; dosis y esquema [VERIFICAR EN FUENTE] [8].'));
+  if(hv(p,'vigilar')&&(hv(k,'desf')||hv(k,'n1'))) r.push(par('Con ese riesgo la vigilancia no es la conducta estándar: revisa con el paciente por qué la prefiere [8].'));
+  if(hv(p,'tratar')&&hv(k,'bajo')) r.push(par('Un paciente de bajo riesgo que pide tratar debe conocer que la vigilancia tiene excelente pronóstico y que el tratamiento trae efectos adversos [8].'));
+  r.push('<span class="cf">Si el grupo de grado sube de 1 a 2 → deja de ser candidato automático a vigilancia y se revalora el riesgo [8].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE4(dc){
+  var p=sel(dc,'pres'),o=sel(dc,'otros');
+  if(!p.length&&!o.length){
+    vacio(dc,'Elige la presentación y los otros datos para obtener la conducta y la posología.');return;}
+  var r=[];
+  if(hv(p,'local')){
+    if(hv(o,'tmp')) r.push(par('Cistitis complicada del varón: urocultivo antes del antibiótico [5]; ciprofloxacino 500 mg VO cada 12 h si el cultivo es sensible; duración [VERIFICAR EN FUENTE] [7].'));
+    else r.push(par('Cistitis complicada del varón: urocultivo antes del antibiótico [5]; trimetoprima-sulfametoxazol 160 mg/800 mg VO cada 12 h según sensibilidad; duración [VERIFICAR EN FUENTE]; alternativa: ciprofloxacino 500 mg VO cada 12 h [7].'));
+    r.push(par('Completa el estudio con tacto rectal y ecografía con residuo posmiccional [5].'));
+  }
+  if(hv(p,'sist')) r.push(par('Fiebre o dolor lumbar sugieren que la infección ascendió: toma urocultivo y deriva o ingresa según la gravedad [5].'));
+  if(hv(p,'neg')) r.push(par('Dolor vesical con cultivo negativo: considera síndrome de dolor vesical y no indiques antibiótico [VERIFICAR EN FUENTE]; descarta tuberculosis vesical y cáncer vesical, y deriva a urología.'));
+  if(hv(o,'obs')) r.push(par('Obstrucción o residuo: es la causa predisponente; trátala o deriva para evitar la recurrencia [5].'));
+  if(hv(o,'rec')) r.push(par('Episodios previos: busca prostatitis o una causa obstructiva y deriva a urología [5].'));
+  if(!r.length) r.push(par('Elige una presentación para ver la conducta.'));
+  r.push('<span class="cf">Si el cultivo es negativo con síntomas persistentes → piensa en síndrome de dolor vesical, tuberculosis vesical o cáncer vesical en lugar de repetir el antibiótico [VERIFICAR EN FUENTE].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE5(dc){
+  var w=num(dc,'peso'),c=sel(dc,'cuadro'),o=sel(dc,'otros');
+  if(!c.length&&!o.length){
+    vacio(dc,'Escribe el peso y elige el cuadro para obtener el esquema con su posología.');return;}
+  var cefMg=Math.min(1000,(!isNaN(w)&&w>=150)?1000:500);
+  var cef=(cefMg>=1000?'1 g':'500 mg')+' (dosis máxima 1 g)';
+  var nota=isNaN(w)?'; escribe el peso: 1 g si pesa 150 kg o más':'';
+  var r=[];
+  if(hv(c,'ngu')) r.push(par('Uretritis no gonocócica: doxiciclina 100 mg VO cada 12 h por 7 días; alternativa: azitromicina 1 g VO en dosis única, o 500 mg el primer día y 250 mg cada 24 h por 4 días más [4]. Observa la primera dosis y trata a las parejas de los últimos 60 días.'));
+  if(hv(c,'gono')) r.push(par('Gonococo: ceftriaxona '+cef+' IM en dosis única'+nota+'; si la clamidia no está excluida, añade doxiciclina 100 mg VO cada 12 h por 7 días [4].'));
+  if(hv(c,'pers')){
+    r.push(par('Persistente tras tratamiento completo: confirma inflamación uretral, cumplimiento y reexposición antes de retratar [4].'));
+    if(hv(o,'tv')) r.push(par('Con tricomonas prevalentes: metronidazol 2 g VO en dosis única [4].'));
+    else r.push(par('Sin prueba de resistencia para Mycoplasma genitalium: doxiciclina 100 mg VO cada 12 h por 7 días y después moxifloxacino 400 mg VO cada 24 h por 7 días [4].'));
+  }
+  if(hv(o,'epi')){
+    if(hv(o,'anal')) r.push(par('Epididimitis con sexo anal insertivo: ceftriaxona '+cef+' IM en dosis única más levofloxacino 500 mg VO cada 24 h por 10 días [4].'));
+    else r.push(par('Epididimitis de probable causa sexual: ceftriaxona '+cef+' IM en dosis única más doxiciclina 100 mg VO cada 12 h por 10 días [4]. Si el inicio fue súbito, descarta torsión testicular.'));
+  }
+  if(!r.length) r.push(par('Elige un cuadro para ver el esquema.'));
+  r.push('<span class="cf">Si hay diplococos gramnegativos intracelulares o NAAT positiva para gonococo → se añade ceftriaxona al esquema de la uretritis no gonocócica [4].</span>');
+  out(dc,r.join(''));
+}
+</script>

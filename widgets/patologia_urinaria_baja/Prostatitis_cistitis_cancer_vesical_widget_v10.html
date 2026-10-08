@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prostatitis, cistitis y cáncer vesical</title>
+<style>
+/* Vademécum: monografía impresa con índice de canto; filetes y tinta llevan la jerarquía, no las sombras */
+:root{
+--paper:#FBFBFC;--paper-2:#F1F2F5;--ink:#16181D;--ink-2:#3A3D46;--ink-3:#686C78;--rule:#D7D9E0;--rule-strong:#16181D;
+--accent:#2342A6;--accent-ink:#1B358A;--accent-field:#EAEEFA;--on-accent:#FFFFFF;
+--am:#7A4A06;--am-f:#FBF1DF;--ro:#9E1F1F;--ro-f:#FBE9E7;--ve:#2F5E12;--ve-f:#EBF3E1;--pu:#4C3FA8;--pu-f:#EEECFB;--co:#8E3517;--co-f:#FAEDE6;--rs:#8A2C52;--rs-f:#FAEAF1;
+--f-serif:ui-serif,"New York","Iowan Old Style","Charter","Source Serif Pro",Georgia,"Times New Roman",serif;
+--f-sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+--r:3px;
+/* alias de la v10 para compatibilidad */
+--surface-0:var(--paper);--surface-1:var(--paper-2);--border:var(--rule);--border-accent:var(--accent);--bg-accent:var(--accent-field);--text-primary:var(--ink);--text-secondary:var(--ink-2);--text-muted:var(--ink-3);--text-accent:var(--accent-ink);--radius:var(--r);--font-sans:var(--f-sans);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}
+html{color-scheme:light dark;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:var(--accent);color:var(--on-accent)}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--f-sans);-webkit-text-size-adjust:100%;font-feature-settings:"kern" 1;text-rendering:optimizeLegibility;caret-color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:18px 16px 56px;background:transparent}
+h1{font:600 26px/1.2 var(--f-serif);letter-spacing:-.012em;margin:6px 0 14px;padding-bottom:12px;border-bottom:2px solid var(--rule-strong);text-wrap:balance}
+h2{font:600 19px/1.3 var(--f-serif);letter-spacing:-.006em;margin:40px 0 14px;padding-top:12px;border-top:1px solid var(--rule-strong);text-wrap:balance}
+h3{font:600 16px/1.35 var(--f-serif);margin:20px 0 6px;text-wrap:balance}
+p{margin:0 0 12px;text-wrap:pretty}
+a{color:var(--accent-ink);text-underline-offset:3px}
+button{font:inherit;color:inherit;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,color .15s ease-out}
+button:active{transform:translateY(1px)}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* índice de canto */
+.tabs{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 0 0;border-bottom:2px solid var(--rule-strong);margin-bottom:16px;position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);scroll-snap-type:x proximity;scroll-padding-inline:56px}
+.tabs-w{position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper)}
+.tabs-w::before,.tabs-w::after{content:"";position:absolute;top:0;bottom:2px;width:56px;pointer-events:none;opacity:0;transition:opacity .2s;z-index:6}
+.tabs-w::before{left:0;background:linear-gradient(to left,transparent,var(--paper) 85%)}
+.tabs-w::after{right:0;background:linear-gradient(to right,transparent,var(--paper) 85%)}
+.tabs-w.ov-l::before,.tabs-w.ov-r::after{opacity:1}
+.nodo,.signo,.qv,.dc,h2{scroll-margin-top:84px}
+.tabs::-webkit-scrollbar{display:none}
+.tb{flex:0 0 auto;min-height:44px;padding:9px 15px 8px;border:1px solid var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;background:var(--paper-2);color:var(--ink-2);font:600 13px/1.2 var(--f-sans);letter-spacing:.01em;white-space:nowrap;scroll-snap-align:start}
+.tb:hover{background:var(--accent-field);color:var(--accent-ink)}
+.tb.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+.tab{display:none}
+.tab.on{display:block}
+/* recuadros */
+.card{background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;margin:12px 0;font-size:15px;line-height:1.6}
+.card p{margin:0 0 8px}
+.card p:last-child{margin-bottom:0}
+.mini{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:6px 0}
+.hb{border-radius:var(--r);padding:12px 14px;margin:14px 0;border:1px solid transparent;font-size:15px;line-height:1.6}
+.hb.az{background:var(--accent-field);color:var(--ink);border-color:var(--accent)}
+.hb.am{background:var(--am-f);color:var(--am);border-color:var(--am)}
+.hb.ro{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.hb.ve{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+.hb.am .mini,.hb.ro .mini,.hb.ve .mini{color:inherit;opacity:.88}
+.hb-t{font:600 16px/1.35 var(--f-serif);margin-bottom:6px;text-wrap:balance}
+.hb.az .hb-t{color:var(--accent-ink)}
+.pg{margin:0;padding-left:22px}
+.pg li{margin:5px 0}
+.pg li::marker{color:var(--accent-ink);font-weight:700}
+.hb.az:has(.pg){margin-bottom:24px}
+.hb.az:not(:has(.pg)):not(.rec-go){background:transparent;border-left-color:transparent;border-right-color:transparent;border-radius:0;padding-left:0;padding-right:0}
+.hb.az:not(:has(.pg))+.etapa{border-top:0}
+h2+.card,h2+.hb,h2+.tw{margin-top:0}
+.badge{display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.04em;padding:2px 7px;border-radius:2px;margin:0 4px 4px 0;vertical-align:middle;border:1px solid currentColor}
+.b-az{background:var(--accent-field);color:var(--accent-ink)}
+.b-ro{background:var(--ro-f);color:var(--ro)}
+.b-am{background:var(--am-f);color:var(--am)}
+.b-ve{background:var(--ve-f);color:var(--ve)}
+.b-pu{background:var(--pu-f);color:var(--pu)}
+.badge.b-pu{display:block;width:fit-content;max-width:100%;white-space:normal;font-size:12px;line-height:1.5;font-weight:600;letter-spacing:.01em;margin:14px 0}
+.b-co{background:var(--co-f);color:var(--co)}
+.b-rs{background:var(--rs-f);color:var(--rs)}
+.rem{display:inline-block;font-size:12.5px;background:var(--rs-f);color:var(--rs);border:1px dashed var(--rs);border-radius:2px;padding:1px 7px;margin:4px 0}
+/* Feynman */
+.fey{background:var(--co-f);border:1px solid var(--co);border-radius:var(--r);padding:14px 16px;margin:18px 0 26px}
+.fey-t{display:inline-block;font:600 15px/1.35 var(--f-serif);color:var(--co);margin-bottom:8px}
+.fey-b{margin:0 0 10px;font:400 16px/1.6 var(--f-serif);color:var(--ink)}
+.fey-c{margin:2px 0;color:var(--ink-2)}
+/* Panorama: entradas de índice */
+.tab{counter-reset:et}
+.etapa{counter-increment:et;background:transparent;border:0;border-top:1px solid var(--rule);border-radius:0;padding:18px 0 8px;margin:4px 0}
+.etapa h3{font-size:19px;line-height:1.3;margin:0 0 8px}
+.etapa h3::before{content:counter(et,decimal-leading-zero);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;letter-spacing:.04em;color:var(--accent-ink);margin-right:10px;vertical-align:2px}
+.res{margin:0 0 10px}
+.perla{border-top:1px dotted var(--rule);padding-top:8px;margin:0 0 10px;font-weight:500}
+.perla::before{content:"Perla";display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;background:var(--ve-f);color:var(--ve);border:1px solid var(--ve);border-radius:2px;padding:1px 6px;margin-right:8px;vertical-align:1px}
+.go{min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent);color:var(--on-accent);font:600 13.5px/1.2 var(--f-sans)}
+.go:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+/* tablas de monografía */
+.tw{overflow-x:auto;margin:12px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.5;font-variant-numeric:tabular-nums}
+th,td{border:0;border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--paper-2);font-weight:700;color:var(--ink)}
+thead th{font:700 14.5px/1.35 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong)}
+tbody tr:last-child>*{border-bottom:1px solid var(--rule-strong)}
+.stats{display:grid;grid-template-columns:1fr;gap:10px;margin:12px 0}
+@media (min-width:600px){.stats{grid-template-columns:repeat(3,1fr)}}
+.stat{background:transparent;border:0;border-top:2px solid var(--accent);border-radius:0;padding:8px 2px}
+.stat b{display:block;font:600 22px/1.25 var(--f-serif);color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--ink-2);line-height:1.4;display:block}
+.steps{list-style:none;counter-reset:st;padding:0;margin:10px 0}
+.steps>li{counter-increment:st;position:relative;padding:5px 0 9px 40px}
+.steps>li::before{content:counter(st);position:absolute;left:0;top:3px;width:26px;height:26px;border-radius:2px;background:var(--ink);color:var(--paper);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;display:flex;align-items:center;justify-content:center}
+/* cascada */
+.tl{list-style:none;margin:14px 0;padding:0 0 0 20px;border-left:2px solid var(--accent)}
+.nodo{position:relative;margin:0 0 14px;padding:11px 13px;background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);font-size:14px;line-height:1.55}
+.nodo::before{content:"";position:absolute;left:-27px;top:15px;width:12px;height:12px;border-radius:1px;background:var(--accent);box-shadow:0 0 0 3px var(--paper)}
+.paso{display:block;font:600 15px/1.4 var(--f-serif);margin-bottom:5px}
+.pn{color:var(--accent-ink);margin-right:4px;font-variant-numeric:tabular-nums}
+.man{margin:8px 0 0;font-size:13px;color:var(--ink-2)}
+.signo{background:var(--paper);border:1px solid var(--rule);border-top:2px solid var(--rule-strong);border-radius:0 0 var(--r) var(--r);padding:12px 14px;margin:12px 0;font-size:14px;line-height:1.55}
+.signo h4{margin:0 0 6px;font:600 15.5px/1.35 var(--f-serif)}
+.signo dl{margin:0}
+.signo dt{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-3);margin-top:8px}
+.signo dd{margin:2px 0 0}
+.xref{display:inline-flex;align-items:center;min-height:44px;padding:4px 10px;margin:3px 6px 3px 0;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent-field);color:var(--accent-ink);font:600 12.5px/1.3 var(--f-sans);text-align:left}
+.xref:hover{background:var(--accent);color:var(--on-accent)}
+p .xref,td .xref,li .xref,dd .xref{display:inline;position:relative;min-height:0;padding:0 5px;margin:0 2px;line-height:inherit;border-radius:2px;white-space:normal;overflow-wrap:anywhere;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+p .xref::after,td .xref::after,li .xref::after,dd .xref::after{content:"";position:absolute;left:-4px;right:-4px;top:-12px;bottom:-12px}
+.hl{outline:2px solid var(--accent);background:var(--accent-field)!important;transition:background .3s}
+.acc{border:1px solid var(--rule);border-radius:var(--r);margin:12px 0;overflow:hidden}
+.acc-h{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:44px;padding:9px 14px;border:0;background:var(--paper-2);font:600 14px/1.35 var(--f-sans);text-align:left}
+.acc-h:hover{background:var(--accent-field)}
+.chev{transition:transform .2s;color:var(--accent-ink)}
+.acc.op .chev{transform:rotate(180deg)}
+.acc-b{display:none;padding:10px 14px;font-size:14px;line-height:1.55}
+.acc.op .acc-b{display:block}
+.vanc{font-size:12.5px;line-height:1.5;padding-left:24px}
+.vanc li{margin:5px 0;word-break:break-word}
+.vanc li::marker{font-variant-numeric:tabular-nums;color:var(--ink-3)}
+/* simulador */
+.dc{border:1px solid var(--rule-strong);border-radius:var(--r);padding:14px 16px;margin:22px 0;background:var(--paper)}
+.dc-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.dc-g{margin:10px 0}
+.dc-l{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);margin-bottom:5px;display:block}
+.chip{min-height:44px;padding:7px 13px;margin:3px 6px 3px 0;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);font-size:13.5px}
+.chip:hover{border-color:var(--accent);color:var(--accent-ink)}
+.chip.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:600}
+.dc input[type=number]{min-height:44px;width:120px;padding:6px 10px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper);color:var(--ink);font:15px var(--f-sans);font-variant-numeric:tabular-nums}
+.out{margin-top:12px;padding:12px 14px;border-radius:var(--r);background:var(--paper-2);border:1px solid var(--rule);font-size:14px;line-height:1.58;min-height:44px}
+.tag{display:inline-block;font:600 11px/1.4 var(--f-sans);padding:1px 7px;border-radius:2px;background:var(--accent-field);color:var(--accent-ink);margin:4px 4px 0 0}
+.rec-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.rec-bar textarea{width:100%;min-height:120px;margin-top:8px;padding:9px 11px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper-2);color:var(--ink);font:14px/1.55 var(--f-sans);resize:vertical}
+.chip:disabled{cursor:default;opacity:.85}
+.rec-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.rec-ctl{display:none;gap:6px;margin-top:6px}
+.recon .rec-ctl{display:flex}
+.recon>*:not(.rec-bar):not(.tl){display:none}
+.recon .nodo:not(.rev) .pt{display:none}
+.recon .nodo:not(.rev) .pn::after{content:" ?"}
+.recon .nodo:not(.rev) .det{display:none}
+.recon .nodo.pis:not(.rev) .det{display:block}
+.recon .nodo.pis:not(.rev) .det>*:not(.man){display:none}
+.recon .nodo:not(.pis):not(.rev) .man{display:none}
+.recon .nodo.rev{border-color:var(--accent)}
+.rec-go{margin:22px 0}
+.steps.tg>li{padding-left:40px}
+span.tg{display:inline-block;font:700 11px/1.4 var(--f-mono);letter-spacing:.02em;padding:2px 7px;margin:0 6px 2px 0;border-radius:2px;background:var(--paper-2);border:1px solid var(--rule);color:var(--ink-2);white-space:nowrap;vertical-align:1px}
+span.tg[data-t="clave"]{background:var(--accent-field);color:var(--accent-ink);border-color:var(--accent)}
+span.tg[data-t="ok"]{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+span.tg[data-t="cond"]{background:var(--am-f);color:var(--am);border-color:var(--am)}
+span.tg[data-t="no"]{background:var(--rs-f);color:var(--rs);border-color:var(--rs)}
+span.tg[data-t="alarma"]{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.qv{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:12px 0}
+.qv p{margin:0;padding:9px 11px;border-radius:var(--r);border:1px solid var(--rule);background:var(--paper-2);font-size:13.5px;line-height:1.45}
+.qv p::before{display:block;font:700 10.5px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px;color:var(--ink-3)}
+.qv p[data-e="p"]{background:var(--accent-field);border-color:var(--accent)}
+.qv p[data-e="p"]::before{content:"Presente";color:var(--accent-ink)}
+.qv p[data-e="v"]::before{content:"Variable"}
+.qv p[data-e="a"]{border:1px dashed var(--rule);color:var(--ink-3);background:transparent}
+.qv p[data-e="a"]::before{content:"Ausente"}
+.qv p[data-e="k"]{grid-column:1/-1;border:2px solid var(--accent);background:var(--accent-field);font-size:14.5px}
+.qv p[data-e="k"]::before{content:"Signo clave";color:var(--accent-ink)}
+.hb.vi{background:var(--pu-f);color:var(--pu);border-color:var(--pu)}
+.hb.vi .mini{color:inherit;opacity:.88}
+table.vis{min-width:620px}
+table.vis td{min-width:140px}
+table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index:1;background:var(--paper-2);min-width:118px;max-width:150px;font-weight:700;border-right:1px solid var(--rule)}
+.vb-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.tbl>*:not(.vb-bar):not(.vis-w){display:none}
+.tbl td.tap{cursor:pointer}
+.tbl td.tap:not(.rev){color:transparent;background:repeating-linear-gradient(135deg,var(--paper-2),var(--paper-2) 7px,var(--accent-field) 7px,var(--accent-field) 14px)}
+.tbl td.tap:not(.rev) *{visibility:hidden}
+.tbl td.tap.rev{box-shadow:inset 0 0 0 1px var(--accent)}
+.cf{display:block;margin-top:10px;padding-top:8px;border-top:1px dashed var(--accent);font-style:italic;color:var(--ink-2)}
+.cf::before{content:"Contrafactual · ";font-style:normal;font-weight:700;color:var(--accent-ink)}
+.fig{margin:14px 0}
+.fig img{display:block;max-width:100%;height:auto;border-radius:var(--r);border:1px solid var(--rule)}
+.fig figcaption{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin-top:6px}
+@media (min-width:700px){body{font-size:15.5px}.wrap{padding:22px 24px 64px}h1{font-size:28px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- /KIT_HEAD -->
+<h1>Prostatitis, cistitis y cáncer vesical</h1>
+<nav class="tabs">
+<button type="button" class="tb" data-tab="pan" onclick="show('pan')">Panorama</button>
+<button type="button" class="tb" data-tab="vis" onclick="show('vis')">Diferencial</button>
+<button type="button" class="tb" data-tab="e1" onclick="show('e1')">Cistitis infecciosa</button>
+<button type="button" class="tb" data-tab="e2" onclick="show('e2')">Prostatitis</button>
+<button type="button" class="tb" data-tab="e3" onclick="show('e3')">Cáncer vesical</button>
+<button type="button" class="tb" data-tab="sin" onclick="show('sin')">Errores</button>
+</nav>
+<section class="tab" data-tab="pan">
+<div class="hb az"><div class="hb-t">El grupo en una frase</div>
+<p>Cistitis, prostatitis y cáncer vesical irritan la misma salida urinaria; la fiebre con dolor perineal y la hematuria sin infección las separan.</p></div>
+<div class="etapa" data-go="vis"><h3>Los ejes que separan las tres causas</h3>
+<p class="res">Disuria, polaquiuria y urgencia forman el síndrome miccional irritativo, y aparecen igual cuando se inflama la vejiga, la próstata o cuando un tumor irrita el urotelio. Por eso el dato que discrimina está fuera del síndrome: el sexo y el terreno, la fiebre con dolor perineal y la próstata dolorosa, y la hematuria visible o los síntomas que persisten con urocultivo negativo. En la mujer sana sin fiebre ni flujo basta la clínica [2]; en el varón, el cultivo es obligatorio [1]. Se empieza por la cistitis, la más frecuente.</p>
+<p class="perla">La hematuria de un fumador no se atribuye a infección sin mirar dentro de la vejiga.</p>
+<button type="button" class="go" data-go="vis" onclick="show('vis')">Ir a Diferencial →</button></div>
+<div class="etapa" data-go="e1"><h3>Cistitis infecciosa, el extremo frecuente y benigno</h3>
+<p class="res">La Escherichia coli del intestino coloniza el introito, sube por la uretra corta femenina y se adhiere al urotelio con sus fimbrias; la mucosa inflamada produce disuria, urgencia y, a veces, hematuria. La señal es el síndrome miccional sin flujo vaginal, sin fiebre ni dolor lumbar. La conducta decisiva es tratar a la mujer sana sin cultivo con nitrofurantoína o fosfomicina, y cultivar al varón, a la embarazada y a la recurrente [1][2]. Después se estudia la glándula que convierte esa infección en un cuadro grave.</p>
+<p class="perla">En el varón no existe la cistitis simple: cultiva y busca la causa.</p>
+<button type="button" class="go" data-go="e1" onclick="show('e1')">Ir a Cistitis infecciosa →</button></div>
+<div class="etapa" data-go="e2"><h3>Prostatitis, cuatro tipos y una amenaza</h3>
+<p class="res">El consenso NIH separa cuatro tipos: bacteriana aguda, bacteriana crónica, dolor pélvico crónico y asintomática [4]. En la aguda, las bacterias refluyen a la glándula, el edema estrecha la uretra y las citocinas causan fiebre; la señal es la próstata dolorosa, caliente y edematosa. La conducta decisiva es urocultivo antes del antibiótico, un curso de semanas y el ingreso si hay sepsis o retención. La crónica bacteriana recae con el mismo germen; el dolor pélvico crónico no tiene infección demostrada. Después se pasa a la amenaza oncológica de la vejiga.</p>
+<p class="perla">En la prostatitis aguda no se masajea la próstata ni se pide PSA.</p>
+<button type="button" class="go" data-go="e2" onclick="show('e2')">Ir a Prostatitis →</button></div>
+<div class="etapa" data-go="e3"><h3>Cáncer vesical, el extremo grave</h3>
+<p class="res">Los carcinógenos del tabaco se eliminan por la orina y dañan durante años el ADN de todo el urotelio. La vía papilar crece hacia la luz con vasos frágiles y sangra sin dolor; el carcinoma in situ, plano, irrita la pared como una cistitis que no cura. La señal es la hematuria macroscópica indolora y total. La conducta decisiva es cistoscopia con urotomografía y resección transuretral con músculo en la muestra: la invasión del detrusor separa instilaciones vesicales de cistectomía [3][5].</p>
+<p class="perla">Una cistitis con cultivo negativo que no cede pide citología y cistoscopia.</p>
+<button type="button" class="go" data-go="e3" onclick="show('e3')">Ir a Cáncer vesical →</button></div>
+<p class="mini">Esto es el mapa, no el territorio: cada párrafo y cada perla se justifican en su pestaña.</p>
+</section>
+<section class="tab" data-tab="vis">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>Ante un adulto con disuria, polaquiuria y urgencia, ¿qué datos del interrogatorio y de la exploración separan una infección de la vejiga de una de la próstata?</li>
+<li>¿Por qué la fiebre con dolor perineal cambia el lugar de tratamiento y la duración del antibiótico?</li>
+<li>¿Qué hace que una hematuria o unos síntomas irritativos sin infección demostrada exijan mirar dentro de la vejiga?</li>
+<li>¿En qué pacientes con síntomas irritativos se trata sin cultivo y en cuáles el cultivo es obligatorio antes del antibiótico?</li>
+</ol></div>
+<p><span class="badge b-pu">EAU infecciones urológicas 2025, solo resumen [1]</span> <span class="badge b-pu">IDSA/ESCMID cistitis no complicada 2011 [2]</span> <span class="badge b-pu">EAU cáncer vesical no músculo-invasivo 2026, solo resumen [3]</span></p>
+<p class="mini">Vigencia no verificada: de las guías EAU solo se leyó el resumen de cambios; la guía IDSA/ESCMID es de 2011.</p>
+<div class="hb am"><div class="hb-t">Alcance</div>
+<p>Tres entidades que comparten el síndrome miccional irritativo (disuria, polaquiuria, urgencia) con o sin hematuria. Quedan fuera, solo como diferencial, la pielonefritis, la uretritis de transmisión sexual, la vaginitis, la litiasis vesical y la tuberculosis urinaria.</p></div>
+<div class="tw"><table class="vis"><thead><tr><th>Rasgo</th><th>Cistitis infecciosa</th><th>Prostatitis</th><th>Cáncer vesical</th></tr></thead>
+<tbody>
+<tr><th>Falla central</th><td>Bacterias entéricas colonizan y lesionan la mucosa vesical</td><td>Inflamación o infección del tejido prostático</td><td>Proliferación maligna del urotelio expuesto a carcinógenos urinarios</td></tr>
+<tr><th>Terreno típico</th><td>Mujer sexualmente activa; varón con obstrucción o sonda</td><td>Varón con obstrucción, instrumentación o riesgo sexual</td><td>Mayor de 60 años, fumador o expuesto a aminas aromáticas</td></tr>
+<tr><th>Inicio y curso</th><td>Horas a días, autolimitado con antibiótico</td><td>Agudo con fiebre o crónico recurrente</td><td>Insidioso; hematuria intermitente que engaña</td></tr>
+<tr><th>Síntoma compartido aquí</th><td>Disuria, polaquiuria y urgencia con dolor suprapúbico</td><td>Disuria y urgencia con dolor perineal</td><td>Urgencia y polaquiuria, sobre todo en el carcinoma in situ</td></tr>
+<tr><th>Signo que la delata</th><td>Disuria con polaquiuria y urgencia, sin flujo vaginal</td><td>Próstata dolorosa, caliente y edematosa al tacto rectal</td><td>Hematuria macroscópica indolora y total</td></tr>
+<tr><th>Negativo pertinente</th><td>Sin fiebre ni dolor lumbar: no es pielonefritis</td><td>Sin fiebre ni dolor al tacto: la forma aguda cae</td><td>Urocultivo negativo: la infección no explica los síntomas</td></tr>
+<tr><th>Prueba que decide</th><td>Diagnóstico clínico ante disuria, polaquiuria y urgencia sin flujo vaginal</td><td>Uroanálisis y urocultivo antes del antibiótico</td><td>Cistoscopia y urotomografía ante toda hematuria macroscópica</td></tr>
+<tr><th>Conducta inicial y quién maneja</th><td>Antibiótico corto en primer nivel; cultivo si es complicada</td><td>Antibiótico prolongado; ingreso si hay sepsis o retención</td><td>Urología: resección transuretral y estadificación</td></tr>
+<tr><th>Amenaza si se pierde</th><td>Pielonefritis y urosepsis</td><td>Sepsis y absceso prostático</td><td>Progresión a enfermedad músculo-invasiva o metastásica</td></tr>
+</tbody></table></div>
+<div class="card"><p><b>Común al grupo</b>: la vejiga y la próstata comparten la uretra y la inervación del cuello vesical; por eso irritar cualquiera de las dos produce el mismo síndrome miccional, y el dato que discrimina está fuera de él.</p>
+<div class="tw"><table><thead><tr><th>Término</th><th>Qué significa</th></tr></thead>
+<tbody>
+<tr><th>Síndrome miccional irritativo</th><td>Disuria, polaquiuria y urgencia por irritación del urotelio o del cuello vesical</td></tr>
+<tr><th>Disuria</th><td>Dolor o ardor al orinar</td></tr>
+<tr><th>Piuria</th><td>Leucocitos en la orina: indica inflamación, no siempre infección</td></tr>
+<tr><th>Nitritos</th><td>Producto de bacterias gramnegativas que reducen los nitratos de la orina; se leen en la tira reactiva</td></tr>
+<tr><th>Hematuria total</th><td>Sangre durante toda la micción: orienta a vejiga o vías altas</td></tr>
+<tr><th>Bacteriuria asintomática</th><td>Bacterias en el cultivo sin síntomas; casi nunca se trata [1]</td></tr>
+</tbody></table></div>
+<p>La guía europea de 2025 deja de dividir las infecciones urinarias en complicadas y no complicadas y las clasifica en localizadas y sistémicas [1]. En la práctica, la cistitis de la mujer sana no embarazada sigue siendo la forma de manejo más simple [2]. La prostatitis, en cambio, no es una sola enfermedad: el consenso NIH la divide en cuatro tipos [4].</p>
+<ul>
+<li>Eje 1 — Fiebre, dolor perineal y próstata dolorosa separan la prostatitis aguda de la cistitis.</li>
+<li>Eje 2 — Hematuria macroscópica indolora o síntomas irritativos con urocultivo negativo obligan a descartar cáncer vesical.</li>
+<li>Eje 3 — En la mujer sin fiebre, dolor lumbar ni flujo, la disuria es cistitis y se trata sin cultivo.</li>
+</ul></div>
+<div class="hb ro"><div class="hb-t">Banderas rojas ante el síndrome miccional</div>
+<ul>
+<li>Prostatitis aguda: fiebre, escalofríos y dolor perineal en un varón son sepsis en potencia; ingresa si hay hipotensión o retención y no masajees la próstata [1].</li>
+<li>Hematuria macroscópica en un fumador mayor de 40 años: cáncer vesical hasta demostrar lo contrario, aunque haya infección [3].</li>
+<li>Fiebre, dolor lumbar o puñopercusión positiva: la infección subió al riñón; ya no es cistitis [2].</li>
+<li>Retención urinaria o globo vesical: vaciado urgente; en la prostatitis aguda, preferible por vía suprapúbica [1].</li>
+<li>Cistitis que no responde o recurre con el mismo germen: busca obstrucción, cálculo, foco prostático o tumor [1].</li>
+</ul></div>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Interroga sexo, fiebre, dolor lumbar o perineal, flujo vaginal y hematuria visible [2].</li>
+<li><span class="tg">Añade</span>Tira reactiva o uroanálisis; en el varón, tacto rectal suave [1].</li>
+<li><span class="tg">Confirma</span>Confirma con urocultivo la infección del varón o la que falla; con cistoscopia, el tumor [1][3].</li>
+<li><span class="tg">Solo si</span>Imagen de vías urinarias solo si hay hematuria, fiebre persistente o sospecha de obstrucción [3].</li>
+<li><span class="tg">No pidas</span>No pidas urocultivo en la cistitis típica de la mujer sana ni trates la bacteriuria asintomática [1][2].</li>
+<li><span class="tg">Alarma</span>Sepsis, retención o hematuria macroscópica: deriva el mismo día [1][3].</li>
+</ol>
+<div class="dc" data-fn="dcVis"><div class="dc-t">Simulador · Decisión clínica — predice la entidad antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Paciente</span>
+<button type="button" class="chip" data-g="pac" data-v="mujer" onclick="ch(this)">Mujer no embarazada</button>
+<button type="button" class="chip" data-g="pac" data-v="varon" onclick="ch(this)">Varón</button></div>
+<div class="dc-g"><span class="dc-l">Hallazgos</span>
+<button type="button" class="chip" data-g="h" data-v="irrit" data-m="1" onclick="ch(this)">Disuria, polaquiuria y urgencia</button>
+<button type="button" class="chip" data-g="h" data-v="fiebre" data-m="1" onclick="ch(this)">Fiebre o escalofríos</button>
+<button type="button" class="chip" data-g="h" data-v="perine" data-m="1" onclick="ch(this)">Dolor perineal o próstata dolorosa</button>
+<button type="button" class="chip" data-g="h" data-v="lumbar" data-m="1" onclick="ch(this)">Dolor lumbar</button>
+<button type="button" class="chip" data-g="h" data-v="hema" data-m="1" onclick="ch(this)">Hematuria macroscópica</button>
+<button type="button" class="chip" data-g="h" data-v="flujo" data-m="1" onclick="ch(this)">Flujo vaginal</button></div>
+<div class="dc-g"><span class="dc-l">Orina y terreno</span>
+<button type="button" class="chip" data-g="o" data-v="piuria" data-m="1" onclick="ch(this)">Piuria o nitritos</button>
+<button type="button" class="chip" data-g="o" data-v="cultneg" data-m="1" onclick="ch(this)">Urocultivo negativo</button>
+<button type="button" class="chip" data-g="o" data-v="tabaco" data-m="1" onclick="ch(this)">Fumador o exposición laboral</button></div>
+<div class="out"></div></div>
+</section>
+<section class="tab" data-tab="e1">
+<div class="hb az"><div class="hb-t">Frente a Cáncer vesical</div>
+<p>Se confunde con el carcinoma in situ porque ambos dan disuria, urgencia y hematuria. Se separa por el urocultivo positivo y la respuesta rápida al antibiótico.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué la anatomía femenina y la biología de la Escherichia coli explican que la cistitis sea tan frecuente en mujeres jóvenes?</li>
+<li>¿Cómo se explican la disuria, la urgencia y la hematuria a partir de lo que ocurre en la mucosa vesical?</li>
+<li>¿Qué cambia en el diagnóstico y en el tratamiento cuando la cistitis aparece en un varón, en una embarazada o con sonda?</li>
+<li>¿En qué se apoya la elección de nitrofurantoína o fosfomicina frente a otros antibióticos, y qué hacer si falla?</li>
+</ol></div>
+<p><span class="badge b-pu">IDSA/ESCMID 2011 [2]</span> <span class="badge b-pu">EAU infecciones urológicas 2025, solo resumen [1]</span></p>
+
+<h2>Qué es</h2>
+<div class="card"><p>La cistitis infecciosa es la infección bacteriana limitada a la mucosa de la vejiga, sin afectación del riñón ni signos sistémicos, que se manifiesta con disuria, polaquiuria y urgencia [2].</p>
+<ul>
+<li>Criterio clínico: síndrome miccional irritativo de inicio reciente, sin fiebre, dolor lumbar ni flujo vaginal [2].</li>
+<li>Agente: Escherichia coli uropatógena en la mayoría; también Klebsiella, Proteus y Staphylococcus saprophyticus [5].</li>
+</ul></div>
+<p>Los subtipos existen porque el terreno cambia el germen probable, la necesidad de cultivo y la duración del antibiótico.</p>
+<div class="tw"><table><thead><tr><th>Subtipo</th><th>Qué domina</th><th>Cómo cambia el manejo</th></tr></thead>
+<tbody>
+<tr><th>Cistitis de la mujer sana no embarazada</th><td>Ascenso de flora intestinal</td><td>Tratamiento empírico corto sin cultivo [2]</td></tr>
+<tr><th>Cistitis con factor de riesgo (varón, embarazo, sonda, obstrucción)</th><td>Germen más variado y resistente</td><td>Urocultivo previo y curso más largo [1]</td></tr>
+<tr><th>Cistitis recurrente</th><td>Reinfección o persistencia</td><td>Cultivo, búsqueda de causa y profilaxis [1]</td></tr>
+</tbody></table></div>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Pielonefritis aguda</th><td>Síndrome miccional y piuria</td><td>Fiebre, dolor lumbar y puñopercusión positiva [2]</td></tr>
+<tr><th>Vaginitis o uretritis de transmisión sexual</th><td>Disuria</td><td>Flujo o secreción, disuria externa y poca polaquiuria [5]</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Dato</th><th>Valor en la fuente</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>Infección bacteriana común en la mujer; muchas tendrán al menos un episodio en la vida [5]</td></tr>
+<tr><th>Edad</th><td>Pico en mujeres sexualmente activas y en la posmenopausia [5]</td></tr>
+<tr><th>Sexo</th><td>Mucho más frecuente en mujeres; en el varón obliga a buscar causa [1][5]</td></tr>
+<tr><th>Factores clave</th><td>Coito reciente, espermicidas, episodio previo, atrofia vaginal, sonda y obstrucción [2][5]</td></tr>
+</tbody></table></div>
+<p class="mini">No se leyeron datos de Ecuador ni de resistencia local; la resistencia de E. coli a trimetoprima-sulfametoxazol y a fluoroquinolonas debe consultarse en el laboratorio de cada hospital.</p>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e1-m-1" data-clin="0" data-paso="E. coli intestinal coloniza el introito"><div class="det"><p>Terreno: la flora del colon contamina el periné y la mucosa vaginal; los espermicidas y la falta de estrógenos eliminan a los lactobacilos que la protegen.</p></div></li>
+<li class="nodo" id="e1-m-2" data-clin="0" data-paso="Bacteria asciende por la uretra corta"><div class="det"><p>Desencadenante: el coito o la sonda empujan las bacterias por la uretra femenina, de unos pocos centímetros, hasta la vejiga. En el varón, el residuo por obstrucción cumple ese papel.</p></div></li>
+<li class="nodo" id="e1-m-3" data-clin="0" data-paso="Fimbrias se adhieren a las uroplaquinas"><div class="det"><p>Las fimbrias tipo 1, pelos de adhesión de la bacteria, se pegan a las uroplaquinas, proteínas de la superficie del urotelio; así resisten el lavado de la micción.</p></div></li>
+<li class="nodo" id="e1-m-4" data-clin="1" data-paso="Invasión del urotelio y llegada de neutrófilos"><div class="det"><p>La bacteria entra en las células superficiales; el urotelio libera interleucina 8, señal que atrae neutrófilos. La mucosa inflamada estimula las terminaciones sensitivas del trígono y del cuello vesical, y los neutrófilos pasan a la orina. Blanco del antibiótico. <span class="rem">↪ Posología en «Tratamiento»</span></p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-1" onclick="ir('e1','e1-s-1')">Disuria, polaquiuria y urgencia</button> <button type="button" class="xref" data-ir="e1-s-2" onclick="ir('e1','e1-s-2')">Piuria con nitritos</button></p></div></li>
+<li class="nodo" id="e1-m-5" data-clin="1" data-paso="Inflamación hemorrágica de la mucosa vesical"><div class="det"><p>Los capilares de la mucosa inflamada se rompen y sangran a la luz; la vejiga irritada se contrae al final de la micción, cuando se exprime el cuello.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-3" onclick="ir('e1','e1-s-3')">Dolor suprapúbico con hematuria</button></p></div></li>
+<li class="nodo" id="e1-m-6" data-clin="0" data-paso="Ascenso por el uréter hacia el riñón"><div class="det"><p>Si la infección no se controla, las bacterias suben por el uréter; aparecen fiebre y dolor lumbar y el cuadro deja de ser cistitis para ser pielonefritis.</p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — por qué arde al orinar</span>
+<p class="fey-b">Unos microbios que viven en el intestino llegan a la vejiga por un tubo muy corto. Tienen ganchitos con los que se agarran a la pared y no se van con el chorro. La pared se irrita como una herida: cada vez que pasa la orina arde, y la vejiga avisa que quiere vaciarse aunque esté casi vacía.</p>
+<p class="mini fey-c">En medicina esto se llama… adhesión por fimbrias tipo 1, inflamación del urotelio, disuria y urgencia.</p>
+<p class="mini fey-c">Dónde falla la comparación: los ganchos son proteínas y la bacteria además entra en las células, no solo se agarra.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Disuria y polaquiuria</p>
+<p data-e="p">Urgencia</p>
+<p data-e="v">Dolor suprapúbico</p>
+<p data-e="v">Hematuria</p>
+<p data-e="a">Fiebre y dolor lumbar</p>
+<p data-e="a">Flujo vaginal</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e1-s-1" onclick="ir('e1','e1-s-1')">Disuria con polaquiuria y urgencia, sin flujo vaginal</button></p>
+</div>
+<div class="signo" id="e1-s-1"><h4>Disuria, polaquiuria y urgencia</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Ardor al orinar, micciones frecuentes de poco volumen y necesidad imperiosa de orinar.</dd>
+<dt>Por qué aparece</dt><dd>La mucosa inflamada estimula los nervios sensitivos del trígono y la vejiga se contrae con poco llenado. <button type="button" class="xref" data-ir="e1-m-4" onclick="ir('e1','e1-m-4')">← Invasión del urotelio</button></dd>
+<dt>Qué significa</dt><dd>En la mujer sin flujo ni fiebre basta para diagnosticar cistitis y tratar sin cultivo [2].</dd></dl></div>
+<div class="signo" id="e1-s-2"><h4>Piuria con nitritos</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Esterasa leucocitaria y nitritos positivos en la tira; leucocitos y bacterias en el sedimento.</dd>
+<dt>Por qué aparece</dt><dd>Los neutrófilos reclutados pasan a la orina y las enterobacterias reducen nitratos a nitritos. <button type="button" class="xref" data-ir="e1-m-4" onclick="ir('e1','e1-m-4')">← Invasión del urotelio</button></dd>
+<dt>Qué significa</dt><dd>Apoya la infección cuando la clínica es dudosa; una tira negativa no la descarta. <span class="rem">↪ Propiedades en «Diagnóstico»</span></dd></dl></div>
+<div class="signo" id="e1-s-3"><h4>Dolor suprapúbico con hematuria</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Molestia sobre el pubis y orina rosada o con sangre, a menudo al final de la micción.</dd>
+<dt>Por qué aparece</dt><dd>La mucosa inflamada sangra y la vejiga duele al contraerse. <button type="button" class="xref" data-ir="e1-m-5" onclick="ir('e1','e1-m-5')">← Inflamación hemorrágica</button></dd>
+<dt>Qué significa</dt><dd>No cambia el tratamiento, pero si la hematuria persiste tras curar la infección, estudia la vejiga [3].</dd></dl></div>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la sangre en la orina</span>
+<p class="fey-b">Cuando la pared de la vejiga está irritada, sus vasitos se vuelven frágiles y sueltan un poco de sangre, como una encía inflamada que sangra al cepillarse. Al curar la infección la pared se repara y la sangre desaparece. Si no desaparece, la causa es otra y hay que mirar por dentro.</p>
+<p class="mini fey-c">En medicina esto se llama… cistitis hemorrágica y hematuria persistente que obliga a cistoscopia.</p>
+<p class="mini fey-c">Dónde falla la comparación: la encía se ve; la vejiga solo se ve con cistoscopia.</p></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Diagnóstico clínico ante disuria, polaquiuria y urgencia sin flujo vaginal</li>
+<li><span class="tg">Añade</span>Tira reactiva solo si la clínica es dudosa [2].</li>
+<li><span class="tg">Confirma</span>Confirma con urocultivo en el varón, la embarazada, la recurrencia, la sonda o el fracaso del tratamiento [1].</li>
+<li><span class="tg">Solo si</span>Ecografía de vías urinarias solo si hay recurrencia, hematuria persistente o sospecha de obstrucción [1].</li>
+<li><span class="tg">No pidas</span>No pidas urocultivo de control tras la curación ni tratamiento ante bacteriuria asintomática fuera del embarazo [1].</li>
+<li><span class="tg">Alarma</span>Fiebre, dolor lumbar o hipotensión: piensa en pielonefritis o sepsis [2].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Tira reactiva (esterasa y nitritos)</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Apoyar el diagnóstico si la clínica es dudosa</td><td>Nitritos falsos negativos con gérmenes que no reducen nitratos <button type="button" class="xref" data-ir="e1-m-4" onclick="ir('e1','e1-m-4')">← Invasión del urotelio</button></td><td>[2]</td></tr>
+<tr><th>Urocultivo</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar germen y sensibilidad</td><td>Antes del antibiótico; obligatorio con factor de riesgo</td><td>[1]</td></tr>
+<tr><th>Ecografía de vías urinarias</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Buscar obstrucción, residuo o cálculo</td><td>Solo en recurrencia o fracaso</td><td>[1]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos positivo y negativo. No se leyeron cifras de rendimiento en esta sesión; en la mujer con clínica típica la probabilidad previa es tan alta que la tira negativa no basta para descartar.</p>
+<div class="dc" data-fn="dcE1dx"><div class="dc-t">Simulador · Decisión clínica — predice la clasificación antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Terreno</span>
+<button type="button" class="chip" data-g="t" data-v="mujer" onclick="ch(this)">Mujer sana no embarazada</button>
+<button type="button" class="chip" data-g="t" data-v="varon" onclick="ch(this)">Varón</button>
+<button type="button" class="chip" data-g="t" data-v="emb" onclick="ch(this)">Embarazada</button>
+<button type="button" class="chip" data-g="t" data-v="sonda" onclick="ch(this)">Sonda u obstrucción</button></div>
+<div class="dc-g"><span class="dc-l">Datos</span>
+<button type="button" class="chip" data-g="d" data-v="fiebre" data-m="1" onclick="ch(this)">Fiebre o dolor lumbar</button>
+<button type="button" class="chip" data-g="d" data-v="flujo" data-m="1" onclick="ch(this)">Flujo vaginal</button>
+<button type="button" class="chip" data-g="d" data-v="recur" data-m="1" onclick="ch(this)">Tres o más episodios al año</button></div>
+<div class="out"></div></div>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Elige el antibiótico por eficacia, daño ecológico mínimo y resistencia local [2].</li>
+<li><span class="tg">De elección</span>Nitrofurantoína o fosfomicina en la cistitis no complicada de la mujer</li>
+<li><span class="tg">Alternativa</span>Trimetoprima-sulfametoxazol si la resistencia local es baja o el germen es sensible [2].</li>
+<li><span class="tg">Sintomático</span>Analgesia con antiinflamatorio y líquidos; acorta el malestar mientras actúa el antibiótico [1].</li>
+<li><span class="tg">Escala</span>Varón, embarazo o sonda: antibiótico guiado por cultivo y curso más largo [1].</li>
+<li><span class="tg">Reevalúa</span>Si los síntomas persisten a las 48 a 72 h, cultiva y cambia según sensibilidad [1].</li>
+<li><span class="tg">Evita</span>Evita las fluoroquinolonas en la cistitis no complicada: guárdalas para infecciones graves [1][2].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Nitrofurantoína monohidrato/macrocristales</th><td>100 mg</td><td>VO</td><td>Cada 12 h</td><td>5 días</td><td>Daña el ADN bacteriano en la orina <button type="button" class="xref" data-ir="e1-m-4" onclick="ir('e1','e1-m-4')">← Invasión del urotelio</button>. No llega al riñón: no sirve en pielonefritis. Evitar con filtrado glomerular bajo y al término del embarazo</td><td>[2]</td></tr>
+<tr><th>Fosfomicina trometamol</th><td>3 g</td><td>VO</td><td>Dosis única</td><td>1 día</td><td>Bloquea la síntesis de pared bacteriana <button type="button" class="xref" data-ir="e1-m-4" onclick="ir('e1','e1-m-4')">← Invasión del urotelio</button>. Algo menos eficaz que los cursos de 5 días; útil por adherencia</td><td>[2]</td></tr>
+<tr><th>Trimetoprima-sulfametoxazol</th><td>160 mg/800 mg</td><td>VO</td><td>Cada 12 h</td><td>3 días</td><td>Bloquea la síntesis de folato bacteriano <button type="button" class="xref" data-ir="e1-m-4" onclick="ir('e1','e1-m-4')">← Invasión del urotelio</button>. Solo si la resistencia local es baja o hay sensibilidad; hiperpotasemia; evitar en el primer trimestre</td><td>[2]</td></tr>
+<tr><th>Ibuprofeno</th><td>400 mg</td><td>VO</td><td>Cada 8 h</td><td>2 a 3 días</td><td>Reduce la inflamación de la mucosa <button type="button" class="xref" data-ir="e1-m-5" onclick="ir('e1','e1-m-5')">← Inflamación hemorrágica</button>. Evitar en enfermedad renal o úlcera</td><td>[1]</td></tr>
+</tbody></table></div>
+<p class="mini">VO: vía oral. Dosis de ficha técnica y de la guía IDSA/ESCMID; la duración en el varón (7 días) se toma de la guía EAU, de la que solo se leyó el resumen [VERIFICAR EN FUENTE].</p>
+<div class="dc" data-fn="dcE1tx"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Situación</span>
+<button type="button" class="chip" data-g="s" data-v="nc" onclick="ch(this)">Mujer, cistitis no complicada</button>
+<button type="button" class="chip" data-g="s" data-v="varon" onclick="ch(this)">Varón</button></div>
+<div class="dc-g"><span class="dc-l">Condiciones</span>
+<button type="button" class="chip" data-g="c" data-v="renal" data-m="1" onclick="ch(this)">Filtrado glomerular bajo</button>
+<button type="button" class="chip" data-g="c" data-v="adh" data-m="1" onclick="ch(this)">Mala adherencia previsible</button>
+<button type="button" class="chip" data-g="c" data-v="sens" data-m="1" onclick="ch(this)">Germen sensible a TMP-SMX</button></div>
+<div class="out"></div></div>
+
+<h2>Seguimiento</h2>
+<p>No se cultiva tras la curación si los síntomas desaparecen. Ante recurrencia, se documenta con cultivo, se buscan factores corregibles (residuo, atrofia vaginal, cálculo) y se plantea profilaxis no antibiótica o antibiótica [1].</p>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Pielonefritis y urosepsis</th><td>Las bacterias ascienden por el uréter</td><td><button type="button" class="xref" data-ir="e1-m-6" onclick="ir('e1','e1-m-6')">← Ascenso hacia el riñón</button></td></tr>
+<tr><th>Recurrencia</th><td>Reservorios intracelulares y nueva colonización del introito</td><td><button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Adhesión a uroplaquinas</button></td></tr>
+<tr><th>Hematuria que persiste</th><td>No es inflamatoria: obliga a descartar tumor</td><td><button type="button" class="xref" data-ir="e1-m-5" onclick="ir('e1','e1-m-5')">← Inflamación hemorrágica</button></td></tr>
+</tbody></table></div>
+</section>
+<section class="tab" data-tab="e2">
+<div class="hb az"><div class="hb-t">Frente a Cistitis infecciosa</div>
+<p>Se confunde con la cistitis del varón porque ambas dan disuria, urgencia y piuria. Se separa por la fiebre, el dolor perineal y la próstata dolorosa al tacto rectal.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué los cuatro tipos de prostatitis comparten nombre pero exigen manejos distintos?</li>
+<li>¿Qué hallazgos del tacto y del urocultivo separan la forma aguda de las crónicas, y qué cambia en la conducta?</li>
+<li>¿Por qué el antibiótico debe penetrar el tejido prostático y qué decide su duración?</li>
+</ol></div>
+<p><span class="badge b-pu">Clasificación NIH 1999 [4]</span> <span class="badge b-pu">EAU infecciones urológicas 2025, solo resumen [1]</span></p>
+
+<h2>Qué es</h2>
+<div class="card"><p>La prostatitis es la inflamación de la próstata, con infección demostrada o sin ella, que causa dolor pélvico, síntomas urinarios y, en la forma aguda, fiebre [4].</p>
+<p>La clasificación de los Institutos Nacionales de Salud de EE. UU. (NIH) separa cuatro tipos según la clínica y el resultado de los cultivos de orina y de secreción prostática [4].</p></div>
+<p>Los tipos existen porque el germen, el curso y la presencia de infección cambian por completo el tratamiento.</p>
+<div class="tw"><table><thead><tr><th>Tipo NIH</th><th>Qué domina</th><th>Cómo se reconoce</th><th>Qué cambia</th></tr></thead>
+<tbody>
+<tr><th>I · Bacteriana aguda</th><td>Infección sistémica de la glándula</td><td>Fiebre, dolor perineal, próstata dolorosa y urocultivo positivo</td><td>Antibiótico prolongado; ingreso si hay sepsis</td></tr>
+<tr><th>II · Bacteriana crónica</th><td>Infección persistente en la glándula</td><td>Infecciones urinarias recurrentes por el mismo germen</td><td>Cultivo localizador y antibiótico por semanas</td></tr>
+<tr><th>III · Síndrome de dolor pélvico crónico</th><td>Dolor sin infección demostrada</td><td>Dolor pélvico durante al menos 3 de los últimos 6 meses con cultivos negativos; IIIA con leucocitos en la secreción, IIIB sin ellos</td><td>No responde a antibióticos repetidos; manejo por fenotipo</td></tr>
+<tr><th>IV · Inflamatoria asintomática</th><td>Inflamación hallada por casualidad</td><td>Leucocitos en biopsia, semen o secreción sin síntomas</td><td>No se trata</td></tr>
+</tbody></table></div>
+<p class="mini">Fuente de la tabla: consenso NIH [4]. La forma III es la más frecuente en consulta; la I es la más grave [5].</p>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Epididimitis</th><td>Dolor, fiebre y disuria</td><td>Dolor e inflamación escrotal con tacto prostático no doloroso [5]</td></tr>
+<tr><th>Tuberculosis genitourinaria</th><td>Prostatitis crónica y piuria</td><td>Piuria con cultivo convencional negativo; se busca el bacilo [5]</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Dato</th><th>Valor en la fuente</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>Motivo frecuente de consulta urológica en varones; predomina el tipo III [5]</td></tr>
+<tr><th>Edad</th><td>Adulto joven y de edad media; la aguda también en mayores con obstrucción [5]</td></tr>
+<tr><th>Sexo</th><td>Solo varones [4]</td></tr>
+<tr><th>Factores clave</th><td>Obstrucción, sonda, biopsia prostática e infección de transmisión sexual [1][5]</td></tr>
+</tbody></table></div>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e2-m-1" data-clin="0" data-paso="Bacterias alcanzan el tejido prostático" data-rama="Rama A"><div class="det"><p>Terreno: obstrucción, sonda o biopsia transrectal. Desencadenante: enterobacterias, sobre todo E. coli, o gérmenes de transmisión sexual ascienden por la uretra hacia los conductos prostáticos. Blanco del antibiótico. <span class="rem">↪ Posología en «Tratamiento»</span></p></div></li>
+<li class="nodo" id="e2-m-2" data-clin="0" data-paso="Reflujo intraprostático de orina infectada" data-rama="Rama A"><div class="det"><p>Al orinar contra resistencia, la orina contaminada entra por los conductos a los acinos, las unidades secretoras, y allí se inicia la inflamación.</p></div></li>
+<li class="nodo" id="e2-m-3" data-clin="1" data-paso="Respuesta inflamatoria aguda del parénquima" data-rama="Rama A"><div class="det"><p>Los neutrófilos y las citocinas, señales que reclutan defensas, inundan la glándula: causan edema, calor y dolor y, al pasar a la sangre, fiebre.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-1" onclick="ir('e2','e2-s-1')">Próstata dolorosa y caliente</button> <button type="button" class="xref" data-ir="e2-s-2" onclick="ir('e2','e2-s-2')">Fiebre y dolor perineal</button></p></div></li>
+<li class="nodo" id="e2-m-4" data-clin="1" data-paso="Edema prostático estrecha la uretra" data-rama="Rama A"><div class="det"><p>La glándula hinchada comprime la uretra prostática e irrita el cuello vesical.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-3" onclick="ir('e2','e2-s-3')">Disuria y chorro débil</button></p></div></li>
+<li class="nodo" id="e2-m-5" data-clin="0" data-paso="Bacterias pasan a sangre o forman absceso" data-rama="Rama A"><div class="det"><p>Si las defensas no contienen el foco, hay bacteriemia o un absceso encapsulado: la vía hacia la sepsis.</p></div></li>
+<li class="nodo" id="e2-m-6" data-clin="1" data-paso="Infección persistente o dolor sin infección" data-rama="Rama B"><div class="det"><p>Tipo II: las bacterias persisten en biopelículas y cálculos prostáticos, donde el antibiótico llega mal, y reinfectan la orina. Tipo III: no hay infección demostrada; intervienen inflamación, disfunción del suelo pélvico y sensibilización del dolor, y su mecanismo no está del todo establecido [5].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-4" onclick="ir('e2','e2-s-4')">Dolor pélvico con recaídas</button></p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la próstata inflamada</span>
+<p class="fey-b">Piensa en un rasguño infectado: rojo, caliente, hinchado y dolorido. La próstata inflamada hace lo mismo, escondida alrededor del tubo de la orina, y al hincharse lo aprieta. A veces los microbios se esconden dentro y vuelven una y otra vez; otras veces ya no hay microbios y la zona sigue doliendo.</p>
+<p class="mini fey-c">En medicina esto se llama… prostatitis bacteriana aguda, bacteriana crónica y síndrome de dolor pélvico crónico.</p>
+<p class="mini fey-c">Dónde falla la comparación: la próstata no se ve y los antibióticos entran en ella con dificultad.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Disuria y urgencia</p>
+<p data-e="p">Dolor perineal</p>
+<p data-e="v">Fiebre y escalofríos</p>
+<p data-e="v">Retención urinaria</p>
+<p data-e="a">Secreción uretral</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e2-s-1" onclick="ir('e2','e2-s-1')">Próstata dolorosa, caliente y edematosa al tacto rectal</button></p>
+</div>
+<div class="signo" id="e2-s-1"><h4>Próstata dolorosa, caliente y edematosa al tacto rectal</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Dolor intenso al tacto; glándula tensa y tibia. Se examina con suavidad, sin masaje.</dd>
+<dt>Por qué aparece</dt><dd>El tejido se llena de líquido y células inflamatorias. <button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">← Respuesta inflamatoria aguda</button></dd>
+<dt>Qué significa</dt><dd>Define el tipo I y pide urocultivo antes del antibiótico.</dd></dl></div>
+<div class="signo" id="e2-s-2"><h4>Fiebre y dolor perineal</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Temperatura elevada, escalofríos y dolor entre el escroto y el ano.</dd>
+<dt>Por qué aparece</dt><dd>Las citocinas llegan al centro térmico del hipotálamo. <button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">← Respuesta inflamatoria aguda</button></dd>
+<dt>Qué significa</dt><dd>Obliga a valorar signos de sepsis antes de elegir ambulatorio u hospital.</dd></dl></div>
+<div class="signo" id="e2-s-3"><h4>Disuria y chorro débil</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Ardor al orinar, urgencia y chorro fino, a veces retención.</dd>
+<dt>Por qué aparece</dt><dd>El edema comprime la uretra prostática. <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Edema prostático</button></dd>
+<dt>Qué significa</dt><dd>Mezcla infección y obstrucción; con retención, el vaciado es urgente.</dd></dl></div>
+<div class="signo" id="e2-s-4"><h4>Dolor pélvico con recaídas</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Dolor perineal, peniano, testicular o al eyacular durante meses, con episodios que vuelven.</dd>
+<dt>Por qué aparece</dt><dd>Bacterias persistentes (tipo II) o dolor sin infección (tipo III). <button type="button" class="xref" data-ir="e2-m-6" onclick="ir('e2','e2-m-6')">← Infección persistente o dolor sin infección</button></dd>
+<dt>Qué significa</dt><dd>Obliga a documentar cultivos antes de repetir antibióticos [4].</dd></dl></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Uroanálisis y urocultivo antes del antibiótico</li>
+<li><span class="tg">Añade</span>Hemocultivos y función renal si hay fiebre; examen escrotal [1].</li>
+<li><span class="tg">Confirma</span>Confirma el tipo II con cultivo de orina antes y después del masaje prostático, fuera de la fase aguda [1][4].</li>
+<li><span class="tg">Solo si</span>Ecografía transrectal o tomografía solo si la fiebre persiste pese al antibiótico: busca absceso [1].</li>
+<li><span class="tg">No pidas</span>No pidas masaje prostático en la forma aguda ni PSA durante la infección: disemina bacterias y el PSA sube sin cáncer [1].</li>
+<li><span class="tg">Alarma</span>Fiebre alta, hipotensión, retención o dolor intenso: ingresa por sospecha de sepsis.</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Uroanálisis</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Orientar a infección</td><td>Piuria y bacteriuria <button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">← Respuesta inflamatoria aguda</button></td><td>[1]</td></tr>
+<tr><th>Urocultivo</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar germen y guiar el antibiótico</td><td>Antes de la primera dosis</td><td>[1]</td></tr>
+<tr><th>Prueba de dos vasos (orina antes y después del masaje)</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Localizar la infección en la próstata (tipo II)</td><td>Solo en la forma crónica <button type="button" class="xref" data-ir="e2-m-6" onclick="ir('e2','e2-m-6')">← Infección persistente</button></td><td>[4]</td></tr>
+<tr><th>Ecografía transrectal o tomografía</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar absceso</td><td>Fiebre que no cede <button type="button" class="xref" data-ir="e2-m-5" onclick="ir('e2','e2-m-5')">← Absceso</button></td><td>[1]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos; PSA: antígeno prostático específico. No se leyeron cifras de rendimiento.</p>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Trata según tipo y gravedad, con antibióticos que penetren la próstata [1].</li>
+<li><span class="tg">De elección</span>Fluoroquinolona oral en la forma aguda estable sin sospecha de infección sexual</li>
+<li><span class="tg">Alternativa</span>Trimetoprima-sulfametoxazol si el germen es sensible [1].</li>
+<li><span class="tg">Escala</span>Con sepsis o intolerancia oral, antibiótico parenteral y paso a vía oral al mejorar [1].</li>
+<li><span class="tg">Sintomático</span>Alfabloqueante para el vaciado doloroso y analgesia [1].</li>
+<li><span class="tg">Especialista</span>Urología ante absceso (drenaje), retención, tipo II recurrente o tipo III [1].</li>
+<li><span class="tg">Evita</span>Evita la sonda uretral en la forma aguda con retención: prefiere el catéter suprapúbico [1].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Ciprofloxacino</th><td>500 mg</td><td>VO</td><td>Cada 12 h</td><td>Tipo I: 2 a 4 semanas; tipo II: 4 a 6 semanas [VERIFICAR EN FUENTE]</td><td>Penetra la próstata y mata las bacterias <button type="button" class="xref" data-ir="e2-m-1" onclick="ir('e2','e2-m-1')">← Bacterias alcanzan la próstata</button>. Tendinopatía y QT largo; ajustar en insuficiencia renal</td><td>[1]</td></tr>
+<tr><th>Levofloxacino</th><td>500 mg</td><td>VO</td><td>Cada 24 h</td><td>Igual que ciprofloxacino [VERIFICAR EN FUENTE]</td><td>Misma acción <button type="button" class="xref" data-ir="e2-m-1" onclick="ir('e2','e2-m-1')">← Bacterias alcanzan la próstata</button>. Mismos riesgos; ajustar en insuficiencia renal</td><td>[1]</td></tr>
+<tr><th>Trimetoprima-sulfametoxazol</th><td>160 mg/800 mg</td><td>VO</td><td>Cada 12 h</td><td>Igual que la fluoroquinolona [VERIFICAR EN FUENTE]</td><td>Solo con germen sensible <button type="button" class="xref" data-ir="e2-m-1" onclick="ir('e2','e2-m-1')">← Bacterias alcanzan la próstata</button>. Hiperpotasemia; ajustar en insuficiencia renal</td><td>[1]</td></tr>
+<tr><th>Ceftriaxona</th><td>2 g</td><td>IV</td><td>Cada 24 h</td><td>Hasta mejorar; luego vía oral para completar el curso</td><td>Inicio parenteral en sepsis <button type="button" class="xref" data-ir="e2-m-5" onclick="ir('e2','e2-m-5')">← Bacterias pasan a sangre</button>. Ajustar según cultivo</td><td>[1]</td></tr>
+<tr><th>Tamsulosina</th><td>0,4 mg</td><td>VO</td><td>Cada 24 h tras la misma comida</td><td>Mientras dure el vaciado doloroso</td><td>Relaja el músculo liso del cuello vesical <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Edema prostático</button>. Hipotensión ortostática</td><td>[1]</td></tr>
+</tbody></table></div>
+<p class="mini">VO: vía oral; IV: intravenosa; QT: intervalo del electrocardiograma. Dosis de ficha técnica; las duraciones no se leyeron en el texto completo de la guía.</p>
+<div class="dc" data-fn="dcE2"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Tipo</span>
+<button type="button" class="chip" data-g="forma" data-v="aguda" onclick="ch(this)">I · Aguda estable</button>
+<button type="button" class="chip" data-g="forma" data-v="grave" onclick="ch(this)">I · Aguda con sepsis o retención</button>
+<button type="button" class="chip" data-g="forma" data-v="cronica" onclick="ch(this)">II · Crónica bacteriana</button>
+<button type="button" class="chip" data-g="forma" data-v="cppc" onclick="ch(this)">III · Dolor pélvico crónico</button>
+<button type="button" class="chip" data-g="forma" data-v="asint" onclick="ch(this)">IV · Asintomática</button></div>
+<div class="dc-g"><span class="dc-l">Otros datos</span>
+<button type="button" class="chip" data-g="otros" data-v="fq" data-m="1" onclick="ch(this)">No tolera fluoroquinolonas</button>
+<button type="button" class="chip" data-g="otros" data-v="abs" data-m="1" onclick="ch(this)">Fiebre que no cede en 48 h</button></div>
+<div class="out"></div></div>
+
+<h2>Seguimiento</h2>
+<p>Revisa la respuesta a las 48 a 72 h, ajusta al antibiograma y no interpretes el PSA durante la infección ni en los meses siguientes [1].</p>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Absceso y sepsis</th><td>El foco se encapsula o pasa a la sangre</td><td><button type="button" class="xref" data-ir="e2-m-5" onclick="ir('e2','e2-m-5')">← Bacterias pasan a sangre</button></td></tr>
+<tr><th>Retención aguda</th><td>El edema comprime la uretra</td><td><button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Edema prostático</button></td></tr>
+<tr><th>Paso a prostatitis crónica</th><td>Bacterias en biopelículas y cálculos</td><td><button type="button" class="xref" data-ir="e2-m-6" onclick="ir('e2','e2-m-6')">← Infección persistente</button></td></tr>
+</tbody></table></div>
+</section>
+<section class="tab" data-tab="e3">
+<div class="hb az"><div class="hb-t">Frente a Cistitis infecciosa</div>
+<p>Se confunde con la cistitis porque el carcinoma in situ da disuria y urgencia, y el tumor papilar, hematuria. Se separa por la hematuria sin infección demostrada y la persistencia tras el antibiótico.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué el tabaco, que entra por el pulmón, produce un cáncer en la vejiga?</li>
+<li>¿Por qué el tumor papilar sangra sin doler y el carcinoma in situ irrita sin sangrar mucho, y qué implica cada uno?</li>
+<li>¿Qué decide que un tumor vesical se trate con resección e instilaciones o con cistectomía?</li>
+</ol></div>
+<p><span class="badge b-pu">EAU cáncer vesical no músculo-invasivo 2026, solo resumen [3]</span> <span class="badge b-pu">Harrison 21.ª ed. [5]</span></p>
+<p class="mini">Vigencia no verificada: no se leyó el texto completo de la guía EAU de cáncer vesical músculo-invasivo; ese tramo se apoya en Harrison.</p>
+
+<h2>Qué es</h2>
+<div class="card"><p>El cáncer vesical es la neoplasia maligna de la vejiga, en su gran mayoría carcinoma urotelial, que se origina en el epitelio que tapiza la luz y se clasifica según invada o no la capa muscular, el detrusor [3][5].</p>
+<ul>
+<li>Diagnóstico: histológico, sobre la pieza de resección transuretral que incluya músculo [3].</li>
+<li>Estadio T: Ta (papilar sin invasión), Tis o carcinoma in situ (plano, de alto grado), T1 (invade la lámina propia), T2 o más (invade el detrusor) [3].</li>
+</ul></div>
+<p>Los subtipos existen porque la invasión del detrusor separa dos enfermedades con pronóstico y tratamiento distintos.</p>
+<div class="tw"><table><thead><tr><th>Subtipo</th><th>Qué domina</th><th>Cómo cambia el manejo</th></tr></thead>
+<tbody>
+<tr><th>No músculo-invasivo (Ta, T1, carcinoma in situ)</th><td>Recurrencia frecuente; progresión según el riesgo</td><td>Resección transuretral más instilaciones vesicales [3]</td></tr>
+<tr><th>Músculo-invasivo (T2 o más)</th><td>Riesgo de metástasis</td><td>Quimioterapia neoadyuvante y cistectomía radical [5]</td></tr>
+<tr><th>Histología no urotelial (escamoso, adenocarcinoma)</th><td>Irritación crónica, esquistosomiasis o uraco</td><td>Manejo específico por urología oncológica [5]</td></tr>
+</tbody></table></div>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Tumor de vías altas (pelvis renal o uréter)</th><td>Hematuria total indolora</td><td>Cistoscopia normal y defecto de llenado en la urotomografía [3]</td></tr>
+<tr><th>Litiasis urinaria</th><td>Hematuria</td><td>Dolor cólico y cálculo en la tomografía [5]</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Dato</th><th>Valor en la fuente</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>El cáncer urológico más frecuente tras el de próstata; cerca de 3 de cada 4 se diagnostican sin invasión muscular [3][5]</td></tr>
+<tr><th>Edad</th><td>Sobre todo después de los 60 años [5]</td></tr>
+<tr><th>Sexo</th><td>Predomina en varones [5]</td></tr>
+<tr><th>Factores clave</th><td>Tabaco (el principal), aminas aromáticas laborales, ciclofosfamida, radioterapia pélvica y esquistosomiasis [3][5]</td></tr>
+</tbody></table></div>
+<p class="mini">No se leyeron datos de Ecuador ni de Latinoamérica en esta sesión.</p>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e3-m-1" data-clin="0" data-paso="Carcinógenos del tabaco se excretan por orina"><div class="det"><p>Terreno: el humo aporta aminas aromáticas, como el 4-aminobifenilo; el hígado las transforma y el riñón las elimina. La orina las concentra y las mantiene horas en contacto con el urotelio, el epitelio de la vejiga.</p></div></li>
+<li class="nodo" id="e3-m-2" data-clin="0" data-paso="Metabolitos dañan el ADN del urotelio"><div class="det"><p>Los metabolitos activos forman aductos, uniones químicas con el ADN, y producen mutaciones. Todo el urotelio queda expuesto: por eso los tumores son múltiples y recurren en otros sitios.</p></div></li>
+<li class="nodo" id="e3-m-3" data-clin="1" data-paso="Tumor papilar frágil sangra a la luz" data-rama="Rama A"><div class="det"><p>Vía papilar, con mutaciones del receptor 3 del factor de crecimiento de fibroblastos (FGFR3): el tumor crece hacia la luz con tallos vasculares finos que se rompen con la micción. No inflama la pared, por eso no duele.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-1" onclick="ir('e3','e3-s-1')">Hematuria macroscópica indolora</button></p></div></li>
+<li class="nodo" id="e3-m-4" data-clin="1" data-paso="Carcinoma in situ plano irrita la pared" data-rama="Rama B"><div class="det"><p>Vía plana, con pérdida de TP53 y RB1, genes que frenan la división celular: el epitelio de alto grado se extiende sin formar masa, inflama la mucosa y reduce la capacidad de la vejiga.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-2" onclick="ir('e3','e3-s-2')">Síntomas irritativos con urocultivo negativo</button></p></div></li>
+<li class="nodo" id="e3-m-5" data-clin="0" data-paso="Invasión de lámina propia y detrusor" data-rama="Rama B"><div class="det"><p>Las células de alto grado atraviesan la membrana basal y alcanzan la lámina propia (T1) y luego el detrusor (T2), donde hay vasos linfáticos y sanguíneos: comienza el riesgo de metástasis.</p></div></li>
+<li class="nodo" id="e3-m-6" data-clin="1" data-paso="Tumor obstruye el uréter o metastatiza" data-rama="Rama B"><div class="det"><p>El tumor del trígono cierra el orificio ureteral y dilata el riñón; las metástasis van a ganglios pélvicos, hueso, pulmón e hígado.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-3" onclick="ir('e3','e3-s-3')">Dolor lumbar o hidronefrosis</button></p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — el humo que llega a la vejiga</span>
+<p class="fey-b">El humo del cigarrillo trae sustancias dañinas que el cuerpo intenta botar por la orina. La orina se queda guardada horas en la vejiga, así que esas sustancias tocan su pared mucho tiempo, como una gotera sobre el mismo techo. Con los años, algunas células de la pared se vuelven rebeldes y crecen sin control.</p>
+<p class="mini fey-c">En medicina esto se llama… carcinogénesis urotelial por aminas aromáticas y efecto de campo.</p>
+<p class="mini fey-c">Dónde falla la comparación: la gotera daña por fuera; aquí el daño está en el ADN de las células.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Hematuria visible intermitente</p>
+<p data-e="v">Urgencia y polaquiuria</p>
+<p data-e="v">Coágulos en la orina</p>
+<p data-e="a">Dolor al orinar con fiebre</p>
+<p data-e="a">Masa palpable en etapas tempranas</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e3-s-1" onclick="ir('e3','e3-s-1')">Hematuria macroscópica indolora y total</button></p>
+</div>
+<div class="signo" id="e3-s-1"><h4>Hematuria macroscópica indolora</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Orina roja o con coágulos durante toda la micción, sin dolor, que aparece y desaparece.</dd>
+<dt>Por qué aparece</dt><dd>Los vasos frágiles del tumor papilar se rompen. <button type="button" class="xref" data-ir="e3-m-3" onclick="ir('e3','e3-m-3')">← Tumor papilar frágil</button></dd>
+<dt>Qué significa</dt><dd>Que desaparezca no tranquiliza: obliga a cistoscopia y urotomografía [3].</dd></dl></div>
+<div class="signo" id="e3-s-2"><h4>Síntomas irritativos con urocultivo negativo</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Urgencia, polaquiuria y disuria que no ceden con antibióticos y con cultivos negativos.</dd>
+<dt>Por qué aparece</dt><dd>El carcinoma in situ inflama la mucosa y reduce la capacidad vesical. <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Carcinoma in situ</button></dd>
+<dt>Qué significa</dt><dd>Pide citología urinaria y cistoscopia, sobre todo en el fumador [3].</dd></dl></div>
+<div class="signo" id="e3-s-3"><h4>Dolor lumbar o hidronefrosis</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Dolor en el flanco, riñón dilatado en la ecografía o elevación de la creatinina.</dd>
+<dt>Por qué aparece</dt><dd>El tumor ocluye el orificio ureteral. <button type="button" class="xref" data-ir="e3-m-6" onclick="ir('e3','e3-m-6')">← Tumor obstruye el uréter</button></dd>
+<dt>Qué significa</dt><dd>Sugiere enfermedad invasiva y peor pronóstico [5].</dd></dl></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Cistoscopia y urotomografía ante toda hematuria macroscópica</li>
+<li><span class="tg">Añade</span>Citología urinaria: detecta el carcinoma in situ y los tumores de alto grado [3].</li>
+<li><span class="tg">Confirma</span>Confirma con resección transuretral que incluya detrusor en la muestra [3].</li>
+<li><span class="tg">Solo si</span>Tomografía de tórax, abdomen y pelvis solo si el tumor invade el músculo [5].</li>
+<li><span class="tg">No pidas</span>No pidas marcadores urinarios en lugar de la cistoscopia [3].</li>
+<li><span class="tg">Alarma</span>Hematuria con coágulos y retención: lavado vesical y urología urgente [5].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Cistoscopia</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar y localizar el tumor</td><td>El carcinoma in situ puede pasar inadvertido <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Carcinoma in situ</button></td><td>[3]</td></tr>
+<tr><th>Citología urinaria</th><td>Alta en alto grado; baja en bajo grado</td><td>Alta</td><td>No establecida</td><td>Confirmar alto grado; no descarta bajo grado</td><td>Útil en carcinoma in situ</td><td>[3]</td></tr>
+<tr><th>Urotomografía</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Descartar tumor de vías altas</td><td>Fase excretora <button type="button" class="xref" data-ir="e3-m-6" onclick="ir('e3','e3-m-6')">← Tumor obstruye el uréter</button></td><td>[3]</td></tr>
+<tr><th>Resección transuretral</th><td>No aplica</td><td>No aplica</td><td>No aplica</td><td>Diagnóstico histológico y estadio T</td><td>Sin detrusor en la muestra no se puede descartar T2</td><td>[3]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos. Las cifras exactas no se leyeron; se describe solo la dirección del rendimiento de la citología.</p>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>El estadio T y el grupo de riesgo deciden entre conservar la vejiga o extirparla [3].</li>
+<li><span class="tg">De elección</span>Resección transuretral completa con detrusor en la muestra</li>
+<li><span class="tg">Escala</span>Bajo riesgo: instilación única de quimioterapia tras la resección en el tumor de bajo riesgo [3].</li>
+<li><span class="tg">Escala</span>BCG intravesical con mantenimiento en riesgo intermedio y alto [3].</li>
+<li><span class="tg">Especialista</span>Músculo-invasivo: quimioterapia neoadyuvante con cisplatino y cistectomía radical [5].</li>
+<li><span class="tg">Principio</span>Dejar de fumar reduce recurrencias [3].</li>
+<li><span class="tg">Evita</span>Evita la instilación inmediata si se sospecha perforación vesical [3].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Mitomicina C</th><td>40 mg</td><td>Intravesical</td><td>Dosis única</td><td>Dentro de las 24 h tras la resección</td><td>Destruye células tumorales sueltas que se implantarían <button type="button" class="xref" data-ir="e3-m-2" onclick="ir('e3','e3-m-2')">← Daño del urotelio</button>. Contraindicada con perforación</td><td>[3]</td></tr>
+<tr><th>BCG (bacilo de Calmette-Guérin)</th><td>Dosis completa según cepa</td><td>Intravesical</td><td>Semanal ×6 (inducción), luego mantenimiento</td><td>1 año en riesgo intermedio; 1 a 3 años en alto riesgo [VERIFICAR EN FUENTE]</td><td>Induce respuesta inmune local contra el tumor <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Carcinoma in situ</button>. Cistitis y riesgo de infección sistémica por BCG</td><td>[3]</td></tr>
+<tr><th>Gemcitabina + cisplatino</th><td>Gemcitabina 1 000 mg/m² días 1 y 8; cisplatino 70 mg/m² día 1</td><td>IV</td><td>Cada 21 días</td><td>4 ciclos antes de la cistectomía [VERIFICAR EN FUENTE]</td><td>Elimina micrometástasis <button type="button" class="xref" data-ir="e3-m-5" onclick="ir('e3','e3-m-5')">← Invasión del detrusor</button>. Requiere función renal y audición adecuadas</td><td>[5]</td></tr>
+</tbody></table></div>
+<p class="mini">IV: intravenosa; BCG: bacilo de Calmette-Guérin; m²: superficie corporal.</p>
+<div class="dc" data-fn="dcE3"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Resultado de la resección</span>
+<button type="button" class="chip" data-g="r" data-v="bajo" onclick="ch(this)">Ta bajo grado, único y pequeño</button>
+<button type="button" class="chip" data-g="r" data-v="inter" onclick="ch(this)">Ta bajo grado, múltiple o recurrente</button>
+<button type="button" class="chip" data-g="r" data-v="alto" onclick="ch(this)">T1 alto grado o carcinoma in situ</button>
+<button type="button" class="chip" data-g="r" data-v="mi" onclick="ch(this)">T2 o más (invade detrusor)</button></div>
+<div class="dc-g"><span class="dc-l">Paciente</span>
+<button type="button" class="chip" data-g="p" data-v="nocis" data-m="1" onclick="ch(this)">No apto para cisplatino</button>
+<button type="button" class="chip" data-g="p" data-v="perf" data-m="1" onclick="ch(this)">Sospecha de perforación</button></div>
+<div class="out"></div></div>
+
+<h2>Seguimiento</h2>
+<p>Cistoscopia a los 3 meses de la resección en todos y luego con una frecuencia según el riesgo; el carcinoma in situ y el alto grado suman citología y vigilancia de vías altas [3].</p>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Recurrencia en otro sitio de la vejiga</th><td>Todo el urotelio estuvo expuesto</td><td><button type="button" class="xref" data-ir="e3-m-2" onclick="ir('e3','e3-m-2')">← Daño del ADN del urotelio</button></td></tr>
+<tr><th>Progresión a músculo-invasivo</th><td>Alto grado que atraviesa la lámina propia</td><td><button type="button" class="xref" data-ir="e3-m-5" onclick="ir('e3','e3-m-5')">← Invasión del detrusor</button></td></tr>
+<tr><th>Hidronefrosis e insuficiencia renal</th><td>Obstrucción ureteral</td><td><button type="button" class="xref" data-ir="e3-m-6" onclick="ir('e3','e3-m-6')">← Tumor obstruye el uréter</button></td></tr>
+</tbody></table></div>
+</section>
+<section class="tab" data-tab="sin">
+<div class="hb ro"><div class="hb-t">Errores que no se pueden cometer</div>
+<ul>
+<li>Tratar como cistitis simple a un varón con fiebre y dolor perineal sin tacto rectal ni urocultivo: es prostatitis aguda y puede ser sepsis [1].</li>
+<li>Masajear la próstata en la forma aguda o pedir PSA durante la infección [1].</li>
+<li>Repetir antibióticos en el dolor pélvico crónico con cultivos negativos [4].</li>
+<li>Atribuir a una infección la hematuria macroscópica de un fumador sin hacer cistoscopia y urotomografía [3].</li>
+<li>Pedir urocultivo de rutina en la cistitis típica de la mujer sana o tratar la bacteriuria asintomática [1][2].</li>
+<li>Usar fluoroquinolonas como primera línea en la cistitis no complicada o nitrofurantoína ante sospecha de pielonefritis [2].</li>
+</ul></div>
+<div class="acc refs"><button type="button" class="acc-h" onclick="tog(this)">Referencias <span class="chev">▾</span></button>
+<div class="acc-b"><ol class="vanc">
+<li>European Association of Urology. EAU Guidelines on Urological Infections. Edición 2025. Arnhem: EAU Guidelines Office; 2025. Guía de práctica clínica; actualización limitada de la edición 2024. Solo se leyó el resumen de cambios.</li>
+<li>Gupta K, Hooton TM, Naber KG, Wullt B, Colgan R, Miller LG, et al. International clinical practice guidelines for the treatment of acute uncomplicated cystitis and pyelonephritis in women: a 2010 update by the Infectious Diseases Society of America and the European Society for Microbiology and Infectious Diseases. Clin Infect Dis. 2011;52(5):e103-20. Guía de práctica clínica.</li>
+<li>European Association of Urology. EAU Guidelines on Non-muscle-invasive Bladder Cancer (TaT1 and CIS). Edición 2026. Arnhem: EAU Guidelines Office; 2026. Guía de práctica clínica; actualización completa de la edición 2025. Solo se leyó el resumen.</li>
+<li>Krieger JN, Nyberg L Jr, Nickel JC. NIH consensus definition and classification of prostatitis. JAMA. 1999;282(3):236-7. Consenso.</li>
+<li>Loscalzo J, Fauci AS, Kasper DL, Hauser SL, Longo DL, Jameson JL, editores. Harrison's Principles of Internal Medicine. 21.ª ed. Nueva York: McGraw-Hill; 2022. Texto de referencia.</li>
+</ol></div></div>
+</section>
+<script>
+function par(t){return '<p>'+t+'</p>';}
+function hv(a,v){return a.indexOf(v)>-1;}
+function vacio(dc,t){out(dc,par(t));}
+
+function dcVis(dc){
+  var p=sel(dc,'pac'),h=sel(dc,'h'),o=sel(dc,'o');
+  if(!(p.length||h.length||o.length)){
+    vacio(dc,'Elige el paciente, los hallazgos y los datos de orina. El simulador propone la entidad compatible, el dato que falta para confirmarla y la conducta inicial; no calcula probabilidades.');return;}
+  var r=[],n=0;
+  if(hv(h,'lumbar')||(hv(h,'fiebre')&&!hv(h,'perine')&&!hv(p,'varon'))){n++;
+    r.push(par('<b>Fuera del grupo: pielonefritis</b>. La fiebre o el dolor lumbar indican que la infección subió al riñón. Falta urocultivo y valorar sepsis [2]. Conducta: antibiótico con penetración renal; la nitrofurantoína no sirve.'));}
+  if(hv(p,'varon')&&(hv(h,'perine')||hv(h,'fiebre'))){n++;
+    r.push(par('<b>Prostatitis aguda</b>: varón con '+(hv(h,'fiebre')?'fiebre':'')+(hv(h,'fiebre')&&hv(h,'perine')?' y ':'')+(hv(h,'perine')?'dolor perineal o próstata dolorosa':'')+'. Falta el urocultivo antes del antibiótico y el tacto rectal suave [1]. Conducta: antibiótico que penetre la próstata; ingreso si hay sepsis o retención; sin masaje prostático.'));}
+  if(hv(h,'hema')&&(hv(o,'tabaco')||hv(o,'cultneg')||!hv(o,'piuria'))){n++;
+    r.push(par('<b>Cáncer vesical</b>: hematuria macroscópica'+(hv(o,'tabaco')?' en un fumador o expuesto':'')+(hv(o,'cultneg')?' con urocultivo negativo':'')+'. Falta la cistoscopia y la urotomografía [3]. Conducta: derivar a urología.'));}
+  else if(hv(h,'irrit')&&hv(o,'cultneg')){n++;
+    r.push(par('<b>Cáncer vesical (carcinoma in situ)</b>: síntomas irritativos con urocultivo negativo. Falta citología urinaria y cistoscopia [3]. Conducta: no repetir antibióticos; derivar a urología.'));}
+  if(hv(h,'flujo')){n++;
+    r.push(par('<b>Fuera del grupo: vaginitis o infección de transmisión sexual</b>. El flujo vaginal resta valor a la disuria como signo de cistitis [2]. Conducta: examen ginecológico y pruebas dirigidas.'));}
+  if(hv(h,'irrit')&&!hv(h,'fiebre')&&!hv(h,'lumbar')&&!hv(h,'perine')&&!hv(h,'flujo')&&!hv(o,'cultneg')){n++;
+    if(hv(p,'varon')) r.push(par('<b>Cistitis infecciosa del varón</b>: síndrome miccional sin fiebre ni próstata dolorosa. Falta el urocultivo y buscar la causa (residuo, obstrucción) [1]. Conducta: antibiótico guiado por cultivo y curso más largo que en la mujer.'));
+    else r.push(par('<b>Cistitis infecciosa no complicada</b>: disuria, polaquiuria y urgencia sin fiebre, dolor lumbar ni flujo. No falta ninguna prueba: el diagnóstico es clínico [2]. Conducta: nitrofurantoína o fosfomicina (ver «Cistitis infecciosa»).'));}
+  if(!n) r.push(par('Los hallazgos elegidos no sostienen una sola entidad. Añade los síntomas miccionales, la fiebre, el dolor y el resultado de la orina.'));
+  r.push('<span class="cf">Si la disuria sin fiebre de una mujer pasa a hematuria macroscópica con urocultivo negativo en un fumador → la conducta cambia de antibiótico corto a cistoscopia y urotomografía [3].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE1dx(dc){
+  var t=sel(dc,'t'),d=sel(dc,'d');
+  if(!t.length&&!d.length){vacio(dc,'Elige el terreno y los datos acompañantes para clasificar la infección y decidir si hace falta urocultivo.');return;}
+  var r=[];
+  if(hv(d,'flujo')) r.push(par('El flujo vaginal resta valor a la disuria: explora vaginitis o infección de transmisión sexual antes de diagnosticar cistitis [2].'));
+  if(hv(d,'fiebre')) r.push(par('Clasificación: <b>infección sistémica</b> (la guía europea 2025 separa localizadas de sistémicas) [1]. Ya no es cistitis: trata como pielonefritis o urosepsis, con urocultivo y hemocultivos.'));
+  else if(hv(t,'mujer')) r.push(par('Clasificación: <b>cistitis localizada en mujer sana no embarazada</b> [1][2]. Diagnóstico clínico; sin urocultivo salvo recurrencia o fracaso.'));
+  else if(t.length) r.push(par('Clasificación: <b>cistitis localizada con factor de riesgo</b> ('+(hv(t,'varon')?'varón':hv(t,'emb')?'embarazo':'sonda u obstrucción')+'). Urocultivo antes del antibiótico'+(hv(t,'varon')?' y búsqueda de obstrucción o foco prostático':'')+(hv(t,'emb')?'; en el embarazo también se trata la bacteriuria asintomática':'')+' [1].'));
+  if(hv(d,'recur')) r.push(par('Cistitis recurrente: documenta cada episodio con urocultivo, busca causas corregibles y plantea profilaxis [1].'));
+  r.push('<span class="cf">Si la misma mujer añade fiebre o dolor lumbar → deja de ser cistitis y pasa a infección sistémica con cultivo y antibiótico con penetración renal [1][2].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE1tx(dc){
+  var s=sel(dc,'s'),c=sel(dc,'c');
+  if(!s.length){vacio(dc,'Elige la situación clínica y las condiciones del paciente para obtener el antibiótico y su posología.');return;}
+  var r=[];
+  if(hv(s,'nc')){
+    if(hv(c,'adh')||hv(c,'renal')) r.push(par('<b>Fosfomicina trometamol 3 g VO en dosis única</b> [2]'+(hv(c,'renal')?': evita la nitrofurantoína con filtrado glomerular bajo.':': una sola toma resuelve la adherencia.')));
+    else r.push(par('<b>Nitrofurantoína 100 mg VO cada 12 h por 5 días</b> [2]. Alternativa: fosfomicina trometamol 3 g VO en dosis única.'));
+    if(hv(c,'sens')) r.push(par('Con germen sensible: trimetoprima-sulfametoxazol 160 mg/800 mg VO cada 12 h por 3 días es otra opción [2].'));
+    r.push(par('Analgesia: ibuprofeno 400 mg VO cada 8 h por 2 a 3 días si no hay contraindicación [1].'));
+  } else {
+    r.push(par('<b>Varón</b>: urocultivo antes de empezar y antibiótico según sensibilidad durante 7 días [1] [VERIFICAR EN FUENTE]. Busca residuo y foco prostático; si hay fiebre o próstata dolorosa, trátalo como prostatitis.'));
+    if(hv(c,'sens')) r.push(par('Con germen sensible: trimetoprima-sulfametoxazol 160 mg/800 mg VO cada 12 h por 7 días [1] [VERIFICAR EN FUENTE].'));
+  }
+  r.push('<span class="cf">Si el filtrado glomerular cae por debajo del umbral de la ficha técnica → cambia la nitrofurantoína por fosfomicina [2].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE2(dc){
+  var f=sel(dc,'forma'),o=sel(dc,'otros');
+  if(!f.length){vacio(dc,'Elige el tipo NIH de prostatitis y los datos adicionales para obtener la conducta.');return;}
+  var r=[],v=f[0];
+  if(v==='aguda'){
+    if(hv(o,'fq')) r.push(par('<b>Tipo I estable</b>: urocultivo y luego, si el germen es sensible, trimetoprima-sulfametoxazol 160 mg/800 mg VO cada 12 h durante 2 a 4 semanas [1] [VERIFICAR EN FUENTE].'));
+    else r.push(par('<b>Tipo I estable</b>: urocultivo y ciprofloxacino 500 mg VO cada 12 h (o levofloxacino 500 mg VO cada 24 h) durante 2 a 4 semanas [1] [VERIFICAR EN FUENTE]. Tamsulosina 0,4 mg VO cada 24 h si el vaciado es doloroso.'));
+  } else if(v==='grave'){
+    r.push(par('<b>Tipo I con sepsis o retención</b>: ingreso, hemocultivos y ceftriaxona 2 g IV cada 24 h; paso a vía oral al mejorar hasta completar 2 a 4 semanas [1] [VERIFICAR EN FUENTE]. Retención: catéter suprapúbico, no sonda uretral.'));
+  } else if(v==='cronica'){
+    r.push(par('<b>Tipo II</b>: confirma el germen con la prueba de dos vasos y trata '+(hv(o,'fq')?'con trimetoprima-sulfametoxazol 160 mg/800 mg VO cada 12 h si es sensible':'con levofloxacino 500 mg VO cada 24 h')+' durante 4 a 6 semanas [1][4] [VERIFICAR EN FUENTE].'));
+  } else if(v==='cppc'){
+    r.push(par('<b>Tipo III</b>: cultivos negativos, sin antibiótico repetido. Manejo por fenotipo de síntomas (urinario, psicosocial, órgano, infección, neurológico, sensibilidad muscular); alfabloqueante como tamsulosina 0,4 mg VO cada 24 h si domina el vaciado; derivación a urología [1][4].'));
+  } else {
+    r.push(par('<b>Tipo IV</b>: hallazgo casual sin síntomas; no se trata [4].'));
+  }
+  if(hv(o,'abs')&&v!=='asint'&&v!=='cppc') r.push(par('Fiebre que no cede en 48 h: ecografía transrectal o tomografía para buscar absceso y drenaje por urología [1].'));
+  r.push('<span class="cf">Si el tipo I estable añade hipotensión o retención → la conducta pasa de vía oral ambulatoria a ingreso con ceftriaxona IV y catéter suprapúbico [1].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE3(dc){
+  var g=sel(dc,'r'),p=sel(dc,'p');
+  if(!g.length){vacio(dc,'Elige el resultado de la resección transuretral y las condiciones del paciente para obtener la conducta.');return;}
+  var r=[],v=g[0];
+  if(v==='mi'){
+    if(hv(p,'nocis')) r.push(par('<b>Músculo-invasivo, no apto para cisplatino</b>: cistectomía radical sin neoadyuvancia o protocolo de preservación vesical en urología oncológica [5].'));
+    else r.push(par('<b>Músculo-invasivo</b>: tomografía de estadificación y gemcitabina 1 000 mg/m² IV días 1 y 8 más cisplatino 70 mg/m² IV día 1, cada 21 días por 4 ciclos [VERIFICAR EN FUENTE], seguidos de cistectomía radical con linfadenectomía [5].'));
+  } else {
+    if(hv(p,'perf')) r.push(par('Sospecha de perforación: <b>no</b> instiles quimioterapia inmediata [3].'));
+    else if(v==='bajo') r.push(par('Instilación única de mitomicina C 40 mg intravesical dentro de las 24 h tras la resección [3].'));
+    if(v==='bajo') r.push(par('<b>Bajo riesgo</b>: no requiere más instilaciones; cistoscopia a los 3 meses [3].'));
+    if(v==='inter') r.push(par('<b>Riesgo intermedio</b>: BCG intravesical a dosis completa, semanal ×6 de inducción y mantenimiento por 1 año [3] [VERIFICAR EN FUENTE].'));
+    if(v==='alto') r.push(par('<b>Alto riesgo</b>: segunda resección si es T1, luego BCG intravesical semanal ×6 de inducción y mantenimiento de 1 a 3 años; valora cistectomía precoz si el riesgo es muy alto [3] [VERIFICAR EN FUENTE].'));
+  }
+  r.push(par('En todos: dejar de fumar [3].'));
+  r.push('<span class="cf">Si la muestra de un tumor de alto grado no incluye detrusor → no se puede descartar T2: repite la resección antes de decidir [3].</span>');
+  out(dc,r.join(''));
+}
+</script>
+<!-- KIT_SCRIPT -->
+</div>
+<script>
+(function(){
+'use strict';
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+function secK(k){return $('section.tab[data-tab="'+k+'"]')}
+function secOf(el){return el&&el.closest?el.closest('section.tab'):null}
+function nameOf(k){var b=$('button.tb[data-tab="'+k+'"]');return b?b.textContent.replace(/\s+/g,' ').replace(/^\s+|\s+$/g,''):k}
+function btn(t,f,c){var b=document.createElement('button');b.type='button';b.className=c||'chip';b.textContent=t;b.addEventListener('click',f);return b}
+function recon(s,on){if(!s)return;s.classList.toggle('recon',!!on);$$('.nodo',s).forEach(function(n){n.classList.remove('rev');n.classList.remove('pis')});var st=$('.rec-state',s);if(st)st.textContent=on?'Modo reconstrucción activo':'Modo lectura';var a=$('.rec-bar [data-act="rec"]',s);if(a){a.disabled=!!on;a.classList.toggle('on',!!on);a.textContent=on?'Reconstrucción activa':'Activar reconstrucción'}}
+window.recon=function(k,on){recon(secK(k),on)};
+function navOv(){var n=$('nav.tabs');if(!n)return;var sl=n.scrollLeft,mx=n.scrollWidth-n.clientWidth,w=n.parentNode;[n,w].forEach(function(e){if(e===n||e.classList.contains('tabs-w')){e.classList.toggle('ov-l',sl>2);e.classList.toggle('ov-r',sl<mx-2)}})}
+function tabla(on){var t=$('table.vis'),s=secOf(t);if(!s)return;s.classList.toggle('tbl',!!on);$$('td.tap',t).forEach(function(c){c.classList.remove('rev')});var st=$('.vb-state',s);if(st)st.textContent=on?'Tabla tapada: toca cada celda para revelarla':'Modo lectura'}
+window.tabla=tabla;
+window.show=function(k){var ns=secK(k);if(!ns)return;$$('section.tab.on').forEach(function(s){if(s!==ns){if(s.classList.contains('recon'))recon(s,false);if(s.classList.contains('tbl'))tabla(false)}});$$('.tb,.tab').forEach(function(e){e.classList.toggle('on',e.getAttribute('data-tab')===k)});window.scrollTo(0,0);var b=$('.tb.on');if(b&&b.scrollIntoView){try{b.scrollIntoView({inline:'nearest',block:'nearest'})}catch(e){}}navOv()};
+window.ir=function(k,id){var el=document.getElementById(id),s=secOf(el);if(!s)return;var nodo=el.classList.contains('nodo');if(s.classList.contains('recon')&&!nodo)recon(s,false);if(s.classList.contains('tbl')&&!el.closest('.vis-w'))tabla(false);show(s.getAttribute('data-tab'));if(nodo&&s.classList.contains('recon'))el.classList.add('rev');var a=el.closest('.acc');if(a)a.classList.add('op');el.scrollIntoView({block:'start'});el.classList.add('hl');setTimeout(function(){el.classList.remove('hl')},1500)};
+window.tog=function(b){var a=b.closest('.acc');if(a)a.classList.toggle('op')};
+window.sel=function(dc,g){return $$('.chip.on[data-g="'+g+'"]',dc).map(function(c){return c.getAttribute('data-v')})};
+window.num=function(dc,n){var i=$('input[data-n="'+n+'"]',dc);if(!i||i.value==='')return NaN;return parseFloat(String(i.value).replace(',','.'))};
+window.out=function(dc,h){var o=$('.out',dc);if(o)o.innerHTML=h};
+window.rd=function(x,d){var p=Math.pow(10,d||0);return Math.round(x*p)/p};
+function outErr(dc,e){var o=$('.out',dc);if(o)o.textContent='Error de cálculo: '+(e&&e.message?e.message:String(e))}
+function runDc(dc){var fn=window[dc.getAttribute('data-fn')];if(typeof fn==='function'){try{fn(dc)}catch(e){outErr(dc,e)}}}
+window.ch=function(el){var dc=el.closest('.dc');if(!dc)return;if(el.classList.contains('chip')){var g=el.getAttribute('data-g');if(el.getAttribute('data-m')==='1'){el.classList.toggle('on')}else{var was=el.classList.contains('on');$$('.chip[data-g="'+g+'"]',dc).forEach(function(c){c.classList.remove('on')});if(!was)el.classList.add('on')}}runDc(dc)};
+function initNodos(f){var k=f.getAttribute('data-tab');$$('.nodo',f).forEach(function(n,i){var p=document.createElement('b');p.className='paso';var pn=document.createElement('span');pn.className='pn';pn.textContent=(i+1)+' ·';var pt=document.createElement('span');pt.className='pt';pt.textContent=n.getAttribute('data-paso')||'';p.appendChild(pn);p.appendChild(pt);var ra=n.getAttribute('data-rama');if(ra){var b=document.createElement('span');b.className='badge b-az rama';b.textContent=ra;p.appendChild(document.createTextNode(' '));p.appendChild(b)}n.insertBefore(p,n.firstChild);var c=document.createElement('div');c.className='rec-ctl';if($('.man',n))c.appendChild(btn('Pista',function(){n.classList.toggle('pis')}));c.appendChild(btn('Revelar',function(){n.classList.toggle('rev')}));n.appendChild(c)});
+var tl=$('ol.tl',f);if(!tl)return;var bar=document.createElement('div');bar.className='rec-bar';bar.id='rec-bar-'+k;var t=document.createElement('div');t.innerHTML='<b>Timeline en blanco</b> · <span class="rec-state">Modo lectura</span><p class="mini">Reconstruye la cascada sin mirar: escribe cada paso en orden, luego usa Pista (signos que produce) y Revelar nodo por nodo. Nada se guarda.</p>';bar.appendChild(t);var ta=document.createElement('textarea');ta.setAttribute('aria-label','Escribe aquí la cascada en orden');var bs=document.createElement('div');bs.className='rec-btns';var ab=btn('Activar reconstrucción',function(){recon(f,true);ta.focus()});ab.setAttribute('data-act','rec');bs.appendChild(ab);bs.appendChild(btn('Revelar todo',function(){$$('.nodo',f).forEach(function(n){n.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){recon(f,false)}));bar.appendChild(bs);bar.appendChild(ta);tl.parentNode.insertBefore(bar,tl)}
+var TGT={'1.º':'clave','De elección':'clave','Confirma':'ok','Solo si':'cond','Escala':'cond','Reevalúa':'cond','No pidas':'no','Evita':'no','Alarma':'alarma'};
+function initTg(){$$('ol.tg span.tg').forEach(function(s){var v=TGT[s.textContent.replace(/^\s+|\s+$/g,'')];if(v)s.setAttribute('data-t',v)})}
+function initTabla(){var t=$('table.vis'),s=secOf(t);if(!s)return;var w=t.parentNode;if(!w.classList.contains('tw')){w=document.createElement('div');w.className='tw';t.parentNode.insertBefore(w,t);w.appendChild(t)}w.classList.add('vis-w');var rows=$$('tbody tr',t);if(!rows.length)rows=$$('tr',t).slice(1);rows.forEach(function(r){Array.prototype.slice.call(r.children,1).forEach(function(c){c.classList.add('tap');c.addEventListener('click',function(){if(s.classList.contains('tbl'))c.classList.add('rev')})})});
+var bar=document.createElement('div');bar.className='vb-bar';bar.id='vb-bar';var h=document.createElement('div');h.innerHTML='<b>Tabla en blanco</b> · <span class="vb-state">Modo lectura</span><p class="mini">Tapa todas las celdas de las entidades (quedan visibles las cabeceras y los ejes). Di cada celda antes de tocarla; un toque la revela. Nada se guarda.</p>';bar.appendChild(h);var bs=document.createElement('div');bs.className='rec-btns';bs.appendChild(btn('Tapar la tabla',function(){tabla(true)}));bs.appendChild(btn('Revelar todo',function(){$$('td.tap',t).forEach(function(c){c.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){tabla(false)}));bar.appendChild(bs);w.parentNode.insertBefore(bar,w)}
+function initRecGo(){var TL=$$('section.tab').filter(function(s){return!!$('ol.tl',s)}),sin=secK('sin'),dst=sin||secK('seg');if(!dst)return;var ord=sin?TL.filter(function(s,i){return i%2===0}).concat(TL.filter(function(s,i){return i%2===1})):TL;var vt=$('table.vis');if(!ord.length&&!(sin&&vt))return;
+var w=document.createElement('div');w.className='hb az rec-go';w.innerHTML='<div class="hb-t">Antes de cerrar: recupera sin mirar</div><p class="mini">Cada botón te lleva a la función en blanco correspondiente. Intenta la respuesta completa antes de revelar.</p>';var bs=document.createElement('div');bs.className='rec-btns';w.appendChild(bs);
+if(sin&&vt){var vs=secOf(vt),vk=vs.getAttribute('data-tab'),b0=btn('Tabla en blanco — '+nameOf(vk),function(){show(vk);tabla(true);var b=document.getElementById('vb-bar');if(b)b.scrollIntoView({block:'start'})},'go');b0.setAttribute('data-rec',vk);bs.appendChild(b0)}
+ord.forEach(function(s){var k=s.getAttribute('data-tab'),b=btn('Reconstruir la cascada — '+nameOf(k),function(){show(k);recon(s,true);var r=document.getElementById('rec-bar-'+k);if(r)r.scrollIntoView({block:'start'})},'go');b.setAttribute('data-rec',k);bs.appendChild(b)});
+var rf=$('.acc.refs',dst);if(rf)dst.insertBefore(w,rf);else dst.appendChild(w)}
+function init(){var f=$('.tb'),ph=[function(){var n=$('nav.tabs');if(n){var w=document.createElement('div');w.className='tabs-w';n.parentNode.insertBefore(w,n);w.appendChild(n);n.addEventListener('scroll',navOv);window.addEventListener('resize',navOv)}},function(){$$('section.tab').forEach(function(s){if($('ol.tl',s))initNodos(s)})},initTg,initTabla,initRecGo,function(){$$('.dc').forEach(runDc)},function(){show(secK('pan')?'pan':(f?f.getAttribute('data-tab'):''))}];ph.forEach(function(p){try{p()}catch(e){if(window.console)console.error('kit v10:',e)}})}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+</body>
+</html>

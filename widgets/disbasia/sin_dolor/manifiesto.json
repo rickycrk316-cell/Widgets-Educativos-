@@ -1,0 +1,97 @@
+{
+ "titulo": "Marcha alterada sin dolor",
+ "salida": "../Marcha_sin_dolor_widget_v10.html",
+ "modo": "multi",
+ "entidades": {
+  "e1": "Displasia del desarrollo de la cadera",
+  "e2": "Dismetría de miembros inferiores",
+  "e3": "Enfermedad neuromuscular",
+  "e4": "Síndrome de Guillain-Barré"
+ },
+ "principal": "e1",
+ "amenaza": "e4",
+ "tabs": [
+  "pan",
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4",
+  "sin"
+ ],
+ "pg": {
+  "vis": 4,
+  "e1": 4,
+  "e2": 3,
+  "e3": 3,
+  "e4": 3
+ },
+ "fey": {
+  "e1": 2,
+  "e2": 1,
+  "e3": 1,
+  "e4": 1
+ },
+ "nodos": {
+  "e1": 7,
+  "e2": 6,
+  "e3": 7,
+  "e4": 7
+ },
+ "signos": {
+  "e1": 4,
+  "e2": 3,
+  "e3": 4,
+  "e4": 4
+ },
+ "dc": [
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4"
+ ],
+ "nucleo": {
+  "vis": [
+   "Eje 1 — El examen dirigido separa las causas: maniobra de cadera, longitud con cinta, fuerza proximal con Gowers y reflejos.",
+   "Eje 2 — El curso orienta: desde el nacimiento, con el crecimiento, durante años o en días.",
+   "Eje 3 — Debilidad ascendente con arreflexia o disnea es una urgencia, aunque no haya dolor."
+  ],
+  "e1": [
+   "Cabeza femoral mal centrada o inestable",
+   "Cabeza asciende y se luxa",
+   "Abductores ineficaces y pelvis cae al caminar",
+   "Ortolani o Barlow positivo en el lactante",
+   "Ortolani y Barlow con ecografía de cadera por Graf según la edad",
+   "Arnés de Pavlik en el lactante pequeño con cadera reducible",
+   "No pidas radiografía de pelvis en el recién nacido para decidir"
+  ],
+  "e2": [
+   "Pelvis se inclina hacia el lado corto",
+   "Tronco inclinado o puntillas del lado corto",
+   "Columna se curva para nivelar los hombros",
+   "Cresta ilíaca más baja del lado corto, corregida con tacos",
+   "Cinta métrica y bloques, ortorradiografía de miembros inferiores en bipedestación",
+   "Alza en el calzado para la diferencia real",
+   "Evita tratar con alza una dismetría aparente"
+  ],
+  "e3": [
+   "Necrosis y reemplazo por grasa y fibrosis",
+   "Debilidad de cintura pélvica y muslos",
+   "Acortamiento del tendón de Aquiles",
+   "Signo de Gowers con debilidad proximal",
+   "CK sérica y estudio genético del gen de distrofina",
+   "Glucocorticoide diario: prednisona o deflazacort",
+   "Evita suspender el glucocorticoide de golpe"
+  ],
+  "e4": [
+   "Bloqueo de conducción en raíces y nervios",
+   "Fibras sensitivas y autonómicas afectadas",
+   "Músculos respiratorios y bulbares se debilitan",
+   "Debilidad simétrica ascendente con arreflexia",
+   "Examen de fuerza y reflejos, y estudios de LCR y neuroconducción",
+   "Inmunoglobulina intravenosa si no camina sin ayuda",
+   "Evita los corticoides orales"
+  ]
+ }
+}

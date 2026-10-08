@@ -1,0 +1,73 @@
+{
+ "titulo": "Prostatitis, cistitis y cáncer vesical",
+ "salida": "../Prostatitis_cistitis_cancer_vesical_widget_v10.html",
+ "modo": "multi",
+ "entidades": {
+  "e1": "Cistitis infecciosa",
+  "e2": "Prostatitis",
+  "e3": "Cáncer vesical"
+ },
+ "principal": "e1",
+ "amenaza": "e2",
+ "tabs": [
+  "pan",
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "sin"
+ ],
+ "pg": {
+  "vis": 4,
+  "e1": 4,
+  "e2": 3,
+  "e3": 3
+ },
+ "fey": {
+  "e1": 2,
+  "e2": 1,
+  "e3": 1
+ },
+ "nodos": {
+  "e1": 6,
+  "e2": 6,
+  "e3": 6
+ },
+ "signos": {
+  "e1": 3,
+  "e2": 4,
+  "e3": 3
+ },
+ "dc": [
+  "vis",
+  "e1",
+  "e2",
+  "e3"
+ ],
+ "nucleo": {
+  "vis": [
+   "Eje 1 — Fiebre, dolor perineal y próstata dolorosa separan la prostatitis aguda de la cistitis.",
+   "Eje 2 — Hematuria macroscópica indolora o síntomas irritativos con urocultivo negativo obligan a descartar cáncer vesical.",
+   "Eje 3 — En la mujer sin fiebre, dolor lumbar ni flujo, la disuria es cistitis y se trata sin cultivo."
+  ],
+  "e1": [
+   "Invasión del urotelio y llegada de neutrófilos",
+   "Inflamación hemorrágica de la mucosa vesical",
+   "Disuria con polaquiuria y urgencia, sin flujo vaginal",
+   "Diagnóstico clínico ante disuria, polaquiuria y urgencia sin flujo vaginal",
+   "Nitrofurantoína o fosfomicina en la cistitis no complicada de la mujer"
+  ],
+  "e2": [
+   "Respuesta inflamatoria aguda del parénquima",
+   "Próstata dolorosa, caliente y edematosa al tacto rectal",
+   "Uroanálisis y urocultivo antes del antibiótico",
+   "Fluoroquinolona oral en la forma aguda estable sin sospecha de infección sexual"
+  ],
+  "e3": [
+   "Tumor papilar frágil sangra a la luz",
+   "Hematuria macroscópica indolora y total",
+   "Cistoscopia y urotomografía ante toda hematuria macroscópica",
+   "Resección transuretral completa con detrusor en la muestra"
+  ]
+ }
+}

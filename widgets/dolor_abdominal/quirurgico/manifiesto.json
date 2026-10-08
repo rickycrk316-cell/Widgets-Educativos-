@@ -1,0 +1,110 @@
+{
+ "titulo": "Abdomen agudo quirúrgico",
+ "salida": "../Abdomen_agudo_quirurgico_widget_v10.html",
+ "modo": "multi",
+ "entidades": {
+  "e1": "Apendicitis aguda",
+  "e2": "Obstrucción intestinal",
+  "e3": "Perforación de víscera hueca",
+  "e4": "Isquemia mesentérica aguda",
+  "e5": "Aneurisma de aorta abdominal roto"
+ },
+ "principal": "e1",
+ "amenaza": "e5",
+ "tabs": [
+  "pan",
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4",
+  "e5",
+  "sin"
+ ],
+ "pg": {
+  "vis": 5,
+  "e1": 4,
+  "e2": 3,
+  "e3": 3,
+  "e4": 3,
+  "e5": 3
+ },
+ "fey": {
+  "e1": 2,
+  "e2": 1,
+  "e3": 1,
+  "e4": 1,
+  "e5": 1
+ },
+ "nodos": {
+  "e1": 6,
+  "e2": 5,
+  "e3": 5,
+  "e4": 5,
+  "e5": 5
+ },
+ "signos": {
+  "e1": 4,
+  "e2": 3,
+  "e3": 4,
+  "e4": 3,
+  "e5": 3
+ },
+ "dc": [
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4",
+  "e5"
+ ],
+ "nucleo": {
+  "vis": [
+   "Inicio y curso",
+   "Signo que la delata",
+   "Negativo pertinente",
+   "Prueba que decide",
+   "Amenaza si se pierde"
+  ],
+  "e1": [
+   "Distensión estimula fibras viscerales: dolor periumbilical",
+   "Inflamación alcanza el peritoneo parietal",
+   "Isquemia transmural con necrosis y perforación",
+   "Defensa en fosa ilíaca derecha",
+   "Estratifica con AIR o AAS; Alvarado solo para excluir.",
+   "Apendicectomía laparoscópica en menos de 24 h con una dosis antibiótica preoperatoria."
+  ],
+  "e2": [
+   "Gas y líquido se acumulan antes del obstáculo",
+   "Peristalsis intensa contra el obstáculo",
+   "Estrangulación: isquemia, necrosis y perforación",
+   "Distensión con vómito y sin gases",
+   "TC con contraste oral hidrosoluble si hay duda diagnóstica o riesgo de isquemia.",
+   "Manejo no operatorio: nada por vía oral, descompresión y reposición hídrica y electrolítica."
+  ],
+  "e3": [
+   "Pared rota: contenido sale al peritoneo",
+   "Peritonitis química por ácido y bilis",
+   "Aire libre bajo el diafragma",
+   "Contaminación bacteriana causa sepsis",
+   "Abdomen en tabla",
+   "TC abdominal; radiografía solo si no hay TC pronta.",
+   "Reparación quirúrgica urgente tras reanimar y dar antibiótico amplio."
+  ],
+  "e4": [
+   "Isquemia mucosa con dolor visceral intenso",
+   "Hiperperistalsis y vaciamiento intestinal",
+   "Translocación bacteriana, peritonitis y sepsis",
+   "Dolor desproporcionado con examen blando",
+   "Angio-TC sin demora ante dolor desproporcionado.",
+   "Revascularización, endovascular si hay experiencia, y resección de lo necrótico."
+  ],
+  "e5": [
+   "Rotura de pared con sangrado retroperitoneal",
+   "Choque hemorrágico por pérdida de volumen",
+   "Masa pulsátil con hipotensión",
+   "Inestable: quirófano sin imagen; estable: angio-TC inmediata.",
+   "Reparación endovascular si la anatomía lo permite; si no, abierta."
+  ]
+ }
+}

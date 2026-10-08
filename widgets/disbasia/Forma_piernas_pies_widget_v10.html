@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Forma de piernas y pies</title>
+<style>
+/* Vademécum: monografía impresa con índice de canto; filetes y tinta llevan la jerarquía, no las sombras */
+:root{
+--paper:#FBFBFC;--paper-2:#F1F2F5;--ink:#16181D;--ink-2:#3A3D46;--ink-3:#686C78;--rule:#D7D9E0;--rule-strong:#16181D;
+--accent:#2342A6;--accent-ink:#1B358A;--accent-field:#EAEEFA;--on-accent:#FFFFFF;
+--am:#7A4A06;--am-f:#FBF1DF;--ro:#9E1F1F;--ro-f:#FBE9E7;--ve:#2F5E12;--ve-f:#EBF3E1;--pu:#4C3FA8;--pu-f:#EEECFB;--co:#8E3517;--co-f:#FAEDE6;--rs:#8A2C52;--rs-f:#FAEAF1;
+--f-serif:ui-serif,"New York","Iowan Old Style","Charter","Source Serif Pro",Georgia,"Times New Roman",serif;
+--f-sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+--r:3px;
+/* alias de la v10 para compatibilidad */
+--surface-0:var(--paper);--surface-1:var(--paper-2);--border:var(--rule);--border-accent:var(--accent);--bg-accent:var(--accent-field);--text-primary:var(--ink);--text-secondary:var(--ink-2);--text-muted:var(--ink-3);--text-accent:var(--accent-ink);--radius:var(--r);--font-sans:var(--f-sans);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}
+html{color-scheme:light dark;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:var(--accent);color:var(--on-accent)}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--f-sans);-webkit-text-size-adjust:100%;font-feature-settings:"kern" 1;text-rendering:optimizeLegibility;caret-color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:18px 16px 56px;background:transparent}
+h1{font:600 26px/1.2 var(--f-serif);letter-spacing:-.012em;margin:6px 0 14px;padding-bottom:12px;border-bottom:2px solid var(--rule-strong);text-wrap:balance}
+h2{font:600 19px/1.3 var(--f-serif);letter-spacing:-.006em;margin:40px 0 14px;padding-top:12px;border-top:1px solid var(--rule-strong);text-wrap:balance}
+h3{font:600 16px/1.35 var(--f-serif);margin:20px 0 6px;text-wrap:balance}
+p{margin:0 0 12px;text-wrap:pretty}
+a{color:var(--accent-ink);text-underline-offset:3px}
+button{font:inherit;color:inherit;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,color .15s ease-out}
+button:active{transform:translateY(1px)}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* índice de canto */
+.tabs{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 0 0;border-bottom:2px solid var(--rule-strong);margin-bottom:16px;position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);scroll-snap-type:x proximity;scroll-padding-inline:56px}
+.tabs-w{position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper)}
+.tabs-w::before,.tabs-w::after{content:"";position:absolute;top:0;bottom:2px;width:56px;pointer-events:none;opacity:0;transition:opacity .2s;z-index:6}
+.tabs-w::before{left:0;background:linear-gradient(to left,transparent,var(--paper) 85%)}
+.tabs-w::after{right:0;background:linear-gradient(to right,transparent,var(--paper) 85%)}
+.tabs-w.ov-l::before,.tabs-w.ov-r::after{opacity:1}
+.nodo,.signo,.qv,.dc,h2{scroll-margin-top:84px}
+.tabs::-webkit-scrollbar{display:none}
+.tb{flex:0 0 auto;min-height:44px;padding:9px 15px 8px;border:1px solid var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;background:var(--paper-2);color:var(--ink-2);font:600 13px/1.2 var(--f-sans);letter-spacing:.01em;white-space:nowrap;scroll-snap-align:start}
+.tb:hover{background:var(--accent-field);color:var(--accent-ink)}
+.tb.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+.tab{display:none}
+.tab.on{display:block}
+/* recuadros */
+.card{background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;margin:12px 0;font-size:15px;line-height:1.6}
+.card p{margin:0 0 8px}
+.card p:last-child{margin-bottom:0}
+.mini{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:6px 0}
+.hb{border-radius:var(--r);padding:12px 14px;margin:14px 0;border:1px solid transparent;font-size:15px;line-height:1.6}
+.hb.az{background:var(--accent-field);color:var(--ink);border-color:var(--accent)}
+.hb.am{background:var(--am-f);color:var(--am);border-color:var(--am)}
+.hb.ro{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.hb.ve{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+.hb.am .mini,.hb.ro .mini,.hb.ve .mini{color:inherit;opacity:.88}
+.hb-t{font:600 16px/1.35 var(--f-serif);margin-bottom:6px;text-wrap:balance}
+.hb.az .hb-t{color:var(--accent-ink)}
+.pg{margin:0;padding-left:22px}
+.pg li{margin:5px 0}
+.pg li::marker{color:var(--accent-ink);font-weight:700}
+.hb.az:has(.pg){margin-bottom:24px}
+.hb.az:not(:has(.pg)):not(.rec-go){background:transparent;border-left-color:transparent;border-right-color:transparent;border-radius:0;padding-left:0;padding-right:0}
+.hb.az:not(:has(.pg))+.etapa{border-top:0}
+h2+.card,h2+.hb,h2+.tw{margin-top:0}
+.badge{display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.04em;padding:2px 7px;border-radius:2px;margin:0 4px 4px 0;vertical-align:middle;border:1px solid currentColor}
+.b-az{background:var(--accent-field);color:var(--accent-ink)}
+.b-ro{background:var(--ro-f);color:var(--ro)}
+.b-am{background:var(--am-f);color:var(--am)}
+.b-ve{background:var(--ve-f);color:var(--ve)}
+.b-pu{background:var(--pu-f);color:var(--pu)}
+.badge.b-pu{display:block;width:fit-content;max-width:100%;white-space:normal;font-size:12px;line-height:1.5;font-weight:600;letter-spacing:.01em;margin:14px 0}
+.b-co{background:var(--co-f);color:var(--co)}
+.b-rs{background:var(--rs-f);color:var(--rs)}
+.rem{display:inline-block;font-size:12.5px;background:var(--rs-f);color:var(--rs);border:1px dashed var(--rs);border-radius:2px;padding:1px 7px;margin:4px 0}
+/* Feynman */
+.fey{background:var(--co-f);border:1px solid var(--co);border-radius:var(--r);padding:14px 16px;margin:18px 0 26px}
+.fey-t{display:inline-block;font:600 15px/1.35 var(--f-serif);color:var(--co);margin-bottom:8px}
+.fey-b{margin:0 0 10px;font:400 16px/1.6 var(--f-serif);color:var(--ink)}
+.fey-c{margin:2px 0;color:var(--ink-2)}
+/* Panorama: entradas de índice */
+.tab{counter-reset:et}
+.etapa{counter-increment:et;background:transparent;border:0;border-top:1px solid var(--rule);border-radius:0;padding:18px 0 8px;margin:4px 0}
+.etapa h3{font-size:19px;line-height:1.3;margin:0 0 8px}
+.etapa h3::before{content:counter(et,decimal-leading-zero);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;letter-spacing:.04em;color:var(--accent-ink);margin-right:10px;vertical-align:2px}
+.res{margin:0 0 10px}
+.perla{border-top:1px dotted var(--rule);padding-top:8px;margin:0 0 10px;font-weight:500}
+.perla::before{content:"Perla";display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;background:var(--ve-f);color:var(--ve);border:1px solid var(--ve);border-radius:2px;padding:1px 6px;margin-right:8px;vertical-align:1px}
+.go{min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent);color:var(--on-accent);font:600 13.5px/1.2 var(--f-sans)}
+.go:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+/* tablas de monografía */
+.tw{overflow-x:auto;margin:12px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.5;font-variant-numeric:tabular-nums}
+th,td{border:0;border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--paper-2);font-weight:700;color:var(--ink)}
+thead th{font:700 14.5px/1.35 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong)}
+tbody tr:last-child>*{border-bottom:1px solid var(--rule-strong)}
+.stats{display:grid;grid-template-columns:1fr;gap:10px;margin:12px 0}
+@media (min-width:600px){.stats{grid-template-columns:repeat(3,1fr)}}
+.stat{background:transparent;border:0;border-top:2px solid var(--accent);border-radius:0;padding:8px 2px}
+.stat b{display:block;font:600 22px/1.25 var(--f-serif);color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--ink-2);line-height:1.4;display:block}
+.steps{list-style:none;counter-reset:st;padding:0;margin:10px 0}
+.steps>li{counter-increment:st;position:relative;padding:5px 0 9px 40px}
+.steps>li::before{content:counter(st);position:absolute;left:0;top:3px;width:26px;height:26px;border-radius:2px;background:var(--ink);color:var(--paper);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;display:flex;align-items:center;justify-content:center}
+/* cascada */
+.tl{list-style:none;margin:14px 0;padding:0 0 0 20px;border-left:2px solid var(--accent)}
+.nodo{position:relative;margin:0 0 14px;padding:11px 13px;background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);font-size:14px;line-height:1.55}
+.nodo::before{content:"";position:absolute;left:-27px;top:15px;width:12px;height:12px;border-radius:1px;background:var(--accent);box-shadow:0 0 0 3px var(--paper)}
+.paso{display:block;font:600 15px/1.4 var(--f-serif);margin-bottom:5px}
+.pn{color:var(--accent-ink);margin-right:4px;font-variant-numeric:tabular-nums}
+.man{margin:8px 0 0;font-size:13px;color:var(--ink-2)}
+.signo{background:var(--paper);border:1px solid var(--rule);border-top:2px solid var(--rule-strong);border-radius:0 0 var(--r) var(--r);padding:12px 14px;margin:12px 0;font-size:14px;line-height:1.55}
+.signo h4{margin:0 0 6px;font:600 15.5px/1.35 var(--f-serif)}
+.signo dl{margin:0}
+.signo dt{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-3);margin-top:8px}
+.signo dd{margin:2px 0 0}
+.xref{display:inline-flex;align-items:center;min-height:44px;padding:4px 10px;margin:3px 6px 3px 0;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent-field);color:var(--accent-ink);font:600 12.5px/1.3 var(--f-sans);text-align:left}
+.xref:hover{background:var(--accent);color:var(--on-accent)}
+p .xref,td .xref,li .xref,dd .xref{display:inline;position:relative;min-height:0;padding:0 5px;margin:0 2px;line-height:inherit;border-radius:2px;white-space:normal;overflow-wrap:anywhere;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+p .xref::after,td .xref::after,li .xref::after,dd .xref::after{content:"";position:absolute;left:-4px;right:-4px;top:-12px;bottom:-12px}
+.hl{outline:2px solid var(--accent);background:var(--accent-field)!important;transition:background .3s}
+.acc{border:1px solid var(--rule);border-radius:var(--r);margin:12px 0;overflow:hidden}
+.acc-h{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:44px;padding:9px 14px;border:0;background:var(--paper-2);font:600 14px/1.35 var(--f-sans);text-align:left}
+.acc-h:hover{background:var(--accent-field)}
+.chev{transition:transform .2s;color:var(--accent-ink)}
+.acc.op .chev{transform:rotate(180deg)}
+.acc-b{display:none;padding:10px 14px;font-size:14px;line-height:1.55}
+.acc.op .acc-b{display:block}
+.vanc{font-size:12.5px;line-height:1.5;padding-left:24px}
+.vanc li{margin:5px 0;word-break:break-word}
+.vanc li::marker{font-variant-numeric:tabular-nums;color:var(--ink-3)}
+/* simulador */
+.dc{border:1px solid var(--rule-strong);border-radius:var(--r);padding:14px 16px;margin:22px 0;background:var(--paper)}
+.dc-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.dc-g{margin:10px 0}
+.dc-l{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);margin-bottom:5px;display:block}
+.chip{min-height:44px;padding:7px 13px;margin:3px 6px 3px 0;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);font-size:13.5px}
+.chip:hover{border-color:var(--accent);color:var(--accent-ink)}
+.chip.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:600}
+.dc input[type=number]{min-height:44px;width:120px;padding:6px 10px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper);color:var(--ink);font:15px var(--f-sans);font-variant-numeric:tabular-nums}
+.out{margin-top:12px;padding:12px 14px;border-radius:var(--r);background:var(--paper-2);border:1px solid var(--rule);font-size:14px;line-height:1.58;min-height:44px}
+.tag{display:inline-block;font:600 11px/1.4 var(--f-sans);padding:1px 7px;border-radius:2px;background:var(--accent-field);color:var(--accent-ink);margin:4px 4px 0 0}
+.rec-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.rec-bar textarea{width:100%;min-height:120px;margin-top:8px;padding:9px 11px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper-2);color:var(--ink);font:14px/1.55 var(--f-sans);resize:vertical}
+.chip:disabled{cursor:default;opacity:.85}
+.rec-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.rec-ctl{display:none;gap:6px;margin-top:6px}
+.recon .rec-ctl{display:flex}
+.recon>*:not(.rec-bar):not(.tl){display:none}
+.recon .nodo:not(.rev) .pt{display:none}
+.recon .nodo:not(.rev) .pn::after{content:" ?"}
+.recon .nodo:not(.rev) .det{display:none}
+.recon .nodo.pis:not(.rev) .det{display:block}
+.recon .nodo.pis:not(.rev) .det>*:not(.man){display:none}
+.recon .nodo:not(.pis):not(.rev) .man{display:none}
+.recon .nodo.rev{border-color:var(--accent)}
+.rec-go{margin:22px 0}
+.steps.tg>li{padding-left:40px}
+span.tg{display:inline-block;font:700 11px/1.4 var(--f-mono);letter-spacing:.02em;padding:2px 7px;margin:0 6px 2px 0;border-radius:2px;background:var(--paper-2);border:1px solid var(--rule);color:var(--ink-2);white-space:nowrap;vertical-align:1px}
+span.tg[data-t="clave"]{background:var(--accent-field);color:var(--accent-ink);border-color:var(--accent)}
+span.tg[data-t="ok"]{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+span.tg[data-t="cond"]{background:var(--am-f);color:var(--am);border-color:var(--am)}
+span.tg[data-t="no"]{background:var(--rs-f);color:var(--rs);border-color:var(--rs)}
+span.tg[data-t="alarma"]{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.qv{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:12px 0}
+.qv p{margin:0;padding:9px 11px;border-radius:var(--r);border:1px solid var(--rule);background:var(--paper-2);font-size:13.5px;line-height:1.45}
+.qv p::before{display:block;font:700 10.5px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px;color:var(--ink-3)}
+.qv p[data-e="p"]{background:var(--accent-field);border-color:var(--accent)}
+.qv p[data-e="p"]::before{content:"Presente";color:var(--accent-ink)}
+.qv p[data-e="v"]::before{content:"Variable"}
+.qv p[data-e="a"]{border:1px dashed var(--rule);color:var(--ink-3);background:transparent}
+.qv p[data-e="a"]::before{content:"Ausente"}
+.qv p[data-e="k"]{grid-column:1/-1;border:2px solid var(--accent);background:var(--accent-field);font-size:14.5px}
+.qv p[data-e="k"]::before{content:"Signo clave";color:var(--accent-ink)}
+.hb.vi{background:var(--pu-f);color:var(--pu);border-color:var(--pu)}
+.hb.vi .mini{color:inherit;opacity:.88}
+table.vis{min-width:620px}
+table.vis td{min-width:140px}
+table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index:1;background:var(--paper-2);min-width:118px;max-width:150px;font-weight:700;border-right:1px solid var(--rule)}
+.vb-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.tbl>*:not(.vb-bar):not(.vis-w){display:none}
+.tbl td.tap{cursor:pointer}
+.tbl td.tap:not(.rev){color:transparent;background:repeating-linear-gradient(135deg,var(--paper-2),var(--paper-2) 7px,var(--accent-field) 7px,var(--accent-field) 14px)}
+.tbl td.tap:not(.rev) *{visibility:hidden}
+.tbl td.tap.rev{box-shadow:inset 0 0 0 1px var(--accent)}
+.cf{display:block;margin-top:10px;padding-top:8px;border-top:1px dashed var(--accent);font-style:italic;color:var(--ink-2)}
+.cf::before{content:"Contrafactual · ";font-style:normal;font-weight:700;color:var(--accent-ink)}
+.fig{margin:14px 0}
+.fig img{display:block;max-width:100%;height:auto;border-radius:var(--r);border:1px solid var(--rule)}
+.fig figcaption{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin-top:6px}
+@media (min-width:700px){body{font-size:15.5px}.wrap{padding:22px 24px 64px}h1{font-size:28px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- /KIT_HEAD -->
+<h1>Forma de piernas y pies</h1>
+<nav class="tabs">
+<button type="button" class="tb" data-tab="pan" onclick="show('pan')">Panorama</button>
+<button type="button" class="tb" data-tab="vis" onclick="show('vis')">Qué los separa</button>
+<button type="button" class="tb" data-tab="e1" onclick="show('e1')">Genu varo y genu valgo</button>
+<button type="button" class="tb" data-tab="e2" onclick="show('e2')">Anteversión femoral</button>
+<button type="button" class="tb" data-tab="e3" onclick="show('e3')">Pie plano</button>
+<button type="button" class="tb" data-tab="e4" onclick="show('e4')">Pie cavo</button>
+<button type="button" class="tb" data-tab="e5" onclick="show('e5')">Pie equinovaro</button>
+<button type="button" class="tb" data-tab="sin" onclick="show('sin')">Errores clave</button>
+</nav>
+<section class="tab" data-tab="pan">
+<div class="hb az"><div class="hb-t">El grupo en una frase</div><p>Ante padres preocupados por piernas o pies, hay que separar la variante del crecimiento de la deformidad que se deriva, sin perder el pie zambo ni la causa neurológica.</p></div>
+<div class="etapa" data-go="vis"><h3>Qué separa las cinco entidades</h3>
+<p class="res">Ante unos padres que consultan por la forma de las piernas o los pies, la primera pregunta es el nivel: rodilla, fémur o pie. Tres ejes separan las entidades: si la desviación es simétrica y acorde con la edad, si el pie es flexible o rígido y si hay hallazgos neurológicos. Una historia dirigida, la observación de la marcha y el perfil rotacional ubican el nivel sin imágenes. Las imágenes se reservan para lo atípico, y la derivación sigue a la asimetría, la progresión, el dolor, la rigidez o los signos neurológicos. Con ese mapa se empieza por la entidad más frecuente: el eje de la rodilla.</p>
+<p class="perla">Asimetría, progresión, dolor, rigidez y signos neurológicos son los datos que cambian la conducta.</p>
+<button type="button" class="go" data-go="vis" onclick="show('vis')">Ir a Qué los separa →</button></div>
+<div class="etapa" data-go="e1"><h3>Genu varo y genu valgo</h3>
+<p class="res">Es el extremo proximal del eje y la entidad más frecuente. El varo del lactante y el valgo del preescolar son una etapa normal: la carga sobre los cartílagos de crecimiento remodela el eje hasta estabilizarlo en la edad escolar temprana. La distancia aumentada entre rodillas o entre tobillos es el signo que la delata, y lo simétrico y acorde con la edad se observa sin ortesis. Si la carga frena un solo lado de la fisis, como en la tibia vara, o falta mineral, como en el raquitismo, la deformidad progresa y se deriva. Del eje frontal se pasa al giro del miembro: la anteversión femoral.</p>
+<p class="perla">Lo simétrico y acorde con la edad se observa; lo unilateral o progresivo se estudia.</p>
+<button type="button" class="go" data-go="e1" onclick="show('e1')">Ir a Genu varo y genu valgo →</button></div>
+<div class="etapa" data-go="e2"><h3>Anteversión femoral</h3>
+<p class="res">Baja un nivel, hasta el fémur. El cuello femoral nace rotado hacia delante y la cadera gira el muslo hacia dentro para cubrir la cabeza, de modo que todo el miembro rota y el pie mira hacia dentro. La rotación interna de cadera aumentada con la externa reducida es el signo que la delata, y el perfil rotacional separa fémur, tibia y pie. Mejora con el crecimiento, así que se tranquiliza y se observa sin ortesis. Un pie hacia fuera de inicio reciente con dolor en un adolescente es otra cosa: epifisiólisis. De la rotación se pasa al arco del pie.</p>
+<p class="perla">Pie hacia fuera nuevo con dolor en un adolescente es epifisiólisis hasta descartarla.</p>
+<button type="button" class="go" data-go="e2" onclick="show('e2')">Ir a Anteversión femoral →</button></div>
+<div class="etapa" data-go="e3"><h3>Pie plano</h3>
+<p class="res">El pie plano es el primer eslabón distal. Los ligamentos laxos dejan que el arco se aplane al cargar peso, y el arco reaparece de puntillas: eso es lo flexible y fisiológico, que se observa sin ortesis. Si el arco no reaparece y la subtalar no se mueve, hay una coalición tarsal o un astrágalo vertical, que se derivan y se estudian con imagen. La coalición duele en el estirón adolescente porque las articulaciones vecinas absorben la carga. Un pie plano precoz puede ser la primera cara de una neuropatía hereditaria que luego lleva al pie cavo.</p>
+<p class="perla">El arco que reaparece de puntillas separa el pie flexible del rígido.</p>
+<button type="button" class="go" data-go="e3" onclick="show('e3')">Ir a Pie plano →</button></div>
+<div class="etapa" data-go="e4"><h3>Pie cavo</h3>
+<p class="res">El pie cavo es lo opuesto: arco alto, retropié en varo y dedos en garra por la fuerza desigual de los músculos del pie. Casi siempre hay una causa neurológica, por lo que el primer paso es un examen neurológico completo y la derivación a neurología pediátrica, no el tratamiento del pie. Que sea flexible o rígido decide la técnica, de partes blandas o de hueso. Operar sin descartar la causa neurológica es el error que hay que evitar. La última entidad es la que más urgencia tiene: el pie zambo.</p>
+<p class="perla">Un pie cavo es neurológico hasta demostrar lo contrario.</p>
+<button type="button" class="go" data-go="e4" onclick="show('e4')">Ir a Pie cavo →</button></div>
+<div class="etapa" data-go="e5"><h3>Pie equinovaro</h3>
+<p class="res">Es la entidad con mayor amenaza. Desde el nacimiento el talón está en equino y varo con el antepié aducido, y los tejidos acortados impiden corregirlo con una maniobra suave. El método de Ponseti corrige con yesos seriados, tenotomía del Aquiles y férula, y rinde más si empieza en las primeras semanas de vida. La férula evita la recaída, y su intolerancia es el mayor predictor de que el pie vuelva a torcerse. La forma sindrómica o neurogénica recae más. Un pie zambo no derivado a tiempo deja una secuela rígida.</p>
+<p class="perla">Un pie zambo derivado en las primeras semanas corrige; uno tardío deja secuela.</p>
+<button type="button" class="go" data-go="e5" onclick="show('e5')">Ir a Pie equinovaro →</button></div>
+<p class="mini">Esto es el mapa, no el territorio: cada párrafo y cada perla se justifican en su pestaña.</p>
+</section>
+<section class="tab" data-tab="vis">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div><ol class="pg">
+<li>Ante unos padres que consultan por la forma de las piernas o los pies de su hijo, ¿qué datos de la historia y del examen separan una variante que se observa de una deformidad que se deriva?</li>
+<li>¿Por qué cada medida del perfil rotacional localiza un nivel distinto (cadera, tibia o pie), y qué se pierde si se mide solo el ángulo de progresión del pie?</li>
+<li>¿Qué hallazgos obligan a buscar una causa neurológica, metabólica o de la cadera antes de aceptar una explicación mecánica benigna?</li>
+<li>¿Qué cambia en la conducta cuando una deformidad es rígida y no flexible, y por qué el momento de empezar el tratamiento pesa más en una entidad que en las otras?</li>
+</ol></div>
+<p><span class="badge b-pu">Vlaic et al., revisión narrativa, Medicina (Kaunas) 2026 [1]; Baird et al., Am Fam Physician 2025 (solo resumen) [2]</span></p>
+<p class="mini">Vigencia no verificada: no se localizó una guía formal de sociedad para el grupo; se usan revisiones narrativas recientes.</p>
+<div class="hb am"><div class="hb-t">Alcance</div><p>Este widget cubre la forma de piernas y pies. Las cojeras dolorosas, la displasia del desarrollo de la cadera, la dismetría y las enfermedades neuromusculares tienen widgets propios; aquí aparecen solo como diagnóstico diferencial o alarma.</p></div>
+<h3>Qué separa las cinco entidades</h3>
+<div class="tw"><table class="vis"><thead><tr><th>Criterio</th><th>Genu varo y genu valgo</th><th>Anteversión femoral</th><th>Pie plano</th><th>Pie cavo</th><th>Pie equinovaro</th></tr></thead><tbody>
+<tr><th>Falla central</th><td>Eje coronal de la rodilla fuera de la norma para la edad</td><td>Torsión del fémur aumentada rota todo el miembro hacia dentro</td><td>Arco longitudinal medial aplanado al apoyar el pie</td><td>Arco longitudinal exagerado con retropié en varo y dedos en garra</td><td>Pie fijo en equino y varo con antepié aducido desde el nacimiento</td></tr>
+<tr><th>Terreno típico</th><td>Preescolar sano; obesidad, raquitismo o displasia si es patológico</td><td>Niño de 3 a 6 años, antecedente familiar, se sienta en W</td><td>Lactante o preescolar con laxitud; adolescente si hay coalición</td><td>Niño con neuropatía hereditaria u otra causa neurológica</td><td>Recién nacido; sindrómico si hay otras malformaciones o debilidad</td></tr>
+<tr><th>Inicio y curso</th><td>Varo hasta 2 años, valgo 3–6; se corrige hacia 7–8</td><td>Evidente al caminar; mejora sola hacia los 8 años</td><td>Flexible mejora hasta 6–8 años; rígido empeora en el estirón</td><td>Progresivo con el crecimiento; más evidente en la adolescencia</td><td>Fijo desde el nacimiento; recae si falla la férula</td></tr>
+<tr><th>Síntoma compartido aquí</th><td>Padres notan piernas arqueadas o rodillas juntas al caminar</td><td>Pies hacia dentro al caminar y tropiezos frecuentes</td><td>Pies que se aplanan al pararse; a veces dolor tras caminar</td><td>Pie de arco alto con callosidades y torceduras de tobillo</td><td>Padres ven el pie torcido hacia dentro y abajo</td></tr>
+<tr><th>Signo que la delata</th><td>Distancia intercondílea o intermaleolar aumentada</td><td>Rotación interna de cadera aumentada con externa reducida</td><td>Arco aplanado en carga que reaparece al ponerse de puntillas</td><td>Arco alto con retropié en varo y dedos en garra</td><td>Talón en equino y varo, rígido, desde el nacimiento</td></tr>
+<tr><th>Negativo pertinente</th><td>Sin dolor, cojera ni asimetría en la variante fisiológica</td><td>Sin dolor de cadera ni cojera que sugieran epifisiólisis</td><td>Sin dolor ni rigidez subtalar: descarta coalición</td><td>Sin debilidad ni cambios de reflejos: orienta a cavo idiopático</td><td>Pie que se corrige con maniobra suave no es pie zambo</td></tr>
+<tr><th>Prueba que decide</th><td>Medir distancia intercondílea o intermaleolar y comparar con la edad</td><td>Perfil rotacional: rotación de cadera, ángulo muslo-pie y de progresión</td><td>Comprobar si el arco reaparece de puntillas y la subtalar se mueve</td><td>Examen neurológico completo: fuerza, reflejos, sensibilidad y marcha</td><td>Examinar al recién nacido: equino y varo rígidos, no corregibles con maniobra</td></tr>
+<tr><th>Conducta inicial y quién maneja</th><td>Observar y reevaluar; pediatra, ortopedia si es asimétrico o progresivo</td><td>Tranquilizar y observar; pediatra, ortopedia si persiste sintomático</td><td>Observar sin ortesis; ortopedia si es rígido o doloroso</td><td>Derivar a neurología y ortopedia pediátrica antes de tratar el pie</td><td>Yesos seriados desde las primeras semanas; ortopedia pediátrica</td></tr>
+<tr><th>Amenaza si se pierde</th><td>Deformidad progresiva por Blount o raquitismo sin diagnosticar</td><td>Epifisiólisis confundida con variante rotacional en adolescente</td><td>Coalición tarsal o astrágalo vertical rígidos sin reconocer</td><td>Neuropatía progresiva no diagnosticada tras operar el pie</td><td>Ventana del método de Ponseti perdida y secuela rígida</td></tr>
+</tbody></table></div>
+<p class="mini"><span class="rem">↪ Propiedades en «Diagnóstico»</span> <span class="rem">↪ Posología en «Tratamiento»</span> de cada entidad.</p>
+<div class="card"><p><b>Común al grupo</b> Lo que se hace antes de nombrar la deformidad: historia dirigida, marcha, imagen y criterios de derivación.</p>
+<p>Historia clínica dirigida. Se pregunta por lo siguiente [1]:</p>
+<ul>
+<li>Edad de inicio y evolución: mejora, estabilidad o empeoramiento.</li>
+<li>Lateralidad: lo fisiológico es simétrico; lo unilateral sospecha patología.</li>
+<li>Dolor, cojera, caídas y limitación para correr o jugar.</li>
+<li>Antecedentes perinatales: presentación podálica, prematurez y ecografía de cadera.</li>
+<li>Hitos del desarrollo y antecedentes familiares de alteraciones similares, neuropatía o displasia.</li>
+<li>Nutrición y exposición al sol (raquitismo), trauma o infección previos y posición de sentarse en W.</li>
+</ul>
+<p>Marcha. Se observa al niño descalzo, de frente, de espalda y de perfil [1]:</p>
+<ul>
+<li>Antálgica: acorta el apoyo del lado doloroso.</li>
+<li>De Trendelenburg: la pelvis cae del lado opuesto por debilidad de los abductores de la cadera.</li>
+<li>En estepaje: el pie cae y el niño eleva la rodilla para no arrastrarlo.</li>
+<li>Equina: apoya la punta del pie por acortamiento del tríceps sural.</li>
+<li>Atáxica: base ancha e inestable, de origen cerebeloso o sensitivo.</li>
+</ul>
+<p class="mini">Semiología de la marcha según conocimiento clínico estándar, sin fuente leída en la sesión [VERIFICAR EN FUENTE].</p>
+<p>Prerrequisitos de la exploración. Se miden cuatro cosas [1]:</p>
+<ul>
+<li>Ángulo de progresión del pie: ángulo entre el eje del pie y la línea de marcha; es negativo si el pie mira hacia dentro y mezcla cadera, tibia y pie.</li>
+<li>Rotación de cadera: en prono con rodillas flexionadas a 90°; aísla el fémur.</li>
+<li>Ángulo muslo-pie: en prono, entre el eje del muslo y el del pie; aísla la tibia.</li>
+<li>Línea bisectriz del talón: si no pasa entre el segundo y el tercer dedo, el antepié está aducido.</li>
+</ul>
+<p>Interpretación de las pruebas. La imagen se reserva para lo atípico [1]:</p>
+<ul>
+<li>Radiografía en dos planos o de miembros inferiores en bipedestación: primera prueba ante deformidad atípica; muestra ejes y fisis.</li>
+<li>Ecografía de cadera: lactante con sospecha de displasia; la radiografía de pelvis la sustituye tras la osificación de la cabeza femoral.</li>
+<li>Resonancia magnética o tomografía: barra fisaria, epifisiólisis o displasia compleja.</li>
+<li>Estudios neurológicos: los define neurología pediátrica ante cavo, debilidad o regresión motora.</li>
+</ul>
+</div>
+<div class="hb ro"><div class="hb-t">Banderas rojas del grupo</div><ol>
+<li>Pie equinovaro no derivado en las primeras semanas: se cierra la ventana del método de Ponseti y queda una deformidad rígida.</li>
+<li>Pie cavo, o cualquier pie con debilidad, reflejos alterados o estepaje: descartar causa neurológica antes de tratar el pie.</li>
+<li>Adolescente con pie hacia fuera de inicio reciente, dolor de cadera o rodilla o rotación interna limitada: pensar en epifisiólisis hasta descartarla [1].</li>
+<li>Varo o valgo unilateral, progresivo, doloroso o con talla baja [1].</li>
+<li>Pie plano rígido o doloroso [1].</li>
+<li>Mediciones a más de 2 desviaciones estándar de la norma, dolor o afectación de la función: derivar a ortopedia pediátrica [2].</li>
+</ol></div>
+<h3>Pasos del diferencial</h3>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Observar la marcha descalzo y medir el ángulo de progresión del pie</li>
+<li><span class="tg">Añade</span>Rotación de cadera en prono y ángulo muslo-pie para ubicar el nivel</li>
+<li><span class="tg">Confirma</span>Radiografía en carga o estudio neurológico según el nivel hallado</li>
+<li><span class="tg">Solo si</span>Laboratorio metabólico ante talla baja, muñecas ensanchadas o varo persistente</li>
+<li><span class="tg">No pidas</span>Imágenes en un niño simétrico, indoloro y con medidas acordes a la edad</li>
+<li><span class="tg">Alarma</span>Asimetría, progresión, dolor, cojera, rigidez o signos neurológicos: derivar</li>
+</ol>
+<div class="dc" data-fn="dcVis"><div class="dc-t">Simulador · Decisión clínica — predice la entidad antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Hallazgos</span>
+<button type="button" class="chip" data-g="h" data-v="rod" data-m="1" onclick="ch(this)">Rodillas arqueadas o juntas</button>
+<button type="button" class="chip" data-g="h" data-v="intoe" data-m="1" onclick="ch(this)">Pies hacia dentro con rótulas convergentes</button>
+<button type="button" class="chip" data-g="h" data-v="rotint" data-m="1" onclick="ch(this)">Rotación interna de cadera aumentada</button>
+<button type="button" class="chip" data-g="h" data-v="flat" data-m="1" onclick="ch(this)">Arco aplanado que reaparece de puntillas</button>
+<button type="button" class="chip" data-g="h" data-v="rigid" data-m="1" onclick="ch(this)">Pie plano rígido, subtalar sin movimiento</button>
+<button type="button" class="chip" data-g="h" data-v="cavus" data-m="1" onclick="ch(this)">Arco alto con dedos en garra</button>
+<button type="button" class="chip" data-g="h" data-v="neuro" data-m="1" onclick="ch(this)">Debilidad, reflejos alterados o estepaje</button>
+<button type="button" class="chip" data-g="h" data-v="equino" data-m="1" onclick="ch(this)">Talón en equino y varo rígido desde el nacimiento</button>
+<button type="button" class="chip" data-g="h" data-v="uni" data-m="1" onclick="ch(this)">Asimetría o deformidad unilateral</button>
+</div><div class="out"></div></div>
+</section>
+<section class="tab" data-tab="e1">
+<div class="hb az"><div class="hb-t">Frente a Anteversión femoral</div><p>Se confunde con la anteversión femoral porque ambas cambian la apariencia de las rodillas al caminar. Se separa porque aquí falla el eje en el plano frontal (distancia entre rodillas o tobillos) y allá el giro del miembro.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div><ol class="pg">
+<li>¿Por qué el eje de las piernas pasa de varo a valgo y luego se estabiliza durante la infancia, y qué distingue una desviación que se corrige sola de otra que no?</li>
+<li>¿Cómo explica la carga sobre el cartílago de crecimiento que un lado de la tibia crezca menos y la pierna se curve?</li>
+<li>¿Por qué aparece el empuje en varo durante la marcha y qué hallazgo de la historia o del examen lo vuelve preocupante?</li>
+<li>¿En qué se apoya la decisión de observar en lugar de usar plantillas o zapatos correctivos, y cuándo cambia a derivar?</li>
+</ol></div>
+<p><span class="badge b-pu">Vlaic et al., revisión narrativa, Medicina (Kaunas) 2026 [1]; Roelen et al., J Child Orthop 2026 (solo resumen) [3]</span></p>
+<h2>Qué es</h2>
+<p>El genu varo (piernas arqueadas) y el genu valgo (rodillas juntas) son desviaciones del eje de la pierna en el plano frontal; en la mayoría de los niños son una etapa normal del crecimiento [1].</p>
+<p>Criterios para separar lo fisiológico de lo patológico [1]:</p>
+<ul>
+<li>Varo fisiológico: hasta los 2 años, con hasta unos 15° de varo.</li>
+<li>Valgo fisiológico: entre los 3 y los 6 años, hasta unos 12–13°, con alineamiento estable hacia los 7–8 años y valgo leve de 5–7°.</li>
+<li>Patológico: unilateral, progresivo, doloroso, con talla baja, o fuera del patrón de edad.</li>
+</ul>
+<p>El eje mecánico es la línea del centro de la cadera al centro del tobillo; la rodilla está neutra cuando cae sobre esa línea [1]. Se mide la distancia intercondílea (varo, con los tobillos juntos) o la intermaleolar (valgo, con las rodillas juntas) [1]. <span class="rem">↪ Historia dirigida y marcha en «Qué los separa»</span></p>
+<p>Hay tres subtipos porque tres mecanismos distintos producen la misma imagen de piernas torcidas:</p>
+<div class="tw"><table><thead><tr><th>Subtipo</th><th>Qué lo distingue</th><th>Conducta</th></tr></thead><tbody>
+<tr><td>Fisiológico</td><td>Simétrico, indoloro y acorde con la edad</td><td>Observar [1]</td></tr>
+<tr><td>Tibia vara (Blount)</td><td>Varo persistente o progresivo tras los 2–3 años, a menudo asimétrico, con empuje en varo y rotación interna de la tibia</td><td>Derivar a ortopedia [1]</td></tr>
+<tr><td>Raquitismo y displasias</td><td>Varo o valgo con talla baja, muñecas ensanchadas, laboratorio alterado o miembros desproporcionados</td><td>Tratar la causa y derivar [1]</td></tr>
+</tbody></table></div>
+<p>No confundir con:</p>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead><tbody>
+<tr><td>Acondroplasia e hipocondroplasia</td><td>Varo persistente</td><td>Miembros desproporcionadamente cortos y talla baja desde la infancia [1]</td></tr>
+<tr><td>Valgo tras fractura tibial proximal</td><td>Valgo unilateral</td><td>Antecedente de fractura entre los 2 y los 8 años; suele ser leve y resolverse [1]</td></tr>
+</tbody></table></div>
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Aspecto</th><th>Dato</th></tr></thead><tbody>
+<tr><td>Frecuencia</td><td>Alteraciones de rodilla en más de la mitad de los preescolares de un estudio urbano; más de dos tercios de los niños evaluados tenían variantes fisiológicas [1]</td></tr>
+<tr><td>Edad</td><td>Varo hasta los 2 años, valgo entre 3 y 6 años y estabilización hacia los 7–8 años [1]</td></tr>
+<tr><td>Sexo</td><td>No establecido en [1]; [VERIFICAR EN FUENTE]</td></tr>
+<tr><td>Factores clave</td><td>Índice de masa corporal alto se asocia a valgo; raquitismo, displasias y fractura tibial proximal explican los casos patológicos [1]</td></tr>
+</tbody></table></div>
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e1-m-1" data-clin="0" data-paso="Varo fisiológico del recién nacido" data-rama="Rama A"><div class="det"><p>Al nacer, el eje de la pierna queda en varo, de hasta unos 15°, y es fisiológico hasta los 2 años [1]. El eje mecánico, la línea del centro de la cadera al centro del tobillo, pasa por dentro de la rodilla y la carga cae más sobre su lado interno.</p></div></li>
+<li class="nodo" id="e1-m-2" data-clin="0" data-paso="Eje neutro por remodelación bajo carga" data-rama="Rama A"><div class="det"><p>Al caminar, la carga se reparte sobre las fisis (cartílagos de crecimiento junto a los extremos de fémur y tibia). La compresión frena el crecimiento de un lado y la tensión lo estimula [3]; así el eje se endereza y es neutro hacia los 2 años [1].</p></div></li>
+<li class="nodo" id="e1-m-3" data-clin="1" data-paso="Valgo fisiológico de 3 a 6 años" data-rama="Rama A"><div class="det"><p>Entre los 3 y los 6 años el mismo proceso de remodelación sobrepasa el eje neutro y produce valgo de hasta unos 12–13°: las rodillas se acercan y los maléolos se separan [1].</p></div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-1" onclick="ir('e1','e1-s-1')">Distancia intercondílea o intermaleolar aumentada</button></p></li>
+<li class="nodo" id="e1-m-4" data-clin="0" data-paso="Valgo leve definitivo a los 7–8 años" data-rama="Rama A"><div class="det"><p>La remodelación termina hacia los 7–8 años con un valgo leve de unos 5–7°, que es el alineamiento del adulto joven [1].</p></div></li>
+<li class="nodo" id="e1-m-5" data-clin="0" data-paso="Sobrecarga medial de la fisis tibial" data-rama="Rama B"><div class="det"><p>En la tibia vara, la fisis tibial proximal (cartílago de crecimiento bajo la rodilla) recibe una carga excesiva en su lado medial. La obesidad y la marcha temprana se citan como factores, pero no se leyeron en la sesión [VERIFICAR EN FUENTE].</p></div></li>
+<li class="nodo" id="e1-m-6" data-clin="1" data-paso="Crecimiento medial inhibido y varo progresivo" data-rama="Rama B"><div class="det"><p>Como la compresión frena el crecimiento [3], la parte medial de la fisis crece menos que la lateral y la tibia se curva en varo. La rodilla cede hacia fuera al apoyar y la tibia rota hacia dentro; la radiografía muestra alteración de la fisis medial con pico de la metáfisis (zona ensanchada del hueso junto a la fisis) [1].</p></div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-2" onclick="ir('e1','e1-s-2')">Empuje en varo con rotación interna tibial</button></p></li>
+<li class="nodo" id="e1-m-7" data-clin="0" data-paso="Cartílago de crecimiento sin mineralizar" data-rama="Rama C"><div class="det"><p>En el raquitismo, la falta de vitamina D (la hormona que permite absorber calcio en el intestino) o de calcio deja sin mineralizar el cartílago de crecimiento y el osteoide, la matriz del hueso nuevo todavía sin calcificar [1].</p></div></li>
+<li class="nodo" id="e1-m-8" data-clin="1" data-paso="Hueso blando cede bajo carga" data-rama="Rama C"><div class="det"><p>El hueso sin mineral se deforma bajo el peso corporal y se curva en varo o en valgo, mientras la fisis se ensancha en las muñecas; el niño suele tener talla baja e hipotonía [1].</p></div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-3" onclick="ir('e1','e1-s-3')">Muñecas ensanchadas y retraso del crecimiento</button></p></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — por qué las piernas se enderezan o se curvan</span>
+<p class="fey-b">Los huesos largos crecen por unas capas blandas cercanas a sus extremos. Si el peso se reparte parejo, crecen rectos. Si cae más de un lado, ese lado crece menos y el hueso se curva. Es como una torre de plastilina con un libro apoyado en un lado: ese lado se aplasta y la torre se inclina. En casi todos los niños el reparto se corrige solo con el tiempo.</p>
+<p class="mini fey-c">En medicina esto se llama… fisis o cartílago de crecimiento, y genu varo o genu valgo.</p>
+<p class="mini fey-c">Dónde falla la comparación: el hueso no es plastilina; crece y se reajusta por sí mismo, así que lo habitual es que se corrija.</p></div>
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Piernas arqueadas o rodillas juntas visibles al estar de pie</p>
+<p data-e="p">Simetría entre ambos lados en la variante fisiológica</p>
+<p data-e="v">Empuje en varo durante la marcha</p>
+<p data-e="v">Dolor de rodilla o cojera</p>
+<p data-e="a">Fiebre o signos inflamatorios</p>
+<p data-e="a">Limitación de la movilidad de cadera</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e1-s-1" onclick="ir('e1','e1-s-1')">Distancia intercondílea o intermaleolar aumentada</button></p>
+</div>
+<div class="signo" id="e1-s-1"><h4>Distancia intercondílea o intermaleolar aumentada</h4><dl>
+<dt>Cómo se reconoce</dt><dd>De pie con los tobillos juntos se mide la distancia entre los cóndilos mediales del fémur (varo); con las rodillas juntas, la distancia entre los maléolos mediales (valgo). Se compara con la norma de la edad [1].</dd>
+<dt>Por qué aparece</dt><dd>Cuando el eje mecánico se desvía de la rodilla, los extremos distales del miembro se separan o se juntan; el valgo del preescolar es parte de la remodelación normal. <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Si es simétrica y acorde con la edad, es una variante; si es asimétrica, creciente o fuera de edad, exige radiografía y valoración ortopédica [1].</dd></dl></div>
+<div class="signo" id="e1-s-2"><h4>Empuje en varo con rotación interna tibial</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Al apoyar, la rodilla se desplaza hacia fuera de forma brusca y la tibia rota hacia dentro de manera marcada [1].</dd>
+<dt>Por qué aparece</dt><dd>La tibia, curvada por el menor crecimiento medial, no sostiene la carga en la fase de apoyo y la rodilla cede lateralmente. <button type="button" class="xref" data-ir="e1-m-6" onclick="ir('e1','e1-m-6')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Un varo persistente o progresivo, sobre todo asimétrico y pasados los 2–3 años, obliga a pensar en tibia vara [1].</dd></dl></div>
+<div class="signo" id="e1-s-3"><h4>Muñecas ensanchadas y retraso del crecimiento</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Muñecas anchas por el ensanchamiento de la fisis, talla baja e hipotonía; el laboratorio muestra déficit de vitamina D, hipocalcemia y fosfatasa alcalina elevada [1].</dd>
+<dt>Por qué aparece</dt><dd>El cartílago de crecimiento sin mineralizar se ensancha y el hueso blando se deforma al cargar peso. <button type="button" class="xref" data-ir="e1-m-8" onclick="ir('e1','e1-m-8')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Orienta a raquitismo y a pedir laboratorio antes de pensar en una deformidad idiopática [1].</dd></dl></div>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — qué mide la distancia entre rodillas o tobillos</span>
+<p class="fey-b">La distancia entre las rodillas o entre los tobillos es una regla sencilla: cuenta cuánto se separan los extremos cuando junto los otros. Si ambos lados dan lo mismo y encaja con la edad, el niño está en una etapa normal. Si un lado se aleja o la medida crece con los meses, algo está empujando ese lado y hay que buscar qué.</p>
+<p class="mini fey-c">En medicina esto se llama… distancia intercondílea e intermaleolar, y asimetría.</p>
+<p class="mini fey-c">Dónde falla la comparación: la regla mide el resultado y no la causa; para saber por qué hace falta la historia y, a veces, la radiografía.</p></div>
+<h2>Diagnóstico <span class="rem">↓ En la tabla</span></h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Medir distancia intercondílea o intermaleolar y comparar con la edad</li>
+<li><span class="tg">Añade</span>Observar la marcha descalzo y buscar empuje en varo y asimetría</li>
+<li><span class="tg">Confirma</span>Radiografía en dos planos o de miembros en bipedestación si es atípico [1]</li>
+<li><span class="tg">Solo si</span>Laboratorio de calcio, fosfatasa alcalina y vitamina D ante talla baja o muñecas ensanchadas [1]</li>
+<li><span class="tg">No pidas</span>Imágenes en un niño simétrico, indoloro y con medidas acordes a la edad [1]</li>
+<li><span class="tg">Alarma</span>Deformidad unilateral, progresiva, dolorosa o con talla baja: derivar a ortopedia pediátrica [1]</li>
+</ol>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad (descartar/confirmar)</th><th>Notas</th><th>Ref.</th></tr></thead><tbody>
+<tr><td>Medición clínica de distancia intercondílea o intermaleolar</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Descartar patología si es simétrica y acorde con la edad</td><td>Depende del examinador; repetir en cada control <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Nodo</button></td><td>[1]</td></tr>
+<tr><td>Radiografía en dos planos o de miembros inferiores en bipedestación</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar tibia vara, raquitismo o displasia</td><td>Solo en deformidad atípica, unilateral o sin mejoría; muestra pico metafisario en tibia vara <button type="button" class="xref" data-ir="e1-m-6" onclick="ir('e1','e1-m-6')">← Nodo</button></td><td>[1]</td></tr>
+<tr><td>Laboratorio: calcio, fosfatasa alcalina, vitamina D</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar raquitismo</td><td>Déficit de vitamina D, hipocalcemia y fosfatasa alcalina elevada <button type="button" class="xref" data-ir="e1-m-7" onclick="ir('e1','e1-m-7')">← Nodo</button></td><td>[1]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad. E: especificidad. VPP/VPN: valores predictivos positivo y negativo. Sin cifras en las fuentes leídas; la prevalencia de variantes fisiológicas en preescolares hace que la medición simétrica descarte bien y que la radiografía sin indicación rinda poco en Ecuador.</p>
+<div class="dc" data-fn="dcE1a"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Edad</span>
+<button type="button" class="chip" data-g="edad" data-v="a" onclick="ch(this)">Hasta 2 años</button>
+<button type="button" class="chip" data-g="edad" data-v="b" onclick="ch(this)">Más de 2 y menos de 3 años</button>
+<button type="button" class="chip" data-g="edad" data-v="c" onclick="ch(this)">3 a 6 años</button>
+<button type="button" class="chip" data-g="edad" data-v="d" onclick="ch(this)">7 años o más</button></div>
+<div class="dc-g"><span class="dc-l">Tipo de deformidad</span>
+<button type="button" class="chip" data-g="tipo" data-v="varo" onclick="ch(this)">Varo</button>
+<button type="button" class="chip" data-g="tipo" data-v="valgo" onclick="ch(this)">Valgo</button></div>
+<div class="dc-g"><span class="dc-l">Rasgos asociados</span>
+<button type="button" class="chip" data-g="f" data-v="uni" data-m="1" onclick="ch(this)">Unilateral o asimétrica</button>
+<button type="button" class="chip" data-g="f" data-v="prog" data-m="1" onclick="ch(this)">Progresiva</button>
+<button type="button" class="chip" data-g="f" data-v="dol" data-m="1" onclick="ch(this)">Dolor o cojera</button>
+<button type="button" class="chip" data-g="f" data-v="talla" data-m="1" onclick="ch(this)">Talla baja o muñecas ensanchadas</button>
+<button type="button" class="chip" data-g="f" data-v="trauma" data-m="1" onclick="ch(this)">Fractura tibial proximal previa</button></div>
+<div class="out"></div></div>
+<h2>Tratamiento <span class="rem">↓ En la tabla</span></h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>La mayoría de las variantes fisiológicas se corrigen con el crecimiento; se vigila y no se trata [1]</li>
+<li><span class="tg">De elección</span>Tranquilizar a la familia y reevaluar si es fisiológico [1]</li>
+<li><span class="tg">Alternativa</span>Tratar la causa si se identifica, como el raquitismo carencial [1]</li>
+<li><span class="tg">Escala</span>Crecimiento guiado con hemiepifisiodesis (frenar un lado de la fisis para que el otro alcance) si hay crecimiento remanente [1][3]</li>
+<li><span class="tg">Reevalúa</span>Cada 6–12 meses si es fisiológico y cada 3–6 meses si hay rasgos atípicos [1]</li>
+<li><span class="tg">Especialista</span>Osteotomía en el adolescente con fisis cerradas y desviación de más de 2 desviaciones estándar [1]</li>
+<li><span class="tg">Evita</span>Plantillas, cuñas o calzado especial en variantes fisiológicas: sin eficacia demostrada [1][2]</li>
+</ol>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead><tbody>
+<tr><td>Vitamina D (colecalciferol) con calcio, solo en raquitismo carencial</td><td>[VERIFICAR EN FUENTE]: esquema de la guía de raquitismo, no leído en la sesión</td><td>VO</td><td>[VERIFICAR EN FUENTE]</td><td>[VERIFICAR EN FUENTE]</td><td>Repone el sustrato que mineraliza la fisis e interrumpe el defecto de mineralización <button type="button" class="xref" data-ir="e1-m-7" onclick="ir('e1','e1-m-7')">← Paso</button>; exige laboratorio compatible y control de la calcemia</td><td>[1]</td></tr>
+<tr><td>Ninguno para la variante fisiológica</td><td>No aplica</td><td>No aplica</td><td>No aplica</td><td>No aplica</td><td>Ningún fármaco ni ortesis modifica la remodelación normal <button type="button" class="xref" data-ir="e1-m-2" onclick="ir('e1','e1-m-2')">← Paso</button></td><td>[1]</td></tr>
+</tbody></table></div>
+<p class="mini">VO: vía oral.</p>
+<div class="dc" data-fn="dcE1b"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Causa</span>
+<button type="button" class="chip" data-g="causa" data-v="fis" onclick="ch(this)">Variante fisiológica</button>
+<button type="button" class="chip" data-g="causa" data-v="blount" onclick="ch(this)">Varo progresivo con rasgos de tibia vara</button>
+<button type="button" class="chip" data-g="causa" data-v="rach" onclick="ch(this)">Raquitismo con laboratorio compatible</button>
+<button type="button" class="chip" data-g="causa" data-v="idio" onclick="ch(this)">Deformidad idiopática persistente</button></div>
+<div class="dc-g"><span class="dc-l">Crecimiento</span>
+<button type="button" class="chip" data-g="crec" data-v="si" onclick="ch(this)">Con crecimiento remanente</button>
+<button type="button" class="chip" data-g="crec" data-v="no" onclick="ch(this)">Fisis cerradas</button></div>
+<div class="out"></div></div>
+<h2>Seguimiento</h2>
+<p>Las complicaciones se entienden por el nodo que sigue activo [1]:</p>
+<ul>
+<li>Progresión de la tibia vara: mientras la fisis medial siga frenada, el varo aumenta y puede requerir cirugía compleja <button type="button" class="xref" data-ir="e1-m-6" onclick="ir('e1','e1-m-6')">← Mecanismo</button>.</li>
+<li>Raquitismo persistente: si no se repone el sustrato, el hueso sigue cediendo bajo carga <button type="button" class="xref" data-ir="e1-m-8" onclick="ir('e1','e1-m-8')">← Mecanismo</button>.</li>
+<li>Valgo tras fractura de la tibia proximal: suele ser leve y resolverse, pero todo valgo asimétrico tras esa lesión pasa por ortopedia [1].</li>
+<li>Impacto psicosocial: las diferencias visibles del miembro pueden limitar la participación y la autoestima [1].</li>
+</ul>
+<p>Los controles son cada 6–12 meses si el cuadro es fisiológico y cada 3–6 meses si hay rasgos atípicos [1].</p>
+</section>
+<section class="tab" data-tab="e2">
+<div class="hb az"><div class="hb-t">Frente a Genu varo y genu valgo</div><p>Se confunde con el genu valgo porque las rótulas convergentes y el sentarse en W dan aspecto de rodillas juntas. Se separa porque el eje frontal es normal y lo alterado es la rotación, que se mide con el niño en prono.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div><ol class="pg">
+<li>¿Por qué un fémur con anteversión aumentada hace que todo el miembro rote hacia dentro al caminar, y por qué eso no daña la cadera?</li>
+<li>¿Cómo localiza cada maniobra del perfil rotacional el nivel de la deformidad, y qué se pierde si se mide solo el ángulo de progresión del pie?</li>
+<li>¿Qué cambia en la conducta ante un pie hacia dentro según la edad, el dolor y la simetría, y qué hallazgo obliga a pensar en epifisiólisis cuando el pie mira hacia fuera?</li>
+</ol></div>
+<p><span class="badge b-pu">Vlaic et al., revisión narrativa, Medicina (Kaunas) 2026 [1]; Baird et al., Am Fam Physician 2025 (solo resumen) [2]</span></p>
+<h2>Qué es</h2>
+<p>La anteversión femoral es el grado en que el cuello del fémur está rotado hacia delante respecto a los cóndilos de la rodilla. Cuando es excesiva, el miembro entero rota hacia dentro y el niño camina con los pies hacia dentro (in-toeing) [1]. <span class="rem">↪ Historia dirigida y marcha en «Qué los separa»</span></p>
+<p>Criterios [1]:</p>
+<ul>
+<li>Anteversión de hasta unos 40° al nacer, que baja a unos 15° en el adulto joven.</li>
+<li>Rotación interna de cadera mayor de 70° con rotación externa reducida, ángulo de progresión negativo y rótulas convergentes.</li>
+<li>Es la causa más frecuente de pie hacia dentro y suele mejorar sola hacia los 8 años.</li>
+</ul>
+<p>El perfil rotacional tiene tres subtipos porque el miembro puede rotar en tres niveles:</p>
+<div class="tw"><table><thead><tr><th>Subtipo</th><th>Cómo se identifica</th><th>Edad típica</th></tr></thead><tbody>
+<tr><td>Anteversión femoral</td><td>Rotación interna de cadera aumentada y ángulo de progresión negativo [1]</td><td>3 a 6 años [1]</td></tr>
+<tr><td>Torsión tibial interna</td><td>Ángulo muslo-pie negativo; en el recién nacido ronda −5° y llega a +10° a los 10 años [1]</td><td>Niño pequeño [1]</td></tr>
+<tr><td>Metatarso aducto</td><td>Borde lateral curvo del pie y línea del talón desviada del segundo dedo; flexible, semirrígido o rígido [1]</td><td>Lactante [1]</td></tr>
+</tbody></table></div>
+<p>No confundir con:</p>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead><tbody>
+<tr><td>Epifisiólisis de la cabeza femoral</td><td>Alteración de la rotación del miembro</td><td>Adolescente con pie hacia fuera de inicio reciente, dolor de cadera o rodilla y rotación interna limitada [1]</td></tr>
+<tr><td>Enfermedad de Perthes</td><td>Cojera y dolor referido a la rodilla</td><td>Edad de 4 a 8 años, abducción y rotación interna de cadera limitadas [1]</td></tr>
+</tbody></table></div>
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Aspecto</th><th>Dato</th></tr></thead><tbody>
+<tr><td>Frecuencia</td><td>Causa más frecuente de pie hacia dentro [1]</td></tr>
+<tr><td>Edad</td><td>Más evidente entre los 3 y los 6 años; la mayoría mejora hacia los 8 [1]</td></tr>
+<tr><td>Sexo</td><td>No establecido en [1]; [VERIFICAR EN FUENTE]</td></tr>
+<tr><td>Factores clave</td><td>Antecedente familiar y sentarse en W; parálisis cerebral en los casos persistentes [1]</td></tr>
+</tbody></table></div>
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e2-m-1" data-clin="0" data-paso="Cuello femoral rotado hacia delante"><div class="det"><p>El cuello femoral, el segmento que une la cabeza del fémur con el cuerpo del hueso, nace rotado hacia delante respecto al eje de la rodilla: hasta unos 40° en el recién nacido [1].</p></div></li>
+<li class="nodo" id="e2-m-2" data-clin="0" data-paso="Anteversión máxima al nacer, descenso con crecimiento"><div class="det"><p>Con el crecimiento la anteversión baja hasta unos 15° en el adulto joven [1]. En algunos niños sigue alta entre los 3 y los 6 años y se hace visible al caminar.</p></div></li>
+<li class="nodo" id="e2-m-3" data-clin="1" data-paso="Rotación interna de cadera compensa la cobertura"><div class="det"><p>La cabeza femoral, la esfera de la cadera, debe quedar cubierta por el acetábulo, la cavidad de la pelvis. Con el cuello rotado hacia delante, la cadera gira el muslo hacia dentro para lograrlo; por eso aumenta la rotación interna y se reduce la externa [1].</p></div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-1" onclick="ir('e2','e2-s-1')">Rotación interna de cadera aumentada con externa reducida</button></p></li>
+<li class="nodo" id="e2-m-4" data-clin="1" data-paso="Todo el miembro rota hacia dentro"><div class="det"><p>El fémur rotado arrastra la rodilla y el pie: el ángulo de progresión se hace negativo y las rótulas miran hacia dentro [1].</p></div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-2" onclick="ir('e2','e2-s-2')">Ángulo de progresión negativo con rótulas convergentes</button></p></li>
+<li class="nodo" id="e2-m-5" data-clin="1" data-paso="Postura en W acomoda la rotación interna"><div class="det"><p>Sentarse con las rodillas flexionadas y los pies a los lados de las caderas exige rotación interna de cadera, que el exceso de anteversión vuelve cómoda; por eso esa postura es frecuente en estos niños [1].</p></div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-3" onclick="ir('e2','e2-s-3')">Sentarse en W</button></p></li>
+<li class="nodo" id="e2-m-6" data-clin="0" data-paso="Resolución espontánea hacia los 8 años"><div class="det"><p>La mayoría de los casos mejora sola hacia los 8 años; ortesis, cuñas o calzado especial no modifican esa historia natural [1].</p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — por qué los pies miran hacia dentro</span>
+<p class="fey-b">Imagina una llave que entra torcida en su cerradura: para que encaje, giras la muñeca. El hueso del muslo nace con la punta de la cadera girada hacia delante y, para que la cadera encaje bien, el muslo gira hacia dentro. Ese giro arrastra la rodilla y el pie, y por eso el niño camina con los pies hacia dentro.</p>
+<p class="mini fey-c">En medicina esto se llama… anteversión femoral y rotación interna de cadera.</p>
+<p class="mini fey-c">Dónde falla la comparación: la cadera no sufre daño y el giro disminuye solo con el crecimiento; una llave torcida no se endereza sola.</p></div>
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Pies hacia dentro al caminar</p>
+<p data-e="p">Rótulas convergentes al estar de pie</p>
+<p data-e="v">Tropiezos y torpeza leve al correr</p>
+<p data-e="v">Sentarse en W</p>
+<p data-e="a">Dolor de cadera</p>
+<p data-e="a">Cojera</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e2-s-1" onclick="ir('e2','e2-s-1')">Rotación interna de cadera aumentada con externa reducida</button></p>
+</div>
+<div class="signo" id="e2-s-1"><h4>Rotación interna de cadera aumentada con externa reducida</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Con el niño en prono y las rodillas a 90°, el examinador rota las piernas y mide con goniómetro; una rotación interna mayor de 70° apunta a anteversión [1].</dd>
+<dt>Por qué aparece</dt><dd>La cadera gira el muslo hacia dentro para cubrir la cabeza femoral con el cuello rotado hacia delante. <button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Ubica la deformidad en el fémur; si es asimétrica o dolorosa, se amplía el estudio [1].</dd></dl></div>
+<div class="signo" id="e2-s-2"><h4>Ángulo de progresión negativo con rótulas convergentes</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Al caminar descalzo, el eje del pie mira hacia dentro de la línea de marcha y las rótulas apuntan una hacia la otra [1].</dd>
+<dt>Por qué aparece</dt><dd>El fémur rotado arrastra rodilla y pie en la misma dirección. <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Mide el efecto combinado de cadera, tibia y pie; por sí solo no dice en qué nivel está el problema [1].</dd></dl></div>
+<div class="signo" id="e2-s-3"><h4>Sentarse en W</h4><dl>
+<dt>Cómo se reconoce</dt><dd>El niño se sienta con las rodillas flexionadas y los pies a los lados de las caderas [1].</dd>
+<dt>Por qué aparece</dt><dd>Es la posición en la que el exceso de rotación interna de la cadera no estorba. <button type="button" class="xref" data-ir="e2-m-5" onclick="ir('e2','e2-m-5')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Apoya la anteversión como causa; no mide su gravedad [1].</dd></dl></div>
+<h2>Diagnóstico <span class="rem">↓ En la tabla</span></h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Perfil rotacional: rotación de cadera, ángulo muslo-pie y de progresión</li>
+<li><span class="tg">Añade</span>Línea del talón y marcha descalzo para separar fémur, tibia y pie [1]</li>
+<li><span class="tg">Solo si</span>Radiografía de pelvis si hay asimetría, dolor, limitación de la cadera o enfermedad neuromuscular [1]</li>
+<li><span class="tg">No pidas</span>Imágenes en un niño simétrico, indoloro y con medidas acordes a la edad [1]</li>
+<li><span class="tg">Alarma</span>Pie hacia fuera de inicio reciente con dolor o rotación interna limitada en un adolescente: radiografía urgente por posible epifisiólisis [1]</li>
+</ol>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad (descartar/confirmar)</th><th>Notas</th><th>Ref.</th></tr></thead><tbody>
+<tr><td>Perfil rotacional clínico</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar el nivel de la rotación anormal</td><td>Examinador-dependiente; el ángulo muslo-pie es la medida más aislada de la tibia <button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">← Nodo</button></td><td>[1]</td></tr>
+<tr><td>Radiografía anteroposterior de pelvis</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Descartar epifisiólisis o enfermedad de Perthes</td><td>Tras la osificación de la cabeza femoral; solo ante dolor, asimetría o pie hacia fuera nuevo</td><td>[1]</td></tr>
+<tr><td>Tomografía o resonancia</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar casos complejos</td><td>Reservadas a indicaciones definidas, como epifisiólisis o displasia compleja</td><td>[1]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad. E: especificidad. VPP/VPN: valores predictivos positivo y negativo. Sin cifras en las fuentes leídas.</p>
+<h2>Tratamiento <span class="rem">↓ En la tabla</span></h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>La anteversión disminuye con el crecimiento; el tratamiento es el seguimiento [1]</li>
+<li><span class="tg">De elección</span>Observar y tranquilizar; reevaluar periódicamente [1]</li>
+<li><span class="tg">Reevalúa</span>Cada 6–12 meses si es fisiológico y cada 3–6 meses si hay rasgos atípicos [1]</li>
+<li><span class="tg">Especialista</span>Casos graves y sintomáticos que persisten después de los 8 años, o con parálisis cerebral [1]</li>
+<li><span class="tg">Evita</span>Ortesis, cuñas, zapatos especiales y ejercicios que no cambian la historia natural [1][2]</li>
+</ol>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead><tbody>
+<tr><td>Ninguno</td><td>No aplica</td><td>No aplica</td><td>No aplica</td><td>No aplica</td><td>Ningún fármaco corrige el giro del fémur, que depende del crecimiento <button type="button" class="xref" data-ir="e2-m-2" onclick="ir('e2','e2-m-2')">← Paso</button></td><td>[1]</td></tr>
+</tbody></table></div>
+<div class="dc" data-fn="dcE2"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Edad</span>
+<button type="button" class="chip" data-g="edad" data-v="m" onclick="ch(this)">Menor de 8 años</button>
+<button type="button" class="chip" data-g="edad" data-v="M" onclick="ch(this)">8 años o más</button></div>
+<div class="dc-g"><span class="dc-l">Hallazgos</span>
+<button type="button" class="chip" data-g="f" data-v="sint" data-m="1" onclick="ch(this)">Dolor o limitación funcional</button>
+<button type="button" class="chip" data-g="f" data-v="asim" data-m="1" onclick="ch(this)">Asimetría o unilateral</button>
+<button type="button" class="chip" data-g="f" data-v="sec" data-m="1" onclick="ch(this)">Enfermedad neuromuscular de base</button>
+<button type="button" class="chip" data-g="f" data-v="de2" data-m="1" onclick="ch(this)">Medidas a más de 2 desviaciones estándar</button>
+<button type="button" class="chip" data-g="f" data-v="scfe" data-m="1" onclick="ch(this)">Pie hacia fuera reciente con dolor en adolescente</button></div>
+<div class="out"></div></div>
+<h2>Seguimiento</h2>
+<p>Las complicaciones se entienden por la historia natural [1]:</p>
+<ul>
+<li>Persistencia sintomática después de los 8 años: la remodelación no se completó y se valora derivar a ortopedia <button type="button" class="xref" data-ir="e2-m-6" onclick="ir('e2','e2-m-6')">← Mecanismo</button>.</li>
+<li>Enfermedad de base: en la parálisis cerebral la deformidad rotacional puede persistir y requerir tratamiento especializado [1].</li>
+<li>Diagnóstico equivocado: un pie hacia fuera nuevo con dolor en un adolescente es epifisiólisis hasta demostrar lo contrario [1].</li>
+</ul>
+<p>Los controles son cada 6–12 meses si el cuadro es fisiológico [1].</p>
+</section>
+<section class="tab" data-tab="e3">
+<div class="hb az"><div class="hb-t">Frente a Pie cavo</div><p>Se confunde con el pie cavo porque el pie plano puede ser la primera forma de una neuropatía hereditaria que luego se vuelve cavo. Se separa porque aquí el arco está aplanado y la pregunta clave es si es flexible o rígido.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div><ol class="pg">
+<li>¿Por qué el pie plano flexible es normal en la infancia y qué hallazgo del examen separa un pie flexible de uno rígido?</li>
+<li>¿Cómo explica una coalición tarsal que el pie pierda movimiento en la articulación subtalar y que duela en la adolescencia y no antes?</li>
+<li>¿En qué se apoya la decisión de no tratar el pie plano flexible asintomático, y qué cambia si duele o es rígido?</li>
+</ol></div>
+<p><span class="badge b-pu">Bauer et al., J Pediatr Orthop 2016 (solo resumen) [4]; Catanzano et al., JBJS Rev 2023 (solo resumen) [5]; Vlaic et al., Medicina 2026 [1]</span></p>
+<h2>Qué es</h2>
+<p>El pie plano (pes planus) es el aplanamiento del arco longitudinal medial al apoyar el pie. En el niño suele ser flexible y fisiológico; es patológico si es rígido o doloroso [4][1]. <span class="rem">↪ Historia dirigida y marcha en «Qué los separa»</span></p>
+<p>Criterios:</p>
+<ul>
+<li>Flexible: el arco reaparece al ponerse de puntillas y es fisiológico hasta los 6–8 años [1].</li>
+<li>Sospecha de patología: rigidez de la subtalar, prominencia medial sobre el escafoides, signo de los muchos dedos o dolor localizado [1].</li>
+<li>Las coaliciones tarsales afectan hasta el 13 % de la población general; las más frecuentes son calcáneo-escafoidea y astrágalo-calcánea [5].</li>
+</ul>
+<p>Hay tres subtipos porque el mismo aspecto de pie aplanado nace de mecanismos distintos:</p>
+<div class="tw"><table><thead><tr><th>Subtipo</th><th>Qué lo distingue</th><th>Conducta</th></tr></thead><tbody>
+<tr><td>Flexible fisiológico</td><td>El arco reaparece de puntillas y no hay dolor</td><td>Observar sin ortesis [4]</td></tr>
+<tr><td>Flexible sintomático</td><td>Dolor o fatiga con la actividad; a veces escafoides accesorio prominente</td><td>Medidas conservadoras [1]</td></tr>
+<tr><td>Rígido: coalición tarsal o astrágalo vertical</td><td>El arco no reaparece; astrágalo vertical en el lactante, coalición en el niño mayor y el adolescente [4]</td><td>Derivar a ortopedia [4][5]</td></tr>
+</tbody></table></div>
+<p>No confundir con:</p>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead><tbody>
+<tr><td>Neuropatía hereditaria con pie planovalgo precoz</td><td>Pie plano en el niño pequeño</td><td>Dolor regional inexplicado, debilidad o evolución posterior a cavo; la neurología confirma [6]</td></tr>
+<tr><td>Artropatía inflamatoria del pie</td><td>Dolor y rigidez</td><td>Inflamación articular o síntomas sistémicos; se evalúa antes de atribuirlo a coalición [1]</td></tr>
+</tbody></table></div>
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Aspecto</th><th>Dato</th></tr></thead><tbody>
+<tr><td>Frecuencia</td><td>El pie plano flexible es común en lactantes y niños pequeños [1]; la coalición tarsal alcanza hasta el 13 % de la población general [5]</td></tr>
+<tr><td>Edad</td><td>Fisiológico hasta los 6–8 años [1]; la coalición se hace sintomática en el estirón adolescente [5]</td></tr>
+<tr><td>Sexo</td><td>No establecido en [1]; [VERIFICAR EN FUENTE]</td></tr>
+<tr><td>Factores clave</td><td>Laxitud ligamentaria; en el rígido, coalición, astrágalo vertical o causas inflamatorias; en niños pequeños con neuropatía hereditaria es frecuente el pie planovalgo [1][6]</td></tr>
+</tbody></table></div>
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e3-m-1" data-clin="0" data-paso="Laxitud ligamentaria sostiene mal el arco" data-rama="Rama A"><div class="det"><p>Los ligamentos del pie del niño pequeño son laxos y el arco longitudinal medial, la curva interna del pie que reparte el peso, aún no está desarrollado [1].</p></div></li>
+<li class="nodo" id="e3-m-2" data-clin="1" data-paso="Arco medial se aplana al cargar peso" data-rama="Rama A"><div class="det"><p>Al apoyar, el peso del cuerpo hunde el arco porque los ligamentos laxos ceden. Sin carga o de puntillas el arco reaparece, porque las articulaciones del pie conservan su movilidad [1].</p></div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-1" onclick="ir('e3','e3-s-1')">Arco aplanado en carga que reaparece al ponerse de puntillas</button></p></li>
+<li class="nodo" id="e3-m-3" data-clin="0" data-paso="Ligamentos maduran y forman el arco" data-rama="Rama A"><div class="det"><p>Con el crecimiento los ligamentos ganan tensión y el arco se desarrolla; por eso se considera fisiológico hasta los 6–8 años [1].</p></div></li>
+<li class="nodo" id="e3-m-4" data-clin="0" data-paso="Coalición une dos huesos del tarso" data-rama="Rama B"><div class="det"><p>Una coalición tarsal es una unión ósea, cartilaginosa o fibrosa entre dos huesos del tarso, la parte posterior del pie. Las más frecuentes unen el calcáneo con el escafoides o el astrágalo con el calcáneo [5].</p></div></li>
+<li class="nodo" id="e3-m-5" data-clin="1" data-paso="Subtalar rígida pierde inversión y eversión" data-rama="Rama B"><div class="det"><p>La unión bloquea la articulación subtalar, la que une el astrágalo con el calcáneo y deja inclinar el talón hacia dentro y hacia fuera. Sin ese movimiento el arco no reaparece de puntillas [5].</p></div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-2" onclick="ir('e3','e3-s-2')">Subtalar rígida: el arco no reaparece de puntillas</button></p></li>
+<li class="nodo" id="e3-m-6" data-clin="0" data-paso="Articulaciones vecinas absorben la sobrecarga" data-rama="Rama B"><div class="det"><p>El tobillo y las articulaciones vecinas reciben el esfuerzo que la subtalar ya no absorbe, sobre todo durante el estirón adolescente [5].</p></div></li>
+<li class="nodo" id="e3-m-7" data-clin="1" data-paso="Esguinces y dolor en el estirón adolescente" data-rama="Rama B"><div class="det"><p>La sobrecarga produce dolor, esguinces de tobillo de repetición y un pie plano progresivo durante el estirón de la adolescencia [5].</p></div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-3" onclick="ir('e3','e3-s-3')">Dolor de retropié con esguinces de repetición</button></p></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — el arco del pie como un puente</span>
+<p class="fey-b">El arco del pie es como un puente sostenido por cuerdas. En los niños pequeños las cuerdas están flojas y el puente se aplana cuando alguien pasa por encima, pero se levanta de nuevo si nadie lo pisa. Con los años las cuerdas se tensan. Si dos piezas del puente están soldadas, no se mueve nada: ni se aplana ni se levanta, y las piezas vecinas se cansan más.</p>
+<p class="mini fey-c">En medicina esto se llama… pie plano flexible, coalición tarsal y articulación subtalar.</p>
+<p class="mini fey-c">Dónde falla la comparación: el pie no es un puente pasivo; los músculos también sostienen el arco.</p></div>
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Pie que se aplana al cargar peso</p>
+<p data-e="p">Arco visible cuando el niño no apoya el pie</p>
+<p data-e="v">Dolor tras caminar o correr</p>
+<p data-e="v">Fatiga del pie</p>
+<p data-e="a">Hinchazón articular o fiebre</p>
+<p data-e="a">Debilidad muscular</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e3-s-1" onclick="ir('e3','e3-s-1')">Arco aplanado en carga que reaparece al ponerse de puntillas</button></p>
+</div>
+<div class="signo" id="e3-s-1"><h4>Arco aplanado en carga que reaparece al ponerse de puntillas</h4><dl>
+<dt>Cómo se reconoce</dt><dd>De pie, el arco medial desaparece; al ponerse de puntillas o al elevar el talón con un solo pie, el arco se restituye [1].</dd>
+<dt>Por qué aparece</dt><dd>Los ligamentos laxos ceden con el peso y las articulaciones conservan su movilidad. <button type="button" class="xref" data-ir="e3-m-2" onclick="ir('e3','e3-m-2')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Define el pie flexible, fisiológico hasta los 6–8 años si no duele [1].</dd></dl></div>
+<div class="signo" id="e3-s-2"><h4>Subtalar rígida: el arco no reaparece de puntillas</h4><dl>
+<dt>Cómo se reconoce</dt><dd>La movilidad subtalar está disminuida o ausente, a veces con prominencia medial sobre el escafoides o el signo de los muchos dedos [1].</dd>
+<dt>Por qué aparece</dt><dd>La unión entre dos huesos del tarso bloquea la articulación subtalar. <button type="button" class="xref" data-ir="e3-m-5" onclick="ir('e3','e3-m-5')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Un pie rígido obliga a pensar en coalición tarsal o astrágalo vertical y a derivar [1][4].</dd></dl></div>
+<div class="signo" id="e3-s-3"><h4>Dolor de retropié con esguinces de repetición</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Dolor al caminar o hacer deporte y torceduras de tobillo repetidas en un adolescente con pie plano [5].</dd>
+<dt>Por qué aparece</dt><dd>Las articulaciones vecinas soportan la carga que la subtalar bloqueada no absorbe. <button type="button" class="xref" data-ir="e3-m-7" onclick="ir('e3','e3-m-7')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Pide imagen para buscar coalición y planificar el tratamiento [5].</dd></dl></div>
+<h2>Diagnóstico <span class="rem">↓ En la tabla</span></h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Comprobar si el arco reaparece de puntillas y la subtalar se mueve</li>
+<li><span class="tg">Añade</span>Buscar prominencia sobre el escafoides y el signo de los muchos dedos [1]</li>
+<li><span class="tg">Confirma</span>Radiografía en carga y tomografía o resonancia si se sospecha coalición [5]</li>
+<li><span class="tg">Solo si</span>Imagen ante dolor persistente, rigidez o esguinces de repetición [5]</li>
+<li><span class="tg">No pidas</span>Imagen ni ortesis en un pie flexible asintomático [1][4]</li>
+<li><span class="tg">Alarma</span>Pie rígido en el lactante o el adolescente: pensar en astrágalo vertical o coalición y derivar [1][4]</li>
+</ol>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad (descartar/confirmar)</th><th>Notas</th><th>Ref.</th></tr></thead><tbody>
+<tr><td>Examen clínico: arco de puntillas y movilidad subtalar</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Descartar rigidez si el arco reaparece</td><td>Separa flexible de rígido <button type="button" class="xref" data-ir="e3-m-5" onclick="ir('e3','e3-m-5')">← Nodo</button></td><td>[1]</td></tr>
+<tr><td>Radiografía en carga</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar deformidad o coalición visible</td><td>Muchas coaliciones se ven en radiografías; algunas requieren más imagen</td><td>[5]</td></tr>
+<tr><td>Tomografía o resonancia</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar coalición y planificar la cirugía</td><td>Identifican coaliciones fibrosas o cartilaginosas y miden la deformidad <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Nodo</button></td><td>[5]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad. E: especificidad. VPP/VPN: valores predictivos positivo y negativo. Sin cifras en las fuentes leídas.</p>
+<h2>Tratamiento <span class="rem">↓ En la tabla</span></h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>El pie flexible asintomático no se trata; hay muy poca evidencia de que cualquier intervención cambie su evolución [4]</li>
+<li><span class="tg">De elección</span>Observar sin ortesis el pie flexible asintomático [1][4]</li>
+<li><span class="tg">Sintomático</span>Dolor: modificar la actividad, estirar y valorar plantilla; antiinflamatorio por tiempo corto [1][5]</li>
+<li><span class="tg">Escala</span>Coalición dolorosa: antiinflamatorio, ortesis y yeso sin apoyo; si persiste, resección de la coalición con o sin reconstrucción [5]</li>
+<li><span class="tg">Especialista</span>Pie rígido, doloroso o con escafoides accesorio prominente: ortopedia pediátrica [1]</li>
+<li><span class="tg">Evita</span>Ortesis sistemáticas en el pie flexible asintomático [4]</li>
+</ol>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead><tbody>
+<tr><td>Ibuprofeno</td><td>10 mg/kg por dosis, máximo 400 mg por dosis</td><td>VO</td><td>Cada 8 h, máximo 1 200 mg al día</td><td>3 a 5 días y reevaluar</td><td>Reduce las prostaglandinas del tejido sobrecargado y alivia el dolor generado en <button type="button" class="xref" data-ir="e3-m-7" onclick="ir('e3','e3-m-7')">← Paso</button>; no corrige la coalición. Dar con alimentos; evitar en deshidratación, enfermedad renal, úlcera o alergia a antiinflamatorios</td><td>[5]</td></tr>
+</tbody></table></div>
+<p class="mini">VO: vía oral.</p>
+<div class="dc" data-fn="dcE3"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Pie</span>
+<button type="button" class="chip" data-g="rig" data-v="flex" onclick="ch(this)">Flexible: el arco reaparece de puntillas</button>
+<button type="button" class="chip" data-g="rig" data-v="rig" onclick="ch(this)">Rígido: subtalar sin movimiento</button></div>
+<div class="dc-g"><span class="dc-l">Dolor</span>
+<button type="button" class="chip" data-g="dol" data-v="no" onclick="ch(this)">Sin dolor</button>
+<button type="button" class="chip" data-g="dol" data-v="si" onclick="ch(this)">Con dolor</button></div>
+<div class="dc-g"><span class="dc-l">Peso (kg)</span><input type="number" data-n="kg" min="3" max="120" step="0.5" aria-label="Peso en kilogramos" oninput="ch(this)"></div>
+<div class="out"></div></div>
+<h2>Seguimiento</h2>
+<p>Las complicaciones se entienden por el nodo que sigue activo:</p>
+<ul>
+<li>Dolor y esguinces progresivos: mientras la coalición siga bloqueando la subtalar, las articulaciones vecinas se sobrecargan <button type="button" class="xref" data-ir="e3-m-6" onclick="ir('e3','e3-m-6')">← Mecanismo</button> [5].</li>
+<li>Pie plano progresivo en el estirón adolescente <button type="button" class="xref" data-ir="e3-m-7" onclick="ir('e3','e3-m-7')">← Mecanismo</button>; tras operar, el resultado depende también de tratar la deformidad asociada [4].</li>
+<li>Pie plano flexible que no mejora o duele: se reevalúa en busca de causa rígida, inflamatoria o neurológica [1][6].</li>
+</ul>
+<p>Los controles son cada 6–12 meses si el cuadro es fisiológico y cada 3–6 meses si hay rasgos atípicos [1].</p>
+</section>
+<section class="tab" data-tab="e4">
+<div class="hb az"><div class="hb-t">Frente a Pie plano</div><p>Se confunde con el pie plano porque ambos pueden ser expresión de una misma neuropatía en edades distintas. Se separa porque aquí el arco es alto, el retropié va en varo y siempre hay que descartar una causa neurológica.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div><ol class="pg">
+<li>¿Por qué un desequilibrio entre los músculos que mueven el pie produce arco alto, retropié en varo y dedos en garra, y qué enfermedades lo originan?</li>
+<li>¿Por qué un pie cavo exige un examen neurológico antes de cualquier tratamiento del pie, y qué hallazgos lo vuelven urgente?</li>
+<li>¿Qué cambia en el abordaje si el pie cavo es flexible o rígido, y por qué?</li>
+</ol></div>
+<p><span class="badge b-pu">Nogueira et al., Foot Ankle Clin 2015 (solo resumen) [7]; Hoellwarth et al., J Pediatr Orthop B 2012 (solo resumen) [6]</span></p>
+<h2>Qué es</h2>
+<p>El pie cavo es un arco longitudinal exagerado, con frecuencia con el retropié en varo (cavovaro) y los dedos en garra. Se relaciona habitualmente con alteraciones neurológicas y por eso exige una evaluación clínica y de imagen completa [7]. <span class="rem">↪ Historia dirigida y marcha en «Qué los separa»</span></p>
+<p>Criterios:</p>
+<ul>
+<li>Arco alto con retropié en varo, fijo o flexible; hay que precisar el ápice de la deformidad [7].</li>
+<li>Búsqueda de causa neurológica: debilidad, atrofia distal, reflejos o sensibilidad alterados, antecedente familiar [7][6].</li>
+<li>En niños pequeños con neuropatía hereditaria el pie suele ser primero planovalgo y pasa a cavo o cavovaro al crecer [6].</li>
+</ul>
+<p>Hay dos subtipos por causa y un eje de rigidez que define el tratamiento:</p>
+<div class="tw"><table><thead><tr><th>Subtipo</th><th>Qué lo distingue</th><th>Conducta</th></tr></thead><tbody>
+<tr><td>Neurológico</td><td>Debilidad, atrofia distal, reflejos alterados o antecedente familiar; ejemplo clásico, la neuropatía hereditaria [6]</td><td>Neurología y ortopedia pediátrica [6][7]</td></tr>
+<tr><td>Idiopático</td><td>Sin hallazgo neurológico tras una evaluación completa; es un diagnóstico de exclusión [7]</td><td>Ortopedia pediátrica [7]</td></tr>
+<tr><td>Flexible o rígido</td><td>El retropié se corrige o no con la manipulación [7]</td><td>Partes blandas o cirugía ósea [7]</td></tr>
+</tbody></table></div>
+<p>No confundir con:</p>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead><tbody>
+<tr><td>Pie caído por lesión de un nervio periférico</td><td>Marcha en estepaje</td><td>Sin arco alto y a menudo unilateral, con antecedente de lesión [VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Aspecto</th><th>Dato</th></tr></thead><tbody>
+<tr><td>Frecuencia</td><td>Se relaciona habitualmente con alteraciones neurológicas [7]; la frecuencia pediátrica no consta en la fuente leída [VERIFICAR EN FUENTE]</td></tr>
+<tr><td>Edad</td><td>En la neuropatía hereditaria, el niño pequeño suele ser planovalgo y la mayoría pasa a cavo o cavovaro al crecer [6]</td></tr>
+<tr><td>Sexo</td><td>No establecido en [7]; [VERIFICAR EN FUENTE]</td></tr>
+<tr><td>Factores clave</td><td>Neuropatía hereditaria u otra causa neurológica; antecedente familiar [7][6]</td></tr>
+</tbody></table></div>
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e4-m-1" data-clin="0" data-paso="Neuropatía periférica debilita músculos distales"><div class="det"><p>En la neuropatía hereditaria, como la enfermedad de Charcot-Marie-Tooth, los nervios periféricos conducen mal y los músculos más distales de la pierna y del pie se debilitan primero [6].</p></div></li>
+<li class="nodo" id="e4-m-2" data-clin="0" data-paso="Fuerza desigual entre músculos que mueven el pie"><div class="det"><p>No todos los músculos se debilitan igual. El peroneo largo, músculo lateral de la pierna que baja el primer metatarsiano, suele vencer al tibial anterior, que sube el borde interno del pie [VERIFICAR EN FUENTE].</p></div></li>
+<li class="nodo" id="e4-m-3" data-clin="1" data-paso="Primer radio cae y el retropié gira en varo"><div class="det"><p>Con el peroneo largo dominante, el primer metatarsiano baja; para apoyarlo, el retropié gira en varo y el arco se eleva (cavovaro). Esa imagen de cavovaro es la característica de la neuropatía hereditaria [6].</p></div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-1" onclick="ir('e4','e4-s-1')">Arco alto con retropié en varo y dedos en garra</button></p></li>
+<li class="nodo" id="e4-m-4" data-clin="0" data-paso="Intrínsecos débiles producen dedos en garra"><div class="det"><p>Los músculos intrínsecos, pequeños músculos de la planta que mantienen los dedos rectos, se debilitan y los extensores largos levantan los dedos, que quedan en garra [VERIFICAR EN FUENTE].</p></div></li>
+<li class="nodo" id="e4-m-5" data-clin="1" data-paso="Apoyo se concentra en talón y metatarsianos"><div class="det"><p>El arco alto reduce la superficie de apoyo: el peso se concentra en el talón y en las cabezas de los metatarsianos, y el borde lateral soporta más carga [7].</p></div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-2" onclick="ir('e4','e4-s-2')">Callosidades metatarsianas y esguinces de tobillo</button></p></li>
+<li class="nodo" id="e4-m-6" data-clin="1" data-paso="Pie caído obliga a elevar la rodilla"><div class="det"><p>La debilidad de los músculos que levantan el pie lo deja caído; el niño eleva la rodilla para no arrastrar la punta, con una marcha de pasos altos y pantorrillas delgadas [6].</p></div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-3" onclick="ir('e4','e4-s-3')">Marcha en estepaje con pantorrillas delgadas</button></p></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — por qué el pie se arquea</span>
+<p class="fey-b">Piensa en una carpa sostenida por tirantes. Si unos tirantes pierden fuerza y los otros siguen tirando, el poste se tuerce hacia el lado de los fuertes. En ciertas enfermedades de los nervios, unos músculos del pie se debilitan más que otros. Los más fuertes tiran sin oposición, el arco se levanta, el talón se inclina y los dedos se encogen.</p>
+<p class="mini fey-c">En medicina esto se llama… pie cavo, cavovaro y neuropatía hereditaria.</p>
+<p class="mini fey-c">Dónde falla la comparación: los músculos no son cuerdas pasivas, y la enfermedad del nervio también quita sensibilidad y reflejos, algo que una carpa no tiene.</p></div>
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Arco alto visible al estar de pie</p>
+<p data-e="p">Dedos en garra</p>
+<p data-e="v">Callosidades bajo las cabezas metatarsianas</p>
+<p data-e="v">Esguinces de tobillo repetidos</p>
+<p data-e="a">Fiebre o signos inflamatorios</p>
+<p data-e="a">Dolor agudo de inicio súbito</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e4-s-1" onclick="ir('e4','e4-s-1')">Arco alto con retropié en varo y dedos en garra</button></p>
+</div>
+<div class="signo" id="e4-s-1"><h4>Arco alto con retropié en varo y dedos en garra</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Arco longitudinal elevado, talón inclinado hacia dentro y dedos encogidos; se comprueba si el retropié se corrige con la manipulación (flexible) o no (rígido) [7].</dd>
+<dt>Por qué aparece</dt><dd>Los músculos fuertes tiran sin oposición del primer radio y del retropié. <button type="button" class="xref" data-ir="e4-m-3" onclick="ir('e4','e4-m-3')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Obliga a buscar una causa neurológica; que sea flexible o rígido decide la técnica de tratamiento [7].</dd></dl></div>
+<div class="signo" id="e4-s-2"><h4>Callosidades metatarsianas y esguinces de tobillo</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Engrosamiento de la piel bajo las cabezas metatarsianas y torceduras repetidas del tobillo, con desgaste del borde lateral del calzado [7].</dd>
+<dt>Por qué aparece</dt><dd>El arco alto concentra el peso en pocos puntos y el retropié en varo inclina el tobillo. <button type="button" class="xref" data-ir="e4-m-5" onclick="ir('e4','e4-m-5')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Indica sobrecarga mecánica del pie; no dice la causa y no sustituye el examen neurológico [7].</dd></dl></div>
+<div class="signo" id="e4-s-3"><h4>Marcha en estepaje con pantorrillas delgadas</h4><dl>
+<dt>Cómo se reconoce</dt><dd>El niño levanta la rodilla de más al caminar para que la punta del pie no roce el suelo; las pantorrillas son delgadas [6].</dd>
+<dt>Por qué aparece</dt><dd>Los músculos que levantan el pie están débiles y la pierna pierde volumen. <button type="button" class="xref" data-ir="e4-m-6" onclick="ir('e4','e4-m-6')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Sugiere neuropatía periférica y pide derivar a neurología pediátrica [6].</dd></dl></div>
+<h2>Diagnóstico <span class="rem">↓ En la tabla</span></h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Examen neurológico completo: fuerza, reflejos, sensibilidad y marcha</li>
+<li><span class="tg">Añade</span>Evaluar si el retropié es flexible o rígido y dónde está el ápice de la deformidad [7]</li>
+<li><span class="tg">Confirma</span>Estudios neurológicos que defina neurología pediátrica ante sospecha de neuropatía [6]</li>
+<li><span class="tg">Solo si</span>Imagen de columna o médula ante signos medulares o asimetría [VERIFICAR EN FUENTE]</li>
+<li><span class="tg">No pidas</span>Imagen del pie como única prueba, que no sustituye el examen neurológico [7]</li>
+<li><span class="tg">Alarma</span>Cavo unilateral, progresivo o con debilidad: descartar causa neurológica antes de tratar el pie [7]</li>
+</ol>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad (descartar/confirmar)</th><th>Notas</th><th>Ref.</th></tr></thead><tbody>
+<tr><td>Examen neurológico completo</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Descartar causa neurológica si es normal y el cuadro no progresa</td><td>Fuerza distal, reflejos, sensibilidad y marcha <button type="button" class="xref" data-ir="e4-m-1" onclick="ir('e4','e4-m-1')">← Nodo</button></td><td>[7]</td></tr>
+<tr><td>Imagen del pie en carga</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar la deformidad y su ápice</td><td>Define flexible o rígido y la técnica <button type="button" class="xref" data-ir="e4-m-3" onclick="ir('e4','e4-m-3')">← Nodo</button></td><td>[7]</td></tr>
+<tr><td>Estudios neurológicos dirigidos</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar neuropatía hereditaria u otra causa</td><td>Los define neurología pediátrica; el diagnóstico definitivo es neurológico</td><td>[6]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad. E: especificidad. VPP/VPN: valores predictivos positivo y negativo. Sin cifras en las fuentes leídas.</p>
+<h2>Tratamiento <span class="rem">↓ En la tabla</span></h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>El pie cavo suele ser manifestación de una causa neurológica: se estudia la causa y se corrige la deformidad según sea flexible o rígida [7]</li>
+<li><span class="tg">De elección</span>Derivar a neurología y ortopedia pediátrica antes de operar el pie [6][7]</li>
+<li><span class="tg">Escala</span>Flexible: técnicas de partes blandas; rígido: osteotomías o tarsectomía, preferibles a la artrodesis [7]</li>
+<li><span class="tg">Reevalúa</span>Progresión de la deformidad y del cuadro neurológico en cada control [6]</li>
+<li><span class="tg">Especialista</span>Neurología pediátrica para el diagnóstico definitivo [6]</li>
+<li><span class="tg">Evita</span>Operar el pie sin descartar antes la causa neurológica [7]</li>
+</ol>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead><tbody>
+<tr><td>Ninguno</td><td>No aplica</td><td>No aplica</td><td>No aplica</td><td>No aplica</td><td>Las fuentes leídas no describen un fármaco que corrija la deformidad; el tratamiento actúa sobre el desequilibrio muscular con cirugía <button type="button" class="xref" data-ir="e4-m-2" onclick="ir('e4','e4-m-2')">← Paso</button></td><td>[7]</td></tr>
+</tbody></table></div>
+<div class="dc" data-fn="dcE4"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Retropié</span>
+<button type="button" class="chip" data-g="flex" data-v="flex" onclick="ch(this)">Flexible: se corrige con la manipulación</button>
+<button type="button" class="chip" data-g="flex" data-v="rig" onclick="ch(this)">Rígido: no se corrige</button></div>
+<div class="dc-g"><span class="dc-l">Hallazgos neurológicos</span>
+<button type="button" class="chip" data-g="n" data-v="debil" data-m="1" onclick="ch(this)">Debilidad o atrofia distal</button>
+<button type="button" class="chip" data-g="n" data-v="refl" data-m="1" onclick="ch(this)">Reflejos o sensibilidad alterados</button>
+<button type="button" class="chip" data-g="n" data-v="fam" data-m="1" onclick="ch(this)">Antecedente familiar de neuropatía</button>
+<button type="button" class="chip" data-g="n" data-v="uni" data-m="1" onclick="ch(this)">Unilateral o progresivo</button>
+<button type="button" class="chip" data-g="n" data-v="espina" data-m="1" onclick="ch(this)">Signos de columna o médula</button></div>
+<div class="out"></div></div>
+<h2>Seguimiento</h2>
+<p>Las complicaciones se entienden por el nodo que sigue activo:</p>
+<ul>
+<li>Progresión de la neuropatía y de la deformidad: mientras los nervios sigan fallando, el desequilibrio muscular aumenta <button type="button" class="xref" data-ir="e4-m-1" onclick="ir('e4','e4-m-1')">← Mecanismo</button> [6].</li>
+<li>Un pie flexible puede volverse rígido con el crecimiento y cambiar la técnica quirúrgica necesaria <button type="button" class="xref" data-ir="e4-m-3" onclick="ir('e4','e4-m-3')">← Mecanismo</button> [7].</li>
+<li>Callosidades y esguinces de repetición por la concentración del apoyo <button type="button" class="xref" data-ir="e4-m-5" onclick="ir('e4','e4-m-5')">← Mecanismo</button> [7].</li>
+<li>Tropiezos y caídas por el pie caído <button type="button" class="xref" data-ir="e4-m-6" onclick="ir('e4','e4-m-6')">← Mecanismo</button> [6].</li>
+</ul>
+<p>El control incluye la evolución neurológica y la de la deformidad, en coordinación con neurología pediátrica [6].</p>
+</section>
+<section class="tab" data-tab="e5">
+<div class="hb az"><div class="hb-t">Frente a Anteversión femoral</div><p>Se confunde con el pie hacia dentro de la anteversión porque en ambos el pie mira hacia dentro. Se separa porque aquí el pie es rígido, con equino y varo, y no se corrige con una maniobra suave.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div><ol class="pg">
+<li>¿Por qué el pie equinovaro no se corrige con una maniobra suave y qué estructuras mantienen la deformidad?</li>
+<li>¿Por qué el momento de iniciar el tratamiento condiciona el resultado y qué papel cumple la férula para evitar la recaída?</li>
+<li>¿Qué rasgos hacen sospechar una causa sindrómica o neurogénica y cómo cambia el pronóstico?</li>
+</ol></div>
+<p><span class="badge b-pu">Consenso CPAM-LRC y revisión sombrilla, J Orthop Surg Res 2025 (solo resumen) [8]; Ogutu et al., BMC Musculoskelet Disord 2026 (solo resumen) [9]; Scher et al., J Pediatr Soc North Am 2026 (solo resumen) [10]</span></p>
+<p class="mini">Vigencia no verificada: el consenso es de origen chino y no es una guía de una sociedad internacional; Nelson 22e no se consultó.</p>
+<div class="hb am"><div class="hb-t">Precisión sobre el sílabo</div>
+<p>El sílabo lista «pie equino», «pie varo» y «pie valgo» por separado. Aquí se interpretan así, sin que una fuente leída los unifique:</p>
+<ul>
+<li>Equino y varo son componentes del mismo pie equinovaro congénito, o pie zambo.</li>
+<li>El varo aislado del antepié es el metatarso aducto, cubierto como subtipo en «Anteversión femoral».</li>
+<li>El pie valgo corresponde al pie plano planovalgo y a sus vecinas, el talo valgo y el astrágalo vertical congénito.</li>
+</ul></div>
+<h2>Qué es</h2>
+<p>El pie equinovaro congénito es una deformidad fija presente al nacer: el talón está en equino (punta hacia abajo) y en varo (inclinado hacia dentro), con el antepié aducido [8][VERIFICAR EN FUENTE]. Es la entidad del grupo en la que el momento del tratamiento decide el resultado. <span class="rem">↪ Historia dirigida y marcha en «Qué los separa»</span></p>
+<p>Criterios:</p>
+<ul>
+<li>Diagnóstico clínico: deformidad rígida desde el nacimiento [8].</li>
+<li>Gravedad medida con el puntaje de Pirani o el de Dimeglio [9].</li>
+<li>Separar la forma idiopática de la sindrómica o neurogénica por el examen y la historia [8].</li>
+</ul>
+<p>Hay tres subtipos porque la causa y la vecindad con otras deformidades cambian el pronóstico:</p>
+<div class="tw"><table><thead><tr><th>Subtipo</th><th>Qué lo distingue</th><th>Conducta y pronóstico</th></tr></thead><tbody>
+<tr><td>Idiopático</td><td>Pie aislado en un niño por lo demás sano</td><td>Ponseti; corrección inicial de 96–98 % y recaída de 20–30 % [8]</td></tr>
+<tr><td>Sindrómico o neurogénico</td><td>Asociado a un síndrome o a una enfermedad neuromuscular</td><td>Ponseti también; recaída de 30–40 % y éxito a largo plazo de 68 % [8]</td></tr>
+<tr><td>Vecinas: pie valgo (talo valgo, astrágalo vertical)</td><td>Posición opuesta; el astrágalo vertical es un pie plano rígido del lactante [4]</td><td>Derivar a ortopedia si es rígido [4]</td></tr>
+</tbody></table></div>
+<p>No confundir con:</p>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead><tbody>
+<tr><td>Pie posicional del recién nacido</td><td>Postura anormal al nacer</td><td>Se corrige con una maniobra suave, a diferencia del pie zambo [VERIFICAR EN FUENTE]</td></tr>
+<tr><td>Talo valgo congénito</td><td>Pie en posición anormal desde el nacimiento</td><td>Talón en valgo y pie flexible, la posición opuesta al equinovaro [VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Aspecto</th><th>Dato</th></tr></thead><tbody>
+<tr><td>Frecuencia</td><td>No consta en las fuentes leídas; [VERIFICAR EN FUENTE]</td></tr>
+<tr><td>Edad</td><td>Presente al nacer; el consenso recomienda iniciar el método de Ponseti en las primeras 2–6 semanas de vida [8]</td></tr>
+<tr><td>Sexo</td><td>72 % de varones en una serie de 515 pacientes con pie zambo idiopático [11]</td></tr>
+<tr><td>Factores clave</td><td>Forma sindrómica o neurogénica, mayor gravedad inicial y retraso del tratamiento elevan el riesgo de recaída [9]</td></tr>
+</tbody></table></div>
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e5-m-1" data-clin="0" data-paso="Causa idiopática, sindrómica o neurogénica"><div class="det"><p>En la forma idiopática la causa no está establecida [VERIFICAR EN FUENTE]; en la sindrómica o neurogénica, un síndrome o una enfermedad neuromuscular de base altera el desarrollo del pie [8].</p></div></li>
+<li class="nodo" id="e5-m-2" data-clin="0" data-paso="Astrágalo y escafoides se desplazan hacia medial"><div class="det"><p>El astrágalo, hueso que articula la pierna con el pie, tiene el cuello desviado, y el escafoides, hueso interno del mediopié, queda desplazado hacia dentro [VERIFICAR EN FUENTE].</p></div></li>
+<li class="nodo" id="e5-m-3" data-clin="1" data-paso="Calcáneo rota bajo el astrágalo en varo y equino"><div class="det"><p>El calcáneo, hueso del talón, rota bajo el astrágalo hacia dentro y hacia abajo: el talón queda en varo y en equino [VERIFICAR EN FUENTE].</p></div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e5-s-1" onclick="ir('e5','e5-s-1')">Talón en equino y varo, rígido, desde el nacimiento</button></p></li>
+<li class="nodo" id="e5-m-4" data-clin="1" data-paso="Antepié se aduce y el arco se exagera"><div class="det"><p>Con el escafoides desplazado hacia dentro, el antepié se aduce y el arco se eleva; el borde lateral del pie deja de ser recto.</p></div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e5-s-2" onclick="ir('e5','e5-s-2')">Antepié aducido con borde lateral convexo</button></p></li>
+<li class="nodo" id="e5-m-5" data-clin="0" data-paso="Tejidos posteromediales y tendón de Aquiles se acortan"><div class="det"><p>Los ligamentos y las cápsulas de la cara posterior y medial del pie, y el tendón de Aquiles, que une el tríceps sural con el talón, se acortan y fijan la posición. Si falta la férula, esos tejidos tienden a acortarse de nuevo [9][10].</p></div></li>
+<li class="nodo" id="e5-m-6" data-clin="1" data-paso="Contractura fija impide corrección pasiva"><div class="det"><p>Por esa contractura el pie no se corrige con una maniobra suave. Hacen falta yesos seriados que estiren los tejidos de forma gradual y, cuando persiste el equino, la tenotomía del Aquiles [8].</p></div><p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e5-s-3" onclick="ir('e5','e5-s-3')">Deformidad rígida que no se corrige pasivamente</button></p></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — por qué el pie nace torcido y rígido</span>
+<p class="fey-b">Piensa en una rama joven que se ata inclinada. Mientras es tierna, cede si la enderezas poco a poco con ajustes graduales; si esperas a que endurezca, ya no cede. El pie del recién nacido tiene huesos blandos y tejidos acortados que lo mantienen torcido. Por eso se endereza con estiramientos suaves y repetidos, y después hay que sostenerlo para que no vuelva a su posición.</p>
+<p class="mini fey-c">En medicina esto se llama… pie equinovaro congénito, contractura y recaída.</p>
+<p class="mini fey-c">Dónde falla la comparación: una rama no tiene tejidos que vuelvan a acortarse; el pie sí, y por eso la férula es parte del tratamiento.</p></div>
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Talón hacia arriba y hacia dentro</p>
+<p data-e="p">Antepié aducido</p>
+<p data-e="v">Una o ambas piernas afectadas</p>
+<p data-e="v">Otras malformaciones o debilidad en la forma sindrómica</p>
+<p data-e="a">Pie que se corrige con una maniobra suave</p>
+<p data-e="a">Signos inflamatorios</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e5-s-1" onclick="ir('e5','e5-s-1')">Talón en equino y varo, rígido, desde el nacimiento</button></p>
+</div>
+<div class="signo" id="e5-s-1"><h4>Talón en equino y varo, rígido, desde el nacimiento</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Talón elevado e inclinado hacia dentro desde el nacimiento; el pie no se corrige con una maniobra suave [8].</dd>
+<dt>Por qué aparece</dt><dd>El calcáneo rota bajo el astrágalo y queda fijado por tejidos acortados. <button type="button" class="xref" data-ir="e5-m-3" onclick="ir('e5','e5-m-3')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Es un pie zambo: se deriva de inmediato a ortopedia pediátrica con entrenamiento en el método de Ponseti [8].</dd></dl></div>
+<div class="signo" id="e5-s-2"><h4>Antepié aducido con borde lateral convexo</h4><dl>
+<dt>Cómo se reconoce</dt><dd>El antepié mira hacia dentro, el borde lateral del pie es curvo y el arco está elevado [VERIFICAR EN FUENTE].</dd>
+<dt>Por qué aparece</dt><dd>El escafoides desplazado hacia dentro arrastra el antepié. <button type="button" class="xref" data-ir="e5-m-4" onclick="ir('e5','e5-m-4')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Es un componente de la deformidad; en el metatarso aducto aislado el talón es normal y la deformidad suele ser flexible [1].</dd></dl></div>
+<div class="signo" id="e5-s-3"><h4>Deformidad rígida que no se corrige pasivamente</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Al manipular el pie, el equino y el varo no ceden con maniobras suaves [8].</dd>
+<dt>Por qué aparece</dt><dd>Los tejidos posteromediales acortados mantienen la posición. <button type="button" class="xref" data-ir="e5-m-6" onclick="ir('e5','e5-m-6')">← Mecanismo</button></dd>
+<dt>Qué significa</dt><dd>Separa el pie zambo de un pie posicional flexible y marca la necesidad de yesos seriados [8].</dd></dl></div>
+<h2>Diagnóstico <span class="rem">↓ En la tabla</span></h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Examinar al recién nacido: equino y varo rígidos, no corregibles con maniobra</li>
+<li><span class="tg">Añade</span>Buscar causa sindrómica o neurogénica: columna, caderas, tono y otras malformaciones [8]</li>
+<li><span class="tg">Confirma</span>Diagnóstico clínico; graduar la gravedad con el puntaje de Pirani o el de Dimeglio [9]</li>
+<li><span class="tg">Solo si</span>Ecografía de cadera según el sistema local de tamizaje; el pie zambo idiopático no es por sí solo factor de riesgo de displasia [11]</li>
+<li><span class="tg">No pidas</span>Imágenes para iniciar los yesos, porque el diagnóstico es clínico [VERIFICAR EN FUENTE]</li>
+<li><span class="tg">Alarma</span>Pie zambo sin derivar en las primeras semanas: se pierde la ventana del método y sube el riesgo de recaída [8][9]</li>
+</ol>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad (descartar/confirmar)</th><th>Notas</th><th>Ref.</th></tr></thead><tbody>
+<tr><td>Examen clínico del recién nacido</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar el pie zambo y separarlo de un pie posicional</td><td>La rigidez a la maniobra suave define el cuadro <button type="button" class="xref" data-ir="e5-m-6" onclick="ir('e5','e5-m-6')">← Nodo</button></td><td>[8]</td></tr>
+<tr><td>Puntaje de Pirani o de Dimeglio</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar la gravedad, no el diagnóstico</td><td>Mayor gravedad inicial se asocia a más recaídas</td><td>[9]</td></tr>
+<tr><td>Ecografía de cadera (clasificación de Graf)</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Descartar displasia del desarrollo de la cadera</td><td>En 515 pacientes la displasia fue de 0,78 %, comparable a la población general; según el sistema local de tamizaje</td><td>[11]</td></tr>
+<tr><td>Evaluación sindrómica y neurológica</td><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Descartar causa de base</td><td>Cambia el pronóstico: más recaída en la forma no idiopática <button type="button" class="xref" data-ir="e5-m-1" onclick="ir('e5','e5-m-1')">← Nodo</button></td><td>[8]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad. E: especificidad. VPP/VPN: valores predictivos positivo y negativo. Sin cifras de rendimiento diagnóstico en las fuentes leídas.</p>
+<h2>Tratamiento <span class="rem">↓ En la tabla</span></h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Corregir con manipulación y yesos seriados antes de cualquier cirugía, e iniciar en las primeras 2–6 semanas de vida [8]</li>
+<li><span class="tg">De elección</span>Método de Ponseti: yesos seriados, tenotomía del Aquiles y férula de abducción [8]</li>
+<li><span class="tg">Escala</span>Recaída: repetir los yesos y, si fracasan, cirugía limitada [8]</li>
+<li><span class="tg">Reevalúa</span>Seguimiento a largo plazo, vigilando la adherencia a la férula [8][10]</li>
+<li><span class="tg">Especialista</span>Ortopedia pediátrica con entrenamiento en Ponseti desde el diagnóstico [8]</li>
+<li><span class="tg">Evita</span>Cirugía extensa como primera línea [8]</li>
+<li><span class="tg">Evita</span>Suspender la férula antes de tiempo: su intolerancia es el mayor predictor de recaída [9][10]</li>
+</ol>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead><tbody>
+<tr><td>Ninguno corrige la deformidad</td><td>No aplica; la anestesia de la tenotomía sigue el protocolo del centro [VERIFICAR EN FUENTE]</td><td>No aplica</td><td>No aplica</td><td>No aplica</td><td>La corrección es mecánica: los yesos estiran los tejidos acortados e interrumpen la contractura <button type="button" class="xref" data-ir="e5-m-5" onclick="ir('e5','e5-m-5')">← Paso</button></td><td>[8]</td></tr>
+</tbody></table></div>
+<div class="dc" data-fn="dcE5"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Tipo</span>
+<button type="button" class="chip" data-g="tipo" data-v="idio" onclick="ch(this)">Idiopático</button>
+<button type="button" class="chip" data-g="tipo" data-v="sind" onclick="ch(this)">Sindrómico o neurogénico</button></div>
+<div class="dc-g"><span class="dc-l">Inicio del tratamiento</span>
+<button type="button" class="chip" data-g="ini" data-v="pron" onclick="ch(this)">En las primeras semanas</button>
+<button type="button" class="chip" data-g="ini" data-v="tard" onclick="ch(this)">Tardío</button></div>
+<div class="dc-g"><span class="dc-l">Fase</span>
+<button type="button" class="chip" data-g="fase" data-v="yeso" onclick="ch(this)">Durante los yesos</button>
+<button type="button" class="chip" data-g="fase" data-v="ferula" onclick="ch(this)">En la fase de férula</button>
+<button type="button" class="chip" data-g="fase" data-v="recaida" onclick="ch(this)">Recaída tras la corrección</button></div>
+<div class="dc-g"><span class="dc-l">Férula</span>
+<button type="button" class="chip" data-g="fer" data-v="tol" onclick="ch(this)">Tolerada</button>
+<button type="button" class="chip" data-g="fer" data-v="int" onclick="ch(this)">Intolerancia o abandono</button></div>
+<div class="out"></div></div>
+<h2>Seguimiento</h2>
+<p>Las complicaciones se entienden por el nodo que sigue activo:</p>
+<ul>
+<li>Recaída: afecta a cerca de uno de cada cuatro niños (26,4 %; IC 95 % 20,4–33,5) porque los tejidos acortados tienden a retraerse <button type="button" class="xref" data-ir="e5-m-5" onclick="ir('e5','e5-m-5')">← Mecanismo</button> [9]; el consenso cita 20–30 % [8].</li>
+<li>Intolerancia a la férula: es el mayor predictor de recaída, incluso por encima de la gravedad inicial [10]; el incumplimiento se asocia con una razón de momios de 22,35 (IC 95 % 10,09–49,53) [9].</li>
+<li>Gravedad inicial y retraso del tratamiento: aumentan el riesgo de recaída [9]; la contractura fija se instala si no se corrige a tiempo <button type="button" class="xref" data-ir="e5-m-6" onclick="ir('e5','e5-m-6')">← Mecanismo</button>.</li>
+<li>Forma sindrómica o neurogénica: la recaída llega a 30–40 % y el éxito a largo plazo a 68 % [8].</li>
+</ul>
+<p>El control es prolongado y coordinado con ortopedia pediátrica; la displasia de cadera se vigila según el sistema local de tamizaje [8][11].</p>
+</section>
+<section class="tab" data-tab="sin">
+<div class="hb ro"><div class="hb-t">Errores que no se pueden cometer</div><ol>
+<li>Tratar con plantillas, cuñas o calzado especial una variante fisiológica de piernas o pies [1][2].</li>
+<li>Pedir imágenes en un niño simétrico, indoloro y con medidas acordes a la edad [1].</li>
+<li>Tomar por variante rotacional un pie hacia fuera de inicio reciente con dolor en un adolescente: es epifisiólisis hasta demostrar lo contrario [1].</li>
+<li>Operar un pie cavo sin descartar antes la causa neurológica [7].</li>
+<li>Dejar pasar las primeras semanas de un pie zambo o suspender la férula antes de tiempo [8][9][10].</li>
+<li>Dar por flexible un pie plano rígido o doloroso y no buscar coalición tarsal ni astrágalo vertical [4][5].</li>
+<li>Atribuir a una variante un varo unilateral, progresivo o con talla baja, sin radiografía ni laboratorio [1].</li>
+</ol></div>
+<div class="acc refs"><button type="button" class="acc-h" onclick="tog(this)">Referencias <span class="chev">▾</span></button><div class="acc-b"><ol class="vanc">
+<li>Vlaic J, Kruk A, Wasko MK. Angular and rotational lower limb alignment variations in children: practical guidance for paediatricians. Medicina (Kaunas). 2026;62(8):1499. doi:10.3390/medicina62081499. PMID: 42654396. Revisión narrativa; texto completo leído.</li>
+<li>Baird DC, Dickison CG, Spires HI. Lower extremity abnormalities in children. Am Fam Physician. 2025;111(2):125-39. PMID: 39964924. Revisión; solo resumen.</li>
+<li>Roelen MCR, van Bergen CJA, Siemensma MF, Eastwood DM, Sanpera I, Tolk JJ. Guided growth: current concepts and novel techniques for harnessing a child's growth potential. J Child Orthop. 2026;20(4):313-27. doi:10.1177/18632521261456090. PMID: 42299327. Revisión; solo resumen.</li>
+<li>Bauer K, Mosca VS, Zionts LE. What's new in pediatric flatfoot? J Pediatr Orthop. 2016;36(8):865-9. doi:10.1097/BPO.0000000000000582. PMID: 26296215. Revisión de la literatura, nivel 4; solo resumen.</li>
+<li>Catanzano AA, Akoh CC, Easley ME, Mosca VS. Decision-making and management of tarsal coalition in the young adult patient: a critical analysis review. JBJS Rev. 2023;11(6). doi:10.2106/JBJS.RVW.23.00021. PMID: 37307332. Revisión; solo resumen.</li>
+<li>Hoellwarth JS, Mahan ST, Spencer SA. Painful pes planovalgus: an uncommon pediatric orthopedic presentation of Charcot-Marie-Tooth disease. J Pediatr Orthop B. 2012;21(5):428-33. doi:10.1097/BPB.0b013e3283563750. PMID: 22744235. Serie de casos con revisión; solo resumen.</li>
+<li>Nogueira MP, Farcetta F, Zuccon A. Cavus foot. Foot Ankle Clin. 2015;20(4):645-56. doi:10.1016/j.fcl.2015.07.007. PMID: 26589083. Revisión; solo resumen.</li>
+<li>Zhao F, Wu T, Kang Q, Wang C, Geng X, Qin H, et al. Management of idiopathic clubfoot: an umbrella review and CPAM-LRC consensus. J Orthop Surg Res. 2025;20(1):1103. doi:10.1186/s13018-025-06459-8. PMID: 41291730. Revisión sombrilla y consenso Delphi; solo resumen.</li>
+<li>Ogutu V, Jacob EE, Vahwere BM, Oviosun A, Anyanwu CN, Makena W, et al. Global prevalence, patterns, and predictors of relapse following Ponseti treatment for idiopathic clubfoot: a systematic review and meta-analysis. BMC Musculoskelet Disord. 2026;27(1). doi:10.1186/s12891-026-10017-6. PMID: 42210224. Revisión sistemática con metaanálisis; solo resumen.</li>
+<li>Scher EM, Math D, Beber SA, Tse A, Williams CJ, Scher DM, et al. Pearls and pitfalls of Ponseti method bracing for idiopathic clubfoot: an institutional guide to optimize orthotic management. J Pediatr Soc North Am. 2026;15:100336. doi:10.1016/j.jposna.2026.100336. PMID: 42254991. Revisión institucional; solo resumen.</li>
+<li>Krespi R, Gigi R, Hemo Y, Danino B, Ovadia D. Association between idiopathic clubfoot and developmental dysplasia of the hip: do we need universal screening for it? J Pediatr Orthop. 2026 Aug 17. doi:10.1097/BPO.0000000000003444. PMID: 42606105. Cohorte retrospectiva, nivel III; solo resumen.</li>
+</ol></div></div>
+</section>
+<script>
+function dcVis(dc){
+var h=sel(dc,'h');
+if(!h.length){out(dc,'<p class="mini">Marca al menos un hallazgo para ver la entidad compatible.</p>');return;}
+var s=function(k){return h.indexOf(k)>-1;};
+var E={
+e5:{n:'Pie equinovaro (pie zambo)',f:'Que el pie no se corrija con una maniobra suave y que no haya causa sindrómica ni neurológica de base',c:'Derivar en los primeros días a ortopedia pediátrica para iniciar yesos seriados, idealmente en las primeras 2–6 semanas [8]',cf:'Si el pie se corrigiera con una maniobra suave → sería un pie posicional y bastaría el seguimiento'},
+e4:{n:'Pie cavo con causa neurológica por descartar',f:'Examen neurológico completo y los estudios que defina neurología pediátrica [6][7]',c:'Derivar a neurología y ortopedia pediátrica antes de operar el pie [7]',cf:'Si no hubiera ningún hallazgo neurológico tras la evaluación completa → cavo idiopático, un diagnóstico de exclusión [7]'},
+e3r:{n:'Pie plano rígido (coalición tarsal o astrágalo vertical)',f:'Radiografía en carga y tomografía o resonancia para confirmar la coalición [5]',c:'Derivar a ortopedia pediátrica y tratar el dolor mientras tanto [4][5]',cf:'Si el arco reapareciera de puntillas → sería un pie plano flexible y bastaría observar [1]'},
+e3:{n:'Pie plano flexible',f:'Arco que reaparece de puntillas y subtalar móvil [1]',c:'Observar sin ortesis si es asintomático [4]',cf:'Si el pie plano fuera rígido o doloroso → pensar en coalición tarsal o astrágalo vertical y derivar [4][5]'},
+e2:{n:'Anteversión femoral',f:'Rotación interna de cadera mayor de 70° con externa reducida y ausencia de dolor de cadera [1]',c:'Tranquilizar, observar y reevaluar cada 6–12 meses [1]',cf:'Si el pie mirara hacia fuera de forma reciente con dolor en un adolescente → radiografía urgente por posible epifisiólisis [1]'},
+e1:{n:'Genu varo o genu valgo',f:'Medición simétrica de la distancia intercondílea o intermaleolar acorde con la edad; radiografía si es atípico [1]',c:'Observar y reevaluar; derivar a ortopedia si es asimétrico, progresivo o doloroso [1]',cf:'Si fuera unilateral o progresivo → radiografía y derivación a ortopedia pediátrica [1]'}
+};
+var k=[];
+if(s('equino'))k.push('e5');
+if(s('neuro')||s('cavus'))k.push('e4');
+if(s('rigid'))k.push('e3r');
+else if(s('flat'))k.push('e3');
+if(s('rotint')||s('intoe'))k.push('e2');
+if(s('rod'))k.push('e1');
+if(!k.length){out(dc,'<p>La asimetría sola no ubica la entidad: completa el perfil rotacional, el eje de la rodilla y el examen del pie, y deriva a ortopedia pediátrica [1].</p><span class="cf">Si añadieras un hallazgo del pie, de la cadera o de la rodilla → la entidad compatible quedaría definida</span>');return;}
+var m=E[k[0]],o='';
+if(k.length>1){var l=[];for(var i=1;i<k.length;i++)l.push(E[k[i]].n);o='<p>También compatible: '+l.join('; ')+'. Se atiende primero la de mayor amenaza.</p>';}
+var u=s('uni')?'<p>La asimetría obliga a pedir radiografía y valoración ortopédica [1].</p>':'';
+out(dc,'<p><b>'+m.n+'</b></p><p>Hallazgo que falta para confirmarla: '+m.f+'.</p><p>Conducta inicial: '+m.c+'.</p>'+o+u+'<span class="cf">'+m.cf+'</span>');
+}
+function dcE1a(dc){
+var e=sel(dc,'edad')[0],t=sel(dc,'tipo')[0],f=sel(dc,'f');
+if(!e||!t){out(dc,'<p class="mini">Elige la edad y el tipo de deformidad para ver la conducta.</p>');return;}
+var has=function(x){return f.indexOf(x)>-1;};
+var esp=(t==='varo'&&e==='a')||(t==='valgo'&&(e==='b'||e==='c'));
+var r,cf;
+if(f.length){
+r='<p><b>Rasgos de alarma: radiografía y derivación a ortopedia pediátrica.</b></p><p>Pide una radiografía en dos planos o de miembros inferiores en bipedestación [1].'+(has('talla')?' Añade calcio, fosfatasa alcalina y vitamina D por la talla baja o las muñecas ensanchadas [1].':'')+(has('trauma')?' El valgo tras una fractura tibial proximal suele ser leve y resolverse, pero se evalúa en ortopedia [1].':'')+'</p>';
+cf='Si no hubiera ningún rasgo asociado y la edad coincidiera con el patrón → observar y reevaluar cada 6–12 meses [1]';
+}else if(esp){
+r='<p><b>Variante fisiológica probable: observar sin imagen.</b></p><p>El patrón coincide con la edad: varo hasta los 2 años o valgo entre los 3 y los 6 años [1]. Reevalúa cada 6–12 meses y no uses plantillas ni calzado especial [1][2].</p>';
+cf='Si la deformidad fuera unilateral o progresiva → radiografía y derivación aunque la edad coincida [1]';
+}else if(t==='varo'&&e==='b'){
+r='<p><b>Varo persistente tras los 2 años: vigilar de cerca.</b></p><p>Piensa en tibia vara o raquitismo si es persistente o progresivo pasados los 2–3 años; controla cada 3–6 meses y pide radiografía si no mejora [1].</p>';
+cf='Si apareciera asimetría, dolor o talla baja → radiografía y laboratorio en la primera visita [1]';
+}else{
+r='<p><b>Patrón fuera de la edad esperada: radiografía y derivación.</b></p><p>El '+t+' a esta edad no corresponde al patrón fisiológico; se pide radiografía y se deriva a ortopedia pediátrica [1].</p>';
+cf='Si el patrón coincidiera con la edad (varo hasta los 2 años, valgo de 3 a 6) → observar y reevaluar cada 6–12 meses [1]';
+}
+out(dc,r+'<span class="cf">'+cf+'</span>');
+}
+function dcE1b(dc){
+var c=sel(dc,'causa')[0],g=sel(dc,'crec')[0];
+if(!c){out(dc,'<p class="mini">Elige la causa para ver la conducta.</p>');return;}
+if((c==='blount'||c==='idio')&&!g){out(dc,'<p class="mini">Indica si hay crecimiento remanente.</p>');return;}
+var r,cf;
+if(c==='fis'){
+r='<p><b>Observar y tranquilizar.</b></p><p>La variante fisiológica se corrige con el crecimiento; reevalúa cada 6–12 meses y evita ortesis, cuñas y calzado especial [1][2].</p>';
+cf='Si el varo fuera asimétrico o progresivo → radiografía y derivación a ortopedia [1]';
+}else if(c==='rach'){
+r='<p><b>Tratar la causa y reevaluar la alineación.</b></p><p>Vitamina D y calcio con el esquema de la guía de raquitismo; la dosis no se leyó en la sesión [VERIFICAR EN FUENTE]. Controla la calcemia y revisa el eje al corregir la carencia [1].</p>';
+cf='Si el eje no mejorara tras corregir la carencia → derivar a ortopedia pediátrica por posible deformidad estructural [1]';
+}else if(c==='blount'){
+r=g==='si'?'<p><b>Derivar a ortopedia pediátrica.</b></p><p>Con crecimiento remanente se considera el crecimiento guiado con hemiepifisiodesis; una tibia vara progresiva no se resuelve con observación [1][3].</p>':'<p><b>Derivar a ortopedia pediátrica para osteotomía.</b></p><p>Con las fisis cerradas, la corrección del eje exige osteotomía [1].</p>';
+cf='Si las fisis siguieran abiertas → crecimiento guiado en lugar de osteotomía [3]';
+}else{
+r=g==='si'?'<p><b>Crecimiento guiado en deformidad idiopática persistente.</b></p><p>Con crecimiento remanente, la hemiepifisiodesis corrige el eje con una cirugía de bajo riesgo [1][3].</p>':'<p><b>Osteotomía si la desviación supera 2 desviaciones estándar.</b></p><p>Con fisis cerradas, la corrección del eje requiere osteotomía [1].</p>';
+cf='Si la desviación fuera leve y sin síntomas → seguir observando [1]';
+}
+out(dc,r+'<span class="cf">'+cf+'</span>');
+}
+function dcE2(dc){
+var e=sel(dc,'edad')[0],f=sel(dc,'f');
+if(!e){out(dc,'<p class="mini">Elige la edad para ver la conducta.</p>');return;}
+var has=function(x){return f.indexOf(x)>-1;};
+var r,cf;
+if(has('scfe')){
+r='<p><b>Epifisiólisis hasta demostrar lo contrario.</b></p><p>Pide radiografía urgente de pelvis y deriva de inmediato a ortopedia pediátrica [1].</p>';
+cf='Si el pie mirara hacia dentro, sin dolor y con rotación interna conservada → anteversión femoral y observación [1]';
+}else if(has('asim')||has('sec')||has('de2')||has('sint')){
+r='<p><b>Derivar a ortopedia pediátrica.</b></p><p>La asimetría, el dolor, la enfermedad neuromuscular de base o las medidas a más de 2 desviaciones estándar salen del patrón fisiológico [1][2].</p>';
+cf='Si fuera simétrico, indoloro y con medidas acordes a la edad → observar y reevaluar cada 6–12 meses [1]';
+}else if(e==='M'){
+r='<p><b>Persistencia después de los 8 años: seguir y valorar derivación.</b></p><p>Sin síntomas se observa; la intervención se reserva para casos graves y sintomáticos que persisten pasados los 8 años [1].</p>';
+cf='Si apareciera dolor o limitación funcional → derivar a ortopedia pediátrica [2]';
+}else{
+r='<p><b>Observar y tranquilizar.</b></p><p>La anteversión disminuye con el crecimiento; reevalúa cada 6–12 meses y no uses ortesis, cuñas ni calzado especial [1][2].</p>';
+cf='Si hubiera dolor, asimetría o un pie hacia fuera reciente → derivar y pedir radiografía [1]';
+}
+out(dc,r+'<span class="cf">'+cf+'</span>');
+}
+function dcE3(dc){
+var r=sel(dc,'rig')[0],d=sel(dc,'dol')[0],kg=num(dc,'kg');
+if(!r||!d){out(dc,'<p class="mini">Elige si el pie es flexible o rígido y si hay dolor.</p>');return;}
+var dosis='';
+if(d==='si'){
+if(isNaN(kg)||kg<=0){dosis='<p class="mini">Escribe el peso en kilogramos para calcular la dosis de ibuprofeno.</p>';}
+else{var u=Math.min(10*kg,400);dosis='<p>Ibuprofeno VO '+rd(u,0)+' mg por dosis cada 8 h, máximo 1 200 mg al día, durante 3 a 5 días y reevaluar; el cálculo es 10 mg/kg con tope de 400 mg por dosis'+(10*kg>400?', y el tope se aplica con este peso':'')+' [5].</p>';}
+}
+var t,cf;
+if(r==='flex'&&d==='no'){
+t='<p><b>Observar sin ortesis.</b></p><p>El pie flexible asintomático no se trata y casi no hay evidencia de que las ortesis cambien su evolución [4].</p>';
+cf='Si apareciera dolor o rigidez → reevaluar en busca de una causa rígida [1][5]';
+}else if(r==='flex'){
+t='<p><b>Medidas conservadoras.</b></p><p>Modifica la actividad, indica estiramientos y valora una plantilla; añade un antiinflamatorio por tiempo corto [1][5].</p>'+dosis;
+cf='Si el arco dejara de reaparecer de puntillas → pensar en coalición y derivar [4][5]';
+}else if(d==='no'){
+t='<p><b>Derivar a ortopedia pediátrica.</b></p><p>El pie rígido sugiere astrágalo vertical en el lactante o coalición tarsal en el mayor; confirma con radiografía en carga y, si hace falta, tomografía o resonancia [4][5].</p>';
+cf='Si apareciera dolor o esguinces → antiinflamatorio, ortesis o yeso sin apoyo y valorar la resección [5]';
+}else{
+t='<p><b>Derivar a ortopedia pediátrica y tratar el dolor.</b></p><p>Antiinflamatorio, ortesis y yeso sin apoyo; si el dolor persiste, resección de la coalición con o sin reconstrucción [5].</p>'+dosis;
+cf='Si el arco reapareciera de puntillas → sería un pie flexible sintomático y bastarían medidas conservadoras [1]';
+}
+out(dc,t+'<span class="cf">'+cf+'</span>');
+}
+function dcE4(dc){
+var x=sel(dc,'flex')[0],n=sel(dc,'n');
+if(!x){out(dc,'<p class="mini">Elige si el retropié es flexible o rígido para ver la conducta.</p>');return;}
+var t,cf;
+var q=x==='flex'?'Flexible: técnicas de partes blandas [7].':'Rígido: osteotomías o tarsectomía, preferibles a la artrodesis [7].';
+if(n.length){
+t='<p><b>Derivar a neurología pediátrica y a ortopedia antes de tratar el pie.</b></p><p>Hay hallazgos que sugieren causa neurológica: se piden los estudios que defina neurología [6][7]'+(n.indexOf('espina')>-1?'; ante signos de columna o médula se valora imagen medular [VERIFICAR EN FUENTE]':'')+'. '+q+' No se opera el pie antes de esa evaluación [7].</p>';
+cf='Si todos los hallazgos neurológicos fueran normales tras la evaluación completa → cavo idiopático y manejo ortopédico [7]';
+}else{
+t='<p><b>Completar el examen neurológico antes de llamarlo idiopático.</b></p><p>Sin hallazgos, el cavo idiopático es un diagnóstico de exclusión [7]. '+q+'</p>';
+cf='Si apareciera debilidad, reflejos alterados o progresión → derivar a neurología pediátrica [6][7]';
+}
+out(dc,t+'<span class="cf">'+cf+'</span>');
+}
+function dcE5(dc){
+var tp=sel(dc,'tipo')[0],ini=sel(dc,'ini')[0],fa=sel(dc,'fase')[0],fe=sel(dc,'fer')[0];
+if(!tp||!ini||!fa){out(dc,'<p class="mini">Elige el tipo, el momento de inicio y la fase para ver la conducta.</p>');return;}
+if(fa==='ferula'&&!fe){out(dc,'<p class="mini">Indica si la férula es tolerada.</p>');return;}
+var t,cf;
+if(fa==='yeso'){
+t='<p><b>Continuar los yesos seriados.</b></p><p>Se sigue el método de Ponseti y se valora la tenotomía del Aquiles si persiste el equino [8].</p>';
+cf='Si el equino cediera por completo con los yesos → pasar a la férula de abducción sin tenotomía [8]';
+}else if(fa==='ferula'){
+t=fe==='tol'?'<p><b>Mantener la férula y vigilar.</b></p><p>La férula sostiene la corrección frente a los tejidos que tienden a acortarse [10].</p>':'<p><b>Intervenir de inmediato en la adherencia.</b></p><p>La intolerancia a la férula es el mayor predictor de recaída; revisa el ajuste, la piel y el apoyo de los cuidadores [9][10].</p>';
+cf='Si la férula dejara de tolerarse → alto riesgo de recaída: actuar sobre la adherencia antes de que reaparezca el equino [9][10]';
+}else{
+t='<p><b>Tratar la recaída.</b></p><p>Se repiten los yesos y, si fracasan, se indica cirugía limitada [8].</p>';
+cf='Si hubiera una férula mal tolerada previa → reforzar la adherencia después de la corrección [9][10]';
+}
+var a=tp==='sind'?'<p>En la forma sindrómica o neurogénica la recaída esperable es de 30–40 % y el éxito a largo plazo de 68 % [8].</p>':'<p>En la forma idiopática la recaída es de 20–30 % [8].</p>';
+var b=ini==='tard'?'<p>No esperes: inicia el tratamiento ya; el retraso se asocia con más recaída [9].</p>':'';
+out(dc,t+a+b+'<span class="cf">'+cf+'</span>');
+}
+</script>
+<!-- KIT_SCRIPT -->
+</div>
+<script>
+(function(){
+'use strict';
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+function secK(k){return $('section.tab[data-tab="'+k+'"]')}
+function secOf(el){return el&&el.closest?el.closest('section.tab'):null}
+function nameOf(k){var b=$('button.tb[data-tab="'+k+'"]');return b?b.textContent.replace(/\s+/g,' ').replace(/^\s+|\s+$/g,''):k}
+function btn(t,f,c){var b=document.createElement('button');b.type='button';b.className=c||'chip';b.textContent=t;b.addEventListener('click',f);return b}
+function recon(s,on){if(!s)return;s.classList.toggle('recon',!!on);$$('.nodo',s).forEach(function(n){n.classList.remove('rev');n.classList.remove('pis')});var st=$('.rec-state',s);if(st)st.textContent=on?'Modo reconstrucción activo':'Modo lectura';var a=$('.rec-bar [data-act="rec"]',s);if(a){a.disabled=!!on;a.classList.toggle('on',!!on);a.textContent=on?'Reconstrucción activa':'Activar reconstrucción'}}
+window.recon=function(k,on){recon(secK(k),on)};
+function navOv(){var n=$('nav.tabs');if(!n)return;var sl=n.scrollLeft,mx=n.scrollWidth-n.clientWidth,w=n.parentNode;[n,w].forEach(function(e){if(e===n||e.classList.contains('tabs-w')){e.classList.toggle('ov-l',sl>2);e.classList.toggle('ov-r',sl<mx-2)}})}
+function tabla(on){var t=$('table.vis'),s=secOf(t);if(!s)return;s.classList.toggle('tbl',!!on);$$('td.tap',t).forEach(function(c){c.classList.remove('rev')});var st=$('.vb-state',s);if(st)st.textContent=on?'Tabla tapada: toca cada celda para revelarla':'Modo lectura'}
+window.tabla=tabla;
+window.show=function(k){var ns=secK(k);if(!ns)return;$$('section.tab.on').forEach(function(s){if(s!==ns){if(s.classList.contains('recon'))recon(s,false);if(s.classList.contains('tbl'))tabla(false)}});$$('.tb,.tab').forEach(function(e){e.classList.toggle('on',e.getAttribute('data-tab')===k)});window.scrollTo(0,0);var b=$('.tb.on');if(b&&b.scrollIntoView){try{b.scrollIntoView({inline:'nearest',block:'nearest'})}catch(e){}}navOv()};
+window.ir=function(k,id){var el=document.getElementById(id),s=secOf(el);if(!s)return;var nodo=el.classList.contains('nodo');if(s.classList.contains('recon')&&!nodo)recon(s,false);if(s.classList.contains('tbl')&&!el.closest('.vis-w'))tabla(false);show(s.getAttribute('data-tab'));if(nodo&&s.classList.contains('recon'))el.classList.add('rev');var a=el.closest('.acc');if(a)a.classList.add('op');el.scrollIntoView({block:'start'});el.classList.add('hl');setTimeout(function(){el.classList.remove('hl')},1500)};
+window.tog=function(b){var a=b.closest('.acc');if(a)a.classList.toggle('op')};
+window.sel=function(dc,g){return $$('.chip.on[data-g="'+g+'"]',dc).map(function(c){return c.getAttribute('data-v')})};
+window.num=function(dc,n){var i=$('input[data-n="'+n+'"]',dc);if(!i||i.value==='')return NaN;return parseFloat(String(i.value).replace(',','.'))};
+window.out=function(dc,h){var o=$('.out',dc);if(o)o.innerHTML=h};
+window.rd=function(x,d){var p=Math.pow(10,d||0);return Math.round(x*p)/p};
+function outErr(dc,e){var o=$('.out',dc);if(o)o.textContent='Error de cálculo: '+(e&&e.message?e.message:String(e))}
+function runDc(dc){var fn=window[dc.getAttribute('data-fn')];if(typeof fn==='function'){try{fn(dc)}catch(e){outErr(dc,e)}}}
+window.ch=function(el){var dc=el.closest('.dc');if(!dc)return;if(el.classList.contains('chip')){var g=el.getAttribute('data-g');if(el.getAttribute('data-m')==='1'){el.classList.toggle('on')}else{var was=el.classList.contains('on');$$('.chip[data-g="'+g+'"]',dc).forEach(function(c){c.classList.remove('on')});if(!was)el.classList.add('on')}}runDc(dc)};
+function initNodos(f){var k=f.getAttribute('data-tab');$$('.nodo',f).forEach(function(n,i){var p=document.createElement('b');p.className='paso';var pn=document.createElement('span');pn.className='pn';pn.textContent=(i+1)+' ·';var pt=document.createElement('span');pt.className='pt';pt.textContent=n.getAttribute('data-paso')||'';p.appendChild(pn);p.appendChild(pt);var ra=n.getAttribute('data-rama');if(ra){var b=document.createElement('span');b.className='badge b-az rama';b.textContent=ra;p.appendChild(document.createTextNode(' '));p.appendChild(b)}n.insertBefore(p,n.firstChild);var c=document.createElement('div');c.className='rec-ctl';if($('.man',n))c.appendChild(btn('Pista',function(){n.classList.toggle('pis')}));c.appendChild(btn('Revelar',function(){n.classList.toggle('rev')}));n.appendChild(c)});
+var tl=$('ol.tl',f);if(!tl)return;var bar=document.createElement('div');bar.className='rec-bar';bar.id='rec-bar-'+k;var t=document.createElement('div');t.innerHTML='<b>Timeline en blanco</b> · <span class="rec-state">Modo lectura</span><p class="mini">Reconstruye la cascada sin mirar: escribe cada paso en orden, luego usa Pista (signos que produce) y Revelar nodo por nodo. Nada se guarda.</p>';bar.appendChild(t);var ta=document.createElement('textarea');ta.setAttribute('aria-label','Escribe aquí la cascada en orden');var bs=document.createElement('div');bs.className='rec-btns';var ab=btn('Activar reconstrucción',function(){recon(f,true);ta.focus()});ab.setAttribute('data-act','rec');bs.appendChild(ab);bs.appendChild(btn('Revelar todo',function(){$$('.nodo',f).forEach(function(n){n.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){recon(f,false)}));bar.appendChild(bs);bar.appendChild(ta);tl.parentNode.insertBefore(bar,tl)}
+var TGT={'1.º':'clave','De elección':'clave','Confirma':'ok','Solo si':'cond','Escala':'cond','Reevalúa':'cond','No pidas':'no','Evita':'no','Alarma':'alarma'};
+function initTg(){$$('ol.tg span.tg').forEach(function(s){var v=TGT[s.textContent.replace(/^\s+|\s+$/g,'')];if(v)s.setAttribute('data-t',v)})}
+function initTabla(){var t=$('table.vis'),s=secOf(t);if(!s)return;var w=t.parentNode;if(!w.classList.contains('tw')){w=document.createElement('div');w.className='tw';t.parentNode.insertBefore(w,t);w.appendChild(t)}w.classList.add('vis-w');var rows=$$('tbody tr',t);if(!rows.length)rows=$$('tr',t).slice(1);rows.forEach(function(r){Array.prototype.slice.call(r.children,1).forEach(function(c){c.classList.add('tap');c.addEventListener('click',function(){if(s.classList.contains('tbl'))c.classList.add('rev')})})});
+var bar=document.createElement('div');bar.className='vb-bar';bar.id='vb-bar';var h=document.createElement('div');h.innerHTML='<b>Tabla en blanco</b> · <span class="vb-state">Modo lectura</span><p class="mini">Tapa todas las celdas de las entidades (quedan visibles las cabeceras y los ejes). Di cada celda antes de tocarla; un toque la revela. Nada se guarda.</p>';bar.appendChild(h);var bs=document.createElement('div');bs.className='rec-btns';bs.appendChild(btn('Tapar la tabla',function(){tabla(true)}));bs.appendChild(btn('Revelar todo',function(){$$('td.tap',t).forEach(function(c){c.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){tabla(false)}));bar.appendChild(bs);w.parentNode.insertBefore(bar,w)}
+function initRecGo(){var TL=$$('section.tab').filter(function(s){return!!$('ol.tl',s)}),sin=secK('sin'),dst=sin||secK('seg');if(!dst)return;var ord=sin?TL.filter(function(s,i){return i%2===0}).concat(TL.filter(function(s,i){return i%2===1})):TL;var vt=$('table.vis');if(!ord.length&&!(sin&&vt))return;
+var w=document.createElement('div');w.className='hb az rec-go';w.innerHTML='<div class="hb-t">Antes de cerrar: recupera sin mirar</div><p class="mini">Cada botón te lleva a la función en blanco correspondiente. Intenta la respuesta completa antes de revelar.</p>';var bs=document.createElement('div');bs.className='rec-btns';w.appendChild(bs);
+if(sin&&vt){var vs=secOf(vt),vk=vs.getAttribute('data-tab'),b0=btn('Tabla en blanco — '+nameOf(vk),function(){show(vk);tabla(true);var b=document.getElementById('vb-bar');if(b)b.scrollIntoView({block:'start'})},'go');b0.setAttribute('data-rec',vk);bs.appendChild(b0)}
+ord.forEach(function(s){var k=s.getAttribute('data-tab'),b=btn('Reconstruir la cascada — '+nameOf(k),function(){show(k);recon(s,true);var r=document.getElementById('rec-bar-'+k);if(r)r.scrollIntoView({block:'start'})},'go');b.setAttribute('data-rec',k);bs.appendChild(b)});
+var rf=$('.acc.refs',dst);if(rf)dst.insertBefore(w,rf);else dst.appendChild(w)}
+function init(){var f=$('.tb'),ph=[function(){var n=$('nav.tabs');if(n){var w=document.createElement('div');w.className='tabs-w';n.parentNode.insertBefore(w,n);w.appendChild(n);n.addEventListener('scroll',navOv);window.addEventListener('resize',navOv)}},function(){$$('section.tab').forEach(function(s){if($('ol.tl',s))initNodos(s)})},initTg,initTabla,initRecGo,function(){$$('.dc').forEach(runDc)},function(){show(secK('pan')?'pan':(f?f.getAttribute('data-tab'):''))}];ph.forEach(function(p){try{p()}catch(e){if(window.console)console.error('kit v10:',e)}})}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+</body>
+</html>

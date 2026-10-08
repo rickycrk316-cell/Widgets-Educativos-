@@ -1,0 +1,76 @@
+{
+ "titulo": "Cojera dolorosa mecánica",
+ "salida": "../Cojera_dolorosa_mecanica_widget_v10.html",
+ "modo": "multi",
+ "entidades": {
+  "e1": "Enfermedad de Legg-Calvé-Perthes",
+  "e2": "Epifisiólisis de la cabeza femoral",
+  "e3": "Enfermedad de Osgood-Schlatter"
+ },
+ "principal": "e1",
+ "amenaza": "e2",
+ "tabs": [
+  "pan",
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "sin"
+ ],
+ "pg": {
+  "vis": 4,
+  "e1": 4,
+  "e2": 3,
+  "e3": 3
+ },
+ "fey": {
+  "e1": 2,
+  "e2": 1,
+  "e3": 1
+ },
+ "nodos": {
+  "e1": 7,
+  "e2": 7,
+  "e3": 5
+ },
+ "signos": {
+  "e1": 4,
+  "e2": 3,
+  "e3": 3
+ },
+ "dc": [
+  "vis",
+  "e1",
+  "e2",
+  "e3"
+ ],
+ "nucleo": {
+  "vis": [
+   "Limitación de la abducción y la rotación interna",
+   "Rotación externa obligada al flexionar la cadera",
+   "Dolor a la palpación de la tuberosidad tibial",
+   "Sin apoyo inmediato y ortopedia urgente para fijación"
+  ],
+  "e1": [
+   "Sinovitis reactiva y dolor articular",
+   "Colapso con deformidad y pérdida de contención",
+   "Limitación de la abducción y la rotación interna",
+   "Radiografía AP de pelvis y axial de cadera: busca esclerosis, fragmentación o colapso de la epífisis.",
+   "Observación con alivio del dolor en niños pequeños con buen pronóstico [6]."
+  ],
+  "e2": [
+   "Deslizamiento de la epífisis sobre el cuello",
+   "Deslizamiento agudo con inestabilidad",
+   "Rotación externa obligada al flexionar la cadera",
+   "Radiografía AP de pelvis y axial de ambas caderas, sin apoyo del miembro; si parece inestable, lateral con rayo horizontal y no en rana [1][5] [VERIFICAR EN FUENTE].",
+   "Retirar el apoyo de inmediato y fijar la epífisis con tornillo in situ [1][8]."
+  ],
+  "e3": [
+   "Microavulsión e inflamación de la apófisis",
+   "Osificación reactiva y osículo",
+   "Dolor a la palpación de la tuberosidad tibial",
+   "Examen clínico del aparato extensor: palpa la tuberosidad tibial y prueba la extensión contra resistencia [2].",
+   "Modificar la actividad y dar tratamiento sintomático [2]."
+  ]
+ }
+}

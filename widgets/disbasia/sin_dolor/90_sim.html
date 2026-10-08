@@ -1,0 +1,152 @@
+<script>
+function par(t){return '<p>'+t+'</p>';}
+function hv(a,v){return a.indexOf(v)>-1;}
+function vacio(dc,t){out(dc,par(t));}
+
+function dcVis(dc){
+  var e=sel(dc,'edad'),h=sel(dc,'hall'),c=sel(dc,'ctx');
+  if(!(e.length||h.length||c.length)){
+    vacio(dc,'Elige la edad, los hallazgos y el contexto. El simulador propone qué entidad es compatible, qué dato falta para confirmarla y la conducta inicial; no calcula probabilidades.');return;}
+  var r=[],n=0;
+  if(hv(h,'asc')||hv(h,'arr')){n++;
+    var both=hv(h,'asc')&&hv(h,'arr');
+    r.push(par('<b>Síndrome de Guillain-Barré</b>: '+(both?'la debilidad ascendente con reflejos ausentes':'este hallazgo')+(hv(c,'inf')?', con infección reciente,':'')+' lo hace compatible'+(both?'':'; falta documentar el otro dato (debilidad simétrica o arreflexia)')+'. Falta confirmar con LCR y neuroconducción [3]. Conducta inicial: ingreso para vigilar la respiración y la autonomía; la inmunoterapia depende de la ventana y de si camina sin ayuda.'));
+    if(hv(c,'resp')) r.push(par('La dificultad para respirar o tragar exige cuidados intensivos y estratificar el riesgo de ventilación [3].'));
+  }
+  if(hv(h,'ort')||hv(h,'abd')){n++;
+    if(hv(e,'lact')) r.push(par('<b>Displasia del desarrollo de la cadera</b>: la maniobra o la abducción limitada en el lactante la hace compatible. Falta la ecografía de cadera por Graf [1][6]. Conducta inicial: referir a ortopedia pediátrica y definir arnés según el tipo de Graf.'));
+    else r.push(par('<b>Displasia del desarrollo de la cadera</b>: hallazgo compatible, pero Ortolani y Barlow pierden valor fuera del período de lactante pequeño. Falta la radiografía de pelvis [VERIFICAR EN FUENTE]. Conducta inicial: referir a ortopedia pediátrica [1].'));
+  }
+  if(hv(h,'gowers')){n++;
+    r.push(par('<b>Enfermedad neuromuscular (Duchenne)</b>: el Gowers o las pantorrillas grandes la hacen compatible'+(hv(c,'fam')?', y el antecedente familiar la refuerza':'')+'. Falta la CK y el estudio genético del gen de distrofina [2]. Conducta inicial: referir a neurología neuromuscular sin demora.'));
+  }
+  if(hv(h,'cresta')||(hv(c,'ant')&&!hv(h,'ort')&&!hv(h,'gowers')&&!hv(h,'asc')&&!hv(h,'arr'))){n++;
+    r.push(par('<b>Dismetría de miembros inferiores</b>: '+(hv(h,'cresta')?'la cresta ilíaca baja la hace compatible':'el antecedente de un miembro afectado la hace posible, pero falta el signo')+'. Falta medir la longitud real y la aparente y pedir ortorradiografía [4]. Conducta inicial: alza si la diferencia es significativa y referir a ortopedia pediátrica si supera 2 cm.'));
+  }
+  if(hv(c,'dolor')) r.push(par('El dolor intenso o la fiebre sacan al niño de este grupo: descarta primero una infección articular o una urgencia ortopédica.'));
+  if(!n) r.push(par('Los hallazgos elegidos no bastan para sostener una sola entidad. Completa el examen de la cadera, la longitud de los miembros, la fuerza proximal y los reflejos.'));
+  r.push('<span class="cf">Si a la debilidad simétrica se suman los reflejos ausentes → la conducta cambia de estudio ambulatorio a ingreso por posible síndrome de Guillain-Barré [3].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE1dx(dc){
+  var e=sel(dc,'edad'),x=sel(dc,'ex'),k=sel(dc,'riesgo'),g=sel(dc,'graf');
+  if(!(e.length||x.length||k.length||g.length)){
+    vacio(dc,'Elige la edad, el examen, los factores de riesgo y el tipo de Graf para obtener la clasificación y la conducta.');return;}
+  var r=[],anor=hv(x,'ort')||hv(x,'bar')||hv(x,'abd');
+  if(hv(x,'norm')&&anor) r.push(par('Elegiste un examen normal y otro anormal a la vez: revisa los datos.'));
+  if(anor){
+    r.push(par('<b>Examen anormal</b>: la cadera es inestable o está limitada ['+(hv(e,'lact')?'1':'1')+']. '+(hv(e,'lact')?'Pide ecografía de cadera por Graf y refiere a ortopedia pediátrica sin esperar a que el niño camine [1][6] [VERIFICAR EN FUENTE].':'Fuera del lactante pequeño, la maniobra pierde valor: pide radiografía de pelvis y refiere a ortopedia pediátrica [VERIFICAR EN FUENTE].')));
+  } else if(hv(x,'norm')&&k.length){
+    r.push(par('Examen normal con factores de riesgo ('+k.length+'): el examen solo no descarta displasia; pide ecografía de cadera según la edad [1][6] [VERIFICAR EN FUENTE].'));
+  } else if(hv(x,'norm')){
+    r.push(par('Examen normal sin factores de riesgo: continúa el control periódico; muchas formas leves se resuelven sin tratamiento [1].'));
+  }
+  if(hv(e,'camina')) r.push(par('Marcha de pato o de Trendelenburg sin dolor en el niño que camina: descarta luxación de cadera con radiografía de pelvis antes de pensar en enfermedad muscular [1] [VERIFICAR EN FUENTE].'));
+  if(hv(g,'I')) r.push(par('Graf I: cadera madura y centrada. Alta sin tratamiento [6].'));
+  if(hv(g,'IIa')) r.push(par('Graf IIa: acetábulo inmaduro. Observa y repite la ecografía; muchas formas leves se resuelven solas [1][8].'));
+  if(hv(g,'IIb')) r.push(par('Graf IIb, IIc o D: displasia o cadera en el límite de descentrarse. Arnés de Pavlik y control ecográfico [7].'));
+  if(hv(g,'III')) r.push(par('Graf III o IV: cabeza descentrada o luxada. Refiere a ortopedia pediátrica para decidir la reducción [7] [VERIFICAR EN FUENTE].'));
+  if(hv(g,'no')&&hv(e,'lact')&&(anor||k.length)) r.push(par('Aún no hay ecografía: es la prueba que decide en este lactante [6].'));
+  if(!r.length) r.push(par('Con esos datos no hay una conducta clara: completa el examen de la cadera y la edad.'));
+  r.push('<span class="cf">Si el Ortolani pasa de negativo a positivo → la conducta cambia de control clínico a ecografía y referencia a ortopedia pediátrica [1].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE1tx(dc){
+  var e=sel(dc,'edad'),s=sel(dc,'est'),v=sel(dc,'evo');
+  if(!(e.length||s.length||v.length)){
+    vacio(dc,'Elige la edad, el estado de la cadera y la evolución para obtener la conducta.');return;}
+  var r=[];
+  if(hv(s,'inma')) r.push(par('Cadera inmadura, Graf IIa: observa con ecografía de control sin arnés inicial [1][8].'));
+  if(hv(s,'red')){
+    if(hv(e,'lact')){
+      r.push(par('<b>Arnés de Pavlik</b> en el lactante pequeño con cadera reducible [1][7]. Uso continuo y duración según el protocolo del servicio [VERIFICAR EN FUENTE]; control ecográfico hasta normalizar [8].'));
+      if(hv(v,'mejora')) r.push(par('Con buena respuesta, continúa hasta normalizar la cadera y vigila hasta los 2 años [8].'));
+      if(hv(v,'falla')) r.push(par('Si no se reduce con el arnés, suspéndelo y refiere para reducción cerrada o abierta con yeso pelvipédico [6] [VERIFICAR EN FUENTE].'));
+    } else r.push(par('Fuera del lactante pequeño el arnés pierde utilidad: refiere a ortopedia pediátrica para reducción con yeso o cirugía [6] [VERIFICAR EN FUENTE].'));
+  }
+  if(hv(s,'irr')) r.push(par('Cadera luxada o irreductible: refiere a ortopedia pediátrica para reducción cerrada o abierta con yeso pelvipédico [6] [VERIFICAR EN FUENTE].'));
+  if(hv(e,'camina')&&!s.length) r.push(par('El niño que camina con displasia o luxación no responde al arnés: refiere para decidir la cirugía [VERIFICAR EN FUENTE].'));
+  if(!r.length) r.push(par('Con esos datos no hay una conducta clara: define el estado de la cadera.'));
+  r.push('<span class="cf">Si la cadera deja de reducirse con el arnés → se suspende y la conducta pasa a reducción con yeso o cirugía [6] [VERIFICAR EN FUENTE].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE2(dc){
+  var d=num(dc,'dif'),t=sel(dc,'tipo'),c=sel(dc,'crec'),o=sel(dc,'otros');
+  if(isNaN(d)&&!t.length&&!c.length&&!o.length){
+    vacio(dc,'Escribe la diferencia en centímetros y elige el tipo, el crecimiento restante y los otros datos para obtener la conducta.');return;}
+  var r=[];
+  if(hv(t,'apar')){
+    r.push(par('Dismetría aparente: los huesos miden igual. Trata la contractura de cadera o la escoliosis que inclina la pelvis y no pongas alza [4] [VERIFICAR EN FUENTE].'));
+  } else {
+    if(isNaN(d)) r.push(par('Falta la diferencia en centímetros medida con ortorradiografía.'));
+    else if(d<0||d>15) r.push(par('Revisa el valor: la diferencia debe estar entre 0 y 15 cm.'));
+    else if(d<2) r.push(par('Diferencia de '+rd(d,1)+' cm, menor de 2 cm: vigila en cada control; si hay escoliosis, una diferencia menor también puede contribuir y su corrección puede reducir la curva [4]. Alza opcional.'));
+    else r.push(par('Diferencia de '+rd(d,1)+' cm, mayor de 2 cm, significativa: inclina la pelvis y genera escoliosis funcional [4]. Alza en el calzado y referencia a ortopedia pediátrica.'));
+    if(!isNaN(d)&&d>=2&&hv(c,'mucho')) r.push(par('Con mucho crecimiento restante la diferencia puede aumentar [9]: ortopedia pediátrica decide epifisiodesis del miembro largo o alargamiento [4] [VERIFICAR EN FUENTE].'));
+    if(!isNaN(d)&&d>=2&&hv(c,'poco')) r.push(par('Con poco crecimiento restante, la corrección quirúrgica depende de la diferencia final [VERIFICAR EN FUENTE].'));
+  }
+  if(hv(o,'esco')) r.push(par('La curva que se corrige al nivelar es una escoliosis funcional; se espera que mejore al corregir la diferencia [4].'));
+  if(hv(o,'prog')) r.push(par('Una diferencia que aumenta pide referencia a ortopedia pediátrica y vigilancia de la columna [9].'));
+  if(!r.length) r.push(par('Con esos datos no hay una conducta clara: define si la dismetría es real o aparente.'));
+  r.push('<span class="cf">Si la diferencia pasa de menos a más de 2 cm → la conducta cambia de vigilancia a alza con referencia a ortopedia pediátrica [4].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE3(dc){
+  var w=num(dc,'peso'),f=sel(dc,'farm'),s=sel(dc,'sit'),e=sel(dc,'edad');
+  if(isNaN(w)&&!f.length&&!s.length&&!e.length){
+    vacio(dc,'Escribe el peso y elige el glucocorticoide y la situación para obtener la posología.');return;}
+  var r=[];
+  if(hv(s,'mant')||(!s.length&&f.length)){
+    if(isNaN(w)||!f.length) r.push(par('Escribe el peso y elige prednisona o deflazacort para calcular la dosis de mantenimiento.'));
+    else if(w<5||w>150) r.push(par('Revisa el peso: debe estar entre 5 y 150 kg.'));
+    else{
+      var pred=hv(f,'pred'),cap=pred?40:39,mgkg=pred?0.75:0.9,calc=mgkg*w,dosis=Math.min(calc,cap);
+      r.push(par('<b>'+(pred?'Prednisona':'Deflazacort')+'</b>: '+rd(dosis,1)+' mg VO cada 24 h ('+(pred?'0,75':'0,9')+' mg/kg al día con tope diario de '+cap+' mg'+(calc>cap?'; el cálculo de '+rd(calc,1)+' mg se limitó al tope':'')+') [2] [VERIFICAR EN FUENTE]. Sostenido, también tras perder la marcha; no lo suspendas de golpe [2].'));
+    }
+  }
+  if(hv(s,'grave')) r.push(par('Enfermedad grave, trauma o cirugía con más de 12 mg/m² al día de prednisona o deflazacort: añade dosis de estrés con hidrocortisona de 50 a 100 mg/m² al día [2].'));
+  if(hv(s,'susp')){
+    if(hv(e,'men2')) r.push(par('Vómitos o suspensión: riesgo de crisis suprarrenal. Hidrocortisona 50 mg IM y atención de urgencia [2].'));
+    else if(hv(e,'may2')) r.push(par('Vómitos o suspensión: riesgo de crisis suprarrenal. Hidrocortisona 100 mg IM y atención de urgencia [2].'));
+    else r.push(par('Vómitos o suspensión: riesgo de crisis suprarrenal. Hidrocortisona IM de emergencia, 50 mg si tiene menos de 2 años y 100 mg desde los 2 años; elige la edad para ver la dosis [2].'));
+  }
+  if(!r.length) r.push(par('Con esos datos no hay una conducta clara: define la situación clínica.'));
+  r.push('<span class="cf">Si el niño pasa de tolerar la vía oral a vomitar → deja la dosis oral y la conducta pasa a hidrocortisona IM de emergencia [2].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE4(dc){
+  var w=num(dc,'peso'),t=sel(dc,'tiempo'),m=sel(dc,'marcha'),o=sel(dc,'otros');
+  if(isNaN(w)&&!t.length&&!m.length&&!o.length){
+    vacio(dc,'Escribe el peso y elige el tiempo de evolución, la marcha y los otros datos para obtener el esquema con su posología.');return;}
+  var r=[];
+  if(hv(m,'si')) r.push(par('Camina sin ayuda: la indicación de inmunoterapia de la guía es para quien no camina sin ayuda; vigila y reevalúa con frecuencia [3] [VERIFICAR EN FUENTE].'));
+  if(hv(m,'no')){
+    if(!t.length) r.push(par('Falta el tiempo desde el inicio de la debilidad para elegir entre inmunoglobulina y plasmaféresis [3].'));
+    if(hv(t,'s2')||hv(t,'s4')){
+      var plas='<b>Plasmaféresis</b>: 12 a 15 L de plasma en 4 a 5 recambios durante 1 a 2 semanas en el adulto (en el niño, unos 200 a 250 mL/kg en total [VERIFICAR EN FUENTE]), dentro de las 4 primeras semanas [3].';
+      if(isNaN(w)) r.push(par('Escribe el peso para calcular la inmunoglobulina intravenosa.'));
+      else if(w<5||w>150) r.push(par('Revisa el peso: debe estar entre 5 y 150 kg.'));
+      else{
+        var calc=0.4*w,dia=Math.min(calc,30);
+        r.push(par('<b>Inmunoglobulina intravenosa</b>: '+rd(dia,1)+' g IV cada 24 h por 5 días, en total '+rd(dia*5,1)+' g (0,4 g/kg al día, 2 g/kg en total; tope operativo del widget de 30 g al día'+(calc>30?'; el cálculo de '+rd(calc,1)+' g se limitó al tope':'')+') [3] [VERIFICAR EN FUENTE].'));
+      }
+      if(hv(t,'s2')) r.push(par('Dentro de las 2 primeras semanas: la inmunoglobulina es la opción de elección y la plasmaféresis es la alternativa [3].'));
+      else r.push(par('Entre 2 y 4 semanas: la inmunoglobulina entra como punto de buena práctica y la plasmaféresis sigue indicada [3].'));
+      r.push(par(plas));
+    }
+    if(hv(t,'m4')) r.push(par('Más de 4 semanas desde el inicio: fuera de las ventanas de la guía; decide con neurología y reconsidera el diagnóstico [3] [VERIFICAR EN FUENTE].'));
+  }
+  if(hv(o,'resp')) r.push(par('Disnea, tos débil o disfagia: ingreso a cuidados intensivos y estratificación del riesgo de ventilación con mEGRIS [3].'));
+  if(hv(o,'pron')) r.push(par('Mal pronóstico tras una primera tanda: no repitas la inmunoglobulina [3].'));
+  if(hv(o,'a8')) r.push(par('Progresión más allá de 8 semanas: considera poliradiculoneuropatía crónica de inicio agudo (A-CIDP) [3].'));
+  if(m.length||t.length) r.push(par('No uses corticoides orales; los intravenosos tienen recomendación débil en contra [3].'));
+  if(!r.length) r.push(par('Con esos datos no hay una conducta clara: define la marcha y el tiempo de evolución.'));
+  r.push('<span class="cf">Si aparecen disnea o disfagia → la conducta cambia de sala general a vigilancia en cuidados intensivos [3].</span>');
+  out(dc,r.join(''));
+}
+</script>

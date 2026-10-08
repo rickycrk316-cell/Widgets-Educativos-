@@ -1,0 +1,131 @@
+<script>
+function dcPut(dc,h){dc.querySelector('.out').innerHTML=h;}
+function dcGuia(dc,t){dcPut(dc,'<p>'+t+'</p>');}
+function dcVis(dc){
+var ex=sel(dc,'ex')[0],fi=sel(dc,'fi')[0],ap=sel(dc,'ap')[0],cu=sel(dc,'cu')[0];
+if(!ex){dcGuia(dc,'Elige el hallazgo del examen osteoarticular; luego añade fiebre, apoyo y curso para ver qué entidad es compatible.');return;}
+var e,falta,cond,cf;
+if(ex==='masa'||(cu==='cr'&&!(ex==='foco'&&fi==='alta'))){
+e='Neoplasia ósea maligna (sospecha)';
+falta='Falta para confirmarla: radiografía y resonancia, y biopsia en el centro de referencia [5].';
+cond='Radiografía en dos proyecciones y derivación a oncología ortopédica pediátrica; no biopsies, no drenes y no inmovilices fuera del centro [5].';
+cf='Si hay fiebre alta, signos inflamatorios locales y un curso de días en vez de semanas → piensa en osteomielitis: hemocultivo y resonancia [4].';
+}else if(ex==='dolor'){
+e='Artritis séptica (amenaza del grupo)';
+falta='Falta para confirmarla: líquido sinovial purulento o cultivo positivo [1].';
+cond='Hemocultivo, PCR y VSG, artrocentesis guiada por ecografía y drenaje urgente con ortopedia pediátrica, sin esperar imágenes adicionales [1].';
+cf='Si el movimiento pasivo deja de doler y el niño apoya con cojera leve → piensa en sinovitis transitoria y aplica Kocher [2].';
+}else if(ex==='foco'){
+e='Osteomielitis (compatible)';
+falta='Falta para confirmarla: resonancia con edema medular o colección, y hemocultivo o cultivo del aspirado [4].';
+cond='Hemocultivo antes del antibiótico, resonancia del segmento doloroso y antiestafilocócico intravenoso; ortopedia si hay colección [4].';
+cf='Si el dolor pasivo de la cadera es extremo y la cadera no se mueve → piensa en artritis séptica o en extensión articular [1].';
+}else{
+if(fi==='alta'||ap==='no'){
+e='Compatible con sinovitis, pero con señales de infección: trata como artritis séptica hasta demostrar lo contrario';
+falta='Falta para decidir: Kocher completo con VSG y leucocitos, y ecografía de cadera [2].';
+cond='Aplica la escala de Kocher y valora artrocentesis; no des el alta como sinovitis [2].';
+cf='Si la fiebre cede y el niño apoya con cojera → desciende a sinovitis con reevaluación precoz [2].';
+}else{
+e='Sinovitis transitoria de cadera (diagnóstico de exclusión)';
+falta='Falta para confirmarla: ecografía con derrame y predictores de Kocher bajos [2].';
+cond='Reposo relativo, antiinflamatorio y reevaluación precoz, sin antibiótico; pediatría [1].';
+cf='Si aparece fiebre ≥38,5 °C o rechazo total del apoyo → pasa a artritis séptica: Kocher y artrocentesis [2].';
+}}
+dcPut(dc,'<p><b>'+e+'</b></p><p>'+falta+'</p><p>'+cond+'</p><p><span class="cf">'+cf+'</span></p>');
+}
+function dcK(dc){
+var fi=sel(dc,'fi')[0],ap=sel(dc,'ap')[0],vs=sel(dc,'vs')[0],le=sel(dc,'le')[0],pc=sel(dc,'pc')[0],ed=num(dc,'edad');
+if(!fi||!ap||!vs||!le){dcGuia(dc,'Marca los cuatro predictores de Kocher (fiebre, apoyo, VSG y leucocitos) para obtener la banda de riesgo y la conducta.');return;}
+var n=(fi==='s'?1:0)+(ap==='s'?1:0)+(vs==='s'?1:0)+(le==='s'?1:0);
+var b=n<=1?0:(n===2?1:2);
+var sube=(pc==='s'&&b<2);
+if(sube){b=b+1;}
+var nom=['baja','intermedia','alta'][b];
+var cond=[
+'Reposo y antiinflamatorio con reevaluación clínica al día siguiente; sin antibiótico [2] [6].',
+'Ecografía de cadera con PCR; si hay derrame, artrocentesis, o ingreso con observación estrecha y repetición del examen y los marcadores [6].',
+'Artrocentesis urgente guiada por ecografía con ortopedia pediátrica y drenaje quirúrgico si hay pus, sin esperar más estudios [2] [6].'][b];
+var h='<p><b>Predictores presentes: '+n+' de 4. Banda '+nom+'.</b></p>';
+if(sube){h+='<p>Una PCR mayor de 20 mg/L sube la banda un nivel [3].</p>';}
+h+='<p>'+cond+'</p>';
+if(!isNaN(ed)&&ed<3){h+='<p>Por debajo de los tres años el algoritmo pierde sensibilidad: pide hemocultivo y amplificación de ácidos nucleicos para Kingella aunque la banda sea baja [9].</p>';}
+h+='<p>El rendimiento de la escala cae en otras poblaciones; úsala para decidir la prueba, no para descartar infección [7] [8].</p>';
+h+='<p><span class="cf">Si cambia un solo predictor (por ejemplo, el niño deja de apoyar) → sube una banda: baja pasa a intermedia e intermedia a alta [2].</span></p>';
+dcPut(dc,h);
+}
+function dcT1(dc){
+var p=num(dc,'peso'),ai=sel(dc,'ai')[0],rs=sel(dc,'rs')[0];
+if(isNaN(p)||!ai||!rs){dcGuia(dc,'Indica el peso, si tolera antiinflamatorio y el nivel de riesgo para ver la posología de la cadera irritable.');return;}
+if(p<3||p>120){dcGuia(dc,'El peso debe estar entre 3 y 120 kg.');return;}
+if(rs==='alto'){dcPut(dc,'<p><b>No es manejo ambulatorio.</b></p><p>Con fiebre o rechazo del apoyo, aplica Kocher y valora artrocentesis; no indiques antibiótico sin cultivo [6].</p><p><span class="cf">Si la fiebre cede y el niño apoya con cojera → vuelve al manejo sintomático con reevaluación precoz [6].</span></p>');return;}
+var h;
+if(ai==='ok'){
+var d=Math.min(10*p,400);
+h='<p><b>Ibuprofeno oral: '+rd(d)+' mg por dosis cada 8 horas.</b></p><p>Dosis de 10 mg/kg; tope de 400 mg por dosis y 1 200 mg al día'+(10*p>400?' (tope aplicado)':'')+' [1].</p>';
+}else{
+var q=Math.min(15*p,1000),dia=Math.min(75*p,4000);
+h='<p><b>Paracetamol oral: '+rd(q)+' mg por dosis cada 6 horas.</b></p><p>Dosis de 15 mg/kg; tope de 1 000 mg por dosis y de '+rd(dia)+' mg al día (el menor entre 75 mg/kg y 4 000 mg)'+(15*p>1000?'; tope aplicado':'')+' [1].</p>';
+}
+h+='<p>Reposo relativo, apoyo progresivo según el dolor y reevaluación al día siguiente [1].</p>';
+h+='<p><span class="cf">Si aparece fiebre ≥38,5 °C o el niño deja de apoyar → no es sinovitis de bajo riesgo: aplica Kocher y valora artrocentesis [6].</span></p>';
+dcPut(dc,h);
+}
+function dcAb(dc,nombre){
+var p=num(dc,'peso'),es=sel(dc,'es')[0],mr=sel(dc,'mr')[0];
+if(isNaN(p)||!es||!mr){dcGuia(dc,'Indica el peso, el estado del niño y el germen probable local para ver el antibiótico empírico y su posología.');return null;}
+if(p<3||p>120){dcGuia(dc,'El peso debe estar entre 3 y 120 kg.');return null;}
+var f,t;
+if(es==='gra'||mr==='alta'){
+var v=Math.min(15*p,2000);
+f='Vancomicina intravenosa: '+rd(v)+' mg por dosis cada 6 horas (15 mg/kg; tope 2 000 mg por dosis'+(15*p>2000?', aplicado':'')+'), ajustada por niveles y función renal.';
+t=es==='gra'?'Niño grave: ingreso monitorizado, vancomicina y valorar cobertura adicional [4].':'SAMR con clindamicina resistente: vancomicina [4].';
+}else if(mr==='clin'){
+var c=Math.min(40*p/3,900);
+f='Clindamicina intravenosa: '+rd(c)+' mg por dosis cada 8 horas (40 mg/kg al día; tope 900 mg por dosis'+(40*p/3>900?', aplicado':'')+').';
+t='SAMR con clindamicina sensible: clindamicina, vigilando diarrea por Clostridioides difficile [4].';
+}else{
+var z=Math.min(150*p/3,2000);
+f='Cefazolina intravenosa: '+rd(z)+' mg por dosis cada 8 horas (150 mg/kg al día; tope 2 000 mg por dosis'+(150*p/3>2000?', aplicado':'')+').';
+t='Predomina el SAMS: cefazolina; también cubre Kingella [4].';
+}
+return {f:f,t:t};
+}
+function dcE2(dc){
+var r=dcAb(dc);if(!r){return;}
+dcPut(dc,'<p><b>'+r.f+'</b></p><p>'+r.t+'</p><p>Drenaje quirúrgico urgente, hemocultivo y cultivo del líquido antes del antibiótico si el niño está estable, y ortopedia e infectología pediátricas [1].</p><p><span class="cf">Si no hay mejoría de fiebre, dolor y PCR a las 48 a 72 horas → repite el drenaje y escala a vancomicina [4].</span></p>');
+}
+function dcE3(dc){
+var r=dcAb(dc);if(!r){return;}
+var p=num(dc,'peso'),ev=sel(dc,'ev')[0],mr=sel(dc,'mr')[0],h='<p><b>'+r.f+'</b></p><p>'+r.t+'</p>';
+if(ev==='mej'){
+var x;
+if(mr==='clin'){x='Clindamicina oral: '+rd(Math.min(10*p,900))+' mg por dosis cada 8 horas (30 mg/kg al día; tope 900 mg por dosis).';}
+else{x='Cefalexina oral: '+rd(Math.min(25*p,1000))+' mg por dosis cada 6 horas (100 mg/kg al día; tope 1 000 mg por dosis) [VERIFICAR EN FUENTE].';}
+if(mr==='alta'){x='SAMR con clindamicina resistente: el paso a vía oral depende del antibiograma; decide con infectología [4].';}
+h+='<p>Paso a vía oral permitido por la evolución: '+x+'</p>';
+}else if(ev==='nom'){
+h+='<p>Sin mejoría no se pasa a vía oral: repite imagen en busca de colección y valora drenaje [4].</p>';
+}else{
+h+='<p>Indica la evolución para decidir el paso a vía oral.</p>';
+}
+h+='<p><span class="cf">Si el niño queda afebril, mejora y la PCR baja → pasa a vía oral; si no mejora → repite resonancia y valora drenaje [4].</span></p>';
+dcPut(dc,h);
+}
+function dcE4(dc){
+var p=num(dc,'peso'),dl=sel(dc,'dl')[0],fx=sel(dc,'fx')[0],pl=sel(dc,'pl')[0];
+if(isNaN(p)||!dl||!fx||!pl){dcGuia(dc,'Indica peso, intensidad del dolor, sospecha de fractura y plaquetas para ver la analgesia puente y la derivación.');return;}
+if(p<3||p>120){dcGuia(dc,'El peso debe estar entre 3 y 120 kg.');return;}
+var h='<p><b>Derivación hoy a oncología ortopédica pediátrica.</b> Radiografía en dos proyecciones; no biopsies, no drenes y no inmovilices con yeso [5].</p>';
+var q=Math.min(15*p,1000);
+h+='<p>Paracetamol oral: '+rd(q)+' mg por dosis cada 6 horas (15 mg/kg; tope 1 000 mg por dosis'+(15*p>1000?', aplicado':'')+').</p>';
+if(dl!=='leve'){
+if(pl==='ok'){h+='<p>Ibuprofeno oral: '+rd(Math.min(10*p,400))+' mg por dosis cada 8 horas (10 mg/kg; tope 400 mg por dosis), tras consultar con oncología.</p>';}
+else{h+='<p>Con plaquetas bajas o desconocidas no uses antiinflamatorio.</p>';}
+}
+if(dl==='sev'){h+='<p>Dolor intenso: el equipo de oncología indica el opioide en el centro de referencia; este simulador no lo dosifica.</p>';}
+if(fx==='si'){h+='<p>Fractura sospechada: sin carga, inmoviliza sin reducir ni manipular, y traslada.</p>';}
+h+='<p><span class="cf">Si hay fiebre alta, calor y eritema locales y un curso de días → reconsidera osteomielitis: hemocultivo, resonancia y antiestafilocócico [4].</span></p>';
+dcPut(dc,h);
+}
+</script>

@@ -1,0 +1,93 @@
+{
+ "titulo": "Dolor biliopancreático",
+ "salida": "../Dolor_biliopancreatico_widget_v10.html",
+ "modo": "multi",
+ "entidades": {
+  "e1": "Colelitiasis y colecistitis aguda",
+  "e2": "Coledocolitiasis",
+  "e3": "Colangitis aguda",
+  "e4": "Pancreatitis aguda"
+ },
+ "principal": "e1",
+ "amenaza": "e3",
+ "tabs": [
+  "pan",
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4",
+  "sin"
+ ],
+ "pg": {
+  "vis": 4,
+  "e1": 4,
+  "e2": 3,
+  "e3": 3,
+  "e4": 3
+ },
+ "fey": {
+  "e1": 2,
+  "e2": 1,
+  "e3": 1,
+  "e4": 1
+ },
+ "nodos": {
+  "e1": 8,
+  "e2": 5,
+  "e3": 5,
+  "e4": 6
+ },
+ "signos": {
+  "e1": 4,
+  "e2": 2,
+  "e3": 3,
+  "e4": 3
+ },
+ "dc": [
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4"
+ ],
+ "nucleo": {
+  "vis": [
+   "Fiebre con ictericia o hipotensión: trátala como colangitis hasta demostrar lo contrario",
+   "Riesgo ASGE: ecografía y bilirrubina, luego CPRE o USE",
+   "Dolor típico más lipasa elevada; imagen si hay duda",
+   "No pidas: CPRE urgente en pancreatitis biliar sin colangitis ni obstrucción persistente",
+   "Disfunción orgánica en infección biliar"
+  ],
+  "e1": [
+   "Cálculo obstruye el conducto cístico",
+   "Inflamación alcanza el peritoneo parietal",
+   "Signo de Murphy",
+   "Ecografía abdominal con criterios de colecistitis",
+   "Colecistectomía laparoscópica precoz en grado I",
+   "Drenaje vesicular si el riesgo quirúrgico es alto"
+  ],
+  "e2": [
+   "Bilis retenida eleva la presión del colédoco",
+   "Bilirrubina conjugada regurgita a la sangre",
+   "Ictericia colestásica sin fiebre",
+   "Riesgo ASGE: ecografía y bilirrubina, luego CPRE o USE",
+   "CPRE con esfinterotomía y extracción del cálculo en alto riesgo"
+  ],
+  "e3": [
+   "Colestasis eleva la bilirrubina",
+   "Presión intraductal empuja bacterias a la sangre",
+   "Bacteriemia sin control causa choque séptico",
+   "Criterios TG18: inflamación sistémica, colestasis e imagen",
+   "Antibiótico 4 a 7 días tras el drenaje exitoso"
+  ],
+  "e4": [
+   "Autodigestión pancreática y peripancreática",
+   "Dolor epigástrico irradiado a la espalda",
+   "Ranson modificado (biliar)",
+   "Lactato de Ringer, hidratación moderadamente agresiva",
+   "Biliar leve: colecistectomía en el mismo ingreso, antes del alta",
+   "No pidas: CPRE urgente sin colangitis ni obstrucción biliar persistente"
+  ]
+ }
+}

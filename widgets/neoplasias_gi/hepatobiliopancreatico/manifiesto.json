@@ -1,0 +1,95 @@
+{
+ "titulo": "Cáncer hepatobiliopancreático",
+ "salida": "../Cancer_hepatobiliopancreatico_widget_v10.html",
+ "modo": "multi",
+ "entidades": {
+  "e1": "Adenocarcinoma de páncreas",
+  "e2": "Carcinoma hepatocelular",
+  "e3": "Cáncer de vesícula biliar",
+  "e4": "Colangiocarcinoma"
+ },
+ "principal": "e1",
+ "amenaza": "e1",
+ "tabs": [
+  "pan",
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4",
+  "sin"
+ ],
+ "pg": {
+  "vis": 4,
+  "e1": 5,
+  "e2": 3,
+  "e3": 3,
+  "e4": 3
+ },
+ "fey": {
+  "e1": 2,
+  "e2": 1,
+  "e3": 1,
+  "e4": 1
+ },
+ "nodos": {
+  "e1": 9,
+  "e2": 7,
+  "e3": 5,
+  "e4": 6
+ },
+ "signos": {
+  "e1": 5,
+  "e2": 3,
+  "e3": 3,
+  "e4": 3
+ },
+ "dc": [
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4"
+ ],
+ "nucleo": {
+  "vis": [
+   "Ictericia indolora con vesícula palpable",
+   "Descompensación súbita de cirrosis conocida",
+   "Dolor persistente en hipocondrio derecho con masa",
+   "Ictericia indolora con vesícula colapsada, no palpable"
+  ],
+  "e1": [
+   "Ictericia indolora con vesícula palpable",
+   "TC multifásica con protocolo pancreático",
+   "Tumor resecable: resección primaria seguida de mFOLFIRINOX adyuvante",
+   "Compresión del colédoco intrapancreático",
+   "Resistencia a insulina y disfunción de células beta",
+   "Obstrucción del conducto pancreático principal",
+   "Invasión perineural del plexo celíaco"
+  ],
+  "e2": [
+   "Descompensación súbita de cirrosis conocida",
+   "RM o TC multifásica con criterios LI-RADS",
+   "BCLC 0–A con función conservada: resección si no hay hipertensión portal significativa",
+   "Tumor y trombo desplazan el parénquima funcional",
+   "Crecimiento que distiende la cápsula hepática",
+   "Consumo sistémico y anorexia"
+  ],
+  "e3": [
+   "Dolor persistente en hipocondrio derecho con masa",
+   "Ecografía y luego TC o RM con contraste",
+   "T1b o mayor sin metástasis: re-resección radical",
+   "Invasión de una pared delgada sin submucosa",
+   "Compresión del conducto hepático común",
+   "Diseminación hepática, linfática y peritoneal"
+  ],
+  "e4": [
+   "Ictericia indolora con vesícula colapsada, no palpable",
+   "Colangio-RM más TC multifásica",
+   "Tumor resecable: resección con márgenes negativos",
+   "Crecimiento periductal que estrecha el conducto",
+   "Estasis biliar y sobreinfección ascendente",
+   "Retención de sales biliares y consumo sistémico"
+  ]
+ }
+}
