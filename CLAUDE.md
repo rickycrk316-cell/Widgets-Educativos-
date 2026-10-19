@@ -28,7 +28,7 @@ Reglas del kit: las partes no llevan `<style>`, estilos en línea, recursos remo
 
 1. Editar la parte.
 2. `python3 kit/construir.py widgets/<tema>/<id>` → reensambla y valida; imprime solo errores y la línea `RESULTADO`.
-3. Si cambió algo visual o de JS: `node kit/probar_navegador.js file://$PWD/<html> <carpeta_capturas_en_scratchpad>` (las capturas no se versionan).
+3. Si cambió algo visual o de JS: `node kit/probar_navegador.js file://$PWD/<html> <carpeta_capturas_en_scratchpad>` (las capturas no se versionan). Instalación única de la herramienta: `cd kit && npm ci` (`playwright-core` 1.64.1 fijado en `kit/package.json`; no ejecutar `playwright install`; Chromium de `/opt/pw-browsers` o el de `PW_CHROMIUM`). Para definiciones usa `node kit/probar_definiciones.js` (mismos argumentos).
 4. Para definiciones: `python3 kit/auditar_definiciones.py <html> <n_terminos>`. Auditoría de diseño/router: `python3 kit/auditar_diseno.py <html> <manifiesto> "<línea del router del PLAN>"`.
 4b. (Opcional, cambios visuales) Revisión de accesibilidad/pulido: sigue `.claude/skills/impeccable/SKILL.md` (comandos `audit`, `polish`, `clarify`), leyendo solo la referencia del comando pedido. Es complementaria a `kit/auditar_diseno.py`; ante conflicto mandan `docs/DESIGN.md` y las reglas del kit.
 5. Commit de partes + HTML final juntos.
