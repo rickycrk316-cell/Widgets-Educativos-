@@ -30,7 +30,8 @@ widgets/<tema>/PLAN.md          partición del caso en widgets y decisión del r
 widgets/<tema>/*.html           widgets finales (generados: no editar a mano)
 widgets/<tema>/<id>/            partes numeradas + manifiesto.json (aquí se edita)
 kit/                            kit fijo, ensamblador y validadores
-fuentes/                        sílabo, prompt de la skill v10, casos
+.claude/skills/impeccable/      revisión opcional (audit, polish, clarify)
+fuentes/                        sílabos (dos rotaciones), kit v10 original, contratos de las skills, casos
 docs/                           PRODUCT.md (propósito) y DESIGN.md (sistema visual)
 ```
 
