@@ -1,0 +1,30 @@
+{
+ "titulo": "Definiciones · Consumo de alcohol",
+ "salida": "../Definiciones_consumo_alcohol.html",
+ "tipo": "definiciones",
+ "terminos": 6,
+ "canonicos": [
+  2,
+  1,
+  1,
+  1,
+  1,
+  0
+ ],
+ "remisiones": [
+  0,
+  1,
+  1,
+  1,
+  1,
+  2
+ ],
+ "tarjetas": [
+  6,
+  6,
+  6,
+  6,
+  6,
+  6
+ ]
+}

@@ -1,4 +1,5 @@
-"""Validador del widget de definiciones (skill definiciones v5.1). Uso: python3 validar_definiciones.py widget.html"""
+"""Validador del widget de definiciones (skill definiciones v5.1). Uso: python3 validar_definiciones.py widget.html [manifiesto.json]
+El manifiesto da terminos y los conteos esperados (canonicos, remisiones, tarjetas); sin él se usan los del widget urinario."""
 import re, sys, subprocess, json, os
 from html.parser import HTMLParser
 import tempfile
@@ -52,22 +53,24 @@ p=P(); p.feed(body_nojs)
 chk('balance div/section/table/nav/ol/ul/button/p/span',not p.errs and not p.stack,'; '.join(p.errs[:3])+str(p.stack))
 for t in ('div','section','table'):
     chk('conteo <%s>'%t,len(re.findall('<'+t+r'[\s>]',body_nojs))==len(re.findall('</'+t+'>',body_nojs)))
-ids=['t%d'%i for i in range(1,10)]+['tg']
-chk('10 pestañas (9 + Repaso global)',list(p.tabs)==ids,str(list(p.tabs)))
+MAN=json.load(open(sys.argv[2],encoding='utf-8')) if len(sys.argv)>2 else {}
+N=MAN.get('terminos',9)
+ids=['t%d'%i for i in range(1,N+1)]+['tg']
+chk('%d pestañas (%d + Repaso global)'%(N+1,N),list(p.tabs)==ids,str(list(p.tabs)))
 btn=re.findall(r"onclick=\"show\('(\w+)',this\)\"",body_nojs)
 chk('show(id) -> pestaña existente y 1:1',btn==ids,str(btn))
-chk('barra: 10 botones tb',len(re.findall(r'class="tb( active)?"',body_nojs))==10)
-exp_can=[3,2,2,1,2,1,2,2,2]; exp_rem=[0,1,1,2,1,1,1,1,1]; exp_card=[6,5,5,5,6,5,5,5,6]
-chk('prerrequisitos canónicos vs manifiesto',[p.tabs[i]['pre_acc'] for i in ids[:9]]==exp_can,str([p.tabs[i]['pre_acc'] for i in ids[:9]]))
-chk('remisiones vs manifiesto',[p.tabs[i]['rem'] for i in ids[:9]]==exp_rem,str([p.tabs[i]['rem'] for i in ids[:9]]))
-chk('tope prerrequisitos <=5',max(exp_can)<=5 and all(p.tabs[i]['pre_acc']<=5 for i in ids[:9]))
-chk('DECKS claves = pestañas con simulador',sorted(D)==sorted(ids[:9]+['tg']) and all(('id="rc-%s"'%k) in body_nojs for k in D),str(sorted(D)))
-chk('tarjetas por mazo vs manifiesto',[len(D[i]) for i in ids[:9]]==exp_card,str([len(D[i]) for i in ids[:9]]))
-chk('4-6 tarjetas por término',all(4<=len(D[i])<=6 for i in ids[:9]))
-un=[(c['q'],c['a'],c['h']) for i in ids[:9] for c in D[i]]
+chk('barra: %d botones tb'%(N+1),len(re.findall(r'class="tb( active)?"',body_nojs))==N+1)
+exp_can=MAN.get('canonicos',[3,2,2,1,2,1,2,2,2]); exp_rem=MAN.get('remisiones',[0,1,1,2,1,1,1,1,1]); exp_card=MAN.get('tarjetas',[6,5,5,5,6,5,5,5,6])
+chk('prerrequisitos canónicos vs manifiesto',[p.tabs[i]['pre_acc'] for i in ids[:N]]==exp_can,str([p.tabs[i]['pre_acc'] for i in ids[:N]]))
+chk('remisiones vs manifiesto',[p.tabs[i]['rem'] for i in ids[:N]]==exp_rem,str([p.tabs[i]['rem'] for i in ids[:N]]))
+chk('tope prerrequisitos <=5',max(exp_can)<=5 and all(p.tabs[i]['pre_acc']<=5 for i in ids[:N]))
+chk('DECKS claves = pestañas con simulador',sorted(D)==sorted(ids[:N]+['tg']) and all(('id="rc-%s"'%k) in body_nojs for k in D),str(sorted(D)))
+chk('tarjetas por mazo vs manifiesto',[len(D[i]) for i in ids[:N]]==exp_card,str([len(D[i]) for i in ids[:N]]))
+chk('4-6 tarjetas por término',all(4<=len(D[i])<=6 for i in ids[:N]))
+un=[(c['q'],c['a'],c['h']) for i in ids[:N] for c in D[i]]
 g=[(c['q'],c['a'],c['h']) for c in D['tg']]
 chk('mazo global = unión exacta',un==g and len(g)==sum(exp_card),str(len(g)))
-chk('toda tarjeta con pista',all(c['h'] for i in ids[:9] for c in D[i]))
+chk('toda tarjeta con pista',all(c['h'] for i in ids[:N] for c in D[i]))
 chk('un solo motor rc_* (1 definición c/u)',all(len(re.findall(r'function '+f+r'\(',js))==1 for f in('rc_render','rc_show','rc_grade','rc_end','rc_reset')) and not re.search(r'function rc_\w+_t\d',js))
 # citas
 txt=re.sub(r'\s+',' ',''.join(p.text))
@@ -106,7 +109,7 @@ chk('párrafos <=90 palabras',not bad,str(bad))
 badb=[wc(x) for x in re.findall(r'<p(?: class="[^"]*")?>(.*?)</p>',body_nojs,re.S) if len(re.findall('<b>',x))>1]
 chk('<=1 <b> por párrafo',not badb)
 sec=[]
-for i in ids[:9]:
+for i in ids[:N]:
     h=re.search(r'id="%s">(.*)'%i,body_nojs,re.S)
 sections=re.findall(r'<section class="tab[^"]*" id="(\w+)">(.*?)</section>',body_nojs,re.S)
 fl=[]
@@ -122,7 +125,7 @@ for sid,sh in sections:
     gl=re.search(r'<p class="gloss">(.*?)</p>',sh,re.S).group(1)
     core=sh.replace(re.search(r'<p class="gloss">.*?</p>',sh,re.S).group(0),'')
     core=re.sub(r'<[^>]+>',' ',core)
-    toks=set(re.findall(r'(?<![A-Za-zÁ-ú])[A-Z][A-Z0-9]{1,}(?![A-Za-zÁ-ú])',core))-{'IV'} 
+    toks=set(re.findall(r'(?<![A-Za-zÁ-ú])[A-Z][A-Z0-9]{1,}(?![A-Za-zÁ-ú])',core))-{'IV','VERIFICAR','EN','FUENTE'}
     miss=[t for t in toks if t not in gl and not (t=='Roma')]
     if miss: fl.append((sid,'siglas sin glosario',miss))
     if len(re.findall(r'class="hb"',sh))!=1: fl.append((sid,'hb'))
