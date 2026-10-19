@@ -1,10 +1,14 @@
 // Pruebas funcionales y visuales del widget de definiciones.
 // Uso: node probar_definiciones.js <url> <carpeta_capturas>
-const { chromium } = (() => { for (const m of ['playwright', '/opt/node22/lib/node_modules/playwright', '/opt/node22/lib/node_modules/@playwright/cli/node_modules/playwright-core']) { try { return require(m); } catch (e) {} } throw new Error('playwright no encontrado'); })();
+// Resolución: kit/node_modules (npm ci) primero; si no, playwright global.
+const { chromium } = (() => { for (const m of ['playwright-core', 'playwright', '/opt/node22/lib/node_modules/playwright', '/opt/node22/lib/node_modules/@playwright/cli/node_modules/playwright-core']) { try { return require(m); } catch (e) {} } throw new Error('playwright no encontrado (ejecuta: cd kit && npm ci)'); })();
 const fs = require('fs');
 const [url, outDir] = process.argv.slice(2);
 fs.mkdirSync(outDir, { recursive: true });
 const fails = [], notes = [];
+// Chromium: env PW_CHROMIUM > /opt/pw-browsers/chromium > el de playwright.
+const exe = [process.env.PW_CHROMIUM, '/opt/pw-browsers/chromium'].find(p => p && fs.existsSync(p));
+const pausa = (page, ms) => page.evaluate(ms => new Promise(r => setTimeout(r, ms)), ms);
 
 async function runDeck(page, sec) {
   // recorre el mazo de la sección visible: Mostrar respuesta → La sabía, hasta el final
@@ -26,7 +30,7 @@ async function runDeck(page, sec) {
 }
 
 (async () => {
-  const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+  const browser = await chromium.launch(exe ? { executablePath: exe } : {});
   const views = [
     { name: 'ipad', width: 820, height: 1180, scheme: 'light' },
     { name: 'ipad-oscuro', width: 820, height: 1180, scheme: 'dark' },
@@ -39,10 +43,10 @@ async function runDeck(page, sec) {
     page.on('pageerror', e => errs.push(e.message));
     page.on('console', m => { if (m.type() === 'error' && !/favicon/.test((m.location() || {}).url || '')) errs.push(m.text()); });
     await page.goto(url);
-    const n = await page.$$eval('nav.tabs button.tb', b => b.length);
+    const n = await page.locator('nav.tabs button.tb').count();
     for (let i = 0; i < n; i++) {
       await page.evaluate(i => document.querySelectorAll('nav.tabs button.tb')[i].click(), i);
-      await page.waitForTimeout(120);
+      await pausa(page, 120);
       const sec = await page.evaluate(() => (document.querySelector('section.tab.active') || {}).id);
       if (!sec) { fails.push(`${v.name}: el botón ${i + 1} no activa ninguna sección`); continue; }
       const ov = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
