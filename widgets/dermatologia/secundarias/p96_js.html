@@ -1,0 +1,143 @@
+<script>
+const TERMS={t1:'Escama',t2:'Costra',t3:'Erosión',t4:'Úlcera',t5:'Fisura',t6:'Excoriación',t7:'Liquenificación',t8:'Atrofia',t9:'Cicatriz'};
+const DECKS={
+t1:[
+{q:'Un queratinocito asciende desde la capa basal y en el estrato granuloso pierde el núcleo. ¿Qué célula resulta y qué papel cumple en la barrera?',a:'Un corneocito: célula plana sin núcleo que, unida por lípidos, forma el estrato córneo que impide la pérdida de agua.',h:'Ladrillos y cemento.'},
+{q:'Si la proliferación basal se acelera, ¿cómo llegan los corneocitos a la superficie y qué signo se ve?',a:'Llegan inmaduros y todavía unidos; se desprenden en láminas gruesas visibles, es decir, escamas.',h:'Piensa en la velocidad de renovación.'},
+{q:'Escama: acúmulo visible de láminas de {{estrato córneo}} desprendidas, por queratinización o {{descamación}} alterada.',a:'estrato córneo; descamación',h:'Es la capa más externa de la epidermis.'},
+{q:'¿Cómo separas una escama de una costra al despegarla?',a:'La escama es estrato córneo y deja piel íntegra debajo; la costra es exudado seco y deja una erosión o úlcera húmeda.',h:'Mira qué queda debajo.'},
+{q:'Placas rojas bien delimitadas con láminas blanco-plateadas que, al raspar, dejan puntos sangrantes: ¿qué tipo de escama y qué signo?',a:'Escama psoriasiforme gruesa y plateada; signo de Auspitz.',h:'El raspado mete en el nombre a un autor.'},
+{q:'Lámina fina de escama, adherida por el centro y libre en el borde, que dibuja un anillo dentro del margen de la lesión: ¿cómo se llama?',a:'Collarete; es típico de la pitiriasis rosada.',h:'Su nombre alude a un cuello.'}
+],
+t2:[
+{q:'En una herida sangrante, ¿qué proteína forma la red que atrapa células y luego se seca como costra hemática?',a:'Fibrina, formada a partir del fibrinógeno por acción de la trombina.',h:'La cascada de coagulación termina en ella.'},
+{q:'¿Qué ocurre bajo una costra mientras está pegada y qué indica que se caiga sola?',a:'Los queratinocitos migran desde los bordes y los anexos y reepitelizan el lecho; al caer sola, ya hay epidermis nueva debajo.',h:'La costra protege una reparación en marcha.'},
+{q:'Costra: exudado {{seco}} y adherente de suero, sangre o {{pus}} sobre una erosión o una úlcera.',a:'seco; pus',h:'Se forma cuando el líquido se evapora.'},
+{q:'Una costra amarilla meloso, otra pardo-negra y otra amarillo verdosa espesa: ¿qué líquido forma cada una?',a:'Melicérica: suero; pardo-negra: sangre; amarillo verdosa espesa: pus.',h:'El color orienta el origen.'},
+{q:'Placa negra, seca, dura y de borde definido sobre el sacro de un paciente encamado: ¿costra o escara?',a:'Escara: es tejido muerto sobre una úlcera por presión, no exudado seco.',h:'Una es tejido; la otra, secreción.'}
+],
+t3:[
+{q:'Si fallan los hemidesmosomas y las fibrillas de anclaje de la unión dermoepidérmica, ¿qué lesión se forma y entre qué planos?',a:'Una ampolla subepidérmica: la epidermis se despega de la dermis; su techo roto deja una erosión.',h:'El pegamento entre dos capas.'},
+{q:'¿Por qué una erosión cura sin cicatriz?',a:'Porque la membrana basal y la dermis quedan íntegras y los queratinocitos del borde y del folículo reepitelizan el lecho.',h:'La dermis conserva sus reservas.'},
+{q:'Erosión: pérdida de {{epidermis}} que no alcanza la {{dermis}}, húmeda y sin cicatriz.',a:'epidermis; dermis',h:'Es la pérdida más superficial.'},
+{q:'¿Qué criterio separa erosión de úlcera?',a:'La profundidad: la erosión solo pierde epidermis y cura sin cicatriz; la úlcera llega a la dermis o más y deja cicatriz.',h:'Piensa en el plano que se alcanza.'},
+{q:'Ampollas fláccidas en la boca y el tronco que se rompen y dejan áreas rojas y húmedas con restos del techo en los bordes: ¿qué lesión secundaria predomina?',a:'Erosión; en la mucosa casi nunca se forma costra por la humedad.',h:'La mucosa siempre está húmeda.'}
+],
+t4:[
+{q:'Si el flujo arterial al lecho dérmico cae por debajo de lo que necesita, ¿qué le pasa a la epidermis y qué lesión resulta?',a:'La epidermis, que se nutre por difusión desde la dermis, se necrosa y aparece una úlcera distal, dolorosa y con piel fría.',h:'La epidermis no tiene vasos propios.'},
+{q:'Una presión sostenida sobre una prominencia ósea comprime los capilares: ¿qué secuencia lleva a la úlcera y dónde aparece?',a:'Compresión, isquemia y necrosis de piel y tejido blando; en sacro, trocánter o talón.',h:'Piensa en los puntos de apoyo del paciente encamado.'},
+{q:'Úlcera: pérdida de epidermis y {{dermis}}, al menos en parte, que cura con {{cicatriz}}.',a:'dermis; cicatriz',h:'Se diferencia de la erosión por la profundidad.'},
+{q:'¿Qué relación hay entre escara y úlcera?',a:'La escara es tejido necrótico seco adherido sobre el fondo de una úlcera; no es lo mismo que una costra de exudado.',h:'Una cubre a la otra.'},
+{q:'Al explorar una úlcera, ¿qué se palpa para valorar la base y qué sugiere una base dura e indolora?',a:'Se palpa entre dos dedos; una base indurada e indolora sugiere chancro sifilítico o neoplasia.',h:'No todas las úlceras duelen.'}
+],
+t5:[
+{q:'En la piel normal, ¿qué proteína dérmica permite recuperar la forma tras estirarla y cuál da resistencia a la tracción?',a:'La elastina recupera la forma; el colágeno resiste la tracción.',h:'Una es fibra elástica, la otra, de tracción.'},
+{q:'Si el estrato córneo pierde ceramidas y agua, ¿qué propiedad mecánica cambia y qué lesión puede aparecer con la flexión repetida?',a:'Pierde flexibilidad; con la flexión se abre una fisura perpendicular a la tensión.',h:'Piensa en un cartón seco.'},
+{q:'Fisura: hendidura {{lineal}} que atraviesa la epidermis hasta la {{dermis}}, dolorosa y sobre piel con poca elasticidad.',a:'lineal; dermis',h:'Es estrecha pero profunda.'},
+{q:'¿Cómo separas una fisura de una excoriación lineal?',a:'La fisura es hendidura por tensión en pliegues y se abre al estirar; la excoriación es erosión por uñas, con costra hemática y prurito.',h:'Una la causa la tensión; la otra, el rascado.'},
+{q:'Comisuras de la boca con grietas dolorosas y maceración en quien se lame los labios: ¿qué lesión y qué localización típica?',a:'Fisuras en un pliegue: queilitis angular.',h:'Las comisuras son zonas de flexión.'},
+{q:'¿Qué maniobra deja ver una fisura poco visible?',a:'Estirar la piel a ambos lados o flexionar la zona para abrir la hendidura.',h:'Se abre en el sentido contrario a su cierre.'}
+],
+t6:[
+{q:'¿Qué fibras conducen el picor y por dónde llega la señal al cerebro?',a:'Fibras C amielínicas; hacen sinapsis en el asta dorsal y suben por el tracto espinotalámico.',h:'Son las mismas fibras lentas del dolor.'},
+{q:'¿Por qué rascar alivia un momento pero perpetúa el picor?',a:'El dolor leve inhibe la señal del picor en la médula, pero el daño de la barrera libera mediadores que reactivan las fibras C.',h:'Alivio inmediato, daño posterior.'},
+{q:'Excoriación: erosión o úlcera superficial, {{lineal}}, por rascado con {{uñas}}, con costra hemática.',a:'lineal; uñas',h:'La forma sigue el gesto de rascar.'},
+{q:'Excoriaciones de bordes angulares en distintas etapas de curación, sin dermatosis ni prurito que las expliquen: ¿qué cambia respecto de la excoriación por picor?',a:'La causa no es el picor sino la manipulación compulsiva: trastorno de excoriación.',h:'Falta la dermatosis primaria.'},
+{q:'Espalda con líneas costrosas pero con la zona central alta sin lesión: ¿qué dato aporta?',a:'Indica prurito: el rascado ocurre donde la mano alcanza y la zona inaccesible queda indemne (signo de la mariposa).',h:'La mano no llega a todas partes.'}
+],
+t7:[
+{q:'La fricción repetida sobre la epidermis, ¿qué cambio histológico produce el engrosamiento?',a:'Acantosis (más capas del estrato espinoso) e hiperqueratosis, por mayor proliferación basal.',h:'Más células en el estrato espinoso y en el córneo.'},
+{q:'Al engrosarse la epidermis, ¿qué pasa con las marcas cutáneas normales y qué lesión resulta?',a:'Se acentúan y forman una cuadrícula marcada: liquenificación. En la atrofia, en cambio, se borran.',h:'Es la superficie de corteza.'},
+{q:'Liquenificación: engrosamiento con {{marcas cutáneas}} acentuadas por {{rascado}} crónico.',a:'marcas cutáneas; rascado',h:'Cuenta la historia de un picor largo.'},
+{q:'¿Qué separa la liquenificación del liquen plano, pese al nombre?',a:'La liquenificación es lesión secundaria por rascado, en placa cuadriculada; el liquen plano es una dermatosis con pápulas poligonales violáceas.',h:'Una es consecuencia, la otra es enfermedad.'},
+{q:'¿Con qué dos maniobras evidencias la liquenificación?',a:'Luz tangencial, que muestra la cuadrícula, y palpación o pellizco, que muestra engrosamiento y rugosidad.',h:'Una es visual, la otra táctil.'}
+],
+t8:[
+{q:'Si la síntesis de colágeno cae y las metaloproteinasas siguen degradándolo, ¿qué pasa con el grosor dérmico y qué signo aparece?',a:'La dermis se adelgaza: piel laxa con depresión y vasos visibles.',h:'Se fabrica menos de lo que se pierde.'},
+{q:'¿Qué función pierde la hipodermis y qué signo aparece si se pierde su grasa?',a:'Pierde amortiguación y relleno; aparece una depresión localizada (lipoatrofia).',h:'La grasa subcutánea rellena el volumen.'},
+{q:'Atrofia: {{disminución}} del espesor de la epidermis, la dermis o la {{hipodermis}}.',a:'disminución; hipodermis',h:'Pueden fallar tres capas.'},
+{q:'Si una zona se ve deprimida, ¿cómo separas la atrofia de la erosión?',a:'En la atrofia la piel está íntegra y adelgazada; en la erosión falta la epidermis y la superficie es húmeda.',h:'Mira la continuidad de la superficie.'},
+{q:'Piel como papel de cigarrillo, que se arruga al pellizcar y deja ver vasos: ¿qué capa está atrofiada?',a:'La epidermis, con probable compromiso de la dermis superficial.',h:'La capa más externa es la que da brillo.'}
+],
+t9:[
+{q:'¿Por qué una cicatriz no tiene pelo ni sudor?',a:'Porque el daño destruyó folículos y glándulas, que no se regeneran; el tejido fibroso que los reemplaza carece de anexos.',h:'Los anexos viven en la dermis.'},
+{q:'¿Qué células contraen la herida y qué les ocurre al cerrarse normalmente?',a:'Los miofibroblastos; mueren por apoptosis. Si persisten, se acumula colágeno de más.',h:'Si no mueren, siguen fabricando.'},
+{q:'Cicatriz: reemplazo fibroso de dermis dañada, sin {{anexos}} ni marcas cutáneas; el {{queloide}} rebasa los bordes de la herida.',a:'anexos; queloide',h:'Hay un tipo que se sale del borde.'},
+{q:'¿Qué separa la cicatriz hipertrófica del queloide?',a:'La hipertrófica se queda dentro de los bordes de la herida y puede aplanarse; el queloide los rebasa y no regresa por sí solo.',h:'Mira dónde está el borde de la herida original.'},
+{q:'Piel de las manos firme, brillante y que no se pliega, sin herida previa: ¿qué hallazgo es?',a:'Esclerosis (induración dérmica), como en la morfea o la esclerodermia; no es cicatriz porque no hubo herida.',h:'Falta el antecedente de lesión.'},
+{q:'Cicatrices deprimidas de bordes definidos en las mejillas tras acné: ¿qué tipo son?',a:'Cicatrices atróficas.',h:'Hay hundimiento, no relieve.'}
+]
+};
+DECKS.tg=[].concat.apply([],Object.keys(TERMS).map(function(k){return DECKS[k].map(function(c){return {q:c.q,a:c.a,h:c.h,t:k};});}));
+const RC={};
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function el(k,s){return document.getElementById('rc-'+k+'-'+s);}
+function isCloze(c){return c.q.indexOf('{{')>=0;}
+function front(c){return esc(c.q).replace(/\{\{[^}]*\}\}/g,'[ ? ]');}
+function back(c){return esc(c.q).replace(/\{\{([^}]*)\}\}/g,'<b>$1</b>');}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function show(id,btn){
+  document.querySelectorAll('.tab').forEach(function(s){s.classList.toggle('active',s.id===id);});
+  document.querySelectorAll('.tb').forEach(function(b){b.classList.toggle('active',b===btn);});
+  try{btn.scrollIntoView({inline:'center',block:'nearest'});}catch(e){}
+}
+function tog(b){b.parentElement.classList.toggle('op');}
+function rc_reset(k){
+  var n=DECKS[k].length,idx=[];
+  for(var i=0;i<n;i++)idx.push(i);
+  RC[k]={queue:shuffle(idx),first:{},fails:{},shown:false,done:0,n:n};
+  if(el(k,'e'))el(k,'e').innerHTML='';
+  rc_render(k);
+}
+function rc_render(k){
+  var s=RC[k],card=el(k,'c');
+  if(!card)return;
+  if(!s.queue.length){rc_end(k);return;}
+  var c=DECKS[k][s.queue[0]],f=s.fails[s.queue[0]]||0;
+  el(k,'n').textContent='Tarjeta '+(s.done+1)+' de '+s.n+(k==='tg'?' · '+TERMS[c.t]:'');
+  var h='<p class="rc-q">'+(s.shown&&isCloze(c)?back(c):front(c))+'</p>';
+  if(s.shown&&!isCloze(c))h+='<p class="rc-a"><b>Respuesta.</b> '+esc(c.a)+'</p>';
+  if(!s.shown&&f>=2)h+='<p class="rc-hint">Pista: '+esc(c.h)+'</p>';
+  card.innerHTML=h;
+  var b='';
+  if(!s.shown){b+='<button class="go" onclick="rc_show(\''+k+'\')">Mostrar respuesta</button>';}
+  else{
+    b+='<button class="gr ok" onclick="rc_grade(\''+k+'\',\'ok\')">La sabía</button>';
+    b+='<button class="gr mid" onclick="rc_grade(\''+k+'\',\'mid\')">A medias</button>';
+    b+='<button class="gr ko" onclick="rc_grade(\''+k+'\',\'ko\')">No la sabía</button>';
+  }
+  b+='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  el(k,'b').innerHTML=b;
+}
+function rc_show(k){RC[k].shown=true;rc_render(k);}
+function rc_grade(k,g){
+  var s=RC[k],i=s.queue.shift();
+  if(s.first[i]===undefined)s.first[i]=(g==='ok');
+  if(g==='ok'){s.done++;}
+  else{s.fails[i]=(s.fails[i]||0)+1;s.queue.push(i);}
+  s.shown=false;
+  rc_render(k);
+}
+function rc_verdict(p){return p>=80?['ok','Término consolidado']:['rep','Repasar hoy'];}
+function rc_end(k){
+  var s=RC[k],ok=0,i,rows='';
+  for(i=0;i<s.n;i++)if(s.first[i])ok++;
+  var p=Math.round(100*ok/s.n),v=rc_verdict(p);
+  el(k,'n').textContent='Mazo completado';
+  el(k,'c').innerHTML='<p class="rc-q">Cola agotada: todas las tarjetas se resolvieron.</p>';
+  el(k,'b').innerHTML='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  var h='<div class="rc-end '+v[0]+'">Aciertos al primer intento: '+ok+' de '+s.n+' ('+p+' %). <b>'+v[1]+'</b>.</div>';
+  if(k==='tg'){
+    Object.keys(TERMS).forEach(function(t){
+      var tot=0,hit=0;
+      for(i=0;i<s.n;i++){if(DECKS.tg[i].t===t){tot++;if(s.first[i])hit++;}}
+      var pp=Math.round(100*hit/tot),vv=rc_verdict(pp);
+      rows+='<tr><td>'+esc(TERMS[t])+'</td><td>'+hit+' de '+tot+' ('+pp+' %)</td><td>'+vv[1]+'</td></tr>';
+    });
+    h+='<div class="tw"><table><thead><tr><th>Término</th><th>Aciertos 1er intento</th><th>Veredicto</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  }
+  el(k,'e').innerHTML=h;
+}
+Object.keys(DECKS).forEach(rc_reset);
+</script>
+</div></body></html>

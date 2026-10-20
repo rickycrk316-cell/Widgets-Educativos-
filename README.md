@@ -20,6 +20,10 @@ Widgets HTML de estudio, autocontenidos y offline (skill `widget-ensenanza` v10,
 | | `Cojera_dolorosa_mecanica_widget_v10.html` | multi | Perthes (principal), epifisiólisis (amenaza), Osgood-Schlatter | 27 |
 | | `Marcha_sin_dolor_widget_v10.html` | multi | DDC (principal), dismetría, neuromuscular, Guillain-Barré (amenaza) | 65 |
 | | `Forma_piernas_pies_widget_v10.html` | multi | genu varo/valgo (principal), anteversión femoral, pie plano, pie cavo, equinovaro (amenaza) | 26 |
+| Dermatología · lesiones elementales | `Definiciones_lesiones_primarias_solidas.html` | definiciones | 9 términos + repaso (mácula, mancha, pápula, placa, nódulo, tumor, habón, quiste, comedón) | 8 |
+| | `Definiciones_lesiones_liquidas_vasculares.html` | definiciones | 9 términos + repaso (vesícula, ampolla, pústula, absceso, púrpura, equimosis, telangiectasia, surco, vitropresión/Nikolsky) | 5 |
+| | `Definiciones_lesiones_secundarias.html` | definiciones | 9 términos + repaso (escama, costra, erosión, úlcera, fisura, excoriación, liquenificación, atrofia, cicatriz) | 4 |
+| | `Definiciones_descripcion_morfologica.html` | definiciones | 9 términos + repaso (eritema, anular, numular, diana, lineal, reticulado, herpetiforme, dermatómica, fotodistribución) | 12 |
 
 `[VERIFICAR]` = datos marcados `[VERIFICAR EN FUENTE]`: compruébalos antes de estudiar con ellos.
 
