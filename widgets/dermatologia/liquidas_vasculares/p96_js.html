@@ -1,0 +1,140 @@
+<script>
+const TERMS={t1:'Vesícula',t2:'Ampolla',t3:'Pústula',t4:'Absceso',t5:'Púrpura',t6:'Equimosis',t7:'Telangiectasia',t8:'Surco acarino',t9:'Vitropresión y signo de Nikolsky'};
+const DECKS={
+t1:[
+{q:'Los queratinocitos se unen por desmosomas. Si ese anclaje se pierde y las células se separan, ¿cómo se llama el proceso y qué lesión puede resultar?',a:'Acantólisis; una vesícula o ampolla intraepidérmica.',h:'El prefijo indica pérdida de las espinas o puentes entre células.'},
+{q:'Los hemidesmosomas anclan la capa basal a la lámina basal. Si ese anclaje falla, ¿dónde queda el líquido y cómo es el techo?',a:'Debajo de toda la epidermis (subepidérmica); el techo es la epidermis entera, grueso y tenso.',h:'Piensa qué capas quedan por encima del plano de separación.'},
+{q:'Vesícula: elevación circunscrita de contenido {{líquido seroso claro}} con diámetro menor de {{1 cm}} según Bolognia.',a:'líquido seroso claro; 1 cm',h:'Otras fuentes usan una cifra menor.'},
+{q:'Una lesión elevada de 4 mm tiene contenido turbio, blanco-amarillento. ¿Es vesícula o pústula y qué la separa?',a:'Pústula; su contenido es pus (neutrófilos), no líquido claro.',h:'Se separan por el contenido.'},
+{q:'Un clínico palpa una lesión de 3 mm llena de líquido claro, con techo fino que se rompe con el roce. ¿Qué lesión es y qué queda al romperse?',a:'Vesícula; queda una erosión húmeda y luego costra.',h:'El techo fino explica por qué no dura.'}
+],
+t2:[
+{q:'En una ampolla subepidérmica, ¿qué forma el techo y qué aspecto da?',a:'La epidermis entera; la ampolla es tensa y se rompe con dificultad.',h:'Piensa qué queda por encima del plano de separación.'},
+{q:'Si la separación ocurre entre queratinocitos, ¿qué techo queda y cómo se comporta la ampolla?',a:'Techo fino de pocas capas celulares; ampolla flácida que se rompe con facilidad y deja erosión.',h:'Hay menos tejido sobre el líquido.'},
+{q:'Ampolla (bulla): lesión de contenido {{líquido}} con diámetro de {{1 cm o más}} según Bolognia.',a:'líquido; 1 cm o más',h:'Es la vesícula grande.'},
+{q:'Dos pacientes con ampollas: A tiene ampollas tensas que duran días; B, ampollas flácidas que se rompen enseguida. ¿Qué nivel de separación sugiere cada una?',a:'A: subepidérmica (penfigoide). B: intraepidérmica (pénfigo vulgar).',h:'El techo grueso resiste; el fino no.'},
+{q:'Un paciente tiene erosiones dolorosas redondeadas y no se vio ninguna ampolla íntegra. ¿Qué lesión primaria precedió y por qué no se ve?',a:'Una ampolla flácida; el techo fino se rompe y deja la erosión.',h:'El techo fino dura poco.'}
+],
+t3:[
+{q:'El sebo sale por el infundíbulo folicular. Si el orificio se obstruye y hay inflamación, ¿qué lesión centrada en un pelo aparece y qué célula forma el pus?',a:'Pústula folicular; los neutrófilos.',h:'Es la célula inflamatoria aguda predominante.'},
+{q:'En las palmas no hay folículos pilosos. Si aparecen pústulas estériles allí, ¿son foliculares o no foliculares?',a:'No foliculares: no pueden centrarse en un pelo.',h:'Piensa qué estructura falta en la palma.'},
+{q:'Pústula: elevación circunscrita con contenido {{purulento}}, formado por {{neutrófilos}} y restos celulares.',a:'purulento; neutrófilos',h:'Es el contenido de color blanquecino o amarillento.'},
+{q:'Una lesión de 3 mm tiene líquido turbio. ¿Qué dato distingue una vesícula enturbiada de una pústula verdadera?',a:'La vesícula empezó con líquido claro y suele estar agrupada; la pústula contiene pus desde el inicio.',h:'Mira la evolución y el aspecto inicial.'},
+{q:'¿Toda pústula implica infección bacteriana?',a:'No; puede ser estéril, como en la psoriasis pustulosa.',h:'Hay pústulas sin microorganismos.'}
+],
+t4:[
+{q:'La dermis reticular es densa y poco extensible. ¿Qué consecuencia tiene eso para una colección de pus en ella?',a:'Comprime los nervios sensitivos y da dolor intenso; el tejido apenas cede.',h:'Piensa en lo que ocurre al llenar un espacio rígido.'},
+{q:'La hipodermis tiene lóbulos de grasa y septos con vasos y nervios. ¿Qué signo palpatorio indica líquido bajo la piel y cómo se busca?',a:'Fluctuación; un dedo presiona y el otro, en el lado opuesto, percibe la onda.',h:'Se usan los dos índices.'},
+{q:'Absceso: colección de {{pus}} en {{dermis o hipodermis}}, con signo de {{fluctuación}}.',a:'pus; dermis o hipodermis; fluctuación',h:'Se palpa como una bolsa de líquido.'},
+{q:'Una placa roja, caliente y dolorosa no transmite onda a la palpación. ¿Es absceso o celulitis?',a:'Celulitis: hay inflamación difusa sin colección.',h:'Falta el signo de la colección.'},
+{q:'¿Qué diferencia a la pústula del absceso por profundidad y tamaño?',a:'La pústula es epidérmica y de milímetros; el absceso es de dermis o hipodermis, centimétrico y palpable.',h:'Uno se ve; el otro se palpa.'}
+],
+t5:[
+{q:'Las vénulas poscapilares son la diana de la vasculitis de pequeño vaso. Si su pared se inflama y se rompe, ¿qué lesión aparece y qué la distingue al tacto?',a:'Púrpura palpable: está elevada porque hay infiltrado inflamatorio en la pared.',h:'La inflamación añade volumen.'},
+{q:'En la hemostasia primaria, las plaquetas forman el tapón sobre el endotelio lesionado. Si hay muy pocas, ¿qué lesión puntiforme aparece y dónde primero?',a:'Petequias, sobre todo en piernas (zonas declive).',h:'Es el sitio donde la presión hidrostática es mayor.'},
+{q:'La púrpura no {{blanquea}} a la vitropresión porque los eritrocitos están {{fuera del vaso}}.',a:'blanquea; fuera del vaso',h:'La presión solo vacía lo que está dentro de los vasos.'},
+{q:'Una mancha roja plana desaparece al presionar con un vidrio. ¿Es púrpura o eritema?',a:'Eritema por vasodilatación; la púrpura no blanquea.',h:'Depende de si la sangre está dentro del vaso.'},
+{q:'Dos pacientes con puntos rojos en las piernas: A tiene plaquetas bajas y lesiones planas; B, lesiones elevadas y palpables con inflamación vascular. ¿Qué lesión tiene cada uno?',a:'A: petequias o púrpura no palpable. B: púrpura palpable.',h:'La diferencia es la palpación.'}
+],
+t6:[
+{q:'Los macrófagos degradan la hemoglobina extravasada. ¿Qué pigmento da el color verdoso a la equimosis y en cuál se convierte después, con color amarillo?',a:'Biliverdina; se convierte en bilirrubina.',h:'Es la misma secuencia que sigue el hemo en el hígado.'},
+{q:'Cuando la sangre extravasada se resuelve, ¿qué pigmento pardo puede persistir y por qué?',a:'Hemosiderina: el hierro liberado de la hemoglobina se almacena en macrófagos.',h:'Contiene hierro.'},
+{q:'Una equimosis {{no blanquea}} a la vitropresión y {{cambia de color}} con los días.',a:'no blanquea; cambia de color',h:'Lo primero indica sangre fuera del vaso.'},
+{q:'Una mancha azul-grisácea sacra presente desde el nacimiento no cambia con los días. ¿Es equimosis?',a:'No; es una mancha mongólica (melanocitosis dérmica): estable, sin sangre.',h:'Una equimosis sí cambia de color.'},
+{q:'¿Qué separa la equimosis del hematoma?',a:'La equimosis es plana, sin masa; el hematoma es una colección de sangre palpable y elevada.',h:'Se separan por el relieve.'}
+],
+t7:[
+{q:'El plexo subpapilar está justo bajo la epidermis. Si sus capilares se dilatan de forma permanente, ¿por qué se ven como líneas finas individuales?',a:'Porque están superficiales y la epidermis fina deja ver cada vaso.',h:'Piensa en la distancia entre vaso y superficie.'},
+{q:'La telangiectasia {{blanquea}} a la vitropresión porque la sangre sigue {{dentro del vaso}}.',a:'blanquea; dentro del vaso',h:'La presión vacía el vaso dilatado.'},
+{q:'Un punto rojo de 1 mm no blanquea al presionar con un vidrio. ¿Es telangiectasia o petequia?',a:'Petequia: la sangre está fuera del vaso.',h:'Lo que no blanquea no está en el lumen.'},
+{q:'Una mancha roja confluente en la mejilla no muestra vasos individuales. ¿Es eritema o telangiectasia?',a:'Eritema: la telangiectasia muestra vasos finos individuales.',h:'Busca si se identifican hilos aislados.'},
+{q:'Una mujer tiene líneas rojas finas ramificadas en mejillas y alas nasales, que empeoran con el calor. ¿Qué lesión vascular y qué enfermedad prototipo sugieren?',a:'Telangiectasias; rosácea.',h:'El calor dilata los vasos faciales.'}
+],
+t8:[
+{q:'El estrato córneo no tiene células vivas ni vasos. ¿Por qué el surco acarino en sí no sangra, pero el paciente tiene prurito intenso?',a:'El ácaro está en una capa muerta y avascular; el prurito es hipersensibilidad de la epidermis y dermis vivas.',h:'Distingue la capa del ácaro de la capa que reacciona.'},
+{q:'Surco acarino: trayecto {{lineal o serpiginoso}} excavado en el {{estrato córneo}} por la hembra de {{Sarcoptes scabiei}}.',a:'lineal o serpiginoso; estrato córneo; Sarcoptes scabiei',h:'El ácaro de la sarna.'},
+{q:'Una línea costrosa de 2 cm aparece en la espalda de un paciente que se rasca mucho. ¿Es surco acarino?',a:'No; es una excoriación por rascado. El surco es fino, previo al rascado y típico de dedos y muñecas.',h:'Mira el sitio y la causa de la línea.'},
+{q:'Un trayecto serpiginoso eritematoso avanza día a día en el pie tras la playa. ¿Es surco acarino?',a:'No; es larva migrans cutánea. El surco acarino es corto y estable.',h:'Compara la evolución de ambos.'},
+{q:'¿Dónde se buscan surcos acarinos y con qué técnica?',a:'En espacios interdigitales, caras laterales de dedos y muñecas; con luz tangencial, lupa o dermatoscopio.',h:'Son zonas de capa córnea fina.'}
+],
+t9:[
+{q:'En la vitropresión el vidrio vacía los vasos dilatados. ¿Qué desaparece y qué persiste, y por qué?',a:'El eritema vascular desaparece porque la sangre está dentro del vaso; la púrpura persiste porque los eritrocitos están fuera.',h:'Compara sangre dentro y fuera del vaso.'},
+{q:'Si autoanticuerpos dañan los desmosomas, ¿qué ocurre al frotar con lateralidad la piel sana junto a una erosión?',a:'La epidermis se desprende: Nikolsky positivo.',h:'Piensa en qué mantiene unidas las células.'},
+{q:'En la vitropresión, el eritema {{blanquea}} y la púrpura {{no blanquea}}; en el Nikolsky la presión es {{tangencial}}.',a:'blanquea; no blanquea; tangencial',h:'Una maniobra explora vasos; la otra, adhesión.'},
+{q:'Se presiona una ampolla íntegra y el líquido se extiende hacia la piel vecina. ¿Es Nikolsky o Asboe-Hansen?',a:'Asboe-Hansen; el Nikolsky se explora sobre piel sana.',h:'Fíjate dónde se aplica la presión.'},
+{q:'Tras la vitropresión de un nódulo queda un color amarillo-pardo, como jalea de manzana. ¿Qué sugiere?',a:'Infiltrado granulomatoso, como en la sarcoidosis o el lupus vulgar.',h:'No es sangre ni vasodilatación.'}
+]
+};
+DECKS.tg=[].concat.apply([],Object.keys(TERMS).map(function(k){return DECKS[k].map(function(c){return {q:c.q,a:c.a,h:c.h,t:k};});}));
+const RC={};
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function el(k,s){return document.getElementById('rc-'+k+'-'+s);}
+function isCloze(c){return c.q.indexOf('{{')>=0;}
+function front(c){return esc(c.q).replace(/\{\{[^}]*\}\}/g,'[ ? ]');}
+function back(c){return esc(c.q).replace(/\{\{([^}]*)\}\}/g,'<b>$1</b>');}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function show(id,btn){
+  document.querySelectorAll('.tab').forEach(function(s){s.classList.toggle('active',s.id===id);});
+  document.querySelectorAll('.tb').forEach(function(b){b.classList.toggle('active',b===btn);});
+  try{btn.scrollIntoView({inline:'center',block:'nearest'});}catch(e){}
+}
+function tog(b){b.parentElement.classList.toggle('op');}
+function rc_reset(k){
+  var n=DECKS[k].length,idx=[];
+  for(var i=0;i<n;i++)idx.push(i);
+  RC[k]={queue:shuffle(idx),first:{},fails:{},shown:false,done:0,n:n};
+  if(el(k,'e'))el(k,'e').innerHTML='';
+  rc_render(k);
+}
+function rc_render(k){
+  var s=RC[k],card=el(k,'c');
+  if(!card)return;
+  if(!s.queue.length){rc_end(k);return;}
+  var c=DECKS[k][s.queue[0]],f=s.fails[s.queue[0]]||0;
+  el(k,'n').textContent='Tarjeta '+(s.done+1)+' de '+s.n+(k==='tg'?' · '+TERMS[c.t]:'');
+  var h='<p class="rc-q">'+(s.shown&&isCloze(c)?back(c):front(c))+'</p>';
+  if(s.shown&&!isCloze(c))h+='<p class="rc-a"><b>Respuesta.</b> '+esc(c.a)+'</p>';
+  if(!s.shown&&f>=2)h+='<p class="rc-hint">Pista: '+esc(c.h)+'</p>';
+  card.innerHTML=h;
+  var b='';
+  if(!s.shown){b+='<button class="go" onclick="rc_show(\''+k+'\')">Mostrar respuesta</button>';}
+  else{
+    b+='<button class="gr ok" onclick="rc_grade(\''+k+'\',\'ok\')">La sabía</button>';
+    b+='<button class="gr mid" onclick="rc_grade(\''+k+'\',\'mid\')">A medias</button>';
+    b+='<button class="gr ko" onclick="rc_grade(\''+k+'\',\'ko\')">No la sabía</button>';
+  }
+  b+='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  el(k,'b').innerHTML=b;
+}
+function rc_show(k){RC[k].shown=true;rc_render(k);}
+function rc_grade(k,g){
+  var s=RC[k],i=s.queue.shift();
+  if(s.first[i]===undefined)s.first[i]=(g==='ok');
+  if(g==='ok'){s.done++;}
+  else{s.fails[i]=(s.fails[i]||0)+1;s.queue.push(i);}
+  s.shown=false;
+  rc_render(k);
+}
+function rc_verdict(p){return p>=80?['ok','Término consolidado']:['rep','Repasar hoy'];}
+function rc_end(k){
+  var s=RC[k],ok=0,i,rows='';
+  for(i=0;i<s.n;i++)if(s.first[i])ok++;
+  var p=Math.round(100*ok/s.n),v=rc_verdict(p);
+  el(k,'n').textContent='Mazo completado';
+  el(k,'c').innerHTML='<p class="rc-q">Cola agotada: todas las tarjetas se resolvieron.</p>';
+  el(k,'b').innerHTML='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  var h='<div class="rc-end '+v[0]+'">Aciertos al primer intento: '+ok+' de '+s.n+' ('+p+' %). <b>'+v[1]+'</b>.</div>';
+  if(k==='tg'){
+    Object.keys(TERMS).forEach(function(t){
+      var tot=0,hit=0;
+      for(i=0;i<s.n;i++){if(DECKS.tg[i].t===t){tot++;if(s.first[i])hit++;}}
+      var pp=Math.round(100*hit/tot),vv=rc_verdict(pp);
+      rows+='<tr><td>'+esc(TERMS[t])+'</td><td>'+hit+' de '+tot+' ('+pp+' %)</td><td>'+vv[1]+'</td></tr>';
+    });
+    h+='<div class="tw"><table><thead><tr><th>Término</th><th>Aciertos 1er intento</th><th>Veredicto</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  }
+  el(k,'e').innerHTML=h;
+}
+Object.keys(DECKS).forEach(rc_reset);
+</script>
+</div></body></html>

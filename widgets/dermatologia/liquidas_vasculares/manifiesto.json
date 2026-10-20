@@ -1,0 +1,9 @@
+{
+ "titulo": "Definiciones · Lesiones líquidas y vasculares",
+ "salida": "../Definiciones_lesiones_liquidas_vasculares.html",
+ "tipo": "definiciones",
+ "terminos": 9,
+ "canonicos": [2, 0, 1, 1, 2, 1, 0, 1, 0],
+ "remisiones": [0, 2, 1, 0, 0, 2, 1, 1, 2],
+ "tarjetas": [5, 5, 5, 5, 5, 5, 5, 5, 5]
+}
