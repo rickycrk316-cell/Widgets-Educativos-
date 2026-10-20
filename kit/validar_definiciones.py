@@ -1,4 +1,7 @@
-"""Validador del widget de definiciones (skill definiciones v5.1). Uso: python3 validar_definiciones.py widget.html"""
+"""Validador del widget de definiciones (skill definiciones v5.1).
+Uso: python3 validar_definiciones.py widget.html [manifiesto.json]
+El manifiesto (opcional) puede traer 'canonicos', 'remisiones' y 'tarjetas' (listas de 9 enteros);
+cada clave que falte o sea inválida conserva el valor por defecto (widget de patología urinaria baja)."""
 import re, sys, subprocess, json, os
 from html.parser import HTMLParser
 import tempfile
@@ -57,7 +60,14 @@ chk('10 pestañas (9 + Repaso global)',list(p.tabs)==ids,str(list(p.tabs)))
 btn=re.findall(r"onclick=\"show\('(\w+)',this\)\"",body_nojs)
 chk('show(id) -> pestaña existente y 1:1',btn==ids,str(btn))
 chk('barra: 10 botones tb',len(re.findall(r'class="tb( active)?"',body_nojs))==10)
+# Valores esperados: por defecto (patología urinaria baja); el manifiesto los sobrescribe si trae claves válidas.
 exp_can=[3,2,2,1,2,1,2,2,2]; exp_rem=[0,1,1,2,1,1,1,1,1]; exp_card=[6,5,5,5,6,5,5,5,6]
+if len(sys.argv)>2 and os.path.exists(sys.argv[2]):
+    _mf=json.load(open(sys.argv[2],encoding='utf-8'))
+    def _lista9(v): return isinstance(v,list) and len(v)==9 and all(isinstance(x,int) for x in v)
+    if _lista9(_mf.get('canonicos')): exp_can=_mf['canonicos']
+    if _lista9(_mf.get('remisiones')): exp_rem=_mf['remisiones']
+    if _lista9(_mf.get('tarjetas')): exp_card=_mf['tarjetas']
 chk('prerrequisitos canónicos vs manifiesto',[p.tabs[i]['pre_acc'] for i in ids[:9]]==exp_can,str([p.tabs[i]['pre_acc'] for i in ids[:9]]))
 chk('remisiones vs manifiesto',[p.tabs[i]['rem'] for i in ids[:9]]==exp_rem,str([p.tabs[i]['rem'] for i in ids[:9]]))
 chk('tope prerrequisitos <=5',max(exp_can)<=5 and all(p.tabs[i]['pre_acc']<=5 for i in ids[:9]))

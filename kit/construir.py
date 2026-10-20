@@ -35,7 +35,7 @@ def construir(d: pathlib.Path, validar: bool) -> bool:
     if not validar:
         return True
     if tipo == 'definiciones':
-        cmd = [sys.executable, str(KIT / 'validar_definiciones.py'), str(out)]
+        cmd = [sys.executable, str(KIT / 'validar_definiciones.py'), str(out), str(d / 'manifiesto.json')]
     else:
         # validar.py rechaza claves que no conoce: se le pasa el manifiesto sin las de ensamblaje.
         val = {k: v for k, v in m.items() if k not in ('titulo', 'salida', 'tipo')}
