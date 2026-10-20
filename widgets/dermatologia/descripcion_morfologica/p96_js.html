@@ -1,0 +1,143 @@
+<script>
+const TERMS={t1:'Eritema y eritrodermia',t2:'Anular y arciforme',t3:'Numular (discoide)',t4:'Lesión en diana',t5:'Disposición lineal',t6:'Patrón reticulado',t7:'Agrupación herpetiforme',t8:'Distribución dermatómica',t9:'Fotodistribución'};
+const DECKS={
+t1:[
+{q:'Ante un eritema, ¿qué cambia en el plexo vascular superficial al presionar con un vidrio, y por qué la púrpura no se comporta igual?',a:'El plexo se vacía y el eritema blanquea porque la sangre está dentro de los vasos dilatados; la púrpura no blanquea porque los eritrocitos ya salieron del vaso.',h:'Piensa dónde está la sangre en cada caso.'},
+{q:'Al describir una lesión, ¿qué pasos van entre el color y la distribución?',a:'Tamaño, forma y borde, y configuración (en ese orden).',h:'El orden completo empieza por el tipo de lesión y termina en dónde está.'},
+{q:'¿Qué dos hallazgos de la exploración separan una eritrodermia de un eritema localizado?',a:'Compromiso de casi toda la superficie corporal y, con frecuencia, descamación; el eritema localizado afecta solo un área.',h:'Uno depende de cuánta piel está afectada.'},
+{q:'La {{vitropresión}} permite comprobar si un enrojecimiento blanquea y por tanto es eritema.',a:'vitropresión',h:'La maniobra usa un vidrio o portaobjetos.'},
+{q:'Un paciente con psoriasis tiene toda la piel roja, caliente y con descamación fina, y refiere escalofríos. ¿Cómo se llama el cuadro?',a:'Eritrodermia (psoriasis eritrodérmica).',h:'Casi toda la superficie corporal está comprometida.'},
+{q:'¿Qué separa el eritema de la telangiectasia?',a:'El eritema es difuso y reversible, con aumento de sangre en un plexo dilatado; la telangiectasia son vasos finos dilatados y visibles de forma permanente.',h:'Una es un color de fondo y la otra son vasos individuales.'}
+],
+t2:[
+{q:'En una tiña anular, ¿qué proceso explica el aclaramiento del centro?',a:'El proceso avanza hacia afuera y cede detrás del frente: el borde queda activo y el centro, casi normal.',h:'Piensa hacia dónde crece la lesión y qué queda atrás.'},
+{q:'¿Qué ocurre en el estrato córneo del borde activo que forma el collarete?',a:'El recambio se acelera o se inflama y los corneocitos se desprenden en grupos, formando escama visible.',h:'Esta capa está formada por células muertas.'},
+{q:'¿Qué distingue una configuración arciforme de una policíclica?',a:'Arciforme son fragmentos de anillo o arcos; policíclica son anillos que confluyen y forman bordes festoneados.',h:'Una se rompe y la otra se une.'},
+{q:'Una placa de 3 cm con borde rojo y escamoso y centro más claro que crece por semanas es una placa {{anular}}.',a:'anular',h:'Mira qué pasa en el centro.'},
+{q:'¿Cómo se separa una placa anular de una diana?',a:'La anular tiene borde y centro claro; la diana añade un tercer anillo y un centro oscuro o ampolloso.',h:'Cuenta las zonas concéntricas.'}
+],
+t3:[
+{q:'¿Qué proceso epidérmico forma las microvesículas y el exudado de una placa numular de eccema?',a:'Espongiosis: el líquido se acumula entre los queratinocitos, forma cavidades, estas se rompen y dejan exudado y costra.',h:'Ocurre dentro de la epidermis, entre las células.'},
+{q:'En una placa discoide de lupus, ¿por qué se ven tapones y atrofia en el folículo?',a:'La inflamación en la unión dermoepidérmica afecta el folículo: la boca se dilata y se tapona con escama, con atrofia y pérdida de pelo.',h:'Piensa en la relación entre folículo y epidermis.'},
+{q:'¿Cómo se define una lesión numular?',a:'Lesión en forma de moneda, redonda u ovalada, de borde nítido y superficie uniforme hasta el centro.',h:'Piensa en una moneda.'},
+{q:'¿Qué separa una lesión numular de una anular?',a:'En la numular el centro mantiene el mismo aspecto que el borde; en la anular se aclara.',h:'Fíjate en el centro.'},
+{q:'Varón de 60 años con placas redondas de 2 cm, rojas, con exudado y costra, muy pruriginosas, en piernas con piel seca. ¿Cuál es la configuración?',a:'Numular (eccema numular).',h:'Las placas son redondas y llenas.'}
+],
+t4:[
+{q:'¿Qué ocurre en cada zona de una lesión en diana típica, de dentro afuera?',a:'Centro: muerte de queratinocitos (oscuro o ampolla); anillo intermedio: edema dérmico (pálido); anillo externo: vasodilatación (rojo).',h:'Hay tres zonas con tres procesos distintos.'},
+{q:'Una lesión en diana típica tiene {{tres}} zonas concéntricas.',a:'tres',h:'Cuenta los anillos.'},
+{q:'¿Qué distingue una diana atípica de una típica?',a:'Tiene solo dos zonas o los bordes son mal definidos.',h:'Mira cuántas zonas tiene.'},
+{q:'¿Qué separa una diana de una lesión anular simple?',a:'La diana tiene un tercer anillo y un centro dañado (oscuro o con ampolla); la anular solo tiene borde y centro claro.',h:'Una es más compleja que la otra.'},
+{q:'Mujer de 25 años con lesiones de 1 a 2 cm, simétricas, en manos y antebrazos, ocho días después de un herpes labial. ¿Cuál es el prototipo?',a:'Eritema multiforme, con lesiones en diana típicas.',h:'El antecedente infeccioso orienta.'}
+],
+t5:[
+{q:'En el fenómeno de Koebner, ¿qué condición debe cumplirse en el paciente para que el trauma deje lesiones?',a:'Tener una dermatosis activa; en piel sana o con la enfermedad controlada, el mismo trauma no deja lesiones.',h:'Depende de la enfermedad de base.'},
+{q:'¿Cómo se origina una lesión lineal en las líneas de Blaschko?',a:'Una mutación posterior al cigoto crea un clon celular que migra por trayectos del desarrollo y ocupa una banda constante.',h:'Es un fenómeno del embrión.'},
+{q:'Un adulto con psoriasis desarrolla placas sobre un rasguño reciente. ¿Qué nombre recibe el fenómeno?',a:'Fenómeno isomórfico de Koebner.',h:'El trauma tiene forma de línea.'},
+{q:'Un niño tiene una banda de pápulas del hombro al antebrazo desde hace semanas, sin trauma. ¿Qué patrón es?',a:'Líneas de Blaschko (mosaicismo), como el liquen estriado.',h:'No hay trauma ni nervio implicados.'},
+{q:'¿Qué separa el pseudo-Koebner del Koebner verdadero?',a:'En el pseudo-Koebner la línea la forma un agente inoculado al rascarse (verrugas, molusco), no la enfermedad de base.',h:'Piensa en qué causa la lesión en la línea.'},
+{q:'¿Cómo se distingue una banda de Blaschko de una dermatómica?',a:'Blaschko traza V y S fijas desde el nacimiento sin relación con el nervio; la dermatómica sigue un nervio y respeta la línea media.',h:'Una es del desarrollo y otra de los nervios.'}
+],
+t6:[
+{q:'En el livedo reticular, ¿en qué parte del cono de perfusión se ve la red violácea?',a:'En los bordes entre conos vecinos, donde el flujo es más lento y la sangre pierde más oxígeno.',h:'Piensa dónde se tocan dos territorios arteriales.'},
+{q:'Un lactante con red violácea simétrica en las piernas que desaparece al entibiar. ¿Es fisiológica o patológica?',a:'Fisiológica (cutis marmorata): la red se borra al entibiar porque el flujo se normaliza.',h:'Observa si persiste o desaparece.'},
+{q:'Un patrón reticulado puede ser vascular, {{pigmentado}} o blanquecino, según el color de la malla.',a:'pigmentado',h:'El tercer color es el pardo.'},
+{q:'¿Cómo se distingue el livedo racemoso del reticular?',a:'El racemoso es una red incompleta, de ramas rotas y asimétricas; el reticular es completo y regular.',h:'Piensa en lo completo de la red.'},
+{q:'En el liquen plano, ¿qué patrón blanquecino reticulado se observa?',a:'Las estrías de Wickham.',h:'Llevan el nombre de un dermatólogo.'}
+],
+t7:[
+{q:'¿Por qué el herpes simple recurrente reaparece casi siempre en el mismo sitio?',a:'El virus queda latente en el ganglio sensitivo y, al reactivarse, desciende por el mismo nervio hasta el mismo territorio de piel.',h:'Piensa dónde descansa el virus.'},
+{q:'En la dermatitis herpetiforme, ¿qué estructura de la dermis contiene los depósitos de IgA que desencadenan las vesículas?',a:'La punta de las papilas dérmicas, en la unión dermoepidérmica.',h:'Es una saliente de la dermis hacia la epidermis.'},
+{q:'La agrupación herpetiforme describe vesículas {{en racimo}} y no implica infección por herpesvirus.',a:'en racimo',h:'Mira cómo se disponen las vesículas.'},
+{q:'¿Qué separa lo herpetiforme de lo zosteriforme?',a:'Herpetiforme solo dice que las vesículas están agrupadas; zosteriforme añade que siguen un dermatoma, unilateral.',h:'Una se refiere solo a la forma y otra incluye el nervio.'},
+{q:'Joven con ardor en el labio y luego un racimo de vesículas diminutas sobre base roja. ¿Cómo se describe la configuración?',a:'Vesículas agrupadas de disposición herpetiforme (herpes simple).',h:'El ardor previo es el pródromo.'}
+],
+t8:[
+{q:'Si el virus latente se reactiva en un ganglio sensitivo torácico, ¿qué territorio de piel afecta y cómo se ve?',a:'El dermatoma de ese nervio: una banda unilateral que respeta la línea media.',h:'El virus baja por el nervio de ese ganglio.'},
+{q:'¿Qué marcador de la nariz anuncia compromiso ocular en un zóster de la rama oftálmica?',a:'Lesiones en la punta de la nariz.',h:'Comparte inervación con el ojo.'},
+{q:'¿Qué define una distribución zosteriforme?',a:'Lesiones agrupadas sobre un dermatoma, unilaterales y sin cruzar la línea media.',h:'Combina agrupación y nervio.'},
+{q:'¿Cómo se distingue una banda dermatómica de una de Blaschko?',a:'La dermatómica sigue un nervio, respeta la línea media y aparece en un momento dado; Blaschko traza V y S fijas desde el nacimiento.',h:'Una depende del nervio y otra del desarrollo.'},
+{q:'Mujer de 72 años con dolor ardiente y luego vesículas en racimo en una banda del hemitórax derecho, que se detiene en la línea media. ¿Cuál es el prototipo?',a:'Herpes zóster en distribución dermatómica.',h:'Dolor previo y un solo lado.'}
+],
+t9:[
+{q:'¿Por qué la radiación UVA afecta más la cara izquierda de quien conduce?',a:'La UVA atraviesa el vidrio de la ventana y llega hasta la dermis de ese lado.',h:'Piensa qué atraviesa el vidrio.'},
+{q:'¿Por qué las personas de fototipo bajo desarrollan fotosensibilidad antes?',a:'Tienen menos melanina, que absorbe la radiación UV y protege el ADN del queratinocito.',h:'La melanina es el filtro natural.'},
+{q:'Una lesión fotodistribuida respeta {{la zona submentoniana}} y el párpado superior.',a:'la zona submentoniana',h:'Son zonas que quedan en sombra.'},
+{q:'¿Qué separa una distribución fotodistribuida de una por contacto?',a:'La fotodistribuida sigue las zonas expuestas a la luz y respeta las sombreadas; la de contacto copia la forma de la sustancia que tocó la piel.',h:'Una depende de la luz y otra de la sustancia.'},
+{q:'Paciente con eritema y ampollas en cara, escote en V y dorso de manos, con el área bajo el mentón libre. ¿Qué configuración sugiere?',a:'Fotodistribución (fotosensibilidad).',h:'Mira qué zonas quedaron libres.'},
+{q:'¿Qué dice el fototipo sobre un paciente y qué no dice?',a:'Describe la respuesta de la persona al sol; no indica dónde están las lesiones.',h:'Es una propiedad de la persona, no de la lesión.'}
+]
+};
+DECKS.tg=[].concat.apply([],Object.keys(TERMS).map(function(k){return DECKS[k].map(function(c){return {q:c.q,a:c.a,h:c.h,t:k};});}));
+const RC={};
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function el(k,s){return document.getElementById('rc-'+k+'-'+s);}
+function isCloze(c){return c.q.indexOf('{{')>=0;}
+function front(c){return esc(c.q).replace(/\{\{[^}]*\}\}/g,'[ ? ]');}
+function back(c){return esc(c.q).replace(/\{\{([^}]*)\}\}/g,'<b>$1</b>');}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function show(id,btn){
+  document.querySelectorAll('.tab').forEach(function(s){s.classList.toggle('active',s.id===id);});
+  document.querySelectorAll('.tb').forEach(function(b){b.classList.toggle('active',b===btn);});
+  try{btn.scrollIntoView({inline:'center',block:'nearest'});}catch(e){}
+}
+function tog(b){b.parentElement.classList.toggle('op');}
+function rc_reset(k){
+  var n=DECKS[k].length,idx=[];
+  for(var i=0;i<n;i++)idx.push(i);
+  RC[k]={queue:shuffle(idx),first:{},fails:{},shown:false,done:0,n:n};
+  if(el(k,'e'))el(k,'e').innerHTML='';
+  rc_render(k);
+}
+function rc_render(k){
+  var s=RC[k],card=el(k,'c');
+  if(!card)return;
+  if(!s.queue.length){rc_end(k);return;}
+  var c=DECKS[k][s.queue[0]],f=s.fails[s.queue[0]]||0;
+  el(k,'n').textContent='Tarjeta '+(s.done+1)+' de '+s.n+(k==='tg'?' · '+TERMS[c.t]:'');
+  var h='<p class="rc-q">'+(s.shown&&isCloze(c)?back(c):front(c))+'</p>';
+  if(s.shown&&!isCloze(c))h+='<p class="rc-a"><b>Respuesta.</b> '+esc(c.a)+'</p>';
+  if(!s.shown&&f>=2)h+='<p class="rc-hint">Pista: '+esc(c.h)+'</p>';
+  card.innerHTML=h;
+  var b='';
+  if(!s.shown){b+='<button class="go" onclick="rc_show(\''+k+'\')">Mostrar respuesta</button>';}
+  else{
+    b+='<button class="gr ok" onclick="rc_grade(\''+k+'\',\'ok\')">La sabía</button>';
+    b+='<button class="gr mid" onclick="rc_grade(\''+k+'\',\'mid\')">A medias</button>';
+    b+='<button class="gr ko" onclick="rc_grade(\''+k+'\',\'ko\')">No la sabía</button>';
+  }
+  b+='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  el(k,'b').innerHTML=b;
+}
+function rc_show(k){RC[k].shown=true;rc_render(k);}
+function rc_grade(k,g){
+  var s=RC[k],i=s.queue.shift();
+  if(s.first[i]===undefined)s.first[i]=(g==='ok');
+  if(g==='ok'){s.done++;}
+  else{s.fails[i]=(s.fails[i]||0)+1;s.queue.push(i);}
+  s.shown=false;
+  rc_render(k);
+}
+function rc_verdict(p){return p>=80?['ok','Término consolidado']:['rep','Repasar hoy'];}
+function rc_end(k){
+  var s=RC[k],ok=0,i,rows='';
+  for(i=0;i<s.n;i++)if(s.first[i])ok++;
+  var p=Math.round(100*ok/s.n),v=rc_verdict(p);
+  el(k,'n').textContent='Mazo completado';
+  el(k,'c').innerHTML='<p class="rc-q">Cola agotada: todas las tarjetas se resolvieron.</p>';
+  el(k,'b').innerHTML='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  var h='<div class="rc-end '+v[0]+'">Aciertos al primer intento: '+ok+' de '+s.n+' ('+p+' %). <b>'+v[1]+'</b>.</div>';
+  if(k==='tg'){
+    Object.keys(TERMS).forEach(function(t){
+      var tot=0,hit=0;
+      for(i=0;i<s.n;i++){if(DECKS.tg[i].t===t){tot++;if(s.first[i])hit++;}}
+      var pp=Math.round(100*hit/tot),vv=rc_verdict(pp);
+      rows+='<tr><td>'+esc(TERMS[t])+'</td><td>'+hit+' de '+tot+' ('+pp+' %)</td><td>'+vv[1]+'</td></tr>';
+    });
+    h+='<div class="tw"><table><thead><tr><th>Término</th><th>Aciertos 1er intento</th><th>Veredicto</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  }
+  el(k,'e').innerHTML=h;
+}
+Object.keys(DECKS).forEach(rc_reset);
+</script>
+</div></body></html>

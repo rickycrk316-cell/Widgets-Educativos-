@@ -1,0 +1,9 @@
+{
+ "titulo": "Definiciones · Descripción morfológica",
+ "salida": "../Definiciones_descripcion_morfologica.html",
+ "tipo": "definiciones",
+ "terminos": 9,
+ "canonicos": [3,2,2,1,2,1,2,2,2],
+ "remisiones": [0,1,1,2,1,1,1,1,1],
+ "tarjetas": [6,5,5,5,6,5,5,5,6]
+}
