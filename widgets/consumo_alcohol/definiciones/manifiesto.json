@@ -2,11 +2,15 @@
  "titulo": "Definiciones · Consumo de alcohol",
  "salida": "../Definiciones_consumo_alcohol.html",
  "tipo": "definiciones",
- "terminos": 6,
+ "terminos": 10,
  "canonicos": [
   2,
   1,
   1,
+  1,
+  1,
+  0,
+  0,
   1,
   1,
   0
@@ -17,9 +21,17 @@
   1,
   1,
   1,
-  2
+  2,
+  2,
+  1,
+  2,
+  1
  ],
  "tarjetas": [
+  6,
+  6,
+  6,
+  6,
   6,
   6,
   6,

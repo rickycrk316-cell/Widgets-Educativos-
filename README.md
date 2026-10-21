@@ -20,7 +20,7 @@ Widgets HTML de estudio, autocontenidos y offline (skill `widget-ensenanza` v10,
 | | `Cojera_dolorosa_mecanica_widget_v10.html` | multi | Perthes (principal), epifisiólisis (amenaza), Osgood-Schlatter | 27 |
 | | `Marcha_sin_dolor_widget_v10.html` | multi | DDC (principal), dismetría, neuromuscular, Guillain-Barré (amenaza) | 65 |
 | | `Forma_piernas_pies_widget_v10.html` | multi | genu varo/valgo (principal), anteversión femoral, pie plano, pie cavo, equinovaro (amenaza) | 26 |
-| Consumo de alcohol | `Definiciones_consumo_alcohol.html` | definiciones | 6 términos + repaso | 2 |
+| Consumo de alcohol | `Definiciones_consumo_alcohol.html` | definiciones | 10 términos + repaso | 3 |
 
 `[VERIFICAR]` = datos marcados `[VERIFICAR EN FUENTE]`: compruébalos antes de estudiar con ellos.
 

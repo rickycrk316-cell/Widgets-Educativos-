@@ -1,5 +1,5 @@
 <script>
-const TERMS={t1:'Estado etílico',t2:'Síndrome de abstinencia alcohólica',t3:'Trastorno por consumo de alcohol',t4:'Aguardiente y bebida estándar',t5:'Ideas de inutilidad y minusvalía',t6:'Violencia de pareja'};
+const TERMS={t1:'Estado etílico',t2:'Síndrome de abstinencia alcohólica',t3:'Trastorno por consumo de alcohol',t4:'Aguardiente y bebida estándar',t5:'Ideas de inutilidad y minusvalía',t6:'Violencia de pareja',t7:'Alcoholismo',t8:'Craving',t9:'Inversión de la tolerancia',t10:'Trastorno mental'};
 const DECKS={
 t1:[
 {q:'¿Por qué la concentración de etanol baja a un ritmo casi fijo, aunque haya mucho en sangre, y qué paso la limita?',a:'La alcohol deshidrogenasa (ADH) se satura con poco etanol y el hígado elimina una cantidad casi fija por hora: cinética de orden cero.',h:'Piensa en una puerta estrecha por la que pasa la misma gente cada hora.'},
@@ -48,6 +48,38 @@ t6:[
 {q:'¿Cuáles son los cuatro tipos que reúne la definición de la OMS?',a:'Agresión física, coerción sexual, maltrato psicológico y conductas de control.',h:'Cada uno se reconoce de forma distinta.'},
 {q:'¿Qué separa la violencia de pareja de un conflicto de pareja?',a:'En la violencia hay daño o conductas de control sobre el otro; el conflicto es un desacuerdo sin daño.',h:'Mira si hay daño o control.'},
 {q:'¿En qué se diferencia la violencia de pareja de la violencia intrafamiliar?',a:'La intrafamiliar es más amplia (hijos, adultos mayores, otros familiares); la de pareja es una de sus formas.',h:'Una es el conjunto; la otra, un subtipo.'}
+],
+t7:[
+{q:'¿Por qué el DSM-5-TR no usa «alcoholismo» como diagnóstico y qué término ofrece en su lugar?',a:'Porque no precisa gravedad ni criterios; usa «trastorno por consumo de alcohol», con criterios definidos.',h:'Un nombre coloquial frente a uno con criterios.'},
+{q:'¿Qué término de la CIE-11 equivale al uso común de «alcoholismo»?',a:'Dependencia del alcohol.',h:'Es el diagnóstico que recoge la pérdida de control y la dependencia.'},
+{q:'Si el consumo repetido ajusta los receptores cerebrales, ¿qué dos fenómenos físicos suele implicar lo que se llama «alcoholismo»?',a:'Tolerancia y abstinencia, es decir, dependencia física.',h:'Más cantidad para el mismo efecto y malestar al suspender.'},
+{q:'Un paciente tuvo una sola noche de borrachera tras una fiesta. ¿Por qué no corresponde llamarlo «alcoholismo»?',a:'El término alude a un patrón crónico y sostenido, no a un episodio aislado.',h:'Piensa en tiempo y repetición.'},
+{q:'En la historia clínica se escribe «alcoholismo». ¿Qué le falta a esa palabra frente al diagnóstico formal?',a:'Criterios, gravedad y duración definidos.',h:'Sirve para entenderse, no para clasificar.'},
+{q:'Un término tradicional para el consumo crónico con pérdida de control, hoy reemplazado en los manuales por términos precisos, es {{alcoholismo}}.',a:'Alcoholismo.',h:'Es el nombre histórico, no el diagnóstico actual.'}
+],
+t8:[
+{q:'Si un lugar asociado con beber libera dopamina en el accumbens antes del primer trago, ¿qué se ha formado y qué provoca?',a:'Una asociación condicionada; el estímulo dispara motivación y búsqueda del alcohol.',h:'La señal, no el alcohol, activa el impulso.'},
+{q:'¿Qué papel cumple la amígdala en el deseo de consumir ante una señal?',a:'Asocia señales y estados emocionales con la recompensa, y por eso las reactiva.',h:'Piensa en memoria emocional.'},
+{q:'Tras semanas sin beber, el paciente pasa por su antiguo bar y siente un deseo intenso. ¿Qué explica que reaparezca?',a:'La memoria asociativa persiste mucho más que el consumo y la señal la reactiva.',h:'La memoria dura más que la abstinencia.'},
+{q:'Deseo intenso o necesidad apremiante de consumir alcohol, criterio del DSM-5-TR, es el {{craving}}.',a:'Craving.',h:'Es un criterio subjetivo, no un signo físico.'},
+{q:'¿Qué separa el craving del síndrome de abstinencia?',a:'El craving es un deseo subjetivo que puede aparecer sin signos físicos; la abstinencia se caracteriza por signos de hiperactividad.',h:'Uno se refiere, el otro se mide.'},
+{q:'¿Por qué el craving no se explica solo por una necesidad del cuerpo?',a:'Se dispara por señales aprendidas o estrés, incluso sin dependencia física actual.',h:'Piensa en el olor del pan sin hambre.'}
+],
+t9:[
+{q:'Con consumo sostenido, el hígado induce CYP2E1. ¿Qué efecto tiene sobre la cantidad necesaria para el mismo efecto?',a:'Depura más rápido, por lo que hace falta más etanol: es la tolerancia metabólica.',h:'Mira la velocidad de eliminación.'},
+{q:'Si la masa de hepatocitos funcionantes cae tras años de consumo, ¿qué pasa con la alcoholemia al beber la misma cantidad?',a:'Sube más y se mantiene más tiempo, porque la depuración disminuye.',h:'Menos hígado, menos limpieza.'},
+{q:'Un paciente dice que antes aguantaba una botella y ahora se embriaga con la mitad. ¿Qué fenómeno describe?',a:'Inversión de la tolerancia.',h:'Menos cantidad basta; piensa en el sentido contrario a la tolerancia.'},
+{q:'¿Qué separa la inversión de la tolerancia de la tolerancia habitual?',a:'En la tolerancia hace falta más alcohol para el mismo efecto; en la inversión basta menos.',h:'Compara el sentido del cambio.'},
+{q:'¿Por qué la inversión de la tolerancia no se puede atribuir solo a que el cerebro «se acostumbró a menos»?',a:'Se debe sobre todo a la pérdida de reserva hepática, que reduce la depuración.',h:'El problema empieza en el órgano que elimina.'},
+{q:'Cuando la misma dosis de etanol intoxica antes porque la reserva hepática se agotó, se habla de {{inversión de la tolerancia}}.',a:'Inversión de la tolerancia (tolerancia inversa).',h:'Aparece tras años de consumo crónico.'}
+],
+t10:[
+{q:'¿Qué tres áreas de la persona altera, según el DSM-5-TR, un trastorno mental?',a:'La cognición, la regulación emocional y la conducta.',h:'Pensar, sentir y actuar.'},
+{q:'Si un duelo produce tristeza proporcionada a la pérdida, ¿por qué no es en sí un trastorno mental?',a:'Es una reacción esperable al estrés, no una disfunción individual subyacente.',h:'Piensa en lo proporcionado y lo esperable.'},
+{q:'Alguien no sufre y rinde bien, pero su conducta es poco frecuente en su medio. ¿Por qué eso no basta para hablar de trastorno, según los criterios de normalidad?',a:'Salirse del criterio estadístico no basta: faltan malestar y disfunción; y «enfermedad mental» es un término más amplio que trastorno mental.',h:'Compara frecuente, funcional y con malestar.'},
+{q:'Un paciente tiene tristeza, ideas de inutilidad y deterioro laboral. ¿Qué dos elementos acercan este cuadro al concepto de trastorno?',a:'Varias manifestaciones agrupadas con malestar y deterioro del funcionamiento.',h:'Un síntoma solo no alcanza.'},
+{q:'Si el ánimo depende de serotonina, noradrenalina y dopamina, ¿qué idea cubre que su alteración sostenida cause síntomas?',a:'Que un trastorno mental refleja disfunción de procesos biológicos, además de psicológicos o del desarrollo.',h:'La definición incluye una base biológica.'},
+{q:'Síndrome con alteración clínicamente significativa de la cognición, la emoción o la conducta, con malestar o discapacidad, es un {{trastorno mental}}.',a:'Trastorno mental.',h:'Es un concepto general, no un diagnóstico concreto.'}
 ],
 };
 DECKS.tg=[].concat.apply([],Object.keys(TERMS).map(function(k){return DECKS[k].map(function(c){return {q:c.q,a:c.a,h:c.h,t:k};});}));
