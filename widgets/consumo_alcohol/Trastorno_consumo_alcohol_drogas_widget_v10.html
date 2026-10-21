@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trastorno por consumo de alcohol y otras drogas</title>
+<style>
+/* Vademécum: monografía impresa con índice de canto; filetes y tinta llevan la jerarquía, no las sombras */
+:root{
+--paper:#FBFBFC;--paper-2:#F1F2F5;--ink:#16181D;--ink-2:#3A3D46;--ink-3:#686C78;--rule:#D7D9E0;--rule-strong:#16181D;
+--accent:#2342A6;--accent-ink:#1B358A;--accent-field:#EAEEFA;--on-accent:#FFFFFF;
+--am:#7A4A06;--am-f:#FBF1DF;--ro:#9E1F1F;--ro-f:#FBE9E7;--ve:#2F5E12;--ve-f:#EBF3E1;--pu:#4C3FA8;--pu-f:#EEECFB;--co:#8E3517;--co-f:#FAEDE6;--rs:#8A2C52;--rs-f:#FAEAF1;
+--f-serif:ui-serif,"New York","Iowan Old Style","Charter","Source Serif Pro",Georgia,"Times New Roman",serif;
+--f-sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+--r:3px;
+/* alias de la v10 para compatibilidad */
+--surface-0:var(--paper);--surface-1:var(--paper-2);--border:var(--rule);--border-accent:var(--accent);--bg-accent:var(--accent-field);--text-primary:var(--ink);--text-secondary:var(--ink-2);--text-muted:var(--ink-3);--text-accent:var(--accent-ink);--radius:var(--r);--font-sans:var(--f-sans);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}
+html{color-scheme:light dark;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:var(--accent);color:var(--on-accent)}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--f-sans);-webkit-text-size-adjust:100%;font-feature-settings:"kern" 1;text-rendering:optimizeLegibility;caret-color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:18px 16px 56px;background:transparent}
+h1{font:600 26px/1.2 var(--f-serif);letter-spacing:-.012em;margin:6px 0 14px;padding-bottom:12px;border-bottom:2px solid var(--rule-strong);text-wrap:balance}
+h2{font:600 19px/1.3 var(--f-serif);letter-spacing:-.006em;margin:40px 0 14px;padding-top:12px;border-top:1px solid var(--rule-strong);text-wrap:balance}
+h3{font:600 16px/1.35 var(--f-serif);margin:20px 0 6px;text-wrap:balance}
+p{margin:0 0 12px;text-wrap:pretty}
+a{color:var(--accent-ink);text-underline-offset:3px}
+button{font:inherit;color:inherit;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,color .15s ease-out}
+button:active{transform:translateY(1px)}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* índice de canto */
+.tabs{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 0 0;border-bottom:2px solid var(--rule-strong);margin-bottom:16px;position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);scroll-snap-type:x proximity;scroll-padding-inline:56px}
+.tabs-w{position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper)}
+.tabs-w::before,.tabs-w::after{content:"";position:absolute;top:0;bottom:2px;width:56px;pointer-events:none;opacity:0;transition:opacity .2s;z-index:6}
+.tabs-w::before{left:0;background:linear-gradient(to left,transparent,var(--paper) 85%)}
+.tabs-w::after{right:0;background:linear-gradient(to right,transparent,var(--paper) 85%)}
+.tabs-w.ov-l::before,.tabs-w.ov-r::after{opacity:1}
+.nodo,.signo,.qv,.dc,h2{scroll-margin-top:84px}
+.tabs::-webkit-scrollbar{display:none}
+.tb{flex:0 0 auto;min-height:44px;padding:9px 15px 8px;border:1px solid var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;background:var(--paper-2);color:var(--ink-2);font:600 13px/1.2 var(--f-sans);letter-spacing:.01em;white-space:nowrap;scroll-snap-align:start}
+.tb:hover{background:var(--accent-field);color:var(--accent-ink)}
+.tb.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+.tab{display:none}
+.tab.on{display:block}
+/* recuadros */
+.card{background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;margin:12px 0;font-size:15px;line-height:1.6}
+.card p{margin:0 0 8px}
+.card p:last-child{margin-bottom:0}
+.mini{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:6px 0}
+.hb{border-radius:var(--r);padding:12px 14px;margin:14px 0;border:1px solid transparent;font-size:15px;line-height:1.6}
+.hb.az{background:var(--accent-field);color:var(--ink);border-color:var(--accent)}
+.hb.am{background:var(--am-f);color:var(--am);border-color:var(--am)}
+.hb.ro{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.hb.ve{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+.hb.am .mini,.hb.ro .mini,.hb.ve .mini{color:inherit;opacity:.88}
+.hb-t{font:600 16px/1.35 var(--f-serif);margin-bottom:6px;text-wrap:balance}
+.hb.az .hb-t{color:var(--accent-ink)}
+.pg{margin:0;padding-left:22px}
+.pg li{margin:5px 0}
+.pg li::marker{color:var(--accent-ink);font-weight:700}
+.hb.az:has(.pg){margin-bottom:24px}
+.hb.az:not(:has(.pg)):not(.rec-go){background:transparent;border-left-color:transparent;border-right-color:transparent;border-radius:0;padding-left:0;padding-right:0}
+.hb.az:not(:has(.pg))+.etapa{border-top:0}
+h2+.card,h2+.hb,h2+.tw{margin-top:0}
+.badge{display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.04em;padding:2px 7px;border-radius:2px;margin:0 4px 4px 0;vertical-align:middle;border:1px solid currentColor}
+.b-az{background:var(--accent-field);color:var(--accent-ink)}
+.b-ro{background:var(--ro-f);color:var(--ro)}
+.b-am{background:var(--am-f);color:var(--am)}
+.b-ve{background:var(--ve-f);color:var(--ve)}
+.b-pu{background:var(--pu-f);color:var(--pu)}
+.badge.b-pu{display:block;width:fit-content;max-width:100%;white-space:normal;font-size:12px;line-height:1.5;font-weight:600;letter-spacing:.01em;margin:14px 0}
+.b-co{background:var(--co-f);color:var(--co)}
+.b-rs{background:var(--rs-f);color:var(--rs)}
+.rem{display:inline-block;font-size:12.5px;background:var(--rs-f);color:var(--rs);border:1px dashed var(--rs);border-radius:2px;padding:1px 7px;margin:4px 0}
+/* Feynman */
+.fey{background:var(--co-f);border:1px solid var(--co);border-radius:var(--r);padding:14px 16px;margin:18px 0 26px}
+.fey-t{display:inline-block;font:600 15px/1.35 var(--f-serif);color:var(--co);margin-bottom:8px}
+.fey-b{margin:0 0 10px;font:400 16px/1.6 var(--f-serif);color:var(--ink)}
+.fey-c{margin:2px 0;color:var(--ink-2)}
+/* Panorama: entradas de índice */
+.tab{counter-reset:et}
+.etapa{counter-increment:et;background:transparent;border:0;border-top:1px solid var(--rule);border-radius:0;padding:18px 0 8px;margin:4px 0}
+.etapa h3{font-size:19px;line-height:1.3;margin:0 0 8px}
+.etapa h3::before{content:counter(et,decimal-leading-zero);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;letter-spacing:.04em;color:var(--accent-ink);margin-right:10px;vertical-align:2px}
+.res{margin:0 0 10px}
+.perla{border-top:1px dotted var(--rule);padding-top:8px;margin:0 0 10px;font-weight:500}
+.perla::before{content:"Perla";display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;background:var(--ve-f);color:var(--ve);border:1px solid var(--ve);border-radius:2px;padding:1px 6px;margin-right:8px;vertical-align:1px}
+.go{min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent);color:var(--on-accent);font:600 13.5px/1.2 var(--f-sans)}
+.go:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+/* tablas de monografía */
+.tw{overflow-x:auto;margin:12px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.5;font-variant-numeric:tabular-nums}
+th,td{border:0;border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--paper-2);font-weight:700;color:var(--ink)}
+thead th{font:700 14.5px/1.35 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong)}
+tbody tr:last-child>*{border-bottom:1px solid var(--rule-strong)}
+.stats{display:grid;grid-template-columns:1fr;gap:10px;margin:12px 0}
+@media (min-width:600px){.stats{grid-template-columns:repeat(3,1fr)}}
+.stat{background:transparent;border:0;border-top:2px solid var(--accent);border-radius:0;padding:8px 2px}
+.stat b{display:block;font:600 22px/1.25 var(--f-serif);color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--ink-2);line-height:1.4;display:block}
+.steps{list-style:none;counter-reset:st;padding:0;margin:10px 0}
+.steps>li{counter-increment:st;position:relative;padding:5px 0 9px 40px}
+.steps>li::before{content:counter(st);position:absolute;left:0;top:3px;width:26px;height:26px;border-radius:2px;background:var(--ink);color:var(--paper);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;display:flex;align-items:center;justify-content:center}
+/* cascada */
+.tl{list-style:none;margin:14px 0;padding:0 0 0 20px;border-left:2px solid var(--accent)}
+.nodo{position:relative;margin:0 0 14px;padding:11px 13px;background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);font-size:14px;line-height:1.55}
+.nodo::before{content:"";position:absolute;left:-27px;top:15px;width:12px;height:12px;border-radius:1px;background:var(--accent);box-shadow:0 0 0 3px var(--paper)}
+.paso{display:block;font:600 15px/1.4 var(--f-serif);margin-bottom:5px}
+.pn{color:var(--accent-ink);margin-right:4px;font-variant-numeric:tabular-nums}
+.man{margin:8px 0 0;font-size:13px;color:var(--ink-2)}
+.signo{background:var(--paper);border:1px solid var(--rule);border-top:2px solid var(--rule-strong);border-radius:0 0 var(--r) var(--r);padding:12px 14px;margin:12px 0;font-size:14px;line-height:1.55}
+.signo h4{margin:0 0 6px;font:600 15.5px/1.35 var(--f-serif)}
+.signo dl{margin:0}
+.signo dt{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-3);margin-top:8px}
+.signo dd{margin:2px 0 0}
+.xref{display:inline-flex;align-items:center;min-height:44px;padding:4px 10px;margin:3px 6px 3px 0;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent-field);color:var(--accent-ink);font:600 12.5px/1.3 var(--f-sans);text-align:left}
+.xref:hover{background:var(--accent);color:var(--on-accent)}
+p .xref,td .xref,li .xref,dd .xref{display:inline;position:relative;min-height:0;padding:0 5px;margin:0 2px;line-height:inherit;border-radius:2px;white-space:normal;overflow-wrap:anywhere;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+p .xref::after,td .xref::after,li .xref::after,dd .xref::after{content:"";position:absolute;left:-4px;right:-4px;top:-12px;bottom:-12px}
+.hl{outline:2px solid var(--accent);background:var(--accent-field)!important;transition:background .3s}
+.acc{border:1px solid var(--rule);border-radius:var(--r);margin:12px 0;overflow:hidden}
+.acc-h{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:44px;padding:9px 14px;border:0;background:var(--paper-2);font:600 14px/1.35 var(--f-sans);text-align:left}
+.acc-h:hover{background:var(--accent-field)}
+.chev{transition:transform .2s;color:var(--accent-ink)}
+.acc.op .chev{transform:rotate(180deg)}
+.acc-b{display:none;padding:10px 14px;font-size:14px;line-height:1.55}
+.acc.op .acc-b{display:block}
+.vanc{font-size:12.5px;line-height:1.5;padding-left:24px}
+.vanc li{margin:5px 0;word-break:break-word}
+.vanc li::marker{font-variant-numeric:tabular-nums;color:var(--ink-3)}
+/* simulador */
+.dc{border:1px solid var(--rule-strong);border-radius:var(--r);padding:14px 16px;margin:22px 0;background:var(--paper)}
+.dc-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.dc-g{margin:10px 0}
+.dc-l{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);margin-bottom:5px;display:block}
+.chip{min-height:44px;padding:7px 13px;margin:3px 6px 3px 0;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);font-size:13.5px}
+.chip:hover{border-color:var(--accent);color:var(--accent-ink)}
+.chip.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:600}
+.dc input[type=number]{min-height:44px;width:120px;padding:6px 10px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper);color:var(--ink);font:15px var(--f-sans);font-variant-numeric:tabular-nums}
+.out{margin-top:12px;padding:12px 14px;border-radius:var(--r);background:var(--paper-2);border:1px solid var(--rule);font-size:14px;line-height:1.58;min-height:44px}
+.tag{display:inline-block;font:600 11px/1.4 var(--f-sans);padding:1px 7px;border-radius:2px;background:var(--accent-field);color:var(--accent-ink);margin:4px 4px 0 0}
+.rec-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.rec-bar textarea{width:100%;min-height:120px;margin-top:8px;padding:9px 11px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper-2);color:var(--ink);font:14px/1.55 var(--f-sans);resize:vertical}
+.chip:disabled{cursor:default;opacity:.85}
+.rec-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.rec-ctl{display:none;gap:6px;margin-top:6px}
+.recon .rec-ctl{display:flex}
+.recon>*:not(.rec-bar):not(.tl){display:none}
+.recon .nodo:not(.rev) .pt{display:none}
+.recon .nodo:not(.rev) .pn::after{content:" ?"}
+.recon .nodo:not(.rev) .det{display:none}
+.recon .nodo.pis:not(.rev) .det{display:block}
+.recon .nodo.pis:not(.rev) .det>*:not(.man){display:none}
+.recon .nodo:not(.pis):not(.rev) .man{display:none}
+.recon .nodo.rev{border-color:var(--accent)}
+.rec-go{margin:22px 0}
+.steps.tg>li{padding-left:40px}
+span.tg{display:inline-block;font:700 11px/1.4 var(--f-mono);letter-spacing:.02em;padding:2px 7px;margin:0 6px 2px 0;border-radius:2px;background:var(--paper-2);border:1px solid var(--rule);color:var(--ink-2);white-space:nowrap;vertical-align:1px}
+span.tg[data-t="clave"]{background:var(--accent-field);color:var(--accent-ink);border-color:var(--accent)}
+span.tg[data-t="ok"]{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+span.tg[data-t="cond"]{background:var(--am-f);color:var(--am);border-color:var(--am)}
+span.tg[data-t="no"]{background:var(--rs-f);color:var(--rs);border-color:var(--rs)}
+span.tg[data-t="alarma"]{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.qv{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:12px 0}
+.qv p{margin:0;padding:9px 11px;border-radius:var(--r);border:1px solid var(--rule);background:var(--paper-2);font-size:13.5px;line-height:1.45}
+.qv p::before{display:block;font:700 10.5px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px;color:var(--ink-3)}
+.qv p[data-e="p"]{background:var(--accent-field);border-color:var(--accent)}
+.qv p[data-e="p"]::before{content:"Presente";color:var(--accent-ink)}
+.qv p[data-e="v"]::before{content:"Variable"}
+.qv p[data-e="a"]{border:1px dashed var(--rule);color:var(--ink-3);background:transparent}
+.qv p[data-e="a"]::before{content:"Ausente"}
+.qv p[data-e="k"]{grid-column:1/-1;border:2px solid var(--accent);background:var(--accent-field);font-size:14.5px}
+.qv p[data-e="k"]::before{content:"Signo clave";color:var(--accent-ink)}
+.hb.vi{background:var(--pu-f);color:var(--pu);border-color:var(--pu)}
+.hb.vi .mini{color:inherit;opacity:.88}
+table.vis{min-width:620px}
+table.vis td{min-width:140px}
+table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index:1;background:var(--paper-2);min-width:118px;max-width:150px;font-weight:700;border-right:1px solid var(--rule)}
+.vb-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.tbl>*:not(.vb-bar):not(.vis-w){display:none}
+.tbl td.tap{cursor:pointer}
+.tbl td.tap:not(.rev){color:transparent;background:repeating-linear-gradient(135deg,var(--paper-2),var(--paper-2) 7px,var(--accent-field) 7px,var(--accent-field) 14px)}
+.tbl td.tap:not(.rev) *{visibility:hidden}
+.tbl td.tap.rev{box-shadow:inset 0 0 0 1px var(--accent)}
+.cf{display:block;margin-top:10px;padding-top:8px;border-top:1px dashed var(--accent);font-style:italic;color:var(--ink-2)}
+.cf::before{content:"Contrafactual · ";font-style:normal;font-weight:700;color:var(--accent-ink)}
+.fig{margin:14px 0}
+.fig img{display:block;max-width:100%;height:auto;border-radius:var(--r);border:1px solid var(--rule)}
+.fig figcaption{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin-top:6px}
+@media (min-width:700px){body{font-size:15.5px}.wrap{padding:22px 24px 64px}h1{font-size:28px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- /KIT_HEAD -->
+<h1>Trastorno por consumo de alcohol y otras drogas</h1>
+<nav class="tabs">
+<button type="button" class="tb" data-tab="pan" onclick="show('pan')">Panorama</button>
+<button type="button" class="tb" data-tab="def" onclick="show('def')">Definición y epidemiología</button>
+<button type="button" class="tb" data-tab="fis" onclick="show('fis')">Etiología y fisiopatología</button>
+<button type="button" class="tb" data-tab="cli" onclick="show('cli')">Clínica</button>
+<button type="button" class="tb" data-tab="dro" onclick="show('dro')">Otras drogas</button>
+<button type="button" class="tb" data-tab="dx" onclick="show('dx')">Plan diagnóstico</button>
+<button type="button" class="tb" data-tab="tx" onclick="show('tx')">Plan de tratamiento</button>
+<button type="button" class="tb" data-tab="seg" onclick="show('seg')">Seguimiento y complicaciones</button>
+</nav>
+<section class="tab" data-tab="pan">
+<div class="hb az"><div class="hb-t">El tema en una frase</div>
+<p>Trastorno por consumo: el refuerzo dopaminérgico y la neuroadaptación vuelven compulsivo el consumo, pese al daño que el alcohol causa en hígado y cerebro.</p></div>
+<div class="etapa" data-go="def"><h3>Definición</h3>
+<p class="res">Es un patrón problemático de consumo de alcohol u otra droga que dura al menos 12 meses y produce deterioro o malestar, con pérdida de control, consumo pese al daño y tolerancia o abstinencia [1]. Lo separan de lo más parecido sus criterios: el consumo de riesgo aún no daña, el perjudicial daña sin dependencia y la intoxicación aguda es un estado transitorio [2]. La CIE-11 divide el cuadro en patrón dañino y dependencia, y el DSM-5-TR lo gradúa por número de criterios [1][2]. Para saber a quién afecta, sigue con la epidemiología.</p>
+<p class="perla">Beber mucho no basta: el trastorno exige criterios cumplidos durante 12 meses.</p>
+<button type="button" class="go" data-go="def" onclick="show('def')">Ir a Definición y epidemiología →</button></div>
+<div class="etapa" data-go="def"><h3>Epidemiología</h3>
+<p class="res">En 2019 el alcohol causó 2,6 millones de muertes anuales y las drogas psicoactivas 0,6 millones [7]. El alcohol aporta la mayor parte de esa mortalidad, por accidentes, violencia, cirrosis, cáncer y trastornos mentales, mientras las drogas ilícitas concentran la carga en personas jóvenes [7][8]. Para Ecuador no se leyó una estimación sostenible, así que conviene consultar las encuestas nacionales. Sigue con la fisiopatología para entender por qué surge la compulsión de consumo.</p>
+<p class="perla">Frente a una consulta por drogas, pregunta primero por el alcohol: aporta la mayor parte de la mortalidad.</p>
+<button type="button" class="go" data-go="def" onclick="show('def')">Ir a Definición y epidemiología →</button></div>
+<div class="etapa" data-go="fis"><h3>Etiología y fisiopatología</h3>
+<p class="res">El etanol potencia el GABA-A y bloquea el NMDA, y el trago libera dopamina en el núcleo accumbens, que marca esa conducta como digna de repetirse. Con cada consumo, las señales asociadas ganan valor y disparan el deseo. El uso crónico reduce los receptores GABA-A y aumenta los NMDA; al suspender, el equilibrio rebota hacia la excitación. Cuando la corteza prefrontal pierde su freno, el consumo sigue pese al daño. Ese mismo circuito explica el consumo para aliviar la abstinencia. Para verlo en el paciente, sigue con la clínica.</p>
+<p class="perla">Un paciente que bebe al día siguiente quizá busca alivio de la abstinencia, no placer.</p>
+<button type="button" class="go" data-go="fis" onclick="show('fis')">Ir a Etiología y fisiopatología →</button></div>
+<div class="etapa" data-go="cli"><h3>Clínica</h3>
+<p class="res">La intoxicación aguda se reconoce por desinhibición, marcha inestable, habla farfullante y nistagmo, porque el etanol apaga primero la corteza prefrontal y después el cerebelo. En la dependencia aparecen craving y tolerancia, que puede invertirse con el hígado dañado. La abstinencia sigue un reloj: temblor a las 6 a 24 horas, convulsiones y alucinosis a las 12 a 48, y delirium tremens a las 48 a 96. Antes de atribuir la confusión al alcohol, hay que descartar hipoglucemia y traumatismo craneal. Otras drogas tienen cuadros propios: sigue con ellas.</p>
+<p class="perla">Confusión, ataxia u oftalmoplejía en un dependiente se tratan como Wernicke hasta prueba en contrario.</p>
+<button type="button" class="go" data-go="cli" onclick="show('cli')">Ir a Clínica →</button></div>
+<div class="etapa" data-go="dro"><h3>Otras drogas</h3>
+<p class="res">Las drogas se agrupan por su efecto en el sistema nervioso: depresoras como los opiáceos y las benzodiacepinas, estimulantes como la cocaína y las anfetaminas, y psicodélicas como el LSD. Cada grupo deja un toxíndrome propio: los opiáceos deprimen la respiración, mientras la cocaína eleva la presión y la temperatura. La abstinencia también difiere: los depresores producen hiperactivación y los estimulantes un apagón con disforia. El antídoto, la vigilancia y el riesgo vital dependen de la sustancia. Para separarlas con pruebas, sigue con el diagnóstico.</p>
+<p class="perla">Un opioide o una benzodiacepina sumados al alcohol deprimen la respiración: esa combinación puede matar.</p>
+<button type="button" class="go" data-go="dro" onclick="show('dro')">Ir a Otras drogas →</button></div>
+<div class="etapa" data-go="dx"><h3>Diagnóstico</h3>
+<p class="res">La prueba inicial es la historia clínica con examen mental y el AUDIT, que clasifica el riesgo pero no diagnostica. Si el puntaje llega a 8, se añaden los criterios del DSM-5-TR de los últimos 12 meses; dos o más confirman el trastorno y gradúan su gravedad. Los biomarcadores solo aclaran el consumo reciente o el daño hepático. Las señales de alarma, como confusión, ataxia, visión borrosa con acidosis o trauma craneal, obligan a actuar antes de completar el estudio. Eso decide el tratamiento.</p>
+<p class="perla">Una alcoholemia baja no descarta dependencia, porque la tolerancia la oculta.</p>
+<button type="button" class="go" data-go="dx" onclick="show('dx')">Ir a Plan diagnóstico →</button></div>
+<div class="etapa" data-go="tx"><h3>Tratamiento</h3>
+<p class="res">La meta se pacta según la gravedad: consumo de bajo riesgo, abstinencia o reducción del daño cuando el paciente no acepta dejar de beber. Primero se tratan los riesgos vitales, como la abstinencia grave y la sospecha de Wernicke. En la dependencia, tras la desintoxicación con benzodiacepinas guiadas por la escala CIWA-Ar, se añade un fármaco que previene la recaída y el apoyo psicosocial. En hepatopatía se prefieren las benzodiacepinas que no se acumulan en el hígado enfermo. Sigue con la vigilancia y las complicaciones.</p>
+<p class="perla">Dar glucosa antes que tiamina en un desnutrido puede precipitar Wernicke.</p>
+<button type="button" class="go" data-go="tx" onclick="show('tx')">Ir a Plan de tratamiento →</button></div>
+<div class="etapa" data-go="seg"><h3>Seguimiento y complicaciones</h3>
+<p class="res">El trastorno es crónico y recurrente, así que cada control repite el ciclo de revisar, evaluar y ajustar; la desintoxicación no lo termina. La recaída no cancela el tratamiento, sino que obliga a revisar qué falló. Las complicaciones siguen mecanismos concretos: la hepatopatía por acetaldehído, la encefalopatía de Wernicke por déficit de tiamina y la abstinencia complicada por rebote excitatorio. La de mayor riesgo vital es la abstinencia complicada, cuya señal es el temblor con descarga autonómica que escala a convulsiones o delirio. El riesgo suicida se pregunta desde la primera consulta.</p>
+<p class="perla">Recaída diaria con temblor al suspender: evalúa el riesgo de abstinencia antes de cualquier suspensión brusca.</p>
+<button type="button" class="go" data-go="seg" onclick="show('seg')">Ir a Seguimiento y complicaciones →</button></div>
+<p class="mini">Esto es el mapa, no el territorio: cada párrafo y cada perla se justifican en su pestaña.</p>
+</section>
+<section class="tab" data-tab="def">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Qué cambia en el circuito de recompensa para que un consumo que empezó por placer termine siendo un consumo por compulsión?</li>
+<li>¿En qué se distinguen tolerancia, dependencia física y dependencia psíquica, y cómo reconoces cada una en el paciente?</li>
+<li>¿Por qué el consumo de riesgo, el consumo perjudicial y la intoxicación aguda no bastan para hablar de trastorno por consumo?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: DSM-5-TR 2022 [1] y CIE-11 [2]</span></p>
+<div class="hb am"><div class="hb-t">Alcance</div>
+<p>Suma los temas del sílabo (caso 4: concepto, morbimortalidad, teorías causales, mecanismos, complicaciones, cuadro clínico, laboratorio y tratamiento en primer nivel; trabajo autónomo: historia clínica psiquiátrica, normalidad y enfermedad mental, neurotransmisión de dopamina y GABA en el sistema límbico, funciones psíquicas y sus alteraciones, benzodiacepinas y clasificación de drogas) y los pedidos por el docente (factores de riesgo, personalidad y otras teorías, craving, inversión de la tolerancia, patología dual y criterios de referencia). Harrison 19e, Farreras 17e y Ebert 2025, citados en el sílabo, no se consultaron.</p></div>
+<p class="mini">Vigencia no verificada: la guía mhGAP de la OMS tiene una actualización de recomendaciones de 2023 que no se leyó.</p>
+
+<h2>Definición</h2>
+<div class="card"><p><b>Trastorno por consumo de sustancias</b>: patrón problemático de consumo de alcohol u otra droga que, durante al menos 12 meses, produce deterioro o malestar clínicamente significativo, con pérdida de control, consumo pese al daño y signos fisiológicos como tolerancia o abstinencia [1]. Redacción propia.</p>
+<span class="badge b-pu">DSM-5-TR 2022 [1]</span>
+<p class="mini">La CIE-11 lo reparte en dos diagnósticos: patrón dañino de consumo (daño ya presente, sin dependencia) y dependencia (control alterado y prioridad del consumo sobre otras actividades) [2]. El DSM-5-TR los une en un solo trastorno graduado por número de criterios [1].</p></div>
+<div class="card"><p><b>Sustrato normal</b>: el circuito de recompensa conecta el área tegmental ventral con el núcleo accumbens. Ante un estímulo útil (comida, pareja, logro), las neuronas dopaminérgicas del área tegmental ventral liberan dopamina en el accumbens y marcan esa conducta como digna de repetirse. La corteza prefrontal evalúa consecuencias y frena el impulso; la amígdala asocia el estímulo con su valor emocional [3].</p>
+<span class="rem">↪ Mecanismo en «Etiología y fisiopatología»</span></div>
+<div class="card"><p><b>Criterios</b>: el DSM-5-TR exige 2 o más de 11 criterios en 12 meses (leve 2 a 3, moderado 4 a 5, grave 6 o más) y agrupa el consumo, el control, el daño social y el criterio farmacológico [1]. La tabla ordena los conceptos del sílabo con la forma de reconocerlos al lado del paciente.</p>
+<div class="tw"><table><thead><tr><th>Concepto</th><th>Qué es</th><th>Cómo se reconoce en el paciente</th></tr></thead>
+<tbody>
+<tr><th>Alcoholismo</th><td>Término histórico para el consumo problemático y compulsivo de alcohol; hoy no es diagnóstico y se sustituye por trastorno por consumo de alcohol [1][2]</td><td>Consumo diario que ocupa la vida del paciente, con daño laboral y familiar</td></tr>
+<tr><th>Abuso</th><td>Categoría del DSM-IV para el consumo repetido con daño o riesgo, sin dependencia; el DSM-5-TR la fusionó con la dependencia en un solo trastorno [1]</td><td>Consumo que lleva a incumplir el trabajo, a conducir ebrio o a pelear, pese a los problemas</td></tr>
+<tr><th>Dependencia</th><td>Estado de adaptación del organismo y de la conducta al consumo repetido, con dos componentes que se distinguen: física (neuroadaptación que se revela como abstinencia) y psíquica (deseo y pérdida de control) [4][5]</td><td>Física: temblor y sudoración al suspender. Psíquica: no puede dejar el consumo aunque lo intente</td></tr>
+<tr><th>Tolerancia</th><td>Necesidad de más etanol para el mismo efecto, o efecto menor con la misma cantidad [1]</td><td>Pasa de cerveza de fin de semana a aguardiente diario, con más volumen cada vez</td></tr>
+<tr><th>Inversión de la tolerancia</th><td>Pérdida posterior de la tolerancia: con la misma cantidad aparece más embriaguez, por menor reserva hepática o cerebral [4]</td><td>Se emborracha con menos trago que antes, en un paciente con hepatopatía o edad avanzada</td></tr>
+<tr><th>Craving</th><td>Deseo intenso e irresistible de consumir, desencadenado por señales asociadas al consumo; criterio del DSM-5-TR desde 2013 [1][6]</td><td>Relata que piensa en el trago al pasar por la tienda o discutir con la pareja</td></tr>
+<tr><th>Normalidad psíquica</th><td>Se juzga con tres criterios que no coinciden siempre: estadístico (lo frecuente en la población), funcional (capacidad de adaptarse y funcionar) y de malestar (sufrimiento subjetivo) [1][4]</td><td>Beber mucho es frecuente en su medio (criterio estadístico), pero él pierde trabajo y pareja (criterio funcional) y refiere tristeza (malestar)</td></tr>
+<tr><th>Enfermedad mental</th><td>Término general para la alteración psíquica con causa biológica o psicológica reconocible; el DSM-5-TR usa «trastorno mental» y no exige causa conocida [1][4]</td><td>Cuando el malestar o el deterioro cumplen criterios de un trastorno y no son solo una respuesta esperable o una conducta desviada</td></tr>
+<tr><th>Trastorno mental</th><td>Síndrome con alteración clínicamente significativa de la cognición, la regulación emocional o la conducta, que refleja una disfunción psicológica, biológica o del desarrollo [1]</td><td>Malestar o deterioro funcional que no es una respuesta esperable a un hecho, ni un conflicto solo social</td></tr>
+</tbody></table></div></div>
+<div class="tw"><table><thead><tr><th>No confundir con</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Consumo de riesgo</th><td>Consumo por encima de lo seguro</td><td>Aún sin daño ni criterios cumplidos; es un patrón de riesgo, no un trastorno [2]</td></tr>
+<tr><th>Consumo perjudicial (patrón dañino, CIE-11)</th><td>Daño por el consumo</td><td>Hay daño físico o mental, pero no dependencia ni pérdida de control [2]</td></tr>
+<tr><th>Intoxicación aguda</th><td>Alteración conductual tras beber</td><td>Estado transitorio por una dosis, que puede ocurrir en un bebedor sin trastorno [1]</td></tr>
+</tbody></table></div>
+<div class="card"><p><b>Ejemplo de anclaje</b>: varón que ingresa a emergencia ebrio tras una semana de aguardiente. Bebe desde los 17 años; hace 6 meses intentó parar y tuvo temblores, mareos e irritabilidad; maltrata a su pareja y perdió rendimiento laboral.</p></div>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — qué es el trastorno por consumo</span>
+<p class="fey-b">El cerebro tiene un botón que dice «esto estuvo bien, repítelo». El alcohol lo aprieta con una fuerza que ninguna comida logra. Con los años el cerebro se acostumbra, pide cada vez más y el freno que decide con calma se debilita. Entonces la persona ya no bebe por gusto: bebe porque el cuerpo y la cabeza se lo exigen, aunque sepa que le hace daño.</p>
+<p class="mini fey-c">En medicina esto se llama… trastorno por consumo de alcohol, con tolerancia, dependencia y craving.</p>
+<p class="mini fey-c">Dónde falla la comparación: un botón es un solo interruptor; en el cerebro intervienen varios circuitos y mucho aprendizaje.</p></div>
+
+<h2>Epidemiología</h2>
+<div class="stats">
+<div class="stat"><b>2,6 millones</b><span>muertes anuales atribuibles al alcohol, año 2019 [7]</span></div>
+<div class="stat"><b>0,6 millones</b><span>muertes anuales atribuibles a drogas psicoactivas, año 2019 [7]</span></div>
+<div class="stat"><b>≈400 millones</b><span>personas con trastornos por consumo de alcohol [7] [VERIFICAR EN FUENTE]</span></div>
+<div class="stat"><b>≈292 millones</b><span>personas que consumieron drogas en un año reciente [8] [VERIFICAR EN FUENTE]</span></div>
+</div>
+<p>El alcohol aporta la mayor parte de la mortalidad por sustancias psicoactivas y su carga incluye accidentes, violencia, cirrosis, cáncer y trastornos mentales [7]. Las drogas ilícitas suman menos muertes, pero concentran la carga en personas jóvenes [8].</p>
+<p class="mini">Ecuador y Latinoamérica: no se leyó una estimación sostenible en esta sesión; consultar las encuestas del Ministerio de Salud Pública y del observatorio nacional de drogas.</p>
+</section>
+<section class="tab" data-tab="fis">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué el mismo etanol que desinhibe y produce ataxia al beber provoca temblor y convulsiones cuando se suspende?</li>
+<li>¿Qué pasos convierten un consumo recreativo en craving y pérdida de control, y qué distingue la dependencia física de la psíquica?</li>
+<li>¿Cómo explican la lesión hepática y el déficit de tiamina que la tolerancia se invierta y que aparezca una encefalopatía?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: DSM-5-TR 2022 [1]; modelo de neurocircuitos de Koob y Volkow 2016 [9]</span></p>
+
+<h2>Neurotransmisión: dopamina, GABA y sistema límbico</h2>
+<div class="tw"><table><thead><tr><th>Estructura o transmisor</th><th>Qué hace normalmente</th><th>Qué le hace la droga</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Dopamina mesolímbica (ATV al núcleo accumbens)</th><td>Señala qué conductas valen la pena repetir</td><td>El alcohol y otras drogas elevan la dopamina del accumbens más que una recompensa natural</td><td>[3][9]</td></tr>
+<tr><th>Dopamina mesocortical (ATV a corteza prefrontal)</th><td>Sostiene la atención y la toma de decisiones</td><td>El consumo crónico la reduce y debilita el control</td><td>[9]</td></tr>
+<tr><th>GABA y receptor GABA-A</th><td>Principal freno del sistema nervioso; abre un canal de cloro</td><td>El etanol lo potencia; con el uso crónico el receptor disminuye</td><td>[5][3]</td></tr>
+<tr><th>Glutamato y receptor NMDA</th><td>Principal excitador; participa en el aprendizaje</td><td>El etanol lo inhibe; con el uso crónico aumenta y se rebota al suspender</td><td>[5][3]</td></tr>
+<tr><th>Amígdala</th><td>Asocia estímulos con emoción y estrés</td><td>Amplifica el malestar de la retirada y el valor de las señales</td><td>[9]</td></tr>
+<tr><th>Hipocampo</th><td>Forma la memoria del contexto</td><td>Guarda el lugar y la situación del consumo; el exceso de etanol altera su memoria</td><td>[3][9]</td></tr>
+<tr><th>Núcleo accumbens</th><td>Convierte la señal de recompensa en motivación</td><td>Recibe la dopamina que marca el consumo</td><td>[3]</td></tr>
+<tr><th>Corteza prefrontal</th><td>Planifica y frena el impulso</td><td>Pierde control inhibitorio con el consumo crónico</td><td>[9]</td></tr>
+<tr><th>Opioides endógenos</th><td>Median el placer y el alivio del dolor</td><td>El etanol libera endorfinas que activan la dopamina</td><td>[9][5]</td></tr>
+</tbody></table></div>
+
+<h2>Etiología</h2>
+<div class="tw"><table><thead><tr><th>Causa / grupo</th><th>Cómo entra en la cascada</th><th>Nodo</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th colspan="4">Teorías genéticas</th></tr>
+<tr><th>Heredabilidad de alrededor de 50 %</th><td>Los genes modulan la respuesta dopaminérgica y la sensibilidad al etanol, no «heredan» el hábito</td><td>
+<button type="button" class="xref" data-ir="m-2" onclick="ir('fis','m-2')">← Dopamina del ATV</button></td><td>[10]</td></tr>
+<tr><th>Tipologías de Cloninger</th><td>Tipo I (inicio tardío, dependencia psíquica, evitación del daño) y tipo II (inicio temprano, búsqueda de novedad, rasgos antisociales): el segundo entra por el refuerzo dopaminérgico</td><td>
+<button type="button" class="xref" data-ir="m-2" onclick="ir('fis','m-2')">← Dopamina del ATV</button></td><td>[11]</td></tr>
+<tr><th>Variantes de ADH y ALDH</th><td>Cambian la velocidad con que se forma y se elimina el acetaldehído; las variantes de ALDH2 con poca actividad lo acumulan y protegen del consumo, y las de ADH rápidas lo producen antes</td><td>
+<button type="button" class="xref" data-ir="m-7" onclick="ir('fis','m-7')">← Acetaldehído y estrés oxidativo</button></td><td>[5]</td></tr>
+<tr><th colspan="4">Socioculturales</th></tr>
+<tr><th>Disponibilidad y precio</th><td>Más oportunidades de exposición generan más señales asociadas al consumo</td><td>
+<button type="button" class="xref" data-ir="m-3" onclick="ir('fis','m-3')">← Aprendizaje asociativo</button></td><td>[7]</td></tr>
+<tr><th>Normas de consumo</th><td>Si beber hasta embriagarse es parte de la fiesta y de la identidad masculina, se refuerza socialmente cada episodio</td><td>
+<button type="button" class="xref" data-ir="m-3" onclick="ir('fis','m-3')">← Aprendizaje asociativo</button></td><td>[4]</td></tr>
+<tr><th>Aguardiente barato y artesanal</th><td>Mucho etanol por dólar facilita consumos de gran volumen; las bebidas artesanales pueden añadir contaminantes y metanol [VERIFICAR EN FUENTE]</td><td>
+<button type="button" class="xref" data-ir="m-1" onclick="ir('fis','m-1')">← Etanol potencia GABA-A</button></td><td>[7]</td></tr>
+<tr><th>Grupo de pares del barrio</th><td>Los amigos que beben ofrecen el trago, el modelo y el contexto donde se aprende a asociar</td><td>
+<button type="button" class="xref" data-ir="m-3" onclick="ir('fis','m-3')">← Aprendizaje asociativo</button></td><td>[4]</td></tr>
+<tr><th colspan="4">Personalidad como factor etiológico</th></tr>
+<tr><th>Impulsividad</th><td>Corteza prefrontal con menor capacidad de frenar la conducta ya aprendida</td><td>
+<button type="button" class="xref" data-ir="m-6" onclick="ir('fis','m-6')">← Corteza prefrontal pierde control</button></td><td>[4]</td></tr>
+<tr><th>Búsqueda de sensaciones</th><td>Mayor atractivo de la recompensa y de la novedad; inicio más precoz</td><td>
+<button type="button" class="xref" data-ir="m-2" onclick="ir('fis','m-2')">← Dopamina del ATV</button></td><td>[4]</td></tr>
+<tr><th>Rasgos antisociales</th><td>Control inhibitorio débil y consumo pese a las consecuencias</td><td>
+<button type="button" class="xref" data-ir="m-6" onclick="ir('fis','m-6')">← Corteza prefrontal pierde control</button></td><td>[4]</td></tr>
+<tr><th colspan="4">Otras teorías</th></tr>
+<tr><th>Aprendizaje y condicionamiento</th><td>El alivio y el placer tras beber refuerzan la conducta; las señales asociadas la disparan</td><td>
+<button type="button" class="xref" data-ir="m-3" onclick="ir('fis','m-3')">← Aprendizaje asociativo</button></td><td>[4]</td></tr>
+<tr><th>Automedicación</th><td>Se bebe para aliviar tristeza, ansiedad o la propia abstinencia; el alivio refuerza el consumo siguiente</td><td>
+<button type="button" class="xref" data-ir="m-5" onclick="ir('fis','m-5')">← Retirada del etanol</button></td><td>[4]</td></tr>
+<tr><th>Sensibilización del incentivo</th><td>Con el uso repetido, las señales ganan valor de incentivo («querer») aunque el placer («gustar») disminuya</td><td>
+<button type="button" class="xref" data-ir="m-3" onclick="ir('fis','m-3')">← Aprendizaje asociativo</button></td><td>[6]</td></tr>
+<tr><th>Modelo de Koob y Volkow</th><td>Ciclo en tres etapas (atracón e intoxicación, afecto negativo de la retirada, preocupación y anticipación) que desplaza el control hacia el hábito</td><td>
+<button type="button" class="xref" data-ir="m-4" onclick="ir('fis','m-4')">← Neuroadaptación</button></td><td>[9]</td></tr>
+</tbody></table></div>
+
+<h2>Factores de riesgo para uso y abuso de alcohol y drogas</h2>
+<div class="tw"><table><thead><tr><th>Factor</th><th>Nivel</th><th>Por qué aumenta el riesgo</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Inicio precoz del consumo</th><td>Individual</td><td>El cerebro adolescente aprende asociaciones con más fuerza y su corteza prefrontal madura después</td><td>[4]</td></tr>
+<tr><th>Sexo masculino</th><td>Individual</td><td>Mayor prevalencia de consumo intenso y de trastorno en varones</td><td>[7]</td></tr>
+<tr><th>Trastornos mentales comórbidos (depresión, ansiedad, TDAH, conducta antisocial)</th><td>Individual</td><td>El alcohol se usa para aliviar el síntoma y la impulsividad facilita la compulsión</td><td>[1][4]</td></tr>
+<tr><th>Antecedente familiar de trastorno por consumo</th><td>Familiar</td><td>Suma carga genética y modelo de consumo en casa</td><td>[10]</td></tr>
+<tr><th>Maltrato, violencia o trauma en la infancia</th><td>Familiar</td><td>Estrés temprano sensibiliza los sistemas de respuesta al estrés, que luego buscan alivio en el etanol</td><td>[4]</td></tr>
+<tr><th>Crianza con poca supervisión</th><td>Familiar</td><td>Menos límites y más acceso al trago desde edades tempranas</td><td>[4]</td></tr>
+<tr><th>Pares que consumen</th><td>Social</td><td>Ofrecen el consumo y normalizan la embriaguez</td><td>[4]</td></tr>
+<tr><th>Disponibilidad, bajo precio y publicidad</th><td>Social</td><td>Reducen la barrera para beber y multiplican las señales</td><td>[7]</td></tr>
+<tr><th>Pobreza, desempleo y estrés laboral</th><td>Social</td><td>Cronifican el malestar que se alivia bebiendo; aumentan la carga del daño</td><td>[7]</td></tr>
+</tbody></table></div>
+
+<h2>Rama A · Efecto agudo del etanol</h2>
+<ol class="tl">
+<li class="nodo" id="m-1" data-clin="1" data-paso="Etanol potencia GABA-A e inhibe NMDA" data-rama="Rama A · Aguda"><div class="det"><p>El etanol, molécula pequeña y soluble en agua y en lípidos, cruza la barrera hematoencefálica. Potencia el receptor GABA-A, un canal de cloro de la neurona postsináptica que es el principal freno del sistema nervioso, y bloquea el receptor NMDA, un canal de calcio activado por glutamato, el principal excitador [5]. Predomina la inhibición: primero se apaga la corteza prefrontal y luego el cerebelo y el tronco. Las benzodiacepinas actúan sobre el mismo receptor. <span class="rem">↪ Posología en «Plan de tratamiento»</span></p>
+<p class="man">Se manifiesta como: 
+<button type="button" class="xref" data-ir="s-1" onclick="ir('cli','s-1')">Intoxicación aguda</button></p></div></li>
+<li class="nodo" id="m-2" data-clin="0" data-paso="Dopamina del ATV marca el consumo" data-rama="Rama A · Aguda"><div class="det"><p>El etanol libera endorfinas y disminuye el freno de las interneuronas GABA sobre el área tegmental ventral (ATV), grupo de neuronas dopaminérgicas del mesencéfalo. Estas descargan dopamina en el núcleo accumbens, que señala «esto merece repetirse». Así el cerebro registra el trago como una recompensa, igual que una comida o un logro [9].</p></div></li>
+</ol>
+
+<h2>Rama B · De la recompensa a la adicción</h2>
+<ol class="tl">
+<li class="nodo" id="m-3" data-clin="1" data-paso="Aprendizaje asociativo convierte señales en deseo" data-rama="Rama B · Adicción"><div class="det"><p>La dopamina refuerza las sinapsis glutamatérgicas que llegan al estriado desde la amígdala y la corteza. Con cada consumo, los estímulos asociados (la tienda, la cuadra, una discusión) adquieren valor de incentivo y disparan deseo por sí solos, aunque el placer del trago ya sea menor [6][9].</p>
+<p class="man">Se manifiesta como: 
+<button type="button" class="xref" data-ir="s-2" onclick="ir('cli','s-2')">Craving</button></p></div></li>
+<li class="nodo" id="m-4" data-clin="1" data-paso="Neuroadaptación reduce GABA-A y aumenta NMDA" data-rama="Rama B · Adicción"><div class="det"><p>Ante la presencia constante de etanol, la neurona compensa para recuperar su equilibrio: disminuye y cambia las subunidades de los receptores GABA-A y aumenta los receptores NMDA [5]. A la vez, el hígado induce la enzima CYP2E1 y elimina el etanol más rápido. Ambos cambios explican que haga falta más trago para el mismo efecto.</p>
+<p class="man">Se manifiesta como: 
+<button type="button" class="xref" data-ir="s-3" onclick="ir('cli','s-3')">Tolerancia que aumenta y luego se invierte</button></p></div></li>
+<li class="nodo" id="m-5" data-clin="1" data-paso="Retirada del etanol desata rebote excitatorio" data-rama="Rama B · Adicción"><div class="det"><p>Al suspender el consumo desaparece el etanol, pero el cerebro conserva pocos receptores GABA-A y muchos NMDA. El balance se inclina a la excitación: el locus coeruleus descarga noradrenalina y el sistema simpático se dispara; el exceso de glutamato puede producir convulsiones [5]. El cuadro explica también el consumo para aliviar la abstinencia. <span class="rem">↪ Posología en «Plan de tratamiento»</span></p>
+<p class="man">Se manifiesta como: 
+<button type="button" class="xref" data-ir="s-4" onclick="ir('cli','s-4')">Temblor e hiperactividad autonómica</button><button type="button" class="xref" data-ir="s-5" onclick="ir('cli','s-5')">Convulsiones y delirium tremens</button></p></div></li>
+<li class="nodo" id="m-6" data-clin="1" data-paso="Corteza prefrontal pierde control inhibitorio" data-rama="Rama B · Adicción"><div class="det"><p>La corteza prefrontal (orbitofrontal y cingulada) evalúa consecuencias y frena el impulso. Con el consumo crónico su actividad cae, mientras la amígdala amplifica el malestar de la retirada y el estriado dorsal convierte el consumo en hábito. Se consume pese al daño y la decisión deja de ser voluntaria [9]. La misma desinhibición favorece la agresividad.</p>
+<p class="man">Se manifiesta como: 
+<button type="button" class="xref" data-ir="s-6" onclick="ir('cli','s-6')">Pérdida de control y consumo pese al daño</button></p></div></li>
+</ol>
+<div class="card"><p><b>Dependencia física y psíquica</b>: son dos caras del mismo proceso, no dos enfermedades.</p>
+<div class="tw"><table><thead><tr><th>Concepto</th><th>Qué lo sostiene</th><th>Nodo</th><th>Cómo se ve</th></tr></thead>
+<tbody>
+<tr><th>Dependencia física</th><td>Neuroadaptación: pocos GABA-A, muchos NMDA; sin etanol aparece el rebote</td><td>
+<button type="button" class="xref" data-ir="m-4" onclick="ir('fis','m-4')">← Neuroadaptación</button> 
+<button type="button" class="xref" data-ir="m-5" onclick="ir('fis','m-5')">← Retirada del etanol</button></td><td>Abstinencia: temblor, sudoración, irritabilidad</td></tr>
+<tr><th>Dependencia psíquica</th><td>Aprendizaje de señales y pérdida del control prefrontal</td><td>
+<button type="button" class="xref" data-ir="m-3" onclick="ir('fis','m-3')">← Aprendizaje asociativo</button> 
+<button type="button" class="xref" data-ir="m-6" onclick="ir('fis','m-6')">← Corteza prefrontal</button></td><td>Craving y consumo pese al daño</td></tr>
+<tr><th>Tolerancia</th><td>Neuroadaptación y mayor eliminación hepática del etanol</td><td>
+<button type="button" class="xref" data-ir="m-4" onclick="ir('fis','m-4')">← Neuroadaptación</button></td><td>Necesita más trago para el mismo efecto</td></tr>
+<tr><th>Inversión de la tolerancia</th><td>Pérdida de reserva hepática y cerebral con los años de consumo</td><td>
+<button type="button" class="xref" data-ir="m-9" onclick="ir('fis','m-9')">← Reserva hepática cae</button></td><td>Se emborracha con menos trago</td></tr>
+</tbody></table></div>
+<p class="mini">La dependencia física puede existir sin psíquica (paciente hospitalizado con opioides) y la psíquica sin la física (juego patológico, que no es sustancia) [4].</p></div>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — cómo se forma una adicción</span>
+<p class="fey-b">Cuando cruzas un potrero muchas veces, se marca un sendero. Al principio eliges pasar; con el tiempo el sendero es una autopista y tus pies van solos, aunque al final haya un barranco. Al mismo tiempo el vigilante que debería gritar «para» se cansa y su voz se vuelve débil. El camino se hizo con un premio, pero se sigue por costumbre y por miedo a lo que se siente al dejarlo.</p>
+<p class="mini fey-c">En medicina esto se llama… refuerzo dopaminérgico, sensibilización del incentivo y pérdida del control prefrontal.</p>
+<p class="mini fey-c">Dónde falla la comparación: el sendero no se ensancha por sí mismo; en el cerebro intervienen la dopamina y el estrés además del hábito.</p></div>
+
+<h2>Rama C · Daño orgánico e inversión de la tolerancia</h2>
+<ol class="tl">
+<li class="nodo" id="m-7" data-clin="1" data-paso="Acetaldehído y estrés oxidativo dañan el hepatocito" data-rama="Rama C · Daño orgánico"><div class="det"><p>La alcohol deshidrogenasa (ADH) del hepatocito convierte el etanol en acetaldehído, una molécula tóxica que forma aductos con proteínas y ADN; la aldehído deshidrogenasa (ALDH2) lo transforma en acetato. El exceso de NADH favorece la grasa dentro de la célula, y la CYP2E1 induce especies reactivas de oxígeno que inflaman e inducen muerte celular [5]. Las transaminasas son marcadores de este daño. <span class="rem">↪ Propiedades en «Plan diagnóstico»</span></p>
+<p class="man">Se manifiesta como: 
+<button type="button" class="xref" data-ir="s-7" onclick="ir('cli','s-7')">Hepatopatía alcohólica</button></p></div></li>
+<li class="nodo" id="m-8" data-clin="1" data-paso="Déficit de tiamina frena el metabolismo neuronal" data-rama="Rama C · Daño orgánico"><div class="det"><p>El paciente come poco, absorbe mal la tiamina (vitamina B1) en el intestino y la almacena mal en el hígado enfermo. La tiamina es cofactor de enzimas del metabolismo de la glucosa, como la transcetolasa y la piruvato deshidrogenasa. Sin ella fallan las neuronas más demandantes: cuerpos mamilares, tálamo medial y núcleos oculomotores [4]. Es un blanco terapéutico. <span class="rem">↪ Posología en «Plan de tratamiento»</span></p>
+<p class="man">Se manifiesta como: 
+<button type="button" class="xref" data-ir="s-8" onclick="ir('cli','s-8')">Encefalopatía de Wernicke</button></p></div></li>
+<li class="nodo" id="m-9" data-clin="1" data-paso="Reserva hepática cae e invierte la tolerancia" data-rama="Rama C · Daño orgánico"><div class="det"><p>Con esteatosis o cirrosis hay menos hepatocitos que metabolicen el etanol; la misma cantidad produce una concentración sanguínea mayor y por más tiempo. La tolerancia adquirida se pierde: el paciente se embriaga con menos trago que antes [4]. La edad y la desnutrición agravan el efecto.</p>
+<p class="man">Se manifiesta como: 
+<button type="button" class="xref" data-ir="s-3" onclick="ir('cli','s-3')">Tolerancia que aumenta y luego se invierte</button></p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — qué pasa al dejar de beber y por qué cambia la resistencia</span>
+<p class="fey-b">Imagina que empujas una puerta con resorte y alguien la empuja de vuelta con la misma fuerza; la puerta queda quieta. El cuerpo se acostumbró a empujar contra el alcohol. Si de repente quitas el empuje, la puerta se abre de golpe: es el temblor y los nervios al dejar de beber. Con los años el ayudante que limpia el alcohol, el hígado, se agota, y el mismo trago pega más fuerte que antes.</p>
+<p class="mini fey-c">En medicina esto se llama… neuroadaptación, síndrome de abstinencia, tolerancia e inversión de la tolerancia.</p>
+<p class="mini fey-c">Dónde falla la comparación: el resorte no se daña con el tiempo; el hígado y el cerebro sí.</p></div>
+</section>
+<section class="tab" data-tab="cli">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué el mismo mecanismo que produce la ataxia y la disartria de la intoxicación aguda explica que la tolerancia primero aumente y luego se invierta?</li>
+<li>¿Qué cambia en el cerebro de un bebedor crónico para que suspender el alcohol cause temblor, convulsiones o delirio, y por qué aparecen en ese orden temporal?</li>
+<li>¿Cómo explica el mecanismo que un mismo paciente presente ataxia y confusión por Wernicke y, a la vez, hepatomegalia o ictericia?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: ASAM 2020 (abstinencia) y DSM-5-TR 2022, solo resumen [12][1]</span></p>
+<div class="qv">
+<p data-e="p">Desinhibición, marcha inestable y habla farfullante</p>
+<p data-e="p">Consumo que continúa pese al daño y a los conflictos</p>
+<p data-e="v">Temblor e hiperactividad autonómica al suspender</p>
+<p data-e="v">Hepatomegalia, ictericia o estigmas de hepatopatía</p>
+<p data-e="a">Déficit neurológico focal asimétrico</p>
+<p data-e="k"><button type="button" class="xref" data-ir="s-5" onclick="ir('cli','s-5')">Convulsiones y delirium tremens</button></p>
+</div>
+
+<h2>Intoxicación alcohólica aguda</h2>
+<p>El etanol deprime el sistema nervioso de arriba abajo: primero la corteza prefrontal, que frena la conducta, y después el cerebelo y el tronco. La gravedad sigue a grandes rasgos la alcoholemia, pero la tolerancia desplaza esos umbrales: un bebedor crónico puede caminar y hablar con cifras que dejarían estuporoso a un abstemio.</p>
+<div class="tw"><table><thead><tr><th>Alcoholemia aproximada</th><th>Efecto</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>20–50 mg/dL</th><td>Euforia, locuacidad, atención y juicio levemente alterados.</td><td>[5][13]</td></tr>
+<tr><th>50–100 mg/dL</th><td>Desinhibición, reflejos más lentos, coordinación fina disminuida.</td><td>[5][13]</td></tr>
+<tr><th>100–200 mg/dL</th><td>Ataxia, disartria, nistagmo, labilidad emocional, juicio alterado.</td><td>[5][13]</td></tr>
+<tr><th>200–300 mg/dL</th><td>Confusión, vómito, lagunas amnésicas, somnolencia; riesgo de broncoaspiración.</td><td>[5][13]</td></tr>
+<tr><th>300–400 mg/dL</th><td>Estupor, hipotermia, posible hipoglucemia.</td><td>[5][13]</td></tr>
+<tr><th>Más de 400 mg/dL</th><td>Coma, depresión respiratoria y riesgo de muerte.</td><td>[5][13]</td></tr>
+</tbody></table></div>
+<p class="mini">Rangos orientativos que se solapan entre fuentes: los umbrales exactos de cada grado [VERIFICAR EN FUENTE]. La conducta se decide por la clínica, no por el número. <span class="rem">↪ Alcoholemia y glucemia en «Plan diagnóstico»</span></p>
+<div class="signo" id="s-1"><h4>Intoxicación aguda: desinhibición, ataxia, disartria, nistagmo</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Aliento etílico, conducta desinhibida o agresiva, marcha inestable, habla farfullante y nistagmo; en el paciente del caso, una semana de consumo seguido.</dd>
+<dt>Por qué aparece</dt><dd>El etanol potencia el receptor GABA-A y bloquea el NMDA, de modo que apaga primero el control cortical y luego el cerebelo. <button type="button" class="xref" data-ir="m-1" onclick="ir('fis','m-1')">← Etanol potencia GABA-A e inhibe NMDA</button></dd>
+<dt>Qué significa</dt><dd>No atribuyas todo al alcohol: descarta hipoglucemia, traumatismo craneal y otras sustancias antes de cerrar el cuadro [13].</dd></dl></div>
+
+<h2>Intoxicación alcohólica crónica: dependencia</h2>
+<p>El consumo sostenido cambia al cerebro y a la conducta. Aparecen el deseo intenso de beber y una tolerancia que primero exige más etanol y, con el hígado ya dañado, se invierte. Ambos rasgos cuentan entre los criterios del trastorno por consumo de alcohol [1].</p>
+<div class="signo" id="s-2"><h4>Craving</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Deseo intenso e intrusivo de beber, que el paciente refiere ante ciertos lugares, compañías o emociones.</dd>
+<dt>Por qué aparece</dt><dd>Las señales ligadas al consumo activan la dopamina y se viven como deseo, no como placer. <button type="button" class="xref" data-ir="m-3" onclick="ir('fis','m-3')">← Aprendizaje asociativo convierte señales en deseo</button></dd>
+<dt>Qué significa</dt><dd>Es criterio diagnóstico y anticipa la recaída; es un síntoma del trastorno, no falta de voluntad [1][9].</dd></dl></div>
+<div class="signo" id="s-3"><h4>Tolerancia que aumenta y luego se invierte</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Al inicio necesita cada vez más alcohol para el mismo efecto; en fases avanzadas se intoxica con cantidades que antes toleraba.</dd>
+<dt>Por qué aparece</dt><dd>Primero el cerebro compensa el etanol con menos GABA-A y más NMDA; después el hígado dañado metaboliza menos y la reserva cae. <button type="button" class="xref" data-ir="m-4" onclick="ir('fis','m-4')">← Neuroadaptación reduce GABA-A y aumenta NMDA</button> <button type="button" class="xref" data-ir="m-9" onclick="ir('fis','m-9')">← Reserva hepática cae e invierte la tolerancia</button></dd>
+<dt>Qué significa</dt><dd>La tolerancia que cae no es mejoría: suele marcar daño hepático avanzado [1][13].</dd></dl></div>
+
+<h2>Abstinencia alcohólica</h2>
+<p>Las manifestaciones siguen una cronología que parte del último consumo. Cada fase tiene un hallazgo guía y un riesgo propio; conocer el reloj permite anticipar la siguiente [12][13].</p>
+<div class="tw"><table><thead><tr><th>Fase</th><th>Inicio tras el último consumo</th><th>Hallazgos</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Abstinencia menor</th><td>6–24 h</td><td>Temblor, ansiedad, insomnio, náuseas, sudoración, taquicardia.</td><td>[12][13]</td></tr>
+<tr><th>Convulsiones</th><td>12–48 h</td><td>Crisis tónico-clónicas generalizadas, aisladas o en racimo.</td><td>[12][13]</td></tr>
+<tr><th>Alucinosis alcohólica</th><td>12–48 h</td><td>Alucinaciones visuales, auditivas o táctiles con sensorio claro.</td><td>[12][13]</td></tr>
+<tr><th>Delirium tremens</th><td>48–96 h</td><td>Desorientación, alucinaciones, agitación, fiebre e hiperactividad autonómica.</td><td>[12][13]</td></tr>
+</tbody></table></div>
+<p>La gravedad se mide con la escala CIWA-Ar: diez ítems que suman hasta 67 puntos [14]. Los puntos de corte de leve, moderada y grave varían entre protocolos [VERIFICAR EN FUENTE] y la escala solo cuantifica la gravedad. <span class="rem">↪ Manejo en «Plan de tratamiento»</span></p>
+<div class="signo" id="s-4"><h4>Temblor e hiperactividad autonómica de la abstinencia</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Temblor fino de manos y lengua, sudoración, taquicardia, hipertensión, ansiedad e insomnio pocas horas después del último trago.</dd>
+<dt>Por qué aparece</dt><dd>Sin etanol quedan menos receptores GABA-A y más NMDA: el cerebro rebota hacia la excitación. <button type="button" class="xref" data-ir="m-5" onclick="ir('fis','m-5')">← Retirada del etanol desata rebote excitatorio</button></dd>
+<dt>Qué significa</dt><dd>Es la abstinencia menor y puede escalar; el temblor y los mareos del intento previo del paciente ya anunciaban dependencia física [12].</dd></dl></div>
+<div class="signo" id="s-5"><h4>Convulsiones y delirium tremens</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Crisis generalizadas a las 12–48 h; después, confusión, alucinaciones, agitación, fiebre y descarga simpática a las 48–96 h.</dd>
+<dt>Por qué aparece</dt><dd>Es el mismo rebote excitatorio, pero más intenso y prolongado. <button type="button" class="xref" data-ir="m-5" onclick="ir('fis','m-5')">← Retirada del etanol desata rebote excitatorio</button></dd>
+<dt>Qué significa</dt><dd>Urgencia con riesgo de muerte: exige vigilancia y tratamiento hospitalario [12]. <span class="rem">↪ Posología en «Plan de tratamiento»</span></dd></dl></div>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — por qué la abstinencia da temblor</span>
+<p class="fey-b">Imagina un resorte que alguien aprieta con la mano. El resorte hace fuerza hacia arriba para no dejarse aplastar. Si la mano se retira de golpe, el resorte salta más alto de lo normal antes de calmarse. El cerebro de quien bebe mucho se acostumbra a que el alcohol lo aplaste y empuja de vuelta; cuando falta el alcohol, ese empuje queda sin freno y todo el cuerpo se sacude.</p>
+<p class="mini fey-c">En medicina esto se llama… síndrome de abstinencia alcohólica, rebote excitatorio y delirium tremens.</p>
+<p class="mini fey-c">Dónde falla la comparación: el resorte vuelve solo a su sitio; el cerebro se reajusta poco a poco y por eso el riesgo dura días.</p></div>
+
+<h2>Intoxicación alcohólica crónica: pérdida de control y daño orgánico</h2>
+<p>La exposición prolongada altera la corteza prefrontal y daña, por vía directa o por déficit nutricional, el hígado, el sistema nervioso y otros órganos [13][5].</p>
+<div class="signo" id="s-6"><h4>Pérdida de control y consumo pese al daño</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Bebe más o por más tiempo de lo que quería, fracasa al intentar reducir y sigue consumiendo pese a la violencia, el deterioro laboral y el ánimo bajo.</dd>
+<dt>Por qué aparece</dt><dd>La corteza prefrontal pierde la capacidad de frenar el impulso aprendido. <button type="button" class="xref" data-ir="m-6" onclick="ir('fis','m-6')">← Corteza prefrontal pierde control inhibitorio</button></dd>
+<dt>Qué significa</dt><dd>Son criterios del DSM-5-TR: dos a tres criterios indican trastorno leve; cuatro a cinco, moderado; seis o más, grave [1].</dd></dl></div>
+<div class="signo" id="s-7"><h4>Hepatopatía alcohólica: hepatomegalia, ictericia, estigmas</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Hígado aumentado de tamaño, ictericia, eritema palmar, telangiectasias en araña y, en fases avanzadas, ascitis.</dd>
+<dt>Por qué aparece</dt><dd>El acetaldehído y el estrés oxidativo lesionan el hepatocito y desencadenan inflamación y fibrosis. <button type="button" class="xref" data-ir="m-7" onclick="ir('fis','m-7')">← Acetaldehído y estrés oxidativo dañan el hepatocito</button></dd>
+<dt>Qué significa</dt><dd>La esteatosis revierte con abstinencia; la cirrosis, no [13]. <span class="rem">↪ Pruebas hepáticas en «Plan diagnóstico»</span></dd></dl></div>
+<div class="signo" id="s-8"><h4>Encefalopatía de Wernicke: confusión, ataxia, oftalmoplejía</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Confusión, marcha atáxica y alteración de los movimientos oculares; la tríada completa es poco frecuente, por eso se sospecha ante cualquiera de sus elementos.</dd>
+<dt>Por qué aparece</dt><dd>Sin tiamina, las neuronas con alta demanda energética no sostienen su metabolismo. <button type="button" class="xref" data-ir="m-8" onclick="ir('fis','m-8')">← Déficit de tiamina frena el metabolismo neuronal</button></dd>
+<dt>Qué significa</dt><dd>Es una urgencia: se trata sin esperar confirmación, porque sin tratamiento deja amnesia anterógrada y confabulación (síndrome de Korsakoff) [13]. <span class="rem">↪ Posología en «Plan de tratamiento»</span></dd></dl></div>
+
+<h2>Otros hallazgos del consumo crónico</h2>
+<div class="tw"><table><thead><tr><th>Signo</th><th>Mecanismo</th><th>Nodo</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Ascitis y circulación colateral</th><td>Fibrosis hepática con hipertensión portal.</td><td><button type="button" class="xref" data-ir="m-7" onclick="ir('fis','m-7')">← Daño del hepatocito</button></td><td>[13]</td></tr>
+<tr><th>Neuropatía periférica sensitiva</th><td>Toxicidad directa del etanol y déficit de tiamina.</td><td><button type="button" class="xref" data-ir="m-8" onclick="ir('fis','m-8')">← Déficit de tiamina</button></td><td>[13]</td></tr>
+<tr><th>Pancreatitis aguda o crónica</th><td>Metabolitos del etanol lesionan el acino y activan enzimas en la glándula.</td><td>Fuera de la cascada</td><td>[13]</td></tr>
+<tr><th>Miocardiopatía dilatada</th><td>Toxicidad directa del etanol y el acetaldehído sobre el miocardiocito.</td><td>Fuera de la cascada</td><td>[13]</td></tr>
+<tr><th>Macrocitosis (VCM elevado)</th><td>Efecto tóxico sobre la eritropoyesis y déficit de folato.</td><td>Fuera de la cascada</td><td>[13]</td></tr>
+</tbody></table></div>
+</section>
+<section class="tab" data-tab="dro">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Qué diferencia el efecto sobre el sistema nervioso de una droga depresora y una estimulante, y cómo se refleja en su sobredosis?</li>
+<li>¿Por qué la abstinencia de depresores se parece a una hiperactivación y la de estimulantes a un apagón, y cuál de las dos puede matar?</li>
+<li>¿Cómo se deduce el toxíndrome de una droga a partir de su mecanismo y qué cambia en la conducta inicial según el grupo?</li>
+</ol></div>
+<p><span class="badge b-pu">Fuentes rectoras: DSM-5-TR 2022 y Kaplan &amp; Sadock 12e, solo resumen [1][4]</span></p>
+<div class="hb am"><div class="hb-t">Alcance</div>
+<p>Esta pestaña compara cómo se clasifican y cómo se presentan las intoxicaciones y abstinencias de otras drogas. El tratamiento no se desarrolla aquí.</p></div>
+
+<h2>Clasificación de las drogas</h2>
+<div class="tw"><table><thead><tr><th>Grupo</th><th>Subgrupo</th><th>Ejemplos</th><th>Efecto sobre el SNC</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Depresoras</th><td>Opiáceos</td><td>Morfina, codeína, heroína, fentanilo, metadona</td><td>Agonismo del receptor µ: analgesia, sedación y depresión respiratoria.</td><td>[5][4]</td></tr>
+<tr><th>Depresoras</th><td>Hipnóticos, sedantes y tranquilizantes</td><td>Benzodiacepinas (diazepam, alprazolam, clonazepam); barbitúricos (fenobarbital)</td><td>Potencian el receptor GABA-A: sedación, ansiolisis, ataxia.</td><td>[5][4]</td></tr>
+<tr><th>Depresoras</th><td>Alcohol</td><td>Etanol</td><td>Potencia GABA-A e inhibe NMDA.</td><td>[5][4]</td></tr>
+<tr><th>Estimulantes</th><td>Mayores</td><td>Cocaína; anfetaminas y metanfetamina</td><td>Elevan la dopamina, noradrenalina y serotonina sinápticas: euforia y activación simpática.</td><td>[5][4]</td></tr>
+<tr><th>Estimulantes</th><td>Menores</td><td>Cafeína, nicotina</td><td>Activación leve: vigilia por bloqueo de adenosina (cafeína) o por agonismo nicotínico (nicotina).</td><td>[5][4]</td></tr>
+<tr><th>Psicodélicas</th><td>Mayores</td><td>LSD, psilocibina, mescalina</td><td>Agonismo del receptor 5-HT2A: alteración de la percepción sin pérdida marcada de conciencia.</td><td>[5][4]</td></tr>
+<tr><th>Psicodélicas</th><td>Menores</td><td>Cannabis; MDMA según la clasificación del sílabo</td><td>Cannabis: agonismo parcial CB1. MDMA: liberación de serotonina con efecto mixto estimulante y perceptivo.</td><td>[5][4]</td></tr>
+<tr><th>Psicodélicas</th><td>Disociativos</td><td>Ketamina, fenciclidina</td><td>Antagonismo del receptor NMDA: disociación, analgesia y distorsión corporal.</td><td>[5][4]</td></tr>
+</tbody></table></div>
+<p class="mini">Las fuentes ubican el cannabis y la MDMA de forma distinta; aquí se sigue la clasificación del sílabo y no se armoniza con otras.</p>
+
+<h2>Intoxicación y abstinencia por droga</h2>
+<div class="tw"><table><thead><tr><th>Droga</th><th>Mecanismo</th><th>Toxíndrome de intoxicación</th><th>Abstinencia</th><th>Riesgo vital</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Opioides</th><td>Agonismo del receptor µ.</td><td>Coma, miosis puntiforme y depresión respiratoria; bradicardia e hipotensión.</td><td>Bostezos, lagrimeo, rinorrea, midriasis, piloerección, mialgias, vómito y diarrea.</td><td>Intoxicación: paro respiratorio. Abstinencia: rara vez mortal.</td><td>[5][4]</td></tr>
+<tr><th>Benzodiacepinas</th><td>Potencian GABA-A.</td><td>Somnolencia, ataxia, disartria y amnesia anterógrada; sola rara vez deprime la respiración, con alcohol u opioides sí.</td><td>Ansiedad, insomnio, temblor, convulsiones y delirio, similar a la del alcohol.</td><td>Convulsiones en la abstinencia; depresión respiratoria si se combinan.</td><td>[5][4]</td></tr>
+<tr><th>Cocaína</th><td>Bloquea la recaptación de dopamina, noradrenalina y serotonina.</td><td>Simpaticomimético: agitación, midriasis, taquicardia, hipertensión, hipertermia y sudoración.</td><td>«Crash» con disforia, hipersomnia, hiperfagia y craving; pocos signos autonómicos.</td><td>Infarto, arritmias, ictus, hipertermia y convulsiones; riesgo suicida en la abstinencia.</td><td>[5][4]</td></tr>
+<tr><th>Anfetaminas</th><td>Liberan monoaminas e invierten sus transportadores.</td><td>Cuadro simpaticomimético más prolongado que el de la cocaína, con bruxismo y psicosis paranoide.</td><td>Fatiga, hipersomnia, hiperfagia y depresión.</td><td>Hipertermia, rabdomiólisis, arritmias y ictus.</td><td>[5][4]</td></tr>
+<tr><th>Cannabis</th><td>Agonismo parcial CB1 (THC).</td><td>Inyección conjuntival, taquicardia, boca seca, apetito, memoria reciente alterada; ansiedad o paranoia.</td><td>Irritabilidad, insomnio, ansiedad, inquietud y menos apetito.</td><td>Bajo de forma directa; accidentes y psicosis.</td><td>[1][4]</td></tr>
+<tr><th>Alucinógenos (LSD, psilocibina)</th><td>Agonismo 5-HT2A.</td><td>Alucinaciones visuales, sinestesias, midriasis, taquicardia y ansiedad (mal viaje).</td><td>No hay síndrome de abstinencia establecido.</td><td>Bajo de forma directa; accidentes, psicosis y recuerdos visuales recurrentes.</td><td>[1][4]</td></tr>
+</tbody></table></div>
+<p class="mini">Los antídotos específicos son naloxona para los opioides y flumazenil para las benzodiacepinas; el flumazenil puede precipitar convulsiones en el dependiente. <span class="rem">↪ Posología en «Plan de tratamiento»</span></p>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — depresor y estimulante</span>
+<p class="fey-b">Piensa en un auto. Una droga depresora es un pie en el freno: todo va más lento, hasta que casi se detiene. Una estimulante es un pie en el acelerador: todo va más rápido, hasta que el motor se calienta. Si alguien lleva mucho tiempo frenando, el motor aprende a empujar más; al soltar el freno el auto sale disparado. Si alguien llevaba tiempo acelerando, el cuerpo aprende a frenar; al soltar el acelerador queda sin fuerza.</p>
+<p class="mini fey-c">En medicina esto se llama… depresores y estimulantes del sistema nervioso central, abstinencia por hiperactivación y abstinencia por apagón.</p>
+<p class="mini fey-c">Dónde falla la comparación: el cerebro tiene muchos pedales y las drogas psicodélicas no son ni freno ni acelerador, sino que cambian la percepción.</p></div>
+</section>
+<section class="tab" data-tab="dx">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué el AUDIT clasifica el riesgo pero no diagnostica, y qué se añade para graduar el trastorno?</li>
+<li>¿Qué ventana de tiempo explora cada biomarcador y cómo eso decide cuál pedir según la pregunta clínica?</li>
+<li>¿Qué hallazgos obligan a descartar otra causa antes de atribuir la intoxicación o la confusión al alcohol?</li>
+</ol></div>
+<p><span class="badge b-pu">Tamizaje: AUDIT, OMS 2001 [15]</span> <span class="badge b-pu">Criterios: DSM-5-TR 2022 [1]</span> <span class="badge b-pu">Abstinencia: ASAM 2020 [12]</span></p>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Historia clínica psiquiátrica con examen mental y tamizaje con AUDIT de 10 ítems o AUDIT-C en todo adulto que consulta [15][4].</li>
+<li><span class="tg">Añade</span>Criterios DSM-5-TR de los últimos 12 meses si el AUDIT es de 8 o más, para decidir si hay trastorno y graduarlo [1].</li>
+<li><span class="tg">Confirma</span>Confirma el trastorno con 2 o más criterios DSM-5-TR: leve con 2 o 3, moderado con 4 o 5, grave con 6 o más [1]; si hay síntomas de retirada, mide la gravedad con CIWA-Ar [14].</li>
+<li><span class="tg">Solo si</span>Biomarcadores solo si el relato es dudoso, para documentar un consumo reciente o para seguir la abstinencia; orina para drogas solo si se sospecha otra sustancia [4][13].</li>
+<li><span class="tg">No pidas</span>No uses la alcoholemia para diagnosticar dependencia: una cifra baja o normal no la descarta, porque la tolerancia la oculta [13].</li>
+<li><span class="tg">Alarma</span>Confusión, ataxia u oftalmoplejía (Wernicke), trauma craneal, glucemia baja o visión borrosa con acidosis (metanol): glucemia capilar, imagen, gasometría y manejo urgente [13].</li>
+</ol>
+<h2>Historia clínica psiquiátrica y examen mental</h2>
+<p>La historia ordena el consumo por sustancia y sitúa el trastorno en la vida del paciente. El examen mental distingue qué parte del cuadro es intoxicación o abstinencia y qué parte es un trastorno mental propio [4][1].</p>
+<div class="tw"><table><thead><tr><th>Componente</th><th>Qué se pregunta</th></tr></thead>
+<tbody>
+<tr><th>Motivo de consulta</th><td>Con palabras del paciente y de quien lo acompaña; quién decidió consultar y por qué ahora</td></tr>
+<tr><th>Historia del consumo, por cada sustancia</th><td>Edad de inicio, patrón (cantidad y frecuencia), vía, última dosis, abstinencias previas con sus complicaciones y tratamientos anteriores</td></tr>
+<tr><th>Antecedentes psiquiátricos</th><td>Depresión, ansiedad, psicosis, intentos de suicidio, hospitalizaciones y fármacos usados</td></tr>
+<tr><th>Antecedentes médicos</th><td>Hepatopatía, convulsiones, trauma craneal, desnutrición, enfermedades infecciosas</td></tr>
+<tr><th>Antecedentes familiares</th><td>Consumo de sustancias y trastornos mentales en familiares de primer grado</td></tr>
+<tr><th>Antecedentes sociales, laborales y legales</th><td>Pareja y convivencia, violencia, empleo, deudas, conducción bajo efectos del alcohol, procesos judiciales</td></tr>
+</tbody></table></div>
+<div class="tw"><table><thead><tr><th>Función psíquica</th><th>Qué es</th><th>Alteración típica en intoxicación o abstinencia</th></tr></thead>
+<tbody>
+<tr><th>Conciencia</th><td>Grado de alerta frente al entorno</td><td>Somnolencia o estupor en intoxicación intensa; fluctuación en el delirium tremens</td></tr>
+<tr><th>Orientación</th><td>Ubicación en persona, tiempo y lugar</td><td>Desorientación en intoxicación grave, abstinencia complicada y Wernicke</td></tr>
+<tr><th>Atención</th><td>Capacidad de sostener y dirigir el foco</td><td>Distraibilidad en la intoxicación y en la abstinencia</td></tr>
+<tr><th>Memoria</th><td>Registro y evocación de lo vivido</td><td>Lagunas del episodio de intoxicación; déficit amnésico en Wernicke-Korsakoff</td></tr>
+<tr><th>Afecto y ánimo</th><td>Tono emocional sostenido y su expresión</td><td>Labilidad e irritabilidad al beber; ansiedad y disforia en la abstinencia</td></tr>
+<tr><th>Pensamiento: curso y contenido</th><td>Velocidad y orden de las ideas; qué ideas predominan</td><td>Lentitud o disgregación al intoxicarse; ideas de culpa, minusvalía o suspicacia</td></tr>
+<tr><th>Sensopercepción</th><td>Interpretación de estímulos sensoriales</td><td>Alucinaciones visuales o táctiles en la abstinencia grave; ilusiones</td></tr>
+<tr><th>Juicio e introspección</th><td>Valoración de la realidad; conciencia de enfermedad</td><td>Juicio alterado al intoxicarse; negación del problema en el trastorno</td></tr>
+<tr><th>Psicomotricidad</th><td>Actividad y movimientos voluntarios</td><td>Lentitud y ataxia al intoxicarse; temblor e inquietud en la abstinencia</td></tr>
+</tbody></table></div>
+<p class="mini">Un examen mental normal con el paciente sobrio no excluye un trastorno del ánimo previo: reevalúa tras unas semanas de abstinencia para separar el trastorno inducido del independiente [1].</p>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Alcoholemia (etanol en sangre)</th><td>No aplica</td><td>No aplica</td><td>No aplica</td><td>Cuantifica la intoxicación aguda; no diagnostica el trastorno</td><td>Se elimina por cinética de orden cero, cerca de 15 mg/dL por hora [VERIFICAR EN FUENTE]. Una cifra alta con pocos signos de intoxicación indica tolerancia <button type="button" class="xref" data-ir="m-1" onclick="ir('fis','m-1')">← Etanol potencia GABA-A e inhibe NMDA</button></td><td>[5]</td></tr>
+<tr><th>Etanol en aliento</th><td>No establecida</td><td>No establecida</td><td>No aplica</td><td>Estima el consumo reciente sin extraer sangre</td><td>Correlaciona con la alcoholemia; solo refleja las últimas horas y depende de la técnica del equipo</td><td>[13]</td></tr>
+<tr><th>GGT (gamma-glutamil transferasa)</th><td>No establecida</td><td>No establecida</td><td>VPP bajo en población general [VERIFICAR EN FUENTE]</td><td>Sugiere consumo crónico o daño hepático</td><td>Inespecífica: sube con hígado graso, obesidad y fármacos. Se normaliza en semanas de abstinencia <button type="button" class="xref" data-ir="m-7" onclick="ir('fis','m-7')">← Acetaldehído y estrés oxidativo dañan el hepatocito</button></td><td>[4]</td></tr>
+<tr><th>VCM (volumen corpuscular medio)</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Sugiere consumo crónico sostenido</td><td>Macrocitosis que tarda meses en aparecer y en corregirse; también la causan déficit de B12 o folato e hipotiroidismo</td><td>[4]</td></tr>
+<tr><th>AST/ALT mayor de 2</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Orienta a hepatopatía alcohólica frente a otras causas</td><td>La AST rara vez pasa de 300 U/L en hepatitis alcohólica [VERIFICAR EN FUENTE] <button type="button" class="xref" data-ir="m-7" onclick="ir('fis','m-7')">← Acetaldehído y estrés oxidativo dañan el hepatocito</button></td><td>[13]</td></tr>
+<tr><th>CDT (transferrina deficiente en carbohidratos)</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Marcador de consumo intenso sostenido</td><td>Ventana de 1 a 2 semanas con consumo intenso diario [VERIFICAR EN FUENTE]; falsos positivos en hepatopatía avanzada y variantes genéticas</td><td>[4]</td></tr>
+<tr><th>Fosfatidiletanol (PEth) en sangre</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Documenta consumo de las últimas 2 a 4 semanas [VERIFICAR EN FUENTE]</td><td>Metabolito directo del etanol, formado en la membrana del eritrocito, con alta especificidad. Disponibilidad en Ecuador no verificada</td><td>[4]</td></tr>
+<tr><th>Etilglucurónido y etilsulfato en orina</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirma consumo reciente, incluso con alcoholemia ya negativa</td><td>Detectables hasta unas 80 horas tras beber [VERIFICAR EN FUENTE]; la exposición incidental (desinfectantes, enjuagues bucales) puede dar falsos positivos</td><td>[4]</td></tr>
+<tr><th>Inmunoensayo en orina: opiáceos</th><td>No establecida</td><td>No establecida</td><td>Falsos positivos posibles</td><td>Tamiza otra sustancia en intoxicación o abstinencia</td><td>Ventana de 1 a 3 días [VERIFICAR EN FUENTE]; muchos opioides sintéticos no se detectan. Confirmar por cromatografía con espectrometría de masas</td><td>[4]</td></tr>
+<tr><th>Inmunoensayo en orina: cocaína (benzoilecgonina)</th><td>No establecida</td><td>No establecida</td><td>Falsos positivos posibles</td><td>Tamiza consumo reciente de cocaína</td><td>Ventana de 2 a 4 días [VERIFICAR EN FUENTE]. Confirmar por cromatografía con espectrometría de masas</td><td>[4]</td></tr>
+<tr><th>Inmunoensayo en orina: cannabinoides (THC-COOH)</th><td>No establecida</td><td>No establecida</td><td>Falsos positivos posibles</td><td>Tamiza consumo de cannabis</td><td>Ventana de unos 3 días en consumo ocasional y de varias semanas en consumo crónico [VERIFICAR EN FUENTE]. Confirmar por cromatografía</td><td>[4]</td></tr>
+<tr><th>Inmunoensayo en orina: benzodiacepinas</th><td>No establecida</td><td>No establecida</td><td>Falsos negativos frecuentes</td><td>Tamiza consumo no prescrito</td><td>Ventana de 2 a 7 días, mayor con las de vida media larga [VERIFICAR EN FUENTE]; el lorazepam y el clonazepam pueden pasar inadvertidos. Confirmar por cromatografía</td><td>[4]</td></tr>
+<tr><th>Inmunoensayo en orina: anfetaminas</th><td>No establecida</td><td>No establecida</td><td>Falsos positivos posibles</td><td>Tamiza estimulantes</td><td>Ventana de 1 a 3 días [VERIFICAR EN FUENTE]; algunos descongestionantes dan falsos positivos. Confirmar por cromatografía</td><td>[4]</td></tr>
+<tr><th>Osmolalidad y brecha osmolar</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Sospecha de alcohol tóxico (metanol, etilenglicol)</td><td>Una brecha mayor de 10 mOsm/kg tras restar el aporte del etanol [VERIFICAR EN FUENTE] obliga a descartarlo; con visión borrosa, es urgencia</td><td>[13]</td></tr>
+<tr><th>Gasometría arterial y brecha aniónica</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Detecta acidosis metabólica con brecha elevada</td><td>Se pide si hay sospecha de metanol, sepsis o cetoacidosis alcohólica; el etanol solo no explica la acidosis</td><td>[13]</td></tr>
+<tr><th>Glucemia capilar</th><td>No aplica</td><td>No aplica</td><td>No aplica</td><td>Descarta hipoglucemia como causa de la alteración de conciencia</td><td>El etanol inhibe la gluconeogénesis hepática; en desnutrición, administrar glucosa solo con tiamina previa o simultánea <button type="button" class="xref" data-ir="m-8" onclick="ir('fis','m-8')">← Déficit de tiamina frena el metabolismo neuronal</button></td><td>[13]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos; GGT: gamma-glutamil transferasa; AST/ALT: aminotransferasas; CDT: transferrina deficiente en carbohidratos; PEth: fosfatidiletanol; THC-COOH: metabolito del tetrahidrocannabinol. Las ventanas de detección son aproximadas y dependen de la dosis, la frecuencia de uso y el metabolismo. No se leyeron cifras de rendimiento diagnóstico en la sesión.</p>
+<div class="tw"><table><thead><tr><th>Puntuación AUDIT (0–40)</th><th>Zona de riesgo OMS</th><th>Intervención</th></tr></thead>
+<tbody>
+<tr><th>0 a 7</th><td>Consumo de bajo riesgo</td><td>Educación sobre el alcohol</td></tr>
+<tr><th>8 a 15</th><td>Consumo de riesgo</td><td>Consejo simple</td></tr>
+<tr><th>16 a 19</th><td>Consumo perjudicial</td><td>Consejo simple, asesoría breve y seguimiento</td></tr>
+<tr><th>20 o más</th><td>Probable dependencia</td><td>Derivación para evaluación diagnóstica y tratamiento</td></tr>
+</tbody></table></div>
+<p class="mini">Bandas de la guía de uso del AUDIT en atención primaria [15]. El punto de corte del AUDIT-C (3 en mujeres, 4 en varones) [VERIFICAR EN FUENTE] no figura en esa guía. Una puntuación alta sugiere dependencia, pero solo los criterios DSM-5-TR la confirman.</p>
+<div class="tw"><table><thead><tr><th>Grupo de criterios DSM-5-TR</th><th>Qué explora</th></tr></thead>
+<tbody>
+<tr><th>Control deteriorado (4)</th><td>Beber más o más tiempo del previsto; deseo o intentos fallidos de reducir; mucho tiempo dedicado a conseguir, beber o recuperarse; craving</td></tr>
+<tr><th>Deterioro social (3)</th><td>Incumplir obligaciones laborales, escolares o familiares; seguir pese a problemas con otras personas; abandonar actividades por beber</td></tr>
+<tr><th>Uso de riesgo (2)</th><td>Beber en situaciones peligrosas; seguir pese a un problema físico o psicológico causado o agravado por el alcohol</td></tr>
+<tr><th>Criterios farmacológicos (2)</th><td>Tolerancia; abstinencia</td></tr>
+</tbody></table></div>
+<p class="mini">Un trastorno por consumo de alcohol exige 2 o más de los 11 criterios en 12 meses; la gravedad se gradúa por su número [1].</p>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — por qué no basta un análisis</span>
+<p class="fey-b">Saber si alguien bebe de más se parece a leer huellas en la arena. Unas se borran en horas y otras duran semanas, así que se busca la huella que dura lo justo para la pregunta: si tomó hoy, si toma seguido o si ya lastimó el hígado. Pero ninguna huella muestra cuánto control perdió esa persona. Eso solo lo cuenta un buen cuestionario.</p>
+<p class="mini fey-c">En medicina esto se llama… biomarcadores directos e indirectos de consumo y cuestionario de tamizaje (AUDIT).</p>
+<p class="mini fey-c">Dónde falla la comparación: las huellas se borran solas, pero un resultado normal en el laboratorio no borra el trastorno.</p></div>
+<div class="dc" data-fn="dcDx"><div class="dc-t">Simulador · Decisión clínica — predice la clasificación antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Puntuación AUDIT</span>
+<button type="button" class="chip" data-g="au" data-v="b" onclick="ch(this)">0 a 7</button>
+<button type="button" class="chip" data-g="au" data-v="r" onclick="ch(this)">8 a 15</button>
+<button type="button" class="chip" data-g="au" data-v="p" onclick="ch(this)">16 a 19</button>
+<button type="button" class="chip" data-g="au" data-v="d" onclick="ch(this)">20 o más</button></div>
+<div class="dc-g"><span class="dc-l">Criterios DSM-5-TR presentes</span>
+<button type="button" class="chip" data-g="dm" data-v="0" onclick="ch(this)">0 a 1</button>
+<button type="button" class="chip" data-g="dm" data-v="2" onclick="ch(this)">2 a 3</button>
+<button type="button" class="chip" data-g="dm" data-v="4" onclick="ch(this)">4 a 5</button>
+<button type="button" class="chip" data-g="dm" data-v="6" onclick="ch(this)">6 o más</button></div>
+<div class="dc-g"><span class="dc-l">Abstinencia</span>
+<button type="button" class="chip" data-g="ab" data-v="no" onclick="ch(this)">Sin signos de abstinencia</button>
+<button type="button" class="chip" data-g="ab" data-v="si" onclick="ch(this)">Temblor y signos autonómicos</button>
+<button type="button" class="chip" data-g="ab" data-v="gr" onclick="ch(this)">Convulsión, alucinaciones o delirium</button></div>
+<div class="dc-g"><span class="dc-l">Hallazgos de alarma</span>
+<button type="button" class="chip" data-g="al" data-v="met" data-m="1" onclick="ch(this)">Visión borrosa y acidosis</button>
+<button type="button" class="chip" data-g="al" data-v="glu" data-m="1" onclick="ch(this)">Hipoglucemia</button>
+<button type="button" class="chip" data-g="al" data-v="tce" data-m="1" onclick="ch(this)">Trauma craneal</button>
+<button type="button" class="chip" data-g="al" data-v="wer" data-m="1" onclick="ch(this)">Confusión, ataxia u oftalmoplejía</button></div>
+<div class="out"></div></div>
+</section>
+<section class="tab" data-tab="tx">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué la meta terapéutica depende de la gravedad y se pacta con el paciente, y cuándo es válida la reducción del daño?</li>
+<li>¿Qué eslabón de la cascada interrumpe cada fármaco y cómo eso decide a quién se lo das?</li>
+<li>¿Por qué la tiamina precede a la glucosa y por qué la hepatopatía cambia la benzodiacepina elegida?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: OMS mhGAP 2.0, 2016 [16]</span> <span class="badge b-pu">NICE CG115, 2011 [17]</span> <span class="badge b-pu">Abstinencia: ASAM 2020 [12]</span></p>
+<p class="mini">Vigencia no verificada: mhGAP tiene una actualización de recomendaciones de 2023 que no se leyó.</p>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Pacta una meta según la gravedad (consumo de bajo riesgo, abstinencia o reducción del daño) y trata primero lo que mata: abstinencia grave, Wernicke e hipoglucemia [16][17].</li>
+<li><span class="tg">De elección</span>Intervención breve y entrevista motivacional en el consumo de riesgo y perjudicial [16][17].</li>
+<li><span class="tg">Alternativa</span>En la dependencia, tras la desintoxicación: naltrexona o acamprosato con apoyo psicosocial; disulfiram solo con indicación y supervisión [17][5].</li>
+<li><span class="tg">Sintomático</span>Benzodiacepina guiada por CIWA-Ar para la abstinencia y tiamina a todo paciente dependiente [12][14].</li>
+<li><span class="tg">Escala</span>Abstinencia grave, convulsiones, delirium tremens o sospecha de Wernicke: hospital, tiamina parenteral y benzodiacepina intravenosa [12].</li>
+<li><span class="tg">Reevalúa</span>CIWA-Ar durante la abstinencia; después, consumo, adherencia y metas en cada control [12][16].</li>
+<li><span class="tg">Especialista</span>Psiquiatría o adicciones en dependencia moderada o grave, patología dual, riesgo suicida, violencia o fracaso del manejo ambulatorio [16][17].</li>
+<li><span class="tg">Evita</span>Evita suspender el alcohol bruscamente sin vigilancia en la dependencia y dar glucosa antes de la tiamina: precipita convulsiones y Wernicke [12][13].</li>
+</ol>
+<h2>Objetivos y metas</h2>
+<div class="tw"><table><thead><tr><th>Patrón</th><th>Meta</th><th>Intervención en el primer nivel</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Consumo de riesgo</th><td>Consumo de bajo riesgo</td><td>Intervención breve y seguimiento</td><td>[16][17]</td></tr>
+<tr><th>Consumo perjudicial</th><td>Bajo riesgo o abstinencia, según el daño ya presente</td><td>Intervención breve, entrevista motivacional y control periódico</td><td>[16][17]</td></tr>
+<tr><th>Dependencia leve o moderada</th><td>Abstinencia; si el paciente no la acepta, reducción del daño</td><td>Desintoxicación si hay riesgo de abstinencia, fármaco para prevenir recaídas y apoyo psicosocial</td><td>[17][16]</td></tr>
+<tr><th>Dependencia grave</th><td>Abstinencia sostenida</td><td>Desintoxicación supervisada, prevención de recaídas y derivación a especialista</td><td>[17][12]</td></tr>
+</tbody></table></div>
+<p class="mini">La reducción del daño (menos consumo, menos riesgo, mejor retención en el servicio) es meta válida cuando la abstinencia no es aceptada. La meta se acuerda con el paciente y se revisa en cada control [16].</p>
+<h2>Tratamiento no farmacológico en el primer nivel</h2>
+<div class="tw"><table><thead><tr><th>Intervención</th><th>En qué consiste</th><th>A quién</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Intervención breve (FRAMES)</th><td>Devolver la información del riesgo, subrayar la responsabilidad del paciente, aconsejar, ofrecer opciones, mostrar empatía y reforzar la autoeficacia</td><td>Consumo de riesgo y perjudicial</td><td>[16][17]</td></tr>
+<tr><th>Entrevista motivacional</th><td>Conversación que explora la ambivalencia y deja que el paciente articule sus razones para cambiar</td><td>Todos los patrones, sobre todo si no reconoce el problema</td><td>[16][17]</td></tr>
+<tr><th>Terapia cognitivo-conductual</th><td>Identifica disparadores del deseo, entrena habilidades de rechazo y estrategias frente a la recaída</td><td>Dependencia y consumo perjudicial persistente</td><td>[17]</td></tr>
+<tr><th>Grupos de ayuda mutua</th><td>Acompañamiento entre pares, como Alcohólicos Anónimos, para sostener la abstinencia</td><td>Dependencia, como complemento</td><td>[17][16]</td></tr>
+<tr><th>Apoyo familiar y de pareja</th><td>Involucra a la familia en la meta, en la detección de recaídas y en la seguridad frente a la violencia</td><td>Dependencia, sobre todo con conflicto familiar</td><td>[17][16]</td></tr>
+</tbody></table></div>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — soltar el freno poco a poco</span>
+<p class="fey-b">Quien bebe mucho durante años obliga a su cuerpo a trabajar con un freno puesto. Si se quita de golpe, el motor se dispara. Por eso el retiro se hace con ayuda: se baja el freno despacio con una medicina parecida y se dan las vitaminas que el cerebro necesita para funcionar. Después hace falta más que pastillas: un plan para no volver a ponerse el freno.</p>
+<p class="mini fey-c">En medicina esto se llama… desintoxicación con benzodiacepinas, tiamina y tratamiento para prevenir recaídas.</p>
+<p class="mini fey-c">Dónde falla la comparación: una persona no es un motor; las ganas de beber dependen también de su historia y su entorno.</p></div>
+<h2>Farmacología de las benzodiacepinas</h2>
+<p>Las benzodiacepinas son moduladores alostéricos positivos del receptor GABA-A: aumentan la frecuencia de apertura del canal de cloruro cuando el GABA se une. Comparten tolerancia cruzada con el etanol, que actúa sobre el mismo receptor; por eso sustituyen al alcohol y frenan el rebote excitatorio de la abstinencia <button type="button" class="xref" data-ir="m-4" onclick="ir('fis','m-4')">← Neuroadaptación reduce GABA-A y aumenta NMDA</button> [5].</p>
+<div class="tw"><table><thead><tr><th>Benzodiacepina</th><th>Vida media</th><th>Metabolismo hepático</th><th>Uso en abstinencia alcohólica</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Diazepam</th><td>Larga, de 20 a 100 h con metabolitos activos [VERIFICAR EN FUENTE]</td><td>Oxidación con metabolitos activos</td><td>De elección: descenso espontáneo suave y menor riesgo de convulsiones; se acumula en hepatopatía y en ancianos</td><td>[5][12]</td></tr>
+<tr><th>Clordiazepóxido</th><td>Larga, de 5 a 30 h con metabolitos activos [VERIFICAR EN FUENTE]</td><td>Oxidación con metabolitos activos</td><td>Alternativa clásica por vía oral; se acumula en hepatopatía</td><td>[5][12]</td></tr>
+<tr><th>Lorazepam</th><td>Intermedia, de 10 a 20 h [VERIFICAR EN FUENTE]</td><td>Glucuronidación directa, sin metabolitos activos</td><td>Preferido en hepatopatía y en ancianos; admite vía intramuscular</td><td>[5][12]</td></tr>
+<tr><th>Oxazepam</th><td>Corta a intermedia, de 4 a 15 h [VERIFICAR EN FUENTE]</td><td>Glucuronidación directa, sin metabolitos activos</td><td>Alternativa en hepatopatía; absorción oral más lenta</td><td>[5]</td></tr>
+<tr><th>Alprazolam</th><td>Intermedia, de 6 a 27 h [VERIFICAR EN FUENTE]</td><td>Oxidación por CYP3A4</td><td>No es de elección: mayor potencial de abuso y abstinencia propia</td><td>[5]</td></tr>
+<tr><th>Midazolam</th><td>Ultracorta, de 2 a 6 h [VERIFICAR EN FUENTE]</td><td>Oxidación por CYP3A4</td><td>Solo en medio hospitalario, parenteral, en abstinencia refractaria con vigilancia respiratoria</td><td>[5][12]</td></tr>
+</tbody></table></div>
+<p class="mini">CYP3A4: enzima oxidativa hepática. Los riesgos comunes son depresión respiratoria si se asocian con alcohol u opioides, sedación y caídas, y dependencia si se prolongan más allá de la abstinencia aguda [5]. Posología en la tabla de fármacos.</p>
+<h2>Fármacos</h2>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Tiamina (profilaxis y sospecha de Wernicke)</th><td>Profilaxis: 100 mg. Sospecha de Wernicke: 500 mg [VERIFICAR EN FUENTE]</td><td>VO en profilaxis; IV en Wernicke</td><td>Profilaxis: cada 24 h. Wernicke: cada 8 h</td><td>Profilaxis durante la desintoxicación. Wernicke: 2 a 3 días, luego 250 mg al día por 3 a 5 días [VERIFICAR EN FUENTE]</td><td>Repone el cofactor que el metabolismo neuronal necesita <button type="button" class="xref" data-ir="m-8" onclick="ir('fis','m-8')">← Déficit de tiamina frena el metabolismo neuronal</button>. Dar antes que la glucosa; con desnutrición, preferir la vía parenteral</td><td>[12][13]</td></tr>
+<tr><th>Diazepam</th><td>10 a 20 mg por dosis guiada por CIWA-Ar; en abstinencia grave por vía IV, 10 mg o 0,15 mg/kg con tope de 10 mg por dosis [VERIFICAR EN FUENTE]</td><td>VO; IV lenta en abstinencia grave</td><td>Cada 1 a 2 h hasta CIWA-Ar menor de 10, luego según síntomas</td><td>Habitualmente 3 a 7 días, sin prolongar [VERIFICAR EN FUENTE]</td><td>Sustituye al etanol en el receptor y frena el rebote <button type="button" class="xref" data-ir="m-5" onclick="ir('fis','m-5')">← Retirada del etanol desata rebote excitatorio</button>. Se acumula en hepatopatía y en ancianos: usar lorazepam u oxazepam. Vigilar sedación y depresión respiratoria</td><td>[12][5]</td></tr>
+<tr><th>Lorazepam u oxazepam (en hepatopatía)</th><td>Lorazepam: 1 a 2 mg, hasta 4 mg en abstinencia grave [VERIFICAR EN FUENTE]. Oxazepam: 15 a 30 mg [VERIFICAR EN FUENTE]</td><td>Lorazepam: VO, IV o IM. Oxazepam: VO</td><td>Lorazepam: cada 4 a 6 h guiado por CIWA-Ar. Oxazepam: cada 6 a 8 h</td><td>Hasta resolver la abstinencia, habitualmente menos de 7 días</td><td>Misma acción sobre el receptor; se glucuronidan sin metabolitos activos y no se acumulan con la hepatopatía <button type="button" class="xref" data-ir="m-7" onclick="ir('fis','m-7')">← Acetaldehído y estrés oxidativo dañan el hepatocito</button>. Aun así, titular con cautela</td><td>[12][5]</td></tr>
+<tr><th>Naltrexona</th><td>50 mg</td><td>VO</td><td>Cada 24 h</td><td>De 3 a 12 meses [VERIFICAR EN FUENTE]</td><td>Antagonista opioide que atenúa el refuerzo del consumo en la vía dopaminérgica <button type="button" class="xref" data-ir="m-2" onclick="ir('fis','m-2')">← Dopamina del ATV marca el consumo</button>. Contraindicada con opioides y en hepatitis aguda o insuficiencia hepática; vigilar transaminasas</td><td>[17][5]</td></tr>
+<tr><th>Acamprosato</th><td>666 mg tres veces al día con 60 kg o más; con menos de 60 kg, 666 mg por la mañana y 333 mg al mediodía y por la noche</td><td>VO</td><td>Cada 8 h</td><td>6 a 12 meses, iniciando tras la abstinencia [VERIFICAR EN FUENTE]</td><td>Restablece el equilibrio glutamato-GABA alterado por la neuroadaptación <button type="button" class="xref" data-ir="m-4" onclick="ir('fis','m-4')">← Neuroadaptación reduce GABA-A y aumenta NMDA</button>. Se elimina por vía renal: reducir con depuración de creatinina de 30 a 50 mL/min y contraindicado por debajo de 30. Opción segura en hepatopatía</td><td>[17][5]</td></tr>
+<tr><th>Disulfiram (solo con indicación y supervisión)</th><td>250 mg [VERIFICAR EN FUENTE]</td><td>VO</td><td>Cada 24 h, bajo supervisión de un tercero</td><td>Meses, con revisión periódica</td><td>Inhibe la aldehído deshidrogenasa y acumula acetaldehído si se bebe <button type="button" class="xref" data-ir="m-7" onclick="ir('fis','m-7')">← Acetaldehído y estrés oxidativo dañan el hepatocito</button>. Exige abstinencia de al menos 12 horas, consentimiento informado; contraindicado en hepatopatía grave, cardiopatía y psicosis</td><td>[17][5]</td></tr>
+<tr><th>Naloxona (intoxicación opioide)</th><td>0,4 a 2 mg [VERIFICAR EN FUENTE]</td><td>IV, IM o SC</td><td>Repetir cada 2 a 3 min según respuesta</td><td>Observación prolongada: su efecto dura menos que el de muchos opioides</td><td>Antagonista opioide competitivo que revierte la depresión respiratoria; sin nodo en esta cascada (ver «Otras drogas»). Puede precipitar abstinencia opioide</td><td>[5][16]</td></tr>
+<tr><th>Flumazenil (solo intoxicación por benzodiacepinas)</th><td>0,2 mg inicial, repetir 0,3 a 0,5 mg [VERIFICAR EN FUENTE]</td><td>IV</td><td>Cada 1 min según respuesta, con tope de 3 mg</td><td>Dosis corta, con vigilancia por la resedación</td><td>Antagonista del sitio benzodiacepínico del receptor <button type="button" class="xref" data-ir="m-1" onclick="ir('fis','m-1')">← Etanol potencia GABA-A e inhibe NMDA</button>. Puede provocar convulsiones en dependencia del alcohol o de benzodiacepinas y con coingesta proconvulsivante: evitar</td><td>[5]</td></tr>
+</tbody></table></div>
+<p class="mini">VO: vía oral; IV: intravenosa; IM: intramuscular; SC: subcutánea; CIWA-Ar: escala revisada de valoración de la abstinencia alcohólica. Baclofeno y topiramato son fármacos de segunda línea, sin posología estandarizada aquí [5][12][17][16]. Dosis de ficha técnica.</p>
+<div class="dc" data-fn="dcTx"><div class="dc-t">Simulador · Decisión clínica — predice el plan antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Patrón</span>
+<button type="button" class="chip" data-g="pt" data-v="r" onclick="ch(this)">Consumo de riesgo</button>
+<button type="button" class="chip" data-g="pt" data-v="p" onclick="ch(this)">Consumo perjudicial</button>
+<button type="button" class="chip" data-g="pt" data-v="d" onclick="ch(this)">Dependencia</button></div>
+<div class="dc-g"><span class="dc-l">Abstinencia (CIWA-Ar)</span>
+<button type="button" class="chip" data-g="ab" data-v="no" onclick="ch(this)">Sin abstinencia</button>
+<button type="button" class="chip" data-g="ab" data-v="le" onclick="ch(this)">Leve (menos de 10)</button>
+<button type="button" class="chip" data-g="ab" data-v="mo" onclick="ch(this)">Moderada (10 a 18)</button>
+<button type="button" class="chip" data-g="ab" data-v="gr" onclick="ch(this)">Grave (19 o más)</button></div>
+<div class="dc-g"><span class="dc-l">Hepatopatía</span>
+<button type="button" class="chip" data-g="hp" data-v="si" onclick="ch(this)">Sí</button>
+<button type="button" class="chip" data-g="hp" data-v="no" onclick="ch(this)">No</button></div>
+<div class="dc-g"><span class="dc-l">Nutrición y neurología</span>
+<button type="button" class="chip" data-g="nu" data-v="des" data-m="1" onclick="ch(this)">Desnutrición</button>
+<button type="button" class="chip" data-g="nu" data-v="wer" data-m="1" onclick="ch(this)">Sospecha de Wernicke</button></div>
+<div class="dc-g"><span class="dc-l">Peso en kg</span><input type="number" data-n="kg" min="30" max="200" step="0.5" oninput="ch(this)"></div>
+<div class="out"></div></div>
+</section>
+<section class="tab" data-tab="seg">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué en el primer nivel la recaída se trata como parte del curso de la enfermedad y qué hace el equipo cuando aparece?</li>
+<li>¿Qué mecanismo une cada complicación sanitaria o psicosocial con el consumo, y en qué nodo de la cascada se origina?</li>
+<li>¿Cómo se separa un trastorno mental inducido por el alcohol de uno independiente, y qué decide que el paciente salga del primer nivel?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: OMS mhGAP 2.0 2016 [16] y DSM-5-TR 2022 [1]</span></p>
+<p class="mini">Vigencia no verificada: mhGAP tiene una actualización de recomendaciones de 2023 que no se leyó.</p>
+<h2>Ciclo revisar, evaluar y ajustar</h2>
+<div class="card"><p>El trastorno por consumo es crónico y recurrente: el seguimiento repite un ciclo en cada control y no termina con la desintoxicación [16][17]. La recaída no cancela el tratamiento; es el momento de revisar qué falló y ajustar el plan.</p></div>
+<div class="tw"><table><thead><tr><th>Fase</th><th>Qué haces en cada control</th></tr></thead>
+<tbody>
+<tr><th>Revisa</th><td>Consumo desde el último control (AUDIT o diario de bebidas), craving, asistencia, adherencia a fármacos y eventos estresantes [17][15].</td></tr>
+<tr><th>Evalúa</th><td>Señales de recaída, estado de ánimo y riesgo suicida, violencia en el hogar, hígado y estado nutricional [16].</td></tr>
+<tr><th>Ajusta</th><td>Refuerza la entrevista motivacional, cambia la intensidad del apoyo psicosocial, revisa el fármaco (ver «Plan de tratamiento») y decide si hay criterio de referencia [16][17].</td></tr>
+</tbody></table></div>
+<div class="tw"><table><thead><tr><th>Señal de recaída</th><th>Qué indica</th><th>Qué haces</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Craving creciente o contacto con señales de consumo</th><td>El aprendizaje asociativo sigue activo y se reactiva con el contexto</td><td>Identifica el desencadenante y ensaya estrategias de afrontamiento</td><td>[9]</td></tr>
+<tr><th>Faltas a los controles o abandono del fármaco</th><td>Pérdida de adherencia, a menudo antes del consumo</td><td>Contacto activo (llamada, visita) y revisión de barreras</td><td>[16]</td></tr>
+<tr><th>Una caída aislada</th><td>Lapso, que no equivale a volver al patrón previo</td><td>Sin reproche; retoma el plan y ajusta</td><td>[17]</td></tr>
+<tr><th>Consumo diario de nuevo o aparición de temblor al suspender</th><td>Recaída plena con neuroadaptación reinstalada</td><td>Evalúa riesgo de abstinencia antes de cualquier suspensión brusca</td><td>[12]</td></tr>
+</tbody></table></div>
+
+<h2>Complicaciones sanitarias por mecanismo</h2>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Hepatopatía alcohólica (esteatosis, hepatitis, cirrosis)</th><td>El acetaldehído y el estrés oxidativo lesionan el hepatocito; la inflamación crónica lleva a fibrosis</td><td><button type="button" class="xref" data-ir="m-7" onclick="ir('fis','m-7')">← Acetaldehído y hepatocito</button></td><td>[13]</td></tr>
+<tr><th>Encefalopatía de Wernicke y síndrome de Korsakoff</th><td>Déficit de tiamina por baja ingesta y mala absorción; sin ella fallan las enzimas del metabolismo energético neuronal</td><td><button type="button" class="xref" data-ir="m-8" onclick="ir('fis','m-8')">← Déficit de tiamina</button></td><td>[13]</td></tr>
+<tr><th>Abstinencia complicada (convulsiones, delirium tremens)</th><td>Al faltar el etanol, el sistema con menos GABA-A y más NMDA queda sin freno</td><td><button type="button" class="xref" data-ir="m-5" onclick="ir('fis','m-5')">← Rebote excitatorio</button></td><td>[12]</td></tr>
+<tr><th>Pancreatitis aguda y crónica</th><td>Toxicidad directa sobre el ácino y activación prematura de enzimas; las agudizaciones repetidas dejan fibrosis</td><td>Sin nodo propio</td><td>[13]</td></tr>
+<tr><th>Miocardiopatía alcohólica y arritmias</th><td>Efecto tóxico directo sobre el miocito con dilatación ventricular</td><td>Sin nodo propio</td><td>[13]</td></tr>
+<tr><th>Cáncer (boca, faringe, laringe, esófago, hígado, mama, colon)</th><td>El acetaldehído daña el ADN; el riesgo crece con la cantidad acumulada</td><td><button type="button" class="xref" data-ir="m-7" onclick="ir('fis','m-7')">← Acetaldehído y hepatocito</button></td><td>[7]</td></tr>
+<tr><th>Traumatismos y caídas</th><td>Ataxia, desinhibición y reflejos lentos de la intoxicación</td><td><button type="button" class="xref" data-ir="s-1" onclick="ir('cli','s-1')">← Intoxicación aguda</button></td><td>[7]</td></tr>
+<tr><th>VIH y hepatitis B o C con otras drogas</th><td>Uso de agujas o material compartido en la vía parenteral y conductas sexuales de riesgo bajo intoxicación; no depende del alcohol</td><td>Sin nodo propio</td><td>[8]</td></tr>
+<tr><th>Sobredosis y depresión respiratoria</th><td>La potenciación de GABA-A y el bloqueo de NMDA deprimen el tronco; se suma con opioides y sedantes</td><td><button type="button" class="xref" data-ir="m-1" onclick="ir('fis','m-1')">← Etanol potencia GABA-A</button></td><td>[5]</td></tr>
+</tbody></table></div>
+
+<h2>Complicaciones psicosociales</h2>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Violencia de pareja e intrafamiliar</th><td>La corteza prefrontal inhibe peor la agresión; el consumo no es la causa única, pero la facilita</td><td><button type="button" class="xref" data-ir="m-6" onclick="ir('fis','m-6')">← Pérdida de control prefrontal</button></td><td>[7]</td></tr>
+<tr><th>Deterioro laboral y pérdidas económicas</th><td>Ausentismo, resaca, menor rendimiento y gasto en bebida desplazan lo demás</td><td><button type="button" class="xref" data-ir="m-6" onclick="ir('fis','m-6')">← Pérdida de control prefrontal</button></td><td>[4]</td></tr>
+<tr><th>Problemas legales</th><td>Conducta impulsiva e intoxicación llevan a denuncias, multas y detenciones</td><td><button type="button" class="xref" data-ir="m-6" onclick="ir('fis','m-6')">← Pérdida de control prefrontal</button></td><td>[4]</td></tr>
+<tr><th>Accidentes de tránsito</th><td>Enlentecimiento psicomotor y juicio alterado durante la intoxicación</td><td><button type="button" class="xref" data-ir="m-1" onclick="ir('fis','m-1')">← Etanol potencia GABA-A</button></td><td>[7]</td></tr>
+<tr><th>Ruptura familiar y aislamiento</th><td>Conflicto, violencia y mentiras erosionan el vínculo; los hijos también quedan expuestos</td><td>Sin nodo propio</td><td>[4]</td></tr>
+<tr><th>Estigma y barrera de acceso</th><td>La vergüenza y el juicio social retrasan la consulta y la adherencia</td><td>Sin nodo propio</td><td>[7]</td></tr>
+</tbody></table></div>
+
+<h2>Patología dual</h2>
+<p>Se llama así a la coexistencia de un trastorno por consumo y otro trastorno mental. Es la regla y no la excepción en quien consulta por consumo, y empeora el pronóstico de ambos [4][16].</p>
+<div class="tw"><table><thead><tr><th>Trastorno asociado</th><th>Relación con el consumo</th><th>Cómo se sospecha independiente</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Depresión</th><td>El alcohol deprime el ánimo durante y tras la intoxicación; la depresión también empuja a beber</td><td>Persiste tras abstinencia sostenida o precede al consumo</td><td>[1][4]</td></tr>
+<tr><th>Trastornos de ansiedad</th><td>La abstinencia produce ansiedad intensa; muchos beben para aliviarla</td><td>Sigue presente tras superar la abstinencia</td><td>[1][4]</td></tr>
+<tr><th>Trastorno bipolar</th><td>Consumo frecuente en fases maníacas y mixtas</td><td>Episodios con duración y curso propios fuera del consumo</td><td>[1][4]</td></tr>
+<tr><th>Psicosis</th><td>Las alucinaciones alcohólicas y el delirium aparecen con consumo o abstinencia</td><td>Síntomas psicóticos que continúan en abstinencia</td><td>[1][4]</td></tr>
+<tr><th>TDAH</th><td>La impulsividad adelanta el inicio y agrava el consumo</td><td>Inicio en la infancia, antes del consumo</td><td>[1][4]</td></tr>
+<tr><th>Trastornos de la personalidad (antisocial, límite)</th><td>Impulsividad y conflicto interpersonal aumentan el riesgo y la recaída</td><td>Patrón estable desde la adolescencia</td><td>[1][4]</td></tr>
+<tr><th>Suicidio</th><td>Impulsividad, desinhibición, pérdidas y depresión suman riesgo; la intoxicación facilita el acto</td><td>Se evalúa siempre, sin esperar a clasificar</td><td>[16][4]</td></tr>
+</tbody></table></div>
+<p>Un trastorno <b>inducido</b> aparece durante la intoxicación o la abstinencia y cede con ella. Si los síntomas persisten alrededor de 1 mes después de terminar la abstinencia, o preceden al consumo, el trastorno es independiente y se trata por separado [1].</p>
+<div class="hb am"><div class="hb-t">El paciente del caso</div>
+<p>Su tristeza y sus ideas de inutilidad aparecieron con años de consumo y tras una semana de bebida intensa: aún no se puede decir si son inducidas o independientes. Se reevalúa tras cerca de 1 mes de abstinencia [1]. Mientras tanto, la pregunta por suicidio y por violencia no espera [16].</p></div>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — humo que sigue o no</span>
+<p class="fey-b">Si hay humo en la casa, primero apagas el fuego. Si el humo se va, era del fuego. Si sigue saliendo cuando el fuego ya no está, algo más lo produce y hay que buscarlo. Con la tristeza de quien bebía pasa igual: se espera sin bebida y se mira si se queda.</p>
+<p class="mini fey-c">En medicina esto se llama… trastorno inducido por sustancias frente a trastorno mental independiente, o patología dual.</p>
+<p class="mini fey-c">Dónde falla la comparación: el humo no puede ser peligroso mientras se espera; la tristeza sí, y por eso el riesgo suicida se vigila desde el primer día.</p></div>
+
+<h2>Criterios de referencia</h2>
+<p>El primer nivel resuelve el consumo no complicado. Se refiere al especialista o al hospital cuando el riesgo supera lo que puede manejarse en ambulatorio [16][17][12].</p>
+<div class="tw"><table><thead><tr><th>Criterio</th><th>Por qué</th><th>A dónde</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Abstinencia grave o complicada</th><td>Riesgo de convulsiones y delirium; necesita monitorización y fármacos parenterales</td><td>Hospital (urgente)</td><td>[12]</td></tr>
+<tr><th>Delirium o convulsiones</th><td>Urgencia vital con inestabilidad autonómica</td><td>Hospital (urgente)</td><td>[12]</td></tr>
+<tr><th>Sospecha de Wernicke</th><td>Reversible solo si se da tiamina a tiempo</td><td>Hospital (urgente)</td><td>[16][13]</td></tr>
+<tr><th>Riesgo suicida</th><td>Mortal, y la intoxicación lo agrava</td><td>Hospital (urgente) y salud mental</td><td>[16]</td></tr>
+<tr><th>Patología dual grave</th><td>Psicosis, manía o depresión grave exigen manejo psiquiátrico</td><td>Salud mental</td><td>[16][4]</td></tr>
+<tr><th>Embarazo</th><td>La abstinencia y el alcohol dañan a la madre y al feto</td><td>Obstetricia y salud mental</td><td>[16]</td></tr>
+<tr><th>Policonsumo o dependencia de opioides</th><td>Abstinencias combinadas y riesgo de sobredosis</td><td>Salud mental o centro de adicciones</td><td>[16]</td></tr>
+<tr><th>Fracaso del manejo ambulatorio</th><td>Recaídas pese a un plan bien aplicado piden mayor intensidad</td><td>Salud mental o centro de adicciones</td><td>[17]</td></tr>
+<tr><th>Comorbilidad orgánica descompensada</th><td>Hepatopatía, pancreatitis o cardiopatía agudizadas necesitan manejo hospitalario</td><td>Hospital</td><td>[13]</td></tr>
+<tr><th>Falta de red de apoyo</th><td>Sin quien supervise, la desintoxicación ambulatoria no es segura</td><td>Hospital o centro de adicciones; trabajo social</td><td>[17][12]</td></tr>
+</tbody></table></div>
+<div class="dc" data-fn="dcSeg"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Hallazgos del seguimiento</span>
+<button type="button" class="chip" data-g="g" data-v="sui" data-m="1" onclick="ch(this)">Ideas de suicidio con plan</button>
+<button type="button" class="chip" data-g="g" data-v="conv" data-m="1" onclick="ch(this)">Convulsión o delirium</button>
+<button type="button" class="chip" data-g="g" data-v="wer" data-m="1" onclick="ch(this)">Confusión, ataxia u oftalmoplejía</button>
+<button type="button" class="chip" data-g="g" data-v="abs" data-m="1" onclick="ch(this)">Abstinencia moderada o grave</button>
+<button type="button" class="chip" data-g="g" data-v="hep" data-m="1" onclick="ch(this)">Ictericia, ascitis o sangrado</button>
+<button type="button" class="chip" data-g="g" data-v="emb" data-m="1" onclick="ch(this)">Embarazo</button>
+<button type="button" class="chip" data-g="g" data-v="opi" data-m="1" onclick="ch(this)">Opioides o policonsumo</button>
+<button type="button" class="chip" data-g="g" data-v="dep" data-m="1" onclick="ch(this)">Tristeza que persiste tras 1 mes sin beber</button>
+<button type="button" class="chip" data-g="g" data-v="fra" data-m="1" onclick="ch(this)">Fracaso del manejo ambulatorio</button>
+<button type="button" class="chip" data-g="g" data-v="red" data-m="1" onclick="ch(this)">Sin red de apoyo</button>
+<button type="button" class="chip" data-g="g" data-v="vio" data-m="1" onclick="ch(this)">Violencia de pareja</button>
+<button type="button" class="chip" data-g="g" data-v="rec" data-m="1" onclick="ch(this)">Recaída sin otros hallazgos</button></div>
+<div class="out"></div></div>
+<div class="acc refs"><button type="button" class="acc-h" onclick="tog(this)">Referencias <span class="chev">▾</span></button>
+<div class="acc-b"><ol class="vanc">
+<li>American Psychiatric Association. Diagnostic and statistical manual of mental disorders. 5th ed, text revision (DSM-5-TR). Washington (DC): American Psychiatric Association Publishing; 2022.</li>
+<li>World Health Organization. International classification of diseases for mortality and morbidity statistics, 11th revision (ICD-11). Geneva: World Health Organization; 2019.</li>
+<li>Kandel ER, Koester JD, Mack SH, Siegelbaum SA, editores. Principles of neural science. 6th ed. New York: McGraw Hill; 2021.</li>
+<li>Boland R, Verduin ML, Ruiz P, editores. Kaplan &amp; Sadock's synopsis of psychiatry. 12th ed. Philadelphia: Wolters Kluwer; 2022.</li>
+<li>Brunton LL, Knollmann BC, editores. Goodman &amp; Gilman's the pharmacological basis of therapeutics. 14th ed. New York: McGraw Hill; 2023.</li>
+<li>Robinson TE, Berridge KC. The neural basis of drug craving: an incentive-sensitization theory of addiction. Brain Res Brain Res Rev. 1993;18(3):247-91.</li>
+<li>World Health Organization. Global status report on alcohol and health and treatment of substance use disorders. Geneva: World Health Organization; 2024.</li>
+<li>United Nations Office on Drugs and Crime. World drug report 2024. Vienna: United Nations Office on Drugs and Crime; 2024.</li>
+<li>Koob GF, Volkow ND. Neurobiology of addiction: a neurocircuitry analysis. Lancet Psychiatry. 2016;3(8):760-73.</li>
+<li>Verhulst B, Neale MC, Kendler KS. The heritability of alcohol use disorders: a meta-analysis of twin and adoption studies. Psychol Med. 2015;45(5):1061-72.</li>
+<li>Cloninger CR. Neurogenetic adaptive mechanisms in alcoholism. Science. 1987;236(4800):410-6.</li>
+<li>The ASAM clinical practice guideline on alcohol withdrawal management. J Addict Med. 2020;14(3S Suppl 1):1-72.</li>
+<li>Loscalzo J, Fauci AS, Kasper DL, Hauser SL, Longo DL, Jameson JL, editores. Harrison's principles of internal medicine. 21st ed. New York: McGraw Hill; 2022.</li>
+<li>Sullivan JT, Sykora K, Schneiderman J, Naranjo CA, Sellers EM. Assessment of alcohol withdrawal: the revised clinical institute withdrawal assessment for alcohol scale (CIWA-Ar). Br J Addict. 1989;84(11):1353-7.</li>
+<li>Babor TF, Higgins-Biddle JC, Saunders JB, Monteiro MG. AUDIT: the alcohol use disorders identification test. Guidelines for use in primary care. 2nd ed. Geneva: World Health Organization; 2001.</li>
+<li>World Health Organization. mhGAP intervention guide for mental, neurological and substance use disorders in non-specialized health settings: mental health Gap Action Programme (mhGAP). Version 2.0. Geneva: World Health Organization; 2016.</li>
+<li>National Institute for Health and Care Excellence. Alcohol-use disorders: diagnosis, assessment and management of harmful drinking (high-risk drinking) and alcohol dependence. Clinical guideline CG115. London: NICE; 2011.</li>
+</ol></div></div>
+</section>
+<script>
+function par(t){return '<p>'+t+'</p>';}
+function hv(a,v){return a.indexOf(v)>-1;}
+function vacio(dc,t){out(dc,par(t));}
+function dcF(x){return String(x).replace('.',',');}
+
+function dcDx(dc){
+  var au=sel(dc,'au'),dm=sel(dc,'dm'),ab=sel(dc,'ab'),al=sel(dc,'al'),r=[];
+  if(!au.length&&!dm.length){vacio(dc,'Elige la banda del AUDIT y el número de criterios DSM-5-TR para obtener la clasificación y la conducta.');return;}
+  if(!au.length||!dm.length){vacio(dc,'Faltan datos: la clasificación necesita la banda del AUDIT y el número de criterios DSM-5-TR [15][1].');return;}
+  var a=au[0],n=parseInt(dm[0],10),cl,cd;
+  if(n>=2){
+    var gr=n>=6?'grave':(n>=4?'moderado':'leve');
+    cl='<b>Trastorno por consumo de alcohol '+gr+'</b> ('+(n>=6?'6 o más':(n>=4?'4 o 5':'2 o 3'))+' criterios DSM-5-TR) [1]';
+    cd='Meta de abstinencia o reducción del daño pactada con el paciente, fármaco para prevenir recaídas tras la desintoxicación y apoyo psicosocial (ver «Plan de tratamiento»)'+(n>=6?'; deriva a especialista [16][17].':' [17].');
+    if(a==='b') r.push(par('Discordancia: el AUDIT bajo no concuerda con los criterios; prima el DSM-5-TR. Reinterroga el consumo, porque el AUDIT subestima si el paciente minimiza [15].'));
+  } else if(a==='d'){
+    cl='<b>Probable dependencia</b> por AUDIT de 20 o más, sin confirmar con criterios DSM-5-TR [15]';
+    cd='Interroga los 11 criterios para confirmar y graduar, valora abstinencia y deriva para evaluación diagnóstica [15][1].';
+  } else if(a==='p'){
+    cl='<b>Consumo perjudicial</b> (AUDIT de 16 a 19) sin criterios suficientes de trastorno [15][2]';
+    cd='Consejo simple, asesoría breve con entrevista motivacional y seguimiento; meta de bajo riesgo o abstinencia según el daño [15][16].';
+  } else if(a==='r'){
+    cl='<b>Consumo de riesgo</b> (AUDIT de 8 a 15) [15]';
+    cd='Intervención breve con consejo simple y seguimiento; meta de consumo de bajo riesgo [15][16].';
+  } else {
+    cl='<b>Consumo de bajo riesgo</b> (AUDIT de 0 a 7) [15]';
+    cd='Educación sobre el alcohol; repite el tamizaje en la siguiente consulta [15].';
+  }
+  r.push(par('Clasificación: '+cl+'.'));
+  r.push(par('Conducta: '+cd));
+  if(ab.length&&ab[0]==='si') r.push(par('Signos de abstinencia: mide la gravedad con CIWA-Ar y trata según el resultado (ver «Plan de tratamiento»); la abstinencia indica neuroadaptación, así que reclasifica como dependencia aunque el AUDIT sea bajo [14][12].'));
+  if(ab.length&&ab[0]==='gr') r.push(par('<b>Abstinencia complicada</b> (convulsión, alucinaciones o delirium): hospitalización urgente, tiamina parenteral y benzodiacepina intravenosa; descarta Wernicke, hipoglucemia y trauma [12].'));
+  if(hv(al,'wer')) r.push(par('Alarma, Wernicke: confusión, ataxia u oftalmoplejía; tiamina parenteral antes de cualquier glucosa (ver «Plan de tratamiento») [13].'));
+  if(hv(al,'glu')) r.push(par('Alarma, hipoglucemia: glucemia capilar, glucosa intravenosa con tiamina previa o simultánea si hay desnutrición [13].'));
+  if(hv(al,'tce')) r.push(par('Alarma, trauma craneal: la intoxicación enmascara el examen neurológico; pide tomografía de cráneo ante cualquier deterioro o signo focal [13].'));
+  if(hv(al,'met')) r.push(par('Alarma, metanol: visión borrosa con acidosis; pide gasometría, brecha osmolar y valoración toxicológica urgente [13].'));
+  r.push('<span class="cf">Si los criterios DSM-5-TR pasan de 0 o 1 a 4 o 5 con el mismo AUDIT → de consumo perjudicial o de riesgo a trastorno moderado, con abstinencia por vigilar y fármaco para prevenir recaídas [1].</span>');
+  out(dc,r.join(''));
+}
+
+function dcTx(dc){
+  var pt=sel(dc,'pt'),ab=sel(dc,'ab'),hp=sel(dc,'hp'),nu=sel(dc,'nu'),kg=num(dc,'kg'),r=[];
+  if(!pt.length){vacio(dc,'Elige el patrón, la abstinencia y las condiciones del paciente para obtener el plan con posología.');return;}
+  if(!ab.length||!hp.length){vacio(dc,'Faltan datos: el plan necesita la gravedad de la abstinencia por CIWA-Ar y si hay hepatopatía [12].');return;}
+  var p=pt[0],a=ab[0],h=hp[0]==='si',wer=hv(nu,'wer'),des=hv(nu,'des'),hosp=false;
+  var peso=!isNaN(kg)&&kg>=30&&kg<=200;
+  if(p!=='d'&&a!=='no') r.push(par('Una abstinencia indica neuroadaptación: reclasifica como dependencia y sigue ese plan [12].'));
+  if(p==='r') r.push(par('<b>Intervención breve</b> (FRAMES) y seguimiento; meta de consumo de bajo riesgo. Sin fármacos [16][17].'));
+  if(p==='p') r.push(par('<b>Intervención breve y entrevista motivacional</b>; meta de bajo riesgo o abstinencia según el daño. Sin fármacos en el primer nivel salvo que aparezca dependencia [16][17].'));
+  if(p==='d'||a!=='no'){
+    if(a==='gr'||wer||(a==='mo'&&h)) hosp=true;
+    if(hosp) r.push(par('<b>Manejo hospitalario</b>: '+(wer?'sospecha de Wernicke; ':'')+(a==='gr'?'abstinencia grave; ':'')+(a==='mo'&&h?'abstinencia moderada con hepatopatía; ':'')+'vigilancia continua y CIWA-Ar frecuente [12].'));
+    else if(a==='mo') r.push(par('Abstinencia moderada: el manejo ambulatorio solo es posible con acompañante, sin antecedente de convulsiones o delirium y con control diario; si no, hospitaliza [12].'));
+    else if(a==='le') r.push(par('Abstinencia leve: manejo ambulatorio con control a las 24 h; sin benzodiacepina si el CIWA-Ar se mantiene en menos de 10 [12].'));
+    if(wer) r.push(par('<b>Tiamina</b> 500 mg IV cada 8 h durante 2 a 3 días, luego 250 mg al día por 3 a 5 días [12][13] [VERIFICAR EN FUENTE]; antes de cualquier glucosa.'));
+    else if(des) r.push(par('<b>Tiamina</b> parenteral 100 a 250 mg al día durante 3 a 5 días por la desnutrición, luego 100 mg VO cada 24 h; antes de cualquier glucosa [12] [VERIFICAR EN FUENTE].'));
+    else r.push(par('<b>Tiamina</b> 100 mg VO cada 24 h durante la desintoxicación [12].'));
+    if(a==='mo'||a==='gr'){
+      if(h) r.push(par('Benzodiacepina con hepatopatía: <b>lorazepam</b> '+(a==='gr'?'2 a 4 mg':'1 a 2 mg')+' VO, IV o IM cada 4 a 6 h guiado por CIWA-Ar, o oxazepam 15 a 30 mg VO cada 6 a 8 h [12][5] [VERIFICAR EN FUENTE]. Evita diazepam: se acumula.'));
+      else if(a==='mo') r.push(par('Benzodiacepina: <b>diazepam</b> 10 a 20 mg VO cada 1 a 2 h hasta CIWA-Ar menor de 10, luego según síntomas [12].'));
+      else {
+        var dz=peso?Math.min(rd(0.15*kg,1),10):10;
+        r.push(par('Benzodiacepina: <b>diazepam</b> '+dcF(dz)+' mg IV lento por dosis, repetir según CIWA-Ar'+(peso?' (0,15 mg/kg para '+dcF(kg)+' kg; tope de 10 mg por dosis)':' (indica el peso para calcular 0,15 mg/kg; tope de 10 mg por dosis)')+' [12] [VERIFICAR EN FUENTE]. Vigila la ventilación.'));
+      }
+    }
+    if(a==='no'||a==='le') r.push(par('Sin abstinencia que exija benzodiacepina; reevalúa con CIWA-Ar si reaparece el síntoma [12].'));
+    if(p==='d'){
+      var pre;
+      if(h) pre='<b>Acamprosato</b> '+(peso&&kg<60?'666 mg por la mañana y 333 mg al mediodía y por la noche':(peso?'666 mg VO cada 8 h':'666 mg VO cada 8 h con 60 kg o más, o 666 mg por la mañana y 333 mg al mediodía y por la noche con menos de 60 kg'))+', 6 a 12 meses [VERIFICAR EN FUENTE]: no tiene metabolismo hepático. Evita naltrexona en hepatitis aguda o insuficiencia hepática y disulfiram en hepatopatía grave [17][5].';
+      else pre='<b>Naltrexona</b> 50 mg VO cada 24 h, de 3 a 12 meses [VERIFICAR EN FUENTE], o <b>acamprosato</b> '+(peso&&kg<60?'666 mg por la mañana y 333 mg al mediodía y por la noche':(peso?'666 mg VO cada 8 h':'666 mg VO cada 8 h con 60 kg o más (menos de 60 kg, 1 332 mg al día)'))+'; ambos tras lograr la abstinencia. Disulfiram 250 mg VO cada 24 h solo con indicación y supervisión [17][5].';
+      if(a==='no'||a==='le'||a==='mo') r.push(par('Prevención de recaídas: '+pre));
+      else r.push(par('Prevención de recaídas: inicia tras superar la fase aguda y la abstinencia; '+pre));
+      r.push(par('Apoyo psicosocial (entrevista motivacional, terapia cognitivo-conductual, grupos de ayuda mutua y apoyo familiar) y derivación a especialista [17][16].'));
+    }
+  }
+  r.push('<span class="cf">Si la hepatopatía pasa de no a sí → el diazepam se cambia por lorazepam u oxazepam y la naltrexona por acamprosato [12][17].</span>');
+  out(dc,r.join(''));
+}
+function dcSeg(dc){
+  function P(t){return '<p>'+t+'</p>';}
+  function has(a,v){return a.indexOf(v)>-1;}
+  var g=sel(dc,'g');
+  if(!g.length){out(dc,P('Elige los hallazgos del control para obtener la conducta: manejo en primer nivel, referencia a salud mental o referencia urgente a hospital.'));return;}
+  var urg=[],amb=[],r=[];
+  if(has(g,'sui')) urg.push('riesgo suicida: no lo dejes solo, retira medios letales y deriva a evaluación psiquiátrica urgente [16]');
+  if(has(g,'conv')) urg.push('convulsión o delirium: urgencia vital con inestabilidad autonómica [12]');
+  if(has(g,'wer')) urg.push('sospecha de Wernicke: tiamina parenteral antes de cualquier glucosa, posología en «Plan de tratamiento» [13]');
+  if(has(g,'abs')) urg.push('abstinencia moderada o grave: requiere monitorización hospitalaria [12]');
+  if(has(g,'hep')) urg.push('hepatopatía posiblemente descompensada: estudio y manejo hospitalario [13]');
+  if(has(g,'emb')) amb.push('embarazo: obstetricia y salud mental, sin esperar al siguiente control [16]');
+  if(has(g,'opi')) amb.push('policonsumo u opioides: centro de adicciones o salud mental por abstinencias combinadas y riesgo de sobredosis [16]');
+  if(has(g,'dep')) amb.push('síntomas que persisten tras cerca de 1 mes de abstinencia: sugieren trastorno independiente, para salud mental [1]');
+  if(has(g,'fra')) amb.push('fracaso ambulatorio: mayor intensidad de tratamiento [17]');
+  if(has(g,'red')) amb.push('sin red de apoyo: la desintoxicación ambulatoria no es segura; suma trabajo social [17][12]');
+  if(urg.length){
+    r.push(P('<b>Referencia urgente a hospital</b>. Motivos: '+urg.join('; ')+'.'));
+    if(amb.length) r.push(P('Además, para el especialista: '+amb.join('; ')+'.'));
+  } else if(amb.length){
+    r.push(P('<b>Referencia ambulatoria a salud mental o a centro de adicciones</b>. Motivos: '+amb.join('; ')+'. Mantén el seguimiento en el primer nivel mientras llega la cita [16].'));
+  } else {
+    r.push(P('<b>Manejo en el primer nivel</b>: no hay criterio de referencia. Revisa consumo, craving y adherencia, evalúa ánimo y riesgo suicida, y ajusta el plan; la recaída es parte del curso, no un fracaso [16][17].'));
+  }
+  if(has(g,'vio')) r.push(P('Violencia de pareja: pregunta por la seguridad de la pareja y los hijos, activa trabajo social y la ruta de protección; no se resuelve solo tratando el consumo [16].'));
+  if(urg.length) r.push('<span class="cf">Si desaparecen los hallazgos urgentes y solo queda una recaída → vuelve al primer nivel con ajuste del plan, sin referencia [16][17].</span>');
+  else if(amb.length) r.push('<span class="cf">Si aparece ideación suicida con plan o una convulsión → la referencia pasa de ambulatoria a urgente al hospital [16][12].</span>');
+  else r.push('<span class="cf">Si se añade tristeza que persiste tras 1 mes sin beber → pasa a referencia ambulatoria a salud mental por probable trastorno independiente [1].</span>');
+  out(dc,r.join(''));
+}
+</script>
+<!-- KIT_SCRIPT -->
+</div>
+<script>
+(function(){
+'use strict';
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+function secK(k){return $('section.tab[data-tab="'+k+'"]')}
+function secOf(el){return el&&el.closest?el.closest('section.tab'):null}
+function nameOf(k){var b=$('button.tb[data-tab="'+k+'"]');return b?b.textContent.replace(/\s+/g,' ').replace(/^\s+|\s+$/g,''):k}
+function btn(t,f,c){var b=document.createElement('button');b.type='button';b.className=c||'chip';b.textContent=t;b.addEventListener('click',f);return b}
+function recon(s,on){if(!s)return;s.classList.toggle('recon',!!on);$$('.nodo',s).forEach(function(n){n.classList.remove('rev');n.classList.remove('pis')});var st=$('.rec-state',s);if(st)st.textContent=on?'Modo reconstrucción activo':'Modo lectura';var a=$('.rec-bar [data-act="rec"]',s);if(a){a.disabled=!!on;a.classList.toggle('on',!!on);a.textContent=on?'Reconstrucción activa':'Activar reconstrucción'}}
+window.recon=function(k,on){recon(secK(k),on)};
+function navOv(){var n=$('nav.tabs');if(!n)return;var sl=n.scrollLeft,mx=n.scrollWidth-n.clientWidth,w=n.parentNode;[n,w].forEach(function(e){if(e===n||e.classList.contains('tabs-w')){e.classList.toggle('ov-l',sl>2);e.classList.toggle('ov-r',sl<mx-2)}})}
+function tabla(on){var t=$('table.vis'),s=secOf(t);if(!s)return;s.classList.toggle('tbl',!!on);$$('td.tap',t).forEach(function(c){c.classList.remove('rev')});var st=$('.vb-state',s);if(st)st.textContent=on?'Tabla tapada: toca cada celda para revelarla':'Modo lectura'}
+window.tabla=tabla;
+window.show=function(k){var ns=secK(k);if(!ns)return;$$('section.tab.on').forEach(function(s){if(s!==ns){if(s.classList.contains('recon'))recon(s,false);if(s.classList.contains('tbl'))tabla(false)}});$$('.tb,.tab').forEach(function(e){e.classList.toggle('on',e.getAttribute('data-tab')===k)});window.scrollTo(0,0);var b=$('.tb.on');if(b&&b.scrollIntoView){try{b.scrollIntoView({inline:'nearest',block:'nearest'})}catch(e){}}navOv()};
+window.ir=function(k,id){var el=document.getElementById(id),s=secOf(el);if(!s)return;var nodo=el.classList.contains('nodo');if(s.classList.contains('recon')&&!nodo)recon(s,false);if(s.classList.contains('tbl')&&!el.closest('.vis-w'))tabla(false);show(s.getAttribute('data-tab'));if(nodo&&s.classList.contains('recon'))el.classList.add('rev');var a=el.closest('.acc');if(a)a.classList.add('op');el.scrollIntoView({block:'start'});el.classList.add('hl');setTimeout(function(){el.classList.remove('hl')},1500)};
+window.tog=function(b){var a=b.closest('.acc');if(a)a.classList.toggle('op')};
+window.sel=function(dc,g){return $$('.chip.on[data-g="'+g+'"]',dc).map(function(c){return c.getAttribute('data-v')})};
+window.num=function(dc,n){var i=$('input[data-n="'+n+'"]',dc);if(!i||i.value==='')return NaN;return parseFloat(String(i.value).replace(',','.'))};
+window.out=function(dc,h){var o=$('.out',dc);if(o)o.innerHTML=h};
+window.rd=function(x,d){var p=Math.pow(10,d||0);return Math.round(x*p)/p};
+function outErr(dc,e){var o=$('.out',dc);if(o)o.textContent='Error de cálculo: '+(e&&e.message?e.message:String(e))}
+function runDc(dc){var fn=window[dc.getAttribute('data-fn')];if(typeof fn==='function'){try{fn(dc)}catch(e){outErr(dc,e)}}}
+window.ch=function(el){var dc=el.closest('.dc');if(!dc)return;if(el.classList.contains('chip')){var g=el.getAttribute('data-g');if(el.getAttribute('data-m')==='1'){el.classList.toggle('on')}else{var was=el.classList.contains('on');$$('.chip[data-g="'+g+'"]',dc).forEach(function(c){c.classList.remove('on')});if(!was)el.classList.add('on')}}runDc(dc)};
+function initNodos(f){var k=f.getAttribute('data-tab');$$('.nodo',f).forEach(function(n,i){var p=document.createElement('b');p.className='paso';var pn=document.createElement('span');pn.className='pn';pn.textContent=(i+1)+' ·';var pt=document.createElement('span');pt.className='pt';pt.textContent=n.getAttribute('data-paso')||'';p.appendChild(pn);p.appendChild(pt);var ra=n.getAttribute('data-rama');if(ra){var b=document.createElement('span');b.className='badge b-az rama';b.textContent=ra;p.appendChild(document.createTextNode(' '));p.appendChild(b)}n.insertBefore(p,n.firstChild);var c=document.createElement('div');c.className='rec-ctl';if($('.man',n))c.appendChild(btn('Pista',function(){n.classList.toggle('pis')}));c.appendChild(btn('Revelar',function(){n.classList.toggle('rev')}));n.appendChild(c)});
+var tl=$('ol.tl',f);if(!tl)return;var bar=document.createElement('div');bar.className='rec-bar';bar.id='rec-bar-'+k;var t=document.createElement('div');t.innerHTML='<b>Timeline en blanco</b> · <span class="rec-state">Modo lectura</span><p class="mini">Reconstruye la cascada sin mirar: escribe cada paso en orden, luego usa Pista (signos que produce) y Revelar nodo por nodo. Nada se guarda.</p>';bar.appendChild(t);var ta=document.createElement('textarea');ta.setAttribute('aria-label','Escribe aquí la cascada en orden');var bs=document.createElement('div');bs.className='rec-btns';var ab=btn('Activar reconstrucción',function(){recon(f,true);ta.focus()});ab.setAttribute('data-act','rec');bs.appendChild(ab);bs.appendChild(btn('Revelar todo',function(){$$('.nodo',f).forEach(function(n){n.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){recon(f,false)}));bar.appendChild(bs);bar.appendChild(ta);tl.parentNode.insertBefore(bar,tl)}
+var TGT={'1.º':'clave','De elección':'clave','Confirma':'ok','Solo si':'cond','Escala':'cond','Reevalúa':'cond','No pidas':'no','Evita':'no','Alarma':'alarma'};
+function initTg(){$$('ol.tg span.tg').forEach(function(s){var v=TGT[s.textContent.replace(/^\s+|\s+$/g,'')];if(v)s.setAttribute('data-t',v)})}
+function initTabla(){var t=$('table.vis'),s=secOf(t);if(!s)return;var w=t.parentNode;if(!w.classList.contains('tw')){w=document.createElement('div');w.className='tw';t.parentNode.insertBefore(w,t);w.appendChild(t)}w.classList.add('vis-w');var rows=$$('tbody tr',t);if(!rows.length)rows=$$('tr',t).slice(1);rows.forEach(function(r){Array.prototype.slice.call(r.children,1).forEach(function(c){c.classList.add('tap');c.addEventListener('click',function(){if(s.classList.contains('tbl'))c.classList.add('rev')})})});
+var bar=document.createElement('div');bar.className='vb-bar';bar.id='vb-bar';var h=document.createElement('div');h.innerHTML='<b>Tabla en blanco</b> · <span class="vb-state">Modo lectura</span><p class="mini">Tapa todas las celdas de las entidades (quedan visibles las cabeceras y los ejes). Di cada celda antes de tocarla; un toque la revela. Nada se guarda.</p>';bar.appendChild(h);var bs=document.createElement('div');bs.className='rec-btns';bs.appendChild(btn('Tapar la tabla',function(){tabla(true)}));bs.appendChild(btn('Revelar todo',function(){$$('td.tap',t).forEach(function(c){c.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){tabla(false)}));bar.appendChild(bs);w.parentNode.insertBefore(bar,w)}
+function initRecGo(){var TL=$$('section.tab').filter(function(s){return!!$('ol.tl',s)}),sin=secK('sin'),dst=sin||secK('seg');if(!dst)return;var ord=sin?TL.filter(function(s,i){return i%2===0}).concat(TL.filter(function(s,i){return i%2===1})):TL;var vt=$('table.vis');if(!ord.length&&!(sin&&vt))return;
+var w=document.createElement('div');w.className='hb az rec-go';w.innerHTML='<div class="hb-t">Antes de cerrar: recupera sin mirar</div><p class="mini">Cada botón te lleva a la función en blanco correspondiente. Intenta la respuesta completa antes de revelar.</p>';var bs=document.createElement('div');bs.className='rec-btns';w.appendChild(bs);
+if(sin&&vt){var vs=secOf(vt),vk=vs.getAttribute('data-tab'),b0=btn('Tabla en blanco — '+nameOf(vk),function(){show(vk);tabla(true);var b=document.getElementById('vb-bar');if(b)b.scrollIntoView({block:'start'})},'go');b0.setAttribute('data-rec',vk);bs.appendChild(b0)}
+ord.forEach(function(s){var k=s.getAttribute('data-tab'),b=btn('Reconstruir la cascada — '+nameOf(k),function(){show(k);recon(s,true);var r=document.getElementById('rec-bar-'+k);if(r)r.scrollIntoView({block:'start'})},'go');b.setAttribute('data-rec',k);bs.appendChild(b)});
+var rf=$('.acc.refs',dst);if(rf)dst.insertBefore(w,rf);else dst.appendChild(w)}
+function init(){var f=$('.tb'),ph=[function(){var n=$('nav.tabs');if(n){var w=document.createElement('div');w.className='tabs-w';n.parentNode.insertBefore(w,n);w.appendChild(n);n.addEventListener('scroll',navOv);window.addEventListener('resize',navOv)}},function(){$$('section.tab').forEach(function(s){if($('ol.tl',s))initNodos(s)})},initTg,initTabla,initRecGo,function(){$$('.dc').forEach(runDc)},function(){show(secK('pan')?'pan':(f?f.getAttribute('data-tab'):''))}];ph.forEach(function(p){try{p()}catch(e){if(window.console)console.error('kit v10:',e)}})}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+</body>
+</html>

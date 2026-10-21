@@ -21,6 +21,7 @@ Widgets HTML de estudio, autocontenidos y offline (skill `widget-ensenanza` v10,
 | | `Marcha_sin_dolor_widget_v10.html` | multi | DDC (principal), dismetría, neuromuscular, Guillain-Barré (amenaza) | 65 |
 | | `Forma_piernas_pies_widget_v10.html` | multi | genu varo/valgo (principal), anteversión femoral, pie plano, pie cavo, equinovaro (amenaza) | 26 |
 | Consumo de alcohol | `Definiciones_consumo_alcohol.html` | definiciones | 10 términos + repaso | 3 |
+| | `Trastorno_consumo_alcohol_drogas_widget_v10.html` | mono | + pestaña de otras drogas · temas del sílabo de toxicodependencias | 41 |
 
 `[VERIFICAR]` = datos marcados `[VERIFICAR EN FUENTE]`: compruébalos antes de estudiar con ellos.
 
