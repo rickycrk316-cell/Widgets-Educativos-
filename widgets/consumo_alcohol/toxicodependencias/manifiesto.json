@@ -1,0 +1,112 @@
+{
+ "titulo": "Toxicodependencias",
+ "salida": "../Toxicodependencias_widget_v10.html",
+ "modo": "multi",
+ "entidades": {
+  "e1": "Alcohol",
+  "e2": "Opioides",
+  "e3": "Sedantes e hipnóticos",
+  "e4": "Estimulantes",
+  "e5": "Cannabis y psicodélicos"
+ },
+ "principal": "e1",
+ "amenaza": "e2",
+ "tabs": [
+  "pan",
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4",
+  "e5",
+  "sin"
+ ],
+ "pg": {
+  "vis": 5,
+  "e1": 5,
+  "e2": 3,
+  "e3": 3,
+  "e4": 3,
+  "e5": 3
+ },
+ "fey": {
+  "e1": 2,
+  "e2": 1,
+  "e3": 1,
+  "e4": 1,
+  "e5": 1
+ },
+ "nodos": {
+  "e1": 8,
+  "e2": 6,
+  "e3": 6,
+  "e4": 7,
+  "e5": 5
+ },
+ "signos": {
+  "e1": 6,
+  "e2": 3,
+  "e3": 3,
+  "e4": 4,
+  "e5": 5
+ },
+ "dc": [
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4",
+  "e5"
+ ],
+ "nucleo": {
+  "vis": [
+   "Pupilas: miosis, midriasis o normales",
+   "Ventilación: bradipnea frente a taquipnea",
+   "Tono adrenérgico: temperatura, diaforesis y presión arterial",
+   "Sensorio: deprimido, agitado o con percepción alterada"
+  ],
+  "e1": [
+   "Etanol potencia GABA-A e inhibe NMDA",
+   "ADH y ALDH generan exceso de NADH",
+   "Supresión libera hiperactividad glutamatérgica y noradrenérgica",
+   "Abstinencias repetidas descienden el umbral convulsivo",
+   "Hiperexcitabilidad global desemboca en delirium tremens",
+   "Gradúa la abstinencia con CIWA-Ar y estima el riesgo con PAWSS",
+   "Benzodiacepina pautada por síntomas según CIWA-Ar"
+  ],
+  "e2": [
+   "Agonista μ deprime centros respiratorios del tronco",
+   "Estímulo parasimpático de Edinger-Westphal causa miosis",
+   "Retirada desata hiperactividad noradrenérgica del locus coeruleus",
+   "Agonista parcial desplaza al agonista completo",
+   "Mide frecuencia respiratoria, saturación y pupilas en todo paciente deprimido",
+   "Naloxona titulada hasta recuperar la ventilación, no la conciencia"
+  ],
+  "e3": [
+   "BZD aumentan la frecuencia de apertura del canal de cloro",
+   "Coingesta de depresores suma depresión respiratoria",
+   "Retirada brusca desenmascara hiperexcitabilidad y convulsiones",
+   "Flumazenil desplaza la benzodiacepina del receptor",
+   "Evalúa vía aérea, ventilación y coingesta de otros depresores",
+   "Soporte ventilatorio y observación; el antídoto no es rutinario"
+  ],
+  "e4": [
+   "Cocaína bloquea la recaptación de dopamina y noradrenalina",
+   "Vasoconstricción coronaria y trombosis provocan isquemia",
+   "Anfetaminas invierten transportadores y liberan monoaminas",
+   "MDMA libera serotonina y vasopresina",
+   "Agitación y actividad muscular generan hipertermia",
+   "Temperatura central, ECG y glucemia en todo agitado simpaticomimético",
+   "Benzodiacepina para agitación, taquicardia e hipertensión"
+  ],
+  "e5": [
+   "THC activa receptores CB1 presinápticos",
+   "Uso crónico desregula CB1 hipotalámico y entérico",
+   "Exceso dopaminérgico en vulnerables precipita psicosis",
+   "LSD y psilocibina activan receptores 5-HT2A corticales",
+   "Ketamina y PCP bloquean receptores NMDA",
+   "Signos vitales, glucemia y búsqueda de coingesta ante percepción alterada",
+   "Entorno tranquilo y benzodiacepina si hay agitación"
+  ]
+ }
+}
