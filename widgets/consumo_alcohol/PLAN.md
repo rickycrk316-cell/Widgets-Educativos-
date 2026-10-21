@@ -37,3 +37,38 @@ Uso: t1 cita [1] en prerrequisitos y [2][3] en la definición; t2–t3 reutiliza
 ## Diseño
 
 Idéntico al widget de definiciones de `patologia_urinaria_baja/PLAN.md` (sección «Widget B» y «Reglas de diseño para ejecutores»): mismo vocabulario de clases, mismos glifos (sin ✅ ⚠️ ❌), mismas reglas 1–10. Archivo: `Definiciones_consumo_alcohol.html`.
+
+## Ampliación 1 · temas del sílabo (monitoreo miércoles, cierre viernes)
+
+Temas pedidos por el docente y dónde se resuelven:
+
+| Tema del sílabo | Dónde |
+|---|---|
+| Conceptos: alcoholismo, abuso, dependencia, tolerancia, inversión de la tolerancia, craving, trastorno mental | Definiciones t3 (abuso, dependencia, tolerancia) + t7–t10 nuevas; resumen en enseñanza `def` |
+| Morbilidad y mortalidad global | enseñanza `def` (Epidemiología) |
+| Teorías causales (genética, socioculturales, personalidad, otras) y factores de riesgo | enseñanza `fis` |
+| Mecanismo de adicción, dependencia física y psíquica, abstinencia, tolerancia, inversión | enseñanza `fis` (timeline) |
+| Cuadro clínico: intoxicación aguda y crónica, abstinencia alcohólica | enseñanza `cli` |
+| Clasificación de drogas e intoxicación/abstinencia de otras drogas | enseñanza adicional `dro` |
+| Laboratorio: metabolitos en sangre y orina | enseñanza `dx` |
+| Tratamiento en el primer nivel: objetivos, metas, farmacológico y no farmacológico | enseñanza `tx` |
+| Complicaciones sanitarias y psicosociales, patología dual, criterios de referencia | enseñanza `seg` |
+
+### Definiciones · pestañas nuevas (10 términos, régimen normal)
+
+| Pestaña | Término | Prerrequisito canónico | Remisiones |
+|---|---|---|---|
+| t7 | Alcoholismo | — (término histórico; se declara omisión) | recompensa («Trastorno por consumo»), neuroadaptación («Síndrome de abstinencia») |
+| t8 | Craving (deseo intenso de consumir) | Condicionamiento y memoria asociativa de la recompensa (tipo C) [4] | recompensa y amígdala («Trastorno por consumo») |
+| t9 | Inversión de la tolerancia | Sensibilización y reserva funcional hepática (tipo C) [1] | farmacocinética («Estado etílico»), neuroadaptación («Síndrome de abstinencia») |
+| t10 | Trastorno mental | — (concepto; se declara omisión) | monoaminas («Ideas de inutilidad») |
+
+Mazo: 5–6 tarjetas por término. Referencias: solo las 6 ya fijadas; alcoholismo cita [2] y [3] (la CIE-11 y el DSM-5-TR no usan «alcoholismo» como diagnóstico); trastorno mental cita [3] (definición de trastorno mental del DSM-5-TR). Repaso global pasa a «diez términos».
+
+### Enseñanza · `ensenanza/` (skill widget-ensenanza v10, modo mono)
+
+- Línea del router: `Modo: mono · Entidades: e1=Trastorno por consumo de alcohol y otras drogas · Amenaza: — · Override: no`. Las intoxicaciones y abstinencias son formas clínicas del mismo proceso (en `cli` y `dro`), no entidades aparte.
+- Pestañas: `pan def fis cli dro dx tx seg`; adicional `dro` = «Otras drogas» (parte `12x_dro.html`).
+- Caso de anclaje: el paciente del caso de emergencia (en ejemplos y simuladores).
+- Guía rectora: OMS mhGAP 2.0 (2016) para el primer nivel; DSM-5-TR (2022) para criterios; ASAM 2020 para abstinencia. Vigencia: mhGAP tiene actualización de recomendaciones 2023 no leída → `.mini` «Vigencia no verificada».
+- Citas: los ejecutores citan con claves `[@clave]` del banco de referencias de `ensenanza/REFS.md`; el orquestador numera por primera aparición. No usar fuentes fuera del banco.
