@@ -72,3 +72,7 @@ Mazo: 5–6 tarjetas por término. Referencias: solo las 6 ya fijadas; alcoholis
 - Caso de anclaje: el paciente del caso de emergencia (en ejemplos y simuladores).
 - Guía rectora: OMS mhGAP 2.0 (2016) para el primer nivel; DSM-5-TR (2022) para criterios; ASAM 2020 para abstinencia. Vigencia: mhGAP tiene actualización de recomendaciones 2023 no leída → `.mini` «Vigencia no verificada».
 - Citas: los ejecutores citan con claves `[@clave]` del banco de referencias de `ensenanza/REFS.md`; el orquestador numera por primera aparición. No usar fuentes fuera del banco.
+
+### Contraste con el sílabo (segunda rotación, Caso 4 · Toxicodependencias)
+
+El sílabo añade a la lista del docente (trabajo autónomo): historia clínica psiquiátrica y examen de funciones psíquicas → `dx`; normalidad y enfermedad mental → `def` y definiciones t10; neurotransmisión dopamina-GABA-sistema límbico → `fis`; farmacología de benzodiacepinas → `tx`. El docente añade al sílabo: factores de riesgo, personalidad y otras teorías, craving, inversión de la tolerancia (también en el sílabo), patología dual y criterios de referencia. Bibliografía del sílabo (Harrison 19e, Farreras 17e, Ebert 2025) no consultada: se declara en `Alcance`.
