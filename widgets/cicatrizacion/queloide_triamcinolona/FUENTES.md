@@ -23,6 +23,8 @@ Búsqueda en PubMed (octubre de 2026). Numeración Vancouver fija [1]…[19]. «
 17. Bandaru DR, Tatavarthi NBL, Rao DS, et al. Evaluation of intralesional bleomycin and triamcinolone acetonide in the treatment of keloids: a prospective, randomized, open-label, comparative study. Int J Dermatol. 2026;65(11):2334-42. PMID: 42360873. doi: 10.1111/ijd.70554 (solo resumen)
 18. Meaume S, Le Pillouer-Prost A, Richert B, et al. Management of scars: updated practical guidelines and use of silicones. Eur J Dermatol. 2014;24(4):435-43. PMID: 25141160. doi: 10.1684/ejd.2014.2356 (solo resumen)
 19. Bijlard E, Steltenpool S, Niessen FB. Intralesional 5-fluorouracil in keloid treatment: a systematic review. Acta Derm Venereol. 2015;95(7):778-82. PMID: 25805099. doi: 10.2340/00015555-2106 (solo resumen)
+20. Bristol-Myers Squibb. Kenalog-10 (triamcinolone acetonide injectable suspension): dosing [sitio web del fabricante]. Princeton (NJ): Bristol-Myers Squibb; s.f. [citado 2026 oct 23]. Disponible en: https://www.kenaloghcp.bmscustomerconnect.com/kenalog-10/dosing.html (no accesible desde el entorno; solo el extracto de resultados de búsqueda, parafraseado, no el texto verbatim)
+21. Bristol-Myers Squibb. Kenalog-40 (triamcinolone acetonide injectable suspension, USP) [ficha técnica FDA]. Silver Spring (MD): U.S. Food and Drug Administration; 2018 [citado 2026 oct 23]. Disponible en: https://www.accessdata.fda.gov/drugsatfda_docs/label/2018/014901s045lbl.pdf (no accesible desde el entorno; solo metadatos y extracto de búsqueda)
 
 ## Datos
 
@@ -134,12 +136,24 @@ Aviso: la búsqueda (≈28 llamadas) no devolvió ninguna guía de técnica con 
 ### Ecuador y Latinoamérica
 - No hallé datos de Ecuador ni de Latinoamérica sobre queloide ni infiltración con TAC en la búsqueda realizada (consulta amplia con términos de países; los resultados no fueron pertinentes).
 
+### inf · ficha técnica
+Aviso: DailyMed, el sitio del fabricante y la FDA devolvieron «no resuelve el host» desde este entorno (WebFetch); la información sale solo de extractos de resultados de búsqueda, no del texto verbatim de la ficha. Citas en inglés aproximadas, a validar contra la ficha original.
+
+- Kenalog-10 (10 mg/mL) es la presentación para uso intralesional; según el fabricante, la etiqueta solo contempla uso intraarticular o intralesional, con queloides entre las indicaciones intralesionales [20].
+- Dosis inicial: «may vary depending on the specific lesion and disease being treated»; no hay cifra de mg por sitio en el extracto [20]. Dosis por sitio: (no confirmado).
+- Sitios múltiples: «at least one centimeter apart» (≥ 1 cm entre sitios) y repetición «at weekly or less frequent intervals» (semanal o menos) [20].
+- Atrofia: «The site of injection and volume of injection should be carefully considered due to the potential for cutaneous atrophy» [20]. Volumen total mayor → más corticoide disponible para absorción sistémica y efectos sistémicos [20].
+- Calcinosis tras uso intraarticular o intralesional figura entre las reacciones adversas de la ficha Kenalog-40 [21] (solo metadatos y extracto; no leí la sección).
+- Manipulación: agitar el vial antes de usar; la exposición a congelación produce aglomeración y el producto no debe usarse [20].
+- Jeringa tuberculina, calibre de aguja, contraindicaciones, advertencias sobre embarazo, lactancia, diabetes, niños, alcohol bencílico y eje HHS: (no confirmado; no llegué al texto de la ficha).
+- Concentración 40 mg/mL para uso intralesional/intradermal: (no confirmado en la ficha; no leída).
+
 ## Lagunas
 
 - Histología detallada (colágeno hialinizado, nódulos), edad típica de aparición, incidencia por fototipo e incidencia exacta: no leí una fuente con esas cifras; el consenso JSW las trata pero el texto recuperado no las incluye.
 - Mecanismo de la triamcinolona sobre el fibroblasto (colagenasa, α2-macroglobulina, vasoconstricción): no hallado en lo leído.
-- Dosis máxima por sesión y por mes en adultos; calibre de aguja (25–30 G), jeringa Luer-lock, anestesia/lidocaína, crioterapia previa, plano dérmico y blanqueamiento: no confirmados. Solo hay protocolos individuales [12][13].
-- Contraindicaciones: sin fuente.
+- Dosis máxima por sesión y por mes en adultos; calibre de aguja (25–30 G), jeringa Luer-lock, anestesia/lidocaína, crioterapia previa, plano dérmico y blanqueamiento: no confirmados. Solo hay protocolos individuales [12][13]. Ficha Kenalog-10 [20]: solo se obtuvo el extracto de búsqueda (sitios ≥ 1 cm, intervalo semanal o mayor, dosis inicial según lesión sin cifra); sin dosis por sitio ni calibre; ficha no leída de forma directa.
+- Contraindicaciones: sin fuente. La ficha de Kenalog-10/40 [20][21] no se pudo leer (DailyMed no resuelve desde el entorno); pendiente.
 - Frecuencia de efectos sistémicos (Cushing, alteraciones menstruales, hiperglucemia, supresión suprarrenal): sin fuente; solo casos [14].
 - Tasas globales de respuesta (50–100 %) y recidiva (9–50 %) con TAC sola: no confirmadas como rango; usar las cifras puntuales de `tx`/`seg`.
 - Recomendaciones de consenso posteriores a 2019 (2020–2025): la búsqueda dirigida no devolvió un consenso; la revisión narrativa [15] sintetiza el panorama hasta 2025.
