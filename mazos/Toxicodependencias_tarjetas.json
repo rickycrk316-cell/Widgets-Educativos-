@@ -1,0 +1,982 @@
+[
+ {
+  "id": "Q2-TOX-0001",
+  "tipo": "QA",
+  "pregunta": "Drogas de abuso — ¿por qué convergen en la dopamina mesolímbica si cada una entra por un receptor distinto?",
+  "respuesta": "Porque cada una, por su propia puerta (GABA-A, receptor μ, transportadores, CB1), termina liberando dopamina desde el área tegmental ventral al núcleo accumbens, que marca la conducta como digna de repetirse.",
+  "razonamiento": "Es el principio organizador del caso: la recompensa converge, pero la abstinencia física depende del receptor de cada grupo.<br>Con la repetición, las claves del entorno disparan dopamina por sí mismas, lo que explica el craving ante señales.",
+  "fuente": "Koob y Volkow 2016, Lancet Psychiatry",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Concepto",
+   "Nivel::Aplicacion",
+   "Fuente::KoobVolkow",
+   "Clase::Principio",
+   "Bloom::Comprender",
+   "Principio",
+   "AltoRendimiento::USMLE"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0002",
+  "tipo": "QA",
+  "pregunta": "Trastorno por consumo (DSM-5-TR) — ¿en qué se distingue de «abuso», «dependencia» (DSM-IV) y «alcoholismo»?",
+  "respuesta": "El DSM-5-TR fusionó abuso y dependencia en un solo diagnóstico graduado por número de criterios; «alcoholismo» es un término histórico que ya no es diagnóstico.",
+  "razonamiento": "Abuso (DSM-IV) = consumo con daño o riesgo sin dependencia; dependencia = adaptación física y conductual. «Dependencia física» y «psíquica» siguen siendo útiles como mecanismos, no como diagnósticos.<br>El sílabo cita DSM-5; la versión vigente es DSM-5-TR, con los mismos 11 criterios.",
+  "fuente": "DSM-5-TR 2022",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Concepto",
+   "Nivel::Aplicacion",
+   "Fuente::DSM5TR",
+   "Clase::Contraste",
+   "Bloom::Analizar",
+   "AltoRendimiento::MIR"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0003",
+  "tipo": "Cloze",
+  "text": "Trastorno por consumo de sustancias (DSM-5-TR) — se diagnostica con ≥{{c1::2 de 11}} criterios en 12 meses; gravedad: leve 2-3, moderado {{c2::4-5}}, grave {{c2::≥6}}.",
+  "extra": "Convención del DSM-5-TR, no derivable. Tolerancia y abstinencia no cuentan si aparecen bajo tratamiento médico supervisado.",
+  "fuente": "DSM-5-TR 2022",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Concepto",
+   "Nivel::Recuerdo",
+   "Fuente::DSM5TR",
+   "Clase::Irreducible",
+   "Bloom::Recordar",
+   "AltoRendimiento::USMLE",
+   "AltoRendimiento::MIR"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0004",
+  "tipo": "QA",
+  "pregunta": "Caso — varón que bebe aguardiente a diario, ha fracasado al intentar dejarlo, presenta temblor al suspender y ha deteriorado su trabajo y su pareja. ¿Qué gravedad DSM-5-TR tiene y qué grupos de criterios lo justifican?",
+  "respuesta": "Trastorno por consumo de alcohol grave (≥6 de 11 criterios).",
+  "razonamiento": "Control deficiente (intentos fallidos de dejarlo, tiempo y consumo mayores de lo previsto), deterioro social (trabajo y pareja), y criterios farmacológicos (tolerancia y abstinencia: el temblor al suspender).<br>Tolerancia y abstinencia cuentan aquí porque no hay tratamiento médico supervisado.",
+  "fuente": "DSM-5-TR 2022",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Concepto",
+   "Nivel::Aplicacion",
+   "Fuente::DSM5TR",
+   "Clase::Vineta",
+   "Bloom::Analizar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0005",
+  "tipo": "QA",
+  "pregunta": "Normalidad psíquica vs trastorno mental — ¿por qué beber mucho «como todos» en su medio no es normal según el criterio funcional?",
+  "respuesta": "Porque un consumo frecuente solo cumple el criterio estadístico; si hay malestar o disfunción (trabajo, pareja), el criterio funcional y el de malestar fallan.",
+  "razonamiento": "Normalidad se juzga con tres criterios: estadístico (lo frecuente), funcional (rinde y se adapta) y de malestar (no sufre). Trastorno mental exige alteración clínicamente significativa con malestar o discapacidad.<br>Salirse de un solo criterio no basta para hablar de trastorno; cumplir uno solo tampoco garantiza normalidad.",
+  "fuente": "DSM-5-TR 2022",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Concepto",
+   "Nivel::Aplicacion",
+   "Fuente::DSM5TR",
+   "Clase::Contraste",
+   "Bloom::Analizar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0006",
+  "tipo": "QA",
+  "pregunta": "Craving — ¿qué es y qué estatus tiene en el DSM-5-TR?",
+  "respuesta": "Deseo intenso e irresistible de consumir, desencadenado por señales asociadas al consumo; es el criterio 4 del trastorno por consumo desde el DSM-5 (2013).",
+  "razonamiento": "Dato de convención: no se deduce de un principio. Se explica por la dopamina que disparan las claves del entorno.<br>El craving no impide la remisión.",
+  "fuente": "DSM-5-TR 2022",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Concepto",
+   "Nivel::Recuerdo",
+   "Fuente::DSM5TR",
+   "Clase::Irreducible",
+   "Bloom::Recordar",
+   "AltoRendimiento::USMLE"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0007",
+  "tipo": "QA",
+  "pregunta": "Morbimortalidad global — ¿cuántas muertes se atribuyen al alcohol frente a las drogas psicoactivas (2019) y qué implica para priorizar?",
+  "respuesta": "Alcohol: ≈2,6 millones de muertes; drogas psicoactivas: ≈0,6 millones. El alcohol es la sustancia de mayor carga de mortalidad y exige prioridad en el primer nivel.",
+  "razonamiento": "El alcohol explica ≈4,7 % de todas las muertes de 2019 y ≈400 millones de personas viven con trastornos por consumo de alcohol.<br>Ecuador: bebedores actuales 39,3 % y consumo episódico excesivo 23,8 % en adultos de 18-69 años.",
+  "fuente": "OMS 2024, Informe global sobre alcohol y salud",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Epidemiologia",
+   "Nivel::Recuerdo",
+   "Fuente::OMS",
+   "Clase::Irreducible",
+   "Bloom::Recordar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0008",
+  "tipo": "QA",
+  "pregunta": "Etiología del trastorno por consumo — ¿por qué es poligénica y ambiental y no «hereditaria» en sentido estricto?",
+  "respuesta": "Porque los genes modulan la respuesta dopaminérgica y la reacción del organismo a la sustancia (heredabilidad ≈40-60 %), pero el ambiente aporta la exposición y el aprendizaje.",
+  "razonamiento": "Sin disponibilidad, normas de consumo y señales, el riesgo genético no se expresa; los genes no «heredan» el hábito.<br>Un 40-60 % de heredabilidad deja un 40-60 % a factores no genéticos.",
+  "fuente": "Koob y Volkow 2016, Lancet Psychiatry",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::TeoriasCausales",
+   "Nivel::Aplicacion",
+   "Fuente::KoobVolkow",
+   "Clase::Principio",
+   "Bloom::Comprender",
+   "Principio"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0009",
+  "tipo": "QA",
+  "pregunta": "Variante de ALDH2 de baja actividad — ¿por qué protege del consumo de alcohol?",
+  "respuesta": "Porque el acetaldehído se acumula tras beber y produce un efecto desagradable (rubor, malestar), que desalienta el consumo.",
+  "razonamiento": "ADH oxida etanol a acetaldehído y ALDH lo lleva a acetato. Con ALDH2 poco activa, el paso tóxico se enlentece; el mismo mecanismo, farmacológico, es el del disulfiram.<br>Las variantes de ADH rápidas producen el acetaldehído antes.",
+  "fuente": "Goodman y Gilman 2023",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::TeoriasCausales",
+   "Nivel::Aplicacion",
+   "Fuente::Goodman",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar",
+   "AltoRendimiento::USMLE"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0010",
+  "tipo": "QA",
+  "pregunta": "Tipologías de Cloninger — ¿cómo se distinguen el tipo I y el tipo II?",
+  "respuesta": "Tipo I: inicio tardío, dependencia psíquica y evitación del daño. Tipo II: inicio temprano, búsqueda de novedad y rasgos antisociales; entra por el refuerzo dopaminérgico.",
+  "razonamiento": "El tipo II es el más cercano al perfil impulsivo y de búsqueda de recompensa; el tipo I, al de consumo para aliviar tensión.<br>Son tipologías descriptivas, no diagnósticos DSM-5-TR.",
+  "fuente": "Cloninger 1987, Science",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::TeoriasCausales",
+   "Nivel::Aplicacion",
+   "Fuente::Cloninger",
+   "Clase::Contraste",
+   "Bloom::Analizar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0011",
+  "tipo": "QA",
+  "pregunta": "Personalidad y riesgo de consumo — usa el control prefrontal para explicar por qué impulsividad y rasgos antisociales aumentan el riesgo.",
+  "respuesta": "Porque una corteza prefrontal que frena menos la conducta ya aprendida deja pasar el impulso de consumir, y los rasgos antisociales suman búsqueda de recompensa y menor temor al daño.",
+  "razonamiento": "La búsqueda de sensaciones aumenta el atractivo de la recompensa y adelanta el inicio.<br>El control prefrontal también se debilita con el consumo crónico, así que el rasgo y el consumo se refuerzan entre sí.",
+  "fuente": "Kaplan y Sadock 2022",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::TeoriasCausales",
+   "Nivel::Aplicacion",
+   "Fuente::Kaplan",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0012",
+  "tipo": "QA",
+  "pregunta": "Sensibilización del incentivo — ¿por qué el «querer» crece aunque el «gustar» disminuya?",
+  "respuesta": "Porque el consumo repetido sensibiliza el sistema dopaminérgico que asigna valor motivacional a las claves, de modo que el deseo de consumir aumenta aunque el placer del consumo se atenúe.",
+  "razonamiento": "Explica el craving ante señales y la recaída tras largos periodos de abstinencia; separa motivación (querer) de placer (gustar).<br>El widget cita la teoría (Robinson y Berridge 1993) sin detallar su contenido: [VERIFICAR EN FUENTE].",
+  "fuente": "Robinson y Berridge 1993, Brain Res Rev",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::TeoriasCausales",
+   "Nivel::Aplicacion",
+   "Fuente::RobinsonBerridge",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0013",
+  "tipo": "QA",
+  "pregunta": "Inicio adolescente del consumo — ¿por qué es factor de riesgo?",
+  "respuesta": "Porque el cerebro adolescente forma asociaciones con más fuerza y su corteza prefrontal madura después, así que aprende a consumir antes de poder frenarse.",
+  "razonamiento": "Un inicio precoz aumenta la probabilidad de trastorno posterior.<br>En las Américas bebe el 43,9 % de los adolescentes de 15-19 años.",
+  "fuente": "Kaplan y Sadock 2022",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::FactoresRiesgo",
+   "Nivel::Aplicacion",
+   "Fuente::Kaplan",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0014",
+  "tipo": "QA",
+  "pregunta": "Automedicación — ¿cómo sostienen el consumo la depresión o la abstinencia por refuerzo negativo?",
+  "respuesta": "El consumo alivia el síntoma (ánimo bajo o malestar de la retirada), y ese alivio refuerza la conducta; a su vez, la abstinencia reaparece al faltar la sustancia, cerrando el ciclo.",
+  "razonamiento": "La abstinencia recluta sistemas de estrés (CRF y dinorfina en la amígdala extendida) y genera afecto negativo que se alivia consumiendo.<br>Comorbilidad frecuente: depresión, ansiedad y bipolar. Se distingue la depresión independiente porque persiste tras abstinencia sostenida o precede al consumo.",
+  "fuente": "Koob y Volkow 2016, Lancet Psychiatry",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::FactoresRiesgo",
+   "Nivel::Aplicacion",
+   "Fuente::KoobVolkow",
+   "Clase::Relacional",
+   "Bloom::Evaluar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0015",
+  "tipo": "QA",
+  "pregunta": "Tolerancia y abstinencia — ¿por qué son dos caras de la misma neuroadaptación?",
+  "respuesta": "Porque la tolerancia es el ajuste del receptor para neutralizar la droga, y la abstinencia es ese ajuste sin oposición al retirarla: aparece lo opuesto al efecto agudo.",
+  "razonamiento": "Alcohol: menos GABA-A y más NMDA, y al suspender hay hiperexcitabilidad glutamatérgica. Opioides: el locus coeruleus frenado se dispara y causa hiperactividad noradrenérgica.<br>Son los criterios 10 y 11 del DSM-5-TR.",
+  "fuente": "Koob y Volkow 2016, Lancet Psychiatry",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Mecanismos",
+   "Nivel::Aplicacion",
+   "Fuente::KoobVolkow",
+   "Clase::Principio",
+   "Bloom::Comprender",
+   "Principio",
+   "AltoRendimiento::USMLE"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0016",
+  "tipo": "QA",
+  "pregunta": "Abstinencia alcohólica — usa la neuroadaptación para explicar temblor, taquicardia y convulsiones al suspender.",
+  "respuesta": "Con el alcohol crónico hay menos GABA-A y más NMDA; al retirarlo, el freno débil no compensa el exceso excitatorio y el locus coeruleus se desinhibe.",
+  "razonamiento": "Excitación glutamatérgica y noradrenérgica sin freno GABA = temblor, taquicardia, hipertensión y diaforesis; el umbral convulsivo desciende y aparecen convulsiones.<br>Inicia a las 6-24 h, a veces con alcoholemia medible.",
+  "fuente": "ASAM 2020, J Addict Med",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Mecanismos",
+   "Nivel::Aplicacion",
+   "Fuente::ASAM",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar",
+   "AltoRendimiento::USMLE",
+   "AltoRendimiento::MIR"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0017",
+  "tipo": "QA",
+  "pregunta": "Abstinencia de opioides — usa la neuroadaptación para predecir midriasis, lagrimeo, rinorrea y diarrea.",
+  "respuesta": "El locus coeruleus, frenado crónicamente por el opioide, se dispara al retirarlo y produce una descarga noradrenérgica: lo opuesto a miosis, sequedad y estreñimiento.",
+  "razonamiento": "Cuadro: bostezos, lagrimeo, rinorrea, piloerección, mialgias, vómitos, diarrea, insomnio y midriasis.<br>Se gradúa con COWS y es la señal para iniciar buprenorfina; los agonistas α2 atenúan la descarga.",
+  "fuente": "StatPearls, Opioid Withdrawal",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Mecanismos",
+   "Nivel::Aplicacion",
+   "Fuente::StatPearls",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar",
+   "AltoRendimiento::USMLE",
+   "AltoRendimiento::MIR"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0018",
+  "tipo": "QA",
+  "pregunta": "Dependencia física vs psíquica — ¿qué sostiene a cada una y puede existir una sin la otra?",
+  "respuesta": "Física: neuroadaptación que se revela como abstinencia. Psíquica: aprendizaje de señales y pérdida de control prefrontal, que se ve como craving y consumo pese al daño; sí, pueden separarse.",
+  "razonamiento": "Física sin psíquica: paciente hospitalizado con opioides. Psíquica sin física: juego patológico, que no es sustancia.<br>La terminología física/psíquica como tal figura en el widget marcada: [VERIFICAR EN FUENTE].",
+  "fuente": "Kaplan y Sadock 2022",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Mecanismos",
+   "Nivel::Aplicacion",
+   "Fuente::Kaplan",
+   "Clase::Contraste",
+   "Bloom::Analizar",
+   "AltoRendimiento::MIR"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0019",
+  "tipo": "QA",
+  "pregunta": "Inversión de la tolerancia — ¿qué dos mecanismos la explican y qué significa en el bebedor crónico?",
+  "respuesta": "La sensibilización por exposición intermitente y la pérdida de reserva hepática (y cerebral) hacen que la misma cantidad dé más embriaguez; suele marcar daño hepático avanzado.",
+  "razonamiento": "No es mejoría: con menos hepatocitos que metabolicen el etanol, la alcoholemia es mayor y más prolongada. La edad y la desnutrición lo agravan.<br>El mecanismo de sensibilización (exposición repetida e intermitente) aparece en el widget marcado: [VERIFICAR EN FUENTE].",
+  "fuente": "Kaplan y Sadock 2022",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Mecanismos",
+   "Nivel::Aplicacion",
+   "Fuente::Kaplan",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0020",
+  "tipo": "QA",
+  "pregunta": "Kindling en la abstinencia alcohólica — ¿por qué cada abstinencia es más grave y qué cambia en la conducta si hubo convulsión o delirium tremens previos?",
+  "respuesta": "Cada abstinencia deja circuitos más excitables y baja el umbral convulsivo, por lo que la siguiente es peor; con convulsión o DT previos se hospitaliza.",
+  "razonamiento": "Esos antecedentes puntúan en PAWSS y contraindican el manejo ambulatorio.<br>La conducta se adelanta: se protege antes de que aparezcan las complicaciones.",
+  "fuente": "ASAM 2020, J Addict Med",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Mecanismos",
+   "Nivel::Aplicacion",
+   "Fuente::ASAM",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0021",
+  "tipo": "QA",
+  "pregunta": "Tolerancia cruzada etanol-benzodiacepinas — ¿por qué las BZD tratan la abstinencia alcohólica?",
+  "respuesta": "Porque actúan sobre el mismo receptor GABA-A y restituyen el tono inhibitorio que el etanol dejó debilitado, frenando el exceso excitatorio.",
+  "razonamiento": "Las BZD son el pilar del manejo guiado por CIWA-Ar; el diazepam es de elección por su descenso suave y el lorazepam se prefiere en hepatopatía y ancianos.<br>Un betabloqueante, la clonidina o un antipsicótico solos no previenen convulsiones ni delirium.",
+  "fuente": "Goodman y Gilman 2023",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Mecanismos",
+   "Nivel::Aplicacion",
+   "Fuente::Goodman",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar",
+   "AltoRendimiento::USMLE"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0022",
+  "tipo": "QA",
+  "pregunta": "Toxíndromes — ¿por qué el receptor predice el cuadro y qué ejes separan depresores, estimulantes y psicodélicos?",
+  "respuesta": "Porque cada receptor produce un patrón en pupilas, ventilación, tono adrenérgico y sensorio: depresores (sensorio deprimido), estimulantes (tono adrenérgico alto) y psicodélicos (percepción alterada con conciencia clara).",
+  "razonamiento": "Miosis y bradipnea: receptor μ. Midriasis y diaforesis: exceso de monoaminas. Coma con constantes casi normales: BZD (GABA-A). Nistagmo: disociativos (NMDA).<br>Mira primero estos cuatro ejes, antes de cualquier prueba.",
+  "fuente": "StatPearls, Toxidromes",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::ToxindromesClasificacion",
+   "Nivel::Aplicacion",
+   "Fuente::StatPearls",
+   "Clase::Principio",
+   "Bloom::Comprender",
+   "Principio",
+   "AltoRendimiento::USMLE",
+   "AltoRendimiento::MIR"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0023",
+  "tipo": "QA",
+  "pregunta": "Clasificación del sílabo — ¿cómo se agrupan las sustancias y dónde cae el cannabis?",
+  "respuesta": "Depresoras (opiáceos; hipnóticos, sedantes y tranquilizantes), estimulantes (cocaína, anfetaminas) y psicodélicas; el cannabis se agrupa con las psicodélicas porque su cuadro de entrada es la percepción alterada.",
+  "razonamiento": "El cannabis no encaja limpio en ninguna categoría. Ninguna fuente leída define «psicodélicos mayores y menores»: [VERIFICAR EN FUENTE].<br>Equivalencia práctica: clasificar por receptor (5-HT2A, NMDA, CB1).",
+  "fuente": "Kaplan y Sadock 2022",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::ToxindromesClasificacion",
+   "Nivel::Recuerdo",
+   "Fuente::Kaplan",
+   "Clase::Irreducible",
+   "Bloom::Recordar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0024",
+  "tipo": "QA",
+  "pregunta": "Caso — hombre hallado en coma, con bradipnea y pupilas puntiformes. ¿Qué toxíndrome es y cuál es la conducta inmediata?",
+  "respuesta": "Intoxicación por opioides: ventilar y dar naloxona titulada sin esperar pruebas.",
+  "razonamiento": "Tríada: coma, bradipnea y miosis puntiforme por agonismo μ. La naloxona se titula según la ventilación.<br>Observación prolongada: el opioide puede durar más que la naloxona y causar resedación (renarcotización).",
+  "fuente": "StatPearls, Opioid Toxicity",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::ToxindromesClasificacion",
+   "Nivel::Aplicacion",
+   "Fuente::StatPearls",
+   "Clase::Vineta",
+   "Bloom::Analizar",
+   "AltoRendimiento::USMLE",
+   "AltoRendimiento::MIR"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0025",
+  "tipo": "QA",
+  "pregunta": "Miosis con secreciones — ¿cómo se distingue el toxíndrome colinérgico del opioide y por qué importa el antídoto?",
+  "respuesta": "El colinérgico cursa con sialorrea, lagrimeo, sudoración, vómitos y diarrea y se trata con atropina; el opioide no tiene secreciones y se trata con naloxona.",
+  "razonamiento": "Ambos tienen miosis, pero la presencia de secreciones descarta el opioide.<br>Dar naloxona en un colinérgico no corrige el cuadro, y la atropina no revierte un opioide.",
+  "fuente": "StatPearls, Toxidromes",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::ToxindromesClasificacion",
+   "Nivel::Aplicacion",
+   "Fuente::StatPearls",
+   "Clase::Contraste",
+   "Bloom::Analizar",
+   "AltoRendimiento::MIR"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0026",
+  "tipo": "QA",
+  "pregunta": "Midriasis con agitación — ¿cómo separas el toxíndrome simpaticomimético del anticolinérgico?",
+  "respuesta": "La piel: sudorosa en el simpaticomimético; seca y caliente en el anticolinérgico.",
+  "razonamiento": "Simpaticomimético (cocaína, anfetaminas): taquicardia, hipertensión, diaforesis y agitación. Anticolinérgico (belladona, escopolamina): piel seca y caliente, agitación y delirium.<br>Fisostigmina de uso controvertido en el anticolinérgico.",
+  "fuente": "StatPearls, Toxidromes",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::ToxindromesClasificacion",
+   "Nivel::Aplicacion",
+   "Fuente::StatPearls",
+   "Clase::Contraste",
+   "Bloom::Analizar",
+   "AltoRendimiento::USMLE"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0027",
+  "tipo": "QA",
+  "pregunta": "Coma por benzodiacepina aislada vs barbitúrico o coingesta — ¿por qué la BZD sola casi no deprime la ventilación?",
+  "respuesta": "Porque la BZD solo amplifica el GABA presente (efecto con techo), mientras que los barbitúricos abren el canal sin GABA y el alcohol u opioides se suman.",
+  "razonamiento": "BZD aislada: coma tranquilo con constantes y pupilas casi normales; si hay bradipnea, busca otro depresor.<br>Barbitúricos: letales a ≈10 veces la dosis terapéutica. La coingesta explica casi todas las muertes por sobredosis.",
+  "fuente": "Goodman y Gilman 2023",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::ToxindromesClasificacion",
+   "Nivel::Aplicacion",
+   "Fuente::Goodman",
+   "Clase::Contraste",
+   "Bloom::Analizar",
+   "AltoRendimiento::USMLE"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0028",
+  "tipo": "QA",
+  "pregunta": "Disociativos (ketamina, PCP) — ¿qué receptor bloquean y qué signo los delata?",
+  "respuesta": "Antagonizan el receptor NMDA; el nistagmo (horizontal, vertical o rotatorio) los delata.",
+  "razonamiento": "Se acompañan de disociación y analgesia; el PCP además bloquea la recaptación de dopamina y noradrenalina, y la ketamina estimula el simpático (taquicardia, HTA).<br>Busca lesiones ocultas, rabdomiólisis e hipoglucemia.",
+  "fuente": "StatPearls, Phencyclidine Toxicity",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::ToxindromesClasificacion",
+   "Nivel::Aplicacion",
+   "Fuente::StatPearls",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar",
+   "AltoRendimiento::USMLE"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0029",
+  "tipo": "QA",
+  "pregunta": "Abstinencia de estimulantes — ¿por qué es un «apagón» disfórico no letal y cuál es su riesgo real?",
+  "respuesta": "Porque tras el exceso de monoaminas queda el agotamiento: disforia, fatiga e hipersomnia, no inestabilidad autonómica; el riesgo real es el suicida.",
+  "razonamiento": "Pico a los 2-3 días y cede en 4-7; craving durante semanas. No hay fármaco aprobado: tratamiento psicosocial.<br>Se maneja en domicilio salvo policonsumo o psiquiatría grave; tamiza la ideación suicida.",
+  "fuente": "Li y Shoptaw 2023",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::ToxindromesClasificacion",
+   "Nivel::Aplicacion",
+   "Fuente::LiShoptaw",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0030",
+  "tipo": "QA",
+  "pregunta": "Intoxicación alcohólica aguda — ¿por qué la desinhibición precede a la ataxia y cómo desplaza la tolerancia los umbrales de alcoholemia?",
+  "respuesta": "El etanol deprime primero la corteza prefrontal (desinhibición) y después el cerebelo (ataxia); la tolerancia hace que el mismo grado clínico aparezca con alcoholemias mayores.",
+  "razonamiento": "Secuencia por alcoholemia: desinhibición, ataxia y disartria, vómitos, hipotermia y nistagmo, coma y depresión respiratoria.<br>Los umbrales exactos se solapan entre fuentes y la conducta se decide por la clínica: [VERIFICAR EN FUENTE]. Coma desproporcionado para un tolerante: busca TCE, hipoglucemia, coingesta o metanol.",
+  "fuente": "Goodman y Gilman 2023",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::ClinicaAlcohol",
+   "Nivel::Aplicacion",
+   "Fuente::Goodman",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0031",
+  "tipo": "Cloze",
+  "text": "Abstinencia alcohólica — cronología: síntomas menores a las {{c1::6-24 h}}; convulsiones a las {{c2::24-72 h}}; delirium tremens desde las {{c3::48 h}}.",
+  "extra": "Otra fuente sitúa las convulsiones a las 8-48 h; el delirium tremens dura 1-8 días. Conocer el reloj permite anticipar la siguiente fase.",
+  "fuente": "ASAM 2020, J Addict Med",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::ClinicaAlcohol",
+   "Nivel::Recuerdo",
+   "Fuente::ASAM",
+   "Clase::Irreducible",
+   "Bloom::Recordar",
+   "AltoRendimiento::MIR"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0032",
+  "tipo": "QA",
+  "pregunta": "Alcohol, abstinencia — alucinosis alcohólica frente a delirium tremens: ¿qué hallazgo los separa?",
+  "respuesta": "En la alucinosis el sensorio está claro (atención y orientación conservadas); en el delirium tremens hay atención fluctuante, desorientación y tormenta autonómica.",
+  "razonamiento": "La alucinosis aparece a las 12–48 h con alucinaciones visuales, auditivas o táctiles; el delirium tremens, a las 48–72 h, con fiebre, taquicardia y diaforesis. El delirium es emergencia, a menudo en UCI, y la CIWA-Ar ya no sirve (se usa CAM-ICU o RASS).",
+  "fuente": "ASAM 2020, J Addict Med",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::ClinicaAlcohol",
+   "Nivel::Aplicacion",
+   "Fuente::ASAM",
+   "Clase::Contraste",
+   "Bloom::Analizar",
+   "AltoRendimiento::MIR"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0033",
+  "tipo": "QA",
+  "pregunta": "Wernicke — ¿por qué se trata ante la sospecha sin esperar la tríada completa y por qué la glucosa sin tiamina puede precipitarlo?",
+  "respuesta": "La tríada completa es poco frecuente y esperarla es llegar tarde; la carga de glucosa consume la tiamina residual y agrava el fallo energético neuronal.",
+  "razonamiento": "La tiamina es cofactor de piruvato deshidrogenasa, α-cetoglutarato deshidrogenasa y transcetolasa; sin ella las neuronas de mayor demanda (tálamo medial, cuerpos mamilares) fallan.<br>Confusión, ataxia u oftalmoparesia en un bebedor desnutrido bastan para tratar. Tiamina antes o junto con la glucosa; no retrases la glucosa en una hipoglucemia.",
+  "fuente": "EFNS 2010, Eur J Neurol",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::ClinicaAlcohol",
+   "Nivel::Aplicacion",
+   "Fuente::EFNS",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar",
+   "AltoRendimiento::USMLE",
+   "AltoRendimiento::MIR"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0034",
+  "tipo": "QA",
+  "pregunta": "Caso — bebedor de aguardiente artesanal («puntas») con embriaguez leve que, horas después, presenta visión borrosa y taquipnea. ¿Qué sospechas y qué prueba lo orienta?",
+  "respuesta": "Intoxicación por metanol; la gasometría con anión gap y osmolalidad (brecha osmolar) orienta el diagnóstico.",
+  "razonamiento": "La latencia de 12–24 h (el etanol coingerido la alarga) refleja la conversión a ácido fórmico: visión borrosa y acidosis con hiperventilación compensadora. La brecha osmolar sube temprano y el anión gap tarde; una prueba normal no lo descarta. Se trata con fomepizol (o etanol) y hemodiálisis según gravedad.",
+  "fuente": "StatPearls, Methanol Toxicity",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::ClinicaAlcohol",
+   "Nivel::Aplicacion",
+   "Fuente::StatPearls",
+   "Clase::Vineta",
+   "Bloom::Analizar",
+   "AltoRendimiento::MIR"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0035",
+  "tipo": "QA",
+  "pregunta": "Hipoglucemia del bebedor en ayunas — ¿por qué ocurre y qué conducta sigue?",
+  "respuesta": "El NADH generado al metabolizar el etanol bloquea la gluconeogénesis cuando el glucógeno ya está agotado; se mide glucosa capilar y se corrige, sin olvidar la tiamina.",
+  "razonamiento": "La ADH y la ALDH reducen NAD⁺ a NADH, lo que desvía el piruvato hacia lactato. Cursa con confusión, diaforesis o coma y simula embriaguez, por lo que la glucemia capilar se mide en todo intoxicado.",
+  "fuente": "Goodman y Gilman, 14.ª ed.",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::ClinicaAlcohol",
+   "Nivel::Aplicacion",
+   "Fuente::Goodman",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar",
+   "AltoRendimiento::USMLE"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0036",
+  "tipo": "QA",
+  "pregunta": "Abstinencia alcohólica — paciente con temblor e hiperactividad autonómica y alcoholemia positiva: ¿qué pesa más para decidir, la cifra o la clínica?",
+  "respuesta": "La clínica: una alcoholemia positiva no descarta abstinencia.",
+  "razonamiento": "La abstinencia empieza al caer la alcoholemia y puede iniciarse con etanol aún medible; una cifra negativa tampoco excluye el riesgo. Se gradúa con CIWA-Ar y se estima el riesgo con PAWSS, no con la alcoholemia.",
+  "fuente": "ASAM 2020, J Addict Med",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::ClinicaAlcohol",
+   "Nivel::Aplicacion",
+   "Fuente::ASAM",
+   "Clase::Relacional",
+   "Bloom::Evaluar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0037",
+  "tipo": "QA",
+  "pregunta": "Biomarcadores de alcohol — ¿qué pregunta responde cada uno y pueden diagnosticar el trastorno por consumo?",
+  "respuesta": "Cada marcador explora una ventana temporal distinta (horas, días, semanas) y ninguno diagnostica; el diagnóstico es clínico, por criterios DSM-5-TR.",
+  "razonamiento": "Etanol: horas; EtG en orina: días; PEth en sangre: semanas; GGT, VCM y CDT reflejan consumo crónico. Sirven para confirmar exposición y monitorizar, no para definir el trastorno.",
+  "fuente": "Tawiah 2022",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Laboratorio",
+   "Nivel::Aplicacion",
+   "Fuente::Tawiah",
+   "Clase::Principio",
+   "Bloom::Comprender",
+   "Principio"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0038",
+  "tipo": "QA",
+  "pregunta": "Biomarcadores de alcohol — marcadores directos (EtG/EtS, PEth) frente a indirectos (GGT, VCM, CDT, AST/ALT): ¿cuál es la diferencia de especificidad y qué pregunta responde cada grupo?",
+  "respuesta": "Los directos son metabolitos del etanol y responden si hubo consumo; los indirectos reflejan el daño o la respuesta del organismo y son menos específicos.",
+  "razonamiento": "EtG/EtS indican consumo reciente (días) y PEth consumo de semanas. GGT, VCM, CDT y AST/ALT también se alteran por hepatopatía, déficit de folato u otras causas, de modo que apoyan consumo crónico pero no lo prueban.",
+  "fuente": "Andresen-Streichert 2018, Dtsch Arztebl Int",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Laboratorio",
+   "Nivel::Aplicacion",
+   "Fuente::AndresenStreichert",
+   "Clase::Contraste",
+   "Bloom::Analizar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0039",
+  "tipo": "QA",
+  "pregunta": "Opioides, inmunoensayo en orina — sospecha de sobredosis por fentanilo o metadona con panel de opiáceos negativo: ¿se descarta, y qué decide la naloxona?",
+  "respuesta": "No se descarta: el panel de opiáceos no detecta bien fentanilo ni metadona. La naloxona se decide por la ventilación (bradipnea o apnea con miosis), no por el tóxico en orina.",
+  "razonamiento": "El inmunoensayo apunta a morfina y codeína; fentanilo, metadona, buprenorfina y oxicodona exigen un panel específico. Esperar el resultado retrasaría una maniobra que salva la vida: ventila y da naloxona sin esperar pruebas.",
+  "fuente": "StatPearls, Drug Testing",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Laboratorio",
+   "Nivel::Aplicacion",
+   "Fuente::StatPearls",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar",
+   "AltoRendimiento::MIR"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0040",
+  "tipo": "QA",
+  "pregunta": "Tóxicos en orina — inmunoensayo frente a cromatografía con espectrometría de masas: ¿qué aporta cada uno y cuándo importa confirmar?",
+  "respuesta": "El inmunoensayo es rápido y presuntivo, con reactividad cruzada; la cromatografía con espectrometría de masas confirma con mayor especificidad. Importa confirmar cuando el resultado tiene consecuencias legales o laborales.",
+  "razonamiento": "En clínica no siempre se exige confirmación, porque la conducta se decide por el cuadro; en el ámbito laboral sí. La cromatografía es más cara y lenta.",
+  "fuente": "StatPearls, Drug Testing",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Laboratorio",
+   "Nivel::Aplicacion",
+   "Fuente::StatPearls",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0041",
+  "tipo": "QA",
+  "pregunta": "Benzodiacepinas en orina — inmunoensayo negativo con sospecha clínica alta: ¿por qué puede omitir lorazepam, clonazepam y alprazolam?",
+  "respuesta": "Porque el ensayo está dirigido sobre todo a oxazepam y sus metabolitos, y estos fármacos reaccionan poco con él.",
+  "razonamiento": "Un inmunoensayo negativo no descarta benzodiacepinas: ante sospecha alta se actúa por la clínica o se pide confirmación cromatográfica. Sirve para confirmar exposición, no para excluirla.",
+  "fuente": "StatPearls, Drug Testing",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Laboratorio",
+   "Nivel::Aplicacion",
+   "Fuente::StatPearls",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0042",
+  "tipo": "QA",
+  "pregunta": "AUDIT — ¿qué conducta corresponde a cada zona de puntuación de la OMS y qué no puede hacer la escala?",
+  "respuesta": "0–7 educación; 8–15 consejo simple o intervención breve; 16–19 asesoría breve con seguimiento; ≥20 derivación para evaluación diagnóstica y tratamiento. Tamiza: no diagnostica.",
+  "razonamiento": "Una puntuación alta sugiere dependencia, pero solo los criterios DSM-5-TR la confirman. El AUDIT-C es la versión corta para el primer nivel y, si es positivo, se aplica el AUDIT completo.",
+  "fuente": "Babor 2001, OMS (AUDIT)",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::EscalasTamizaje",
+   "Nivel::Aplicacion",
+   "Fuente::Babor",
+   "Clase::Escala",
+   "Bloom::Aplicar",
+   "Escala::AUDIT"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0043",
+  "tipo": "QA",
+  "pregunta": "CIWA-Ar — ¿qué conducta marcan las bandas de ASAM y por qué no sirve en delirium?",
+  "respuesta": "&lt;10 leve, 10–18 moderada y ≥19 grave; a mayor banda, benzodiacepina más intensiva y mayor nivel de atención. No sirve en delirium porque depende del autorreporte del paciente.",
+  "razonamiento": "Se pauta la benzodiacepina por síntomas según el puntaje. Con delirium el paciente no puede responder, por lo que se sustituye por CAM-ICU o RASS. Otras fuentes usan cortes distintos; aquí se sigue ASAM.",
+  "fuente": "ASAM 2020, J Addict Med",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::EscalasTamizaje",
+   "Nivel::Aplicacion",
+   "Fuente::ASAM",
+   "Clase::Escala",
+   "Bloom::Aplicar",
+   "Escala::CIWAAr"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0044",
+  "tipo": "QA",
+  "pregunta": "PAWSS — puntuación ≥4: ¿qué predice, qué conducta implica y qué antecedente pesa más?",
+  "respuesta": "Predice abstinencia complicada y obliga a hospitalizar; pesan la convulsión o el delirium tremens previos.",
+  "razonamiento": "Por kindling, cada abstinencia deja circuitos más excitables y la siguiente es más grave. Un puntaje ≤3 hace improbable la complicación. Se validó en hospitalizados y no hay datos de Ecuador: donde la complicación es rara, un positivo es menos fiable.",
+  "fuente": "Maldonado 2014, Alcohol Alcohol",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::EscalasTamizaje",
+   "Nivel::Aplicacion",
+   "Fuente::Maldonado",
+   "Clase::Escala",
+   "Bloom::Aplicar",
+   "Escala::PAWSS"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0045",
+  "tipo": "QA",
+  "pregunta": "COWS — ¿para qué sirve y por qué decide cuándo iniciar buprenorfina?",
+  "respuesta": "Gradúa la abstinencia opioide (11 ítems); la buprenorfina se inicia solo con abstinencia objetiva, porque como agonista parcial puede precipitarla.",
+  "razonamiento": "Su alta afinidad y baja actividad intrínseca desplazan al agonista completo y la señal cae de golpe. Bandas: leve 5–12, moderada 13–24, moderadamente grave 25–36, grave &gt;36. ASAM no fija un umbral de COWS: exige signos objetivos de abstinencia.",
+  "fuente": "StatPearls, Opioid Withdrawal",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::EscalasTamizaje",
+   "Nivel::Aplicacion",
+   "Fuente::StatPearls",
+   "Clase::Escala",
+   "Bloom::Aplicar",
+   "Escala::COWS"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0046",
+  "tipo": "QA",
+  "pregunta": "Primer nivel ante un trastorno por consumo — ¿qué objetivos persigue y por qué la desintoxicación sola no basta?",
+  "respuesta": "Tamizar, intervenir brevemente, manejar lo leve y referir lo complicado; la desintoxicación sola no trata el trastorno, por lo que hay que enlazar tratamiento.",
+  "razonamiento": "El manejo de la abstinencia resuelve el síndrome agudo, pero no la desregulación crónica de la recompensa que sostiene el consumo. El riesgo de abstinencia se evalúa en todo consumo reciente, regular e intenso, aun asintomático.",
+  "fuente": "OMS mhGAP 2016",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::TratamientoAPS",
+   "Nivel::Aplicacion",
+   "Fuente::mhGAP",
+   "Clase::Principio",
+   "Bloom::Comprender",
+   "Principio"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0047",
+  "tipo": "QA",
+  "pregunta": "Metas pactadas en el primer nivel — ¿qué meta corresponde al consumo de riesgo y cuál a la dependencia?",
+  "respuesta": "Consumo de riesgo: pasar a bajo riesgo. Dependencia: abstinencia o, si el paciente no la acepta, reducción del daño.",
+  "razonamiento": "La reducción del daño (menos consumo, menos riesgo, mejor retención en el servicio) es meta válida cuando se rechaza la abstinencia. La meta se pacta con el paciente, y en el consumo perjudicial se ajusta según el daño ya presente.",
+  "fuente": "OMS mhGAP 2016",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::TratamientoAPS",
+   "Nivel::Aplicacion",
+   "Fuente::mhGAP",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0048",
+  "tipo": "QA",
+  "pregunta": "Entrevista motivacional — ¿por qué trabaja la ambivalencia en lugar de confrontar?",
+  "respuesta": "Porque el paciente articula sus propias razones para cambiar; la confrontación provoca resistencia y refuerza la negación.",
+  "razonamiento": "Explora la ambivalencia sin imponer una meta. Es útil en todos los patrones, sobre todo si el paciente no reconoce el problema. Se combina con intervención breve y seguimiento.",
+  "fuente": "NICE CG115",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::TratamientoAPS",
+   "Nivel::Aplicacion",
+   "Fuente::NICE",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0049",
+  "tipo": "QA",
+  "pregunta": "Abstinencia alcohólica — ¿por qué la benzodiacepina pautada por síntomas según CIWA-Ar es de elección y qué fármacos se evitan en monoterapia?",
+  "respuesta": "Restituye el tono GABA-A perdido por la neuroadaptación y previene convulsiones y delirium. En monoterapia se evitan betabloqueante, clonidina y antipsicótico.",
+  "razonamiento": "Estos últimos controlan signos autonómicos o psicóticos pero no previenen convulsiones ni delirium. Tampoco se usa alcohol para tratar la abstinencia. Alternativas: fenobarbital si no se pueden usar BZD, o gabapentina/carbamazepina en cuadros leves.",
+  "fuente": "ASAM 2020, J Addict Med",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::TratamientoAlcohol",
+   "Nivel::Aplicacion",
+   "Fuente::ASAM",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar",
+   "AltoRendimiento::MIR"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0050",
+  "tipo": "QA",
+  "pregunta": "Benzodiacepinas en abstinencia alcohólica — diazepam/clordiazepóxido frente a lorazepam/oxazepam: ¿qué los diferencia y cuándo se elige cada grupo?",
+  "respuesta": "Diazepam y clordiazepóxido se oxidan en el hígado y tienen metabolitos activos (vida larga); lorazepam y oxazepam se glucuronidan. Con hepatopatía o en el anciano se prefieren lorazepam u oxazepam.",
+  "razonamiento": "La vida larga da una retirada más suave, pero se acumula si falla la oxidación hepática. Nota: ASAM no nombra el lorazepam para este fin; la preferencia en hepatopatía procede de la farmacología.",
+  "fuente": "Goodman y Gilman, 14.ª ed.",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::TratamientoAlcohol",
+   "Nivel::Aplicacion",
+   "Fuente::Goodman",
+   "Clase::Contraste",
+   "Bloom::Analizar",
+   "AltoRendimiento::MIR"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0051",
+  "tipo": "Cloze",
+  "text": "Alcohol, tiamina profiláctica — la dosis ambulatoria es {{c1::100 mg}} cada 24 h durante 3–5 días.",
+  "extra": "Dato no derivable. En Wernicke se da por vía IV antes de cualquier carbohidrato (EFNS: 200 mg; otra pauta 500 mg c/8 h; discrepancia no armonizada).",
+  "fuente": "ASAM 2020, J Addict Med",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::TratamientoAlcohol",
+   "Nivel::Recuerdo",
+   "Fuente::ASAM",
+   "Clase::Irreducible",
+   "Bloom::Recordar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0052",
+  "tipo": "QA",
+  "pregunta": "Deshabituación alcohólica — naltrexona, acamprosato y disulfiram: ¿qué mecanismo tiene cada uno y qué contraindicación decide?",
+  "respuesta": "Naltrexona (antagonista μ) no se da con opioides ni hepatitis o insuficiencia hepática; acamprosato (modula el exceso glutamatérgico) no se da con ClCr &lt;30; disulfiram (inhibe la ALDH) no se da con cardiopatía o psicosis y exige ≥12 h sin alcohol.",
+  "razonamiento": "Naltrexona y acamprosato son de primera línea y el disulfiram de segunda, con toma supervisada y consentimiento. El acamprosato es seguro en hepatopatía; la naltrexona precipitaría abstinencia en quien usa opioides.",
+  "fuente": "APA 2018, Guía TCA",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::TratamientoAlcohol",
+   "Nivel::Aplicacion",
+   "Fuente::APA",
+   "Clase::Contraste",
+   "Bloom::Analizar",
+   "AltoRendimiento::USMLE",
+   "AltoRendimiento::MIR"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0053",
+  "tipo": "QA",
+  "pregunta": "Naloxona en sobredosis de opioides — ¿hasta qué punto se titula y por qué se observa al paciente?",
+  "respuesta": "Se titula hasta recuperar la ventilación, no la conciencia; se observa porque la naloxona dura menos que metadona o fentanilo y el paciente puede renarcotizarse.",
+  "razonamiento": "Revertir de más precipita abstinencia en el dependiente. El efecto dura unos 90–180 min (otra cita, ≈1 h). Tras la reversión se observa 12–24 h (heroína asintomática: 6–12 h) y se entrega naloxona para llevar.",
+  "fuente": "StatPearls, Opioid Toxicity",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::TratamientoOtrasDrogas",
+   "Nivel::Aplicacion",
+   "Fuente::StatPearls",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar",
+   "AltoRendimiento::USMLE",
+   "AltoRendimiento::MIR"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0054",
+  "tipo": "QA",
+  "pregunta": "Flumazenil en coma por sedantes — ¿por qué no es rutinario?",
+  "respuesta": "Porque puede precipitar abstinencia y convulsiones en el dependiente crónico o con coingesta de tricíclicos u otro proconvulsivante.",
+  "razonamiento": "Antagoniza el sitio BZD y desenmascara la hiperexcitabilidad. Se reserva para sedación iatrogénica sin uso crónico. Tiene vida corta, por lo que hay resedación y se reevalúa la ventilación. La abstinencia se trata reintroduciendo BZD, no con más antídoto.",
+  "fuente": "StatPearls, Flumazenil",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::TratamientoOtrasDrogas",
+   "Nivel::Aplicacion",
+   "Fuente::StatPearls",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar",
+   "AltoRendimiento::USMLE",
+   "AltoRendimiento::MIR"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0055",
+  "tipo": "QA",
+  "pregunta": "Buprenorfina — ¿por qué se inicia solo con abstinencia objetiva?",
+  "respuesta": "Porque, como agonista parcial de alta afinidad, desplaza al agonista completo del receptor μ y precipita abstinencia.",
+  "razonamiento": "Su baja actividad intrínseca hace que la señal caiga de golpe. Se espera a que haya signos objetivos (12–18 h tras un opioide corto; 24–48 h tras metadona) y se gradúa con COWS. ASAM no fija un umbral de COWS.",
+  "fuente": "ASAM 2020, National Practice Guideline OUD",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::TratamientoOtrasDrogas",
+   "Nivel::Aplicacion",
+   "Fuente::ASAM",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar",
+   "AltoRendimiento::USMLE",
+   "AltoRendimiento::MIR"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0056",
+  "tipo": "QA",
+  "pregunta": "Cocaína con dolor torácico — ¿qué es el primer escalón y por qué se evita el betabloqueante con intoxicación activa?",
+  "respuesta": "Primer escalón: benzodiacepina, que reduce el tono simpático. Se evita el betabloqueante porque, con intoxicación activa, la vasoconstricción mediada por α quedaría sin oposición.",
+  "razonamiento": "La noradrenalina contrae la coronaria vía α y activa plaquetas, mientras la taquicardia y la hipertensión elevan la demanda. AHA/ACC 2014: clase III, nivel C, con evidencia débil. El labetalol es controvertido [VERIFICAR EN FUENTE].",
+  "fuente": "AHA/ACC 2014, SCA sin elevación del ST",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::TratamientoOtrasDrogas",
+   "Nivel::Aplicacion",
+   "Fuente::AHAACC",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar",
+   "AltoRendimiento::USMLE",
+   "AltoRendimiento::MIR"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0057",
+  "tipo": "QA",
+  "pregunta": "Patología dual — ¿cómo se distingue un trastorno inducido por sustancias de uno independiente?",
+  "respuesta": "El inducido aparece durante la intoxicación o la abstinencia y cede con ella; es independiente si precede al consumo o persiste alrededor de 1 mes tras la abstinencia.",
+  "razonamiento": "La relación temporal y la persistencia guían el diagnóstico. El independiente se trata por separado y empeora el pronóstico de ambos trastornos.",
+  "fuente": "DSM-5-TR (APA 2022)",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::PatologiaDual",
+   "Nivel::Aplicacion",
+   "Fuente::DSM5TR",
+   "Clase::Principio",
+   "Bloom::Comprender",
+   "Principio",
+   "AltoRendimiento::MIR"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0058",
+  "tipo": "QA",
+  "pregunta": "Caso — paciente con trastorno por consumo de alcohol activo que refiere tristeza e ideas de minusvalía. ¿Qué haces ahora y cuándo reevalúas?",
+  "respuesta": "Tamizar siempre el riesgo suicida (la ideación contraindica el manejo ambulatorio) y reevaluar tras unas 4 semanas de abstinencia antes de llamarla depresión primaria.",
+  "razonamiento": "El alcohol deprime el ánimo, por lo que los síntomas pueden ser inducidos. No se indica antidepresivo para el trastorno por consumo si no hay comorbilidad que lo justifique; se mantiene el tratamiento del consumo y el seguimiento.",
+  "fuente": "APA 2018, Guía TCA",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::PatologiaDual",
+   "Nivel::Aplicacion",
+   "Fuente::APA",
+   "Clase::Vineta",
+   "Bloom::Analizar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0059",
+  "tipo": "QA",
+  "pregunta": "Complicaciones psicosociales del alcohol — ¿cómo explica el control prefrontal la violencia de pareja y el deterioro laboral sin convertir el alcohol en excusa?",
+  "respuesta": "El consumo debilita el control prefrontal y facilita la agresión y el incumplimiento, pero no es causa única: la conducta sigue siendo responsabilidad de la persona.",
+  "razonamiento": "El consumo crónico reduce la dopamina mesocortical que sostiene atención y decisión. El ausentismo, la resaca y el menor rendimiento explican las pérdidas laborales. En violencia de pareja se tamiza en privado y se prioriza la seguridad de la pareja.",
+  "fuente": "OMS 2024, Informe sobre alcohol y salud",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Complicaciones",
+   "Nivel::Aplicacion",
+   "Fuente::OMS",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0060",
+  "tipo": "QA",
+  "pregunta": "Celotipia alcohólica (síndrome de Otelo) — ¿qué es y qué riesgo implica para la pareja?",
+  "respuesta": "Delirio de infidelidad en el bebedor crónico; conlleva riesgo de agresión a la pareja, homicidio o suicidio.",
+  "razonamiento": "Ante un delirio celotípico se piensa en este síndrome, se evalúa la seguridad de la pareja y se deriva a salud mental.",
+  "fuente": "Czerwiak 2024",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Complicaciones",
+   "Nivel::Aplicacion",
+   "Fuente::Czerwiak",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar",
+   "AltoRendimiento::MIR"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0061",
+  "tipo": "QA",
+  "pregunta": "Referencia desde el primer nivel — ¿qué hallazgos obligan a hospital urgente y cuáles a referencia ambulatoria especializada?",
+  "respuesta": "Hospital urgente: abstinencia complicada (convulsión o delirium), sospecha de Wernicke, metanol y riesgo suicida. Ambulatoria: patología dual grave y fracaso del manejo ambulatorio.",
+  "razonamiento": "El criterio es si el riesgo supera lo manejable en ambulatorio. La ideación suicida o la psicosis contraindican el manejo ambulatorio, y la falta de red de apoyo hace inseguro desintoxicar en casa.",
+  "fuente": "OMS mhGAP 2016",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Referencia",
+   "Nivel::Aplicacion",
+   "Fuente::mhGAP",
+   "Clase::Relacional",
+   "Bloom::Evaluar"
+  ]
+ },
+ {
+  "id": "Q2-TOX-0062",
+  "tipo": "QA",
+  "pregunta": "CETAD en Ecuador — ¿qué es y quién puede ingresar?",
+  "respuesta": "Establecimiento de tercer nivel con tratamiento residencial voluntario, no hospitalario. Ingresa quien tiene dependencia o abstinencia (F10–F19, excepto F17), un indicador de gravedad, voluntariedad e informes psicológico, social y médico.",
+  "razonamiento": "Llega referido desde un Servicio Ambulatorio Intensivo o por demanda espontánea; no hay internamiento indefinido y el alta exige contrarreferencia.",
+  "fuente": "MSP Ecuador, Lineamientos CETAD 2025",
+  "tags": [
+   "Quirurgica2::Toxicodependencias::Referencia",
+   "Nivel::Aplicacion",
+   "Fuente::MSP",
+   "Clase::Aplicacion",
+   "Bloom::Aplicar"
+  ]
+ }
+]
