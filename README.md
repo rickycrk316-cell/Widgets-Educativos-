@@ -30,9 +30,10 @@ Widgets HTML de estudio, autocontenidos y offline (skill `widget-ensenanza` v10,
 widgets/<tema>/PLAN.md          partición del caso en widgets y decisión del router
 widgets/<tema>/*.html           widgets finales (generados: no editar a mano)
 widgets/<tema>/<id>/            partes numeradas + manifiesto.json (aquí se edita)
-kit/                            kit fijo, ensamblador y validadores
-.claude/skills/impeccable/      revisión opcional (audit, polish, clarify)
-fuentes/                        sílabos (dos rotaciones), kit v10 original, contratos de las skills, casos
+kit/                            kit fijo, ensamblador, validadores y empaquetador de skills
+.claude/skills/                 skills definiciones, widget-ensenanza, flashcards (fuente de verdad) e impeccable
+dist/                           skills empaquetadas (.skill) para instalar en claude.ai
+fuentes/                        sílabos (dos rotaciones), protocolo de verificación, kit v10 original, casos
 docs/                           PRODUCT.md (propósito) y DESIGN.md (sistema visual)
 ```
 

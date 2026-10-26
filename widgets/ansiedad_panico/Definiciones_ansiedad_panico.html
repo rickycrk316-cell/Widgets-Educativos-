@@ -563,7 +563,7 @@ function rc_render(k){
   if(!card)return;
   if(!s.queue.length){rc_end(k);return;}
   var c=DECKS[k][s.queue[0]],f=s.fails[s.queue[0]]||0;
-  el(k,'n').textContent='Tarjeta '+(s.done+1)+' de '+s.n+(k==='tg'?' · '+TERMS[c.t]:'');
+  el(k,'n').textContent='Tarjeta '+(s.done+1)+' de '+s.n+(k==='tg'&&s.shown?' · '+TERMS[c.t]:'');
   var h='<p class="rc-q">'+(s.shown&&isCloze(c)?back(c):front(c))+'</p>';
   if(s.shown&&!isCloze(c))h+='<p class="rc-a"><b>Respuesta.</b> '+esc(c.a)+'</p>';
   if(!s.shown&&f>=2)h+='<p class="rc-hint">Pista: '+esc(c.h)+'</p>';

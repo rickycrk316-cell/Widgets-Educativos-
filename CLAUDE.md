@@ -1,13 +1,13 @@
 # Guía para Claude · Widgets educativos
 
-Repo solo de estudio médico (Ricardo, Quirúrgica 2 · PUCE, 10.º nivel). Índice de widgets en `README.md`. Sin contenido de marketing ni de otras marcas.
+Repo solo de estudio médico (Ricardo, Salud Integral Hospitalaria 2 · PUCE, 10.º nivel; sílabos de las dos rotaciones en `fuentes/`). Índice de widgets en `README.md`. Sin contenido de marketing ni de otras marcas.
 
 ## Dónde mirar (ahorra tokens)
 
 - **Edita y lee las partes**, nunca el HTML final: `widgets/<tema>/<id>/*.html`. El HTML final repite ~27 KB de kit en cada widget.
 - No leas `kit/kit_head.html`, `kit/kit_script.html`, `kit/def_head.html` ni `kit/validar.py` salvo que la tarea sea cambiar el kit. Clases y roles de color: `docs/DESIGN.md`.
 - Para ubicar algo usa `grep -rn` sobre `widgets/<tema>/<id>/` en vez de abrir archivos enteros.
-- `fuentes/prompt_widget_ensenanza_v10.md` (60 KB) es el documento de proyecto con el kit v10 original (CSS v10, no Vademécum). Las reglas completas de la skill están en `fuentes/skill_widget_ensenanza_v10.md` y `fuentes/skill_definiciones_v5.1.md`: léelas solo por secciones cuando haga falta una regla concreta.
+- `fuentes/prompt_widget_ensenanza_v10.md` (60 KB) es el documento de proyecto con el kit v10 original (CSS v10, no Vademécum). Las reglas completas de las skills están en `.claude/skills/{widget-ensenanza,definiciones,flashcards}/SKILL.md`: léelas solo por secciones cuando haga falta una regla concreta. Protocolo de verificación de fuentes y tabla de ediciones: `fuentes/protocolo_verificacion.md`.
 - `PLAN.md` de cada tema explica por qué se partió el caso así; léelo antes de añadir o reordenar pestañas.
 
 ## Partes de un widget
@@ -39,4 +39,12 @@ Crear `widgets/<tema>/<id>/` con partes y `manifiesto.json` (con `titulo` y `sal
 
 ## Actualizar a una versión nueva (v11)
 
-Re-extraer el kit del nuevo documento de proyecto y comparar con `kit/`: `validar.py` y `kit_script.html` se reemplazan directo; `kit_head.html` se reaplica sobre Vademécum. Luego reconstruir todos los widgets y actualizar `fuentes/skill_*.md`.
+Re-extraer el kit del nuevo documento de proyecto y comparar con `kit/`: `validar.py` y `kit_script.html` se reemplazan directo; `kit_head.html` se reaplica sobre Vademécum. Luego reconstruir todos los widgets y actualizar `.claude/skills/*/SKILL.md`.
+
+## Skills del repo
+
+`.claude/skills/` tiene las skills `definiciones` (v6), `widget-ensenanza` (v10.1) y `flashcards` (v6): Claude Code las carga solas al abrir el repo y se invocan con `/definiciones`, `/widget-ensenanza`, `/flashcards`. Son la fuente de verdad; las instaladas en claude.ai se generan desde aquí:
+
+1. Editar `.claude/skills/<nombre>/SKILL.md`.
+2. `python3 kit/empaquetar_skills.py` → `dist/<nombre>.skill` (añade sílabos y protocolo en `references/`, y el kit en `assets/kit/`).
+3. Subir el `.skill` en la sección de Skills de los ajustes de claude.ai, sustituyendo la versión anterior del mismo nombre.

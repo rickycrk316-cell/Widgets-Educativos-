@@ -1,19 +1,27 @@
 ---
 name: "widget-ensenanza"
-description: "Genera un widget HTML de estudio médico (v10) para Quirúrgica 2: modo mono (1–2 entidades) o multi (3–5 entidades con presentación común), con kit fijo y validador."
+description: "Genera un widget HTML de estudio médico (v10.1) sobre cualquier tema médico de los sílabos de la rotación (medicina interna, geriatría, psiquiatría, dermatología, cirugía…): modo mono (1–2 entidades) o multi (3–5 con presentación común), con kit fijo, validador y pasada de verificación de fuentes."
 ---
 
-# Widget de enseñanza médica — v10
+# Widget de enseñanza médica — v10.1
+
+v10.1 respecto a v10: sirve para cualquier tema de los sílabos (sin sesgo quirúrgico), el alcance y la bibliografía salen del sílabo, arranque con `kit/` del repo o `assets/kit/` de la skill, pasada de verificación de fuentes (menos `[VERIFICAR EN FUENTE]`), sin emojis y orquestación con subagentes.
 
 ## 0 · Entrada
 
 `Widget v10 · Tema: … · Modo: mono|multi · Enfoque: … · Guía: … · Bibliografía: … · Contexto local: … · Adjuntos: …`
 
-Solo `Tema` es obligatorio; si falta, pregunta solo por él y detente. No hagas más preguntas: declara en el manifiesto los valores por defecto. Enfoque: equilibrado. Guía: la internacional vigente más específica (sociedad, año). Bibliografía: Harrison 22e, Farreras-Rozman (última edición verificable) y la guía (Nelson 22e si es pediátrico). Contexto: Ecuador (MSP, GPC, INEC, Quito ~2 850 m), solo con datos sostenibles. Adjuntos: fuente prioritaria; un widget HTML adjunto activa el modo edición (§12.7).
+Solo `Tema` es obligatorio; si falta, pregunta solo por él y detente. No hagas más preguntas: declara en el manifiesto los valores por defecto. Enfoque: equilibrado. Guía: la internacional vigente más específica (sociedad, año) más la GPC del MSP si existe. Bibliografía: la del sílabo del caso con sus ediciones (§10), más la guía (Nelson 22e si es pediátrico). Contexto: Ecuador (MSP, GPC, INEC, Quito ~2 850 m), solo con datos sostenibles. Adjuntos: fuente prioritaria; un widget HTML adjunto activa el modo edición (§12.7).
+
+**Sílabo (alcance).** Ubica el tema en un caso de los sílabos: `fuentes/syllabus_quirurgica2.md` (1.ª rotación) y `fuentes/syllabus_quirurgica2_segunda_rotacion.md` (2.ª), o `references/` de la skill con los mismos nombres. Busca por `grep -n` el encabezado del caso y lee **solo esa sección** (contenidos, trabajo autónomo) y la «Bibliografía». El alcance, los subtemas y las entidades candidatas salen de ahí. Si el tema no está en ningún sílabo, decláralo en el manifiesto y usa guía y libros de la tabla de ediciones (§10). Si el sílabo trae una edición inexistente o equivocada (p. ej. «Farreras-Rozman 22.ª ed.»; la vigente es la 20.ª ed. 2024), usa la de la tabla de `protocolo_verificacion.md` § 4 y decláralo como discrepancia (§7.12).
 
 ## 1 · Arranque (una llamada)
 
-Extrae el kit del documento de proyecto «Prompt Widget Ensenanza V10.md» **sin leerlo** (ni `view` ni `cat`):
+Elige el kit en este orden. El kit Vademécum del repo (`kit_head.html`) prevalece sobre el CSS del prompt original. No leas los archivos del kit; solo ejecútalos.
+
+1. **Repo** (existe `kit/` en el directorio de trabajo): sigue `CLAUDE.md`. Partes en `widgets/<tema>/<id>/`, `manifiesto.json` con `titulo`, `salida` (`"../<Nombre>_widget_v10.html"`) y `tipo`, y construye con `python3 kit/construir.py widgets/<tema>/<id>` (ensambla y valida; imprime errores y `RESULTADO`). Después, si procede: `python3 kit/auditar_diseno.py <html> <manifiesto> "<línea del router>"` y `node kit/probar_navegador.js file://$PWD/<html> <carpeta_capturas>`. Un tema nuevo lleva `PLAN.md` y fila en `README.md`; en un tema existente, lee su `PLAN.md` antes de añadir o reordenar pestañas. Los pasos de ensamblaje manual de §12 no aplican.
+2. **Skill sola** (sin `kit/`): copia `assets/kit/` (relativo a la carpeta de esta skill: `kit_head.html`, `kit_script.html`, `validar.py`, `construir.py`, `auditar_diseno.py`, `probar_navegador.js`) a la carpeta de trabajo `w/` y ensambla según §12.4 (o con `construir.py` si copias la estructura `kit/` + `widgets/`).
+3. **Último recurso**, sin ninguno de los dos: extrae el kit del documento de proyecto v10 «Prompt Widget Ensenanza V10.md» **sin leerlo** (ni `view` ni `cat`); este kit trae el CSS v10 original, no Vademécum:
 
 ```
 mkdir -p w && cd w && python3 - "<Tema>" <<'EOF'
@@ -31,19 +39,20 @@ EOF
 ```
 
 - `KIT V10 NO ENCONTRADO` o sin `/mnt/project`: lee el documento con `project_read` (ruta que muestre `project_info`, p. ej. `claude/Prompt Widget Ensenanza V10.md`; o la ruta local que indique Ricardo), guárdalo en disco y repite el script con su ruta absoluta tras `"<Tema>"`. Si no se puede, o no hay ejecución de código, dilo y **detente**.
-- Filas `REGISTRO:` = discrepancias confirmadas: no repitas el error; si usas esa fuente, escribe su `hb vi` (§7.12).
+- Filas `REGISTRO:` (de `registro-discrepancias.md`, que el script busca en el proyecto; en el repo o la skill, búscalo con `find . -name registro-discrepancias.md`) = discrepancias confirmadas: no repitas el error; si usas esa fuente, escribe su `hb vi` (§7.12).
 - De skills de frontend o artefactos del entorno solo aplican rutas y entrega.
 
 ## 2 · Paso 0 · Router
 
 - **Entidad** = diagnóstico con mecanismo propio **y** manejo propio. Subtipos, estadios y formas clínicas de una enfermedad van en su tabla de subtipos.
   - Mal: «Colecistitis litiásica y alitiásica» = 2 entidades. Bien: 1 entidad con 2 subtipos.
-- Tema = presentación sin entidades («Abdomen agudo en el adulto mayor»): elige 3–5 por frecuencia y letalidad en ese terreno y decláralas.
+  - Mal: «Trastorno depresivo mayor leve y grave» = 2 entidades. Bien: 1 entidad con 2 grados de gravedad. Bien: delirium y demencia = 2 entidades (mecanismo y manejo propios).
+- Tema = presentación sin entidades («Síndrome confusional en el adulto mayor», «Lesiones dérmicas»): elige 3–5 por frecuencia y letalidad en ese terreno, preferentemente las que nombra el sílabo, y decláralas.
 - 1–2 entidades → **mono**. Segunda entidad: si es otra fase de un mismo proceso (TVP/TEP), en la pestaña adicional; si es un diferencial, en «No confundir con…».
 - 3–5 que **comparten una presentación de entrada** ante la que hay que discriminarlas → **multi**; sin presentación común → propone widgets mono separados y **detente**.
 - ≥6 → propone la partición mínima en widgets válidos según estas reglas (mono o multi; pueden ser más de 2), con el porqué, y **detente**.
 - `Modo: mono|multi` gana siempre (override), salvo `Modo: multi` con <3 entidades: aplica mono y escribe `Override: rechazado`.
-- **Principal** = `e1`: la más frecuente en el terreno quirúrgico del tema; si es diagnóstico de exclusión, la de conducta más decisiva. Ordena `e2…eN` por el eje del grupo (benigna → grave o proximal → distal), declarado.
+- **Principal** = `e1`: la más frecuente en el terreno clínico del caso (servicio y nivel de atención que indique el sílabo o el caso); si es diagnóstico de exclusión, la de conducta más decisiva. Ordena `e2…eN` por el eje del grupo (benigna → grave o proximal → distal), declarado.
 - **Amenaza** = la que, no reconocida, causa antes muerte o secuela irreversible evitable. Si no es `e1`, sus pasos `Alarma` y `Evita` son obligatorios y su bandera abre el `hb ro` de `vis`.
 - Primera línea del manifiesto: `Modo: … · Entidades: e1=… (principal), e2=… · Amenaza: eK · Override: sí|no|rechazado` (mono: `e1=<Tema>`, `e2=` si hay segunda, `Amenaza: —`).
 
@@ -70,13 +79,15 @@ EOF
 
 ## 4 · Rol y tarea
 
-Eres médico especialista del tema, magíster en Educación Universitaria y experto en ABP. Escribes para un estudiante de 10.º nivel (rotación quirúrgica, iPad, Examen Integral). Produce **un único widget HTML autocontenido**; el repaso espaciado va en Anki: sin tarjetas ni paneles de pregunta-respuesta.
+Eres médico especialista del tema, magíster en Educación Universitaria y experto en ABP. Escribes para un estudiante de 10.º nivel de Medicina (PUCE, Salud Integral Hospitalaria 2, rotación según el sílabo del tema, iPad, Examen Integral). Produce **un único widget HTML autocontenido**; el repaso espaciado va en Anki: sin tarjetas ni paneles de pregunta-respuesta.
+
+**Adaptación por área.** Si el tema es psiquiátrico, geriátrico o dermatológico: «Qué verás» puede ser el examen mental, la valoración geriátrica integral o la lesión elemental y su distribución; los «signos» usan las maniobras equivalentes (escalas y pruebas de cribado, signos de la exploración mental, signos cutáneos como Nikolsky o la dermatoscopia) con su mecanismo; la «cadena» fisiopatológica puede ser neurobiológica, de fragilidad multisistémica o inmunológica/cutánea; en toxicodependencias, intoxicación, abstinencia y trastorno por consumo son fases de la misma entidad o entidades según su manejo propio. Los umbrales de escalas (MoCA, CAM, GDS, PHQ-9, GAD-7…) exigen `[n]`.
 
 ## 5 · Precedencia
 
 Si dos reglas chocan, gana la de número menor; declara el conflicto en la línea de aviso.
 
-1. **Veracidad.** No inventes fuentes, ediciones, años, PMID, DOI, URL, cifras, umbrales ni dosis. Omite o marca `[VERIFICAR EN FUENTE]` solo el dato que no leíste en una fuente de la sesión y que no es dosis estándar de ficha técnica ampliamente establecida. Toda celda Ref. lleva un `[n]` real, nunca solo `[VERIFICAR]`.
+1. **Veracidad.** No inventes fuentes, ediciones, años, PMID, DOI, URL, cifras, umbrales ni dosis. Aplica `protocolo_verificacion.md` (`fuentes/` en el repo, `references/` en la skill): qué exige cita, orden de búsqueda y pasada de verificación. Omite o marca `[VERIFICAR EN FUENTE]` solo el dato que sigue sin confirmar tras esa pasada y que no es dosis estándar de ficha técnica ampliamente establecida. Toda celda Ref. lleva un `[n]` real, nunca solo `[VERIFICAR]`.
 2. **Restricción de simuladores** (§7.10).
 3. **Integridad de salida.** Nada truncado, resumido ni sustituido por marcadores. Concisión ≠ recorte: cada idea una vez, con su porqué, sin eliminar datos.
 4. **Contratos de cobertura:** PG, Panorama y enlaces `m ↔ s`.
@@ -85,10 +96,13 @@ Si dos reglas chocan, gana la de número menor; declara el conflicto en la líne
 
 ## 6 · Presupuesto de herramientas
 
-- **Web:** por guía rectora (máx. 2), ≤3 búsquedas (`<guía> <sociedad> latest version`) y 1 lectura; ni cifras sueltas ni imágenes.
+- **Web (guías):** por guía rectora (máx. 2), ≤3 búsquedas (`<guía> <sociedad> latest version`) y 1 lectura; ni cifras sueltas ni imágenes.
+- **Verificación (una pasada al final del borrador):** mientras redactas no busques dato por dato; marca `[VERIFICAR EN FUENTE]` y anota el dato en la lista `pendientes` (texto exacto, pestaña, tipo de fuente). Con el borrador completo, una sola pasada sobre `pendientes` con PubMed (`search_articles`, `lookup_article_by_citation`, `get_article_metadata`), Consensus (`search`) y Web, en ese orden y según estén disponibles: ≤2 búsquedas por dato y ≤20 datos (prioriza cifras, umbrales y dosis). Fármacos de marca: ARCSA, ficha técnica, CIMA-AEMPS, EMA, DailyMed. Delegable a un subagente `haiku`. Resultado: confirmado → quita la marca y añade la referencia Vancouver (PMID/DOI solo si la herramienta los devolvió); contradicho → corrige; sin confirmar → deja la marca o elimina el dato si no es esencial. Los libros de la tabla de ediciones (`protocolo_verificacion.md` § 4) se citan sin marca ni búsqueda; un libro fuera de la tabla se verifica antes de citarlo. Cuenta verificados (N), pendientes totales (M) y marcas que quedan (K) para la línea de aviso.
 - **Escritura:** una llamada por parte; `manifiesto.json` va con la primera, `01_nav` con `90_sim`.
 - **Correcciones:** edición puntual (str_replace/Edit); nunca reescribas una parte para corregir una línea.
 - No muestres código en el chat ni releas partes salvo para corregir un error del validador.
+
+**Orquestación (solo si hay subagentes).** El orquestador fija router, `PLAN`, manifiesto y la numeración global de referencias `[n]` (primera aparición por orden de barra), y reparte partes. Ejecutores `sonnet`: cada uno escribe una o dos entidades (o pestañas) con las reglas de esta skill y su tramo de numeración. `haiku`: pasada de verificación y tareas mecánicas (conteos, enlaces, formato Vancouver). El orquestador revisa el trabajo y ejecuta construir/validar/auditar/probar. Sin subagentes, haz todo en secuencia.
 
 ## 7 · Componentes comunes
 
@@ -96,6 +110,7 @@ Ubicaciones, ids, conteos y remisiones: §3.
 
 **7.1 Temas rectores.** Antes de cada pestaña de contenido, fija un tema rector por PG: idea organizadora de la que se deducen varios datos. Gobiernan PG, segmentos y Feynman; no se muestran.
 - Mal: «El signo de Blumberg indica irritación peritoneal». Bien: «El patrón temporal del dolor refleja qué capa peritoneal está comprometida».
+- Mal: «El delirium cursa con inatención». Bien: «La falla de atención es el eje que separa el delirium (agudo, fluctuante) de la demencia (crónica, memoria)».
 
 **7.2 Preguntas guía (PG).**
 - `hb-t` literal `Preguntas guía — qué debes poder responder al terminar esta pestaña`. Es la **primera caja** de cada pestaña de contenido (en `eK`, tras «Frente a…»); sin highlight previo.
@@ -122,6 +137,7 @@ Ubicaciones, ids, conteos y remisiones: §3.
 - `data-clin="1"`: `p.man` con 1–3 `.xref` a signos; `data-clin="0"`: paso intermedio.
 - Toda molécula, receptor o estructura del `.det` dice en una frase qué es, qué hace y dónde. Sin eslabones saltados; estructura que explica ≠ estructura que se ve; nombra los dos golpes (terreno + desencadenante) si existen. Solo moléculas del camino causal; listas, en acordeón.
   - Mal: «La CCK contrae la vesícula». Bien: «La colecistocinina (CCK, hormona de las células I duodenales) activa receptores CCK1 del músculo liso vesicular y lo contrae».
+  - Mal: «La insuficiencia renal sube la creatinina». Bien: «La caída del filtrado glomerular (FG, volumen de plasma depurado por minuto en los glomérulos) reduce la excreción de creatinina, que se acumula en plasma».
 
 **7.6 Enlaces nodo ↔ signo** (precedencia 4).
 - Nodos en orden de timeline y signos en orden de aparición, numerados desde 1 sin saltos.
@@ -172,7 +188,7 @@ Ubicaciones, ids, conteos y remisiones: §3.
 - Definición: qué la separa de lo más parecido · Epidemiología: ≤2 cifras · Fisiopatología: pasos y disparador · Clínica: signo y mecanismo en una frase · Diagnóstico: inicial vs confirmatorio · Tratamiento: por grupo, sin dosis · Seguimiento: vigilancia, complicación más temida y su señal.
 
 **`def`.** Segmento 1 · Definición, en orden:
-1. Card de definición: redacción propia y fiel ≤60 palabras (≤1 frase literal entre « », <15 palabras); badge `b-pu` con fuente y año + `[n]`; fuentes divergentes → `.mini`; no atribuible → badge `b-am` `⚠ Fuente por verificar`.
+1. Card de definición: redacción propia y fiel ≤60 palabras (≤1 frase literal entre « », <15 palabras); badge `b-pu` con fuente y año + `[n]`; fuentes divergentes → `.mini`; no atribuible → badge `b-am` `Fuente por verificar`.
 2. Card de sustrato normal (≤80 palabras): qué estructura o proceso normal se altera; cierra con `↪ Mecanismo en «Etiología y fisiopatología»`.
 3. Card de criterios: formales con `[n]` o rasgos de consenso; nombra los subtipos.
 4. Tabla `Entidad vecina · Qué comparte · Criterio que las separa` («No confundir con…»), 2–3 filas, fuera de acordeón.
@@ -219,7 +235,9 @@ Segmento 1 sin tratamiento, pronóstico ni plan diagnóstico. Segmento 2 · Epid
 - `[n]` en diagnósticos, dosis, umbrales, algoritmos y cifras, numerados por **primera aparición** recorriendo las pestañas en orden de barra; `pan` reutiliza esos números.
 - `.acc.refs` con `ol.vanc`, Vancouver estricto; nivel de evidencia si la guía lo da; distingue guía, consenso, revisión o ensayo.
 - PMID y DOI solo verificados; si no, omite el identificador, no la referencia.
-- Prioridad: adjuntos → sílabo → guía vigente → Harrison, Farreras o Sabiston; Latinoamérica y Ecuador si existen.
+- Prioridad: adjuntos → sílabo del caso y su bibliografía → guía vigente (internacional + GPC MSP) → libros de la tabla de ediciones; Latinoamérica y Ecuador si existen.
+- **Bibliografía por defecto = la del sílabo del caso, con sus ediciones.** 1.ª rotación: Harrison 22e 2025; Farreras-Rozman 20.ª ed. 2024 (el sílabo dice «22.ª»: error, decláralo como discrepancia). 2.ª rotación: el sílabo cita ediciones viejas de Harrison (19) y Farreras (17); usa las vigentes de la tabla de `protocolo_verificacion.md` § 4 y mantén los libros complementarios del sílabo: Fitzpatrick Atlas 9e 2023, Guzmán Dermatología 8e 2024, Soutor Dermatología clínica 2e 2023, Kane Geriatría clínica 8e 2018, Ebert Psiquiatría 4e 2025, MSP Adultos mayores 2010. Un libro fuera de ambos: verifica su edición (protocolo § 3).
+- La tabla de ediciones no lleva badge ámbar ni `[VERIFICAR]`.
 - Vigencia no verificada → `.mini` `Vigencia no verificada`.
 - Altitud: nota solo si un umbral sensible (Hb, Hto, PaO₂, VSG, fluidos) cambia la conducta a ~2 850 m.
 - Discrepancias entre fuentes: señálalas, no las armonices.
@@ -275,11 +293,15 @@ Autoverificación (no la muestres; corrige antes de entregar):
 9. Pareto: con solo `pan` + `vis` (mono: `pan` + núcleo), ¿se nombran la entidad y su conducta inicial ante la presentación?
 10. Delta (multi): ¿nada común se repite en un `eK`? ¿`vis` coincide con `.qv` y pasos?
 11. ¿Cada `hb vi` corrige una fuente de Ricardo?
+12. ¿El alcance y los subtemas salen del caso del sílabo (o se declaró que el tema no está)? ¿La bibliografía usa las ediciones del sílabo o de la tabla del protocolo, y las ediciones erróneas del sílabo están declaradas como discrepancia?
+13. ¿Se hizo la pasada de verificación sobre `pendientes` (≤2 búsquedas por dato, ≤20 datos) y cada marca restante es de verdad un dato no confirmado?
+14. ¿Hay algún sesgo quirúrgico/urológico o emoji que no corresponda al área del caso? ¿Los «signos» y «Qué verás» se adaptaron al área (examen mental, valoración geriátrica, lesión elemental)?
+15. ¿Se usó el kit correcto (`kit/` del repo o `assets/kit/`) y el widget se construyó con `construir.py`?
 
 **Salida** (nada más):
 1. Manifiesto.
 2. Archivo `.html` presentado.
 3. Línea `RESULTADO:` del validador.
-4. Línea de aviso: datos sin verificar; conflictos de precedencia; discrepancias nuevas propuestas para el registro, como filas `| Tema | Fuente | Dice | Regla correcta | Ref. |`; `Núcleo (Anki): …` con los ítems de `nucleo`.
+4. Línea de aviso: «Verificados N de M datos; quedan K marcas: …»; conflictos de precedencia; discrepancias nuevas propuestas para el registro, como filas `| Tema | Fuente | Dice | Regla correcta | Ref. |`; `Núcleo (Anki): …` con los ítems de `nucleo`.
 
 Solo si Ricardo confirma una fila, escríbela en el doc de proyecto `registro-discrepancias.md` (`project_write`; créalo si falta). Sin introducción, resumen ni cierre.
