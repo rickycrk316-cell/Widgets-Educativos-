@@ -129,6 +129,10 @@ tbody th{font-weight:700;background:var(--paper-2)}
 <button class="tb" onclick="show('t4',this)">Preinfarto</button>
 <button class="tb" onclick="show('t5',this)">Stresstabs</button>
 <button class="tb" onclick="show('t6',this)">Xanax (alprazolam)</button>
+<button class="tb" onclick="show('t7',this)">Ansiedad</button>
+<button class="tb" onclick="show('t8',this)">Pánico</button>
+<button class="tb" onclick="show('t9',this)">Ataque de ansiedad</button>
+<button class="tb" onclick="show('t10',this)">Ataque de pánico</button>
 <button class="tb" onclick="show('tg',this)">Repaso global</button>
 </nav>
 <section class="tab active" id="t1">
@@ -467,11 +471,208 @@ tbody th{font-weight:700;background:var(--paper-2)}
 
 <p class="gloss">Siglas: GABA, ácido gamma-aminobutírico; GABA-A, receptor ionotrópico del GABA; SNC, sistema nervioso central; ISRS, inhibidores selectivos de la recaptación de serotonina; CYP3A4, isoenzima 3A4 del citocromo P450; P450, familia de enzimas hepáticas de oxidación.</p>
 </section>
+<section class="tab" id="t7">
+<h2>Ansiedad</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Emoción de anticipación ante una amenaza futura, con tensión muscular y vigilancia; normal en dosis ajustada, trastorno cuando es excesiva o persistente.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Eje hipotálamo-hipófiso-suprarrenal</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Estrés.</b> Una demanda o amenaza percibida activa el núcleo paraventricular del hipotálamo.</li>
+<li><b>CRH.</b> El hipotálamo libera hormona liberadora de corticotropina (CRH) hacia la adenohipófisis [1].</li>
+<li><b>ACTH.</b> La adenohipófisis libera hormona adrenocorticotrópica (ACTH) a la sangre.</li>
+<li><b>Cortisol.</b> La ACTH estimula la corteza suprarrenal, que libera cortisol.</li>
+<li><b>Freno.</b> El cortisol inhibe al hipotálamo y a la hipófisis: retroalimentación negativa que apaga el eje.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> El eje sigue un ritmo circadiano, con pico matutino y descenso a lo largo del día; ante un estrés se activa y luego se apaga [1].</p>
+<p><b>Qué lo rompe.</b> El punto vulnerable es el apagado: una activación sostenida que no cede mantiene el cortisol alto y el organismo en alerta.</p>
+<p><b>Correlato clínico.</b> Estado de alerta sostenido, insomnio y tensión muscular; se exploran con la anamnesis y con la exploración del tono muscular.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Sistema serotoninérgico</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Criterio de agrupación.</b> Neuronas que liberan serotonina desde el tronco encefálico y la reparten por el encéfalo; la enzima monoaminooxidasa (MAO) la degrada y limita su acción [4].</p>
+<div class="tw"><table><thead><tr><th>Elemento</th><th>Acción o papel</th><th>Tipo de estructura</th><th>Qué falla si claudica</th></tr></thead><tbody>
+<tr><td><b>Núcleos del rafe</b></td><td>Sintetizan serotonina y la envían a todo el encéfalo.</td><td>Núcleos del tronco encefálico</td><td>Cae la modulación de todas las proyecciones.</td></tr>
+<tr><td><b>Proyección a la amígdala</b></td><td>Modula la reactividad ante estímulos amenazantes.</td><td>Vía de proyección</td><td>La amígdala responde de forma exagerada.</td></tr>
+<tr><td><b>Proyección a la corteza prefrontal</b></td><td>Participa en la regulación del ánimo y del control de la respuesta emocional.</td><td>Vía de proyección</td><td>Menor control sobre la respuesta emocional.</td></tr>
+<tr><td><b>Proyección al hipocampo</b></td><td>Modula la memoria y el contexto de la experiencia.</td><td>Vía de proyección</td><td>El contexto se integra peor.</td></tr>
+<tr><td><b>MAO</b></td><td>Degrada la serotonina en la terminal y limita su efecto.</td><td>Enzima</td><td>Si falta, la serotonina se acumula; si sobra, escasea.</td></tr>
+</tbody></table></div>
+<p><b>Jerarquía.</b> Los núcleos del rafe son el elemento dominante: son la única fuente de serotonina, y su fallo reduce todas las proyecciones a la vez.</p>
+<p><b>Correlato clínico.</b> No hay un signo exploratorio propio. Se infiere por el estado de ánimo, el sueño y el nivel de inquietud que se recogen en la anamnesis y el examen mental.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Angustia por perder el control mental»: circuito del miedo. La amígdala detecta la amenaza y la corteza prefrontal la frena.</p>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Palpitaciones»: respuesta simpaticoadrenal de lucha o huida. El simpático y la médula suprarrenal liberan adrenalina y noradrenalina.</p>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [1]</span><span class="badge b-pu">Kandel 2021 [4]</span> Tratado de fisiología médica, 14.ª edición; Principios de neurociencia, 6.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>El DSM-5-TR distingue el miedo, respuesta emocional a una amenaza inminente, real o percibida, de la ansiedad, anticipación de una amenaza futura, con tensión muscular, vigilancia y conducta de evitación. La ansiedad es una emoción normal; se vuelve trastorno cuando es excesiva o persistente y causa malestar o deterioro.</p>
+<p><span class="badge b-pu">DSM-5-TR 2022 [5]</span></p>
+<p class="mini">La definición describe la emoción y su umbral; no nombra ningún trastorno concreto.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>El miedo responde a un peligro que está aquí; la ansiedad se prepara para uno que quizá llegue. El cuerpo se pone en guardia: músculos tensos, atención en alerta, ganas de evitar lo temido. Esa preparación sirve para un examen o una entrevista. Deja de servir cuando se enciende sin motivo proporcional, no se apaga y empieza a estorbar la vida diaria.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>En un paciente como el del caso, que consulta por sensaciones físicas y miedo, la ansiedad se reconoce preguntando si anticipa algo malo, si está tenso o en guardia y si evita situaciones por eso. El término describe esa anticipación; no dice qué la origina ni si llega a ser un trastorno.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Miedo</b></td><td>Responde a una amenaza inminente, real o percibida; la ansiedad anticipa una amenaza futura [5].</td></tr>
+<tr><td><b>Estrés</b></td><td>Es la demanda o el desafío que activa al organismo; la ansiedad es la emoción anticipatoria que puede acompañarlo.</td></tr>
+<tr><td><b>Trastorno de ansiedad generalizada</b></td><td>Es un diagnóstico: preocupación excesiva, difícil de controlar, la mayoría de los días durante al menos 6 meses [5]. La ansiedad por sí sola es solo la emoción.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t7"><div class="rc-t">Simulador · Recall de ansiedad</div><div class="rc-count" id="rc-t7-n"></div><div class="rc-card" id="rc-t7-c"></div><div class="rc-btns" id="rc-t7-b"></div><div id="rc-t7-e"></div></div>
+
+<p class="gloss">Siglas: HHS, hipotálamo-hipófiso-suprarrenal; CRH, hormona liberadora de corticotropina; ACTH, hormona adrenocorticotrópica; MAO, monoaminooxidasa; DSM-5-TR, Manual diagnóstico y estadístico de los trastornos mentales, quinta edición, texto revisado.</p>
+</section>
+<section class="tab" id="t8">
+<h2>Pánico</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Miedo extremo, súbito e intenso; en el DSM-5-TR el término forma parte de «ataque de pánico» y «trastorno de pánico».</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Interocepción y corteza insular</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> La ínsula es una corteza situada en la profundidad del surco lateral, tapada por los opérculos frontal, parietal y temporal. Recibe por el tálamo las señales del cuerpo: latido, respiración, temperatura y víscera [4].</p>
+<p><b>Cómo está hecha.</b> Es corteza de asociación que integra la señal corporal con la emoción: se conecta con la amígdala y con la corteza del cíngulo anterior.</p>
+<p><b>Qué permite hacer.</b> Construye la percepción consciente del estado corporal, la interocepción: saber que el corazón late rápido o que falta el aire.</p>
+<p><b>De qué depende.</b> De las vías sensitivas viscerales que llegan por el tálamo; la calidad de la señal depende de ellas y de la atención que se le dedique.</p>
+<p><b>Correlato clínico.</b> Si la señal corporal se amplifica o se interpreta como peligro, sensaciones normales, como un latido fuerte, se viven como amenaza. Se explora con la anamnesis: qué sensación notó primero y cómo la interpretó.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Angustia por perder el control mental»: circuito del miedo. La amígdala valora la amenaza y activa la respuesta corporal.</p>
+
+<p class="mini"><span class="badge b-pu">Kandel 2021 [4]</span> Principios de neurociencia, 6.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>«Pánico» designa un miedo extremo, súbito e intenso. En el DSM-5-TR el término aparece en «ataque de pánico», el episodio, y en «trastorno de pánico»: ataques recurrentes e inesperados seguidos de al menos un mes de preocupación por nuevos ataques o de un cambio de conducta.</p>
+<p><span class="badge b-pu">DSM-5-TR 2022 [5]</span></p>
+<p class="mini am">Interpretación tomada: «pánico» como la emoción de miedo extremo súbito. Alternativa: abreviatura popular de «trastorno de pánico».</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Pánico es el miedo llevado al máximo: aparece de golpe y la persona siente que lo supera. El cuerpo manda sensaciones, la ínsula las registra y la mente las lee como peligro. Esa lectura alimenta más miedo y más sensaciones. Por eso la palabra describe la intensidad de la emoción; que sea un episodio o un trastorno es otra pregunta.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>En un paciente como el del caso, el pánico se reconoce por el relato de un miedo que irrumpe de golpe y con gran intensidad, junto a sensaciones corporales que él interpreta como amenazantes. El término nombra esa intensidad; no dice si hubo un ataque ni un trastorno.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Ataque de pánico</b></td><td>Es un episodio concreto de miedo intenso con síntomas corporales; se desarrolla en su propia pestaña [5].</td></tr>
+<tr><td><b>Trastorno de pánico</b></td><td>Exige ataques recurrentes e inesperados y al menos un mes de preocupación por nuevos ataques o cambio de conducta [5].</td></tr>
+<tr><td><b>Fobia</b></td><td>Miedo ligado a un objeto o situación predecible; el pánico puede surgir sin un desencadenante claro.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t8"><div class="rc-t">Simulador · Recall de pánico</div><div class="rc-count" id="rc-t8-n"></div><div class="rc-card" id="rc-t8-c"></div><div class="rc-btns" id="rc-t8-b"></div><div id="rc-t8-e"></div></div>
+
+<p class="gloss">Siglas: DSM-5-TR, Manual diagnóstico y estadístico de los trastornos mentales, quinta edición, texto revisado.</p>
+</section>
+<section class="tab" id="t9">
+<h2>Ataque de ansiedad</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Expresión popular, no diagnóstica: nombra un episodio de ansiedad intensa que puede ser un ataque de pánico o un aumento gradual de ansiedad.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+<p class="mini">Término coloquial: no requiere base morfofuncional nueva, solo estas dos remisiones.</p>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Palpitaciones»: respuesta simpaticoadrenal de lucha o huida. Una amenaza percibida libera adrenalina y noradrenalina, con taquicardia, temblor y sudoración.</p>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Ansiedad»: eje hipotálamo-hipófiso-suprarrenal. El estrés sostenido activa hipotálamo, hipófisis y corteza suprarrenal, que libera cortisol.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>«Ataque de ansiedad» no es una categoría del DSM-5-TR [5]. En el uso popular nombra un episodio de ansiedad intensa que puede corresponder a un ataque de pánico, de inicio abrupto y pico en minutos, o a un aumento gradual de ansiedad ligado a una preocupación o estresor, sin pico abrupto.</p>
+<p><span class="badge b-pu">DSM-5-TR 2022 [5]</span></p>
+<p class="mini am">Interpretación tomada: episodio de ansiedad intensa de instauración gradual, distinto del ataque de pánico. Alternativa: sinónimo popular de «ataque de pánico».</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>La gente usa «ataque de ansiedad» para decir que la ansiedad se desbordó. A veces es un golpe repentino que sube en minutos, y eso se llama ataque de pánico. Otras veces la preocupación crece poco a poco, con un motivo a la vista, y se mantiene en una meseta incómoda. Para reconocerlo, pregunta cómo empezó, si hubo un pico y si había un desencadenante anticipado.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Dos relatos distintos podrían recibir el mismo nombre popular. En uno, la persona cuenta que de pronto, sin aviso, sintió que se ahogaba. En otro, refiere varios días de nerviosismo creciente antes de una entrega de trabajo. Lo que los separa es la forma de inicio y la presencia de un pico.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Ataque de pánico</b></td><td>Inicio abrupto con pico en minutos y síntomas definidos por el DSM-5-TR [5].</td></tr>
+<tr><td><b>Preocupación de la ansiedad generalizada</b></td><td>Es persistente y se mantiene durante meses, sin episodios con pico.</td></tr>
+<tr><td><b>Reacción aguda al estrés</b></td><td>Responde a un evento traumático o estresante identificable y es transitoria.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t9"><div class="rc-t">Simulador · Recall de ataque de ansiedad</div><div class="rc-count" id="rc-t9-n"></div><div class="rc-card" id="rc-t9-c"></div><div class="rc-btns" id="rc-t9-b"></div><div id="rc-t9-e"></div></div>
+
+<p class="gloss">Siglas: DSM-5-TR, Manual diagnóstico y estadístico de los trastornos mentales, quinta edición, texto revisado.</p>
+</section>
+<section class="tab" id="t10">
+<h2>Ataque de pánico</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Episodio de miedo o malestar intenso de inicio abrupto, con pico en minutos y síntomas físicos y cognitivos acompañantes.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Curso temporal de la descarga de catecolaminas</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Amenaza.</b> Una amenaza, real o percibida, activa el hipotálamo y el locus coeruleus.</li>
+<li><b>Descarga.</b> El simpático y la médula suprarrenal liberan adrenalina y noradrenalina a la sangre [1].</li>
+<li><b>Pico.</b> Con la hormona circulante, el efecto en el corazón, la piel y el músculo alcanza su máximo en minutos.</li>
+<li><b>Retirada.</b> La recaptación neuronal y la degradación enzimática por MAO y COMT retiran las catecolaminas con rapidez [9].</li>
+<li><b>Cese.</b> Si la descarga no se renueva, los síntomas ceden. Rama: si se renueva, el cuadro se prolonga.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> Es una respuesta breve y autolimitada: sube, alcanza un máximo y baja sin intervención [1].</p>
+<p><b>Qué lo rompe.</b> Un bucle en que las sensaciones corporales se interpretan como peligro y renuevan la descarga, de modo que el pico no baja.</p>
+<p><b>Correlato clínico.</b> Pico de taquicardia, temblor y sudoración que cede de forma espontánea. Se explora con el pulso y los signos vitales seriados.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Palpitaciones»: respuesta simpaticoadrenal de lucha o huida. La amenaza percibida libera catecolaminas y acelera el corazón.</p>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Angustia por perder el control mental»: ventilación y CO2: hiperventilación y alcalosis respiratoria. Respirar de más baja el CO2 y causa hormigueo y mareo.</p>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Pánico»: interocepción y corteza insular. La ínsula integra las señales internas del cuerpo en una sensación consciente.</p>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [1]</span> <span class="badge b-pu">Goodman &amp; Gilman 2023 [9]</span> Tratado de fisiología médica, 14.ª edición; Las bases farmacológicas de la terapéutica, 14.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Aparición abrupta de miedo o malestar intenso que alcanza su máximo en minutos, con cuatro o más de 13 síntomas, entre ellos palpitaciones, sudoración, temblor, disnea, dolor u opresión torácica, náuseas, mareo, desrealización y miedo a perder el control o a morir. Puede ser esperado, con desencadenante, o inesperado [5].</p>
+<p><span class="badge b-pu">DSM-5-TR 2022 [5]</span></p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>El cuerpo dispara su alarma de peligro cuando no hay un peligro visible. En pocos minutos llegan el corazón acelerado, el temblor, el sudor y el miedo intenso. Esas sensaciones asustan y pueden renovar la alarma, así que el pico sube más. Luego la adrenalina se degrada y el episodio cede por sí solo. Lo definitorio es el inicio abrupto, el pico en minutos y los síntomas.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Los rasgos del término se reconocerían en un relato así: inicio abrupto mientras conducía, palpitaciones, opresión torácica, sudoración, náuseas y miedo a perder el control. Reconocer ese patrón no dice qué tiene el paciente ni descarta causas orgánicas, que pertenecen a pasos posteriores.</p></div>
+
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span>Mecanismo mínimo</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Interpretación.</b> Una sensación corporal, como un latido fuerte, se interpreta como señal de catástrofe.</li>
+<li><b>Descarga.</b> El miedo activa el simpático y libera más catecolaminas.</li>
+<li><b>Bucle.</b> Aparecen más sensaciones, que refuerzan la interpretación y elevan el pico.</li>
+</ol>
+<p class="mini">Correlato clínico: el pulso y la frecuencia respiratoria suben durante el pico y bajan cuando el bucle se interrumpe.</p>
+</div></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Trastorno de pánico</b></td><td>Exige ataques recurrentes inesperados más al menos un mes de preocupación o cambio de conducta [5]; el ataque es solo el episodio.</td></tr>
+<tr><td><b>Síndrome coronario agudo</b></td><td>Puede dar los mismos síntomas: el patrón del relato no lo separa sin estudio.</td></tr>
+<tr><td><b>Ataque de ansiedad</b></td><td>Término popular; si el inicio es gradual y sin pico abrupto, no cumple el patrón del ataque de pánico.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t10"><div class="rc-t">Simulador · Recall de ataque de pánico</div><div class="rc-count" id="rc-t10-n"></div><div class="rc-card" id="rc-t10-c"></div><div class="rc-btns" id="rc-t10-b"></div><div id="rc-t10-e"></div></div>
+
+<p class="gloss">Siglas: DSM-5-TR, Manual diagnóstico y estadístico de los trastornos mentales, quinta edición, texto revisado; MAO, monoaminooxidasa; COMT, catecol-O-metiltransferasa; CO2, dióxido de carbono.</p>
+</section>
 <section class="tab" id="tg">
 <h2>Repaso global</h2>
-<p class="mini">Mazo mixto con todas las tarjetas de las seis pestañas, barajadas e intercaladas. Al terminar verás los aciertos al primer intento por término.</p>
+<p class="mini">Mazo mixto con todas las tarjetas de las diez pestañas, barajadas e intercaladas. Al terminar verás los aciertos al primer intento por término.</p>
 
-<div class="rc" id="rc-tg"><div class="rc-t">Simulador · Repaso global de los seis términos</div><div class="rc-count" id="rc-tg-n"></div><div class="rc-card" id="rc-tg-c"></div><div class="rc-btns" id="rc-tg-b"></div><div id="rc-tg-e"></div></div>
+<div class="rc" id="rc-tg"><div class="rc-t">Simulador · Repaso global de los diez términos</div><div class="rc-count" id="rc-tg-n"></div><div class="rc-card" id="rc-tg-c"></div><div class="rc-btns" id="rc-tg-b"></div><div id="rc-tg-e"></div></div>
 
 <div class="acc"><button class="acc-h" onclick="tog(this)"><span>Referencias</span><span class="chev">▾</span></button><div class="acc-b">
 <ol class="vanc">
@@ -489,7 +690,7 @@ tbody th{font-weight:700;background:var(--paper-2)}
 </div></div>
 </section>
 <script>
-const TERMS={t1:'Opresión en el pecho',t2:'Palpitaciones',t3:'Angustia por perder el control mental',t4:'Preinfarto',t5:'Stresstabs',t6:'Xanax (alprazolam)'};
+const TERMS={t1:'Opresión en el pecho',t2:'Palpitaciones',t3:'Angustia por perder el control mental',t4:'Preinfarto',t5:'Stresstabs',t6:'Xanax (alprazolam)',t7:'Ansiedad',t8:'Pánico',t9:'Ataque de ansiedad',t10:'Ataque de pánico'};
 const DECKS={
 t1:[
 {q:'¿Por qué el dolor de origen cardiaco puede percibirse en el brazo izquierdo?',a:'Las aferentes viscerales del corazón convergen en la médula con aferentes somáticas del brazo, y el cerebro no distingue el origen de la señal.',h:'Piensa en una neurona de segundo orden compartida.'},
@@ -535,6 +736,35 @@ t6:[
 {q:'Tras la suspensión brusca de un uso continuo con neuroadaptación, ¿qué cuadro aparece?',a:'Ansiedad de rebote y síndrome de abstinencia: temblor, insomnio y, en casos graves, convulsiones.',h:'El cerebro se ajustó a la presencia del fármaco.'},
 {q:'El estado estacionario y la eliminación casi completa del fármaco se alcanzan en unas {{4 a 5}} vidas medias.',a:'4 a 5',h:'Es un número pequeño de vidas medias.'},
 {q:'¿En qué se diferencia un ISRS de alprazolam en su sitio de acción y su tiempo de efecto?',a:'El ISRS no actúa sobre GABA-A y su efecto ansiolítico tarda semanas; alprazolam potencia el GABA-A con efecto rápido.',h:'Uno modula serotonina, el otro GABA.'},
+],
+t7:[
+{q:'Cuando el cortisol sube, frena al hipotálamo y a la hipófisis: es un control por {{retroalimentación negativa}}.',a:'retroalimentación negativa',h:'El producto final apaga lo que lo estimula.'},
+{q:'En la anamnesis, ¿qué tres preguntas permiten reconocer la ansiedad como emoción?',a:'Si anticipa algo malo; si está tenso o en guardia; si evita situaciones por eso.',h:'Anticipación, tensión y conducta.'},
+{q:'Los núcleos del rafe, en el tronco encefálico, liberan {{serotonina}} y la proyectan a la {{amígdala}}, donde modula la reactividad ante la amenaza.',a:'serotonina; amígdala',h:'Es la única fuente de este neurotransmisor en el encéfalo.'},
+{q:'¿En qué se diferencia el miedo de la ansiedad según el DSM-5-TR?',a:'El miedo responde a una amenaza inminente, real o percibida; la ansiedad anticipa una amenaza futura.',h:'Uno mira al presente, la otra al futuro.'},
+{q:'La ansiedad pasa de emoción normal a trastorno cuando es {{excesiva o persistente}} y causa {{malestar o deterioro}}.',a:'excesiva o persistente; malestar o deterioro',h:'Se mide por proporción y por su efecto en la vida diaria.'},
+],
+t8:[
+{q:'La ínsula recibe por el {{tálamo}} las señales del cuerpo y construye la percepción consciente del estado corporal, llamada {{interocepción}}.',a:'tálamo; interocepción',h:'Es la relación entre el cuerpo y la conciencia de él.'},
+{q:'En un relato, ¿qué dos rasgos permiten reconocer que la persona describe pánico y no solo nerviosismo?',a:'Que el miedo irrumpió de golpe y que fue de intensidad extrema, desbordante.',h:'Velocidad de inicio e intensidad.'},
+{q:'¿Cómo se explora en la anamnesis la contribución de la interocepción al miedo?',a:'Preguntando qué sensación corporal notó primero y cómo la interpretó.',h:'Interesa el orden: sensación, luego interpretación.'},
+{q:'¿Qué separa el pánico, como emoción, de la ansiedad?',a:'El pánico irrumpe de golpe con intensidad extrema; la ansiedad es anticipatoria y puede crecer de forma gradual.',h:'Compara el momento y la forma de inicio.'},
+{q:'¿Cómo se distingue el miedo de una fobia del pánico?',a:'La fobia se liga a un objeto o situación predecible; el pánico puede surgir sin un desencadenante claro.',h:'Piensa en si el disparador se puede anticipar.'},
+],
+t9:[
+{q:'Un episodio de ansiedad que sube poco a poco durante horas, ligado a una preocupación, sin pico abrupto, ¿qué patrón sigue frente al ataque de pánico?',a:'Es el patrón gradual, con meseta; el ataque de pánico es abrupto y alcanza el pico en minutos',h:'Forma de inicio y presencia de pico'},
+{q:'¿Por qué «ataque de ansiedad» no basta como término en una historia clínica?',a:'Porque no es una categoría del DSM-5-TR: puede nombrar un ataque de pánico o un aumento gradual de ansiedad, y hay que precisar cuál por el inicio y el pico',h:'Piensa en los dos significados que admite'},
+{q:'¿Qué tres rasgos del relato ayudan a distinguir un ataque de ansiedad gradual de un ataque de pánico?',a:'Forma de inicio (gradual o abrupta); pico en minutos o meseta; desencadenante anticipado o no',h:'Inicio, curso y desencadenante'},
+{q:'En el uso popular, «ataque de ansiedad» puede nombrar un {{ataque de pánico}} o un aumento {{gradual}} de ansiedad ligado a un estresor.',a:'ataque de pánico; gradual',h:'Dos significados posibles del mismo nombre'},
+{q:'¿Qué diferencia a la preocupación de la ansiedad generalizada de un episodio con pico?',a:'La preocupación es persistente durante meses y no tiene episodios con pico',h:'Duración y curso temporal'},
+],
+t10:[
+{q:'Tras la descarga de catecolaminas, ¿qué dos procesos las retiran rápido de la sangre y los receptores?',a:'Recaptación neuronal; degradación enzimática por MAO y COMT',h:'Uno es transporte y otro es enzimático'},
+{q:'Si la descarga de catecolaminas no se renueva, los síntomas {{ceden de forma espontánea}} en minutos.',a:'ceden de forma espontánea',h:'Respuesta breve y autolimitada'},
+{q:'Un ataque de pánico se define por inicio abrupto, pico en {{minutos}} y {{cuatro o más}} de 13 síntomas.',a:'minutos; cuatro o más',h:'Tiempo al máximo y umbral de síntomas'},
+{q:'¿Qué ocurre en el bucle que mantiene un ataque de pánico?',a:'Una sensación corporal se interpreta como peligro, renueva la descarga simpática y produce más sensaciones',h:'Interpretación, descarga, más sensaciones'},
+{q:'¿Qué separa un ataque de pánico del trastorno de pánico?',a:'El trastorno exige ataques recurrentes inesperados más al menos un mes de preocupación o cambio de conducta; el ataque es solo el episodio',h:'Episodio frente a diagnóstico con recurrencia'},
+{q:'¿Por qué un relato de inicio abrupto con palpitaciones, opresión torácica y sudoración no basta para separar un ataque de pánico de un síndrome coronario agudo?',a:'Porque ambos pueden dar los mismos síntomas: el patrón del relato no los separa sin estudio',h:'Los síntomas se solapan'},
 ]
 };
 DECKS.tg=[].concat.apply([],Object.keys(TERMS).map(function(k){return DECKS[k].map(function(c){return {q:c.q,a:c.a,h:c.h,t:k};});}));

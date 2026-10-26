@@ -1,5 +1,5 @@
 <script>
-const TERMS={t1:'Opresión en el pecho',t2:'Palpitaciones',t3:'Angustia por perder el control mental',t4:'Preinfarto',t5:'Stresstabs',t6:'Xanax (alprazolam)'};
+const TERMS={t1:'Opresión en el pecho',t2:'Palpitaciones',t3:'Angustia por perder el control mental',t4:'Preinfarto',t5:'Stresstabs',t6:'Xanax (alprazolam)',t7:'Ansiedad',t8:'Pánico',t9:'Ataque de ansiedad',t10:'Ataque de pánico'};
 const DECKS={
 t1:[
 {q:'¿Por qué el dolor de origen cardiaco puede percibirse en el brazo izquierdo?',a:'Las aferentes viscerales del corazón convergen en la médula con aferentes somáticas del brazo, y el cerebro no distingue el origen de la señal.',h:'Piensa en una neurona de segundo orden compartida.'},
@@ -45,6 +45,35 @@ t6:[
 {q:'Tras la suspensión brusca de un uso continuo con neuroadaptación, ¿qué cuadro aparece?',a:'Ansiedad de rebote y síndrome de abstinencia: temblor, insomnio y, en casos graves, convulsiones.',h:'El cerebro se ajustó a la presencia del fármaco.'},
 {q:'El estado estacionario y la eliminación casi completa del fármaco se alcanzan en unas {{4 a 5}} vidas medias.',a:'4 a 5',h:'Es un número pequeño de vidas medias.'},
 {q:'¿En qué se diferencia un ISRS de alprazolam en su sitio de acción y su tiempo de efecto?',a:'El ISRS no actúa sobre GABA-A y su efecto ansiolítico tarda semanas; alprazolam potencia el GABA-A con efecto rápido.',h:'Uno modula serotonina, el otro GABA.'},
+],
+t7:[
+{q:'Cuando el cortisol sube, frena al hipotálamo y a la hipófisis: es un control por {{retroalimentación negativa}}.',a:'retroalimentación negativa',h:'El producto final apaga lo que lo estimula.'},
+{q:'En la anamnesis, ¿qué tres preguntas permiten reconocer la ansiedad como emoción?',a:'Si anticipa algo malo; si está tenso o en guardia; si evita situaciones por eso.',h:'Anticipación, tensión y conducta.'},
+{q:'Los núcleos del rafe, en el tronco encefálico, liberan {{serotonina}} y la proyectan a la {{amígdala}}, donde modula la reactividad ante la amenaza.',a:'serotonina; amígdala',h:'Es la única fuente de este neurotransmisor en el encéfalo.'},
+{q:'¿En qué se diferencia el miedo de la ansiedad según el DSM-5-TR?',a:'El miedo responde a una amenaza inminente, real o percibida; la ansiedad anticipa una amenaza futura.',h:'Uno mira al presente, la otra al futuro.'},
+{q:'La ansiedad pasa de emoción normal a trastorno cuando es {{excesiva o persistente}} y causa {{malestar o deterioro}}.',a:'excesiva o persistente; malestar o deterioro',h:'Se mide por proporción y por su efecto en la vida diaria.'},
+],
+t8:[
+{q:'La ínsula recibe por el {{tálamo}} las señales del cuerpo y construye la percepción consciente del estado corporal, llamada {{interocepción}}.',a:'tálamo; interocepción',h:'Es la relación entre el cuerpo y la conciencia de él.'},
+{q:'En un relato, ¿qué dos rasgos permiten reconocer que la persona describe pánico y no solo nerviosismo?',a:'Que el miedo irrumpió de golpe y que fue de intensidad extrema, desbordante.',h:'Velocidad de inicio e intensidad.'},
+{q:'¿Cómo se explora en la anamnesis la contribución de la interocepción al miedo?',a:'Preguntando qué sensación corporal notó primero y cómo la interpretó.',h:'Interesa el orden: sensación, luego interpretación.'},
+{q:'¿Qué separa el pánico, como emoción, de la ansiedad?',a:'El pánico irrumpe de golpe con intensidad extrema; la ansiedad es anticipatoria y puede crecer de forma gradual.',h:'Compara el momento y la forma de inicio.'},
+{q:'¿Cómo se distingue el miedo de una fobia del pánico?',a:'La fobia se liga a un objeto o situación predecible; el pánico puede surgir sin un desencadenante claro.',h:'Piensa en si el disparador se puede anticipar.'},
+],
+t9:[
+{q:'Un episodio de ansiedad que sube poco a poco durante horas, ligado a una preocupación, sin pico abrupto, ¿qué patrón sigue frente al ataque de pánico?',a:'Es el patrón gradual, con meseta; el ataque de pánico es abrupto y alcanza el pico en minutos',h:'Forma de inicio y presencia de pico'},
+{q:'¿Por qué «ataque de ansiedad» no basta como término en una historia clínica?',a:'Porque no es una categoría del DSM-5-TR: puede nombrar un ataque de pánico o un aumento gradual de ansiedad, y hay que precisar cuál por el inicio y el pico',h:'Piensa en los dos significados que admite'},
+{q:'¿Qué tres rasgos del relato ayudan a distinguir un ataque de ansiedad gradual de un ataque de pánico?',a:'Forma de inicio (gradual o abrupta); pico en minutos o meseta; desencadenante anticipado o no',h:'Inicio, curso y desencadenante'},
+{q:'En el uso popular, «ataque de ansiedad» puede nombrar un {{ataque de pánico}} o un aumento {{gradual}} de ansiedad ligado a un estresor.',a:'ataque de pánico; gradual',h:'Dos significados posibles del mismo nombre'},
+{q:'¿Qué diferencia a la preocupación de la ansiedad generalizada de un episodio con pico?',a:'La preocupación es persistente durante meses y no tiene episodios con pico',h:'Duración y curso temporal'},
+],
+t10:[
+{q:'Tras la descarga de catecolaminas, ¿qué dos procesos las retiran rápido de la sangre y los receptores?',a:'Recaptación neuronal; degradación enzimática por MAO y COMT',h:'Uno es transporte y otro es enzimático'},
+{q:'Si la descarga de catecolaminas no se renueva, los síntomas {{ceden de forma espontánea}} en minutos.',a:'ceden de forma espontánea',h:'Respuesta breve y autolimitada'},
+{q:'Un ataque de pánico se define por inicio abrupto, pico en {{minutos}} y {{cuatro o más}} de 13 síntomas.',a:'minutos; cuatro o más',h:'Tiempo al máximo y umbral de síntomas'},
+{q:'¿Qué ocurre en el bucle que mantiene un ataque de pánico?',a:'Una sensación corporal se interpreta como peligro, renueva la descarga simpática y produce más sensaciones',h:'Interpretación, descarga, más sensaciones'},
+{q:'¿Qué separa un ataque de pánico del trastorno de pánico?',a:'El trastorno exige ataques recurrentes inesperados más al menos un mes de preocupación o cambio de conducta; el ataque es solo el episodio',h:'Episodio frente a diagnóstico con recurrencia'},
+{q:'¿Por qué un relato de inicio abrupto con palpitaciones, opresión torácica y sudoración no basta para separar un ataque de pánico de un síndrome coronario agudo?',a:'Porque ambos pueden dar los mismos síntomas: el patrón del relato no los separa sin estudio',h:'Los síntomas se solapan'},
 ]
 };
 DECKS.tg=[].concat.apply([],Object.keys(TERMS).map(function(k){return DECKS[k].map(function(c){return {q:c.q,a:c.a,h:c.h,t:k};});}));
