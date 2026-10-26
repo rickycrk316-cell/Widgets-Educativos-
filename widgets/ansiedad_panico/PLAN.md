@@ -8,13 +8,17 @@ Fuentes (prioridad en este orden):
 ## Widget · Definiciones (skill definiciones v5.1) — `definiciones/`
 
 - Caso/semana: Ansiedad y pánico (primera sesión). Consulta externa sin posibilidad de derivar.
-- Términos, en este orden de pestañas (6 → régimen normal, tope 5 prerrequisitos):
+- Términos, en este orden de pestañas (10 → régimen normal, tope 5 prerrequisitos):
   1. Opresión en el pecho (opresión precordial)
   2. Palpitaciones
   3. Angustia por perder el control mental
   4. Preinfarto — término coloquial, no diagnóstico: `.mini` ámbar con la interpretación (angina inestable / síndrome coronario agudo sin elevación del ST) y la alternativa (uso popular para cualquier dolor torácico «de corazón»)
   5. Stresstabs — producto comercial (multivitamínico del complejo B con vitamina C; composición según presentación): define qué es; badge «Fuente por verificar» para la composición; manejo al paso 7
   6. Xanax (alprazolam) — una pestaña con ambos nombres (marca y principio activo); qué es y su mecanismo; manejo al paso 7
+  7. Ansiedad
+  8. Pánico — la emoción de miedo extremo súbito; «trastorno de pánico» va en «No confundir con»
+  9. Ataque de ansiedad — término coloquial (regla de la skill v6)
+  10. Ataque de pánico — episodio según DSM-5-TR
   + pestaña final **Repaso global**.
 - Alcance: paso 1 del ABP (qué es, qué lo distingue, cómo se reconoce). No se resuelve el caso: el widget no dice que sea un ataque de pánico ni que se haya descartado un síndrome coronario. Los ejemplos de anclaje pueden usar al paciente del caso.
 
@@ -29,7 +33,12 @@ Fuentes (prioridad en este orden):
 | t5 Stresstabs | Vitaminas hidrosolubles como cofactores del metabolismo (B) | — | 5 |
 | t6 Xanax (alprazolam) | Receptor GABA-A y la inhibición sináptica (A) · Vida media de eliminación y estado estacionario (C) | circuito del miedo (t3) | 6 |
 
-Totales: 11 prerrequisitos canónicos · 3 remisiones · 33 tarjetas.
+| t7 Ansiedad | Eje hipotálamo-hipófiso-suprarrenal (C) · Sistema serotoninérgico: núcleos del rafe y proyecciones (B) | circuito del miedo (t3) · lucha o huida (t2) | 5 |
+| t8 Pánico | Interocepción y corteza insular (A) | circuito del miedo (t3) | 5 |
+| t9 Ataque de ansiedad | — (término coloquial sin base nueva: declarado) | lucha o huida (t2) · eje HHS (t7) | 5 |
+| t10 Ataque de pánico | Curso temporal de la descarga de catecolaminas (C) | lucha o huida (t2) · hiperventilación (t3) · interocepción (t8) | 6 |
+
+Totales: 15 prerrequisitos canónicos · 11 remisiones · 54 tarjetas. Ampliación (skill definiciones v6): t7–t10 añadidas tras t6 para no mover prerrequisitos canónicos ni la numeración de referencias; 10 términos → régimen normal (tope 5). Partes `p70_t7`, `p80_t8`, `p90_t9`, `p92_t10` (orden alfabético < `p95`). Fuentes: solo [1] Guyton, [4] Kandel, [5] DSM-5-TR y [9] Goodman & Gilman ya numeradas. «Ataque de ansiedad»: término coloquial (no es categoría del DSM-5-TR) → término cercano + `.mini` ámbar.
 
 ### Referencias (numeración fija por primera aparición)
 
