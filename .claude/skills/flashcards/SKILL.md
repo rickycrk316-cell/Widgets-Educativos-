@@ -92,6 +92,14 @@ No eres un generador de datos: eres un diseñador de instrumentos de recuperaci�
 
 ---
 
+# INTEGRACIÓN CON EL REPO (solo si existe `widgets/`)
+
+- **Widget v10 del caso:** busca `widgets/<tema>/*/manifiesto.json`. Si el caso tiene widget, usa su `nucleo` (dict por pestaña de listas de enunciados) como **semilla prioritaria** de las tarjetas: cada ítem sugiere un principio, contraste o umbral. Reescríbelo con P1–P12 (no copies el enunciado tal cual) y respeta sus cifras y citas `[n]`; no cambies un dato que el widget ya verificó sin avisar. Registra `semilla` en el plan.
+- **Widget de definiciones:** si hay `widgets/<tema>/definiciones/manifiesto.json`, sus términos pueden alimentar tarjetas de definición (solo si aportan comprensión, P1) sin duplicar las del recall del propio widget; lo que el widget ya cubre como recall se menciona en la guía, no se repite.
+- No edites los widgets desde esta skill. Sin `widgets/` (skill empaquetada), omite esta sección.
+
+---
+
 # ALTO RENDIMIENTO EN EXÁMENES (USMLE y MIR)
 
 - **USMLE:** sus bancos no son públicos. Úsalo solo como **patrón** de alto rendimiento (temas y tipos de decisión que se preguntan). Nunca cites una "pregunta USMLE" concreta. Tag `AltoRendimiento::USMLE`.
@@ -185,7 +193,7 @@ Tarjetas que contrasten entidades confundibles (Brunmair & Richter 2019, g=0,42)
 - **Mnemotecnias**, salvo para listas genuinamente arbitrarias sin lógica; en lo demás, preferir el principio.
 - Cloze de palabras funcionales o adivinables.
 - Hechos que un principio del caso ya explica.
-- **Valores de S, E, VPP, VPN, LR o AUC.** Se permite y prefiere la afirmación cualitativa con su consecuencia decisional (*"Un ultrasonido de cadera normal no descarta artritis séptica temprana; con sospecha alta se procede a artrocentesis."*). Excepción única: que el syllabus o el docente exijan el valor.
+- **Valores de S, E, VPP, VPN, LR o AUC.** Se permite y prefiere la afirmación cualitativa con su consecuencia decisional (*"Un ultrasonido de cadera normal no descarta artritis séptica temprana; con sospecha alta se procede a artrocentesis."*). Excepción única: que el sílabo o el docente exijan el valor.
 - Cifras, dosis o cortes inventados: si no hay certeza, no generes la tarjeta o marca `[VERIFICAR EN FUENTE]` en `Razonamiento` y regístrala en `pendientes` (F3b la intentará resolver).
 - Tarjetas no trazables a la sección del caso en el sílabo (o a la guía declarada si el tema está fuera de ambos sílabos).
 
@@ -238,7 +246,7 @@ Muestra al usuario el resultado de F1, F3 y F3b, resumidos. En autónomo se mues
 - **F0 Parámetros:** caso, modo, IDs (continuidad), material adjunto, rutas de sílabos y protocolo (`fuentes/` o `references/`), widgets del repo del mismo caso (ver INTEGRACIÓN CON EL REPO).
 - **F1 Plan (orquestador):** lee del sílabo solo la sección del caso y ancla al resultado de aprendizaje (transcríbelo; si el tema no está en ninguno de los dos sílabos, dilo, pide confirmación y declara el prefijo `Q2X-<ABREV>`); fija las ediciones de referencia según el §4 del protocolo y anota discrepancias con el sílabo; principios (P1); irreducibles (P6); pares de contraste (P7); escalas (P10); cribado de alto rendimiento (el orquestador busca en la web; si verifica una pregunta MIR, registra año-número en `MIR_VERIFICADOS` y en la auditoría final con la URL del cuaderno oficial; el ejecutor nunca asigna tags MIR); cálculo P11 con deuda; rango de IDs; **plan de tarjetas** en JSON (abajo); contenido de la guía del caso.
 - **F2 Ejecución (ejecutor):** recibe plan + P1–P12 + ejemplos calibrados; devuelve el JSON de tarjetas. No añade ni elimina IDs; si cree que falta o sobra una, lo propone en `notas_ejecutor`. Si el plan trae `anverso_usuario`, `pregunta` (o `text`) = ese anverso literal; si viola P3/P8/P9, el ejecutor propone la versión corregida en `notas_ejecutor` y no la aplica.
-- **F3 Revisión (orquestador):** (a) lint automático en Python sobre el JSON (reglas del bloque de auditoría, más: palabras de `Respuesta`, listas abiertas por regex, cifras de S/E/VPP/VPN/LR por regex, tags MIR sin verificación registrada; que `anverso_usuario` no haya cambiado, salvo aprobación del usuario); (b) rúbrica cualitativa por tarjeta: P3, P2, P8 (sujeto primero y resumen), exactitud clínica, alineación con el `objetivo` del plan, trazabilidad al syllabus. Salida: lista `id → regla → corrección exigida`. Cuenta también las marcas `[VERIFICAR EN FUENTE]` y consolida `pendientes`.
+- **F3 Revisión (orquestador):** (a) lint automático en Python sobre el JSON (reglas del bloque de auditoría, más: palabras de `Respuesta`, listas abiertas por regex, cifras de S/E/VPP/VPN/LR por regex, tags MIR sin verificación registrada; que `anverso_usuario` no haya cambiado, salvo aprobación del usuario); (b) rúbrica cualitativa por tarjeta: P3, P2, P8 (sujeto primero y resumen), exactitud clínica, alineación con el `objetivo` del plan, trazabilidad al sílabo del caso. Salida: lista `id → regla → corrección exigida`. Cuenta también las marcas `[VERIFICAR EN FUENTE]` y consolida `pendientes`.
 - **F4 Corrección (ejecutor):** corrige solo los IDs listados; devuelve el JSON completo.
 - **Loop F3→F4:** hasta cero defectos o **máximo 2 vueltas**. Si persisten, el orquestador corrige lo trivial o elimina la tarjeta y lo reporta; **nunca compila con defectos de exactitud clínica**.
 - **F3b Pasada de verificación (antes de la auditoría):** una sola pasada sobre la lista consolidada de `pendientes` (protocolo §3). La hace un subagente ligero (`model: "haiku"`) o, si Agent no está disponible, el orquestador. Para cada dato busca con PubMed (`search_articles`, `lookup_article_by_citation`, `get_article_metadata`), luego Consensus (`search`), luego WebSearch/WebFetch para guías de sociedades y MSP. Fármacos de marca: ARCSA → ficha técnica/prospecto → CIMA-AEMPS, EMA o DailyMed. Presupuesto: **≤2 búsquedas por dato y ≤20 datos**; si hay más, prioriza cifras, umbrales y dosis. Resultado por dato: `confirmado` (cita Vancouver + PMID/DOI si la herramienta los devolvió), `contradicho` (corrección con la fuente hallada) o `sin_confirmar`. El orquestador aplica: confirmado → quita la marca de `razonamiento` y escribe la cita en `fuente` (forma corta, p. ej. `Autor Año, Revista (PMID n)`); contradicho → corrige el dato; sin confirmar → deja la marca o, si el dato no es esencial, elimina el dato o la tarjeta. Tras aplicar, repite el lint de F3(a). El verificador **no inventa** PMID, DOI, ediciones ni años; UpToDate y DynaMed se citan solo con la fecha real de consulta.
@@ -526,6 +534,26 @@ Fuente:        Di Nisio 2016, Lancet
 Tags:          Quirurgica2::Vascular::Flegmasia  Nivel::Aplicacion  Fuente::Lancet  Clase::Aplicacion  Bloom::Aplicar
 ```
 
+**✅ Principio (P1) · QA · geriatría/psiquiatría**
+```
+ID:            Q2R2-DEL-0001
+Pregunta:      Delirium — ¿por qué una infección urinaria o un fármaco nuevo pueden desencadenar confusión aguda en un adulto mayor?
+Respuesta:     Porque un cerebro con poca reserva funcional se desorganiza ante un estresor agudo, y la atención es lo primero que falla.
+Razonamiento:  La vulnerabilidad previa (edad, demencia, polifarmacia) más un desencadenante agudo explican la mayoría de los delirium; por eso se busca y corrige la causa antes de sedar.
+Fuente:        Kane 8e (sílabo)
+Tags:          Quirurgica2::DeliriumDemencia::Fisiopatologia  Nivel::Aplicacion  Fuente::Kane  Clase::Principio  Bloom::Comprender  Principio
+```
+
+**✅ Aplicación (troquel 3) · QA · geriatría**
+```
+ID:            Q2R2-DEL-0002
+Pregunta:      Anciano con demencia, hospitalizado, que esta noche está agitado y desorientado cuando ayer no lo estaba — usa el principio de vulnerabilidad más estresor para decidir qué hacer primero.
+Respuesta:     Buscar y tratar el desencadenante (infección, fármaco, retención urinaria, dolor, deshidratación), no sedar de entrada.
+Razonamiento:  El cambio agudo y fluctuante sobre una demencia de base indica delirium sobreañadido; la sedación enmascara la causa.<br>Contraste: la demencia sola es de curso crónico y la atención se afecta tarde.
+Fuente:        Kane 8e (sílabo)
+Tags:          Quirurgica2::DeliriumDemencia::Delirium  Nivel::Aplicacion  Fuente::Kane  Clase::Aplicacion  Bloom::Aplicar
+```
+
 **✅ Irreducible · Cloze**
 ```
 ID:     Q2-COMA-0007
@@ -535,14 +563,14 @@ Fuente: ATLS 10e
 Tags:   Quirurgica2::Coma::EscalaGlasgow  Nivel::Recuerdo  Fuente::ATLS  Clase::Escala  Bloom::Recordar  Escala::Glasgow
 ```
 
-**✅ Prueba diagnóstica sin valores operativos**
+**✅ Prueba diagnóstica sin valores operativos** (nefrología)
 ```
-ID:            Q2-DISB-0014
-Pregunta:      Artritis séptica de cadera — el ultrasonido es normal en un niño febril que no apoya. ¿Se descarta?
-Respuesta:     No. Un ultrasonido normal no descarta artritis séptica temprana.
-Razonamiento:  El derrame puede no detectarse en las primeras horas. Con sospecha alta: artrocentesis con análisis del líquido sinovial.
-Fuente:        DynaMed
-Tags:          Quirurgica2::Disbasia::ArtritisSeptica  Nivel::Aplicacion  Fuente::DynaMed  Clase::Aplicacion  Bloom::Aplicar
+ID:            Q2R2-AZO-0003
+Pregunta:      Elevación aguda de azoados — la ecografía renal es normal en un paciente con vómitos y diarrea de 3 días. ¿Se descarta una causa renal?
+Respuesta:     No. Una ecografía normal no excluye una lesión aguda; lo más probable aquí es una causa prerrenal.
+Razonamiento:  La ecografía muestra obstrucción y tamaño renal, pero no la hipoperfusión funcional. Con depleción de volumen, la creatinina suele mejorar al reponer líquidos; si no mejora, se sospecha daño parenquimatoso.
+Fuente:        Harrison 22e
+Tags:          Quirurgica2::Azoados::LesionRenalAguda  Nivel::Aplicacion  Fuente::Harrison  Clase::Aplicacion  Bloom::Aplicar
 ```
 
 **✅ Viñeta (P12) · QA**
@@ -555,6 +583,16 @@ Fuente:        DynaMed
 Tags:          Quirurgica2::Disbasia::ArtritisSeptica  Nivel::Aplicacion  Fuente::DynaMed  Clase::Vineta  Bloom::Analizar
 ```
 
+**✅ Viñeta (P12) · QA · psiquiatría**
+```
+ID:            Q2R2-ANS-0004
+Pregunta:      Caso — mujer de 28 años con palpitaciones, disnea, parestesias y miedo a morir, de inicio brusco y resolución en minutos, con ECG normal. ¿Qué diagnóstico plantear y qué debes descartar antes de darlo?
+Respuesta:     Ataque de pánico; antes se descartan causas orgánicas que lo imitan (cardiorrespiratorias, tiroideas, sustancias).
+Razonamiento:  El pico brusco con síntomas autonómicos y miedo intenso sugiere pánico, pero es diagnóstico de exclusión en una primera presentación. El tratamiento de base es psicoterapia cognitivo-conductual y/o ISRS, no benzodiacepinas sostenidas.
+Fuente:        Ebert 4e (sílabo)
+Tags:          Quirurgica2::AnsiedadPanico::Panico  Nivel::Aplicacion  Fuente::Ebert  Clase::Vineta  Bloom::Analizar
+```
+
 **✅ Relacional / Evaluar (P12) · QA**
 ```
 ID:            Q2-ABD-0018
@@ -563,6 +601,16 @@ Respuesta:     La exploración: la peritonitis difusa indica cirugía aunque la 
 Razonamiento:  La irritación peritoneal generalizada refleja un proceso parietal que no se resolverá con observación; la imagen orienta la causa, pero no debe retrasar la exploración quirúrgica.
 Fuente:        Harrison 22e
 Tags:          Quirurgica2::AbdomenAgudo::Conducta  Nivel::Aplicacion  Fuente::Harrison  Clase::Relacional  Bloom::Evaluar
+```
+
+**✅ Relacional / Evaluar (P12) · QA · dermatología**
+```
+ID:            Q2R2-DER-0006
+Pregunta:      Lesión pigmentada — pequeña, pero con crecimiento y cambio de color documentados en meses: ¿qué pesa más para decidir biopsia, el tamaño o el cambio evolutivo, y por qué?
+Respuesta:     El cambio evolutivo: una lesión que cambia obliga a obtener histología aunque sea pequeña.
+Razonamiento:  La evolución refleja proliferación activa y es de los datos más sugestivos de melanoma; el tamaño solo orienta. La biopsia diagnostica y define el pronóstico.
+Fuente:        Fitzpatrick 9e (sílabo)
+Tags:          Quirurgica2::LesionesDermicas::LesionPigmentada  Nivel::Aplicacion  Fuente::Fitzpatrick  Clase::Relacional  Bloom::Evaluar
 ```
 
 **❌ A evitar**
@@ -574,6 +622,9 @@ Tags:          Quirurgica2::AbdomenAgudo::Conducta  Nivel::Aplicacion  Fuente::H
 | `¿Cuáles son las causas de ojo rojo?` | Lista abierta. |
 | `¿Por qué la obstrucción venosa en la flegmasia cerúlea compromete el flujo arterial?` | Sujeto tardío (P8a). |
 | `La conjuntivitis bacteriana se trata con {{c1::antibióticos}} tópicos.` | Adivinable (P3). |
+| `¿Cuáles son los síndromes geriátricos?` | Lista abierta; unificar bajo un principio (P9). |
+| `La sensibilidad del CAM es {{c1::94%}}.` | Valor operativo (P9). |
+| `Ataque de pánico: {{c1::ansiedad}} intensa de inicio brusco.` | Adivinable y palabra funcional (P3). |
 
 ---
 
@@ -588,6 +639,8 @@ Tags:          Quirurgica2::AbdomenAgudo::Conducta  Nivel::Aplicacion  Fuente::H
 | Escalas: umbral/bandas/componentes/limitaciones · Pares de contraste | |
 | Alto rendimiento: USMLE (patrón) / MIR (patrón) / MIR verificados (año-número + URL) | |
 | `[VERIFICAR EN FUENTE]` · Subtema con más tarjetas | |
+| **Verificación (F3b):** «Verificados N de M; quedan K» (K = marcas que persisten en las tarjetas) · discrepancias sílabo–protocolo (ediciones) | |
+| Fuente del alcance (sección del sílabo o guía vigente) · semilla del widget usada (sí/no) | |
 | Vueltas del loop F3→F4 / defectos residuales | |
 
 - [ ] ¿Cada tarjeta pasa P3, y ningún Recuerdo es derivable de un principio?
@@ -597,6 +650,7 @@ Tags:          Quirurgica2::AbdomenAgudo::Conducta  Nivel::Aplicacion  Fuente::H
 - [ ] ¿Cloze ≤15%, Recuerdo ≤40%, total en 25–45 (o justificado/recortado), ningún subtema >8?
 - [ ] ¿Tags completos (Clase, Bloom, Nivel, Fuente), sin espacios ni tildes?
 - [ ] ¿Tags `MIR::` solo con pregunta verificada en el cuaderno oficial?
+- [ ] ¿Se ejecutó F3b sobre todos los `pendientes` y ningún dato quedó sin marca sin haberse confirmado? ¿Alguna referencia o PMID sin respaldo en una herramienta?
 
 Si algo falla, corrige antes de compilar.
 
@@ -624,7 +678,7 @@ Si algo falla, corrige antes de compilar.
 > 13. **Alerta:** si repasar 100 tarjetas viejas toma >1 h, las tarjetas son demasiado largas o estás memorizando palabras → revisa contra P2/P8b.
 >
 > **Estudiar**
-> 14. Antes de cada caso: Custom Study → tag `Quirurgica2::<Caso>`.
+> 14. Antes de cada caso: Custom Study → tag `Quirurgica2::<TagRaíz>`.
 > 15. Antes de un examen: `tag:Principio`.
 > 16. Razonamiento: `tag:Nivel::Aplicacion`. Escalas: `tag:Escala::*`. Alto rendimiento: `tag:AltoRendimiento::*`.
 >
