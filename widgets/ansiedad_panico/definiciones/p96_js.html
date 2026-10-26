@@ -1,0 +1,122 @@
+<script>
+const TERMS={t1:'Opresión en el pecho',t2:'Palpitaciones',t3:'Angustia por perder el control mental',t4:'Preinfarto',t5:'Stresstabs',t6:'Xanax (alprazolam)'};
+const DECKS={
+t1:[
+{q:'¿Por qué el dolor de origen cardiaco puede percibirse en el brazo izquierdo?',a:'Las aferentes viscerales del corazón convergen en la médula con aferentes somáticas del brazo, y el cerebro no distingue el origen de la señal.',h:'Piensa en una neurona de segundo orden compartida.'},
+{q:'La taquicardia acorta la {{diástole}}, y como la coronaria izquierda se perfunde sobre todo en esa fase, baja el aporte mientras sube la demanda de oxígeno.',a:'diástole',h:'Es la fase en que el músculo se relaja.'},
+{q:'Un dolor torácico que se acentúa al inspirar profundo y se reproduce al palpar la pared, ¿se parece a la opresión de origen visceral?',a:'No: el dolor visceral es difuso, no cambia con la respiración ni se reproduce al palpar; el pleurítico y el de pared sí.',h:'Compara qué maniobra cambia cada dolor.'},
+{q:'La guía AHA/ACC 2021 desaconseja llamar {{atípico}} al dolor torácico.',a:'atípico',h:'Es un adjetivo que sugiere que el dolor no sería cardiaco.'},
+{q:'Un paciente cierra el puño sobre el esternón al describir su molestia. ¿Cómo se llama el signo y qué sugiere sobre el dolor?',a:'Signo de Levine: dolor visceral difuso, que el paciente no puede localizar con un dedo.',h:'Lleva el nombre de un cardiólogo.'},
+],
+t2:[
+{q:'¿Qué hace el nodo AV con el impulso que viene de las aurículas y qué permite?',a:'Lo retrasa, de modo que las aurículas se vacíen antes de que se contraigan los ventrículos.',h:'Piensa en el orden de la contracción.'},
+{q:'En la respuesta de lucha o huida, ¿qué receptores explican el temblor fino y cuál es el mecanismo de la sudoración?',a:'Temblor: receptores β2 del músculo esquelético; sudoración: simpático colinérgico sobre las glándulas sudoríparas.',h:'Un mecanismo usa catecolaminas y el otro acetilcolina.'},
+{q:'Un paciente refiere «palpitaciones» pero su pulso es regular y de frecuencia normal. ¿Hay palpitaciones? ¿Qué las distingue de una taquicardia?',a:'Sí: son un síntoma, la percepción del paciente; la taquicardia es un signo medido.',h:'Una se refiere, la otra se mide.'},
+{q:'El consenso EHRA define las palpitaciones por lo que {{siente el paciente}}, no por el ritmo medido.',a:'siente el paciente',h:'El énfasis está en el relato.'},
+{q:'Un paciente describe «un salto», una pausa y un golpe fuerte en el pecho. ¿Qué evento del ritmo suele producir esa sensación?',a:'Una extrasístole: un latido prematuro seguido de una pausa y un latido siguiente más fuerte.',h:'Es un latido que llega antes de tiempo.'},
+],
+t3:[
+{q:'¿Qué función cumple la amígdala en el circuito del miedo y qué estructuras activa?',a:'Detecta y valora la amenaza; activa el hipotálamo y el locus coeruleus, que disparan la respuesta corporal.',h:'Es el elemento dominante del circuito.'},
+{q:'Al hiperventilar baja la {{PaCO2}}, sube el pH y baja el calcio ionizado; por eso aparecen {{parestesias peribucales}}.',a:'PaCO2; parestesias peribucales',h:'La baja de calcio ionizado excita a los nervios.'},
+{q:'¿Cómo se distingue el miedo a enloquecer de la psicosis?',a:'En la psicosis hay pérdida real del juicio de realidad, con delirios o alucinaciones que no se reconocen como tales; en el miedo a enloquecer el juicio se conserva.',h:'Pregunta si la persona reconoce lo que vive.'},
+{q:'Desrealización es sentir irrealidad del {{entorno}}; despersonalización es sentir desapego de {{uno mismo}}.',a:'entorno; uno mismo',h:'Una mira hacia afuera y la otra hacia adentro.'},
+{q:'¿Qué rasgo del relato separa el miedo a enloquecer de la preocupación de la ansiedad generalizada?',a:'El miedo a enloquecer es súbito, intenso y referido a la propia mente durante un episodio; la preocupación es un pensamiento repetitivo y persistente sobre problemas futuros.',h:'Compara la duración y el objeto del temor.'},
+{q:'Tras respirar rápido, un paciente nota hormigueo alrededor de la boca y espasmo de la mano. ¿Qué maniobra provoca ese espasmo y cómo se llama el signo?',a:'Inflar un manguito por encima de la presión sistólica durante unos minutos; signo de Trousseau.',h:'Se usa el mismo aparato que para la presión arterial.'},
+],
+t4:[
+{q:'La coronaria {{derecha}} da la rama del nodo sinusal en la mayoría de las personas y la del nodo auriculoventricular.',a:'derecha',h:'Una sola arteria irriga ambos nodos en la mayoría.'},
+{q:'Al ser arterias terminales funcionales, ¿qué le pasa al territorio de una rama coronaria que se ocluye?',a:'Queda sin riego eficaz por falta de anastomosis y sufre isquemia.',h:'Piensa en cuántas rutas alternas tiene.'},
+{q:'Cuando el cardiomiocito muere, su membrana se rompe y la {{troponina}} cardiaca pasa a la sangre, donde se detecta su elevación.',a:'troponina',h:'Proteína del sarcómero específica del miocardio.'},
+{q:'¿Qué término médico es el más cercano a «preinfarto» y qué lo distingue del infarto?',a:'Angina inestable: isquemia en reposo o progresiva sin necrosis, sin elevación de troponina.',h:'La diferencia está en un marcador de daño celular.'},
+{q:'¿Qué rasgo del patrón del dolor separa la angina estable de la inestable?',a:'La estable aparece con un esfuerzo predecible y cede con el reposo; la inestable aparece en reposo, es de inicio reciente o se agrava.',h:'Fíjate en qué la desencadena y si es predecible.'},
+{q:'¿Qué distingue al síndrome de Takotsubo de la angina inestable por placa rota?',a:'Es una miocardiopatía por estrés emocional con disfunción apical transitoria del ventrículo izquierdo, no un trombo sobre una placa.',h:'El desencadenante es una emoción intensa.'},
+],
+t5:[
+{q:'Stresstabs es la marca de un suplemento multivitamínico del complejo {{B}} con vitamina {{C}}.',a:'B; C',h:'Dos grupos de vitaminas hidrosolubles.'},
+{q:'¿Qué diferencia de mecanismo separa a Stresstabs de una benzodiacepina frente a la ansiedad?',a:'Stresstabs aporta cofactores vitamínicos y no actúa sobre el receptor GABA-A; la benzodiacepina potencia ese receptor.',h:'Compara qué receptor toca cada uno.'},
+{q:'El déficit de vitamina {{B12}} produce anemia megaloblástica y neuropatía.',a:'B12',h:'Cofactor de la síntesis de ADN y de la mielina.'},
+{q:'¿Qué falla en el escorbuto y qué signo se explora?',a:'La síntesis de colágeno por falta de vitamina C; se ven encías sangrantes.',h:'La vitamina C cofactoriza una proteína estructural.'},
+{q:'Frente a un placebo, un multivitamínico se distingue porque {{aporta cofactores}} reales, aunque el alivio de la ansiedad pueda deberse a la expectativa.',a:'aporta cofactores',h:'Tiene composición activa, pero no mecanismo ansiolítico.'},
+],
+t6:[
+{q:'Cuando el GABA se une al receptor GABA-A, entra {{cloruro}} y la neurona se {{hiperpolariza}}.',a:'cloruro; hiperpolariza',h:'La entrada de un anión vuelve la célula más negativa.'},
+{q:'¿Por qué una benzodiacepina se llama modulador alostérico positivo?',a:'Se une entre las subunidades α y γ y aumenta la frecuencia de apertura del canal cuando hay GABA, sin abrirlo por sí sola.',h:'Necesita al GABA presente.'},
+{q:'Si se suma alcohol a una benzodiacepina, puede haber {{depresión respiratoria}}; la ataxia se explora con la marcha en {{tándem}}.',a:'depresión respiratoria; tándem',h:'Ambos actúan sobre el mismo canal.'},
+{q:'Tras la suspensión brusca de un uso continuo con neuroadaptación, ¿qué cuadro aparece?',a:'Ansiedad de rebote y síndrome de abstinencia: temblor, insomnio y, en casos graves, convulsiones.',h:'El cerebro se ajustó a la presencia del fármaco.'},
+{q:'El estado estacionario y la eliminación casi completa del fármaco se alcanzan en unas {{4 a 5}} vidas medias.',a:'4 a 5',h:'Es un número pequeño de vidas medias.'},
+{q:'¿En qué se diferencia un ISRS de alprazolam en su sitio de acción y su tiempo de efecto?',a:'El ISRS no actúa sobre GABA-A y su efecto ansiolítico tarda semanas; alprazolam potencia el GABA-A con efecto rápido.',h:'Uno modula serotonina, el otro GABA.'},
+]
+};
+DECKS.tg=[].concat.apply([],Object.keys(TERMS).map(function(k){return DECKS[k].map(function(c){return {q:c.q,a:c.a,h:c.h,t:k};});}));
+const RC={};
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function el(k,s){return document.getElementById('rc-'+k+'-'+s);}
+function isCloze(c){return c.q.indexOf('{{')>=0;}
+function front(c){return esc(c.q).replace(/\{\{[^}]*\}\}/g,'[ ? ]');}
+function back(c){return esc(c.q).replace(/\{\{([^}]*)\}\}/g,'<b>$1</b>');}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function show(id,btn){
+  document.querySelectorAll('.tab').forEach(function(s){s.classList.toggle('active',s.id===id);});
+  document.querySelectorAll('.tb').forEach(function(b){b.classList.toggle('active',b===btn);});
+  try{btn.scrollIntoView({inline:'center',block:'nearest'});}catch(e){}
+}
+function tog(b){b.parentElement.classList.toggle('op');}
+function rc_reset(k){
+  var n=DECKS[k].length,idx=[];
+  for(var i=0;i<n;i++)idx.push(i);
+  RC[k]={queue:shuffle(idx),first:{},fails:{},shown:false,done:0,n:n};
+  if(el(k,'e'))el(k,'e').innerHTML='';
+  rc_render(k);
+}
+function rc_render(k){
+  var s=RC[k],card=el(k,'c');
+  if(!card)return;
+  if(!s.queue.length){rc_end(k);return;}
+  var c=DECKS[k][s.queue[0]],f=s.fails[s.queue[0]]||0;
+  el(k,'n').textContent='Tarjeta '+(s.done+1)+' de '+s.n+(k==='tg'?' · '+TERMS[c.t]:'');
+  var h='<p class="rc-q">'+(s.shown&&isCloze(c)?back(c):front(c))+'</p>';
+  if(s.shown&&!isCloze(c))h+='<p class="rc-a"><b>Respuesta.</b> '+esc(c.a)+'</p>';
+  if(!s.shown&&f>=2)h+='<p class="rc-hint">Pista: '+esc(c.h)+'</p>';
+  card.innerHTML=h;
+  var b='';
+  if(!s.shown){b+='<button class="go" onclick="rc_show(\''+k+'\')">Mostrar respuesta</button>';}
+  else{
+    b+='<button class="gr ok" onclick="rc_grade(\''+k+'\',\'ok\')">La sabía</button>';
+    b+='<button class="gr mid" onclick="rc_grade(\''+k+'\',\'mid\')">A medias</button>';
+    b+='<button class="gr ko" onclick="rc_grade(\''+k+'\',\'ko\')">No la sabía</button>';
+  }
+  b+='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  el(k,'b').innerHTML=b;
+}
+function rc_show(k){RC[k].shown=true;rc_render(k);}
+function rc_grade(k,g){
+  var s=RC[k],i=s.queue.shift();
+  if(s.first[i]===undefined)s.first[i]=(g==='ok');
+  if(g==='ok'){s.done++;}
+  else{s.fails[i]=(s.fails[i]||0)+1;s.queue.push(i);}
+  s.shown=false;
+  rc_render(k);
+}
+function rc_verdict(p){return p>=80?['ok','Término consolidado']:['rep','Repasar hoy'];}
+function rc_end(k){
+  var s=RC[k],ok=0,i,rows='';
+  for(i=0;i<s.n;i++)if(s.first[i])ok++;
+  var p=Math.round(100*ok/s.n),v=rc_verdict(p);
+  el(k,'n').textContent='Mazo completado';
+  el(k,'c').innerHTML='<p class="rc-q">Cola agotada: todas las tarjetas se resolvieron.</p>';
+  el(k,'b').innerHTML='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  var h='<div class="rc-end '+v[0]+'">Aciertos al primer intento: '+ok+' de '+s.n+' ('+p+' %). <b>'+v[1]+'</b>.</div>';
+  if(k==='tg'){
+    Object.keys(TERMS).forEach(function(t){
+      var tot=0,hit=0;
+      for(i=0;i<s.n;i++){if(DECKS.tg[i].t===t){tot++;if(s.first[i])hit++;}}
+      var pp=Math.round(100*hit/tot),vv=rc_verdict(pp);
+      rows+='<tr><td>'+esc(TERMS[t])+'</td><td>'+hit+' de '+tot+' ('+pp+' %)</td><td>'+vv[1]+'</td></tr>';
+    });
+    h+='<div class="tw"><table><thead><tr><th>Término</th><th>Aciertos 1er intento</th><th>Veredicto</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  }
+  el(k,'e').innerHTML=h;
+}
+Object.keys(DECKS).forEach(rc_reset);
+</script>
+</div></body></html>
