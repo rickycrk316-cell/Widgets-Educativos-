@@ -18,7 +18,7 @@ Repo solo de estudio médico (Ricardo, Quirúrgica 2 · PUCE, 10.º nivel). Índ
 | mono | `01_nav` `02_pan` `10_def` `11_fis` `12_cli` `13_dx` `14_tx` `15_seg` `16x_*` (extra) `90_sim` |
 | definiciones | `p01_nav` `p10_t1`…`p90_t9` `p95_tg` `p96_js` |
 
-`manifiesto.json`: `titulo`, `salida` (HTML final) y `tipo` son del ensamblador; el resto (`modo`, `entidades`, `principal`, `amenaza`, `pg`, `fey`, `nodos`, `signos`, `dc`, `nucleo`) los exige `validar.py`. `nucleo` es la lista para Anki.
+`manifiesto.json`: `titulo`, `salida` (HTML final) y `tipo` son del ensamblador; el resto (`modo`, `entidades`, `principal`, `amenaza`, `pg`, `fey`, `nodos`, `signos`, `dc`, `nucleo`) los exige `validar.py`. `nucleo` es la lista para Anki. En definiciones, `terminos`, `prerrequisitos`, `remisiones` y `tarjetas` (listas por pestaña) los exige `validar_definiciones.py`.
 
 Construye siempre con `kit/construir.py`: el kit del repo (`kit/kit_head.html`) es la variante Vademécum y prevalece sobre el CSS del prompt/skill.
 
@@ -29,7 +29,7 @@ Reglas del kit: las partes no llevan `<style>`, estilos en línea, recursos remo
 1. Editar la parte.
 2. `python3 kit/construir.py widgets/<tema>/<id>` → reensambla y valida; imprime solo errores y la línea `RESULTADO`.
 3. Si cambió algo visual o de JS: `node kit/probar_navegador.js file://$PWD/<html> <carpeta_capturas_en_scratchpad>` (las capturas no se versionan). Instalación única de la herramienta: `cd kit && npm ci` (`playwright-core` 1.64.1 fijado en `kit/package.json`; no ejecutar `playwright install`; Chromium de `/opt/pw-browsers` o el de `PW_CHROMIUM`). Para definiciones usa `node kit/probar_definiciones.js` (mismos argumentos).
-4. Para definiciones: `python3 kit/auditar_definiciones.py <html> <n_terminos>`. Auditoría de diseño/router: `python3 kit/auditar_diseno.py <html> <manifiesto> "<línea del router del PLAN>"`.
+4. Para definiciones: `python3 kit/auditar_definiciones.py <html> <n_terminos>` (`<n_terminos>` puede ser el manifiesto). Auditoría de diseño/router: `python3 kit/auditar_diseno.py <html> <manifiesto> "<línea del router del PLAN>"`.
 4b. (Opcional, cambios visuales) Revisión de accesibilidad/pulido: sigue `.claude/skills/impeccable/SKILL.md` (comandos `audit`, `polish`, `clarify`), leyendo solo la referencia del comando pedido. Es complementaria a `kit/auditar_diseno.py`; ante conflicto mandan `docs/DESIGN.md` y las reglas del kit.
 5. Commit de partes + HTML final juntos.
 

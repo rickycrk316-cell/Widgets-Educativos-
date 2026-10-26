@@ -2,5 +2,8 @@
  "titulo": "Definiciones · Patología urinaria baja",
  "salida": "../Definiciones_patologia_urinaria_baja.html",
  "tipo": "definiciones",
- "terminos": 9
+ "terminos": 9,
+ "prerrequisitos": [3,2,2,1,2,1,2,2,2],
+ "remisiones": [0,1,1,2,1,1,1,1,1],
+ "tarjetas": [6,5,5,5,6,5,5,5,6]
 }

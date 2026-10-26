@@ -12,7 +12,8 @@ alfabético) y un manifiesto.json con, además de los campos del validador:
   "salida": ruta del HTML final, relativa a la carpeta del widget
   "tipo":   "v10" (por defecto) o "definiciones"
 v10:          kit_head.html (título sustituido) + partes + kit_script.html → validar.py
-definiciones: def_head.html (título sustituido) + partes                  → validar_definiciones.py
+definiciones: def_head.html (título sustituido) + partes                  → validar_definiciones.py <html> <manifiesto>
+              (el manifiesto añade terminos, prerrequisitos, remisiones y tarjetas: listas por pestaña)
 """
 import sys, json, pathlib, subprocess, tempfile
 
@@ -35,7 +36,7 @@ def construir(d: pathlib.Path, validar: bool) -> bool:
     if not validar:
         return True
     if tipo == 'definiciones':
-        cmd = [sys.executable, str(KIT / 'validar_definiciones.py'), str(out)]
+        cmd = [sys.executable, str(KIT / 'validar_definiciones.py'), str(out), str(d / 'manifiesto.json')]
     else:
         # validar.py rechaza claves que no conoce: se le pasa el manifiesto sin las de ensamblaje.
         val = {k: v for k, v in m.items() if k not in ('titulo', 'salida', 'tipo')}

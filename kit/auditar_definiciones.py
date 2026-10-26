@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Auditoría del orquestador para el widget de definiciones (skill definiciones v5.1 + cabecera Vademécum).
-Uso: python3 auditar_definiciones.py widget.html N_TERMINOS"""
-import sys, re, pathlib
+Uso: python3 auditar_definiciones.py widget.html N_TERMINOS|manifiesto.json
+(si el 2.º argumento termina en .json se lee `terminos` del manifiesto)"""
+import sys, re, json, pathlib
 from bs4 import BeautifulSoup
 
 KIT = pathlib.Path(__file__).resolve().parent
 H = pathlib.Path(sys.argv[1]).read_text(encoding='utf-8')
-NT = int(sys.argv[2])
+NT = json.loads(pathlib.Path(sys.argv[2]).read_text(encoding='utf-8'))['terminos'] if sys.argv[2].endswith('.json') else int(sys.argv[2])
 F, W = [], []
 fail, warn = F.append, W.append
 
