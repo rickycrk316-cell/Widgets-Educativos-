@@ -16,7 +16,8 @@ Widgets HTML de estudio, autocontenidos y offline (skill `widget-ensenanza` v10,
 | | `Prostatitis_cistitis_cancer_vesical_widget_v10.html` | multi | cistitis infecciosa (principal), prostatitis (amenaza), cáncer vesical | 15 |
 | | `Cancer_de_prostata_widget_v10.html` | mono | cáncer de próstata | 7 |
 | | `Definiciones_patologia_urinaria_baja.html` | definiciones | 9 términos + repaso | 0 |
-| Ansiedad y pánico | `Definiciones_ansiedad_panico.html` | definiciones | 10 términos + repaso | 1 |
+| Ansiedad y pánico | `Ansiedad_y_panico_widget_v10.html` | multi | trastorno de pánico (principal), ansiedad generalizada, trastornos fóbicos, trauma y estrés (amenaza), síntomas somáticos | 10 |
+| | `Definiciones_ansiedad_panico.html` | definiciones | 10 términos + repaso | 1 |
 | Disbasia infantil | `Cojera_dolorosa_sistemica_widget_v10.html` | multi | sinovitis transitoria (principal), artritis séptica (amenaza), osteomielitis, neoplasia ósea | 27 |
 | | `Cojera_dolorosa_mecanica_widget_v10.html` | multi | Perthes (principal), epifisiólisis (amenaza), Osgood-Schlatter | 27 |
 | | `Marcha_sin_dolor_widget_v10.html` | multi | DDC (principal), dismetría, neuromuscular, Guillain-Barré (amenaza) | 65 |
