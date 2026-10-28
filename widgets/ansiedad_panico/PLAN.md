@@ -59,3 +59,37 @@ Stresstabs: definición con «Fuente por verificar» (ficha técnica no consulta
 - Diseño: igual que `patologia_urinaria_baja/PLAN.md` § Widget B (cabecera `kit/def_head.html`, solo sus clases, glifos sin ✅ ⚠️ ❌, remisión con ↪) y sus reglas de diseño 1–10.
 - Validación: `python3 kit/construir.py widgets/ansiedad_panico/definiciones` + `auditar_definiciones.py <html> 6` + `probar_definiciones.js`.
 - Archivo: `Definiciones_ansiedad_panico.html`.
+
+## Widget · Enseñanza (skill widget-ensenanza v10.1, multi) — `ensenanza/`
+
+- Sílabo, 2.ª rotación, caso 5. Resultado: «Maneja de manera integral a los pacientes con ansiedad de acuerdo con evidencia científica». Contenidos: TAG, ataque de pánico, trastornos por estrés, trastornos fóbicos, trastornos somatomorfos. Trabajo autónomo: concepto de ansiedad; serotonina, acetilcolina, GABA, MAO; benzodiacepinas e ISRS. Objetivo general: manejo integral en el nivel de atención, factores de riesgo y repercusiones psicológicas, sociales, personales y familiares (APS, comunicación, ética).
+- Presentación común: **síntomas físicos de ansiedad (palpitaciones, opresión torácica, disnea, temblor) y miedo en la consulta de atención primaria**.
+- `Modo: multi · Entidades: e1=Trastorno de pánico (principal), e2=Trastorno de ansiedad generalizada, e3=Trastornos fóbicos, e4=Trastornos relacionados con trauma y estrés, e5=Trastorno de síntomas somáticos · Amenaza: e4 · Override: no`
+- Eje declarado: **qué dispara la ansiedad** — nada (crisis inesperadas, e1) → el futuro difuso (preocupación, e2) → un objeto o situación concretos (e3; la agorafobia es el subtipo que conecta con conducir) → un evento traumático o estresante (e4) → el propio síntoma corporal (e5).
+- Principal: el trastorno de pánico (es el patrón del caso y la consulta más frecuente por síntomas cardiopulmonares en APS). Amenaza: trauma y estrés, por riesgo suicida y cronificación si no se pregunta por el evento; las imitaciones orgánicas (síndrome coronario agudo, arritmia, hipertiroidismo, abstinencia de benzodiacepinas o alcohol, hipoglucemia, feocromocitoma) abren el `hb ro` de `vis` como banderas del grupo.
+- Precisión sobre el sílabo (`hb am` en e5): «trastornos somatomorfos» fue reemplazado en el DSM-5 (y DSM-5-TR) por «trastorno de síntomas somáticos y trastornos relacionados».
+- Subtipos: e3 = agorafobia, ansiedad social, fobia específica; e4 = trastorno de estrés agudo, TEPT, trastorno de adaptación; e5 = síntomas somáticos, ansiedad por enfermedad, conversión (síntomas neurológicos funcionales).
+- «No confundir con…» fuera del grupo: síndrome coronario agudo y arritmias (e1), depresión mayor (e2), TOC (e3), hipertiroidismo (e2), enfermedad orgánica no diagnosticada (e5).
+- Simuladores: `dcVis` (diferencial por desencadenante y curso) · `dcE1dx` (ataque de pánico + banderas orgánicas → conducta en consulta sin derivación) · `dcE1tx` (ISRS por perfil; benzodiacepina solo puente) · `dcE2` (GAD-7 → banda → conducta escalonada) · `dcE3` (subtipo → tratamiento) · `dcE4` (tiempo desde el evento → TEA/TEPT/adaptación → conducta y riesgo suicida) · `dcE5` (SSS-8/banderas → manejo en APS).
+- Título: `Ansiedad y pánico` · Slug: `Ansiedad_y_panico_widget_v10.html`.
+
+### Referencias: claves simbólicas
+
+Los ejecutores citan con `[@clave]` (varias: `[@a, @b]`); el orquestador renumera por primera aparición en orden de barra y genera `ol.vanc` al final. Clave nueva → el ejecutor la propone en su archivo `refs_<parte>.txt` con la referencia Vancouver completa; la verifica `haiku`.
+
+| Clave | Fuente |
+|---|---|
+| `dsm` | DSM-5-TR 2022 |
+| `nice113` | NICE CG113, TAG y trastorno de pánico en adultos (2011, actualizada 2020) |
+| `nice159` | NICE CG159, ansiedad social (2013) |
+| `nice116` | NICE NG116, TEPT (2018) |
+| `gad7` | Spitzer 2006, GAD-7 |
+| `sss8` | Gierk 2014, SSS-8 |
+| `pcptsd5` | Prins 2016, PC-PTSD-5 |
+| `gulati` | AHA/ACC 2021, dolor torácico |
+| `harrison` | Harrison 22e 2025 |
+| `goodman` | Goodman & Gilman 14.ª 2023 |
+| `kandel` | Kandel 6.ª 2021 |
+| `guyton` | Guyton y Hall 14.ª 2021 |
+| `ebert` | Ebert, Diagnóstico y tratamiento en psiquiatría 4e 2025 (sílabo) |
+| `dm_<fármaco>` | Ficha DailyMed del fármaco (posología); la verifica `haiku` |

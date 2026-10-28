@@ -1,0 +1,15 @@
+{
+ "titulo": "Ansiedad y pánico",
+ "salida": "../Ansiedad_y_panico_widget_v10.html",
+ "modo": "multi",
+ "entidades": {"e1": "Trastorno de pánico", "e2": "Ansiedad generalizada", "e3": "Trastornos fóbicos", "e4": "Trauma y estrés", "e5": "Síntomas somáticos"},
+ "principal": "e1",
+ "amenaza": "e4",
+ "tabs": ["pan", "vis", "e1", "e2", "e3", "e4", "e5", "sin"],
+ "pg": {"vis": 4, "e1": 5, "e2": 3, "e3": 3, "e4": 3, "e5": 3},
+ "fey": {"e1": 2, "e2": 1, "e3": 1, "e4": 1, "e5": 1},
+ "nodos": {"e1": 7, "e2": 5, "e3": 5, "e4": 5, "e5": 5},
+ "signos": {"e1": 5, "e2": 3, "e3": 3, "e4": 3, "e5": 3},
+ "dc": ["vis", "e1", "e2", "e3", "e4", "e5"],
+ "nucleo": {}
+}
