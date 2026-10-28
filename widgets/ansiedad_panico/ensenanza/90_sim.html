@@ -163,7 +163,7 @@ function dcE4(dc){
   if(isNaN(d)&&!es.length&&!id.length&&!si.length&&!ot.length){
     vacio(dc,'Escribe los días desde el evento y elige el tipo de estresor, la ideación suicida y los grupos de síntomas para obtener el subtipo y la conducta; no calcula probabilidades.');return;}
   var r=[];
-  if(!id.length){r.push(par('Falta preguntar por la ideación suicida: hazlo de forma directa antes de decidir la conducta.'));}
+  if(!id.length){r.push(par('Falta explorar la ideación suicida antes de decidir la conducta.'));}
   else if(hv(id,'activa')) r.push(par('<b>Ideación activa o con plan</b>: no dejes solo al paciente, retira los medios y haz plan de seguridad con la familia en esta visita. Si no puedes derivar, programa seguimiento propio cercano; es la prioridad sobre el subtipo.'));
   else if(hv(id,'pasiva')) r.push(par('<b>Ideación pasiva</b>: indaga plan, medios y factores protectores, involucra a la familia y agenda un seguimiento cercano.'));
   else r.push(par('Sin ideación suicida hoy: vuelve a preguntar en cada visita.'));
@@ -178,7 +178,7 @@ function dcE4(dc){
     else if(d<=30) r.push(par('<b>Trastorno de estrés agudo</b> si cumple criterios completos (de 3 días a 1 mes desde el evento) [@dsm]. Conducta: seguridad y psicoeducación; con síntomas clínicamente importantes, ofrece terapia centrada en el trauma [@nice116]; sin debriefing de sesión única [@nice116].'));
     else if(n===4){
       r.push(par('<b>TEPT</b>: evento traumático, más de 1 mes y los cuatro grupos de síntomas [@dsm]. Conducta: terapia cognitivo-conductual centrada en el trauma o EMDR [@nice116].'));
-      r.push(par('Si el paciente prefiere un fármaco: sertralina 25 mg VO cada 24 h la primera semana y luego 50 mg, con ajuste según respuesta [@dm_sertralina, @nice116]; alternativa: venlafaxina, dosis [VERIFICAR EN FUENTE] [@nice116]. Evita las benzodiacepinas [@nice116].'));
+      r.push(par('Si el paciente prefiere un fármaco: sertralina 25 mg VO cada 24 h la primera semana y luego 50 mg, con ajuste según respuesta hasta 200 mg/día como máximo [@dm_sertralina, @nice116]; alternativa: venlafaxina, dosis [VERIFICAR EN FUENTE] [@nice116]. Evita las benzodiacepinas [@nice116].'));
     } else if(n>0) r.push(par('<b>Más de 1 mes con grupos incompletos</b> ('+n+' de 4): no cumple todos los criterios de TEPT [@dsm]. Explora los grupos que faltan, descarta depresión y consumo, y reevalúa en la siguiente visita.'));
     else r.push(par('Más de 1 mes tras un evento traumático pero sin grupos de síntomas marcados: no hay base para TEPT; pregunta de nuevo por evitación y por cambios del ánimo [@dsm].'));
   }
@@ -204,7 +204,7 @@ function dcE5(dc){
   else if(s<0||s>32){r.push(par('El SSS-8 va de 0 a 32: revisa el valor.'));}
   else{
     var k=s<=3?'mínima':(s<=7?'baja':(s<=11?'media':(s<=15?'alta':'muy alta')));
-    r.push(par('Carga de síntomas <b>'+k+'</b> (SSS-8 '+s+'; 0 a 3 mínima, 4 a 7 baja, 8 a 11 media, 12 a 15 alta, 16 o más muy alta) [@sss8].'));
+    r.push(par('Carga de síntomas <b>'+k+'</b> (SSS-8 '+s+'; 0 a 3 mínima, 4 a 7 baja, 8 a 11 media, 12 a 15 alta, 16 a 32 muy alta) [@sss8].'));
     if(!b.length){
       if(k==='mínima'||k==='baja') r.push(par('Conducta: valida los síntomas, explica el mecanismo y programa una cita de control; la carga no justifica más estudios [@kurlansik].'));
       else r.push(par('Conducta: un solo médico de cabecera con citas programadas, validación de los síntomas y terapia cognitivo-conductual [@kurlansik]; mide la función en cada cita.'));
@@ -213,9 +213,9 @@ function dcE5(dc){
   }
   if(hv(c,'dep')||hv(c,'ans')){
     var x=hv(c,'dep')&&hv(c,'ans')?'depresión y ansiedad':(hv(c,'dep')?'depresión':'ansiedad');
-    r.push(par('Con '+x+' comórbida considera un antidepresivo: sertralina 50 mg VO cada 24 h, con ajuste según respuesta [@dm_sertralina]; duración [VERIFICAR EN FUENTE]. Si hay depresión, pregunta por el riesgo suicida.'));
+    r.push(par('Con '+x+' comórbida considera un antidepresivo: sertralina 50 mg VO cada 24 h, con ajuste según respuesta hasta 200 mg/día como máximo [@dm_sertralina]; mantenla tras la respuesta y reevalúa periódicamente. Si hay depresión, explora la ideación suicida.'));
   }
-  if(hv(o,'benzo')) r.push(par('Con benzodiacepinas: no las prolongues; refuerzan el ciclo y generan dependencia, por lo que conviene retirarlas de forma gradual [@kurlansik].'));
+  if(hv(o,'benzo')) r.push(par('Con benzodiacepinas: no las prolongues por el riesgo de dependencia y retíralas de forma gradual [@nice113].'));
   if(hv(o,'estudios')) r.push(par('Pide más estudios sin dato nuevo: no los solicites; explica por qué y agenda la siguiente cita para sostener la relación [@kurlansik].'));
   r.push('<span class="cf">Si aparece pérdida de peso, fiebre o un signo objetivo nuevo → la conducta cambia de manejo del trastorno de síntomas somáticos a reabrir el estudio orgánico [@dsm].</span>');
   out(dc,r.join(''));
