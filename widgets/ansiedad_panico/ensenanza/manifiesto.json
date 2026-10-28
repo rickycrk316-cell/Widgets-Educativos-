@@ -2,14 +2,98 @@
  "titulo": "Ansiedad y pánico",
  "salida": "../Ansiedad_y_panico_widget_v10.html",
  "modo": "multi",
- "entidades": {"e1": "Trastorno de pánico", "e2": "Ansiedad generalizada", "e3": "Trastornos fóbicos", "e4": "Trauma y estrés", "e5": "Síntomas somáticos"},
+ "entidades": {
+  "e1": "Trastorno de pánico",
+  "e2": "Ansiedad generalizada",
+  "e3": "Trastornos fóbicos",
+  "e4": "Trauma y estrés",
+  "e5": "Síntomas somáticos"
+ },
  "principal": "e1",
  "amenaza": "e4",
- "tabs": ["pan", "vis", "e1", "e2", "e3", "e4", "e5", "sin"],
- "pg": {"vis": 4, "e1": 5, "e2": 3, "e3": 3, "e4": 3, "e5": 3},
- "fey": {"e1": 2, "e2": 1, "e3": 1, "e4": 1, "e5": 1},
- "nodos": {"e1": 7, "e2": 5, "e3": 5, "e4": 5, "e5": 5},
- "signos": {"e1": 5, "e2": 3, "e3": 3, "e4": 3, "e5": 3},
- "dc": ["vis", "e1", "e2", "e3", "e4", "e5"],
- "nucleo": {}
+ "tabs": [
+  "pan",
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4",
+  "e5",
+  "sin"
+ ],
+ "pg": {
+  "vis": 4,
+  "e1": 5,
+  "e2": 3,
+  "e3": 3,
+  "e4": 3,
+  "e5": 3
+ },
+ "fey": {
+  "e1": 2,
+  "e2": 1,
+  "e3": 1,
+  "e4": 1,
+  "e5": 1
+ },
+ "nodos": {
+  "e1": 7,
+  "e2": 5,
+  "e3": 5,
+  "e4": 5,
+  "e5": 5
+ },
+ "signos": {
+  "e1": 5,
+  "e2": 3,
+  "e3": 3,
+  "e4": 3,
+  "e5": 3
+ },
+ "dc": [
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4",
+  "e5"
+ ],
+ "nucleo": {
+  "vis": [
+   "Eje 1 — Qué dispara la ansiedad: nada (crisis inesperadas), el futuro difuso, un objeto o situación, un evento traumático o el propio síntoma corporal.",
+   "Eje 2 — Curso temporal: crisis abruptas con pico en minutos frente a preocupación continua o síntomas persistentes durante meses.",
+   "Eje 3 — Antes de etiquetar ansiedad, descarta la causa orgánica con signos vitales, ECG y glucemia capilar.",
+   "Eje 4 — Ideación suicida, dolor torácico con factores de riesgo o síncope: actúa el mismo día antes de etiquetar."
+  ],
+  "e1": [
+   "Descarga simpática y suprarrenal",
+   "Hiperventilación y alcalosis respiratoria",
+   "Interpretación catastrófica de las sensaciones",
+   "Miedo anticipatorio y evitación",
+   "Crisis abrupta con pico en minutos y examen normal entre crisis",
+   "TCC o un ISRS (sertralina, escitalopram, paroxetina), según preferencia y disponibilidad"
+  ],
+  "e2": [
+   "Preocupación como evitación cognitiva",
+   "Tensión muscular e hiperalerta motora",
+   "Preocupación excesiva y difícil de controlar",
+   "Entrevista y examen mental con los criterios del DSM-5-TR, apoyada en el GAD-7"
+  ],
+  "e3": [
+   "Evitación alivia y refuerza el miedo",
+   "Evitación de la situación temida",
+   "TCC con exposición gradual a lo temido, centrada en el subtipo"
+  ],
+  "e4": [
+   "Corteza prefrontal medial no extingue el miedo",
+   "Reexperimentación: flashbacks y pesadillas",
+   "Pregunta por el evento y cuándo ocurrió: el tiempo desde el evento define el subtipo",
+   "Terapia cognitivo-conductual centrada en el trauma o EMDR"
+  ],
+  "e5": [
+   "Catastrofización interpreta el síntoma como enfermedad grave",
+   "Síntomas persistentes con estudios normales",
+   "Terapia cognitivo-conductual"
+  ]
+ }
 }
