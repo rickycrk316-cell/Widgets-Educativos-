@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Apertura · Síndrome confusional (caso de Doña Rosa)</title>
+<style>
+/* Vademécum · widget de apertura (def_head + clases de apertura): mismas tintas y tipografía que DESIGN.md */
+:root{
+--paper:#FBFBFC;--paper-2:#F1F2F5;--ink:#16181D;--ink-2:#3A3D46;--ink-3:#686C78;--rule:#D7D9E0;--rule-strong:#16181D;
+--accent:#2342A6;--accent-ink:#1B358A;--accent-field:#EAEEFA;--on-accent:#FFFFFF;
+--am:#7A4A06;--am-f:#FBF1DF;--ro:#9E1F1F;--ro-f:#FBE9E7;--ve:#2F5E12;--ve-f:#EBF3E1;--pu:#4C3FA8;--pu-f:#EEECFB;--co:#8E3517;--co-f:#FAEDE6;--rs:#8A2C52;--rs-f:#FAEAF1;
+--f-serif:ui-serif,"New York","Iowan Old Style","Charter","Source Serif Pro",Georgia,"Times New Roman",serif;
+--f-sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+--r:3px;
+/* alias de la v10 para compatibilidad */
+--surface-0:var(--paper);--surface-1:var(--paper-2);--border:var(--rule);--border-accent:var(--accent);--bg-accent:var(--accent-field);--text-primary:var(--ink);--text-secondary:var(--ink-2);--text-muted:var(--ink-3);--text-accent:var(--accent-ink);--radius:var(--r);--font-sans:var(--f-sans);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}
+html{color-scheme:light dark;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:var(--accent);color:var(--on-accent)}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--f-sans);-webkit-text-size-adjust:100%;caret-color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:18px 16px 56px;background:transparent}
+h1{font:600 26px/1.2 var(--f-serif);letter-spacing:-.012em;margin:6px 0 14px;padding-bottom:12px;border-bottom:2px solid var(--rule-strong);text-wrap:balance}
+h2{font:600 19px/1.3 var(--f-serif);margin:34px 0 12px;padding-top:12px;border-top:1px solid var(--rule-strong);text-wrap:balance}
+h3{font:600 16px/1.35 var(--f-serif);margin:18px 0 6px;text-wrap:balance}
+p{margin:0 0 12px;text-wrap:pretty}
+button{font:inherit;color:inherit;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,color .15s ease-out}
+button:active{transform:translateY(1px)}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* índice de canto */
+.tabs{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 0 0;border-bottom:2px solid var(--rule-strong);margin-bottom:16px;position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);scroll-snap-type:x proximity;scroll-padding-inline:56px}
+.tabs::-webkit-scrollbar{display:none}
+.tb{flex:0 0 auto;min-height:44px;padding:9px 15px 8px;border:1px solid var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;background:var(--paper-2);color:var(--ink-2);font:600 13px/1.2 var(--f-sans);white-space:nowrap;scroll-snap-align:start}
+.tb:hover{background:var(--accent-field);color:var(--accent-ink)}
+.tb.active{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+.tab{display:none}
+.tab.active{display:block}
+/* idea rectora */
+.hb{border-radius:var(--r);padding:12px 14px;margin:14px 0;border:1px solid var(--accent);background:var(--accent-field);font-size:15px;line-height:1.6}
+.hb-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);margin-bottom:6px}
+/* prerrequisitos (rol rosa) */
+.pre{border:1px solid var(--rs);border-radius:var(--r);background:var(--rs-f);padding:12px 14px;margin:16px 0}
+.pre-t{font:600 16px/1.35 var(--f-serif);color:var(--rs);margin-bottom:8px}
+.pre .acc{background:var(--paper);border-color:var(--rs)}
+.pre .acc-h{background:var(--paper)}
+.rem-line{font-size:13px;color:var(--ink-2);margin:8px 0;line-height:1.5}
+.chip-rs{display:inline-block;font:700 11px/1.4 var(--f-sans);padding:1px 7px;border:1px solid var(--rs);border-radius:2px;background:var(--rs-f);color:var(--rs);margin-right:6px;vertical-align:1px}
+/* cards */
+.card{background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;margin:12px 0;font-size:15px;line-height:1.6}
+.card p:last-child{margin-bottom:0}
+.card-t{font:600 16px/1.35 var(--f-serif);margin:0 0 6px}
+.card.fey{background:var(--co-f);border-color:var(--co)}
+.card.fey .card-t{color:var(--co)}
+.card.fey p{font:400 16px/1.6 var(--f-serif)}
+.card.ej{background:var(--paper);border-top:2px solid var(--rule-strong)}
+.badge{display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.02em;padding:2px 7px;border-radius:2px;margin:6px 4px 0 0;vertical-align:middle;border:1px solid currentColor}
+.b-az{background:var(--accent-field);color:var(--accent-ink)}
+.b-ro{background:var(--ro-f);color:var(--ro)}
+.b-am{background:var(--am-f);color:var(--am)}
+.b-ve{background:var(--ve-f);color:var(--ve)}
+.b-pu{background:var(--pu-f);color:var(--pu)}
+.b-co{background:var(--co-f);color:var(--co)}
+.b-rs{background:var(--rs-f);color:var(--rs)}
+.mini{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:6px 0}
+.mini.am{color:var(--am);background:var(--am-f);border:1px solid var(--am);border-radius:var(--r);padding:6px 9px}
+/* acordeones */
+.acc{border:1px solid var(--rule);border-radius:var(--r);margin:10px 0;overflow:hidden;background:var(--paper)}
+.acc-h{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;min-height:44px;padding:9px 14px;border:0;background:var(--paper-2);font:600 14.5px/1.35 var(--f-sans);text-align:left}
+.acc-h:hover{background:var(--accent-field)}
+.chev{transition:transform .2s;color:var(--accent-ink);flex:0 0 auto}
+.acc.op .chev{transform:rotate(180deg)}
+.acc-b{display:none;padding:10px 14px;font-size:15px;line-height:1.6}
+.acc.op .acc-b{display:block}
+.acc.no .acc-h{color:var(--ro)}
+/* tablas */
+.tw{overflow-x:auto;margin:12px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;font-variant-numeric:tabular-nums}
+th,td{border:0;border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
+thead th{font:700 14.5px/1.35 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong);background:var(--paper-2)}
+tbody tr:last-child>*{border-bottom:1px solid var(--rule-strong)}
+tbody th{font-weight:700;background:var(--paper-2)}
+/* mini-timeline */
+.tl{list-style:none;margin:12px 0;padding:0 0 0 20px;border-left:2px solid var(--accent)}
+.tl>li{position:relative;margin:0 0 12px;padding:9px 12px;background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);font-size:14.5px;line-height:1.55}
+.tl>li::before{content:"";position:absolute;left:-27px;top:13px;width:12px;height:12px;border-radius:1px;background:var(--accent);box-shadow:0 0 0 3px var(--paper)}
+.tl b{font-family:var(--f-serif)}
+/* simulador de recall */
+.rc{border:1px solid var(--rule-strong);border-radius:var(--r);padding:14px 16px;margin:24px 0;background:var(--paper)}
+.rc-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);padding-bottom:8px;margin-bottom:10px;border-bottom:1px solid var(--rule)}
+.rc-count{font:600 13px/1.4 var(--f-sans);color:var(--ink-3);font-variant-numeric:tabular-nums;margin-bottom:8px}
+.rc-card{border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);padding:14px;min-height:110px}
+.rc-q{font:400 16px/1.6 var(--f-serif);margin:0}
+.rc-a{margin:12px 0 0;padding-top:10px;border-top:1px dashed var(--accent);font-size:15px;line-height:1.6}
+.rc-a b{color:var(--accent-ink)}
+.rc-hint{font-size:13px;color:var(--am);margin-top:8px}
+.rc-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.go{min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent);color:var(--on-accent);font:600 14px/1.2 var(--f-sans)}
+.go:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+.gr{min-height:44px;padding:8px 14px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper);font:600 14px/1.2 var(--f-sans)}
+.gr.ok{border-color:var(--ve);color:var(--ve)}
+.gr.mid{border-color:var(--am);color:var(--am)}
+.gr.ko{border-color:var(--ro);color:var(--ro)}
+.gr.ok:hover{background:var(--ve-f)}.gr.mid:hover{background:var(--am-f)}.gr.ko:hover{background:var(--ro-f)}
+.ghost{min-height:44px;padding:8px 14px;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);font:600 14px/1.2 var(--f-sans);color:var(--ink-2)}
+.rc-end{margin-top:12px;padding:12px 14px;border-radius:var(--r);border:1px solid var(--rule);font-size:15px}
+.rc-end.ok{background:var(--ve-f);border-color:var(--ve);color:var(--ve)}
+.rc-end.rep{background:var(--am-f);border-color:var(--am);color:var(--am)}
+.gloss{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:18px 0 0;padding-top:8px;border-top:1px solid var(--rule)}
+.vanc{font-size:12.5px;line-height:1.5;padding-left:24px}
+.vanc li{margin:5px 0;word-break:break-word}
+.vanc li::marker{color:var(--ink-3);font-variant-numeric:tabular-nums}
+/* apertura: caso, ejes B/P/S/FR, problemas, jerarquía, hipótesis y diagramas (tokens existentes: el modo oscuro es automático) */
+.card.caso{background:var(--paper);border-left:3px solid var(--rule-strong)}
+.card.caso p{margin:0 0 10px}
+.card.vin{border-left:3px solid var(--accent)}
+.card.vin .card-t{color:var(--accent-ink)}
+.card.hx{background:var(--paper);border-left:3px solid var(--accent)}
+.card.hx .card-t{color:var(--accent-ink)}
+.ley{font-size:13px;line-height:1.9;color:var(--ink-2);margin:10px 0;padding:6px 10px;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2)}
+.chip-b,.chip-p,.chip-s,.chip-fr{display:inline-block;font:700 11px/1.4 var(--f-sans);padding:1px 7px;border:1px solid currentColor;border-radius:2px;margin-right:6px;vertical-align:1px}
+.chip-b{background:var(--co-f);color:var(--co)}
+.chip-p{background:var(--pu-f);color:var(--pu)}
+.chip-s{background:var(--ve-f);color:var(--ve)}
+.chip-fr{background:var(--am-f);color:var(--am)}
+mark.mk-b,mark.mk-p,mark.mk-s,mark.mk-fr{color:var(--ink);padding:0 2px;border-bottom:2px solid;border-radius:2px 2px 0 0;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+mark.mk-b{background:var(--co-f);border-bottom-color:var(--co)}
+mark.mk-p{background:var(--pu-f);border-bottom-color:var(--pu)}
+mark.mk-s{background:var(--ve-f);border-bottom-color:var(--ve)}
+mark.mk-fr{background:var(--am-f);border-bottom-color:var(--am)}
+.pid{display:inline-block;font:600 11.5px/1.4 var(--f-mono);padding:0 6px;border:1px solid var(--ink-3);border-radius:var(--r);background:var(--paper);color:var(--ink-2);margin-right:6px;vertical-align:1px;white-space:nowrap}
+.pbg{border-left:3px solid var(--ink-3);padding:2px 0 2px 12px;margin:22px 0}
+.pbg.b{border-left-color:var(--co)}
+.pbg.p{border-left-color:var(--pu)}
+.pbg.s{border-left-color:var(--ve)}
+.pbg.fr{border-left-color:var(--am)}
+.pbg-t{font:600 16px/1.35 var(--f-serif);margin:0 0 8px;color:var(--ink)}
+.pbg.b>.pbg-t{color:var(--co)}
+.pbg.p>.pbg-t{color:var(--pu)}
+.pbg.s>.pbg-t{color:var(--ve)}
+.pbg.fr>.pbg-t{color:var(--am)}
+ol.rank{list-style:none;counter-reset:rk;margin:14px 0;padding:0}
+ol.rank>li{counter-increment:rk;position:relative;margin:0 0 10px;padding:10px 12px 10px 60px;min-height:52px;background:var(--paper-2);border:1px solid var(--rule);border-left:4px solid var(--ink-3);border-radius:var(--r);font-size:14.5px;line-height:1.55}
+ol.rank>li::before{content:counter(rk);position:absolute;left:10px;top:6px;width:40px;text-align:center;font:600 28px/1.2 var(--f-serif);font-variant-numeric:tabular-nums;color:var(--ink-3)}
+ol.rank>li.g1{border-left-color:var(--ro)}
+ol.rank>li.g2{border-left-color:var(--co)}
+ol.rank>li.g3{border-left-color:var(--am)}
+ol.rank>li.g4{border-left-color:var(--ve)}
+ol.rank>li.g1::before{color:var(--ro)}
+ol.rank>li.g2::before{color:var(--co)}
+ol.rank>li.g3::before{color:var(--am)}
+ol.rank>li.g4::before{color:var(--ve)}
+/* diagramas HTML/CSS */
+.dg{margin:16px 0;padding:12px;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);max-width:100%;overflow-wrap:anywhere}
+.dg-t{font:600 15px/1.35 var(--f-serif);margin:0 0 10px}
+.dg figcaption{margin-top:10px}
+.dg-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;margin:8px 0}
+.dg-col{display:flex;flex-direction:column;gap:6px;flex:0 1 220px;min-width:0}
+.dg-n{border:1px solid var(--ink-3);border-radius:var(--r);background:var(--paper);color:var(--ink);padding:7px 10px;font-size:13.5px;line-height:1.4;min-width:0;max-width:100%}
+.dg-row>.dg-n{flex:0 1 220px}
+.dg-n.b{background:var(--co-f);border-color:var(--co);color:var(--co)}
+.dg-n.p{background:var(--pu-f);border-color:var(--pu);color:var(--pu)}
+.dg-n.s{background:var(--ve-f);border-color:var(--ve);color:var(--ve)}
+.dg-n.fr{background:var(--am-f);border-color:var(--am);color:var(--am)}
+.dg-n.ac{background:var(--accent-field);border-color:var(--accent);color:var(--accent-ink)}
+.dg-n.ro{background:var(--ro-f);border-color:var(--ro);color:var(--ro)}
+.dg-ar{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;min-width:28px;color:var(--ink-3)}
+.dg-ar::before{content:"→";order:2;font:400 22px/1 var(--f-sans);color:var(--ink-3)}
+.dg-lab{order:1;font-size:11.5px;line-height:1.3;color:var(--ink-3);text-align:center}
+@media (max-width:599px){
+.dg-row{flex-direction:column;align-items:stretch;flex-wrap:nowrap}
+.dg-col,.dg-row>.dg-n{flex:0 0 auto;width:100%}
+.dg-ar{flex-direction:row;align-self:center;gap:6px}
+.dg-ar::before{content:"↓";order:0}
+.dg-lab{order:1}
+}
+@media (min-width:700px){body{font-size:15.5px}.wrap{padding:22px 24px 64px}h1{font-size:28px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- /APERTURA_HEAD -->
+<h1>Apertura · Síndrome confusional</h1>
+<p class="mini">Sesión de apertura del ABP, caso de Doña Rosa (Caso 6 del sílabo de la segunda rotación): términos desconocidos, problemas, jerarquización e hipótesis. No resuelve el caso.</p>
+<nav class="tabs">
+<button class="tb active" onclick="show('c0',this)">Caso</button>
+<button class="tb" onclick="show('t1',this)">Vacunas</button>
+<button class="tb" onclick="show('t2',this)">Losartán</button>
+<button class="tb" onclick="show('t3',this)">Diltiazem</button>
+<button class="tb" onclick="show('t4',this)">Furosemida</button>
+<button class="tb" onclick="show('t5',this)">Paracetamol</button>
+<button class="tb" onclick="show('t6',this)">Pregabalina</button>
+<button class="tb" onclick="show('t7',this)">Glucosamina</button>
+<button class="tb" onclick="show('t8',this)">Insulina + metformina</button>
+<button class="tb" onclick="show('t9',this)">Hipotiroidismo subclínico</button>
+<button class="tb" onclick="show('pb',this)">Problemas</button>
+<button class="tb" onclick="show('jq',this)">Jerarquización</button>
+<button class="tb" onclick="show('hx',this)">Hipótesis</button>
+<button class="tb" onclick="show('tg',this)">Repaso global</button>
+</nav>
+<section class="tab active" id="c0">
+<h2>Caso de Doña Rosa</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Mujer de 83 años con dos años de pérdida de memoria y, en las últimas semanas, cambio agudo de conducta, sueño y percepción.</p></div>
+
+<p class="ley">Marcas de color según el eje al que pertenece cada dato: <span class="chip-b">Biológico</span> <span class="chip-p">Psicológico</span> <span class="chip-s">Social</span> <span class="chip-fr">Factor de riesgo</span></p>
+
+<div class="card caso"><div class="card-t">Caso transcrito</div>
+
+<h3>Filiación y hábitos</h3>
+<p>Doña Rosa de <mark class="mk-fr">83 años</mark>, <mark class="mk-s">primaria completa</mark>, diestra, <mark class="mk-s">viuda</mark>, católica, <mark class="mk-s">vive con su hijo</mark>.</p>
+<p>Tabaquismo negativo, alcoholismo negativo, <mark class="mk-fr">exposición a humo de leña positivo</mark>.</p>
+<p>Alimentaria: 3 porciones + 2 colaciones diarias. Miccional: 4 por día y <mark class="mk-b">2-3 por noche</mark>. Defecatorio: 1 a 2 al día.</p>
+
+<h3>Vacunas</h3>
+<p>Covid-19 tres dosis, influenza sí este año, <mark class="mk-b">neumococo una dosis hace 1 año</mark>, <mark class="mk-b">no vacuna de DT, dupla viral, varicela, herpes zóster no</mark>.</p>
+
+<h3>Motivo de consulta</h3>
+<p>El hijo de la paciente refiere que la misma está con «<mark class="mk-p">el carácter dañado</mark>» desde hace <mark class="mk-b">una semana</mark> y que <mark class="mk-b">se olvida las cosas</mark>.</p>
+
+<h3>Enfermedad actual</h3>
+<p>El hijo de la paciente refiere que la paciente está de peor carácter desde hace <mark class="mk-b">dos semanas</mark>; está <mark class="mk-p">irritable</mark>, <mark class="mk-p">duerme en el día y en la noche pasa despierta</mark>, <mark class="mk-p">le acusa de robo de dinero</mark> y <mark class="mk-p">ve a su difunto marido</mark>.</p>
+<p>Desde hace aproximadamente dos años, <mark class="mk-b">ha perdido la memoria</mark>. Se confunde con los nombres de los hijos, <mark class="mk-s">quema mucho la comida, se olvida la plancha prendida</mark>. No se acuerda dónde pone las cosas. <mark class="mk-s">No es capaz de mantener en orden la casa, ni su comida, ni su ropa</mark>.</p>
+
+<h3>Antecedentes patológicos quirúrgicos</h3>
+<p>Cistopexia con colocación de una malla, hace 15 años.</p>
+
+<h3>Antecedentes gineco-obstétricos</h3>
+<p>G6 P2 C1, A3. Menarquia a los 12 años, menopausia a los 53 años, método de planificación con Tcu. Mamografía normal hace 5 años, DMO <mark class="mk-b">osteopenia</mark> hace 5 años, Paptest normal a los 68 años.</p>
+
+<h3>Antecedentes patológicos no quirúrgicos</h3>
+<ul>
+<li><mark class="mk-b">Insuficiencia cardiaca hipertensiva</mark> grado II NYHA, desde hace 10 años, en tratamiento con: <mark class="mk-b">Losartán 25 mg am y 12,5 mg pm + Diltiazem 60 mg bid + Furosemida 40 mg am</mark>.</li>
+<li><mark class="mk-b">Escoliosis derecha con anterolistesis grado II, a nivel L5 sobre S1 y lumbociatalgia crónica</mark>, en tratamiento con <mark class="mk-b">paracetamol 500 mg tid + Tramal 5 gotas bid + Pregabalina 25 mg am y 50 mg hs</mark>.</li>
+<li><mark class="mk-b">Gonartrosis</mark> en tratamiento con Glucosamina (Artrin) 1 tableta cada día.</li>
+<li><mark class="mk-b">Hipotiroidismo subclínico</mark> en observación.</li>
+<li><mark class="mk-b">Diabetes mellitus tipo II, insulinorrequiriente</mark>, recibe <mark class="mk-b">12 unidades de insulina HPH en la noche</mark> más metformina 500 mg BID.</li>
+<li><mark class="mk-b">Infección de vías urinarias recurrente</mark> en seguimiento, la última infección fue hace 4 meses.</li>
+</ul>
+
+<h3>Antecedentes patológicos familiares</h3>
+<p><mark class="mk-fr">Hijo con diabetes mellitus. Hermanas con hipertensión arterial.</mark></p>
+
+<h3>Hábitos</h3>
+<p>Alimentaria: 3 porciones + 2 colaciones diarias. Miccional: 4 por día y <mark class="mk-b">2-3 por noche</mark>. Defecatorio: 1 a 2 al día.</p>
+</div>
+
+<p class="mini">Transcripción fiel; solo se corrigió ortografía evidente (tildes, «zóster», «mg»). Las marcas no son diagnóstico: señalan datos que originan problemas en la pestaña Problemas.</p>
+
+<div class="mini am"><p><b>Incongruencias y datos repetidos.</b> El motivo de consulta dice «una semana» y la enfermedad actual dice «dos semanas»; la cronología exacta del inicio queda como dato faltante. Alimentaria, miccional y defecatorio se repiten en la filiación y en Hábitos. «HPH» se interpreta como insulina NPH (isófana), el caso no lo aclara. </p><p>«Tramal» es tramadol, que no figura en la lista de términos: se explica dentro del problema B3. «Herpes zorter» se lee como herpes zóster. La nicturia aparece como «2-3 por noche» sin precisar desde cuándo. El texto «no vacuna de DT, dupla viral, varicela herpes zorter no» es ambiguo; aquí se lee como cuatro vacunas ausentes.</p></div>
+
+<div class="card"><div class="card-t">Datos que faltan para la apertura</div>
+<ul>
+<li>Signos vitales y saturación de oxígeno: no consignados.</li>
+<li>Glucemia capilar actual y registro de hipoglucemias: no consignados.</li>
+<li>Examen neurológico y prueba de atención: no consignados.</li>
+<li>Sodio, potasio y creatinina: no consignados.</li>
+<li>Examen de orina y urocultivo: no consignados.</li>
+<li>Fracción de eyección del ventrículo izquierdo (FEVI): no consignada.</li>
+<li>TSH y T4 libre actuales: no consignadas.</li>
+<li>Vitamina B12: no consignada.</li>
+<li>Valoración funcional y cognitiva previa (por ejemplo, actividades instrumentales): no consignada.</li>
+<li>Cronología exacta del inicio del cambio agudo: contradictoria entre motivo y enfermedad actual.</li>
+<li>Caídas recientes: no consignadas.</li>
+<li>Estado de ánimo y fecha de la viudez: no consignados.</li>
+</ul></div>
+
+<p class="gloss">Siglas: II, grado dos de la clasificación NYHA; L5 y S1, quinta vértebra lumbar y primera sacra; G6 P2 C1 A3, fórmula obstétrica; DT, difteria y tétanos; DMO, densitometría ósea; Tcu, DIU de cobre; NYHA, New York Heart Association; HPH, grafía del caso (NPH); NPH, insulina isófana; TSH, hormona estimulante de la tiroides; T4, tiroxina; FEVI, fracción de eyección del ventrículo izquierdo; BID (bid), dos veces al día; tid, tres veces al día.</p>
+</section>
+<section class="tab" id="t1">
+<h2>Vacunas del adulto mayor ≥80 años</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Esquema que protege a quien responde peor a las vacunas y se infecta con más gravedad; en Doña Rosa muestra brechas concretas.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Inmunosenescencia: por qué la vacuna rinde menos con la edad</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Inmunidad innata.</b> neutrófilos, macrófagos y células dendríticas fagocitan y presentan antígeno con menos eficacia, y persiste una inflamación basal de bajo grado.</li>
+<li><b>Presentación.</b> con menos células dendríticas eficaces, los linfocitos T vírgenes reciben una señal de activación más débil.</li>
+<li><b>Linfocitos T.</b> el timo involuciona y salen menos T vírgenes; predominan T de memoria y T envejecidos que responden poco a antígenos nuevos.</li>
+<li><b>Linfocitos B.</b> hay menos diversidad de anticuerpos y menor afinidad, porque los centros germinales funcionan peor.</li>
+<li><b>Resultado.</b> tras la vacuna, el título de anticuerpos es menor y cae antes que en un adulto joven.</li>
+</ol><p><b>Ventana de normalidad.</b> El declive es gradual y varía mucho entre personas; no existe una edad exacta en la que la respuesta «se apague» [1].</p>
+<p><b>Qué lo rompe.</b> El punto más vulnerable es la activación de T vírgenes y la formación de memoria B: sin ellas, un antígeno nuevo genera una respuesta corta.</p>
+<p><b>Correlato clínico.</b> El adulto mayor tiene infecciones más graves y responde con títulos más bajos; por eso se usan vacunas reforzadas y esquemas de dos dosis.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Tipos de vacuna y memoria T-dependiente</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Tipo</th><th>Qué contiene</th><th>Ejemplo en el esquema</th></tr></thead><tbody>
+<tr><td><b>Viva atenuada</b></td><td>Microorganismo debilitado que se replica un poco</td><td>Sarampión-rubéola, varicela</td></tr>
+<tr><td><b>Inactivada</b></td><td>Microorganismo completo muerto o fragmentado</td><td>Influenza inactivada</td></tr>
+<tr><td><b>Subunidad o recombinante</b></td><td>Proteína purificada o producida por recombinación, con adyuvante</td><td>Zóster recombinante, VSR</td></tr>
+<tr><td><b>Conjugada</b></td><td>Polisacárido unido a una proteína transportadora</td><td>Neumococo conjugada</td></tr>
+<tr><td><b>ARNm</b></td><td>Instrucción para que la célula fabrique el antígeno</td><td>COVID-19</td></tr>
+</tbody></table></div><ol class="tl">
+<li><b>Polisacárido solo.</b> activa al linfocito B sin ayuda de T: respuesta breve y casi sin memoria.</li>
+<li><b>Conjugación.</b> el linfocito B capta el polisacárido unido a la proteína y presenta péptidos de esa proteína al linfocito T colaborador.</li>
+<li><b>Memoria.</b> el T colaborador activa al B en el centro germinal: aparecen células de memoria y anticuerpos de mayor afinidad.</li>
+</ol><p><b>Correlato clínico.</b> Por eso la vacuna conjugada se prefiere a la de polisacárido puro en el adulto mayor, cuya memoria es más débil.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Crooke 2019 [1]</span> Revisión de inmunosenescencia y respuesta vacunal. <span class="badge b-am">Fuente por verificar</span> tabla de tipos de vacuna (consenso inmunológico).</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Esquema de inmunización del adulto de 65 años o más según ACIP/CDC: influenza anual, neumococo conjugada, tétanos-difteria (Td o Tdap) cada diez años, herpes zóster recombinante en dos dosis, COVID-19 actualizada y virus sincitial respiratorio (VSR) desde los 75 años.</p>
+<p><span class="badge b-pu">ACIP/CDC vigente [2]</span><span class="badge b-am">MSP Ecuador: Fuente por verificar</span></p>
+<p class="mini">Año y versión del calendario, y el esquema nacional del MSP, deben contrastarse con la fuente [VERIFICAR EN FUENTE].</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Una vacuna entrena a las defensas con una copia inofensiva del microbio. En el adulto mayor el entrenamiento rinde menos, así que se eligen vacunas más potentes y se priorizan las que previenen lo que más daña a esa edad: gripe, neumonía, tétanos, zóster, COVID-19 y virus respiratorio. Las vacunas de virus vivo, como sarampión o varicela, pasan a segundo plano.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Al revisar las vacunas de Doña Rosa se compara fila por fila: la influenza de este año está al día, el neumococo está a medias porque no se sabe de qué tipo fue la dosis, y el tétanos y el zóster no aparecen. La tabla muestra qué se recomienda a los 83 años y qué falta.</p></div>
+
+<div class="card vin"><div class="card-t">Por qué importa en este caso</div>
+<p><span class="pid">B10</span> Esquema incompleto: faltan Td y zóster, y el neumococo está por aclarar. <span class="pid">B6</span> Con inmunosenescencia e infecciones urinarias recurrentes, prevenir neumonía y gripe cuenta. Toda infección precipita delirium <span class="pid">FR2</span> [3]: cada infección evitable es un precipitante menos. Es dato de prevención, no de tratamiento.</p></div>
+
+<div class="card"><div class="card-t">Esquema recomendado frente al carnet de Doña Rosa</div>
+<div class="tw"><table><thead><tr><th>Vacuna</th><th>Recomendación ≥80 años</th><th>Lo que tiene Doña Rosa</th><th>Brecha</th></tr></thead><tbody>
+<tr><td><b>Influenza</b></td><td>Una dosis cada año; en ≥65 años se prefiere formulación de dosis alta, adyuvada o recombinante [2]</td><td>Sí, este año</td><td>Sin brecha esta temporada; la formulación no consta</td></tr>
+<tr><td><b>Neumococo</b></td><td>Una dosis de conjugada PCV20 o PCV21, o PCV15 seguida de PPSV23 [2]</td><td>Una dosis hace 1 año, tipo no especificado</td><td>Depende del tipo: tras PCV20 o PCV21 estaría completa; tras PCV15 falta PPSV23; tras PPSV23 sola falta una conjugada</td></tr>
+<tr><td><b>Td o Tdap</b></td><td>Tdap una vez si nunca la recibió, luego Td o Tdap cada diez años [2]</td><td>No vacuna de DT</td><td>Brecha: sin dosis ni refuerzo registrados</td></tr>
+<tr><td><b>Zóster recombinante</b></td><td>Dos dosis, con 2 a 6 meses entre ellas, desde los 50 años [2]</td><td>No</td><td>Brecha: ninguna dosis</td></tr>
+<tr><td><b>COVID-19</b></td><td>Dosis de la fórmula actualizada, según la recomendación vigente para ≥65 años [VERIFICAR EN FUENTE]</td><td>Tres dosis, fechas no consignadas</td><td>Probable brecha en la fórmula actual; faltan fechas</td></tr>
+<tr><td><b>VSR</b></td><td>Una dosis única desde los 75 años [2]</td><td>No consignado</td><td>Dato faltante; probable brecha</td></tr>
+<tr><td><b>Sarampión-rubéola («dupla viral»)</b></td><td>Vacuna viva; los nacidos antes de 1957 se consideran inmunes por haber cursado la infección [2]</td><td>No consta</td><td>No es prioridad a su edad</td></tr>
+<tr><td><b>Varicela</b></td><td>Vacuna viva; los adultos de esta generación se consideran inmunes por infección previa [2]</td><td>No</td><td>No es prioridad; el riesgo a su edad es la reactivación (zóster), que cubre la recombinante</td></tr>
+</tbody></table></div>
+<p class="mini am">El caso dice «no vacuna de DT, dupla viral, varicela herpes zorter no»: se interpreta que el «no» abarca toda la lista. Confirmar con el carnet de vacunación, que es un dato faltante.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Vacuna conjugada frente a polisacárida (PPSV23)</b></td><td>La conjugada une el polisacárido a una proteína y genera memoria T-dependiente; la de polisacárido puro activa B sin ayuda de T y deja poca memoria.</td></tr>
+<tr><td><b>Zóster recombinante frente a vacuna viva</b></td><td>La recombinante contiene una proteína del virus con adyuvante y no contiene virus replicante; la viva es una cepa atenuada.</td></tr>
+<tr><td><b>Td frente a Tdap</b></td><td>Ambas protegen contra tétanos y difteria; la Tdap añade el componente acelular de tos ferina.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t1"><div class="rc-t">Simulador · Recall de vacunas del adulto mayor</div><div class="rc-count" id="rc-t1-n"></div><div class="rc-card" id="rc-t1-c"></div><div class="rc-btns" id="rc-t1-b"></div><div id="rc-t1-e"></div></div>
+
+<p class="gloss">Siglas: ACIP, Comité Asesor sobre Prácticas de Inmunización; CDC, Centros para el Control y la Prevención de Enfermedades; PCV15, PCV20, PCV21, vacunas neumocócicas conjugadas de 15, 20 y 21 serotipos; PPSV23, vacuna neumocócica de polisacárido de 23 serotipos; Td, tétanos-difteria; Tdap, tétanos-difteria-tos ferina acelular; DT, difteria-tétanos; VSR, virus sincitial respiratorio; COVID-19, enfermedad por coronavirus 2019; ARNm, ácido ribonucleico mensajero; MSP, Ministerio de Salud Pública; IVU, infección de vías urinarias.</p>
+</section>
+<section class="tab" id="t2">
+<h2>Losartán (ARA II)</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Bloquea el receptor AT1 de la angiotensina II: relaja arterias y alivia al corazón, pero cambia cómo el riñón sostiene su filtrado.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Sistema renina-angiotensina-aldosterona</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Estímulo.</b> la caída de la perfusión renal, poco sodio en el túbulo o la activación simpática hacen que las células yuxtaglomerulares liberen renina.</li>
+<li><b>Angiotensina I.</b> la renina corta el angiotensinógeno hepático y forma angiotensina I.</li>
+<li><b>Angiotensina II.</b> la enzima convertidora de angiotensina (ECA), sobre todo en el endotelio pulmonar, la convierte en angiotensina II.</li>
+<li><b>Acción en AT1.</b> la angiotensina II contrae las arteriolas, estimula la sed y la hormona antidiurética (ADH) y libera aldosterona de la corteza suprarrenal.</li>
+<li><b>Aldosterona.</b> en el túbulo distal y colector retiene sodio y agua y excreta potasio.</li>
+<li><b>Cierre.</b> sube la presión y el volumen, y la angiotensina II frena la liberación de renina (retroalimentación negativa).</li>
+</ol><p><b>Ventana de normalidad.</b> El sistema se activa ante hipovolemia o hipotensión y permanece poco activo en reposo con volumen normal [4].</p>
+<p><b>Qué lo rompe.</b> En la insuficiencia cardiaca el bajo gasto se interpreta como pérdida de volumen: el sistema queda activado de forma sostenida y favorece retención de líquido y remodelado del corazón.</p>
+<p><b>Correlato clínico.</b> Se refleja en la presión arterial, el potasio y la creatinina séricos.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Autorregulación del filtrado glomerular: la arteriola eferente</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Presión de filtración.</b> depende de la presión hidrostática en el capilar glomerular, que se regula con el tono de las arteriolas aferente (entrada) y eferente (salida).</li>
+<li><b>Perfusión estable.</b> con presión arterial normal, la aferente se ajusta (respuesta miogénica y retroalimentación túbulo-glomerular) y el filtrado se mantiene constante.</li>
+<li><b>Perfusión baja.</b> la angiotensina II contrae sobre todo la eferente: acumula presión dentro del glomérulo y sostiene el filtrado.</li>
+<li><b>Bloqueo de AT1.</b> la eferente se dilata, cae la presión del glomérulo y baja el filtrado.</li>
+</ol><p><b>Ventana de normalidad.</b> El filtrado se mantiene estable en un amplio intervalo de presión arterial media [4].</p>
+<p><b>Qué lo rompe.</b> Hipovolemia, un diurético, una estenosis de la arteria renal o la pérdida de nefronas por la edad dejan al filtrado dependiente de la eferente.</p>
+<p><b>Correlato clínico.</b> La creatinina sube y el filtrado estimado baja cuando se bloquea el sistema en un paciente con poco volumen.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [4]</span> Tratado de fisiología médica, 14.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Antagonista selectivo del receptor AT1 de la angiotensina II (ARA II). Bloquea la vasoconstricción y la liberación de aldosterona mediadas por ese receptor. Se usa en hipertensión arterial e insuficiencia cardiaca; su efecto adverso característico es reducir el filtrado glomerular y elevar el potasio.</p>
+<p><span class="badge b-pu">Goodman y Gilman 2023 [5]</span></p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>La angiotensina II es una orden de «apretar y retener»: aprieta las arterias y hace retener sal y agua. El losartán bloquea el receptor donde esa orden se recibe. La presión baja y el corazón trabaja menos, pero el riñón también pierde un recurso para sostener su filtrado cuando hay poco líquido, y retiene menos potasio.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Doña Rosa toma losartán 25 mg en la mañana y 12,5 mg en la tarde, junto con furosemida 40 mg (datos del caso). Si una infección o la diuresis la deshidratan, el riñón depende de la arteriola eferente y el bloqueo de AT1 le quita ese apoyo.</p></div>
+
+<div class="card vin"><div class="card-t">Por qué importa en este caso</div>
+<p>Con furosemida <span class="pid">B3</span>, el losartán suma riesgo de lesión renal aguda e hiperpotasemia si ella se deshidrata. Un filtrado bajo acumula pregabalina y metformina, que se eliminan por el riñón. En <span class="pid">B5</span> forma parte del tratamiento de su insuficiencia cardiaca. Creatinina y potasio no constan en el caso.</p></div>
+
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>IECA (por ejemplo enalapril)</b></td><td>Inhibe la enzima que forma angiotensina II y acumula bradicinina, lo que explica la tos; el losartán bloquea el receptor y no actúa sobre la bradicinina.</td></tr>
+<tr><td><b>Antagonista de la aldosterona</b></td><td>Bloquea el receptor mineralocorticoide en el túbulo; el losartán actúa antes, en el receptor AT1 de la angiotensina II. Ambos pueden elevar el potasio.</td></tr>
+<tr><td><b>Furosemida</b></td><td>Es un diurético de asa que actúa en el túbulo; el losartán actúa sobre el receptor vascular y suprarrenal. Se desarrolla en la pestaña de furosemida.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t2"><div class="rc-t">Simulador · Recall de losartán</div><div class="rc-count" id="rc-t2-n"></div><div class="rc-card" id="rc-t2-c"></div><div class="rc-btns" id="rc-t2-b"></div><div id="rc-t2-e"></div></div>
+
+<p class="gloss">Siglas: ARA II, antagonista del receptor de angiotensina II; AT1, receptor tipo 1 de la angiotensina II; ECA, enzima convertidora de angiotensina; IECA, inhibidor de la enzima convertidora de angiotensina; ADH, hormona antidiurética.</p>
+</section>
+<section class="tab" id="t3">
+<h2>Diltiazem (calcioantagonista no dihidropiridínico)</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Reduce la entrada de calcio en corazón y arterias: frena la frecuencia, resta fuerza al latido y dilata; por eso importa en un corazón débil.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Acoplamiento excitación-contracción del miocardio</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Despolarización.</b> el potencial de acción llega al sarcolema y a los túbulos T y abre los canales de calcio tipo L.</li>
+<li><b>Calcio gatillo.</b> entra una pequeña cantidad de calcio, que activa los receptores de rianodina del retículo sarcoplásmico.</li>
+<li><b>Liberación.</b> el retículo libera mucho más calcio al citosol; el calcio se une a la troponina C y permite la unión de actina y miosina.</li>
+<li><b>Contracción.</b> los puentes de actina y miosina generan la fuerza de la sístole.</li>
+<li><b>Relajación.</b> la bomba SERCA devuelve el calcio al retículo y el intercambiador sodio-calcio lo saca de la célula.</li>
+</ol><p><b>Ventana de normalidad.</b> La fuerza de contracción es proporcional al calcio disponible en el citosol [4].</p>
+<p><b>Qué lo rompe.</b> Reducir la entrada por el canal L disminuye el calcio gatillo y, con él, la fuerza de cada latido (efecto inotrópico negativo).</p>
+<p><b>Correlato clínico.</b> Un corazón con contractilidad ya reducida tolera mal una nueva caída de la fuerza: baja el gasto y aparece congestión o hipoperfusión.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Canales de calcio tipo L en nodos y músculo liso vascular</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Nodos.</b> en el nodo sinusal y el auriculoventricular la despolarización lenta depende de la entrada de calcio por canales L, no de sodio como en el músculo ventricular.</li>
+<li><b>Frecuencia y conducción.</b> menos entrada de calcio aplana esa pendiente: baja la frecuencia sinusal y se enlentece la conducción auriculoventricular.</li>
+<li><b>Músculo liso arterial.</b> el calcio activa la calmodulina y la cinasa de la cadena ligera de miosina; sin él, la arteria se relaja y baja la resistencia.</li>
+<li><b>Selectividad.</b> el diltiazem actúa sobre corazón y vasos; las dihidropiridinas, como el amlodipino, actúan sobre todo en los vasos.</li>
+</ol><p><b>Ventana de normalidad.</b> La frecuencia en reposo y la conducción auriculoventricular dependen del equilibrio entre calcio y tono autonómico [4].</p>
+<p><b>Qué lo rompe.</b> Un bloqueo de estos canales sobre un nodo ya envejecido puede producir bradicardia o bloqueo de conducción.</p>
+<p><b>Correlato clínico.</b> Se explora con la frecuencia, el electrocardiograma y la presión arterial.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [4]</span> Tratado de fisiología médica, 14.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Bloqueador de los canales de calcio tipo L de la clase no dihidropiridínica (benzotiazepina). Reduce la entrada de calcio en el nodo sinusal, el nodo auriculoventricular, el miocardio y el músculo liso arterial: baja la frecuencia, enlentece la conducción, reduce la contractilidad y dilata las arterias.</p>
+<p><span class="badge b-pu">Goodman y Gilman 2023 [5]</span></p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>El calcio es la chispa que hace latir y contraer al corazón y estrecha las arterias. El diltiazem cierra parcialmente la puerta por donde entra: el corazón late más lento y con menos fuerza y las arterias se aflojan. Eso sirve para controlar la frecuencia o la presión, pero resta fuerza a un corazón que ya está débil.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Doña Rosa toma diltiazem 60 mg dos veces al día por su insuficiencia cardiaca hipertensiva (dato del caso). La frecuencia, la presión y la fracción de eyección no constan, y son justo lo que diría si el fármaco la ayuda o le resta fuerza.</p></div>
+
+<div class="card vin"><div class="card-t">Por qué importa en este caso</div>
+<p><span class="pid">B5</span>: en insuficiencia cardiaca con fracción de eyección reducida las guías desaconsejan este grupo por su efecto inotrópico negativo [6]; la FEVI de ella es un dato faltante. <span class="pid">B8</span>: bradicardia o hipotensión reducen la perfusión cerebral y favorecen mareo y caídas.</p></div>
+
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span>Mecanismo mínimo: el diltiazem como inhibidor de CYP3A4</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Unión.</b> el diltiazem inhibe la enzima hepática CYP3A4.</li>
+<li><b>Consecuencia.</b> otros fármacos que dependen de esa vía se metabolizan menos y alcanzan niveles más altos.</li>
+<li><b>Correlato.</b> aumenta el riesgo de efectos adversos de esos fármacos; es una interacción a revisar en la polifarmacia [5].</li>
+</ol>
+</div></div>
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Amlodipino (dihidropiridina)</b></td><td>Actúa sobre todo en el músculo liso vascular y casi no modifica la frecuencia ni la conducción; el diltiazem actúa también en corazón.</td></tr>
+<tr><td><b>Verapamilo</b></td><td>Es el otro no dihidropiridínico, con efecto cardiaco aún más marcado; comparte el riesgo en insuficiencia cardiaca con fracción reducida.</td></tr>
+<tr><td><b>Betabloqueador</b></td><td>Reduce la frecuencia por bloqueo del receptor beta-1 y de la señal de AMPc; el diltiazem lo hace reduciendo la entrada de calcio.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t3"><div class="rc-t">Simulador · Recall de diltiazem</div><div class="rc-count" id="rc-t3-n"></div><div class="rc-card" id="rc-t3-c"></div><div class="rc-btns" id="rc-t3-b"></div><div id="rc-t3-e"></div></div>
+
+<p class="gloss">Siglas: FEVI, fracción de eyección del ventrículo izquierdo; CYP3A4, isoenzima 3A4 del citocromo P450; SERCA, ATPasa de calcio del retículo sarcoplásmico; AMPc, adenosín monofosfato cíclico.</p>
+</section>
+<section class="tab" id="t4">
+<h2>Furosemida (diurético de asa)</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Bloquea la reabsorción de sal en el asa de Henle y arrastra agua: alivia la congestión, pero puede alterar sodio, potasio y volumen.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Asa de Henle y cotransportador Na-K-2Cl</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Rama descendente.</b> es permeable al agua y casi no a los solutos: el agua sale hacia el intersticio medular hiperosmolar.</li>
+<li><b>Rama ascendente gruesa.</b> es impermeable al agua; el cotransportador Na-K-2Cl (NKCC2) de la membrana luminal reabsorbe sodio, potasio y dos cloros.</li>
+<li><b>Reciclaje de potasio.</b> el potasio vuelve a la luz por canales ROMK y crea una carga positiva luminal que empuja calcio y magnesio por la vía entre células.</li>
+<li><b>Motor.</b> la bomba sodio-potasio basolateral mantiene el gradiente que mueve todo el sistema.</li>
+<li><b>Resultado.</b> la orina sale del asa diluida y el intersticio queda concentrado.</li>
+</ol><p><b>Ventana de normalidad.</b> La rama ascendente gruesa reabsorbe alrededor de una cuarta parte del sodio filtrado [4].</p>
+<p><b>Qué lo rompe.</b> Bloquear NKCC2 deja pasar al túbulo distal una gran carga de sodio, cloro y agua, y se pierden también potasio, calcio y magnesio.</p>
+<p><b>Correlato clínico.</b> Se traduce en aumento rápido de la diuresis y en alteraciones del sodio, el potasio y el magnesio séricos.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Mecanismo contracorriente</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Multiplicador.</b> la reabsorción de solutos en la rama ascendente concentra el intersticio de la médula; el asa multiplica un gradiente pequeño.</li>
+<li><b>Intercambiador.</b> los vasos rectos conservan ese gradiente porque llevan la sangre en dirección opuesta.</li>
+<li><b>Concentración.</b> con ADH, el colector deja salir agua hacia el intersticio hiperosmolar y la orina se concentra.</li>
+</ol><p><b>Ventana de normalidad.</b> El riñón humano puede concentrar la orina hasta varias veces la osmolaridad del plasma [4].</p>
+<p><b>Qué lo rompe.</b> Sin la reabsorción de solutos en la rama ascendente, el intersticio pierde su hiperosmolaridad y la orina ya no se concentra bien.</p>
+<p><b>Correlato clínico.</b> Se observa como orina más abundante y diluida.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ El filtrado glomerular y el papel de la arteriola eferente se desarrollaron en «Losartán». Aquí basta recordar que lo que llega al asa depende de cuánto se filtra.</p>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [4]</span> Tratado de fisiología médica, 14.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Diurético de asa: inhibe el cotransportador Na-K-2Cl (NKCC2) de la rama ascendente gruesa del asa de Henle. Aumenta la excreción de sodio, cloro, potasio y agua, también de calcio y magnesio, y disminuye la capacidad de concentrar la orina.</p>
+<p><span class="badge b-pu">Goodman y Gilman 2023 [5]</span></p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Imagina que el asa es un filtro que devuelve sal a la sangre y, con ella, el agua. La furosemida atasca ese filtro: la sal no se recupera, sale con mucha agua y la persona orina más. Quita líquido sobrante en la insuficiencia cardiaca, pero también puede dejar sin sodio, sin potasio y sin agua suficiente.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Doña Rosa toma furosemida 40 mg en la mañana (dato del caso). Orina 4 veces al día y 2 a 3 por la noche; no hay electrolitos ni peso ni signos de hidratación en el caso para saber si está seca o congestiva.</p></div>
+
+<div class="card vin"><div class="card-t">Por qué importa en este caso</div>
+<p><span class="pid">B3</span>: la furosemida puede causar deshidratación, hiponatremia e hipopotasemia, precipitantes de delirium <span class="pid">FR2</span>; sin electrolitos en el caso no se pueden descartar. Tomarla en la mañana concentra la diuresis en el día, pero persiste la nicturia, que se suma al riesgo de caídas <span class="pid">B8</span>.</p></div>
+
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Tiazida</b></td><td>Actúa en el cotransportador Na-Cl del túbulo distal, con menos potencia diurética; también puede causar hiponatremia.</td></tr>
+<tr><td><b>Antagonista de la aldosterona</b></td><td>Actúa en el colector, retiene potasio en lugar de perderlo y es un diurético débil.</td></tr>
+<tr><td><b>Losartán</b></td><td>No es un diurético: bloquea el receptor AT1; solo comparte con la furosemida el riesgo para el riñón y el potasio.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t4"><div class="rc-t">Simulador · Recall de furosemida</div><div class="rc-count" id="rc-t4-n"></div><div class="rc-card" id="rc-t4-c"></div><div class="rc-btns" id="rc-t4-b"></div><div id="rc-t4-e"></div></div>
+
+<p class="gloss">Siglas: NKCC2, cotransportador Na-K-2Cl de tipo 2; ROMK, canal de potasio de la médula externa renal; ADH, hormona antidiurética; AT1, receptor tipo 1 de la angiotensina II.</p>
+</section>
+<section class="tab" id="t5">
+<h2>Paracetamol</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Alivia dolor y fiebre actuando sobre todo en el sistema nervioso central, sin la carga renal y gástrica de los AINE.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Prostaglandinas y ciclooxigenasa en el dolor y la fiebre</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Lesión o inflamación.</b> la fosfolipasa A2 libera ácido araquidónico de las membranas.</li>
+<li><b>Ciclooxigenasa.</b> COX-1 y COX-2 lo convierten en prostaglandina H2 y luego en prostaglandina E2 y otras.</li>
+<li><b>Dolor.</b> la prostaglandina E2 sensibiliza al nociceptor periférico y baja su umbral.</li>
+<li><b>Fiebre.</b> en el hipotálamo, la prostaglandina E2 eleva el punto de ajuste de la temperatura.</li>
+<li><b>Efecto del fármaco.</b> los AINE inhiben COX periférica; el paracetamol lo hace de forma débil en tejidos y su acción principal es central.</li>
+</ol><p><b>Ventana de normalidad.</b> Sin lesión, la producción de prostaglandinas es baja; en el estómago y el riñón cumplen una función protectora [5].</p>
+<p><b>Qué lo rompe.</b> Inhibir COX de forma amplia, como hacen los AINE, quita también esa protección y expone la mucosa gástrica y el riñón.</p>
+<p><b>Correlato clínico.</b> El paracetamol baja la fiebre y el dolor sin efecto antiinflamatorio relevante.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Vía central del dolor y su modulación</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Nociceptor.</b> las fibras Aδ y C llevan el estímulo doloroso al asta dorsal de la médula.</li>
+<li><b>Ascenso.</b> el tracto espinotalámico lo lleva al tálamo y de allí a la corteza somatosensorial y al sistema límbico.</li>
+<li><b>Modulación descendente.</b> desde la sustancia gris periacueductal bajan señales serotoninérgicas, noradrenérgicas y opioides que frenan la transmisión en el asta dorsal.</li>
+</ol><p><b>Ventana de normalidad.</b> El dolor agudo avisa de una lesión y cede al sanar el tejido.</p>
+<p><b>Qué lo rompe.</b> El dolor crónico mantiene sensibilizadas las vías periféricas y centrales y deja de ser solo una alarma.</p>
+<p><b>Correlato clínico.</b> El dolor crónico se asocia a sueño pobre, menos movilidad y malestar emocional. El paracetamol parece actuar en esta vía central; su mecanismo preciso no está completamente aclarado [5].</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Metabolismo hepático: glucuronidación, sulfatación y NAPQI</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Vía principal.</b> en el hígado, la glucuronidación y la sulfatación forman conjugados inactivos que se eliminan por la orina.</li>
+<li><b>Vía menor.</b> una pequeña fracción pasa por CYP2E1 y forma NAPQI, un metabolito tóxico.</li>
+<li><b>Detoxificación.</b> el glutatión se une al NAPQI y lo convierte en un compuesto inocuo.</li>
+<li><b>Si falta glutatión.</b> el NAPQI se une a proteínas del hepatocito y causa necrosis.</li>
+</ol><p><b>Ventana de normalidad.</b> A dosis terapéuticas el glutatión alcanza para neutralizar el NAPQI [5].</p>
+<p><b>Qué lo rompe.</b> La sobredosis o la depleción de glutatión (ayuno prolongado, desnutrición, alcohol crónico) dejan al NAPQI sin neutralizar.</p>
+<p><b>Correlato clínico.</b> La lesión hepática se manifiesta como elevación de las transaminasas.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Goodman y Gilman 2023 [5]</span> Farmacología de analgésicos, 14.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Analgésico y antipirético no opioide, sin efecto antiinflamatorio relevante. Su mecanismo no está del todo aclarado: se atribuye a inhibición de la síntesis de prostaglandinas en el sistema nervioso central. Se metaboliza en el hígado y su toxicidad depende del metabolito NAPQI.</p>
+<p><span class="badge b-pu">Goodman y Gilman 2023 [5]</span></p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Las prostaglandinas suben el volumen de la señal de dolor y reajustan el termostato. El paracetamol baja ese volumen sobre todo dentro del sistema nervioso, sin irritar el estómago ni el riñón como lo hacen los antiinflamatorios. El hígado lo desactiva con facilidad, salvo que se supere su capacidad.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Doña Rosa toma paracetamol 500 mg tres veces al día para su lumbociatalgia crónica por escoliosis con anterolistesis (datos del caso). Es el analgésico de su esquema que no causa sedación ni confusión, a diferencia de los otros dos que recibe contra el dolor.</p></div>
+
+<div class="card vin"><div class="card-t">Por qué importa en este caso</div>
+<p><span class="pid">B7</span>: el dolor crónico limita su movilidad y, sin control, precipita delirium <span class="pid">FR2</span>. Frente a los AINE, el paracetamol evita el riesgo renal y cardiovascular en una mujer con insuficiencia cardiaca, losartán y furosemida; Beers 2023 desaconseja los AINE en insuficiencia cardiaca [7]. El caso añade tramadol (Tramal): su efecto deliriogénico está en Problemas, <span class="pid">B3</span>.</p></div>
+
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>AINE (por ejemplo ibuprofeno)</b></td><td>Inhiben COX en la periferia y sí son antiinflamatorios; añaden riesgo gástrico, renal y cardiovascular.</td></tr>
+<tr><td><b>Tramadol</b></td><td>Opioide débil que además inhibe la recaptación de serotonina y noradrenalina; actúa en receptores del sistema nervioso y puede causar sedación y confusión.</td></tr>
+<tr><td><b>Pregabalina</b></td><td>No inhibe prostaglandinas: modula canales de calcio presinápticos y se desarrolla en su propia pestaña.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t5"><div class="rc-t">Simulador · Recall de paracetamol</div><div class="rc-count" id="rc-t5-n"></div><div class="rc-card" id="rc-t5-c"></div><div class="rc-btns" id="rc-t5-b"></div><div id="rc-t5-e"></div></div>
+
+<p class="gloss">Siglas: A2, fosfolipasa A2 (la 2 indica el tipo); E2, prostaglandina E2; COX, ciclooxigenasa; AINE, antiinflamatorio no esteroideo; NAPQI, N-acetil-p-benzoquinona imina; CYP2E1, isoenzima 2E1 del citocromo P450.</p>
+</section>
+<section class="tab" id="t6">
+<h2>Pregabalina (gabapentinoide)</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Análogo del GABA que se une a la subunidad α2δ de canales de calcio y reduce la liberación de neurotransmisores excitatorios.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Sinapsis excitatoria glutamatérgica</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Llegada del potencial de acción.</b> Despolariza la terminal presináptica y abre canales de calcio dependientes de voltaje.</li>
+<li><b>Entrada de calcio.</b> El calcio intracelular desencadena la fusión de las vesículas con la membrana (exocitosis).</li>
+<li><b>Liberación de glutamato.</b> El glutamato cruza la hendidura y activa receptores AMPA y NMDA postsinápticos, que despolarizan la neurona siguiente.</li>
+<li><b>Terminación.</b> Los astrocitos y la terminal recaptan el glutamato; la señal cesa.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> El glutamato es el principal neurotransmisor excitatorio del SNC y su liberación es proporcional a la entrada de calcio presináptico [4].</p>
+<p><b>Qué lo rompe.</b> El punto más sensible es la entrada de calcio: si aumenta, se libera más glutamato y la neurona se vuelve hiperexcitable, como ocurre en las vías del dolor sensibilizadas.</p>
+<p><b>Correlato clínico.</b> La hiperexcitabilidad de una vía nociceptiva se manifiesta como dolor desproporcionado o evocado por estímulos leves (alodinia).</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Canales de calcio dependientes de voltaje y subunidad α2δ</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Qué es.</b> Complejo proteico de la membrana: una subunidad α1 forma el poro y las subunidades auxiliares (entre ellas α2δ) regulan su abundancia en la membrana.</li>
+<li><b>Cómo está hecho.</b> La α2δ es una proteína extracelular anclada a la membrana; no forma el poro, pero favorece que el canal llegue a la terminal presináptica.</li>
+<li><b>Qué permite.</b> Más α2δ en la terminal significa más canales funcionales y más calcio entrando por cada potencial de acción.</li>
+<li><b>Correlato clínico.</b> Tras una lesión nerviosa aumenta la expresión de α2δ en las neuronas sensitivas, lo que sostiene la hiperexcitabilidad del dolor neuropático [5].</li>
+</ol>
+<p><b>Qué lo rompe.</b> La sobreexpresión de α2δ tras una lesión nerviosa; no es un defecto del poro, sino de la cantidad de canales en la terminal.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Dolor neuropático frente a nociceptivo</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Criterio de agrupación.</b> Se clasifica por el origen de la señal dolorosa, no por la intensidad.</p>
+<div class="tw"><table><thead><tr><th>Tipo</th><th>Origen de la señal</th><th>Cómo se describe</th><th>Ejemplo del caso</th></tr></thead><tbody>
+<tr><td><b>Nociceptivo</b></td><td>Activación de nociceptores en tejido dañado o inflamado (hueso, articulación, músculo)</td><td>Sordo, mecánico, empeora con el movimiento y mejora con el reposo</td><td>Gonartrosis; escoliosis y anterolistesis</td></tr>
+<tr><td><b>Neuropático</b></td><td>Lesión o disfunción del propio sistema nervioso somatosensorial</td><td>Quemante o eléctrico, con parestesias, irradiado por el trayecto de un nervio o raíz</td><td>Componente radicular de la lumbociatalgia</td></tr>
+<tr><td><b>Mixto</b></td><td>Ambos mecanismos a la vez</td><td>Mezcla de los dos patrones</td><td>Lumbociatalgia crónica con anterolistesis</td></tr>
+</tbody></table></div>
+<p><b>Jerarquía.</b> En la lumbociatalgia, un disco o una listesis comprime la raíz nerviosa: el dolor radicular es neuropático y se irradia por el miembro, mientras que el dolor axial es nociceptivo.</p>
+<p><b>Correlato clínico.</b> Se explora el trayecto del dolor, la distribución por dermatoma y la maniobra de elevación de la pierna recta.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Diltiazem»: canales de calcio tipo L del corazón. Son otro subtipo de canal: la pregabalina no bloquea su poro.</p>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Losartán»: filtrado glomerular. Es la vía por la que el riñón elimina fármacos hidrosolubles que no se metabolizan.</p>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [4]</span><span class="badge b-pu">Goodman y Gilman 2023 [5]</span></p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Gabapentinoide: análogo estructural del GABA que no actúa sobre receptores GABA, sino que se une con alta afinidad a la subunidad α2δ de los canales de calcio dependientes de voltaje. Reduce la entrada presináptica de calcio y la liberación de neurotransmisores excitatorios.</p>
+<p><span class="badge b-pu">Goodman y Gilman 2023 [5]</span><span class="badge b-pu">Bockbrader 2011 [8]</span></p>
+<p class="mini">Se elimina por vía renal casi sin metabolismo: su aclaramiento es proporcional al aclaramiento de creatinina [9].</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Una neurona dolorosa lesionada dispara de más porque tiene demasiados canales de calcio en su terminal. La pregabalina no tapa los canales: se une a una pieza auxiliar y deja menos canales funcionando. Entra menos calcio, sale menos glutamato y la señal se apaga. Como actúa en todo el sistema nervioso, también adormece, marea y descoordina. Y como el riñón la elimina intacta, si el riñón filtra menos, se queda más tiempo en el cuerpo.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Doña Rosa tiene lumbociatalgia crónica por anterolistesis L5–S1 y recibe pregabalina, 25 mg en la mañana y 50 mg en la noche (dato del caso). Si hoy duerme de día, camina insegura y se levanta al baño varias veces en la noche, la pregunta que ordena el cuadro es si el fármaco contribuye a la somnolencia y a la inestabilidad.</p></div>
+
+<div class="card vin"><div class="card-t">Por qué importa en este caso</div>
+<p><span class="pid">B3</span><span class="pid">B7</span><span class="pid">B8</span> Doña Rosa toma pregabalina junto con tramadol. Ambos deprimen el SNC y los criterios Beers 2023 desaconsejan combinar un opioide con un gabapentinoide [7]. La pregabalina se elimina sin metabolizar por el riñón: si cae el filtrado con losartán y furosemida, se acumula. Sedación, mareo y ataxia favorecen el delirium y las caídas.</p></div>
+
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span>Mecanismo mínimo</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Paso causal.</b> El filtrado glomerular disminuye y el aclaramiento de pregabalina cae en proporción.</li>
+<li><b>Ejecutor.</b> Sin metabolismo hepático que la inactive, la concentración plasmática sube con la misma dosis.</li>
+<li><b>Consecuencia.</b> Mayor ocupación de α2δ en todo el SNC: somnolencia, mareo, ataxia y confusión.</li>
+</ol>
+<p class="mini">Correlato: la dosis del caso no cambia, pero la exposición real sí depende del filtrado [8].</p>
+</div></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Gabapentina</b></td><td>Es otro gabapentinoide con el mismo sitio de unión α2δ; comparten sedación, mareo y eliminación renal.</td></tr>
+<tr><td><b>Benzodiacepinas</b></td><td>Potencian el receptor GABA-A; la pregabalina no actúa sobre receptores GABA ni sobre su captación.</td></tr>
+<tr><td><b>Tramadol</b></td><td>Es un opioide débil con acción monoaminérgica; no actúa sobre canales de calcio, pero suma depresión del SNC.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t6"><div class="rc-t">Simulador · Recall de pregabalina</div><div class="rc-count" id="rc-t6-n"></div><div class="rc-card" id="rc-t6-c"></div><div class="rc-btns" id="rc-t6-b"></div><div id="rc-t6-e"></div></div>
+
+<p class="gloss">Siglas: GABA, ácido gamma-aminobutírico; SNC, sistema nervioso central; AMPA, receptor de glutamato α-amino-3-hidroxi-5-metil-4-isoxazol propiónico; NMDA, receptor de glutamato N-metil-D-aspartato; L5, quinta vértebra lumbar; S1, primera vértebra sacra; GABA-A, receptor ionotrópico del GABA.</p>
+</section>
+<section class="tab" id="t7">
+<h2>Glucosamina (Artrin)</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Aminomonosacárido usado como suplemento «condroprotector» en la artrosis; su eficacia clínica es controvertida.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Cartílago articular hialino</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Qué es y dónde está.</b> Tejido liso que recubre las superficies articulares de la rodilla y otras articulaciones sinoviales; no tiene vasos, nervios ni linfáticos.</li>
+<li><b>Cómo está hecho.</b> Pocos condrocitos dentro de una matriz abundante: colágeno tipo II que da resistencia a la tensión y proteoglicanos con cadenas de glucosaminoglicanos que atrapan agua.</li>
+<li><b>Qué permite.</b> El agua retenida por los proteoglicanos amortigua la compresión, y la superficie lisa reduce la fricción durante el movimiento.</li>
+<li><b>De qué depende.</b> Se nutre por difusión desde el líquido sinovial y con la carga cíclica; los condrocitos renuevan la matriz muy despacio.</li>
+</ol>
+<p><b>Correlato clínico.</b> Al no tener nervios, el cartílago no duele por sí mismo: el dolor de la artrosis viene del hueso subcondral, la sinovial y las partes blandas. Su escasa capacidad de reparación explica que el daño persista.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Qué ocurre en la artrosis (gonartrosis)</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Sobrecarga o envejecimiento.</b> Edad, carga mecánica y alteración de la alineación aumentan el estrés sobre el cartílago.</li>
+<li><b>Desequilibrio de la matriz.</b> Los condrocitos producen enzimas que degradan colágeno II y proteoglicanos más rápido de lo que se resintetizan.</li>
+<li><b>Pérdida de cartílago.</b> La superficie se fibrila y se adelgaza; el hueso subcondral se esclerosa y se forman osteofitos.</li>
+<li><b>Manifestación.</b> Dolor mecánico, rigidez breve y limitación del movimiento de la rodilla.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> La artrosis es muy frecuente con la edad; la imagen y los síntomas no siempre coinciden [10].</p>
+<p><b>Qué lo rompe.</b> El punto vulnerable es el equilibrio entre síntesis y degradación de la matriz, que se inclina hacia la degradación.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Harrison 2015 [10]</span><span class="badge b-am">Fuente por verificar</span> La descripción histológica es de consenso; verificar en un texto de histología.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Aminomonosacárido derivado de la glucosa (el hidroxilo del carbono 2 se sustituye por un grupo amino), precursor de glucosaminoglicanos del cartílago. Se vende como suplemento «condroprotector» para la artrosis; su beneficio clínico es controvertido.</p>
+<p><span class="badge b-pu">OARSI 2019 [11]</span><span class="badge b-pu">ACR/AF 2019 [12]</span></p>
+<p class="mini">Ambas guías incluyen la glucosamina entre los tratamientos evaluados. La posición exacta de cada guía debe confirmarse en el texto completo [VERIFICAR EN FUENTE]; los resúmenes consultados no la nombran. La composición del producto comercial Artrin no consta en el caso.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>El cartílago de la rodilla es una esponja de colágeno rellena de moléculas que retienen agua; la glucosamina es una de las piezas con las que el cuerpo fabrica esas moléculas. La idea del suplemento es dar más piezas para reparar el cartílago. El problema es que tomar una pieza no garantiza que llegue al cartílago ni que el condrocito la use, y los estudios no muestran un beneficio claro.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Doña Rosa tiene gonartrosis y toma una tableta diaria de Artrin (dato del caso). La pregunta que ordena el término es qué aporta ese comprimido a una lista de más de nueve fármacos y si hay una razón clara para mantenerlo.</p></div>
+
+<div class="card vin"><div class="card-t">Por qué importa en este caso</div>
+<p><span class="pid">B3</span><span class="pid">B7</span> La glucosamina suma otro fármaco a la polifarmacia de Doña Rosa sin un beneficio claro. En personas con diabetes se discutió su efecto sobre la glucemia; la evidencia es inconsistente [VERIFICAR EN FUENTE]. Tener gonartrosis con un suplemento de eficacia dudosa no sustituye evaluar el dolor osteoarticular (B7).</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Condroitín sulfato</b></td><td>Es un glucosaminoglicano, no un aminoazúcar; suele venderse combinado con glucosamina.</td></tr>
+<tr><td><b>AINE</b></td><td>Inhiben la ciclooxigenasa y alivian el dolor y la inflamación; la glucosamina no tiene ese mecanismo.</td></tr>
+<tr><td><b>Ácido hialurónico intraarticular</b></td><td>Se inyecta en la articulación para lubricar; la glucosamina se toma por vía oral como precursor.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t7"><div class="rc-t">Simulador · Recall de glucosamina</div><div class="rc-count" id="rc-t7-n"></div><div class="rc-card" id="rc-t7-c"></div><div class="rc-btns" id="rc-t7-b"></div><div id="rc-t7-e"></div></div>
+
+<p class="gloss">Siglas: OARSI, Osteoarthritis Research Society International; ACR/AF, American College of Rheumatology y Arthritis Foundation; AINE, antiinflamatorio no esteroideo; II, numeral romano que indica el tipo de colágeno.</p>
+</section>
+<section class="tab" id="t8">
+<h2>Insulina + metformina</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Insulina NPH de acción intermedia más una biguanida que frena la glucosa hepática; el riesgo central en la anciana es la hipoglucemia.</p></div>
+
+<p class="mini am">El caso escribe «12 unidades de insulina HPH en la noche más metformina 500 mg BID». «HPH» se interpreta como insulina NPH (isófana, acción intermedia); la lectura debe confirmarse con la receta.</p>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Secreción y acción de la insulina</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Sensado.</b> La glucosa entra a la célula beta pancreática por GLUT2; su metabolismo eleva el ATP, cierra canales de potasio y despolariza la célula.</li>
+<li><b>Secreción.</b> La despolarización abre canales de calcio y la insulina se libera por exocitosis hacia la vena porta.</li>
+<li><b>Receptor.</b> La insulina activa su receptor tirosina cinasa; en músculo y grasa esto lleva los transportadores GLUT4 a la membrana y la glucosa entra a la célula.</li>
+<li><b>Efecto hepático.</b> En el hígado suprime la gluconeogénesis y la glucogenólisis y favorece el almacenamiento de glucógeno.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> La secreción sube tras comer y baja casi a cero en ayuno, de modo que la glucemia se mantiene en un margen estrecho [4].</p>
+<p><b>Qué lo rompe.</b> Una insulina que no se apaga con el ayuno: la insulina inyectada actúa aunque la glucemia sea baja, porque el sensado de la célula beta ya no la regula.</p>
+<p><b>Correlato clínico.</b> El exceso relativo de insulina se manifiesta como hipoglucemia; el defecto como hiperglucemia con poliuria y sed.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Contrarregulación de la hipoglucemia y neuroglucopenia</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Caída de glucosa.</b> La insulina endógena baja primero; en quien usa insulina inyectada esa respuesta no existe.</li>
+<li><b>Hormonas contrarreguladoras.</b> Se liberan glucagón y adrenalina, y más tarde cortisol y hormona de crecimiento; elevan la glucosa por producción hepática.</li>
+<li><b>Síntomas adrenérgicos.</b> Temblor, sudor y palpitaciones avisan al paciente de que debe comer.</li>
+<li><b>Neuroglucopenia.</b> El cerebro consume glucosa casi de forma exclusiva y no tiene reserva apreciable: si la glucemia baja más, aparecen confusión, conducta extraña, somnolencia y convulsión.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> Los síntomas aparecen por escalones: primero la respuesta autonómica y después los síntomas neuroglucopénicos [4].</p>
+<p><b>Qué lo rompe.</b> En el adulto mayor los síntomas adrenérgicos se atenúan y predominan los neuroglucopénicos, de modo que la hipoglucemia puede presentarse como confusión o conducta extraña [13].</p>
+<p><b>Correlato clínico.</b> Un cambio agudo de conducta en una persona con insulina obliga a pensar en hipoglucemia y se confirma con una glucemia capilar.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Acción de la metformina: AMPK y gluconeogénesis hepática</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Entrada al hepatocito.</b> La metformina entra por transportadores de cationes orgánicos y se acumula en la célula.</li>
+<li><b>Inhibición mitocondrial.</b> Inhibe de forma leve el complejo I de la cadena respiratoria, baja el ATP y sube el AMP.</li>
+<li><b>Activación de AMPK.</b> El sensor de energía AMPK se activa y reduce la gluconeogénesis hepática.</li>
+<li><b>Efecto neto.</b> Baja la producción hepática de glucosa y mejora la sensibilidad periférica a la insulina, sin estimular su secreción.</li>
+</ol>
+<p><b>Qué lo rompe.</b> Una metformina que no se elimina: se excreta por el riñón sin metabolizarse, de modo que un filtrado bajo la acumula y favorece la acidosis láctica [5].</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Losartán»: filtrado glomerular. Si cae, la metformina y la pregabalina se acumulan.</p>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [4]</span><span class="badge b-pu">Goodman y Gilman 2023 [5]</span><span class="badge b-pu">ADA 2025 [13]</span></p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>La insulina NPH (isófana) es insulina humana en suspensión con protamina, de absorción lenta y acción intermedia. La metformina es una biguanida que reduce la producción hepática de glucosa y mejora la sensibilidad a la insulina. Se asocian en la diabetes tipo 2 con insulinorrequerimiento.</p>
+<p><span class="badge b-pu">Goodman y Gilman 2023 [5]</span><span class="badge b-pu">ADA 2025 [13]</span></p>
+<p class="mini">Perfil conceptual de la NPH: tras la inyección subcutánea el efecto alcanza un pico varias horas después y decae. Una dosis nocturna coincide con el ayuno de la madrugada.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>La insulina abre la puerta de las células para que entre la glucosa; la metformina enseña al hígado a fabricar menos. La NPH se aplica en un punto y se libera despacio, con un pico a cierta hora. Si ese pico cae de madrugada, cuando la paciente no ha comido, la glucosa baja. El cerebro vive de glucosa: sin ella, la persona no suda ni tiembla, simplemente se confunde y se comporta de forma rara.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Doña Rosa se aplica 12 unidades de insulina en la noche y toma metformina 500 mg dos veces al día (dato del caso). Si duerme de día y pasa despierta la noche, y el hijo cuenta que ve a su difunto marido, la pregunta que ordena el cuadro es qué glucemia tenía en ese momento, dato que el caso no consigna.</p></div>
+
+<div class="card vin"><div class="card-t">Por qué importa en este caso</div>
+<p><span class="pid">B4</span><span class="pid">B3</span> La hipoglucemia nocturna por NPH puede imitar o precipitar el delirium de Doña Rosa, y en la anciana se presenta como confusión y no como temblor [13]. La metformina, a largo plazo, puede causar déficit de B12, causa reversible de deterioro cognitivo y neuropatía, y se acumula con filtrado bajo.</p></div>
+
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span>Mecanismo mínimo</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Paso causal.</b> La NPH nocturna alcanza su pico mientras la paciente está en ayuno.</li>
+<li><b>Ejecutor.</b> Los músculos y la grasa captan glucosa y el hígado la produce menos; la glucemia desciende.</li>
+<li><b>Consecuencia.</b> Neuroglucopenia: confusión, inversión del sueño y conducta extraña, sin síntomas adrenérgicos claros.</li>
+</ol>
+<p class="mini">Correlato: la metformina rara vez provoca hipoglucemia sola, pero con insulina el riesgo lo pone la insulina. Su déficit de B12 se describe con el uso prolongado y obliga a medir B12 si hay neuropatía o anemia <span class="badge b-am">Fuente por verificar</span> (ADA 2025, sección de farmacoterapia).</p>
+</div></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Análogos basales de acción prolongada</b></td><td>Tienen un perfil más plano, sin pico marcado; la NPH sí tiene pico.</td></tr>
+<tr><td><b>Sulfonilureas</b></td><td>Estimulan la secreción de insulina de la célula beta; la metformina no.</td></tr>
+<tr><td><b>Hipoglucemia nocturna</b></td><td>Es un trastorno metabólico con glucemia baja; el delirium es el síndrome cerebral que puede causar, y se distinguen midiendo la glucemia.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t8"><div class="rc-t">Simulador · Recall de insulina + metformina</div><div class="rc-count" id="rc-t8-n"></div><div class="rc-card" id="rc-t8-c"></div><div class="rc-btns" id="rc-t8-b"></div><div id="rc-t8-e"></div></div>
+
+<p class="gloss">Siglas: NPH, protamina neutra de Hagedorn (insulina isófana); HPH, grafía del caso interpretada como NPH; BID, dos veces al día; GLUT, transportador de glucosa (GLUT2 en la célula beta, GLUT4 en músculo y grasa); ATP, trifosfato de adenosina; AMP, monofosfato de adenosina; AMPK, proteína cinasa activada por AMP; ADA, American Diabetes Association; B12, vitamina B12 (cobalamina).</p>
+</section>
+<section class="tab" id="t9">
+<h2>Hipotiroidismo subclínico</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>TSH por encima del rango de referencia con T4 libre normal; en el adulto mayor la TSH sube de forma fisiológica con la edad.</p></div>
+
+<p class="mini am">El caso escribe «hipotiroidismos su clínico»; se interpreta como hipotiroidismo subclínico, que es como figura en los antecedentes («en observación»).</p>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Eje hipotálamo-hipófiso-tiroideo y retroalimentación negativa</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Hipotálamo.</b> Libera la hormona liberadora de tirotropina (TRH) hacia la hipófisis.</li>
+<li><b>Hipófisis.</b> La TRH estimula a los tirotropos para liberar tirotropina (TSH).</li>
+<li><b>Tiroides.</b> La TSH estimula la síntesis y liberación de tiroxina (T4), en su mayoría, y de triyodotironina (T3).</li>
+<li><b>Activación periférica.</b> En los tejidos las desyodasas convierten T4 en T3, la forma activa.</li>
+<li><b>Retroalimentación negativa.</b> La T4 libre circulante frena la liberación de TRH y TSH; si la T4 baja, la TSH sube.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> La relación entre T4 libre y TSH es inversa y amplificada: una variación pequeña de T4 libre produce un cambio proporcionalmente mayor de TSH [4].</p>
+<p><b>Qué lo rompe.</b> El punto vulnerable es la glándula tiroides: si produce menos T4, la hipófisis compensa con más TSH. Por eso la TSH es el sensor más temprano de una falla tiroidea primaria.</p>
+<p><b>Correlato clínico.</b> Se explora el cuello (bocio, nódulos) y se mide TSH y T4 libre; la TSH alta con T4 libre normal es la firma del estado compensado.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Acción de las hormonas tiroideas en el cerebro y el metabolismo</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Receptor nuclear.</b> La T3 entra a la célula, se une a su receptor nuclear y regula la transcripción de genes.</li>
+<li><b>Metabolismo.</b> Aumenta el consumo de oxígeno, la termogénesis y el recambio de lípidos; en el hígado favorece la captación de LDL.</li>
+<li><b>Cerebro.</b> Es necesaria para la función neuronal, la sinapsis y el estado de alerta; su déficit enlentece la actividad mental.</li>
+<li><b>Corazón.</b> Regula la contractilidad y la frecuencia cardiaca.</li>
+</ol>
+<p><b>Qué lo rompe.</b> La falta de hormona tiroidea reduce el metabolismo basal y eleva el colesterol LDL; en el cerebro produce lentitud, falta de atención y trastorno de memoria [4].</p>
+<p><b>Correlato clínico.</b> El hipotiroidismo florido se manifiesta con intolerancia al frío, estreñimiento, bradicardia y enlentecimiento mental; en el subclínico estos signos son leves o inexistentes.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [4]</span></p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Elevación de la TSH sérica por encima del límite superior de referencia con T4 libre normal. Afecta hasta al 10 % de los adultos; la causa más frecuente es la tiroiditis autoinmune de Hashimoto. La TSH aumenta con la edad sin enfermedad tiroidea, por lo que los rangos deben ajustarse.</p>
+<p><span class="badge b-pu">Biondi 2019 [14]</span></p>
+<p class="mini">En ancianos la TSH puede superar el límite tradicional de 4 a 5 mU/L sin enfermedad, lo que sobreestima su prevalencia en mayores de 70 años [14]. Los valores de TSH y T4 libre de Doña Rosa no constan en el caso.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>La hipófisis es el termostato de la tiroides: si la tiroides produce un poco menos de hormona, la hipófisis grita más fuerte con TSH y la tiroides logra mantener la T4 en su rango. Eso es el estado subclínico, una tiroides que rinde menos pero compensada. Con los años el termostato se reajusta y la TSH sube un poco aunque la tiroides esté sana, así que un valor levemente alto en una anciana no siempre es enfermedad.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Doña Rosa tiene hipotiroidismo subclínico en observación (dato del caso). Hoy está irritable, con inversión del sueño y deterioro de memoria de dos años. La pregunta que ordena el término es si la TSH vigente explica algo del cuadro cognitivo o es solo el ajuste esperable de una mujer de 83 años.</p></div>
+
+<div class="card vin"><div class="card-t">Por qué importa en este caso</div>
+<p><span class="pid">B9</span><span class="pid">B2</span><span class="pid">B5</span> El hipotiroidismo es una causa contribuyente y reversible de deterioro cognitivo, por lo que se reevalúa en el estudio de Doña Rosa y entra al diferencial de la demencia (H2). Se asocia con insuficiencia cardiaca [14] y con dislipidemia; el perfil lipídico no consta en el caso.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Hipotiroidismo manifiesto</b></td><td>TSH alta con T4 libre baja; la falla ya no está compensada.</td></tr>
+<tr><td><b>Síndrome del eutiroideo enfermo</b></td><td>Alteración de las pruebas en una enfermedad aguda grave sin enfermedad tiroidea primaria; T3 baja y TSH normal o baja, con ascenso transitorio en la recuperación <span class="badge b-am">Fuente por verificar</span>.</td></tr>
+<tr><td><b>Hipotiroxinemia aislada</b></td><td>T4 libre baja con TSH normal; no hay elevación de TSH.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t9"><div class="rc-t">Simulador · Recall de hipotiroidismo subclínico</div><div class="rc-count" id="rc-t9-n"></div><div class="rc-card" id="rc-t9-c"></div><div class="rc-btns" id="rc-t9-b"></div><div id="rc-t9-e"></div></div>
+
+<p class="gloss">Siglas: TSH, tirotropina; T4, tiroxina; T3, triyodotironina; TRH, hormona liberadora de tirotropina; LDL, lipoproteína de baja densidad; mU/L, miliunidades por litro.</p>
+</section>
+<section class="tab" id="pb">
+<h2>Problemas</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Cada problema se explica por su mecanismo: del dato del caso a la causa, el proceso y la consecuencia en Doña Rosa.</p></div>
+<figure class="dg">
+<div class="dg-t">Mapa biopsicosocial de Doña Rosa</div>
+<div class="dg-row">
+<div class="dg-col"><div class="dg-n b">Polifarmacia de nueve fármacos, dos de acción central</div><div class="dg-n b">Riesgo de hipoglucemia nocturna</div><div class="dg-n b">ITU recurrente e IC hipertensiva</div></div>
+<div class="dg-col"><div class="dg-n p">Ideas de robo y alucinaciones visuales</div><div class="dg-n p">Irritabilidad e inversión del sueño</div></div>
+<div class="dg-col"><div class="dg-n s">Cuidador único y casa insegura</div><div class="dg-n s">Viuda con escolaridad primaria</div></div>
+<div class="dg-col"><div class="dg-n fr">Edad de 83 años y demencia previa</div><div class="dg-n fr">DM2, hipertensión y humo de leña</div></div>
+</div>
+<div class="dg-row"><div class="dg-ar"><span class="dg-lab">convergen en</span></div></div>
+<div class="dg-row"><div class="dg-n ro">Síndrome confusional agudo sobre deterioro cognitivo crónico</div></div>
+<figcaption class="mini">Los cuatro ejes apuntan al mismo problema central; los factores de riesgo bajan el umbral y los problemas biológicos lo precipitan.</figcaption>
+</figure>
+<p class="mini">Los problemas B abren por defecto; los demás ejes están cerrados. Las remisiones evitan repetir un mecanismo ya explicado. Nada de lo que no consta en el caso se supone: se dice «no consignado».</p>
+<figure class="dg">
+<div class="dg-t">Fisiopatología del delirium en Doña Rosa</div>
+<div class="dg-row">
+<div class="dg-col"><div class="dg-n fr">Vulnerabilidad: edad, demencia previa, poca reserva</div><div class="dg-n b">Insultos: tramadol, pregabalina, ITU, glucosa y sodio</div></div>
+<div class="dg-ar"><span class="dg-lab">modelo de Inouye</span></div>
+<div class="dg-col"><div class="dg-n ac">Neuroinflamación: citocinas y microglía</div><div class="dg-n ac">Desequilibrio: menos acetilcolina, más dopamina</div><div class="dg-n ac">Falla energética y estrés oxidativo</div></div>
+</div>
+<div class="dg-row"><div class="dg-ar"><span class="dg-lab">rompen</span></div></div>
+<div class="dg-row"><div class="dg-n ro">Falla de las redes de atención y del ritmo circadiano</div></div>
+<div class="dg-row"><div class="dg-ar"><span class="dg-lab">se manifiesta como</span></div></div>
+<div class="dg-row"><div class="dg-col"><div class="dg-n p">Irritabilidad y desatención</div><div class="dg-n p">Inversión sueño-vigilia</div><div class="dg-n p">Ideas de robo y ver al esposo fallecido</div></div></div>
+<figcaption class="mini">Varias vías convergen: ningún mecanismo explica el delirium por sí solo.</figcaption>
+</figure>
+<div class="pbg b"><div class="pbg-t">Biológicos</div>
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span><span class="pid">B1</span> Síndrome confusional agudo (delirium) de 1 a 2 semanas</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> Irritable, duerme en el día y en la noche pasa despierta, «le acusa de robo de dinero y ve a su difunto marido», con inicio de una a dos semanas (el caso da ambas cifras).</p>
+<p><b>Fisiopatología.</b> El delirium es una falla aguda y fluctuante de la atención y la conciencia por una alteración cerebral difusa; no se atribuye a una sola vía, sino a varias que se suman en un cerebro vulnerable [15] [3] [16].</p>
+<ol class="tl">
+<li><b>Vulnerabilidad.</b> Edad avanzada, deterioro cognitivo previo (B2) y multimorbilidad dejan menos reserva neuronal y sináptica; la primaria completa aporta menos reserva cognitiva. El umbral para delirar es bajo.</li>
+<li><b>Insulto.</b> Un fármaco, una infección o un trastorno metabólico (B3, B4, B6) actúan sobre ese cerebro. Modelo de Inouye: el delirium aparece según vulnerabilidad multiplicada por insulto; con poca reserva basta un insulto leve [3].</li>
+<li><b>Neuroinflamación.</b> Citocinas de la inflamación periférica señalizan al cerebro; la microglía envejecida responde de forma exagerada y libera mediadores que dañan sinapsis y neuronas [16].</li>
+<li><b>Neurotransmisores.</b> Se plantea déficit colinérgico (la síntesis de acetilcolina depende de oxígeno y glucosa y la bloquean fármacos anticolinérgicos) y exceso dopaminérgico; el desequilibrio desorganiza la atención y la percepción [3] [16].</li>
+<li><b>Falla energética y estrés oxidativo.</b> Hipoxia o hipoglucemia reducen el ATP neuronal y aumentan radicales libres; la neurona falla en mantener la transmisión [16].</li>
+<li><b>Redes.</b> Se rompe la integración de las redes de atención y de la red neuronal por defecto: el cerebro no sostiene el foco ni separa lo externo de lo interno. Resultado en Doña Rosa: desatención, fluctuación, inversión del sueño y percepciones falsas [16].</li>
+</ol>
+<p><b>Ritmo circadiano.</b> La melatonina y el ciclo luz-oscuridad se desordenan en el delirium y en el envejecimiento cerebral, lo que facilita dormir de día y vigilar de noche (P3) [16].</p>
+<p><b>Subtipos.</b> El hiperactivo cursa con agitación, irritabilidad y alucinaciones; el hipoactivo, con somnolencia y apatía y pasa inadvertido; el mixto alterna ambos. Irritabilidad más somnolencia diurna sugieren un cuadro hiperactivo o mixto, pero sin examen no se puede clasificar [3].</p>
+<p><b>Alucinaciones.</b> Con menos acetilcolina que filtre estímulos y más dopamina que les dé relevancia, un estímulo ambiguo se percibe como figura real: ver al esposo fallecido es compatible con ese mecanismo (P1) [16].</p>
+<p><b>Por qué importa.</b> Es una urgencia clínica con causa que casi siempre es corregible; atribuirlo a «la demencia» retrasa la búsqueda de la causa y empeora el desenlace.</p>
+</div></div>
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span><span class="pid">B2</span> Deterioro cognitivo crónico progresivo de dos años</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> Desde hace aproximadamente dos años «ha perdido la memoria», se confunde con los nombres de los hijos, quema la comida, se olvida la plancha prendida y no mantiene en orden casa, comida ni ropa.</p>
+<p><b>Fisiopatología.</b> El perfil (memoria reciente primero, luego pérdida de actividades instrumentales) es compatible con un trastorno neurocognitivo mayor; el tipo no se define sin evaluación [15] [17].</p>
+<ol class="tl">
+<li><b>Proteínas anómalas.</b> En la enfermedad de Alzheimer se acumula amiloide beta fuera de la neurona y tau hiperfosforilada dentro de ella [10] [17].</li>
+<li><b>Memoria episódica.</b> El daño empieza en el hipocampo y la corteza entorrinal: no fija recuerdos nuevos. Por eso olvida dónde pone las cosas y confunde nombres.</li>
+<li><b>Pérdida colinérgica.</b> Degeneran las neuronas colinérgicas del núcleo basal de Meynert; baja la acetilcolina cortical, el mismo sistema que se compromete en el delirium (B1) [17].</li>
+<li><b>Daño vascular.</b> DM2, hipertensión e insuficiencia cardiaca dañan los vasos pequeños y reducen la perfusión de la sustancia blanca; se enlentece la función ejecutiva y se pierde la secuencia de tareas (plancha, comida) [18].</li>
+<li><b>Extensión.</b> El daño llega a corteza asociativa y frontal; fallan las actividades instrumentales antes que las básicas (S2).</li>
+</ol>
+<p><b>Relación bidireccional.</b> La demencia es el principal factor de riesgo de delirium, y cada episodio de delirium puede acelerar el deterioro posterior [3]. Por eso en Doña Rosa conviven un proceso crónico y uno agudo, y hay que separarlos.</p>
+<p><b>Por qué importa.</b> Si el cambio agudo se toma por avance de la demencia, no se busca la causa reversible; si el deterioro crónico se pasa por alto, la evaluación cognitiva se contamina por el delirium.</p>
+</div></div>
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span><span class="pid">B3</span> Polifarmacia con medicamentos potencialmente inapropiados</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> Nueve fármacos en la lista: losartán, diltiazem, furosemida, paracetamol, Tramal (tramadol) 5 gotas bid, pregabalina 25 mg am y 50 mg hs, glucosamina, insulina «HPH» y metformina.</p>
+<p><b>Fisiopatología.</b> Con la edad baja el filtrado renal, aumenta la sensibilidad del sistema nervioso central (SNC) y los efectos se suman; varios de estos fármacos figuran en listas de prescripción potencialmente inapropiada [7] [19].</p>
+<ol class="tl">
+<li><b>Tramadol.</b> Agonista μ débil que además inhibe la recaptación de serotonina y noradrenalina. Como opioide sedante y deliriogénico en un cerebro vulnerable, puede precipitar confusión; el efecto serotoninérgico expone a síndrome serotoninérgico [5] [7].</li>
+<li><b>Sodio.</b> El tramadol puede causar secreción inadecuada de hormona antidiurética (SIADH): se retiene agua libre y baja el sodio, lo que hincha las neuronas y las hace disfuncionales; la furosemida suma pérdida de sodio [7].</li>
+<li><b>Umbral convulsivo.</b> El tramadol baja el umbral convulsivo; en un cerebro con demencia y trastorno metabólico el riesgo aumenta [5].</li>
+<li><b>Potenciación.</b> La pregabalina disminuye la liberación de neurotransmisores excitadores al unirse a la subunidad α2δ de los canales de calcio. Combinada con un opioide suma depresión del SNC; esa combinación se desaconseja en adultos mayores [7].</li>
+<li><b>Acumulación.</b> Pregabalina y metformina se eliminan por el riñón: si el filtrado cae por furosemida y losartán, se acumulan (figura de cascada abajo).</li>
+</ol>
+<figure class="dg">
+<div class="dg-t">Cascada de la polifarmacia en Doña Rosa</div>
+<div class="dg-row"><div class="dg-col"><div class="dg-n b">Furosemida: pierde volumen y sodio</div><div class="dg-n b">Losartán: baja la presión de filtración</div></div><div class="dg-ar"><span class="dg-lab">filtrado baja</span></div><div class="dg-n ac">Aclaramiento renal menor</div><div class="dg-ar"><span class="dg-lab">se acumulan</span></div><div class="dg-col"><div class="dg-n b">Pregabalina: sedación, mareo</div><div class="dg-n b">Metformina: acumulación</div></div></div>
+<div class="dg-row"><div class="dg-col"><div class="dg-n b">Tramadol: SIADH</div><div class="dg-n b">Furosemida: pérdida de sodio</div></div><div class="dg-ar"><span class="dg-lab">suman</span></div><div class="dg-n ac">Hiponatremia: edema neuronal</div><div class="dg-ar"></div><div class="dg-n ro">Confusión aguda</div></div>
+<div class="dg-row"><div class="dg-n b">Insulina NPH nocturna</div><div class="dg-ar"><span class="dg-lab">pico en la madrugada</span></div><div class="dg-n ac">Hipoglucemia nocturna</div><div class="dg-ar"></div><div class="dg-n ro">Confusión e irritabilidad</div></div>
+<div class="dg-row"><div class="dg-n b">Diltiazem con antihipertensivos</div><div class="dg-ar"><span class="dg-lab">frena el corazón</span></div><div class="dg-n ac">Bradicardia e hipotensión</div><div class="dg-ar"></div><div class="dg-n ro">Hipoperfusión cerebral y caídas</div></div>
+<figcaption class="mini">Cada fila es una vía de lesión; las cuatro llegan a un cerebro con poca reserva. Los valores de laboratorio no están consignados.</figcaption>
+</figure>
+<p class="rem-line"><span class="chip-rs">Remisión</span>Pregabalina, losartán, furosemida, diltiazem, paracetamol, glucosamina e insulina con metformina se explican en sus pestañas de término. Aquí solo se muestra cómo se encadenan.</p><p><b>Por qué importa.</b> Una lista larga de fármacos es la primera fuente de causas reversibles del delirium; revisarla antes de buscar causas raras es la estrategia más rentable.</p>
+</div></div>
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span><span class="pid">B4</span> Riesgo de hipoglucemia y disglucemia en DM2 insulinorrequiriente</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> Diabetes mellitus tipo II, insulinorrequiriente, con 12 unidades de insulina «HPH» en la noche más metformina 500 mg BID. Glucemia: no consignada.</p>
+<p><b>Fisiopatología.</b> El cerebro depende de la glucosa circulante; no la almacena. Una caída de la glucemia provoca neuroglucopenia y disfunción cortical [5].</p>
+<ol class="tl">
+<li><b>Insulina nocturna.</b> La insulina NPH tiene un efecto máximo horas después de la inyección, que cae en la madrugada, cuando no se come.</li>
+<li><b>Menos eliminación.</b> La insulina se depura en parte por el riñón; si el filtrado baja (B3), su efecto se prolonga [5].</li>
+<li><b>Neuroglucopenia.</b> Sin glucosa, la neurona pierde ATP: aparecen confusión, irritabilidad y somnolencia, indistinguibles de un delirium.</li>
+<li><b>Alarma atenuada.</b> En el adulto mayor los síntomas adrenérgicos de aviso (sudor, temblor) pueden ser menores, y la persona con demencia no los refiere [13].</li>
+</ol>
+<p><b>Nota.</b> También la hiperglucemia marcada altera la conciencia; sin glucemia consignada no se puede decir cuál de las dos ocurre, y se necesita el registro.</p>
+<p class="rem-line"><span class="chip-rs">Remisión</span>Insulina NPH y metformina: ver la pestaña «Insulina + metformina».</p><p><b>Por qué importa.</b> La hipoglucemia es tiempo-dependiente y reversible: dejar pasar la causa permite daño neuronal.</p>
+</div></div>
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span><span class="pid">B5</span> Insuficiencia cardiaca hipertensiva NYHA II</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> Insuficiencia cardiaca hipertensiva grado II NYHA, desde hace 10 años, con losartán, diltiazem y furosemida. FEVI: no consignada.</p>
+<p><b>Fisiopatología.</b> La hipertensión sostenida engrosa el ventrículo y altera su llenado o su vaciado; el corazón entrega menos sangre o la acumula antes de él [6] [10].</p>
+<ol class="tl">
+<li><b>Sobrecarga.</b> La presión alta crónica hipertrofia el ventrículo izquierdo y reduce su distensibilidad.</li>
+<li><b>Bajo gasto.</b> Un gasto cardiaco limítrofe disminuye la perfusión cerebral; sumado a diurético y fármacos hipotensores, la presión de perfusión puede caer.</li>
+<li><b>Congestión.</b> Se retiene sodio y agua; el edema de las piernas se reabsorbe al acostarse y aumenta la diuresis nocturna.</li>
+<li><b>Consecuencia.</b> Nicturia de 2 a 3 veces por noche, sueño fragmentado y cerebro con menor reserva de oxígeno.</li>
+</ol>
+<p class="rem-line"><span class="chip-rs">Remisión</span>Diltiazem en la insuficiencia cardiaca: ver la pestaña «Diltiazem»; función del diurético en «Furosemida».</p><p><b>Por qué importa.</b> Una FEVI reducida cambia qué fármacos son seguros; sin ese dato no se puede juzgar el diltiazem.</p>
+</div></div>
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span><span class="pid">B6</span> Infección de vías urinarias recurrente</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> Infección de vías urinarias recurrente en seguimiento; la última hace 4 meses. Cistopexia con malla hace 15 años. Nicturia de 2 a 3 por noche.</p>
+<p><b>Fisiopatología.</b> En la mujer posmenopáusica el tejido urogenital se atrofia y cambia la flora; si queda orina residual o hay un cuerpo extraño como una malla, las bacterias persisten [17].</p>
+<ol class="tl">
+<li><b>Colonización.</b> Bacterias ascienden por la uretra y se adhieren a la mucosa vesical.</li>
+<li><b>Respuesta inflamatoria.</b> Los productos bacterianos activan citocinas que viajan a la sangre y señalizan al cerebro (mecanismo de B1).</li>
+<li><b>Cuadro atípico.</b> En la persona mayor la infección puede manifestarse como confusión, sin fiebre ni disuria.</li>
+<li><b>Cuidado diagnóstico.</b> En el adulto mayor la bacteriuria sin síntomas es frecuente; hay que decidir si la orina explica el cuadro o es solo un hallazgo. <span class="badge b-am">Fuente por verificar</span></li>
+</ol>
+<p><b>Por qué importa.</b> La infección es un precipitante frecuente y tratable; no buscarla deja un insulto sin corregir.</p>
+</div></div>
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span><span class="pid">B7</span> Dolor crónico osteoarticular</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> Escoliosis derecha con anterolistesis grado II L5 sobre S1, lumbociatalgia crónica y gonartrosis, tratadas con paracetamol, Tramal, pregabalina y glucosamina.</p>
+<p><b>Fisiopatología.</b> El dolor es una señal nociceptiva que, mantenida, se amplifica en el sistema nervioso (sensibilización) y se asocia a estrés, mal sueño y menor movilidad [10].</p>
+<ol class="tl">
+<li><b>Lesión estructural.</b> El desplazamiento L5-S1 comprime raíces nerviosas y causa dolor irradiado; la gonartrosis daña el cartílago de la rodilla.</li>
+<li><b>Dolor persistente.</b> Activa vías de estrés y fragmenta el sueño.</li>
+<li><b>Doble riesgo.</b> El dolor no tratado precipita delirium [3]; los fármacos que lo tratan (tramadol, pregabalina) también (B3).</li>
+<li><b>Limitación.</b> Moverse duele, se reduce la actividad y aumenta la debilidad y el riesgo de caídas (B8).</li>
+</ol>
+<p><b>Dato adicional.</b> En la demencia el dolor se expresa menos con palabras y más como irritabilidad o agitación (P2).</p>
+<p class="rem-line"><span class="chip-rs">Remisión</span>Analgésicos y adyuvantes: pestañas «Paracetamol», «Pregabalina» y «Glucosamina».</p><p><b>Por qué importa.</b> Controlar el dolor sin deliriogénicos es un equilibrio difícil; ambos extremos precipitan confusión.</p>
+</div></div>
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span><span class="pid">B8</span> Riesgo de caídas y fractura</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> Osteopenia por densitometría hace 5 años; nicturia de 2 a 3 por noche; tratamiento con tramadol, pregabalina, furosemida, diltiazem y losartán. Caídas recientes: no consignadas.</p>
+<p><b>Fisiopatología.</b> Una caída ocurre cuando varios factores individuales superan la capacidad de equilibrio; cada uno aquí suma [17].</p>
+<ol class="tl">
+<li><b>Equilibrio.</b> Sedación y mareo por pregabalina y tramadol disminuyen la atención al caminar.</li>
+<li><b>Presión.</b> Furosemida, diltiazem y losartán pueden bajar la presión al ponerse de pie.</li>
+<li><b>Ambiente.</b> La nicturia obliga a levantarse en la oscuridad.</li>
+<li><b>Hueso.</b> La osteopenia aumenta la probabilidad de fractura si se cae.</li>
+<li><b>Cadena.</b> Fractura, inmovilidad y dolor son nuevos precipitantes de delirium.</li>
+</ol>
+<p><b>Por qué importa.</b> Una caída puede ser el primer evento visible del cuadro; un golpe en la cabeza obliga a descartar hematoma subdural.</p>
+</div></div>
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span><span class="pid">B9</span> Hipotiroidismo subclínico en observación</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> Hipotiroidismo subclínico en observación. TSH y T4L actuales: no consignadas.</p>
+<p><b>Fisiopatología.</b> Las hormonas tiroideas regulan el metabolismo y la mielinización cerebral; si faltan, el cerebro funciona más lento. En el subclínico la T4L es normal y la TSH sube para compensar [14].</p>
+<ol class="tl">
+<li><b>Compensación.</b> La hipófisis eleva la TSH para mantener la T4L normal.</li>
+<li><b>Efecto cerebral.</b> Si progresa a franco, se enlentecen la memoria y el ánimo.</li>
+<li><b>Alcance.</b> El efecto del subclínico sobre la cognición es discutido; por eso es una causa a reevaluar, no a asumir [14].</li>
+</ol>
+<p class="rem-line"><span class="chip-rs">Remisión</span>Ver pestaña «Hipotiroidismo subclínico».</p><p><b>Por qué importa.</b> Es una causa potencialmente reversible de deterioro cognitivo que se confirma o descarta con un laboratorio actual.</p>
+</div></div>
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span><span class="pid">B10</span> Esquema de vacunación incompleto</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> Covid-19 tres dosis, influenza este año, neumococo una dosis hace 1 año; sin vacuna DT, dupla viral, varicela ni herpes zóster.</p>
+<p><b>Fisiopatología.</b> Con la edad la respuesta inmune disminuye (inmunosenescencia): las infecciones son más frecuentes y más graves [17].</p>
+<ol class="tl">
+<li><b>Inmunosenescencia.</b> Menos respuesta de linfocitos y menor protección frente a infecciones.</li>
+<li><b>Brechas.</b> Sin protección frente a tétanos, difteria, zóster y otras, el riesgo se concentra en infecciones prevenibles.</li>
+<li><b>Vía al delirium.</b> Neumonía, gripe o zóster activan inflamación sistémica y pueden precipitar delirium (B1).</li>
+</ol>
+<p class="rem-line"><span class="chip-rs">Remisión</span>Esquema recomendado frente a lo que tiene: pestaña «Vacunas».</p><p><b>Por qué importa.</b> Cada infección prevenible es un posible precipitante de delirium; aquí solo se registra la brecha frente al esquema recomendado.</p>
+</div></div>
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span><span class="pid">B11</span> Exposición a humo de leña</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> Exposición a humo de leña positivo; tabaquismo negativo. Síntomas respiratorios y saturación: no consignados.</p>
+<p><b>Fisiopatología.</b> El humo de leña contiene partículas y monóxido de carbono que inflaman el árbol bronquial y, con años de exposición, pueden causar EPOC [18].</p>
+<ol class="tl">
+<li><b>Inhalación.</b> Partículas finas llegan al alvéolo y causan inflamación crónica.</li>
+<li><b>Obstrucción.</b> Se estrecha la vía aérea y se atrapa aire; baja la oxigenación.</li>
+<li><b>Cerebro.</b> La hipoxemia reduce el ATP neuronal (mecanismo de B1) y sobrecarga el corazón derecho en una IC ya presente.</li>
+<li><b>Riesgo a largo plazo.</b> La contaminación del aire figura entre los factores de riesgo modificables de demencia (FR3).</li>
+</ol>
+<p><b>Por qué importa.</b> Sin saturación ni síntomas consignados, la hipoxemia es una causa del delirium que queda por descartar.</p>
+</div></div>
+</div>
+<div class="pbg p"><div class="pbg-t">Psicológicos</div>
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span><span class="pid">P1</span> Síntomas psicóticos: ideas de robo y alucinaciones visuales</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> «Le acusa de robo de dinero y ve a su difunto marido.»</p>
+<p><b>Fisiopatología.</b> Los síntomas psicóticos del delirium se atribuyen a un exceso de dopamina con déficit de acetilcolina; en la demencia se suma el olvido [16].</p>
+<ol class="tl">
+<li><b>Olvido.</b> Con la memoria episódica fallando, no recuerda dónde dejó el dinero.</li>
+<li><b>Explicación errónea.</b> El cerebro busca una causa y concluye que se lo robaron: es la idea delirante de robo típica de la demencia.</li>
+<li><b>Dopamina.</b> Un exceso dopaminérgico da relevancia anormal a estímulos neutros y favorece la desconfianza.</li>
+<li><b>Percepción.</b> La falla de atención e integración visual produce percepciones falsas; ver a su esposo fallecido puede coincidir con el duelo (P4).</li>
+<li><b>Misidentificación.</b> Confundir a los hijos (B2) puede reforzar la idea de que alguien ajeno entra en casa.</li>
+</ol>
+<p class="rem-line"><span class="chip-rs">Remisión</span>Mecanismo dopamina-acetilcolina: ver B1.</p><p><b>Por qué importa.</b> Es un dato clave que separa el delirium de la demencia estable y obliga a pensar en causas agudas.</p>
+</div></div>
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span><span class="pid">P2</span> Irritabilidad y labilidad afectiva</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> El hijo refiere «el carácter dañado»; está irritable.</p>
+<p><b>Fisiopatología.</b> El control de la conducta depende de circuitos frontales y límbicos que modulan la emoción [17].</p>
+<ol class="tl">
+<li><b>Control reducido.</b> Con demencia y delirium, la corteza frontal inhibe peor las respuestas emocionales.</li>
+<li><b>Estrés.</b> Dolor, sueño fragmentado y desorientación aumentan la irritabilidad.</li>
+<li><b>Consecuencia.</b> La relación con el hijo se tensa (S1).</li>
+</ol>
+<p><b>Por qué importa.</b> Reconocerla como síntoma y no como «mal carácter» orienta a buscar la causa.</p>
+</div></div>
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span><span class="pid">P3</span> Alteración del ciclo sueño-vigilia</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> «Duerme en el día y en la noche pasa despierta.»</p>
+<p><b>Fisiopatología.</b> El sueño depende del reloj circadiano del hipotálamo, de la luz y de la melatonina; en el delirium y la demencia se desorganiza [16].</p>
+<ol class="tl">
+<li><b>Reloj.</b> El núcleo supraquiasmático envejece y degenera con la demencia.</li>
+<li><b>Melatonina.</b> En el delirium se altera su secreción.</li>
+<li><b>Interrupciones.</b> Nicturia, dolor y fármacos fragmentan el sueño nocturno.</li>
+<li><b>Inversión.</b> Se duerme de día y se vigila de noche; el cerebro cansado empeora la atención (B1).</li>
+</ol>
+<p><b>Por qué importa.</b> La privación de sueño precipita delirium, y el delirium a su vez altera el sueño: círculo que se refuerza.</p>
+</div></div>
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span><span class="pid">P4</span> Duelo y posible ánimo depresivo</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> Viuda; ve a su difunto marido. Estado de ánimo y fecha de la viudez: no consignados.</p>
+<p><b>Fisiopatología.</b> La depresión en la persona mayor puede aparecer con quejas cognitivas y simular demencia; a la vez, es un factor de riesgo de demencia [18].</p>
+<ol class="tl">
+<li><b>Pérdida.</b> El duelo activa tristeza, aislamiento y alteración del sueño.</li>
+<li><b>Eje de estrés.</b> Un estrés crónico altera el cortisol y afecta el hipocampo, una región de la memoria.</li>
+<li><b>Parecido.</b> El delirium hipoactivo (apatía, lentitud) puede confundirse con depresión.</li>
+</ol>
+<p><b>Por qué importa.</b> Sin valoración del ánimo, depresión, duelo y delirium hipoactivo no se distinguen.</p>
+</div></div>
+</div>
+<div class="pbg s"><div class="pbg-t">Sociales</div>
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span><span class="pid">S1</span> Cuidador único con riesgo de sobrecarga</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> Vive con su hijo; es quien consulta. Refiere acusaciones de robo.</p>
+<p><b>Fisiopatología.</b> El cuidado de una persona con demencia es una demanda continua; con un solo cuidador y sueño de la paciente invertido, la carga crece [17].</p>
+<ol class="tl">
+<li><b>Demanda.</b> Vigilancia diurna y nocturna.</li>
+<li><b>Estrés.</b> Acusaciones de robo y cambio de carácter generan conflicto.</li>
+<li><b>Agotamiento.</b> El cuidador duerme poco y se desgasta.</li>
+<li><b>Consecuencia.</b> Aumenta el riesgo de errores con los fármacos y de claudicación del cuidado.</li>
+</ol>
+<p><b>Por qué importa.</b> La seguridad de la paciente depende del cuidador; si el cuidador falla, falla todo el sistema.</p>
+</div></div>
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span><span class="pid">S2</span> Inseguridad en el hogar y dependencia instrumental</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> «Quema mucho la comida, se olvida la plancha prendida.» No mantiene en orden la casa, la comida ni la ropa.</p>
+<p><b>Fisiopatología.</b> La función ejecutiva y la memoria prospectiva fallan: no completa secuencias ni recuerda que dejó algo encendido [17].</p>
+<ol class="tl">
+<li><b>Memoria prospectiva.</b> Olvida apagar la plancha o retirar la comida.</li>
+<li><b>Función ejecutiva.</b> No organiza tareas en orden.</li>
+<li><b>Delirium.</b> La desatención aumenta el riesgo.</li>
+<li><b>Riesgo.</b> Quemadura o incendio en el hogar.</li>
+</ol>
+<p><b>Por qué importa.</b> Es un riesgo físico inmediato aunque el delirium se resuelva: define cuánta supervisión necesita.</p>
+</div></div>
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span><span class="pid">S3</span> Escolaridad primaria</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> Primaria completa.</p>
+<p><b>Fisiopatología.</b> La educación se asocia con mayor reserva cognitiva: redes más eficientes que compensan la patología [18].</p>
+<ol class="tl">
+<li><b>Reserva.</b> Menos educación implica menos reserva.</li>
+<li><b>Umbral.</b> La demencia y el delirium se manifiestan antes.</li>
+<li><b>Medición.</b> Las pruebas cognitivas pueden dar puntajes bajos por escolaridad y no por enfermedad, lo que condiciona su interpretación.</li>
+</ol>
+<p><b>Por qué importa.</b> Interpretar MMSE o MoCA sin considerar la escolaridad puede sobrediagnosticar demencia.</p>
+</div></div>
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span><span class="pid">S4</span> Viuda, adulta mayor de 83 años</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> Viuda, católica, vive con su hijo.</p>
+<p><b>Fisiopatología.</b> El aislamiento social y la pérdida de pareja reducen la estimulación cognitiva y el apoyo [18].</p>
+<ol class="tl">
+<li><b>Red estrecha.</b> Un solo hijo conviviente y viudez.</li>
+<li><b>Estimulación.</b> Menos interacción social, menos reserva.</li>
+<li><b>Recurso.</b> La religiosidad puede aportar apoyo emocional y comunitario.</li>
+</ol>
+<p><b>Por qué importa.</b> Una red estrecha deja sin segunda persona que detecte cambios o reemplace al cuidador.</p>
+</div></div>
+</div>
+<div class="pbg fr"><div class="pbg-t">Factores de riesgo</div>
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span><span class="pid">FR1</span> Predisponentes de delirium</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> Edad de 83 años, deterioro cognitivo previo, multimorbilidad, dependencia en actividades instrumentales y escolaridad primaria.</p>
+<p><b>Fisiopatología.</b> Un factor predisponente reduce el umbral: con menos reserva, un insulto menor basta [3].</p>
+<ol class="tl">
+<li><b>Edad.</b> Menos reserva neuronal y sináptica.</li>
+<li><b>Demencia previa.</b> Cerebro ya vulnerable (B2).</li>
+<li><b>Multimorbilidad.</b> Más órganos que fallan y más fármacos (B3).</li>
+<li><b>Dependencia.</b> Se asocia a fragilidad.</li>
+</ol>
+<p><b>Por qué importa.</b> Explica por qué un insulto leve produjo un cuadro florido.</p>
+</div></div>
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span><span class="pid">FR2</span> Precipitantes de delirium</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> Tramadol, pregabalina, ITU recurrente, posible disglucemia, uso de diurético, dolor, privación de sueño y nicturia.</p>
+<p><b>Fisiopatología.</b> Un precipitante es el insulto agudo que supera el umbral [3].</p>
+<ol class="tl">
+<li><b>Fármacos.</b> Tramadol y pregabalina deprimen el SNC (B3).</li>
+<li><b>Metabólicos.</b> Hipoglucemia e hiponatremia (B4, B3).</li>
+<li><b>Infección.</b> ITU (B6).</li>
+<li><b>Dolor y sueño.</b> Dolor no controlado y noches sin dormir (B7, P3).</li>
+</ol>
+<p><b>Por qué importa.</b> Son las causas que se pueden buscar y corregir: son el objetivo del abordaje.</p>
+</div></div>
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span><span class="pid">FR3</span> Factores de riesgo de demencia</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> Edad, sexo femenino, escolaridad baja, DM2, hipertensión, insuficiencia cardiaca, humo de leña y viudez.</p>
+<p><b>Fisiopatología.</b> Factores vasculares y ambientales dañan el cerebro durante años y favorecen la demencia [18].</p>
+<ol class="tl">
+<li><b>Vasculares.</b> DM2 e hipertensión (B2, B5).</li>
+<li><b>Ambientales.</b> Contaminación del aire intradomiciliaria (B11).</li>
+<li><b>Sociales.</b> Baja escolaridad y aislamiento (S3, S4).</li>
+<li><b>No modificables.</b> Edad y sexo femenino (este último, como mayor frecuencia de enfermedad de Alzheimer; ver Harrison).</li>
+</ol>
+<p><b>Por qué importa.</b> Sostienen la hipótesis de demencia como sustrato del cuadro.</p>
+</div></div>
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span><span class="pid">FR4</span> Antecedentes familiares cardiometabólicos</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> Hijo con diabetes mellitus; hermanas con hipertensión arterial.</p>
+<p><b>Fisiopatología.</b> La carga familiar de hipertensión y diabetes refleja susceptibilidad genética y hábitos compartidos que dañan los vasos [18].</p>
+<ol class="tl">
+<li><b>Susceptibilidad.</b> Mayor probabilidad de DM2 e hipertensión.</li>
+<li><b>Daño vascular.</b> Microangiopatía que alimenta B2 y B5.</li>
+</ol>
+<p><b>Por qué importa.</b> Explica el origen de la carga vascular de Doña Rosa; no es un problema nuevo.</p>
+</div></div>
+</div>
+<div class="rc" id="rc-pb"><div class="rc-t">Simulador · Recall de problemas</div><div class="rc-count" id="rc-pb-n"></div><div class="rc-card" id="rc-pb-c"></div><div class="rc-btns" id="rc-pb-b"></div><div id="rc-pb-e"></div></div>
+<p class="gloss">Siglas: II, grado NYHA; ATP, adenosín trifosfato; B, P, S y FR, ejes de problema (biológico, psicológico, social, riesgo); BID, dos veces al día; DM2, diabetes tipo 2; DT, difteria y tétanos; EPOC, enfermedad pulmonar obstructiva; FEVI, fracción de eyección ventricular izquierda; HPH, grafía del caso (NPH); IC, insuficiencia cardiaca; ITU, infección urinaria; L5 y S1, vértebras lumbar y sacra; MMSE, Mini-Mental State; MoCA, Montreal Cognitive; NPH, insulina isófana; NYHA, New York Heart Association; SIADH, secreción inadecuada de ADH; SNC, sistema nervioso; T4L, tiroxina libre; TSH, tirotropina.</p>
+</section>
+<section class="tab" id="jq">
+<h2>Jerarquización</h2>
+<div class="hb"><div class="hb-t">Criterio</div><p>Se ordena por el mayor riesgo de morbimortalidad para Doña Rosa: primero lo que puede matarla o dejarla dependiente, sobre todo si es reversible a tiempo.</p></div>
+
+<div class="card"><div class="card-t">Cómo se jerarquiza</div>
+<ol class="tl">
+<li><b>Amenaza vital inmediata.</b> Qué problema puede causar la muerte o un daño grave en horas o días si nadie lo reconoce.</li>
+<li><b>Tiempo-dependencia y reversibilidad.</b> Qué causa pierde posibilidad de corregirse con cada día de retraso; lo reversible y urgente sube.</li>
+<li><b>Riesgo de daño o dependencia funcional.</b> Qué puede dejarla con una fractura, una quemadura o una pérdida de autonomía que no se recupera.</li>
+<li><b>Impacto en la familia.</b> Qué amenaza la continuidad del cuidado: la sobrecarga del hijo y el conflicto por las acusaciones de robo.</li>
+</ol>
+<p class="mini">Los factores de riesgo (FR1 a FR4) no se jerarquizan: se citan como argumento de la gravedad de cada problema.</p></div>
+
+<div class="card"><div class="card-t">Criterios aplicados a los problemas principales</div>
+<div class="tw"><table><thead><tr><th>Problema</th><th>Amenaza vital</th><th>Tiempo-dependiente</th><th>Reversible</th><th>Riesgo de discapacidad</th></tr></thead><tbody>
+<tr><td><b>B1</b> Delirium probable</td><td>Alto</td><td>Alto</td><td>Alto</td><td>Alto</td></tr>
+<tr><td><b>B4</b> Hipoglucemia</td><td>Alto</td><td>Alto</td><td>Alto</td><td>Medio</td></tr>
+<tr><td><b>B3</b> Polifarmacia</td><td>Medio</td><td>Alto</td><td>Alto</td><td>Alto</td></tr>
+<tr><td><b>B6</b> ITU recurrente</td><td>Medio</td><td>Alto</td><td>Alto</td><td>Medio</td></tr>
+<tr><td><b>P1</b> Psicosis</td><td>Bajo</td><td>Medio</td><td>Alto</td><td>Medio</td></tr>
+<tr><td><b>B8</b> Caídas y fractura</td><td>Medio</td><td>Medio</td><td>Bajo</td><td>Alto</td></tr>
+<tr><td><b>S2</b> Inseguridad en el hogar</td><td>Medio</td><td>Medio</td><td>Medio</td><td>Alto</td></tr>
+<tr><td><b>B5</b> Insuficiencia cardiaca</td><td>Medio</td><td>Medio</td><td>Bajo</td><td>Medio</td></tr>
+<tr><td><b>B2</b> Deterioro cognitivo crónico</td><td>Bajo</td><td>Bajo</td><td>Bajo</td><td>Alto</td></tr>
+</tbody></table></div>
+<p class="mini">Valores cualitativos del razonamiento del caso, no puntajes validados.</p></div>
+
+<figure class="dg">
+<div class="dg-t">Escalera de gravedad</div>
+<div class="dg-row">
+<div class="dg-n ro">g1 Riesgo vital: B1, B4, B3</div>
+<div class="dg-ar"><span class="dg-lab">luego</span></div>
+<div class="dg-n fr">g2 Alto: B6, P1, B8, S2, B5</div>
+<div class="dg-ar"><span class="dg-lab">luego</span></div>
+<div class="dg-n ac">g3 Moderado: B2, P3, S1, B7, P2, P4</div>
+<div class="dg-ar"><span class="dg-lab">luego</span></div>
+<div class="dg-n s">g4 Bajo: B9, B10, B11, S3, S4</div>
+</div>
+<figcaption class="mini">Se lee de izquierda a derecha, o de arriba abajo en móvil: del que no puede esperar al que puede esperar.</figcaption>
+</figure>
+
+<figure class="dg">
+<div class="dg-t">Agrupación sindrómica</div>
+<div class="dg-row">
+<div class="dg-col"><div class="dg-n b">B1 cambio agudo cognitivo y conductual</div><div class="dg-n p">P1 psicosis</div><div class="dg-n p">P3 ciclo sueño-vigilia</div><div class="dg-n p">P2 irritabilidad</div></div>
+<div class="dg-ar"><span class="dg-lab">convergen en</span></div>
+<div class="dg-n ro">Delirium</div>
+</div>
+<div class="dg-row">
+<div class="dg-col"><div class="dg-n b">B2 deterioro cognitivo crónico</div><div class="dg-n s">S2 dependencia en actividades instrumentales</div><div class="dg-n s">S3 baja escolaridad</div></div>
+<div class="dg-ar"><span class="dg-lab">convergen en</span></div>
+<div class="dg-n ac">Demencia de base</div>
+</div>
+<div class="dg-row">
+<div class="dg-col"><div class="dg-n b">B3 fármacos inapropiados</div><div class="dg-n b">B4 insulina nocturna</div><div class="dg-n b">B5 diltiazem y furosemida en IC</div></div>
+<div class="dg-ar"><span class="dg-lab">convergen en</span></div>
+<div class="dg-n fr">Polifarmacia</div>
+</div>
+<div class="dg-row">
+<div class="dg-col"><div class="dg-n b">B8 caídas y fractura</div><div class="dg-n b">B7 dolor y limitación de movilidad</div><div class="dg-n p">P3 vigilia nocturna</div></div>
+<div class="dg-ar"><span class="dg-lab">convergen en</span></div>
+<div class="dg-n fr">Riesgo de caídas</div>
+</div>
+<figcaption class="mini">Un problema puede alimentar varios síndromes: B3 y B4 sostienen el delirium y también la polifarmacia.</figcaption>
+</figure>
+
+<div class="card"><div class="card-t">Por qué el delirium va primero</div>
+<p>El delirium es una urgencia médica con mortalidad elevada y siempre tiene una causa orgánica que buscar <span class="badge b-pu">Fuente 2014 [3]</span>. Reconocerlo tarde deja actuar a la causa. Además B1 es el motivo de consulta y organiza el resto del razonamiento: B3, B4 y B6 son sus causas candidatas.</p>
+<p>No se jerarquiza por frecuencia ni por lo cronológico. El deterioro de dos años (B2) pesa mucho en la dependencia futura, pero no mata esta semana y no puede valorarse bien con el delirium encendido.</p>
+<p class="mini">Orden de la propuesta inicial conservado sin cambios. Fisiopatología de cada problema en la pestaña Problemas, por su código.</p></div>
+
+<ol class="rank">
+<li class="g1"><span class="pid">B1</span> <b>Alteración aguda de la conducta y la cognición</b> <span class="badge b-ro">Riesgo vital</span><p>Delirium probable: inicio en 1–2 semanas, inversión del sueño y alucinaciones. Es una urgencia con mortalidad elevada [3] y siempre tiene una causa orgánica; puede ser reversible.</p></li>
+<li class="g1"><span class="pid">B4</span> <b>Riesgo de hipoglucemia y disglucemia</b> <span class="badge b-ro">Riesgo vital</span><p>NPH nocturna a los 83 años con metformina y glucemia no reportada. La neuroglucopenia nocturna imita o precipita la confusión y es tiempo-dependiente.</p></li>
+<li class="g1"><span class="pid">B3</span> <b>Polifarmacia con fármacos inapropiados</b> <span class="badge b-ro">Riesgo vital</span><p>Nueve fármacos; tramadol y pregabalina son deliriogénicos y entran en la lista Beers [7]. La causa es reversible y puede sostener B1 y B4 a la vez.</p></li>
+<li class="g2"><span class="pid">B6</span> <b>ITU recurrente</b> <span class="badge b-co">Alto</span><p>Última ITU hace 4 meses, malla de cistopexia y nicturia. Es un precipitante frecuente en la mujer mayor y puede no dar fiebre ni disuria; sin EMO no se descarta.</p></li>
+<li class="g2"><span class="pid">P1</span> <b>Síntomas psicóticos</b> <span class="badge b-co">Alto</span><p>Ideas de robo y visión del esposo fallecido. Riesgo de agitación, conflicto con el hijo y conductas peligrosas; es síntoma de B1 más que un problema aislado.</p></li>
+<li class="g2"><span class="pid">B8</span> <b>Riesgo de caídas y fractura</b> <span class="badge b-co">Alto</span><p>Osteopenia, pregabalina, tramadol, nicturia, diurético y deterioro cognitivo. Una fractura o un hematoma subdural deja secuelas funcionales; el daño es inmediato y prevenible.</p></li>
+<li class="g2"><span class="pid">S2</span> <b>Inseguridad en el hogar</b> <span class="badge b-co">Alto</span><p>Plancha olvidada encendida y comida quemada: riesgo de quemadura e incendio y dependencia en actividades instrumentales. El daño puede ocurrir cualquier día sin supervisión.</p></li>
+<li class="g2"><span class="pid">B5</span> <b>Insuficiencia cardiaca hipertensiva NYHA II</b> <span class="badge b-co">Alto</span><p>FEVI desconocida y diltiazem en uso. El bajo gasto y la hipoxemia pueden precipitar delirium y la nicturia fragmenta el sueño. Es crónica, pero puede descompensarse.</p></li>
+<li class="g3"><span class="pid">B2</span> <b>Deterioro cognitivo crónico progresivo</b> <span class="badge b-am">Moderado</span><p>Unos 2 años de declive con pérdida de actividades instrumentales. Es el sustrato de vulnerabilidad (FR1) y marca la dependencia futura, pero no es la amenaza de hoy.</p></li>
+<li class="g3"><span class="pid">P3</span> <b>Alteración del ciclo sueño-vigilia</b> <span class="badge b-am">Moderado</span><p>Duerme de día y pasa la noche despierta. Manifiesta y agrava el delirium; la privación de sueño es un precipitante (FR2) y favorece caídas nocturnas.</p></li>
+<li class="g3"><span class="pid">S1</span> <b>Cuidador con riesgo de sobrecarga</b> <span class="badge b-am">Moderado</span><p>El hijo cuida y recibe acusaciones de robo. La sobrecarga amenaza la continuidad del cuidado y la seguridad de la paciente; el impacto crece si el cuadro se prolonga.</p></li>
+<li class="g3"><span class="pid">B7</span> <b>Dolor crónico osteoarticular</b> <span class="badge b-am">Moderado</span><p>Escoliosis, anterolistesis L5–S1 grado II y gonartrosis. El dolor no controlado precipita delirium (FR2) y limita la movilidad; sus analgésicos forman parte de B3.</p></li>
+<li class="g3"><span class="pid">P2</span> <b>Irritabilidad y labilidad</b> <span class="badge b-am">Moderado</span><p>El hijo habla de «carácter dañado». Deteriora la relación familiar; en buena parte es expresión de B1 y mejora si se corrige su causa.</p></li>
+<li class="g3"><span class="pid">P4</span> <b>Duelo y posible ánimo depresivo</b> <span class="badge b-am">Moderado</span><p>Viudez sin evaluación del ánimo. La depresión puede simular deterioro cognitivo o coexistir con él; no hay dato que la apoye ni la descarte, y pesa menos que lo agudo.</p></li>
+<li class="g4"><span class="pid">B9</span> <b>Hipotiroidismo subclínico en observación</b> <span class="badge b-ve">Bajo</span><p>Contribuyente potencial y reversible de deterioro cognitivo; TSH no reportada. La evidencia de que lo cause por sí solo es limitada [VERIFICAR EN FUENTE].</p></li>
+<li class="g4"><span class="pid">B10</span> <b>Esquema de vacunación incompleto</b> <span class="badge b-ve">Bajo</span><p>Sin dT ni Tdap, sin zóster recombinante y con una dosis de neumococo. Aumenta el riesgo de infecciones prevenibles, pero no es la amenaza de hoy; ver pestaña de vacunas.</p></li>
+<li class="g4"><span class="pid">B11</span> <b>Exposición a humo de leña</b> <span class="badge b-ve">Bajo</span><p>Sin datos respiratorios ni saturación. Riesgo de hipoxemia crónica y de demencia a largo plazo (FR3) [18]; falta el dato para priorizarlo.</p></li>
+<li class="g4"><span class="pid">S3</span> <b>Escolaridad primaria</b> <span class="badge b-ve">Bajo</span><p>Menor reserva cognitiva (FR1, FR3) y sesgo al interpretar las pruebas cognitivas. Modifica el riesgo, no es un problema que se corrija ahora.</p></li>
+<li class="g4"><span class="pid">S4</span> <b>Viuda de 83 años con red frágil</b> <span class="badge b-ve">Bajo</span><p>La religiosidad católica es un recurso de apoyo. Es contexto que modula S1 y P4; por sí mismo no amenaza la vida ni la función.</p></li>
+</ol>
+
+<div class="rc" id="rc-jq"><div class="rc-t">Simulador · Recall de jerarquización</div><div class="rc-count" id="rc-jq-n"></div><div class="rc-card" id="rc-jq-c"></div><div class="rc-btns" id="rc-jq-b"></div><div id="rc-jq-e"></div></div>
+
+<p class="gloss">Siglas: L5, quinta vértebra lumbar; B, problema biológico; FR1, FR2, FR3 y FR4, factores de riesgo numerados; II, clase funcional; P, psicológico; S, social; FR, factor de riesgo; NPH, insulina protamina neutra de Hagedorn; ITU, infección de vías urinarias; EMO, examen elemental y microscópico de orina; IC, insuficiencia cardiaca; NYHA, New York Heart Association; FEVI, fracción de eyección del ventrículo izquierdo; TSH, hormona estimulante de la tiroides; dT, toxoide diftérico y tetánico; Tdap, tétanos, difteria y tos ferina acelular.</p>
+</section>
+<section class="tab" id="hx">
+<h2>Hipótesis</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Una paciente con demencia de base y varios precipitantes a la vez: el delirium (H1) se monta sobre el trastorno neurocognitivo mayor (H2).</p></div>
+
+<figure class="dg">
+<div class="dg-t">Modelo multifactorial del delirium</div>
+<div class="dg-row">
+<div class="dg-col"><div class="dg-n fr">Predisponentes (FR1)</div><div class="dg-n fr">Edad de 83 años</div><div class="dg-n fr">Deterioro cognitivo previo</div><div class="dg-n fr">Multimorbilidad y dependencia</div><div class="dg-n fr">Baja escolaridad</div></div>
+<div class="dg-ar"><span class="dg-lab">bajan el umbral</span></div>
+<div class="dg-col"><div class="dg-n b">Precipitantes (FR2)</div><div class="dg-n b">Tramadol y pregabalina</div><div class="dg-n b">NPH nocturna: hipoglucemia</div><div class="dg-n b">Furosemida: hiponatremia</div><div class="dg-n b">ITU, dolor, nicturia, sueño fragmentado</div></div>
+<div class="dg-ar"><span class="dg-lab">desencadenan</span></div>
+<div class="dg-col"><div class="dg-n ro">Delirium (H1)</div><div class="dg-n ac">Trastorno neurocognitivo mayor (H2)</div></div>
+</div>
+<figcaption class="mini">Cuanto más vulnerable el cerebro, menos insulto basta; H1 se apoya en H2, y en Doña Rosa hay varios insultos candidatos a la vez [3].</figcaption>
+</figure>
+
+<div class="card hx"><div class="card-t"><span class="pid">H1</span> Síndrome confusional agudo (delirium) multifactorial, hiperactivo o mixto</div>
+<span class="badge b-ro">Probabilidad alta</span>
+<p class="mini">Explica: <span class="pid">B1</span> <span class="pid">P1</span> <span class="pid">P2</span> <span class="pid">P3</span></p>
+<div class="tw"><table><thead><tr><th>A favor (dato del caso)</th><th>En contra o dato que falta</th></tr></thead><tbody>
+<tr><td>Inicio en 1–2 semanas sobre una línea de base de 2 años.</td><td>La fluctuación durante el día no está descrita.</td></tr>
+<tr><td>Inversión del ciclo sueño-vigilia e irritabilidad.</td><td>La atención no está evaluada; es el rasgo central.</td></tr>
+<tr><td>Ideas de robo y visión del esposo fallecido.</td><td>No se consigna el nivel de conciencia ni la orientación.</td></tr>
+<tr><td>Varios precipitantes a la vez (FR2) en una paciente vulnerable (FR1).</td><td>Faltan glucemia, sodio, creatinina y EMO.</td></tr>
+</tbody></table></div>
+<p><b>Qué la confirmaría.</b> Un CAM positivo, que exige inicio agudo con curso fluctuante e inatención, más pensamiento desorganizado o alteración del nivel de conciencia <span class="badge b-pu">Fuente 1990 [20]</span>, y los criterios DSM-5-TR de delirium, con evidencia de una causa orgánica <span class="badge b-pu">Fuente 2022 [15]</span>.</p></div>
+
+<div class="card hx"><div class="card-t"><span class="pid">H2</span> Trastorno neurocognitivo mayor de base, probable Alzheimer o mixto Alzheimer-vascular</div>
+<span class="badge b-ro">Probabilidad alta</span>
+<p class="mini">Explica: <span class="pid">B2</span> <span class="pid">S2</span> <span class="pid">S3</span></p>
+<div class="tw"><table><thead><tr><th>A favor (dato del caso)</th><th>En contra o dato que falta</th></tr></thead><tbody>
+<tr><td>Unos 2 años de olvidos que se confunden con los nombres de los hijos.</td><td>No hay valoración cognitiva previa con un informante estructurado.</td></tr>
+<tr><td>Pérdida de actividades instrumentales: plancha encendida, comida quemada, casa desordenada.</td><td>El delirium actual impide medir la cognición basal.</td></tr>
+<tr><td>Carga vascular: DM2, HTA e IC (FR3) y escolaridad primaria.</td><td>Faltan MMSE o MoCA, escala de Lawton y neuroimagen.</td></tr>
+</tbody></table></div>
+<p><b>Qué la confirmaría.</b> Declive en uno o más dominios cognitivos que interfiere con la independencia y no se explica solo por delirium <span class="badge b-pu">Fuente 2022 [15]</span>; criterios de demencia por Alzheimer probable <span class="badge b-pu">Fuente 2011 [21]</span>, con una evaluación cognitiva repetida una vez resuelto el cuadro agudo.</p></div>
+
+<div class="card hx"><div class="card-t"><span class="pid">H3</span> Delirium inducido por medicamentos o prescripción potencialmente inapropiada</div>
+<span class="badge b-co">Probabilidad media-alta</span>
+<p class="mini">Explica: <span class="pid">B3</span> <span class="pid">B4</span> · Sub-hipótesis de H1 con identidad propia porque es reversible.</p>
+<div class="tw"><table><thead><tr><th>A favor (dato del caso)</th><th>En contra o dato que falta</th></tr></thead><tbody>
+<tr><td>Nueve fármacos; tramadol y pregabalina son sedantes y deliriogénicos <span class="badge b-pu">Fuente 2023 [7]</span>.</td><td>No se consigna cuándo se inició ni se cambió cada dosis.</td></tr>
+<tr><td>NPH nocturna en una paciente de 83 años, con riesgo de hipoglucemia.</td><td>Glucemia no reportada, ni capilar ni en ayunas.</td></tr>
+<tr><td>Furosemida con losartán: riesgo de hiponatremia y de lesión renal que acumula pregabalina.</td><td>Faltan sodio, potasio y creatinina; la adherencia y la automedicación no se consignan.</td></tr>
+</tbody></table></div>
+<p><b>Qué la confirmaría.</b> Una relación temporal entre un inicio o cambio de dosis y el cuadro, documentada en una historia farmacológica completa; fármacos que cumplen criterios Beers <span class="badge b-pu">Fuente 2023 [7]</span>; y hallazgos medibles como hipoglucemia, hiponatremia o creatinina elevada.</p></div>
+
+<div class="card hx"><div class="card-t"><span class="pid">H4</span> ITU como foco precipitante</div>
+<span class="badge b-am">Probabilidad media</span>
+<p class="mini">Explica: <span class="pid">B6</span></p>
+<div class="tw"><table><thead><tr><th>A favor (dato del caso)</th><th>En contra o dato que falta</th></tr></thead><tbody>
+<tr><td>ITU recurrente; la última hace 4 meses.</td><td>No se consignan fiebre, disuria ni dolor suprapúbico.</td></tr>
+<tr><td>Malla de cistopexia, nicturia de 2–3 veces y DM2.</td><td>No hay EMO ni urocultivo; la bacteriuria sola puede ser un hallazgo sin relación con el cuadro.</td></tr>
+<tr><td>En el adulto mayor la ITU puede presentarse como confusión sin síntomas urinarios <span class="badge b-pu">Fuente 2018 [17]</span>.</td><td>Otros precipitantes igual de plausibles coexisten.</td></tr>
+</tbody></table></div>
+<p><b>Qué la confirmaría.</b> Un EMO y un urocultivo compatibles, junto con signos sistémicos, y la ausencia de una explicación mejor para el cuadro; la bacteriuria aislada no basta para atribuirle el delirium.</p></div>
+
+<div class="card"><div class="card-t">Diagnóstico diferencial</div>
+<div class="tw"><table><thead><tr><th>Hipótesis alternativa</th><th>Dato que la acerca</th><th>Dato que la aleja</th></tr></thead><tbody>
+<tr><td><b>Demencia con cuerpos de Lewy</b></td><td>Alucinaciones visuales bien formadas y posible fluctuación <span class="badge b-pu">Fuente 2017 [22]</span>.</td><td>Las alucinaciones son recientes, tras 2 años de amnesia; no se consigna parkinsonismo ni conducta durante el sueño REM.</td></tr>
+<tr><td><b>Depresión con quejas cognitivas</b></td><td>Viudez, alteración del sueño e irritabilidad.</td><td>No se refiere tristeza; hay psicosis y confusión de los nombres de los hijos; el ánimo no está evaluado.</td></tr>
+<tr><td><b>Hipotiroidismo (B9)</b></td><td>TSH alta en seguimiento y deterioro cognitivo.</td><td>Es subclínico con T4 libre normal; no se reporta el valor de TSH y su efecto cognitivo aislado es limitado [VERIFICAR EN FUENTE].</td></tr>
+<tr><td><b>Déficit de B12 por metformina</b></td><td>Metformina de larga data y DM2.</td><td>No se consignan anemia ni neuropatía; falta hemograma y nivel de B12.</td></tr>
+<tr><td><b>Hematoma subdural crónico</b></td><td>Riesgo de caídas (B8), edad y anterolistesis con dolor.</td><td>No se consigna caída, cefalea ni déficit focal; falta neuroimagen.</td></tr>
+<tr><td><b>Psicosis de inicio tardío</b></td><td>Ideas de robo y alucinaciones persistentes.</td><td>Hay cambio agudo con sueño invertido y causas orgánicas candidatas; es un diagnóstico de exclusión.</td></tr>
+<tr><td><b>Hipoxemia (humo de leña o IC)</b></td><td>Exposición a humo de leña e IC NYHA II.</td><td>Tabaquismo negativo; no se consignan disnea, tos ni saturación.</td></tr>
+</tbody></table></div>
+<p class="mini">Cada fila nombra el dato que falta para aceptarla o descartarla; ninguna se resuelve solo con el relato del hijo.</p></div>
+
+<div class="card"><div class="card-t">Delirium frente a demencia en Doña Rosa</div>
+<div class="tw"><table><thead><tr><th>Rasgo</th><th>Delirium (H1)</th><th>Demencia (H2)</th><th>Dato de Doña Rosa</th></tr></thead><tbody>
+<tr><td><b>Inicio</b></td><td>Agudo, en horas o días.</td><td>Insidioso, en meses o años.</td><td>1–2 semanas el cuadro nuevo; unos 2 años el olvido.</td></tr>
+<tr><td><b>Curso</b></td><td>Fluctuante.</td><td>Progresivo y estable en el día.</td><td>Fluctuación no documentada.</td></tr>
+<tr><td><b>Atención</b></td><td>Alterada desde el inicio.</td><td>Conservada hasta fases avanzadas.</td><td>No evaluada.</td></tr>
+<tr><td><b>Nivel de conciencia</b></td><td>Alterado o fluctuante.</td><td>Conservado.</td><td>Duerme de día; no se describe el nivel de conciencia.</td></tr>
+</tbody></table></div>
+<p class="mini">Ambos coexisten con frecuencia: el delirium sobre la demencia es la forma más habitual en el adulto mayor <span class="badge b-pu">Fuente 2014 [3]</span>.</p></div>
+
+<div class="card"><div class="card-t">Necesidades de aprendizaje</div>
+<p>Contenidos del Caso 6 del sílabo de la segunda rotación que esta apertura deja abiertos <span class="badge b-pu">Fuente 2015 [10]</span> <span class="badge b-pu">Fuente 2018 [17]</span>.</p>
+<ul>
+<li>Síndrome confusional agudo: definición, epidemiología, factores de riesgo y precipitantes, fisiopatología, clasificación, características clínicas, diagnóstico (CAM) y diagnóstico diferencial.</li>
+<li>Pronóstico, prevención y tratamiento del delirium.</li>
+<li>Trastornos cognitivos por Alzheimer y por Parkinson.</li>
+<li>Demencias vascular, con cuerpos de Lewy, en la enfermedad de Parkinson y frontotemporal: concepto, factores de riesgo y de protección, evaluación y diagnóstico.</li>
+<li>Manejo farmacológico y no farmacológico de las demencias.</li>
+<li>Trabajo autónomo: características del envejecimiento cerebral y evaluación cognitiva en la persona adulta mayor.</li>
+</ul></div>
+
+<div class="rc" id="rc-hx"><div class="rc-t">Simulador · Recall de hipótesis</div><div class="rc-count" id="rc-hx-n"></div><div class="rc-card" id="rc-hx-c"></div><div class="rc-btns" id="rc-hx-b"></div><div id="rc-hx-e"></div></div>
+
+<p class="gloss">Siglas: H, hipótesis; FR1, FR2 y FR3, factores de riesgo; II, clase funcional; B, problema biológico; P, psicológico; S, social; FR, factor de riesgo; NPH, insulina de acción intermedia; ITU, infección urinaria; EMO, examen de orina; CAM, Confusion Assessment Method; DSM-5-TR, manual diagnóstico y estadístico, 5.ª ed. revisada; DM2, diabetes mellitus tipo 2; HTA, hipertensión arterial; IC, insuficiencia cardiaca; NYHA, New York Heart Association; MMSE, Mini-Mental State Examination; MoCA, Montreal Cognitive Assessment; REM, movimientos oculares rápidos; TSH, hormona estimulante de la tiroides; T4, tiroxina.</p>
+</section>
+<section class="tab" id="tg">
+<h2>Repaso global</h2>
+<p class="mini">Mazo mixto con todas las tarjetas de los nueve términos, los problemas, la jerarquización y las hipótesis, barajadas e intercaladas. Al terminar verás los aciertos al primer intento por pestaña.</p>
+
+<div class="rc" id="rc-tg"><div class="rc-t">Simulador · Repaso global de la apertura</div><div class="rc-count" id="rc-tg-n"></div><div class="rc-card" id="rc-tg-c"></div><div class="rc-btns" id="rc-tg-b"></div><div id="rc-tg-e"></div></div>
+
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span>Referencias</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="vanc">
+<li>Crooke SN, Ovsyannikova IG, Poland GA, Kennedy RB. Immunosenescence and human vaccine immune responses. Immun Ageing. 2019;16:25. doi:10.1186/s12979-019-0164-9.</li>
+<li>Centers for Disease Control and Prevention. Adult Immunization Schedule by Age. Recommendations of the Advisory Committee on Immunization Practices (ACIP). Atlanta: CDC; edición vigente. Disponible en: https://www.cdc.gov/vaccines/hcp/imz-schedules/adult-age.html</li>
+<li>Inouye SK, Westendorp RG, Saczynski JS. Delirium in elderly people. Lancet. 2014;383(9920):911-22.</li>
+<li>Hall JE, Hall ME. Guyton and Hall textbook of medical physiology. 14th ed. Philadelphia: Elsevier; 2021.</li>
+<li>Brunton LL, Knollmann BC, editors. Goodman &amp; Gilman's the pharmacological basis of therapeutics. 14th ed. New York: McGraw-Hill; 2023.</li>
+<li>Heidenreich PA, Bozkurt B, Aguilar D, Allen LA, Byun JJ, Colvin MM, et al. 2022 AHA/ACC/HFSA guideline for the management of heart failure. Circulation. 2022;145(18):e895-e1032. doi:10.1161/CIR.0000000000001063.</li>
+<li>2023 American Geriatrics Society Beers Criteria Update Expert Panel. American Geriatrics Society 2023 updated AGS Beers Criteria for potentially inappropriate medication use in older adults. J Am Geriatr Soc. 2023;71(7):2052-81.</li>
+<li>Bockbrader HN, Burger P, Knapp L, Corrigan BW. Population pharmacokinetics of pregabalin in healthy subjects and patients with chronic pain or partial seizures. Epilepsia. 2011;52(2):248-57.</li>
+<li>Bockbrader HN, Radulovic LL, Posvar EL, Strand JC, Alvey CW, Busch JA, et al. Clinical pharmacokinetics of pregabalin in healthy volunteers. J Clin Pharmacol. 2010;50(8):941-50.</li>
+<li>Kasper DL, Fauci AS, Hauser SL, Longo DL, Jameson JL, Loscalzo J, editors. Harrison's principles of internal medicine. 19th ed. New York: McGraw-Hill; 2015.</li>
+<li>Bannuru RR, Osani MC, Vaysbrot EE, Arden NK, Bennell K, Bierma-Zeinstra SMA, et al. OARSI guidelines for the non-surgical management of knee, hip, and polyarticular osteoarthritis. Osteoarthritis Cartilage. 2019;27(11):1578-89.</li>
+<li>Kolasinski SL, Neogi T, Hochberg MC, Oatis C, Guyatt G, Block J, et al. 2019 American College of Rheumatology/Arthritis Foundation guideline for the management of osteoarthritis of the hand, hip, and knee. Arthritis Care Res (Hoboken). 2020;72(2):149-62.</li>
+<li>American Diabetes Association Professional Practice Committee. 13. Older adults: Standards of Care in Diabetes-2025. Diabetes Care. 2025;48(Suppl 1):S266-82. doi:10.2337/dc25-S013.</li>
+<li>Biondi B, Cappola AR, Cooper DS. Subclinical hypothyroidism: a review. JAMA. 2019;322(2):153-60.</li>
+<li>American Psychiatric Association. Diagnostic and Statistical Manual of Mental Disorders. 5th ed, text revision (DSM-5-TR). Washington, DC: American Psychiatric Association Publishing; 2022.</li>
+<li>Maldonado JR. Delirium pathophysiology: an updated hypothesis of the etiology of acute brain failure. Int J Geriatr Psychiatry. 2018;33(11):1428-57. doi:10.1002/gps.4823.</li>
+<li>Kane RL, Ouslander JG, Resnick B, Malone ML. Essentials of clinical geriatrics (Principios de geriatría clínica). 8th ed. New York: McGraw-Hill; 2018.</li>
+<li>Livingston G, Huntley J, Liu KY, Costafreda SG, Selbæk G, Alladi S, et al. Dementia prevention, intervention, and care: 2024 report of the Lancet standing Commission. Lancet. 2024;404(10452):572-628.</li>
+<li>O'Mahony D, Cherubini A, Guiteras AR, Denkinger M, Beuscart JB, Onder G, et al. STOPP/START criteria for potentially inappropriate prescribing in older people: version 3. Eur Geriatr Med. 2023;14(4):625-32. doi:10.1007/s41999-023-00777-y.</li>
+<li>Inouye SK, van Dyck CH, Alessi CA, Balkin S, Siegal AP, Horwitz RI. Clarifying confusion: the confusion assessment method. A new method for detection of delirium. Ann Intern Med. 1990;113(12):941-8.</li>
+<li>McKhann GM, Knopman DS, Chertkow H, Hyman BT, Jack CR Jr, Kawas CH, et al. The diagnosis of dementia due to Alzheimer's disease: recommendations from the National Institute on Aging-Alzheimer's Association workgroups on diagnostic guidelines for Alzheimer's disease. Alzheimers Dement. 2011;7(3):263-9.</li>
+<li>McKeith IG, Boeve BF, Dickson DW, Halliday G, Taylor JP, Weintraub D, et al. Diagnosis and management of dementia with Lewy bodies: fourth consensus report of the DLB Consortium. Neurology. 2017;89(1):88-100.</li>
+</ol>
+<p class="mini">Quedaron con «Fuente por verificar» o con la marca [VERIFICAR EN FUENTE]: la tabla de tipos de vacuna y el esquema del MSP, la fórmula vigente de COVID-19 (Vacunas); la descripción histológica y la posición de cada guía sobre la glucosamina (Glucosamina); el correlato de B12 con metformina (Insulina + metformina); la cifra del eutiroideo enfermo (Hipotiroidismo subclínico); el cuidado diagnóstico de la bacteriuria (Problemas); y el peso del hipotiroidismo subclínico en la jerarquía y en las hipótesis.</p>
+</div></div>
+<p class="gloss">Siglas: ninguna.</p>
+</section>
+<script>
+const TERMS={t1:"Vacunas",t2:"Losartán",t3:"Diltiazem",t4:"Furosemida",t5:"Paracetamol",t6:"Pregabalina",t7:"Glucosamina",t8:"Insulina + metformina",t9:"Hipotiroidismo subclínico",pb:"Problemas",jq:"Jerarquización",hx:"Hipótesis"};
+const DECKS={
+t1:[
+{q:"¿Qué cambia en los linfocitos T con la edad y cómo afecta a la respuesta a una vacuna nueva?",a:"El timo involuciona y salen menos T vírgenes: hay menos células capaces de responder a un antígeno nuevo, y la respuesta es menor y más corta.",h:"Timo y T vírgenes"},
+{q:"¿Por qué una vacuna conjugada genera memoria y un polisacárido puro casi no?",a:"Al unirse a una proteína, el linfocito B presenta péptidos al T colaborador (respuesta T-dependiente), que lo lleva al centro germinal y a la memoria.",h:"Quién ayuda al linfocito B"},
+{q:"¿Qué contiene la vacuna recombinante del zóster y qué papel tiene su adyuvante?",a:"Una proteína del virus (sin virus replicante) más un adyuvante que amplifica una respuesta que en el anciano es débil.",h:"Proteína más adyuvante"},
+{q:"En Doña Rosa, ¿de qué depende que su neumococo esté completo y qué dato falta?",a:"Depende del tipo de la dosis recibida (PCV20 o PCV21, PCV15 o PPSV23); el caso no lo especifica.",h:"Tipo de la dosis"},
+{q:"¿Por qué sarampión-rubéola y varicela no son prioridad en Doña Rosa?",a:"Son vacunas vivas y su generación se considera inmune por haber cursado la infección; el riesgo a su edad es el zóster, que cubre la vacuna recombinante.",h:"Generación y virus vivo"},
+{q:"¿Cómo se conecta el esquema de vacunas con el delirium de Doña Rosa?",a:"Las infecciones son precipitantes de delirium; una brecha vacunal deja infecciones evitables como posibles precipitantes.",h:"Infección como precipitante"}
+],
+t2:[
+{q:"¿Por qué la angiotensina II ayuda a mantener el filtrado cuando baja la perfusión renal?",a:"Contrae la arteriola eferente y mantiene la presión hidrostática dentro del glomérulo.",h:"Arteriola de salida"},
+{q:"¿Qué le pasa al filtrado si se bloquea AT1 en una persona deshidratada?",a:"La eferente se dilata, cae la presión de filtración y se arriesga una lesión renal aguda.",h:"Dilata la salida"},
+{q:"¿Por qué el losartán puede elevar el potasio?",a:"Hay menos aldosterona activa, y el túbulo colector excreta menos potasio.",h:"Aldosterona y potasio"},
+{q:"¿En qué se diferencia el losartán de un IECA?",a:"El losartán bloquea el receptor AT1; el IECA inhibe la enzima que forma angiotensina II y acumula bradicinina (tos).",h:"Receptor frente a enzima"},
+{q:"En Doña Rosa, ¿qué combinación eleva el riesgo renal y qué fármacos se acumularían si baja el filtrado?",a:"Losartán más furosemida; se acumularían pregabalina y metformina, de eliminación renal.",h:"Dos fármacos hacia el riñón"}
+],
+t3:[
+{q:"¿Qué hace el calcio que entra por el canal tipo L en el cardiomiocito?",a:"Actúa como gatillo: activa los receptores de rianodina y libera mucho más calcio del retículo sarcoplásmico.",h:"Calcio gatillo"},
+{q:"¿Por qué el diltiazem baja la frecuencia y enlentece la conducción?",a:"La despolarización de los nodos depende del calcio por canales L; menos calcio aplana su pendiente.",h:"Nodos y calcio"},
+{q:"¿En qué se diferencia el diltiazem del amlodipino?",a:"El amlodipino actúa sobre todo en los vasos; el diltiazem actúa también en el corazón (frecuencia, conducción y contractilidad).",h:"Vaso frente a corazón"},
+{q:"¿Por qué el diltiazem es problemático en insuficiencia cardiaca con fracción de eyección reducida y qué dato falta en Doña Rosa?",a:"Por su efecto inotrópico negativo; falta la fracción de eyección (FEVI).",h:"Resta fuerza"},
+{q:"¿Cómo puede el diltiazem contribuir a las caídas de Doña Rosa?",a:"Por bradicardia o hipotensión, que reducen la perfusión cerebral y favorecen mareo.",h:"Perfusión cerebral"},
+{q:"¿Qué implica que el diltiazem inhiba CYP3A4?",a:"Los fármacos que dependen de esa enzima se metabolizan menos y alcanzan niveles más altos.",h:"Metabolismo hepático"}
+],
+t4:[
+{q:"¿Qué transporta el NKCC2 y en qué segmento está?",a:"Sodio, potasio y dos cloros, en la rama ascendente gruesa del asa de Henle.",h:"Tres iones, un segmento"},
+{q:"¿Por qué la furosemida aumenta también la pérdida de calcio y magnesio?",a:"Al bloquear el NKCC2 y el reciclaje de potasio se pierde la carga positiva luminal que empuja esos cationes por la vía entre células.",h:"Carga luminal"},
+{q:"¿Por qué la furosemida disminuye la capacidad de concentrar la orina?",a:"Sin reabsorción de solutos en la rama ascendente, el intersticio medular pierde su hiperosmolaridad.",h:"Contracorriente"},
+{q:"¿En qué se diferencia la furosemida de una tiazida?",a:"La furosemida actúa en el asa (NKCC2) y es más potente; la tiazida actúa en el túbulo distal (cotransportador Na-Cl).",h:"Segmento y potencia"},
+{q:"¿Qué alteraciones de la furosemida pueden precipitar delirium en Doña Rosa?",a:"Deshidratación, hiponatremia e hipopotasemia, no descartables porque el caso no trae electrolitos.",h:"Volumen e iones"},
+{q:"¿Por qué la toma matutina de furosemida no resuelve la nicturia de Doña Rosa?",a:"Concentra la diuresis en el día, pero la nicturia tiene otras causas (insuficiencia cardiaca, vejiga, edad) y persiste en 2 a 3 veces por noche.",h:"Hora de toma"}
+],
+t5:[
+{q:"¿Qué hace la ciclooxigenasa en el dolor y la fiebre?",a:"Convierte el ácido araquidónico en prostaglandinas, que sensibilizan al nociceptor y elevan el punto de ajuste hipotalámico.",h:"Del ácido araquidónico"},
+{q:"¿Cómo se metaboliza el paracetamol y qué es el NAPQI?",a:"Casi todo se conjuga (glucuronidación, sulfatación); una fracción forma NAPQI por CYP2E1, un metabolito tóxico que neutraliza el glutatión.",h:"Vía principal y vía menor"},
+{q:"¿Qué situación expone al hígado a toxicidad por paracetamol?",a:"La sobredosis o la depleción de glutatión (ayuno prolongado, desnutrición, alcohol crónico).",h:"Falta de glutatión"},
+{q:"¿Qué diferencia al paracetamol de los AINE?",a:"No tiene efecto antiinflamatorio relevante, pero tampoco el riesgo gástrico, renal y cardiovascular de los AINE.",h:"Antiinflamatorio"},
+{q:"¿Por qué el paracetamol es una opción razonable para el dolor de Doña Rosa frente a un AINE?",a:"Tiene insuficiencia cardiaca y recibe losartán y furosemida: los AINE añaden riesgo renal y cardiovascular.",h:"Corazón y riñón"},
+{q:"¿Cómo se relaciona el dolor crónico de Doña Rosa con su delirium?",a:"El dolor no controlado y la privación de sueño son precipitantes de delirium; también limitan su movilidad.",h:"Precipitante"}
+],
+t6:[
+{q:"En la terminal presináptica excitatoria, ¿qué sucesión lleva del potencial de acción a la liberación de glutamato?",a:"Se abren canales de calcio dependientes de voltaje, entra calcio y las vesículas se fusionan con la membrana (exocitosis).",h:"El calcio es el disparador de la exocitosis."},
+{q:"¿Qué papel cumple la subunidad α2δ en un canal de calcio dependiente de voltaje?",a:"Es una subunidad auxiliar que no forma el poro, pero favorece que haya más canales funcionales en la terminal presináptica.",h:"El poro lo forma otra subunidad (α1)."},
+{q:"Una paciente con lumbociatalgia describe dolor quemante que baja por el miembro siguiendo una raíz nerviosa. ¿Es nociceptivo o neuropático y por qué?",a:"Neuropático: la señal nace de una raíz nerviosa comprimida o lesionada, no de tejido dañado que active nociceptores.",h:"Piensa si el origen es el tejido o el propio nervio."},
+{q:"¿Cómo actúa la pregabalina y sobre qué receptores NO actúa pese a ser análogo del GABA?",a:"Se une a α2δ de los canales de calcio y reduce la liberación de neurotransmisores excitatorios; no actúa sobre receptores GABA.",h:"El nombre sugiere un mecanismo que no es el real."},
+{q:"¿Por qué la pregabalina se acumula si cae el filtrado glomerular?",a:"Se elimina por el riñón sin metabolismo, de modo que su aclaramiento es proporcional al de creatinina.",h:"No hay otra vía de salida que la renal."},
+{q:"Doña Rosa toma pregabalina y tramadol y está somnolienta de día y confusa. ¿Qué dice Beers 2023 de esa combinación y qué riesgos suma?",a:"Desaconseja combinar opioide con gabapentinoide; suma depresión del SNC, sedación, ataxia y riesgo de delirium y caídas.",h:"Dos fármacos que deprimen el mismo sistema."}
+],
+t7:[
+{q:"¿De qué dos componentes de la matriz depende la resistencia a la tensión y la capacidad de amortiguar la compresión del cartílago hialino?",a:"Colágeno tipo II da resistencia a la tensión; los proteoglicanos con glucosaminoglicanos retienen agua y amortiguan la compresión.",h:"Uno es fibra, el otro es esponja."},
+{q:"¿Por qué el cartílago hialino repara mal su daño?",a:"No tiene vasos y tiene pocos condrocitos que renuevan la matriz muy despacio.",h:"Piensa en su nutrición y en su población celular."},
+{q:"En la gonartrosis, ¿qué desequilibrio ocurre en la matriz del cartílago?",a:"Se degradan colágeno II y proteoglicanos más rápido de lo que los condrocitos los resintetizan.",h:"Síntesis frente a degradación."},
+{q:"¿Qué es la glucosamina y por qué se propuso como «condroprotectora»?",a:"Es un aminomonosacárido precursor de glucosaminoglicanos; se pensó que aportar el precursor ayudaría a reparar la matriz.",h:"Es una pieza de construcción del cartílago."},
+{q:"¿Cómo se diferencia la glucosamina de un AINE en su mecanismo y en su finalidad?",a:"El AINE inhibe la ciclooxigenasa y alivia dolor e inflamación; la glucosamina se propone como precursor de matriz y no tiene ese mecanismo.",h:"Uno actúa sobre el dolor, el otro pretende actuar sobre el cartílago."},
+{q:"Doña Rosa toma glucosamina para su gonartrosis dentro de más de nueve fármacos. ¿Qué pregunta de polifarmacia plantea?",a:"Qué beneficio clínico claro aporta, porque la eficacia es controvertida y suma otro fármaco a la lista.",h:"Relaciona beneficio con carga de fármacos."}
+],
+t8:[
+{q:"¿Cómo lleva la insulina la glucosa al interior de una célula muscular?",a:"Activa su receptor tirosina cinasa, lo que lleva transportadores GLUT4 a la membrana y permite la entrada de glucosa.",h:"La puerta es un transportador que sale de vesículas."},
+{q:"¿Qué efecto tiene la insulina sobre el hígado?",a:"Suprime la gluconeogénesis y la glucogenólisis y favorece el almacenamiento de glucógeno.",h:"Frena la producción de glucosa."},
+{q:"¿Por qué el cerebro es tan vulnerable a la hipoglucemia?",a:"Consume glucosa casi de forma exclusiva y no tiene reserva apreciable de glucógeno.",h:"No puede almacenar su combustible."},
+{q:"En el adulto mayor, ¿qué tipo de síntomas de hipoglucemia predomina y cómo se presenta?",a:"Predominan los neuroglucopénicos: confusión o conducta extraña, porque los síntomas adrenérgicos se atenúan.",h:"Faltan el temblor y el sudor."},
+{q:"¿Cómo reduce la metformina la glucosa y por qué por sí sola rara vez causa hipoglucemia?",a:"Activa AMPK y baja la gluconeogénesis hepática, sin estimular la secreción de insulina.",h:"No empuja a la célula beta."},
+{q:"Doña Rosa recibe NPH en la noche, está confusa y duerme de día. ¿Qué mecanismo explica que la insulina pueda causar este cuadro?",a:"El pico de la NPH coincide con el ayuno de la madrugada y produce hipoglucemia nocturna con neuroglucopenia, sin síntomas adrenérgicos claros.",h:"Piensa cuándo actúa más la insulina intermedia."}
+],
+t9:[
+{q:"¿Cuál es la secuencia del eje tiroideo, desde el hipotálamo hasta la T3?",a:"TRH hipotalámica, TSH hipofisaria, T4 tiroidea (y algo de T3), convertida a T3 activa en los tejidos por desyodasas.",h:"Cuatro pasos antes de llegar a la hormona activa."},
+{q:"¿Por qué la TSH es el sensor más temprano de una falla tiroidea primaria?",a:"Porque la relación con la T4 libre es inversa y amplificada: una caída pequeña de T4 produce un aumento proporcionalmente mayor de TSH.",h:"El cambio de TSH es mayor que el de T4."},
+{q:"¿Cómo se define el hipotiroidismo subclínico?",a:"TSH por encima del límite de referencia con T4 libre normal.",h:"La TSH sola no basta para definirlo."},
+{q:"¿Qué cambia de la TSH con la edad y qué implica al interpretarla en una anciana?",a:"Aumenta de forma fisiológica sin enfermedad tiroidea, por lo que conviene usar rangos ajustados por edad para no sobrediagnosticar.",h:"El termostato se reajusta con los años."},
+{q:"¿En qué se diferencia el hipotiroidismo subclínico del manifiesto y de la hipotiroxinemia aislada?",a:"Subclínico: TSH alta con T4 libre normal. Manifiesto: TSH alta con T4 libre baja. Hipotiroxinemia aislada: T4 libre baja con TSH normal.",h:"Compara siempre las dos hormonas."},
+{q:"¿Por qué se reevalúa el hipotiroidismo subclínico de Doña Rosa ante su deterioro cognitivo?",a:"Es una causa contribuyente y reversible de deterioro cognitivo que entra al diferencial de la demencia.",h:"Piensa en causas tratables de olvido."}
+],
+pb:[
+{q:"¿Qué desequilibrio de neurotransmisores se plantea en el delirium?",a:"Déficit colinérgico y exceso dopaminérgico.",h:"Acetilcolina y dopamina"},
+{q:"Según el modelo de Inouye, ¿de qué depende que aparezca el delirium?",a:"De la vulnerabilidad del paciente combinada con la intensidad del insulto.",h:"Predisponentes y precipitantes"},
+{q:"¿Por qué el tramadol puede bajar el sodio?",a:"Por SIADH: retiene agua libre y diluye el sodio sérico.",h:"Mecanismo hormonal"},
+{q:"En Doña Rosa, ¿cómo se acumulan la pregabalina y la metformina?",a:"Furosemida y losartán reducen el filtrado renal y ambos se eliminan por el riñón.",h:"Eliminación renal"},
+{q:"¿Por qué la insulina NPH nocturna expone a hipoglucemia de madrugada?",a:"Su efecto máximo cae horas después de la inyección, en ayuno.",h:"Pico de acción"},
+{q:"¿Por qué la persona con delirium puede ver a un familiar fallecido?",a:"Menos acetilcolina que filtre estímulos y más dopamina que les dé relevancia producen percepciones falsas.",h:"Alucinación visual"},
+{q:"¿En qué eje se clasifica la plancha encendida y la comida quemada?",a:"Social: seguridad en el hogar y dependencia instrumental (S2).",h:"Eje BPS"},
+{q:"¿Qué relación hay entre delirium y demencia?",a:"Bidireccional: la demencia predispone al delirium y el delirium puede acelerar el deterioro.",h:"Dos direcciones"}
+],
+jq:[
+{q:"¿Por qué B4 (hipoglucemia) va antes que B2 (deterioro cognitivo crónico)?",a:"B4 es tiempo-dependiente y reversible, y puede causar daño neuronal o una caída en horas; B2 es crónico y no mata esta semana.",h:"Compara urgencia y reversibilidad."},
+{q:"¿Por qué el delirium (B1) encabeza la lista aunque la demencia lleve dos años?",a:"El delirium es una urgencia médica con mortalidad elevada y siempre tiene una causa orgánica que buscar; la demencia no puede valorarse bien mientras persiste.",h:"Piensa en qué no puede esperar."},
+{q:"¿Por qué la polifarmacia (B3) es g1 aunque no sea una enfermedad?",a:"Sus fármacos deliriogénicos son una causa reversible que puede sostener B1 y B4 a la vez.",h:"Causa corregible de un problema grave."},
+{q:"¿Por qué B8 (caídas y fractura) es g2 y no g4?",a:"El daño es inmediato, prevenible y deja secuelas funcionales; varios factores de la paciente se suman.",h:"Daño funcional que no se recupera."},
+{q:"¿Por qué los factores de riesgo no entran en el ranking?",a:"No son problemas de la paciente sino argumentos que explican la gravedad o la vulnerabilidad de los problemas.",h:"Se citan, no se ordenan."}
+],
+hx:[
+{q:"¿Qué cuatro rasgos evalúa el CAM y cuáles deben estar presentes?",a:"Inicio agudo con curso fluctuante, inatención, pensamiento desorganizado y alteración del nivel de conciencia; se exigen los dos primeros y uno de los dos últimos.",h:"Dos obligatorios más uno de dos."},
+{q:"¿Por qué H3 se separa de H1 si es una sub-hipótesis?",a:"Porque es reversible: identificar el fármaco causal cambia lo que puede corregirse.",h:"Identidad propia por la reversibilidad."},
+{q:"¿Qué dato falta para atribuir el cuadro de Doña Rosa a una ITU?",a:"EMO y urocultivo con signos sistémicos y sin mejor explicación; la bacteriuria sola no basta.",h:"Un hallazgo de laboratorio no es un diagnóstico."},
+{q:"¿Por qué no se puede confirmar H2 durante el delirium?",a:"Porque el delirium altera la atención y la cognición, y impide medir la línea de base; se repite la evaluación cuando el cuadro agudo se resuelve.",h:"El cuadro agudo contamina la medición."},
+{q:"¿Qué dato de Doña Rosa aleja la demencia con cuerpos de Lewy?",a:"Las alucinaciones son recientes, tras 2 años de amnesia, y no se consigna parkinsonismo.",h:"Cronología de las alucinaciones."},
+{q:"¿Cómo distingue el inicio al delirium de la demencia?",a:"El delirium comienza de forma aguda, en horas o días; la demencia es insidiosa, en meses o años.",h:"Horas frente a años."},
+{q:"¿Qué hace que un hematoma subdural crónico entre al diferencial?",a:"El riesgo de caídas de la paciente, su edad y el posible traumatismo no recordado; falta neuroimagen.",h:"Piensa en B8."},
+{q:"En el modelo multifactorial, ¿qué relación hay entre vulnerabilidad e insulto?",a:"Cuanto mayor la vulnerabilidad previa, menor el insulto necesario para precipitar delirium.",h:"Umbral."}
+]
+};
+DECKS.tg=[].concat.apply([],Object.keys(TERMS).map(function(k){return DECKS[k].map(function(c){return {q:c.q,a:c.a,h:c.h,t:k};});}));
+const RC={};
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function el(k,s){return document.getElementById('rc-'+k+'-'+s);}
+function isCloze(c){return c.q.indexOf('{{')>=0;}
+function front(c){return esc(c.q).replace(/\{\{[^}]*\}\}/g,'[ ? ]');}
+function back(c){return esc(c.q).replace(/\{\{([^}]*)\}\}/g,'<b>$1</b>');}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function show(id,btn){
+  document.querySelectorAll('.tab').forEach(function(s){s.classList.toggle('active',s.id===id);});
+  document.querySelectorAll('.tb').forEach(function(b){b.classList.toggle('active',b===btn);});
+  try{btn.scrollIntoView({inline:'center',block:'nearest'});}catch(e){}
+}
+function tog(b){b.parentElement.classList.toggle('op');}
+function rc_reset(k){
+  var n=DECKS[k].length,idx=[];
+  for(var i=0;i<n;i++)idx.push(i);
+  RC[k]={queue:shuffle(idx),first:{},fails:{},shown:false,done:0,n:n};
+  if(el(k,'e'))el(k,'e').innerHTML='';
+  rc_render(k);
+}
+function rc_render(k){
+  var s=RC[k],card=el(k,'c');
+  if(!card)return;
+  if(!s.queue.length){rc_end(k);return;}
+  var c=DECKS[k][s.queue[0]],f=s.fails[s.queue[0]]||0;
+  el(k,'n').textContent='Tarjeta '+(s.done+1)+' de '+s.n+(k==='tg'?' · '+TERMS[c.t]:'');
+  var h='<p class="rc-q">'+(s.shown&&isCloze(c)?back(c):front(c))+'</p>';
+  if(s.shown&&!isCloze(c))h+='<p class="rc-a"><b>Respuesta.</b> '+esc(c.a)+'</p>';
+  if(!s.shown&&f>=2)h+='<p class="rc-hint">Pista: '+esc(c.h)+'</p>';
+  card.innerHTML=h;
+  var b='';
+  if(!s.shown){b+='<button class="go" onclick="rc_show(\''+k+'\')">Mostrar respuesta</button>';}
+  else{
+    b+='<button class="gr ok" onclick="rc_grade(\''+k+'\',\'ok\')">La sabía</button>';
+    b+='<button class="gr mid" onclick="rc_grade(\''+k+'\',\'mid\')">A medias</button>';
+    b+='<button class="gr ko" onclick="rc_grade(\''+k+'\',\'ko\')">No la sabía</button>';
+  }
+  b+='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  el(k,'b').innerHTML=b;
+}
+function rc_show(k){RC[k].shown=true;rc_render(k);}
+function rc_grade(k,g){
+  var s=RC[k],i=s.queue.shift();
+  if(s.first[i]===undefined)s.first[i]=(g==='ok');
+  if(g==='ok'){s.done++;}
+  else{s.fails[i]=(s.fails[i]||0)+1;s.queue.push(i);}
+  s.shown=false;
+  rc_render(k);
+}
+function rc_verdict(p){return p>=80?['ok','Término consolidado']:['rep','Repasar hoy'];}
+function rc_end(k){
+  var s=RC[k],ok=0,i,rows='';
+  for(i=0;i<s.n;i++)if(s.first[i])ok++;
+  var p=Math.round(100*ok/s.n),v=rc_verdict(p);
+  el(k,'n').textContent='Mazo completado';
+  el(k,'c').innerHTML='<p class="rc-q">Cola agotada: todas las tarjetas se resolvieron.</p>';
+  el(k,'b').innerHTML='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  var h='<div class="rc-end '+v[0]+'">Aciertos al primer intento: '+ok+' de '+s.n+' ('+p+' %). <b>'+v[1]+'</b>.</div>';
+  if(k==='tg'){
+    Object.keys(TERMS).forEach(function(t){
+      var tot=0,hit=0;
+      for(i=0;i<s.n;i++){if(DECKS.tg[i].t===t){tot++;if(s.first[i])hit++;}}
+      var pp=Math.round(100*hit/tot),vv=rc_verdict(pp);
+      rows+='<tr><td>'+esc(TERMS[t])+'</td><td>'+hit+' de '+tot+' ('+pp+' %)</td><td>'+vv[1]+'</td></tr>';
+    });
+    h+='<div class="tw"><table><thead><tr><th>Término</th><th>Aciertos 1er intento</th><th>Veredicto</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  }
+  el(k,'e').innerHTML=h;
+}
+Object.keys(DECKS).forEach(rc_reset);
+</script>
+</div></body></html>

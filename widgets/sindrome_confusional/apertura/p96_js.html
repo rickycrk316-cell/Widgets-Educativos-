@@ -1,0 +1,175 @@
+<script>
+const TERMS={t1:"Vacunas",t2:"Losartán",t3:"Diltiazem",t4:"Furosemida",t5:"Paracetamol",t6:"Pregabalina",t7:"Glucosamina",t8:"Insulina + metformina",t9:"Hipotiroidismo subclínico",pb:"Problemas",jq:"Jerarquización",hx:"Hipótesis"};
+const DECKS={
+t1:[
+{q:"¿Qué cambia en los linfocitos T con la edad y cómo afecta a la respuesta a una vacuna nueva?",a:"El timo involuciona y salen menos T vírgenes: hay menos células capaces de responder a un antígeno nuevo, y la respuesta es menor y más corta.",h:"Timo y T vírgenes"},
+{q:"¿Por qué una vacuna conjugada genera memoria y un polisacárido puro casi no?",a:"Al unirse a una proteína, el linfocito B presenta péptidos al T colaborador (respuesta T-dependiente), que lo lleva al centro germinal y a la memoria.",h:"Quién ayuda al linfocito B"},
+{q:"¿Qué contiene la vacuna recombinante del zóster y qué papel tiene su adyuvante?",a:"Una proteína del virus (sin virus replicante) más un adyuvante que amplifica una respuesta que en el anciano es débil.",h:"Proteína más adyuvante"},
+{q:"En Doña Rosa, ¿de qué depende que su neumococo esté completo y qué dato falta?",a:"Depende del tipo de la dosis recibida (PCV20 o PCV21, PCV15 o PPSV23); el caso no lo especifica.",h:"Tipo de la dosis"},
+{q:"¿Por qué sarampión-rubéola y varicela no son prioridad en Doña Rosa?",a:"Son vacunas vivas y su generación se considera inmune por haber cursado la infección; el riesgo a su edad es el zóster, que cubre la vacuna recombinante.",h:"Generación y virus vivo"},
+{q:"¿Cómo se conecta el esquema de vacunas con el delirium de Doña Rosa?",a:"Las infecciones son precipitantes de delirium; una brecha vacunal deja infecciones evitables como posibles precipitantes.",h:"Infección como precipitante"}
+],
+t2:[
+{q:"¿Por qué la angiotensina II ayuda a mantener el filtrado cuando baja la perfusión renal?",a:"Contrae la arteriola eferente y mantiene la presión hidrostática dentro del glomérulo.",h:"Arteriola de salida"},
+{q:"¿Qué le pasa al filtrado si se bloquea AT1 en una persona deshidratada?",a:"La eferente se dilata, cae la presión de filtración y se arriesga una lesión renal aguda.",h:"Dilata la salida"},
+{q:"¿Por qué el losartán puede elevar el potasio?",a:"Hay menos aldosterona activa, y el túbulo colector excreta menos potasio.",h:"Aldosterona y potasio"},
+{q:"¿En qué se diferencia el losartán de un IECA?",a:"El losartán bloquea el receptor AT1; el IECA inhibe la enzima que forma angiotensina II y acumula bradicinina (tos).",h:"Receptor frente a enzima"},
+{q:"En Doña Rosa, ¿qué combinación eleva el riesgo renal y qué fármacos se acumularían si baja el filtrado?",a:"Losartán más furosemida; se acumularían pregabalina y metformina, de eliminación renal.",h:"Dos fármacos hacia el riñón"}
+],
+t3:[
+{q:"¿Qué hace el calcio que entra por el canal tipo L en el cardiomiocito?",a:"Actúa como gatillo: activa los receptores de rianodina y libera mucho más calcio del retículo sarcoplásmico.",h:"Calcio gatillo"},
+{q:"¿Por qué el diltiazem baja la frecuencia y enlentece la conducción?",a:"La despolarización de los nodos depende del calcio por canales L; menos calcio aplana su pendiente.",h:"Nodos y calcio"},
+{q:"¿En qué se diferencia el diltiazem del amlodipino?",a:"El amlodipino actúa sobre todo en los vasos; el diltiazem actúa también en el corazón (frecuencia, conducción y contractilidad).",h:"Vaso frente a corazón"},
+{q:"¿Por qué el diltiazem es problemático en insuficiencia cardiaca con fracción de eyección reducida y qué dato falta en Doña Rosa?",a:"Por su efecto inotrópico negativo; falta la fracción de eyección (FEVI).",h:"Resta fuerza"},
+{q:"¿Cómo puede el diltiazem contribuir a las caídas de Doña Rosa?",a:"Por bradicardia o hipotensión, que reducen la perfusión cerebral y favorecen mareo.",h:"Perfusión cerebral"},
+{q:"¿Qué implica que el diltiazem inhiba CYP3A4?",a:"Los fármacos que dependen de esa enzima se metabolizan menos y alcanzan niveles más altos.",h:"Metabolismo hepático"}
+],
+t4:[
+{q:"¿Qué transporta el NKCC2 y en qué segmento está?",a:"Sodio, potasio y dos cloros, en la rama ascendente gruesa del asa de Henle.",h:"Tres iones, un segmento"},
+{q:"¿Por qué la furosemida aumenta también la pérdida de calcio y magnesio?",a:"Al bloquear el NKCC2 y el reciclaje de potasio se pierde la carga positiva luminal que empuja esos cationes por la vía entre células.",h:"Carga luminal"},
+{q:"¿Por qué la furosemida disminuye la capacidad de concentrar la orina?",a:"Sin reabsorción de solutos en la rama ascendente, el intersticio medular pierde su hiperosmolaridad.",h:"Contracorriente"},
+{q:"¿En qué se diferencia la furosemida de una tiazida?",a:"La furosemida actúa en el asa (NKCC2) y es más potente; la tiazida actúa en el túbulo distal (cotransportador Na-Cl).",h:"Segmento y potencia"},
+{q:"¿Qué alteraciones de la furosemida pueden precipitar delirium en Doña Rosa?",a:"Deshidratación, hiponatremia e hipopotasemia, no descartables porque el caso no trae electrolitos.",h:"Volumen e iones"},
+{q:"¿Por qué la toma matutina de furosemida no resuelve la nicturia de Doña Rosa?",a:"Concentra la diuresis en el día, pero la nicturia tiene otras causas (insuficiencia cardiaca, vejiga, edad) y persiste en 2 a 3 veces por noche.",h:"Hora de toma"}
+],
+t5:[
+{q:"¿Qué hace la ciclooxigenasa en el dolor y la fiebre?",a:"Convierte el ácido araquidónico en prostaglandinas, que sensibilizan al nociceptor y elevan el punto de ajuste hipotalámico.",h:"Del ácido araquidónico"},
+{q:"¿Cómo se metaboliza el paracetamol y qué es el NAPQI?",a:"Casi todo se conjuga (glucuronidación, sulfatación); una fracción forma NAPQI por CYP2E1, un metabolito tóxico que neutraliza el glutatión.",h:"Vía principal y vía menor"},
+{q:"¿Qué situación expone al hígado a toxicidad por paracetamol?",a:"La sobredosis o la depleción de glutatión (ayuno prolongado, desnutrición, alcohol crónico).",h:"Falta de glutatión"},
+{q:"¿Qué diferencia al paracetamol de los AINE?",a:"No tiene efecto antiinflamatorio relevante, pero tampoco el riesgo gástrico, renal y cardiovascular de los AINE.",h:"Antiinflamatorio"},
+{q:"¿Por qué el paracetamol es una opción razonable para el dolor de Doña Rosa frente a un AINE?",a:"Tiene insuficiencia cardiaca y recibe losartán y furosemida: los AINE añaden riesgo renal y cardiovascular.",h:"Corazón y riñón"},
+{q:"¿Cómo se relaciona el dolor crónico de Doña Rosa con su delirium?",a:"El dolor no controlado y la privación de sueño son precipitantes de delirium; también limitan su movilidad.",h:"Precipitante"}
+],
+t6:[
+{q:"En la terminal presináptica excitatoria, ¿qué sucesión lleva del potencial de acción a la liberación de glutamato?",a:"Se abren canales de calcio dependientes de voltaje, entra calcio y las vesículas se fusionan con la membrana (exocitosis).",h:"El calcio es el disparador de la exocitosis."},
+{q:"¿Qué papel cumple la subunidad α2δ en un canal de calcio dependiente de voltaje?",a:"Es una subunidad auxiliar que no forma el poro, pero favorece que haya más canales funcionales en la terminal presináptica.",h:"El poro lo forma otra subunidad (α1)."},
+{q:"Una paciente con lumbociatalgia describe dolor quemante que baja por el miembro siguiendo una raíz nerviosa. ¿Es nociceptivo o neuropático y por qué?",a:"Neuropático: la señal nace de una raíz nerviosa comprimida o lesionada, no de tejido dañado que active nociceptores.",h:"Piensa si el origen es el tejido o el propio nervio."},
+{q:"¿Cómo actúa la pregabalina y sobre qué receptores NO actúa pese a ser análogo del GABA?",a:"Se une a α2δ de los canales de calcio y reduce la liberación de neurotransmisores excitatorios; no actúa sobre receptores GABA.",h:"El nombre sugiere un mecanismo que no es el real."},
+{q:"¿Por qué la pregabalina se acumula si cae el filtrado glomerular?",a:"Se elimina por el riñón sin metabolismo, de modo que su aclaramiento es proporcional al de creatinina.",h:"No hay otra vía de salida que la renal."},
+{q:"Doña Rosa toma pregabalina y tramadol y está somnolienta de día y confusa. ¿Qué dice Beers 2023 de esa combinación y qué riesgos suma?",a:"Desaconseja combinar opioide con gabapentinoide; suma depresión del SNC, sedación, ataxia y riesgo de delirium y caídas.",h:"Dos fármacos que deprimen el mismo sistema."}
+],
+t7:[
+{q:"¿De qué dos componentes de la matriz depende la resistencia a la tensión y la capacidad de amortiguar la compresión del cartílago hialino?",a:"Colágeno tipo II da resistencia a la tensión; los proteoglicanos con glucosaminoglicanos retienen agua y amortiguan la compresión.",h:"Uno es fibra, el otro es esponja."},
+{q:"¿Por qué el cartílago hialino repara mal su daño?",a:"No tiene vasos y tiene pocos condrocitos que renuevan la matriz muy despacio.",h:"Piensa en su nutrición y en su población celular."},
+{q:"En la gonartrosis, ¿qué desequilibrio ocurre en la matriz del cartílago?",a:"Se degradan colágeno II y proteoglicanos más rápido de lo que los condrocitos los resintetizan.",h:"Síntesis frente a degradación."},
+{q:"¿Qué es la glucosamina y por qué se propuso como «condroprotectora»?",a:"Es un aminomonosacárido precursor de glucosaminoglicanos; se pensó que aportar el precursor ayudaría a reparar la matriz.",h:"Es una pieza de construcción del cartílago."},
+{q:"¿Cómo se diferencia la glucosamina de un AINE en su mecanismo y en su finalidad?",a:"El AINE inhibe la ciclooxigenasa y alivia dolor e inflamación; la glucosamina se propone como precursor de matriz y no tiene ese mecanismo.",h:"Uno actúa sobre el dolor, el otro pretende actuar sobre el cartílago."},
+{q:"Doña Rosa toma glucosamina para su gonartrosis dentro de más de nueve fármacos. ¿Qué pregunta de polifarmacia plantea?",a:"Qué beneficio clínico claro aporta, porque la eficacia es controvertida y suma otro fármaco a la lista.",h:"Relaciona beneficio con carga de fármacos."}
+],
+t8:[
+{q:"¿Cómo lleva la insulina la glucosa al interior de una célula muscular?",a:"Activa su receptor tirosina cinasa, lo que lleva transportadores GLUT4 a la membrana y permite la entrada de glucosa.",h:"La puerta es un transportador que sale de vesículas."},
+{q:"¿Qué efecto tiene la insulina sobre el hígado?",a:"Suprime la gluconeogénesis y la glucogenólisis y favorece el almacenamiento de glucógeno.",h:"Frena la producción de glucosa."},
+{q:"¿Por qué el cerebro es tan vulnerable a la hipoglucemia?",a:"Consume glucosa casi de forma exclusiva y no tiene reserva apreciable de glucógeno.",h:"No puede almacenar su combustible."},
+{q:"En el adulto mayor, ¿qué tipo de síntomas de hipoglucemia predomina y cómo se presenta?",a:"Predominan los neuroglucopénicos: confusión o conducta extraña, porque los síntomas adrenérgicos se atenúan.",h:"Faltan el temblor y el sudor."},
+{q:"¿Cómo reduce la metformina la glucosa y por qué por sí sola rara vez causa hipoglucemia?",a:"Activa AMPK y baja la gluconeogénesis hepática, sin estimular la secreción de insulina.",h:"No empuja a la célula beta."},
+{q:"Doña Rosa recibe NPH en la noche, está confusa y duerme de día. ¿Qué mecanismo explica que la insulina pueda causar este cuadro?",a:"El pico de la NPH coincide con el ayuno de la madrugada y produce hipoglucemia nocturna con neuroglucopenia, sin síntomas adrenérgicos claros.",h:"Piensa cuándo actúa más la insulina intermedia."}
+],
+t9:[
+{q:"¿Cuál es la secuencia del eje tiroideo, desde el hipotálamo hasta la T3?",a:"TRH hipotalámica, TSH hipofisaria, T4 tiroidea (y algo de T3), convertida a T3 activa en los tejidos por desyodasas.",h:"Cuatro pasos antes de llegar a la hormona activa."},
+{q:"¿Por qué la TSH es el sensor más temprano de una falla tiroidea primaria?",a:"Porque la relación con la T4 libre es inversa y amplificada: una caída pequeña de T4 produce un aumento proporcionalmente mayor de TSH.",h:"El cambio de TSH es mayor que el de T4."},
+{q:"¿Cómo se define el hipotiroidismo subclínico?",a:"TSH por encima del límite de referencia con T4 libre normal.",h:"La TSH sola no basta para definirlo."},
+{q:"¿Qué cambia de la TSH con la edad y qué implica al interpretarla en una anciana?",a:"Aumenta de forma fisiológica sin enfermedad tiroidea, por lo que conviene usar rangos ajustados por edad para no sobrediagnosticar.",h:"El termostato se reajusta con los años."},
+{q:"¿En qué se diferencia el hipotiroidismo subclínico del manifiesto y de la hipotiroxinemia aislada?",a:"Subclínico: TSH alta con T4 libre normal. Manifiesto: TSH alta con T4 libre baja. Hipotiroxinemia aislada: T4 libre baja con TSH normal.",h:"Compara siempre las dos hormonas."},
+{q:"¿Por qué se reevalúa el hipotiroidismo subclínico de Doña Rosa ante su deterioro cognitivo?",a:"Es una causa contribuyente y reversible de deterioro cognitivo que entra al diferencial de la demencia.",h:"Piensa en causas tratables de olvido."}
+],
+pb:[
+{q:"¿Qué desequilibrio de neurotransmisores se plantea en el delirium?",a:"Déficit colinérgico y exceso dopaminérgico.",h:"Acetilcolina y dopamina"},
+{q:"Según el modelo de Inouye, ¿de qué depende que aparezca el delirium?",a:"De la vulnerabilidad del paciente combinada con la intensidad del insulto.",h:"Predisponentes y precipitantes"},
+{q:"¿Por qué el tramadol puede bajar el sodio?",a:"Por SIADH: retiene agua libre y diluye el sodio sérico.",h:"Mecanismo hormonal"},
+{q:"En Doña Rosa, ¿cómo se acumulan la pregabalina y la metformina?",a:"Furosemida y losartán reducen el filtrado renal y ambos se eliminan por el riñón.",h:"Eliminación renal"},
+{q:"¿Por qué la insulina NPH nocturna expone a hipoglucemia de madrugada?",a:"Su efecto máximo cae horas después de la inyección, en ayuno.",h:"Pico de acción"},
+{q:"¿Por qué la persona con delirium puede ver a un familiar fallecido?",a:"Menos acetilcolina que filtre estímulos y más dopamina que les dé relevancia producen percepciones falsas.",h:"Alucinación visual"},
+{q:"¿En qué eje se clasifica la plancha encendida y la comida quemada?",a:"Social: seguridad en el hogar y dependencia instrumental (S2).",h:"Eje BPS"},
+{q:"¿Qué relación hay entre delirium y demencia?",a:"Bidireccional: la demencia predispone al delirium y el delirium puede acelerar el deterioro.",h:"Dos direcciones"}
+],
+jq:[
+{q:"¿Por qué B4 (hipoglucemia) va antes que B2 (deterioro cognitivo crónico)?",a:"B4 es tiempo-dependiente y reversible, y puede causar daño neuronal o una caída en horas; B2 es crónico y no mata esta semana.",h:"Compara urgencia y reversibilidad."},
+{q:"¿Por qué el delirium (B1) encabeza la lista aunque la demencia lleve dos años?",a:"El delirium es una urgencia médica con mortalidad elevada y siempre tiene una causa orgánica que buscar; la demencia no puede valorarse bien mientras persiste.",h:"Piensa en qué no puede esperar."},
+{q:"¿Por qué la polifarmacia (B3) es g1 aunque no sea una enfermedad?",a:"Sus fármacos deliriogénicos son una causa reversible que puede sostener B1 y B4 a la vez.",h:"Causa corregible de un problema grave."},
+{q:"¿Por qué B8 (caídas y fractura) es g2 y no g4?",a:"El daño es inmediato, prevenible y deja secuelas funcionales; varios factores de la paciente se suman.",h:"Daño funcional que no se recupera."},
+{q:"¿Por qué los factores de riesgo no entran en el ranking?",a:"No son problemas de la paciente sino argumentos que explican la gravedad o la vulnerabilidad de los problemas.",h:"Se citan, no se ordenan."}
+],
+hx:[
+{q:"¿Qué cuatro rasgos evalúa el CAM y cuáles deben estar presentes?",a:"Inicio agudo con curso fluctuante, inatención, pensamiento desorganizado y alteración del nivel de conciencia; se exigen los dos primeros y uno de los dos últimos.",h:"Dos obligatorios más uno de dos."},
+{q:"¿Por qué H3 se separa de H1 si es una sub-hipótesis?",a:"Porque es reversible: identificar el fármaco causal cambia lo que puede corregirse.",h:"Identidad propia por la reversibilidad."},
+{q:"¿Qué dato falta para atribuir el cuadro de Doña Rosa a una ITU?",a:"EMO y urocultivo con signos sistémicos y sin mejor explicación; la bacteriuria sola no basta.",h:"Un hallazgo de laboratorio no es un diagnóstico."},
+{q:"¿Por qué no se puede confirmar H2 durante el delirium?",a:"Porque el delirium altera la atención y la cognición, y impide medir la línea de base; se repite la evaluación cuando el cuadro agudo se resuelve.",h:"El cuadro agudo contamina la medición."},
+{q:"¿Qué dato de Doña Rosa aleja la demencia con cuerpos de Lewy?",a:"Las alucinaciones son recientes, tras 2 años de amnesia, y no se consigna parkinsonismo.",h:"Cronología de las alucinaciones."},
+{q:"¿Cómo distingue el inicio al delirium de la demencia?",a:"El delirium comienza de forma aguda, en horas o días; la demencia es insidiosa, en meses o años.",h:"Horas frente a años."},
+{q:"¿Qué hace que un hematoma subdural crónico entre al diferencial?",a:"El riesgo de caídas de la paciente, su edad y el posible traumatismo no recordado; falta neuroimagen.",h:"Piensa en B8."},
+{q:"En el modelo multifactorial, ¿qué relación hay entre vulnerabilidad e insulto?",a:"Cuanto mayor la vulnerabilidad previa, menor el insulto necesario para precipitar delirium.",h:"Umbral."}
+]
+};
+DECKS.tg=[].concat.apply([],Object.keys(TERMS).map(function(k){return DECKS[k].map(function(c){return {q:c.q,a:c.a,h:c.h,t:k};});}));
+const RC={};
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function el(k,s){return document.getElementById('rc-'+k+'-'+s);}
+function isCloze(c){return c.q.indexOf('{{')>=0;}
+function front(c){return esc(c.q).replace(/\{\{[^}]*\}\}/g,'[ ? ]');}
+function back(c){return esc(c.q).replace(/\{\{([^}]*)\}\}/g,'<b>$1</b>');}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function show(id,btn){
+  document.querySelectorAll('.tab').forEach(function(s){s.classList.toggle('active',s.id===id);});
+  document.querySelectorAll('.tb').forEach(function(b){b.classList.toggle('active',b===btn);});
+  try{btn.scrollIntoView({inline:'center',block:'nearest'});}catch(e){}
+}
+function tog(b){b.parentElement.classList.toggle('op');}
+function rc_reset(k){
+  var n=DECKS[k].length,idx=[];
+  for(var i=0;i<n;i++)idx.push(i);
+  RC[k]={queue:shuffle(idx),first:{},fails:{},shown:false,done:0,n:n};
+  if(el(k,'e'))el(k,'e').innerHTML='';
+  rc_render(k);
+}
+function rc_render(k){
+  var s=RC[k],card=el(k,'c');
+  if(!card)return;
+  if(!s.queue.length){rc_end(k);return;}
+  var c=DECKS[k][s.queue[0]],f=s.fails[s.queue[0]]||0;
+  el(k,'n').textContent='Tarjeta '+(s.done+1)+' de '+s.n+(k==='tg'?' · '+TERMS[c.t]:'');
+  var h='<p class="rc-q">'+(s.shown&&isCloze(c)?back(c):front(c))+'</p>';
+  if(s.shown&&!isCloze(c))h+='<p class="rc-a"><b>Respuesta.</b> '+esc(c.a)+'</p>';
+  if(!s.shown&&f>=2)h+='<p class="rc-hint">Pista: '+esc(c.h)+'</p>';
+  card.innerHTML=h;
+  var b='';
+  if(!s.shown){b+='<button class="go" onclick="rc_show(\''+k+'\')">Mostrar respuesta</button>';}
+  else{
+    b+='<button class="gr ok" onclick="rc_grade(\''+k+'\',\'ok\')">La sabía</button>';
+    b+='<button class="gr mid" onclick="rc_grade(\''+k+'\',\'mid\')">A medias</button>';
+    b+='<button class="gr ko" onclick="rc_grade(\''+k+'\',\'ko\')">No la sabía</button>';
+  }
+  b+='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  el(k,'b').innerHTML=b;
+}
+function rc_show(k){RC[k].shown=true;rc_render(k);}
+function rc_grade(k,g){
+  var s=RC[k],i=s.queue.shift();
+  if(s.first[i]===undefined)s.first[i]=(g==='ok');
+  if(g==='ok'){s.done++;}
+  else{s.fails[i]=(s.fails[i]||0)+1;s.queue.push(i);}
+  s.shown=false;
+  rc_render(k);
+}
+function rc_verdict(p){return p>=80?['ok','Término consolidado']:['rep','Repasar hoy'];}
+function rc_end(k){
+  var s=RC[k],ok=0,i,rows='';
+  for(i=0;i<s.n;i++)if(s.first[i])ok++;
+  var p=Math.round(100*ok/s.n),v=rc_verdict(p);
+  el(k,'n').textContent='Mazo completado';
+  el(k,'c').innerHTML='<p class="rc-q">Cola agotada: todas las tarjetas se resolvieron.</p>';
+  el(k,'b').innerHTML='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  var h='<div class="rc-end '+v[0]+'">Aciertos al primer intento: '+ok+' de '+s.n+' ('+p+' %). <b>'+v[1]+'</b>.</div>';
+  if(k==='tg'){
+    Object.keys(TERMS).forEach(function(t){
+      var tot=0,hit=0;
+      for(i=0;i<s.n;i++){if(DECKS.tg[i].t===t){tot++;if(s.first[i])hit++;}}
+      var pp=Math.round(100*hit/tot),vv=rc_verdict(pp);
+      rows+='<tr><td>'+esc(TERMS[t])+'</td><td>'+hit+' de '+tot+' ('+pp+' %)</td><td>'+vv[1]+'</td></tr>';
+    });
+    h+='<div class="tw"><table><thead><tr><th>Término</th><th>Aciertos 1er intento</th><th>Veredicto</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  }
+  el(k,'e').innerHTML=h;
+}
+Object.keys(DECKS).forEach(rc_reset);
+</script>
+</div></body></html>
