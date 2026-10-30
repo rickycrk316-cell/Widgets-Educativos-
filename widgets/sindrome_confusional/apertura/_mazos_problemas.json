@@ -1,0 +1,44 @@
+{
+ "pb": [
+  {
+   "q": "¿Qué desequilibrio de neurotransmisores se plantea en el delirium?",
+   "a": "Déficit colinérgico y exceso dopaminérgico.",
+   "h": "Acetilcolina y dopamina"
+  },
+  {
+   "q": "Según el modelo de Inouye, ¿de qué depende que aparezca el delirium?",
+   "a": "De la vulnerabilidad del paciente combinada con la intensidad del insulto.",
+   "h": "Predisponentes y precipitantes"
+  },
+  {
+   "q": "¿Por qué el tramadol puede bajar el sodio?",
+   "a": "Por SIADH: retiene agua libre y diluye el sodio sérico.",
+   "h": "Mecanismo hormonal"
+  },
+  {
+   "q": "En Doña Rosa, ¿cómo se acumulan la pregabalina y la metformina?",
+   "a": "Furosemida y losartán reducen el filtrado renal y ambos se eliminan por el riñón.",
+   "h": "Eliminación renal"
+  },
+  {
+   "q": "¿Por qué la insulina NPH nocturna expone a hipoglucemia de madrugada?",
+   "a": "Su efecto máximo cae horas después de la inyección, en ayuno.",
+   "h": "Pico de acción"
+  },
+  {
+   "q": "¿Por qué la persona con delirium puede ver a un familiar fallecido?",
+   "a": "Menos acetilcolina que filtre estímulos y más dopamina que les dé relevancia producen percepciones falsas.",
+   "h": "Alucinación visual"
+  },
+  {
+   "q": "¿En qué eje se clasifica la plancha encendida y la comida quemada?",
+   "a": "Social: seguridad en el hogar y dependencia instrumental (S2).",
+   "h": "Eje BPS"
+  },
+  {
+   "q": "¿Qué relación hay entre delirium y demencia?",
+   "a": "Bidireccional: la demencia predispone al delirium y el delirium puede acelerar el deterioro.",
+   "h": "Dos direcciones"
+  }
+ ]
+}

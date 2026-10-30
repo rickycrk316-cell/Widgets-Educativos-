@@ -17,6 +17,7 @@ Repo solo de estudio médico (Ricardo, Quirúrgica 2 · PUCE, 10.º nivel). Índ
 | multi | `01_nav` `02_pan` `05_vis` `21_e1`…`25_e5` `80_sin` `90_sim` |
 | mono | `01_nav` `02_pan` `10_def` `11_fis` `12_cli` `13_dx` `14_tx` `15_seg` `16x_*` (extra) `90_sim` |
 | definiciones | `p01_nav` `p10_t1`…`p90_t9` `p95_tg` `p96_js` |
+| apertura | `p01_nav` `p05_c0` `p10_t1`…`p90_t9` `p91_pb` `p92_jq` `p93_hx` `p95_tg` `p96_js` (`tipo: "apertura"`; manifiesto: `terminos` `problemas` `hipotesis` `diagramas`) |
 
 `manifiesto.json`: `titulo`, `salida` (HTML final) y `tipo` son del ensamblador; el resto (`modo`, `entidades`, `principal`, `amenaza`, `pg`, `fey`, `nodos`, `signos`, `dc`, `nucleo`) los exige `validar.py`. `nucleo` es la lista para Anki.
 
@@ -29,7 +30,7 @@ Reglas del kit: las partes no llevan `<style>`, estilos en línea, recursos remo
 1. Editar la parte.
 2. `python3 kit/construir.py widgets/<tema>/<id>` → reensambla y valida; imprime solo errores y la línea `RESULTADO`.
 3. Si cambió algo visual o de JS: `node kit/probar_navegador.js file://$PWD/<html> <carpeta_capturas_en_scratchpad>` (las capturas no se versionan). Instalación única de la herramienta: `cd kit && npm ci` (`playwright-core` 1.64.1 fijado en `kit/package.json`; no ejecutar `playwright install`; Chromium de `/opt/pw-browsers` o el de `PW_CHROMIUM`). Para definiciones usa `node kit/probar_definiciones.js` (mismos argumentos).
-4. Para definiciones: `python3 kit/auditar_definiciones.py <html> <n_terminos>`. Auditoría de diseño/router: `python3 kit/auditar_diseno.py <html> <manifiesto> "<línea del router del PLAN>"`.
+4. Para definiciones: `python3 kit/auditar_definiciones.py <html> <n_terminos>`. Para apertura: `python3 kit/validar_apertura.py <html> <manifiesto>` (lo corre `construir.py`), `python3 kit/auditar_definiciones.py <html> <n_terminos>` (detecta la cabecera de apertura) y `node kit/probar_definiciones.js` (incluye desborde de `figure.dg` y tablas a 390 px). Auditoría de diseño/router: `python3 kit/auditar_diseno.py <html> <manifiesto> "<línea del router del PLAN>"`.
 4b. (Opcional, cambios visuales) Revisión de accesibilidad/pulido: sigue `.claude/skills/impeccable/SKILL.md` (comandos `audit`, `polish`, `clarify`), leyendo solo la referencia del comando pedido. Es complementaria a `kit/auditar_diseno.py`; ante conflicto mandan `docs/DESIGN.md` y las reglas del kit.
 5. Commit de partes + HTML final juntos.
 

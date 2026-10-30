@@ -334,6 +334,7 @@ for t in tabs:
     for x in cc.select('.gloss,.pid'): x.decompose()
     core = txt(cc).replace('[VERIFICAR EN FUENTE]', ' ')
     toks = set(re.findall(r'(?<![A-Za-zÁ-ú])[A-Z][A-Z0-9]{1,}(?![A-Za-zÁ-ú0-9])', core)) - ROM
+    toks = {x for x in toks if not re.fullmatch(r'(B|P|S|FR|H)\d+', x)}
     miss = sorted(x for x in toks if x not in gl)
     if miss: fl.append((sid, 'siglas sin glosario', miss))
 chk('límites (hb, def 60, Feynman 80, vin 70) y glosarios por pestaña', not fl, str(fl))
