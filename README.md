@@ -16,7 +16,7 @@ Widgets HTML de estudio, autocontenidos y offline (skill `widget-ensenanza` v10,
 | | `Prostatitis_cistitis_cancer_vesical_widget_v10.html` | multi | cistitis infecciosa (principal), prostatitis (amenaza), cáncer vesical | 15 |
 | | `Cancer_de_prostata_widget_v10.html` | mono | cáncer de próstata | 7 |
 | | `Definiciones_patologia_urinaria_baja.html` | definiciones | 9 términos + repaso | 0 |
-| Síndrome confusional | `Apertura_sindrome_confusional.html` | apertura | 9 términos + 23 problemas BPS/FR + jerarquía + 4 hipótesis | 14 |
+| Síndrome confusional | `Apertura_sindrome_confusional.html` | apertura | 9 términos + 23 problemas BPS/FR + jerarquía + 4 hipótesis | 0 |
 | Disbasia infantil | `Cojera_dolorosa_sistemica_widget_v10.html` | multi | sinovitis transitoria (principal), artritis séptica (amenaza), osteomielitis, neoplasia ósea | 27 |
 | | `Cojera_dolorosa_mecanica_widget_v10.html` | multi | Perthes (principal), epifisiólisis (amenaza), Osgood-Schlatter | 27 |
 | | `Marcha_sin_dolor_widget_v10.html` | multi | DDC (principal), dismetría, neuromuscular, Guillain-Barré (amenaza) | 65 |
