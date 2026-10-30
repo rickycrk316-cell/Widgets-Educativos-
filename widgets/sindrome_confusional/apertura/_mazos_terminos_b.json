@@ -1,0 +1,130 @@
+{
+ "t6": [
+  {
+   "q": "En la terminal presináptica excitatoria, ¿qué sucesión lleva del potencial de acción a la liberación de glutamato?",
+   "a": "Se abren canales de calcio dependientes de voltaje, entra calcio y las vesículas se fusionan con la membrana (exocitosis).",
+   "h": "El calcio es el disparador de la exocitosis."
+  },
+  {
+   "q": "¿Qué papel cumple la subunidad α2δ en un canal de calcio dependiente de voltaje?",
+   "a": "Es una subunidad auxiliar que no forma el poro, pero favorece que haya más canales funcionales en la terminal presináptica.",
+   "h": "El poro lo forma otra subunidad (α1)."
+  },
+  {
+   "q": "Una paciente con lumbociatalgia describe dolor quemante que baja por el miembro siguiendo una raíz nerviosa. ¿Es nociceptivo o neuropático y por qué?",
+   "a": "Neuropático: la señal nace de una raíz nerviosa comprimida o lesionada, no de tejido dañado que active nociceptores.",
+   "h": "Piensa si el origen es el tejido o el propio nervio."
+  },
+  {
+   "q": "¿Cómo actúa la pregabalina y sobre qué receptores NO actúa pese a ser análogo del GABA?",
+   "a": "Se une a α2δ de los canales de calcio y reduce la liberación de neurotransmisores excitatorios; no actúa sobre receptores GABA.",
+   "h": "El nombre sugiere un mecanismo que no es el real."
+  },
+  {
+   "q": "¿Por qué la pregabalina se acumula si cae el filtrado glomerular?",
+   "a": "Se elimina por el riñón sin metabolismo, de modo que su aclaramiento es proporcional al de creatinina.",
+   "h": "No hay otra vía de salida que la renal."
+  },
+  {
+   "q": "Doña Rosa toma pregabalina y tramadol y está somnolienta de día y confusa. ¿Qué dice Beers 2023 de esa combinación y qué riesgos suma?",
+   "a": "Desaconseja combinar opioide con gabapentinoide; suma depresión del SNC, sedación, ataxia y riesgo de delirium y caídas.",
+   "h": "Dos fármacos que deprimen el mismo sistema."
+  }
+ ],
+ "t7": [
+  {
+   "q": "¿De qué dos componentes de la matriz depende la resistencia a la tensión y la capacidad de amortiguar la compresión del cartílago hialino?",
+   "a": "Colágeno tipo II da resistencia a la tensión; los proteoglicanos con glucosaminoglicanos retienen agua y amortiguan la compresión.",
+   "h": "Uno es fibra, el otro es esponja."
+  },
+  {
+   "q": "¿Por qué el cartílago hialino repara mal su daño?",
+   "a": "No tiene vasos y tiene pocos condrocitos que renuevan la matriz muy despacio.",
+   "h": "Piensa en su nutrición y en su población celular."
+  },
+  {
+   "q": "En la gonartrosis, ¿qué desequilibrio ocurre en la matriz del cartílago?",
+   "a": "Se degradan colágeno II y proteoglicanos más rápido de lo que los condrocitos los resintetizan.",
+   "h": "Síntesis frente a degradación."
+  },
+  {
+   "q": "¿Qué es la glucosamina y por qué se propuso como «condroprotectora»?",
+   "a": "Es un aminomonosacárido precursor de glucosaminoglicanos; se pensó que aportar el precursor ayudaría a reparar la matriz.",
+   "h": "Es una pieza de construcción del cartílago."
+  },
+  {
+   "q": "¿Cómo se diferencia la glucosamina de un AINE en su mecanismo y en su finalidad?",
+   "a": "El AINE inhibe la ciclooxigenasa y alivia dolor e inflamación; la glucosamina se propone como precursor de matriz y no tiene ese mecanismo.",
+   "h": "Uno actúa sobre el dolor, el otro pretende actuar sobre el cartílago."
+  },
+  {
+   "q": "Doña Rosa toma glucosamina para su gonartrosis dentro de más de nueve fármacos. ¿Qué pregunta de polifarmacia plantea?",
+   "a": "Qué beneficio clínico claro aporta, porque la eficacia es controvertida y suma otro fármaco a la lista.",
+   "h": "Relaciona beneficio con carga de fármacos."
+  }
+ ],
+ "t8": [
+  {
+   "q": "¿Cómo lleva la insulina la glucosa al interior de una célula muscular?",
+   "a": "Activa su receptor tirosina cinasa, lo que lleva transportadores GLUT4 a la membrana y permite la entrada de glucosa.",
+   "h": "La puerta es un transportador que sale de vesículas."
+  },
+  {
+   "q": "¿Qué efecto tiene la insulina sobre el hígado?",
+   "a": "Suprime la gluconeogénesis y la glucogenólisis y favorece el almacenamiento de glucógeno.",
+   "h": "Frena la producción de glucosa."
+  },
+  {
+   "q": "¿Por qué el cerebro es tan vulnerable a la hipoglucemia?",
+   "a": "Consume glucosa casi de forma exclusiva y no tiene reserva apreciable de glucógeno.",
+   "h": "No puede almacenar su combustible."
+  },
+  {
+   "q": "En el adulto mayor, ¿qué tipo de síntomas de hipoglucemia predomina y cómo se presenta?",
+   "a": "Predominan los neuroglucopénicos: confusión o conducta extraña, porque los síntomas adrenérgicos se atenúan.",
+   "h": "Faltan el temblor y el sudor."
+  },
+  {
+   "q": "¿Cómo reduce la metformina la glucosa y por qué por sí sola rara vez causa hipoglucemia?",
+   "a": "Activa AMPK y baja la gluconeogénesis hepática, sin estimular la secreción de insulina.",
+   "h": "No empuja a la célula beta."
+  },
+  {
+   "q": "Doña Rosa recibe NPH en la noche, está confusa y duerme de día. ¿Qué mecanismo explica que la insulina pueda causar este cuadro?",
+   "a": "El pico de la NPH coincide con el ayuno de la madrugada y produce hipoglucemia nocturna con neuroglucopenia, sin síntomas adrenérgicos claros.",
+   "h": "Piensa cuándo actúa más la insulina intermedia."
+  }
+ ],
+ "t9": [
+  {
+   "q": "¿Cuál es la secuencia del eje tiroideo, desde el hipotálamo hasta la T3?",
+   "a": "TRH hipotalámica, TSH hipofisaria, T4 tiroidea (y algo de T3), convertida a T3 activa en los tejidos por desyodasas.",
+   "h": "Cuatro pasos antes de llegar a la hormona activa."
+  },
+  {
+   "q": "¿Por qué la TSH es el sensor más temprano de una falla tiroidea primaria?",
+   "a": "Porque la relación con la T4 libre es inversa y amplificada: una caída pequeña de T4 produce un aumento proporcionalmente mayor de TSH.",
+   "h": "El cambio de TSH es mayor que el de T4."
+  },
+  {
+   "q": "¿Cómo se define el hipotiroidismo subclínico?",
+   "a": "TSH por encima del límite de referencia con T4 libre normal.",
+   "h": "La TSH sola no basta para definirlo."
+  },
+  {
+   "q": "¿Qué cambia de la TSH con la edad y qué implica al interpretarla en una anciana?",
+   "a": "Aumenta de forma fisiológica sin enfermedad tiroidea, por lo que conviene usar rangos ajustados por edad para no sobrediagnosticar.",
+   "h": "El termostato se reajusta con los años."
+  },
+  {
+   "q": "¿En qué se diferencia el hipotiroidismo subclínico del manifiesto y de la hipotiroxinemia aislada?",
+   "a": "Subclínico: TSH alta con T4 libre normal. Manifiesto: TSH alta con T4 libre baja. Hipotiroxinemia aislada: T4 libre baja con TSH normal.",
+   "h": "Compara siempre las dos hormonas."
+  },
+  {
+   "q": "¿Por qué se reevalúa el hipotiroidismo subclínico de Doña Rosa ante su deterioro cognitivo?",
+   "a": "Es una causa contribuyente y reversible de deterioro cognitivo que entra al diferencial de la demencia.",
+   "h": "Piensa en causas tratables de olvido."
+  }
+ ]
+}
