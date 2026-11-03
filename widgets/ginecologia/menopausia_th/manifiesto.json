@@ -1,0 +1,42 @@
+{
+ "titulo": "Ciclo ovárico, cuerpo albo y terapia hormonal",
+ "salida": "../Ciclo_ovarico_menopausia_TH_widget_v10.html",
+ "modo": "mono",
+ "tabs": [
+  "pan",
+  "def",
+  "cic",
+  "fis",
+  "cli",
+  "dx",
+  "tx",
+  "seg"
+ ],
+ "pg": {
+  "def": 4,
+  "cic": 4,
+  "fis": 4,
+  "cli": 4,
+  "dx": 5,
+  "tx": 5,
+  "seg": 4
+ },
+ "fey": {
+  "def": 1,
+  "cic": 1,
+  "fis": 2,
+  "cli": 1,
+  "dx": 1,
+  "tx": 1,
+  "seg": 1
+ },
+ "nodos": 8,
+ "signos": 5,
+ "dc": [
+  "cic",
+  "dx",
+  "tx",
+  "seg"
+ ],
+ "nucleo": []
+}

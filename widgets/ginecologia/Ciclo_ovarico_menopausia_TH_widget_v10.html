@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ciclo ovárico, cuerpo albo y terapia hormonal</title>
+<style>
+/* Vademécum: monografía impresa con índice de canto; filetes y tinta llevan la jerarquía, no las sombras */
+:root{
+--paper:#FBFBFC;--paper-2:#F1F2F5;--ink:#16181D;--ink-2:#3A3D46;--ink-3:#686C78;--rule:#D7D9E0;--rule-strong:#16181D;
+--accent:#2342A6;--accent-ink:#1B358A;--accent-field:#EAEEFA;--on-accent:#FFFFFF;
+--am:#7A4A06;--am-f:#FBF1DF;--ro:#9E1F1F;--ro-f:#FBE9E7;--ve:#2F5E12;--ve-f:#EBF3E1;--pu:#4C3FA8;--pu-f:#EEECFB;--co:#8E3517;--co-f:#FAEDE6;--rs:#8A2C52;--rs-f:#FAEAF1;
+--f-serif:ui-serif,"New York","Iowan Old Style","Charter","Source Serif Pro",Georgia,"Times New Roman",serif;
+--f-sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+--r:3px;
+/* alias de la v10 para compatibilidad */
+--surface-0:var(--paper);--surface-1:var(--paper-2);--border:var(--rule);--border-accent:var(--accent);--bg-accent:var(--accent-field);--text-primary:var(--ink);--text-secondary:var(--ink-2);--text-muted:var(--ink-3);--text-accent:var(--accent-ink);--radius:var(--r);--font-sans:var(--f-sans);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}
+html{color-scheme:light dark;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:var(--accent);color:var(--on-accent)}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--f-sans);-webkit-text-size-adjust:100%;font-feature-settings:"kern" 1;text-rendering:optimizeLegibility;caret-color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:18px 16px 56px;background:transparent}
+h1{font:600 26px/1.2 var(--f-serif);letter-spacing:-.012em;margin:6px 0 14px;padding-bottom:12px;border-bottom:2px solid var(--rule-strong);text-wrap:balance}
+h2{font:600 19px/1.3 var(--f-serif);letter-spacing:-.006em;margin:40px 0 14px;padding-top:12px;border-top:1px solid var(--rule-strong);text-wrap:balance}
+h3{font:600 16px/1.35 var(--f-serif);margin:20px 0 6px;text-wrap:balance}
+p{margin:0 0 12px;text-wrap:pretty}
+a{color:var(--accent-ink);text-underline-offset:3px}
+button{font:inherit;color:inherit;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,color .15s ease-out}
+button:active{transform:translateY(1px)}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* índice de canto */
+.tabs{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 0 0;border-bottom:2px solid var(--rule-strong);margin-bottom:16px;position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);scroll-snap-type:x proximity;scroll-padding-inline:56px}
+.tabs-w{position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper)}
+.tabs-w::before,.tabs-w::after{content:"";position:absolute;top:0;bottom:2px;width:56px;pointer-events:none;opacity:0;transition:opacity .2s;z-index:6}
+.tabs-w::before{left:0;background:linear-gradient(to left,transparent,var(--paper) 85%)}
+.tabs-w::after{right:0;background:linear-gradient(to right,transparent,var(--paper) 85%)}
+.tabs-w.ov-l::before,.tabs-w.ov-r::after{opacity:1}
+.nodo,.signo,.qv,.dc,h2{scroll-margin-top:84px}
+.tabs::-webkit-scrollbar{display:none}
+.tb{flex:0 0 auto;min-height:44px;padding:9px 15px 8px;border:1px solid var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;background:var(--paper-2);color:var(--ink-2);font:600 13px/1.2 var(--f-sans);letter-spacing:.01em;white-space:nowrap;scroll-snap-align:start}
+.tb:hover{background:var(--accent-field);color:var(--accent-ink)}
+.tb.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+.tab{display:none}
+.tab.on{display:block}
+/* recuadros */
+.card{background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;margin:12px 0;font-size:15px;line-height:1.6}
+.card p{margin:0 0 8px}
+.card p:last-child{margin-bottom:0}
+.mini{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:6px 0}
+.hb{border-radius:var(--r);padding:12px 14px;margin:14px 0;border:1px solid transparent;font-size:15px;line-height:1.6}
+.hb.az{background:var(--accent-field);color:var(--ink);border-color:var(--accent)}
+.hb.am{background:var(--am-f);color:var(--am);border-color:var(--am)}
+.hb.ro{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.hb.ve{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+.hb.am .mini,.hb.ro .mini,.hb.ve .mini{color:inherit;opacity:.88}
+.hb-t{font:600 16px/1.35 var(--f-serif);margin-bottom:6px;text-wrap:balance}
+.hb.az .hb-t{color:var(--accent-ink)}
+.pg{margin:0;padding-left:22px}
+.pg li{margin:5px 0}
+.pg li::marker{color:var(--accent-ink);font-weight:700}
+.hb.az:has(.pg){margin-bottom:24px}
+.hb.az:not(:has(.pg)):not(.rec-go){background:transparent;border-left-color:transparent;border-right-color:transparent;border-radius:0;padding-left:0;padding-right:0}
+.hb.az:not(:has(.pg))+.etapa{border-top:0}
+h2+.card,h2+.hb,h2+.tw{margin-top:0}
+.badge{display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.04em;padding:2px 7px;border-radius:2px;margin:0 4px 4px 0;vertical-align:middle;border:1px solid currentColor}
+.b-az{background:var(--accent-field);color:var(--accent-ink)}
+.b-ro{background:var(--ro-f);color:var(--ro)}
+.b-am{background:var(--am-f);color:var(--am)}
+.b-ve{background:var(--ve-f);color:var(--ve)}
+.b-pu{background:var(--pu-f);color:var(--pu)}
+.badge.b-pu{display:block;width:fit-content;max-width:100%;white-space:normal;font-size:12px;line-height:1.5;font-weight:600;letter-spacing:.01em;margin:14px 0}
+.b-co{background:var(--co-f);color:var(--co)}
+.b-rs{background:var(--rs-f);color:var(--rs)}
+.rem{display:inline-block;font-size:12.5px;background:var(--rs-f);color:var(--rs);border:1px dashed var(--rs);border-radius:2px;padding:1px 7px;margin:4px 0}
+/* Feynman */
+.fey{background:var(--co-f);border:1px solid var(--co);border-radius:var(--r);padding:14px 16px;margin:18px 0 26px}
+.fey-t{display:inline-block;font:600 15px/1.35 var(--f-serif);color:var(--co);margin-bottom:8px}
+.fey-b{margin:0 0 10px;font:400 16px/1.6 var(--f-serif);color:var(--ink)}
+.fey-c{margin:2px 0;color:var(--ink-2)}
+/* Panorama: entradas de índice */
+.tab{counter-reset:et}
+.etapa{counter-increment:et;background:transparent;border:0;border-top:1px solid var(--rule);border-radius:0;padding:18px 0 8px;margin:4px 0}
+.etapa h3{font-size:19px;line-height:1.3;margin:0 0 8px}
+.etapa h3::before{content:counter(et,decimal-leading-zero);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;letter-spacing:.04em;color:var(--accent-ink);margin-right:10px;vertical-align:2px}
+.res{margin:0 0 10px}
+.perla{border-top:1px dotted var(--rule);padding-top:8px;margin:0 0 10px;font-weight:500}
+.perla::before{content:"Perla";display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;background:var(--ve-f);color:var(--ve);border:1px solid var(--ve);border-radius:2px;padding:1px 6px;margin-right:8px;vertical-align:1px}
+.go{min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent);color:var(--on-accent);font:600 13.5px/1.2 var(--f-sans)}
+.go:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+/* tablas de monografía */
+.tw{overflow-x:auto;margin:12px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.5;font-variant-numeric:tabular-nums}
+th,td{border:0;border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--paper-2);font-weight:700;color:var(--ink)}
+thead th{font:700 14.5px/1.35 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong)}
+tbody tr:last-child>*{border-bottom:1px solid var(--rule-strong)}
+.stats{display:grid;grid-template-columns:1fr;gap:10px;margin:12px 0}
+@media (min-width:600px){.stats{grid-template-columns:repeat(3,1fr)}}
+.stat{background:transparent;border:0;border-top:2px solid var(--accent);border-radius:0;padding:8px 2px}
+.stat b{display:block;font:600 22px/1.25 var(--f-serif);color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--ink-2);line-height:1.4;display:block}
+.steps{list-style:none;counter-reset:st;padding:0;margin:10px 0}
+.steps>li{counter-increment:st;position:relative;padding:5px 0 9px 40px}
+.steps>li::before{content:counter(st);position:absolute;left:0;top:3px;width:26px;height:26px;border-radius:2px;background:var(--ink);color:var(--paper);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;display:flex;align-items:center;justify-content:center}
+/* cascada */
+.tl{list-style:none;margin:14px 0;padding:0 0 0 20px;border-left:2px solid var(--accent)}
+.nodo{position:relative;margin:0 0 14px;padding:11px 13px;background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);font-size:14px;line-height:1.55}
+.nodo::before{content:"";position:absolute;left:-27px;top:15px;width:12px;height:12px;border-radius:1px;background:var(--accent);box-shadow:0 0 0 3px var(--paper)}
+.paso{display:block;font:600 15px/1.4 var(--f-serif);margin-bottom:5px}
+.pn{color:var(--accent-ink);margin-right:4px;font-variant-numeric:tabular-nums}
+.man{margin:8px 0 0;font-size:13px;color:var(--ink-2)}
+.signo{background:var(--paper);border:1px solid var(--rule);border-top:2px solid var(--rule-strong);border-radius:0 0 var(--r) var(--r);padding:12px 14px;margin:12px 0;font-size:14px;line-height:1.55}
+.signo h4{margin:0 0 6px;font:600 15.5px/1.35 var(--f-serif)}
+.signo dl{margin:0}
+.signo dt{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-3);margin-top:8px}
+.signo dd{margin:2px 0 0}
+.xref{display:inline-flex;align-items:center;min-height:44px;padding:4px 10px;margin:3px 6px 3px 0;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent-field);color:var(--accent-ink);font:600 12.5px/1.3 var(--f-sans);text-align:left}
+.xref:hover{background:var(--accent);color:var(--on-accent)}
+p .xref,td .xref,li .xref,dd .xref{display:inline;position:relative;min-height:0;padding:0 5px;margin:0 2px;line-height:inherit;border-radius:2px;white-space:normal;overflow-wrap:anywhere;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+p .xref::after,td .xref::after,li .xref::after,dd .xref::after{content:"";position:absolute;left:-4px;right:-4px;top:-12px;bottom:-12px}
+.hl{outline:2px solid var(--accent);background:var(--accent-field)!important;transition:background .3s}
+.acc{border:1px solid var(--rule);border-radius:var(--r);margin:12px 0;overflow:hidden}
+.acc-h{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:44px;padding:9px 14px;border:0;background:var(--paper-2);font:600 14px/1.35 var(--f-sans);text-align:left}
+.acc-h:hover{background:var(--accent-field)}
+.chev{transition:transform .2s;color:var(--accent-ink)}
+.acc.op .chev{transform:rotate(180deg)}
+.acc-b{display:none;padding:10px 14px;font-size:14px;line-height:1.55}
+.acc.op .acc-b{display:block}
+.vanc{font-size:12.5px;line-height:1.5;padding-left:24px}
+.vanc li{margin:5px 0;word-break:break-word}
+.vanc li::marker{font-variant-numeric:tabular-nums;color:var(--ink-3)}
+/* simulador */
+.dc{border:1px solid var(--rule-strong);border-radius:var(--r);padding:14px 16px;margin:22px 0;background:var(--paper)}
+.dc-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.dc-g{margin:10px 0}
+.dc-l{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);margin-bottom:5px;display:block}
+.chip{min-height:44px;padding:7px 13px;margin:3px 6px 3px 0;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);font-size:13.5px}
+.chip:hover{border-color:var(--accent);color:var(--accent-ink)}
+.chip.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:600}
+.dc input[type=number]{min-height:44px;width:120px;padding:6px 10px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper);color:var(--ink);font:15px var(--f-sans);font-variant-numeric:tabular-nums}
+.out{margin-top:12px;padding:12px 14px;border-radius:var(--r);background:var(--paper-2);border:1px solid var(--rule);font-size:14px;line-height:1.58;min-height:44px}
+.tag{display:inline-block;font:600 11px/1.4 var(--f-sans);padding:1px 7px;border-radius:2px;background:var(--accent-field);color:var(--accent-ink);margin:4px 4px 0 0}
+.rec-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.rec-bar textarea{width:100%;min-height:120px;margin-top:8px;padding:9px 11px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper-2);color:var(--ink);font:14px/1.55 var(--f-sans);resize:vertical}
+.chip:disabled{cursor:default;opacity:.85}
+.rec-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.rec-ctl{display:none;gap:6px;margin-top:6px}
+.recon .rec-ctl{display:flex}
+.recon>*:not(.rec-bar):not(.tl){display:none}
+.recon .nodo:not(.rev) .pt{display:none}
+.recon .nodo:not(.rev) .pn::after{content:" ?"}
+.recon .nodo:not(.rev) .det{display:none}
+.recon .nodo.pis:not(.rev) .det{display:block}
+.recon .nodo.pis:not(.rev) .det>*:not(.man){display:none}
+.recon .nodo:not(.pis):not(.rev) .man{display:none}
+.recon .nodo.rev{border-color:var(--accent)}
+.rec-go{margin:22px 0}
+.steps.tg>li{padding-left:40px}
+span.tg{display:inline-block;font:700 11px/1.4 var(--f-mono);letter-spacing:.02em;padding:2px 7px;margin:0 6px 2px 0;border-radius:2px;background:var(--paper-2);border:1px solid var(--rule);color:var(--ink-2);white-space:nowrap;vertical-align:1px}
+span.tg[data-t="clave"]{background:var(--accent-field);color:var(--accent-ink);border-color:var(--accent)}
+span.tg[data-t="ok"]{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+span.tg[data-t="cond"]{background:var(--am-f);color:var(--am);border-color:var(--am)}
+span.tg[data-t="no"]{background:var(--rs-f);color:var(--rs);border-color:var(--rs)}
+span.tg[data-t="alarma"]{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.qv{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:12px 0}
+.qv p{margin:0;padding:9px 11px;border-radius:var(--r);border:1px solid var(--rule);background:var(--paper-2);font-size:13.5px;line-height:1.45}
+.qv p::before{display:block;font:700 10.5px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px;color:var(--ink-3)}
+.qv p[data-e="p"]{background:var(--accent-field);border-color:var(--accent)}
+.qv p[data-e="p"]::before{content:"Presente";color:var(--accent-ink)}
+.qv p[data-e="v"]::before{content:"Variable"}
+.qv p[data-e="a"]{border:1px dashed var(--rule);color:var(--ink-3);background:transparent}
+.qv p[data-e="a"]::before{content:"Ausente"}
+.qv p[data-e="k"]{grid-column:1/-1;border:2px solid var(--accent);background:var(--accent-field);font-size:14.5px}
+.qv p[data-e="k"]::before{content:"Signo clave";color:var(--accent-ink)}
+.hb.vi{background:var(--pu-f);color:var(--pu);border-color:var(--pu)}
+.hb.vi .mini{color:inherit;opacity:.88}
+table.vis{min-width:620px}
+table.vis td{min-width:140px}
+table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index:1;background:var(--paper-2);min-width:118px;max-width:150px;font-weight:700;border-right:1px solid var(--rule)}
+.vb-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.tbl>*:not(.vb-bar):not(.vis-w){display:none}
+.tbl td.tap{cursor:pointer}
+.tbl td.tap:not(.rev){color:transparent;background:repeating-linear-gradient(135deg,var(--paper-2),var(--paper-2) 7px,var(--accent-field) 7px,var(--accent-field) 14px)}
+.tbl td.tap:not(.rev) *{visibility:hidden}
+.tbl td.tap.rev{box-shadow:inset 0 0 0 1px var(--accent)}
+.cf{display:block;margin-top:10px;padding-top:8px;border-top:1px dashed var(--accent);font-style:italic;color:var(--ink-2)}
+.cf::before{content:"Contrafactual · ";font-style:normal;font-weight:700;color:var(--accent-ink)}
+.fig{margin:14px 0}
+.fig img{display:block;max-width:100%;height:auto;border-radius:var(--r);border:1px solid var(--rule)}
+.fig figcaption{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin-top:6px}
+@media (min-width:700px){body{font-size:15.5px}.wrap{padding:22px 24px 64px}h1{font-size:28px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- /KIT_HEAD -->
+<h1>Ciclo ovárico, cuerpo albo y terapia hormonal de la menopausia</h1>
+<nav class="tabs">
+<button type="button" class="tb" data-tab="pan" onclick="show('pan')">Panorama</button>
+<button type="button" class="tb" data-tab="def" onclick="show('def')">Definición y epidemiología</button>
+<button type="button" class="tb" data-tab="cic" onclick="show('cic')">Ciclo ovárico y cuerpo albo</button>
+<button type="button" class="tb" data-tab="fis" onclick="show('fis')">Etiología y fisiopatología</button>
+<button type="button" class="tb" data-tab="cli" onclick="show('cli')">Clínica</button>
+<button type="button" class="tb" data-tab="dx" onclick="show('dx')">Plan diagnóstico</button>
+<button type="button" class="tb" data-tab="tx" onclick="show('tx')">Plan de tratamiento</button>
+<button type="button" class="tb" data-tab="seg" onclick="show('seg')">Seguimiento y complicaciones</button>
+</nav>
+<section class="tab" data-tab="pan"><div class="hb az"><div class="hb-t">El tema en una frase</div><p>x</p></div></section>
+<section class="tab" data-tab="def">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Qué criterio permite llamar menopausia a un cese menstrual y por qué ese diagnóstico solo se confirma mirando hacia atrás?</li>
+<li>¿En qué se diferencian la menopausia natural, la quirúrgica, la insuficiencia ovárica prematura y la menopausia temprana, y qué cambia en cada una para la paciente?</li>
+<li>¿Qué proceso ovárico normal deja de ocurrir en la menopausia y en qué pestañas se explica su causa y su consecuencia sobre el endometrio?</li>
+<li>¿Por qué la edad de la menopausia varía entre regiones y qué dato latinoamericano debes tener como referencia?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: The Menopause Society (NAMS) 2022 [R1] (solo resumen)</span> <span class="badge b-pu">Estadiaje: STRAW+10 2012 [R5] (solo resumen)</span> <span class="badge b-pu">IOP: ESHRE 2024 [R6] (solo resumen)</span></p>
+<div class="hb am"><div class="hb-t">Alcance</div>
+<p>Este widget no figura en el sílabo; parte de la guía vigente y de los textos de fisiología. Cubre la menopausia espontánea y la terapia hormonal sistémica, y trata la insuficiencia ovárica prematura solo como subtipo y con su guía propia. No desarrolla el climaterio de la mujer transgénero ni la anticoncepción perimenopáusica. No hay una guía de práctica clínica del Ministerio de Salud Pública del Ecuador sobre menopausia que se haya podido localizar; las cifras locales no se leyeron.</p></div>
+
+<h2>Definición</h2>
+<div class="card"><p><b>Menopausia</b>: cese definitivo de las menstruaciones por pérdida de la función folicular del ovario, no explicado por embarazo, lactancia ni otra causa. Se establece de forma retrospectiva, después de 12 meses seguidos de amenorrea, sin otra causa [VERIFICAR EN FUENTE]. La fecha de la menopausia es la del último sangrado, que solo se identifica pasado ese año. Es una redacción propia, sin frase literal de una fuente.</p>
+<span class="badge b-pu">STRAW+10, 2012 [R5] (solo resumen); criterio de 12 meses por verificar</span></div>
+<div class="card"><p>En la mujer en edad reproductiva, cada ciclo recluta un folículo que ovula y se convierte en cuerpo lúteo. Ese cuerpo secreta progesterona y estradiol durante la fase lútea y luego involuciona hasta formar una cicatriz sin función, el <b>cuerpo albo</b> [R26] [R27]. Mientras el ovario conserve folículos, este ciclo se repite y el endometrio recibe sus dos señales, estrógeno y progesterona. La menopausia es el momento en que el ovario ya no puede reclutar folículos que respondan.</p>
+<span class="rem">↪ Ciclo normal en «Ciclo ovárico y cuerpo albo»</span> <span class="rem">↪ Mecanismo en «Etiología y fisiopatología»</span></div>
+<div class="card"><p>Criterio central: amenorrea de 12 meses sin otra causa, en el contexto de la edad esperada [VERIFICAR EN FUENTE]. Cuando el útero se ha extirpado o hay un método que borra el sangrado, la menstruación deja de ser guía y el diagnóstico se apoya en los síntomas y, si hace falta, en la FSH. STRAW+10 propone estadios de la vida reproductiva, la transición y la posmenopausia aplicables sin importar edad, etnia ni índice de masa corporal [R5]. Subtipos:</p>
+<ul>
+<li>Natural o espontánea: por agotamiento folicular fisiológico, a la edad habitual.</li>
+<li>Inducida o quirúrgica: por ooforectomía bilateral o por tratamiento que destruye el ovario (quimioterapia, radioterapia pélvica); la caída hormonal es brusca, sin transición [VERIFICAR EN FUENTE].</li>
+<li>Insuficiencia ovárica prematura (IOP): pérdida de la función ovárica antes de los 40 años [R6].</li>
+<li>Menopausia temprana: la que ocurre entre los 40 y los 45 años; se trata como diagnóstico de sospecha con estudio hormonal si hay síntomas [R21] [VERIFICAR EN FUENTE].</li>
+</ul></div>
+
+<h3>No confundir con…</h3>
+<div class="tw"><table>
+<thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Perimenopausia (transición menopáusica)</th><td>Bochornos, ciclos irregulares y cambios del ánimo</td><td>Aún hay folículos y ovulaciones esporádicas: la menstruación todavía puede ocurrir y el embarazo sigue siendo posible. La menopausia exige el año sin sangrado [R5] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Amenorrea secundaria de otra causa (embarazo, hiperprolactinemia, hipogonadismo hipotalámico, enfermedad tiroidea)</th><td>Cese de la menstruación en una mujer que ya menstruaba</td><td>En estas el ovario puede estar sano; la FSH no está elevada de forma sostenida como en la falla ovárica. Se excluyen antes de llamarla menopausia o IOP [R6]</td></tr>
+<tr><th>Insuficiencia ovárica prematura</th><td>Misma deficiencia estrogénica y mismos síntomas</td><td>Ocurre antes de los 40 años, puede ser intermitente y conserva alguna actividad folicular; exige guía propia y suele requerir terapia hormonal hasta la edad habitual de la menopausia [R6]</td></tr>
+</tbody></table></div>
+
+<div class="card"><p>Ejemplo de anclaje: mujer de 52 años, con útero, sin sangrado menstrual desde hace 14 meses. Refiere bochornos nocturnos que la despiertan, sequedad vaginal con dolor en el coito y sueño fragmentado. Su madre tuvo la menopausia a los 49 años.</p></div>
+
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la menopausia</span>
+<p class="fey-b">Imagina que cada mes un jardín reparte semillas y solo una llega a florecer. Con los años el jardín gasta casi todas sus semillas. Sin flores nuevas, el jardín deja de mandar los mensajes que le avisaban al resto del cuerpo que todo marchaba bien. Cuando pasa un año entero sin ninguna flor, decimos que el jardín cerró su temporada, y el cuerpo tiene que acostumbrarse a vivir sin esos mensajes.</p>
+<p class="mini fey-c">En medicina esto se llama… menopausia (el cierre de la temporada), folículo (la semilla), ovulación (la flor que se abre) y hormonas (los mensajes).</p>
+<p class="mini fey-c">Dónde falla la comparación: el ovario no reparte una semilla por vez, sino que tiene una reserva que se acaba por completo y no se repone, y los mensajes los fabrican tanto las semillas como la flor.</p></div>
+
+<h2>Epidemiología</h2>
+<div class="stats">
+<div class="stat"><b>48,6 años</b><span>edad media de la menopausia en Latinoamérica (REDLINC) [R18]</span></div>
+<div class="stat"><b>43,8–53 años</b><span>rango de las medianas regionales de edad de menopausia en la revisión sistemática [R19]</span></div>
+<div class="stat"><b>3,5 %</b><span>prevalencia de la insuficiencia ovárica prematura según la guía ESHRE 2024 [R6]</span></div>
+</div>
+<p>La menopausia latinoamericana ocurre antes que la de Europa (50,1 a 52,8 años) y que la de Norteamérica (50,5 a 51,4 años) según la revisión sistemática de Palacios [R19]; la cifra de Latinoamérica de la red REDLINC es 48,6 años [R18]. Esa diferencia importa porque los síntomas y la ventana de tratamiento (menos de 10 años desde la menopausia o menos de 60 años de edad) se cuentan desde la fecha real de la paciente [R1].</p>
+<div class="tw"><table>
+<thead><tr><th>Factor</th><th>Qué modifica</th><th>Dónde se explica el mecanismo</th></tr></thead>
+<tbody>
+<tr><th>Edad de la madre en su menopausia</th><td>Orienta el adelanto o retraso de la propia [VERIFICAR EN FUENTE]</td><td>Etiología y fisiopatología, reserva folicular</td></tr>
+<tr><th>Ooforectomía bilateral, quimioterapia o radioterapia pélvica</th><td>Adelanta la menopausia de forma abrupta [VERIFICAR EN FUENTE]</td><td>Etiología y fisiopatología, nodo de pérdida de reserva</td></tr>
+<tr><th>Región geográfica</th><td>Desplaza la edad media entre regiones [R19]</td><td>No se atribuye una causa en las fuentes leídas</td></tr>
+</tbody></table></div>
+<p class="mini">Ecuador: no se encontraron cifras nacionales de edad de menopausia ni de uso de terapia hormonal; no se estiman. Se toman los datos de REDLINC como referencia regional [R18].</p>
+</section>
+<section class="tab" data-tab="cic">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Cómo el diálogo entre hipotálamo, hipófisis y ovario produce la ovulación y por qué la fase posterior a ella es la parte más constante del ciclo?</li>
+<li>¿Qué hace el cuerpo lúteo, qué desencadena su regresión y en qué se transforma al terminar?</li>
+<li>¿En qué se diferencian el cuerpo lúteo y el cuerpo albo, y qué estructuras y hormonas faltan en el ovario posmenopáusico?</li>
+<li>¿Por qué la mujer con útero necesita un progestágeno junto al estrógeno de la terapia hormonal y la histerectomizada no, y qué parte de ese razonamiento es fisiológica y no un hallazgo de un estudio?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: The Menopause Society (NAMS) 2022 [R1] (solo resumen)</span></p>
+<div class="hb am"><div class="hb-t">Alcance</div>
+<p>No hay estudios que relacionen directamente el cuerpo albo con la terapia hormonal: las búsquedas dirigidas solo devolvieron literatura histológica. El vínculo que se presenta aquí es fisiológico y conceptual: sin ovulación no hay cuerpo lúteo, sin cuerpo lúteo no hay progesterona endógena y, en la mujer con útero, el estrógeno exógeno exige un progestágeno para proteger el endometrio. Las cifras de fisiología salen de los textos de Guyton [R26] y Ross [R27], que no se consultaron directamente [VERIFICAR EN FUENTE].</p></div>
+
+<h2>Eje hipotálamo-hipófisis-ovario y fases del ciclo</h2>
+<p>El hipotálamo libera de forma pulsátil la hormona liberadora de gonadotropinas; esta hace que la hipófisis anterior secrete hormona foliculoestimulante (FSH) y hormona luteinizante (LH), y ambas actúan sobre el ovario [R26]. El ovario devuelve señales: estradiol, progesterona e inhibinas. El estradiol bajo o moderado frena a la hipófisis (retrocontrol negativo), pero el estradiol alto y sostenido del folículo maduro invierte la señal y dispara el pico de LH (retrocontrol positivo) [R26].</p>
+<div class="tw"><table>
+<thead><tr><th>Fase</th><th>Días en un ciclo de 28 días</th><th>Estructura dominante</th><th>Hormonas predominantes</th><th>Endometrio</th></tr></thead>
+<tbody>
+<tr><th>Folicular</th><td>Del 1 al 13 aproximadamente [R26]</td><td>Cohorte de folículos antrales y, desde la mitad de la fase, un folículo dominante</td><td>FSH al inicio; estradiol en ascenso</td><td>Proliferativo: crece bajo el estrógeno</td></tr>
+<tr><th>Ovulación</th><td>Alrededor del día 14 [R26]</td><td>Folículo maduro que se rompe</td><td>Estradiol alto, luego pico de LH y de FSH</td><td>Proliferativo máximo</td></tr>
+<tr><th>Lútea</th><td>Del 15 al 28 aproximadamente [R26]</td><td>Cuerpo lúteo</td><td>Progesterona y estradiol (e inhibina A)</td><td>Secretor: la progesterona lo transforma y lo prepara para la implantación</td></tr>
+</tbody></table></div>
+<p>Si no hay embarazo, el cuerpo lúteo involuciona al cabo de unos 14 días; la caída de progesterona y de estradiol provoca la descamación del endometrio, que es la menstruación [R26]. El día 1 del ciclo es el primer día del sangrado.</p>
+<div class="hb ve"><div class="hb-t">Perla</div>
+<p>La fase lútea dura alrededor de 14 días y es constante; la que varía entre mujeres y entre ciclos es la folicular. Por eso la ovulación cae unos 14 días antes de la menstruación siguiente y no en el día 14 del calendario [R26].</p></div>
+
+<h2>Desarrollo folicular y reserva</h2>
+<p>La reserva ovárica es finita: la ovogonia entra en meiosis durante la vida fetal y no se renueva. Se calcula en 1 a 2 millones de folículos primordiales al nacer, unos 400 000 en la pubertad y alrededor de 1 000 en la menopausia [R26] [VERIFICAR EN FUENTE]. Casi todos se pierden por atresia y no por ovulación: en cada ciclo se reclutan varios folículos antrales, pero solo uno es seleccionado y ovula [R26]. El folículo seleccionado es el más sensible a la FSH y produce más estradiol, que a su vez frena la FSH y condena a los demás.</p>
+<div class="tw"><table>
+<thead><tr><th>Estadio folicular</th><th>Dependencia</th><th>Qué produce</th></tr></thead>
+<tbody>
+<tr><th>Primordial</th><td>Independiente de gonadotropinas; reserva</td><td>Nada relevante</td></tr>
+<tr><th>Antral reclutado</th><td>FSH</td><td>Estradiol (células de la teca producen andrógenos y la granulosa los aromatiza) e inhibina B [R26]</td></tr>
+<tr><th>Dominante o preovulatorio</th><td>FSH y luego LH</td><td>Estradiol alto; con el pico de LH se luteiniza y se rompe [R26]</td></tr>
+</tbody></table></div>
+<p>La inhibina B y la hormona antimülleriana son marcadores de esta reserva; su caída antecede al aumento de la FSH [R5]. <button type="button" class="xref" data-ir="m-1" onclick="ir('fis','m-1')">→ Atresia agota la reserva folicular</button> <button type="button" class="xref" data-ir="m-2" onclick="ir('fis','m-2')">→ Inhibina B cae y la FSH sube</button></p>
+
+<h2>Cuerpo lúteo y cuerpo albo</h2>
+<p>Tras la ovulación, lo que queda del folículo se reorganiza: las células de la granulosa y de la teca se luteinizan, se llenan de lípidos y forman el <b>cuerpo lúteo</b>, una glándula endocrina transitoria muy vascularizada que secreta progesterona y estradiol [R26] [R27]. La progesterona detiene la proliferación endometrial y lo hace secretor, y frena la LH y la FSH [R26]. Si no hay embarazo, el cuerpo lúteo entra en luteólisis: pierde su sostén de LH, las células luteínicas mueren y el tejido es reemplazado por tejido conectivo.</p>
+<p>El resultado es el <b>cuerpo albo</b> (<i>corpus albicans</i>): una cicatriz hialina, pálida y avascular, formada por colágeno denso y restos de células luteínicas, sin función endocrina; se retrae hacia el estroma y se reabsorbe con lentitud [R27]. Se acumulan con los años: el ovario que ha ovulado muchas veces contiene muchos cuerpos albos (corpora albicantia) [R27]. La literatura reciente los describe como estructuras fisiológicas que rara vez forman una masa visible [R24].</p>
+<div class="tw"><table>
+<thead><tr><th>Estructura</th><th>Hormona</th><th>Función</th><th>Qué pasa en la menopausia</th></tr></thead>
+<tbody>
+<tr><th>Folículo antral y dominante</th><td>Estradiol, inhibina B</td><td>Prepara el óvulo y hace proliferar el endometrio</td><td>Casi no quedan; los pocos que persisten no responden y no maduran</td></tr>
+<tr><th>Cuerpo lúteo</th><td>Progesterona, estradiol, inhibina A</td><td>Transforma el endometrio en secretor y sostiene el embarazo inicial</td><td>No se forma más: sin ovulación no hay luteinización</td></tr>
+<tr><th>Cuerpo albo</th><td>Ninguna</td><td>Cicatriz inerte; marca la regresión del cuerpo lúteo</td><td>Los antiguos persisten en el estroma; no se forman nuevos</td></tr>
+<tr><th>Estroma ovárico</th><td>Andrógenos en pequeña cantidad</td><td>Soporte y producción androgénica residual</td><td>Predomina; el ovario se atrofia y se retrae [R27] [VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+
+<h2>Ovario posmenopáusico</h2>
+<p>Con la reserva agotada, el ovario ya no tiene folículos que respondan a la FSH: no produce estradiol en cantidad relevante, no ovula y no forma cuerpos lúteos nuevos. Queda un ovario pequeño, de estroma denso, con cuerpos albos de ciclos pasados [R27] [VERIFICAR EN FUENTE]. Sin estradiol ni inhibina B, la retroalimentación negativa desaparece y la FSH y la LH suben de forma sostenida [R5]. La transición hacia este estado empieza con ciclos anovulatorios, que ya carecen de cuerpo lúteo. <button type="button" class="xref" data-ir="m-3" onclick="ir('fis','m-3')">→ Ciclos anovulatorios sin cuerpo lúteo</button> <button type="button" class="xref" data-ir="m-4" onclick="ir('fis','m-4')">→ Estradiol cae de forma definitiva</button></p>
+
+<h2>Del cuerpo albo a la terapia hormonal</h2>
+<p>El razonamiento central del widget se apoya en un hecho de fisiología: en el ciclo normal el estrógeno hace crecer el endometrio y la progesterona del cuerpo lúteo lo frena y lo transforma en secretor; al faltar la progesterona se descama. Es decir, el endometrio nunca está expuesto durante mucho tiempo a estrógeno solo [R26].</p>
+<div class="tw"><table>
+<thead><tr><th>Situación</th><th>Estrógeno</th><th>Progesterona</th><th>Efecto sobre el endometrio</th></tr></thead>
+<tbody>
+<tr><th>Ciclo ovulatorio</th><td>Del folículo y del cuerpo lúteo</td><td>Del cuerpo lúteo, en la fase lútea</td><td>Proliferación y luego secreción, con descamación cíclica [R26]</td></tr>
+<tr><th>Posmenopausia sin tratamiento</th><td>Muy bajo</td><td>Ausente (no hay cuerpo lúteo)</td><td>Atrófico</td></tr>
+<tr><th>Terapia hormonal con útero y solo estrógeno</th><td>Exógeno</td><td>Ausente</td><td>Proliferación sin oposición: riesgo de hiperplasia y de cáncer de endometrio [R17]</td></tr>
+<tr><th>Terapia hormonal combinada con útero</th><td>Exógeno</td><td>Progestágeno exógeno, que hace el papel que antes tenía el cuerpo lúteo</td><td>Endometrio protegido [R1]</td></tr>
+<tr><th>Terapia con estrógeno solo, sin útero</th><td>Exógeno</td><td>No se necesita</td><td>No hay endometrio que proteger [R1]</td></tr>
+</tbody></table></div>
+<p>La consecuencia práctica: <b>la mujer con útero recibe estrógeno más progestágeno; la histerectomizada, estrógeno solo</b> [R1]. Los progestágenos no son idénticos a la progesterona del cuerpo lúteo, pero cumplen su función sobre el endometrio. Ese es el vínculo entre el cuerpo albo y la terapia hormonal: el cuerpo albo marca que el cuerpo lúteo ya no existe y que la progesterona endógena ya no está disponible.</p>
+<span class="rem">↪ Posología en «Plan de tratamiento»</span>
+<p class="mini">Es un razonamiento fisiológico, no un hallazgo de un estudio. El cuerpo albo no actúa sobre el endometrio ni sobre la terapia: es el marcador histológico de que la fuente de progesterona terminó. Los estudios clínicos de seguridad endometrial se refieren al estrógeno sin oposición y no al cuerpo albo [R17].</p>
+
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — el cuerpo albo y la progesterona</span>
+<p class="fey-b">Piensa en una obra donde un albañil levanta un muro y otro obrero lo frena para que no se pase de alto. Cada mes, la obra recibe a ese segundo obrero por unos días, y cuando se va, se derriba lo construido y se empieza de nuevo. Con los años, el segundo obrero deja de venir: solo quedan las marcas de sus visitas, que ya no trabajan. Si ponemos a un albañil nuevo sin su compañero, el muro crece sin tope; por eso se le suma un freno.</p>
+<p class="mini fey-c">En medicina esto se llama… estrógeno (el albañil), progesterona del cuerpo lúteo (el obrero que frena), cuerpo albo (la marca que queda) y progestágeno (el freno que se suma).</p>
+<p class="mini fey-c">Dónde falla la comparación: el freno nuevo no es idéntico al obrero original, y el cuerpo albo no hace nada por sí mismo; solo señala que el obrero ya no viene.</p></div>
+
+<div class="dc" data-fn="dcCic"><div class="dc-t">Simulador · Decisión clínica — predice la fase antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Estado de la mujer</span>
+<button type="button" class="chip" data-g="est" data-v="ovu" onclick="ch(this)">Ciclo ovulatorio</button>
+<button type="button" class="chip" data-g="est" data-v="pos" onclick="ch(this)">Posmenopausia</button>
+<button type="button" class="chip" data-g="est" data-v="comb" onclick="ch(this)">TH combinada</button>
+<button type="button" class="chip" data-g="est" data-v="solo" onclick="ch(this)">TH con estrógeno solo y útero</button></div>
+<div class="dc-g"><span class="dc-l">Día del ciclo (solo ciclo ovulatorio)</span><input type="number" data-n="dia" min="1" max="60" step="1" oninput="ch(this)"></div>
+<div class="dc-g"><span class="dc-l">Duración del ciclo en días (solo ciclo ovulatorio)</span><input type="number" data-n="dur" min="20" max="60" step="1" oninput="ch(this)"></div>
+<div class="out"></div></div>
+</section>
+<section class="tab" data-tab="fis">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué el agotamiento de los folículos, y no una falla del hipotálamo o de la hipófisis, hace subir la FSH y abre la transición menopáusica?</li>
+<li>¿Cómo la ausencia de ovulación, y por tanto de cuerpo lúteo, cambia el patrón menstrual antes de que el estradiol caiga de forma definitiva?</li>
+<li>¿Cómo la falta de estradiol desajusta el centro termorregulador hasta producir el bochorno?</li>
+<li>¿Por qué un solo déficit hormonal explica a la vez la atrofia urogenital, la pérdida de hueso y el cambio del riesgo cardiovascular?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: The Menopause Society (NAMS) 2022 [R1] (solo resumen)</span></p>
+<p class="mini">La secuencia folicular y hormonal sigue los textos de fisiología e histología de la tabla de ediciones [R26] [R27], que no se consultaron en esta sesión; cada cifra de ese tipo lleva su cita al libro. Vigencia no verificada.</p>
+
+<h2>Causas y puntos de entrada</h2>
+<div class="tw"><table>
+<thead><tr><th>Causa / grupo</th><th>Cómo entra en la cascada</th><th>Nodo</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Menopausia natural (envejecimiento ovárico)</th><td>La atresia folicular, que nunca se detiene, consume la reserva finita de folículos hasta que ya no queda cohorte que responda a las gonadotropinas</td><td><button type="button" class="xref" data-ir="m-1" onclick="ir('fis','m-1')">Atresia agota la reserva</button></td><td>[R26]</td></tr>
+<tr><th>Menopausia quirúrgica (ooforectomía bilateral)</th><td>Se extirpa de golpe el tejido que produce estradiol: la cascada salta los pasos graduales y el estradiol cae de forma abrupta</td><td><button type="button" class="xref" data-ir="m-4" onclick="ir('fis','m-4')">Estradiol cae de forma definitiva</button></td><td>[R26]</td></tr>
+<tr><th>Quimioterapia o radioterapia pélvica</th><td>Destruyen folículos en crecimiento y parte de la reserva; el efecto depende del agente, la dosis y la edad, y puede ser transitorio o permanente</td><td><button type="button" class="xref" data-ir="m-1" onclick="ir('fis','m-1')">Atresia agota la reserva</button></td><td>[VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Insuficiencia ovárica prematura (IOP) genética o autoinmune</th><td>Una dotación folicular escasa de origen, un defecto genético o una agresión autoinmune al ovario agotan la reserva antes de los 40 años</td><td><button type="button" class="xref" data-ir="m-1" onclick="ir('fis','m-1')">Atresia agota la reserva</button></td><td>[R6]</td></tr>
+</tbody></table></div>
+<p class="mini">IOP: pérdida de la función ovárica antes de los 40 años. Los criterios para diagnosticarla están en «Plan diagnóstico».</p>
+
+<h2>Del agotamiento folicular a la caída del estradiol</h2>
+<ol class="tl">
+<li class="nodo" id="m-1" data-clin="0" data-paso="Atresia agota la reserva folicular" data-rama="Rama A · Eje ovárico"><div class="det"><p>La mujer nace con una reserva finita de folículos primordiales (ovocito rodeado de una capa de células planas), del orden de uno a dos millones al nacer, unos cuatrocientos mil en la pubertad y alrededor de mil en la menopausia [R26]. La atresia es la degeneración por apoptosis (muerte celular programada) de las células de la granulosa del folículo y de su ovocito. Ocurre en todas las edades y se acelera con los años; solo una pequeña fracción llega a ovular. Como el ovario adulto no genera folículos nuevos, la reserva solo puede agotarse. Este es el único nodo común a todas las causas de la tabla, salvo la quirúrgica.</p></div></li>
+<li class="nodo" id="m-2" data-clin="1" data-paso="Inhibina B cae y la FSH sube" data-rama="Rama A · Eje ovárico"><div class="det"><p>La inhibina B es una hormona que secretan las células de la granulosa de los folículos antrales pequeños y que frena de forma selectiva la liberación de FSH (hormona folículo-estimulante, gonadotropina de la hipófisis anterior que recluta folículos). La AMH (hormona antimülleriana, que producen los folículos pequeños y refleja cuántos quedan) también cae [R5]. Con menos folículos pequeños baja la inhibina B, se levanta el freno sobre los gonadotropos y la FSH sube; el hipotálamo y la hipófisis están sanos, solo han perdido la señal del ovario [R26]. Al principio el estradiol sigue normal o incluso alto, porque la FSH recluta folículos más temprano y acorta la fase folicular.</p>
+<p class="mini">La inhibina B, la AMH y la FSH son los marcadores de reserva que usa la estadificación STRAW+10 [R5]. <span class="rem">↪ Propiedades en «Plan diagnóstico»</span></p>
+<p class="man">Se manifiesta como: ciclos que se acortan al inicio y luego se espacian <button type="button" class="xref" data-ir="s-1" onclick="ir('cli','s-1')">Cambio del patrón menstrual</button></p></div></li>
+<li class="nodo" id="m-3" data-clin="1" data-paso="Ciclos anovulatorios sin cuerpo lúteo" data-rama="Rama A · Eje ovárico"><div class="det"><p>Los folículos que quedan responden mal a la FSH y a veces no alcanzan el pico de LH (hormona luteinizante, que desencadena la ovulación). Sin ovulación no se forma cuerpo lúteo (la estructura que deja el folículo roto y que secreta progesterona durante unos catorce días [R26]); sin él no hay progesterona endógena. El estradiol sigue actuando solo sobre el endometrio: lo hace proliferar sin la oposición de la progesterona, que es la que lo estabiliza y provoca su descamación ordenada. Resultado: sangrado irregular, a veces escaso y a veces abundante. El cuerpo albo es la cicatriz sin función endocrina en que acaba el cuerpo lúteo; cuantas menos ovulaciones, menos cuerpos lúteos y menos progesterona. <span class="rem">↪ Estructura del ciclo en «Ciclo ovárico y cuerpo albo»</span></p>
+<p>Este mismo razonamiento, y no un hallazgo de ensayo, es el que luego justifica añadir un progestágeno al estrógeno en la mujer con útero. <span class="rem">↪ Posología en «Plan de tratamiento»</span></p>
+<p class="man">Se manifiesta como: sangrado irregular o amenorreas intercaladas <button type="button" class="xref" data-ir="s-1" onclick="ir('cli','s-1')">Cambio del patrón menstrual</button></p></div></li>
+<li class="nodo" id="m-4" data-clin="1" data-paso="Estradiol cae de forma definitiva" data-rama="Rama A · Eje ovárico"><div class="det"><p>El estradiol es el estrógeno principal del ovario: la teca (capa externa del folículo) produce andrógenos y la aromatasa (enzima de la granulosa) los convierte en estradiol. Cuando ya no queda ningún folículo capaz de responder, la FSH, aunque esté muy alta, no puede remontarlo [R26]. El estradiol cae y se queda bajo; el ovario atrófico, con estroma fibroso y cuerpos albos, persiste como fuente menor de andrógenos. Desde entonces el estrógeno circulante es sobre todo estrona, que el tejido adiposo forma por aromatización a partir de andrógenos y que es mucho más débil. Los doce meses de amenorrea con que se define la menopausia son el reflejo clínico de este paso. <span class="rem">↪ Definición en «Definición y epidemiología»</span></p>
+<p class="man">Se manifiesta como: amenorrea definitiva <button type="button" class="xref" data-ir="s-1" onclick="ir('cli','s-1')">Cambio del patrón menstrual</button></p></div></li>
+</ol>
+
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la despensa que se vacía</span>
+<p class="fey-b">Piensa en una despensa que se llena una sola vez, antes de nacer. Cada mes se gasta algo y algunas cosas se echan a perder sin usarse. Al principio el cerebro, que vigila la despensa, nota que queda poco y grita más fuerte para que se produzca algo. Los meses se desordenan, a veces sale demasiado y a veces nada. Cuando la despensa se vacía, el grito sigue, pero ya no hay nada que enviar.</p>
+<p class="mini fey-c">En medicina esto se llama… reserva folicular, atresia, retroalimentación negativa y menopausia.</p>
+<p class="mini fey-c">Dónde falla la comparación: la despensa se vacía por uso y la reserva ovárica se pierde también por muerte celular, aunque no se ovule; además nadie puede volver a llenarla.</p></div>
+
+<h2>Rama vasomotora: el centro de la temperatura sin su freno</h2>
+<ol class="tl">
+<li class="nodo" id="m-5" data-clin="1" data-paso="Neuronas KNDy estrechan la zona termoneutral" data-rama="Rama B · Vasomotora"><div class="det"><p>Las neuronas KNDy del núcleo arcuato del hipotálamo coexpresan kisspeptina, neurocinina B (NKB) y dinorfina. El estradiol las frena de forma tónica; al caer, se hipertrofian y se hiperactivan y liberan NKB en exceso [R20]. La NKB activa los receptores NK3 (NK3R) de las neuronas del área preóptica mediana, que forman parte del centro termorregulador, y desencadena la disipación de calor: vasodilatación cutánea y sudoración [R20]. Se describe como un estrechamiento de la zona termoneutral (el intervalo de temperatura central en que no se activa la sudoración ni el escalofrío), de modo que un cambio mínimo de temperatura basta para disparar la respuesta [VERIFICAR EN FUENTE].</p>
+<p>Es un blanco farmacológico en dos puntos: restablecer el freno con estrógeno, o bloquear el receptor, con antagonistas de NK3 (fezolinetant) o de NK1 y NK3 (elinzanetant) [R12] [R14]. <span class="rem">↪ Posología en «Plan de tratamiento»</span></p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="s-2" onclick="ir('cli','s-2')">Bochorno y sudoración nocturna</button> y, por la fragmentación del sueño, <button type="button" class="xref" data-ir="s-3" onclick="ir('cli','s-3')">Insomnio y cambios del ánimo</button></p></div></li>
+</ol>
+
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — el termostato sin su regulador</span>
+<p class="fey-b">El cuerpo tiene un termostato en el cerebro. Una hormona del ovario le ponía un freno suave para que no se disparara. Cuando esa hormona desaparece, el termostato se vuelve nervioso: ante una variación diminuta cree que hace demasiado calor, abre los grifos de la piel y suda. Por eso llega la oleada de calor, con la cara enrojecida, aunque la temperatura de la habitación no haya cambiado.</p>
+<p class="mini fey-c">En medicina esto se llama… síntomas vasomotores, zona termoneutral y neuronas que liberan neurocinina.</p>
+<p class="mini fey-c">Dónde falla la comparación: un termostato no tiene hormonas ni se vuelve nervioso por falta de una; el cerebro sí recibe señales químicas de todo el cuerpo.</p></div>
+
+<h2>Rama tisular: el tejido que depende del estrógeno</h2>
+<ol class="tl">
+<li class="nodo" id="m-6" data-clin="1" data-paso="Epitelio urogenital pierde trofismo" data-rama="Rama C · Tisular"><div class="det"><p>La vagina, la vulva, la uretra y el trígono de la vejiga tienen receptores de estrógeno. El estrógeno mantiene el epitelio grueso, con glucógeno en las células superficiales; los lactobacilos lo fermentan a ácido láctico y mantienen el pH vaginal ácido, que protege de patógenos; también sostiene el colágeno, el riego sanguíneo y la lubricación [R1] [R26]. Sin estrógeno el epitelio se adelgaza, el glucógeno disminuye, los lactobacilos caen y el pH sube. El tejido se vuelve frágil, seco y propenso a la irritación y a las infecciones.</p>
+<p>Es un blanco farmacológico local: estrógeno vaginal a dosis baja, DHEA vaginal u ospemifeno oral (modulador selectivo del receptor de estrógeno) [R1]. <span class="rem">↪ Posología en «Plan de tratamiento»</span></p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="s-4" onclick="ir('cli','s-4')">Síndrome genitourinario de la menopausia</button></p></div></li>
+<li class="nodo" id="m-7" data-clin="1" data-paso="Resorción ósea supera a la formación" data-rama="Rama C · Tisular"><div class="det"><p>El hueso se renueva a diario: los osteoclastos (células que lo destruyen) y los osteoblastos (que lo forman) trabajan acoplados. El estrógeno frena a los osteoclastos al reducir la señal de RANKL (ligando que expresan osteoblastos y linfocitos T y que, al unirse a RANK en los precursores, los diferencia en osteoclastos) y al aumentar la osteoprotegerina (OPG, receptor señuelo que captura RANKL) [R26]. Sin estradiol, sube la relación RANKL/OPG, los osteoclastos son más numerosos y viven más, y la resorción supera a la formación. La pérdida es más rápida en el hueso trabecular, el de las vértebras, que sufre el aplastamiento. La prevención de esta pérdida es una indicación de la terapia hormonal [R1]. <span class="rem">↪ Posología en «Plan de tratamiento»</span></p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="s-5" onclick="ir('cli','s-5')">Pérdida de talla o fractura por fragilidad</button></p></div></li>
+<li class="nodo" id="m-8" data-clin="0" data-paso="Endotelio y lípidos pierden protección estrogénica" data-rama="Rama C · Tisular"><div class="det"><p>El estradiol actúa sobre receptores endoteliales y estimula la formación de óxido nítrico (gas que relaja el músculo liso de la pared y dilata el vaso); también favorece en el hígado perfiles lipídicos menos aterogénicos [R26]. Sin él, el endotelio vasodilata menos, la LDL tiende a subir y la HDL a bajar, y la grasa se reparte más hacia el abdomen. Es un paso intermedio sin signo propio: pesa en el riesgo cardiovascular a largo plazo, y el momento en que se inicie un tratamiento hormonal cambia la relación entre beneficio y riesgo (menos de diez años desde la menopausia o menos de sesenta años de edad) [R1]. <span class="rem">↪ Riesgos y vigilancia en «Seguimiento y complicaciones»</span></p></div></li>
+</ol>
+</section>
+<section class="tab" data-tab="cli">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué el patrón menstrual cambia años antes de que el estradiol caiga de forma definitiva?</li>
+<li>¿Cómo la inestabilidad del centro termorregulador produce el bochorno y por qué la sudoración nocturna acaba en insomnio?</li>
+<li>¿Por qué el síndrome genitourinario y la pérdida ósea comparten una misma causa y, sin embargo, se manifiestan en tiempos distintos?</li>
+<li>¿Qué cambia en la presentación clínica cuando la menopausia es quirúrgica o llega antes de los 40 años?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: The Menopause Society (NAMS) 2022 [R1] (solo resumen)</span></p>
+<div class="qv">
+<p data-e="p">Irregularidad del ciclo en la transición</p>
+<p data-e="p">Bochorno con enrojecimiento facial</p>
+<p data-e="p">Sudoración nocturna que despierta</p>
+<p data-e="v">Sequedad vaginal y dispareunia</p>
+<p data-e="v">Urgencia urinaria o infecciones repetidas</p>
+<p data-e="v">Insomnio y labilidad emocional</p>
+<p data-e="a">Sangrado vaginal después de doce meses de amenorrea</p>
+<p data-e="k"><button type="button" class="xref" data-ir="s-2" onclick="ir('cli','s-2')">Bochorno y sudoración nocturna</button></p>
+</div>
+<p class="mini">El sangrado tras doce meses de amenorrea no pertenece a la clínica esperable de la menopausia: obliga a descartar patología endometrial [R17]. <span class="rem">↪ Propiedades en «Plan diagnóstico»</span></p>
+
+<h2>Rama del eje ovárico: el patrón menstrual</h2>
+<div class="signo" id="s-1"><h4>Cambio del patrón menstrual</h4>
+<dl>
+<dt>Cómo se reconoce</dt><dd>En la transición temprana, ciclos más cortos o con diferencias de varios días entre uno y otro. Después, ciclos espaciados con amenorreas intercaladas y sangrados irregulares, a veces abundantes. La amenorrea se hace definitiva en la menopausia.</dd>
+<dt>Por qué aparece</dt><dd>Sin ovulación no hay cuerpo lúteo ni progesterona, y el endometrio crece sin oposición hasta descamarse de forma irregular; al final, sin estradiol, ya no hay endometrio que proliferar. <button type="button" class="xref" data-ir="m-3" onclick="ir('fis','m-3')">← Ciclos anovulatorios</button> <button type="button" class="xref" data-ir="m-4" onclick="ir('fis','m-4')">← Estradiol cae</button></dd>
+<dt>Qué significa</dt><dd>En una mujer de edad compatible es el primer indicio de la transición y suele bastar la clínica. En una mujer joven, o con sangrado muy abundante o fuera de patrón, no se da por «climaterio» sin estudio. <span class="rem">↪ Propiedades en «Plan diagnóstico»</span></dd>
+</dl></div>
+
+<h2>Rama vasomotora</h2>
+<div class="signo" id="s-2"><h4>Bochorno y sudoración nocturna</h4>
+<dl>
+<dt>Cómo se reconoce</dt><dd>Sensación súbita de calor que sube por tórax, cuello y cara, con enrojecimiento, sudoración y a veces palpitaciones; dura minutos y puede terminar con escalofrío. De noche se presenta como sudoración que empapa la ropa y despierta.</dd>
+<dt>Por qué aparece</dt><dd>Sin estradiol, las neuronas KNDy liberan neurocinina B en exceso y activan el centro termorregulador, que dilata los vasos de la piel y suda aunque la temperatura central no haya subido. <button type="button" class="xref" data-ir="m-5" onclick="ir('fis','m-5')">← Neuronas KNDy</button></dd>
+<dt>Qué significa</dt><dd>Es el síntoma que más lleva a consultar y, si es moderado o intenso, es indicación de tratamiento. Antes de atribuirlo a la menopausia, en una mujer sin otras claves se piensa también en otras causas de sudoración. <span class="rem">↪ Posología en «Plan de tratamiento»</span></dd>
+</dl></div>
+<div class="signo" id="s-3"><h4>Insomnio y cambios del ánimo</h4>
+<dl>
+<dt>Cómo se reconoce</dt><dd>Dificultad para conciliar o mantener el sueño, despertares con sudor, cansancio diurno, irritabilidad y ánimo bajo o ansioso.</dd>
+<dt>Por qué aparece</dt><dd>Los episodios nocturnos fragmentan el sueño y el sueño no reparador deteriora el ánimo y la atención. El estradiol también modula neurotransmisores del sistema nervioso central, pero esa vía no está bien establecida. <button type="button" class="xref" data-ir="m-5" onclick="ir('fis','m-5')">← Neuronas KNDy</button></dd>
+<dt>Qué significa</dt><dd>Si el insomnio y el ánimo bajo no se acompañan de bochornos, o hay anhedonia persistente, ideas de muerte o antecedente de depresión, hay que evaluar un trastorno del ánimo primario y no atribuirlo solo a la menopausia.</dd>
+</dl></div>
+
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la mucosa sin su riego</span>
+<p class="fey-b">Imagina la piel fina por dentro de la vagina y de la salida de la orina como un jardín que se mantiene verde porque lo riega una hormona. Cuando el riego se acaba, el césped se seca, se adelgaza y se agrieta. Roza, duele y se irrita con facilidad. Los pequeños habitantes buenos que lo protegían se van y entran otros que no lo cuidan, así que aparecen las molestias y las infecciones.</p>
+<p class="mini fey-c">En medicina esto se llama… síndrome genitourinario de la menopausia, atrofia urogenital y pH vaginal alcalino.</p>
+<p class="mini fey-c">Dónde falla la comparación: el jardín se recupera con agua de cualquier origen, mientras que este tejido responde solo a estrógeno, y las molestias pueden aparecer también sin que haya césped «seco» a simple vista.</p></div>
+
+<h2>Rama tisular-urogenital</h2>
+<div class="signo" id="s-4"><h4>Síndrome genitourinario de la menopausia</h4>
+<dl>
+<dt>Cómo se reconoce</dt><dd>Sequedad, ardor o prurito vulvovaginal, dispareunia, flujo escaso o sangrado leve con el coito, urgencia y disuria sin infección, e infecciones urinarias recurrentes. Al examen: mucosa pálida, delgada, con petequias o fisuras y pérdida de pliegues.</dd>
+<dt>Por qué aparece</dt><dd>Sin estrógeno el epitelio se adelgaza, falta glucógeno, caen los lactobacilos y sube el pH; el tejido se vuelve frágil, seco y vulnerable. <button type="button" class="xref" data-ir="m-6" onclick="ir('fis','m-6')">← Epitelio urogenital</button></dd>
+<dt>Qué significa</dt><dd>A diferencia de los bochornos, no remite por sí solo con el tiempo y tiende a progresar; la sequedad persistente sin respuesta a medidas de venta libre indica tratamiento local [R1]. Un sangrado no se atribuye a atrofia sin descartar causa endometrial.</dd>
+</dl></div>
+
+<h2>Rama ósea y cardiometabólica</h2>
+<div class="signo" id="s-5"><h4>Pérdida de talla o fractura por fragilidad</h4>
+<dl>
+<dt>Cómo se reconoce</dt><dd>Disminución progresiva de la estatura, cifosis dorsal, dolor dorsal agudo tras un esfuerzo mínimo (fractura vertebral) o fractura de muñeca o cadera con un traumatismo leve. En la fase previa no da síntomas.</dd>
+<dt>Por qué aparece</dt><dd>Sin estradiol sube la relación RANKL/OPG y los osteoclastos destruyen más hueso del que forman los osteoblastos; el hueso trabecular vertebral se aplasta. <button type="button" class="xref" data-ir="m-7" onclick="ir('fis','m-7')">← Resorción ósea</button></dd>
+<dt>Qué significa</dt><dd>Es una manifestación tardía de una pérdida silenciosa de años; una fractura por fragilidad ya define riesgo alto, de modo que la prevención se plantea antes de que aparezca.</dd>
+</dl></div>
+<p>La caída del estradiol también cambia el perfil lipídico y la función del endotelio, y se acompaña de aumento de la grasa abdominal. Esa rama carece de un signo clínico propio: se detecta en el laboratorio y pesa a largo plazo en el riesgo cardiovascular [R1] [R26]. <span class="rem">↪ Vigilancia en «Seguimiento y complicaciones»</span></p>
+
+<h3>Signos menores</h3>
+<div class="tw"><table>
+<thead><tr><th>Signo</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Palpitaciones</th><td>Acompañan al bochorno, por vasodilatación y activación simpática del episodio</td><td><button type="button" class="xref" data-ir="m-5" onclick="ir('fis','m-5')">Neuronas KNDy</button></td></tr>
+<tr><th>Piel seca y adelgazada</th><td>Menor contenido de colágeno y de hidratación dérmica por falta de estradiol; la relación se describe en los textos, sin cifra establecida</td><td><button type="button" class="xref" data-ir="m-4" onclick="ir('fis','m-4')">Estradiol cae</button></td></tr>
+<tr><th>Cefalea o migraña que empeora</th><td>Se asocia a las fluctuaciones del estradiol en la transición; el vínculo es observacional [VERIFICAR EN FUENTE]</td><td><button type="button" class="xref" data-ir="m-3" onclick="ir('fis','m-3')">Ciclos anovulatorios</button></td></tr>
+<tr><th>Aumento de la grasa abdominal</th><td>Redistribución de la grasa hacia el territorio visceral con el déficit de estradiol, junto con el envejecimiento</td><td><button type="button" class="xref" data-ir="m-8" onclick="ir('fis','m-8')">Endotelio y lípidos</button></td></tr>
+<tr><th>Artralgias</th><td>Frecuentes en la edad climatérica; la contribución del estrógeno no está establecida</td><td><span class="mini">Mecanismo no establecido</span></td></tr>
+<tr><th>Niebla mental o lapsos de memoria</th><td>Se describe como queja de la transición; en parte la explica el sueño fragmentado y no se ha demostrado un efecto directo del estrógeno</td><td><span class="mini">Mecanismo no establecido</span></td></tr>
+</tbody></table></div>
+<p class="mini">Ninguno de estos signos es específico: antes de atribuirlos a la menopausia se descartan otras causas según la edad y el contexto.</p>
+
+<h2>Formas clínicas</h2>
+<div class="tw"><table>
+<thead><tr><th>Forma</th><th>Mecanismo</th><th>Cómo cambia la clínica</th></tr></thead>
+<tbody>
+<tr><th>Menopausia quirúrgica abrupta (ooforectomía bilateral)</th><td>La extirpación de los ovarios elimina el estradiol sin la fase gradual de transición: no hay ciclos irregulares y el déficit se instala de golpe [R26]</td><td>Bochornos y síntomas urogenitales de inicio brusco, con frecuencia más intensos que en la menopausia natural [VERIFICAR EN FUENTE]; la pérdida ósea comienza antes por el déficit precoz</td></tr>
+<tr><th>Insuficiencia ovárica prematura (antes de los 40 años)</th><td>Agotamiento o destrucción de la reserva folicular antes de la edad esperable, de causa genética, autoinmune o iatrogénica [R6]</td><td>Amenorrea o irregularidad en una mujer joven, síntomas de deficiencia estrogénica e infertilidad; la prevalencia comunicada es del 3,5 % [R6]. Una vida más larga sin estradiol aumenta la exposición ósea y cardiovascular [VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+<p>En ambas formas el diagnóstico y el tratamiento siguen reglas propias. <span class="rem">↪ Propiedades en «Plan diagnóstico»</span> <span class="rem">↪ Posología en «Plan de tratamiento»</span></p>
+</section>
+<section class="tab" data-tab="dx">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué en una mujer de edad habitual para la transición con síntomas típicos el diagnóstico es clínico, y qué cambia cuando es más joven?</li>
+<li>¿Cómo se ubica a una mujer en un estadio del envejecimiento reproductivo y por qué una hormona folículo-estimulante aislada no basta para hacerlo?</li>
+<li>¿Cómo se plantea la transición en una mujer histerectomizada, que ya no puede contar sus menstruaciones?</li>
+<li>¿Qué aporta la ecografía transvaginal ante un sangrado posmenopáusico y por qué su valor predictivo negativo es el dato útil?</li>
+<li>¿Qué debe evaluarse antes de ofrecer terapia hormonal y qué decisión cambia cada hallazgo?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: The Menopause Society (NAMS) 2022 [R1] (solo resumen); NICE NG23 2024 [R21] (solo resumen secundario); insuficiencia ovárica prematura: ESHRE 2024 [R6] (solo resumen)</span></p>
+<ol class="steps tg">
+<li><span class="tg">1.º</span> Diagnóstico clínico en mujeres de 45 años o más con síntomas (cambio del patrón menstrual, bochornos, sudoración nocturna): no hace falta ninguna prueba de laboratorio [R21] [R1].</li>
+<li><span class="tg">Añade</span> Historia menstrual, fecha del último período, uso de anticonceptivos hormonales o de dispositivo con levonorgestrel, cirugías pélvicas y síntomas vasomotores y genitourinarios; en cuadro atípico o amenorrea, descarta embarazo, tiroides y prolactina [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Confirma</span> Menopausia: ausencia de menstruación por 12 meses, que se reconoce de forma retrospectiva [VERIFICAR EN FUENTE]. Insuficiencia ovárica prematura: síntomas, edad menor de 40 años y FSH elevada; ESHRE acepta una sola medición mayor de 25 UI/L y NICE pide dos con 4 a 6 semanas de separación [R6] [R21].</li>
+<li><span class="tg">Solo si</span> La mujer tiene menos de 45 años o hay sospecha de insuficiencia ovárica prematura: mide FSH (entre 40 y 45 años con síntomas y cambio del ciclo, se considera; por debajo de 40 años, se mide) [R21] [R6].</li>
+<li><span class="tg">No pidas</span> FSH ni hormona antimülleriana de rutina en mujeres de 45 años o más con síntomas típicos, ni FSH en usuarias de anticonceptivo combinado o de progestágeno en dosis alta [R21] [R5].</li>
+<li><span class="tg">Alarma</span> Sangrado posmenopáusico: ecografía transvaginal y estudio del endometrio, nunca atribuirlo a la terapia sin evaluarlo [R17].</li>
+</ol>
+
+<h2>Estadios del envejecimiento reproductivo (STRAW+10)</h2>
+<p class="mini">STRAW+10 [R5] simplifica los criterios de sangrado de la transición temprana y tardía, modifica los del estadio −3 y +1, da la duración de −1 y +1, y se aplica sin importar edad, etnia, índice de masa corporal ni estilo de vida. Los criterios detallados de cada estadio no figuran en el resumen leído: se marcan [VERIFICAR EN FUENTE] hasta contrastarlos con el texto original.</p>
+<div class="tw"><table>
+<thead><tr><th>Estadio</th><th>Fase</th><th>Criterio principal</th><th>Qué implica para la conducta</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>−5 a −3</th><td>Reproductiva</td><td>Ciclos regulares o con cambios sutiles de flujo y duración [VERIFICAR EN FUENTE]</td><td>Sin diagnóstico de transición; si hay síntomas vasomotores, busca otra causa</td><td>[R5] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>−2</th><td>Transición menopáusica temprana</td><td>Ciclos de duración variable, con diferencia persistente de 7 días o más entre ciclos consecutivos [VERIFICAR EN FUENTE]</td><td>Diagnóstico clínico; el embarazo sigue siendo posible: no se asume infertilidad</td><td>[R5] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>−1</th><td>Transición menopáusica tardía</td><td>Amenorrea de 60 días o más; FSH elevada y síntomas vasomotores probables [VERIFICAR EN FUENTE]</td><td>Estadio donde más se consulta por bochornos; candidata a plan de tratamiento. <button type="button" class="xref" data-ir="m-2" onclick="ir('fis','m-2')">← Mecanismo</button></td><td>[R5] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>+1a, +1b, +1c</th><td>Posmenopausia temprana</td><td>Desde el último período: el primer año confirma la menopausia; después siguen 1 año y 3 a 6 años de estabilización hormonal [VERIFICAR EN FUENTE]</td><td>Ventana de mayor utilidad de la terapia hormonal: menos de 10 años desde la menopausia [R1]</td><td>[R5] [R1] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>+2</th><td>Posmenopausia tardía</td><td>Resto de la vida; predominan los síntomas genitourinarios y el riesgo óseo [VERIFICAR EN FUENTE]</td><td>Estrógeno vaginal a dosis baja para el síndrome genitourinario; la terapia sistémica es menos favorable al iniciarla tarde [R1]</td><td>[R5] [R1] [VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+<p class="mini">La edad media de la menopausia en Latinoamérica es 48,6 años [R18]; por eso una mujer de 40 a 45 años con ciclos alterados no es excepcional y justifica pensar en transición temprana, incluso sin sospecha de insuficiencia ovárica prematura.</p>
+
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — por qué no siempre hace falta una prueba</span>
+<p class="fey-b">Si ves a alguien con abrigo, bufanda y guantes, no necesitas un termómetro para saber que hace frío: la ropa ya te lo cuenta. Con la transición ocurre igual: si una mujer en la edad esperada cuenta que sus ciclos cambian y que se despierta empapada de calor, esa historia ya es el diagnóstico. El termómetro, la prueba de sangre, se reserva para cuando la ropa no concuerda con la edad o con la estación.</p>
+<p class="mini fey-c">En medicina esto se llama… diagnóstico clínico, probabilidad pretest alta y pruebas de reserva ovárica.</p>
+<p class="mini fey-c">Dónde falla la comparación: el termómetro mide una sola cosa estable; las hormonas de la transición fluctúan de un día a otro, por eso una medición aislada puede engañar.</p></div>
+
+<h2>Pruebas diagnósticas</h2>
+<p class="mini">VPP y VPN dependen de la prevalencia; no se leyeron estimaciones de Ecuador ni de Latinoamérica para estas pruebas, por eso S y E se escriben «No establecida». Glosario: S, sensibilidad; E, especificidad; VPP y VPN, valores predictivos; FSH, hormona folículo-estimulante; AMH, hormona antimülleriana; TSH, hormona estimulante del tiroides; β-hCG, fracción beta de la gonadotropina coriónica; IOP, insuficiencia ovárica prematura. <span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table>
+<thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad (descartar/confirmar)</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>FSH</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirma IOP en menores de 40 años con síntomas; no descarta transición en mayores de 45</td><td>No se usa en 45 años o más con síntomas típicos, ni en usuarias de anticonceptivo combinado o de progestágeno en dosis alta. Fluctúa en la transición: un valor normal no la excluye. Umbral de IOP: una medición mayor de 25 UI/L para ESHRE y dos con 4 a 6 semanas de separación para NICE; las fuentes difieren y no se armonizan. <button type="button" class="xref" data-ir="m-2" onclick="ir('fis','m-2')">← Mecanismo</button></td><td>[R21] [R6] [R5]</td></tr>
+<tr><th>AMH</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Marcador de reserva folicular; no confirma ni descarta menopausia</td><td>Junto con la FSH y la inhibina B, STRAW+10 la reconoce como marcador de reserva. No se pide de rutina en mayores de 45 años con síntomas; puede apoyar la sospecha de IOP con FSH dudosa [R6]. <button type="button" class="xref" data-ir="m-1" onclick="ir('fis','m-1')">← Mecanismo</button></td><td>[R5] [R6]</td></tr>
+<tr><th>Estradiol</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>No confirma ni descarta: no aporta al diagnóstico en la transición</td><td>Oscila de un día a otro en la transición y solo cae de forma sostenida cuando la menopausia ya es evidente por la clínica; no se usa para decidir iniciar terapia [VERIFICAR EN FUENTE]. <button type="button" class="xref" data-ir="m-4" onclick="ir('fis','m-4')">← Mecanismo</button></td><td>[R5] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>TSH, prolactina y β-hCG</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Descartan causas de amenorrea o ciclos alterados que simulan la transición</td><td>La β-hCG descarta embarazo; la TSH, enfermedad tiroidea, y la prolactina, hiperprolactinemia. Se piden ante cuadro atípico, amenorrea o edad menor de 45 años, no en el caso típico [VERIFICAR EN FUENTE].</td><td>[R6] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Ecografía transvaginal del endometrio</th><td>No establecida</td><td>No establecida</td><td>VPN mayor de 99% con endometrio de 4 mm o menos para cáncer de endometrio</td><td>Descarta cáncer de endometrio en sangrado posmenopáusico</td><td>Solo en mujer con sangrado: el sangrado aparece en más de 90% de los carcinomas y la ecografía no se usa como tamizaje sin sangrado. El VPN es alto en parte porque el cáncer de endometrio es poco frecuente entre las mujeres que sangran; no se leyeron cifras de prevalencia de Ecuador. Un cáncer con p53 anormal puede dar falso negativo con endometrio fino [VERIFICAR EN FUENTE]; endometrio mayor de 4 mm o sangrado persistente exigen biopsia.</td><td>[R17] [VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+
+<h2>Evaluación previa a la terapia hormonal</h2>
+<p class="mini">El balance beneficio-riesgo de la terapia es favorable en menores de 60 años o con menos de 10 años desde la menopausia y sin contraindicaciones, y se vuelve menos favorable al iniciarla más tarde por mayor riesgo absoluto de cardiopatía coronaria, accidente cerebrovascular, tromboembolismo venoso y demencia [R1]. <span class="rem">↪ Contraindicaciones en «Plan de tratamiento»</span></p>
+<div class="tw"><table>
+<thead><tr><th>Dominio</th><th>Qué se evalúa</th><th>Qué decisión cambia</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Riesgo cardiovascular</th><td>Edad, años desde la menopausia, antecedente de cardiopatía o accidente cerebrovascular, hipertensión, diabetes, lípidos y tabaquismo</td><td>Candidata si inicia en la ventana; con enfermedad cardiovascular establecida o inicio tardío, no se prefiere la vía sistémica <button type="button" class="xref" data-ir="m-8" onclick="ir('fis','m-8')">← Mecanismo</button></td><td>[R1] [R2]</td></tr>
+<tr><th>Mama</th><td>Antecedente personal y familiar de cáncer de mama; mamografía vigente según la edad y el programa de tamizaje</td><td>Cáncer de mama previo o activo contraindica la terapia sistémica; el riesgo adicional con el estrógeno más progestágeno crece con la duración [R11]</td><td>[R2] [R11] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Tromboembolismo venoso</th><td>Antecedente de trombosis, obesidad, trombofilia, inmovilidad prolongada y cirugía reciente</td><td>El estrógeno oral eleva el riesgo y el transdérmico no lo eleva de forma apreciable; con riesgo aumentado se prefiere la vía transdérmica <button type="button" class="xref" data-ir="m-8" onclick="ir('fis','m-8')">← Mecanismo</button></td><td>[R15] [R16]</td></tr>
+<tr><th>Endometrio y útero</th><td>Presencia de útero y sangrado vaginal no explicado</td><td>Con útero se añade progestágeno; un sangrado sin diagnóstico se estudia antes de iniciar [R17] <span class="rem">↪ Posología en «Plan de tratamiento»</span></td><td>[R17] [R1]</td></tr>
+<tr><th>Hígado</th><td>Hepatopatía activa y enzimas hepáticas basales</td><td>Contraindica la terapia sistémica y condiciona la elección de fármacos no hormonales <span class="rem">↪ Posología en «Plan de tratamiento»</span></td><td>[R22] [VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+
+<div class="dc" data-fn="dcDx"><div class="dc-t">Simulador · Decisión clínica — predice el estadio y si pedir FSH antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Edad</span>
+<button type="button" class="chip" data-g="edad" data-v="m40" onclick="ch(this)">Menor de 40 años</button>
+<button type="button" class="chip" data-g="edad" data-v="e40" onclick="ch(this)">40 a 45 años</button>
+<button type="button" class="chip" data-g="edad" data-v="m45" onclick="ch(this)">45 años o más</button></div>
+<div class="dc-g"><span class="dc-l">Patrón menstrual</span>
+<button type="button" class="chip" data-g="pat" data-v="reg" onclick="ch(this)">Ciclos regulares</button>
+<button type="button" class="chip" data-g="pat" data-v="var" onclick="ch(this)">Ciclos variables</button>
+<button type="button" class="chip" data-g="pat" data-v="a60" onclick="ch(this)">Amenorrea de 60 días o más</button>
+<button type="button" class="chip" data-g="pat" data-v="a12" onclick="ch(this)">Amenorrea de 12 meses o más</button></div>
+<div class="dc-g"><span class="dc-l">Síntomas</span>
+<button type="button" class="chip" data-g="sx" data-v="vm" data-m="1" onclick="ch(this)">Bochornos o sudoración nocturna</button>
+<button type="button" class="chip" data-g="sx" data-v="gu" data-m="1" onclick="ch(this)">Sequedad o dispareunia</button></div>
+<div class="dc-g"><span class="dc-l">Útero</span>
+<button type="button" class="chip" data-g="ut" data-v="si" onclick="ch(this)">Con útero</button>
+<button type="button" class="chip" data-g="ut" data-v="no" onclick="ch(this)">Histerectomía (sin menstruación)</button></div>
+<div class="dc-g"><span class="dc-l">Otros datos</span>
+<button type="button" class="chip" data-g="ot" data-v="ac" data-m="1" onclick="ch(this)">Usa anticonceptivo hormonal</button>
+<button type="button" class="chip" data-g="ot" data-v="sg" data-m="1" onclick="ch(this)">Sangrado posmenopáusico</button></div>
+<div class="out"></div></div>
+</section>
+<section class="tab" data-tab="tx">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué la mujer con útero necesita un progestágeno junto con el estrógeno, y qué papel del cuerpo lúteo reemplaza?</li>
+<li>¿Qué define la ventana de oportunidad de la terapia hormonal y cómo cambia la relación beneficio-riesgo fuera de ella?</li>
+<li>¿Por qué la vía transdérmica puede preferirse cuando hay riesgo trombótico?</li>
+<li>¿Cómo se elige entre terapia hormonal y alternativa no hormonal según el síntoma y las contraindicaciones, y qué paso de la cascada interrumpe cada fármaco?</li>
+<li>¿Qué cambió con el retiro del recuadro negro de la FDA y qué sigue igual?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: The Menopause Society (NAMS) 2022 [R1] (solo resumen); no hormonal: NAMS 2023 [R2] (solo resumen)</span></p>
+<ol class="steps tg">
+<li><span class="tg">Principio</span> La terapia hormonal es el tratamiento más eficaz de los síntomas vasomotores y del síndrome genitourinario y previene la pérdida ósea; se decide por síntoma, edad, tiempo desde la menopausia y riesgo individual [R1].</li>
+<li><span class="tg">De elección</span> Terapia hormonal en mujeres menores de 60 años o con menos de 10 años desde la menopausia, con síntomas vasomotores moderados a graves y sin contraindicación [R1] [R4].</li>
+<li><span class="tg">Alternativa</span> No hormonal si hay contraindicación o preferencia: fezolinetant, elinzanetant, ISRS o IRSN y gabapentina [R2] [R12] [R13].</li>
+<li><span class="tg">Sintomático</span> Síndrome genitourinario: estrógeno vaginal a dosis baja, tras medidas de venta libre sin respuesta [R1].</li>
+<li><span class="tg">Escala</span> Inicio con más de 10 años desde la menopausia o más de 60 años de edad: el balance es menos favorable; decisión compartida y valoración por especialista [R1].</li>
+<li><span class="tg">Reevalúa</span> Cada año: síntomas, riesgo, necesidad de continuar y sangrado; la duración se individualiza [R1] [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Especialista</span> Ginecología o endocrinología ante antecedente de cáncer de mama, trombosis, sangrado sin explicar o inicio tardío [R1] [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">Evita</span> Estrógeno solo en mujer con útero; terapia hormonal sistémica en cáncer de mama, tromboembolismo venoso o accidente cerebrovascular [R1] [R2] [VERIFICAR EN FUENTE].</li>
+</ol>
+
+<h2>El progestágeno reemplaza al cuerpo lúteo</h2>
+<div class="card"><b>Razonamiento de puente (no es un hallazgo de ningún estudio).</b> En el ciclo normal, el estrógeno hace crecer el endometrio y, tras la ovulación, la progesterona del cuerpo lúteo lo transforma en secretor y limita esa proliferación [R26]. El cuerpo lúteo se retrae y queda como cuerpo albo, una cicatriz sin función endocrina [R27]. En la menopausia ya no hay ovulación, no se forman cuerpos lúteos y no hay progesterona endógena <button type="button" class="xref" data-ir="m-3" onclick="ir('fis','m-3')">← Paso</button>. Si en una mujer con útero se agrega estrógeno exógeno sin oposición, el endometrio queda expuesto a estímulo proliferativo continuo; el estrógeno sin oposición es un factor de riesgo de cáncer de endometrio [R17]. Por eso el progestágeno de la terapia cumple la función que antes hacía el cuerpo lúteo; sin útero, el estrógeno va solo. <span class="rem">↪ Cuerpo albo en «Ciclo ovárico y cuerpo albo»</span></div>
+
+<h2>Ventana de oportunidad, vía y riesgo trombótico</h2>
+<p><b>Hipótesis de la ventana.</b> El balance beneficio-riesgo es favorable en menores de 60 años o con menos de 10 años desde la menopausia y sin contraindicaciones; si se inicia más tarde, el riesgo absoluto de cardiopatía coronaria, accidente cerebrovascular, tromboembolismo venoso y demencia es mayor [R1]. En el seguimiento de WHI, el índice global por 10 000 mujeres-año con estrógenos conjugados más acetato de medroxiprogesterona fue de +12 a los 50 a 59 años y de +38 a los 70 a 79 años [R8]; el exceso absoluto crece con la edad. <button type="button" class="xref" data-ir="m-8" onclick="ir('fis','m-8')">← Paso</button></p>
+<p><b>Vía y tromboembolismo venoso.</b> La vía oral pasa por el hígado y la transdérmica no, lo que explica su distinto efecto sobre la coagulación; los datos de riesgo son de calidad baja a moderada [R16].</p>
+<div class="tw"><table>
+<thead><tr><th>Esquema</th><th>RR de tromboembolismo venoso (IC 95%)</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Estrógeno oral solo</th><td>1,48 (1,39 a 1,58)</td><td>[R15]</td></tr>
+<tr><th>Estrógeno transdérmico solo</th><td>0,97 (0,87 a 1,09)</td><td>[R15]</td></tr>
+<tr><th>Transdérmico con progesterona micronizada</th><td>0,93 (0,65 a 1,33)</td><td>[R15]</td></tr>
+<tr><th>Oral con acetato de medroxiprogesterona</th><td>2,77 (2,33 a 3,30)</td><td>[R15]</td></tr>
+<tr><th>Oral frente a no oral (OR)</th><td>1,66 (1,39 a 1,98); no oral frente a controles, 0,97 (0,90 a 1,06)</td><td>[R16]</td></tr>
+</tbody></table></div>
+<div class="card"><b>Recuadro negro de la FDA.</b> El 10 de noviembre de 2025 HHS y FDA anunciaron el retiro del recuadro negro de los productos de terapia hormonal, tras el panel de expertos y un período de comentario público [R3] [R4]. Se pasa a un etiquetado por producto, con énfasis en distinguir el estrógeno vaginal del sistémico y en iniciar en menores de 60 años o con menos de 10 años de menopausia [R3] [R4]. Matiz: ambas fuentes son resúmenes de publicaciones, y el texto original de la FDA o de HHS no se leyó. Discrepancia: R4 indica que se eliminó el mandato de usar «la dosis más baja por el menor tiempo», mientras NAMS 2022 pide individualizar sin un límite fijo; no se armonizan [R1] [R4].</div>
+
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — por qué se añade una segunda hormona</span>
+<p class="fey-b">Cada mes el cuerpo preparaba en el útero una cama mullida y, si no llegaba visita, alguien la recogía. Ese encargado de recoger aparecía después de la ovulación. Cuando la ovulación termina, el encargado ya no viene. Si solo se vuelve a dar la hormona que arma la cama, la cama sigue creciendo y nadie la ordena. Por eso, cuando hay útero, se agrega la hormona que hace de encargado.</p>
+<p class="mini fey-c">En medicina esto se llama… protección endometrial, progestágeno y terapia combinada.</p>
+<p class="mini fey-c">Dónde falla la comparación: el progestágeno no repite el ciclo completo ni vuelve fértil a la mujer; solo frena el crecimiento del revestimiento.</p></div>
+
+<h2>Fármacos</h2>
+<p class="mini">Las dosis estándar del estradiol, la progesterona micronizada, el dispositivo y el estrógeno vaginal siguen la ficha técnica habitual y NAMS [R29] [R1]; las dosis de los antagonistas de neurocininas y de la paroxetina son las de los ensayos o de fuentes secundarias y se marcan donde faltan. No se tabula tibolona: no se leyó una fuente para su dosis. Glosario: TH, terapia hormonal; TEV, tromboembolismo venoso; RR, riesgo relativo; OR, razón de momios; IC, intervalo de confianza; WHI, ensayo Women's Health Initiative; DIU-LNG, dispositivo intrauterino con levonorgestrel; KNDy, neuronas de kisspeptina, neurocinina B y dinorfina; NK3R, receptor de neurocinina 3; ALT y AST, transaminasas; LSN, límite superior normal; ISRS e IRSN, inhibidores de la recaptación de serotonina o de serotonina y noradrenalina. <span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table>
+<thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Estradiol oral</th><td>1 a 2 mg por día</td><td>VO</td><td>Cada 24 h, continuo</td><td>Individualizada con reevaluación periódica</td><td>Repone el estradiol ovárico que cae. Mayor riesgo de tromboembolismo venoso que la vía transdérmica; en mujer con útero se acompaña de progestágeno. <button type="button" class="xref" data-ir="m-4" onclick="ir('fis','m-4')">← Paso</button></td><td>[R29] [R1] [R15] [R16]</td></tr>
+<tr><th>Estradiol transdérmico</th><td>25 a 100 µg por día; se inicia con la dosis baja y se titula por respuesta</td><td>Parche cutáneo</td><td>Continuo; el parche se cambia según su presentación (semanal o dos veces por semana) [VERIFICAR EN FUENTE]</td><td>Individualizada con reevaluación periódica</td><td>Evita el primer paso hepático; sin aumento apreciable del riesgo de tromboembolismo venoso. Primera opción con riesgo trombótico o obesidad. Con útero se acompaña de progestágeno. <button type="button" class="xref" data-ir="m-4" onclick="ir('fis','m-4')">← Paso</button></td><td>[R29] [R1] [R15]</td></tr>
+<tr><th>Estrógenos conjugados</th><td>0,625 mg por día (dosis de WHI); existe una dosis menor de 0,3 mg [VERIFICAR EN FUENTE]</td><td>VO</td><td>Cada 24 h, continuo</td><td>Individualizada con reevaluación periódica</td><td>Mezcla de estrógenos de uso oral que repone el estradiol que cae; con útero requiere progestágeno. La dosis de 0,625 mg con acetato de medroxiprogesterona de 2,5 mg es la de WHI. <button type="button" class="xref" data-ir="m-4" onclick="ir('fis','m-4')">← Paso</button></td><td>[R7] [R8] [R29]</td></tr>
+<tr><th>Progesterona micronizada continua</th><td>100 mg por día</td><td>VO</td><td>Cada 24 h, todos los días, con el estrógeno continuo</td><td>Mientras dure el estrógeno</td><td>Hace de cuerpo lúteo: protege el endometrio del estímulo del estrógeno. Con estradiol transdérmico, el RR de tromboembolismo venoso fue 0,93. Su efecto sedante sugiere tomarla de noche [VERIFICAR EN FUENTE]. <button type="button" class="xref" data-ir="m-3" onclick="ir('fis','m-3')">← Paso</button></td><td>[R29] [R1] [R15]</td></tr>
+<tr><th>Progesterona micronizada cíclica</th><td>200 mg por día</td><td>VO</td><td>Cada 24 h durante 12 a 14 días de cada ciclo</td><td>Mientras dure el estrógeno</td><td>Con estrógeno cíclico o continuo; suele producir sangrado por privación al final de la secuencia, que se espera y no se confunde con sangrado anormal [VERIFICAR EN FUENTE]. <button type="button" class="xref" data-ir="m-3" onclick="ir('fis','m-3')">← Paso</button></td><td>[R29] [R1]</td></tr>
+<tr><th>DIU-LNG 52 mg</th><td>52 mg de levonorgestrel, un dispositivo</td><td>Intrauterina</td><td>Dosis liberada de forma continua y local</td><td>Hasta 5 años en la ficha habitual [VERIFICAR EN FUENTE]</td><td>Progestágeno local que protege el endometrio sin dosis oral diaria; se asocia a estradiol transdérmico u oral en mujer con útero. <button type="button" class="xref" data-ir="m-3" onclick="ir('fis','m-3')">← Paso</button></td><td>[R29] [R1]</td></tr>
+<tr><th>Estrógeno vaginal a dosis baja</th><td>Estradiol vaginal a dosis baja; los mg dependen de la presentación [VERIFICAR EN FUENTE]</td><td>Vaginal (crema, óvulo, tableta o anillo)</td><td>Según la presentación, de inicio diaria y luego espaciada [VERIFICAR EN FUENTE]</td><td>Mientras persistan los síntomas, con reevaluación periódica</td><td>Restablece el trofismo del epitelio urogenital. Indicado si las medidas de venta libre no bastan; en la cohorte de Collaborative Group no se vio exceso de cáncer de mama con el vaginal. DHEA vaginal y ospemifeno oral son otras opciones nombradas por NAMS. <button type="button" class="xref" data-ir="m-6" onclick="ir('fis','m-6')">← Paso</button></td><td>[R1] [R11] [R29]</td></tr>
+<tr><th>Fezolinetant</th><td>45 mg por día (en SKYLIGHT 1 se probaron 30 y 45 mg) [VERIFICAR EN FUENTE]</td><td>VO</td><td>Una vez al día</td><td>Ensayos de 12 y 52 semanas; la duración clínica se individualiza</td><td>Antagonista del receptor NK3R: frena la neurocinina B de las neuronas KNDy hiperactivas. Hepatotoxicidad rara pero grave: recuadro negro desde diciembre de 2024; no iniciar si ALT o AST son 2 veces el LSN o más, o la bilirrubina total 2 veces el LSN o más. El calendario de vigilancia hepática difiere entre fuentes (mensual los 3 primeros meses frente a mensual 2 meses y luego a los 3, 6 y 9 meses): leer la etiqueta [VERIFICAR EN FUENTE]. <button type="button" class="xref" data-ir="m-5" onclick="ir('fis','m-5')">← Paso</button></td><td>[R12] [R22]</td></tr>
+<tr><th>Elinzanetant</th><td>120 mg por día en OASIS 1, 2 y 3; una fuente secundaria menciona cápsulas de 60 mg, y la dosis de etiqueta no está confirmada [VERIFICAR EN FUENTE]</td><td>VO</td><td>Una vez al día [VERIFICAR EN FUENTE]</td><td>Hasta 52 semanas en OASIS-3</td><td>Antagonista dual de NK1 y NK3. Efectos más frecuentes: somnolencia, fatiga y cefalea; en OASIS-3 sin hepatotoxicidad ni hiperplasia endometrial. Aprobación FDA el 24 de octubre de 2025 según fuentes secundarias. Discrepancia de dosis entre ensayos y fuente secundaria: no se armoniza. <button type="button" class="xref" data-ir="m-5" onclick="ir('fis','m-5')">← Paso</button></td><td>[R13] [R14] [R23]</td></tr>
+<tr><th>Paroxetina</th><td>7,5 mg por día [VERIFICAR EN FUENTE]</td><td>VO</td><td>Cada 24 h</td><td>Individualizada</td><td>ISRS recomendado por NAMS 2023 para síntomas vasomotores. Su mecanismo sobre el bochorno es serotoninérgico y no está establecido con precisión en las fuentes leídas. En mujer con tamoxifeno se evita [VERIFICAR EN FUENTE]. <button type="button" class="xref" data-ir="m-5" onclick="ir('fis','m-5')">← Paso</button></td><td>[R2] [VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+<p class="mini">Otros ISRS, IRSN y gabapentina tienen respaldo de NAMS 2023 [R2], pero no se tabulan porque no se leyó una fuente para su posología.</p>
+
+<h2>Contraindicaciones de la terapia hormonal sistémica</h2>
+<p class="mini">NAMS 2023 menciona los cánceres dependientes de estrógeno y la enfermedad cardiovascular como motivos de no candidatura [R2]; la lista completa no se verificó en fuente primaria [VERIFICAR EN FUENTE].</p>
+<div class="tw"><table>
+<thead><tr><th>Situación</th><th>Por qué</th><th>Conducta alternativa</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Cáncer de mama previo o activo</th><td>Tumor dependiente de estrógeno</td><td>No hormonal para síntomas vasomotores; el estrógeno vaginal se decide con oncología</td><td>[R2] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Cáncer de endometrio activo</th><td>El estrógeno estimula el tejido tumoral</td><td>No hormonal; valoración por ginecología oncológica</td><td>[R2] [R17] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Tromboembolismo venoso previo o activo</th><td>El estrógeno sistémico, sobre todo oral, eleva el riesgo</td><td>No hormonal; la vía transdérmica no se usa como atajo sin decisión especializada</td><td>[R15] [R16] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Accidente cerebrovascular o cardiopatía isquémica establecida</th><td>Mayor riesgo absoluto de eventos vasculares con inicio tardío o enfermedad previa</td><td>No hormonal; tratar el riesgo cardiovascular</td><td>[R1] [R2] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Hepatopatía activa</th><td>Metabolismo hepático del estrógeno; además, el fezolinetant es hepatotóxico</td><td>Evitar fezolinetant; elegir otra alternativa no hormonal con vigilancia</td><td>[R22] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Sangrado vaginal sin diagnóstico</th><td>Puede ocultar un cáncer de endometrio</td><td>Estudiar con ecografía transvaginal antes de cualquier tratamiento <span class="rem">↪ Propiedades en «Plan diagnóstico»</span></td><td>[R17]</td></tr>
+</tbody></table></div>
+
+<div class="dc" data-fn="dcTx"><div class="dc-t">Simulador · Decisión clínica — predice el esquema antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Útero</span>
+<button type="button" class="chip" data-g="ut" data-v="si" onclick="ch(this)">Con útero</button>
+<button type="button" class="chip" data-g="ut" data-v="no" onclick="ch(this)">Sin útero (histerectomía)</button></div>
+<div class="dc-g"><span class="dc-l">Edad y tiempo desde la menopausia</span>
+<button type="button" class="chip" data-g="vt" data-v="ven" onclick="ch(this)">Menor de 60 años o menos de 10 años de menopausia</button>
+<button type="button" class="chip" data-g="vt" data-v="tar" onclick="ch(this)">60 años o más, o 10 años o más de menopausia</button></div>
+<div class="dc-g"><span class="dc-l">Contraindicación</span>
+<button type="button" class="chip" data-g="ci" data-v="ma" data-m="1" onclick="ch(this)">Cáncer de mama</button>
+<button type="button" class="chip" data-g="ci" data-v="tev" data-m="1" onclick="ch(this)">Tromboembolismo venoso</button>
+<button type="button" class="chip" data-g="ci" data-v="acv" data-m="1" onclick="ch(this)">Accidente cerebrovascular</button>
+<button type="button" class="chip" data-g="ci" data-v="hep" data-m="1" onclick="ch(this)">Hepatopatía activa</button>
+<button type="button" class="chip" data-g="ci" data-v="sg" data-m="1" onclick="ch(this)">Sangrado sin diagnóstico</button></div>
+<div class="dc-g"><span class="dc-l">Riesgo trombótico</span>
+<button type="button" class="chip" data-g="rt" data-v="alto" onclick="ch(this)">Riesgo de TEV aumentado u obesidad</button></div>
+<div class="dc-g"><span class="dc-l">Síntoma dominante</span>
+<button type="button" class="chip" data-g="sx" data-v="vm" data-m="1" onclick="ch(this)">Vasomotor moderado a grave</button>
+<button type="button" class="chip" data-g="sx" data-v="gu" data-m="1" onclick="ch(this)">Solo genitourinario</button>
+<button type="button" class="chip" data-g="sx" data-v="oseo" data-m="1" onclick="ch(this)">Prevención ósea</button></div>
+<div class="out"></div></div>
+</section>
+<section class="tab" data-tab="seg">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Qué se revisa, se evalúa y se ajusta en cada visita de una mujer con terapia hormonal, y qué dato de la visita cambia la decisión de continuarla?</li>
+<li>¿Por qué el riesgo absoluto de la terapia hormonal es pequeño en la mujer joven y mayor en la que la inicia tarde, aunque el riesgo relativo parezca el mismo?</li>
+<li>¿Por qué el estrógeno sin progestágeno daña el endometrio y qué papel hacía el cuerpo lúteo que el progestágeno exógeno reemplaza?</li>
+<li>¿Cómo se distingue un sangrado esperado de uno que obliga a estudiar el endometrio, y con qué prueba se empieza?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: The Menopause Society (NAMS) 2022 [R1] (solo resumen)</span> <span class="badge b-pu">NICE NG23 2024 [R21] (solo resumen secundario)</span></p>
+
+<h2>Ciclo de seguimiento</h2>
+<p>El seguimiento repite tres pasos: revisar los síntomas, la adherencia y el sangrado; evaluar el balance entre beneficio y riesgo; y ajustar la dosis, la vía o la duración. La terapia no tiene una duración fija: se prolonga solo con indicación documentada, decisión compartida y reevaluación periódica [R1]. En Ecuador no hay una guía de práctica clínica del Ministerio de Salud Pública sobre menopausia que yo haya podido confirmar.</p>
+<div class="tw"><table>
+<thead><tr><th>Paso</th><th>Qué se hace</th><th>Por qué</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Revisar</th><td>Control a los 3 meses del inicio y luego anual; pregunta por control de los síntomas, adherencia y efectos adversos</td><td>El esquema se elige por el síntoma que motivó la terapia: si no mejora o no se tolera, hay que ajustarlo y no insistir</td><td>[R1] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Revisar</th><td>Patrón de sangrado: con esquema cíclico se espera sangrado por deprivación al final de la fase con progestágeno; con esquema continuo se espera amenorrea y, a lo sumo, manchado irregular en los primeros meses</td><td>El sangrado por deprivación es el endometrio descamándose al retirar el progestágeno; el sangrado fuera de ese patrón no es esperado</td><td>[VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Evaluar</th><td>Edad y años desde la menopausia, antecedentes personales y familiares de cáncer de mama y de TEV, y riesgo cardiovascular</td><td>El riesgo absoluto depende de la edad de inicio: la relación beneficio-riesgo es favorable antes de los 60 años o en menos de 10 años desde la menopausia, y menos favorable si se inicia después</td><td>[R1] [R4]</td></tr>
+<tr><th>Ajustar</th><td>Continuar, reducir la dosis, cambiar la vía o suspender; más allá de los 60 años o de los 5 años de uso, mantener solo si persiste la indicación y la mujer lo decide tras informarse</td><td>La duración se individualiza; la retirada del recuadro negro de la FDA eliminó el mandato de «la dosis más baja por el menor tiempo», pero no el deber de reevaluar</td><td>[R1] [R3] [R4]</td></tr>
+</tbody></table></div>
+<p class="mini">Posología y esquemas: <span class="rem">↪ Posología en «Plan de tratamiento»</span></p>
+
+<h2>Riesgos de la terapia hormonal en cifras absolutas</h2>
+<p>El ensayo WHI comparó estrógeno equino conjugado más acetato de medroxiprogesterona (E+P) contra placebo en mujeres con útero, y estrógeno equino conjugado solo (E solo) contra placebo en mujeres sin útero [R7] [R8]. Un riesgo relativo de 1,3 parece alto, pero sobre un riesgo basal bajo en una mujer de 50 años equivale a pocos casos por 10 000 mujeres-año; el mismo riesgo relativo sobre un riesgo basal alto en una mujer de 70 años da más casos. Por eso el exceso absoluto se lee junto con la edad [R8].</p>
+<div class="tw"><table>
+<thead><tr><th>Desenlace</th><th>E+P (exceso por 10 000 mujeres-año)</th><th>E solo</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Cardiopatía coronaria</th><td>+7 (HR 1,29)</td><td>Exceso absoluto no confirmado [VERIFICAR EN FUENTE]</td><td>[R7] [R8]</td></tr>
+<tr><th>Accidente cerebrovascular</th><td>+8 (HR 1,41)</td><td>Exceso absoluto no confirmado [VERIFICAR EN FUENTE]</td><td>[R7] [R8]</td></tr>
+<tr><th>Embolia pulmonar</th><td>+8 (HR 2,13)</td><td>Exceso absoluto no confirmado [VERIFICAR EN FUENTE]</td><td>[R7] [R8]</td></tr>
+<tr><th>Cáncer de mama invasivo</th><td>+8 (HR 1,26); en el seguimiento prolongado HR 1,28</td><td>Sin exceso: HR 0,78 en el seguimiento prolongado</td><td>[R7] [R10]</td></tr>
+<tr><th>Cáncer colorrectal</th><td>−6</td><td>No confirmado [VERIFICAR EN FUENTE]</td><td>[R7]</td></tr>
+<tr><th>Fractura de cadera</th><td>−5 (HR 0,66)</td><td>No confirmado [VERIFICAR EN FUENTE]</td><td>[R7]</td></tr>
+<tr><th>Índice global (balance de todos los desenlaces)</th><td>+19 en el ensayo inicial; en el seguimiento, +12 a los 50 a 59 años y +38 a los 70 a 79 años</td><td>−19 a los 50 a 59 años y +51 a los 70 a 79 años</td><td>[R7] [R8]</td></tr>
+<tr><th>Mortalidad por cualquier causa a 18 años</th><td>HR 1,02</td><td>HR 0,94 (IC 95% 0,88 a 1,01); ambos grupos combinados HR 0,99</td><td>[R9]</td></tr>
+</tbody></table></div>
+<p class="mini">E+P: estrógeno más progestágeno; E solo: estrógeno solo; HR: razón de riesgos instantáneos; IC: intervalo de confianza. Un signo positivo es exceso en usuarias; uno negativo, menos casos. Reinterpretación por edad: el índice global del estrógeno solo cambia de favorable a desfavorable entre los 50 a 59 y los 70 a 79 años [R8], por lo que la edad de inicio pesa más que el fármaco. El panel de expertos de la FDA retomó esa lectura por edad y tiempo desde la menopausia, y en noviembre de 2025 se anunció el retiro del recuadro negro; la fuente es secundaria y el texto de la FDA no se leyó [R3] [R4].</p>
+
+<h3>Cáncer de mama según tipo y duración</h3>
+<div class="tw"><table>
+<thead><tr><th>Esquema (usuaria actual)</th><th>RR en años 1 a 4</th><th>RR en años 5 a 14</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Estrógeno más progestágeno</th><td>1,60 (1,52 a 1,69)</td><td>2,08 (2,02 a 2,15)</td><td>[R11]</td></tr>
+<tr><th>Solo estrógeno</th><td>1,17 (1,10 a 1,26)</td><td>1,33 (1,28 a 1,37)</td><td>[R11]</td></tr>
+</tbody></table></div>
+<p class="mini">RR: riesgo relativo. Cinco años de uso desde los 50 años dejan un exceso aproximado de 1 caso por 50 mujeres con estrógeno más progestágeno diario, 1 por 70 con progestágeno intermitente y 1 por 200 con solo estrógeno; el estrógeno vaginal no mostró exceso [R11]. Discrepancia entre fuentes: el ensayo WHI no mostró aumento con estrógeno solo [R10], pero el metaanálisis de estudios observacionales sí [R11]; no están armonizadas, y la lectura prudente es que el riesgo mamario sube con el progestágeno y con la duración.</p>
+
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — por qué se revisa la terapia cada año</span>
+<p class="fey-b">Piensa en llevar un abrigo grueso en un viaje largo. Al salir de casa en pleno frío te protege mucho y casi no te estorba. Pero si el viaje sigue, el clima cambia y tú también: puede que ya sobre calor. Por eso conviene pararse a mirar el cielo de vez en cuando y decidir si seguir con el abrigo, cambiarlo por uno más ligero o quitártelo.</p>
+<p class="mini fey-c">En medicina esto se llama… reevaluación periódica de la terapia hormonal, decisión compartida y balance entre beneficio y riesgo.</p>
+<p class="mini fey-c">Dónde falla la comparación: un abrigo se quita y no deja rastro, mientras que el riesgo de algunas hormonas depende de cuánto tiempo se usaron y de la edad a la que se empezaron.</p></div>
+
+<h2>Complicaciones de la deficiencia estrogénica</h2>
+<p>Estas complicaciones no vienen de la terapia sino de la falta de estrógeno; son las que la terapia busca evitar o aliviar [R1]. Cada una se explica por el mecanismo del nodo correspondiente.</p>
+<div class="tw"><table>
+<thead><tr><th>Complicación</th><th>Mecanismo</th><th>Señal</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Síndrome genitourinario de la menopausia</th><td>Sin estrógeno, el epitelio vaginal y urinario se adelgaza y pierde glucógeno, humedad y elasticidad</td><td>Sequedad, dispareunia, ardor y urgencia urinaria</td><td><button type="button" class="xref" data-ir="m-6" onclick="ir('fis','m-6')">← Epitelio urogenital pierde trofismo</button></td></tr>
+<tr><th>Osteoporosis y fractura por fragilidad</th><td>Sin estrógeno, la resorción ósea supera a la formación y la masa ósea cae</td><td>Pérdida de talla, fractura de cadera, vértebra o muñeca con trauma mínimo</td><td><button type="button" class="xref" data-ir="m-7" onclick="ir('fis','m-7')">← Resorción ósea supera a la formación</button></td></tr>
+<tr><th>Riesgo cardiovascular</th><td>Se pierde la protección estrogénica sobre el endotelio y el perfil de lípidos</td><td>Sin señal propia: se detecta con el perfil lipídico y la presión arterial</td><td><button type="button" class="xref" data-ir="m-8" onclick="ir('fis','m-8')">← Endotelio y lípidos pierden protección</button></td></tr>
+</tbody></table></div>
+<p class="mini">La terapia hormonal alivia el síndrome genitourinario y previene la pérdida ósea y la fractura [R1]; la prevención cardiovascular no es su indicación.</p>
+
+<h2>Complicaciones de la terapia hormonal</h2>
+<div class="tw"><table>
+<thead><tr><th>Complicación</th><th>Mecanismo</th><th>Cómo se evita o se detecta</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Hiperplasia y cáncer de endometrio</th><td>El estrógeno estimula la proliferación del endometrio; sin ovulación no hay cuerpo lúteo, no hay progesterona endógena que lo frene, y el estrógeno exógeno queda «sin oposición». Es un razonamiento fisiológico, no el hallazgo de un estudio concreto. <span class="rem">↪ Cuerpo albo en «Ciclo ovárico y cuerpo albo»</span></td><td>En la mujer con útero, añadir siempre un progestágeno; ante sangrado fuera del patrón esperado, estudiar el endometrio. El estrógeno sin oposición figura como factor de riesgo de cáncer de endometrio</td><td>[R17] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Tromboembolia venosa</th><td>El riesgo es mayor con estrógeno oral que con el transdérmico; el mecanismo propuesto es el paso hepático del estrógeno oral [VERIFICAR EN FUENTE]. El progestágeno también modula el riesgo: con estrógeno transdérmico, progesterona micronizada no elevó el riesgo y los norpregnanos sí</td><td>Preferir la vía transdérmica si hay factores de riesgo; valorar antecedentes antes de iniciar. Con TEV nuevo, suspender</td><td>[R15] [R16]</td></tr>
+<tr><th>Cáncer de mama</th><td>El riesgo sube con el progestágeno y con los años de uso; el exceso es pequeño en términos absolutos</td><td>Mamografía según el tamizaje habitual de la edad; informar la cifra absoluta, no solo la relativa</td><td>[R7] [R10] [R11] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Accidente cerebrovascular</th><td>Exceso absoluto pequeño con estrógeno más progestágeno</td><td>Control de la presión arterial; con un ACV nuevo, suspender</td><td>[R7]</td></tr>
+<tr><th>Colelitiasis</th><td>Se describe mayor riesgo de enfermedad biliar con estrógenos orales [VERIFICAR EN FUENTE]</td><td>Dolor en el hipocondrio derecho; considerar la vía transdérmica</td><td>[VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+<p class="mini">TEV: tromboembolia venosa; ACV: accidente cerebrovascular. Posología de cada vía: <span class="rem">↪ Posología en «Plan de tratamiento»</span></p>
+
+<h2>Sangrado posmenopáusico</h2>
+<p>Se considera posmenopáusico el sangrado que aparece tras 12 meses de amenorrea. En una mujer sin terapia, todo sangrado posmenopáusico se estudia. En una mujer con terapia, el sangrado esperado según el esquema no requiere estudio; el que no coincide con el esquema, el persistente o el que aparece después de meses de amenorrea sí [R17] [VERIFICAR EN FUENTE].</p>
+<ol class="steps tg">
+<li><span class="tg">1.º</span> Ecografía transvaginal para medir el grosor del endometrio; no se usa como tamizaje en una mujer sin sangrado [R17].</li>
+<li><span class="tg">Solo si</span> el endometrio mide más de 4 mm, no se visualiza bien o el sangrado persiste: muestreo endometrial [R17] [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">No pidas</span> la ecografía para vigilar a una mujer asintomática en terapia [R17].</li>
+<li><span class="tg">Alarma</span> sangrado abundante o persistente con endometrio de 4 mm o menos: la ecografía no lo descarta todo, y un endometrio fino con sangrado persistente pide valorar biopsia o histeroscopia [VERIFICAR EN FUENTE].</li>
+</ol>
+<p class="mini">Un endometrio de 4 mm o menos tiene un valor predictivo negativo muy alto para cáncer de endometrio en la mujer con sangrado posmenopáusico [R17]. <span class="rem">↪ Propiedades en «Plan diagnóstico»</span></p>
+
+<h2>Vigilancia hepática del fezolinetant</h2>
+<p>El fezolinetant, antagonista del receptor de neurocinina 3, lleva un recuadro negro por lesión hepática: no se inicia si la ALT o la AST están en 2 veces el límite superior normal o más, ni si la bilirrubina total lo está; se mide la función hepática antes de empezar y durante el tratamiento, y se suspende ante síntomas o enzimas elevadas [R22]. El calendario exacto de controles difiere entre las fuentes secundarias consultadas [R22] [VERIFICAR EN FUENTE]. Señales para consultar de inmediato: ictericia, orina oscura, náuseas persistentes, dolor en el hipocondrio derecho o prurito. <span class="rem">↪ Posología en «Plan de tratamiento»</span></p>
+
+<div class="dc" data-fn="dcSeg"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Tiempo con terapia hormonal</span>
+<button type="button" class="chip" data-g="t" data-v="t3" onclick="ch(this)">Hasta 3 meses</button>
+<button type="button" class="chip" data-g="t" data-v="t5" onclick="ch(this)">Hasta 5 años</button>
+<button type="button" class="chip" data-g="t" data-v="t5m" onclick="ch(this)">Más de 5 años</button></div>
+<div class="dc-g"><span class="dc-l">Sangrado</span>
+<button type="button" class="chip" data-g="sg" data-v="no" onclick="ch(this)">Ninguno</button>
+<button type="button" class="chip" data-g="sg" data-v="esp" onclick="ch(this)">Esperado en esquema cíclico</button>
+<button type="button" class="chip" data-g="sg" data-v="inesp" onclick="ch(this)">Inesperado o posmenopáusico</button></div>
+<div class="dc-g"><span class="dc-l">Endometrio por ecografía</span>
+<button type="button" class="chip" data-g="en" data-v="e4" onclick="ch(this)">4 mm o menos</button>
+<button type="button" class="chip" data-g="en" data-v="e5" onclick="ch(this)">Más de 4 mm</button>
+<button type="button" class="chip" data-g="en" data-v="ne" onclick="ch(this)">No evaluado</button></div>
+<div class="dc-g"><span class="dc-l">Nuevo evento</span>
+<button type="button" class="chip" data-g="ev" data-v="tev" data-m="1" onclick="ch(this)">TEV</button>
+<button type="button" class="chip" data-g="ev" data-v="mama" data-m="1" onclick="ch(this)">Cáncer de mama</button>
+<button type="button" class="chip" data-g="ev" data-v="acv" data-m="1" onclick="ch(this)">ACV</button></div>
+<div class="dc-g"><span class="dc-l">Edad y síntomas</span>
+<button type="button" class="chip" data-g="ed" data-v="e60" onclick="ch(this)">Edad de 60 años o más con síntomas persistentes</button></div>
+<div class="out"></div></div>
+
+<!--REFS-->
+</section>
+<script>
+function dcCic(dc){
+  var e=sel(dc,'est')[0], d=num(dc,'dia'), n=num(dc,'dur'), h='';
+  if(!e){out(dc,'<p>Elige el estado de la mujer. Si es un ciclo ovulatorio, indica también el día del ciclo y su duración.</p>');return;}
+  if(e==='pos'){
+    out(dc,'<p><b>Fase:</b> no hay ciclo; el ovario no ovula.</p>'
+     +'<p><b>Estructura ovárica dominante:</b> ninguna activa. Quedan cuerpos albos de ciclos pasados y estroma denso; no se forman folículos dominantes ni cuerpos lúteos nuevos [R27] [VERIFICAR EN FUENTE].</p>'
+     +'<p><b>Hormona predominante:</b> FSH y LH altas con estradiol bajo y sin progesterona endógena [R5].</p>'
+     +'<p><b>Efecto endometrial:</b> endometrio atrófico, sin estímulo proliferativo ni secretor.</p>'
+     +'<span class="cf">Si la mujer recibiera estrógeno exógeno y conservara el útero → el endometrio proliferaría sin la progesterona que antes daba el cuerpo lúteo y necesitaría progestágeno [R1] [R17].</span>');return;
+  }
+  if(e==='comb'){
+    out(dc,'<p><b>Fase:</b> no hay ciclo ovárico; la hormona viene de fuera.</p>'
+     +'<p><b>Estructura ovárica dominante:</b> ninguna activa (cuerpos albos antiguos); el progestágeno no depende de un cuerpo lúteo [R27] [VERIFICAR EN FUENTE].</p>'
+     +'<p><b>Hormona predominante:</b> estrógeno exógeno con un progestágeno que cumple el papel de la progesterona lútea.</p>'
+     +'<p><b>Efecto endometrial:</b> endometrio protegido de la proliferación sostenida [R1].</p>'
+     +'<span class="rem">↪ Posología en «Plan de tratamiento»</span>'
+     +'<span class="cf">Si la mujer estuviera histerectomizada → no haría falta el progestágeno y bastaría el estrógeno solo [R1].</span>');return;
+  }
+  if(e==='solo'){
+    out(dc,'<p><b>Fase:</b> no hay ciclo ovárico; la hormona viene de fuera.</p>'
+     +'<p><b>Estructura ovárica dominante:</b> ninguna activa; no hay cuerpo lúteo que aporte progesterona [R27] [VERIFICAR EN FUENTE].</p>'
+     +'<p><b>Hormona predominante:</b> estrógeno exógeno sin oposición progestacional.</p>'
+     +'<p><b>Efecto endometrial:</b> proliferación sostenida, con riesgo de hiperplasia y de cáncer de endometrio [R17]. Esta combinación se evita en la mujer con útero [R1].</p>'
+     +'<span class="rem">↪ Posología en «Plan de tratamiento»</span>'
+     +'<span class="cf">Si se añadiera un progestágeno → el endometrio quedaría protegido; si el útero hubiera sido extirpado → el estrógeno solo sería el esquema correcto [R1].</span>');return;
+  }
+  if(isNaN(d)||isNaN(n)){out(dc,'<p>Indica el día del ciclo y la duración del ciclo en días para ubicar la fase.</p>');return;}
+  if(n<20||n>60||d<1||d>n||d!==Math.floor(d)||n!==Math.floor(n)){out(dc,'<p>Usa números enteros: duración entre 20 y 60 días y día del ciclo entre 1 y la duración.</p>');return;}
+  var o=n-14, f, s, hm, en;
+  if(d<=5){
+    f='folicular, con sangrado menstrual en curso';
+    s='cohorte de folículos antrales reclutados; el cuerpo lúteo del ciclo anterior ya involucionó a cuerpo albo [R26] [R27]';
+    hm='FSH en ascenso; estradiol y progesterona en su nivel más bajo';
+    en='descamación y comienzo de la regeneración';
+  } else if(d<o-1){
+    f='folicular';
+    s='folículo dominante (seleccionado entre la cohorte) [R26]';
+    hm='estradiol en ascenso, con FSH que cae por retrocontrol negativo';
+    en='fase proliferativa: crece bajo el estrógeno';
+  } else if(d<=o+1){
+    f='ovulación (ventana periovulatoria)';
+    s='folículo maduro que se rompe; el pico de LH lo luteiniza [R26]';
+    hm='estradiol máximo, seguido del pico de LH';
+    en='proliferativo máximo; empieza a recibir progesterona al luteinizarse el folículo';
+  } else if(d<n-2){
+    f='lútea';
+    s='cuerpo lúteo';
+    hm='progesterona (con estradiol e inhibina A) [R26]';
+    en='fase secretora: la progesterona lo transforma y lo prepara para la implantación';
+  } else {
+    f='lútea tardía (luteólisis)';
+    s='cuerpo lúteo en regresión, que se convertirá en cuerpo albo [R26] [R27]';
+    hm='progesterona y estradiol en caída';
+    en='la retirada de la progesterona precede a la descamación menstrual';
+  }
+  h='<p><b>Ovulación estimada:</b> día '+o+' (duración '+n+' menos 14, porque la fase lútea es constante) [R26].</p>'
+   +'<p><b>Fase:</b> '+f+'.</p><p><b>Estructura ovárica dominante:</b> '+s+'.</p>'
+   +'<p><b>Hormona predominante:</b> '+hm+'.</p><p><b>Efecto endometrial:</b> '+en+'.</p>'
+   +'<span class="cf">Si la duración del ciclo fuera '+(n===28?35:28)+' días → la ovulación caería el día '+((n===28?35:28)-14)+' y el mismo día '+d+' correspondería a otra fase [R26].</span>';
+  out(dc,h);
+}
+
+function dcDx(dc){
+  var a=sel(dc,'edad')[0], p=sel(dc,'pat')[0], u=sel(dc,'ut')[0], sx=sel(dc,'sx'), ot=sel(dc,'ot');
+  var ac=ot.indexOf('ac')>=0, sg=ot.indexOf('sg')>=0, vm=sx.indexOf('vm')>=0, gu=sx.indexOf('gu')>=0, h='';
+  if(!a&&!sg){out(dc,'<p>Elige la edad (y, si la hay, la histerectomía o el patrón menstrual) para ver el estadio probable y si conviene medir FSH.</p>');return;}
+  if(sg){
+    h='<p><b>Alarma:</b> sangrado posmenopáusico. Pide ecografía transvaginal y estudia el endometrio; un grosor de 4 mm o menos tiene VPN mayor de 99% para cáncer de endometrio [R17]. No lo atribuyas a la terapia hormonal sin evaluarlo [R17].</p>'
+     +'<span class="cf">Si el endometrio midiera más de 4 mm o el sangrado persistiera → biopsia de endometrio [R17] [VERIFICAR EN FUENTE].</span>';
+    out(dc,h);return;
+  }
+  var est;
+  if(u==='no'){
+    est='<p><b>Sin útero no hay patrón menstrual que contar:</b> el estadio no se asigna por la menstruación. El diagnóstico se apoya en la edad y en los síntomas vasomotores y genitourinarios, y los ovarios conservados pueden seguir funcionando [R21] [VERIFICAR EN FUENTE].</p>';
+  } else if(!p){
+    est='<p>Indica el patrón menstrual para ubicar el estadio STRAW+10 [R5].</p>';
+  } else if(p==='reg'){
+    est='<p><b>Estadio probable:</b> fase reproductiva (−5 a −3) [R5] [VERIFICAR EN FUENTE]. Ciclos regulares no son transición; si hay bochornos, busca otra causa [VERIFICAR EN FUENTE].</p>';
+  } else if(p==='var'){
+    est='<p><b>Estadio probable:</b> transición menopáusica temprana (−2) [R5] [VERIFICAR EN FUENTE]. Aún es posible el embarazo.</p>';
+  } else if(p==='a60'){
+    est='<p><b>Estadio probable:</b> transición menopáusica tardía (−1) [R5] [VERIFICAR EN FUENTE].</p>';
+  } else {
+    est='<p><b>Estadio probable:</b> posmenopausia temprana (+1a): la menopausia se confirma tras 12 meses de amenorrea, de forma retrospectiva [R5] [VERIFICAR EN FUENTE].</p>';
+  }
+  h=est;
+  if(a==='m40'){
+    h+='<p><b>FSH:</b> sí, mídela. Por debajo de 40 años con síntomas o cambio del ciclo se sospecha insuficiencia ovárica prematura [R21] [R6]. Confirma con FSH elevada: una medición mayor de 25 UI/L para ESHRE o dos con 4 a 6 semanas de separación para NICE; las guías difieren [R6] [R21].</p>'
+     +'<p>Descarta también embarazo, tiroides y prolactina [VERIFICAR EN FUENTE].</p>';
+  } else if(a==='e40'){
+    h+='<p><b>FSH:</b> considérala si hay síntomas y cambio del ciclo [R21]. Si hay amenorrea o sospecha de insuficiencia ovárica prematura, sigue el algoritmo de ESHRE [R6].</p>';
+  } else if(a==='m45'){
+    h+='<p><b>FSH:</b> no la pidas. En 45 años o más con síntomas el diagnóstico es clínico [R21] [R1].</p>';
+  }
+  if(ac){
+    h+='<p>Usa anticonceptivo hormonal: la FSH no es interpretable con combinados ni con progestágeno en dosis alta [R21]; el patrón menstrual también queda enmascarado.</p>';
+  }
+  if(!vm&&!gu){
+    h+='<p>Indica si hay síntomas: sin ellos no se plantea tratamiento y el diagnóstico clínico no se completa.</p>';
+  } else {
+    h+='<p>Con síntomas'+(vm?' vasomotores':'')+((vm&&gu)?' y':'')+(gu?' genitourinarios':'')+', sigue en «Plan de tratamiento» tras evaluar riesgo cardiovascular, mama y tromboembolismo [R1].</p>';
+  }
+  h+='<span class="cf">'+(a==='m45'?'Si tuviera menos de 45 años o sospecha de insuficiencia ovárica prematura → se mide FSH [R21] [R6].':'Si tuviera 45 años o más con síntomas típicos → el diagnóstico es clínico y no se pide FSH [R21].')+'</span>';
+  out(dc,h);
+}
+
+function dcTx(dc){
+  var u=sel(dc,'ut')[0], v=sel(dc,'vt')[0], ci=sel(dc,'ci'), rt=sel(dc,'rt').indexOf('alto')>=0, sx=sel(dc,'sx'), h='';
+  var vm=sx.indexOf('vm')>=0, gu=sx.indexOf('gu')>=0, os=sx.indexOf('oseo')>=0;
+  var ma=ci.indexOf('ma')>=0, tev=ci.indexOf('tev')>=0, acv=ci.indexOf('acv')>=0, hep=ci.indexOf('hep')>=0, sg=ci.indexOf('sg')>=0;
+  var cont=ma||tev||acv||hep;
+  var nh='<li>Fezolinetant 45 mg VO una vez al día; no iniciar si ALT o AST son 2 veces el LSN o más, o la bilirrubina total 2 veces el LSN o más, y vigilar la función hepática [R12] [R22] [VERIFICAR EN FUENTE].</li>'
+        +'<li>Elinzanetant 120 mg VO una vez al día en los ensayos (la dosis de etiqueta no está confirmada) [R13] [R14] [R23] [VERIFICAR EN FUENTE].</li>'
+        +'<li>Paroxetina 7,5 mg VO cada 24 h [R2] [VERIFICAR EN FUENTE].</li>';
+  var nhHep='<li>Evita fezolinetant por su hepatotoxicidad [R22].</li>'
+        +'<li>Elinzanetant 120 mg VO una vez al día en los ensayos, o paroxetina 7,5 mg VO cada 24 h; la seguridad en hepatopatía activa no se leyó [R13] [R2] [VERIFICAR EN FUENTE].</li>';
+  var vag='<li>Estrógeno vaginal a dosis baja, tras medidas de venta libre sin respuesta; la dosis en mg depende de la presentación [R1] [R29] [VERIFICAR EN FUENTE].</li>';
+  if(!sx.length&&!sg){out(dc,'<p>Elige el síntoma dominante, el útero y la edad o el tiempo desde la menopausia para ver el esquema.</p>');return;}
+  if(sg){
+    h+='<p><b>Primero el sangrado:</b> un sangrado vaginal sin diagnóstico se estudia con ecografía transvaginal antes de iniciar cualquier tratamiento hormonal [R17].</p>';
+    if(!sx.length){out(dc,h+'<span class="cf">Si el estudio descartara patología endometrial → se retoma el esquema según síntoma, útero y contraindicaciones [R17].</span>');return;}
+  }
+  if(!u&&(vm||os)&&!cont){
+    out(dc,h+'<p>Indica si tiene útero: decide si el estrógeno va solo o con progestágeno [R1].</p>');return;
+  }
+  if(vm){
+    if(cont){
+      h+='<p><b>Síntomas vasomotores con contraindicación a la terapia sistémica:</b> no hormonal [R2].</p><ul>'+(hep?nhHep:nh)+'</ul>';
+      if(ma){h+='<p>Cáncer de mama: si recibe tamoxifeno, evita la paroxetina; decide con oncología [VERIFICAR EN FUENTE].</p>';}
+    } else if(v==='tar'){
+      h+='<p><b>Inicio tardío (60 años o más, o 10 años o más de menopausia):</b> el balance de la terapia sistémica es menos favorable [R1]. Primera opción: no hormonal.</p><ul>'+nh+'</ul>'
+        +'<p>Si se opta por terapia hormonal, que sea decisión compartida con especialista y vía transdérmica [R1] [R15]: estradiol 25 a 100 µg por día en parche'+(u==='si'?', más progesterona micronizada 100 mg VO cada 24 h continua o DIU-LNG 52 mg':'')+' [R29] [R1].</p>';
+    } else if(!v){
+      h+='<p>Indica la edad o el tiempo desde la menopausia: decide si la terapia hormonal es de elección [R1].</p>';
+    } else {
+      h+='<p><b>De elección:</b> terapia hormonal [R1] [R4].</p><ul>';
+      if(rt){
+        h+='<li>Estradiol transdérmico 25 a 100 µg por día en parche, continuo, titulado por respuesta; no eleva de forma apreciable el riesgo de TEV (RR 0,97) [R29] [R15].</li>';
+      } else {
+        h+='<li>Estradiol oral 1 a 2 mg VO cada 24 h, o estradiol transdérmico 25 a 100 µg por día en parche; la vía transdérmica evita el exceso de TEV de la oral (RR 1,48) [R29] [R1] [R15].</li>';
+      }
+      if(u==='si'){
+        h+='<li>Progestágeno obligatorio (el estrógeno solo con útero eleva el riesgo de cáncer de endometrio) [R17]: progesterona micronizada 100 mg VO cada 24 h continua, o 200 mg VO cada 24 h durante 12 a 14 días de cada ciclo, o DIU-LNG 52 mg [R29] [R1].</li>';
+        if(rt){h+='<li>Con transdérmico más progesterona micronizada el RR de TEV fue 0,93 [R15].</li>';}
+      } else {
+        h+='<li>Sin útero: estrógeno solo, sin progestágeno [R1].</li>';
+      }
+      h+='</ul><p>Duración individualizada y reevaluación al menos anual [R1] [VERIFICAR EN FUENTE].</p>';
+    }
+  }
+  if(gu&&!vm){
+    if(cont){
+      h+='<p><b>Síndrome genitourinario con contraindicación sistémica:</b> medidas de venta libre primero; el estrógeno vaginal a dosis baja se decide con el especialista [R1] [VERIFICAR EN FUENTE].</p>';
+    } else {
+      h+='<p><b>Síndrome genitourinario:</b></p><ul>'+vag+'</ul><p>No se asimila al estrógeno sistémico: sin exceso de cáncer de mama en el metaanálisis de Collaborative Group [R11]; con útero, el progestágeno no suele añadirse a dosis bajas locales [R1] [VERIFICAR EN FUENTE].</p>';
+    }
+  } else if(gu&&vm){
+    h+='<p>Además, si los síntomas genitourinarios persisten con el esquema elegido, agrega estrógeno vaginal a dosis baja [R1] [VERIFICAR EN FUENTE].</p>';
+  }
+  if(os){
+    if(cont){
+      h+='<p><b>Prevención ósea:</b> la terapia hormonal no es opción con contraindicación; este widget no tabula otros fármacos óseos [VERIFICAR EN FUENTE].</p>';
+    } else if(v==='ven'||!v){
+      h+='<p><b>Prevención ósea:</b> la terapia hormonal previene la pérdida ósea y la fractura dentro de la ventana [R1]; usa el esquema de estradiol de arriba con la regla del útero y evalúa el riesgo individual de fractura [VERIFICAR EN FUENTE].</p>';
+      if(!vm){
+        h+='<ul><li>Estradiol 1 a 2 mg VO cada 24 h o 25 a 100 µg por día en parche'+(u==='si'?', más progesterona micronizada 100 mg VO cada 24 h continua o DIU-LNG 52 mg':', sin progestágeno')+' [R29] [R1].</li></ul>';
+      }
+    } else {
+      h+='<p><b>Prevención ósea con inicio tardío:</b> el balance de la terapia hormonal es menos favorable [R1]; decisión con especialista [VERIFICAR EN FUENTE].</p>';
+    }
+  }
+  h+='<span class="cf">'+(cont?'Si no hubiera ninguna contraindicación y estuviera en la ventana → la terapia hormonal pasa a ser de elección [R1].':(u==='si'?'Si no tuviera útero → el estrógeno va solo, sin progestágeno [R1].':'Si tuviera útero → se añade progestágeno al estrógeno [R17].'))+'</span>';
+  out(dc,h);
+}
+
+function dcSeg(dc){
+  var t=sel(dc,'t')[0], sg=sel(dc,'sg')[0], en=sel(dc,'en')[0], ev=sel(dc,'ev'), ed=sel(dc,'ed').indexOf('e60')>=0, h='';
+  if(!t&&!sg&&!en&&!ev.length&&!ed){out(dc,'<p>Elige el tiempo con terapia, el sangrado, el endometrio o un nuevo evento para ver la conducta.</p>');return;}
+  if(ev.length){
+    var n=[];
+    if(ev.indexOf('tev')>=0){n.push('tromboembolia venosa');}
+    if(ev.indexOf('mama')>=0){n.push('cáncer de mama');}
+    if(ev.indexOf('acv')>=0){n.push('accidente cerebrovascular');}
+    h='<p><b>Conducta: suspender la terapia hormonal sistémica</b> ante '+n.join(' y ')+' y manejar el evento con el especialista [R1] [VERIFICAR EN FUENTE].</p>';
+    if(ev.indexOf('mama')>=0){h+='<p>El riesgo de cáncer de mama aumenta con el progestágeno y con la duración del uso, aunque el exceso absoluto es pequeño [R10] [R11].</p>';}
+    if(ev.indexOf('tev')>=0){h+='<p>El riesgo de TEV fue mayor con estrógeno oral que con transdérmico, de modo que la vía importa para reevaluar cualquier terapia futura [R15] [R16].</p>';}
+    if(ev.indexOf('acv')>=0){h+='<p>El ACV figura entre los excesos absolutos de estrógeno más progestágeno [R7].</p>';}
+    h+='<p>Los síntomas que motivaron la terapia se manejan con opciones no hormonales [R2].</p>';
+    h+='<span class="cf">Si el evento no existiera y el sangrado fuera el esperado → se continuaría la terapia con reevaluación periódica [R1].</span>';
+    out(dc,h);return;
+  }
+  if(sg==='inesp'){
+    h='<p><b>Conducta: estudiar el endometrio antes de ajustar nada.</b> El sangrado que no coincide con el esquema, el persistente o el posmenopáusico se estudia con ecografía transvaginal [R17].</p>';
+    if(en==='e4'){
+      h+='<p>Endometrio de 4 mm o menos: el valor predictivo negativo para cáncer de endometrio es muy alto [R17]. Si el sangrado persiste o es abundante, valora biopsia o histeroscopia [VERIFICAR EN FUENTE]. Mientras tanto, revisa adherencia y esquema del progestágeno [VERIFICAR EN FUENTE].</p>';
+      h+='<span class="cf">Si el endometrio midiera más de 4 mm → muestreo endometrial antes de continuar [R17] [VERIFICAR EN FUENTE].</span>';
+    } else if(en==='e5'){
+      h+='<p>Endometrio de más de 4 mm: muestreo endometrial (biopsia) y, hasta tener el resultado, no continuar sin decisión [R17] [VERIFICAR EN FUENTE]. Si hay hiperplasia o cáncer, suspender el estrógeno y derivar.</p>';
+      h+='<span class="cf">Si el endometrio midiera 4 mm o menos y el sangrado cediera → se vigilaría y se continuaría el esquema [R17].</span>';
+    } else {
+      h+='<p>Aún no hay ecografía: pídela primero; sin ella no se puede decidir si basta con vigilar o si hace falta biopsia [R17].</p>';
+      h+='<span class="cf">Si la ecografía mostrara 4 mm o menos y el sangrado cediera → la conducta sería vigilar, no biopsiar de entrada [R17] [VERIFICAR EN FUENTE].</span>';
+    }
+    out(dc,h);return;
+  }
+  if(en==='e5'&&!sg){
+    h='<p><b>Conducta:</b> un endometrio de más de 4 mm en una mujer con terapia pide correlacionarlo con el sangrado; si hubo sangrado fuera de patrón, muestreo endometrial [R17] [VERIFICAR EN FUENTE].</p>';
+    h+='<span class="cf">Si no hubiera sangrado → la ecografía no habría estado indicada como tamizaje [R17].</span>';
+    out(dc,h);return;
+  }
+  if(sg==='esp'){
+    h='<p><b>Conducta: no estudies el endometrio.</b> El sangrado por deprivación es esperable al final de la fase con progestágeno en un esquema cíclico [VERIFICAR EN FUENTE]; la ecografía no se usa para vigilar a la mujer sin sangrado anormal [R17].</p>';
+  } else {
+    h='<p><b>Conducta:</b> sin sangrado anormal ni evento nuevo, la terapia se continúa mientras persista la indicación y el balance sea favorable [R1].</p>';
+  }
+  if(t==='t3'){
+    h+='<p>Control de los 3 meses: valora control del síntoma, adherencia y tolerancia; si no mejora o no se tolera, <b>cambia la vía o ajusta la dosis</b> en lugar de insistir [R1] [VERIFICAR EN FUENTE]. <span class="rem">↪ Posología en «Plan de tratamiento»</span></p>';
+  } else if(t==='t5'){
+    h+='<p>Reevaluación anual: confirma que la indicación sigue vigente. Si los síntomas ya están controlados, considera <b>reducir la dosis</b> [R1] [VERIFICAR EN FUENTE]. Con factores de riesgo de TEV, prefiere la vía transdérmica [R15] [R16].</p>';
+  } else if(t==='t5m'){
+    h+='<p>Más de 5 años de uso: sigue solo con indicación documentada y decisión compartida, y considera que el riesgo mamario crece con los años de uso [R1] [R11].</p>';
+  }
+  if(ed){
+    h+='<p>Edad de 60 años o más con síntomas persistentes: continuar es posible, pero con una relación beneficio-riesgo menos favorable, individualiza el riesgo absoluto y reevalúa con frecuencia; valora <b>reducir la dosis o cambiar a vía transdérmica</b> [R1] [R4] [R8].</p>';
+  }
+  if(!t&&!ed){h+='<p>Indica el tiempo con terapia para precisar el momento del ajuste.</p>';}
+  h+='<span class="cf">Si apareciera sangrado inesperado, un evento nuevo o la mujer decidiera suspender → cambiaría a estudiar el endometrio o a suspender [R1] [R17].</span>';
+  out(dc,h);
+}
+
+</script>
+<!-- KIT_SCRIPT -->
+</div>
+<script>
+(function(){
+'use strict';
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+function secK(k){return $('section.tab[data-tab="'+k+'"]')}
+function secOf(el){return el&&el.closest?el.closest('section.tab'):null}
+function nameOf(k){var b=$('button.tb[data-tab="'+k+'"]');return b?b.textContent.replace(/\s+/g,' ').replace(/^\s+|\s+$/g,''):k}
+function btn(t,f,c){var b=document.createElement('button');b.type='button';b.className=c||'chip';b.textContent=t;b.addEventListener('click',f);return b}
+function recon(s,on){if(!s)return;s.classList.toggle('recon',!!on);$$('.nodo',s).forEach(function(n){n.classList.remove('rev');n.classList.remove('pis')});var st=$('.rec-state',s);if(st)st.textContent=on?'Modo reconstrucción activo':'Modo lectura';var a=$('.rec-bar [data-act="rec"]',s);if(a){a.disabled=!!on;a.classList.toggle('on',!!on);a.textContent=on?'Reconstrucción activa':'Activar reconstrucción'}}
+window.recon=function(k,on){recon(secK(k),on)};
+function navOv(){var n=$('nav.tabs');if(!n)return;var sl=n.scrollLeft,mx=n.scrollWidth-n.clientWidth,w=n.parentNode;[n,w].forEach(function(e){if(e===n||e.classList.contains('tabs-w')){e.classList.toggle('ov-l',sl>2);e.classList.toggle('ov-r',sl<mx-2)}})}
+function tabla(on){var t=$('table.vis'),s=secOf(t);if(!s)return;s.classList.toggle('tbl',!!on);$$('td.tap',t).forEach(function(c){c.classList.remove('rev')});var st=$('.vb-state',s);if(st)st.textContent=on?'Tabla tapada: toca cada celda para revelarla':'Modo lectura'}
+window.tabla=tabla;
+window.show=function(k){var ns=secK(k);if(!ns)return;$$('section.tab.on').forEach(function(s){if(s!==ns){if(s.classList.contains('recon'))recon(s,false);if(s.classList.contains('tbl'))tabla(false)}});$$('.tb,.tab').forEach(function(e){e.classList.toggle('on',e.getAttribute('data-tab')===k)});window.scrollTo(0,0);var b=$('.tb.on');if(b&&b.scrollIntoView){try{b.scrollIntoView({inline:'nearest',block:'nearest'})}catch(e){}}navOv()};
+window.ir=function(k,id){var el=document.getElementById(id),s=secOf(el);if(!s)return;var nodo=el.classList.contains('nodo');if(s.classList.contains('recon')&&!nodo)recon(s,false);if(s.classList.contains('tbl')&&!el.closest('.vis-w'))tabla(false);show(s.getAttribute('data-tab'));if(nodo&&s.classList.contains('recon'))el.classList.add('rev');var a=el.closest('.acc');if(a)a.classList.add('op');el.scrollIntoView({block:'start'});el.classList.add('hl');setTimeout(function(){el.classList.remove('hl')},1500)};
+window.tog=function(b){var a=b.closest('.acc');if(a)a.classList.toggle('op')};
+window.sel=function(dc,g){return $$('.chip.on[data-g="'+g+'"]',dc).map(function(c){return c.getAttribute('data-v')})};
+window.num=function(dc,n){var i=$('input[data-n="'+n+'"]',dc);if(!i||i.value==='')return NaN;return parseFloat(String(i.value).replace(',','.'))};
+window.out=function(dc,h){var o=$('.out',dc);if(o)o.innerHTML=h};
+window.rd=function(x,d){var p=Math.pow(10,d||0);return Math.round(x*p)/p};
+function outErr(dc,e){var o=$('.out',dc);if(o)o.textContent='Error de cálculo: '+(e&&e.message?e.message:String(e))}
+function runDc(dc){var fn=window[dc.getAttribute('data-fn')];if(typeof fn==='function'){try{fn(dc)}catch(e){outErr(dc,e)}}}
+window.ch=function(el){var dc=el.closest('.dc');if(!dc)return;if(el.classList.contains('chip')){var g=el.getAttribute('data-g');if(el.getAttribute('data-m')==='1'){el.classList.toggle('on')}else{var was=el.classList.contains('on');$$('.chip[data-g="'+g+'"]',dc).forEach(function(c){c.classList.remove('on')});if(!was)el.classList.add('on')}}runDc(dc)};
+function initNodos(f){var k=f.getAttribute('data-tab');$$('.nodo',f).forEach(function(n,i){var p=document.createElement('b');p.className='paso';var pn=document.createElement('span');pn.className='pn';pn.textContent=(i+1)+' ·';var pt=document.createElement('span');pt.className='pt';pt.textContent=n.getAttribute('data-paso')||'';p.appendChild(pn);p.appendChild(pt);var ra=n.getAttribute('data-rama');if(ra){var b=document.createElement('span');b.className='badge b-az rama';b.textContent=ra;p.appendChild(document.createTextNode(' '));p.appendChild(b)}n.insertBefore(p,n.firstChild);var c=document.createElement('div');c.className='rec-ctl';if($('.man',n))c.appendChild(btn('Pista',function(){n.classList.toggle('pis')}));c.appendChild(btn('Revelar',function(){n.classList.toggle('rev')}));n.appendChild(c)});
+var tl=$('ol.tl',f);if(!tl)return;var bar=document.createElement('div');bar.className='rec-bar';bar.id='rec-bar-'+k;var t=document.createElement('div');t.innerHTML='<b>Timeline en blanco</b> · <span class="rec-state">Modo lectura</span><p class="mini">Reconstruye la cascada sin mirar: escribe cada paso en orden, luego usa Pista (signos que produce) y Revelar nodo por nodo. Nada se guarda.</p>';bar.appendChild(t);var ta=document.createElement('textarea');ta.setAttribute('aria-label','Escribe aquí la cascada en orden');var bs=document.createElement('div');bs.className='rec-btns';var ab=btn('Activar reconstrucción',function(){recon(f,true);ta.focus()});ab.setAttribute('data-act','rec');bs.appendChild(ab);bs.appendChild(btn('Revelar todo',function(){$$('.nodo',f).forEach(function(n){n.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){recon(f,false)}));bar.appendChild(bs);bar.appendChild(ta);tl.parentNode.insertBefore(bar,tl)}
+var TGT={'1.º':'clave','De elección':'clave','Confirma':'ok','Solo si':'cond','Escala':'cond','Reevalúa':'cond','No pidas':'no','Evita':'no','Alarma':'alarma'};
+function initTg(){$$('ol.tg span.tg').forEach(function(s){var v=TGT[s.textContent.replace(/^\s+|\s+$/g,'')];if(v)s.setAttribute('data-t',v)})}
+function initTabla(){var t=$('table.vis'),s=secOf(t);if(!s)return;var w=t.parentNode;if(!w.classList.contains('tw')){w=document.createElement('div');w.className='tw';t.parentNode.insertBefore(w,t);w.appendChild(t)}w.classList.add('vis-w');var rows=$$('tbody tr',t);if(!rows.length)rows=$$('tr',t).slice(1);rows.forEach(function(r){Array.prototype.slice.call(r.children,1).forEach(function(c){c.classList.add('tap');c.addEventListener('click',function(){if(s.classList.contains('tbl'))c.classList.add('rev')})})});
+var bar=document.createElement('div');bar.className='vb-bar';bar.id='vb-bar';var h=document.createElement('div');h.innerHTML='<b>Tabla en blanco</b> · <span class="vb-state">Modo lectura</span><p class="mini">Tapa todas las celdas de las entidades (quedan visibles las cabeceras y los ejes). Di cada celda antes de tocarla; un toque la revela. Nada se guarda.</p>';bar.appendChild(h);var bs=document.createElement('div');bs.className='rec-btns';bs.appendChild(btn('Tapar la tabla',function(){tabla(true)}));bs.appendChild(btn('Revelar todo',function(){$$('td.tap',t).forEach(function(c){c.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){tabla(false)}));bar.appendChild(bs);w.parentNode.insertBefore(bar,w)}
+function initRecGo(){var TL=$$('section.tab').filter(function(s){return!!$('ol.tl',s)}),sin=secK('sin'),dst=sin||secK('seg');if(!dst)return;var ord=sin?TL.filter(function(s,i){return i%2===0}).concat(TL.filter(function(s,i){return i%2===1})):TL;var vt=$('table.vis');if(!ord.length&&!(sin&&vt))return;
+var w=document.createElement('div');w.className='hb az rec-go';w.innerHTML='<div class="hb-t">Antes de cerrar: recupera sin mirar</div><p class="mini">Cada botón te lleva a la función en blanco correspondiente. Intenta la respuesta completa antes de revelar.</p>';var bs=document.createElement('div');bs.className='rec-btns';w.appendChild(bs);
+if(sin&&vt){var vs=secOf(vt),vk=vs.getAttribute('data-tab'),b0=btn('Tabla en blanco — '+nameOf(vk),function(){show(vk);tabla(true);var b=document.getElementById('vb-bar');if(b)b.scrollIntoView({block:'start'})},'go');b0.setAttribute('data-rec',vk);bs.appendChild(b0)}
+ord.forEach(function(s){var k=s.getAttribute('data-tab'),b=btn('Reconstruir la cascada — '+nameOf(k),function(){show(k);recon(s,true);var r=document.getElementById('rec-bar-'+k);if(r)r.scrollIntoView({block:'start'})},'go');b.setAttribute('data-rec',k);bs.appendChild(b)});
+var rf=$('.acc.refs',dst);if(rf)dst.insertBefore(w,rf);else dst.appendChild(w)}
+function init(){var f=$('.tb'),ph=[function(){var n=$('nav.tabs');if(n){var w=document.createElement('div');w.className='tabs-w';n.parentNode.insertBefore(w,n);w.appendChild(n);n.addEventListener('scroll',navOv);window.addEventListener('resize',navOv)}},function(){$$('section.tab').forEach(function(s){if($('ol.tl',s))initNodos(s)})},initTg,initTabla,initRecGo,function(){$$('.dc').forEach(runDc)},function(){show(secK('pan')?'pan':(f?f.getAttribute('data-tab'):''))}];ph.forEach(function(p){try{p()}catch(e){if(window.console)console.error('kit v10:',e)}})}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+</body>
+</html>
