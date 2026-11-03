@@ -20,6 +20,7 @@ Widgets HTML de estudio, autocontenidos y offline (skill `widget-ensenanza` v10,
 | | `Cojera_dolorosa_mecanica_widget_v10.html` | multi | Perthes (principal), epifisiólisis (amenaza), Osgood-Schlatter | 27 |
 | | `Marcha_sin_dolor_widget_v10.html` | multi | DDC (principal), dismetría, neuromuscular, Guillain-Barré (amenaza) | 65 |
 | | `Forma_piernas_pies_widget_v10.html` | multi | genu varo/valgo (principal), anteversión femoral, pie plano, pie cavo, equinovaro (amenaza) | 26 |
+| Ginecología (fuera de sílabo) | `Ciclo_ovarico_menopausia_TH_widget_v10.html` | mono | menopausia y terapia hormonal + pestaña «Ciclo ovárico y cuerpo albo» | 89 |
 
 `[VERIFICAR]` = datos marcados `[VERIFICAR EN FUENTE]`: compruébalos antes de estudiar con ellos.
 
