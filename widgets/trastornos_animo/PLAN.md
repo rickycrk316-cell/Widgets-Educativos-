@@ -54,28 +54,68 @@ Reparto (hecho): ejecutor A → `05_vis` + `21_e1`; B → `22_e2` + `23_e3`; C �
 
 Título `Crisis de angustia con síntomas somáticos` · salida `Crisis_de_angustia_widget_v10.html`.
 
-## Widget B · Definiciones (skill definiciones v6) — `definiciones/`
+## Widget B · Apertura (skill apertura v1) — `apertura/`
 
-Caso/semana: Trastornos del estado de ánimo (precaso del paciente con crisis al conducir). Términos derivados del texto del caso por el orquestador (el estudiante no entregó lista). 9 términos → régimen normal (tope 5 prerrequisitos). 5 tarjetas por término (45 en total).
+Reemplaza al widget de definiciones (el estudiante pidió apertura). Conserva las 9 pestañas de término y su fuente única de prerrequisitos (tabla de abajo), y añade `c0`, `pb`, `jq` y `hx`. Título `Apertura · Trastornos del estado de ánimo` · salida `../Apertura_trastornos_animo.html` · manifiesto `problemas {B:3,P:3,S:3,FR:3}`, `hipotesis 4`, `diagramas 4`.
 
-| Pestaña · término | Prerrequisitos canónicos (tipo) | Remisiones | Tarjetas |
+### Términos (sin cambios en prerrequisitos)
+
+| Pestaña · término | Prerrequisitos canónicos (tipo) | Remisiones | pid que toca (card.vin) |
 |---|---|---|---|
-| t1 · Trastornos del estado de ánimo | Sistema límbico (B) · Sistemas monoaminérgicos: serotonina, noradrenalina, dopamina y MAO (B) · Afecto, ánimo y emoción como funciones psíquicas (C) | — | 5 |
-| t2 · Angustia (miedo a perder el control) | Circuito del miedo: tálamo → amígdala → hipotálamo y tronco (C) · Interocepción y corteza insular (A) | sistema límbico (t1) | 5 |
-| t3 · Opresión precordial | Precordio y contenido mediastínico (A) · Dolor visceral y dolor referido (C) · Aporte y demanda de oxígeno del miocardio, circulación coronaria (C) | — | 5 |
-| t4 · Palpitaciones | Sistema de conducción cardiaco (B) · Sistema nervioso autónomo: divisiones, transmisores y receptores (B) | — | 5 |
-| t5 · Sudoración y náuseas | Glándula sudorípara ecrina e inervación simpática colinérgica (A) · Reflejo del vómito: área postrema, núcleo del tracto solitario, aferencias vagales (C) | SNA (t4) · circuito del miedo (t2) | 5 |
-| t6 · Preinfarto (término popular) | Isquemia y necrosis miocárdica en el tiempo (C) · Troponinas cardiacas en el sarcómero (A) | circulación coronaria (t3) · dolor referido (t3) | 5 |
-| t7 · Estrés | Eje hipotálamo-hipófiso-suprarrenal (C) · Sistema simpático-adrenomedular (C) | SNA (t4) · circuito del miedo (t2) | 5 |
-| t8 · Stresstabs | Vitaminas hidrosolubles del complejo B y C como coenzimas (B) | eje HHS (t7) | 5 |
-| t9 · Xanax (alprazolam) | Receptor GABA-A (A) · Vida media, metabolismo por CYP3A4 y neuroadaptación (C) | circuito del miedo (t2) · afecto/ánimo (t1) | 5 |
+| t1 · Trastornos del estado de ánimo | Sistema límbico (B) · Sistemas monoaminérgicos (B) · Afecto, ánimo y emoción (C) | — | P3, H4 |
+| t2 · Angustia | Circuito del miedo (C) · Interocepción e ínsula (A) | sistema límbico (t1) | P1, FR3 |
+| t3 · Opresión precordial | Precordio y mediastino (A) · Dolor visceral y referido (C) · Aporte y demanda de O₂ (C) | — | B1 |
+| t4 · Palpitaciones | Sistema de conducción (B) · SNA (B) | — | B1, B2 |
+| t5 · Sudoración y náuseas | Glándula sudorípara ecrina (A) · Reflejo del vómito (C) | SNA (t4) · circuito del miedo (t2) | B1 |
+| t6 · Preinfarto | Isquemia y necrosis en el tiempo (C) · Troponinas (A) | circulación coronaria y dolor referido (t3) | P2, S3 |
+| t7 · Estrés | Eje HHS (C) · Simpático-adrenomedular (C) | SNA (t4) · circuito del miedo (t2) | FR1, P3 |
+| t8 · Stresstabs | Vitaminas B y C como coenzimas (B) | eje HHS (t7) | S3 |
+| t9 · Xanax (alprazolam) | Receptor GABA-A (A) · Vida media, CYP3A4 y neuroadaptación (C) | circuito del miedo (t2) · afecto/ánimo (t1) | B3, FR2 |
 
-- «Preinfarto»: término coloquial → define el más cercano (síndrome coronario agudo sin elevación del ST / angina inestable) con `.mini.am` (interpretación y alternativa popular). No es entidad diagnóstica.
-- «Angustia»: en la tradición hispana = ansiedad con vivencia corporal; DSM-5-TR «ataque de pánico». `.mini.am` con la interpretación.
-- Stresstabs y Xanax: marca + principio activo en la misma pestaña; qué es y mecanismo; manejo → paso 7 (`.mini`). Composición de Stresstabs: verificar en ficha del fabricante/registro (pendiente para haiku).
-- Reparto (hecho): ejecutor E → t1–t3; F → t4–t6; G → t7–t9. El orquestador escribió `p01_nav` y `p95_tg`, y armó `p96_js` con el motor de `p96_js_ejemplo.html` de la skill, que muestra el término en el repaso global solo tras «Mostrar respuesta».
+En apertura cada término lleva la card `.card.vin` «Por qué importa en este caso» (≤70 palabras, chips `span.pid`), su ejemplo de anclaje pasa a estar anclado en el paciente (sin afirmar el diagnóstico) y cada mazo suma 1 tarjeta que conecta el término con el caso (5 → 6).
 
-Título `Definiciones · Trastornos del estado de ánimo` · salida `../Definiciones_trastornos_animo.html`.
+### Problemas (ids fijos)
+
+| id | Problema | Dato del caso |
+|---|---|---|
+| B1 | Dolor torácico opresivo agudo con palpitaciones, sudoración y náuseas, no filiado | «opresión en el pecho… se me va a salir el corazón»; hace 40 min; sudoración y náuseas |
+| B2 | Episodios paroxísticos recurrentes de activación autonómica | tercer episodio en el último año |
+| B3 | Uso de alprazolam por semanas sin diagnóstico ni seguimiento claros | «recibió… Xanax (alprazolam) que consumió por varias semanas» |
+| P1 | Miedo intenso a perder el control mental durante la crisis | «sensación de angustia por perder el control mental» |
+| P2 | Creencia de enfermedad cardiaca grave («preinfarto») | «le diagnosticaron un preinfarto debido a estrés» (según el paciente) |
+| P3 | Estrés referido como causa, con ánimo y ansiedad basal sin explorar | «debido a estrés»; el caso no describe ánimo ni preocupación entre crisis |
+| S1 | Crisis mientras conduce: riesgo vial y para su trabajo | «mientras conducía su auto en dirección a su lugar de trabajo» |
+| S2 | Atención en primer nivel sin posibilidad de derivar | «no tiene forma de derivar al paciente» |
+| S3 | Atención previa fragmentada: rótulo impreciso y tratamientos sin diagnóstico | dos atenciones previas, «preinfarto», Stresstabs y Xanax |
+| FR1 | Estrés percibido (predisponente y precipitante) | «debido a estrés» |
+| FR2 | Benzodiacepina de vida media corta usada semanas (rebote, abstinencia) | alprazolam por varias semanas |
+| FR3 | Situación de la que es difícil escapar (conducir) | episodio al conducir |
+
+Datos que faltan (c0 y hx): edad y sexo; factores de riesgo cardiovascular; signos vitales; ECG y troponina actuales y de los episodios previos; glucemia; TSH; consumo de cafeína, alcohol, tabaco y otras sustancias; dosis, horario y fecha de la última toma de alprazolam; ánimo, preocupación entre crisis, ideación suicida; evitación posterior; antecedentes personales y familiares; ocupación.
+
+### Jerarquía propuesta (`ol.rank`, todos los B, P, S una vez)
+
+g1: B1 (amenaza vital hasta ECG y troponina). g2: B3 (abstinencia con convulsiones si se suspende de golpe; dependencia), S1 (riesgo vial inmediato si la crisis se repite al conducir), B2 (recurrencia que sostiene el diagnóstico y el deterioro). g3: P2 (sostiene la ansiedad anticipatoria y las consultas), P1, S3, S2. g4: P3. Los FR no se jerarquizan.
+
+### Hipótesis (`.card.hx`, por probabilidad)
+
+| id | Hipótesis | Probabilidad | Explica | Qué la confirmaría |
+|---|---|---|---|---|
+| H1 | Ataques de pánico recurrentes / trastorno de pánico (con posible agorafobia) | Alta | B1, B2, P1, P2, FR3 | ECG y troponina normales; criterios DSM-5-TR (≥4 síntomas con pico en minutos, ≥1 mes de miedo o evitación) |
+| H2 | Síndrome coronario agudo | Media (no descartada) | B1 | ECG en ≤10 min y troponina seriada |
+| H3 | Ansiedad inducida por benzodiacepinas (rebote o abstinencia) | Media | B2, B3, FR2 | Relación temporal con la última toma y el horario de dosis |
+| H4 | Trastorno del ánimo o ansiedad generalizada comórbidos | Baja (por datos faltantes) | P3, FR1 | PHQ-9, GAD-7, pregunta directa por ideación suicida |
+
+Diferencial (tabla fuera de las cards): taquicardia supraventricular, hipertiroidismo, hipoglucemia, feocromocitoma, intoxicación por estimulantes o cafeína, tromboembolia pulmonar.
+
+### Diagramas (`figure.dg`, mínimo 4)
+
+1. `pb` · mapa biopsicosocial: B, P, S y FR convergiendo en «Crisis de angustia con síntomas somáticos recurrente».
+2. `pb` · círculo del pánico: sensación corporal → interpretación catastrófica → miedo → descarga simpática → más síntomas.
+3. `jq` · escalera de gravedad (g1 → g4).
+4. `hx` · predisponentes + precipitantes → síndrome → hipótesis H1–H4.
+
+Reparto: ejecutor K → `p05_c0` + vin/anclaje/tarjeta de t1–t4; L → vin/anclaje/tarjeta de t5–t9; M → `p91_pb`; N → `p92_jq` + `p93_hx`. Tarjetas nuevas en `apertura/_mazos_<X>.json`; el orquestador arma `p01_nav`, `p95_tg`, `p96_js` y el manifiesto.
 
 ## Reglas de diseño para ejecutores (ambos widgets)
 

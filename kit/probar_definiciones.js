@@ -1,5 +1,7 @@
 // Pruebas funcionales y visuales del widget de definiciones.
 // Uso: node probar_definiciones.js <url> <carpeta_capturas>
+// Sirve también para apertura: la pestaña c0 (sin simulador) no se recorre como mazo y se comprueba
+// que ningún figure.dg ni tabla desborde el ancho de la página (390 px).
 // Resolución: kit/node_modules (npm ci) primero; si no, playwright global.
 const { chromium } = (() => { for (const m of ['playwright-core', 'playwright', '/opt/node22/lib/node_modules/playwright', '/opt/node22/lib/node_modules/@playwright/cli/node_modules/playwright-core']) { try { return require(m); } catch (e) {} } throw new Error('playwright no encontrado (ejecuta: cd kit && npm ci)'); })();
 const fs = require('fs');
@@ -49,12 +51,28 @@ async function runDeck(page, sec) {
       await pausa(page, 120);
       const sec = await page.evaluate(() => (document.querySelector('section.tab.active') || {}).id);
       if (!sec) { fails.push(`${v.name}: el botón ${i + 1} no activa ninguna sección`); continue; }
+      // en móvil se abren todos los acordeones para medir también su contenido
+      if (v.name === 'movil') await page.evaluate(() => document.querySelectorAll('section.tab.active .acc').forEach(a => a.classList.add('op')));
       const ov = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
       if (ov > 1) fails.push(`${v.name}/${sec}: desborde horizontal de ${ov}px`);
+      // diagramas y tablas: deben caber en el ancho de la ventana (las tablas pueden desplazarse dentro de .tw)
+      const bad = await page.evaluate(() => {
+        const W = document.documentElement.clientWidth, out = [];
+        document.querySelectorAll('section.tab.active figure.dg').forEach((f, k) => {
+          const r = f.getBoundingClientRect();
+          if (f.scrollWidth > f.clientWidth + 1 || r.right > W + 1 || r.left < -1) out.push(`figure.dg #${k + 1}`);
+          f.querySelectorAll('.dg-n').forEach(n => { if (n.getBoundingClientRect().right > W + 1) out.push(`dg-n en figure #${k + 1}`); });
+        });
+        document.querySelectorAll('section.tab.active .tw').forEach((t, k) => { if (t.getBoundingClientRect().right > W + 1) out.push(`tabla .tw #${k + 1}`); });
+        return out;
+      });
+      bad.forEach(b => fails.push(`${v.name}/${sec}: ${b} desborda el ancho de página`));
       if (i === 0 || i === n - 1) await page.screenshot({ path: `${outDir}/${v.name}_${i === 0 ? 'primera' : 'repaso'}.png` });
+      else if (v.name !== 'ipad' && ['pb', 'jq', 'hx'].includes(sec)) await page.screenshot({ path: `${outDir}/${v.name}_${sec}.png`, fullPage: true });
       if (v.name === 'ipad') {
         const r = await runDeck(page, sec);
-        if (r !== 'ok') fails.push(`recall ${sec}: ${r}`);
+        if (r === 'sin-rc' && sec === 'c0') notes.push('c0: sin simulador (correcto)');
+        else if (r !== 'ok') fails.push(`recall ${sec}: ${r}`);
         else {
           const end = await page.evaluate(sec => document.querySelector('#' + sec + ' .rc-end').textContent.trim().slice(0, 80), sec);
           notes.push(`recall ${sec}: completo · «${end}»`);
@@ -73,6 +91,6 @@ async function runDeck(page, sec) {
   }
   await browser.close();
   fails.forEach(f => console.log('FALLA ' + f)); notes.forEach(x => console.log('NOTA ' + x));
-  console.log(`NAVEGADOR DEFINICIONES: ${fails.length ? 'FALLA' : 'OK'} · fallas ${fails.length}`);
+  console.log(`NAVEGADOR DEFINICIONES/APERTURA: ${fails.length ? 'FALLA' : 'OK'} · fallas ${fails.length}`);
   process.exit(fails.length ? 1 : 0);
 })().catch(e => { console.log('FALLA prueba: ' + e.message); process.exit(1); });

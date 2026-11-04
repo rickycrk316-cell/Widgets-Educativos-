@@ -1,9 +1,0 @@
-{
- "titulo": "Definiciones · Trastornos del estado de ánimo",
- "salida": "../Definiciones_trastornos_animo.html",
- "tipo": "definiciones",
- "terminos": 9,
- "prerrequisitos": [3, 2, 3, 2, 2, 2, 2, 1, 2],
- "remisiones": [0, 1, 0, 0, 2, 2, 2, 1, 2],
- "tarjetas": [5, 5, 5, 5, 5, 5, 5, 5, 5]
-}
