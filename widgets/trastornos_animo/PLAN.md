@@ -8,7 +8,9 @@ Bibliografía: la del sílabo de la 2.ª rotación con ediciones vigentes del pr
 
 ## Citas (ambos widgets)
 
-Las partes citan con claves `[@CLAVE]` de `refs.json` (nunca números). El orquestador numera al final con `python3 widgets/trastornos_animo/citar.py <carpeta>`, que también sustituye `<!--REFS-->` (dentro de `ol.vanc`) por la lista Vancouver. Clave nueva: añádela a `refs.json` solo con datos que hayas leído; si no, `[VERIFICAR EN FUENTE]` (enseñanza) o badge ámbar (definiciones) y anótala en `pendientes`.
+Los ejecutores citaron con claves de un catálogo común, que se verificó en PubMed (los 10 artículos de revista, con PMID) y en la web (documentos de organismos). El orquestador las numeró por primera aparición: en enseñanza se cuenta desde `vis` y el Panorama reutiliza los números. Las partes ya llevan `[n]`, así que una cita nueva se numera a mano según el validador.
+
+Lo que no se pudo confirmar: la composición de Stresstabs, que cambia según el país (badge ámbar en t8); la duración del ISRS en TAG (≥12 meses, e2); y la nota de altitud para el umbral de SatO₂ en Quito (e5, en la tabla y en el simulador). También se quitó un tope de 40 mg de diazepam en la sustitución, porque no se encontró en Ashton.
 
 ## Pistas del caso (sin resolver el caso)
 
@@ -48,7 +50,7 @@ Contrato de `vis` por entidad (celdas `Signo que la delata` = `k` de la `.qv` de
 
 Conteos (manifiesto): `pg` vis 4, e1 4, e2–e5 3 · `fey` e1 2, e2–e5 1 · `nodos` e1 6, e2 5, e3 5, e4 5, e5 5 · `signos` e1 4, e2 3, e3 3, e4 3, e5 3 · `dc` vis, e1, e2, e3, e4, e5. Simuladores: `dcVis` (diferencial), `dcE1d` y `dcE1t` (e1 dx y tx), `dcE2` (tx), `dcE3r` (riesgo suicida → conducta en primer nivel, en «Diagnóstico») y `dcE3` (tx), `dcE4` (pauta de reducción por dosis), `dcE5` (conducta inicial en primer nivel sin derivación). Helpers comunes en `90_sim`: `par(t)`, `hv(a,v)`, `vacio(dc,t)` + los del kit (`sel num out rd`).
 
-Reparto: ejecutor A → `05_vis` + `21_e1`; B → `22_e2` + `23_e3`; C → `24_e4` + `25_e5` + `80_sin` (con `<!--REFS-->`); D (al final) → `02_pan`. El JS de cada simulador va en `ensenanza/_sim_<X>.js` (no `.html`); el orquestador arma `90_sim.html` y `01_nav.html`.
+Reparto (hecho): ejecutor A → `05_vis` + `21_e1`; B → `22_e2` + `23_e3`; C → `24_e4` + `25_e5` + `80_sin`; D → `02_pan`; el orquestador escribió `01_nav` y unió los simuladores en `90_sim`. El botón de `vis` es «Visión de conjunto».
 
 Título `Crisis de angustia con síntomas somáticos` · salida `Crisis_de_angustia_widget_v10.html`.
 
@@ -71,7 +73,7 @@ Caso/semana: Trastornos del estado de ánimo (precaso del paciente con crisis al
 - «Preinfarto»: término coloquial → define el más cercano (síndrome coronario agudo sin elevación del ST / angina inestable) con `.mini.am` (interpretación y alternativa popular). No es entidad diagnóstica.
 - «Angustia»: en la tradición hispana = ansiedad con vivencia corporal; DSM-5-TR «ataque de pánico». `.mini.am` con la interpretación.
 - Stresstabs y Xanax: marca + principio activo en la misma pestaña; qué es y mecanismo; manejo → paso 7 (`.mini`). Composición de Stresstabs: verificar en ficha del fabricante/registro (pendiente para haiku).
-- Reparto: ejecutor E → t1–t3; F → t4–t6; G → t7–t9. Cada uno escribe sus `pNN_tK.html` y `definiciones/_decks_tK.js` (solo el objeto del mazo). El orquestador arma `p01_nav`, `p95_tg` (con `<!--REFS-->`) y `p96_js` (motor copiado del widget de definiciones existente).
+- Reparto (hecho): ejecutor E → t1–t3; F → t4–t6; G → t7–t9. El orquestador escribió `p01_nav` y `p95_tg`, y armó `p96_js` con el motor de `p96_js_ejemplo.html` de la skill, que muestra el término en el repaso global solo tras «Mostrar respuesta».
 
 Título `Definiciones · Trastornos del estado de ánimo` · salida `../Definiciones_trastornos_animo.html`.
 

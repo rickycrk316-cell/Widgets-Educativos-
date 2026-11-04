@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Definiciones · Trastornos del estado de ánimo</title>
+<style>
+/* Vademécum · variante del widget de definiciones (skill definiciones v5.1): mismas tintas y tipografía que DESIGN.md */
+:root{
+--paper:#FBFBFC;--paper-2:#F1F2F5;--ink:#16181D;--ink-2:#3A3D46;--ink-3:#686C78;--rule:#D7D9E0;--rule-strong:#16181D;
+--accent:#2342A6;--accent-ink:#1B358A;--accent-field:#EAEEFA;--on-accent:#FFFFFF;
+--am:#7A4A06;--am-f:#FBF1DF;--ro:#9E1F1F;--ro-f:#FBE9E7;--ve:#2F5E12;--ve-f:#EBF3E1;--pu:#4C3FA8;--pu-f:#EEECFB;--co:#8E3517;--co-f:#FAEDE6;--rs:#8A2C52;--rs-f:#FAEAF1;
+--f-serif:ui-serif,"New York","Iowan Old Style","Charter","Source Serif Pro",Georgia,"Times New Roman",serif;
+--f-sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+--r:3px;
+/* alias de la v10 para compatibilidad */
+--surface-0:var(--paper);--surface-1:var(--paper-2);--border:var(--rule);--border-accent:var(--accent);--bg-accent:var(--accent-field);--text-primary:var(--ink);--text-secondary:var(--ink-2);--text-muted:var(--ink-3);--text-accent:var(--accent-ink);--radius:var(--r);--font-sans:var(--f-sans);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}
+html{color-scheme:light dark;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:var(--accent);color:var(--on-accent)}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--f-sans);-webkit-text-size-adjust:100%;caret-color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:18px 16px 56px;background:transparent}
+h1{font:600 26px/1.2 var(--f-serif);letter-spacing:-.012em;margin:6px 0 14px;padding-bottom:12px;border-bottom:2px solid var(--rule-strong);text-wrap:balance}
+h2{font:600 19px/1.3 var(--f-serif);margin:34px 0 12px;padding-top:12px;border-top:1px solid var(--rule-strong);text-wrap:balance}
+h3{font:600 16px/1.35 var(--f-serif);margin:18px 0 6px;text-wrap:balance}
+p{margin:0 0 12px;text-wrap:pretty}
+button{font:inherit;color:inherit;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,color .15s ease-out}
+button:active{transform:translateY(1px)}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* índice de canto */
+.tabs{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 0 0;border-bottom:2px solid var(--rule-strong);margin-bottom:16px;position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);scroll-snap-type:x proximity;scroll-padding-inline:56px}
+.tabs::-webkit-scrollbar{display:none}
+.tb{flex:0 0 auto;min-height:44px;padding:9px 15px 8px;border:1px solid var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;background:var(--paper-2);color:var(--ink-2);font:600 13px/1.2 var(--f-sans);white-space:nowrap;scroll-snap-align:start}
+.tb:hover{background:var(--accent-field);color:var(--accent-ink)}
+.tb.active{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+.tab{display:none}
+.tab.active{display:block}
+/* idea rectora */
+.hb{border-radius:var(--r);padding:12px 14px;margin:14px 0;border:1px solid var(--accent);background:var(--accent-field);font-size:15px;line-height:1.6}
+.hb-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);margin-bottom:6px}
+/* prerrequisitos (rol rosa) */
+.pre{border:1px solid var(--rs);border-radius:var(--r);background:var(--rs-f);padding:12px 14px;margin:16px 0}
+.pre-t{font:600 16px/1.35 var(--f-serif);color:var(--rs);margin-bottom:8px}
+.pre .acc{background:var(--paper);border-color:var(--rs)}
+.pre .acc-h{background:var(--paper)}
+.rem-line{font-size:13px;color:var(--ink-2);margin:8px 0;line-height:1.5}
+.chip-rs{display:inline-block;font:700 11px/1.4 var(--f-sans);padding:1px 7px;border:1px solid var(--rs);border-radius:2px;background:var(--rs-f);color:var(--rs);margin-right:6px;vertical-align:1px}
+/* cards */
+.card{background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;margin:12px 0;font-size:15px;line-height:1.6}
+.card p:last-child{margin-bottom:0}
+.card-t{font:600 16px/1.35 var(--f-serif);margin:0 0 6px}
+.card.fey{background:var(--co-f);border-color:var(--co)}
+.card.fey .card-t{color:var(--co)}
+.card.fey p{font:400 16px/1.6 var(--f-serif)}
+.card.ej{background:var(--paper);border-top:2px solid var(--rule-strong)}
+.badge{display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.02em;padding:2px 7px;border-radius:2px;margin:6px 4px 0 0;vertical-align:middle;border:1px solid currentColor}
+.b-az{background:var(--accent-field);color:var(--accent-ink)}
+.b-ro{background:var(--ro-f);color:var(--ro)}
+.b-am{background:var(--am-f);color:var(--am)}
+.b-ve{background:var(--ve-f);color:var(--ve)}
+.b-pu{background:var(--pu-f);color:var(--pu)}
+.b-co{background:var(--co-f);color:var(--co)}
+.b-rs{background:var(--rs-f);color:var(--rs)}
+.mini{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:6px 0}
+.mini.am{color:var(--am);background:var(--am-f);border:1px solid var(--am);border-radius:var(--r);padding:6px 9px}
+/* acordeones */
+.acc{border:1px solid var(--rule);border-radius:var(--r);margin:10px 0;overflow:hidden;background:var(--paper)}
+.acc-h{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;min-height:44px;padding:9px 14px;border:0;background:var(--paper-2);font:600 14.5px/1.35 var(--f-sans);text-align:left}
+.acc-h:hover{background:var(--accent-field)}
+.chev{transition:transform .2s;color:var(--accent-ink);flex:0 0 auto}
+.acc.op .chev{transform:rotate(180deg)}
+.acc-b{display:none;padding:10px 14px;font-size:15px;line-height:1.6}
+.acc.op .acc-b{display:block}
+.acc.no .acc-h{color:var(--ro)}
+/* tablas */
+.tw{overflow-x:auto;margin:12px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;font-variant-numeric:tabular-nums}
+th,td{border:0;border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
+thead th{font:700 14.5px/1.35 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong);background:var(--paper-2)}
+tbody tr:last-child>*{border-bottom:1px solid var(--rule-strong)}
+tbody th{font-weight:700;background:var(--paper-2)}
+/* mini-timeline */
+.tl{list-style:none;margin:12px 0;padding:0 0 0 20px;border-left:2px solid var(--accent)}
+.tl>li{position:relative;margin:0 0 12px;padding:9px 12px;background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);font-size:14.5px;line-height:1.55}
+.tl>li::before{content:"";position:absolute;left:-27px;top:13px;width:12px;height:12px;border-radius:1px;background:var(--accent);box-shadow:0 0 0 3px var(--paper)}
+.tl b{font-family:var(--f-serif)}
+/* simulador de recall */
+.rc{border:1px solid var(--rule-strong);border-radius:var(--r);padding:14px 16px;margin:24px 0;background:var(--paper)}
+.rc-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);padding-bottom:8px;margin-bottom:10px;border-bottom:1px solid var(--rule)}
+.rc-count{font:600 13px/1.4 var(--f-sans);color:var(--ink-3);font-variant-numeric:tabular-nums;margin-bottom:8px}
+.rc-card{border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);padding:14px;min-height:110px}
+.rc-q{font:400 16px/1.6 var(--f-serif);margin:0}
+.rc-a{margin:12px 0 0;padding-top:10px;border-top:1px dashed var(--accent);font-size:15px;line-height:1.6}
+.rc-a b{color:var(--accent-ink)}
+.rc-hint{font-size:13px;color:var(--am);margin-top:8px}
+.rc-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.go{min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent);color:var(--on-accent);font:600 14px/1.2 var(--f-sans)}
+.go:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+.gr{min-height:44px;padding:8px 14px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper);font:600 14px/1.2 var(--f-sans)}
+.gr.ok{border-color:var(--ve);color:var(--ve)}
+.gr.mid{border-color:var(--am);color:var(--am)}
+.gr.ko{border-color:var(--ro);color:var(--ro)}
+.gr.ok:hover{background:var(--ve-f)}.gr.mid:hover{background:var(--am-f)}.gr.ko:hover{background:var(--ro-f)}
+.ghost{min-height:44px;padding:8px 14px;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);font:600 14px/1.2 var(--f-sans);color:var(--ink-2)}
+.rc-end{margin-top:12px;padding:12px 14px;border-radius:var(--r);border:1px solid var(--rule);font-size:15px}
+.rc-end.ok{background:var(--ve-f);border-color:var(--ve);color:var(--ve)}
+.rc-end.rep{background:var(--am-f);border-color:var(--am);color:var(--am)}
+.gloss{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:18px 0 0;padding-top:8px;border-top:1px solid var(--rule)}
+.vanc{font-size:12.5px;line-height:1.5;padding-left:24px}
+.vanc li{margin:5px 0;word-break:break-word}
+.vanc li::marker{color:var(--ink-3);font-variant-numeric:tabular-nums}
+@media (min-width:700px){body{font-size:15.5px}.wrap{padding:22px 24px 64px}h1{font-size:28px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- /DEF_HEAD -->
+<h1>Definiciones · Trastornos del estado de ánimo</h1>
+<p class="mini">Paso 1 del ABP, caso Trastornos del estado de ánimo (paciente con crisis al conducir, consulta externa sin posibilidad de derivar): aclarar términos, sin resolver el caso. Cada pestaña lleva su base morfofuncional, su definición y un simulador de recall.</p>
+<nav class="tabs">
+<button class="tb active" onclick="show('t1',this)">Trastornos del ánimo</button>
+<button class="tb" onclick="show('t2',this)">Angustia</button>
+<button class="tb" onclick="show('t3',this)">Opresión precordial</button>
+<button class="tb" onclick="show('t4',this)">Palpitaciones</button>
+<button class="tb" onclick="show('t5',this)">Sudoración y náuseas</button>
+<button class="tb" onclick="show('t6',this)">Preinfarto</button>
+<button class="tb" onclick="show('t7',this)">Estrés</button>
+<button class="tb" onclick="show('t8',this)">Stresstabs</button>
+<button class="tb" onclick="show('t9',this)">Xanax (alprazolam)</button>
+<button class="tb" onclick="show('tg',this)">Repaso global</button>
+</nav>
+<section class="tab active" id="t1">
+<h2>Trastornos del estado de ánimo</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Alteraciones persistentes del ánimo, de tristeza o de exaltación, que cambian la forma de sentir, pensar y actuar más allá de lo esperable.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Sistema límbico</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Criterio de agrupación.</b> Conjunto de estructuras del lóbulo temporal medial, la corteza frontal medial y el diencéfalo que procesan la emoción, la motivación y la memoria emocional, y conectan lo que se siente con la respuesta del cuerpo [1].</p>
+<div class="tw"><table><thead><tr><th>Elemento</th><th>Acción o papel</th><th>Qué falla si claudica</th></tr></thead><tbody>
+<tr><td><b>Amígdala</b></td><td>Asigna valor emocional a un estímulo y dispara la respuesta de alarma.</td><td>Se pierde el reconocimiento de la amenaza o, al contrario, la alarma se dispara sin motivo.</td></tr>
+<tr><td><b>Hipocampo</b></td><td>Fija la memoria de los hechos y los sitúa en su contexto.</td><td>Se pierde el contexto de los recuerdos emocionales.</td></tr>
+<tr><td><b>Corteza prefrontal ventromedial</b></td><td>Regula y frena la respuesta de la amígdala; interviene en la valoración y la decisión.</td><td>La emoción se desborda y se pierde el control de la respuesta.</td></tr>
+<tr><td><b>Cíngulo anterior</b></td><td>Integra la emoción con la atención y el dolor; detecta el conflicto.</td><td>Se altera la motivación y la vivencia afectiva del dolor.</td></tr>
+<tr><td><b>Hipotálamo</b></td><td>Traduce la emoción en respuesta del cuerpo: sistema nervioso autónomo y hormonas.</td><td>Se desacopla la emoción de su correlato corporal (sueño, apetito, energía).</td></tr>
+</tbody></table></div>
+<p><b>Jerarquía.</b> La corteza prefrontal ventromedial ejerce el control de arriba abajo sobre la amígdala; por eso su fallo pesa más: la respuesta emocional pierde su freno.</p>
+<p><b>Correlato clínico.</b> Si el control prefrontal sobre la amígdala falla, la emoción se vuelve desproporcionada y persistente; se explora en la entrevista con el examen mental: afecto, ánimo y su congruencia con la situación.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Sistemas monoaminérgicos: serotonina, noradrenalina y dopamina</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Criterio de agrupación.</b> Tres grupos de neuronas con cuerpos en el tronco encefálico que proyectan de forma difusa a todo el encéfalo y modulan el ánimo, la activación y la motivación. Cada neurona sintetiza su monoamina, la libera en la sinapsis, la recapta con un transportador y la degrada con la monoaminooxidasa (MAO) [1] [2].</p>
+<div class="tw"><table><thead><tr><th>Elemento</th><th>Núcleo de origen</th><th>Acción o papel</th><th>Qué falla si claudica</th></tr></thead><tbody>
+<tr><td><b>Serotonina</b></td><td>Núcleos del rafe</td><td>Modula el ánimo, el sueño, el apetito y la inhibición de la respuesta emocional.</td><td>Alteran el sueño, el apetito y el control de la emoción.</td></tr>
+<tr><td><b>Noradrenalina</b></td><td>Locus coeruleus</td><td>Sostiene la vigilia, la atención y la respuesta de alerta.</td><td>Bajan la energía y la atención; la activación se desregula.</td></tr>
+<tr><td><b>Dopamina</b></td><td>Área tegmental ventral</td><td>Impulsa la motivación y la sensación de recompensa.</td><td>Se pierde el interés y el placer (anhedonia).</td></tr>
+</tbody></table></div>
+<p><b>Síntesis, recaptación y degradación.</b> Los precursores aminoácidos se convierten en monoamina dentro de la neurona. Tras liberarse, el transportador de la membrana presináptica la devuelve al terminal, donde la MAO la degrada. Esa recaptación termina la señal sináptica.</p>
+<p><b>Jerarquía.</b> Ninguna sustituye a las otras: lo que pesa es el equilibrio entre las tres vías y su conexión con el sistema límbico.</p>
+<p><b>Correlato clínico.</b> Si la señal monoaminérgica disminuye, se alteran el sueño, la energía, el apetito y el interés; se explora preguntando por esas funciones en la entrevista.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Afecto, ánimo y emoción como funciones psíquicas</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Estímulo y valoración.</b> Un hecho interno o externo es valorado por la amígdala y la corteza prefrontal como relevante para la persona.</li>
+<li><b>Emoción.</b> Respuesta breve y reactiva, con componente corporal mediado por el hipotálamo y el sistema nervioso autónomo.</li>
+<li><b>Afecto.</b> Expresión observable de la emoción en el momento: gesto, voz, postura.</li>
+<li><b>Ánimo.</b> Estado emocional sostenido durante horas o días, de fondo, que colorea la vivencia de la persona.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> El ánimo fluctúa con el contexto y recupera su nivel de base; el afecto es congruente con lo que la persona vive y varía en el tiempo [3].</p>
+<p><b>Qué lo rompe.</b> El punto vulnerable es el paso de emoción a ánimo: cuando el estado de fondo queda fijo, deja de seguir al contexto y cambia el modo de funcionar.</p>
+<p><b>Correlato clínico.</b> Afecto y ánimo se exploran en el examen mental: el afecto se observa en la entrevista y el ánimo se pregunta; la señal de desviación es un estado fijo, incongruente o que no varía.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Kandel et al. 2021 [1]</span> <span class="badge b-pu">Goodman y Gilman 2023 [2]</span> <span class="badge b-pu">Kaplan y Sadock 2022 [3]</span> Neurociencia, farmacología básica y psiquiatría.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Grupo de trastornos mentales cuya alteración central es el ánimo: tristeza o pérdida de interés en los depresivos, y exaltación o irritabilidad en los bipolares. El DSM-5-TR los presenta como capítulos separados, el de trastornos depresivos y el de trastornos bipolares y relacionados.</p>
+<p><span class="badge b-pu">DSM-5-TR 2022 [4]</span></p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Todos tenemos emociones que suben y bajan con lo que nos pasa, como olas. El ánimo es el nivel del mar: de fondo, durante días. Si el nivel queda fijo muy abajo o muy arriba y ya no responde a lo que ocurre, y eso cambia el sueño, la energía y la forma de pensar, hablamos de un trastorno del estado de ánimo.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Marta, de 40 años, lleva semanas sin ganas de hacer nada, duerme mal y siente que nada le da placer, aunque en su vida no ha cambiado nada. Otra persona, Luis, pasa días con energía excesiva, duerme poco y habla sin parar. En ambas el estado de fondo ha cambiado y se mantiene, no sigue al contexto.</p></div>
+
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span>Mecanismo mínimo</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Paso causal.</b> La señal monoaminérgica hacia el sistema límbico se altera y la corteza prefrontal pierde el control sobre la amígdala.</li>
+<li><b>Quién lo ejecuta.</b> Las vías de serotonina, noradrenalina y dopamina modulan circuitos límbicos que regulan el ánimo.</li>
+<li><b>Consecuencia.</b> El ánimo queda fijo, y se alteran el sueño, la energía, el apetito y el interés.</li>
+</ol>
+<p class="mini">Correlato clínico: ánimo persistente y cambios del sueño, la energía y el apetito en el examen mental.</p>
+</div></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Trastornos de ansiedad</b></td><td>Su alteración central es el miedo o la preocupación excesiva, no el ánimo; ambos pueden coexistir.</td></tr>
+<tr><td><b>Tristeza normal y duelo</b></td><td>Responden a un hecho y siguen el contexto; el trastorno persiste, cambia el funcionamiento y no sigue lo que ocurre.</td></tr>
+<tr><td><b>Ciclotimia</b></td><td>Es un trastorno bipolar de fluctuaciones leves y crónicas del ánimo; no equivale al grupo completo.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t1"><div class="rc-t">Simulador · Recall de trastornos del estado de ánimo</div><div class="rc-count" id="rc-t1-n"></div><div class="rc-card" id="rc-t1-c"></div><div class="rc-btns" id="rc-t1-b"></div><div id="rc-t1-e"></div></div>
+
+<p class="gloss">Siglas: DSM-5-TR, Manual diagnóstico y estadístico de los trastornos mentales, 5.ª edición, texto revisado; MAO, monoaminooxidasa.</p>
+</section>
+<section class="tab" id="t2">
+<h2>Angustia (miedo a perder el control)</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Vivencia de amenaza inminente con manifestaciones del cuerpo, en la que la persona teme perder el control o volverse loca.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Circuito del miedo: tálamo, amígdala, hipotálamo y tronco</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Estímulo.</b> Un estímulo potencialmente amenazante llega al tálamo sensorial.</li>
+<li><b>Vía rápida.</b> El tálamo envía una señal directa a la amígdala, que valora la amenaza antes de la percepción consciente. Rama lenta: el tálamo también envía la señal a la corteza sensorial, que analiza el estímulo con más detalle y lo remite a la amígdala [1].</li>
+<li><b>Activación.</b> La amígdala activa el hipotálamo y los núcleos del tronco encefálico.</li>
+<li><b>Respuesta del cuerpo.</b> El hipotálamo y el tronco activan el sistema nervioso simpático: sube la frecuencia cardiaca, se acelera la respiración y aparece el temblor.</li>
+<li><b>Freno.</b> La corteza prefrontal y el hipocampo modulan la respuesta y la ajustan al contexto.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> La respuesta es breve, proporcional a la amenaza real y cede al desaparecer el estímulo; el miedo adaptativo prepara la huida o la defensa.</p>
+<p><b>Qué lo rompe.</b> El punto más vulnerable es el freno prefrontal sobre la amígdala: sin él, la alarma se dispara con estímulos inofensivos o sin estímulo claro.</p>
+<p><b>Correlato clínico.</b> Si la alarma se activa sin amenaza real, se observan taquicardia, taquipnea, temblor y sudoración junto con miedo intenso; se explora con la entrevista y la toma de signos vitales durante el episodio.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Interocepción y corteza insular</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> La corteza insular está oculta en la profundidad del surco lateral, cubierta por los opérculos frontal, parietal y temporal. La interocepción es la percepción de las señales internas del cuerpo, como el latido, la respiración y el estado visceral [5].</p>
+<p><b>Cómo está hecha.</b> Es corteza de varias capas, con una parte posterior que recibe la información visceral y una parte anterior que la integra con la emoción y la conciencia. Recibe aferencias viscerales por el tálamo y se conecta con la amígdala y la corteza cingulada anterior [1].</p>
+<p><b>Qué permite hacer.</b> Convierte las señales viscerales en sensación consciente (el corazón late fuerte, falta el aire) y les da una coloración emocional. Su límite es el umbral: una señal débil no llega a la conciencia.</p>
+<p><b>De qué depende.</b> De las aferencias vagales y espinales por el núcleo del tracto solitario y el tálamo, y de la irrigación de la arteria cerebral media.</p>
+<p><b>Correlato clínico.</b> Si la ínsula amplifica la señal visceral, un latido normal se percibe como amenaza y alimenta el miedo; se explora preguntando qué sensaciones corporales aparecen y cómo se interpretan.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Trastornos del estado de ánimo»: sistema límbico. La amígdala valora la amenaza y la corteza prefrontal ventromedial frena su respuesta.</p>
+
+<p class="mini"><span class="badge b-pu">Kandel et al. 2021 [1]</span> <span class="badge b-pu">Snell 2025 [5]</span> Neurociencia y neuroanatomía clínica.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Vivencia de miedo intenso con amenaza inminente y síntomas del cuerpo. El DSM-5-TR la recoge en el ataque de pánico, un episodio brusco con pico en minutos que incluye, entre sus síntomas, el «miedo a perder el control o a volverse loco».</p>
+<p><span class="badge b-pu">DSM-5-TR 2022 [4]</span></p>
+<p class="mini am">Interpretación tomada: «angustia» del caso se entiende como ansiedad con vivencia corporal (uso de la tradición hispana). Alternativa: uso coloquial como malestar emocional sin crisis. No es una entidad diagnóstica por sí sola.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>El cerebro tiene una alarma que prepara al cuerpo para huir. Cuando suena sin peligro real, el corazón late fuerte y el pecho se aprieta, y la persona lo interpreta como algo grave. Ese miedo a perder el control, a enloquecer o a morir es lo que muchos pacientes llaman angustia: la alarma suena y la mente teme lo que sigue.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Ana, de 35 años, estaba en el supermercado cuando sintió que el corazón se le salía, le temblaban las manos y pensó que se estaba volviendo loca y que no podía controlar su cabeza. El episodio alcanzó su máximo en minutos. Esa vivencia, con el miedo a perder el control, es lo que se reconoce como angustia.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Ansiedad generalizada</b></td><td>Es preocupación excesiva y mantenida durante meses; la angustia aquí es un episodio brusco con pico en minutos.</td></tr>
+<tr><td><b>Miedo adaptativo</b></td><td>Responde a una amenaza real y es proporcional; la angustia aparece sin peligro proporcional.</td></tr>
+<tr><td><b>Despersonalización</b></td><td>Es sentirse separado de uno mismo, como observador de la propia mente; el miedo a perder el control es temor, no extrañeza.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t2"><div class="rc-t">Simulador · Recall de angustia</div><div class="rc-count" id="rc-t2-n"></div><div class="rc-card" id="rc-t2-c"></div><div class="rc-btns" id="rc-t2-b"></div><div id="rc-t2-e"></div></div>
+
+<p class="gloss">Siglas: DSM-5-TR, Manual diagnóstico y estadístico de los trastornos mentales, 5.ª edición, texto revisado.</p>
+</section>
+<section class="tab" id="t3">
+<h2>Opresión precordial</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Descriptor del dolor torácico anterior de tipo opresivo, como peso o presión, sentido sobre la región del corazón.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Precordio y contenido mediastínico</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> El precordio es la región de la pared torácica anterior que cubre el corazón, entre el esternón y el ápex, en el 5.º espacio intercostal izquierdo. El corazón ocupa el mediastino medio, dentro del pericardio, y junto a él están los grandes vasos, el esófago, la tráquea y los nervios frénico y vago [6].</p>
+<p><b>Cómo está hecha.</b> Hacia fuera, la pared anterior está formada por piel, músculos pectorales, esternón y cartílagos costales. Hacia dentro, el pericardio fibroso envuelve el corazón y la pleura cubre los pulmones a ambos lados; todo se sitúa muy cerca.</p>
+<p><b>Qué permite hacer.</b> Protege el corazón y permite explorarlo por inspección, palpación y auscultación en el precordio. Su límite es la proximidad: varias estructuras comparten la misma región, y el dolor de una se atribuye a otra.</p>
+<p><b>De qué depende.</b> La pared recibe inervación somática de los nervios intercostales (T1–T11); las vísceras mediastínicas, inervación autónoma por los plexos cardíaco y esofágico. El corazón se irriga por las arterias coronarias.</p>
+<p><b>Correlato clínico.</b> Una zona precordial con muchas estructuras vecinas hace que el dolor de corazón, esófago, pleura o pared se parezcan; se explora con la palpación de la pared, la auscultación y la relación del dolor con el movimiento y la respiración.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Dolor visceral y dolor referido</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Estímulo.</b> La isquemia o la distensión de una víscera activa nociceptores viscerales que conducen por fibras simpáticas.</li>
+<li><b>Entrada medular.</b> Las fibras viscerales de T1–T4 entran en el asta dorsal en los mismos segmentos que las fibras somáticas del tórax y del brazo izquierdo [7].</li>
+<li><b>Convergencia.</b> Las neuronas de segundo orden reciben ambas aferencias; el cerebro no distingue el origen y proyecta el dolor a la pared torácica, la mandíbula o el brazo.</li>
+<li><b>Percepción.</b> El dolor visceral se siente profundo, difuso, opresivo, con sudoración y náuseas, al contrario del somático, que es localizado y se agrava al tocar o mover.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> El dolor visceral no se desencadena por estímulos fisiológicos habituales: aparece cuando hay isquemia, distensión o inflamación.</p>
+<p><b>Qué lo rompe.</b> El punto vulnerable es la convergencia viscerosomática: por ella el dolor de una víscera se proyecta fuera de su sitio y confunde el origen.</p>
+<p><b>Correlato clínico.</b> El dolor visceral cardiaco se irradia al brazo izquierdo o a la mandíbula y no cambia con la palpación ni la postura; se explora palpando la pared y registrando la irradiación.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Aporte y demanda de oxígeno del miocardio y circulación coronaria</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Aporte.</b> Las arterias coronarias derecha e izquierda nacen de la raíz aórtica y reparten sangre oxigenada al miocardio.</li>
+<li><b>Perfusión en diástole.</b> La sangre fluye sobre todo en diástole, cuando el músculo se relaja y no comprime los vasos; por eso la diástole determina el flujo [7].</li>
+<li><b>Extracción.</b> El miocardio extrae casi todo el oxígeno que le llega, por lo que, para ganar oxígeno, solo puede aumentar el flujo.</li>
+<li><b>Demanda.</b> Aumenta con la frecuencia cardiaca, la contractilidad y la tensión de la pared del ventrículo.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> Aporte y demanda se equilibran: si la demanda sube, las coronarias se dilatan y el flujo aumenta en proporción.</p>
+<p><b>Qué lo rompe.</b> El punto vulnerable es la reserva de flujo: con una arteria estrecha, el flujo no puede subir cuando la demanda crece, y el miocardio queda sin oxígeno suficiente.</p>
+<p><b>Correlato clínico.</b> El desequilibrio produce dolor opresivo precordial desencadenado por el esfuerzo o el estrés; se explora preguntando qué lo provoca y cuánto dura, y con el electrocardiograma.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Moore (Dalley y Agur) 2023 [6]</span> <span class="badge b-pu">Guyton y Hall 2021 [7]</span> Anatomía y fisiología médica.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Descriptor semiológico del dolor torácico anterior de tipo opresivo, referido como presión, peso o aplastamiento en la región precordial o retroesternal. Describe la característica del síntoma; no indica por sí mismo su causa cardiaca.</p>
+<p><span class="badge b-pu">AHA/ACC 2021 [8]</span></p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Es la forma en que algunas personas describen el dolor del pecho: no como pinchazo, sino como si alguien apretara o pusiera un peso encima. «Precordial» solo dice dónde: delante del corazón. Es una palabra para describir el síntoma, no un diagnóstico; varias causas distintas pueden dar esa misma sensación.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Pedro, de 55 años, dice que siente «una piedra en el pecho» que lo aprieta, sin poder señalar un punto exacto con un dedo. El dolor no cambia al respirar profundo ni al tocarse el tórax. Esa presión difusa, profunda y sin relación con el movimiento es lo que se reconoce como opresión precordial.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Dolor pleurítico</b></td><td>Punzante, empeora con la inspiración profunda y la tos; la opresión es sorda y no cambia con la respiración.</td></tr>
+<tr><td><b>Dolor parietal u osteomuscular</b></td><td>Se localiza con un dedo y se reproduce al palpar o mover la pared; la opresión es difusa y no se reproduce.</td></tr>
+<tr><td><b>Pirosis</b></td><td>Ardor retroesternal ascendente, ligado a las comidas y la posición; la opresión es presión, no quemazón.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t3"><div class="rc-t">Simulador · Recall de opresión precordial</div><div class="rc-count" id="rc-t3-n"></div><div class="rc-card" id="rc-t3-c"></div><div class="rc-btns" id="rc-t3-b"></div><div id="rc-t3-e"></div></div>
+
+<p class="gloss">Siglas: AHA/ACC, American Heart Association y American College of Cardiology; T1, T4, T11, segmentos medulares torácicos.</p>
+</section>
+<section class="tab" id="t4">
+<h2>Palpitaciones</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Sensación de sentir el propio latido; nombra lo que percibe la persona, no necesariamente una arritmia.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Sistema de conducción cardiaco</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Criterio de agrupación.</b> Cardiomiocitos modificados, pobres en miofibrillas, que generan el impulso y lo conducen en orden desde las aurículas hasta los ventrículos, de modo que las cámaras se contraigan en secuencia [7].</p>
+<div class="tw"><table><thead><tr><th>Elemento</th><th>Acción o papel</th><th>Irrigación</th><th>Qué falla si claudica</th></tr></thead><tbody>
+<tr><td><b>Nodo sinusal</b></td><td>Marcapasos dominante, en la aurícula derecha junto a la vena cava superior; su ritmo propio (unos 70–80 por minuto) es el más rápido [7].</td><td>Arteria del nodo sinusal, rama habitual de la coronaria derecha [6]</td><td>Otro foco asume el mando: ritmo más lento o irregular.</td></tr>
+<tr><td><b>Nodo auriculoventricular (AV)</b></td><td>Retrasa el impulso unas décimas de segundo para que las aurículas vacíen en los ventrículos antes de su sístole.</td><td>Arteria del nodo AV, habitualmente de la coronaria derecha [6]</td><td>El impulso no pasa o pasa tarde: pulso lento o latidos auriculares sin respuesta ventricular.</td></tr>
+<tr><td><b>Haz de His</b></td><td>Cruza el esqueleto fibroso y es la única vía eléctrica normal entre aurículas y ventrículos.</td><td>Arteria del nodo AV y ramas septales de la descendente anterior [6]</td><td>Interrupción de la comunicación auriculoventricular.</td></tr>
+<tr><td><b>Ramas derecha e izquierda</b></td><td>Llevan el impulso por el tabique interventricular hacia cada ventrículo.</td><td>Ramas septales de la descendente anterior y de la descendente posterior [6]</td><td>Un ventrículo se activa tarde y la contracción pierde sincronía.</td></tr>
+<tr><td><b>Red de Purkinje</b></td><td>Fibras subendocárdicas de conducción muy rápida que despolarizan casi a la vez ambos ventrículos [7].</td><td>Capilares subendocárdicos, alimentados por las coronarias</td><td>Activación ventricular lenta y desordenada.</td></tr>
+</tbody></table></div>
+<p><b>Jerarquía.</b> El elemento dominante es el nodo sinusal, porque su ritmo propio es el más rápido y silencia a los demás. Su fallo pesa más: los marcapasos inferiores descargan más lento, de modo que cuanto más abajo falla la cadena, más lento es el ritmo de escape [7].</p>
+<p><b>Correlato clínico.</b> Si el nodo AV bloquea el paso, los ventrículos laten con un ritmo de escape lento y se palpa un pulso lento; si un foco ectópico dispara antes de tiempo, se palpa un latido adelantado seguido de una pausa. Se explora con el pulso radial y la auscultación cardiaca.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Sistema nervioso autónomo: divisiones, transmisores y receptores</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Criterio de agrupación.</b> Vías eferentes involuntarias de dos neuronas que regulan corazón, vasos, glándulas y vísceras. El simpático predomina en la acción y el esfuerzo; el parasimpático, en el reposo. En ambos, la neurona preganglionar libera acetilcolina (ACh) sobre receptores nicotínicos del ganglio [7].</p>
+<div class="tw"><table><thead><tr><th>Elemento</th><th>Transmisor y receptor</th><th>Efecto en el órgano</th><th>Qué falla si claudica</th></tr></thead><tbody>
+<tr><td><b>Receptor nicotínico ganglionar</b></td><td>ACh en el ganglio de ambas divisiones</td><td>Transmite la señal de la neurona preganglionar a la posganglionar.</td><td>Se interrumpen a la vez las dos divisiones.</td></tr>
+<tr><td><b>Receptor β1</b></td><td>Noradrenalina (NA) simpática</td><td>Corazón: acelera el nodo sinusal y aumenta la fuerza del latido.</td><td>Frecuencia y fuerza cardiacas bajas.</td></tr>
+<tr><td><b>Receptor muscarínico M2</b></td><td>ACh parasimpática (nervio vago)</td><td>Corazón: frena nodo sinusal y nodo AV.</td><td>Sin freno vagal, la frecuencia sube.</td></tr>
+<tr><td><b>Receptor α1</b></td><td>NA simpática</td><td>Vasos: contrae el músculo liso y eleva la resistencia.</td><td>Vasodilatación y caída de la presión al ponerse de pie.</td></tr>
+<tr><td><b>Receptor β2</b></td><td>Adrenalina circulante y NA</td><td>Vasos de músculo esquelético y bronquios: relaja el músculo liso.</td><td>Menos vasodilatación y broncodilatación en el esfuerzo.</td></tr>
+<tr><td><b>Receptor muscarínico M3</b></td><td>ACh parasimpática</td><td>Tubo digestivo: contrae la pared y aumenta secreciones; glándulas: secreción.</td><td>Motilidad y secreciones disminuidas.</td></tr>
+<tr><td><b>Glándula sudorípara ecrina</b></td><td>ACh simpática sobre receptor muscarínico</td><td>Secreta sudor.</td><td>Piel seca sin sudor.</td></tr>
+</tbody></table></div>
+<p><b>Jerarquía.</b> En el corazón en reposo predomina el tono vagal, que mantiene la frecuencia por debajo del ritmo propio del nodo sinusal; al retirarse el freno vagal y activarse β1, la frecuencia sube con rapidez [7].</p>
+<p><b>Correlato clínico.</b> Una descarga simpática produce taquicardia, latido más fuerte, piel pálida y fría con sudor; se explora con el pulso, la presión arterial y la inspección de la piel.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [7]</span> Tratado de fisiología médica, 14.ª edición. <span class="badge b-pu">Moore (Dalley y Agur) 2023 [6]</span> Anatomía con orientación clínica, 9.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Percepción consciente y desagradable del propio latido cardiaco. Se describe como golpeteo, aleteo, salto o pausa en el pecho, el cuello o la garganta. Es un síntoma subjetivo: puede acompañarse de una alteración del ritmo o no.</p>
+<p><span class="badge b-pu">EHRA 2011 [9]</span></p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Normalmente el corazón late sin que lo notemos, como el motor de un refrigerador que ya no oímos. Hay palpitación cuando la persona empieza a notar ese latido: porque va más rápido, más fuerte, se salta un tiempo o porque la atención se vuelve hacia el pecho. Lo que cuenta la persona es la percepción; lo que haga el ritmo se comprueba aparte, con el pulso y un registro.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Una mujer de 35 años dice: «siento que el corazón me golpea la garganta» durante unos minutos y luego se calma. Describe lo que percibe, no cuánto latía. Al tomarle el pulso en ese momento puede estar acelerado, irregular o normal.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Taquicardia (objetiva)</b></td><td>Es un hallazgo medible: frecuencia cardiaca elevada en el pulso o el registro. Puede existir sin palpitaciones y las palpitaciones pueden darse con frecuencia normal.</td></tr>
+<tr><td><b>Extrasístole</b></td><td>Es un latido prematuro del corazón, un hecho eléctrico; la palpitación es cómo lo percibe la persona, a menudo como «salto» o pausa.</td></tr>
+<tr><td><b>Latido normal percibido</b></td><td>Notar el pulso al acostarse sobre el lado izquierdo o al hacer ejercicio no equivale a un síntoma si no es molesto ni desproporcionado.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t4"><div class="rc-t">Simulador · Recall de palpitaciones</div><div class="rc-count" id="rc-t4-n"></div><div class="rc-card" id="rc-t4-c"></div><div class="rc-btns" id="rc-t4-b"></div><div id="rc-t4-e"></div></div>
+
+<p class="gloss">Siglas: ACh, acetilcolina; NA, noradrenalina; AV, auriculoventricular; α1, β1, β2, subtipos de receptor adrenérgico; M2, M3, subtipos de receptor muscarínico; EHRA, European Heart Rhythm Association.</p>
+</section>
+<section class="tab" id="t5">
+<h2>Sudoración y náuseas</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Síntomas neurovegetativos acompañantes: el sistema nervioso autónomo activa las glándulas sudoríparas y el centro del vómito.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Glándula sudorípara ecrina e inervación simpática colinérgica</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Glándula tubular simple de la dermis que abre su conducto en la superficie de la piel. Está en casi todo el cuerpo y es más densa en palmas, plantas, axilas y frente [7].</p>
+<p><b>Cómo está hecha.</b> Tiene un ovillo secretor en la dermis profunda y un conducto helicoidal hasta la epidermis. El ovillo produce un líquido parecido al plasma; el conducto reabsorbe sodio y cloro, de modo que el sudor sale más diluido que el plasma. Un plexo capilar rodea el ovillo [7].</p>
+<p><b>Qué permite hacer.</b> Secretar sudor. Al evaporarse enfría la piel y baja la temperatura corporal; la glándula también responde a estímulos emocionales, sobre todo en palmas, axilas y frente. Su límite es la reposición de agua y sal [7].</p>
+<p><b>De qué depende.</b> De fibras simpáticas posganglionares amielínicas que, por excepción, liberan acetilcolina y no noradrenalina; esta actúa sobre receptores muscarínicos de la glándula. El hipotálamo regula la señal térmica; la corteza límbica, la emocional [7].</p>
+<p><b>Correlato clínico.</b> Si el simpático se activa, la piel se humedece, a menudo fría y pálida; si la inervación o la glándula fallan, la piel queda seca. Se explora por inspección y palpación de la piel, en palmas y frente.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Reflejo del vómito: área postrema, núcleo del tracto solitario y centro emético</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Aferencias.</b> Llegan señales desde el tubo digestivo por el nervio vago, desde el laberinto y la corteza, y desde la sangre y el líquido cefalorraquídeo (químicas) sobre el área postrema.</li>
+<li><b>Área postrema.</b> Zona del piso del cuarto ventrículo sin barrera hematoencefálica completa: detecta sustancias circulantes y las envía al núcleo del tracto solitario [7].</li>
+<li><b>Núcleo del tracto solitario.</b> Recibe las aferencias vagales y glosofaríngeas y las integra en el bulbo raquídeo.</li>
+<li><b>Centro emético.</b> Red de la formación reticular bulbar que coordina la secuencia motora: salivación, náuseas, cierre de la glotis, contracción del diafragma y de los músculos abdominales, y relajación del esfínter esofágico inferior.</li>
+<li><b>Eferencias.</b> Vómito, con activación autonómica acompañante.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> La náusea suele preceder al vómito y se acompaña de salivación, palidez, sudor frío y aumento de la frecuencia cardiaca, por la activación autonómica del centro [7].</p>
+<p><b>Qué lo rompe.</b> El punto vulnerable es el área postrema, porque no tiene barrera completa y recibe sustancias circulantes; también se dispara por la distensión digestiva vía vago.</p>
+<p><b>Correlato clínico.</b> Náusea con sudor frío y palidez; se explora con la anamnesis del momento de aparición y la inspección del estado de hidratación.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Palpitaciones»: sistema nervioso autónomo. La neurona simpática posganglionar libera noradrenalina, salvo en la glándula sudorípara, donde libera acetilcolina.</p>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Angustia»: circuito del miedo. La amígdala activa el hipotálamo y el tronco, y de ahí sale la respuesta simpática del cuerpo.</p>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [7]</span> Tratado de fisiología médica, 14.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Diaforesis es la sudoración profusa que no obedece al calor ni al ejercicio. La náusea es la sensación desagradable de necesidad inminente de vomitar, a menudo con salivación, palidez y malestar epigástrico. Ambas forman parte de la respuesta neurovegetativa.</p>
+<p><span class="badge b-pu">Harrison 2025 [10]</span></p>
+<p class="mini">En el ataque de pánico, el DSM-5-TR [4] enumera la sudoración y las náuseas o el malestar abdominal entre sus síntomas.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Cuando el cerebro cree que hay peligro, enciende el sistema de «alarma» del cuerpo. Una de sus órdenes llega a las glándulas sudoríparas de la piel, que sueltan sudor aunque no haga calor. Otra llega al bulbo, donde está el centro del vómito, y el estómago se siente revuelto aunque no haya comido nada raro. Son efectos de una misma alarma, no dos enfermedades.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Un hombre de 40 años cuenta que, durante un episodio de miedo intenso, empapó la camisa con la temperatura ambiente agradable y sintió asco, como si fuera a vomitar, sin haber comido nada. Palmas húmedas, piel pálida. El sudor y la náusea aparecieron junto al miedo, no por calor ni por la comida.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Sudoración termorreguladora</b></td><td>Responde a calor o ejercicio, es proporcionada y se acompaña de piel caliente y enrojecida; la diaforesis es desproporcionada y la piel suele ser fría y pálida.</td></tr>
+<tr><td><b>Sofocos</b></td><td>Sensación súbita de calor con enrojecimiento facial y sudor, de curso característico; la diaforesis neurovegetativa se asocia a piel fría y palidez.</td></tr>
+<tr><td><b>Náusea de origen digestivo</b></td><td>Se relaciona con comida, dolor abdominal o alteración del tránsito; la neurovegetativa aparece con la activación autonómica, sin causa digestiva evidente.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t5"><div class="rc-t">Simulador · Recall de sudoración y náuseas</div><div class="rc-count" id="rc-t5-n"></div><div class="rc-card" id="rc-t5-c"></div><div class="rc-btns" id="rc-t5-b"></div><div id="rc-t5-e"></div></div>
+
+<p class="gloss">Siglas: DSM-5-TR, Manual diagnóstico y estadístico de los trastornos mentales, 5.ª edición revisada.</p>
+</section>
+<section class="tab" id="t6">
+<h2>Preinfarto</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Palabra popular, no diagnóstico: suele apuntar a la isquemia del miocardio todavía sin necrosis demostrada.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Isquemia y necrosis miocárdica en el tiempo</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Desequilibrio.</b> El flujo coronario no alcanza lo que el músculo necesita: disminuye el aporte de oxígeno o aumenta la demanda.</li>
+<li><b>Isquemia reversible.</b> Las células cambian a metabolismo anaerobio, pierden fuerza de contracción y envían señales de dolor; si el flujo vuelve, se recuperan [7].</li>
+<li><b>Lesión celular.</b> Si la falta de oxígeno continúa, falla la bomba de iones, la célula se hincha y su membrana se rompe.</li>
+<li><b>Necrosis.</b> La célula muerta libera su contenido, entre ellas proteínas cardiacas que se detectan en la sangre. Empieza en el subendocardio, la capa más lejana a la luz y más expuesta a la compresión durante la sístole.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> Un miocardio con riego suficiente no se necrosa; las células toleran una isquemia breve y reversible, pero el daño pasa a ser irreversible si la isquemia se mantiene del orden de decenas de minutos [10].</p>
+<p><b>Qué lo rompe.</b> El punto más vulnerable es el subendocardio, que recibe menos flujo y soporta más presión de pared; por eso el daño empieza ahí.</p>
+<p><b>Correlato clínico.</b> La isquemia da dolor u opresión torácica; la necrosis es una lesión del miocardio que se detecta con un marcador sanguíneo. Se explora con el electrocardiograma y la medición de troponina.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Troponinas cardiacas en el sarcómero</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Complejo de tres proteínas (C, I y T) en el filamento delgado del sarcómero, unido a tropomiosina y actina. La troponina T (cTnT) y la troponina I (cTnI) tienen isoformas propias del corazón [7].</p>
+<p><b>Cómo está hecha.</b> La troponina C fija calcio; la troponina I inhibe la unión de actina y miosina en reposo; la troponina T ancla el complejo a la tropomiosina. Casi todo el contenido está unido a la estructura y una fracción pequeña circula libre en el citosol [7].</p>
+<p><b>Qué permite hacer.</b> Traduce el calcio en contracción: al unirse el calcio a la troponina C, se libera la inhibición y la miosina se une a la actina. Su límite es el calcio disponible [7].</p>
+<p><b>De qué depende.</b> De la integridad de la membrana celular. Mientras la célula vive, casi no pasa a la sangre; cuando muere, el complejo se disuelve y sale a la circulación. Por eso su aumento indica lesión miocárdica [11].</p>
+<p><b>Correlato clínico.</b> Si hay daño del miocito, la troponina cardiaca sube en la sangre; se explora con su medición en una muestra de sangre, no con la exploración física.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Opresión precordial»: circulación coronaria. Las coronarias irrigan el miocardio en la diástole; su estrechez limita el aporte de oxígeno.</p>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Opresión precordial»: dolor referido. La isquemia cardiaca se percibe en el tórax, el brazo o la mandíbula por convergencia de aferencias.</p>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [7]</span> Tratado de fisiología médica, 14.ª edición. <span class="badge b-pu">Harrison 2025 [10]</span> Principios de medicina interna, 22.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>«Preinfarto» no figura en las clasificaciones. El término médico más cercano es el síndrome coronario agudo sin elevación del ST, en particular la angina inestable: isquemia miocárdica aguda sin necrosis, con troponina cardiaca no elevada. Si la troponina sube y baja con evidencia de isquemia, se trata de infarto.</p>
+<p><span class="badge b-pu">UDMI-4 2018 [11]</span> <span class="badge b-pu">ESC 2023 [12]</span></p>
+<p class="mini am">Interpretación tomada: «preinfarto» como síndrome coronario agudo sin elevación del ST, en particular angina inestable. Alternativa: uso popular para un «susto cardiaco», un dolor torácico sin diagnóstico definido o una etiqueta dada sin estudio. No es una entidad diagnóstica.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Imagina el corazón como un músculo que pide oxígeno y recibe un flujo insuficiente por sus arterias. Mientras solo «sufre», duele, pero no se rompen sus células: eso es isquemia. Si el apuro dura demasiado, las células mueren y sueltan troponina a la sangre: eso es infarto. La gente dice «preinfarto» para el momento de sufrimiento, antes de la muerte celular; la medicina lo separa con un análisis de sangre.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Un hombre de 58 años cuenta que «le dijeron preinfarto» tras un dolor opresivo en el pecho. Para reconocer el término, falta saber si hubo troponina elevada y evidencia de isquemia: con ellas fue infarto; sin ellas, el médico habría pensado en angina inestable u otra causa.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Infarto agudo de miocardio</b></td><td>Hay lesión miocárdica aguda: troponina con alza o caída por encima del percentil 99 y evidencia de isquemia [11]; en la angina inestable no.</td></tr>
+<tr><td><b>Angina estable</b></td><td>Dolor por isquemia desencadenado por el esfuerzo, de patrón predecible, que cede con el reposo; la inestable aparece en reposo, con esfuerzo mínimo o con cambio de patrón.</td></tr>
+<tr><td><b>Crisis de pánico</b></td><td>Episodio de miedo intenso con síntomas corporales sin isquemia como mecanismo; el dolor torácico puede ser idéntico, y se separa por la demostración de isquemia, no por el síntoma.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t6"><div class="rc-t">Simulador · Recall de preinfarto</div><div class="rc-count" id="rc-t6-n"></div><div class="rc-card" id="rc-t6-c"></div><div class="rc-btns" id="rc-t6-b"></div><div id="rc-t6-e"></div></div>
+
+<p class="gloss">Siglas: ST, segmento del electrocardiograma tras el QRS; cTnT, troponina T cardiaca; cTnI, troponina I cardiaca; UDMI-4, cuarta definición universal de infarto de miocardio; ESC, Sociedad Europea de Cardiología.</p>
+</section>
+<section class="tab" id="t7">
+<h2>Estrés</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Respuesta del organismo ante un estresor, que activa dos ejes hormonales para adaptarse y que, si se prolonga, desgasta.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Eje hipotálamo-hipófiso-suprarrenal</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Señal inicial.</b> Ante un estresor, el núcleo paraventricular del hipotálamo libera hormona liberadora de corticotropina (CRH) hacia la circulación portal hipofisaria.</li>
+<li><b>Relevo hipofisario.</b> La CRH estimula a las células corticotropas de la adenohipófisis, que liberan corticotropina (ACTH) a la sangre.</li>
+<li><b>Efector suprarrenal.</b> La ACTH actúa sobre la zona fascicular de la corteza suprarrenal y esta secreta cortisol, que moviliza glucosa, modula la inflamación y mantiene la presión arterial.</li>
+<li><b>Retroalimentación negativa.</b> El cortisol frena la liberación de CRH en el hipotálamo y de ACTH en la hipófisis, y cierra el circuito.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> El cortisol sigue un ritmo circadiano: es máximo poco después de despertar y mínimo hacia la medianoche [7]. Un estresor lo eleva por encima de ese ritmo y la retroalimentación lo devuelve a la línea de base.</p>
+<p><b>Qué lo rompe.</b> El punto vulnerable es el freno: si el estresor persiste o el cortisol no frena el eje, la activación se mantiene y el cortisol deja de seguir su ritmo.</p>
+<p><b>Correlato clínico.</b> El exceso sostenido de cortisol produce hiperglucemia, hipertensión y obesidad central; se explora con la medición de la presión arterial y del perímetro abdominal. Su déficit produce hipotensión y astenia.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Sistema simpático-adrenomedular</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Detección y orden.</b> El hipotálamo y el tronco encefálico activan las neuronas preganglionares simpáticas de la médula espinal torácica.</li>
+<li><b>Relevo en la médula suprarrenal.</b> Las fibras preganglionares liberan acetilcolina sobre las células cromafines de la médula suprarrenal, que funcionan como un ganglio simpático modificado.</li>
+<li><b>Liberación.</b> Las células cromafines secretan a la sangre sobre todo adrenalina y, en menor proporción, noradrenalina.</li>
+<li><b>Efecto en órganos.</b> La adrenalina actúa en receptores adrenérgicos: acelera el corazón, dilata los bronquios, moviliza glucosa y redistribuye el flujo hacia el músculo [7].</li>
+</ol>
+<p><b>Ventana de normalidad.</b> Actúa en segundos y se disipa en minutos, porque las catecolaminas circulantes se degradan con rapidez. Es la fase rápida de la respuesta; el eje del cortisol es la lenta.</p>
+<p><b>Qué lo rompe.</b> El punto vulnerable es el exceso de descarga: una activación intensa o repetida mantiene la frecuencia cardiaca y la presión arterial elevadas.</p>
+<p><b>Correlato clínico.</b> La descarga adrenérgica produce taquicardia, temblor, palidez y sudoración; se explora con el pulso, la presión arterial y la inspección de manos y piel.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Palpitaciones»: sistema nervioso autónomo. El simpático actúa por noradrenalina y receptores adrenérgicos; el parasimpático, por acetilcolina.</p>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Angustia»: circuito del miedo. La amígdala detecta la amenaza y activa el hipotálamo y el tronco encefálico.</p>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [7]</span> Tratado de fisiología médica, 14.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Estrés es la respuesta del organismo a un estresor, es decir, a una amenaza real o percibida para su equilibrio. Sus mediadores buscan la adaptación (alostasis); si la activación es repetida o prolongada, el desgaste acumulado se llama carga alostática.</p>
+<p><span class="badge b-pu">McEwen 2007 [13]</span></p>
+<p class="mini am">«Estrés» no es un diagnóstico. Los trastornos relacionados con estrés del DSM-5-TR (por estrés agudo, por estrés postraumático y de adaptación) son entidades distintas, con criterios propios [4].</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Piensa en el estrés como la alarma de un edificio. Cuando suena, el cuerpo hace dos cosas: una descarga rápida de adrenalina (corazón más rápido, más energía en el músculo) y otra más lenta de cortisol (más glucosa disponible). Eso sirve para resolver el problema. Si la alarma no se apaga, el desgaste acumulado se llama carga alostática.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Una estudiante de medicina, la noche antes de un examen, nota el corazón más rápido, las manos frías y la boca seca, y duerme poco. Tras el examen, esos signos ceden en horas. Una respuesta ligada a un estresor identificable que termina cuando este pasa es la forma adaptativa del estrés.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Ansiedad</b></td><td>El estrés responde a un estresor presente; la ansiedad es anticipación de una amenaza futura y puede aparecer sin estresor identificable.</td></tr>
+<tr><td><b>Trastorno de estrés agudo</b></td><td>Entidad del DSM-5-TR que exige haber vivido un evento traumático y un número de síntomas definidos [4]; el estrés cotidiano no la cumple.</td></tr>
+<tr><td><b>Trastorno de adaptación</b></td><td>Diagnóstico del DSM-5-TR con malestar o deterioro desproporcionados al estresor [4]; el estrés es la respuesta, no esa categoría.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t7"><div class="rc-t">Simulador · Recall de estrés</div><div class="rc-count" id="rc-t7-n"></div><div class="rc-card" id="rc-t7-c"></div><div class="rc-btns" id="rc-t7-b"></div><div id="rc-t7-e"></div></div>
+
+<p class="gloss">Siglas: HHS, hipotálamo-hipófiso-suprarrenal; CRH, hormona liberadora de corticotropina; ACTH, corticotropina; DSM-5-TR, Manual diagnóstico y estadístico de los trastornos mentales, 5.ª edición revisada.</p>
+</section>
+<section class="tab" id="t8">
+<h2>Stresstabs (polivitamínico del complejo B)</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Suplemento polivitamínico de venta libre con vitaminas del complejo B y vitamina C, que el cuerpo usa como piezas de enzimas.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Vitaminas hidrosolubles del complejo B y C como coenzimas</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Criterio de agrupación.</b> Vitaminas solubles en agua que el organismo no sintetiza en cantidad suficiente y que, una vez transformadas, actúan como coenzimas: ayudan a una enzima a realizar su reacción. No se almacenan bien (salvo la B12 en el hígado), por eso su falta se manifiesta si el aporte falla [7] [10].</p>
+<div class="tw"><table><thead><tr><th>Vitamina</th><th>Coenzima activa</th><th>Reacción que sostiene</th><th>Qué falla si falta</th></tr></thead><tbody>
+<tr><td><b>B1, tiamina</b></td><td>Pirofosfato de tiamina</td><td>Descarboxilación del piruvato y reacciones de la vía de las pentosas.</td><td>Beriberi; encefalopatía de Wernicke.</td></tr>
+<tr><td><b>B2, riboflavina</b></td><td>FAD y FMN</td><td>Reacciones de oxidorreducción de la cadena respiratoria.</td><td>Queilosis, glositis, dermatitis seborreica.</td></tr>
+<tr><td><b>B3, niacina (niacinamida)</b></td><td>NAD y NADP</td><td>Deshidrogenasas del metabolismo energético.</td><td>Pelagra: dermatitis, diarrea y demencia.</td></tr>
+<tr><td><b>B5, ácido pantoténico</b></td><td>Coenzima A</td><td>Transferencia de grupos acilo; entrada de acetilo al ciclo de Krebs.</td><td>Muy rara; parestesias y fatiga.</td></tr>
+<tr><td><b>B6, piridoxina</b></td><td>Fosfato de piridoxal</td><td>Transaminación y descarboxilación de aminoácidos, entre ellas la síntesis de serotonina, dopamina y GABA.</td><td>Neuropatía periférica, convulsiones, anemia microcítica.</td></tr>
+<tr><td><b>B7, biotina</b></td><td>Biotina unida a carboxilasas</td><td>Carboxilación de sustratos del metabolismo de grasas y glucosa.</td><td>Dermatitis y alopecia.</td></tr>
+<tr><td><b>B9, ácido fólico</b></td><td>Tetrahidrofolato</td><td>Transferencia de unidades de un carbono para sintetizar ADN.</td><td>Anemia megaloblástica; defectos del tubo neural en el feto.</td></tr>
+<tr><td><b>B12, cobalamina</b></td><td>Metilcobalamina y adenosilcobalamina</td><td>Metilación de la homocisteína y metabolismo del metilmalonil-CoA.</td><td>Anemia megaloblástica y neuropatía.</td></tr>
+<tr><td><b>C, ácido ascórbico</b></td><td>Cofactor reductor de hidroxilasas</td><td>Hidroxilación de prolina y lisina en el colágeno; reduce hierro y radicales libres.</td><td>Escorbuto: encías sangrantes, equimosis, mala cicatrización.</td></tr>
+</tbody></table></div>
+<p><b>Jerarquía.</b> Pesan más las que sostienen la síntesis de ADN y el metabolismo energético de tejidos de recambio rápido: su falta se nota primero en la médula ósea (folato y B12) y en el sistema nervioso (B1, B6 y B12).</p>
+<p><b>Correlato clínico.</b> La deficiencia deja un signo según la coenzima que falta: palidez y fatiga en la anemia megaloblástica, oftalmoplejía y ataxia en Wernicke, dermatitis en la pelagra, petequias en el escorbuto; se exploran con el examen de piel, mucosas y marcha.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Estrés»: eje hipotálamo-hipófiso-suprarrenal. El estresor activa CRH, ACTH y cortisol, con retroalimentación negativa.</p>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [7]</span> <span class="badge b-pu">Harrison 2025 [10]</span> Fisiología médica y medicina interna.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Stresstabs es un nombre comercial de un polivitamínico de venta libre. Contiene vitaminas hidrosolubles del complejo B (B1, B2, B6, B12, niacinamida, ácido pantoténico, biotina y ácido fólico) y vitamina C; algunas variantes añaden zinc o hierro. No es un ansiolítico.</p>
+<p><span class="badge b-am">Fuente por verificar</span></p>
+<p class="mini">La composición exacta de cada presentación no está verificada en la ficha del fabricante ni en el registro sanitario; aquí se describe la formulación general. Su uso corresponde al paso 7.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Las enzimas son las obreras de las reacciones del cuerpo y muchas necesitan una herramienta para trabajar: la coenzima. Las vitaminas del complejo B y la C se transforman en esas herramientas. Un polivitamínico como Stresstabs aporta varias a la vez. Aporta herramientas, no calma el sistema nervioso: no actúa sobre el miedo ni sobre el estrés en sí.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Una persona compra en la farmacia, sin receta, un frasco que en la etiqueta dice «complejo B con vitamina C y zinc». Al leer la lista de componentes, se reconoce un polivitamínico: cada ingrediente es un precursor de coenzima o un mineral, no un fármaco que actúe sobre un receptor.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Ansiolítico</b></td><td>Actúa sobre un receptor del sistema nervioso (por ejemplo, el GABA-A); un polivitamínico aporta coenzimas y no modifica la neurotransmisión por sí mismo.</td></tr>
+<tr><td><b>Suplemento con hierbas</b></td><td>Contiene extractos vegetales de composición variable; Stresstabs es un conjunto de vitaminas y minerales definidos.</td></tr>
+<tr><td><b>Complejo B inyectable</b></td><td>Es la presentación parenteral, de preparación y vía distintas; Stresstabs es una presentación oral de venta libre.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t8"><div class="rc-t">Simulador · Recall de Stresstabs</div><div class="rc-count" id="rc-t8-n"></div><div class="rc-card" id="rc-t8-c"></div><div class="rc-btns" id="rc-t8-b"></div><div id="rc-t8-e"></div></div>
+
+<p class="gloss">Siglas: B1, B2, B3, B5, B6, B7, B9, B12, vitaminas del complejo B; C, vitamina C; FAD, dinucleótido de flavina y adenina; FMN, mononucleótido de flavina; NAD, dinucleótido de nicotinamida y adenina; NADP, su forma fosforilada; CoA, coenzima A; ADN, ácido desoxirribonucleico; CRH, hormona liberadora de corticotropina; ACTH, corticotropina; GABA, ácido gamma-aminobutírico.</p>
+</section>
+<section class="tab" id="t9">
+<h2>Xanax (alprazolam)</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Benzodiacepina que potencia el freno GABA-A del cerebro: calma la excitabilidad neuronal, de acción corta e intermedia.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Receptor GABA-A</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Canal de cloro (Cl⁻) activado por ligando, presente en la membrana postsináptica de casi todas las neuronas del sistema nervioso central. Su ligando natural es el ácido gamma-aminobutírico (GABA), el principal neurotransmisor inhibidor [2].</p>
+<p><b>Cómo está hecho.</b> Es un pentámero: cinco subunidades dispuestas alrededor de un poro central. La combinación más frecuente es de dos α, dos β y una γ. El GABA se une en la interfaz α–β; el sitio de las benzodiacepinas (BZD) está en la interfaz α–γ.</p>
+<p><b>Qué permite hacer.</b> Al unirse el GABA, el canal se abre, entra Cl⁻ y la neurona se hiperpolariza: es menos excitable. Las BZD no abren el canal por sí solas; potencian el efecto del GABA. La subunidad α determina la acción: α1 se asocia a la sedación y α2 y α3 a la ansiolisis.</p>
+<p><b>De qué depende.</b> El efecto necesita GABA presente y la subunidad γ en el pentámero; los receptores sin γ no responden a las BZD.</p>
+<p><b>Correlato clínico.</b> Si se potencia el receptor, disminuyen la ansiedad y la excitabilidad neuronal y aparece sedación; se exploran con el nivel de alerta, la coordinación y el habla. Si se potencia en exceso, hay somnolencia, ataxia y disartria.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Vida media, metabolismo por CYP3A4 y neuroadaptación</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Absorción y distribución.</b> El fármaco pasa a la sangre y llega al cerebro, donde alcanza el receptor [2].</li>
+<li><b>Metabolismo hepático.</b> La isoenzima CYP3A4 del hígado lo transforma en metabolitos hidroxilados, de actividad escasa, que se eliminan por la orina.</li>
+<li><b>Eliminación.</b> La concentración baja de forma exponencial; el tiempo en que cae a la mitad es la vida media de eliminación.</li>
+<li><b>Neuroadaptación.</b> Con exposición repetida, el cerebro compensa: disminuyen la respuesta y el número efectivo de receptores GABA-A, y el mismo fármaco hace menos efecto (tolerancia).</li>
+</ol>
+<p><b>Ventana de normalidad.</b> Según su ficha técnica, la vida media de eliminación del alprazolam en el adulto sano es de unas 11 horas, con variación amplia entre personas [14]. Es una vida media corta-intermedia, menor que la de otras BZD como el diazepam.</p>
+<p><b>Qué lo rompe.</b> Una vida media corta hace que la concentración suba y baje entre dosis: al caer, el cerebro adaptado queda sin el refuerzo inhibitorio y reaparecen ansiedad y excitabilidad (caída interdosis). La inhibición de CYP3A4 alarga la vida media.</p>
+<p><b>Correlato clínico.</b> La caída de concentración en un cerebro adaptado se manifiesta como inquietud, temblor y taquicardia; se explora con el pulso, el temblor de manos y la inspección del paciente.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Angustia»: circuito del miedo. La amígdala detecta la amenaza y activa hipotálamo y tronco encefálico.</p>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Trastornos del estado de ánimo»: afecto y ánimo. Son funciones psíquicas moduladas por sistemas monoaminérgicos y el sistema límbico.</p>
+
+<p class="mini"><span class="badge b-pu">Goodman y Gilman 2023 [2]</span> <span class="badge b-pu">Ficha técnica Xanax [14]</span> Farmacología básica y ficha del fabricante.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Xanax es el nombre comercial del alprazolam, una triazolobenzodiacepina. Es un modulador alostérico positivo del receptor GABA-A: al unirse a su sitio, aumenta la frecuencia de apertura del canal de Cl⁻ cuando hay GABA y refuerza la inhibición neuronal.</p>
+<p><span class="badge b-pu">Goodman y Gilman 2023 [2]</span> <span class="badge b-pu">Ficha técnica Xanax [14]</span></p>
+<p class="mini">Su manejo, dosis y retirada corresponden al paso 7.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>El cerebro tiene un freno natural, el GABA, que abre un canal para que entre cloro y la neurona se calme. El alprazolam no empuja el freno: hace que el GABA funcione mejor, porque el canal se abre más veces. El resultado es menos excitación y menos ansiedad. Como se elimina relativamente rápido, el efecto baja entre dosis.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Una persona identifica en la etiqueta de un frasco el nombre comercial «Xanax» y, en letra pequeña, «alprazolam». Reconoce que es una benzodiacepina, que actúa como sedante por la subunidad α1 y como ansiolítica por α2 y α3, y que su efecto sigue la concentración en sangre.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Clonazepam y diazepam</b></td><td>Otras BZD con el mismo mecanismo, pero con vida media de eliminación más larga que la del alprazolam; difieren en la duración, no en el receptor.</td></tr>
+<tr><td><b>ISRS</b></td><td>Inhiben la recaptación de serotonina; el alprazolam potencia el GABA-A. Mecanismos y tiempos de inicio distintos.</td></tr>
+<tr><td><b>Z-fármacos (zolpidem)</b></td><td>No son BZD pero actúan en el mismo receptor, con mayor afinidad por la subunidad α1; el alprazolam actúa en la interfaz α–γ de varias subunidades α.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t9"><div class="rc-t">Simulador · Recall de Xanax (alprazolam)</div><div class="rc-count" id="rc-t9-n"></div><div class="rc-card" id="rc-t9-c"></div><div class="rc-btns" id="rc-t9-b"></div><div id="rc-t9-e"></div></div>
+
+<p class="gloss">Siglas: GABA, ácido gamma-aminobutírico; GABA-A, receptor ionotrópico de tipo A del GABA; BZD, benzodiacepina; Cl⁻, ion cloro; α, β, γ, subunidades del receptor; CYP3A4, isoenzima 3A4 del citocromo P450; ISRS, inhibidores selectivos de la recaptación de serotonina; h, hora.</p>
+</section>
+<section class="tab" id="tg">
+<h2>Repaso global</h2>
+<p class="mini">Mazo mixto con todas las tarjetas de las nueve pestañas, barajadas e intercaladas. El término de cada tarjeta aparece solo después de «Mostrar respuesta». Al terminar verás los aciertos al primer intento por término.</p>
+
+<div class="rc" id="rc-tg"><div class="rc-t">Simulador · Repaso global de los nueve términos</div><div class="rc-count" id="rc-tg-n"></div><div class="rc-card" id="rc-tg-c"></div><div class="rc-btns" id="rc-tg-b"></div><div id="rc-tg-e"></div></div>
+
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span>Referencias</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="vanc">
+<li>Kandel ER, Koester JD, Mack SH, Siegelbaum SA, editors. Principles of neural science. 6th ed. New York: McGraw Hill; 2021.</li>
+<li>Brunton LL, Knollmann BC, editors. Goodman & Gilman's the pharmacological basis of therapeutics. 14th ed. New York: McGraw Hill; 2023.</li>
+<li>Boland R, Verduin ML, editors. Kaplan & Sadock's synopsis of psychiatry. 12th ed. Philadelphia: Wolters Kluwer; 2022.</li>
+<li>American Psychiatric Association. Diagnostic and statistical manual of mental disorders. 5th ed., text revision (DSM-5-TR). Washington (DC): American Psychiatric Association Publishing; 2022.</li>
+<li>Splittgerber R. Snell's clinical neuroanatomy. 9th ed. Philadelphia: Wolters Kluwer; 2025.</li>
+<li>Dalley AF II, Agur AMR. Moore's clinically oriented anatomy. 9th ed. Philadelphia: Wolters Kluwer; 2023.</li>
+<li>Hall JE, Hall ME. Guyton and Hall textbook of medical physiology. 14th ed. Philadelphia: Elsevier; 2021.</li>
+<li>Gulati M, Levy PD, Mukherjee D, Amsterdam E, Bhatt DL, Birtcher KK, et al. 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR guideline for the evaluation and diagnosis of chest pain. Circulation. 2021;144(22):e368-454. doi:10.1161/CIR.0000000000001029. PMID: 34709879.</li>
+<li>Raviele A, Giada F, Bergfeldt L, Blanc JJ, Blomstrom-Lundqvist C, Mont L, et al. Management of patients with palpitations: a position paper from the European Heart Rhythm Association. Europace. 2011;13(7):920-34. doi:10.1093/europace/eur130. PMID: 21697315.</li>
+<li>Loscalzo J, Fauci AS, Kasper DL, Hauser SL, Longo DL, Jameson JL, editors. Harrison's principles of internal medicine. 22nd ed. New York: McGraw Hill; 2025.</li>
+<li>Thygesen K, Alpert JS, Jaffe AS, Chaitman BR, Bax JJ, Morrow DA, et al. Fourth universal definition of myocardial infarction (2018). Eur Heart J. 2019;40(3):237-69. doi:10.1093/eurheartj/ehy462. PMID: 30165617.</li>
+<li>Byrne RA, Rossello X, Coughlan JJ, Barbato E, Berry C, Chieffo A, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-826. doi:10.1093/eurheartj/ehad191. PMID: 37622654.</li>
+<li>McEwen BS. Physiology and neurobiology of stress and adaptation: central role of the brain. Physiol Rev. 2007;87(3):873-904. doi:10.1152/physrev.00041.2006. PMID: 17615391.</li>
+<li>Pfizer. XANAX (alprazolam) tablets, for oral use, CIV [ficha técnica]. DailyMed. Bethesda (MD): National Library of Medicine; 2023.</li>
+</ol>
+</div></div>
+</section>
+<script>
+const TERMS={t1:'Trastornos del estado de ánimo',t2:'Angustia',t3:'Opresión precordial',t4:'Palpitaciones',t5:'Sudoración y náuseas',t6:'Preinfarto',t7:'Estrés',t8:'Stresstabs',t9:'Xanax (alprazolam)'};
+const DECKS={
+t1:[
+{q:'¿Qué papel cumple la corteza prefrontal ventromedial sobre la amígdala y qué se observa si ese control falla?',a:'Frena la respuesta de la amígdala; si falla, la emoción se vuelve desproporcionada y persistente, y se nota en el examen mental.',h:'Es un control de arriba abajo.'},
+{q:'Una persona pierde el interés y el placer por casi todo. ¿Qué vía monoaminérgica se relaciona con esa pérdida y de dónde nace?',a:'La dopamina, que nace en el área tegmental ventral y sostiene la motivación y la recompensa (la pérdida es anhedonia).',h:'Es la vía de la motivación y la recompensa.'},
+{q:'¿Qué alteración central define a los trastornos del estado de ánimo según el DSM-5-TR y cómo los organiza?',a:'La alteración del ánimo (tristeza o pérdida de interés, exaltación o irritabilidad); los presenta en capítulos separados, depresivos y bipolares.',h:'El nombre ya indica la función afectada.'},
+{q:'¿En qué se diferencia el ánimo normal de un trastorno del estado de ánimo?',a:'El ánimo normal fluctúa con el contexto y recupera su base; en el trastorno el estado de fondo queda fijo, no sigue lo que ocurre y cambia el funcionamiento.',h:'Piensa en el nivel del mar frente a las olas.'},
+{q:'Un paciente tiene miedo y preocupación excesivos, sin cambio fijo del ánimo. ¿A qué grupo se acerca más y por qué no a los trastornos del estado de ánimo?',a:'A los trastornos de ansiedad: su alteración central es el miedo o la preocupación, no el ánimo.',h:'Fíjate en qué función está alterada.'}
+],
+t2:[
+{q:'Un estímulo amenazante llega al tálamo. ¿Qué dos vías toma hacia la amígdala y qué respuesta del cuerpo se activa después?',a:'Una vía rápida directa y una lenta por la corteza sensorial; después el hipotálamo y el tronco activan el simpático: taquicardia, taquipnea y temblor.',h:'Una vía es veloz pero imprecisa; la otra, lenta y detallada.'},
+{q:'¿Qué hace la ínsula con las señales del cuerpo y qué ocurre si las amplifica?',a:'Convierte las señales viscerales en sensación consciente; si las amplifica, un latido normal se vive como amenaza y alimenta el miedo.',h:'Es la corteza de la interocepción.'},
+{q:'¿Cómo recoge el DSM-5-TR la vivencia de angustia con miedo a perder el control?',a:'Como síntoma del ataque de pánico: «miedo a perder el control o a volverse loco» dentro de un episodio brusco con pico en minutos.',h:'Es un síntoma de un episodio con pico rápido.'},
+{q:'¿Qué separa la angustia de una crisis del miedo adaptativo?',a:'El miedo adaptativo responde a una amenaza real y es proporcional; la angustia aparece sin peligro proporcional.',h:'Mira si la amenaza era real.'},
+{q:'Un paciente se siente separado de su cuerpo, como si se mirara desde fuera. ¿Es esta la angustia con miedo a perder el control?',a:'No: es despersonalización (extrañeza respecto de uno mismo); en la angustia lo central es el temor a perder el control.',h:'Una es extrañeza; la otra, temor.'}
+],
+t3:[
+{q:'¿Por qué el dolor del corazón se siente en el brazo izquierdo o la mandíbula?',a:'Porque las fibras viscerales y las somáticas convergen en las mismas neuronas medulares (T1–T4) y el cerebro proyecta el dolor a la pared o al brazo.',h:'Piensa en la entrada común a la médula.'},
+{q:'Si una arteria coronaria está estrecha y la demanda de oxígeno sube con el esfuerzo, ¿qué ocurre con el flujo y qué síntoma puede aparecer?',a:'El flujo no puede aumentar lo suficiente y el miocardio queda con poco oxígeno; aparece dolor opresivo precordial al esfuerzo.',h:'Falla la reserva de flujo.'},
+{q:'¿Qué describe el término opresión precordial?',a:'Una característica del dolor torácico anterior: presión, peso o aplastamiento sentido sobre la región del corazón.',h:'Describe el síntoma, no la causa.'},
+{q:'¿Cómo separas una opresión precordial de un dolor parietal u osteomuscular?',a:'El parietal se localiza con un dedo y se reproduce al palpar o mover la pared; la opresión es difusa y no se reproduce al tocar.',h:'Prueba a palpar la pared.'},
+{q:'Un dolor retroesternal con ardor, que sube y se relaciona con las comidas, ¿es una opresión precordial?',a:'No: es pirosis (ardor ascendente ligado a las comidas y la posición); la opresión es presión, no quemazón.',h:'Se diferencian por el carácter del dolor.'}
+],
+t4:[
+{q:'¿Qué hace la demora del nodo auriculoventricular y qué se palpa si el impulso no pasa a los ventrículos?',a:'Deja que las aurículas vacíen en los ventrículos antes de su sístole; si no pasa, los ventrículos laten con un ritmo de escape lento y el pulso es lento.',h:'El nodo AV actúa como compuerta entre dos cámaras.'},
+{q:'¿Qué transmisor y qué receptor aceleran el nodo sinusal, y qué signo produce su descarga?',a:'Noradrenalina sobre receptores β1; produce taquicardia y latido más fuerte, que se palpa en el pulso.',h:'Es la rama simpática, la de la acción.'},
+{q:'¿Cómo define la EHRA la palpitación?',a:'Percepción consciente y desagradable del propio latido cardiaco.',h:'La definición se centra en lo que siente la persona.'},
+{q:'¿Qué separa una palpitación de una taquicardia objetiva?',a:'La palpitación es la percepción de la persona; la taquicardia es una frecuencia elevada medida en el pulso o el registro. Puede haber una sin la otra.',h:'Una se cuenta y la otra se refiere.'},
+{q:'Una persona siente «un salto» en el pecho y al tomarle el pulso en ese momento es normal. ¿Sigue siendo una palpitación y por qué?',a:'Sí, porque la palpitación es una percepción; su presencia no exige que el pulso esté alterado.',h:'Piensa si el síntoma se define por el pulso o por lo que siente la persona.'}
+],
+t5:[
+{q:'¿Qué transmisor liberan las fibras simpáticas que inervan las glándulas sudoríparas ecrinas y qué receptor lo recibe?',a:'Acetilcolina, sobre receptores muscarínicos; es una excepción del simpático, que usa noradrenalina en casi todo el resto.',h:'La glándula sudorípara rompe la regla de la noradrenalina.'},
+{q:'¿Por qué el área postrema detecta sustancias de la sangre que no llegan a otras zonas del encéfalo, y a qué núcleo envía la señal?',a:'Porque no tiene una barrera hematoencefálica completa; envía la señal al núcleo del tracto solitario.',h:'Está en el piso del cuarto ventrículo.'},
+{q:'¿Qué es la diaforesis?',a:'Sudoración profusa que no obedece al calor ni al ejercicio.',h:'El adjetivo clave es «no termorreguladora».'},
+{q:'¿Qué rasgo de la piel separa la diaforesis neurovegetativa de la sudoración por calor?',a:'En la neurovegetativa la piel suele estar fría y pálida; en la termorreguladora, caliente y enrojecida.',h:'Piensa qué hace el simpático con los vasos de la piel.'},
+{q:'Un paciente tiene náusea con sudor frío y palidez, sin comida ni dolor abdominal. ¿Qué tipo de náusea sugiere el cuadro y por qué?',a:'Náusea neurovegetativa, porque se acompaña de activación autonómica y no hay causa digestiva evidente.',h:'Mira los signos que acompañan a la náusea.'}
+],
+t6:[
+{q:'¿Por qué la necrosis por isquemia empieza en el subendocardio?',a:'Porque es la capa más lejana de la luz coronaria epicárdica, recibe menos flujo y soporta más presión de pared durante la sístole.',h:'Piensa en riego y presión de pared.'},
+{q:'Si la membrana del miocito se rompe, ¿qué proteína del sarcómero pasa a la sangre y cómo se detecta?',a:'La troponina cardiaca (T o I); se detecta midiéndola en una muestra de sangre.',h:'Es la proteína que fija el calcio y regula la contracción.'},
+{q:'¿Qué término médico es el más cercano a «preinfarto»?',a:'Síndrome coronario agudo sin elevación del ST, en particular angina inestable.',h:'«Preinfarto» no figura en las clasificaciones.'},
+{q:'¿Qué dato de laboratorio separa la angina inestable del infarto?',a:'La troponina cardiaca: no elevada en la angina inestable; elevada, con alza o caída, en el infarto.',h:'Piensa si hay muerte celular o no.'},
+{q:'Un dolor torácico de pánico puede ser idéntico al de la isquemia. ¿Qué lo separa de la angina inestable?',a:'La demostración de isquemia (electrocardiograma y troponina); el síntoma por sí solo no los distingue.',h:'No se separan por cómo duele.'}
+],
+t7:[
+{q:'Tras la liberación de CRH, ¿qué hormona hipofisaria se libera y qué secreta la suprarrenal en respuesta, y cómo se frena el eje?',a:'La hipófisis libera ACTH y la corteza suprarrenal secreta cortisol; el cortisol frena la CRH y la ACTH (retroalimentación negativa).',h:'El producto final apaga las dos hormonas anteriores.'},
+{q:'¿Qué órgano libera adrenalina ante un estresor y qué signo cardiovascular produce en segundos?',a:'La médula suprarrenal (células cromafines, inervadas por fibras simpáticas preganglionares); produce taquicardia.',h:'Funciona como un ganglio simpático modificado.'},
+{q:'Estrés: respuesta del organismo a un {{estresor}} que busca la adaptación (alostasis); si es repetida o prolongada, el desgaste acumulado se llama {{carga alostática}}.',a:'estresor; carga alostática',h:'McEwen nombra el desgaste con dos palabras que empiezan por «carga».'},
+{q:'Un estudiante tiene el corazón rápido y las manos frías la noche antes de un examen, y todo cede al terminar. ¿Se trata de un trastorno de adaptación? ¿Por qué?',a:'No; es la respuesta adaptativa al estresor. El trastorno de adaptación exige malestar o deterioro desproporcionados al estresor.',h:'Fíjate en si la respuesta es proporcionada y transitoria.'},
+{q:'¿Por qué «estrés» no es un diagnóstico del DSM-5-TR, a diferencia del trastorno de estrés agudo?',a:'Porque nombra una respuesta fisiológica a un estresor; el trastorno de estrés agudo es una entidad con criterios propios y exige un evento traumático.',h:'Una es respuesta general; la otra, categoría con criterios.'}
+],
+t8:[
+{q:'¿Qué papel cumple una vitamina del complejo B convertida en coenzima y qué ocurre con la reacción si falta?',a:'Ayuda a una enzima a realizar su reacción; sin ella la reacción se enlentece y aparece el síndrome carencial correspondiente.',h:'La enzima necesita una herramienta para trabajar.'},
+{q:'La tiamina forma pirofosfato de tiamina en la descarboxilación del piruvato. ¿Qué cuadros neurológicos aparecen si falta?',a:'Beriberi y encefalopatía de Wernicke.',h:'La neurona depende del metabolismo energético de la glucosa.'},
+{q:'Stresstabs es un polivitamínico de venta libre con vitaminas del {{complejo B}} y vitamina {{C}}; algunas variantes añaden zinc o hierro.',a:'complejo B; C',h:'Una letra y una vitamina que aparece en el escorbuto.'},
+{q:'¿Por qué Stresstabs no es un ansiolítico, aunque su nombre mencione el estrés?',a:'Aporta coenzimas y minerales para el metabolismo; no actúa sobre un receptor del sistema nervioso que module la ansiedad.',h:'Un ansiolítico actúa sobre un receptor, como el GABA-A.'},
+{q:'¿Qué separa a Stresstabs de un complejo B inyectable?',a:'Stresstabs es una presentación oral de venta libre; el complejo B inyectable es una presentación parenteral, con preparación y vía distintas.',h:'Se diferencian por la vía.'}
+],
+t9:[
+{q:'En el receptor GABA-A, ¿dónde se une la benzodiacepina y qué hace con el canal de Cl⁻ cuando hay GABA?',a:'En la interfaz α–γ; aumenta la frecuencia de apertura del canal, con más entrada de Cl⁻ e hiperpolarización.',h:'No abre el canal por sí sola: potencia al GABA.'},
+{q:'¿Qué subunidad α se asocia con la sedación y cuáles con la ansiolisis?',a:'α1 con la sedación; α2 y α3 con la ansiolisis.',h:'La menor numeración se asocia con el efecto de dormir.'},
+{q:'Una BZD de vida media corta hace que la concentración suba y baje entre dosis. ¿Qué se siente cuando cae en un cerebro adaptado?',a:'Reaparecen ansiedad e hiperexcitabilidad (caída interdosis), porque falta el refuerzo inhibitorio al que el cerebro se adaptó.',h:'El cerebro ya compensó la presencia del fármaco.'},
+{q:'Alprazolam: triazolobenzodiacepina, {{modulador alostérico positivo}} del GABA-A; su vida media de eliminación en el adulto sano es de unas {{11 horas}} según la ficha.',a:'modulador alostérico positivo; 11 horas',h:'Es corta-intermedia, menor que la del diazepam.'},
+{q:'¿Qué separa el mecanismo del alprazolam del de un ISRS?',a:'El alprazolam potencia el GABA-A (inhibición); el ISRS inhibe la recaptación de serotonina, con otro mecanismo y otro tiempo de inicio.',h:'Uno actúa sobre un canal iónico y el otro sobre un transportador.'}
+]
+};
+DECKS.tg=[].concat.apply([],Object.keys(TERMS).map(function(k){return DECKS[k].map(function(c){return {q:c.q,a:c.a,h:c.h,t:k};});}));
+const RC={};
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function el(k,s){return document.getElementById('rc-'+k+'-'+s);}
+function isCloze(c){return c.q.indexOf('{{')>=0;}
+function front(c){return esc(c.q).replace(/\{\{[^}]*\}\}/g,'[ ? ]');}
+function back(c){return esc(c.q).replace(/\{\{([^}]*)\}\}/g,'<b>$1</b>');}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function show(id,btn){
+  document.querySelectorAll('.tab').forEach(function(s){s.classList.toggle('active',s.id===id);});
+  document.querySelectorAll('.tb').forEach(function(b){b.classList.toggle('active',b===btn);});
+  try{btn.scrollIntoView({inline:'center',block:'nearest'});}catch(e){}
+}
+function tog(b){b.parentElement.classList.toggle('op');}
+function rc_reset(k){
+  var n=DECKS[k].length,idx=[];
+  for(var i=0;i<n;i++)idx.push(i);
+  RC[k]={queue:shuffle(idx),first:{},fails:{},shown:false,done:0,n:n};
+  if(el(k,'e'))el(k,'e').innerHTML='';
+  rc_render(k);
+}
+function rc_render(k){
+  var s=RC[k],card=el(k,'c');
+  if(!card)return;
+  if(!s.queue.length){rc_end(k);return;}
+  var c=DECKS[k][s.queue[0]],f=s.fails[s.queue[0]]||0;
+  el(k,'n').textContent='Tarjeta '+(s.done+1)+' de '+s.n+(k==='tg'&&s.shown?' · '+TERMS[c.t]:'');
+  var h='<p class="rc-q">'+(s.shown&&isCloze(c)?back(c):front(c))+'</p>';
+  if(s.shown&&!isCloze(c))h+='<p class="rc-a"><b>Respuesta.</b> '+esc(c.a)+'</p>';
+  if(!s.shown&&f>=2)h+='<p class="rc-hint">Pista: '+esc(c.h)+'</p>';
+  card.innerHTML=h;
+  var b='';
+  if(!s.shown){b+='<button class="go" onclick="rc_show(\''+k+'\')">Mostrar respuesta</button>';}
+  else{
+    b+='<button class="gr ok" onclick="rc_grade(\''+k+'\',\'ok\')">La sabía</button>';
+    b+='<button class="gr mid" onclick="rc_grade(\''+k+'\',\'mid\')">A medias</button>';
+    b+='<button class="gr ko" onclick="rc_grade(\''+k+'\',\'ko\')">No la sabía</button>';
+  }
+  b+='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  el(k,'b').innerHTML=b;
+}
+function rc_show(k){RC[k].shown=true;rc_render(k);}
+function rc_grade(k,g){
+  var s=RC[k],i=s.queue.shift();
+  if(s.first[i]===undefined)s.first[i]=(g==='ok');
+  if(g==='ok'){s.done++;}
+  else{s.fails[i]=(s.fails[i]||0)+1;s.queue.push(i);}
+  s.shown=false;
+  rc_render(k);
+}
+function rc_verdict(p){return p>=80?['ok','Término consolidado']:['rep','Repasar hoy'];}
+function rc_end(k){
+  var s=RC[k],ok=0,i,rows='';
+  for(i=0;i<s.n;i++)if(s.first[i])ok++;
+  var p=Math.round(100*ok/s.n),v=rc_verdict(p);
+  el(k,'n').textContent='Mazo completado';
+  el(k,'c').innerHTML='<p class="rc-q">Cola agotada: todas las tarjetas se resolvieron.</p>';
+  el(k,'b').innerHTML='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  var h='<div class="rc-end '+v[0]+'">Aciertos al primer intento: '+ok+' de '+s.n+' ('+p+' %). <b>'+v[1]+'</b>.</div>';
+  if(k==='tg'){
+    Object.keys(TERMS).forEach(function(t){
+      var tot=0,hit=0;
+      for(i=0;i<s.n;i++){if(DECKS.tg[i].t===t){tot++;if(s.first[i])hit++;}}
+      var pp=Math.round(100*hit/tot),vv=rc_verdict(pp);
+      rows+='<tr><td>'+esc(TERMS[t])+'</td><td>'+hit+' de '+tot+' ('+pp+' %)</td><td>'+vv[1]+'</td></tr>';
+    });
+    h+='<div class="tw"><table><thead><tr><th>Término</th><th>Aciertos 1er intento</th><th>Veredicto</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  }
+  el(k,'e').innerHTML=h;
+}
+Object.keys(DECKS).forEach(rc_reset);
+</script>
+</div></body></html>
