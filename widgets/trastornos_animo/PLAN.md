@@ -115,7 +115,7 @@ Diferencial (tabla fuera de las cards): taquicardia supraventricular, hipertiroi
 3. `jq` · escalera de gravedad (g1 → g4).
 4. `hx` · predisponentes + precipitantes → síndrome → hipótesis H1–H4.
 
-Reparto: ejecutor K → `p05_c0` + vin/anclaje/tarjeta de t1–t4; L → vin/anclaje/tarjeta de t5–t9; M → `p91_pb`; N → `p92_jq` + `p93_hx`. Tarjetas nuevas en `apertura/_mazos_<X>.json`; el orquestador arma `p01_nav`, `p95_tg`, `p96_js` y el manifiesto.
+Reparto (hecho): ejecutor K → `p05_c0` + vin/anclaje/tarjeta de t1–t4; L → lo mismo en t5–t9; M → `p91_pb`; N → `p92_jq` + `p93_hx`. El orquestador armó `p01_nav`, `p95_tg`, `p96_js` y el manifiesto. Las partes ya llevan `[n]` numerados.
 
 ## Reglas de diseño para ejecutores (ambos widgets)
 
