@@ -102,7 +102,7 @@ function dcE2(dc){
   if(hv(s,'nores')) r.push(par('Sin respuesta tras 4 a 6 semanas: confirma adherencia y dosis, sube la dosis del ISRS hasta el máximo tolerado, cambia a otro ISRS, a un IRSN o a pregabalina 75 mg VO cada 12 h con ajuste renal [15], y refuerza la terapia cognitivo-conductual [2][15].'));
   if(hv(s,'intol')) r.push(par('No tolera el ISRS: si fue activación o náusea, reinicia con la mitad de la dosis y titula despacio, por ejemplo sertralina 25 mg VO cada 24 h; si persiste, cambia a pregabalina 75 mg VO cada 12 h o a duloxetina 60 mg VO cada 24 h [15].'));
   if(hv(o,'hep')) r.push(par('Hepatopatía: evita duloxetina y usa dosis menores de ISRS con titulación lenta [2].'));
-  if(hv(o,'mayor')) r.push(par('65 años o más: empieza con la mitad de la dosis, vigila hiponatremia y caídas, y limita escitalopram a 10 mg [22].'));
+  if(hv(o,'mayor')) r.push(par('65 años o más: empieza con la mitad de la dosis, vigila hiponatremia y caídas, y limita escitalopram a 10 mg [23].'));
   if(hv(o,'bzd')) r.push(par('Usa benzodiacepina desde hace semanas: no la suspendas de golpe; mantenla mientras el ISRS empieza a actuar y redúcela de forma gradual y pactada para evitar rebote y abstinencia [2][19][12].'));
   if(hv(o,'ide')) r.push(par('Ideación suicida: el ISRS puede activar en las primeras semanas; da pocas dosis por receta, revisa cada semana y estratifica el riesgo (ver «Visión de conjunto») [5].'));
   r.push('<span class="cf">Si aparecen ideación suicida o una depresión mayor asociada → deja de ser solo ansiedad y se trata primero el riesgo y el episodio depresivo [5][2].</span>');
@@ -158,7 +158,7 @@ function dcE3(dc){
   if(hv(e,'remis')) r.push(par('En remisión: mantén el mismo fármaco y la misma dosis al menos 6 meses y retira de forma gradual para evitar discontinuación y recaída [13].'));
   if(hv(o,'bip')) r.push(par('Antecedente de manía o hipomanía: no inicies un antidepresivo solo, porque puede inducir viraje; requiere estrategia con estabilizador, idealmente con psiquiatría [1][13].'));
   if(hv(o,'joven')) r.push(par('Menor de 25 años: vigila activación e ideación en las primeras semanas con revisión durante la primera semana [13].'));
-  if(hv(o,'mayor')) r.push(par('65 años o más: inicia con la mitad de la dosis, vigila hiponatremia y caídas, y limita escitalopram a 10 mg [22].'));
+  if(hv(o,'mayor')) r.push(par('65 años o más: inicia con la mitad de la dosis, vigila hiponatremia y caídas, y limita escitalopram a 10 mg [23].'));
   if(hv(o,'psic')) r.push(par('Síntomas psicóticos: la depresión con psicosis no se maneja con ISRS solo; pide interconsulta o teleconsulta con psiquiatría y, si no es posible, sigue mhGAP en el centro [5].'));
   if(hv(o,'sui')) r.push(par('Ideación suicida: estratifica el riesgo en esa consulta (ver «Diagnóstico») y no entregues fármacos en cantidad letal [5].'));
   r.push('<span class="cf">Si el paciente tiene antecedente de manía o aparece ideación con plan → la conducta pasa de iniciar o ajustar el antidepresivo a descartar bipolaridad o asegurar la vida primero [1][5].</span>');
@@ -203,7 +203,7 @@ function dcE5(dc){
   var isq=stel||sest||hv(o,'tro');
   if(stel) r.push(par('SCACEST: emergencia con reperfusión inmediata. Activa ECU 911 para traslado a un centro con ICP, con monitorización y desfibrilador [3].'));
   else if(sest||hv(o,'tro')) r.push(par('Compatible con IAMSEST o angina inestable: activa ECU 911 para traslado a un centro con ICP; no esperes más resultados [3].'));
-  else if(norm&&hv(o,'dolor')) r.push(par('ECG sin cambios con dolor en curso: no descartes isquemia. Repite el ECG, mide troponina si hay, usa HEART como apoyo y trata como SCA hasta descartarlo [3][25].'));
+  else if(norm&&hv(o,'dolor')) r.push(par('ECG sin cambios con dolor en curso: no descartes isquemia. Repite el ECG, mide troponina si hay, usa HEART como apoyo y trata como SCA hasta descartarlo [3][26].'));
   else if(norm) r.push(par('ECG inicial sin cambios: no descarta el síndrome. Repite el ECG, toma troponina si hay y observa; considera otras causas solo después [3][4].'));
   else r.push(par('Con dolor torácico y sin ECG, hazlo en los primeros 10 min antes de cualquier otra decisión [3].'));
   if(isq||hv(o,'dolor')){
@@ -214,7 +214,7 @@ function dcE5(dc){
     } else {
       r.push(par('Si persiste el dolor: nitroglicerina 0,4 mg sublingual cada 5 min, hasta 3 dosis, mientras la presión sistólica se mantenga adecuada [3].'));
     }
-    if(hv(o,'sat')) r.push(par('SatO₂ menor de 90 %: oxígeno inhalado, titulado hasta una SatO₂ de 90 % o más; en Quito compara con el valor basal local [VERIFICAR EN FUENTE] [3].'));
+    if(hv(o,'sat')) r.push(par('SatO₂ menor de 90 %: oxígeno inhalado, titulado hasta una SatO₂ de 90 % o más; en Quito compara con el valor basal local [27] [3].'));
     else r.push(par('Sin hipoxemia, no des oxígeno de rutina [3].'));
     r.push(par('Evita las benzodiacepinas para calmar la angustia mientras no se descarte isquemia [4].'));
   }

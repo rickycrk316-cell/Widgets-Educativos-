@@ -10,7 +10,7 @@ Bibliografía: la del sílabo de la 2.ª rotación con ediciones vigentes del pr
 
 Los ejecutores citaron con claves de un catálogo común, que se verificó en PubMed (los 10 artículos de revista, con PMID) y en la web (documentos de organismos). El orquestador las numeró por primera aparición: en enseñanza se cuenta desde `vis` y el Panorama reutiliza los números. Las partes ya llevan `[n]`, así que una cita nueva se numera a mano según el validador.
 
-Lo que no se pudo confirmar: la composición de Stresstabs, que cambia según el país (badge ámbar en t8); la duración del ISRS en TAG (≥12 meses, e2); y la nota de altitud para el umbral de SatO₂ en Quito (e5, en la tabla y en el simulador). También se quitó un tope de 40 mg de diazepam en la sustitución, porque no se encontró en Ashton.
+Lo que no se pudo confirmar: la composición de Stresstabs, que cambia según el país (badge ámbar en t8; DailyMed no es accesible desde la sesión). La duración del ISRS en TAG quedó respaldada por Batelaan 2017 (BMJ, PMID 28903922) y la nota de altitud para la SatO₂ en Quito por Rojas-Camayo 2018 (Thorax, PMID 29054885). También se quitó un tope de 40 mg de diazepam en la sustitución, porque no se encontró en Ashton.
 
 ## Pistas del caso (sin resolver el caso)
 
