@@ -1,0 +1,225 @@
+<script>
+function par(t){return '<p>'+t+'</p>';}
+function hv(a,v){return a.indexOf(v)>-1;}
+function vacio(dc,t){out(dc,par(t));}
+
+function dcVis(dc){
+  var c=sel(dc,'curso'),e=sel(dc,'ecg'),h=sel(dc,'hall'),o=sel(dc,'otros');
+  if(!(c.length||e.length||h.length||o.length)){
+    vacio(dc,'Elige el curso, el ECG y los hallazgos de la consulta. El simulador propone qué entidad es compatible, qué dato falta para confirmarla y la conducta inicial; no calcula probabilidades.');return;}
+  var r=[],n=0;
+  var isq=hv(e,'alt')||hv(c,'isq');
+  if(isq){n++;
+    r.push(par('<b>Síndrome coronario agudo</b>: el dolor persistente o los cambios en el ECG lo hacen la primera hipótesis. Falta la troponina seriada y la monitorización [@ESC_SCA]. Conducta inicial: AAS masticada, ECU 911 y monitorización; no rotules ansiedad.'));
+  } else if(hv(e,'no')&&(hv(c,'min')||hv(o,'sudor')||hv(o,'frcv'))){n++;
+    r.push(par('Falta el ECG de 12 derivaciones: con opresión torácica, sudoración o factores de riesgo no se etiqueta ansiedad hasta tenerlo [@AHA_DT]. Conducta inicial: ECG en la misma consulta y troponina si está disponible.'));
+  }
+  if(hv(c,'min')&&hv(e,'norm')){n++;
+    r.push(par('<b>Trastorno de pánico</b>: crisis con pico en minutos y ECG normal lo hacen compatible'+(hv(h,'miedo')||hv(h,'evit')?', y el miedo o la evitación lo refuerzan':'')+'. Falta confirmar que las crisis son inesperadas y recurrentes, con miedo persistente a nuevas crisis, y excluir causa orgánica o tóxica [@DSM]. Conducta inicial: psicoeducación, ISRS y TCC; la benzodiacepina no es mantenimiento [@NICE_ANX].'));
+  } else if(hv(c,'min')&&!isq&&!hv(e,'no')){n++;
+    r.push(par('El pico en minutos sugiere pánico, pero necesita un ECG normal antes de aceptarlo [@AHA_DT].'));
+  }
+  if(hv(c,'mes')||(hv(h,'preoc')&&!hv(c,'min'))){n++;
+    r.push(par('<b>Ansiedad generalizada</b>: preocupación excesiva y difícil de controlar durante meses. Falta el GAD-7 y confirmar la duración de al menos 6 meses con criterios DSM-5-TR [@GAD7][@DSM]. Conducta inicial: ISRS o IRSN y TCC.'));
+  }
+  if(hv(c,'sem')||hv(h,'anhed')){n++;
+    r.push(par('<b>Depresión mayor</b>: ánimo bajo o anhedonia casi todos los días. Falta el PHQ-9 y la pregunta directa por ideación suicida [@PHQ9][@CSSRS]. Conducta inicial: evaluar el riesgo suicida; ISRS y psicoterapia [@NICE_DEP].'));
+  }
+  if(hv(c,'dosis')||hv(o,'xanax')){n++;
+    r.push(par('<b>Consumo de benzodiacepinas</b>: síntomas entre dosis o alprazolam por semanas sugieren tolerancia y rebote. Falta la anamnesis de consumo con criterios DSM-5-TR [@DSM]. Conducta inicial: reducción gradual pactada; nunca suspensión brusca [@ASHTON].'));
+  }
+  if(hv(o,'ideas')) r.push(par('Ideas de muerte o suicidio: pregunta por plan, intención y medios, acompaña al paciente y retira el acceso a medios letales; el primer nivel maneja el riesgo con mhGAP [@CSSRS][@MHGAP].'));
+  if(hv(o,'frcv')&&hv(c,'min')&&!isq) r.push(par('Con factores de riesgo cardiovascular, un cuadro que parece pánico sigue exigiendo ECG y troponina si el dolor dura o se repite [@ESC_SCA].'));
+  if(!n) r.push(par('Los hallazgos elegidos no bastan para sostener una entidad. Completa el curso temporal y el ECG antes de decidir.'));
+  r.push('<span class="cf">Si el ECG normal pasa a cambios isquémicos o el dolor supera los 20 minutos → la conducta cambia de psicoeducación e ISRS a AAS masticada, ECU 911 y monitorización [@ESC_SCA].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE1d(dc){
+  var s=sel(dc,'sint'),p=sel(dc,'pico'),k=sel(dc,'crisis'),m=sel(dc,'miedo'),e=sel(dc,'ecg'),g=sel(dc,'org');
+  if(!(s.length||p.length||k.length||m.length||e.length||g.length)){
+    vacio(dc,'Elige los hallazgos de la crisis, el ECG y el estudio orgánico. El simulador indica si cumple ataque de pánico, si cumple trastorno de pánico y qué falta excluir.');return;}
+  var r=[];
+  if(hv(e,'alt')||hv(p,'pers')){
+    r.push(par('La isquemia no está excluida: el ECG alterado o el dolor persistente mandan sobre cualquier criterio psiquiátrico [@ESC_SCA]. Conducta inicial: manejo de síndrome coronario agudo y ECU 911; no diagnostiques pánico.'));
+    r.push('<span class="cf">Si el ECG vuelve a ser normal y el dolor cede en minutos → se retoma la evaluación de pánico [@AHA_DT].</span>');
+    out(dc,r.join(''));return;
+  }
+  var ataque=hv(s,'cuatro')&&hv(p,'min');
+  if(hv(s,'cuatro')||hv(p,'min')){
+    if(ataque) r.push(par('<b>Cumple ataque de pánico</b>: cuatro o más síntomas con pico en minutos [@DSM]. Es un síndrome, no un diagnóstico por sí solo: aparece también en otros trastornos y en causas orgánicas.'));
+    else r.push(par('No cumple ataque de pánico: se necesitan cuatro o más síntomas con pico en minutos [@DSM].'));
+  } else r.push(par('Falta definir cuántos síntomas hubo y cómo fue el pico para valorar el ataque de pánico.'));
+  if(hv(k,'unica')) r.push(par('Un solo ataque no basta para trastorno de pánico: exige ataques inesperados recurrentes [@DSM].'));
+  if(hv(k,'esp')) r.push(par('Si las crisis aparecen siempre ante un estímulo definido, piensa en fobia específica o social antes que en pánico [@DSM].'));
+  var tp=ataque&&hv(k,'inesp')&&hv(m,'si');
+  if(hv(k,'inesp')&&hv(m,'no')) r.push(par('Hay ataques inesperados sin miedo persistente a nuevas crisis ni cambio de conducta durante al menos un mes: aún no cumple trastorno de pánico [@DSM].'));
+  if(hv(e,'no')) r.push(par('Falta el ECG de 12 derivaciones: sin él no se diagnostica pánico [@AHA_DT].'));
+  if(hv(g,'estim')) r.push(par('La cafeína, los estimulantes o la abstinencia pueden causar el cuadro: se clasifica como inducido por sustancia hasta retirarlos y reevaluar [@DSM].'));
+  if(tp&&hv(e,'norm')&&hv(g,'exc')) r.push(par('<b>Cumple trastorno de pánico</b>: ataques inesperados recurrentes, miedo persistente, ECG normal y causa orgánica excluida [@DSM]. Anota si hay agorafobia. Pasa a «Tratamiento».'));
+  else if(tp&&hv(e,'norm')) r.push(par('Los criterios clínicos están completos, pero falta excluir causa orgánica: glucemia capilar, TSH y consumo de cafeína, estimulantes, alcohol o benzodiacepinas [@DSM][@HARRISON].'));
+  else if(tp) r.push(par('Los criterios clínicos del trastorno de pánico se perfilan, pero faltan el ECG normal y la exclusión de causa orgánica [@DSM].'));
+  r.push('<span class="cf">Si el ECG no se hizo o muestra cambios, o aparece dolor persistente → no se diagnostica pánico y se maneja como síndrome coronario agudo [@ESC_SCA].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE1t(dc){
+  var f=sel(dc,'fase'),o=sel(dc,'otros');
+  if(!f.length&&!o.length){
+    vacio(dc,'Elige la fase del tratamiento y los otros datos para obtener el fármaco, la dosis de inicio y la titulación.');return;}
+  var r=[];
+  if(hv(o,'ecg')) r.push(par('Antes de explicar «no es un infarto», confirma un ECG normal; sin él, no tranquilices [@AHA_DT].'));
+  if(hv(f,'nuevo')){
+    var sert='sertralina 25 mg VO cada 24 h durante 1 semana y luego 50 mg cada 24 h, con ajuste según respuesta hasta 200 mg al día [@WFSBP][@NICE_ANX]';
+    var esc='escitalopram 5 mg VO cada 24 h durante 1 semana y luego 10 mg cada 24 h, hasta 20 mg al día [@WFSBP]';
+    var par10='paroxetina 10 mg VO cada 24 h, con aumento de 10 mg por semana hasta 40 mg al día [@WFSBP]';
+    if(hv(o,'qt')) r.push(par('ISRS de inicio: '+sert+'. Evita escitalopram si el intervalo QT está prolongado.'));
+    else if(hv(o,'emb')) r.push(par('ISRS de inicio: '+sert+'. Evita paroxetina en el embarazo.'));
+    else if(hv(o,'mayor')) r.push(par('ISRS de inicio: '+esc.replace('hasta 20 mg al día','con tope de 10 mg al día en mayores de 65 años')+'; empieza en la mitad de la dosis habitual y vigila el sodio.'));
+    else r.push(par('ISRS de inicio: '+sert+'. Alternativas: '+esc+'; o '+par10+'.'));
+    r.push(par('Empieza con dosis bajas porque el ISRS puede aumentar la ansiedad al inicio, y avisa que el efecto tarda semanas. Suma TCC con exposición interoceptiva y gradual [@NICE_ANX].'));
+  }
+  if(hv(f,'falla')) r.push(par('Respuesta insuficiente: revisa adherencia y dosis, sube a la dosis máxima tolerada, cambia a otro ISRS o a un IRSN tras una prueba adecuada y suma TCC si no la recibe [@WFSBP].'));
+  if(hv(f,'crisis')) r.push(par('Crisis en consulta: con ECG normal, guía respiración lenta y diafragmática y tranquiliza. Si la crisis es intensa, alprazolam 0,5 mg VO una vez como puente, sin pauta de mantenimiento [@XANAX_FT][@NICE_ANX].'));
+  if(hv(f,'xanax')) r.push(par('Alprazolam por semanas: no lo suspendas de golpe. Inicia el ISRS y planifica una reducción gradual pactada (ver «Consumo de benzodiacepinas»); la benzodiacepina no es tratamiento de mantenimiento [@ASHTON][@XANAX_FT].'));
+  if(hv(o,'bzd')&&!hv(f,'xanax')) r.push(par('Si se usa alprazolam como puente: 0,5 mg VO cada 8 h, 0,25 mg en adultos mayores o debilitados, durante 2 a 4 semanas como máximo mientras el ISRS hace efecto; advierte somnolencia, caídas, tolerancia y dependencia [@XANAX_FT][@ASHTON].'));
+  if(hv(o,'ideas')) r.push(par('Con ideas de muerte o suicidio, vigila de cerca el inicio del ISRS, sobre todo en menores de 25 años, y retira el acceso a medios letales [@NICE_DEP][@MHGAP].'));
+  if(hv(o,'polivit')) r.push(par('Evita polivitamínicos como Stresstabs y otros suplementos como tratamiento de la ansiedad: no tienen efecto ansiolítico demostrado y retrasan el diagnóstico [VERIFICAR EN FUENTE].'));
+  if(!r.length) r.push(par('Con esos datos no hay una pauta clara: define la fase del tratamiento.'));
+  r.push('<span class="cf">Si el paciente ya usa alprazolam por semanas → no se suspende de golpe: se inicia el ISRS y se planea una reducción gradual [@ASHTON].</span>');
+  out(dc,r.join(''));
+}
+function dcE2(dc){
+  var s=sel(dc,'sit'),o=sel(dc,'otros');
+  if(!s.length){
+    vacio(dc,'Elige la situación del tratamiento y los otros datos para obtener el fármaco, la dosis y la conducta.');return;}
+  var r=[];
+  if(hv(s,'inicio')){
+    if(hv(o,'hta')) r.push(par('Inicio con hipertensión no controlada: prefiere un ISRS, como escitalopram 10 mg VO cada 24 h (máximo 20 mg) o sertralina 50 mg VO cada 24 h (inicia con 25 mg la primera semana, hasta 200 mg), y evita venlafaxina XR porque sube la presión arterial; añade terapia cognitivo-conductual [@NICE_ANX][@WFSBP].'));
+    else r.push(par('Inicio: escitalopram 10 mg VO cada 24 h (máximo 20 mg) o sertralina 50 mg VO cada 24 h (inicia con 25 mg la primera semana, hasta 200 mg), más terapia cognitivo-conductual. Alternativa IRSN: venlafaxina XR 75 mg VO cada 24 h con alimentos (hasta 225 mg) o duloxetina 60 mg VO cada 24 h (inicia con 30 mg la primera semana, máximo 120 mg) [@NICE_ANX][@WFSBP].'));
+    r.push(par('El efecto tarda 4 a 6 semanas: avísalo al paciente y revisa a las 2 semanas la tolerancia y la ideación suicida [@NICE_ANX].'));
+  }
+  if(hv(s,'nores')) r.push(par('Sin respuesta tras 4 a 6 semanas: confirma adherencia y dosis, sube la dosis del ISRS hasta el máximo tolerado, cambia a otro ISRS, a un IRSN o a pregabalina 75 mg VO cada 12 h con ajuste renal [VERIFICAR EN FUENTE], y refuerza la terapia cognitivo-conductual [@NICE_ANX][@WFSBP].'));
+  if(hv(s,'intol')) r.push(par('No tolera el ISRS: si fue activación o náusea, reinicia con la mitad de la dosis y titula despacio, por ejemplo sertralina 25 mg VO cada 24 h; si persiste, cambia a pregabalina 75 mg VO cada 12 h o a duloxetina 60 mg VO cada 24 h [@WFSBP] [VERIFICAR EN FUENTE].'));
+  if(hv(o,'hep')) r.push(par('Hepatopatía: evita duloxetina y usa dosis menores de ISRS con titulación lenta [@NICE_ANX].'));
+  if(hv(o,'mayor')) r.push(par('65 años o más: empieza con la mitad de la dosis, vigila hiponatremia y caídas, y limita escitalopram a 10 mg [VERIFICAR EN FUENTE].'));
+  if(hv(o,'bzd')) r.push(par('Usa benzodiacepina desde hace semanas: no la suspendas de golpe; mantenla mientras el ISRS empieza a actuar y redúcela de forma gradual y pactada para evitar rebote y abstinencia [@NICE_ANX][@FDA_BZD][@ASHTON].'));
+  if(hv(o,'ide')) r.push(par('Ideación suicida: el ISRS puede activar en las primeras semanas; da pocas dosis por receta, revisa cada semana y estratifica el riesgo (ver «Visión de conjunto») [@MHGAP].'));
+  r.push('<span class="cf">Si aparecen ideación suicida o una depresión mayor asociada → deja de ser solo ansiedad y se trata primero el riesgo y el episodio depresivo [@MHGAP][@NICE_ANX].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE3r(dc){
+  var i=sel(dc,'ide'),f=sel(dc,'fac');
+  if(!i.length){
+    vacio(dc,'Elige el nivel de ideación y los factores presentes para obtener el nivel de riesgo y la conducta en primer nivel sin derivación.');return;}
+  var base={ninguna:0,pasiva:1,activa:2,plan:3},b=0,k;
+  for(k in base){if(hv(i,k)) b=base[k];}
+  var n=f.length,lvl=b;
+  if(b>=1&&n>=1) lvl++;
+  if(b>=1&&n>=3) lvl++;
+  if(lvl>3) lvl=3;
+  var nom=['bajo','bajo con vigilancia','moderado','alto'],r=[];
+  r.push(par('Nivel de riesgo: <b>'+nom[lvl]+'</b>. Los factores presentes ('+n+') suben el nivel; el simulador no calcula probabilidades [@CSSRS][@MHGAP].'));
+  if(lvl===0){
+    r.push(par('Sin ideación: explica que puede consultar si cambia, trata el episodio depresivo y vuelve a preguntar en cada cita [@MHGAP].'));
+    if(n) r.push(par('Con antecedentes o factores de riesgo, sigue preguntando de forma directa y verifica que haya apoyo y plan de contacto [@MHGAP].'));
+  }
+  if(lvl===1){
+    r.push(par('Conducta: plan de seguridad escrito (señales de alarma, estrategias de afrontamiento, personas y números de contacto), psicoeducación a la familia y seguimiento cercano en 1 semana [@MHGAP].'));
+  }
+  if(lvl===2){
+    r.push(par('Conducta: plan de seguridad escrito, restricción de medios con ayuda de un familiar (retirar fármacos, plaguicidas y armas), acompañamiento por una persona de confianza y seguimiento cercano en pocos días [@MHGAP].'));
+  }
+  if(lvl===3){
+    r.push(par('Riesgo inminente: no dejes solo al paciente en ningún momento, retira los medios del entorno, mantén observación continua en el centro y activa ECU 911 para el traslado; mientras llega, conversa, escucha y no lo dejes marchar [@MHGAP].'));
+    r.push(par('Después de la crisis: plan de seguridad escrito, familia comprometida y seguimiento diario o muy cercano hasta que baje el riesgo [@MHGAP].'));
+  }
+  if(hv(f,'agrav')) r.push(par('Psicosis, alcohol o desesperanza grave: trátalo como factor que sube el riesgo; si es psicosis, pide interconsulta o teleconsulta con psiquiatría [@MHGAP].'));
+  if(hv(f,'medios')) r.push(par('El acceso a medios letales es el factor más modificable: retíralos o restríngelos de inmediato con la familia [@MHGAP].'));
+  r.push('<span class="cf">Si el paciente pasa de pensamientos sin plan a plan o intención, o aparece acceso a medios → la conducta cambia de plan de seguridad y seguimiento a no dejarlo solo y activar ECU 911 [@MHGAP][@CSSRS].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE3(dc){
+  var g=sel(dc,'grav'),e=sel(dc,'etapa'),o=sel(dc,'otros');
+  if(!e.length){
+    vacio(dc,'Elige la etapa del tratamiento (y la gravedad si estás iniciando) para obtener la conducta y la posología.');return;}
+  var r=[];
+  if(hv(e,'inicio')){
+    if(!g.length) r.push(par('Elige la gravedad (PHQ-9 por bandas) para decidir entre psicoterapia sola o combinada con fármaco [@PHQ9][@NICE_DEP].'));
+    else if(hv(g,'leve')) r.push(par('Depresión leve: empieza con psicoterapia (activación conductual o terapia cognitivo-conductual) y revisa en 2 semanas; añade un ISRS si no mejora o el paciente lo prefiere [@NICE_DEP].'));
+    else{
+      r.push(par('Depresión '+(hv(g,'grave')?'grave':'moderada')+': ISRS más psicoterapia. Sertralina 50 mg VO cada 24 h (inicia con 25 mg si hay ansiedad marcada, hasta 200 mg), o escitalopram 10 mg VO cada 24 h (máximo 20 mg), o fluoxetina 20 mg VO cada 24 h por la mañana (hasta 60 mg) [@NICE_DEP].'));
+      if(hv(g,'grave')) r.push(par('Grave: revisa cada semana el riesgo suicida y la tolerancia durante el primer mes [@NICE_DEP][@MHGAP].'));
+    }
+  }
+  if(hv(e,'nores')) r.push(par('Sin respuesta tras 4 a 6 semanas: confirma adherencia, sube la dosis hasta el máximo tolerado, cambia a otro ISRS o a venlafaxina XR 75 mg VO cada 24 h con alimentos (hasta 225 mg), o añade psicoterapia [@NICE_DEP].'));
+  if(hv(e,'remis')) r.push(par('En remisión: mantén el mismo fármaco y la misma dosis al menos 6 meses y retira de forma gradual para evitar discontinuación y recaída [@NICE_DEP].'));
+  if(hv(o,'bip')) r.push(par('Antecedente de manía o hipomanía: no inicies un antidepresivo solo, porque puede inducir viraje; requiere estrategia con estabilizador, idealmente con psiquiatría [@DSM][@NICE_DEP].'));
+  if(hv(o,'joven')) r.push(par('Menor de 25 años: vigila activación e ideación en las primeras semanas con revisión durante la primera semana [VERIFICAR EN FUENTE].'));
+  if(hv(o,'mayor')) r.push(par('65 años o más: inicia con la mitad de la dosis, vigila hiponatremia y caídas, y limita escitalopram a 10 mg [VERIFICAR EN FUENTE].'));
+  if(hv(o,'psic')) r.push(par('Síntomas psicóticos: la depresión con psicosis no se maneja con ISRS solo; pide interconsulta o teleconsulta con psiquiatría y, si no es posible, sigue mhGAP en el centro [@MHGAP].'));
+  if(hv(o,'sui')) r.push(par('Ideación suicida: estratifica el riesgo en esa consulta (ver «Diagnóstico») y no entregues fármacos en cantidad letal [@MHGAP].'));
+  r.push('<span class="cf">Si el paciente tiene antecedente de manía o aparece ideación con plan → la conducta pasa de iniciar o ajustar el antidepresivo a descartar bipolaridad o asegurar la vida primero [@DSM][@MHGAP].</span>');
+  out(dc,r.join(''));
+}
+function dcE4(dc){
+  var d=num(dc,'dosis'),ri=sel(dc,'ritmo'),o=sel(dc,'otros');
+  if(isNaN(d)&&!ri.length&&!o.length){
+    vacio(dc,'Escribe la dosis diaria de alprazolam y elige la evolución y los otros datos para obtener la pauta de reducción.');return;}
+  var f=function(x){return String(x).replace('.',',');};
+  var r=[];
+  if(hv(o,'conv')) r.push(par('Convulsión o confusión: es abstinencia grave. Reinstala la benzodiacepina, estabiliza y activa ECU 911; no sigas reduciendo [@ASHTON][@MHGAP].'));
+  if(hv(o,'isq')) r.push(par('Opresión torácica actual: haz ECG de 12 derivaciones antes de atribuirla a rebote o abstinencia; si hay cambios isquémicos, sigue el manejo de «Síndrome coronario agudo» [@AHA_DT].'));
+  if(hv(o,'alc')) r.push(par('Alcohol u opioides: suman depresión respiratoria con la benzodiacepina; suspéndelos o trátalos antes de iniciar la reducción [@FDA_BZD].'));
+  if(!isNaN(d)){
+    if(d<=0){
+      r.push(par('Escribe una dosis diaria mayor de 0 mg.'));
+    } else {
+      if(d>10) r.push(par('La dosis supera los 10 mg al día que admite la ficha en pánico; confirma la dosis real [@XANAX_FT].'));
+      var eq=d*20;
+      var sub=Math.min(eq,40);
+      var lo=Math.max(0.5,rd(sub*0.10*2,0)/2),hi=Math.max(0.5,rd(sub*0.25*2,0)/2);
+      r.push(par('Equivalencia: alprazolam '+f(d)+' mg al día ≈ diazepam '+f(rd(eq,1))+' mg al día (0,5 mg de alprazolam ≈ 10 mg de diazepam) [@ASHTON].'));
+      if(eq>sub) r.push(par('El equivalente supera el tope inicial de 40 mg al día [VERIFICAR EN FUENTE]: sustituye hasta '+f(sub)+' mg de diazepam, mantén el alprazolam restante y completa el cambio en pasos [@ASHTON].'));
+      else r.push(par('Sustituye por diazepam '+f(rd(sub,1))+' mg al día VO, repartido en 2–3 tomas o por la noche, y retira el alprazolam [@ASHTON].'));
+      if(hv(ri,'sint')) r.push(par('Con síntomas de abstinencia en el paso, mantén la dosis actual o retrocede un paso, y alarga el intervalo a 2 semanas o más; baja el 10 % en el paso siguiente [@ASHTON].'));
+      else r.push(par('Reducción: baja entre '+f(lo)+' y '+f(hi)+' mg de diazepam al día (10 a 25 % de la dosis) cada 1–2 semanas, según tolere [@ASHTON][@FDA_BZD].'));
+      r.push(par('Trata a la vez el trastorno de base con sertralina 25 mg VO cada 24 h durante una semana y luego 50 mg, más TCC [@NICE_ANX][@WFSBP].'));
+    }
+  } else {
+    r.push(par('Escribe la dosis diaria de alprazolam para calcular la equivalencia en diazepam y el primer paso de reducción.'));
+  }
+  r.push('<span class="cf">Si aparecen convulsión, confusión o síntomas intensos de abstinencia en un paso → reinstala la dosis previa, enlentece la reducción y activa ECU 911 si hay compromiso vital [@ASHTON][@MHGAP].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE5(dc){
+  var e=sel(dc,'ecg'),o=sel(dc,'otros');
+  if(!e.length&&!o.length){
+    vacio(dc,'Elige el hallazgo del ECG y los otros datos para obtener la conducta inicial con su posología.');return;}
+  var r=[];
+  var stel=hv(e,'stel'),sest=hv(e,'sest'),norm=hv(e,'norm');
+  var isq=stel||sest||hv(o,'tro');
+  if(stel) r.push(par('SCACEST: emergencia con reperfusión inmediata. Activa ECU 911 para traslado a un centro con ICP, con monitorización y desfibrilador [@ESC_SCA].'));
+  else if(sest||hv(o,'tro')) r.push(par('Compatible con IAMSEST o angina inestable: activa ECU 911 para traslado a un centro con ICP; no esperes más resultados [@ESC_SCA].'));
+  else if(norm&&hv(o,'dolor')) r.push(par('ECG sin cambios con dolor en curso: no descartes isquemia. Repite el ECG, mide troponina si hay, usa HEART como apoyo y trata como SCA hasta descartarlo [@ESC_SCA][@HEART].'));
+  else if(norm) r.push(par('ECG inicial sin cambios: no descarta el síndrome. Repite el ECG, toma troponina si hay y observa; considera otras causas solo después [@ESC_SCA][@AHA_DT].'));
+  else r.push(par('Con dolor torácico y sin ECG, hazlo en los primeros 10 min antes de cualquier otra decisión [@ESC_SCA].'));
+  if(isq||hv(o,'dolor')){
+    if(hv(o,'aas')) r.push(par('Alergia a AAS: no lo des. El segundo antiagregante lo decide el centro con ICP [@ESC_SCA].'));
+    else r.push(par('Ácido acetilsalicílico 150–300 mg VO masticada, dosis única [@ESC_SCA].'));
+    if(hv(o,'pas')||hv(o,'pde5')){
+      r.push(par('No des nitroglicerina: '+(hv(o,'pas')?'la presión sistólica es menor de 90 mmHg':'hay un inhibidor de PDE5 reciente')+' [@ESC_SCA]. Acuesta al paciente y vigila.'));
+    } else {
+      r.push(par('Si persiste el dolor: nitroglicerina 0,4 mg sublingual cada 5 min, hasta 3 dosis, mientras la presión sistólica se mantenga adecuada [@ESC_SCA].'));
+    }
+    if(hv(o,'sat')) r.push(par('SatO₂ menor de 90 %: oxígeno inhalado, titulado hasta una SatO₂ de 90 % o más; en Quito compara con el valor basal local [VERIFICAR EN FUENTE] [@ESC_SCA].'));
+    else r.push(par('Sin hipoxemia, no des oxígeno de rutina [@ESC_SCA].'));
+    r.push(par('Evita las benzodiacepinas para calmar la angustia mientras no se descarte isquemia [@AHA_DT].'));
+  }
+  r.push('<span class="cf">Si el ECG sigue sin cambios, la troponina seriada es negativa y el dolor cede → considera crisis de angustia y pasa a «Trastorno de pánico»; si el dolor persiste o la troponina sube → trata como SCASEST y mantén el traslado [@ESC_SCA].</span>');
+  out(dc,r.join(''));
+}
+</script>

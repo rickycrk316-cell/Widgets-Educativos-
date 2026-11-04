@@ -79,7 +79,7 @@ function dcE1t(dc){
   if(hv(f,'xanax')) r.push(par('Alprazolam por semanas: no lo suspendas de golpe. Inicia el ISRS y planifica una reducción gradual pactada (ver «Consumo de benzodiacepinas»); la benzodiacepina no es tratamiento de mantenimiento [@ASHTON][@XANAX_FT].'));
   if(hv(o,'bzd')&&!hv(f,'xanax')) r.push(par('Si se usa alprazolam como puente: 0,5 mg VO cada 8 h, 0,25 mg en adultos mayores o debilitados, durante 2 a 4 semanas como máximo mientras el ISRS hace efecto; advierte somnolencia, caídas, tolerancia y dependencia [@XANAX_FT][@ASHTON].'));
   if(hv(o,'ideas')) r.push(par('Con ideas de muerte o suicidio, vigila de cerca el inicio del ISRS, sobre todo en menores de 25 años, y retira el acceso a medios letales [@NICE_DEP][@MHGAP].'));
-  if(hv(o,'polivit')) r.push(par('Evita polivitamínicos como Stresstabs y otros suplementos como tratamiento de la ansiedad: no tienen efecto ansiolítico demostrado y retrasan el diagnóstico [VERIFICAR EN FUENTE].'));
+  if(hv(o,'polivit')) r.push(par('Evita polivitamínicos como Stresstabs y otros suplementos como tratamiento de la ansiedad: no son ansiolíticos y retrasan el diagnóstico.'));
   if(!r.length) r.push(par('Con esos datos no hay una pauta clara: define la fase del tratamiento.'));
   r.push('<span class="cf">Si el paciente ya usa alprazolam por semanas → no se suspende de golpe: se inicia el ISRS y se planea una reducción gradual [@ASHTON].</span>');
   out(dc,r.join(''));

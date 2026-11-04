@@ -15,7 +15,8 @@ if prueba:
     shutil.copytree(d, t); m = json.loads((t/'manifiesto.json').read_text(encoding='utf-8'))
     m['salida'] = f'../_tmp_{d.name}.html'; (t/'manifiesto.json').write_text(json.dumps(m, ensure_ascii=False, indent=1), encoding='utf-8'); d = t
 partes = sorted(d.glob('*.html')); orden = []
-for p in partes:
+# Panorama (02_pan) reutiliza números: la primera aparición se cuenta desde vis.
+for p in [x for x in partes if not x.name.startswith('02_pan')] + [x for x in partes if x.name.startswith('02_pan')]:
     for k in re.findall(r'\[@([A-Z0-9_]+)\]', p.read_text(encoding='utf-8')):
         if k not in orden: orden.append(k)
 mal = [k for k in orden if k not in refs]
