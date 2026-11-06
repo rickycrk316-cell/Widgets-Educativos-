@@ -2,14 +2,78 @@
  "titulo": "Depresión, trastorno bipolar y suicidio",
  "salida": "../Depresion_bipolar_suicidio_widget_v10.html",
  "modo": "multi",
- "entidades": {"e1": "Depresión mayor", "e2": "Trastorno bipolar", "e3": "Conducta suicida"},
+ "entidades": {
+  "e1": "Depresión mayor",
+  "e2": "Trastorno bipolar",
+  "e3": "Conducta suicida"
+ },
  "principal": "e1",
  "amenaza": "e3",
- "tabs": ["pan", "vis", "e1", "e2", "e3", "sin"],
- "pg": {"vis": 4, "e1": 5, "e2": 3, "e3": 3},
- "fey": {"e1": 2, "e2": 1, "e3": 1},
- "nodos": {"e1": 6, "e2": 6, "e3": 6},
- "signos": {"e1": 5, "e2": 4, "e3": 4},
- "dc": ["vis", "e1", "e2", "e3"],
- "nucleo": {}
+ "tabs": [
+  "pan",
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "sin"
+ ],
+ "pg": {
+  "vis": 4,
+  "e1": 5,
+  "e2": 3,
+  "e3": 3
+ },
+ "fey": {
+  "e1": 2,
+  "e2": 1,
+  "e3": 1
+ },
+ "nodos": {
+  "e1": 6,
+  "e2": 6,
+  "e3": 6
+ },
+ "signos": {
+  "e1": 5,
+  "e2": 4,
+  "e3": 4
+ },
+ "dc": [
+  "vis",
+  "e1",
+  "e2",
+  "e3"
+ ],
+ "nucleo": {
+  "vis": [
+   "Eje 1 — Polaridad: antes de nombrar una depresión, pregunta por manía o hipomanía previas; un solo episodio elevado la convierte en bipolar.",
+   "Eje 2 — Riesgo suicida: en todo paciente con síntomas del ánimo se pregunta de forma directa por ideación, plan, intento previo y acceso a medios.",
+   "Eje 3 — Tratamiento según el polo: el antidepresivo en monoterapia es de elección solo en la depresión unipolar; en la bipolar manda el estabilizador."
+  ],
+  "e1": [
+   "Déficit monoaminérgico",
+   "Caída de BDNF y neuroplasticidad hipocampo-prefrontal",
+   "Hipoactividad prefrontal y circuito de recompensa",
+   "Desesperanza e ideación suicida",
+   "Ánimo deprimido o anhedonia casi todos los días ≥2 semanas",
+   "PHQ-9 + criterios DSM-5-TR en la entrevista",
+   "ISRS y psicoterapia según gravedad"
+  ],
+  "e2": [
+   "Desregulación de ritmos circadianos y sueño",
+   "Dopamina alta en manía y baja en depresión",
+   "Falla el control prefrontal sobre el sistema límbico",
+   "Antecedente de manía o hipomanía: ánimo elevado, más energía, menos sueño",
+   "Entrevista dirigida a manía e hipomanía, con criterios DSM-5-TR, en todo paciente con depresión",
+   "Litio en mantenimiento y en la manía clásica"
+  ],
+  "e3": [
+   "Estresor agudo y desesperanza con atrapamiento",
+   "Capacidad adquirida y acceso a medios",
+   "Acto autoinfligido con intención de morir",
+   "Ideación suicida con plan o intención, o intento reciente",
+   "Pregunta de forma directa por ideación en todo paciente con síntomas del ánimo",
+   "Plan de seguridad escrito y estructurado, elaborado con el paciente"
+  ]
+ }
 }
