@@ -23,7 +23,9 @@ Repo solo de estudio médico (Ricardo, Quirúrgica 2 · PUCE, 10.º nivel). Índ
 
 Construye siempre con `kit/construir.py`: el kit del repo (`kit/kit_head.html`) es la variante Vademécum y prevalece sobre el CSS del prompt/skill.
 
-Reglas del kit: las partes no llevan `<style>`, estilos en línea, recursos remotos, `localStorage` ni `position:fixed`. Cifras con cita Vancouver `[n]` o marcadas `[VERIFICAR EN FUENTE]`.
+Reglas del kit: las partes no llevan `<style>`, estilos en línea, recursos remotos, `localStorage` ni `position:fixed`. Cifras con cita Vancouver `[n]`.
+
+**v10.2** (skill del repo `.claude/skills/widget-ensenanza/SKILL.md`, manda sobre la sincronizada v10.1): diagramas `figure.dg` obligatorios (causa-efecto, mecanismo de acción, representación; mínimos en §7.16), columna «Mecanismo de acción» en las tablas de fármacos, `div.duo` para emparejar texto y diagrama (dos columnas en Mac e iPad horizontal), y cero `[VERIFICAR EN FUENTE]`: se agotan PubMed, Consensus, DailyMed, GPC del MSP y web, y lo que no se confirme se elimina (`fuentes/protocolo_verificacion.md`). El manifiesto lleva `dg` y con él `validar.py` exige todo esto. El kit adapta solo las tablas (fichas en iPhone) y el ancho (Mac).
 
 ## Flujo de revisión
 

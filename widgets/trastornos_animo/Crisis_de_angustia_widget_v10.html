@@ -194,6 +194,47 @@ table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index
 .fig figcaption{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin-top:6px}
 @media (min-width:700px){body{font-size:15.5px}.wrap{padding:22px 24px 64px}h1{font-size:28px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+/* v10.2 · Diagramas de bloques y flechas (causa-efecto, mecanismo, representación) */
+.dg{margin:16px 0;padding:12px;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);max-width:100%;overflow-wrap:anywhere}
+.dg-t{font:600 15px/1.35 var(--f-serif);margin:0 0 10px}
+.dg figcaption{margin-top:10px}
+.dg-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;margin:8px 0}
+.dg-col{display:flex;flex-direction:column;gap:6px;flex:0 1 220px;min-width:0}
+.dg-n{border:1px solid var(--ink-3);border-radius:var(--r);background:var(--paper);color:var(--ink);padding:7px 10px;font-size:13.5px;line-height:1.4;min-width:0;max-width:100%}
+.dg-row>.dg-n{flex:0 1 220px}
+.dg-n.b{background:var(--co-f);border-color:var(--co);color:var(--co)}
+.dg-n.p{background:var(--pu-f);border-color:var(--pu);color:var(--pu)}
+.dg-n.s{background:var(--ve-f);border-color:var(--ve);color:var(--ve)}
+.dg-n.fr{background:var(--am-f);border-color:var(--am);color:var(--am)}
+.dg-n.ac{background:var(--accent-field);border-color:var(--accent);color:var(--accent-ink)}
+.dg-n.ro{background:var(--ro-f);border-color:var(--ro);color:var(--ro)}
+.dg-ar{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;min-width:28px;color:var(--ink-3)}
+.dg-ar::before{content:"→";order:2;font:400 22px/1 var(--f-sans);color:var(--ink-3)}
+.dg-lab{order:1;font-size:11.5px;line-height:1.3;color:var(--ink-3);text-align:center}
+/* v10.2 · Dos columnas: texto y su diagrama o tabla, lado a lado en pantallas anchas */
+.duo>*{min-width:0}
+/* v10.2 · iPhone: diagramas en vertical y tablas apiladas en fichas (el script etiqueta cada celda) */
+@media (max-width:599px){
+.dg-row{flex-direction:column;align-items:stretch;flex-wrap:nowrap}
+.dg-col,.dg-row>.dg-n{flex:0 0 auto;width:100%}
+.dg-ar{flex-direction:row;align-self:center;gap:6px}
+.dg-ar::before{content:"↓";order:0}
+.dg-lab{order:1}
+.tw table.stk,.tw table.stk tbody,.tw table.stk tr,.tw table.stk td,.tw table.stk tbody th{display:block;width:100%}
+.tw table.stk thead{display:none}
+.tw table.stk tr{border:1px solid var(--rule);border-radius:var(--r);margin:0 0 10px;padding:8px 10px;background:var(--paper)}
+.tw table.stk td,.tw table.stk tbody th{border:0;padding:3px 0;text-align:left}
+.tw table.stk tbody th{font-weight:700;padding-bottom:6px;border-bottom:1px solid var(--rule);margin-bottom:4px}
+.tw table.stk td[data-l]::before{content:attr(data-l);display:block;font:700 11px/1.3 var(--f-sans);letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3);margin-top:4px}
+}
+/* v10.2 · Mac e iPad horizontal: página más ancha, prosa con línea legible y .duo en dos columnas */
+@media (min-width:1100px){
+.wrap{max-width:1240px}
+section.tab p,section.tab dd,section.tab li{max-width:82ch}
+.tw p,.tw li,.dg p,.duo p,.duo li{max-width:none}
+.duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start;margin:12px 0}
+.duo>.dg,.duo>.tw,.duo>.card,.duo>.fey{margin-top:0}
+}
 </style>
 </head>
 <body>
@@ -1379,7 +1420,8 @@ var w=document.createElement('div');w.className='hb az rec-go';w.innerHTML='<div
 if(sin&&vt){var vs=secOf(vt),vk=vs.getAttribute('data-tab'),b0=btn('Tabla en blanco — '+nameOf(vk),function(){show(vk);tabla(true);var b=document.getElementById('vb-bar');if(b)b.scrollIntoView({block:'start'})},'go');b0.setAttribute('data-rec',vk);bs.appendChild(b0)}
 ord.forEach(function(s){var k=s.getAttribute('data-tab'),b=btn('Reconstruir la cascada — '+nameOf(k),function(){show(k);recon(s,true);var r=document.getElementById('rec-bar-'+k);if(r)r.scrollIntoView({block:'start'})},'go');b.setAttribute('data-rec',k);bs.appendChild(b)});
 var rf=$('.acc.refs',dst);if(rf)dst.insertBefore(w,rf);else dst.appendChild(w)}
-function init(){var f=$('.tb'),ph=[function(){var n=$('nav.tabs');if(n){var w=document.createElement('div');w.className='tabs-w';n.parentNode.insertBefore(w,n);w.appendChild(n);n.addEventListener('scroll',navOv);window.addEventListener('resize',navOv)}},function(){$$('section.tab').forEach(function(s){if($('ol.tl',s))initNodos(s)})},initTg,initTabla,initRecGo,function(){$$('.dc').forEach(runDc)},function(){show(secK('pan')?'pan':(f?f.getAttribute('data-tab'):''))}];ph.forEach(function(p){try{p()}catch(e){if(window.console)console.error('kit v10:',e)}})}
+function initStk(){$$('.tw table').forEach(function(tb){if(tb.classList.contains('vis'))return;var hs=$$('thead th',tb).map(function(h){return h.textContent.replace(/\s+/g,' ').trim()});if(!hs.length)return;tb.classList.add('stk');$$('tbody tr',tb).forEach(function(tr){Array.prototype.slice.call(tr.children).forEach(function(c,i){if(c.tagName==='TD'&&hs[i])c.setAttribute('data-l',hs[i])})})})}
+function init(){var f=$('.tb'),ph=[function(){var n=$('nav.tabs');if(n){var w=document.createElement('div');w.className='tabs-w';n.parentNode.insertBefore(w,n);w.appendChild(n);n.addEventListener('scroll',navOv);window.addEventListener('resize',navOv)}},function(){$$('section.tab').forEach(function(s){if($('ol.tl',s))initNodos(s)})},initTg,initTabla,initStk,initRecGo,function(){$$('.dc').forEach(runDc)},function(){show(secK('pan')?'pan':(f?f.getAttribute('data-tab'):''))}];ph.forEach(function(p){try{p()}catch(e){if(window.console)console.error('kit v10:',e)}})}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
 </script>
