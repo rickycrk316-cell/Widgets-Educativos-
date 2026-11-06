@@ -120,3 +120,34 @@ Reparto (hecho): ejecutor K → `p05_c0` + vin/anclaje/tarjeta de t1–t4; L →
 ## Reglas de diseño para ejecutores (ambos widgets)
 
 Las 10 reglas de `widgets/patologia_urinaria_baja/PLAN.md` § «Reglas de diseño para ejecutores» aplican tal cual (clases solo del kit; tablas con thead/tbody en `div.tw`; sin recuadros anidados; tipo oración; párrafos ≤90 palabras; un `<b>` por párrafo; voz activa, español de Ecuador; sin emojis; coma decimal; conteos de la skill).
+
+## Widget C · Depresión, trastorno bipolar y suicidio (widget-ensenanza v10.1, multi) — `depresion_bipolar_suicidio/`
+
+Pedido del estudiante: «todo lo que tengo que saber» del Caso 7 (trastornos del estado de ánimo), centrado en depresión, trastorno bipolar y suicidio, con el esquema de explicación de temas del DSM-5-TR. No hay un esquema propio en el repo; se toma la estructura de texto del DSM-5-TR para cada trastorno y se declara en el widget.
+
+Router: `Modo: multi · Entidades: e1=Depresión mayor (principal), e2=Trastorno bipolar, e3=Conducta suicida · Amenaza: e3 · Override: no`
+
+- Presentación común: **adulto con síntomas depresivos (ánimo bajo o anhedonia) en consulta de primer nivel**.
+- Eje (declarado): polaridad y letalidad. Depresión unipolar → espectro bipolar (aparece el polo elevado) → la complicación letal común a ambos (conducta suicida).
+- Textos de botón: `Visión de conjunto` · `Depresión mayor` · `Trastorno bipolar` · `Conducta suicida`.
+- Conducta suicida: en el DSM-5-TR el «trastorno de comportamiento suicida» está en la Sección III (afecciones que necesitan más estudio) y existen códigos de comportamiento suicida actual o pasado entre las afecciones que pueden ser objeto de atención clínica. Se trata como entidad por su mecanismo propio (modelo diátesis-estrés) y su manejo propio (estratificación, plan de seguridad, restricción de medios).
+- Subtipos: e1 gravedad (leve, moderada, grave), especificadores (con características ansiosas, mixtas, melancólicas, atípicas, psicóticas, con patrón estacional, con inicio en el periparto) y trastorno depresivo persistente; e2 bipolar I, bipolar II, ciclotímico y especificadores (ciclación rápida, características mixtas); e3 ideación pasiva, ideación activa sin plan, con plan o intención, intento interrumpido o abortado, intento, y autolesión sin intención suicida como vecina.
+
+**Esquema DSM-5-TR** (obligatorio en cada `eK`, dentro de «Qué es»): tabla `Sección del DSM-5-TR · Lo esencial · Dónde se desarrolla`, con estas filas en este orden: Criterios diagnósticos · Especificadores · Características diagnósticas · Características asociadas · Prevalencia · Desarrollo y curso · Factores de riesgo y pronóstico · Cuestiones culturales · Sexo y género · Asociación con pensamientos o comportamientos suicidas · Consecuencias funcionales · Diagnóstico diferencial · Comorbilidad. «Lo esencial» ≤15 palabras; «Dónde se desarrolla» = el `h2` de la pestaña que lo amplía. Los criterios se parafrasean (no se copian literales) en una tabla aparte `Criterio · Qué exige`.
+
+Ejes de `vis` (literales, van a `nucleo.vis`):
+1. `Eje 1 — Polaridad: antes de nombrar una depresión, pregunta por manía o hipomanía previas; un solo episodio elevado la convierte en bipolar.`
+2. `Eje 2 — Riesgo suicida: en todo paciente con síntomas del ánimo se pregunta de forma directa por ideación, plan, intento previo y acceso a medios.`
+3. `Eje 3 — Tratamiento según el polo: el antidepresivo en monoterapia es de elección solo en la depresión unipolar; en la bipolar manda el estabilizador.`
+
+Contrato de `vis` por entidad:
+
+| | Signo que la delata (k) | 1.º dx | Conducta inicial |
+|---|---|---|---|
+| e1 | Ánimo deprimido o anhedonia casi todos los días ≥2 semanas | PHQ-9 + criterios DSM-5-TR en la entrevista | ISRS y psicoterapia según gravedad |
+| e2 | Antecedente de manía o hipomanía: ánimo elevado, más energía, menos sueño | Entrevista dirigida a manía o hipomanía + criterios DSM-5-TR | Estabilizador del ánimo; no antidepresivo en monoterapia |
+| e3 | Ideación suicida con plan o intención, o intento reciente | Pregunta directa por ideación + C-SSRS | Plan de seguridad, restricción de medios y ECU 911 si es inminente |
+
+Conteos (manifiesto): `pg` vis 4, e1 5, e2 3, e3 3 · `fey` e1 2, e2 1, e3 1 · `nodos` e1 6, e2 6, e3 6 · `signos` e1 5, e2 4, e3 4 · `dc` vis, e1, e2, e3. Simuladores: `dcVis` (diferencial), `dcE1d` (PHQ-9 por bandas → gravedad → conducta inicial, en «Diagnóstico»), `dcE1t` (tratamiento por gravedad y situación especial, en «Tratamiento»), `dcE2` (fase: manía aguda, depresión bipolar, mantenimiento → fármaco con posología; litio con función renal y litemia), `dcE3` (estratificación del riesgo → conducta en primer nivel, en «Tratamiento»). Profundidad: e2 y e3 se escriben a profundidad de examen aunque superen las 1 200 palabras (aviso del validador aceptado: lo pidió el estudiante).
+
+Reparto: A → `05_vis` + `21_e1`; B → `22_e2`; C → `23_e3` + `80_sin` (con `<!--REFS-->`); D (al final) → `02_pan`. JS en `depresion_bipolar_suicidio/_sim_<X>.js`. Título `Depresión, trastorno bipolar y suicidio` · salida `../Depresion_bipolar_suicidio_widget_v10.html`.

@@ -1,0 +1,15 @@
+{
+ "titulo": "Depresión, trastorno bipolar y suicidio",
+ "salida": "../Depresion_bipolar_suicidio_widget_v10.html",
+ "modo": "multi",
+ "entidades": {"e1": "Depresión mayor", "e2": "Trastorno bipolar", "e3": "Conducta suicida"},
+ "principal": "e1",
+ "amenaza": "e3",
+ "tabs": ["pan", "vis", "e1", "e2", "e3", "sin"],
+ "pg": {"vis": 4, "e1": 5, "e2": 3, "e3": 3},
+ "fey": {"e1": 2, "e2": 1, "e3": 1},
+ "nodos": {"e1": 6, "e2": 6, "e3": 6},
+ "signos": {"e1": 5, "e2": 4, "e3": 4},
+ "dc": ["vis", "e1", "e2", "e3"],
+ "nucleo": {}
+}
