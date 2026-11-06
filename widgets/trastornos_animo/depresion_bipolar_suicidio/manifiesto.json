@@ -75,5 +75,11 @@
    "Pregunta de forma directa por ideación en todo paciente con síntomas del ánimo",
    "Plan de seguridad escrito y estructurado, elaborado con el paciente"
   ]
+ },
+ "dg": {
+  "vis": 2,
+  "e1": 4,
+  "e2": 3,
+  "e3": 3
  }
 }
