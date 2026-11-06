@@ -176,6 +176,8 @@ ol.rank>li.g4::before{color:var(--ve)}
 .dg-ar{flex-direction:row;align-self:center;gap:6px}
 .dg-ar::before{content:"↓";order:0}
 .dg-lab{order:1}
+.dg-row+.dg-row{border-top:1px dashed var(--ink-3);padding-top:12px;margin-top:12px}
+.dg-row>.dg-col+.dg-col{border-top:1px dashed var(--ink-3);padding-top:10px;margin-top:6px}
 }
 @media (min-width:700px){body{font-size:15.5px}.wrap{padding:22px 24px 64px}h1{font-size:28px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}

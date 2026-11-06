@@ -220,6 +220,8 @@ table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index
 .dg-ar{flex-direction:row;align-self:center;gap:6px}
 .dg-ar::before{content:"↓";order:0}
 .dg-lab{order:1}
+.dg-row+.dg-row{border-top:1px dashed var(--ink-3);padding-top:12px;margin-top:12px}
+.dg-row>.dg-col+.dg-col{border-top:1px dashed var(--ink-3);padding-top:10px;margin-top:6px}
 .tw table.stk,.tw table.stk tbody,.tw table.stk tr,.tw table.stk td,.tw table.stk tbody th{display:block;width:100%}
 .tw table.stk thead{display:none}
 .tw table.stk tr{border:1px solid var(--rule);border-radius:var(--r);margin:0 0 10px;padding:8px 10px;background:var(--paper)}
@@ -287,11 +289,10 @@ section.tab p,section.tab dd,section.tab li{max-width:82ch}
 <figure class="dg">
 <div class="dg-t">Del síntoma depresivo a la entidad</div>
 <div class="dg-row"><div class="dg-n p">Adulto con ánimo bajo o anhedonia</div></div>
-<div class="dg-row">
-<div class="dg-col"><div class="dg-n p">¿Manía o hipomanía previas?</div><div class="dg-ar"><span class="dg-lab">sí</span></div><div class="dg-n ac">Trastorno bipolar</div><div class="dg-ar"><span class="dg-lab">no</span></div><div class="dg-n ac">Depresión mayor</div></div>
-<div class="dg-col"><div class="dg-n p">Pregunta directa por ideación suicida</div><div class="dg-ar"><span class="dg-lab">plan o intención</span></div><div class="dg-n ro">Conducta suicida: riesgo inmediato</div></div>
-</div>
-<figcaption class="mini">La polaridad y el riesgo suicida se preguntan en paralelo, antes de nombrar la depresión.</figcaption>
+<div class="dg-row"><div class="dg-n p">Manía o hipomanía previas</div><div class="dg-ar"><span class="dg-lab">sí</span></div><div class="dg-n ac">Trastorno bipolar</div></div>
+<div class="dg-row"><div class="dg-n p">Nunca manía ni hipomanía</div><div class="dg-ar"><span class="dg-lab">no</span></div><div class="dg-n ac">Depresión mayor</div></div>
+<div class="dg-row"><div class="dg-n p">Ideación con plan o intención</div><div class="dg-ar"><span class="dg-lab">en cualquiera</span></div><div class="dg-n ro">Conducta suicida: riesgo inmediato</div></div>
+<figcaption class="mini">Cada fila es una pregunta de la misma entrevista: la polaridad decide el capítulo y la ideación, en cualquiera de ellos, decide la urgencia.</figcaption>
 </figure>
 <div class="tw"><table class="vis"><thead><tr><th>Rasgo</th><th>Depresión mayor</th><th>Trastorno bipolar</th><th>Conducta suicida</th></tr></thead>
 <tbody>
@@ -849,7 +850,7 @@ section.tab p,section.tab dd,section.tab li{max-width:82ch}
 <div class="tw"><table><thead><tr><th>Fármaco</th><th>Mecanismo de acción</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
 <tbody>
 <tr><th>Litio (carbonato)</th><td>Inhibe GSK-3β y la inositol monofosfatasa; estabiliza la señalización y la plasticidad [20][27] <button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">← Disfunción mitocondrial y señalización intracelular</button></td><td>Inicio 300 mg cada 8 h (menos en adulto mayor o daño renal leve); sube 300 mg cada 3 días según litemia; habitual 600 mg cada 8 a 12 h en fase aguda y 300 a 600 mg cada 8 a 12 h en mantenimiento</td><td>VO</td><td>Cada 8 a 12 h</td><td>Manía: hasta la remisión; mantenimiento: años, a menudo indefinido</td><td>Litemia 12 h tras la última dosis: 0,8–1,2 mmol/L en manía aguda; 0,6–0,8 en mantenimiento según NICE (0,8–1,0 si hubo recaída; la ficha FDA fija 0,8–1,0) y de 1,5 en adelante es tóxica. Evita con filtrado reducido, deshidratación; monitoriza función renal, TSH y calcio</td><td>[27][3][25][20]</td></tr>
-<tr><th>Valproato (divalproato)</th><td>Bloquea canales de sodio y modula el glutamato: reduce la excitabilidad neuronal [20][27] <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Dopamina alta en manía y baja en depresión</button></td><td>750 mg/día al inicio en tomas divididas; sube lo antes posible a la menor dosis eficaz (máximo 60 mg/kg/día)</td><td>VO</td><td>Cada 8 a 12 h; liberación prolongada una vez al día</td><td>Manía: hasta la remisión; mantenimiento: según respuesta</td><td>Nivel en valle de 50 a 125 µg/mL [28]. Teratogénico: no en mujeres en edad fértil; vigila hígado, plaquetas y peso</td><td>[3][25][20]</td></tr>
+<tr><th>Valproato (divalproato)</th><td>Bloquea canales de sodio, aumenta el GABA y modula el glutamato: reduce la excitabilidad neuronal [20][27] <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Dopamina alta en manía y baja en depresión</button></td><td>750 mg/día al inicio en tomas divididas; sube lo antes posible a la menor dosis eficaz (máximo 60 mg/kg/día)</td><td>VO</td><td>Cada 8 a 12 h; liberación prolongada una vez al día</td><td>Manía: hasta la remisión; mantenimiento: según respuesta</td><td>Nivel en valle de 50 a 125 µg/mL [28]. Teratogénico: no en mujeres en edad fértil; vigila hígado, plaquetas y peso</td><td>[3][25][20]</td></tr>
 <tr><th>Lamotrigina</th><td>Bloquea canales de sodio dependientes de voltaje y reduce la liberación de glutamato [27] <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Dopamina alta en manía y baja en depresión</button></td><td>25 mg/día semanas 1–2; 50 mg semanas 3–4; 100 mg semana 5; 200 mg desde la semana 6</td><td>VO</td><td>Cada 24 h</td><td>Mantenimiento y depresión bipolar, a largo plazo</td><td>No sirve en la manía aguda. Titulación lenta por el riesgo de síndrome de Stevens-Johnson: suspende ante cualquier exantema; con valproato, la mitad (25 mg cada 48 h al inicio); si omite más de 5 días, reinicia [29]</td><td>[3][25][20]</td></tr>
 <tr><th>Quetiapina</th><td>Antagonista de receptores D2 y 5-HT2A [20] <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Dopamina alta en manía y baja en depresión</button></td><td>Manía: 100 mg día 1, 200 mg día 2, 300 mg día 3, 400 mg día 4, hasta 800 mg/día. Depresión bipolar: 50, 100, 200 y 300 mg/día en los días 1 a 4</td><td>VO</td><td>Manía: cada 12 h; depresión: una vez por la noche</td><td>Manía: hasta la remisión; depresión: semanas a meses; mantenimiento si respondió</td><td>Sedación, hipotensión, aumento de peso y glucosa; controla peso, glucemia y lípidos</td><td>[3][20]</td></tr>
 <tr><th>Olanzapina</th><td>Antagonista D2 y 5-HT2A [20] <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Dopamina alta en manía y baja en depresión</button></td><td>10–15 mg/día en manía; máximo 20 mg/día</td><td>VO</td><td>Cada 24 h</td><td>Manía: hasta la remisión; mantenimiento si respondió</td><td>Mayor aumento de peso y alteración metabólica; evita con obesidad o diabetes si hay alternativas</td><td>[3][20]</td></tr>
@@ -931,7 +932,7 @@ section.tab p,section.tab dd,section.tab li{max-width:82ch}
 <div class="dg-row">
 <div class="dg-col"><div class="dg-n ac">Vecina aparte: autolesión no suicida, sin intención de morir</div></div>
 </div>
-<figcaption class="mini">Se lee de izquierda a derecha, de menor a mayor gravedad; la autolesión no suicida no es un peldaño, es una entidad vecina.</figcaption>
+<figcaption class="mini">Se lee en el sentido de las flechas, de menor a mayor gravedad; la autolesión no suicida no es un peldaño, es una entidad vecina.</figcaption>
 </figure>
 <div class="card"><p>El DSM-5 de 2013 propuso el trastorno de comportamiento suicida en la Sección III, entre las afecciones que necesitan más estudio. El DSM-5-TR lo retiró de esa sección y dejó códigos de comportamiento suicida actual o pasado entre las afecciones que pueden ser objeto de atención clínica: el comportamiento se registra sin otorgar un diagnóstico [1].</p></div>
 <p>Criterios propuestos en el DSM-5 de 2013 y retirados en el DSM-5-TR, parafraseados por su valor didáctico:</p>

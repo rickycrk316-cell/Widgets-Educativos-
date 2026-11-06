@@ -220,6 +220,8 @@ table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index
 .dg-ar{flex-direction:row;align-self:center;gap:6px}
 .dg-ar::before{content:"↓";order:0}
 .dg-lab{order:1}
+.dg-row+.dg-row{border-top:1px dashed var(--ink-3);padding-top:12px;margin-top:12px}
+.dg-row>.dg-col+.dg-col{border-top:1px dashed var(--ink-3);padding-top:10px;margin-top:6px}
 .tw table.stk,.tw table.stk tbody,.tw table.stk tr,.tw table.stk td,.tw table.stk tbody th{display:block;width:100%}
 .tw table.stk thead{display:none}
 .tw table.stk tr{border:1px solid var(--rule);border-radius:var(--r);margin:0 0 10px;padding:8px 10px;background:var(--paper)}
