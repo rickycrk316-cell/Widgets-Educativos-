@@ -22,6 +22,7 @@ Widgets HTML de estudio, autocontenidos y offline (skill `widget-ensenanza` v10,
 | | `Forma_piernas_pies_widget_v10.html` | multi | genu varo/valgo (principal), anteversión femoral, pie plano, pie cavo, equinovaro (amenaza) | 26 |
 | Trastornos del ánimo | `Crisis_de_angustia_widget_v10.html` | multi | trastorno de pánico (principal), ansiedad generalizada, depresión mayor, consumo de benzodiacepinas, síndrome coronario agudo (amenaza) | 0 |
 | | `Apertura_trastornos_animo.html` | apertura | caso + 9 términos, 12 problemas (B, P, S, FR), jerarquización, 4 hipótesis, repaso | 1 (composición de Stresstabs) |
+| | `Depresion_bipolar_suicidio_widget_v10.html` | multi | depresión mayor (principal), trastorno bipolar, conducta suicida (amenaza) · esquema DSM-5-TR por entidad | 0 |
 
 `[VERIFICAR]` = datos marcados `[VERIFICAR EN FUENTE]`: compruébalos antes de estudiar con ellos.
 

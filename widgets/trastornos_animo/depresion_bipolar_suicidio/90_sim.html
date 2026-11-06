@@ -10,28 +10,28 @@ function dcVis(dc){
   var x=[],n=0;
   var alto=hv(r,'plan')||hv(r,'intento');
   if(alto){n++;
-    x.push(par('<b>Conducta suicida</b>: la ideación con plan o intención, o un intento reciente, pasa por delante de cualquier diagnóstico del ánimo. Falta la C-SSRS y la identificación de medios y de apoyo [@CSSRS]. Conducta inicial: no dejes solo al paciente, restringe los medios, elabora el plan de seguridad y activa ECU 911 si el riesgo es inminente [@MHGAP][@STANLEY].'));
+    x.push(par('<b>Conducta suicida</b>: la ideación con plan o intención, o un intento reciente, pasa por delante de cualquier diagnóstico del ánimo. Falta la C-SSRS y la identificación de medios y de apoyo [9]. Conducta inicial: no dejes solo al paciente, restringe los medios, elabora el plan de seguridad y activa ECU 911 si el riesgo es inminente [4][33].'));
   } else if(hv(r,'pasiva')){n++;
-    x.push(par('Ideas pasivas de muerte: pregunta por plan, intención, intentos previos y acceso a medios con la C-SSRS antes de decidir el nivel de atención [@CSSRS]. Conducta inicial: plan de seguridad y seguimiento cercano; ver «Conducta suicida».'));
+    x.push(par('Ideas pasivas de muerte: pregunta por plan, intención, intentos previos y acceso a medios con la C-SSRS antes de decidir el nivel de atención [9]. Conducta inicial: plan de seguridad y seguimiento cercano; ver «Conducta suicida».'));
   }
   var bip=hv(a,'mania')||hv(a,'viraje')||(hv(p,'ele'));
   if(bip){n++;
-    x.push(par('<b>Trastorno bipolar</b>: '+(hv(p,'ele')&&!hv(a,'mania')?'el polo elevado actual':'el antecedente de manía o hipomanía')+' ubica el cuadro en el capítulo bipolar'+(hv(p,'dep')?'; el ánimo bajo sería depresión bipolar':'')+'. Falta confirmar con la entrevista dirigida que el episodio elevado dura al menos 4 días (hipomanía) o 1 semana (manía) con criterios DSM-5-TR [@DSM]. Conducta inicial: estabilizador del ánimo; no antidepresivo en monoterapia [@CANMAT_BD].'));
+    x.push(par('<b>Trastorno bipolar</b>: '+(hv(p,'ele')&&!hv(a,'mania')?'el polo elevado actual':'el antecedente de manía o hipomanía')+' ubica el cuadro en el capítulo bipolar'+(hv(p,'dep')?'; el ánimo bajo sería depresión bipolar':'')+'. Falta confirmar con la entrevista dirigida que el episodio elevado dura al menos 4 días (hipomanía) o 1 semana (manía) con criterios DSM-5-TR [1]. Conducta inicial: estabilizador del ánimo; no antidepresivo en monoterapia [3].'));
   } else if(hv(p,'dep')&&hv(a,'fam')){n++;
-    x.push(par('<b>Depresión con sospecha bipolar</b>: el antecedente familiar aumenta la probabilidad de un polo elevado no detectado. Falta la entrevista dirigida a manía o hipomanía y el MDQ [@MDQ][@CANMAT_BD]. Conducta inicial: no inicies un antidepresivo en monoterapia hasta aclararlo.'));
+    x.push(par('<b>Depresión con sospecha bipolar</b>: el antecedente familiar aumenta la probabilidad de un polo elevado no detectado. Falta la entrevista dirigida a manía o hipomanía y el MDQ [12][3]. Conducta inicial: no inicies un antidepresivo en monoterapia hasta aclararlo.'));
   } else if(hv(p,'dep')){
     var ex=hv(o,'org'),du=hv(o,'duelo');
     if(ex){n++;
-      x.push(par('<b>Depresión por causa médica o sustancia</b> posible: el hipotiroidismo, un fármaco o una sustancia pueden explicar el episodio. Falta TSH y la revisión de fármacos y consumo [@DSM][@HARRISON]. Conducta inicial: corrige o retira la causa y reevalúa el ánimo.'));
+      x.push(par('<b>Depresión por causa médica o sustancia</b> posible: el hipotiroidismo, un fármaco o una sustancia pueden explicar el episodio. Falta TSH y la revisión de fármacos y consumo [1][5]. Conducta inicial: corrige o retira la causa y reevalúa el ánimo.'));
     } else if(du){n++;
-      x.push(par('<b>Duelo</b> posible si predominan la añoranza y las oleadas ligadas a la pérdida con autoestima conservada. Falta ver si hay anhedonia generalizada, inutilidad o ideación que sostengan una depresión mayor [@DSM]. Conducta inicial: acompañamiento y reevaluación; trata si se cumplen los criterios.'));
+      x.push(par('<b>Duelo</b> posible si predominan la añoranza y las oleadas ligadas a la pérdida con autoestima conservada. Falta ver si hay anhedonia generalizada, inutilidad o ideación que sostengan una depresión mayor [1]. Conducta inicial: acompañamiento y reevaluación; trata si se cumplen los criterios.'));
     } else {n++;
-      x.push(par('<b>Depresión mayor</b>: ánimo bajo o anhedonia ≥2 semanas, sin antecedente de manía ni hipomanía. Falta el PHQ-9 para la gravedad y la exclusión de causa médica o tóxica [@PHQ9][@DSM]. Conducta inicial: ISRS y psicoterapia según gravedad [@CANMAT_MDD][@NICE_DEP].'));
+      x.push(par('<b>Depresión mayor</b>: ánimo bajo o anhedonia ≥2 semanas, sin antecedente de manía ni hipomanía. Falta el PHQ-9 para la gravedad y la exclusión de causa médica o tóxica [11][1]. Conducta inicial: ISRS y psicoterapia según gravedad [14][2].'));
     }
   }
-  if(hv(o,'psic')) x.push(par('Ideas delirantes o alucinaciones: añade el especificador psicótico (en depresión) o el cuadro psicótico (en manía); requiere antipsicótico y atención especializada [@DSM][@CANMAT_BD].'));
+  if(hv(o,'psic')) x.push(par('Ideas delirantes o alucinaciones: añade el especificador psicótico (en depresión) o el cuadro psicótico (en manía); requiere antipsicótico y atención especializada [1][3].'));
   if(!n) x.push(par('Los datos elegidos no bastan para sostener una entidad. Define el polo y pregunta por ideación suicida antes de decidir.'));
-  x.push('<span class="cf">Si aparece el antecedente de manía o hipomanía, o la ideación pasa a plan o intención → la conducta cambia de ISRS y psicoterapia a estabilizador del ánimo, o a plan de seguridad, restricción de medios y ECU 911 [@CANMAT_BD][@MHGAP].</span>');
+  x.push('<span class="cf">Si aparece el antecedente de manía o hipomanía, o la ideación pasa a plan o intención → la conducta cambia de ISRS y psicoterapia a estabilizador del ánimo, o a plan de seguridad, restricción de medios y ECU 911 [3][4].</span>');
   out(dc,x.join(''));
 }
 
@@ -41,25 +41,25 @@ function dcE1d(dc){
     vacio(dc,'Escribe el puntaje total del PHQ-9 y elige el ítem 9, la duración, la manía previa y la causa orgánica. El simulador da la banda de gravedad y la conducta inicial.');return;}
   var x=[];
   if(!isNaN(t)){
-    if(t<0||t>27){x.push(par('El PHQ-9 va de 0 a 27 puntos: revisa el puntaje [@PHQ9].'));}
+    if(t<0||t>27){x.push(par('El PHQ-9 va de 0 a 27 puntos: revisa el puntaje [11].'));}
     else {
       var b,c;
       if(t<5){b='mínima o sin depresión';c='no hay indicación de tratamiento; reevalúa si persisten los síntomas';}
-      else if(t<10){b='leve';c='psicoeducación, vigilancia activa y psicoterapia (activación conductual o TCC); el fármaco no es la primera opción [@NICE_DEP][@CANMAT_MDD]';}
-      else if(t<15){b='moderada';c='psicoterapia o ISRS, o ambos según preferencia y antecedentes [@NICE_DEP][@CANMAT_MDD]';}
-      else if(t<20){b='moderadamente grave';c='ISRS más psicoterapia; revisa psicosis y riesgo suicida [@CANMAT_MDD]';}
-      else {b='grave';c='ISRS más psicoterapia, seguimiento semanal y evaluación de psicosis y de riesgo suicida; considera apoyo especializado [@CANMAT_MDD][@MHGAP]';}
-      x.push(par('<b>PHQ-9 de '+t+' puntos: depresión '+b+'</b> [@PHQ9]. El puntaje cuantifica; el diagnóstico exige criterios DSM-5-TR en la entrevista y la gravedad final es clínica [@DSM]. Conducta inicial: '+c+'. Detalle de fármacos en «Tratamiento».'));
+      else if(t<10){b='leve';c='psicoeducación, vigilancia activa y psicoterapia (activación conductual o TCC); el fármaco no es la primera opción [2][14]';}
+      else if(t<15){b='moderada';c='psicoterapia o ISRS, o ambos según preferencia y antecedentes [2][14]';}
+      else if(t<20){b='moderadamente grave';c='ISRS más psicoterapia; revisa psicosis y riesgo suicida [14]';}
+      else {b='grave';c='ISRS más psicoterapia, seguimiento semanal y evaluación de psicosis y de riesgo suicida; considera apoyo especializado [14][4]';}
+      x.push(par('<b>PHQ-9 de '+t+' puntos: depresión '+b+'</b> [11]. El puntaje cuantifica; el diagnóstico exige criterios DSM-5-TR en la entrevista y la gravedad final es clínica [1]. Conducta inicial: '+c+'. Detalle de fármacos en «Tratamiento».'));
     }
   }
-  if(hv(i9,'si')) x.push(par('Ítem 9 positivo: antes de decidir el tratamiento pregunta por plan, intención, intentos y medios con la C-SSRS y aplica «Conducta suicida» [@CSSRS][@MHGAP].'));
-  if(hv(du,'corta')) x.push(par('Menos de 2 semanas: no cumple el criterio A de episodio depresivo mayor; considera reacción de ajuste o duelo y reevalúa [@DSM].'));
-  if(hv(ma,'si')) x.push(par('Con manía o hipomanía previas no es depresión mayor: se reclasifica en el espectro bipolar y no se usa antidepresivo en monoterapia [@DSM][@CANMAT_BD].'));
-  if(hv(ma,'nop')) x.push(par('Falta preguntar por manía o hipomanía: es el dato que decide el polo antes de recetar [@DSM].'));
-  if(hv(og,'pres')) x.push(par('Con causa médica o tóxica presente el diagnóstico es depresión inducida por sustancia o por otra afección médica; corrige la causa [@DSM].'));
-  if(hv(og,'pend')) x.push(par('Falta excluir causa orgánica: TSH, revisión de fármacos y consumo de sustancias, y hemograma o vitamina B12 si la clínica lo sugiere [@HARRISON].'));
-  if(hv(og,'exc')&&hv(du,'larga')&&hv(ma,'no')&&!isNaN(t)&&t>=10) x.push(par('<b>Cumple depresión mayor</b> si en la entrevista se cuentan cinco de nueve síntomas con deterioro funcional [@DSM][@PHQ9]. Pasa a «Tratamiento».'));
-  x.push('<span class="cf">Si el ítem 9 cambia de nunca a algunos días, o aparece una manía previa → la conducta cambia de tratar la depresión a estratificar el riesgo suicida o a tratarla como bipolar [@CSSRS][@CANMAT_BD].</span>');
+  if(hv(i9,'si')) x.push(par('Ítem 9 positivo: antes de decidir el tratamiento pregunta por plan, intención, intentos y medios con la C-SSRS y aplica «Conducta suicida» [9][4].'));
+  if(hv(du,'corta')) x.push(par('Menos de 2 semanas: no cumple el criterio A de episodio depresivo mayor; considera reacción de ajuste o duelo y reevalúa [1].'));
+  if(hv(ma,'si')) x.push(par('Con manía o hipomanía previas no es depresión mayor: se reclasifica en el espectro bipolar y no se usa antidepresivo en monoterapia [1][3].'));
+  if(hv(ma,'nop')) x.push(par('Falta preguntar por manía o hipomanía: es el dato que decide el polo antes de recetar [1].'));
+  if(hv(og,'pres')) x.push(par('Con causa médica o tóxica presente el diagnóstico es depresión inducida por sustancia o por otra afección médica; corrige la causa [1].'));
+  if(hv(og,'pend')) x.push(par('Falta excluir causa orgánica: TSH, revisión de fármacos y consumo de sustancias, y hemograma o vitamina B12 si la clínica lo sugiere [5].'));
+  if(hv(og,'exc')&&hv(du,'larga')&&hv(ma,'no')&&!isNaN(t)&&t>=10) x.push(par('<b>Cumple depresión mayor</b> si en la entrevista se cuentan cinco de nueve síntomas con deterioro funcional [1][11]. Pasa a «Tratamiento».'));
+  x.push('<span class="cf">Si el ítem 9 cambia de nunca a algunos días, o aparece una manía previa → la conducta cambia de tratar la depresión a estratificar el riesgo suicida o a tratarla como bipolar [9][3].</span>');
   out(dc,x.join(''));
 }
 
@@ -69,32 +69,32 @@ function dcE1t(dc){
     vacio(dc,'Elige la gravedad, el momento del tratamiento y la situación especial. El simulador propone el fármaco con posología completa o la psicoterapia, según la tabla de fármacos.');return;}
   var x=[];
   if(hv(o,'mania')){
-    x.push(par('Con manía o hipomanía previas el antidepresivo en monoterapia no es una opción: la depresión es bipolar y se maneja con estabilizador del ánimo (ver «Trastorno bipolar») [@CANMAT_BD].'));
+    x.push(par('Con manía o hipomanía previas el antidepresivo en monoterapia no es una opción: la depresión es bipolar y se maneja con estabilizador del ánimo (ver «Trastorno bipolar») [3].'));
   } else {
-    if(hv(o,'ideas')) x.push(par('Con ideación suicida, estratifica el riesgo antes de recetar (ver «Conducta suicida»), prescribe cantidades pequeñas, evita los tricíclicos por su letalidad en sobredosis y cita en pocos días [@NICE_DEP][@MHGAP].'));
-    if(hv(o,'joven')) x.push(par('Menor de 25 años: vigila la ideación y la activación con controles semanales las primeras semanas del ISRS [@GG][@CANMAT_MDD].'));
+    if(hv(o,'ideas')) x.push(par('Con ideación suicida, estratifica el riesgo antes de recetar (ver «Conducta suicida»), prescribe cantidades pequeñas, evita los tricíclicos por su letalidad en sobredosis y cita en pocos días [2][4].'));
+    if(hv(o,'joven')) x.push(par('Menor de 25 años: vigila la ideación y la activación con controles semanales las primeras semanas del ISRS [20][14].'));
     var s50='sertralina 50 mg VO cada 24 h, con ajuste en pasos de 25 a 50 mg cada semana o más hasta 200 mg al día';
     var e10='escitalopram 10 mg VO cada 24 h, hasta 20 mg al día tras una semana o más';
     var e10m='escitalopram 10 mg VO cada 24 h como máximo en mayores de 65 años';
     if(hv(f,'inicio')||!f.length){
-      if(hv(g,'leve')&&!hv(o,'ideas')) x.push(par('Episodio leve: inicia psicoeducación, seguimiento activo y psicoterapia (activación conductual o TCC); el ISRS se reserva si no mejora o si el paciente lo prefiere [@NICE_DEP][@CANMAT_MDD].'));
+      if(hv(g,'leve')&&!hv(o,'ideas')) x.push(par('Episodio leve: inicia psicoeducación, seguimiento activo y psicoterapia (activación conductual o TCC); el ISRS se reserva si no mejora o si el paciente lo prefiere [2][14].'));
       else {
         var ini;
-        if(hv(o,'qt')) ini='sertralina 50 mg VO cada 24 h, con ajuste en pasos de 25 a 50 mg cada semana o más hasta 200 mg al día; evita el escitalopram con QT prolongado [@GG][@MHRA_QT]';
-        else if(hv(o,'mayor')) ini=e10m+' o '+s50+'; vigila el sodio [@GG][@MHRA_QT]';
-        else if(hv(o,'emb')) ini=s50+'; evita la paroxetina y sopesa el riesgo-beneficio con ginecología y obstetricia [@GG][@CANMAT_MDD]';
-        else if(hv(o,'insom')) ini='mirtazapina 15 mg VO cada 24 h por la noche, con subida de 15 mg cada 1 o 2 semanas hasta 45 mg al día; vigila el aumento de peso [@GG][@CANMAT_MDD]';
-        else ini=s50+'. Alternativas: '+e10+', o fluoxetina 20 mg VO cada 24 h por la mañana, hasta 80 mg al día [@GG][@CANMAT_MDD]';
-        x.push(par('Antidepresivo de inicio: '+ini+'. Suma psicoterapia'+(hv(g,'grave')?' y seguimiento semanal':'')+'; el efecto tarda semanas y los efectos adversos aparecen antes [@CANMAT_MDD].'));
+        if(hv(o,'qt')) ini='sertralina 50 mg VO cada 24 h, con ajuste en pasos de 25 a 50 mg cada semana o más hasta 200 mg al día; evita el escitalopram con QT prolongado [20][24]';
+        else if(hv(o,'mayor')) ini=e10m+' o '+s50+'; vigila el sodio [20][24]';
+        else if(hv(o,'emb')) ini=s50+'; evita la paroxetina y sopesa el riesgo-beneficio con ginecología y obstetricia [20][14]';
+        else if(hv(o,'insom')) ini='mirtazapina 15 mg VO cada 24 h por la noche, con subida de 15 mg cada 1 o 2 semanas hasta 45 mg al día; vigila el aumento de peso [20][14]';
+        else ini=s50+'. Alternativas: '+e10+', o fluoxetina 20 mg VO cada 24 h por la mañana, hasta 80 mg al día [20][14]';
+        x.push(par('Antidepresivo de inicio: '+ini+'. Suma psicoterapia'+(hv(g,'grave')?' y seguimiento semanal':'')+'; el efecto tarda semanas y los efectos adversos aparecen antes [14].'));
       }
     }
-    if(hv(f,'falla')) x.push(par('Sin respuesta tras 4 semanas con dosis adecuada: revisa adherencia, diagnóstico (bipolar, causa médica) y dosis; sube a la dosis máxima tolerada o cambia a venlafaxina XR 75 mg VO cada 24 h con subida a 150 mg tras 4 días o más (máximo 225 mg al día), mirtazapina 15 mg VO por la noche (máximo 45 mg al día) o bupropión XL 150 mg VO por la mañana (máximo 450 mg al día; contraindicado con epilepsia). Suma psicoterapia y, si persiste, potenciación bajo guía especializada [@CANMAT_MDD][@GG].'));
-    if(hv(f,'remis')) x.push(par('Remisión: mantén el mismo antidepresivo a la misma dosis durante 6 a 9 meses y más si hubo recurrencias, síntomas residuales o episodios graves; retira de forma gradual para evitar el síndrome de discontinuación [@CANMAT_MDD][@GG].'));
-    if(hv(o,'emb')&&!hv(f,'inicio')&&f.length) x.push(par('Embarazo o lactancia: evita la paroxetina; la sertralina es una opción habitual, y la decisión se toma con obstetricia [@CANMAT_MDD].'));
-    if(hv(o,'mayor')&&!hv(f,'inicio')&&f.length) x.push(par('Mayor de 65 años: escitalopram con tope de 10 mg al día y vigilancia del sodio y del QT [@MHRA_QT].'));
-    if(hv(o,'qt')&&!hv(f,'inicio')&&f.length) x.push(par('QT prolongado: evita el escitalopram y revisa fármacos que prolonguen el QT [@MHRA_QT].'));
+    if(hv(f,'falla')) x.push(par('Sin respuesta tras 4 semanas con dosis adecuada: revisa adherencia, diagnóstico (bipolar, causa médica) y dosis; sube a la dosis máxima tolerada o cambia a venlafaxina XR 75 mg VO cada 24 h con subida a 150 mg tras 4 días o más (máximo 225 mg al día), mirtazapina 15 mg VO por la noche (máximo 45 mg al día) o bupropión XL 150 mg VO por la mañana (máximo 450 mg al día; contraindicado con epilepsia). Suma psicoterapia y, si persiste, potenciación bajo guía especializada [14][20].'));
+    if(hv(f,'remis')) x.push(par('Remisión: mantén el mismo antidepresivo a la misma dosis durante 6 a 9 meses y más si hubo recurrencias, síntomas residuales o episodios graves; retira de forma gradual para evitar el síndrome de discontinuación [14][20].'));
+    if(hv(o,'emb')&&!hv(f,'inicio')&&f.length) x.push(par('Embarazo o lactancia: evita la paroxetina; la sertralina es una opción habitual, y la decisión se toma con obstetricia [14].'));
+    if(hv(o,'mayor')&&!hv(f,'inicio')&&f.length) x.push(par('Mayor de 65 años: escitalopram con tope de 10 mg al día y vigilancia del sodio y del QT [24].'));
+    if(hv(o,'qt')&&!hv(f,'inicio')&&f.length) x.push(par('QT prolongado: evita el escitalopram y revisa fármacos que prolonguen el QT [24].'));
   }
-  x.push('<span class="cf">Si aparece una manía o hipomanía previa, o la ideación pasa a plan o intención → la conducta cambia de antidepresivo y psicoterapia a estabilizador del ánimo, o a plan de seguridad, restricción de medios y ECU 911 [@CANMAT_BD][@MHGAP].</span>');
+  x.push('<span class="cf">Si aparece una manía o hipomanía previa, o la ideación pasa a plan o intención → la conducta cambia de antidepresivo y psicoterapia a estabilizador del ánimo, o a plan de seguridad, restricción de medios y ECU 911 [3][4].</span>');
   out(dc,x.join(''));
 }
 function dcE2(dc){
@@ -102,13 +102,13 @@ function dcE2(dc){
   if(!f.length&&!s.length&&isNaN(l)){
     vacio(dc,'Elige la fase y la situación del paciente, y si ya toma litio escribe la litemia. El simulador propone el fármaco con su posología; no calcula probabilidades.');return;}
   var fert=hv(s,'fert'),ren=hv(s,'renal'),psi=hv(s,'psic'),met=hv(s,'metab');
-  var LI='litio 300 mg VO cada 12 h al inicio, con aumento cada 5 a 7 días según la litemia hasta 900–1 800 mg al día [@CANMAT_BD][@GG]';
-  var VPA='valproato 750 mg al día VO en 2 o 3 dosis, hasta 1 000–2 000 mg al día con nivel de 50 a 125 µg/mL [@CANMAT_BD]';
-  var QM='quetiapina VO cada 12 h: 100 mg día 1, 200 mg día 2, 300 mg día 3 y 400 mg día 4, hasta 800 mg al día [@CANMAT_BD]';
-  var QD='quetiapina VO por la noche: 50 mg día 1, 100 mg día 2, 200 mg día 3 y 300 mg desde el día 4 [@CANMAT_BD]';
-  var OL='olanzapina 10–15 mg VO cada 24 h, máximo 20 mg al día [@CANMAT_BD]';
-  var LU='lurasidona 20 mg VO cada 24 h con al menos 350 kcal de comida, hasta 60 mg al día en monoterapia o 120 mg con litio o valproato [@CANMAT_BD]';
-  var LT='lamotrigina VO cada 24 h con titulación lenta: 25 mg semanas 1–2, 50 mg semanas 3–4, 100 mg semana 5 y 200 mg desde la semana 6; con valproato, la mitad de cada paso [@CANMAT_BD]';
+  var LI='litio 300 mg VO cada 8 h al inicio, con aumento de 300 mg cada 3 días según la litemia; habitual 600 mg cada 8 a 12 h en fase aguda [27]';
+  var VPA='valproato 750 mg al día VO en tomas divididas, hasta la menor dosis eficaz (máximo 60 mg/kg/día) con nivel en valle de 50 a 125 µg/mL [28]';
+  var QM='quetiapina VO cada 12 h: 100 mg día 1, 200 mg día 2, 300 mg día 3 y 400 mg día 4, hasta 800 mg al día [3]';
+  var QD='quetiapina VO por la noche: 50 mg día 1, 100 mg día 2, 200 mg día 3 y 300 mg desde el día 4 [3]';
+  var OL='olanzapina 10–15 mg VO cada 24 h, máximo 20 mg al día [3]';
+  var LU='lurasidona 20 mg VO cada 24 h con al menos 350 kcal de comida, hasta 60 mg al día en monoterapia o 120 mg con litio o valproato [30]';
+  var LT='lamotrigina VO cada 24 h con titulación lenta: 25 mg semanas 1–2, 50 mg semanas 3–4, 100 mg semana 5 y 200 mg desde la semana 6; con valproato, la mitad de cada paso [29]';
   var r=[];
   var ls=isNaN(l)?'':String(l).replace('.',',');
   if(hv(f,'mania')){
@@ -117,31 +117,31 @@ function dcE2(dc){
     else if(ren) r.push(par('<b>Manía aguda con función renal reducida</b>: evita iniciar litio. Primera línea: '+QM+(met?'; con obesidad o diabetes, vigila peso y glucosa':'; alternativa: '+VPA)+'.'));
     else if(met) r.push(par('<b>Manía aguda con obesidad o diabetes</b>: prefiere '+LI+'; alternativa: '+VPA+'. Evita la olanzapina si hay opción.'));
     else r.push(par('<b>Manía aguda</b>: primera línea '+LI+', o '+QM+', o '+VPA+'; si hay agitación, '+OL+'.'));
-    r.push(par('Suspende el antidepresivo y los estimulantes, y regulariza el sueño [@NICE_BD].'));
+    r.push(par('Suspende el antidepresivo y los estimulantes, y regulariza el sueño [25].'));
   }
   if(hv(f,'dep')){
     r.push(par('<b>Depresión bipolar</b>: no uses antidepresivo en monoterapia. Primera línea: '+QD+(met?'; con obesidad o diabetes, vigila peso y glucosa':'')+'.'));
-    r.push(par('Alternativas: '+LU+(ren?'':'; o '+LI)+'; o '+LT+'. La lamotrigina previene la depresión pero no trata la manía [@CANMAT_BD].'));
-    if(fert) r.push(par('En mujer en edad fértil, evita el valproato [@NICE_BD].'));
+    r.push(par('Alternativas: '+LU+(ren?'':'; o '+LI)+'; o '+LT+'. La lamotrigina previene la depresión pero no trata la manía [3].'));
+    if(fert) r.push(par('En mujer en edad fértil, evita el valproato [25].'));
   }
   if(hv(f,'mant')){
-    if(ren) r.push(par('<b>Mantenimiento con función renal reducida</b>: el litio exige cautela; sostén lo que lo logró si el filtrado lo permite, y si no, elige '+(fert?LT:'quetiapina VO a la dosis con que respondió, o '+LT)+' [@CANMAT_BD].'));
-    else r.push(par('<b>Mantenimiento</b>: de elección '+LI+', con litemia de 0,6 a 0,8 mmol/L [@CANMAT_BD][@NICE_BD]. Alternativas: '+(fert?'':VPA+'; ')+LT+'.'));
-    if(fert) r.push(par('En mujer en edad fértil, el valproato no es opción; planifica el embarazo con psiquiatría antes de concebir [@NICE_BD].'));
-    r.push(par('El litio es el estabilizador con mejor evidencia para reducir el suicidio [@CIPRIANI_LI].'));
+    if(ren) r.push(par('<b>Mantenimiento con función renal reducida</b>: el litio exige cautela; sostén lo que lo logró si el filtrado lo permite, y si no, elige '+(fert?LT:'quetiapina VO a la dosis con que respondió, o '+LT)+' [3].'));
+    else r.push(par('<b>Mantenimiento</b>: de elección '+LI+', con litemia de 0,6 a 0,8 mmol/L según NICE, o 0,8 a 1,0 según la ficha FDA [25][27]. Alternativas: '+(fert?'':VPA+'; ')+LT+'.'));
+    if(fert) r.push(par('En mujer en edad fértil, el valproato no es opción; planifica el embarazo con psiquiatría antes de concebir [25].'));
+    r.push(par('El litio es el estabilizador con mejor evidencia para reducir el suicidio [31].'));
   }
   if(!isNaN(l)){
     var m=hv(f,'mania');
-    if(l>=1.5) r.push(par('<b>Litemia de '+ls+' mmol/L</b>: es tóxica. Suspende el litio, hidrata, busca temblor, ataxia y confusión y deriva a urgencias con ECU 911 si hay síntomas neurológicos; no esperes a repetir el nivel [@CANMAT_BD][@GG].'));
-    else if(m&&l<0.8) r.push(par('Litemia de '+ls+' mmol/L, por debajo del objetivo de 0,8–1,2 en manía: sube el litio 300 mg al día y repite la litemia a los 5 a 7 días [@CANMAT_BD].'));
-    else if(m&&l>1.2) r.push(par('Litemia de '+ls+' mmol/L, sobre el tope de 1,2 en manía: baja la dosis, revisa hidratación, AINE, IECA y tiazidas, y repite en 5 a 7 días [@GG].'));
-    else if(m) r.push(par('Litemia de '+ls+' mmol/L dentro del objetivo de 0,8–1,2 en manía: mantén la dosis y vigila función renal [@CANMAT_BD].'));
-    else if(l<0.6) r.push(par('Litemia de '+ls+' mmol/L, por debajo del objetivo de 0,6–0,8 de mantenimiento: sube 300 mg al día, revisa adherencia y repite en 5 a 7 días [@NICE_BD].'));
-    else if(l>1.0) r.push(par('Litemia de '+ls+' mmol/L, sobre el tope de 1,0 de mantenimiento: baja la dosis y busca la causa de la retención: deshidratación, AINE, IECA o tiazidas [@GG][@NICE_BD].'));
-    else r.push(par('Litemia de '+ls+' mmol/L dentro del rango de mantenimiento (0,6–0,8; hasta 1,0 si hubo recaída): mantén la dosis; mide litemia cada 3 a 6 meses y función renal y tiroidea cada 6 meses [@NICE_BD].'));
-    if(ren) r.push(par('Con función renal reducida el litio se acumula: reduce la dosis, controla la litemia cada semana y busca psiquiatría [@CANMAT_BD].'));
+    if(l>=1.5) r.push(par('<b>Litemia de '+ls+' mmol/L</b>: es tóxica. Suspende el litio, hidrata, busca temblor, ataxia y confusión y deriva a urgencias con ECU 911 si hay síntomas neurológicos; no esperes a repetir el nivel [3][20].'));
+    else if(m&&l<0.8) r.push(par('Litemia de '+ls+' mmol/L, por debajo del objetivo de 0,8–1,2 en manía: sube el litio 300 mg al día y repite la litemia a los 5 a 7 días [3].'));
+    else if(m&&l>1.2) r.push(par('Litemia de '+ls+' mmol/L, sobre el tope de 1,2 en manía: baja la dosis, revisa hidratación, AINE, IECA y tiazidas, y repite en 5 a 7 días [20].'));
+    else if(m) r.push(par('Litemia de '+ls+' mmol/L dentro del objetivo de 0,8–1,2 en manía: mantén la dosis y vigila función renal [3].'));
+    else if(l<0.6) r.push(par('Litemia de '+ls+' mmol/L, por debajo del objetivo de 0,6–0,8 de mantenimiento: sube 300 mg al día, revisa adherencia y repite en 5 a 7 días [25].'));
+    else if(l>1.0) r.push(par('Litemia de '+ls+' mmol/L, sobre el tope de 1,0 de mantenimiento: baja la dosis y busca la causa de la retención: deshidratación, AINE, IECA o tiazidas [20][25].'));
+    else r.push(par('Litemia de '+ls+' mmol/L dentro del rango de mantenimiento (0,6–0,8; hasta 1,0 si hubo recaída): mantén la dosis; mide litemia cada 3 a 6 meses y función renal y tiroidea cada 6 meses [25].'));
+    if(ren) r.push(par('Con función renal reducida el litio se acumula: reduce la dosis, controla la litemia cada semana y busca psiquiatría [3].'));
   }
-  r.push('<span class="cf">Si la paciente puede quedar embarazada → se descarta el valproato y se elige litio, quetiapina u olanzapina; si el filtrado glomerular cae → se evita el litio [@CANMAT_BD].</span>');
+  r.push('<span class="cf">Si la paciente puede quedar embarazada → se descarta el valproato y se elige litio, quetiapina u olanzapina; si el filtrado glomerular cae → se evita el litio [3].</span>');
   out(dc,r.join(''));
 }
 function dcE3(dc){
@@ -157,32 +157,32 @@ function dcE3(dc){
   if(lvl>=1&&n>=2&&lvl<3) lvl++;
   if(lvl===2&&hv(f,'psicosis')) lvl=3;
   var nom=['bajo','bajo con vigilancia','moderado','alto o inminente'];
-  r.push(par('Nivel orientativo: <b>'+nom[lvl]+'</b>. Orienta la intervención; no predice el acto ni decide el alta por sí solo [@NICE_SH][@CSSRS].'));
+  r.push(par('Nivel orientativo: <b>'+nom[lvl]+'</b>. Orienta la intervención; no predice el acto ni decide el alta por sí solo [32][9].'));
   if(lvl===0){
-    r.push(par('Sin ideación ni conducta: trata el trastorno de base y vuelve a preguntar en cada cita [@MHGAP].'));
-    if(n) r.push(par('Con factores presentes, mantén la pregunta directa y confirma que haya apoyo familiar y a quién llamar [@MHGAP].'));
+    r.push(par('Sin ideación ni conducta: trata el trastorno de base y vuelve a preguntar en cada cita [4].'));
+    if(n) r.push(par('Con factores presentes, mantén la pregunta directa y confirma que haya apoyo familiar y a quién llamar [4].'));
   }
   if(lvl===1){
-    r.push(par('Deseo de morir sin método: plan de seguridad escrito, psicoeducación a la familia y tratamiento del trastorno de base [@STANLEY][@MHGAP].'));
-    r.push(par('Cita de control en la primera semana [@MHGAP].'));
+    r.push(par('Deseo de morir sin método: plan de seguridad escrito, psicoeducación a la familia y tratamiento del trastorno de base [33][4].'));
+    r.push(par('Cita de control en la primera semana [4].'));
   }
   if(lvl===2){
-    r.push(par('Riesgo moderado: plan de seguridad escrito, restricción de medios con un familiar (retirar fármacos, plaguicidas y armas) y acompañamiento por una persona de confianza [@STANLEY][@FAZEL].'));
-    r.push(par('Seguimiento cercano: contacto en 24 a 72 h [VERIFICAR EN FUENTE] y reevaluación en la primera semana [@MHGAP]. Dispensa fármacos en cantidades pequeñas, nunca letales [@NICE_SH].'));
+    r.push(par('Riesgo moderado: plan de seguridad escrito, restricción de medios con un familiar (retirar fármacos, plaguicidas y armas) y acompañamiento por una persona de confianza [33][10].'));
+    r.push(par('Seguimiento cercano: primera cita en 24 a 72 h y como máximo a los 7 días [35] y reevaluación en la primera semana [4]. Dispensa fármacos en cantidades pequeñas, nunca letales [32].'));
   }
   if(lvl===3){
-    r.push(par('Riesgo alto o inminente: no dejes solo al paciente en ningún momento, retira los medios del entorno, mantén observación continua en el centro y activa ECU 911 para el traslado [@MHGAP].'));
-    r.push(par('Cuando la crisis ceda: plan de seguridad escrito, familia comprometida y seguimiento diario o muy cercano hasta que baje el riesgo [@STANLEY][@MHGAP].'));
+    r.push(par('Riesgo alto o inminente: no dejes solo al paciente en ningún momento, retira los medios del entorno, mantén observación continua en el centro y activa ECU 911 para el traslado [4].'));
+    r.push(par('Cuando la crisis ceda: plan de seguridad escrito, familia comprometida y seguimiento diario o muy cercano hasta que baje el riesgo [33][4].'));
   }
-  if(hv(c,'intento')) r.push(par('Intento reciente: estabiliza primero la lesión o la intoxicación y luego estratifica el riesgo; el periodo posterior al intento es el más vulnerable [@NICE_SH][@TURECKI].'));
-  if(hv(c,'prep')||hv(c,'inter')) r.push(par('Conducta preparatoria, interrumpida o abortada: se trata como riesgo alto aunque no haya lesión ni plan declarado [@CSSRS].'));
-  if(hv(f,'previo')) r.push(par('Intento previo: es el factor individual más constante; sube el nivel y exige seguimiento más cercano [@TURECKI][@FAZEL].'));
-  if(hv(f,'medios')) r.push(par('El acceso a medios letales es el factor más modificable: retíralos o restríngelos hoy con la familia [@FAZEL][@MHGAP].'));
-  if(hv(f,'alcohol')) r.push(par('Alcohol o sustancias: desinhiben el acto; no valores el riesgo como bajo con el paciente intoxicado y trata el consumo [@TURECKI].'));
-  if(hv(f,'psicosis')) r.push(par('Psicosis o agitación: pide interconsulta o teleconsulta con psiquiatría; sin derivación, sigue mhGAP en el centro [@MHGAP].'));
-  if(hv(f,'solo')) r.push(par('Sin apoyo familiar: identifica a una persona de confianza antes del alta y refuerza el contacto con el servicio [@MHGAP].'));
-  if(i.length&&(hv(i,'activa')||hv(i,'plan')||lvl>=2)) r.push(par('Si hay trastorno del ánimo de base y no hay contraindicación, el litio reduce el suicidio en esos trastornos; la posología está en la tabla de «Tratamiento» de Trastorno bipolar [@CIPRIANI_LI].'));
-  r.push('<span class="cf">Si el paciente pasa de pensamientos sin plan a plan o intención, o aparece acceso a un medio letal → la conducta cambia de plan de seguridad y seguimiento a no dejarlo solo y activar ECU 911 [@MHGAP][@CSSRS].</span>');
+  if(hv(c,'intento')) r.push(par('Intento reciente: estabiliza primero la lesión o la intoxicación y luego estratifica el riesgo; el periodo posterior al intento es el más vulnerable [32][8].'));
+  if(hv(c,'prep')||hv(c,'inter')) r.push(par('Conducta preparatoria, interrumpida o abortada: se trata como riesgo alto aunque no haya lesión ni plan declarado [9].'));
+  if(hv(f,'previo')) r.push(par('Intento previo: es el factor individual más constante; sube el nivel y exige seguimiento más cercano [8][10].'));
+  if(hv(f,'medios')) r.push(par('El acceso a medios letales es el factor más modificable: retíralos o restríngelos hoy con la familia [10][4].'));
+  if(hv(f,'alcohol')) r.push(par('Alcohol o sustancias: desinhiben el acto; no valores el riesgo como bajo con el paciente intoxicado y trata el consumo [8].'));
+  if(hv(f,'psicosis')) r.push(par('Psicosis o agitación: pide interconsulta o teleconsulta con psiquiatría; sin derivación, sigue mhGAP en el centro [4].'));
+  if(hv(f,'solo')) r.push(par('Sin apoyo familiar: identifica a una persona de confianza antes del alta y refuerza el contacto con el servicio [4].'));
+  if(i.length&&(hv(i,'activa')||hv(i,'plan')||lvl>=2)) r.push(par('Si hay trastorno del ánimo de base y no hay contraindicación, el litio reduce el suicidio en esos trastornos; la posología está en la tabla de «Tratamiento» de Trastorno bipolar [31].'));
+  r.push('<span class="cf">Si el paciente pasa de pensamientos sin plan a plan o intención, o aparece acceso a un medio letal → la conducta cambia de plan de seguridad y seguimiento a no dejarlo solo y activar ECU 911 [4][9].</span>');
   out(dc,r.join(''));
 }
 </script>

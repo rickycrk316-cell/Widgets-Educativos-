@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Depresión, trastorno bipolar y suicidio</title>
+<style>
+/* Vademécum: monografía impresa con índice de canto; filetes y tinta llevan la jerarquía, no las sombras */
+:root{
+--paper:#FBFBFC;--paper-2:#F1F2F5;--ink:#16181D;--ink-2:#3A3D46;--ink-3:#686C78;--rule:#D7D9E0;--rule-strong:#16181D;
+--accent:#2342A6;--accent-ink:#1B358A;--accent-field:#EAEEFA;--on-accent:#FFFFFF;
+--am:#7A4A06;--am-f:#FBF1DF;--ro:#9E1F1F;--ro-f:#FBE9E7;--ve:#2F5E12;--ve-f:#EBF3E1;--pu:#4C3FA8;--pu-f:#EEECFB;--co:#8E3517;--co-f:#FAEDE6;--rs:#8A2C52;--rs-f:#FAEAF1;
+--f-serif:ui-serif,"New York","Iowan Old Style","Charter","Source Serif Pro",Georgia,"Times New Roman",serif;
+--f-sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+--r:3px;
+/* alias de la v10 para compatibilidad */
+--surface-0:var(--paper);--surface-1:var(--paper-2);--border:var(--rule);--border-accent:var(--accent);--bg-accent:var(--accent-field);--text-primary:var(--ink);--text-secondary:var(--ink-2);--text-muted:var(--ink-3);--text-accent:var(--accent-ink);--radius:var(--r);--font-sans:var(--f-sans);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}
+html{color-scheme:light dark;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:var(--accent);color:var(--on-accent)}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--f-sans);-webkit-text-size-adjust:100%;font-feature-settings:"kern" 1;text-rendering:optimizeLegibility;caret-color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:18px 16px 56px;background:transparent}
+h1{font:600 26px/1.2 var(--f-serif);letter-spacing:-.012em;margin:6px 0 14px;padding-bottom:12px;border-bottom:2px solid var(--rule-strong);text-wrap:balance}
+h2{font:600 19px/1.3 var(--f-serif);letter-spacing:-.006em;margin:40px 0 14px;padding-top:12px;border-top:1px solid var(--rule-strong);text-wrap:balance}
+h3{font:600 16px/1.35 var(--f-serif);margin:20px 0 6px;text-wrap:balance}
+p{margin:0 0 12px;text-wrap:pretty}
+a{color:var(--accent-ink);text-underline-offset:3px}
+button{font:inherit;color:inherit;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,color .15s ease-out}
+button:active{transform:translateY(1px)}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* índice de canto */
+.tabs{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 0 0;border-bottom:2px solid var(--rule-strong);margin-bottom:16px;position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);scroll-snap-type:x proximity;scroll-padding-inline:56px}
+.tabs-w{position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper)}
+.tabs-w::before,.tabs-w::after{content:"";position:absolute;top:0;bottom:2px;width:56px;pointer-events:none;opacity:0;transition:opacity .2s;z-index:6}
+.tabs-w::before{left:0;background:linear-gradient(to left,transparent,var(--paper) 85%)}
+.tabs-w::after{right:0;background:linear-gradient(to right,transparent,var(--paper) 85%)}
+.tabs-w.ov-l::before,.tabs-w.ov-r::after{opacity:1}
+.nodo,.signo,.qv,.dc,h2{scroll-margin-top:84px}
+.tabs::-webkit-scrollbar{display:none}
+.tb{flex:0 0 auto;min-height:44px;padding:9px 15px 8px;border:1px solid var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;background:var(--paper-2);color:var(--ink-2);font:600 13px/1.2 var(--f-sans);letter-spacing:.01em;white-space:nowrap;scroll-snap-align:start}
+.tb:hover{background:var(--accent-field);color:var(--accent-ink)}
+.tb.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+.tab{display:none}
+.tab.on{display:block}
+/* recuadros */
+.card{background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;margin:12px 0;font-size:15px;line-height:1.6}
+.card p{margin:0 0 8px}
+.card p:last-child{margin-bottom:0}
+.mini{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:6px 0}
+.hb{border-radius:var(--r);padding:12px 14px;margin:14px 0;border:1px solid transparent;font-size:15px;line-height:1.6}
+.hb.az{background:var(--accent-field);color:var(--ink);border-color:var(--accent)}
+.hb.am{background:var(--am-f);color:var(--am);border-color:var(--am)}
+.hb.ro{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.hb.ve{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+.hb.am .mini,.hb.ro .mini,.hb.ve .mini{color:inherit;opacity:.88}
+.hb-t{font:600 16px/1.35 var(--f-serif);margin-bottom:6px;text-wrap:balance}
+.hb.az .hb-t{color:var(--accent-ink)}
+.pg{margin:0;padding-left:22px}
+.pg li{margin:5px 0}
+.pg li::marker{color:var(--accent-ink);font-weight:700}
+.hb.az:has(.pg){margin-bottom:24px}
+.hb.az:not(:has(.pg)):not(.rec-go){background:transparent;border-left-color:transparent;border-right-color:transparent;border-radius:0;padding-left:0;padding-right:0}
+.hb.az:not(:has(.pg))+.etapa{border-top:0}
+h2+.card,h2+.hb,h2+.tw{margin-top:0}
+.badge{display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.04em;padding:2px 7px;border-radius:2px;margin:0 4px 4px 0;vertical-align:middle;border:1px solid currentColor}
+.b-az{background:var(--accent-field);color:var(--accent-ink)}
+.b-ro{background:var(--ro-f);color:var(--ro)}
+.b-am{background:var(--am-f);color:var(--am)}
+.b-ve{background:var(--ve-f);color:var(--ve)}
+.b-pu{background:var(--pu-f);color:var(--pu)}
+.badge.b-pu{display:block;width:fit-content;max-width:100%;white-space:normal;font-size:12px;line-height:1.5;font-weight:600;letter-spacing:.01em;margin:14px 0}
+.b-co{background:var(--co-f);color:var(--co)}
+.b-rs{background:var(--rs-f);color:var(--rs)}
+.rem{display:inline-block;font-size:12.5px;background:var(--rs-f);color:var(--rs);border:1px dashed var(--rs);border-radius:2px;padding:1px 7px;margin:4px 0}
+/* Feynman */
+.fey{background:var(--co-f);border:1px solid var(--co);border-radius:var(--r);padding:14px 16px;margin:18px 0 26px}
+.fey-t{display:inline-block;font:600 15px/1.35 var(--f-serif);color:var(--co);margin-bottom:8px}
+.fey-b{margin:0 0 10px;font:400 16px/1.6 var(--f-serif);color:var(--ink)}
+.fey-c{margin:2px 0;color:var(--ink-2)}
+/* Panorama: entradas de índice */
+.tab{counter-reset:et}
+.etapa{counter-increment:et;background:transparent;border:0;border-top:1px solid var(--rule);border-radius:0;padding:18px 0 8px;margin:4px 0}
+.etapa h3{font-size:19px;line-height:1.3;margin:0 0 8px}
+.etapa h3::before{content:counter(et,decimal-leading-zero);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;letter-spacing:.04em;color:var(--accent-ink);margin-right:10px;vertical-align:2px}
+.res{margin:0 0 10px}
+.perla{border-top:1px dotted var(--rule);padding-top:8px;margin:0 0 10px;font-weight:500}
+.perla::before{content:"Perla";display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;background:var(--ve-f);color:var(--ve);border:1px solid var(--ve);border-radius:2px;padding:1px 6px;margin-right:8px;vertical-align:1px}
+.go{min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent);color:var(--on-accent);font:600 13.5px/1.2 var(--f-sans)}
+.go:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+/* tablas de monografía */
+.tw{overflow-x:auto;margin:12px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.5;font-variant-numeric:tabular-nums}
+th,td{border:0;border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--paper-2);font-weight:700;color:var(--ink)}
+thead th{font:700 14.5px/1.35 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong)}
+tbody tr:last-child>*{border-bottom:1px solid var(--rule-strong)}
+.stats{display:grid;grid-template-columns:1fr;gap:10px;margin:12px 0}
+@media (min-width:600px){.stats{grid-template-columns:repeat(3,1fr)}}
+.stat{background:transparent;border:0;border-top:2px solid var(--accent);border-radius:0;padding:8px 2px}
+.stat b{display:block;font:600 22px/1.25 var(--f-serif);color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--ink-2);line-height:1.4;display:block}
+.steps{list-style:none;counter-reset:st;padding:0;margin:10px 0}
+.steps>li{counter-increment:st;position:relative;padding:5px 0 9px 40px}
+.steps>li::before{content:counter(st);position:absolute;left:0;top:3px;width:26px;height:26px;border-radius:2px;background:var(--ink);color:var(--paper);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;display:flex;align-items:center;justify-content:center}
+/* cascada */
+.tl{list-style:none;margin:14px 0;padding:0 0 0 20px;border-left:2px solid var(--accent)}
+.nodo{position:relative;margin:0 0 14px;padding:11px 13px;background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);font-size:14px;line-height:1.55}
+.nodo::before{content:"";position:absolute;left:-27px;top:15px;width:12px;height:12px;border-radius:1px;background:var(--accent);box-shadow:0 0 0 3px var(--paper)}
+.paso{display:block;font:600 15px/1.4 var(--f-serif);margin-bottom:5px}
+.pn{color:var(--accent-ink);margin-right:4px;font-variant-numeric:tabular-nums}
+.man{margin:8px 0 0;font-size:13px;color:var(--ink-2)}
+.signo{background:var(--paper);border:1px solid var(--rule);border-top:2px solid var(--rule-strong);border-radius:0 0 var(--r) var(--r);padding:12px 14px;margin:12px 0;font-size:14px;line-height:1.55}
+.signo h4{margin:0 0 6px;font:600 15.5px/1.35 var(--f-serif)}
+.signo dl{margin:0}
+.signo dt{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-3);margin-top:8px}
+.signo dd{margin:2px 0 0}
+.xref{display:inline-flex;align-items:center;min-height:44px;padding:4px 10px;margin:3px 6px 3px 0;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent-field);color:var(--accent-ink);font:600 12.5px/1.3 var(--f-sans);text-align:left}
+.xref:hover{background:var(--accent);color:var(--on-accent)}
+p .xref,td .xref,li .xref,dd .xref{display:inline;position:relative;min-height:0;padding:0 5px;margin:0 2px;line-height:inherit;border-radius:2px;white-space:normal;overflow-wrap:anywhere;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+p .xref::after,td .xref::after,li .xref::after,dd .xref::after{content:"";position:absolute;left:-4px;right:-4px;top:-12px;bottom:-12px}
+.hl{outline:2px solid var(--accent);background:var(--accent-field)!important;transition:background .3s}
+.acc{border:1px solid var(--rule);border-radius:var(--r);margin:12px 0;overflow:hidden}
+.acc-h{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:44px;padding:9px 14px;border:0;background:var(--paper-2);font:600 14px/1.35 var(--f-sans);text-align:left}
+.acc-h:hover{background:var(--accent-field)}
+.chev{transition:transform .2s;color:var(--accent-ink)}
+.acc.op .chev{transform:rotate(180deg)}
+.acc-b{display:none;padding:10px 14px;font-size:14px;line-height:1.55}
+.acc.op .acc-b{display:block}
+.vanc{font-size:12.5px;line-height:1.5;padding-left:24px}
+.vanc li{margin:5px 0;word-break:break-word}
+.vanc li::marker{font-variant-numeric:tabular-nums;color:var(--ink-3)}
+/* simulador */
+.dc{border:1px solid var(--rule-strong);border-radius:var(--r);padding:14px 16px;margin:22px 0;background:var(--paper)}
+.dc-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.dc-g{margin:10px 0}
+.dc-l{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);margin-bottom:5px;display:block}
+.chip{min-height:44px;padding:7px 13px;margin:3px 6px 3px 0;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);font-size:13.5px}
+.chip:hover{border-color:var(--accent);color:var(--accent-ink)}
+.chip.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:600}
+.dc input[type=number]{min-height:44px;width:120px;padding:6px 10px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper);color:var(--ink);font:15px var(--f-sans);font-variant-numeric:tabular-nums}
+.out{margin-top:12px;padding:12px 14px;border-radius:var(--r);background:var(--paper-2);border:1px solid var(--rule);font-size:14px;line-height:1.58;min-height:44px}
+.tag{display:inline-block;font:600 11px/1.4 var(--f-sans);padding:1px 7px;border-radius:2px;background:var(--accent-field);color:var(--accent-ink);margin:4px 4px 0 0}
+.rec-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.rec-bar textarea{width:100%;min-height:120px;margin-top:8px;padding:9px 11px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper-2);color:var(--ink);font:14px/1.55 var(--f-sans);resize:vertical}
+.chip:disabled{cursor:default;opacity:.85}
+.rec-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.rec-ctl{display:none;gap:6px;margin-top:6px}
+.recon .rec-ctl{display:flex}
+.recon>*:not(.rec-bar):not(.tl){display:none}
+.recon .nodo:not(.rev) .pt{display:none}
+.recon .nodo:not(.rev) .pn::after{content:" ?"}
+.recon .nodo:not(.rev) .det{display:none}
+.recon .nodo.pis:not(.rev) .det{display:block}
+.recon .nodo.pis:not(.rev) .det>*:not(.man){display:none}
+.recon .nodo:not(.pis):not(.rev) .man{display:none}
+.recon .nodo.rev{border-color:var(--accent)}
+.rec-go{margin:22px 0}
+.steps.tg>li{padding-left:40px}
+span.tg{display:inline-block;font:700 11px/1.4 var(--f-mono);letter-spacing:.02em;padding:2px 7px;margin:0 6px 2px 0;border-radius:2px;background:var(--paper-2);border:1px solid var(--rule);color:var(--ink-2);white-space:nowrap;vertical-align:1px}
+span.tg[data-t="clave"]{background:var(--accent-field);color:var(--accent-ink);border-color:var(--accent)}
+span.tg[data-t="ok"]{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+span.tg[data-t="cond"]{background:var(--am-f);color:var(--am);border-color:var(--am)}
+span.tg[data-t="no"]{background:var(--rs-f);color:var(--rs);border-color:var(--rs)}
+span.tg[data-t="alarma"]{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.qv{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:12px 0}
+.qv p{margin:0;padding:9px 11px;border-radius:var(--r);border:1px solid var(--rule);background:var(--paper-2);font-size:13.5px;line-height:1.45}
+.qv p::before{display:block;font:700 10.5px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px;color:var(--ink-3)}
+.qv p[data-e="p"]{background:var(--accent-field);border-color:var(--accent)}
+.qv p[data-e="p"]::before{content:"Presente";color:var(--accent-ink)}
+.qv p[data-e="v"]::before{content:"Variable"}
+.qv p[data-e="a"]{border:1px dashed var(--rule);color:var(--ink-3);background:transparent}
+.qv p[data-e="a"]::before{content:"Ausente"}
+.qv p[data-e="k"]{grid-column:1/-1;border:2px solid var(--accent);background:var(--accent-field);font-size:14.5px}
+.qv p[data-e="k"]::before{content:"Signo clave";color:var(--accent-ink)}
+.hb.vi{background:var(--pu-f);color:var(--pu);border-color:var(--pu)}
+.hb.vi .mini{color:inherit;opacity:.88}
+table.vis{min-width:620px}
+table.vis td{min-width:140px}
+table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index:1;background:var(--paper-2);min-width:118px;max-width:150px;font-weight:700;border-right:1px solid var(--rule)}
+.vb-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.tbl>*:not(.vb-bar):not(.vis-w){display:none}
+.tbl td.tap{cursor:pointer}
+.tbl td.tap:not(.rev){color:transparent;background:repeating-linear-gradient(135deg,var(--paper-2),var(--paper-2) 7px,var(--accent-field) 7px,var(--accent-field) 14px)}
+.tbl td.tap:not(.rev) *{visibility:hidden}
+.tbl td.tap.rev{box-shadow:inset 0 0 0 1px var(--accent)}
+.cf{display:block;margin-top:10px;padding-top:8px;border-top:1px dashed var(--accent);font-style:italic;color:var(--ink-2)}
+.cf::before{content:"Contrafactual · ";font-style:normal;font-weight:700;color:var(--accent-ink)}
+.fig{margin:14px 0}
+.fig img{display:block;max-width:100%;height:auto;border-radius:var(--r);border:1px solid var(--rule)}
+.fig figcaption{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin-top:6px}
+@media (min-width:700px){body{font-size:15.5px}.wrap{padding:22px 24px 64px}h1{font-size:28px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- /KIT_HEAD -->
+<h1>Depresión, trastorno bipolar y suicidio</h1>
+<nav class="tabs">
+<button type="button" class="tb" data-tab="pan" onclick="show('pan')">Panorama</button>
+<button type="button" class="tb" data-tab="vis" onclick="show('vis')">Visión de conjunto</button>
+<button type="button" class="tb" data-tab="e1" onclick="show('e1')">Depresión mayor</button>
+<button type="button" class="tb" data-tab="e2" onclick="show('e2')">Trastorno bipolar</button>
+<button type="button" class="tb" data-tab="e3" onclick="show('e3')">Conducta suicida</button>
+<button type="button" class="tb" data-tab="sin" onclick="show('sin')">Errores</button>
+</nav>
+<section class="tab" data-tab="pan">
+<div class="hb az"><div class="hb-t">El grupo en una frase</div>
+<p>Depresión mayor, trastorno bipolar y conducta suicida se separan por la historia de polaridad y por el riesgo suicida; este último es la amenaza.</p></div>
+<div class="etapa" data-go="vis"><h3>Una presentación común y tres ejes</h3>
+<p class="res">Un adulto llega con ánimo bajo, anhedonia, insomnio y a veces ideas de muerte. Esa presentación es común porque la depresión mayor y el polo bajo del trastorno bipolar se ven iguales en un corte transversal, y la exploración de un día no las separa [1][7]. Las separan tres ejes. El primero es la polaridad, es decir, la manía o hipomanía previas que se preguntan de forma dirigida. El segundo es el riesgo suicida, que se pregunta de frente en todo cuadro del ánimo. El tercero es el tratamiento según el polo, porque el antidepresivo solo no sirve en el bipolar [3][4]. Se empieza por la depresión mayor.</p>
+<p class="perla">Dos depresiones iguales se separan por la historia y por la pregunta directa.</p>
+<button type="button" class="go" data-go="vis" onclick="show('vis')">Ir a Visión de conjunto →</button></div>
+<div class="etapa" data-go="e1"><h3>Depresión mayor, el polo bajo</h3>
+<p class="res">Cae en el extremo unipolar del eje de polaridad: hay episodios bajos y nunca polo elevado. Un eje del estrés hiperactivo, con caída de la señal monoaminérgica y pérdida de BDNF, reduce la plasticidad prefrontal y produce ánimo bajo, anhedonia y síntomas neurovegetativos [19][1]. El signo que la delata es ánimo deprimido o anhedonia casi todos los días durante al menos dos semanas. La conducta decisiva es preguntar por manía o hipomanía previas antes de recetar, medir la gravedad con el PHQ-9 y elegir entre psicoterapia, fármaco o ambos según ella [11][2][14]. Sigue el polo opuesto.</p>
+<p class="perla">Antes de nombrar una depresión, pregunta por manía o hipomanía.</p>
+<button type="button" class="go" data-go="e1" onclick="show('e1')">Ir a Depresión mayor →</button></div>
+<div class="etapa" data-go="e2"><h3>Trastorno bipolar, el polo elevado</h3>
+<p class="res">Cae en el espectro bipolar del eje: aparece el polo elevado y un solo episodio basta. La desregulación del sueño y de los circuitos de recompensa, con falla del control prefrontal, hace que el paciente no se sienta cansado, hable sin pausa y no mida las consecuencias [7][1]. El signo que lo delata es el antecedente de ánimo elevado o irritable con más energía y menos sueño, aunque hoy consulte por depresión. La conducta decisiva es no dar antidepresivo en monoterapia, porque puede inducir viraje, y basar el tratamiento en un estabilizador [3][25]. Sigue la complicación letal que comparten ambos.</p>
+<p class="perla">En el bipolar manda el estabilizador, no el antidepresivo solo.</p>
+<button type="button" class="go" data-go="e2" onclick="show('e2')">Ir a Trastorno bipolar →</button></div>
+<div class="etapa" data-go="e3"><h3>Conducta suicida, la amenaza</h3>
+<p class="res">Cae en el extremo letal del eje: complica a ambos capítulos del ánimo, pero también ocurre fuera de ellos. Un terreno de vulnerabilidad, un estado activo de desesperanza, impulsividad o alcohol, un estresor agudo y el acceso a medios llevan de la ideación al acto [8][9]. El signo que la delata es la ideación con plan o intención, o un intento previo. La conducta decisiva es preguntar de frente en esa misma consulta, no dejar solo al paciente de riesgo alto, hacer un plan de seguridad y restringir los medios, sin que una escala decida el alta [4][33][32].</p>
+<p class="perla">Preguntar por suicidio no lo provoca; protege.</p>
+<button type="button" class="go" data-go="e3" onclick="show('e3')">Ir a Conducta suicida →</button></div>
+<p class="mini">Esto es el mapa, no el territorio: cada párrafo y cada perla se justifican en su pestaña.</p>
+</section>
+<section class="tab" data-tab="vis">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>Ante un adulto con ánimo bajo o anhedonia en consulta de primer nivel, ¿en qué se apoya decidir si es una depresión unipolar o parte del espectro bipolar, y por qué esa decisión va antes de recetar?</li>
+<li>¿Qué comparten la depresión mayor y la depresión bipolar en su polo bajo, y qué dato del interrogatorio las separa a pesar de verse iguales en la exploración?</li>
+<li>¿Por qué se pregunta de forma directa por ideación suicida en todo cuadro del ánimo, y cómo cambia la conducta según la respuesta?</li>
+<li>¿Cómo cambia el tratamiento inicial según el polo y según el riesgo suicida, y qué conductas evitas hasta aclarar ambos?</li>
+</ol></div>
+<p><span class="badge b-pu">DSM-5-TR 2022 [1]</span> <span class="badge b-pu">NICE NG222 depresión 2022, solo resumen [2]</span> <span class="badge b-pu">CANMAT/ISBD trastorno bipolar 2018, solo resumen [3]</span> <span class="badge b-pu">OMS mhGAP, solo resumen [4]</span></p>
+<div class="hb am"><div class="hb-t">Alcance</div>
+<p>Este grupo responde al Caso 7 del sílabo (trastornos del estado de ánimo) con el foco que indicó el docente: depresión mayor, trastorno bipolar y conducta suicida. Quedan fuera, y solo aparecen como diferencial, el trastorno depresivo persistente, el ciclotímico y la desregulación disruptiva del estado de ánimo.</p>
+<p>Cada entidad abre con una tabla «Esquema DSM-5-TR»: recorre, sección por sección, el orden con que el manual describe un trastorno (criterios, prevalencia, curso, riesgo suicida, diagnóstico diferencial) y dice en qué parte de la pestaña se amplía [1]. La atención se plantea para el primer nivel [4].</p></div>
+<div class="hb vi"><div class="hb-t">Discrepancia: ediciones de los libros del sílabo</div>
+<p>El sílabo de la segunda rotación cita Harrison 19.ª edición y Farreras-Rozman 17.ª edición. Ambas fueron superadas por ediciones posteriores y no recogen los criterios actuales [5][6]. <b>Regla correcta: usa Harrison 22.ª edición (2025) y Farreras-Rozman 20.ª edición (2024).</b></p></div>
+<div class="tw"><table class="vis"><thead><tr><th>Rasgo</th><th>Depresión mayor</th><th>Trastorno bipolar</th><th>Conducta suicida</th></tr></thead>
+<tbody>
+<tr><th>Falla central</th><td>Eje del estrés hiperactivo y déficit monoaminérgico con baja plasticidad prefrontal</td><td>Inestabilidad del ánimo con recompensa y ritmos circadianos desregulados</td><td>Diátesis neurobiológica más estrés agudo que debilita el control inhibitorio</td></tr>
+<tr><th>Terreno típico</th><td>Adulto con antecedente familiar, adversidad temprana o pérdidas recientes</td><td>Adulto joven con depresiones recurrentes y antecedente familiar bipolar</td><td>Paciente con trastorno del ánimo, intento previo, consumo o acceso a medios</td></tr>
+<tr><th>Inicio y curso</th><td>Semanas, con curso episódico y riesgo de recurrencia</td><td>Episodios elevados y deprimidos que alternan y recurren</td><td>Súbito sobre una crisis o gradual con ideas persistentes</td></tr>
+<tr><th>Síntoma compartido aquí</th><td>Ánimo bajo, anhedonia, insomnio e ideas de muerte</td><td>En su polo bajo: ánimo bajo, enlentecimiento, hipersomnia y culpa</td><td>Desesperanza, ideas de muerte y deseo de no seguir</td></tr>
+<tr><th>Signo que la delata</th><td>Ánimo deprimido o anhedonia casi todos los días ≥2 semanas</td><td>Antecedente de manía o hipomanía: ánimo elevado, más energía, menos sueño</td><td>Ideación suicida con plan o intención, o intento reciente</td></tr>
+<tr><th>Negativo pertinente</th><td>Manía o hipomanía previa: cae y pasa a espectro bipolar</td><td>Ningún episodio elevado jamás: cae y queda la unipolar</td><td>Niega ideación, plan e intentos tras preguntar de frente: riesgo bajo</td></tr>
+<tr><th>Prueba que decide</th><td>PHQ-9 + criterios DSM-5-TR en la entrevista</td><td>Entrevista dirigida a manía o hipomanía + criterios DSM-5-TR</td><td>Pregunta directa por ideación + C-SSRS</td></tr>
+<tr><th>Conducta inicial y quién maneja</th><td>ISRS y psicoterapia según gravedad</td><td>Estabilizador del ánimo; no antidepresivo en monoterapia</td><td>Plan de seguridad, restricción de medios y ECU 911 si es inminente</td></tr>
+<tr><th>Amenaza si se pierde</th><td>Suicidio, cronicidad y discapacidad funcional</td><td>Viraje maníaco con antidepresivo, suicidio y deterioro progresivo</td><td>Muerte por suicidio</td></tr>
+</tbody></table></div>
+<div class="card"><p><b>Común al grupo</b>: en el DSM-5-TR los trastornos del ánimo se reparten en dos capítulos. Los trastornos depresivos tienen un polo, el bajo; los bipolares y relacionados exigen que alguna vez haya existido un polo elevado, manía o hipomanía. La depresión mayor y la depresión bipolar se ven igual en un momento dado y se separan por la historia [1][7].</p>
+<div class="tw"><table><thead><tr><th>Capítulo del DSM-5-TR</th><th>Entidades</th><th>Qué las separa</th></tr></thead>
+<tbody>
+<tr><th>Trastornos depresivos</th><td>Depresión mayor, depresivo persistente, disfórico premenstrual, desregulación disruptiva del estado de ánimo, inducido por sustancia o por otra afección médica</td><td>Nunca hubo manía ni hipomanía [1]</td></tr>
+<tr><th>Trastornos bipolares y relacionados</th><td>Bipolar I, bipolar II, ciclotímico, inducido por sustancia o por otra afección médica</td><td>Existió al menos un episodio maníaco (I) o hipomaníaco con depresión mayor (II) [1]</td></tr>
+</tbody></table></div>
+<p>La conducta suicida no es un trastorno del ánimo: es la complicación letal que comparten ambos capítulos. El DSM-5-TR la ubica como afección que necesita más estudio y como motivo de atención clínica, y por eso se desarrolla como entidad propia [1][8].</p>
+<p>El examen mental del ánimo se hace en la misma consulta en que se decide el polo y el riesgo:</p>
+<div class="tw"><table><thead><tr><th>Área del examen mental</th><th>Qué explorar</th><th>Qué orienta</th></tr></thead>
+<tbody>
+<tr><th>Aspecto y conducta psicomotora</th><td>Enlentecimiento, agitación, descuido, hiperactividad</td><td>Depresión melancólica frente a activación maníaca [7]</td></tr>
+<tr><th>Afecto y ánimo</th><td>Tristeza, anhedonia, irritabilidad, euforia, labilidad</td><td>Polo bajo frente a polo elevado o mixto [1]</td></tr>
+<tr><th>Pensamiento</th><td>Curso (lento o acelerado), contenido de culpa, ruina o grandiosidad, ideas de muerte</td><td>Depresión, manía y riesgo suicida [1][9]</td></tr>
+<tr><th>Sensopercepción</th><td>Alucinaciones o ideas delirantes congruentes con el ánimo</td><td>Especificador psicótico y mayor gravedad [1]</td></tr>
+<tr><th>Cognición, juicio e introspección</th><td>Atención, memoria, conciencia de enfermedad</td><td>Pseudodemencia, delirium o manía con juicio perdido [7]</td></tr>
+</tbody></table></div>
+<p>Tres ejes ordenan todo lo que sigue:</p>
+<ul>
+<li>Eje 1 — Polaridad: antes de nombrar una depresión, pregunta por manía o hipomanía previas; un solo episodio elevado la convierte en bipolar.</li>
+<li>Eje 2 — Riesgo suicida: en todo paciente con síntomas del ánimo se pregunta de forma directa por ideación, plan, intento previo y acceso a medios.</li>
+<li>Eje 3 — Tratamiento según el polo: el antidepresivo en monoterapia es de elección solo en la depresión unipolar; en la bipolar manda el estabilizador.</li>
+</ul></div>
+<div class="hb ro"><div class="hb-t">Banderas rojas en síntomas del ánimo</div>
+<ul>
+<li>Conducta suicida: ideación con plan o intención, un intento reciente o acceso a un medio letal exigen no dejar solo al paciente, retirar los medios y activar ECU 911 si el riesgo es inminente [10][4].</li>
+<li>Manía o hipomanía no detectada: menos necesidad de dormir, más energía y habla acelerada; un antidepresivo sin estabilizador puede inducir viraje [3].</li>
+<li>Síntomas psicóticos: ideas delirantes o alucinaciones congruentes con el ánimo cambian el nivel de atención y el tratamiento [1].</li>
+<li>Causa médica o tóxica: hipotiroidismo, anemia, deficiencia de B12, corticoides, alcohol y otras sustancias imitan una depresión y se descartan antes de rotular [5].</li>
+<li>Depresión posparto con pensamientos de dañar al bebé o a sí misma: emergencia en el primer nivel [1][4].</li>
+</ul></div>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Pregunta por manía o hipomanía previas y por ideación suicida antes de nombrar la depresión [1][9].</li>
+<li><span class="tg">Añade</span>Examen mental completo, PHQ-9 para cuantificar la depresión y cribado de polo elevado, por ejemplo con el cuestionario MDQ [11][12].</li>
+<li><span class="tg">Confirma</span>Confirma la entidad con criterios DSM-5-TR en la entrevista: duración, número de síntomas y antecedente de episodio elevado [1].</li>
+<li><span class="tg">Solo si</span>Pide TSH, hemograma, vitamina B12 o tóxicos si la clínica sugiere causa médica o consumo de sustancias [5].</li>
+<li><span class="tg">No pidas</span>No pidas neuroimagen de rutina ni inicies un antidepresivo en monoterapia antes de descartar un polo elevado [3].</li>
+<li><span class="tg">Alarma</span>Plan o intención suicida, intento reciente, psicosis o manía con agitación: no dejes solo al paciente y activa ECU 911 si el riesgo es inminente [4].</li>
+</ol>
+<div class="dc" data-fn="dcVis"><div class="dc-t">Simulador · Decisión clínica — predice la entidad antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Polo del ánimo actual</span>
+<button type="button" class="chip" data-g="polo" data-v="dep" data-m="1" onclick="ch(this)">Ánimo bajo o anhedonia ≥2 semanas</button>
+<button type="button" class="chip" data-g="polo" data-v="ele" data-m="1" onclick="ch(this)">Ánimo elevado o irritable, más energía, menos sueño</button></div>
+<div class="dc-g"><span class="dc-l">Antecedentes</span>
+<button type="button" class="chip" data-g="ant" data-v="mania" data-m="1" onclick="ch(this)">Episodio previo de manía o hipomanía</button>
+<button type="button" class="chip" data-g="ant" data-v="fam" data-m="1" onclick="ch(this)">Familiar con trastorno bipolar</button>
+<button type="button" class="chip" data-g="ant" data-v="viraje" data-m="1" onclick="ch(this)">Euforia tras un antidepresivo</button></div>
+<div class="dc-g"><span class="dc-l">Riesgo suicida (pregunta directa)</span>
+<button type="button" class="chip" data-g="riesgo" data-v="nada" onclick="ch(this)">Niega ideación</button>
+<button type="button" class="chip" data-g="riesgo" data-v="pasiva" onclick="ch(this)">Ideas pasivas de muerte</button>
+<button type="button" class="chip" data-g="riesgo" data-v="plan" onclick="ch(this)">Ideación con plan o intención</button>
+<button type="button" class="chip" data-g="riesgo" data-v="intento" onclick="ch(this)">Intento reciente</button></div>
+<div class="dc-g"><span class="dc-l">Otros datos</span>
+<button type="button" class="chip" data-g="otros" data-v="org" data-m="1" onclick="ch(this)">Hipotiroidismo, sustancia o fármaco presentes</button>
+<button type="button" class="chip" data-g="otros" data-v="duelo" data-m="1" onclick="ch(this)">Pérdida reciente de un ser querido</button>
+<button type="button" class="chip" data-g="otros" data-v="psic" data-m="1" onclick="ch(this)">Ideas delirantes o alucinaciones</button></div>
+<div class="out"></div></div>
+</section>
+<section class="tab" data-tab="e1">
+<div class="hb az"><div class="hb-t">Frente a Trastorno bipolar</div>
+<p>Se confunde con el trastorno bipolar porque el episodio depresivo de ambos es idéntico en la exploración de un día. Se separa por el antecedente de manía o hipomanía (criterio E), que se pregunta de forma dirigida; el inicio temprano, las recurrencias numerosas y el antecedente familiar bipolar aumentan la sospecha. Cambia el manejo: en el bipolar el antidepresivo en monoterapia puede inducir viraje [1][3][13].</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué un eje del estrés hiperactivo, la caída de la señal monoaminérgica y la pérdida de BDNF producen a la vez ánimo bajo, anhedonia y síntomas neurovegetativos, y en qué orden se encadenan?</li>
+<li>¿Qué separa un episodio depresivo mayor del duelo, de una depresión por hipotiroidismo o sustancias y del trastorno depresivo persistente, y qué dato lo decide?</li>
+<li>¿En qué se apoya la gravedad que fija la conducta inicial, y por qué la pregunta por manía o hipomanía previa va antes de recetar?</li>
+<li>¿Por qué un ISRS tarda semanas en actuar, y cómo eliges entre psicoterapia, fármaco o ambos según la gravedad y la situación especial?</li>
+<li>¿Qué definen respuesta, remisión y recaída, qué busca cada fase del tratamiento y qué complicaciones previene cada una por su mecanismo?</li>
+</ol></div>
+<p><span class="badge b-pu">DSM-5-TR 2022 [1]</span> <span class="badge b-pu">CANMAT depresión mayor 2023, solo resumen [14]</span> <span class="badge b-pu">NICE NG222 depresión 2022, solo resumen [2]</span> <span class="badge b-pu">OMS mhGAP, solo resumen [4]</span></p>
+
+<h2>Qué es</h2>
+<div class="card"><p>La depresión mayor es un trastorno del ánimo definido por uno o más episodios depresivos mayores sin manía ni hipomanía previas: al menos dos semanas con ánimo bajo o pérdida de placer, acompañados de síntomas cognitivos y neurovegetativos que deterioran la vida diaria [1].</p>
+<p>Los criterios del DSM-5-TR, parafraseados:</p>
+<div class="tw"><table><thead><tr><th>Criterio</th><th>Qué exige</th></tr></thead>
+<tbody>
+<tr><th>A</th><td>Cinco o más de nueve síntomas durante las mismas dos semanas, con cambio respecto a la función previa; uno de ellos es ánimo deprimido o anhedonia [1]</td></tr>
+<tr><th>B</th><td>Los síntomas causan malestar clínicamente significativo o deterioro social, laboral o de otra área importante</td></tr>
+<tr><th>C</th><td>El episodio no se explica por los efectos de una sustancia ni por otra afección médica</td></tr>
+<tr><th>D</th><td>El episodio no se explica mejor por un trastorno esquizoafectivo, esquizofrenia u otro trastorno del espectro psicótico</td></tr>
+<tr><th>E</th><td>Nunca hubo un episodio maníaco o hipomaníaco, salvo los inducidos por una sustancia o por otra afección médica</td></tr>
+</tbody></table></div>
+<p>Los nueve síntomas del criterio A son: ánimo deprimido, pérdida de interés o placer, cambio de peso o de apetito, insomnio o hipersomnia, agitación o enlentecimiento psicomotor, fatiga, sentimiento de inutilidad o culpa excesiva, dificultad para concentrarse o decidir, e ideas recurrentes de muerte o suicidio [1].</p></div>
+<p>La tabla siguiente recorre el esquema con que el DSM-5-TR describe el trastorno y señala dónde se amplía cada sección en esta pestaña.</p>
+<div class="tw"><table><thead><tr><th>Sección del DSM-5-TR</th><th>Lo esencial</th><th>Dónde se desarrolla</th></tr></thead>
+<tbody>
+<tr><th>Criterios diagnósticos</th><td>Cinco de nueve síntomas durante dos semanas, uno de ellos ánimo bajo o anhedonia [1]</td><td>Qué es</td></tr>
+<tr><th>Especificadores</th><td>Gravedad, ansiosas, mixtas, melancólicas, atípicas, psicóticas, estacional, periparto y remisión</td><td>Qué es</td></tr>
+<tr><th>Características diagnósticas</th><td>Ánimo bajo o anhedonia casi diarios, con cambios de sueño, apetito, energía y concentración</td><td>Qué verás</td></tr>
+<tr><th>Características asociadas</th><td>Ansiedad, irritabilidad, quejas somáticas, dolor y deterioro de la atención</td><td>Qué verás</td></tr>
+<tr><th>Prevalencia</th><td>Cerca de 7 % a 12 meses; menor en mayores de 60 años</td><td>Epidemiología</td></tr>
+<tr><th>Desarrollo y curso</th><td>Inicio a cualquier edad, con pico en la adultez joven; curso episódico y recurrente</td><td>Seguimiento</td></tr>
+<tr><th>Factores de riesgo y pronóstico</th><td>Neuroticismo, adversidad infantil, estrés, familiares afectados; la comorbilidad empeora el pronóstico</td><td>Cadena</td></tr>
+<tr><th>Cuestiones culturales</th><td>La queja puede ser somática o expresarse con modismos locales; ajusta la entrevista</td><td>Qué verás</td></tr>
+<tr><th>Sexo y género</th><td>Más frecuente en mujeres desde la adolescencia, 1,5 a 3 veces</td><td>Epidemiología</td></tr>
+<tr><th>Asociación con pensamientos o comportamientos suicidas</th><td>Principal trastorno asociado al suicidio; se pregunta siempre, con plan y medios</td><td>Seguimiento</td></tr>
+<tr><th>Consecuencias funcionales</th><td>Deterioro laboral y social, más discapacidad y más mortalidad por enfermedad médica</td><td>Seguimiento</td></tr>
+<tr><th>Diagnóstico diferencial</th><td>Duelo, bipolar, causa médica, sustancias y trastorno depresivo persistente</td><td>Qué es</td></tr>
+<tr><th>Comorbilidad</th><td>Ansiedad, consumo de sustancias, estrés postraumático, obsesivo-compulsivo y de personalidad</td><td>Seguimiento</td></tr>
+</tbody></table></div>
+<p>Los subtipos y especificadores existen porque cambian el pronóstico y el tratamiento: la gravedad decide si basta una sola intervención o se combinan, y los especificadores avisan de riesgos propios [1][14].</p>
+<div class="tw"><table><thead><tr><th>Subtipo o especificador</th><th>Qué lo define</th><th>Qué cambia en la conducta</th></tr></thead>
+<tbody>
+<tr><th>Gravedad leve, moderada o grave</th><td>Número e intensidad de síntomas y grado de deterioro; el PHQ-9 orienta la banda [11][1]</td><td>Fija entre psicoterapia sola, fármaco o ambos y el nivel de vigilancia [2]</td></tr>
+<tr><th>Con características ansiosas</th><td>Tensión, inquietud o miedo a que ocurra algo terrible</td><td>Mayor riesgo suicida y respuesta más lenta; inicia el ISRS a dosis bajas [1]</td></tr>
+<tr><th>Con características mixtas</th><td>Síntomas subumbrales de manía o hipomanía durante el episodio</td><td>Alerta de espectro bipolar: no uses antidepresivo en monoterapia [1][3]</td></tr>
+<tr><th>Con características melancólicas</th><td>Anhedonia generalizada, empeoramiento matutino, despertar precoz, enlentecimiento, pérdida de peso</td><td>Respuesta más segura a antidepresivos y a terapia electroconvulsiva en casos graves [1][7]</td></tr>
+<tr><th>Con características atípicas</th><td>Reactividad del ánimo, hiperfagia, hipersomnia, parálisis plúmbea y sensibilidad al rechazo</td><td>Más frecuente en el polo bajo del espectro bipolar: pregunta por manía [1]</td></tr>
+<tr><th>Con características psicóticas</th><td>Ideas delirantes o alucinaciones, casi siempre congruentes con el ánimo</td><td>Exige antidepresivo más antipsicótico o terapia electroconvulsiva; atención especializada [1][14]</td></tr>
+<tr><th>Con patrón estacional</th><td>Episodios recurrentes que coinciden con la misma estación</td><td>Plantea fototerapia además del tratamiento habitual [1]</td></tr>
+<tr><th>Con inicio en el periparto</th><td>Comienzo durante el embarazo o en las cuatro semanas posteriores al parto</td><td>Obliga a ponderar lactancia, embarazo y riesgo de daño al lactante [1]</td></tr>
+</tbody></table></div>
+<p>No confundir con las vecinas que quedan fuera del grupo:</p>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Duelo</th><td>Tristeza, llanto, insomnio y pérdida de apetito</td><td>En el duelo predominan la añoranza y las oleadas ligadas al fallecido, con autoestima conservada; en la depresión mayor hay ánimo bajo persistente, inutilidad y anhedonia generalizada. El juicio clínico decide [1]</td></tr>
+<tr><th>Hipotiroidismo</th><td>Fatiga, enlentecimiento, aumento de peso y ánimo bajo</td><td>TSH elevada y signos sistémicos; el ánimo mejora al corregir la causa [5]</td></tr>
+<tr><th>Depresión inducida por sustancias o fármacos</th><td>Episodio idéntico al mayor</td><td>Comienza durante o poco después de alcohol, sedantes, corticoides u otros; remite al retirar el agente [1][7]</td></tr>
+<tr><th>Trastorno depresivo persistente</th><td>Ánimo bajo y síntomas depresivos</td><td>Curso de al menos dos años con síntomas menos intensos pero casi continuos; puede coexistir con episodios mayores [1]</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Dato</th><th>Valor en la fuente</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>Prevalencia a 12 meses cercana a 7 % en adultos de Estados Unidos según el DSM-5-TR [1]; 10,4 % en la encuesta NESARC-III con criterios DSM-5 [15]</td></tr>
+<tr><th>Edad</th><td>Puede iniciar a cualquier edad, con más frecuencia desde la pubertad; a los 18 a 29 años la prevalencia es unas tres veces la de los mayores de 60 [1]</td></tr>
+<tr><th>Sexo</th><td>1,5 a 3 veces más frecuente en mujeres que en varones desde la adolescencia temprana [1]</td></tr>
+<tr><th>Factores clave</th><td>Familiar de primer grado afectado (riesgo de 2 a 4 veces mayor), neuroticismo, adversidad en la infancia, eventos estresantes y enfermedad crónica [1][16]</td></tr>
+</tbody></table></div>
+<p class="mini">No se leyeron cifras de Ecuador; no se aportan estimaciones nacionales.</p>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e1-m-1" data-clin="0" data-paso="Terreno genético y adversidad temprana"><div class="det"><p>Primer golpe, el terreno: muchas variantes genéticas de efecto pequeño aportan una heredabilidad cercana a 40 % [1][17]. Segundo golpe, la adversidad en la infancia y los eventos vitales estresantes, que reprograman la respuesta al estrés del cerebro en desarrollo mediante cambios epigenéticos (marcas químicas que regulan cuánto se expresa un gen sin cambiar su secuencia) [18][16].</p></div></li>
+<li class="nodo" id="e1-m-2" data-clin="0" data-paso="Eje HHS hiperactivo con cortisol alto"><div class="det"><p>El eje hipotálamo-hipófiso-suprarrenal (HHS) es la cadena que responde al estrés: el hipotálamo libera la hormona liberadora de corticotropina, la hipófisis libera ACTH y la corteza suprarrenal libera cortisol. Normalmente el cortisol se frena a sí mismo por receptores de glucocorticoides del hipocampo; en la depresión ese freno falla y el cortisol queda alto y sostenido [18][16].</p></div></li>
+<li class="nodo" id="e1-m-3" data-clin="1" data-paso="Déficit monoaminérgico"><div class="det"><p>Las neuronas serotoninérgicas del rafe, noradrenérgicas del locus coeruleus y dopaminérgicas del área tegmental ventral proyectan a la corteza y al sistema límbico y regulan ánimo, sueño, apetito y motivación. El cortisol alto y la inflamación reducen su señal. Los ISRS bloquean el transportador de serotonina (SERT, proteína de la terminal presináptica que recapta serotonina) y la dejan más tiempo en la sinapsis [19][20]. <span class="rem">↪ Posología en «Tratamiento»</span></p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-1" onclick="ir('e1','e1-s-1')">Ánimo deprimido o anhedonia casi todos los días ≥2 semanas</button> <button type="button" class="xref" data-ir="e1-s-3" onclick="ir('e1','e1-s-3')">Alteración del sueño, apetito y energía</button></p></div></li>
+<li class="nodo" id="e1-m-4" data-clin="1" data-paso="Caída de BDNF y neuroplasticidad hipocampo-prefrontal"><div class="det"><p>El BDNF (factor neurotrófico derivado del cerebro, proteína que sostiene la supervivencia neuronal y las sinapsis) baja con el cortisol alto y la menor señal monoaminérgica. Las dendritas del hipocampo, que consolida la memoria y frena el eje HHS, y de la corteza prefrontal se retraen y se forman menos sinapsis. Los antidepresivos revierten esta pérdida de forma gradual, lo que explica por qué tardan semanas [16][7]. <span class="rem">↪ Posología en «Tratamiento»</span></p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-4" onclick="ir('e1','e1-s-4')">Atención y concentración disminuidas con rumiación</button></p></div></li>
+<li class="nodo" id="e1-m-5" data-clin="1" data-paso="Hipoactividad prefrontal y circuito de recompensa"><div class="det"><p>La corteza prefrontal dorsolateral, que planifica y sostiene la atención, trabaja menos. El núcleo accumbens, centro del circuito de recompensa que recibe dopamina del área tegmental ventral y codifica placer y motivación, responde poco a los estímulos agradables. Mientras tanto la amígdala, que evalúa amenaza, reacciona de más ante lo negativo [19][16].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-1" onclick="ir('e1','e1-s-1')">Ánimo deprimido o anhedonia casi todos los días ≥2 semanas</button> <button type="button" class="xref" data-ir="e1-s-2" onclick="ir('e1','e1-s-2')">Enlentecimiento psicomotor y afecto restringido</button></p></div></li>
+<li class="nodo" id="e1-m-6" data-clin="1" data-paso="Desesperanza e ideación suicida"><div class="det"><p>La prefrontal débil pierde el control inhibitorio y la capacidad de imaginar un futuro distinto, y el sesgo negativo de la amígdala convierte el sufrimiento en algo percibido como interminable. Esa desesperanza es el puente hacia la ideación suicida, que se suma a un terreno de impulsividad y a un estresor agudo [8][16]. <span class="rem">↪ Estratificación del riesgo en «Conducta suicida»</span></p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-5" onclick="ir('e1','e1-s-5')">Desesperanza e ideas de muerte</button></p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — el jardín bajo un sol que no para</span>
+<p class="fey-b">Imagina un jardín al que un sol muy fuerte no deja de pegar. Las plantas se resecan y el jardinero ya no trae agua ni abono. Con el tiempo las raíces se encogen, las flores no salen y todo se ve gris. No es que el dueño no quiera ver colores: el jardín dejó de poder dárselos. Si se apaga el exceso de sol y el jardinero vuelve, las plantas tardan en rebrotar.</p>
+<p class="mini fey-c">En medicina esto se llama… eje del estrés hiperactivo, déficit monoaminérgico, pérdida de neuroplasticidad (BDNF) y anhedonia.</p>
+<p class="mini fey-c">Dónde falla la comparación: un jardín no decide ni siente; en el cerebro los circuitos pueden recuperarse con fármacos, psicoterapia o ambos, y el paciente participa en la recuperación.</p></div>
+
+<h2>Qué verás</h2>
+<p>En psiquiatría «Qué verás» es el examen mental: lo que se observa y se pregunta durante la entrevista.</p>
+<div class="qv">
+<p data-e="p">Ánimo triste con afecto restringido y llanto fácil</p>
+<p data-e="p">Pensamiento con contenido de culpa, inutilidad y ruina</p>
+<p data-e="p">Atención, memoria de trabajo y capacidad de decidir disminuidas</p>
+<p data-e="v">Ideas de muerte o planes suicidas</p>
+<p data-e="v">Ideas delirantes o alucinaciones congruentes con el ánimo</p>
+<p data-e="a">Euforia, grandiosidad o fuga de ideas</p>
+<p data-e="a">Desorientación o fluctuación del nivel de conciencia</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e1-s-1" onclick="ir('e1','e1-s-1')">Ánimo deprimido o anhedonia casi todos los días ≥2 semanas</button></p>
+</div>
+<div class="signo" id="e1-s-1"><h4>Ánimo deprimido o anhedonia casi todos los días ≥2 semanas</h4><dl>
+<dt>Cómo se reconoce</dt><dd>En la entrevista, el paciente refiere tristeza, vacío o irritabilidad, o ya no disfruta lo que antes le gustaba, casi todo el día y casi todos los días. Se observa afecto restringido, mirada baja, voz monótona y llanto fácil. En el PHQ-9 son los dos primeros ítems [11][1].</dd>
+<dt>Por qué aparece</dt><dd>La señal monoaminérgica baja y el circuito de recompensa apagado quitan el color afectivo y el placer. <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Déficit monoaminérgico</button> <button type="button" class="xref" data-ir="e1-m-5" onclick="ir('e1','e1-m-5')">← Hipoactividad prefrontal y circuito de recompensa</button></dd>
+<dt>Qué significa</dt><dd>Es el síntoma cardinal del criterio A, pero no distingue el polo: antes de nombrar depresión mayor hay que descartar manía o hipomanía previas [1].</dd></dl></div>
+<div class="signo" id="e1-s-2"><h4>Enlentecimiento psicomotor y afecto restringido</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Habla lenta y escasa, latencia prolongada de respuesta, movimientos pobres y poca expresividad facial. Menos a menudo hay agitación con inquietud constante [1][7].</dd>
+<dt>Por qué aparece</dt><dd>La prefrontal hipoactiva y la menor dopamina frenan la iniciativa motora y cognitiva. <button type="button" class="xref" data-ir="e1-m-5" onclick="ir('e1','e1-m-5')">← Hipoactividad prefrontal y circuito de recompensa</button></dd>
+<dt>Qué significa</dt><dd>Es observable por el examinador y no depende del relato: sugiere el subtipo melancólico y mayor gravedad [1].</dd></dl></div>
+<div class="signo" id="e1-s-3"><h4>Alteración del sueño, apetito y energía</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Insomnio con despertar precoz o hipersomnia, pérdida o aumento de apetito y de peso, y fatiga que no mejora con el descanso. Pregunta por el patrón horario, porque el empeoramiento matutino orienta a melancolía [1].</dd>
+<dt>Por qué aparece</dt><dd>La serotonina y la noradrenalina regulan los ritmos de sueño y hambre en el hipotálamo; cuando su señal cae y el cortisol queda alto, el ciclo sueño-vigilia y el apetito se desordenan. <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Déficit monoaminérgico</button></dd>
+<dt>Qué significa</dt><dd>Son los síntomas neurovegetativos que el paciente suele presentar como queja somática; en el primer nivel conviene buscar el ánimo detrás de la fatiga y el insomnio [4].</dd></dl></div>
+<div class="signo" id="e1-s-4"><h4>Atención y concentración disminuidas con rumiación</h4><dl>
+<dt>Cómo se reconoce</dt><dd>El paciente olvida citas, se distrae al leer y tarda en decidir. En el pensamiento repite temas de culpa o fracaso sin salida. Una evaluación cognitiva breve muestra fallas de atención con orientación conservada.</dd>
+<dt>Por qué aparece</dt><dd>La pérdida de sinapsis en el hipocampo y la corteza prefrontal debilita la memoria de trabajo y la atención sostenida. <button type="button" class="xref" data-ir="e1-m-4" onclick="ir('e1','e1-m-4')">← Caída de BDNF y neuroplasticidad hipocampo-prefrontal</button></dd>
+<dt>Qué significa</dt><dd>En un adulto mayor puede imitar demencia (pseudodemencia) y mejora al tratar la depresión; la desorientación o la fluctuación de la conciencia orientan a delirium [7].</dd></dl></div>
+<div class="signo" id="e1-s-5"><h4>Desesperanza e ideas de muerte</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Se pregunta de frente por ideas de que la vida no tiene sentido, deseo de no despertar, pensamientos de hacerse daño, plan, intención y acceso a medios. Es el ítem 9 del PHQ-9 y se completa con la C-SSRS [11][9].</dd>
+<dt>Por qué aparece</dt><dd>La prefrontal debilitada pierde control inhibitorio y la amígdala sesgada ve el futuro sin salida. <button type="button" class="xref" data-ir="e1-m-6" onclick="ir('e1','e1-m-6')">← Desesperanza e ideación suicida</button></dd>
+<dt>Qué significa</dt><dd>Preguntar no induce suicidio y es el dato que más cambia la conducta: cualquier respuesta afirmativa activa la estratificación del riesgo [10][4]. <span class="rem">↪ Estratificación del riesgo en «Conducta suicida»</span></dd></dl></div>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la radio que perdió las estaciones</span>
+<p class="fey-b">Piensa en una radio vieja a la que solo le llega ruido gris. La música sigue sonando en alguna parte, pero la radio ya no la capta, así que nada suena alegre y todo cuesta más esfuerzo. La persona mira todo desde ahí: lento, apagado y sin ganas, y por eso a veces cree que nunca volverá a escuchar música. No es pereza ni falta de voluntad.</p>
+<p class="mini fey-c">En medicina esto se llama… anhedonia, enlentecimiento psicomotor y síntomas neurovegetativos.</p>
+<p class="mini fey-c">Dónde falla la comparación: la radio se arregla cambiando una pieza; el cerebro necesita tiempo, tratamiento y apoyo para volver a captar las señales.</p></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>PHQ-9 + criterios DSM-5-TR en la entrevista [11][1]</li>
+<li><span class="tg">Añade</span>Pregunta dirigida por manía o hipomanía previas, por antecedente familiar bipolar y por ideación suicida con plan y medios [1][9].</li>
+<li><span class="tg">Añade</span>Historia clínica psiquiátrica completa y examen mental, con la estructura de la tabla siguiente [7][21].</li>
+<li><span class="tg">Confirma</span>Confirma el episodio depresivo mayor con cinco de nueve síntomas durante dos semanas, deterioro funcional, causa médica o tóxica excluida y ninguna manía ni hipomanía previas [1].</li>
+<li><span class="tg">Solo si</span>Pide TSH ante fatiga, aumento de peso o enlentecimiento, y hemograma o vitamina B12 si hay palidez, dieta pobre o síntomas neurológicos [5].</li>
+<li><span class="tg">No pidas</span>No pidas neuroimagen ni electroencefalograma de rutina, ni uses el PHQ-9 solo para diagnosticar: cuantifica y no sustituye la entrevista [11].</li>
+<li><span class="tg">Alarma</span>Ideación con plan o intención, síntomas psicóticos o incapacidad de cuidarse: no dejes solo al paciente y actúa según «Conducta suicida» [4].</li>
+</ol>
+<p>La historia clínica psiquiátrica es el trabajo autónomo del sílabo para este caso. Su estructura sigue el orden de la entrevista:</p>
+<div class="tw"><table><thead><tr><th>Sección</th><th>Qué recoger</th><th>Qué orienta</th></tr></thead>
+<tbody>
+<tr><th>Identificación y motivo de consulta</th><td>Edad, ocupación, quién consulta y el motivo con las palabras del paciente</td><td>Contexto cultural y expresión somática del malestar [7]</td></tr>
+<tr><th>Enfermedad actual</th><td>Inicio, curso, desencadenantes, síntomas del ánimo y neurovegetativos, funcionamiento y estresores</td><td>Duración de dos semanas, gravedad y deterioro [1]</td></tr>
+<tr><th>Antecedentes psiquiátricos personales</th><td>Episodios previos, manía o hipomanía, psicosis, intentos suicidas, hospitalizaciones y respuesta a tratamientos</td><td>Polaridad, recurrencia y fármacos que ya funcionaron o fallaron [21]</td></tr>
+<tr><th>Antecedentes familiares</th><td>Depresión, trastorno bipolar, suicidio y consumo en familiares</td><td>Riesgo genético y sospecha bipolar [1]</td></tr>
+<tr><th>Antecedentes médicos y farmacológicos</th><td>Tiroides, anemia, dolor crónico, embarazo, corticoides, anticonceptivos, alcohol y otras sustancias</td><td>Depresión por causa médica o inducida por sustancia [5]</td></tr>
+<tr><th>Historia personal y social</th><td>Infancia, trauma, pareja, apoyo social, trabajo, acceso a armas o fármacos en casa</td><td>Adversidad temprana, factores protectores y medios letales [18][8]</td></tr>
+<tr><th>Examen mental</th><td>Aspecto, conducta, afecto, pensamiento, sensopercepción, cognición, juicio e introspección</td><td>Subtipo melancólico, psicótico o mixto [7]</td></tr>
+<tr><th>Riesgo y plan</th><td>Ideación, plan, intención, intentos previos, medios; impresión diagnóstica y plan terapéutico</td><td>Nivel de atención y conducta inicial [9][4]</td></tr>
+</tbody></table></div>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Entrevista con criterios DSM-5-TR</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar el episodio depresivo mayor</td><td>Cuenta los cinco síntomas, verifica dos semanas y excluye manía, hipomanía, sustancia y causa médica <button type="button" class="xref" data-ir="e1-m-5" onclick="ir('e1','e1-m-5')">← Hipoactividad prefrontal y circuito de recompensa</button></td><td>[1]</td></tr>
+<tr><th>PHQ-9</th><td>88 % con puntaje ≥10 para depresión mayor</td><td>88 % con puntaje ≥10</td><td>No aplica: cuantifica, no diagnostica</td><td>Cribar y medir la gravedad; seguir la respuesta</td><td>Bandas: 5 a 9 leve, 10 a 14 moderada, 15 a 19 moderadamente grave, 20 a 27 grave. Una respuesta afirmativa en el ítem 9 exige evaluar el riesgo <button type="button" class="xref" data-ir="e1-s-5" onclick="ir('e1','e1-s-5')">← Desesperanza e ideas de muerte</button></td><td>[11]</td></tr>
+<tr><th>PHQ-2</th><td>83 % con puntaje ≥3 [22]</td><td>92 % con puntaje ≥3 [22]</td><td>No aplica</td><td>Cribado inicial en el primer nivel</td><td>Reúne los dos primeros ítems del PHQ-9 (ánimo bajo y anhedonia) <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Déficit monoaminérgico</button>; con 3 puntos o más se completa el PHQ-9</td><td>[22]</td></tr>
+<tr><th>TSH</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Descartar hipotiroidismo</td><td>Pide ante fatiga, enlentecimiento, aumento de peso o poca respuesta al antidepresivo</td><td>[5]</td></tr>
+<tr><th>Hemograma y vitamina B12</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Descartar anemia y deficiencia de B12 si la clínica los sugiere</td><td>No se piden de rutina; la fatiga y la apatía de la anemia imitan la depresión</td><td>[5]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos positivo y negativo; PHQ-9 y PHQ-2: Patient Health Questionnaire de nueve y de dos ítems; TSH: hormona estimulante de la tiroides. La sensibilidad y la especificidad del PHQ-9 corresponden al estudio de validación en atención primaria; los valores predictivos dependen de la prevalencia y no se aportan.</p>
+<div class="dc" data-fn="dcE1d"><div class="dc-t">Simulador · Decisión clínica — predice la gravedad y la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Puntaje total del PHQ-9 (0 a 27)</span><input type="number" data-n="phq" min="0" max="27" step="1" oninput="ch(this)"></div>
+<div class="dc-g"><span class="dc-l">Ítem 9 del PHQ-9 (ideas de muerte o de hacerse daño)</span>
+<button type="button" class="chip" data-g="item9" data-v="no" onclick="ch(this)">Nunca</button>
+<button type="button" class="chip" data-g="item9" data-v="si" onclick="ch(this)">Algunos días o más</button></div>
+<div class="dc-g"><span class="dc-l">Duración de los síntomas</span>
+<button type="button" class="chip" data-g="dur" data-v="corta" onclick="ch(this)">Menos de 2 semanas</button>
+<button type="button" class="chip" data-g="dur" data-v="larga" onclick="ch(this)">2 semanas o más</button></div>
+<div class="dc-g"><span class="dc-l">Manía o hipomanía previas (pregunta dirigida)</span>
+<button type="button" class="chip" data-g="mania" data-v="no" onclick="ch(this)">Ninguna</button>
+<button type="button" class="chip" data-g="mania" data-v="si" onclick="ch(this)">Presentes</button>
+<button type="button" class="chip" data-g="mania" data-v="nop" onclick="ch(this)">No se ha preguntado</button></div>
+<div class="dc-g"><span class="dc-l">Causa médica o tóxica</span>
+<button type="button" class="chip" data-g="org" data-v="exc" onclick="ch(this)">Excluida (TSH, sustancias)</button>
+<button type="button" class="chip" data-g="org" data-v="pend" onclick="ch(this)">Sin estudiar</button>
+<button type="button" class="chip" data-g="org" data-v="pres" onclick="ch(this)">Presente</button></div>
+<div class="out"></div></div>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Trata el episodio según la gravedad y el polo: psicoeducación y seguimiento activo en todos; en leves basta la psicoterapia o el seguimiento; en moderados o graves se combina fármaco y psicoterapia [2][14].</li>
+<li><span class="tg">De elección</span>ISRS y psicoterapia según gravedad [14][2]</li>
+<li><span class="tg">Alternativa</span>La GPC del MSP fija como primera línea fluoxetina o sertralina, con amitriptilina o mirtazapina como alternativa, y pide ajustar la dosis o cambiar si no hay mejoría a la tercera semana [23]. Otro antidepresivo de primera línea de otra clase, como venlafaxina, mirtazapina o bupropión, si falla el primero o hay un efecto adverso que cambia la elección; la psicoterapia sola es opción en episodios leves o si el paciente rechaza el fármaco [14].</li>
+<li><span class="tg">Sintomático</span>Para insomnio o inapetencia importantes elige un antidepresivo sedante o aplica higiene del sueño; evita las benzodiacepinas como parte del esquema [14][20].</li>
+<li><span class="tg">Escala</span>Sin mejoría tras una prueba adecuada, revisa adherencia, dosis y diagnóstico (¿bipolar?, ¿causa médica?), optimiza la dosis, cambia de antidepresivo, suma psicoterapia o potencia con un segundo agente bajo guía especializada [14][16].</li>
+<li><span class="tg">Reevalúa</span>Reevalúa a las 2 a 4 semanas con el PHQ-9, los efectos adversos y la ideación suicida; vigila de cerca el inicio en menores de 25 años [14][20].</li>
+<li><span class="tg">Especialista</span>Con psicosis, ideación con plan, embarazo complicado o fallo de dos tratamientos, busca apoyo especializado; sin derivación posible, el primer nivel maneja con mhGAP y con la guía de práctica clínica del MSP [4][23].</li>
+<li><span class="tg">Evita</span>Evita el antidepresivo en monoterapia si hay antecedente de manía o hipomanía, los tricíclicos si hay riesgo suicida (son letales en sobredosis) y la suspensión brusca [3][2][20].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Sertralina</th><td>50 mg al inicio; ajuste en pasos de 25 a 50 mg cada semana o más según respuesta (máximo 200 mg al día)</td><td>VO</td><td>Cada 24 h</td><td>Fase aguda de 6 a 8 semanas; continuación de 6 a 9 meses tras la remisión</td><td>Bloquea el SERT y deja más serotonina en la sinapsis <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Déficit monoaminérgico</button>. Náuseas, diarrea, insomnio, disfunción sexual, hiponatremia en mayores; reducir dosis si hay daño hepático; evitar con IMAO y tramadol; opción habitual en lactancia</td><td>[20][14]</td></tr>
+<tr><th>Escitalopram</th><td>10 mg al inicio; puede subir a 20 mg tras una semana o más (máximo 10 mg en mayores de 65 años o con daño hepático)</td><td>VO</td><td>Cada 24 h</td><td>Igual que sertralina</td><td>Mismo mecanismo <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Déficit monoaminérgico</button>. Prolonga el QT de forma dependiente de la dosis: evitar con QT largo, arritmias o fármacos que lo prolongan; vigilar el sodio</td><td>[20][24][14]</td></tr>
+<tr><th>Fluoxetina</th><td>20 mg por la mañana; subir de 10 a 20 mg tras varias semanas si hace falta (máximo 80 mg al día)</td><td>VO</td><td>Cada 24 h, por la mañana</td><td>Igual que sertralina</td><td>Mismo mecanismo <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Déficit monoaminérgico</button>. Su vida media larga y la de su metabolito activo (norfluoxetina) reducen el síndrome de discontinuación; inhibe el CYP2D6 (codeína, tamoxifeno, algunos antipsicóticos); activante, mejor por la mañana</td><td>[20][14]</td></tr>
+<tr><th>Venlafaxina XR</th><td>75 mg al inicio; subir a 150 mg tras 4 días o más (máximo 225 mg al día)</td><td>VO</td><td>Cada 24 h, con alimento</td><td>Igual que sertralina</td><td>Inhibe la recaptación de serotonina y noradrenalina <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Déficit monoaminérgico</button>. Controlar la presión arterial; reducir 25 a 50 % de la dosis en daño renal y 50 % en daño hepático; discontinuación intensa, retirar de forma gradual</td><td>[20][14]</td></tr>
+<tr><th>Mirtazapina</th><td>15 mg al acostarse; subir 15 mg cada 1 o 2 semanas (máximo 45 mg al día)</td><td>VO</td><td>Cada 24 h, por la noche</td><td>Igual que sertralina</td><td>Antagoniza receptores α2, 5-HT2 y H1 y aumenta la liberación de serotonina y noradrenalina <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Déficit monoaminérgico</button>. Sedación y aumento de peso útiles con insomnio e inapetencia; poca disfunción sexual; precaución en daño renal o hepático</td><td>[20][14]</td></tr>
+<tr><th>Bupropión XL</th><td>150 mg por la mañana; subir a 300 mg tras 4 días o más (máximo 450 mg al día)</td><td>VO</td><td>Cada 24 h, por la mañana</td><td>Igual que sertralina</td><td>Inhibe la recaptación de dopamina y noradrenalina <button type="button" class="xref" data-ir="e1-m-5" onclick="ir('e1','e1-m-5')">← Hipoactividad prefrontal y circuito de recompensa</button>. Contraindicado con epilepsia, bulimia o anorexia y abstinencia de alcohol o benzodiacepinas; sin disfunción sexual; disponibilidad en Ecuador no verificada</td><td>[20][14]</td></tr>
+</tbody></table></div>
+<p class="mini">VO: vía oral; ISRS: inhibidores selectivos de la recaptación de serotonina; SERT: transportador de serotonina; XR y XL: liberación prolongada; IMAO: inhibidores de la monoaminooxidasa; QT: intervalo QT del ECG; CYP2D6: isoenzima 2D6 del citocromo P450. Dosis de ficha técnica y guías; las guías leídas solo en resumen respaldan la clase y el escalonamiento.</p>
+<div class="dc" data-fn="dcE1t"><div class="dc-t">Simulador · Decisión clínica — predice el tratamiento antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Gravedad del episodio</span>
+<button type="button" class="chip" data-g="grav" data-v="leve" onclick="ch(this)">Leve</button>
+<button type="button" class="chip" data-g="grav" data-v="mod" onclick="ch(this)">Moderada</button>
+<button type="button" class="chip" data-g="grav" data-v="grave" onclick="ch(this)">Grave</button></div>
+<div class="dc-g"><span class="dc-l">Momento del tratamiento</span>
+<button type="button" class="chip" data-g="fase" data-v="inicio" onclick="ch(this)">Inicio</button>
+<button type="button" class="chip" data-g="fase" data-v="falla" onclick="ch(this)">Sin respuesta tras 4 semanas con dosis adecuada</button>
+<button type="button" class="chip" data-g="fase" data-v="remis" onclick="ch(this)">Remisión lograda</button></div>
+<div class="dc-g"><span class="dc-l">Situación especial</span>
+<button type="button" class="chip" data-g="otros" data-v="emb" data-m="1" onclick="ch(this)">Embarazo o lactancia</button>
+<button type="button" class="chip" data-g="otros" data-v="mayor" data-m="1" onclick="ch(this)">Mayor de 65 años</button>
+<button type="button" class="chip" data-g="otros" data-v="joven" data-m="1" onclick="ch(this)">Menor de 25 años</button>
+<button type="button" class="chip" data-g="otros" data-v="ideas" data-m="1" onclick="ch(this)">Ideación suicida</button>
+<button type="button" class="chip" data-g="otros" data-v="qt" data-m="1" onclick="ch(this)">QT prolongado</button>
+<button type="button" class="chip" data-g="otros" data-v="insom" data-m="1" onclick="ch(this)">Insomnio e inapetencia marcados</button>
+<button type="button" class="chip" data-g="otros" data-v="mania" data-m="1" onclick="ch(this)">Manía o hipomanía previas</button></div>
+<div class="out"></div></div>
+
+<h2>Seguimiento</h2>
+<p>El tratamiento tiene tres fases que se distinguen por su objetivo. Respuesta es la reducción de al menos 50 % del puntaje de síntomas; remisión es que casi no queden síntomas, con un PHQ-9 por debajo de 5; recaída es el regreso de síntomas dentro de la remisión, y recurrencia es un episodio nuevo tras la recuperación [14][11]. <span class="rem">↓ Duración en la tabla de fármacos</span></p>
+<div class="tw"><table><thead><tr><th>Fase</th><th>Objetivo</th><th>Qué haces</th></tr></thead>
+<tbody>
+<tr><th>Aguda</th><td>Lograr la respuesta y llegar a la remisión</td><td>Controles frecuentes con PHQ-9; ajusta dosis o cambia si no hay mejoría a las 4 semanas [14]</td></tr>
+<tr><th>Continuación</th><td>Evitar la recaída del mismo episodio</td><td>Mantén el mismo fármaco a la misma dosis que logró la remisión; refuerza la psicoterapia [14][2]</td></tr>
+<tr><th>Mantenimiento</th><td>Prevenir nuevos episodios</td><td>Se prolonga si hay recurrencias, síntomas residuales, episodios graves o riesgo suicida; retira de forma gradual cuando se decida suspender [14]</td></tr>
+</tbody></table></div>
+<p>Las complicaciones se entienden por su mecanismo:</p>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Suicidio</th><td>La desesperanza y la pérdida del control inhibitorio se suman a un estresor agudo; es el trastorno más asociado al suicidio [1][8]</td><td><button type="button" class="xref" data-ir="e1-m-6" onclick="ir('e1','e1-m-6')">← Desesperanza e ideación suicida</button></td></tr>
+<tr><th>Viraje maníaco con antidepresivo en un bipolar no detectado</th><td>El aumento de monoaminas en un cerebro con diátesis bipolar puede desencadenar manía o ciclación rápida; por eso se pregunta antes de recetar [3]</td><td><button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Déficit monoaminérgico</button></td></tr>
+<tr><th>Cronicidad y recurrencia</th><td>Si la plasticidad no se recupera y hay síntomas residuales, el episodio persiste o recae [16]</td><td><button type="button" class="xref" data-ir="e1-m-4" onclick="ir('e1','e1-m-4')">← Caída de BDNF y neuroplasticidad hipocampo-prefrontal</button></td></tr>
+<tr><th>Síndrome de discontinuación</th><td>Al retirar de golpe el bloqueo del SERT, la serotonina cae y aparecen mareo, náuseas, parestesias, irritabilidad e insomnio; se evita con retirada gradual [20]</td><td><button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Déficit monoaminérgico</button></td></tr>
+<tr><th>Discapacidad y comorbilidad</th><td>La anhedonia y la fatiga merman el trabajo y el autocuidado, y empeoran las enfermedades médicas y el consumo de sustancias [1]</td><td><button type="button" class="xref" data-ir="e1-m-5" onclick="ir('e1','e1-m-5')">← Hipoactividad prefrontal y circuito de recompensa</button></td></tr>
+</tbody></table></div>
+<p><span class="rem">↪ Riesgo suicida y plan de seguridad en «Conducta suicida»</span></p>
+</section>
+<section class="tab" data-tab="e2">
+<div class="hb az"><div class="hb-t">Frente a Depresión mayor</div>
+<p>Se confunde con la depresión mayor porque el episodio depresivo bipolar es idéntico en el corte transversal. Se separa por el antecedente de manía o hipomanía y por pistas: inicio temprano, familiar bipolar, rasgos atípicos o psicóticos, posparto y viraje con antidepresivo.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué una depresión bipolar no se distingue de una unipolar en una sola consulta, qué antecedente y qué pistas la separan, y qué riesgo corre si recibe solo un antidepresivo?</li>
+<li>¿Cómo explican la desregulación del sueño y los circuitos dopaminérgicos y prefrontales que el paciente maníaco no se sienta cansado, hable sin pausa y no mida las consecuencias?</li>
+<li>¿Cómo eliges y vigilas el fármaco según la fase y la situación de la paciente, y qué hace que el litio pase de útil a tóxico?</li>
+</ol></div>
+<p><span class="badge b-pu">CANMAT/ISBD 2018, solo resumen [3]</span> <span class="badge b-pu">NICE CG185 2014, solo resumen [25]</span> <span class="badge b-pu">DSM-5-TR 2022</span></p>
+
+<h2>Qué es</h2>
+<div class="card"><p>El trastorno bipolar es un trastorno del ánimo definido por al menos un episodio de manía o de hipomanía, es decir, un periodo de ánimo elevado o irritable con aumento de la energía y la actividad, casi siempre acompañado de episodios depresivos [1][7].</p>
+<ul>
+<li>La polaridad elevada es lo que lo separa de la depresión mayor [1].</li>
+<li>El tratamiento gira en torno a un estabilizador, no al antidepresivo [3].</li>
+</ul></div>
+<p>Esquema de explicación del DSM-5-TR para este trastorno; cada fila remite al apartado que la desarrolla:</p>
+<div class="tw"><table><thead><tr><th>Sección del DSM-5-TR</th><th>Lo esencial</th><th>Dónde se desarrolla</th></tr></thead>
+<tbody>
+<tr><th>Criterios diagnósticos</th><td>Episodio maníaco o hipomaníaco con energía aumentada; define bipolar I, II y ciclotímico</td><td>Qué es</td></tr>
+<tr><th>Especificadores</th><td>Mixtas, ciclación rápida, psicóticas, ansiosas, inicio en el periparto</td><td>Qué es</td></tr>
+<tr><th>Características diagnósticas</th><td>Ánimo elevado o irritable, menos sueño, habla y pensamiento acelerados</td><td>Qué verás</td></tr>
+<tr><th>Características asociadas</th><td>Grandiosidad, juicio pobre, conducta temeraria; psicosis en la manía grave</td><td>Qué verás</td></tr>
+<tr><th>Prevalencia</th><td>Menor del 1 % al año; más rara que la depresión mayor [1]</td><td>Epidemiología</td></tr>
+<tr><th>Desarrollo y curso</th><td>Inicio en adultez joven y episodios recurrentes; la depresión domina el tiempo enfermo</td><td>Seguimiento</td></tr>
+<tr><th>Factores de riesgo y pronóstico</th><td>Heredabilidad alta; sueño alterado y estrés sensibilizan; cada episodio empeora el curso</td><td>Cadena</td></tr>
+<tr><th>Cuestiones culturales</th><td>Prevalencia parecida entre países; cambian la expresión, el estigma y el retraso diagnóstico</td><td>Epidemiología</td></tr>
+<tr><th>Sexo y género</th><td>Bipolar I similar en ambos sexos; bipolar II y ciclación rápida más en mujeres</td><td>Epidemiología</td></tr>
+<tr><th>Asociación con pensamientos o comportamientos suicidas</th><td>Riesgo muy superior al de la población, sobre todo en depresión y estados mixtos</td><td>Seguimiento</td></tr>
+<tr><th>Consecuencias funcionales</th><td>Deterioro laboral, económico y familiar por episodios recurrentes y conducta temeraria</td><td>Seguimiento</td></tr>
+<tr><th>Diagnóstico diferencial</th><td>Sustancias, hipertiroidismo, TDAH, límite, esquizoafectivo y depresión mayor</td><td>Qué es</td></tr>
+<tr><th>Comorbilidad</th><td>Ansiedad, consumo de sustancias, TDAH y síndrome metabólico acompañan con frecuencia</td><td>Diagnóstico</td></tr>
+</tbody></table></div>
+<p>Criterios del episodio maníaco, parafraseados:</p>
+<div class="tw"><table><thead><tr><th>Criterio</th><th>Qué exige</th></tr></thead>
+<tbody>
+<tr><th>A · Ánimo y energía</th><td>Ánimo elevado, expansivo o irritable, más aumento anormal de la energía o la actividad, casi todo el día [1]</td></tr>
+<tr><th>Duración</th><td>Al menos 1 semana casi todos los días, o cualquier duración si requiere hospitalización [1]</td></tr>
+<tr><th>B · Síntomas acompañantes</th><td>Al menos 3 de 7 (4 si el ánimo es solo irritable): grandiosidad, menos sueño, más habla, fuga de ideas, distraibilidad, más actividad dirigida o agitación, conducta de riesgo [1]</td></tr>
+<tr><th>C · Gravedad</th><td>Deterioro marcado del funcionamiento, o psicosis, o necesidad de hospitalizar [1]</td></tr>
+<tr><th>D · Exclusión</th><td>No se explica por una sustancia, un fármaco ni otra enfermedad médica [1]</td></tr>
+</tbody></table></div>
+<p>Criterios del episodio hipomaníaco, parafraseados; es la versión atenuada de la manía:</p>
+<div class="tw"><table><thead><tr><th>Criterio</th><th>Qué exige</th></tr></thead>
+<tbody>
+<tr><th>Duración</th><td>Al menos 4 días consecutivos, con el mismo ánimo y energía aumentados [1]</td></tr>
+<tr><th>Síntomas acompañantes</th><td>Al menos 3 de los 7 de la manía (4 si solo irritable) [1]</td></tr>
+<tr><th>Cambio observable</th><td>Cambio del funcionamiento que otros notan, distinto de su estado habitual [1]</td></tr>
+<tr><th>Gravedad</th><td>Sin deterioro marcado, sin psicosis y sin hospitalización [1]</td></tr>
+</tbody></table></div>
+<p>Los diagnósticos se construyen con esas dos piezas y con el episodio depresivo mayor:</p>
+<div class="tw"><table><thead><tr><th>Trastorno</th><th>Qué lo define</th><th>Qué lo distingue</th></tr></thead>
+<tbody>
+<tr><th>Bipolar I</th><td>Al menos un episodio maníaco; la depresión es frecuente pero no necesaria [1]</td><td>Un solo episodio maníaco basta, aunque nunca haya habido depresión</td></tr>
+<tr><th>Bipolar II</th><td>Al menos un episodio hipomaníaco y uno depresivo mayor, sin manía nunca [1]</td><td>No es una forma leve: la depresión recurrente pesa más</td></tr>
+<tr><th>Ciclotímico</th><td>Dos años o más de síntomas hipomaníacos y depresivos que no completan un episodio, sin pasar 2 meses libres [1]</td><td>Fluctuación crónica por debajo del umbral de episodio</td></tr>
+</tbody></table></div>
+<p class="mini">Un episodio maníaco completo que aparece con un antidepresivo y persiste más allá de su efecto fisiológico cuenta como manía [1]. Los especificadores existen porque cambian el tratamiento y el pronóstico:</p>
+<div class="tw"><table><thead><tr><th>Especificador</th><th>Qué significa</th><th>Por qué importa</th></tr></thead>
+<tbody>
+<tr><th>Con características mixtas</th><td>Síntomas del polo opuesto durante el episodio, en cantidad suficiente [1]</td><td>Más riesgo suicida; los antidepresivos empeoran el cuadro</td></tr>
+<tr><th>Con ciclación rápida</th><td>Cuatro o más episodios en 12 meses [1]</td><td>Peor respuesta al litio; revisa antidepresivos, tiroides y consumo</td></tr>
+<tr><th>Con características psicóticas</th><td>Delirios o alucinaciones, congruentes o no con el ánimo [1]</td><td>Exige antipsicótico y descarta que sea esquizoafectivo</td></tr>
+<tr><th>Con inicio en el periparto</th><td>Episodio durante el embarazo o en las 4 semanas posteriores al parto [1]</td><td>Alto riesgo de psicosis y de recaída; condiciona el fármaco</td></tr>
+</tbody></table></div>
+<p>No confundir con las vecinas fuera del grupo:</p>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Manía inducida por sustancias o fármacos</th><td>Euforia, insomnio y agitación idénticos a la manía</td><td>Corticoides, estimulantes o cocaína la desencadenan y cede al retirarlos [1][7]</td></tr>
+<tr><th>Hipertiroidismo</th><td>Inquietud, taquicardia, insomnio e irritabilidad</td><td>TSH suprimida con T4 libre alta; no hay grandiosidad ni fuga de ideas [5]</td></tr>
+<tr><th>TDAH</th><td>Distraibilidad, inquietud e impulsividad</td><td>Es crónico desde la infancia, sin episodios con cambio marcado del ánimo ni del sueño [1]</td></tr>
+<tr><th>Trastorno límite de la personalidad</th><td>Labilidad afectiva, impulsividad y conducta suicida</td><td>El ánimo cambia en horas por estímulos interpersonales, no en días con menor sueño [1][7]</td></tr>
+<tr><th>Trastorno esquizoafectivo</th><td>Episodios de ánimo con psicosis</td><td>Las ideas delirantes o alucinaciones persisten 2 semanas o más sin síntomas del ánimo [1]</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Dato</th><th>Valor en la fuente</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>Bipolar I cerca del 0,6 % y bipolar II cerca del 0,8 % al año en EE. UU. (0,3 % en muestras internacionales); sin cifras de Ecuador [1][26]</td></tr>
+<tr><th>Edad</th><td>Inicio medio alrededor de los 18 años en bipolar I y a mediados de la veintena en bipolar II; rara vez después de los 50 [1]</td></tr>
+<tr><th>Sexo</th><td>Bipolar I similar en hombres y mujeres; bipolar II y ciclación rápida más en mujeres [1]</td></tr>
+<tr><th>Factores clave</th><td>Familiar de primer grado bipolar, privación de sueño, estrés, consumo de sustancias, posparto y exposición a antidepresivos [1][13]</td></tr>
+</tbody></table></div>
+<p>Las cifras son parecidas entre países, así que la cultura cambia la forma de consultar más que la frecuencia: la irritabilidad se atribuye al carácter, la euforia no se vive como enfermedad y la depresión se consulta primero, por lo que el diagnóstico tarda años [1][13]. El género matiza el cuadro: las mujeres tienen más depresión, estados mixtos y ciclación rápida, y concentran el riesgo del posparto [1].</p>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e2-m-1" data-clin="0" data-paso="Vulnerabilidad genética de alta heredabilidad"><div class="det"><p>Primer golpe, el terreno: la heredabilidad del trastorno bipolar es de las más altas de la psiquiatría, y cientos de variantes comunes de pequeño efecto afectan genes de canales iónicos, señalización del calcio y ritmos biológicos [13][7]. Segundo golpe, los desencadenantes: privación de sueño, estrés, posparto o un antidepresivo. Ningún gen basta; el terreno solo baja el umbral.</p></div></li>
+<li class="nodo" id="e2-m-2" data-clin="1" data-paso="Desregulación de ritmos circadianos y sueño"><div class="det"><p>El núcleo supraquiasmático del hipotálamo es el reloj que sincroniza el ciclo sueño-vigilia con la luz. En el bipolar ese reloj es inestable y la persona duerme menos sin sentir cansancio; perder una noche de sueño puede precipitar un episodio maníaco, por eso la regularidad del sueño es parte del tratamiento [13][7].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-4" onclick="ir('e2','e2-s-4')">Disminución de la necesidad de dormir</button></p></div></li>
+<li class="nodo" id="e2-m-3" data-clin="0" data-paso="Disfunción mitocondrial y señalización intracelular alterada"><div class="det"><p>La mitocondria, organelo que produce el ATP de la neurona, rinde menos y genera estrés oxidativo, es decir, radicales libres que dañan proteínas y membranas. Además, las cinasas intracelulares GSK-3β (glucógeno sintasa cinasa 3 beta) y PKC (proteína cinasa C) quedan hiperactivas y vuelven frágil la plasticidad neuronal. Esos son los blancos del litio, que inhibe GSK-3β [13][20]. <span class="rem">↪ Posología en «Tratamiento»</span></p></div></li>
+<li class="nodo" id="e2-m-4" data-clin="1" data-paso="Dopamina alta en manía y baja en depresión"><div class="det"><p>La dopamina es el neurotransmisor de la recompensa y del impulso a actuar; la liberan las neuronas del área tegmental ventral hacia el núcleo accumbens y la corteza prefrontal. En la manía la señal dopaminérgica es excesiva, lo que acelera el pensamiento y el habla y aumenta la búsqueda de recompensa; en la depresión cae, con anhedonia y lentitud. Los antipsicóticos atípicos bloquean el receptor D2 [13][20].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-1" onclick="ir('e2','e2-s-1')">Taquipsiquia y fuga de ideas</button> <button type="button" class="xref" data-ir="e2-s-2" onclick="ir('e2','e2-s-2')">Presión del habla</button></p></div></li>
+<li class="nodo" id="e2-m-5" data-clin="1" data-paso="Falla el control prefrontal sobre el sistema límbico"><div class="det"><p>La corteza prefrontal ventromedial y la dorsolateral inhiben a la amígdala y al estriado ventral, el centro límbico de la emoción y la recompensa. Cuando ese freno falla, la emoción positiva no se modula: el paciente sobreestima su capacidad, filtra mal las ideas y no mide el riesgo, de ahí la grandiosidad y las decisiones temerarias [13][7].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-3" onclick="ir('e2','e2-s-3')">Grandiosidad</button> <button type="button" class="xref" data-ir="e2-s-1" onclick="ir('e2','e2-s-1')">Taquipsiquia y fuga de ideas</button></p></div></li>
+<li class="nodo" id="e2-m-6" data-clin="0" data-paso="Sensibilización por kindling: episodios más frecuentes"><div class="det"><p>El kindling («encendido») describe que cada episodio deja la red más sensible, de modo que los siguientes aparecen con menos estrés, con intervalos más cortos y a veces solos. Por eso el tratamiento temprano y el mantenimiento reducen las recaídas y es el motivo por el que el curso empeora si no se trata [13][7]. <span class="rem">↪ Prevención en «Seguimiento»</span></p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — el acelerador sin freno</span>
+<p class="fey-b">Imagina un coche con el acelerador muy sensible y los frenos gastados, y con un reloj que ya no sabe cuándo es de noche. Heredas un motor así de delicado. Cuando duermes poco o te estresas, el coche arranca solo, va rapidísimo y no sientes cansancio. Pasada la carrera, el motor se apaga y se queda sin fuerza. Cada carrera lo deja más sensible a la siguiente.</p>
+<p class="mini fey-c">En medicina esto se llama… trastorno bipolar: desregulación del sueño y de los circuitos de recompensa, con falla del control prefrontal y sensibilización por episodios.</p>
+<p class="mini fey-c">Dónde falla la comparación: el cerebro no es una máquina que se arregle con una pieza; el estabilizador actúa sobre varios sistemas a la vez y hay que tomarlo aun sin síntomas.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Ánimo expansivo o irritable casi todo el día</p>
+<p data-e="p">Habla rápida, difícil de interrumpir</p>
+<p data-e="p">Duerme poco y sigue activo sin cansancio</p>
+<p data-e="v">Delirios o alucinaciones congruentes con la grandiosidad</p>
+<p data-e="a">Enlentecimiento psicomotor y culpa en la manía pura</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e2-s-4" onclick="ir('e2','e2-s-4')">Antecedente de manía o hipomanía: ánimo elevado, más energía, menos sueño</button></p>
+</div>
+<div class="signo" id="e2-s-1"><h4>Taquipsiquia y fuga de ideas</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Taquipsiquia es el pensamiento acelerado. En la fuga de ideas el discurso salta de un tema a otro por asociaciones de sonido o de significado, sin perder del todo el hilo; en el examen mental se documenta la asociación, no solo la cantidad de habla.</dd>
+<dt>Por qué aparece</dt><dd>La señal dopaminérgica excesiva acelera la cadena de ideas y la corteza prefrontal ya no filtra cuáles son pertinentes. <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Dopamina alta en manía y baja en depresión</button> <button type="button" class="xref" data-ir="e2-m-5" onclick="ir('e2','e2-m-5')">← Falla el control prefrontal sobre el sistema límbico</button></dd>
+<dt>Qué significa</dt><dd>Sostiene el criterio de manía; si no hay hilo ni coherencia, piensa en psicosis o en delirium.</dd></dl></div>
+<div class="signo" id="e2-s-2"><h4>Presión del habla</h4><dl>
+<dt>Cómo se reconoce</dt><dd>El paciente habla rápido, fuerte y en cantidad excesiva, y es difícil interrumpirlo; se nota en la entrevista misma, con frases que se pisan.</dd>
+<dt>Por qué aparece</dt><dd>La activación dopaminérgica del circuito motor y del lenguaje empuja a hablar sin pausa. <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Dopamina alta en manía y baja en depresión</button></dd>
+<dt>Qué significa</dt><dd>Es uno de los 7 síntomas de manía e hipomanía; en hipomanía puede ser el único dato visible para un familiar.</dd></dl></div>
+<div class="signo" id="e2-s-3"><h4>Grandiosidad</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Autoestima inflada o ideas de poderes, riqueza o misión especiales; pregunta qué cree poder hacer hoy y qué ha comprado o prometido, y contrasta con un informante. Si la creencia es fija y no corregible, es delirante.</dd>
+<dt>Por qué aparece</dt><dd>Sin freno prefrontal, el sistema de recompensa infla la valoración de la propia capacidad y no se mide la consecuencia. <button type="button" class="xref" data-ir="e2-m-5" onclick="ir('e2','e2-m-5')">← Falla el control prefrontal sobre el sistema límbico</button></dd>
+<dt>Qué significa</dt><dd>Anticipa conducta temeraria (gastos, sexo de riesgo, negocios) y, si es delirante, psicosis maníaca.</dd></dl></div>
+<div class="signo" id="e2-s-4"><h4>Disminución de la necesidad de dormir</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Duerme 2 a 3 horas y amanece con energía. Pregunta si se siente cansado: en la manía no lo está, y eso lo distingue del insomnio, que sí agota.</dd>
+<dt>Por qué aparece</dt><dd>El reloj circadiano inestable y la activación dopaminérgica suprimen la señal de sueño. <button type="button" class="xref" data-ir="e2-m-2" onclick="ir('e2','e2-m-2')">← Desregulación de ritmos circadianos y sueño</button></dd>
+<dt>Qué significa</dt><dd>Es a la vez síntoma y detonante de recaída: si un paciente estable empieza a dormir menos, actúa antes de que sea un episodio.</dd></dl></div>
+<p>Signos menores y pistas del examen mental:</p>
+<div class="tw"><table><thead><tr><th>Signo</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Distraibilidad</th><td>Los estímulos irrelevantes no se filtran por el control prefrontal débil</td><td><button type="button" class="xref" data-ir="e2-m-5" onclick="ir('e2','e2-m-5')">← Falla el control prefrontal</button></td></tr>
+<tr><th>Más actividad dirigida a metas</th><td>La recompensa dopaminérgica excesiva multiplica proyectos y contactos</td><td><button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Dopamina alta en manía</button></td></tr>
+<tr><th>Conducta temeraria</th><td>Se infravalora el riesgo al faltar el freno prefrontal</td><td><button type="button" class="xref" data-ir="e2-m-5" onclick="ir('e2','e2-m-5')">← Falla el control prefrontal</button></td></tr>
+</tbody></table></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Entrevista dirigida a manía e hipomanía, con criterios DSM-5-TR, en todo paciente con depresión: pregunta por periodos de energía elevada, poco sueño, gastos o conductas impulsivas [1][25].</li>
+<li><span class="tg">Añade</span>Añade el cribado MDQ, un informante que haya visto los periodos de ánimo elevado, TSH y tóxicos en orina o historia de consumo [12][3].</li>
+<li><span class="tg">Solo si</span>Solicita función renal y tiroidea antes de litio, y β-hCG en mujeres en edad fértil antes de valproato [3].</li>
+<li><span class="tg">No pidas</span>No pidas neuroimagen de rutina; reserva la imagen para signos neurológicos focales o inicio después de los 50 años [7].</li>
+<li><span class="tg">Alarma</span>Psicosis, agitación, riesgo suicida o conducta temeraria: actúa en esa consulta y activa ECU 911 si hay peligro inminente [25][4].</li>
+</ol>
+<p>La comorbilidad orienta qué más buscar: los trastornos de ansiedad, el consumo de alcohol y otras sustancias, el TDAH y el síndrome metabólico acompañan con frecuencia y empeoran el curso; el consumo puede, además, imitar o precipitar episodios [1][13].</p>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>MDQ</th><td>73 % en pacientes psiquiátricos ambulatorios [12]</td><td>90 % en esa población [12]</td><td>No establecida</td><td>Cribar bipolaridad en depresión</td><td>13 síntomas; positivo con 7 o más, agrupados en el tiempo y con problema moderado o grave. No diagnostica <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Dopamina alta en manía y baja en depresión</button></td><td>[12]</td></tr>
+<tr><th>TSH</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Descartar hipertiroidismo y línea de base</td><td>Suprimida imita la manía; el litio puede causar hipotiroidismo después</td><td>[3]</td></tr>
+<tr><th>Función renal (creatinina y filtrado glomerular)</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Decidir si se puede dar litio</td><td>El litio se elimina por el riñón; con filtrado reducido se acumula <button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">← Disfunción mitocondrial y señalización intracelular</button></td><td>[3]</td></tr>
+<tr><th>β-hCG en mujeres en edad fértil</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Excluir embarazo antes de valproato</td><td>El valproato es teratogénico; también cambia la elección en el embarazo</td><td>[3]</td></tr>
+<tr><th>Tóxicos y consumo</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Descartar manía inducida</td><td>Cocaína y anfetaminas, corticoides y estimulantes</td><td>[1]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos; MDQ: cuestionario de trastornos del ánimo; TSH: tirotropina; β-hCG: gonadotropina coriónica.</p>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Trata la fase actual y previene la siguiente: estabilizador de base, psicoeducación, higiene del sueño y suspensión de estimulantes y alcohol [3][25].</li>
+<li><span class="tg">De elección</span>Litio en mantenimiento y en la manía clásica; manía aguda: litio, quetiapina, valproato o un antipsicótico atípico; depresión bipolar: quetiapina, lurasidona, lamotrigina o litio [3][25].</li>
+<li><span class="tg">Alternativa</span>Si fracasa uno, combina litio o valproato con un antipsicótico atípico; en la manía con psicosis, añade antipsicótico desde el inicio [3].</li>
+<li><span class="tg">Reevalúa</span>Reevalúa a los pocos días en manía y a las semanas en depresión; no cambies de fármaco sin dosis ni tiempo adecuados [3].</li>
+<li><span class="tg">Especialista</span>Con manía grave, psicosis, riesgo suicida alto o embarazo, busca psiquiatría; sin derivación, sigue mhGAP y ECU 911 si hay peligro [4].</li>
+<li><span class="tg">Evita</span>Evita el antidepresivo en monoterapia, que puede inducir viraje, y el valproato en mujeres en edad fértil por su teratogenia [3][25].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Litio (carbonato)</th><td>Inicio 300 mg cada 8 h (menos en adulto mayor o daño renal leve); sube 300 mg cada 3 días según litemia; habitual 600 mg cada 8 a 12 h en fase aguda y 300 a 600 mg cada 8 a 12 h en mantenimiento</td><td>VO</td><td>Cada 8 a 12 h</td><td>Manía: hasta la remisión; mantenimiento: años, a menudo indefinido</td><td>Litemia 12 h tras la última dosis: 0,8–1,2 mmol/L en manía aguda; 0,6–0,8 en mantenimiento según NICE (0,8–1,0 si hubo recaída; la ficha FDA fija 0,8–1,0) y de 1,5 en adelante es tóxica. Inhibe GSK-3β <button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">← Disfunción mitocondrial y señalización intracelular</button>. Evita con filtrado reducido, deshidratación; monitoriza función renal, TSH y calcio</td><td>[27][3][25][20]</td></tr>
+<tr><th>Valproato (divalproato)</th><td>750 mg/día al inicio en tomas divididas; sube lo antes posible a la menor dosis eficaz (máximo 60 mg/kg/día)</td><td>VO</td><td>Cada 8 a 12 h; liberación prolongada una vez al día</td><td>Manía: hasta la remisión; mantenimiento: según respuesta</td><td>Nivel en valle de 50 a 125 µg/mL [28]. Reduce la excitabilidad neuronal <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Dopamina alta en manía y baja en depresión</button>. Teratogénico: no en mujeres en edad fértil; vigila hígado, plaquetas y peso</td><td>[3][25][20]</td></tr>
+<tr><th>Lamotrigina</th><td>25 mg/día semanas 1–2; 50 mg semanas 3–4; 100 mg semana 5; 200 mg desde la semana 6</td><td>VO</td><td>Cada 24 h</td><td>Mantenimiento y depresión bipolar, a largo plazo</td><td>No sirve en la manía aguda. Titulación lenta por el riesgo de síndrome de Stevens-Johnson: suspende ante cualquier exantema; con valproato, la mitad (25 mg cada 48 h al inicio); si omite más de 5 días, reinicia [29] <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Dopamina alta en manía y baja en depresión</button></td><td>[3][25][20]</td></tr>
+<tr><th>Quetiapina</th><td>Manía: 100 mg día 1, 200 mg día 2, 300 mg día 3, 400 mg día 4, hasta 800 mg/día. Depresión bipolar: 50, 100, 200 y 300 mg/día en los días 1 a 4</td><td>VO</td><td>Manía: cada 12 h; depresión: una vez por la noche</td><td>Manía: hasta la remisión; depresión: semanas a meses; mantenimiento si respondió</td><td>Bloquea receptores D2 y 5-HT2A <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Dopamina alta en manía y baja en depresión</button>. Sedación, hipotensión, aumento de peso y glucosa; controla peso, glucemia y lípidos</td><td>[3][20]</td></tr>
+<tr><th>Olanzapina</th><td>10–15 mg/día en manía; máximo 20 mg/día</td><td>VO</td><td>Cada 24 h</td><td>Manía: hasta la remisión; mantenimiento si respondió</td><td>Antagonista D2 y 5-HT2A <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Dopamina alta en manía y baja en depresión</button>. Mayor aumento de peso y alteración metabólica; evita con obesidad o diabetes si hay alternativas</td><td>[3][20]</td></tr>
+<tr><th>Lurasidona</th><td>20 mg/día; sube hasta 60 mg/día en monoterapia (hasta 120 mg con litio o valproato)</td><td>VO</td><td>Cada 24 h con al menos 350 kcal de comida</td><td>Depresión bipolar: semanas a meses</td><td>Antagonista D2 y 5-HT2A <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Dopamina alta en manía y baja en depresión</button>. Poco efecto metabólico; akatisia y náuseas</td><td>[30][3]</td></tr>
+</tbody></table></div>
+<p class="mini">VO: vía oral; GSK-3β: glucógeno sintasa cinasa 3 beta; D2: receptor dopaminérgico tipo 2; 5-HT2A: receptor serotoninérgico tipo 2A; mmol/L: milimoles por litro.</p>
+<div class="dc" data-fn="dcE2"><div class="dc-t">Simulador · Decisión clínica — predice el fármaco antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Fase</span>
+<button type="button" class="chip" data-g="fase" data-v="mania" onclick="ch(this)">Manía aguda</button>
+<button type="button" class="chip" data-g="fase" data-v="dep" onclick="ch(this)">Depresión bipolar</button>
+<button type="button" class="chip" data-g="fase" data-v="mant" onclick="ch(this)">Mantenimiento</button></div>
+<div class="dc-g"><span class="dc-l">Situación</span>
+<button type="button" class="chip" data-g="sit" data-v="fert" data-m="1" onclick="ch(this)">Mujer en edad fértil</button>
+<button type="button" class="chip" data-g="sit" data-v="renal" data-m="1" onclick="ch(this)">Función renal reducida</button>
+<button type="button" class="chip" data-g="sit" data-v="psic" data-m="1" onclick="ch(this)">Psicosis o agitación grave</button>
+<button type="button" class="chip" data-g="sit" data-v="metab" data-m="1" onclick="ch(this)">Obesidad o diabetes</button></div>
+<div class="dc-g"><span class="dc-l">Litemia (mmol/L)</span>
+<input type="number" step="0.1" min="0" data-n="lit" placeholder="0,8" oninput="ch(this)"></div>
+<div class="out"></div></div>
+
+<h2>Seguimiento</h2>
+<p>En el litio, mide la litemia a los 5 a 7 días de cada cambio y luego cada 3 a 6 meses; creatinina, filtrado glomerular, TSH y calcio cada 6 meses [3][25]. En un antipsicótico, controla peso, glucemia y lípidos. La adherencia es la variable más modificable: sin ella, el litio no previene recaídas.</p>
+<p>El litio es de margen estrecho porque se filtra en el glomérulo y se reabsorbe en el túbulo proximal junto con el sodio. Todo lo que baja el sodio o el flujo renal retiene litio: la deshidratación por vómito, diarrea o calor; los AINE, que reducen las prostaglandinas que mantienen el flujo renal; los IECA y los ARA-II; y las tiazidas, que aumentan la reabsorción proximal [20][3].</p>
+<p>Los signos precoces son temblor grueso, vómito y diarrea, y luego ataxia, disartria, confusión y convulsiones. Ante ellos, suspende el litio y mide la litemia el mismo día.</p>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Recaída y episodios cada vez más cercanos</th><td>Cada episodio sensibiliza la red; el mantenimiento y el sueño regular lo frenan</td><td><button type="button" class="xref" data-ir="e2-m-6" onclick="ir('e2','e2-m-6')">← Sensibilización por kindling</button></td></tr>
+<tr><th>Intoxicación por litio</th><td>La deshidratación, los AINE, los IECA y las tiazidas reducen su eliminación renal</td><td><button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">← Disfunción mitocondrial y señalización intracelular</button></td></tr>
+<tr><th>Suicidio</th><td>Desesperanza de la depresión o estado mixto con impulsividad y freno prefrontal débil</td><td><button type="button" class="xref" data-ir="e2-m-5" onclick="ir('e2','e2-m-5')">← Falla el control prefrontal</button></td></tr>
+<tr><th>Hipotiroidismo y diabetes insípida nefrogénica por litio</th><td>El litio altera la síntesis tiroidea y la respuesta renal a la vasopresina</td><td><button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">← Disfunción mitocondrial y señalización intracelular</button></td></tr>
+</tbody></table></div>
+<p>El curso es crónico y recurrente: el inicio es en adultez joven, la depresión ocupa la mayor parte del tiempo enfermo y los episodios sin tratar se acortan en intervalo [1][13]. El riesgo de suicidio supera ampliamente al de la población general y se concentra en la depresión y los estados mixtos; pregunta por ideación en cada control [1][25]. El litio reduce ese riesgo más que otros estabilizadores, razón adicional para sostenerlo [31]. Las consecuencias funcionales son laborales, económicas y familiares, y mejoran con adherencia y apoyo del primer nivel [4].</p>
+</section>
+<section class="tab" data-tab="e3">
+<div class="hb az"><div class="hb-t">Frente a Depresión mayor</div>
+<p>Se confunde con la depresión porque la ideación suicida es un síntoma de ella y casi siempre coexisten. Se separa por sus determinantes propios: intento previo, acceso a medios, impulsividad, alcohol y desesperanza; además ocurre fuera de la depresión, así que se evalúa aunque el episodio parezca leve.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué la conducta suicida no se explica solo por la depresión, y qué combinación de terreno, estado y acceso a medios lleva de la ideación al acto?</li>
+<li>¿Qué preguntas y qué datos convierten una ideación en un riesgo que exige actuar en esa misma consulta, y por qué una escala no puede decidir el alta?</li>
+<li>¿Qué haces en un centro de primer nivel sin posibilidad de derivar, en qué se apoya cada medida y qué se pierde si falta una?</li>
+</ol></div>
+<p><span class="badge b-pu">NICE NG225 2022, solo resumen [32]</span> <span class="badge b-pu">OMS mhGAP 2.0 2016, solo resumen [4]</span> <span class="badge b-pu">Turecki y Brent, Lancet 2016 [8]</span></p>
+
+<h2>Qué es</h2>
+<div class="card"><p>La conducta suicida es el espectro que va del deseo de morir y la ideación con plan hasta el intento y el suicidio, definido siempre por la intención de morir. El suicidio es su desenlace fatal [9].</p>
+<ul>
+<li>Se ordena por niveles de ideación y por tipos de conducta, no por un diagnóstico único [9].</li>
+<li>Exige intención, aunque sea parcial; sin ella es otra entidad, como la autolesión no suicida [9][1].</li>
+</ul></div>
+<p>La Columbia-Suicide Severity Rating Scale (C-SSRS) fija las definiciones operativas que usa todo el equipo:</p>
+<div class="tw"><table><thead><tr><th>Término</th><th>Definición operativa</th><th>Qué lo separa del vecino</th></tr></thead>
+<tbody>
+<tr><th>Ideación pasiva</th><td>Deseo de estar muerto o de no despertar, sin pensar en quitarse la vida</td><td>No hay método ni acto pensado [9]</td></tr>
+<tr><th>Ideación activa</th><td>Pensamientos de quitarse la vida, con o sin método</td><td>Aparece el verbo «matarme» [9]</td></tr>
+<tr><th>Plan e intención</th><td>Método, momento o lugar definidos y propósito de ejecutarlos</td><td>Es el nivel más alto de ideación [9]</td></tr>
+<tr><th>Conducta preparatoria</th><td>Reunir medios, ensayar el acto o escribir despedidas sin iniciarlo</td><td>Se prepara, pero no hay acto autolesivo [9]</td></tr>
+<tr><th>Intento interrumpido</th><td>Un tercero o una circunstancia impide el acto antes de que empiece</td><td>El freno es externo [9]</td></tr>
+<tr><th>Intento abortado</th><td>La persona empieza a actuar y se detiene sola antes de dañarse</td><td>El freno es interno [9]</td></tr>
+<tr><th>Intento</th><td>Acto potencialmente lesivo con algo de deseo de morir, haya o no lesión</td><td>La intención basta; no hace falta daño [9]</td></tr>
+<tr><th>Suicidio consumado</th><td>Muerte por un acto autoinfligido con intención de morir</td><td>Desenlace fatal del espectro [9]</td></tr>
+<tr><th>Autolesión no suicida</th><td>Daño deliberado sin intención de morir, por ejemplo para aliviar tensión</td><td>Vecina, no parte del espectro; puede predecir intentos [9][1]</td></tr>
+</tbody></table></div>
+<div class="card"><p>El DSM-5 de 2013 propuso el trastorno de comportamiento suicida en la Sección III, entre las afecciones que necesitan más estudio. El DSM-5-TR lo retiró de esa sección y dejó códigos de comportamiento suicida actual o pasado entre las afecciones que pueden ser objeto de atención clínica: el comportamiento se registra sin otorgar un diagnóstico [1].</p></div>
+<p>Criterios propuestos en el DSM-5 de 2013 y retirados en el DSM-5-TR, parafraseados por su valor didáctico:</p>
+<div class="tw"><table><thead><tr><th>Criterio</th><th>Qué exige</th></tr></thead>
+<tbody>
+<tr><th>A</th><td>Un intento en los últimos 24 meses [1]</td></tr>
+<tr><th>B</th><td>Que el acto no cumpla la definición de autolesión no suicida [1]</td></tr>
+<tr><th>C</th><td>No se aplica a la ideación ni a los actos preparatorios [1]</td></tr>
+<tr><th>D</th><td>Que el acto no ocurra durante un delirium o un estado confusional [1]</td></tr>
+<tr><th>E</th><td>Que no se emprenda solo por una finalidad política o religiosa [1]</td></tr>
+<tr><th>Especificador</th><td>Actual si han pasado hasta 12 meses; remisión temprana entre 12 y 24 meses [1]</td></tr>
+</tbody></table></div>
+<p>El DSM-5-TR explica cada tema con un esquema fijo de trece secciones; aquí se adapta y cada fila remite al apartado que la amplía:</p>
+<div class="tw"><table><thead><tr><th>Sección del DSM-5-TR</th><th>Lo esencial</th><th>Dónde se desarrolla</th></tr></thead>
+<tbody>
+<tr><th>Criterios diagnósticos</th><td>Sin criterios propios en el DSM-5-TR: se registra con códigos de comportamiento suicida</td><td>Qué es</td></tr>
+<tr><th>Especificadores</th><td>Códigos de comportamiento actual o antecedente, en el encuentro inicial o en los siguientes</td><td>Qué es</td></tr>
+<tr><th>Características diagnósticas</th><td>Acto autoiniciado con la expectativa de que lleve a la muerte</td><td>Qué es</td></tr>
+<tr><th>Características asociadas</th><td>Desesperanza, dolor psíquico, impulsividad, agitación, insomnio y alcohol</td><td>Qué verás</td></tr>
+<tr><th>Prevalencia</th><td>Los intentos superan en número a las muertes por suicidio</td><td>Epidemiología</td></tr>
+<tr><th>Desarrollo y curso</th><td>El riesgo se concentra tras un intento y en transiciones de atención</td><td>Seguimiento</td></tr>
+<tr><th>Factores de riesgo y pronóstico</th><td>Intento previo, trastorno mental, alcohol, desesperanza y acceso a medios</td><td>Diagnóstico</td></tr>
+<tr><th>Cuestiones culturales</th><td>Método, estigma y significado de la muerte cambian con la cultura</td><td>Epidemiología</td></tr>
+<tr><th>Sexo y género</th><td>Mueren más varones; las mujeres intentan más</td><td>Epidemiología</td></tr>
+<tr><th>Asociación con pensamientos o comportamientos suicidas</th><td>Trastornos del ánimo, psicóticos, por sustancias y de personalidad elevan el riesgo</td><td>Diagnóstico</td></tr>
+<tr><th>Consecuencias funcionales</th><td>Lesiones, discapacidad, hospitalización y duelo familiar</td><td>Seguimiento</td></tr>
+<tr><th>Diagnóstico diferencial</th><td>Autolesión no suicida, deseo de morir pasivo y conducta de riesgo</td><td>Qué es</td></tr>
+<tr><th>Comorbilidad</th><td>Depresión, bipolaridad, ansiedad, sustancias y trastornos de personalidad</td><td>Diagnóstico</td></tr>
+</tbody></table></div>
+<p class="mini">Esquema DSM-5-TR adaptado: la fila sobre pensamientos suicidas se reinterpreta como los trastornos que elevan el riesgo [1].</p>
+<p>Los niveles existen porque cada uno cambia la conducta en primer nivel:</p>
+<div class="tw"><table><thead><tr><th>Subtipo</th><th>Qué domina</th><th>Qué cambia en la conducta</th></tr></thead>
+<tbody>
+<tr><th>Ideación pasiva</th><td>Deseo de morir sin método ni intención</td><td>Vigilancia y tratamiento del trastorno de base [9][4]</td></tr>
+<tr><th>Ideación activa sin plan</th><td>Pensamientos de matarse sin método definido</td><td>Plan de seguridad y restricción de medios [33]</td></tr>
+<tr><th>Plan o intención</th><td>Método definido y propósito de actuar</td><td>No dejar solo; riesgo inminente [4]</td></tr>
+<tr><th>Preparatoria, interrumpida o abortada</th><td>El acto estuvo cerca o se ensayó</td><td>Se trata como riesgo alto aunque no haya lesión [9]</td></tr>
+<tr><th>Intento</th><td>Acto con intención de morir, con o sin lesión</td><td>Estabiliza la lesión y luego estratifica el riesgo [32]</td></tr>
+</tbody></table></div>
+<p>No confundir con:</p>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Autolesión no suicida</th><td>Daño deliberado al propio cuerpo</td><td>Sin intención de morir; busca aliviar tensión, aunque eleva el riesgo futuro [1][32]</td></tr>
+<tr><th>Ideación de muerte pasiva sin intención</th><td>Pensamientos sobre la muerte</td><td>No quiere quitarse la vida; por ejemplo, un enfermo grave que desea que acabe [9]</td></tr>
+<tr><th>Conducta de riesgo sin intención</th><td>Posibilidad de morir o lesionarse</td><td>Sin propósito de morir; es imprudencia, no intento [9][7]</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Dato</th><th>Valor en la fuente</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>Cerca de 703 000 muertes por suicidio en 2019, unas 9 por 100 000 habitantes; los intentos son mucho más numerosos [34]</td></tr>
+<tr><th>Edad</th><td>Cuarta causa de muerte entre los 15 y los 29 años [34]</td></tr>
+<tr><th>Sexo</th><td>Tasa de 12,6 en varones y 5,4 en mujeres por 100 000; las mujeres intentan más [34][10]</td></tr>
+<tr><th>Factores clave</th><td>Intento previo, trastorno mental, alcohol, desesperanza, dolor crónico y acceso a medios [8][10]</td></tr>
+</tbody></table></div>
+<p class="mini">Alrededor de tres de cada cuatro muertes ocurren en países de ingresos bajos y medios [34]. Para Ecuador no hay cifras con fuente en este widget, así que no se dan estimaciones. El método y el estigma cambian según la cultura [1].</p>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e3-m-1" data-clin="0" data-paso="Diátesis genética y adversidad temprana"><div class="det"><p>Primer golpe, el terreno (diátesis, vulnerabilidad de fondo): genes que modulan la respuesta al estrés y adversidad en la infancia. El maltrato temprano altera el eje hipotálamo-hipófiso-suprarrenal (HHS, cadena que libera cortisol ante el estrés); en estudios post mortem se ha descrito mayor metilación del gen del receptor de glucocorticoides, una marca epigenética (cambio químico que apaga un gen sin alterar su secuencia) [8].</p></div></li>
+<li class="nodo" id="e3-m-2" data-clin="0" data-paso="Serotonina prefrontal baja y menor control inhibitorio"><div class="det"><p>Las neuronas del rafe liberan serotonina (5-HT, neurotransmisor que modula ánimo y freno de impulsos) hacia la corteza prefrontal ventral, que frena respuestas impulsivas. Con menor señal serotoninérgica el control inhibitorio cae y aumentan la impulsividad y la agresión; esto distingue la diátesis suicida del estado depresivo [8][7].</p></div></li>
+<li class="nodo" id="e3-m-3" data-clin="0" data-paso="Estado: trastorno mental activo, alcohol o dolor"><div class="det"><p>Sobre ese terreno actúa el estado, que sí cambia en semanas: un episodio depresivo, bipolar o psicótico activo, el dolor crónico o el insomnio severo. El alcohol deprime la corteza prefrontal y desinhibe el acto. Este eslabón es el principal blanco terapéutico porque es el más modificable [8][10].</p></div></li>
+<li class="nodo" id="e3-m-4" data-clin="1" data-paso="Estresor agudo y desesperanza con atrapamiento"><div class="det"><p>Segundo golpe: una pérdida, una humillación o una crisis legal o afectiva. La amígdala (centro de alarma emocional) reacciona y la prefrontal debilitada no la modula. El dolor se vive como interminable y sin salida (desesperanza y atrapamiento) y la muerte aparece como solución [8].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-1" onclick="ir('e3','e3-s-1')">Ideación con plan o intención</button> <button type="button" class="xref" data-ir="e3-s-2" onclick="ir('e3','e3-s-2')">Desesperanza</button></p></div></li>
+<li class="nodo" id="e3-m-5" data-clin="1" data-paso="Capacidad adquirida y acceso a medios"><div class="det"><p>Tras exposiciones previas, como un intento anterior o autolesiones repetidas, disminuye el miedo al dolor y a la muerte: es la capacidad adquirida. A ello se suma el acceso a un medio letal, como fármacos en cantidad, plaguicidas o armas, que fija la letalidad del acto. La restricción de medios interrumpe este eslabón [8][10].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-4" onclick="ir('e3','e3-s-4')">Intento previo</button> <button type="button" class="xref" data-ir="e3-s-3" onclick="ir('e3','e3-s-3')">Señales de alarma conductuales</button></p></div></li>
+<li class="nodo" id="e3-m-6" data-clin="1" data-paso="Acto autoinfligido con intención de morir"><div class="det"><p>Con terreno, estado, estresor y medio juntos, la ideación se vuelve acto. La ventana entre la decisión y el acto suele ser corta y la persona suele sentir ambivalencia: por eso quitar el medio y acompañarla gana tiempo hasta que la crisis cede. Antes del acto hay a menudo conductas preparatorias [8][4].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-3" onclick="ir('e3','e3-s-3')">Señales de alarma conductuales</button></p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la bicicleta de frenos gastados</span>
+<p class="fey-b">Imagina bajar una pendiente muy empinada en una bicicleta con los frenos gastados. La pendiente es el dolor y la sensación de no tener salida; los frenos gastados son la capacidad de frenar los impulsos, que unas personas traen más débil desde pequeñas. Si al final del camino hay un precipicio al alcance, el viaje termina allí. Ayuda quitar el precipicio, ir al lado del ciclista y arreglar los frenos.</p>
+<p class="mini fey-c">En medicina esto se llama… modelo diátesis-estrés: vulnerabilidad de fondo, estado activo, estresor agudo y acceso a medios, que llevan de la ideación al acto.</p>
+<p class="mini fey-c">Dónde falla la comparación: la persona no baja sin querer; casi siempre duda entre vivir y morir, y esa duda es la oportunidad de ayudar.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Desesperanza y sensación de ser una carga</p>
+<p data-e="p">Ideas de muerte que confiesa solo si se le pregunta</p>
+<p data-e="v">Agitación, insomnio severo o aislamiento reciente</p>
+<p data-e="v">Intoxicación por alcohol durante la crisis</p>
+<p data-e="a">Planes a futuro y razones para vivir</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e3-s-1" onclick="ir('e3','e3-s-1')">Ideación suicida con plan o intención, o intento reciente</button></p>
+</div>
+<div class="signo" id="e3-s-1"><h4>Ideación con plan o intención</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Pregunta de forma directa y por pasos: si desea no despertar, si piensa en quitarse la vida, si ha pensado cómo, si tiene intención de hacerlo y si fijó un momento o lugar. Preguntar no induce el acto [9][4]. En el examen mental, anota el contenido del pensamiento y la reactividad del afecto.</dd>
+<dt>Por qué aparece</dt><dd>La desesperanza y el freno prefrontal débil hacen que la muerte parezca una salida concreta. <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Estresor agudo y desesperanza con atrapamiento</button></dd>
+<dt>Qué significa</dt><dd>Plan con intención es el nivel de ideación de mayor riesgo y obliga a actuar en esa misma consulta, sin dejar solo al paciente [4].</dd></dl></div>
+<div class="signo" id="e3-s-2"><h4>Desesperanza</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Frases como «nada va a cambiar» o «no hay salida»; futuro cerrado, afecto apagado, sensación de ser una carga. Se detecta en el examen mental, en el contenido del pensamiento [8].</dd>
+<dt>Por qué aparece</dt><dd>La amígdala reacciona al estresor y la prefrontal no proyecta futuro alternativo, por lo que el dolor parece permanente. <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Estresor agudo y desesperanza con atrapamiento</button></dd>
+<dt>Qué significa</dt><dd>Es un factor de riesgo tratable que debe revisarse incluso si el ánimo mejora [8][10].</dd></dl></div>
+<div class="signo" id="e3-s-3"><h4>Señales de alarma conductuales</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Despedidas, regalar pertenencias, arreglar asuntos pendientes, escribir notas, conseguir un método, aislamiento súbito o calma repentina tras una crisis; suelen contarlas la familia o el acompañante [9][4].</dd>
+<dt>Por qué aparece</dt><dd>Cuando la decisión se consolida y existe capacidad adquirida, la persona prepara el acto. <button type="button" class="xref" data-ir="e3-m-5" onclick="ir('e3','e3-m-5')">← Capacidad adquirida y acceso a medios</button> <button type="button" class="xref" data-ir="e3-m-6" onclick="ir('e3','e3-m-6')">← Acto autoinfligido con intención de morir</button></dd>
+<dt>Qué significa</dt><dd>La conducta preparatoria cuenta como riesgo alto aunque el paciente niegue la ideación [9].</dd></dl></div>
+<div class="signo" id="e3-s-4"><h4>Intento previo</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Pregunta fecha, método, letalidad, circunstancias, intención de morir y qué ocurrió después; busca cicatrices, ingresos o atención de urgencias previas [9][10].</dd>
+<dt>Por qué aparece</dt><dd>Tras un intento disminuyen el miedo al dolor y a la muerte, y el acto se hace más posible la siguiente vez. <button type="button" class="xref" data-ir="e3-m-5" onclick="ir('e3','e3-m-5')">← Capacidad adquirida y acceso a medios</button></dd>
+<dt>Qué significa</dt><dd>Es el factor de riesgo individual más constante para un nuevo intento y para el suicidio; el periodo siguiente al intento es el más vulnerable [8][10].</dd></dl></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Pregunta de forma directa por ideación en todo paciente con síntomas del ánimo y ordena la respuesta con la C-SSRS, sin eufemismos [9][4].</li>
+<li><span class="tg">Añade</span>Factores de riesgo y protectores, acceso a medios, consumo de alcohol y sustancias, trastorno mental activo y antecedentes de intentos, siempre con la familia presente si el paciente lo autoriza [8][32].</li>
+<li><span class="tg">Alarma</span>Plan con intención, intento reciente, psicosis, agitación o conductas preparatorias: actúa en esa consulta con el simulador de «Tratamiento» [4][9].</li>
+<li><span class="tg">No pidas</span>No uses escalas de riesgo para predecir el acto ni para decidir quién se va a casa; la evaluación es clínica y se centra en las necesidades [32].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>C-SSRS</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Ordenar ideación y conducta para orientar la conducta</td><td>No predice el acto; la conducta depende del nivel <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Estresor agudo y desesperanza con atrapamiento</button></td><td>[9]</td></tr>
+<tr><th>Ítem 9 del PHQ-9</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Detectar ideación durante el cribado de depresión</td><td>Cualquier respuesta positiva obliga a la pregunta directa <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Estresor agudo y desesperanza con atrapamiento</button></td><td>[11]</td></tr>
+<tr><th>Escalas de predicción de riesgo</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>No usar para predecir ni para decidir el alta</td><td>No sustituyen la evaluación clínica de necesidades</td><td>[32]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos; C-SSRS: escala de Columbia de gravedad suicida; PHQ-9: cuestionario de salud del paciente de 9 ítems.</p>
+<p>Los factores de riesgo orientan la intervención, no la predicción:</p>
+<div class="tw"><table><thead><tr><th>Dominio</th><th>Aumenta el riesgo</th><th>Protege</th></tr></thead>
+<tbody>
+<tr><th>Historia</th><td>Intento previo y antecedente familiar de suicidio</td><td>Sin intentos previos [8]</td></tr>
+<tr><th>Clínico</th><td>Trastorno mental activo, dolor crónico e insomnio</td><td>Tratamiento sostenido y adherencia [10]</td></tr>
+<tr><th>Sustancias</th><td>Alcohol y otras sustancias, sobre todo intoxicado</td><td>Abstinencia y tratamiento del consumo [8]</td></tr>
+<tr><th>Psicológico</th><td>Desesperanza, impulsividad y agitación</td><td>Razones para vivir y habilidades de afrontamiento [32]</td></tr>
+<tr><th>Social</th><td>Aislamiento, pérdida reciente y violencia</td><td>Apoyo familiar y vínculo con el servicio de salud [4]</td></tr>
+<tr><th>Medios</th><td>Armas, plaguicidas y fármacos en cantidad en casa</td><td>Medios fuera del alcance [10][4]</td></tr>
+</tbody></table></div>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>En primer nivel sin posibilidad de derivar, el objetivo es mantener a salvo, reducir el riesgo modificable y sostener el vínculo; se trata el trastorno de base en paralelo [4][32].</li>
+<li><span class="tg">De elección</span>Plan de seguridad escrito y estructurado, elaborado con el paciente [33], más restricción de medios con la familia [4][10].</li>
+<li><span class="tg">Escala</span>Riesgo inminente: no lo dejes solo, observación continua, retira los medios y activa ECU 911 para el traslado [4].</li>
+<li><span class="tg">Reevalúa</span>Asigna la primera cita antes del alta, idealmente en 24 a 72 h y como máximo a los 7 días; seguimiento temprano en 24 a 48 h y nueva evaluación en la primera semana [35].</li>
+<li><span class="tg">Especialista</span>Con psicosis, agitación no controlada o riesgo alto que persiste, pide interconsulta o teleconsulta con psiquiatría; sin derivación, sigue mhGAP en el centro [4].</li>
+<li><span class="tg">Evita</span>Evita dejar solo al paciente con riesgo inminente, prescribir cantidades letales y preguntar con eufemismos [4][32].</li>
+</ol>
+<p>El plan de seguridad es una intervención breve en seis pasos que el paciente conserva:</p>
+<div class="tw"><table><thead><tr><th>Paso</th><th>Qué escribe el paciente</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>1</th><td>Señales de alarma personales: pensamientos, situaciones y emociones que anuncian la crisis</td><td>[33]</td></tr>
+<tr><th>2</th><td>Estrategias propias para afrontar sin contactar a nadie</td><td>[33]</td></tr>
+<tr><th>3</th><td>Personas y lugares que distraen y acompañan</td><td>[33]</td></tr>
+<tr><th>4</th><td>Personas de confianza a quienes pedir ayuda</td><td>[33]</td></tr>
+<tr><th>5</th><td>Profesionales y servicios de crisis; en Ecuador, ECU 911</td><td>[33][4]</td></tr>
+<tr><th>6</th><td>Cómo hacer seguro el entorno: medios fuera del alcance</td><td>[33]</td></tr>
+</tbody></table></div>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Litio</th><td>Según litemia y función renal; esquema en «Tratamiento» de Trastorno bipolar</td><td>VO</td><td>Según esquema de bipolar</td><td>Mantenimiento prolongado</td><td>Reduce el suicidio en trastornos del ánimo; el mecanismo no está establecido y se postula menor impulsividad <button type="button" class="xref" data-ir="e3-m-2" onclick="ir('e3','e3-m-2')">← Serotonina prefrontal baja y menor control inhibitorio</button>. Tóxico en sobredosis: prescribe en cantidades pequeñas</td><td>[31]</td></tr>
+</tbody></table></div>
+<p class="mini">VO: vía oral. El litio se indica por el trastorno del ánimo de base, no solo por el riesgo suicida. <span class="rem">↪ Posología del litio en «Trastorno bipolar»</span></p>
+<div class="dc" data-fn="dcE3"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Ideación</span>
+<button type="button" class="chip" data-g="ide" data-v="ninguna" onclick="ch(this)">Sin ideación</button>
+<button type="button" class="chip" data-g="ide" data-v="pasiva" onclick="ch(this)">Deseo de morir sin método</button>
+<button type="button" class="chip" data-g="ide" data-v="activa" onclick="ch(this)">Pensamientos de matarse sin plan</button>
+<button type="button" class="chip" data-g="ide" data-v="plan" onclick="ch(this)">Plan o intención</button></div>
+<div class="dc-g"><span class="dc-l">Conducta</span>
+<button type="button" class="chip" data-g="cond" data-v="prep" onclick="ch(this)">Conducta preparatoria</button>
+<button type="button" class="chip" data-g="cond" data-v="inter" onclick="ch(this)">Intento interrumpido o abortado</button>
+<button type="button" class="chip" data-g="cond" data-v="intento" onclick="ch(this)">Intento reciente</button></div>
+<div class="dc-g"><span class="dc-l">Factores</span>
+<button type="button" class="chip" data-g="fac" data-v="previo" data-m="1" onclick="ch(this)">Intento previo</button>
+<button type="button" class="chip" data-g="fac" data-v="medios" data-m="1" onclick="ch(this)">Acceso a medios letales</button>
+<button type="button" class="chip" data-g="fac" data-v="alcohol" data-m="1" onclick="ch(this)">Alcohol o sustancias</button>
+<button type="button" class="chip" data-g="fac" data-v="psicosis" data-m="1" onclick="ch(this)">Psicosis o agitación</button>
+<button type="button" class="chip" data-g="fac" data-v="solo" data-m="1" onclick="ch(this)">Sin apoyo familiar</button></div>
+<div class="out"></div></div>
+
+<h2>Seguimiento</h2>
+<p>El riesgo se concentra en los días y semanas tras la crisis o el alta. Mantén el contacto en las primeras 24 a 72 h y como máximo a los 7 días, con seguimiento temprano en 24 a 48 h [35], y en la primera semana, revisa el plan de seguridad en cada cita y pregunta de nuevo por ideación y por el acceso a medios [4][32].</p>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Repetición del intento o suicidio</th><td>La capacidad adquirida persiste y el medio sigue disponible [8]</td><td><button type="button" class="xref" data-ir="e3-m-5" onclick="ir('e3','e3-m-5')">← Capacidad adquirida y acceso a medios</button></td></tr>
+<tr><th>Persistencia de la desesperanza</th><td>El estresor y el trastorno de base no se han tratado [10]</td><td><button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Estresor agudo y desesperanza con atrapamiento</button></td></tr>
+<tr><th>Lesión grave y discapacidad</th><td>El método determina el daño aunque el paciente sobreviva [10]</td><td><button type="button" class="xref" data-ir="e3-m-6" onclick="ir('e3','e3-m-6')">← Acto autoinfligido con intención de morir</button></td></tr>
+<tr><th>Recaída del trastorno de base</th><td>El estado activo vuelve a reducir el control de impulsos [8]</td><td><button type="button" class="xref" data-ir="e3-m-3" onclick="ir('e3','e3-m-3')">← Estado: trastorno mental activo, alcohol o dolor</button></td></tr>
+</tbody></table></div>
+<p>Tras un suicidio, la postvención (apoyo a familiares, amigos y equipo) previene el duelo complicado y reduce el riesgo en los allegados; incluye una conversación franca, derivación del duelo y seguimiento de quienes tuvieron contacto más cercano [7][4].</p>
+</section>
+<section class="tab" data-tab="sin">
+<div class="hb ro"><div class="hb-t">Errores que no se pueden cometer</div>
+<ul>
+<li>No preguntar de forma directa por ideación suicida en todo paciente con síntomas del ánimo, por miedo a inducirla; preguntar no la induce [9][4].</li>
+<li>Dar un antidepresivo en monoterapia a un bipolar no detectado, por no haber preguntado por manía o hipomanía previas; puede inducir viraje o ciclación [1][7].</li>
+<li>Usar una escala de riesgo para predecir el acto o decidir el alta, en lugar de una evaluación clínica de necesidades [32].</li>
+<li>Dejar solo a un paciente con plan o intención, o con un intento reciente, mientras llega el traslado [4].</li>
+<li>Prescribir cantidades letales o dejar fármacos, plaguicidas o armas al alcance del paciente en crisis [10][4].</li>
+<li>Dar el alta sin plan de seguridad escrito ni contacto de seguimiento programado [33][32].</li>
+<li>Tomar la autolesión o el intento como manipulación y minimizarlos: el intento previo es el predictor individual más constante [8][32].</li>
+</ul></div>
+<div class="acc refs"><button type="button" class="acc-h" onclick="tog(this)">Referencias <span class="chev">▾</span></button>
+<div class="acc-b"><ol class="vanc">
+<li>American Psychiatric Association. Diagnostic and statistical manual of mental disorders. 5th ed., text revision (DSM-5-TR). Washington (DC): American Psychiatric Association Publishing; 2022.</li>
+<li>National Institute for Health and Care Excellence. Depression in adults: treatment and management. NICE guideline NG222. London: NICE; 2022.</li>
+<li>Yatham LN, Kennedy SH, Parikh SV, Schaffer A, Bond DJ, Frey BN, et al. Canadian Network for Mood and Anxiety Treatments (CANMAT) and International Society for Bipolar Disorders (ISBD) 2018 guidelines for the management of patients with bipolar disorder. Bipolar Disord. 2018;20(2):97-170. doi:10.1111/bdi.12609. PMID: 29536616.</li>
+<li>Organización Mundial de la Salud. Guía de intervención mhGAP para los trastornos mentales, neurológicos y por consumo de sustancias en el nivel de atención de salud no especializada. Versión 2.0. Ginebra: OMS; 2016.</li>
+<li>Loscalzo J, Fauci AS, Kasper DL, Hauser SL, Longo DL, Jameson JL, editors. Harrison's principles of internal medicine. 22nd ed. New York: McGraw Hill; 2025.</li>
+<li>Rozman Borstnar C, Cardellach López F, editores. Farreras-Rozman. Medicina interna. 20.ª ed. Barcelona: Elsevier; 2024.</li>
+<li>Boland R, Verduin ML, editors. Kaplan & Sadock's synopsis of psychiatry. 12th ed. Philadelphia: Wolters Kluwer; 2022.</li>
+<li>Turecki G, Brent DA. Suicide and suicidal behaviour. Lancet. 2016;387(10024):1227-39. doi:10.1016/S0140-6736(15)00234-2. PMID: 26385066.</li>
+<li>Posner K, Brown GK, Stanley B, Brent DA, Yershova KV, Oquendo MA, et al. The Columbia-Suicide Severity Rating Scale: initial validity and internal consistency findings from three multisite studies with adolescents and adults. Am J Psychiatry. 2011;168(12):1266-77. doi:10.1176/appi.ajp.2011.10111704. PMID: 22193671.</li>
+<li>Fazel S, Runeson B. Suicide. N Engl J Med. 2020;382(3):266-74. doi:10.1056/NEJMra1902944. PMID: 31940700.</li>
+<li>Kroenke K, Spitzer RL, Williams JB. The PHQ-9: validity of a brief depression severity measure. J Gen Intern Med. 2001;16(9):606-13. doi:10.1046/j.1525-1497.2001.016009606.x. PMID: 11556941.</li>
+<li>Hirschfeld RM, Williams JB, Spitzer RL, Calabrese JR, Flynn L, Keck PE Jr, et al. Development and validation of a screening instrument for bipolar spectrum disorder: the Mood Disorder Questionnaire. Am J Psychiatry. 2000;157(11):1873-5. doi:10.1176/appi.ajp.157.11.1873. PMID: 11058490.</li>
+<li>McIntyre RS, Berk M, Brietzke E, Goldstein BI, López-Jaramillo C, Kessing LV, et al. Bipolar disorders. Lancet. 2020;396(10265):1841-56. doi:10.1016/S0140-6736(20)31544-0. PMID: 33278937.</li>
+<li>Lam RW, Kennedy SH, Adams C, Bahji A, Beaulieu S, Bhat V, et al. Canadian Network for Mood and Anxiety Treatments (CANMAT) 2023 update on clinical guidelines for management of major depressive disorder in adults. Can J Psychiatry. 2024;69(9):641-87. doi:10.1177/07067437241245384. PMID: 38711351.</li>
+<li>Hasin DS, Sarvet AL, Meyers JL, Saha TD, Ruan WJ, Stohl M, et al. Epidemiology of adult DSM-5 major depressive disorder and its specifiers in the United States. JAMA Psychiatry. 2018;75(4):336-46. doi:10.1001/jamapsychiatry.2017.4602. PMID: 29450462.</li>
+<li>Malhi GS, Mann JJ. Depression. Lancet. 2018;392(10161):2299-312. doi:10.1016/S0140-6736(18)31948-2. PMID: 30396512.</li>
+<li>Sullivan PF, Neale MC, Kendler KS. Genetic epidemiology of major depression: review and meta-analysis. Am J Psychiatry. 2000;157(10):1552-62. doi:10.1176/appi.ajp.157.10.1552. PMID: 11007705.</li>
+<li>McEwen BS. Physiology and neurobiology of stress and adaptation: central role of the brain. Physiol Rev. 2007;87(3):873-904. doi:10.1152/physrev.00041.2006. PMID: 17615391.</li>
+<li>Kandel ER, Koester JD, Mack SH, Siegelbaum SA, editors. Principles of neural science. 6th ed. New York: McGraw Hill; 2021.</li>
+<li>Brunton LL, Knollmann BC, editors. Goodman & Gilman's the pharmacological basis of therapeutics. 14th ed. New York: McGraw Hill; 2023.</li>
+<li>Ebert MH, Martin PR, McVoy M, Ronis RJ, Weissman SH, editores. Diagnóstico y tratamiento en psiquiatría. 4.ª ed. Nueva York: McGraw Hill; 2025.</li>
+<li>Kroenke K, Spitzer RL, Williams JB. The PHQ-2: validity of a two-item depression screener. Med Care. 2003;41(11):1284-92. doi:10.1097/01.MLR.0000093487.78664.3C. PMID: 14583691.</li>
+<li>Ministerio de Salud Pública del Ecuador. Diagnóstico y tratamiento del episodio depresivo y del trastorno depresivo recurrente en adultos. Guía de Práctica Clínica. Quito: MSP; 2017.</li>
+<li>Medicines and Healthcare products Regulatory Agency. Citalopram and escitalopram: QT interval prolongation. Drug Safety Update. 2011;5(5):A1.</li>
+<li>National Institute for Health and Care Excellence. Bipolar disorder: assessment and management. Clinical guideline CG185. London: NICE; 2014.</li>
+<li>Merikangas KR, Akiskal HS, Angst J, Greenberg PE, Hirschfeld RM, Petukhova M, et al. Lifetime and 12-month prevalence of bipolar spectrum disorder in the National Comorbidity Survey replication. Arch Gen Psychiatry. 2007;64(5):543-52. doi:10.1001/archpsyc.64.5.543. PMID: 17485606.</li>
+<li>PD-Rx Pharmaceuticals. Lithium carbonate capsules [ficha técnica]. DailyMed. Bethesda (MD): National Library of Medicine; 2026.</li>
+<li>AbbVie. DEPAKOTE (divalproex sodium) delayed-release tablets [ficha técnica]. DailyMed. Bethesda (MD): National Library of Medicine; 2026.</li>
+<li>GlaxoSmithKline. LAMICTAL (lamotrigine) tablets [ficha técnica]. DailyMed. Bethesda (MD): National Library of Medicine; 2026.</li>
+<li>Sunovion Pharmaceuticals. LATUDA (lurasidone hydrochloride) tablets [ficha técnica]. Silver Spring (MD): U.S. Food and Drug Administration; 2019.</li>
+<li>Cipriani A, Hawton K, Stockton S, Geddes JR. Lithium in the prevention of suicide in mood disorders: updated systematic review and meta-analysis. BMJ. 2013;346:f3646. doi:10.1136/bmj.f3646. PMID: 23814104.</li>
+<li>National Institute for Health and Care Excellence. Self-harm: assessment, management and preventing recurrence. NICE guideline NG225. London: NICE; 2022.</li>
+<li>Stanley B, Brown GK. Safety planning intervention: a brief intervention to mitigate suicide risk. Cogn Behav Pract. 2012;19(2):256-64.</li>
+<li>Organización Mundial de la Salud. Suicide worldwide in 2019: global health estimates. Ginebra: OMS; 2021.</li>
+<li>Ministerio de Salud Pública del Ecuador. Lineamientos para la atención a personas con comportamiento suicida en establecimientos de salud del Ministerio de Salud Pública del Ecuador. Quito: MSP; 2026.</li>
+</ol></div></div>
+</section>
+<script>
+function par(t){return '<p>'+t+'</p>';}
+function hv(a,v){return a.indexOf(v)>-1;}
+function vacio(dc,t){out(dc,par(t));}
+
+function dcVis(dc){
+  var p=sel(dc,'polo'),a=sel(dc,'ant'),r=sel(dc,'riesgo'),o=sel(dc,'otros');
+  if(!(p.length||a.length||r.length||o.length)){
+    vacio(dc,'Elige el polo del ánimo, los antecedentes, la respuesta a la pregunta por ideación suicida y otros datos. El simulador propone la entidad compatible, el dato que falta y la conducta inicial; no calcula probabilidades.');return;}
+  var x=[],n=0;
+  var alto=hv(r,'plan')||hv(r,'intento');
+  if(alto){n++;
+    x.push(par('<b>Conducta suicida</b>: la ideación con plan o intención, o un intento reciente, pasa por delante de cualquier diagnóstico del ánimo. Falta la C-SSRS y la identificación de medios y de apoyo [9]. Conducta inicial: no dejes solo al paciente, restringe los medios, elabora el plan de seguridad y activa ECU 911 si el riesgo es inminente [4][33].'));
+  } else if(hv(r,'pasiva')){n++;
+    x.push(par('Ideas pasivas de muerte: pregunta por plan, intención, intentos previos y acceso a medios con la C-SSRS antes de decidir el nivel de atención [9]. Conducta inicial: plan de seguridad y seguimiento cercano; ver «Conducta suicida».'));
+  }
+  var bip=hv(a,'mania')||hv(a,'viraje')||(hv(p,'ele'));
+  if(bip){n++;
+    x.push(par('<b>Trastorno bipolar</b>: '+(hv(p,'ele')&&!hv(a,'mania')?'el polo elevado actual':'el antecedente de manía o hipomanía')+' ubica el cuadro en el capítulo bipolar'+(hv(p,'dep')?'; el ánimo bajo sería depresión bipolar':'')+'. Falta confirmar con la entrevista dirigida que el episodio elevado dura al menos 4 días (hipomanía) o 1 semana (manía) con criterios DSM-5-TR [1]. Conducta inicial: estabilizador del ánimo; no antidepresivo en monoterapia [3].'));
+  } else if(hv(p,'dep')&&hv(a,'fam')){n++;
+    x.push(par('<b>Depresión con sospecha bipolar</b>: el antecedente familiar aumenta la probabilidad de un polo elevado no detectado. Falta la entrevista dirigida a manía o hipomanía y el MDQ [12][3]. Conducta inicial: no inicies un antidepresivo en monoterapia hasta aclararlo.'));
+  } else if(hv(p,'dep')){
+    var ex=hv(o,'org'),du=hv(o,'duelo');
+    if(ex){n++;
+      x.push(par('<b>Depresión por causa médica o sustancia</b> posible: el hipotiroidismo, un fármaco o una sustancia pueden explicar el episodio. Falta TSH y la revisión de fármacos y consumo [1][5]. Conducta inicial: corrige o retira la causa y reevalúa el ánimo.'));
+    } else if(du){n++;
+      x.push(par('<b>Duelo</b> posible si predominan la añoranza y las oleadas ligadas a la pérdida con autoestima conservada. Falta ver si hay anhedonia generalizada, inutilidad o ideación que sostengan una depresión mayor [1]. Conducta inicial: acompañamiento y reevaluación; trata si se cumplen los criterios.'));
+    } else {n++;
+      x.push(par('<b>Depresión mayor</b>: ánimo bajo o anhedonia ≥2 semanas, sin antecedente de manía ni hipomanía. Falta el PHQ-9 para la gravedad y la exclusión de causa médica o tóxica [11][1]. Conducta inicial: ISRS y psicoterapia según gravedad [14][2].'));
+    }
+  }
+  if(hv(o,'psic')) x.push(par('Ideas delirantes o alucinaciones: añade el especificador psicótico (en depresión) o el cuadro psicótico (en manía); requiere antipsicótico y atención especializada [1][3].'));
+  if(!n) x.push(par('Los datos elegidos no bastan para sostener una entidad. Define el polo y pregunta por ideación suicida antes de decidir.'));
+  x.push('<span class="cf">Si aparece el antecedente de manía o hipomanía, o la ideación pasa a plan o intención → la conducta cambia de ISRS y psicoterapia a estabilizador del ánimo, o a plan de seguridad, restricción de medios y ECU 911 [3][4].</span>');
+  out(dc,x.join(''));
+}
+
+function dcE1d(dc){
+  var t=num(dc,'phq'),i9=sel(dc,'item9'),du=sel(dc,'dur'),ma=sel(dc,'mania'),og=sel(dc,'org');
+  if(isNaN(t)&&!(i9.length||du.length||ma.length||og.length)){
+    vacio(dc,'Escribe el puntaje total del PHQ-9 y elige el ítem 9, la duración, la manía previa y la causa orgánica. El simulador da la banda de gravedad y la conducta inicial.');return;}
+  var x=[];
+  if(!isNaN(t)){
+    if(t<0||t>27){x.push(par('El PHQ-9 va de 0 a 27 puntos: revisa el puntaje [11].'));}
+    else {
+      var b,c;
+      if(t<5){b='mínima o sin depresión';c='no hay indicación de tratamiento; reevalúa si persisten los síntomas';}
+      else if(t<10){b='leve';c='psicoeducación, vigilancia activa y psicoterapia (activación conductual o TCC); el fármaco no es la primera opción [2][14]';}
+      else if(t<15){b='moderada';c='psicoterapia o ISRS, o ambos según preferencia y antecedentes [2][14]';}
+      else if(t<20){b='moderadamente grave';c='ISRS más psicoterapia; revisa psicosis y riesgo suicida [14]';}
+      else {b='grave';c='ISRS más psicoterapia, seguimiento semanal y evaluación de psicosis y de riesgo suicida; considera apoyo especializado [14][4]';}
+      x.push(par('<b>PHQ-9 de '+t+' puntos: depresión '+b+'</b> [11]. El puntaje cuantifica; el diagnóstico exige criterios DSM-5-TR en la entrevista y la gravedad final es clínica [1]. Conducta inicial: '+c+'. Detalle de fármacos en «Tratamiento».'));
+    }
+  }
+  if(hv(i9,'si')) x.push(par('Ítem 9 positivo: antes de decidir el tratamiento pregunta por plan, intención, intentos y medios con la C-SSRS y aplica «Conducta suicida» [9][4].'));
+  if(hv(du,'corta')) x.push(par('Menos de 2 semanas: no cumple el criterio A de episodio depresivo mayor; considera reacción de ajuste o duelo y reevalúa [1].'));
+  if(hv(ma,'si')) x.push(par('Con manía o hipomanía previas no es depresión mayor: se reclasifica en el espectro bipolar y no se usa antidepresivo en monoterapia [1][3].'));
+  if(hv(ma,'nop')) x.push(par('Falta preguntar por manía o hipomanía: es el dato que decide el polo antes de recetar [1].'));
+  if(hv(og,'pres')) x.push(par('Con causa médica o tóxica presente el diagnóstico es depresión inducida por sustancia o por otra afección médica; corrige la causa [1].'));
+  if(hv(og,'pend')) x.push(par('Falta excluir causa orgánica: TSH, revisión de fármacos y consumo de sustancias, y hemograma o vitamina B12 si la clínica lo sugiere [5].'));
+  if(hv(og,'exc')&&hv(du,'larga')&&hv(ma,'no')&&!isNaN(t)&&t>=10) x.push(par('<b>Cumple depresión mayor</b> si en la entrevista se cuentan cinco de nueve síntomas con deterioro funcional [1][11]. Pasa a «Tratamiento».'));
+  x.push('<span class="cf">Si el ítem 9 cambia de nunca a algunos días, o aparece una manía previa → la conducta cambia de tratar la depresión a estratificar el riesgo suicida o a tratarla como bipolar [9][3].</span>');
+  out(dc,x.join(''));
+}
+
+function dcE1t(dc){
+  var g=sel(dc,'grav'),f=sel(dc,'fase'),o=sel(dc,'otros');
+  if(!(g.length||f.length||o.length)){
+    vacio(dc,'Elige la gravedad, el momento del tratamiento y la situación especial. El simulador propone el fármaco con posología completa o la psicoterapia, según la tabla de fármacos.');return;}
+  var x=[];
+  if(hv(o,'mania')){
+    x.push(par('Con manía o hipomanía previas el antidepresivo en monoterapia no es una opción: la depresión es bipolar y se maneja con estabilizador del ánimo (ver «Trastorno bipolar») [3].'));
+  } else {
+    if(hv(o,'ideas')) x.push(par('Con ideación suicida, estratifica el riesgo antes de recetar (ver «Conducta suicida»), prescribe cantidades pequeñas, evita los tricíclicos por su letalidad en sobredosis y cita en pocos días [2][4].'));
+    if(hv(o,'joven')) x.push(par('Menor de 25 años: vigila la ideación y la activación con controles semanales las primeras semanas del ISRS [20][14].'));
+    var s50='sertralina 50 mg VO cada 24 h, con ajuste en pasos de 25 a 50 mg cada semana o más hasta 200 mg al día';
+    var e10='escitalopram 10 mg VO cada 24 h, hasta 20 mg al día tras una semana o más';
+    var e10m='escitalopram 10 mg VO cada 24 h como máximo en mayores de 65 años';
+    if(hv(f,'inicio')||!f.length){
+      if(hv(g,'leve')&&!hv(o,'ideas')) x.push(par('Episodio leve: inicia psicoeducación, seguimiento activo y psicoterapia (activación conductual o TCC); el ISRS se reserva si no mejora o si el paciente lo prefiere [2][14].'));
+      else {
+        var ini;
+        if(hv(o,'qt')) ini='sertralina 50 mg VO cada 24 h, con ajuste en pasos de 25 a 50 mg cada semana o más hasta 200 mg al día; evita el escitalopram con QT prolongado [20][24]';
+        else if(hv(o,'mayor')) ini=e10m+' o '+s50+'; vigila el sodio [20][24]';
+        else if(hv(o,'emb')) ini=s50+'; evita la paroxetina y sopesa el riesgo-beneficio con ginecología y obstetricia [20][14]';
+        else if(hv(o,'insom')) ini='mirtazapina 15 mg VO cada 24 h por la noche, con subida de 15 mg cada 1 o 2 semanas hasta 45 mg al día; vigila el aumento de peso [20][14]';
+        else ini=s50+'. Alternativas: '+e10+', o fluoxetina 20 mg VO cada 24 h por la mañana, hasta 80 mg al día [20][14]';
+        x.push(par('Antidepresivo de inicio: '+ini+'. Suma psicoterapia'+(hv(g,'grave')?' y seguimiento semanal':'')+'; el efecto tarda semanas y los efectos adversos aparecen antes [14].'));
+      }
+    }
+    if(hv(f,'falla')) x.push(par('Sin respuesta tras 4 semanas con dosis adecuada: revisa adherencia, diagnóstico (bipolar, causa médica) y dosis; sube a la dosis máxima tolerada o cambia a venlafaxina XR 75 mg VO cada 24 h con subida a 150 mg tras 4 días o más (máximo 225 mg al día), mirtazapina 15 mg VO por la noche (máximo 45 mg al día) o bupropión XL 150 mg VO por la mañana (máximo 450 mg al día; contraindicado con epilepsia). Suma psicoterapia y, si persiste, potenciación bajo guía especializada [14][20].'));
+    if(hv(f,'remis')) x.push(par('Remisión: mantén el mismo antidepresivo a la misma dosis durante 6 a 9 meses y más si hubo recurrencias, síntomas residuales o episodios graves; retira de forma gradual para evitar el síndrome de discontinuación [14][20].'));
+    if(hv(o,'emb')&&!hv(f,'inicio')&&f.length) x.push(par('Embarazo o lactancia: evita la paroxetina; la sertralina es una opción habitual, y la decisión se toma con obstetricia [14].'));
+    if(hv(o,'mayor')&&!hv(f,'inicio')&&f.length) x.push(par('Mayor de 65 años: escitalopram con tope de 10 mg al día y vigilancia del sodio y del QT [24].'));
+    if(hv(o,'qt')&&!hv(f,'inicio')&&f.length) x.push(par('QT prolongado: evita el escitalopram y revisa fármacos que prolonguen el QT [24].'));
+  }
+  x.push('<span class="cf">Si aparece una manía o hipomanía previa, o la ideación pasa a plan o intención → la conducta cambia de antidepresivo y psicoterapia a estabilizador del ánimo, o a plan de seguridad, restricción de medios y ECU 911 [3][4].</span>');
+  out(dc,x.join(''));
+}
+function dcE2(dc){
+  var f=sel(dc,'fase'),s=sel(dc,'sit'),l=num(dc,'lit');
+  if(!f.length&&!s.length&&isNaN(l)){
+    vacio(dc,'Elige la fase y la situación del paciente, y si ya toma litio escribe la litemia. El simulador propone el fármaco con su posología; no calcula probabilidades.');return;}
+  var fert=hv(s,'fert'),ren=hv(s,'renal'),psi=hv(s,'psic'),met=hv(s,'metab');
+  var LI='litio 300 mg VO cada 8 h al inicio, con aumento de 300 mg cada 3 días según la litemia; habitual 600 mg cada 8 a 12 h en fase aguda [27]';
+  var VPA='valproato 750 mg al día VO en tomas divididas, hasta la menor dosis eficaz (máximo 60 mg/kg/día) con nivel en valle de 50 a 125 µg/mL [28]';
+  var QM='quetiapina VO cada 12 h: 100 mg día 1, 200 mg día 2, 300 mg día 3 y 400 mg día 4, hasta 800 mg al día [3]';
+  var QD='quetiapina VO por la noche: 50 mg día 1, 100 mg día 2, 200 mg día 3 y 300 mg desde el día 4 [3]';
+  var OL='olanzapina 10–15 mg VO cada 24 h, máximo 20 mg al día [3]';
+  var LU='lurasidona 20 mg VO cada 24 h con al menos 350 kcal de comida, hasta 60 mg al día en monoterapia o 120 mg con litio o valproato [30]';
+  var LT='lamotrigina VO cada 24 h con titulación lenta: 25 mg semanas 1–2, 50 mg semanas 3–4, 100 mg semana 5 y 200 mg desde la semana 6; con valproato, la mitad de cada paso [29]';
+  var r=[];
+  var ls=isNaN(l)?'':String(l).replace('.',',');
+  if(hv(f,'mania')){
+    if(psi) r.push(par('<b>Manía aguda con psicosis o agitación</b>: empieza un antipsicótico atípico y suma litio o valproato. Primera línea: '+(met?QM.replace('quetiapina','quetiapina (vigila peso y glucosa)'):OL)+'.'));
+    else if(fert) r.push(par('<b>Manía aguda en mujer en edad fértil</b>: evita el valproato. Primera línea: '+(ren?QM:LI)+(ren?'':'; alternativa: '+QM)+'.'));
+    else if(ren) r.push(par('<b>Manía aguda con función renal reducida</b>: evita iniciar litio. Primera línea: '+QM+(met?'; con obesidad o diabetes, vigila peso y glucosa':'; alternativa: '+VPA)+'.'));
+    else if(met) r.push(par('<b>Manía aguda con obesidad o diabetes</b>: prefiere '+LI+'; alternativa: '+VPA+'. Evita la olanzapina si hay opción.'));
+    else r.push(par('<b>Manía aguda</b>: primera línea '+LI+', o '+QM+', o '+VPA+'; si hay agitación, '+OL+'.'));
+    r.push(par('Suspende el antidepresivo y los estimulantes, y regulariza el sueño [25].'));
+  }
+  if(hv(f,'dep')){
+    r.push(par('<b>Depresión bipolar</b>: no uses antidepresivo en monoterapia. Primera línea: '+QD+(met?'; con obesidad o diabetes, vigila peso y glucosa':'')+'.'));
+    r.push(par('Alternativas: '+LU+(ren?'':'; o '+LI)+'; o '+LT+'. La lamotrigina previene la depresión pero no trata la manía [3].'));
+    if(fert) r.push(par('En mujer en edad fértil, evita el valproato [25].'));
+  }
+  if(hv(f,'mant')){
+    if(ren) r.push(par('<b>Mantenimiento con función renal reducida</b>: el litio exige cautela; sostén lo que lo logró si el filtrado lo permite, y si no, elige '+(fert?LT:'quetiapina VO a la dosis con que respondió, o '+LT)+' [3].'));
+    else r.push(par('<b>Mantenimiento</b>: de elección '+LI+', con litemia de 0,6 a 0,8 mmol/L según NICE, o 0,8 a 1,0 según la ficha FDA [25][27]. Alternativas: '+(fert?'':VPA+'; ')+LT+'.'));
+    if(fert) r.push(par('En mujer en edad fértil, el valproato no es opción; planifica el embarazo con psiquiatría antes de concebir [25].'));
+    r.push(par('El litio es el estabilizador con mejor evidencia para reducir el suicidio [31].'));
+  }
+  if(!isNaN(l)){
+    var m=hv(f,'mania');
+    if(l>=1.5) r.push(par('<b>Litemia de '+ls+' mmol/L</b>: es tóxica. Suspende el litio, hidrata, busca temblor, ataxia y confusión y deriva a urgencias con ECU 911 si hay síntomas neurológicos; no esperes a repetir el nivel [3][20].'));
+    else if(m&&l<0.8) r.push(par('Litemia de '+ls+' mmol/L, por debajo del objetivo de 0,8–1,2 en manía: sube el litio 300 mg al día y repite la litemia a los 5 a 7 días [3].'));
+    else if(m&&l>1.2) r.push(par('Litemia de '+ls+' mmol/L, sobre el tope de 1,2 en manía: baja la dosis, revisa hidratación, AINE, IECA y tiazidas, y repite en 5 a 7 días [20].'));
+    else if(m) r.push(par('Litemia de '+ls+' mmol/L dentro del objetivo de 0,8–1,2 en manía: mantén la dosis y vigila función renal [3].'));
+    else if(l<0.6) r.push(par('Litemia de '+ls+' mmol/L, por debajo del objetivo de 0,6–0,8 de mantenimiento: sube 300 mg al día, revisa adherencia y repite en 5 a 7 días [25].'));
+    else if(l>1.0) r.push(par('Litemia de '+ls+' mmol/L, sobre el tope de 1,0 de mantenimiento: baja la dosis y busca la causa de la retención: deshidratación, AINE, IECA o tiazidas [20][25].'));
+    else r.push(par('Litemia de '+ls+' mmol/L dentro del rango de mantenimiento (0,6–0,8; hasta 1,0 si hubo recaída): mantén la dosis; mide litemia cada 3 a 6 meses y función renal y tiroidea cada 6 meses [25].'));
+    if(ren) r.push(par('Con función renal reducida el litio se acumula: reduce la dosis, controla la litemia cada semana y busca psiquiatría [3].'));
+  }
+  r.push('<span class="cf">Si la paciente puede quedar embarazada → se descarta el valproato y se elige litio, quetiapina u olanzapina; si el filtrado glomerular cae → se evita el litio [3].</span>');
+  out(dc,r.join(''));
+}
+function dcE3(dc){
+  var i=sel(dc,'ide'),c=sel(dc,'cond'),f=sel(dc,'fac');
+  if(!i.length&&!c.length){
+    vacio(dc,'Elige el nivel de ideación o la conducta (y los factores presentes) para obtener el nivel de riesgo y la conducta en primer nivel sin posibilidad de derivar.');return;}
+  var lvl=0,n=f.length,r=[];
+  if(hv(i,'pasiva')) lvl=1;
+  if(hv(i,'activa')) lvl=2;
+  if(hv(i,'plan')) lvl=3;
+  if(hv(c,'prep')||hv(c,'inter')) lvl=Math.max(lvl,2);
+  if(hv(c,'intento')) lvl=3;
+  if(lvl>=1&&n>=2&&lvl<3) lvl++;
+  if(lvl===2&&hv(f,'psicosis')) lvl=3;
+  var nom=['bajo','bajo con vigilancia','moderado','alto o inminente'];
+  r.push(par('Nivel orientativo: <b>'+nom[lvl]+'</b>. Orienta la intervención; no predice el acto ni decide el alta por sí solo [32][9].'));
+  if(lvl===0){
+    r.push(par('Sin ideación ni conducta: trata el trastorno de base y vuelve a preguntar en cada cita [4].'));
+    if(n) r.push(par('Con factores presentes, mantén la pregunta directa y confirma que haya apoyo familiar y a quién llamar [4].'));
+  }
+  if(lvl===1){
+    r.push(par('Deseo de morir sin método: plan de seguridad escrito, psicoeducación a la familia y tratamiento del trastorno de base [33][4].'));
+    r.push(par('Cita de control en la primera semana [4].'));
+  }
+  if(lvl===2){
+    r.push(par('Riesgo moderado: plan de seguridad escrito, restricción de medios con un familiar (retirar fármacos, plaguicidas y armas) y acompañamiento por una persona de confianza [33][10].'));
+    r.push(par('Seguimiento cercano: primera cita en 24 a 72 h y como máximo a los 7 días [35] y reevaluación en la primera semana [4]. Dispensa fármacos en cantidades pequeñas, nunca letales [32].'));
+  }
+  if(lvl===3){
+    r.push(par('Riesgo alto o inminente: no dejes solo al paciente en ningún momento, retira los medios del entorno, mantén observación continua en el centro y activa ECU 911 para el traslado [4].'));
+    r.push(par('Cuando la crisis ceda: plan de seguridad escrito, familia comprometida y seguimiento diario o muy cercano hasta que baje el riesgo [33][4].'));
+  }
+  if(hv(c,'intento')) r.push(par('Intento reciente: estabiliza primero la lesión o la intoxicación y luego estratifica el riesgo; el periodo posterior al intento es el más vulnerable [32][8].'));
+  if(hv(c,'prep')||hv(c,'inter')) r.push(par('Conducta preparatoria, interrumpida o abortada: se trata como riesgo alto aunque no haya lesión ni plan declarado [9].'));
+  if(hv(f,'previo')) r.push(par('Intento previo: es el factor individual más constante; sube el nivel y exige seguimiento más cercano [8][10].'));
+  if(hv(f,'medios')) r.push(par('El acceso a medios letales es el factor más modificable: retíralos o restríngelos hoy con la familia [10][4].'));
+  if(hv(f,'alcohol')) r.push(par('Alcohol o sustancias: desinhiben el acto; no valores el riesgo como bajo con el paciente intoxicado y trata el consumo [8].'));
+  if(hv(f,'psicosis')) r.push(par('Psicosis o agitación: pide interconsulta o teleconsulta con psiquiatría; sin derivación, sigue mhGAP en el centro [4].'));
+  if(hv(f,'solo')) r.push(par('Sin apoyo familiar: identifica a una persona de confianza antes del alta y refuerza el contacto con el servicio [4].'));
+  if(i.length&&(hv(i,'activa')||hv(i,'plan')||lvl>=2)) r.push(par('Si hay trastorno del ánimo de base y no hay contraindicación, el litio reduce el suicidio en esos trastornos; la posología está en la tabla de «Tratamiento» de Trastorno bipolar [31].'));
+  r.push('<span class="cf">Si el paciente pasa de pensamientos sin plan a plan o intención, o aparece acceso a un medio letal → la conducta cambia de plan de seguridad y seguimiento a no dejarlo solo y activar ECU 911 [4][9].</span>');
+  out(dc,r.join(''));
+}
+</script>
+<!-- KIT_SCRIPT -->
+</div>
+<script>
+(function(){
+'use strict';
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+function secK(k){return $('section.tab[data-tab="'+k+'"]')}
+function secOf(el){return el&&el.closest?el.closest('section.tab'):null}
+function nameOf(k){var b=$('button.tb[data-tab="'+k+'"]');return b?b.textContent.replace(/\s+/g,' ').replace(/^\s+|\s+$/g,''):k}
+function btn(t,f,c){var b=document.createElement('button');b.type='button';b.className=c||'chip';b.textContent=t;b.addEventListener('click',f);return b}
+function recon(s,on){if(!s)return;s.classList.toggle('recon',!!on);$$('.nodo',s).forEach(function(n){n.classList.remove('rev');n.classList.remove('pis')});var st=$('.rec-state',s);if(st)st.textContent=on?'Modo reconstrucción activo':'Modo lectura';var a=$('.rec-bar [data-act="rec"]',s);if(a){a.disabled=!!on;a.classList.toggle('on',!!on);a.textContent=on?'Reconstrucción activa':'Activar reconstrucción'}}
+window.recon=function(k,on){recon(secK(k),on)};
+function navOv(){var n=$('nav.tabs');if(!n)return;var sl=n.scrollLeft,mx=n.scrollWidth-n.clientWidth,w=n.parentNode;[n,w].forEach(function(e){if(e===n||e.classList.contains('tabs-w')){e.classList.toggle('ov-l',sl>2);e.classList.toggle('ov-r',sl<mx-2)}})}
+function tabla(on){var t=$('table.vis'),s=secOf(t);if(!s)return;s.classList.toggle('tbl',!!on);$$('td.tap',t).forEach(function(c){c.classList.remove('rev')});var st=$('.vb-state',s);if(st)st.textContent=on?'Tabla tapada: toca cada celda para revelarla':'Modo lectura'}
+window.tabla=tabla;
+window.show=function(k){var ns=secK(k);if(!ns)return;$$('section.tab.on').forEach(function(s){if(s!==ns){if(s.classList.contains('recon'))recon(s,false);if(s.classList.contains('tbl'))tabla(false)}});$$('.tb,.tab').forEach(function(e){e.classList.toggle('on',e.getAttribute('data-tab')===k)});window.scrollTo(0,0);var b=$('.tb.on');if(b&&b.scrollIntoView){try{b.scrollIntoView({inline:'nearest',block:'nearest'})}catch(e){}}navOv()};
+window.ir=function(k,id){var el=document.getElementById(id),s=secOf(el);if(!s)return;var nodo=el.classList.contains('nodo');if(s.classList.contains('recon')&&!nodo)recon(s,false);if(s.classList.contains('tbl')&&!el.closest('.vis-w'))tabla(false);show(s.getAttribute('data-tab'));if(nodo&&s.classList.contains('recon'))el.classList.add('rev');var a=el.closest('.acc');if(a)a.classList.add('op');el.scrollIntoView({block:'start'});el.classList.add('hl');setTimeout(function(){el.classList.remove('hl')},1500)};
+window.tog=function(b){var a=b.closest('.acc');if(a)a.classList.toggle('op')};
+window.sel=function(dc,g){return $$('.chip.on[data-g="'+g+'"]',dc).map(function(c){return c.getAttribute('data-v')})};
+window.num=function(dc,n){var i=$('input[data-n="'+n+'"]',dc);if(!i||i.value==='')return NaN;return parseFloat(String(i.value).replace(',','.'))};
+window.out=function(dc,h){var o=$('.out',dc);if(o)o.innerHTML=h};
+window.rd=function(x,d){var p=Math.pow(10,d||0);return Math.round(x*p)/p};
+function outErr(dc,e){var o=$('.out',dc);if(o)o.textContent='Error de cálculo: '+(e&&e.message?e.message:String(e))}
+function runDc(dc){var fn=window[dc.getAttribute('data-fn')];if(typeof fn==='function'){try{fn(dc)}catch(e){outErr(dc,e)}}}
+window.ch=function(el){var dc=el.closest('.dc');if(!dc)return;if(el.classList.contains('chip')){var g=el.getAttribute('data-g');if(el.getAttribute('data-m')==='1'){el.classList.toggle('on')}else{var was=el.classList.contains('on');$$('.chip[data-g="'+g+'"]',dc).forEach(function(c){c.classList.remove('on')});if(!was)el.classList.add('on')}}runDc(dc)};
+function initNodos(f){var k=f.getAttribute('data-tab');$$('.nodo',f).forEach(function(n,i){var p=document.createElement('b');p.className='paso';var pn=document.createElement('span');pn.className='pn';pn.textContent=(i+1)+' ·';var pt=document.createElement('span');pt.className='pt';pt.textContent=n.getAttribute('data-paso')||'';p.appendChild(pn);p.appendChild(pt);var ra=n.getAttribute('data-rama');if(ra){var b=document.createElement('span');b.className='badge b-az rama';b.textContent=ra;p.appendChild(document.createTextNode(' '));p.appendChild(b)}n.insertBefore(p,n.firstChild);var c=document.createElement('div');c.className='rec-ctl';if($('.man',n))c.appendChild(btn('Pista',function(){n.classList.toggle('pis')}));c.appendChild(btn('Revelar',function(){n.classList.toggle('rev')}));n.appendChild(c)});
+var tl=$('ol.tl',f);if(!tl)return;var bar=document.createElement('div');bar.className='rec-bar';bar.id='rec-bar-'+k;var t=document.createElement('div');t.innerHTML='<b>Timeline en blanco</b> · <span class="rec-state">Modo lectura</span><p class="mini">Reconstruye la cascada sin mirar: escribe cada paso en orden, luego usa Pista (signos que produce) y Revelar nodo por nodo. Nada se guarda.</p>';bar.appendChild(t);var ta=document.createElement('textarea');ta.setAttribute('aria-label','Escribe aquí la cascada en orden');var bs=document.createElement('div');bs.className='rec-btns';var ab=btn('Activar reconstrucción',function(){recon(f,true);ta.focus()});ab.setAttribute('data-act','rec');bs.appendChild(ab);bs.appendChild(btn('Revelar todo',function(){$$('.nodo',f).forEach(function(n){n.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){recon(f,false)}));bar.appendChild(bs);bar.appendChild(ta);tl.parentNode.insertBefore(bar,tl)}
+var TGT={'1.º':'clave','De elección':'clave','Confirma':'ok','Solo si':'cond','Escala':'cond','Reevalúa':'cond','No pidas':'no','Evita':'no','Alarma':'alarma'};
+function initTg(){$$('ol.tg span.tg').forEach(function(s){var v=TGT[s.textContent.replace(/^\s+|\s+$/g,'')];if(v)s.setAttribute('data-t',v)})}
+function initTabla(){var t=$('table.vis'),s=secOf(t);if(!s)return;var w=t.parentNode;if(!w.classList.contains('tw')){w=document.createElement('div');w.className='tw';t.parentNode.insertBefore(w,t);w.appendChild(t)}w.classList.add('vis-w');var rows=$$('tbody tr',t);if(!rows.length)rows=$$('tr',t).slice(1);rows.forEach(function(r){Array.prototype.slice.call(r.children,1).forEach(function(c){c.classList.add('tap');c.addEventListener('click',function(){if(s.classList.contains('tbl'))c.classList.add('rev')})})});
+var bar=document.createElement('div');bar.className='vb-bar';bar.id='vb-bar';var h=document.createElement('div');h.innerHTML='<b>Tabla en blanco</b> · <span class="vb-state">Modo lectura</span><p class="mini">Tapa todas las celdas de las entidades (quedan visibles las cabeceras y los ejes). Di cada celda antes de tocarla; un toque la revela. Nada se guarda.</p>';bar.appendChild(h);var bs=document.createElement('div');bs.className='rec-btns';bs.appendChild(btn('Tapar la tabla',function(){tabla(true)}));bs.appendChild(btn('Revelar todo',function(){$$('td.tap',t).forEach(function(c){c.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){tabla(false)}));bar.appendChild(bs);w.parentNode.insertBefore(bar,w)}
+function initRecGo(){var TL=$$('section.tab').filter(function(s){return!!$('ol.tl',s)}),sin=secK('sin'),dst=sin||secK('seg');if(!dst)return;var ord=sin?TL.filter(function(s,i){return i%2===0}).concat(TL.filter(function(s,i){return i%2===1})):TL;var vt=$('table.vis');if(!ord.length&&!(sin&&vt))return;
+var w=document.createElement('div');w.className='hb az rec-go';w.innerHTML='<div class="hb-t">Antes de cerrar: recupera sin mirar</div><p class="mini">Cada botón te lleva a la función en blanco correspondiente. Intenta la respuesta completa antes de revelar.</p>';var bs=document.createElement('div');bs.className='rec-btns';w.appendChild(bs);
+if(sin&&vt){var vs=secOf(vt),vk=vs.getAttribute('data-tab'),b0=btn('Tabla en blanco — '+nameOf(vk),function(){show(vk);tabla(true);var b=document.getElementById('vb-bar');if(b)b.scrollIntoView({block:'start'})},'go');b0.setAttribute('data-rec',vk);bs.appendChild(b0)}
+ord.forEach(function(s){var k=s.getAttribute('data-tab'),b=btn('Reconstruir la cascada — '+nameOf(k),function(){show(k);recon(s,true);var r=document.getElementById('rec-bar-'+k);if(r)r.scrollIntoView({block:'start'})},'go');b.setAttribute('data-rec',k);bs.appendChild(b)});
+var rf=$('.acc.refs',dst);if(rf)dst.insertBefore(w,rf);else dst.appendChild(w)}
+function init(){var f=$('.tb'),ph=[function(){var n=$('nav.tabs');if(n){var w=document.createElement('div');w.className='tabs-w';n.parentNode.insertBefore(w,n);w.appendChild(n);n.addEventListener('scroll',navOv);window.addEventListener('resize',navOv)}},function(){$$('section.tab').forEach(function(s){if($('ol.tl',s))initNodos(s)})},initTg,initTabla,initRecGo,function(){$$('.dc').forEach(runDc)},function(){show(secK('pan')?'pan':(f?f.getAttribute('data-tab'):''))}];ph.forEach(function(p){try{p()}catch(e){if(window.console)console.error('kit v10:',e)}})}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+</body>
+</html>
