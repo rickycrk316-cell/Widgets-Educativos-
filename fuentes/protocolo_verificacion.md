@@ -1,6 +1,6 @@
 # Protocolo de verificación de fuentes (compartido por las skills definiciones, widget-ensenanza y flashcards)
 
-Objetivo: que `[VERIFICAR EN FUENTE]` y «Fuente por verificar» queden solo para lo que de verdad no se pudo comprobar en la sesión, no para lo que no se buscó.
+Objetivo: **cero marcas**. Ningún widget (v11, definiciones, apertura) se entrega con `[VERIFICAR EN FUENTE]` ni con el badge «Fuente por verificar»: cada dato se confirma o se elimina.
 
 ## 1 · Qué exige cita
 
@@ -19,24 +19,24 @@ Objetivo: que `[VERIFICAR EN FUENTE]` y «Fuente por verificar» queden solo par
 4. Bibliografía de la tabla del § 4.
 5. Fármacos de marca: ARCSA → ficha del fabricante → CIMA-AEMPS / EMA / DailyMed.
 
-## 3 · Pasada de verificación (obligatoria antes de marcar)
+## 3 · Pasada de verificación (obligatoria antes de entregar)
 
-1. Mientras redactas, no te detengas a buscar cada dato. Marca provisionalmente con `[VERIFICAR EN FUENTE]` y anota el dato en una lista `pendientes` (texto exacto, pestaña o tarjeta, tipo de fuente que lo respaldaría).
+1. Mientras redactas, no te detengas a buscar cada dato. Anota el dato en una lista `pendientes` (texto exacto, pestaña o tarjeta, tipo de fuente que lo respaldaría).
 2. Al terminar el borrador, una **sola pasada** de verificación sobre `pendientes`. Si hay subagentes, delega la pasada a uno ligero (modelo `haiku`). Si no, hazla tú. Herramientas, en este orden y según estén disponibles:
    - PubMed (`search_articles`, `lookup_article_by_citation`, `get_article_metadata`) para artículos, guías publicadas en revista y consensos. Devuelve PMID y DOI.
    - Consensus (`search`) para preguntas clínicas con evidencia de estudios.
    - WebSearch/WebFetch para guías de sociedades, ARCSA, fichas técnicas y catálogos editoriales.
-3. Agota las fuentes (regla v10.2, pedida por el estudiante): cada pendiente pasa por PubMed, Consensus, fichas técnicas oficiales (DailyMed, CIMA-AEMPS, EMA, ARCSA), GPC y lineamientos del MSP del Ecuador (www.salud.gob.ec) y guías o web, hasta 2 búsquedas por dato y por fuente, sin tope de datos. Si un dominio está bloqueado por la red de la sesión, pide habilitarlo antes de darlo por perdido.
+3. Agota las fuentes (regla vigente, pedida por el estudiante): cada pendiente pasa por PubMed, Consensus, fichas técnicas oficiales (DailyMed, CIMA-AEMPS, EMA, ARCSA), GPC y lineamientos del MSP del Ecuador (www.salud.gob.ec) y guías o web, hasta 2 búsquedas por dato y por fuente, sin tope de datos. Si un dominio está bloqueado por la red de la sesión, pide habilitarlo antes de darlo por perdido.
 4. Resultado por dato:
    - **Confirmado** → quita la marca y añade la referencia en Vancouver a la lista, con PMID/DOI si la herramienta los devolvió.
    - **Contradicho** → corrige el dato con la fuente encontrada.
    - **Fuentes divergentes** → muestra ambas cifras con su cita.
    - **Sin confirmar tras agotar las fuentes** → elimina el dato o reescribe la frase sin la cifra. El widget se entrega sin ninguna marca `[VERIFICAR EN FUENTE]` ni «Fuente por verificar».
-5. En la línea final de aviso, informa: «Verificados N de M datos; quedan K marcas: …».
+5. En la línea final de aviso, informa: «Verificados N de M datos; eliminados K sin confirmar: …». Nunca quedan marcas.
 
 ## 4 · Ediciones de referencia (verificadas el 2026-10-26)
 
-Usa estas ediciones sin badge ámbar. Si necesitas un libro que no está en la tabla, verifica su edición con una búsqueda (§ 3) antes de citarlo.
+Usa estas ediciones tal cual. Si necesitas un libro que no está en la tabla, verifica su edición con una búsqueda (§ 3) antes de citarlo.
 
 Citar una edición que existe es veraz aunque haya otra más nueva; prefiere la más reciente de la columna «Edición».
 
@@ -69,6 +69,7 @@ Confianza «media»: cítalo, pero si la edición importa (cifras, criterios) co
 
 ## 5 · Lo que nunca se hace
 
-- Inventar PMID, DOI, páginas, ediciones o años para «cerrar» una marca.
+- Inventar PMID, DOI, páginas, ediciones o años para «cerrar» un dato.
 - Citar UpToDate o DynaMed con una fecha que no leíste; si se citan, la forma es `[Internet]` con `[citado AAAA mmm dd]` de la fecha de consulta real.
-- Convertir un dato no confirmado en uno sin marca solo porque «suena bien».
+- Dejar un dato no confirmado en el widget solo porque «suena bien»: se elimina.
+- Dejar cualquier marca `[VERIFICAR EN FUENTE]` o «Fuente por verificar».

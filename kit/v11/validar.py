@@ -1,252 +1,5 @@
-# Widget de enseñanza médica — v10 · Kit (documento de proyecto)
-
-Este documento contiene **solo el kit fijo** de la skill `widget-ensenanza` v10. Las reglas viven en la skill. Claude lo extrae por script **sin leerlo**; no lo edites a mano.
-
-## Uso
-
-En un chat de este proyecto, con ejecución de código activa:
-
-> Widget v10 · Tema: … · Modo: mono|multi (opcional) · Enfoque: … · Guía: … · Bibliografía: … · Contexto local: … · Adjuntos: …
-
-Solo **Tema** es obligatorio. La skill decide el modo: **mono** (1–2 entidades, estructura por etapas de la v9) o **multi** (3–5 entidades con una presentación común: Panorama · De un vistazo · una pestaña por entidad · Síntesis).
-
-## Cambios respecto a v9
-
-| # | Cambio |
-|---|---|
-| 1 | Router mono/multi con override `Modo:`; tope de 5 entidades. |
-| 2 | Modo multi: `pan · vis · e1…eN · sin`; tabla de 9 filas fijas con «tabla en blanco»; delta «Frente a…»; profundidad escalonada (e1 completa). |
-| 3 | Pasos etiquetados de vocabulario cerrado en diagnóstico y tratamiento; ficha «Qué verás»; caja de discrepancia violeta; contrafactual en todo simulador. |
-| 4 | Profundidad por nodo, prerrequisitos en primera mención, sílabo crítico, concisión ≠ recorte, fármaco por el nodo, recortes declarados. |
-| 5 | Núcleo recuperable (20/80) listado en el manifiesto para Anki. Registro de discrepancias opcional (`registro-discrepancias.md`). |
-| 6 | Kit: timeline en blanco por sección, `ir()` robusto, fixes de v9; validador con ids por entidad y reciprocidad corregida. |
-
----
-
-# KIT (no leer · se extrae por script)
-
-## kit_head.html
-
-<!-- ARCHIVO: kit_head.html -->
-````html
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>@@TITULO@@</title>
-<style>
-:root{--surface-0:#FFFFFF;--surface-1:#F6F6F4;--border:rgba(0,0,0,.14);--border-accent:#378ADD;--bg-accent:#E6F1FB;--text-primary:#1A1A1A;--text-secondary:#444441;--text-muted:#73726C;--text-accent:#185FA5;--radius:8px;--font-sans:-apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--surface-0:#1E1E1C;--surface-1:#2A2A28;--border:rgba(255,255,255,.16);--border-accent:#85B7EB;--bg-accent:#042C53;--text-primary:#EDEDEA;--text-secondary:#C8C7C2;--text-muted:#9C9A92;--text-accent:#B5D4F4}}
-:root[data-theme="dark"]{--surface-0:#1E1E1C;--surface-1:#2A2A28;--border:rgba(255,255,255,.16);--border-accent:#85B7EB;--bg-accent:#042C53;--text-primary:#EDEDEA;--text-secondary:#C8C7C2;--text-muted:#9C9A92;--text-accent:#B5D4F4}
-html{color-scheme:light dark}
-*,*::before,*::after{box-sizing:border-box}
-body{margin:0;background:var(--surface-0);color:var(--text-primary);font:14px/1.75 var(--font-sans);-webkit-text-size-adjust:100%}
-.wrap{max-width:920px;margin:0 auto;padding:12px 14px 40px;background:transparent}
-h1{font-size:20px;line-height:1.3;margin:6px 0 10px}
-h2{font-size:17px;line-height:1.35;margin:22px 0 8px}
-h3{font-size:15px;line-height:1.4;margin:16px 0 6px}
-p{margin:0 0 10px}
-button{font:inherit;color:inherit;cursor:pointer}
-button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--border-accent);outline-offset:2px}
-.tabs{display:flex;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:6px 0 8px;border-bottom:.5px solid var(--border);margin-bottom:12px;position:-webkit-sticky;position:sticky;top:0;z-index:5;background:var(--surface-0)}
-.tabs-w{position:-webkit-sticky;position:sticky;top:0;z-index:5;background:var(--surface-0)}
-.tabs-w::before,.tabs-w::after{content:"";position:absolute;top:0;bottom:9px;width:36px;pointer-events:none;opacity:0;transition:opacity .2s;z-index:1}
-.tabs-w::before{left:0;background:linear-gradient(to left,rgba(128,128,128,0),var(--surface-0))}
-.tabs-w::after{right:0;background:linear-gradient(to right,rgba(128,128,128,0),var(--surface-0))}
-.tabs-w.ov-l::before,.tabs-w.ov-r::after{opacity:1}
-.nodo,.signo,.qv,.dc,h2{scroll-margin-top:72px}
-.tabs::-webkit-scrollbar{display:none}
-.tb{flex:0 0 auto;min-height:44px;padding:8px 14px;border:.5px solid var(--border);border-radius:var(--radius);background:var(--surface-1);font-size:13px;white-space:nowrap}
-.tb.on{background:var(--bg-accent);color:var(--text-accent);border-color:var(--border-accent);font-weight:600}
-.tab{display:none}
-.tab.on{display:block}
-.card{background:var(--surface-1);border:.5px solid var(--border);border-radius:12px;padding:12px 14px;margin:10px 0;font-size:13px;line-height:1.5}
-.card p{margin:0 0 8px}
-.mini{font-size:12px;color:var(--text-muted);line-height:1.5;margin:6px 0}
-.hb{border-radius:12px;padding:12px 14px;margin:10px 0;border:.5px solid transparent}
-.hb.az{background:var(--bg-accent);color:var(--text-primary);border-color:var(--border-accent)}
-.hb.am{background:#FAEEDA;color:#854F0B;border-color:#854F0B}
-.hb.ro{background:#FCEBEB;color:#A32D2D;border-color:#A32D2D}
-.hb.ve{background:#EAF3DE;color:#3B6D11;border-color:#3B6D11}
-.hb.am .mini,.hb.ro .mini,.hb.ve .mini{color:inherit;opacity:.85}
-.hb-t{font-weight:600;margin-bottom:4px}
-.pg{margin:0;padding-left:22px}
-.pg li{margin:4px 0}
-.hb.az:has(.pg){margin-bottom:20px}
-.badge{display:inline-block;font-size:11px;line-height:1.4;padding:2px 8px;border-radius:999px;margin:0 4px 4px 0;font-weight:600;vertical-align:middle}
-.b-az{background:var(--bg-accent);color:var(--text-accent)}
-.b-ro{background:#FCEBEB;color:#A32D2D}
-.b-am{background:#FAEEDA;color:#854F0B}
-.b-ve{background:#EAF3DE;color:#3B6D11}
-.b-pu{background:#EEEDFE;color:#534AB7}
-.b-co{background:#FAECE7;color:#993C1D}
-.b-rs{background:#FBEAF0;color:#993556}
-.rem{display:inline-block;font-size:12px;background:#FBEAF0;color:#993556;border-radius:var(--radius);padding:2px 8px;margin:4px 0}
-.fey{background:var(--surface-1);border:.5px solid #993C1D;border-radius:12px;padding:12px 14px;margin:14px 0 22px}
-.fey-t{display:inline-block;font-size:11px;font-weight:600;background:#FAECE7;color:#993C1D;border-radius:999px;padding:2px 8px;margin-bottom:6px}
-.fey-b{margin:0 0 8px}
-.fey-c{margin:2px 0}
-.etapa{background:var(--surface-1);border:.5px solid var(--border);border-radius:12px;padding:12px 14px;margin:12px 0}
-.etapa h3{margin-top:0}
-.res{margin:0 0 10px}
-.perla{border-top:.5px solid var(--border);padding-top:8px;margin:0 0 8px;font-weight:600}
-.perla::before{content:"Perla";display:inline-block;font-size:11px;background:#EAF3DE;color:#3B6D11;border-radius:999px;padding:2px 8px;margin-right:8px;vertical-align:middle}
-.go{min-height:44px;padding:8px 14px;border:.5px solid var(--border-accent);border-radius:var(--radius);background:var(--bg-accent);color:var(--text-accent);font-size:13px}
-.tw{overflow-x:auto;margin:8px 0;-webkit-overflow-scrolling:touch}
-table{border-collapse:collapse;width:100%;font-size:13px;line-height:1.5}
-th,td{border:.5px solid var(--border);padding:6px 8px;text-align:left;vertical-align:top}
-th{background:var(--surface-1);font-weight:600}
-.stats{display:grid;grid-template-columns:1fr;gap:8px;margin:10px 0}
-@media (min-width:600px){.stats{grid-template-columns:repeat(3,1fr)}}
-.stat{background:var(--surface-1);border:.5px solid var(--border);border-radius:12px;padding:10px 12px}
-.stat b{display:block;font-size:20px;line-height:1.3;color:var(--text-accent)}
-.stat span{font-size:12px;color:var(--text-secondary);line-height:1.4;display:block}
-.steps{list-style:none;counter-reset:st;padding:0;margin:8px 0}
-.steps>li{counter-increment:st;position:relative;padding:4px 0 8px 38px}
-.steps>li::before{content:counter(st);position:absolute;left:0;top:2px;width:26px;height:26px;border-radius:50%;background:var(--bg-accent);color:var(--text-accent);font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center}
-.tl{list-style:none;margin:12px 0;padding:0 0 0 18px;border-left:2px solid var(--border-accent)}
-.nodo{position:relative;margin:0 0 14px;padding:10px 12px;background:var(--surface-1);border:.5px solid var(--border);border-radius:12px;font-size:13px;line-height:1.5}
-.nodo::before{content:"";position:absolute;left:-25px;top:14px;width:10px;height:10px;border-radius:50%;background:var(--border-accent)}
-.paso{display:block;font-size:14px;margin-bottom:4px}
-.pn{color:var(--text-accent);margin-right:4px}
-.man{margin:8px 0 0;font-size:12px;color:var(--text-secondary)}
-.signo{background:var(--surface-1);border:.5px solid var(--border);border-radius:12px;padding:12px 14px;margin:10px 0;font-size:13px;line-height:1.5}
-.signo h4{margin:0 0 6px;font-size:14px}
-.signo dl{margin:0}
-.signo dt{font-weight:600;font-size:12px;color:var(--text-secondary);margin-top:6px}
-.signo dd{margin:0}
-.xref{display:inline-flex;align-items:center;min-height:44px;padding:4px 10px;margin:3px 6px 3px 0;border:0;border-radius:var(--radius);background:var(--bg-accent);color:var(--text-accent);font-size:12px;text-align:left}
-p .xref,td .xref,li .xref,dd .xref{display:inline;position:relative;min-height:0;padding:1px 6px;margin:0 2px;line-height:inherit;border-radius:6px;white-space:nowrap}
-p .xref::after,td .xref::after,li .xref::after,dd .xref::after{content:"";position:absolute;left:-4px;right:-4px;top:-12px;bottom:-12px}
-.hl{outline:.5px solid var(--border-accent);background:var(--bg-accent)!important;transition:background .3s}
-.acc{border:.5px solid var(--border);border-radius:12px;margin:10px 0;overflow:hidden}
-.acc-h{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:44px;padding:8px 14px;border:0;background:var(--surface-1);font-weight:600;font-size:13px;text-align:left}
-.chev{transition:transform .2s}
-.acc.op .chev{transform:rotate(180deg)}
-.acc-b{display:none;padding:10px 14px;font-size:13px;line-height:1.5}
-.acc.op .acc-b{display:block}
-.vanc{font-size:12px;line-height:1.5;padding-left:22px}
-.vanc li{margin:4px 0;word-break:break-word}
-.dc{border:1px solid var(--border-accent);border-radius:12px;padding:12px 14px;margin:18px 0;background:var(--surface-0)}
-.dc-t{font-weight:600;color:var(--text-accent);margin-bottom:8px}
-.dc-g{margin:8px 0}
-.dc-l{font-size:12px;color:var(--text-secondary);margin-bottom:4px;display:block}
-.chip{min-height:44px;padding:6px 12px;margin:3px 6px 3px 0;border:.5px solid var(--border);border-radius:var(--radius);background:var(--surface-1);font-size:13px}
-.chip.on{background:var(--bg-accent);color:var(--text-accent);border-color:var(--border-accent);font-weight:600}
-.dc input[type=number]{min-height:44px;width:120px;padding:6px 10px;border:.5px solid var(--border);border-radius:var(--radius);background:var(--surface-1);color:var(--text-primary);font-size:14px}
-.out{margin-top:10px;padding:10px 12px;border-radius:var(--radius);background:var(--surface-1);border:.5px solid var(--border);font-size:13px;line-height:1.55;min-height:44px}
-.tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:999px;background:var(--bg-accent);color:var(--text-accent);margin:4px 4px 0 0}
-.rec-bar{border:1px dashed var(--border-accent);border-radius:12px;padding:12px 14px;margin:12px 0;font-size:13px;line-height:1.5}
-.rec-bar textarea{width:100%;min-height:110px;margin-top:8px;padding:8px 10px;border:.5px solid var(--border);border-radius:var(--radius);background:var(--surface-1);color:var(--text-primary);font:13px/1.5 var(--font-sans);resize:vertical}
-.chip:disabled{cursor:default;opacity:.85}
-.rec-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
-.rec-ctl{display:none;gap:6px;margin-top:6px}
-.recon .rec-ctl{display:flex}
-.recon>*:not(.rec-bar):not(.tl){display:none}
-.recon .nodo:not(.rev) .pt{display:none}
-.recon .nodo:not(.rev) .pn::after{content:" ?"}
-.recon .nodo:not(.rev) .det{display:none}
-.recon .nodo.pis:not(.rev) .det{display:block}
-.recon .nodo.pis:not(.rev) .det>*:not(.man){display:none}
-.recon .nodo:not(.pis):not(.rev) .man{display:none}
-.recon .nodo.rev{border-color:var(--border-accent)}
-.rec-go{margin:18px 0}
-.steps.tg>li{padding-left:38px}
-span.tg{display:inline-block;font:600 11px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;padding:2px 7px;margin:0 6px 2px 0;border-radius:6px;background:var(--surface-1);border:.5px solid var(--border);color:var(--text-secondary);white-space:nowrap;vertical-align:1px}
-span.tg[data-t="clave"]{background:var(--bg-accent);color:var(--text-accent);border-color:var(--border-accent)}
-span.tg[data-t="ok"]{background:#EAF3DE;color:#3B6D11;border-color:#3B6D11}
-span.tg[data-t="cond"]{background:#FAEEDA;color:#854F0B;border-color:#854F0B}
-span.tg[data-t="no"]{background:#FBEAF0;color:#993556;border-color:#993556}
-span.tg[data-t="alarma"]{background:#FCEBEB;color:#A32D2D;border-color:#A32D2D}
-.qv{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:10px 0}
-.qv p{margin:0;padding:8px 10px;border-radius:10px;border:.5px solid var(--border);background:var(--surface-1);font-size:13px;line-height:1.45}
-.qv p::before{display:block;font-size:10px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:2px;color:var(--text-muted)}
-.qv p[data-e="p"]{background:var(--bg-accent);border-color:var(--border-accent)}
-.qv p[data-e="p"]::before{content:"Presente";color:var(--text-accent)}
-.qv p[data-e="v"]::before{content:"Variable"}
-.qv p[data-e="a"]{border:1px dashed var(--border);color:var(--text-muted);background:transparent}
-.qv p[data-e="a"]::before{content:"Ausente"}
-.qv p[data-e="k"]{grid-column:1/-1;border:1.5px solid var(--border-accent);background:var(--bg-accent)}
-.qv p[data-e="k"]::before{content:"Signo clave";color:var(--text-accent)}
-.hb.vi{background:#EEEDFE;color:#534AB7;border-color:#534AB7}
-.hb.vi .mini{color:inherit;opacity:.85}
-table.vis{min-width:620px}
-table.vis td{min-width:140px}
-table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index:1;background:var(--surface-1);min-width:118px;max-width:150px;font-weight:600}
-.vb-bar{border:1px dashed var(--border-accent);border-radius:12px;padding:12px 14px;margin:12px 0;font-size:13px;line-height:1.5}
-.tbl>*:not(.vb-bar):not(.vis-w){display:none}
-.tbl td.tap{cursor:pointer}
-.tbl td.tap:not(.rev){color:transparent;background:repeating-linear-gradient(135deg,var(--surface-1),var(--surface-1) 8px,var(--bg-accent) 8px,var(--bg-accent) 16px)}
-.tbl td.tap:not(.rev) *{visibility:hidden}
-.tbl td.tap.rev{box-shadow:inset 0 0 0 1px var(--border-accent)}
-.cf{display:block;margin-top:8px;padding-top:6px;border-top:.5px dashed var(--border-accent);font-style:italic;color:var(--text-secondary)}
-.cf::before{content:"Contrafactual · ";font-style:normal;font-weight:600;color:var(--text-accent)}
-.fig{margin:12px 0}
-.fig img{display:block;max-width:100%;height:auto;border-radius:var(--radius);border:.5px solid var(--border)}
-.fig figcaption{font-size:12px;color:var(--text-muted);line-height:1.5;margin-top:6px}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-</style>
-</head>
-<body>
-<div class="wrap">
-<!-- /KIT_HEAD -->
-````
-
-## kit_script.html
-
-<!-- ARCHIVO: kit_script.html -->
-````html
-<!-- KIT_SCRIPT -->
-</div>
-<script>
-(function(){
-'use strict';
-var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
-function secK(k){return $('section.tab[data-tab="'+k+'"]')}
-function secOf(el){return el&&el.closest?el.closest('section.tab'):null}
-function nameOf(k){var b=$('button.tb[data-tab="'+k+'"]');return b?b.textContent.replace(/\s+/g,' ').replace(/^\s+|\s+$/g,''):k}
-function btn(t,f,c){var b=document.createElement('button');b.type='button';b.className=c||'chip';b.textContent=t;b.addEventListener('click',f);return b}
-function recon(s,on){if(!s)return;s.classList.toggle('recon',!!on);$$('.nodo',s).forEach(function(n){n.classList.remove('rev');n.classList.remove('pis')});var st=$('.rec-state',s);if(st)st.textContent=on?'Modo reconstrucción activo':'Modo lectura';var a=$('.rec-bar [data-act="rec"]',s);if(a){a.disabled=!!on;a.classList.toggle('on',!!on);a.textContent=on?'Reconstrucción activa':'Activar reconstrucción'}}
-window.recon=function(k,on){recon(secK(k),on)};
-function navOv(){var n=$('nav.tabs');if(!n)return;var sl=n.scrollLeft,mx=n.scrollWidth-n.clientWidth,w=n.parentNode;[n,w].forEach(function(e){if(e===n||e.classList.contains('tabs-w')){e.classList.toggle('ov-l',sl>2);e.classList.toggle('ov-r',sl<mx-2)}})}
-function tabla(on){var t=$('table.vis'),s=secOf(t);if(!s)return;s.classList.toggle('tbl',!!on);$$('td.tap',t).forEach(function(c){c.classList.remove('rev')});var st=$('.vb-state',s);if(st)st.textContent=on?'Tabla tapada: toca cada celda para revelarla':'Modo lectura'}
-window.tabla=tabla;
-window.show=function(k){var ns=secK(k);if(!ns)return;$$('section.tab.on').forEach(function(s){if(s!==ns){if(s.classList.contains('recon'))recon(s,false);if(s.classList.contains('tbl'))tabla(false)}});$$('.tb,.tab').forEach(function(e){e.classList.toggle('on',e.getAttribute('data-tab')===k)});window.scrollTo(0,0);var b=$('.tb.on');if(b&&b.scrollIntoView){try{b.scrollIntoView({inline:'nearest',block:'nearest'})}catch(e){}}navOv()};
-window.ir=function(k,id){var el=document.getElementById(id),s=secOf(el);if(!s)return;var nodo=el.classList.contains('nodo');if(s.classList.contains('recon')&&!nodo)recon(s,false);if(s.classList.contains('tbl')&&!el.closest('.vis-w'))tabla(false);show(s.getAttribute('data-tab'));if(nodo&&s.classList.contains('recon'))el.classList.add('rev');var a=el.closest('.acc');if(a)a.classList.add('op');el.scrollIntoView({block:'start'});el.classList.add('hl');setTimeout(function(){el.classList.remove('hl')},1500)};
-window.tog=function(b){var a=b.closest('.acc');if(a)a.classList.toggle('op')};
-window.sel=function(dc,g){return $$('.chip.on[data-g="'+g+'"]',dc).map(function(c){return c.getAttribute('data-v')})};
-window.num=function(dc,n){var i=$('input[data-n="'+n+'"]',dc);if(!i||i.value==='')return NaN;return parseFloat(String(i.value).replace(',','.'))};
-window.out=function(dc,h){var o=$('.out',dc);if(o)o.innerHTML=h};
-window.rd=function(x,d){var p=Math.pow(10,d||0);return Math.round(x*p)/p};
-function outErr(dc,e){var o=$('.out',dc);if(o)o.textContent='Error de cálculo: '+(e&&e.message?e.message:String(e))}
-function runDc(dc){var fn=window[dc.getAttribute('data-fn')];if(typeof fn==='function'){try{fn(dc)}catch(e){outErr(dc,e)}}}
-window.ch=function(el){var dc=el.closest('.dc');if(!dc)return;if(el.classList.contains('chip')){var g=el.getAttribute('data-g');if(el.getAttribute('data-m')==='1'){el.classList.toggle('on')}else{var was=el.classList.contains('on');$$('.chip[data-g="'+g+'"]',dc).forEach(function(c){c.classList.remove('on')});if(!was)el.classList.add('on')}}runDc(dc)};
-function initNodos(f){var k=f.getAttribute('data-tab');$$('.nodo',f).forEach(function(n,i){var p=document.createElement('b');p.className='paso';var pn=document.createElement('span');pn.className='pn';pn.textContent=(i+1)+' ·';var pt=document.createElement('span');pt.className='pt';pt.textContent=n.getAttribute('data-paso')||'';p.appendChild(pn);p.appendChild(pt);var ra=n.getAttribute('data-rama');if(ra){var b=document.createElement('span');b.className='badge b-az rama';b.textContent=ra;p.appendChild(document.createTextNode(' '));p.appendChild(b)}n.insertBefore(p,n.firstChild);var c=document.createElement('div');c.className='rec-ctl';if($('.man',n))c.appendChild(btn('Pista',function(){n.classList.toggle('pis')}));c.appendChild(btn('Revelar',function(){n.classList.toggle('rev')}));n.appendChild(c)});
-var tl=$('ol.tl',f);if(!tl)return;var bar=document.createElement('div');bar.className='rec-bar';bar.id='rec-bar-'+k;var t=document.createElement('div');t.innerHTML='<b>Timeline en blanco</b> · <span class="rec-state">Modo lectura</span><p class="mini">Reconstruye la cascada sin mirar: escribe cada paso en orden, luego usa Pista (signos que produce) y Revelar nodo por nodo. Nada se guarda.</p>';bar.appendChild(t);var ta=document.createElement('textarea');ta.setAttribute('aria-label','Escribe aquí la cascada en orden');var bs=document.createElement('div');bs.className='rec-btns';var ab=btn('Activar reconstrucción',function(){recon(f,true);ta.focus()});ab.setAttribute('data-act','rec');bs.appendChild(ab);bs.appendChild(btn('Revelar todo',function(){$$('.nodo',f).forEach(function(n){n.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){recon(f,false)}));bar.appendChild(bs);bar.appendChild(ta);tl.parentNode.insertBefore(bar,tl)}
-var TGT={'1.º':'clave','De elección':'clave','Confirma':'ok','Solo si':'cond','Escala':'cond','Reevalúa':'cond','No pidas':'no','Evita':'no','Alarma':'alarma'};
-function initTg(){$$('ol.tg span.tg').forEach(function(s){var v=TGT[s.textContent.replace(/^\s+|\s+$/g,'')];if(v)s.setAttribute('data-t',v)})}
-function initTabla(){var t=$('table.vis'),s=secOf(t);if(!s)return;var w=t.parentNode;if(!w.classList.contains('tw')){w=document.createElement('div');w.className='tw';t.parentNode.insertBefore(w,t);w.appendChild(t)}w.classList.add('vis-w');var rows=$$('tbody tr',t);if(!rows.length)rows=$$('tr',t).slice(1);rows.forEach(function(r){Array.prototype.slice.call(r.children,1).forEach(function(c){c.classList.add('tap');c.addEventListener('click',function(){if(s.classList.contains('tbl'))c.classList.add('rev')})})});
-var bar=document.createElement('div');bar.className='vb-bar';bar.id='vb-bar';var h=document.createElement('div');h.innerHTML='<b>Tabla en blanco</b> · <span class="vb-state">Modo lectura</span><p class="mini">Tapa todas las celdas de las entidades (quedan visibles las cabeceras y los ejes). Di cada celda antes de tocarla; un toque la revela. Nada se guarda.</p>';bar.appendChild(h);var bs=document.createElement('div');bs.className='rec-btns';bs.appendChild(btn('Tapar la tabla',function(){tabla(true)}));bs.appendChild(btn('Revelar todo',function(){$$('td.tap',t).forEach(function(c){c.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){tabla(false)}));bar.appendChild(bs);w.parentNode.insertBefore(bar,w)}
-function initRecGo(){var TL=$$('section.tab').filter(function(s){return!!$('ol.tl',s)}),sin=secK('sin'),dst=sin||secK('seg');if(!dst)return;var ord=sin?TL.filter(function(s,i){return i%2===0}).concat(TL.filter(function(s,i){return i%2===1})):TL;var vt=$('table.vis');if(!ord.length&&!(sin&&vt))return;
-var w=document.createElement('div');w.className='hb az rec-go';w.innerHTML='<div class="hb-t">Antes de cerrar: recupera sin mirar</div><p class="mini">Cada botón te lleva a la función en blanco correspondiente. Intenta la respuesta completa antes de revelar.</p>';var bs=document.createElement('div');bs.className='rec-btns';w.appendChild(bs);
-if(sin&&vt){var vs=secOf(vt),vk=vs.getAttribute('data-tab'),b0=btn('Tabla en blanco — '+nameOf(vk),function(){show(vk);tabla(true);var b=document.getElementById('vb-bar');if(b)b.scrollIntoView({block:'start'})},'go');b0.setAttribute('data-rec',vk);bs.appendChild(b0)}
-ord.forEach(function(s){var k=s.getAttribute('data-tab'),b=btn('Reconstruir la cascada — '+nameOf(k),function(){show(k);recon(s,true);var r=document.getElementById('rec-bar-'+k);if(r)r.scrollIntoView({block:'start'})},'go');b.setAttribute('data-rec',k);bs.appendChild(b)});
-var rf=$('.acc.refs',dst);if(rf)dst.insertBefore(w,rf);else dst.appendChild(w)}
-function init(){var f=$('.tb'),ph=[function(){var n=$('nav.tabs');if(n){var w=document.createElement('div');w.className='tabs-w';n.parentNode.insertBefore(w,n);w.appendChild(n);n.addEventListener('scroll',navOv);window.addEventListener('resize',navOv)}},function(){$$('section.tab').forEach(function(s){if($('ol.tl',s))initNodos(s)})},initTg,initTabla,initRecGo,function(){$$('.dc').forEach(runDc)},function(){show(secK('pan')?'pan':(f?f.getAttribute('data-tab'):''))}];ph.forEach(function(p){try{p()}catch(e){if(window.console)console.error('kit v10:',e)}})}
-if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
-})();
-</script>
-</body>
-</html>
-````
-
-## validar.py
-
-<!-- ARCHIVO: validar.py -->
-````python
 #!/usr/bin/env python3
-"""Validador fijo del widget v10 (mono|multi). Uso: python3 validar.py widget.html [manifiesto.json]"""
+"""Validador fijo del widget v11 (mono|multi). Uso: python3 validar.py widget.html [manifiesto.json]"""
 import sys, re, json, subprocess, tempfile, os, unicodedata
 try:
     from bs4 import BeautifulSoup, Tag
@@ -260,7 +13,8 @@ def _hook(tp, v, tb):
 sys.excepthook = _hook
 P = sys.argv[1]; H = open(P, encoding='utf-8').read(); S = BeautifulSoup(H, 'html.parser')
 E, W = {}, {}
-def err(c, m): E.setdefault(c, []).append(m)
+def err(c, m):
+    if m not in E.setdefault(c, []): E[c].append(m)
 def warn(c, m):
     if m not in W.setdefault(c, []): W[c].append(m)
 CIT = re.compile(r'\[\d+(?:\s*[,–-]\s*\d+)*\]')
@@ -327,9 +81,9 @@ try:
 except FileNotFoundError:
     js_ok = 'validación manual'; warn('js', 'node no disponible')
 os.unlink(jf)
-for fn in ['window.show', 'window.ir', 'window.tog', 'window.ch', 'window.recon', 'window.tabla', 'initNodos', 'initRecGo']:
+for fn in ['window.show', 'window.ir', 'window.tog', 'window.ch']:
     if fn not in scripts: err('kit', f'kit_script incompleto o editado: falta {fn}; reextrae el kit')
-for m in re.finditer(r'(?:function\s+|(?:var|let|const)\s+|window\.)(show|ir|tog|ch|sel|num|out|rd|recon|tabla)\b\s*[=(]', llm_js):
+for m in re.finditer(r'(?:function\s+|(?:var|let|const)\s+|window\.)(show|ir|tog|ch|sel|num|out|rd)\b\s*[=(]', llm_js):
     err('simulador', f'90_sim redefine el nombre reservado "{m.group(1)}": renombra tu función')
 if len(L.find_all('script')) > 1: warn('simulador', 'más de un <script> en las partes: todo en 90_sim.html')
 if re.search(r'\b(VPP|VPN|prevalencia|Bayes|post-?test|pre-?test|Fagan|likelihood)\b', llm_js, re.I): err('simulador', 'simulador con lógica de rendimiento diagnóstico (VPP/VPN/prevalencia/Bayes): elimínala; esas cifras solo se tabulan')
@@ -337,6 +91,8 @@ if re.search(r'\b(VPP|VPN|prevalencia|Bayes|post-?test|pre-?test|Fagan|likelihoo
 for bad in ['localStorage', 'sessionStorage', 'position:fixed', 'position: fixed', '[resto', 'continúa -->', 'TODO:', '<style', '<link', '@import', 'url(', '<iframe', '<object', '<embed', 'src="http', "src='http"]:
     if bad in LLM: err('prohibido', f'cadena prohibida en las partes: «{bad}»')
 if re.search(r'<[a-zA-Z][^>]*\sstyle\s*=', LLM): err('prohibido', 'estilo inline (style="…"): usa solo clases del kit')
+for bad in ('VERIFICAR EN FUENTE', 'Fuente por verificar'):
+    if bad in LLM: err('verificacion', f'{LLM.count(bad)} marca(s) «{bad}»: agota PubMed, Consensus, fichas técnicas y GPC del MSP; si no se confirma, elimina el dato')
 if '@@TITULO@@' in H: err('prohibido', 'título sin sustituir: sed "s/@@TITULO@@/<Tema>/"')
 LT = BeautifulSoup(LLM, 'html.parser')
 for t in LT(['script', 'style']): t.decompose()
@@ -516,7 +272,7 @@ if MODE == 'mono' and 'fis' in secs and not secs['fis'].select('ol.tl'): err('ti
 for n in nodos:
     i = n.get('id')
     if n.get('data-clin') not in ('0', '1'): err('nodos', f'{i}: data-clin="0|1"')
-    if not n.get('data-paso'): err('nodos', f'{i}: data-paso ausente (≤8 palabras, lo usa la timeline en blanco)')
+    if not n.get('data-paso'): err('nodos', f'{i}: data-paso ausente (≤8 palabras, frase del ejercicio Ordenar)')
     if not n.select_one('.det'): err('nodos', f'{i}: falta div.det')
     if n.select('.paso'): err('nodos', f'{i}: no escribas .paso; lo genera el kit')
     if n.select('.nodo'): err('nodos', f'{i}: nodo anidado (timeline plana; usa data-rama)')
@@ -568,6 +324,9 @@ for o in S.select('ol.tg'):
         if not (isinstance(first, Tag) and first.name == 'span' and 'tg' in (first.get('class') or [])):
             err('pasos', f'{lab}: cada <li> empieza por <span class="tg">…</span> sin texto previo'); continue
         t = txt(first); got.append(t)
+        dp = (li.get('data-paso') or '').strip()
+        if not dp: err('pasos', f'{lab}: <li> sin data-paso (frase clave ≤10 palabras para Ordenar)')
+        elif words(dp) > 10: err('pasos', f'{lab}: data-paso de {words(dp)} palabras (≤10): «{dp[:40]}»')
         if t in V: pass
         elif t in O: err('pasos', f'{lab}: «{t}» es etiqueta {"tx" if ctx == "dx" else "dx"}; aquí: {" · ".join(V)}')
         elif nz(t) in {nz(v) for v in V}:
@@ -603,7 +362,6 @@ for h in S.select('.hb.vi'):
     if p and not p[0].select('b,strong'): warn('discrepancia', 'hb vi: la regla correcta va en <b>')
 # --- vis y sin (multi)
 POS = {id(t): i for i, t in enumerate(S.find_all(True))}
-VIS9 = ['Falla central', 'Terreno típico', 'Inicio y curso', 'Síntoma compartido aquí', 'Signo que la delata', 'Negativo pertinente', 'Prueba que decide', 'Conducta inicial y quién maneja', 'Amenaza si se pierde']
 if MODE == 'multi' and 'vis' in secs:
     v = secs['vis']; tv = v.select('table.vis')
     if len(tv) != 1: err('vis', f'vis: {len(tv)} table.vis (exactamente 1)')
@@ -614,14 +372,18 @@ if MODE == 'multi' and 'vis' in secs:
         exh = [name.get(k) for k in ENT]
         if hc[1:] != exh: err('vis', f'vis: cabeceras {hc[1:]} → textos de los botones {exh} (primera celda libre)')
         rows = t.select('tbody > tr') or tr[1:]
-        lab = [txt(r.find(['th', 'td'])) for r in rows]
-        if lab != VIS9: err('vis', f'vis: filas {lab} → exactamente, en orden: {" · ".join(VIS9)}')
+        if len(rows) != 9: err('vis', f'vis: {len(rows)} filas (las 9 del contrato, como preguntas)')
         for r in rows:
             cs = r.find_all(['th', 'td'])
+            th0 = r.find('th')
+            q, qx = (th0.select_one('span.q'), th0.select_one('span.qx')) if th0 and th0.parent is r else (None, None)
+            if not q or not qx or not txt(qx): err('vis', f'vis: fila «{txt(cs[0])[:30] if cs else ""}»: th debe llevar span.q (pregunta) y span.qx (qué se busca)')
+            elif not txt(q).rstrip().endswith('?'): err('vis', f'vis: pregunta «{txt(q)[:40]}» debe terminar en «?»')
+            elif words(txt(qx)) > 15: warn('vis', f'vis: span.qx de {words(txt(qx))} palabras (≤15)')
             if len(cs) != N + 1: err('vis', f'vis: fila «{txt(cs[0]) if cs else ""}» con {len(cs)} celdas (N+1 = {N + 1})')
             for c in cs[1:]:
-                if not txt(c): err('vis', f'vis: celda vacía en «{txt(cs[0])}»')
-                elif words(txt(c)) > 12: warn('vis', f'vis: celda de {words(txt(c))} palabras en «{txt(cs[0])}» (≤12)')
+                if not txt(c): err('vis', f'vis: celda vacía en «{txt(cs[0])[:30]}»')
+                elif words(txt(c)) > 12: warn('vis', f'vis: celda de {words(txt(c))} palabras en «{txt(cs[0])[:30]}» (≤12)')
     ro = v.select('.hb.ro')
     if not ro: err('vis', 'vis: falta hb ro (banderas rojas)')
     seqv = [v.select_one(x) for x in ('table.vis', '.hb.ro', 'ol.steps.tg', '.dc')]
@@ -683,11 +445,47 @@ for k in CONT:
     if WC[k] > lim: warn('palabras', f'{k}: {WC[k]} palabras (>{lim}): lo común va una vez en vis; recorta repeticiones')
     if MODE == 'multi' and k in ENT and k != 'e1' and WC.get('e1') and WC[k] > 0.8 * WC['e1']: warn('palabras', f'{k}: {WC[k]} palabras >80 % de e1 ({WC["e1"]}): la secundaria es delta, no monografía')
 # --- clases
-css = ' '.join(s.string or '' for s in S.find_all('style'))
+_here = os.path.dirname(os.path.abspath(__file__))
+_hp = next((q for q in (os.path.join(_here, 'head.html'), os.path.join(_here, '..', 'kit_head.html')) if os.path.exists(q)), None)
+css = open(_hp, encoding='utf-8').read() if _hp else ' '.join(s.string or '' for s in S.find_all('style'))
 known = set(re.findall(r'\.([a-zA-Z][\w-]*)', css)) | {'rama', 'refs'}
+# contrato §10 (por si head.html aún no las trae) y clases generadas por el script
+known |= {'nucleo', 'nucleo-t', 'perla', 'perla-t', 'q', 'qx', 'ord', 'ord-bank', 'ord-slots', 'ord-chip', 'ord-slot', 'ord-ok', 'ord-ko', 'ord-btns', 'side', 'bottom', 'perla-filtro'}
 for t in L.find_all(class_=True):
     for c in t['class']:
         if c not in known: warn('clases', f'.{c} sin CSS en el kit')
+# --- v11: núcleo, perlas, diagramas, tablas
+VALEX = {'puce', 'caces', 'usmle1', 'usmle2', 'mir', 'enarm'}
+for k in CONT:
+    if MODE == 'multi' and k == 'sin': continue
+    s = secs[k]; nus = s.select('div.nucleo')
+    if len(nus) != 1: err('nucleo', f'{k}: {len(nus)} div.nucleo (exactamente 1, tras las preguntas guía)')
+    else:
+        nu_ = nus[0]; kk = kids(nu_); ul = [c for c in kk if c.name == 'ul']
+        if not (nu_.parent is s or top_of(nu_, s) is not None): pass
+        if not kk or kk[0].name != 'div' or 'nucleo-t' not in (kk[0].get('class') or []) or len(ul) != 1 or len(kk) != 2:
+            err('nucleo', f'{k}: estructura <div class="nucleo"><div class="nucleo-t">Núcleo</div><ul><li>…</li></ul></div>')
+        else:
+            lis = ul[0].find_all('li', recursive=False)
+            if not 3 <= len(lis) <= 5: err('nucleo', f'{k}: núcleo con {len(lis)} ideas (3–5)')
+            for li in lis:
+                if words(txt(li)) > 35: warn('nucleo', f'{k}: idea del núcleo de {words(txt(li))} palabras (≤35): «{txt(li)[:30]}…»')
+        pgs_ = s.select('ol.pg')
+        if pgs_ and POS[id(nu_)] < POS[id(pgs_[0])]: err('nucleo', f'{k}: el núcleo va después de la caja de preguntas guía')
+    if not s.select('aside.perla'): warn('perlas', f'{k}: sin ninguna perla de examen (aside.perla)')
+for i, a in enumerate(S.select('aside.perla'), 1):
+    k = (a.find_parent('section', class_='tab') or {}).get('data-tab')
+    codes = (a.get('data-ex') or '').split()
+    if not codes: err('perlas', f'{k}: perla {i} sin data-ex'); 
+    elif not set(codes) <= VALEX: err('perlas', f'{k}: perla {i}: data-ex {codes} fuera de {sorted(VALEX)}')
+    if not a.select_one('div.perla-t'): err('perlas', f'{k}: perla {i} sin div.perla-t')
+    if not a.find('p'): err('perlas', f'{k}: perla {i} sin <p> con el dato')
+for i, f in enumerate(S.select('figure.dg'), 1):
+    if not (f.select_one('.dg-t') and f.select_one('.dg-row') and f.find('figcaption')): err('diagramas', f'figure.dg #{i}: falta dg-t, dg-row o figcaption')
+for tb in S.select('table'):
+    hs = [txt(h) for h in tb.select('thead th')] or [txt(h) for h in (tb.find('tr') or tb).find_all('th')]
+    if hs and hs[0].startswith('Sección del DSM-5-TR'): err('tablas', 'tabla-índice «Sección del DSM-5-TR» prohibida (v11 las quita)')
+    if hs and hs[0] == 'Fármaco' and 'Mecanismo de acción' not in hs: err('farmacos', 'tabla de fármacos sin columna «Mecanismo de acción»: ' + ' · '.join(hs))
 # --- manifiesto
 if MODE == 'mono':
     cnt = {'tabs': tbs, 'pg': {k: len(secs[k].select('ol.pg > li')) for k in CONT if secs[k].select('ol.pg > li')}, 'fey': {k: len(secs[k].select('.fey')) for k in CONT if secs[k].select('.fey')},
@@ -697,10 +495,10 @@ else:
            'fey': {k: len(secs[k].select('.fey')) for k in CONT if secs[k].select('.fey')}, 'nodos': {k: len(secs[k].select('.nodo')) for k in ENT if k in secs},
            'signos': {k: len(secs[k].select('.signo')) for k in ENT if k in secs}, 'dc': DCT}
 if M is not None:
-    ALL = ['modo', 'entidades', 'principal', 'amenaza', 'tabs', 'pg', 'fey', 'nodos', 'signos', 'dc', 'nucleo']
+    ALL = ['modo', 'entidades', 'principal', 'amenaza', 'tabs', 'pg', 'fey', 'nodos', 'signos', 'dc', 'nucleo', 'dg', 'tema']
     for key in M:
-        if key not in ALL: err('manifiesto', f'clave desconocida "{key}" (permitidas: {", ".join(ALL)})')
-    req = ALL if MODE == 'multi' else ['tabs', 'pg', 'fey', 'nodos', 'signos', 'dc']
+        if key not in ALL and key not in ('titulo', 'salida', 'tipo'): err('manifiesto', f'clave desconocida "{key}" (permitidas: {", ".join(ALL)})')
+    req = [x for x in ALL if x not in ('dg', 'tema')] if MODE == 'multi' else ['tabs', 'pg', 'fey', 'nodos', 'signos', 'dc']
     for key in req:
         if key not in M: err('manifiesto', f'falta la clave "{key}"')
     if MODE == 'mono' and 'nucleo' not in M: warn('manifiesto', 'falta "nucleo" (lista ≤12)')
@@ -709,6 +507,10 @@ if M is not None:
             for k in M[key]:
                 if k not in CONT: err('manifiesto', f'{key}: clave "{k}" no es pestaña de contenido ({", ".join(CONT)})')
             if {k: v for k, v in M[key].items() if v != 0} == {k: v for k, v in cnt[key].items() if v}: M[key] = cnt[key]
+    # v10.2 (manifiesto con "dg"): diagramas por pestaña, columna de mecanismo de acción y cero marcas de verificación
+    TEMAS = ['ginecologia', 'salud-mental', 'digestivo', 'urologia', 'pediatria-ortopedia']
+    if M.get('tema') is not None and M['tema'] not in TEMAS: warn('manifiesto', f'"tema":"{M["tema"]}" no tiene acento propio ({", ".join(TEMAS)}): usará azul')
+    if M.get('tema') is None: warn('manifiesto', 'falta "tema" (acento del widget)')
     for key, v in cnt.items():
         if key in M and M[key] != v: err('manifiesto', f'{key}: manifiesto {json.dumps(M[key], ensure_ascii=False)} ≠ HTML {json.dumps(v, ensure_ascii=False)}')
     if MODE == 'multi':
@@ -732,6 +534,7 @@ if M is not None:
                         for x in lst:
                             if nz(str(x)) not in nz(hay(secs.get(k, S)) + ' ' + hay(secs.get('vis', S))): warn('nucleo', f'{k}: «{x}» no aparece en {k} ni en vis')
 # --- salida (≤25 líneas)
+cnt.pop('dg', None)
 print(json.dumps(cnt, ensure_ascii=False, separators=(',', ':'))[:400])
 ne, nw = sum(map(len, E.values())), sum(map(len, W.values()))
 def cut(s, n=400): return s if len(s) <= n else s[:n - 1] + '…'
@@ -743,4 +546,3 @@ if len(out) > 23: out = out[:22] + [f'… {len(out) - 22} líneas más omitidas 
 for x in out: print(x)
 print(f'RESULTADO: {"OK" if not E else "FALLA"} · errores {ne} · avisos {nw} · JS {js_ok} · modo {MODE}')
 sys.exit(1 if E else 0)
-````

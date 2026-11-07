@@ -31,7 +31,7 @@ El widget **abre** el caso: no lo cierra. Prohibido en todas las pestañas: plan
 
 ## JERARQUÍA DE PRECEDENCIA
 
-1. **Veracidad.** Igual que definiciones v5.1. Toda cifra con cita `[n]` o marcada `[VERIFICAR EN FUENTE]`; definiciones y bloques con badge púrpura de fuente o ámbar «Fuente por verificar».
+1. **Veracidad.** Igual que definiciones v5.1. Toda cifra con cita `[n]` confirmada; definiciones y bloques con badge púrpura de fuente. Cero marcas: lo que no se confirme tras agotar las fuentes (`fuentes/protocolo_verificacion.md`) se elimina; no existe badge «Fuente por verificar» ni `[VERIFICAR EN FUENTE]`.
 2. **Fidelidad al caso.** Ningún problema, dato ni hallazgo se inventa. Lo que el caso no dice (examen físico, laboratorio, fracción de eyección) se declara como **dato faltante**, nunca se supone. Las incongruencias del caso (p. ej. «una semana» frente a «dos semanas») se señalan en `.mini.am`.
 3. **Regla de alcance** (abajo).
 4. **Fuente única** de prerrequisitos y de fisiopatología: un mecanismo se desarrolla una vez; en el resto, remisión.
@@ -121,7 +121,7 @@ Motor único de v5.1 (`DECKS`, `TERMS`, `RC`, `rc_*`). `DECKS` tiene una clave p
 
 ## CONSTRUCCIÓN
 
-- Tipo `apertura` en `kit/construir.py`: cabecera `kit/apertura_head.html` (def_head + clases de apertura) y validador `kit/validar_apertura.py` guiado por el manifiesto.
+- Tipo `apertura` en `kit/construir.py`: cabecera `kit/apertura_head.html` (def_head + clases de apertura). Diseño v11: los widgets nuevos usarán `kit/v11/apertura_head.html` (restilizada: estilo app, fuente del sistema, acento por tema) cuando exista; hasta entonces, la actual y validador `kit/validar_apertura.py` guiado por el manifiesto.
 - Partes: `p01_nav` `p05_c0` `p10_t1`…`p90_t9` `p91_pb` `p92_jq` `p93_hx` `p95_tg` `p96_js`.
 - `manifiesto.json`: `titulo`, `salida`, `tipo: "apertura"`, `terminos` (n), `problemas` (`{"B":n,"P":n,"S":n,"FR":n}`), `hipotesis` (n), `diagramas` (mínimo).
 - Pruebas: `node kit/probar_definiciones.js <url> <capturas>` (recorre todas las pestañas y mazos).

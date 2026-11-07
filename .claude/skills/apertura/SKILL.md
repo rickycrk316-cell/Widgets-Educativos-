@@ -5,7 +5,11 @@ description: Apertura del ABP en un solo widget HTML (evoluciona la skill defini
 
 # Apertura ABP (v1)
 
-El contrato completo está en `fuentes/skill_apertura_v1.md`; donde no diga nada, manda `fuentes/skill_definiciones_v5.1.md`. Léelos por secciones.
+El contrato completo está en `fuentes/skill_apertura_v1.md`; donde no diga nada, manda `fuentes/skill_definiciones_v5.1.md` (y `.claude/skills/definiciones/SKILL.md`). Léelos por secciones.
+
+**Cero marcas.** Ni `[VERIFICAR EN FUENTE]` ni badge «Fuente por verificar»: se agotan PubMed, Consensus, fichas técnicas, GPC del MSP y web (`fuentes/protocolo_verificacion.md`) y lo no confirmado se elimina.
+
+**Diseño v11.** Los widgets nuevos usarán `kit/v11/apertura_head.html` (restilizada: estilo app, fuente del sistema, acento por tema; `docs/DESIGN.md`) cuando exista; hasta entonces se usa `kit/apertura_head.html`. Las clases no cambian y los widgets ya hechos no se tocan.
 
 ## Flujo
 

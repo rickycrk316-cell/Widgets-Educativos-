@@ -1,10 +1,10 @@
 # Widgets educativos · Quirúrgica 2 (PUCE, 10.º nivel)
 
-Widgets HTML de estudio, autocontenidos y offline (skill `widget-ensenanza` v10.2 en `.claude/skills/`, kit «Vademécum»). Se adaptan a iPhone (tablas en fichas, diagramas en vertical), iPad y Mac (página ancha y dos columnas). Abre el `.html` de cada tema en el navegador o en Archivos del iPad.
+Widgets HTML de estudio, autocontenidos y offline. Los nuevos siguen **v11** (`docs/DECISIONES_v11.md`, skill `widget-ensenanza` en `.claude/skills/`, kit `kit/v11/`): regla 20/80 (núcleo arriba, detalle debajo), perlas de examen (PUCE, CACES, USMLE 1/2, MIR, ENARM), ordenar pasos como recuerdo activo, estilo app con acento por tema, barra inferior en iPhone y menú lateral en iPad y Mac. Los widgets anteriores son v10.2 (kit «Vademécum», legado) y no se tocan. Abre el `.html` de cada tema en el navegador o en Archivos del iPad.
 
 ## Widgets
 
-| Tema | Widget (HTML) | Modo | Entidades | `[VERIFICAR]` |
+| Tema | Widget (HTML) | Modo | Entidades | Marcas pendientes (legado) |
 |---|---|---|---|---|
 | Dolor abdominal | `Abdomen_agudo_quirurgico_widget_v10.html` | multi | apendicitis (principal), obstrucción, perforación, isquemia mesentérica, AAA roto (amenaza) | 42 |
 | | `Dolor_biliopancreatico_widget_v10.html` | multi | colelitiasis/colecistitis (principal), coledocolitiasis, colangitis (amenaza), pancreatitis | 85 |
@@ -23,9 +23,9 @@ Widgets HTML de estudio, autocontenidos y offline (skill `widget-ensenanza` v10.
 | Trastornos del ánimo | `Crisis_de_angustia_widget_v10.html` | multi | trastorno de pánico (principal), ansiedad generalizada, depresión mayor, consumo de benzodiacepinas, síndrome coronario agudo (amenaza) | 0 |
 | | `Apertura_trastornos_animo.html` | apertura | caso + 9 términos, 12 problemas (B, P, S, FR), jerarquización, 4 hipótesis, repaso | 1 (composición de Stresstabs) |
 | | `Depresion_bipolar_suicidio_widget_v10.html` | multi | depresión mayor (principal), trastorno bipolar, conducta suicida (amenaza) · esquema DSM-5-TR por entidad · v10.2: 12 diagramas, mecanismo de acción, adaptable | 0 |
-| Ginecología (fuera de sílabo) | `Ciclo_ovarico_menopausia_TH_widget_v10.html` | mono | menopausia y terapia hormonal + pestaña «Ciclo ovárico y cuerpo albo» | 89 |
+| Ginecología (fuera de sílabo) | `Ciclo_ovarico_menopausia_TH_widget_v10.html` | v11 (piloto, en migración) · mono | menopausia y terapia hormonal + pestaña «Ciclo ovárico y cuerpo albo» | 89 |
 
-`[VERIFICAR]` = datos marcados `[VERIFICAR EN FUENTE]`: compruébalos antes de estudiar con ellos.
+«Marcas pendientes (legado)» = datos marcados `[VERIFICAR EN FUENTE]` en widgets v10.2 anteriores a la regla de cero marcas: compruébalos antes de estudiar con ellos. Los widgets v11 y las definiciones/aperturas nuevas no llevan marcas: lo no confirmado se elimina.
 
 ## Estructura
 
@@ -33,18 +33,21 @@ Widgets HTML de estudio, autocontenidos y offline (skill `widget-ensenanza` v10.
 widgets/<tema>/PLAN.md          partición del caso en widgets y decisión del router
 widgets/<tema>/*.html           widgets finales (generados: no editar a mano)
 widgets/<tema>/<id>/            partes numeradas + manifiesto.json (aquí se edita)
-kit/                            kit fijo, ensamblador y validadores
-.claude/skills/impeccable/      revisión opcional (audit, polish, clarify)
-fuentes/                        sílabos (dos rotaciones), kit v10 original, contratos de las skills, casos
-docs/                           PRODUCT.md (propósito) y DESIGN.md (sistema visual)
+kit/v11/                        kit v11: cabecera, script, validador y prueba de navegador
+kit/                            kit v10.2 (legado), ensamblador construir.py y validadores
+.claude/skills/                 widget-ensenanza (v11), definiciones, apertura, impeccable (revisión opcional)
+fuentes/                        sílabos (dos rotaciones), contratos de definiciones y apertura, protocolo de verificación, casos
+docs/                           DECISIONES_v11.md (fuente de verdad), PRODUCT.md (propósito), DESIGN.md (sistema visual)
 ```
 
 ## Reconstruir y validar
 
 ```sh
-python3 kit/construir.py                          # todos
-python3 kit/construir.py widgets/disbasia/sin_dolor
-node kit/probar_navegador.js file://$PWD/widgets/<tema>/<widget>.html /tmp/capturas
+python3 kit/construir.py                          # todos (elige el kit por "tipo" del manifiesto)
+python3 kit/construir.py widgets/ginecologia/menopausia_th
+python3 kit/renumerar.py widgets/<tema>/<id>      # citas Vancouver por primera aparición
+node kit/v11/probar.js file://$PWD/widgets/<tema>/<widget>.html /tmp/capturas        # widgets v11
+node kit/probar_navegador.js file://$PWD/widgets/<tema>/<widget>.html /tmp/capturas  # legado multi/mono
 ```
 
-Requiere `python3` con `beautifulsoup4` (se instala solo) y `node`. Las pruebas de navegador usan Playwright con el Chromium de `/opt/pw-browsers`.
+Requiere `python3` con `beautifulsoup4` (se instala solo) y `node` (`cd kit && npm ci` una vez). Las pruebas de navegador usan Playwright con el Chromium de `/opt/pw-browsers`.
