@@ -1,6 +1,6 @@
 {
  "titulo": "Ciclo ovárico, cuerpo albo y terapia hormonal",
- "salida": "../Ciclo_ovarico_menopausia_TH_widget_v10.html",
+ "salida": "../Ciclo_ovarico_menopausia_TH_widget_v11.html",
  "modo": "mono",
  "tabs": [
   "pan",
@@ -51,5 +51,7 @@
   "Estrógeno solo en mujer con útero",
   "Sangrado posmenopáusico: ecografía transvaginal y estudio del endometrio",
   "una cicatriz hialina, pálida y avascular, formada por colágeno denso y restos de células luteínicas, sin función endocrina"
- ]
+ ],
+ "tipo": "v11",
+ "tema": "ginecologia"
 }
