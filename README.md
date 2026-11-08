@@ -23,7 +23,7 @@ Widgets HTML de estudio, autocontenidos y offline. Los nuevos siguen **v11** (`d
 | Trastornos del ánimo | `Crisis_de_angustia_widget_v10.html` | multi | trastorno de pánico (principal), ansiedad generalizada, depresión mayor, consumo de benzodiacepinas, síndrome coronario agudo (amenaza) | 0 |
 | | `Apertura_trastornos_animo.html` | apertura | caso + 9 términos, 12 problemas (B, P, S, FR), jerarquización, 4 hipótesis, repaso | 1 (composición de Stresstabs) |
 | | `Depresion_bipolar_suicidio_widget_v10.html` | multi | depresión mayor (principal), trastorno bipolar, conducta suicida (amenaza) · esquema DSM-5-TR por entidad · v10.2: 12 diagramas, mecanismo de acción, adaptable | 0 |
-| Ginecología (fuera de sílabo) | `Ciclo_ovarico_menopausia_TH_widget_v10.html` | v11 (piloto, en migración) · mono | menopausia y terapia hormonal + pestaña «Ciclo ovárico y cuerpo albo» | 89 |
+| Ginecología (sin sílabo) | `Ciclo_ovarico_menopausia_TH_widget_v11.html` | v11 · mono (piloto) | menopausia y terapia hormonal + pestaña «Ciclo ovárico y cuerpo albo»: núcleo por pestaña, perlas por examen, ordenar pasos | 0 |
 
 «Marcas pendientes (legado)» = datos marcados `[VERIFICAR EN FUENTE]` en widgets v10.2 anteriores a la regla de cero marcas: compruébalos antes de estudiar con ellos. Los widgets v11 y las definiciones/aperturas nuevas no llevan marcas: lo no confirmado se elimina.
 
