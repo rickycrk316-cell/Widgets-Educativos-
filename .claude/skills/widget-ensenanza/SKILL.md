@@ -257,6 +257,8 @@ Segmento 1 sin tratamiento, pronóstico ni plan diagnóstico. Segmento 2 · Epid
 
 ## 10 · Fuentes y Vancouver
 
+- **Hipervínculos (v11):** cada `li` de `ol.vanc` lleva, cuando existan, `doi:…`, `PMID: n`, `Setid <id>` (DailyMed) o `Disponible en: <URL>`; el script del kit los convierte en enlaces a la página de la fuente (doi.org, PubMed, DailyMed, URL). Sin identificador (libros), enlace a búsqueda en Google Académico. No escribas `<a>` en las partes.
+
 - Badge `b-pu` con guía, sociedad y año en cada pestaña de contenido (salvo `sin`); `(solo resumen)` si no leíste más. Cita la edición realmente leída; nunca una no verificada.
 - `[n]` en diagnósticos, dosis, umbrales, algoritmos y cifras, numerados por **primera aparición** recorriendo las pestañas en orden de barra; `pan` reutiliza esos números. Tras editar referencias, ejecuta `kit/renumerar.py` para renumerar.
 - `.acc.refs` con `ol.vanc`, Vancouver estricto; nivel de evidencia si la guía lo da; distingue guía, consenso, revisión o ensayo.

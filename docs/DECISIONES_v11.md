@@ -50,6 +50,7 @@ Solo donde aclaran más que el texto (sin mínimos por pestaña). Mismo vocabula
 - Columna **«Mecanismo de acción»** en toda tabla de fármacos (`Fármaco · Mecanismo de acción · Dosis · Vía · Frecuencia · Duración · Notas/ajustes · Ref.`).
 - **Cero `[VERIFICAR EN FUENTE]`**: se agotan PubMed, Consensus, fichas técnicas (DailyMed, CIMA-AEMPS, EMA, ARCSA), GPC y lineamientos del MSP (www.salud.gob.ec) y web; lo que no se confirme se elimina (`fuentes/protocolo_verificacion.md`). Rige también para definiciones y apertura (sin badge «Fuente por verificar»).
 - **Citas Vancouver numeradas** por primera aparición (`kit/renumerar.py`).
+- **Referencias con hipervínculos**: cada referencia de `ol.vanc` enlaza a la página de la fuente usada (DOI → doi.org, PMID → PubMed, ficha → DailyMed por su Setid, guía o web → su URL). El script del kit v11 genera los botones a partir del texto Vancouver; por eso cada referencia debe llevar su DOI, PMID, Setid o «Disponible en: URL» cuando existan. Sin identificador (libros), el kit enlaza a una búsqueda en Google Académico.
 
 ## 8 · Diseño (UI)
 

@@ -124,7 +124,14 @@ done=false;sel=null;box.classList.remove('done');rev.disabled=false;slots.forEac
 }
 
 /* ---------- Arranque ---------- */
-function init(){var f=$('.tb'),ph=[function(){$$('section.tab').forEach(initNodos)},initTg,initStk,initOrd,initPerlas,buildNav,function(){setEx('')},function(){$$('.dc').forEach(runDc)},function(){show(secK('pan')?'pan':(f?f.getAttribute('data-tab'):''))}];ph.forEach(function(p){try{p()}catch(e){if(window.console)console.error('kit v11:',e)}})}
+function initRefs(){$$('ol.vanc > li').forEach(function(li){if($('.ref-links',li))return;var x=li.textContent,L=[],seen={};function add(u,l){if(seen[u])return;seen[u]=1;L.push([u,l])}
+var m,re1=/https?:\/\/[^\s<>"\]]+[^\s<>"\].,;)]/g;while((m=re1.exec(x)))add(m[0],/dailymed/.test(m[0])?'DailyMed':/salud\.gob\.ec/.test(m[0])?'MSP':/nice\.org\.uk/.test(m[0])?'NICE':'Página');
+var d=x.match(/\b(10\.\d{4,9}\/[^\s<>"]+?)(?=[.,;]?(\s|$|\[))/i);if(d)add('https://doi.org/'+d[1],'DOI');
+var p=x.match(/PMID:?\s*(\d{6,9})/i);if(p)add('https://pubmed.ncbi.nlm.nih.gov/'+p[1]+'/','PubMed');
+var sid=x.match(/Setid\s+([0-9a-f-]{36})/i);if(sid)add('https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid='+sid[1],'DailyMed');
+if(!L.length){var q=x.replace(/\[[^\]]*\]/g,'').replace(/\s+/g,' ').trim().slice(0,180);add('https://scholar.google.com/scholar?q='+encodeURIComponent(q),'Buscar en Google Académico')}
+var w=mk('span','ref-links');L.forEach(function(e){var a=document.createElement('a');a.href=e[0];a.target='_blank';a.rel='noopener noreferrer';a.textContent=e[1];w.appendChild(a)});li.appendChild(w)})}
+function init(){var f=$('.tb'),ph=[function(){$$('section.tab').forEach(initNodos)},initTg,initStk,initOrd,initPerlas,initRefs,buildNav,function(){setEx('')},function(){$$('.dc').forEach(runDc)},function(){show(secK('pan')?'pan':(f?f.getAttribute('data-tab'):''))}];ph.forEach(function(p){try{p()}catch(e){if(window.console)console.error('kit v11:',e)}})}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
 </script>
