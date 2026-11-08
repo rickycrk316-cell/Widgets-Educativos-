@@ -66,28 +66,28 @@ function dcDx(dc){
   var ac=ot.indexOf('ac')>=0, sg=ot.indexOf('sg')>=0, vm=sx.indexOf('vm')>=0, gu=sx.indexOf('gu')>=0, h='';
   if(!a&&!sg){out(dc,'<p>Elige la edad (y, si la hay, la histerectomía o el patrón menstrual) para ver el estadio probable y si conviene medir FSH.</p>');return;}
   if(sg){
-    h='<p><b>Alarma:</b> sangrado posmenopáusico. Pide ecografía transvaginal y estudia el endometrio: con 4 mm o menos el cáncer es muy improbable y con más de 4 mm se muestrea el endometrio [11]. No lo atribuyas a la terapia hormonal sin evaluarlo [11].</p>'
-     +'<span class="cf">Si el endometrio midiera más de 4 mm o el sangrado persistiera → biopsia de endometrio [11] [VERIFICAR EN FUENTE].</span>';
+    h='<p><b>Alarma:</b> sangrado posmenopáusico. Pide ecografía transvaginal y estudia el endometrio: con 4 mm o menos el cáncer es muy improbable [11]. No lo atribuyas a la terapia hormonal sin evaluarlo [11].</p>'
+     +'<span class="cf">Si el sangrado persistiera → histeroscopia o muestreo endometrial [11].</span>';
     out(dc,h);return;
   }
   var est;
   if(u==='no'){
-    est='<p><b>Sin útero no hay patrón menstrual que contar:</b> el estadio no se asigna por la menstruación. El diagnóstico se apoya en la edad y en los síntomas vasomotores y genitourinarios, y los ovarios conservados pueden seguir funcionando [7] [VERIFICAR EN FUENTE].</p>';
+    est='<p><b>Sin útero no hay patrón menstrual que contar:</b> el estadio no se asigna por la menstruación [2]. El diagnóstico se apoya en la edad y en los síntomas vasomotores y genitourinarios.</p>';
   } else if(!p){
     est='<p>Indica el patrón menstrual para ubicar el estadio STRAW+10 [2].</p>';
   } else if(p==='reg'){
-    est='<p><b>Estadio probable:</b> fase reproductiva (−5 a −3) [2] [VERIFICAR EN FUENTE]. Ciclos regulares no son transición; si hay bochornos, busca otra causa [VERIFICAR EN FUENTE].</p>';
+    est='<p><b>Estadio probable:</b> fase reproductiva (−3 o anterior) [2]. Ciclos regulares no definen la transición [2].</p>';
   } else if(p==='var'){
-    est='<p><b>Estadio probable:</b> transición menopáusica temprana (−2) [2] [VERIFICAR EN FUENTE]. Aún es posible el embarazo.</p>';
+    est='<p><b>Estadio probable:</b> transición menopáusica temprana (−2) [2]. Aún es posible el embarazo.</p>';
   } else if(p==='a60'){
-    est='<p><b>Estadio probable:</b> transición menopáusica tardía (−1) [2] [VERIFICAR EN FUENTE].</p>';
+    est='<p><b>Estadio probable:</b> transición menopáusica tardía (−1) [2].</p>';
   } else {
-    est='<p><b>Estadio probable:</b> posmenopausia temprana (+1a): la menopausia se confirma tras 12 meses de amenorrea, de forma retrospectiva [2] [VERIFICAR EN FUENTE].</p>';
+    est='<p><b>Estadio probable:</b> posmenopausia temprana (+1): la menopausia se fecha de forma retrospectiva, a partir de la última menstruación [2].</p>';
   }
   h=est;
   if(a==='m40'){
     h+='<p><b>FSH:</b> sí, mídela. Por debajo de 40 años con síntomas o cambio del ciclo se sospecha insuficiencia ovárica prematura [7] [3]. Confirma con FSH elevada: una medición mayor de 25 UI/L para ESHRE o dos con 4 a 6 semanas de separación para NICE; las guías difieren [3] [7].</p>'
-     +'<p>Descarta también embarazo, tiroides y prolactina [VERIFICAR EN FUENTE].</p>';
+     +'<p>Descarta también embarazo, tiroides y prolactina.</p>';
   } else if(a==='e40'){
     h+='<p><b>FSH:</b> considérala si hay síntomas y cambio del ciclo [7]. Si hay amenorrea o sospecha de insuficiencia ovárica prematura, sigue el algoritmo de ESHRE [3].</p>';
   } else if(a==='m45'){
@@ -110,11 +110,11 @@ function dcTx(dc){
   var vm=sx.indexOf('vm')>=0, gu=sx.indexOf('gu')>=0, os=sx.indexOf('oseo')>=0;
   var ma=ci.indexOf('ma')>=0, tev=ci.indexOf('tev')>=0, acv=ci.indexOf('acv')>=0, hep=ci.indexOf('hep')>=0, sg=ci.indexOf('sg')>=0;
   var cont=ma||tev||acv||hep;
-  var nh='<li>Fezolinetant 45 mg VO una vez al día; no iniciar si ALT o AST son 2 veces el LSN o más, o la bilirrubina total 2 veces el LSN o más, y vigilar la función hepática [13] [20] [VERIFICAR EN FUENTE].</li>'
-        +'<li>Elinzanetant 120 mg VO una vez al día en los ensayos (la dosis de etiqueta no está confirmada) [22] [14] [29] [VERIFICAR EN FUENTE].</li>'
+  var nh='<li>Fezolinetant 45 mg VO una vez al día; no iniciar si ALT o AST son 2 veces el LSN o más, o la bilirrubina total 2 veces el LSN o más, y vigilar la función hepática [13] [20] [@V2_2].</li>'
+        +'<li>Elinzanetant 120 mg VO una vez al día, al acostarse (dos cápsulas de 60 mg) [@V2_1].</li>'
         +'<li>Paroxetina 7,5 mg VO cada 24 h [16] [28].</li>';
   var nhHep='<li>Evita fezolinetant por su hepatotoxicidad [20].</li>'
-        +'<li>Elinzanetant 120 mg VO una vez al día en los ensayos, o paroxetina 7,5 mg VO cada 24 h; la seguridad en hepatopatía activa no se leyó [22] [16] [VERIFICAR EN FUENTE].</li>';
+        +'<li>Elinzanetant 120 mg VO una vez al día, al acostarse [@V2_1], o paroxetina 7,5 mg VO cada 24 h [16]; la seguridad en hepatopatía activa no está establecida en las fuentes leídas.</li>';
   var vag='<li>Estrógeno vaginal a dosis baja, tras medidas de venta libre sin respuesta; la dosis en mg depende de la presentación [1] [25].</li>';
   if(!sx.length&&!sg){out(dc,'<p>Elige el síntoma dominante, el útero y la edad o el tiempo desde la menopausia para ver el esquema.</p>');return;}
   if(sg){
@@ -127,10 +127,10 @@ function dcTx(dc){
   if(vm){
     if(cont){
       h+='<p><b>Síntomas vasomotores con contraindicación a la terapia sistémica:</b> no hormonal [16].</p><ul>'+(hep?nhHep:nh)+'</ul>';
-      if(ma){h+='<p>Cáncer de mama: si recibe tamoxifeno, evita la paroxetina; decide con oncología [VERIFICAR EN FUENTE].</p>';}
+      if(ma){h+='<p>Cáncer de mama: si recibe tamoxifeno, evita la paroxetina [@V2_4] [@V2_5]; decide con oncología.</p>';}
     } else if(v==='tar'){
       h+='<p><b>Inicio tardío (60 años o más, o 10 años o más de menopausia):</b> el balance de la terapia sistémica es menos favorable [1]. Primera opción: no hormonal.</p><ul>'+nh+'</ul>'
-        +'<p>Si se opta por terapia hormonal, que sea decisión compartida con especialista y vía transdérmica [1] [18]: estradiol 25 a 100 µg por día en parche'+(u==='si'?', más progesterona micronizada 100 mg VO cada 24 h continua o DIU-LNG 52 mg':'')+' [25] [1].</p>';
+        +'<p>Si se opta por terapia hormonal, que sea decisión compartida con especialista y vía transdérmica [1] [18]: estradiol 25 a 100 µg por día en parche'+(u==='si'?', más progesterona micronizada continua según la ficha local o DIU-LNG 52 mg':'')+' [25] [1].</p>';
     } else if(!v){
       h+='<p>Indica la edad o el tiempo desde la menopausia: decide si la terapia hormonal es de elección [1].</p>';
     } else {
@@ -141,33 +141,33 @@ function dcTx(dc){
         h+='<li>Estradiol oral 1 a 2 mg VO cada 24 h, o estradiol transdérmico 25 a 100 µg por día en parche; la vía transdérmica evita el exceso de TEV de la oral (RR 1,48) [25] [1] [18].</li>';
       }
       if(u==='si'){
-        h+='<li>Progestágeno obligatorio (el estrógeno solo con útero eleva el riesgo de cáncer de endometrio) [11]: progesterona micronizada 100 mg VO cada 24 h continua, o 200 mg VO cada 24 h durante 12 a 14 días de cada ciclo, o DIU-LNG 52 mg [25] [1].</li>';
+        h+='<li>Progestágeno obligatorio (el estrógeno solo con útero eleva el riesgo de cáncer de endometrio) [11]: progesterona micronizada continua según la ficha local, o 200 mg VO al acostarse durante 12 días de cada ciclo de 28 días [@V2_3], o DIU-LNG 52 mg [25] [1].</li>';
         if(rt){h+='<li>Con transdérmico más progesterona micronizada el RR de TEV fue 0,93 [18].</li>';}
       } else {
         h+='<li>Sin útero: estrógeno solo, sin progestágeno [1].</li>';
       }
-      h+='</ul><p>Duración individualizada y reevaluación al menos anual [1] [VERIFICAR EN FUENTE].</p>';
+      h+='</ul><p>Duración individualizada y reevaluación periódica [1].</p>';
     }
   }
   if(gu&&!vm){
     if(cont){
-      h+='<p><b>Síndrome genitourinario con contraindicación sistémica:</b> medidas de venta libre primero; el estrógeno vaginal a dosis baja se decide con el especialista [1] [VERIFICAR EN FUENTE].</p>';
+      h+='<p><b>Síndrome genitourinario con contraindicación sistémica:</b> medidas de venta libre primero; el estrógeno vaginal a dosis baja se decide con el especialista [1].</p>';
     } else {
-      h+='<p><b>Síndrome genitourinario:</b></p><ul>'+vag+'</ul><p>No se asimila al estrógeno sistémico: sin exceso de cáncer de mama en el metaanálisis de Collaborative Group [17]; con útero, el progestágeno no suele añadirse a dosis bajas locales [1] [VERIFICAR EN FUENTE].</p>';
+      h+='<p><b>Síndrome genitourinario:</b></p><ul>'+vag+'</ul><p>No se asimila al estrógeno sistémico: sin exceso de cáncer de mama en el metaanálisis de Collaborative Group [17]; con útero, el progestágeno no hace falta a dosis bajas locales [@V2_8].</p>';
     }
   } else if(gu&&vm){
-    h+='<p>Además, si los síntomas genitourinarios persisten con el esquema elegido, agrega estrógeno vaginal a dosis baja [1] [VERIFICAR EN FUENTE].</p>';
+    h+='<p>Además, si los síntomas genitourinarios persisten con el esquema elegido, agrega estrógeno vaginal a dosis baja [1] [@V2_8].</p>';
   }
   if(os){
     if(cont){
-      h+='<p><b>Prevención ósea:</b> la terapia hormonal no es opción con contraindicación; este widget no tabula otros fármacos óseos [VERIFICAR EN FUENTE].</p>';
+      h+='<p><b>Prevención ósea:</b> la terapia hormonal no es opción con contraindicación; este widget no tabula otros fármacos óseos.</p>';
     } else if(v==='ven'||!v){
-      h+='<p><b>Prevención ósea:</b> la terapia hormonal previene la pérdida ósea y la fractura dentro de la ventana [1]; usa el esquema de estradiol de arriba con la regla del útero y evalúa el riesgo individual de fractura [VERIFICAR EN FUENTE].</p>';
+      h+='<p><b>Prevención ósea:</b> la terapia hormonal previene la pérdida ósea y la fractura dentro de la ventana [1]; usa el esquema de estradiol de arriba con la regla del útero y evalúa el riesgo individual de fractura.</p>';
       if(!vm){
-        h+='<ul><li>Estradiol 1 a 2 mg VO cada 24 h o 25 a 100 µg por día en parche'+(u==='si'?', más progesterona micronizada 100 mg VO cada 24 h continua o DIU-LNG 52 mg':', sin progestágeno')+' [25] [1].</li></ul>';
+        h+='<ul><li>Estradiol 1 a 2 mg VO cada 24 h o 25 a 100 µg por día en parche'+(u==='si'?', más progesterona micronizada continua según la ficha local o DIU-LNG 52 mg':', sin progestágeno')+' [25] [1].</li></ul>';
       }
     } else {
-      h+='<p><b>Prevención ósea con inicio tardío:</b> el balance de la terapia hormonal es menos favorable [1]; decisión con especialista [VERIFICAR EN FUENTE].</p>';
+      h+='<p><b>Prevención ósea con inicio tardío:</b> el balance de la terapia hormonal es menos favorable [1]; decisión con especialista.</p>';
     }
   }
   h+='<span class="cf">'+(cont?'Si no hubiera ninguna contraindicación y estuviera en la ventana → la terapia hormonal pasa a ser de elección [1].':(u==='si'?'Si no tuviera útero → el estrógeno va solo, sin progestágeno [1].':'Si tuviera útero → se añade progestágeno al estrógeno [11].'))+'</span>';
@@ -182,7 +182,7 @@ function dcSeg(dc){
     if(ev.indexOf('tev')>=0){n.push('tromboembolia venosa');}
     if(ev.indexOf('mama')>=0){n.push('cáncer de mama');}
     if(ev.indexOf('acv')>=0){n.push('accidente cerebrovascular');}
-    h='<p><b>Conducta: suspender la terapia hormonal sistémica</b> ante '+n.join(' y ')+' y manejar el evento con el especialista [1] [VERIFICAR EN FUENTE].</p>';
+    h='<p><b>Conducta: suspender la terapia hormonal sistémica</b> ante '+n.join(' y ')+' y manejar el evento con el especialista [1].</p>';
     if(ev.indexOf('mama')>=0){h+='<p>El riesgo de cáncer de mama aumenta con el progestágeno y con la duración del uso, aunque el exceso absoluto es pequeño [30] [17].</p>';}
     if(ev.indexOf('tev')>=0){h+='<p>El riesgo de TEV fue mayor con estrógeno oral que con transdérmico, de modo que la vía importa para reevaluar cualquier terapia futura [18] [19].</p>';}
     if(ev.indexOf('acv')>=0){h+='<p>El ACV figura entre los excesos absolutos de estrógeno más progestágeno [27].</p>';}
@@ -193,31 +193,31 @@ function dcSeg(dc){
   if(sg==='inesp'){
     h='<p><b>Conducta: estudiar el endometrio antes de ajustar nada.</b> El sangrado que no coincide con el esquema, el persistente o el posmenopáusico se estudia con ecografía transvaginal [11].</p>';
     if(en==='e4'){
-      h+='<p>Endometrio de 4 mm o menos: el valor predictivo negativo para cáncer de endometrio es muy alto [11]. Si el sangrado persiste o es abundante, valora biopsia o histeroscopia [VERIFICAR EN FUENTE]. Mientras tanto, revisa adherencia y esquema del progestágeno [VERIFICAR EN FUENTE].</p>';
-      h+='<span class="cf">Si el endometrio midiera más de 4 mm → muestreo endometrial antes de continuar [11] [VERIFICAR EN FUENTE].</span>';
+      h+='<p>Endometrio de 4 mm o menos: el valor predictivo negativo para cáncer de endometrio es muy alto [11]. Si el sangrado persiste, valora histeroscopia [11]. Revisa también la adherencia y el esquema del progestágeno.</p>';
+      h+='<span class="cf">Si el sangrado persistiera → histeroscopia [11].</span>';
     } else if(en==='e5'){
-      h+='<p>Endometrio de más de 4 mm: muestreo endometrial (biopsia) y, hasta tener el resultado, no continuar sin decisión [11] [VERIFICAR EN FUENTE]. Si hay hiperplasia o cáncer, suspender el estrógeno y derivar.</p>';
+      h+='<p>Endometrio de más de 4 mm con sangrado inesperado: la ecografía no basta para decidir y hay que estudiar la cavidad endometrial [11]. Si hay hiperplasia o cáncer, suspender el estrógeno y derivar.</p>';
       h+='<span class="cf">Si el endometrio midiera 4 mm o menos y el sangrado cediera → se vigilaría y se continuaría el esquema [11].</span>';
     } else {
       h+='<p>Aún no hay ecografía: pídela primero; sin ella no se puede decidir si basta con vigilar o si hace falta biopsia [11].</p>';
-      h+='<span class="cf">Si la ecografía mostrara 4 mm o menos y el sangrado cediera → la conducta sería vigilar, no biopsiar de entrada [11] [VERIFICAR EN FUENTE].</span>';
+      h+='<span class="cf">Si la ecografía mostrara 4 mm o menos y el sangrado cediera → la conducta sería vigilar, no biopsiar de entrada [11].</span>';
     }
     out(dc,h);return;
   }
   if(en==='e5'&&!sg){
-    h='<p><b>Conducta:</b> un endometrio de más de 4 mm en una mujer con terapia pide correlacionarlo con el sangrado; si hubo sangrado fuera de patrón, muestreo endometrial [11] [VERIFICAR EN FUENTE].</p>';
+    h='<p><b>Conducta:</b> un endometrio de más de 4 mm en una mujer con terapia pide correlacionarlo con el sangrado; si hubo sangrado fuera de patrón, estudio de la cavidad endometrial [11].</p>';
     h+='<span class="cf">Si no hubiera sangrado → la ecografía no habría estado indicada como tamizaje [11].</span>';
     out(dc,h);return;
   }
   if(sg==='esp'){
-    h='<p><b>Conducta: no estudies el endometrio.</b> El sangrado por deprivación es esperable al final de la fase con progestágeno en un esquema cíclico [VERIFICAR EN FUENTE]; la ecografía no se usa para vigilar a la mujer sin sangrado anormal [11].</p>';
+    h='<p><b>Conducta: no estudies el endometrio.</b> El sangrado por deprivación es esperable al final de la fase con progestágeno en un esquema cíclico [@V2_3]; la ecografía no se usa para vigilar a la mujer sin sangrado anormal [11].</p>';
   } else {
     h='<p><b>Conducta:</b> sin sangrado anormal ni evento nuevo, la terapia se continúa mientras persista la indicación y el balance sea favorable [1].</p>';
   }
   if(t==='t3'){
-    h+='<p>Control de los 3 meses: valora control del síntoma, adherencia y tolerancia; si no mejora o no se tolera, <b>cambia la vía o ajusta la dosis</b> en lugar de insistir [1] [VERIFICAR EN FUENTE]. <span class="rem">↪ Posología en «Plan de tratamiento»</span></p>';
+    h+='<p>Control de los 3 meses: valora control del síntoma, adherencia y tolerancia; si no mejora o no se tolera, <b>cambia la vía o ajusta la dosis</b> en lugar de insistir [1]. <span class="rem">↪ Posología en «Plan de tratamiento»</span></p>';
   } else if(t==='t5'){
-    h+='<p>Reevaluación anual: confirma que la indicación sigue vigente. Si los síntomas ya están controlados, considera <b>reducir la dosis</b> [1] [VERIFICAR EN FUENTE]. Con factores de riesgo de TEV, prefiere la vía transdérmica [18] [19].</p>';
+    h+='<p>Reevaluación anual: confirma que la indicación sigue vigente. Si los síntomas ya están controlados, considera <b>reducir la dosis</b> [1]. Con factores de riesgo de TEV, prefiere la vía transdérmica [18] [19].</p>';
   } else if(t==='t5m'){
     h+='<p>Más de 5 años de uso: sigue solo con indicación documentada y decisión compartida, y considera que el riesgo mamario crece con los años de uso [1] [17].</p>';
   }

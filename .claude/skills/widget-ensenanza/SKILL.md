@@ -154,7 +154,6 @@ Un dato puede llevar varias etiquetas si cumple varios criterios. El kit las mue
 **7.9 Tablas dx y tx.**
 - Pruebas: `Prueba · S · E · VPP/VPN · Utilidad (descartar/confirmar) · Notas · Ref.` S y E solo con fuente y contexto; VPP/VPN comentados según la prevalencia en Ecuador; SnNout/SpPin si procede; sin cifra: `No establecida` o rango con fuente. `.xref` opcional al nodo en Notas.
 - Fármacos: `Fármaco · Mecanismo de acción · Dosis · Vía · Frecuencia · Duración · Notas/ajustes · Ref.` La columna «Mecanismo de acción» dice en 1–2 frases el blanco molecular, qué hace sobre él y el efecto fisiológico, y cierra con 1 `.xref` `← Paso` al nodo que interrumpe; en «Notas/ajustes» quedan ajustes (renal, hepático, edad, peso, embarazo), contraindicaciones y adversos que cambian la elección. Incluye carga y mantenimiento, titulación y umbrales. Nivel: «Prednisona 40 mg VO cada 24 h por 5 días, sin descenso», no «corticoide».
-- **Cero marcas comerciales:** solo denominación común (DCI) en todo el widget.
 - Glosario de siglas al pie de cada tabla (`p.mini`).
 - **Fuente única:** posología solo en la tabla de fármacos (de su entidad); S, E, VPP y VPN solo en la de pruebas. Fuera, `span.rem` de §3; en la pestaña (mono) o `h2` (multi) de su tabla, `↓ En la tabla`. Los simuladores sí muestran posología.
 - **Prohibidas las tablas-índice** que solo dicen dónde está cada cosa (p. ej. «Esquema DSM-5-TR» o cuadros de criterios que enumeran apartados sin contenido). Los criterios se escriben con su contenido en la card de criterios.
@@ -293,7 +292,7 @@ No inventes clases. Emmet (`{…}`=texto); todo `button` con `type="button"`; `k
 - Par adaptable `div.duo>(p|div.card|div.fey)+(figure.dg|div.tw)`
 - vis: `div.tw>table.vis>thead>tr>th+th{botón eK}`…; `tbody` 9 `tr>th>(span.q{pregunta}+span.qx{mini explicación})+td`… con las preguntas de §9 → `hb ro` → `ol.steps.tg` → `.dc`
 - Generadas por el script (no las escribas): `.ord`, `.ord-bank`, `.ord-slots`, `.ord-chip`, `.ord-slot`, `.ord-ok`, `.ord-ko`, `.ord-btns`, `nav.side`, `nav.bottom`, `.perla-filtro`; `html[data-tema]` lo pone `construir.py` desde `manifiesto.tema`
-- Prohibido: estilos inline, `<style>` propio, `<img>` salvo figuras de adjuntos, recursos remotos, `localStorage`/`sessionStorage`, `position:fixed`, `...` ASCII (usa `…`), `[resto igual]`, `TODO:`, `[VERIFICAR EN FUENTE]`, marcas comerciales
+- Prohibido: estilos inline, `<style>` propio, `<img>` salvo figuras de adjuntos, recursos remotos, `localStorage`/`sessionStorage`, `position:fixed`, `...` ASCII (usa `…`), `[resto igual]`, `TODO:`, `[VERIFICAR EN FUENTE]`
 
 ## 12 · Flujo
 
@@ -330,7 +329,7 @@ Autoverificación (no la muestres; corrige antes de entregar):
 12. Delta (multi): ¿nada común se repite en un `eK`? ¿`vis` usa las 9 preguntas con `span.q`+`span.qx` y coincide con `.qv` y pasos?
 13. ¿Cada `hb vi` corrige una fuente de Ricardo?
 14. ¿El alcance sale del caso del sílabo, o se declaró «sin sílabo» con guías y temarios? ¿Las ediciones erróneas del sílabo están declaradas como discrepancia?
-15. ¿Quedan cero `[VERIFICAR EN FUENTE]`, cero «Fuente por verificar» y cero marcas comerciales tras agotar PubMed, Consensus, fichas técnicas, GPC del MSP y web?
+15. ¿Quedan cero `[VERIFICAR EN FUENTE]`, y cero «Fuente por verificar» tras agotar PubMed, Consensus, fichas técnicas, GPC del MSP y web?
 16. ¿Hay sesgo quirúrgico/urológico o emoji que no corresponda al área? ¿Los «signos» y «Qué verás» se adaptaron al área?
 17. ¿Sin tablas-índice, sin modos en blanco, sin preguntas de práctica? ¿Diagramas solo donde aclaran, con color por rol y sin repetir el texto?
 18. ¿El manifiesto lleva `"tipo":"v11"` y `tema`, y se construyó con `kit/construir.py`? ¿Referencias renumeradas con `kit/renumerar.py`?
