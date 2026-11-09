@@ -1,0 +1,26 @@
+{
+"t4":[
+{"q":"Somnolencia: nivel de conciencia en el que la persona tiende a dormirse y se despierta con un {{estímulo verbal}}.","a":"estímulo verbal","h":"Nivel más leve de la escala después de la alerta."},
+{"q":"¿Qué estructura hipotalámica funciona como reloj circadiano (proceso C) y se sincroniza con la luz de la retina?","a":"El núcleo supraquiasmático.","h":"Fija un ritmo de aproximadamente 24 horas."},
+{"q":"Las neuronas de {{orexina (hipocretina)}} del hipotálamo lateral estabilizan la vigilia: si fallan, la persona oscila entre sueño y vigilia.","a":"orexina (hipocretina)","h":"Excitan los núcleos de vigilia."},
+{"q":"Un paciente despierto y atento dice que se siente sin energía tras caminar poco. ¿Es somnolencia?","a":"No; es fatiga. La somnolencia es tendencia a dormirse, no cansancio con el esfuerzo.","h":"Fíjate si mantiene los ojos abiertos sin estímulo."},
+{"q":"Ordena de mayor a menor nivel de conciencia: coma, alerta, estupor, somnolencia.","a":"Alerta, somnolencia, estupor, coma.","h":"Se ordenan por el estímulo que hace falta para despertar."},
+{"q":"En el caso, el hijo dice que el paciente está lúcido y luego «somnoliento». ¿Qué dato necesita el examen para distinguir somnolencia de estupor?","a":"El estímulo que lo despierta: el verbal indica somnolencia; solo uno vigoroso y repetido, estupor.","h":"Conecta con B1."}
+],
+"t5":[
+{"q":"Estupor: solo despierta con estímulos {{vigorosos y repetidos}} y vuelve a dormirse al cesar.","a":"vigorosos y repetidos","h":"Grado entre somnolencia y coma."},
+{"q":"¿Por qué vía asciende la señal dolorosa desde la médula hasta el tálamo?","a":"Por la vía espinotalámica, tras cruzar la línea media en la médula.","h":"Cordón anterolateral."},
+{"q":"¿Qué respuesta motora al dolor indica mayor integración cortical: localizar o retirar?","a":"Localizar, porque dirige la mano al estímulo; retirar es un reflejo sin integración.","h":"Piensa en la mano cruzando la línea media."},
+{"q":"¿Cómo se distingue el estupor del coma?","a":"El estuporoso despierta, brevemente, con un estímulo vigoroso; el comatoso no despierta con ninguno.","h":"Mira la apertura ocular tras el estímulo."},
+{"q":"La escala de Glasgow evalúa tres componentes por separado. ¿Cuáles?","a":"Apertura ocular, respuesta verbal y mejor respuesta motora.","h":"No define estupor: define respuestas."},
+{"q":"El hijo describe al paciente alternando lúcido y estuporoso en minutos. ¿Qué debe documentar el examen, según esta pestaña?","a":"Estímulo usado y respuesta obtenida en cada momento, para ver cómo oscila el nivel.","h":"Conecta con B1."}
+],
+"t6":[
+{"q":"Agitación psicomotora: actividad motora excesiva {{sin propósito}} impulsada por tensión interna.","a":"sin propósito","h":"Caminar de un lado a otro, retorcerse las manos."},
+{"q":"¿Qué circuito frontosubcortical, al fallar, produce desinhibición?","a":"El circuito orbitofrontal.","h":"Inhibe impulsos y ajusta la conducta."},
+{"q":"¿Qué falla si claudica el circuito del cingulado anterior?","a":"La motivación: aparece apatía y la conducta no se inicia.","h":"Es el circuito del propósito."},
+{"q":"¿Qué separa la acatisia de la agitación?","a":"La acatisia incluye una inquietud interna con urgencia de moverse que el paciente refiere, sobre todo por fármacos; la agitación puede ocurrir sin esa vivencia.","h":"Pregunta al paciente qué siente."},
+{"q":"¿Qué neurotransmisor del locus coeruleus, cuando se exagera su activación, aumenta la inquietud?","a":"La noradrenalina.","h":"Remisión a SARA, en «Lúcido»."},
+{"q":"El hijo vio inquieto al paciente un día antes y luego caminando sin dirección por horas. ¿Qué dos términos de esta pestaña describen esas conductas?","a":"Inquietud (o agitación) y deambulación errante.","h":"Conecta con P1 y P2."}
+]
+}
