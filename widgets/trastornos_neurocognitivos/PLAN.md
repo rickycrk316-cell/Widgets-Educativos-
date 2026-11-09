@@ -25,7 +25,7 @@ v11 real (rama `claude/happy-mendel-ylorra`): enseñanza con `tipo: "v11"` (`kit
 
 ## Widget A · Enseñanza (widget-ensenanza v11, multi) — `ensenanza/`
 
-Router: `Modo: multi · Entidades: e1=Delirium (principal), e2=Enfermedad de Alzheimer, e3=Trastorno neurocognitivo vascular, e4=Enfermedad por cuerpos de Lewy, e5=Degeneración frontotemporal · Amenaza: e1 · Override: no`
+Router: `Modo: multi · Entidades: e1=Delirium (principal), e2=Enfermedad de Alzheimer, e3=Neurocognitivo vascular, e4=Cuerpos de Lewy, e5=Frontotemporal · Amenaza: e1 · Override: no` (los nombres son los textos de botón; e3 = trastorno neurocognitivo vascular, e4 = enfermedad por cuerpos de Lewy, e5 = degeneración frontotemporal)
 
 - Presentación común: **adulto mayor con cambio cognitivo o conductual («no actúa como él mismo») en el primer nivel**.
 - Eje (declarado): tiempo de instalación y curso (horas-días y fluctuante → meses-años y progresivo) y, dentro de lo crónico, el dominio que cae primero (memoria → función ejecutiva escalonada → fluctuación con alucinaciones y parkinsonismo → conducta o lenguaje).

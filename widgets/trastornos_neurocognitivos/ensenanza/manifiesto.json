@@ -13,12 +13,53 @@
  },
  "principal": "e1",
  "amenaza": "e1",
- "tabs": ["pan", "vis", "e1", "e2", "e3", "e4", "e5", "sin"],
- "pg": {"vis": 4, "e1": 5, "e2": 3, "e3": 3, "e4": 3, "e5": 3},
- "fey": {"e1": 2, "e2": 1, "e3": 1, "e4": 1, "e5": 1},
- "nodos": {"e1": 7, "e2": 6, "e3": 5, "e4": 5, "e5": 5},
- "signos": {"e1": 5, "e2": 4, "e3": 3, "e4": 4, "e5": 3},
- "dc": ["vis", "e1", "e2", "e3", "e4", "e5"],
+ "tabs": [
+  "pan",
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4",
+  "e5",
+  "sin"
+ ],
+ "pg": {
+  "vis": 4,
+  "e1": 5,
+  "e2": 3,
+  "e3": 3,
+  "e4": 3,
+  "e5": 3
+ },
+ "fey": {
+  "e1": 2,
+  "e2": 1,
+  "e3": 1,
+  "e4": 1,
+  "e5": 1
+ },
+ "nodos": {
+  "e1": 7,
+  "e2": 6,
+  "e3": 5,
+  "e4": 5,
+  "e5": 5
+ },
+ "signos": {
+  "e1": 5,
+  "e2": 4,
+  "e3": 3,
+  "e4": 4,
+  "e5": 3
+ },
+ "dc": [
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4",
+  "e5"
+ ],
  "nucleo": {
   "vis": [
    "Eje 1 — Tiempo y curso: horas o días con fluctuación es delirium hasta demostrar lo contrario; meses o años de declive progresivo es un trastorno neurocognitivo.",
@@ -26,6 +67,48 @@
    "Eje 3 — Todo delirium tiene una causa orgánica que se busca y se corrige: metabólica, infecciosa, farmacológica o por deshidratación.",
    "Eje 4 — El primer dominio que cae orienta la demencia: memoria, función ejecutiva escalonada, alucinaciones con parkinsonismo, o conducta y lenguaje."
   ],
-  "e1": [], "e2": [], "e3": [], "e4": [], "e5": []
+  "e1": [
+   "Pérdida de agua y trastorno metabólico",
+   "Falla de la red atencional y del SARA",
+   "Disfunción cortical difusa de pensamiento y percepción",
+   "Alteración del ciclo sueño-vigilia y psicomotor",
+   "Inicio agudo con inatención y conciencia que fluctúa",
+   "CAM o 4AT más glucemia capilar",
+   "Corregir la causa y medidas no farmacológicas"
+  ],
+  "e2": [
+   "Atrofia hipocampal y entorrinal",
+   "Falla la memoria episódica",
+   "Se extiende al neocórtex: lenguaje, visuoespacial, ejecutivo",
+   "Olvido progresivo de lo reciente con fallo para aprender información nueva",
+   "Historia con informante, función diaria y prueba breve",
+   "Inhibidor de colinesterasa en leve a moderada"
+  ],
+  "e3": [
+   "Infartos o lesión de pequeño vaso",
+   "Disfunción ejecutiva y enlentecimiento",
+   "Marcha alterada y urgencia urinaria",
+   "Declive escalonado, ejecutivo, con signos focales y factores vasculares",
+   "Documenta declive ejecutivo y relación con evento",
+   "Antiagregante, estatina y presión menor de 130/80"
+  ],
+  "e4": [
+   "Déficit colinérgico cortical",
+   "Déficit dopaminérgico nigroestriatal",
+   "Sueño REM sin atonía y conducta de sueño anormal",
+   "Fluctuación cognitiva con alucinaciones visuales y parkinsonismo",
+   "Busca los cuatro rasgos centrales con informante",
+   "Inhibidor de colinesterasa: rivastigmina o donepezilo",
+   "Evita haloperidol y antipsicóticos típicos"
+  ],
+  "e5": [
+   "Degeneración de corteza frontal e ínsula",
+   "Pérdida de cognición social y empatía",
+   "Falla del lenguaje semántico o agramatical",
+   "Cambio temprano de conducta o lenguaje con memoria relativamente conservada",
+   "Historia con informante y criterios de Rascovsky",
+   "ISRS o trazodona según el síntoma conductual",
+   "Evita inhibidores de colinesterasa y memantina"
+  ]
  }
 }
