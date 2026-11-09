@@ -1,0 +1,31 @@
+{
+ "titulo": "Trastornos neurocognitivos",
+ "salida": "../Trastornos_neurocognitivos_widget_v11.html",
+ "tipo": "v11",
+ "tema": "salud-mental",
+ "modo": "multi",
+ "entidades": {
+  "e1": "Delirium",
+  "e2": "Enfermedad de Alzheimer",
+  "e3": "Neurocognitivo vascular",
+  "e4": "Cuerpos de Lewy",
+  "e5": "Frontotemporal"
+ },
+ "principal": "e1",
+ "amenaza": "e1",
+ "tabs": ["pan", "vis", "e1", "e2", "e3", "e4", "e5", "sin"],
+ "pg": {"vis": 4, "e1": 5, "e2": 3, "e3": 3, "e4": 3, "e5": 3},
+ "fey": {"e1": 2, "e2": 1, "e3": 1, "e4": 1, "e5": 1},
+ "nodos": {"e1": 7, "e2": 6, "e3": 5, "e4": 5, "e5": 5},
+ "signos": {"e1": 5, "e2": 4, "e3": 3, "e4": 4, "e5": 3},
+ "dc": ["vis", "e1", "e2", "e3", "e4", "e5"],
+ "nucleo": {
+  "vis": [
+   "Eje 1 — Tiempo y curso: horas o días con fluctuación es delirium hasta demostrar lo contrario; meses o años de declive progresivo es un trastorno neurocognitivo.",
+   "Eje 2 — Atención y conciencia: la inatención y la conciencia alterada definen el delirium; en la demencia temprana se conservan, salvo en cuerpos de Lewy.",
+   "Eje 3 — Todo delirium tiene una causa orgánica que se busca y se corrige: metabólica, infecciosa, farmacológica o por deshidratación.",
+   "Eje 4 — El primer dominio que cae orienta la demencia: memoria, función ejecutiva escalonada, alucinaciones con parkinsonismo, o conducta y lenguaje."
+  ],
+  "e1": [], "e2": [], "e3": [], "e4": [], "e5": []
+ }
+}
