@@ -1,6 +1,6 @@
 {
  "titulo": "Depresión, trastorno bipolar y suicidio",
- "salida": "../Depresion_bipolar_suicidio_widget_v10.html",
+ "salida": "../Depresion_bipolar_suicidio_widget_v11.html",
  "modo": "multi",
  "entidades": {
   "e1": "Depresión mayor",
@@ -76,10 +76,6 @@
    "Plan de seguridad escrito y estructurado, elaborado con el paciente"
   ]
  },
- "dg": {
-  "vis": 2,
-  "e1": 4,
-  "e2": 3,
-  "e3": 3
- }
+ "tipo": "v11",
+ "tema": "salud-mental"
 }
