@@ -1,0 +1,16 @@
+{"jq":[
+{"q":"¿Por qué B1 (alteración aguda de la conciencia) va antes que B2 (nocturia con poco volumen)?","a":"B1 es una amenaza vital tiempo-dependiente; B2 solo orienta la causa y no mata por sí misma.","h":"Criterio: amenaza vital inmediata."},
+{"q":"¿Por qué B3 (sed con ingesta reducida) comparte el nivel g1 con B1?","a":"Puede ser causa y agravante: la deshidratación hipertónica daña el sistema nervioso y el riñón y se corrige mejor si es temprana.","h":"Tiempo-dependencia y reversibilidad."},
+{"q":"¿Por qué P2 (deambulación por horas) va antes que P1 (inquietud previa)?","a":"P2 expone a agotamiento o golpe de calor, caídas y extravío; P1 solo fija el inicio y el curso.","h":"Riesgo de daño."},
+{"q":"¿Por qué S2 (sin posibilidad de derivar) va en g2 aunque no es un problema del paciente?","a":"Modula el riesgo: todo estudio y vigilancia inicial se resuelve en el centro de salud, lo que eleva el peso de B1 y B3.","h":"Impacto en la respuesta del sistema."},
+{"q":"¿Por qué S3 (historia que depende de un informante) es el último, en g4?","a":"No daña al paciente y se corrige verificando los datos con el hijo y otros contactos.","h":"Bajo en los cuatro criterios."}
+],
+"hx":[
+{"q":"Método CAM para delirium: ¿qué dos rasgos deben estar presentes siempre?","a":"Inicio agudo con curso fluctuante, e inatención.","h":"Se añade pensamiento desorganizado o conciencia alterada."},
+{"q":"CAM: además de inicio agudo e inatención, ¿qué rasgo adicional se necesita (uno de dos)?","a":"Pensamiento desorganizado o alteración del nivel de conciencia.","h":"Inouye 1990."},
+{"q":"Hipernatremia: ¿por encima de qué sodio sérico se define en adultos?","a":"145 mmol/L","h":"Refleja hiperosmolalidad sérica."},
+{"q":"¿Qué dos rasgos clínicos definen el golpe de calor, más allá de la exposición al calor?","a":"Disfunción del sistema nervioso central e hipertermia extrema (por lo general sobre 40,5 °C).","h":"Epstein 2019."},
+{"q":"Hipercalcemia: ¿qué prueba hormonal distingue las causas dependientes de las no dependientes de PTH?","a":"La PTH intacta sérica.","h":"Walker 2022."},
+{"q":"Estado hiperosmolar hiperglucémico: ¿qué debe estar ausente, a diferencia de la cetoacidosis?","a":"Cetonemia grave y acidosis metabólica (la mayoría tiene pH de 7,30 o más y bicarbonato de 18 mmol/L o más).","h":"Consenso ADA 2024."},
+{"q":"En este caso, ¿qué dato separa la hipótesis hipercalcemia de la de estado hiperosmolar hiperglucémico?","a":"El calcio corregido o iónico frente a la glucemia y la osmolalidad; el caso no trae ninguno.","h":"Datos faltantes."}
+]}

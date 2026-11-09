@@ -1,0 +1,26 @@
+{
+"t7":[
+{"q":"El órgano vasculoso de la lámina terminal y el órgano subfornical carecen de barrera hematoencefálica completa. ¿Qué ventaja funcional les da y qué ponen en marcha?","a":"Pueden medir directamente la osmolalidad y la angiotensina II de la sangre; activan la sed y la liberación de ADH.","h":"Detectan la sangre sin filtro."},
+{"q":"La ADH se une al receptor V2 del túbulo colector e inserta {{acuaporina-2}} en la membrana apical. ¿Qué cambia en la orina?","a":"acuaporina-2: el agua se reabsorbe y la orina sale más concentrada y escasa.","h":"Piensa en el canal de agua."},
+{"q":"Una pérdida pequeña de agua eleva con rapidez la osmolalidad en un adulto mayor. ¿Qué tres cambios de la edad lo explican?","a":"Menor agua corporal total (reserva), sed atenuada (hipodipsia) y menor capacidad renal de concentrar la orina.","h":"Reserva, señal y riñón."},
+{"q":"¿Qué es la polidipsia y por qué no equivale a tener sed aumentada?","a":"Es la ingesta aumentada de líquidos; la sed aumentada puede existir sin que la persona logre beber más.","h":"Una es la señal, otra es la conducta."},
+{"q":"Una persona bebe mucho por hábito, sin estímulo osmótico ni de volumen. ¿Con qué término vecino se corresponde y en qué se separa de la sed por deshidratación?","a":"Potomanía o polidipsia primaria: bebe sin que la sed responda a un déficit; en la deshidratación la sed sí sube con la osmolalidad.","h":"Fíjate en qué dispara la sed."},
+{"q":"En este paciente la sed aumenta pero toma menos agua para no orinar de noche. ¿Qué dato de sangre ayudaría a ver el efecto de esa restricción sobre la osmolalidad?","a":"El sodio sérico y la osmolalidad plasmática: si la sed sube y no se repone el agua, la osmolalidad sigue subiendo.","h":"Un dato de laboratorio."}
+],
+"t8":[
+{"q":"Durante el llenado vesical, ¿qué hace el detrusor y qué nervio mantiene cerrado el esfínter externo?","a":"El detrusor se relaja y se acomoda sin subir mucho la presión; el nervio pudendo (somático) mantiene el esfínter externo contraído.","h":"Relajación y control voluntario."},
+{"q":"Si la acomodación del detrusor falla y la capacidad funcional de la vejiga baja, ¿qué patrón miccional aparece y con qué herramienta se registra?","a":"Micciones frecuentes de poco volumen; se registra con el diario miccional.","h":"Hora y volumen de cada micción."},
+{"q":"De noche aumenta la {{ADH}}. ¿Qué efecto tiene sobre la diuresis nocturna y qué ocurre cuando se pierde ese ritmo?","a":"ADH: la orina nocturna disminuye y se concentra; si se pierde, hay poliuria nocturna (exceso de orina en el sueño).","h":"Ritmo circadiano de la orina."},
+{"q":"¿Cómo define la ICS la nocturia como síntoma?","a":"Despertarse una o más veces de noche para orinar, con cada micción precedida y seguida de sueño o de la intención de dormir.","h":"No basta orinar de noche: debe despertar."},
+{"q":"Una persona orina muchas veces de día, sin despertarse de noche. ¿Qué término describe eso y en qué se diferencia de la poliuria?","a":"Polaquiuria, definida por la frecuencia diurna; la poliuria se define por el volumen de 24 horas.","h":"Frecuencia frente a volumen."},
+{"q":"En el caso, la frecuencia sube y el volumen por micción baja. ¿Qué medida separa polaquiuria, poliuria percibida y diuresis total baja?","a":"La diuresis de 24 horas.","h":"Un solo número lo resuelve."}
+],
+"t9":[
+{"q":"El reflejo rectoanal inhibitorio relaja el esfínter anal interno cuando las heces distienden el recto. ¿Qué esfínter queda bajo control voluntario y por qué nervio?","a":"El esfínter anal externo, de músculo estriado, por el nervio pudendo.","h":"Interno involuntario, externo voluntario."},
+{"q":"Un colon lento da heces duras. ¿Qué proceso de la absorción lo explica?","a":"Cuanto más tiempo permanece el contenido, más agua se absorbe en el colon y más duras salen las heces.","h":"El tiempo seca."},
+{"q":"El colon avanza bien, pero la persona puja y no logra expulsar las heces. ¿Qué trastorno se sospecha y qué falla?","a":"Disinergia defecatoria: el piso pélvico o el esfínter no se relajan al pujar.","h":"Falla la expulsión, no el tránsito."},
+{"q":"¿Qué mide la escala de Bristol y cómo se relaciona con el tránsito?","a":"La forma de las heces en siete tipos; se correlaciona con el tiempo de tránsito intestinal total (heces duras, tránsito lento).","h":"Forma frente a tiempo."},
+{"q":"Un paciente con dolor cólico, distensión, vómitos y sin paso de heces ni gases. ¿Por qué no es solo estreñimiento?","a":"Sugiere obstrucción intestinal, una barrera mecánica que detiene el tránsito y es una urgencia.","h":"No es un hábito lento."},
+{"q":"En el caso, ¿qué cuatro grupos de causas secundarias obligan a descartar antes de llamar funcional al estreñimiento?","a":"Metabólica, farmacológica, neurológica y obstructiva.","h":"Funcional es diagnóstico de exclusión clínica."}
+]
+}
