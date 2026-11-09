@@ -139,3 +139,42 @@
 <figcaption class="mini">Cada columna va del fármaco al blanco y al efecto clínico; el nodo rojo marca el adverso que limita el uso.</figcaption>
 </figure>
 <p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Mecanismo de acción</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Aspirina</th><td>Acetila la ciclooxigenasa-1 plaquetaria y frena la síntesis de prostaglandinas, con lo que inhibe la agregación plaquetaria <button type="button" class="xref" data-ir="e3-m-2" onclick="ir('e3','e3-m-2')">← Infartos o lesión de pequeño vaso</button></td><td>325 mg/día en estenosis intracraneal sintomática; liberación prolongada 162,5 mg/día en la ficha FDA tras ictus o AIT</td><td>VO</td><td>Cada 24 h</td><td>Largo plazo</td><td>Aumenta el sangrado; evita con úlcera péptica activa o hipersensibilidad a AINE</td><td>[@c_turan2022][@c_durlaza]</td></tr>
+<tr><th>Clopidogrel</th><td>Su metabolito activo se une de forma irreversible al receptor P2Y12 de ADP y bloquea la activación plaquetaria <button type="button" class="xref" data-ir="e3-m-2" onclick="ir('e3','e3-m-2')">← Infartos o lesión de pequeño vaso</button></td><td>75 mg/día, sin dosis de carga en ictus</td><td>VO</td><td>Cada 24 h</td><td>Monoterapia a largo plazo; con aspirina, hasta 90 días en estenosis intracraneal grave</td><td>Efecto menor en metabolizadores lentos de CYP2C19; aumenta el sangrado; no sumar a la aspirina después de 90 días</td><td>[@c_plavix][@c_turan2022][@c_dawson2022]</td></tr>
+<tr><th>Atorvastatina</th><td>Inhibe de forma competitiva la HMG-CoA reductasa hepática, reduce la síntesis de colesterol y aumenta los receptores de LDL <button type="button" class="xref" data-ir="e3-m-1" onclick="ir('e3','e3-m-1')">← Factores de riesgo vascular sostenidos</button></td><td>80 mg/día en el ensayo SPARCL tras ictus o AIT; rango de la ficha 10 a 80 mg/día</td><td>VO</td><td>Cada 24 h</td><td>Largo plazo; meta LDL menor de 70 mg/dL</td><td>Con ictus hemorrágico reciente, pesa riesgo y beneficio de 80 mg: aumentó el ictus hemorrágico (2,3 % frente a 1,4 %); contraindicada en falla hepática descompensada</td><td>[@c_lipitor][@c_dawson2022]</td></tr>
+<tr><th>Antihipertensivos (combinación)</th><td>Reducen la presión de perfusión que daña la pared de las arteriolas cerebrales <button type="button" class="xref" data-ir="e3-m-1" onclick="ir('e3','e3-m-1')">← Factores de riesgo vascular sostenidos</button></td><td>La guía fija la meta (menor de 130/80 mmHg), no la dosis; en estenosis intracraneal sintomática, menor de 140/90</td><td>VO</td><td>Según agente</td><td>Largo plazo</td><td>Se apoya la combinación y la medición fuera de consulta; evita descensos con riesgo de daño en subgrupos vulnerables</td><td>[@c_dawson2022][@c_turan2022]</td></tr>
+<tr><th>Rivastigmina</th><td>Aumenta la acetilcolina al inhibir de forma reversible su hidrólisis por colinesterasa; compensa el déficit colinérgico <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Disfunción ejecutiva y enlentecimiento</button></td><td>Ficha FDA (indicada en Alzheimer): 1,5 mg cada 12 h; sube a 3, 4,5 y 6 mg cada 12 h tras al menos 2 semanas cada vez; en el ensayo vascular la media fue 9,4 mg/día</td><td>VO</td><td>Cada 12 h con las comidas</td><td>Mientras haya beneficio</td><td>Beneficio cognitivo modesto basado en un ensayo grande; más náusea, vómito y abandonos (OR 2,02); vigila peso, sobre todo bajo 50 kg</td><td>[@c_rivastig_label][@c_birks2013riv]</td></tr>
+</tbody></table></div>
+<p class="mini">VO: vía oral; LDL: colesterol de lipoproteínas de baja densidad; HMG-CoA: hidroximetilglutaril coenzima A; P2Y12: receptor plaquetario de ADP; CYP2C19: enzima hepática activadora; AINE: antiinflamatorio no esteroideo; OR: razón de momios.</p>
+<div class="dc" data-fn="dcE3"><div class="dc-t">Simulador · Decisión clínica — predice las medidas de prevención antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Evento cerebrovascular previo</span>
+<button type="button" class="chip" data-g="ev" data-v="isq" onclick="ch(this)">Ictus isquémico o AIT</button>
+<button type="button" class="chip" data-g="ev" data-v="hem" onclick="ch(this)">Hemorragia intracerebral</button>
+<button type="button" class="chip" data-g="ev" data-v="nin" onclick="ch(this)">Sin evento (lesión silente)</button></div>
+<div class="dc-g"><span class="dc-l">Situación</span>
+<button type="button" class="chip" data-g="sit" data-v="icas" data-m="1" onclick="ch(this)">Estenosis intracraneal sintomática grave (70–99 %)</button>
+<button type="button" class="chip" data-g="sit" data-v="hemrisk" data-m="1" onclick="ch(this)">Riesgo alto de transformación hemorrágica</button>
+<button type="button" class="chip" data-g="sit" data-v="dm" data-m="1" onclick="ch(this)">Diabetes</button>
+<button type="button" class="chip" data-g="sit" data-v="cog" data-m="1" onclick="ch(this)">Demencia ya establecida</button></div>
+<div class="dc-g"><span class="dc-l">Presión sistólica / diastólica (mmHg)</span>
+<input type="number" step="1" min="0" data-n="pas" placeholder="140" oninput="ch(this)">
+<input type="number" step="1" min="0" data-n="pad" placeholder="85" oninput="ch(this)"></div>
+<div class="dc-g"><span class="dc-l">LDL (mg/dL) · HbA1c (%)</span>
+<input type="number" step="1" min="0" data-n="ldl" placeholder="110" oninput="ch(this)">
+<input type="number" step="0.1" min="0" data-n="a1c" placeholder="7,5" oninput="ch(this)"></div>
+<div class="out"></div></div>
+
+<h2>Seguimiento</h2>
+<p>Reevalúa en cada control la presión (meta menor de 130/80 mmHg, con medición fuera de consulta), el LDL (menor de 70 mg/dL) y, en diabetes, la HbA1c (menor de 7 %); si el LDL no llega a la meta, se considera ezetimiba o un inhibidor de PCSK9 [@c_dawson2022]. Registra la marcha, las caídas, el ánimo y la independencia en finanzas y medicación, y revisa el efecto y la tolerancia del inhibidor de colinesterasa [@sachdev2014][@c_birks2013riv].</p>
+<aside class="perla" data-ex="usmle2 mir enarm"><div class="perla-t">Perla de examen</div><p>Si el LDL sigue sobre la meta con estatina, el consenso del grupo ESO apoya añadir ezetimiba o un inhibidor de PCSK9; la HbA1c objetivo es menor de 7 % [@c_dawson2022].</p></aside>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Nuevo ictus o infarto silente</th><td>Persisten los factores de riesgo y la oclusión de pequeño o gran vaso; cada infarto suma un déficit [@c_dawson2022]</td><td><button type="button" class="xref" data-ir="e3-m-2" onclick="ir('e3','e3-m-2')">← Infartos o lesión de pequeño vaso</button></td></tr>
+<tr><th>Progresión de la lesión de sustancia blanca</th><td>Mayor desconexión de los circuitos frontosubcorticales; empeora la lentitud y el ánimo [@sachdev2014]</td><td><button type="button" class="xref" data-ir="e3-m-3" onclick="ir('e3','e3-m-3')">← Desconexión de circuitos frontosubcorticales</button></td></tr>
+<tr><th>Caídas e incontinencia urinaria</th><td>La marcha alterada y la urgencia derivan de las mismas vías interrumpidas [@sachdev2014]</td><td><button type="button" class="xref" data-ir="e3-m-5" onclick="ir('e3','e3-m-5')">← Marcha alterada y urgencia urinaria</button></td></tr>
+<tr><th>Abandono del inhibidor de colinesterasa</th><td>Náusea, vómito y diarrea por efecto colinérgico periférico [@c_birks2013riv]</td><td><button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Disfunción ejecutiva y enlentecimiento</button></td></tr>
+</tbody></table></div>
+<p>El curso lo marcan los eventos: se estabiliza si se controlan los factores y se empeora por escalones con cada nuevo infarto; las fuentes leídas no dan cifras de supervivencia ni de progresión [@sachdev2014].</p>
+</section>

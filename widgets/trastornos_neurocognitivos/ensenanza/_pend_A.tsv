@@ -1,0 +1,17 @@
+dato	parte	fuente
+CAM: S 94-100 %, E 90-95 %, VPP 91-94 %, VPN 90-100 % (56 pacientes)	21_e1 Diagnóstico	PubMed PMID 2240918 (resumen leído)
+4AT: S 0,88 (IC 0,80-0,93), E 0,88 (0,82-0,92), 17 estudios; prevalencia 24,2 % (17,8-32,1; rango 10,5-61,9)	21_e1 Epidemiología y Diagnóstico	PubMed PMID 33951145 (resumen leído)
+Algoritmo CAM (1 y 2 más 3 o 4)	21_e1 Qué es	PubMed PMID 2240918
+Delirium: HR muerte 1,95; institucionalización OR 2,41; demencia OR 12,52 (IC 1,86-84,21; 2 estudios)	21_e1 Seguimiento	PubMed PMID 20664045 (resumen leído)
+HELP: incidencia OR 0,47; caídas OR 0,58	21_e1 Seguimiento	PubMed PMID 30076080 (resumen leído)
+Subtipos en UCI: hipoactivo 70 %, hiperactivo 18 %; hipoactivo HR 3,35 de muerte hospitalaria	21_e1 Qué es	PubMed PMID 33929361 (resumen leído)
+Hipercalcemia: leve menor de 12 mg/dL, grave 14 mg/dL o más (ionizado 10 mg/dL o más); PTH suprimida menor de 20 pg/mL; cerca de 90 % hiperparatiroidismo primario o neoplasia; fatiga y estreñimiento en cerca de 20 % de leves; tratamiento inicial hidratación y bisfosfonato IV; insuficiencia renal denosumab o diálisis	21_e1 Cadena, Diagnóstico, Tratamiento	PubMed PMID 36282253 (resumen leído)
+SS 0,9 %: 1-2 L y luego 200-300 mL/h; diuresis objetivo 100-150 mL/h; calcitonina 4 U/kg SC o IM cada 12 h (cada 6 h si insuficiente), efecto en 12-24 h; zoledrónico 4-8 mg IV en 15 min; QTc corto; furosemida solo con sobrecarga	21_e1 Diagnóstico y Tratamiento	PMC8889795 (Tonon 2022, texto completo leído por WebFetch)
+Estado hiperosmolar: SS 0,9 % 500-1000 mL/h en las primeras 2-4 h sin compromiso cardiaco o renal; adultos mayores bolos menores (250 mL); déficit en 24-48 h; sodio no más de 10 mmol/L en 24 h; insulina diferida hasta K mayor de 3,5 mmol/L; pH 7,30 o más y bicarbonato 18 mmol/L o más	21_e1 Tratamiento y Diagnóstico	PMC11272983 (ADA 2024, texto leído por WebFetch; umbral de glucosa y osmolalidad no aparece en texto, eliminado)
+Hipernatremia: corrección no mayor de 0,5 mmol/L por hora sugerida, sin guía clara	21_e1 Tratamiento	PubMed PMID 30948456 (resumen leído)
+Golpe de calor: temperatura central por encima de 40 °C con disfunción del SNC; único tratamiento específico es el enfriamiento rápido	21_e1	PubMed PMID 35115565 (resumen leído)
+Haloperidol: 0,5-2 mg dos o tres veces al día en geriátricos; contraindicado en Parkinson; advertencia de mortalidad en demencia; QT y torsades; no indicado para delirium en la ficha	21_e1 Tratamiento	DailyMed setid 31e33656-2f53-49e6-9816-261ea2e6961a (texto leído por WebFetch)
+Haloperidol corto plazo (una semana o menos), dosis más baja apropiada y titulación cuidadosa; 4AT recomendado	21_e1 Tratamiento y Diagnóstico	Resultado de búsqueda web de nice.org.uk/guidance/cg103 (la página devolvió 403 al leerla; citado como solo resumen)
+Antipsicóticos sin diferencia en duración vs placebo; haloperidol y SGA sin diferencia en gravedad	21_e1 Tratamiento	PubMed PMID 31476770 (resumen leído)
+Beers 2023: evitar en delirium anticolinérgicos, antipsicóticos, benzodiacepinas, corticoides, H2, hipnóticos Z, opioides; benzodiacepinas apropiadas en abstinencia alcohólica; Parkinson excepto clozapina, pimavanserina y quetiapina	21_e1 Tratamiento	PMC12478568 (Beers 2023, texto leído por WebFetch)
+Factores de riesgo del programa (deterioro cognitivo, sueño, inmovilidad, visión, audición, deshidratación); incidencia 9,9 % vs 15,0 %	21_e1 Epidemiología	PubMed PMID 10053175 (resumen leído)
