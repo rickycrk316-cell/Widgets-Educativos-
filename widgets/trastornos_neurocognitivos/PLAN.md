@@ -154,3 +154,10 @@ El orquestador escribe `p01_nav`, `p95_tg`, `p96_js` y el manifiesto.
 ## Reglas de diseño para ejecutores (ambos widgets)
 
 Las 10 reglas de `widgets/patologia_urinaria_baja/PLAN.md` § «Reglas de diseño para ejecutores» (clases solo del kit; tablas con thead/tbody en `div.tw`; sin recuadros anidados; tipo oración; párrafos ≤90 palabras; un `<b>` por párrafo; voz activa, español de Ecuador; sin emojis; coma decimal; conteos de la skill), más las de v11: `div.nucleo` tras las PG, `aside.perla[data-ex]` junto al tema, `li[data-paso]` en pasos, filas-pregunta en `vis`, columna «Mecanismo de acción» en tablas de fármacos, cero `[VERIFICAR EN FUENTE]`.
+
+## Resultado (2026-11-09)
+
+- Enseñanza: `Trastornos_neurocognitivos_widget_v11.html` (v11, multi), 82 referencias, validador OK (7 avisos de longitud aceptados: profundidad de examen, como en `depresion_bipolar_suicidio`). Apertura: `Apertura_trastornos_neurocognitivos.html`, 36 referencias, validador, auditoría y navegador en verde. Cero marcas en ambos.
+- Verificación: catálogo y referencias de ejecutores comprobados por `haiku` en PubMed (78 artículos confirmados, 1 corregido —Cao 2020—, 1 eliminado —estudio poblacional de Lewy 2026 sin registro en PubMed—, con sus cifras).
+- Datos eliminados por no poder leerse en la sesión (hosts bloqueados o figura en imagen): umbrales numéricos de glucemia y osmolalidad del estado hiperosmolar (ADA 2024, figura 2B), umbrales numéricos de Roma IV, punto de corte del Mini-Cog y del 4AT, dosis de quetiapina, risperidona, levodopa y melatonina en demencia, nota de altitud de Saquisilí, hidratación por kg en el simulador (se usan las tasas absolutas de ADA 2024). AHA/ASA 2021 y SIGN 157 no se citan (sin acceso al texto).
+- Los archivos de trabajo `_refs_*`, `_pend_*`, `_sim_*`, `_mazos_*` y los briefs se borraron tras integrar.
