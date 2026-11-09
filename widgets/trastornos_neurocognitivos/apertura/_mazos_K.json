@@ -1,0 +1,98 @@
+{
+ "t1": [
+  {
+   "q": "Al contraerse el músculo, el ATP se une a la cabeza de miosina y {{la suelta de la actina}}; sin ATP el puente cruzado queda unido y el músculo no se relaja.",
+   "a": "la suelta de la actina",
+   "h": "Ciclo de puentes cruzados."
+  },
+  {
+   "q": "¿De qué depende el esfuerzo percibido según el modelo de la descarga corolaria?",
+   "a": "De la copia del comando motor central enviada a áreas sensitivas, y no solo de la señal que vuelve del músculo.",
+   "h": "Comando motor, copia de eferencia."
+  },
+  {
+   "q": "¿Cómo se mide la fatiga como síntoma y cómo se llama la caída medible del rendimiento en una tarea?",
+   "a": "La fatiga se mide por autorreporte; la caída medible del rendimiento es la fatigabilidad.",
+   "h": "Enoka y Duchateau 2016."
+  },
+  {
+   "q": "Si la fuerza máxima está disminuida en el examen desde la primera contracción, el problema es {{debilidad (paresia)}} y no fatiga.",
+   "a": "debilidad (paresia)",
+   "h": "Se mide en el examen."
+  },
+  {
+   "q": "Un paciente refiere que le falta energía para actuar, pero no se queda dormido. ¿Fatiga o somnolencia?",
+   "a": "Fatiga; la somnolencia es la tendencia a dormirse por baja alerta.",
+   "h": "Alerta frente a energía."
+  },
+  {
+   "q": "El paciente del caso redujo sus salidas por la fatiga. ¿Qué dato del examen falta para separar fatiga de debilidad?",
+   "a": "El examen de fuerza muscular, comparado entre el inicio y la repetición del esfuerzo.",
+   "h": "Caso: B5."
+  }
+ ],
+ "t2": [
+  {
+   "q": "¿Qué dominio cognitivo del DSM-5-TR agrupa planificar, decidir, mantener datos en mente y corregir errores?",
+   "a": "La función ejecutiva.",
+   "h": "Corteza prefrontal."
+  },
+  {
+   "q": "¿Qué escala evalúa manejar la medicación, las finanzas, las compras y el teléfono, y a qué grupo de actividades pertenece?",
+   "a": "La escala de Lawton, que evalúa actividades instrumentales de la vida diaria (AIVD).",
+   "h": "Independencia en la comunidad."
+  },
+  {
+   "q": "¿Respecto de qué se define un cambio agudo del estado mental?",
+   "a": "Respecto de la línea basal de la persona, que suele aportar un informante.",
+   "h": "DSM-5-TR."
+  },
+  {
+   "q": "¿Qué dos rasgos temporales separan un cambio agudo del estado mental de uno crónico?",
+   "a": "Inicio en horas o pocos días y curso que fluctúa durante el día.",
+   "h": "DSM-5-TR; CAM."
+  },
+  {
+   "q": "«No actúa como él mismo» es una frase coloquial que orienta pero no establece un {{diagnóstico}}.",
+   "a": "diagnóstico",
+   "h": "Interpretación tomada."
+  },
+  {
+   "q": "En el caso, la línea basal depende de un hijo que visita ocasionalmente. ¿Qué limita esto y qué hay que preguntarle?",
+   "a": "Limita la fiabilidad de la línea basal; hay que preguntarle qué hacía el padre solo hace un mes.",
+   "h": "Caso: B1, S3."
+  }
+ ],
+ "t3": [
+  {
+   "q": "¿Qué función cumplen las proyecciones del sistema activador reticular ascendente al tálamo y a la corteza?",
+   "a": "Mantener la corteza despierta (el nivel de alerta).",
+   "h": "Tronco, hipotálamo y prosencéfalo basal."
+  },
+  {
+   "q": "El locus coeruleus sostiene la vigilia y la respuesta de alerta liberando {{noradrenalina}}.",
+   "a": "noradrenalina",
+   "h": "Núcleo del tronco."
+  },
+  {
+   "q": "¿Cuáles son los dos componentes de la conciencia y qué sustrato sostiene cada uno?",
+   "a": "Nivel (alerta), por el sistema activador; contenido, por la corteza y sus redes.",
+   "h": "Plum y Posner."
+  },
+  {
+   "q": "¿Qué dos cosas implica que alguien esté lúcido en la clínica?",
+   "a": "Que está despierto (nivel normal) y que atiende y piensa con coherencia (contenido normal).",
+   "h": "Interpretación tomada."
+  },
+  {
+   "q": "Un paciente responde bien la fecha y el lugar, pero se duerme a los pocos segundos. ¿Qué falla: orientación o alerta?",
+   "a": "La alerta (nivel de vigilia); la orientación es contenido y está conservada en ese momento.",
+   "h": "Orientado frente a alerta."
+  },
+  {
+   "q": "«Lúcido un minuto y luego somnoliento» describe el rasgo de {{fluctuación}}, que se reconoce sin establecer por sí solo un diagnóstico.",
+   "a": "fluctuación",
+   "h": "Caso: B1; CAM."
+  }
+ ]
+}
