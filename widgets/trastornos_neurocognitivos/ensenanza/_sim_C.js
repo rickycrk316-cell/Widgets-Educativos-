@@ -38,3 +38,25 @@ function dcE3(dc){
   x.push('<span class="cf">Si hay estenosis intracraneal sintomática grave con bajo riesgo de transformación hemorrágica → se añade clopidogrel 75 mg/día a la aspirina hasta 90 días; si no, la doble antiagregación no pasa de 90 días [@c_turan2022][@c_dawson2022].</span>');
   out(dc,x.join(''));
 }
+
+function dcE4(dc){
+  var sub=sel(dc,'sub'),sx=sel(dc,'sx'),rx=sel(dc,'rx');
+  if(!(sub.length||sx.length||rx.length)){
+    vacio(dc,'Elige el subtipo, los síntomas que más molestan y el fármaco que recibe ahora. El simulador propone el fármaco con su posología cuando está verificada y lo que se evita.');return;}
+  var x=[],pdd=hv(sub,'pdd');
+  if(hv(rx,'tip')){
+    x.push(par('<b>Antipsicótico típico en curso</b>: sospecha sensibilidad grave si hay rigidez, somnolencia o confusión; en autopsias 13 de 16 pacientes con Lewy reaccionaron mal y 7 de 13 de forma grave [@c_mckeith1992]. Suspéndelo y trata la causa de la agitación; no lo cambies por otro del mismo grupo [@mckeith2017].'));
+  }
+  if(hv(sx,'cog')||(hv(sx,'vh')&&!hv(sx,'cog'))){
+    if(pdd) x.push(par('<b>Cognición</b> (demencia de Parkinson): rivastigmina VO con las comidas, 1,5 mg cada 12 h; sube a 3, 4,5 y 6 mg cada 12 h tras al menos 4 semanas en cada dosis; máximo 12 mg/día. Si interrumpes más de 3 días, reinicia en 1,5 mg [@c_rivastig_label][@c_emre2004]. Alternativa: donepezilo, 5 mg cada noche y 10 mg tras 4 a 6 semanas [@c_aricept].'));
+    else x.push(par('<b>Cognición</b> (DLB): inhibidor de colinesterasa de primera línea [@mckeith2017]. Donepezilo VO, 5 mg cada noche y 10 mg tras 4 a 6 semanas (ficha FDA, indicada en Alzheimer; en DLB, 10 mg mejoró el MMSE en 1,4 puntos en un análisis post hoc) [@c_aricept][@c_mori2024b]; o rivastigmina VO, 1,5 mg cada 12 h con las comidas, con ascenso lento [@c_rivastig_label].'));
+  }
+  if(hv(sx,'vh')) x.push(par('<b>Alucinaciones visuales</b>: el inhibidor de colinesterasa es el primer paso porque puede reducirlas [@mckeith2017]; revisa también dopaminérgicos y anticolinérgicos que las empeoran. Si persisten y son graves, quetiapina a dosis baja con evidencia débil (un ensayo pequeño fue negativo); la clozapina y la pimavanserina no tienen eficacia establecida en DLB [@mckeith2017]. No se fija una dosis en la fuente leída.'));
+  if(hv(sx,'agit')) x.push(par('<b>Agitación o psicosis grave</b>: descarta delirium por enfermedad intercurrente y fármacos, aplica medidas no farmacológicas y capacita al cuidador [@mckeith2017]. Evita haloperidol y los antipsicóticos típicos (reacción adversa en 81 % y grave en 54 % de los que reaccionaron) [@c_mckeith1992]; si el riesgo lo exige, quetiapina a dosis baja con vigilancia [@mckeith2017].'));
+  if(hv(sx,'park')) x.push(par('<b>Parkinsonismo</b>: levodopa a dosis baja y ascenso lento; responde peor que en el Parkinson y puede aumentar la psicosis. Evalúa caídas, densidad ósea y vitamina D [@mckeith2017]. No se fija una dosis en la fuente leída.'));
+  if(hv(sx,'rbd')) x.push(par('<b>Conducta del sueño REM</b>: melatonina, posiblemente más segura; clonazepam nocturno con cautela porque puede empeorar cognición y marcha [@mckeith2017]. No se fija una dosis en la fuente leída.'));
+  if(hv(sx,'dep')) x.push(par('<b>Depresión</b>: ISRS, IRSN o mirtazapina según tolerabilidad y respuesta; hay pocos datos específicos en DLB [@mckeith2017].'));
+  if(!x.length) x.push(par('Elige al menos un síntoma que moleste para proponer el fármaco.'));
+  x.push('<span class="cf">Si el paciente recibe haloperidol y aparece rigidez, somnolencia o confusión graves → sospecha sensibilidad a antipsicóticos de la DLB; suspéndelo y no lo sustituyas por otro típico [@c_mckeith1992][@mckeith2017].</span>');
+  out(dc,x.join(''));
+}
