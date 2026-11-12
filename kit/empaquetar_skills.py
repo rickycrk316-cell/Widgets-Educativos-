@@ -22,7 +22,7 @@ KIT = {
 }
 # Referencias propias de cada skill, además de REFS (se copian a references/)
 REFS_EXTRA = {
-    'apertura': ['fuentes/skill_apertura_v1.md', 'fuentes/skill_definiciones_v5.1.md', 'docs/DESIGN.md'],
+    'apertura': ['fuentes/skill_apertura_v1.md', '.claude/skills/definiciones/SKILL.md:definiciones_SKILL.md', 'docs/DESIGN.md'],
     'widget-ensenanza': ['docs/DECISIONES_v11.md', 'docs/DESIGN.md'],
 }
 EXTRA = {
@@ -52,7 +52,8 @@ def empaquetar(nombre: str) -> bool:
             if f.is_file() and '__pycache__' not in f.parts:
                 z.write(f, f'{nombre}/{f.relative_to(skill)}')
         for r in REFS + REFS_EXTRA.get(nombre, []):
-            z.write(RAIZ / r, f'{nombre}/references/{pathlib.Path(r).name}')
+            src, _, dst = r.partition(':')  # 'origen:nombre_en_paquete' evita choques de nombre (SKILL.md)
+            z.write(RAIZ / src, f'{nombre}/references/{dst or pathlib.Path(src).name}')
         for k in KIT[nombre]:
             z.write(RAIZ / 'kit' / k, f'{nombre}/assets/kit/{k}')  # conserva v11/ para que construir.py funcione
         for src, dst in EXTRA.get(nombre, {}).items():

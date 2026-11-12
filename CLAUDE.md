@@ -9,7 +9,7 @@ Fuente de verdad del diseño y del contenido v11: `docs/DECISIONES_v11.md`. Si a
 - **Edita y lee las partes**, nunca el HTML final: `widgets/<tema>/<id>/*.html`. El HTML final repite decenas de KB de kit en cada widget.
 - No leas `kit/` (cabeceras, scripts, validadores) salvo que la tarea sea cambiar el kit. Clases y roles de color: `docs/DESIGN.md` y el §10 de `docs/DECISIONES_v11.md`.
 - Para ubicar algo usa `grep -rn` sobre `widgets/<tema>/<id>/` en vez de abrir archivos enteros.
-- Contratos de las skills de definiciones y apertura: `fuentes/skill_definiciones_v5.1.md` y `fuentes/skill_apertura_v1.md` (léelos por secciones). Verificación de fuentes: `fuentes/protocolo_verificacion.md`.
+- Contratos de las skills de definiciones y apertura: `.claude/skills/definiciones/SKILL.md` y `fuentes/skill_apertura_v1.md` (léelos por secciones). Verificación de fuentes: `fuentes/protocolo_verificacion.md`.
 - `PLAN.md` de cada tema explica por qué se partió el caso así; léelo antes de añadir o reordenar pestañas.
 
 ## Kits vivos y v10 congelado, según `manifiesto.json`

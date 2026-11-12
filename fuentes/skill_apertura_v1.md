@@ -1,11 +1,11 @@
 ---
 name: "apertura"
-description: "Apertura del ABP en un solo widget HTML: términos desconocidos, problemas biopsicosociales y factores de riesgo con fisiopatología, jerarquización por morbimortalidad e hipótesis diagnósticas, con diagramas y simulador de recall (evoluciona definiciones v5.1)."
+description: "Apertura del ABP en un solo widget HTML: términos desconocidos, problemas biopsicosociales y factores de riesgo con fisiopatología, jerarquización por morbimortalidad e hipótesis diagnósticas, con diagramas y simulador de recall (evoluciona definiciones v6)."
 ---
 
 # Apertura del caso ABP · Widget interactivo (v1)
 
-Evolución de la skill **definiciones v5.1** (`fuentes/skill_definiciones_v5.1.md`). Conserva todo su contrato para las pestañas de términos (prerrequisitos morfofuncionales, fuente única, recall, Vancouver, anti-truncamiento) y añade los otros pasos de la sesión de apertura del ABP en el **mismo widget**. Donde esta skill no diga nada, manda definiciones v5.1.
+Evolución de la skill **definiciones v6** (`.claude/skills/definiciones/SKILL.md`; en el paquete: `references/definiciones_SKILL.md`). Conserva todo su contrato para las pestañas de términos (prerrequisitos morfofuncionales, fuente única, recall, Vancouver, anti-truncamiento) y añade los otros pasos de la sesión de apertura del ABP en el **mismo widget**. Donde esta skill no diga nada, manda definiciones v6.
 
 ## Entrada
 
@@ -31,16 +31,16 @@ El widget **abre** el caso: no lo cierra. Prohibido en todas las pestañas: plan
 
 ## JERARQUÍA DE PRECEDENCIA
 
-1. **Veracidad.** Igual que definiciones v5.1. Toda cifra con cita `[n]` confirmada; definiciones y bloques con badge púrpura de fuente. Cero marcas: lo que no se confirme tras agotar las fuentes (`fuentes/protocolo_verificacion.md`) se elimina; no existe badge «Fuente por verificar» ni `[VERIFICAR EN FUENTE]`.
+1. **Veracidad.** Igual que definiciones v6. Toda cifra con cita `[n]` confirmada; definiciones y bloques con badge púrpura de fuente. Cero marcas: lo que no se confirme tras agotar las fuentes (`fuentes/protocolo_verificacion.md`) se elimina; no existe badge «Fuente por verificar» ni `[VERIFICAR EN FUENTE]`.
 2. **Fidelidad al caso.** Ningún problema, dato ni hallazgo se inventa. Lo que el caso no dice (examen físico, laboratorio, fracción de eyección) se declara como **dato faltante**, nunca se supone. Las incongruencias del caso (p. ej. «una semana» frente a «dos semanas») se señalan en `.mini.am`.
 3. **Regla de alcance** (abajo).
 4. **Fuente única** de prerrequisitos y de fisiopatología: un mecanismo se desarrolla una vez; en el resto, remisión.
-5. **Integridad de salida** (anti-truncamiento de v5.1).
+5. **Integridad de salida** (anti-truncamiento de v6).
 6. Contratos de formato.
 
 ## REGLA DE ALCANCE
 
-- **Términos (`t*`):** como v5.1 (qué es, qué lo distingue, cómo se reconoce). Excepción de apertura: cada término lleva además la card **«Por qué importa en este caso»**, que lo vincula a los problemas (`pid`) que toca. Para un fármaco: clase, mecanismo y el efecto o riesgo que lo hace relevante en este paciente; la dosis solo se cita **como dato del caso**, nunca como recomendación. Para un esquema (p. ej. vacunas), se permite la tabla «recomendado frente a lo que tiene el paciente» porque *es* la definición pedida.
+- **Términos (`t*`):** como v6 (qué es, qué lo distingue, cómo se reconoce). Excepción de apertura: cada término lleva además la card **«Por qué importa en este caso»**, que lo vincula a los problemas (`pid`) que toca. Para un fármaco: clase, mecanismo y el efecto o riesgo que lo hace relevante en este paciente; la dosis solo se cita **como dato del caso**, nunca como recomendación. Para un esquema (p. ej. vacunas), se permite la tabla «recomendado frente a lo que tiene el paciente» porque *es* la definición pedida.
 - **Problemas (`pb`):** fisiopatología completa del problema en este paciente (es el núcleo didáctico); sin tratamiento.
 - **Jerarquización (`jq`):** criterios explícitos y el orden; sin tratamiento.
 - **Hipótesis (`hx`):** argumentos a favor y en contra con datos del caso, diferencial y datos faltantes que la confirmarían; sin tratamiento ni pronóstico numérico.
@@ -55,11 +55,11 @@ El widget **abre** el caso: no lo cierra. Prohibido en todas las pestañas: plan
 
 ## PESTAÑAS DE TÉRMINO `t1`…`tN`
 
-Orden interno de v5.1, con una card nueva entre «Ejemplo de anclaje» y «No confundir con»:
+Orden interno de v6, con una card nueva entre «Ejemplo de anclaje» y «No confundir con»:
 
 `Idea rectora → Prerrequisitos → Definición de referencia → Explicación Feynman → Ejemplo de anclaje (anclado en el paciente) → Por qué importa en este caso (.card.vin, ≤70 palabras, con chips pid) → Mecanismo mínimo (condicional) → No confundir con… → Simulador · Recall → Glosario`
 
-Mazo: 4–6 tarjetas como v5.1, con ≥1 tarjeta que conecte el término con el caso.
+Mazo: 4–6 tarjetas como v6, con ≥1 tarjeta que conecte el término con el caso.
 
 ## PESTAÑA `pb` · PROBLEMAS
 
@@ -117,7 +117,7 @@ Variantes de nodo: `b` (coral), `p` (violeta), `s` (verde), `fr` (ámbar), `ac` 
 
 ## RECALL
 
-Motor único de v5.1 (`DECKS`, `TERMS`, `RC`, `rc_*`). `DECKS` tiene una clave por pestaña con simulador (`t1…tN`, `pb`, `jq`, `hx`) y `tg` es la unión exacta en ese orden. `TERMS` nombra cada clave.
+Motor único de v6 (`DECKS`, `TERMS`, `RC`, `rc_*`). `DECKS` tiene una clave por pestaña con simulador (`t1…tN`, `pb`, `jq`, `hx`) y `tg` es la unión exacta en ese orden. `TERMS` nombra cada clave.
 
 ## CONSTRUCCIÓN
 
@@ -126,7 +126,7 @@ Motor único de v5.1 (`DECKS`, `TERMS`, `RC`, `rc_*`). `DECKS` tiene una clave p
 - `manifiesto.json`: `titulo`, `salida`, `tipo: "apertura"`, `terminos` (n), `problemas` (`{"B":n,"P":n,"S":n,"FR":n}`), `hipotesis` (n), `diagramas` (mínimo).
 - Pruebas: `node kit/probar_definiciones.js <url> <capturas>` (recorre todas las pestañas y mazos).
 
-## AUTOVERIFICACIÓN (añade a la de v5.1)
+## AUTOVERIFICACIÓN (añade a la de v6)
 
 - [ ] ¿Cada problema tiene dato del caso, fisiopatología con `.tl` y «por qué importa»?
 - [ ] ¿Ningún problema ni dato inventado; los faltantes declarados?

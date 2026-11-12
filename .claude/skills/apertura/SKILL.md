@@ -1,11 +1,11 @@
 ---
 name: apertura
-description: Apertura del ABP en un solo widget HTML (evoluciona la skill definiciones v5.1): términos desconocidos del caso, problemas biológicos, psicológicos, sociales y factores de riesgo con fisiopatología y diagramas, jerarquización por morbimortalidad e hipótesis diagnósticas, con recall. Úsala cuando el estudiante entregue un caso y una lista de términos para la sesión de apertura.
+description: Apertura del ABP en un solo widget HTML (evoluciona la skill definiciones v6): términos desconocidos del caso, problemas biológicos, psicológicos, sociales y factores de riesgo con fisiopatología y diagramas, jerarquización por morbimortalidad e hipótesis diagnósticas, con recall. Úsala cuando el estudiante entregue un caso y una lista de términos para la sesión de apertura.
 ---
 
 # Apertura ABP (v1)
 
-El contrato completo está en `fuentes/skill_apertura_v1.md`; donde no diga nada, manda `fuentes/skill_definiciones_v5.1.md` (y `.claude/skills/definiciones/SKILL.md`). Léelos por secciones.
+El contrato completo está en `fuentes/skill_apertura_v1.md`; donde no diga nada, manda `.claude/skills/definiciones/SKILL.md` (en el paquete: `references/definiciones_SKILL.md`). Léelos por secciones.
 
 **Cero marcas.** Ni `[VERIFICAR EN FUENTE]` ni badge «Fuente por verificar»: se agotan PubMed, Consensus, fichas técnicas, GPC del MSP y web (`fuentes/protocolo_verificacion.md`) y lo no confirmado se elimina.
 
