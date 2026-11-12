@@ -33,6 +33,8 @@ Widgets HTML de estudio, autocontenidos y offline. Los nuevos siguen **v11** (`d
 | | `Definiciones_descripcion_morfologica.html` | definiciones | 9 términos (eritema, anular/arciforme, numular, diana, lineal, reticulado, herpetiforme, dermatómica, fotodistribución) + repaso | 22 |
 | Consumo de alcohol | `Toxicodependencias_widget_v10.html` | multi | alcohol (principal), opioides (amenaza), sedantes e hipnóticos, estimulantes, cannabis y psicodélicos | 33 |
 | | `Definiciones_consumo_alcohol.html` | definiciones | 10 términos (estado etílico, abstinencia, trastorno por consumo, aguardiente y bebida estándar, ideas de inutilidad, violencia de pareja, alcoholismo, craving, inversión de la tolerancia, trastorno mental) + repaso | 4 |
+| Ansiedad y pánico | `Ansiedad_y_panico_widget_v10.html` | multi | trastorno de pánico (principal), ansiedad generalizada, trastornos fóbicos, trauma y estrés (amenaza), síntomas somáticos | 17 |
+| | `Definiciones_ansiedad_panico.html` | definiciones | 10 términos (opresión en el pecho, palpitaciones, angustia por perder el control, preinfarto, Stresstabs, Xanax, ansiedad, pánico, ataque de ansiedad, ataque de pánico) + repaso | 1 |
 | Ginecología (sin sílabo) | `Ciclo_ovarico_menopausia_TH_widget_v11.html` | v11 · mono (piloto) | menopausia y terapia hormonal + pestaña «Ciclo ovárico y cuerpo albo»: núcleo por pestaña, perlas por examen, ordenar pasos | 0 |
 
 «Marcas pendientes (legado)» = datos marcados `[VERIFICAR EN FUENTE]` en widgets v10.2 anteriores a la regla de cero marcas: compruébalos antes de estudiar con ellos. Los widgets v11 y las definiciones/aperturas nuevas no llevan marcas: lo no confirmado se elimina.
