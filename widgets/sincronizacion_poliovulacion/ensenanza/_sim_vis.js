@@ -18,7 +18,7 @@ function dcVis(dc){
   if(!(e.length||c.length||o.length||v.length)){
     out(dc,vis_p('Elige la especie o la categoría, el objetivo y el estado del ovario. El simulador propone la estrategia compatible, lo que falta confirmar y la conducta inicial; no calcula probabilidades.'));return;}
   if(vis_has(v,'gest')){
-    out(dc,vis_r('ninguna: una hembra gestante no se sincroniza.','la gestación (ecografía o palpación) y la fecha de servicio [@frandson].','no apliques PGF2α, que provoca aborto; espera al parto o al diagnóstico de vacía [@diapos].')+'<span class="cf">Si la ecografía muestra que no hay gestación y sí cuerpo lúteo → la PGF2α vuelve a ser una opción [@diapos].</span>');return;}
+    out(dc,vis_r('ninguna: una hembra gestante no se sincroniza.','la gestación (ecografía o palpación) y la fecha de servicio.','no apliques PGF2α, que provoca aborto [@lutalysehighcon]; espera al parto o al diagnóstico de vacía [@diapos].')+'<span class="cf">Si la ecografía muestra que no hay gestación y sí cuerpo lúteo → la PGF2α vuelve a ser una opción [@diapos].</span>');return;}
   if(vis_choque(e,c)){
     out(dc,vis_p('La especie y la categoría elegidas no coinciden. Corrige una de las dos para obtener una estrategia.'));return;}
   var s=vis_esp(e,c),ob=o[0]||'',cl=vis_has(v,'cl'),sc=vis_has(v,'sincl'),ct=c[0]||'',r='',cf='';
@@ -32,7 +32,7 @@ function dcVis(dc){
       r=vis_r('poliovulación: FSH en dosis decrecientes cada 12 h durante 4–5 días, con PGF2α en dosis doble hacia el final y IA en celo; alternativa, eCG en dosis única con PGF2α y GnRH [@diapos][@bomapletoft2014].','que la donante cicle (cuerpo lúteo, folículos) y tenga buena condición corporal'+(sc?'; sin cuerpo lúteo la respuesta es impredecible: resuelve el anestro antes':'')+' [@bomapletoft2014].','inicia la FSH entre los días 9 y 12 del ciclo, con la donante bajo supervisión veterinaria [@diapos].');
       cf='Si la donante no tiene cuerpo lúteo al iniciar → la superovulación pierde sincronía y se pospone hasta confirmar el ciclo [@bomapletoft2014].';
     } else {
-      r=vis_p('<b>Estrategia compatible</b>: la poliovulación en esta especie no figura en la presentación [@diapos].')+vis_p('<b>Falta confirmar</b>: el protocolo de superovulación de la especie [VERIFICAR EN FUENTE].')+vis_p('<b>Conducta inicial</b>: sincroniza el ciclo de la donante con la estrategia de su especie y consulta al especialista.');
+      r=vis_p('<b>Estrategia compatible</b>: la poliovulación en esta especie no figura en la presentación [@diapos].')+vis_p('<b>Falta confirmar</b>: el protocolo de superovulación de la especie, que la presentación no describe.')+vis_p('<b>Conducta inicial</b>: sincroniza el ciclo de la donante con la estrategia de su especie y consulta al especialista.');
       cf='Si la especie fuera bovina → la superovulación sería FSH decreciente con PGF2α en dosis doble [@diapos].';
     }
   } else if(s==='bov'){
@@ -71,8 +71,8 @@ function dcVis(dc){
       r=vis_r('PGF2α para la luteólisis, observación de celos y, si se quiere IA a tiempo fijo, inducción de la ovulación a las 17–24 h [@diapos].','cuerpo lúteo y estación reproductiva [@abecia2012].','inyecta PGF2α, observa celos y sirve a las positivas.');
       cf='Si la oveja está fuera de estación → no hay cuerpo lúteo y hay que usar progestágeno con eCG [@abecia2012].';
     } else {
-      r=vis_r('en la cabra la presentación solo recoge progestágeno (CIDR o esponja) con eCG [@diapos].','la estación y la gestación [@abecia2012].','usa el dispositivo y la eCG al retiro; PGF2α en cabra [VERIFICAR EN FUENTE].');
-      cf='Si la cabra tiene cuerpo lúteo en estación → la PGF2α luteoliza, pero su protocolo en cabra [VERIFICAR EN FUENTE].';
+      r=vis_r('en la cabra la presentación solo recoge progestágeno (CIDR o esponja) con eCG [@diapos].','la estación y la gestación [@abecia2012].','usa el dispositivo y la eCG al retiro; la presentación no recoge PGF2α en cabra.');
+      cf='Si la cabra tiene cuerpo lúteo en estación → la presentación no recoge un protocolo con PGF2α en cabra [@diapos]; consulta al especialista.';
     }
   } else if(s==='por'){
     if(ct==='cerda'||ob==='iatf'){
