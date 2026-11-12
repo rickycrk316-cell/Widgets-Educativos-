@@ -40,13 +40,13 @@ function dcE1t(dc){
       r.push(e1_p('<b>Bovino, 1 dosis + observación + 2.ª dosis:</b> una dosis (cloprostenol 500 µg IM), observa celos 5 días e insemina las positivas; a las no vistas, 2.ª dosis a los 11–14 días y observa 5–7 días [@diapos][@cimavet].'));
     }
   } else if(e1_hv(s,'equ')){
-    r.push(e1_p('<b>Yegua:</b> con CL en diestro, dinoprost 5 mg IM (o cloprostenol 250 µg IM [VERIFICAR EN FUENTE]); el celo y el servicio se programan según el esquema de la presentación (servicio 4–6 días) [@diapos][@cimavet].'));
+    r.push(e1_p('<b>Yegua:</b> con CL en diestro, dinoprost 5 mg IM [@diapos][@cimavet] (o cloprostenol 250–500 µg IM según la ficha de un producto de 250 µg/ml [@cloprochem]); la presentación no da tiempos de celo ni servicio para la PGF2α sola en la yegua: el servicio a 4–6 días aparece en sus esquemas con GnRH y con progestágeno [@diapos].'));
   } else if(e1_hv(s,'ovi')){
-    r.push(e1_p('<b>Oveja, 2 dosis:</b> cloprostenol 125 µg IM [VERIFICAR EN FUENTE] en dos tomas separadas por 10–14 días; el celo aparece a los 2–3 días y el servicio se programa en 4–6 días [@diapos][@cimavet] [VERIFICAR EN FUENTE el punto de partida del intervalo de servicio].'));
+    r.push(e1_p('<b>Oveja, 2 dosis:</b> cloprostenol IM, con la dosis por animal de la ficha del producto (no confirmada aquí), en dos tomas separadas por 10–14 días; la diapositiva marca 2–3 días hasta el celo y 4–6 días hasta el servicio, sin aclarar desde qué punto se cuenta cada intervalo [@diapos].'));
   } else {
-    r.push(e1_p('<b>Cabra, 2 dosis:</b> cloprostenol 125 µg IM [VERIFICAR EN FUENTE] en dos tomas separadas por 11 días; celo a unas 50 h y servicio a 36–40 h [@diapos][@cimavet] [VERIFICAR EN FUENTE el punto de partida del servicio].'));
+    r.push(e1_p('<b>Cabra, 2 dosis:</b> cloprostenol 100–200 µg IM (rango de la ficha de un producto de 250 µg/ml [@cloprochem]) en dos tomas separadas por 11 días; la diapositiva marca 50 h hasta el celo y 36–40 h hasta el servicio, sin aclarar desde qué punto se cuenta cada intervalo [@diapos].'));
   }
-  if(!gest) r.push(e1_p('Antes de inyectar, confirma que la hembra no está gestante; manipula el producto con guantes: la PGF2α es peligrosa para mujeres embarazadas y asmáticas [VERIFICAR EN FUENTE].'));
+  if(!gest) r.push(e1_p('Antes de inyectar, confirma que la hembra no está gestante; manipula el producto con guantes: la PGF2α se absorbe por la piel y puede provocar aborto y broncoespasmo; la embarazada y quien tenga asma deben evitar manipularla [@lutalysehighcon].'));
   r.push('<span class="cf">Si la hembra no muestra celo 5–7 días tras la dosis → revisa por ecografía si había CL maduro; si no lo había, no era candidata y no se repite la misma dosis [@diapos].</span>');
   out(dc,r.join(''));
 }
