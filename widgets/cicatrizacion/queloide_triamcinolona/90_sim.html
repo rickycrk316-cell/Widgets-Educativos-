@@ -1,0 +1,115 @@
+<script>
+function dcDx(dc){
+  var b=sel(dc,'bor')[0], e=sel(dc,'evo')[0], al=sel(dc,'al'), h='';
+  if(al.length){
+    var w=[];
+    if(al.indexOf('rapido')>=0){w.push('crecimiento rápido');}
+    if(al.indexOf('ulcera')>=0){w.push('ulceración');}
+    if(al.indexOf('recidiva')>=0){w.push('recidiva precoz tras escisión');}
+    h='<p><b>Lesión que exige biopsia:</b> con '+w.join(', ')+' no infiltres ni trates como queloide hasta tener histología [2] [VERIFICAR EN FUENTE].</p>'
+     +'<p>El diferencial incluye dermatofibrosarcoma protuberans, carcinoma escamocelular y otros tumores que imitan un queloide [2].</p>'
+     +'<span class="cf">Si no hubiera ninguna señal de alarma y la lesión fuera típica → el diagnóstico es clínico, sin biopsia [1].</span>';
+    out(dc,h);return;
+  }
+  if(!b||!e){out(dc,'<p>Indica si la lesión sobrepasa la herida y cómo evoluciona para ver el diagnóstico.</p>');return;}
+  if(b==='fuera'&&e==='progresa'){
+    h='<p><b>Cicatriz queloide:</b> sobrepasa los bordes de la herida, crece durante años y no regresa por sí sola [1] [3].</p>'
+     +'<p>El diagnóstico es clínico [1]. Mide, fotografía y puntúa con VSS o POSAS antes de tratar [4] [7]; la infiltración con triamcinolona es una primera opción invasiva [10] [4].</p>'
+     +'<span class="cf">Si la lesión respetara los bordes de la herida y se aplanara con los meses → es hipertrófica.</span>';
+  } else if(b==='dentro'&&e==='regresa'){
+    h='<p><b>Cicatriz hipertrófica:</b> se queda en el sitio de la lesión y suele regresar sola en 12 a 24 meses [1].</p>'
+     +'<p>Empieza con medidas no invasivas, como silicona [11]; infiltra si está gruesa, sintomática y no cede [4].</p>'
+     +'<span class="cf">Si empezara a invadir piel sana y dejara de regresar → se reclasifica como queloide.</span>';
+  } else if(b==='fuera'){
+    h='<p><b>Datos discordantes:</b> sobrepasa la herida pero se aplana con el tiempo. Reexamina y puntúa con la escala JSS, que separa queloide, hipertrófica y cicatriz madura [2].</p>'
+     +'<span class="cf">Si el crecimiento continuara más allá de los bordes → queloide.</span>';
+  } else {
+    h='<p><b>Datos discordantes:</b> respeta la herida pero progresa sin regresar. Reexamina en unos meses y puntúa con la escala JSS [2]; una hipertrófica regresa en 12 a 24 meses [1].</p>'
+     +'<span class="cf">Si la lesión creciera de manera atípica o se ulcerara → biopsia antes de tratar.</span>';
+  }
+  out(dc,h);
+}
+
+function dcTx(dc){
+  var s=sel(dc,'esc')[0], pi=sel(dc,'piel'), osc=pi.indexOf('osc')>=0, sin=pi.indexOf('sint')>=0, h='';
+  if(!s){out(dc,'<p>Elige el escenario para ver la conducta.</p>');return;}
+  if(s==='peq'){
+    h='<p><b>Queloide pequeño y reciente:</b> silicona y medidas generales, y triamcinolona intralesional como primera opción invasiva [10] [4] [11].</p><ul>'
+     +'<li>Triamcinolona de 10 a 40 mg/mL cada 4 a 6 semanas [4]; detalle en «Infiltración con triamcinolona».</li>'
+     +'<li>Crioterapia previa en lesiones delgadas y recientes [4].</li>'
+     +'<li>Reevalúa tras unas 3 sesiones; si la mejoría es pequeña, combina con 5-FU [12] [4].</li></ul>'
+     +'<span class="cf">Si la respuesta fuera pobre tras unas 3 sesiones → triamcinolona más 5-FU.</span>';
+  } else if(s==='lob'){
+    h='<p><b>Queloide grande de lóbulo:</b> escisión con cierre sin tensión y adyuvancia obligatoria; la escisión sola recidiva [2] [4].</p><ul>'
+     +'<li>Adyuvancia con triamcinolona intralesional: recidiva de 15,4 % (IC 95 %: 9,4 a 24,1) en queloide de oreja [17].</li>'
+     +'<li>Alternativa: radioterapia posoperatoria, con recidiva de 14,0 % y sin diferencia significativa frente a la triamcinolona [17]; ejemplo del consenso: 10 Gy en 2 fracciones [2].</li>'
+     +'<li>Cuando se indica adyuvancia, se inicia dentro de unas 24 h de la escisión [4].</li></ul>'
+     +'<span class="cf">Si el queloide fuera pequeño y reciente → se intenta primero la infiltración sin cirugía.</span>';
+  } else {
+    h='<p><b>Recidiva tras escisión sin adyuvancia:</b> la escisión aislada recidiva; pasa a tratamiento combinado [4].</p><ul>'
+     +'<li>Triamcinolona más 5-FU, columna farmacológica del queloide establecido: supera a la triamcinolona sola [12] [4].</li>'
+     +'<li>La adyuvancia con una intervención adicional se asocia a menos recidiva (13,7 % frente a 21,7 %, sin significación) [6].</li>'
+     +'<li>Considera radioterapia adyuvante o estroncio-90 en lesiones adelgazadas [6] [4].</li></ul>'
+     +'<span class="cf">Si la recidiva fuera muy rápida o atípica → biopsia antes de escalar [VERIFICAR EN FUENTE].</span>';
+  }
+  if(osc){h+='<p>Fototipo IV a VI: el riesgo de hipopigmentación y atrofia pesa más; prefiere concentraciones bajas y aconseja al paciente antes [8] [4].</p>';}
+  if(sin){h+='<p>Lesión muy sintomática: la infiltración mejora rápido el prurito y el dolor [2]; si hay progresión rápida o compromiso funcional, escala sin esperar [4].</p>';}
+  out(dc,h);
+}
+
+function dcInf(dc){
+  var c=sel(dc,'con')[0], v=sel(dc,'vol')[0], t=sel(dc,'int')[0], h='';
+  if(!c||!v||!t){out(dc,'<p>Elige concentración, volumen e intervalo para ver la retroalimentación.</p>');return;}
+  var mg=(c*(v==='05'?0.5:v==='15'?1.5:3)).toString().replace('.',',');
+  if(c==='10'){
+    h='<p><b>10 mg/mL:</b> punto de partida defendible; es la presentación intralesional [19] y las concentraciones altas aumentan la atrofia [8]. Si el queloide es grueso, la lesión puede requerir más concentración en sesiones posteriores [VERIFICAR EN FUENTE].</p>';
+  } else if(c==='20'){
+    h='<p><b>20 mg/mL:</b> razonable en una lesión gruesa, pero con más riesgo de atrofia y telangiectasia que las concentraciones bajas [8] [4].</p>';
+  } else {
+    h='<p><b>40 mg/mL:</b> es la concentración del protocolo de [15], que excluyó la diátesis queloidea. En un lóbulo visible de una mujer joven suma riesgo de atrofia y telangiectasia [8].</p>';
+  }
+  if(v==='05'){
+    h+='<p>Volumen de 0,5 mL: unos '+mg+' mg en total (cálculo propio). Es coherente con una lesión de 2 cm: puntos separados al menos 1 cm [19], deteniéndose al blanqueamiento [VERIFICAR EN FUENTE].</p>';
+  } else if(v==='15'){
+    h+='<p>Volumen de 1,5 mL: unos '+mg+' mg (cálculo propio). Es el tope orientativo del protocolo [15] para lesiones de hasta 6 cm²; en 2 cm sobra volumen, que se escapa fuera de la dermis y se absorbe [19].</p>';
+  } else {
+    h+='<p>Volumen de 3 mL: unos '+mg+' mg (cálculo propio). Supera el tope leído [15]; exceder la dosis intralesional causó Cushing iatrogénico [21]. La dosis máxima por sesión no está establecida [VERIFICAR EN FUENTE].</p>';
+  }
+  if(t==='m46'){
+    h+='<p><b>Cada 4 a 6 semanas:</b> intervalo habitual [4]. Reevalúa tras unas 3 sesiones y, si la mejoría es pequeña, combina con 5-FU [12] [4].</p>';
+  } else if(t==='sem'){
+    h+='<p>Semanal: es el esquema de [18] y la ficha admite repetición semanal o menos frecuente [19], pero acumula dosis más rápido (inferencia propia); no es el intervalo habitual [4].</p>';
+  } else {
+    h+='<p>A los 3 meses: queda fuera del rango de 4 a 6 semanas [4]; la guía europea reevalúa cada 4 a 8 semanas [11]. El efecto de un intervalo tan largo no está establecido [VERIFICAR EN FUENTE].</p>';
+  }
+  if(c!=='40'&&v==='05'&&t==='m46'){h+='<p>La combinación elegida es coherente. Antes de infiltrar confirma que no esté embarazada ni lactando [VERIFICAR EN FUENTE].</p>';}
+  h+='<span class="cf">Si la lesión no mejorara tras unas 3 sesiones → añadir 5-FU a la triamcinolona [12] [4].</span>';
+  out(dc,h);
+}
+
+function dcSeg(dc){
+  var ses=sel(dc,'ses')[0], e=sel(dc,'ef'), r=sel(dc,'resp')[0], h='';
+  if(!ses||!r){out(dc,'<p>Elige la sesión y la respuesta de la lesión; marca los efectos adversos si los hay.</p>');return;}
+  var atr=e.indexOf('atrofia')>=0, hip=e.indexOf('hipo')>=0, sis=e.indexOf('sist')>=0;
+  if(sis){
+    h='<p><b>Signos sistémicos:</b> suspende la infiltración y sospecha supresión del eje suprarrenal o síndrome de Cushing iatrogénico por exceso de dosis [21] [VERIFICAR EN FUENTE].</p>'
+     +'<p>Revisa el volumen y la dosis acumulada [19] y deriva a endocrinología.</p>';
+  }
+  if(atr||hip){
+    h+='<p><b>'+(ses==='s3'?'Tras la 3.ª sesión':'Tras la 2.ª sesión')+', con efecto local:</b> la atrofia o la hipopigmentación son motivo de parar o cambiar el esquema [4].</p><ul>';
+    if(atr){h+='<li>Atrofia: baja la concentración, porque 20 y 40 mg/mL dan más atrofia y telangiectasia [8]; espacia las sesiones y no inyectes sobre la zona atrófica [VERIFICAR EN FUENTE]. Apareció en 24 % con triamcinolona en un ensayo [16].</li>';}
+    if(hip){h+='<li>Hipopigmentación: pesa más en fototipos IV a VI; avisa al paciente y evita sumar crioterapia sobre la zona [4].</li>';}
+    h+='</ul>';
+  }
+  if(!sis&&!atr&&!hip){
+    h='<p><b>Sin efectos adversos:</b> continúa el esquema y reevalúa en cada visita cada 4 a 8 semanas [4] [11].</p>';
+  }
+  if(r==='parcial'){
+    h+='<p>Con mejoría pequeña o estancada'+(ses==='s3'?' tras unas 3 sesiones':'')+', cambia a triamcinolona más 5-FU: mejora altura, flexibilidad y pigmentación frente a triamcinolona sola y causa menos telangiectasias [8] [12] [4].</p>';
+  } else {
+    h+='<p>Con buena respuesta, continúa a menor concentración o espacia, y detén cuando la lesión quede aplanada y asintomática [15] [4].</p>';
+  }
+  h+='<span class="cf">Si la lesión aplanara y quedara asintomática → se detiene la infiltración y se vigila la recidiva por al menos 12 meses [4].</span>';
+  out(dc,h);
+}
+</script>
