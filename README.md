@@ -31,6 +31,8 @@ Widgets HTML de estudio, autocontenidos y offline. Los nuevos siguen **v11** (`d
 | | `Definiciones_lesiones_liquidas_vasculares.html` | definiciones | 9 términos (vesícula, ampolla, pústula, absceso, púrpura, equimosis, telangiectasia, surco acarino, vitropresión y Nikolsky) + repaso | 5 |
 | | `Definiciones_lesiones_secundarias.html` | definiciones | 9 términos (escama, costra, erosión, úlcera, fisura, excoriación, liquenificación, atrofia, cicatriz) + repaso | 8 |
 | | `Definiciones_descripcion_morfologica.html` | definiciones | 9 términos (eritema, anular/arciforme, numular, diana, lineal, reticulado, herpetiforme, dermatómica, fotodistribución) + repaso | 22 |
+| Consumo de alcohol | `Toxicodependencias_widget_v10.html` | multi | alcohol (principal), opioides (amenaza), sedantes e hipnóticos, estimulantes, cannabis y psicodélicos | 33 |
+| | `Definiciones_consumo_alcohol.html` | definiciones | 10 términos (estado etílico, abstinencia, trastorno por consumo, aguardiente y bebida estándar, ideas de inutilidad, violencia de pareja, alcoholismo, craving, inversión de la tolerancia, trastorno mental) + repaso | 4 |
 | Ginecología (sin sílabo) | `Ciclo_ovarico_menopausia_TH_widget_v11.html` | v11 · mono (piloto) | menopausia y terapia hormonal + pestaña «Ciclo ovárico y cuerpo albo»: núcleo por pestaña, perlas por examen, ordenar pasos | 0 |
 
 «Marcas pendientes (legado)» = datos marcados `[VERIFICAR EN FUENTE]` en widgets v10.2 anteriores a la regla de cero marcas: compruébalos antes de estudiar con ellos. Los widgets v11 y las definiciones/aperturas nuevas no llevan marcas: lo no confirmado se elimina.

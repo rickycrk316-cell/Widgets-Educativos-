@@ -1,0 +1,157 @@
+<script>
+const TERMS={t1:'Estado etílico',t2:'Síndrome de abstinencia alcohólica',t3:'Trastorno por consumo de alcohol',t4:'Aguardiente y bebida estándar',t5:'Ideas de inutilidad y minusvalía',t6:'Violencia de pareja',t7:'Alcoholismo',t8:'Craving',t9:'Inversión de la tolerancia',t10:'Trastorno mental'};
+const DECKS={
+t1:[
+{q:'¿Por qué la concentración de etanol baja a un ritmo casi fijo, aunque haya mucho en sangre, y qué paso la limita?',a:'La alcohol deshidrogenasa (ADH) se satura con poco etanol y el hígado elimina una cantidad casi fija por hora: cinética de orden cero.',h:'Piensa en una puerta estrecha por la que pasa la misma gente cada hora.'},
+{q:'¿Qué hace el etanol sobre el canal GABA-A y qué efecto tiene en la neurona?',a:'Potencia su apertura: entra cloruro, la neurona se hiperpolariza y se inhibe.',h:'Refuerza el freno principal del cerebro.'},
+{q:'Si el etanol deprime el cerebelo, ¿qué signos esperas al explorar la marcha, el habla y los ojos?',a:'Ataxia (marcha inestable), disartria y nistagmo.',h:'Coordinación, equilibrio y movimientos oculares dependen del cerebelo.'},
+{q:'El etanol es un depresor. ¿Por qué entonces el paciente intoxicado puede verse desinhibido o agresivo?',a:'Deprime primero la corteza prefrontal, que frena la conducta; al perder ese freno aparece la desinhibición.',h:'Lo primero que se apaga es el control, no la conducta.'},
+{q:'¿Qué dos hallazgos separan la intoxicación por metanol de la etílica?',a:'Síntomas visuales (daño del nervio óptico) y acidosis metabólica por formiato.',h:'Su metabolito tóxico no es el acetaldehído.'},
+{q:'Tras una ingesta reciente de etanol aparecen cambios de conducta más habla arrastrada, marcha inestable o nistagmo. Este cuadro se llama {{estado etílico (intoxicación alcohólica aguda)}}.',a:'Estado etílico (intoxicación alcohólica aguda).',h:'Conducta alterada más un signo neurológico, con ingesta reciente.'}
+],
+t2:[
+{q:'Tras años de consumo, el cerebro compensa el exceso de inhibición. ¿Qué cambia en los receptores GABA-A y NMDA?',a:'GABA-A responde menos (regulación a la baja) y NMDA responde más (regulación al alza).',h:'Menos freno y más acelerador para equilibrar al etanol.'},
+{q:'Al suspender el etanol en un cerebro adaptado, ¿qué predomina y por qué?',a:'La excitación: falta la potenciación de GABA-A y el NMDA queda sin contrapeso.',h:'El etanol ya no está, pero los receptores siguen adaptados.'},
+{q:'¿Qué sistema se hiperactiva en el rebote y qué signos autonómicos produce?',a:'El noradrenérgico (simpático): taquicardia, sudoración y temblor.',h:'Es la respuesta de alarma sin freno.'},
+{q:'Hace 6 meses el paciente suspendió el alcohol y tuvo temblor, mareo e irritabilidad. ¿Qué cuadro explican?',a:'Un síndrome de abstinencia: hiperexcitabilidad tras suspender un consumo prolongado.',h:'Los tres aparecieron al quitar el alcohol, no al beberlo.'},
+{q:'¿Qué hallazgo distingue el delirium tremens de la abstinencia sin delirium?',a:'La alteración de la conciencia y la atención, con desorientación, además de hiperactividad autonómica intensa.',h:'En la abstinencia simple la conciencia sigue clara.'},
+{q:'Una persona amanece con cefalea y malestar tras una noche de bebida. ¿Por qué eso es {{resaca}} y no abstinencia?',a:'Resaca: ocurre sin suspender un consumo prolongado al que el cerebro se adaptó.',h:'Pregunta qué se interrumpió y cuánto tiempo se bebió.'}
+],
+t3:[
+{q:'¿Qué hace la dopamina que el ATV proyecta al núcleo accumbens y qué efecto tiene en la conducta?',a:'Señala que el estímulo merece repetirse y genera motivación para buscarlo.',h:'Piensa en la señal de valor, no en el placer en sí.'},
+{q:'Si el control de la corteza prefrontal pierde peso, ¿qué se observa en el consumo del paciente?',a:'Pérdida de control inhibitorio: consume más de lo que planeó y persiste pese al daño.',h:'El freno es el que falla, no el deseo.'},
+{q:'Un varón de 17 años bebe cerveza los fines de semana; a los 20 bebe entre semana y más volumen, no logra dejarlo y falla en el trabajo. ¿Qué término describe el patrón?',a:'Trastorno por consumo de alcohol (equivale a la dependencia del alcohol de la CIE-11).',h:'Hay patrón sostenido, pérdida de control y deterioro.'},
+{q:'Según el DSM-5-TR, el trastorno por consumo de alcohol es un patrón problemático que causa {{deterioro o malestar clínicamente significativo}}.',a:'Deterioro o malestar clínicamente significativo.',h:'Es lo que distingue el trastorno del simple consumo de riesgo.'},
+{q:'¿Qué separa el consumo de riesgo del trastorno por consumo de alcohol?',a:'El consumo de riesgo aumenta la probabilidad de daño, pero aún no produce deterioro ni malestar clínico significativo.',h:'Mira si ya hay consecuencias.'},
+{q:'¿Por qué el término «abuso de alcohol» ya no se usa como diagnóstico separado?',a:'Era un término del DSM-IV; el DSM-5-TR lo reúne con la dependencia en un solo trastorno.',h:'Cambió de una a dos categorías a una sola.'}
+],
+t4:[
+{q:'¿Qué indica el grado alcohólico de 10 % vol y cómo se convierte en masa de etanol?',a:'10 mL de etanol por cada 100 mL de bebida; el volumen de etanol se multiplica por 0,8 g/mL para obtener gramos.',h:'Porcentaje en volumen primero, densidad después.'},
+{q:'Se calcula la ingesta en gramos de etanol. ¿Qué fórmula se usa?',a:'% vol × mL × 0,8 g/mL.',h:'Grado, volumen y densidad del etanol.'},
+{q:'La OMS define la bebida estándar como la cantidad que contiene {{10 g}} de etanol.',a:'10 g de etanol.',h:'Unidad común para comparar bebidas distintas.'},
+{q:'¿Qué es el aguardiente?',a:'Bebida alcohólica destilada de caña de azúcar.',h:'Destilado, no fermentado.'},
+{q:'¿En qué se diferencian las puntas de un aguardiente comercial y qué riesgo se asocia a ese tipo de destilado?',a:'Son aguardiente artesanal de alta graduación, sin control de calidad; puede contener metanol.',h:'Piensa en producción sin verificación.'},
+{q:'¿Qué diferencia el grado alcohólico de la bebida estándar?',a:'El grado es una proporción (% vol); la bebida estándar es una cantidad fija de etanol (10 g).',h:'Una es porcentaje, la otra es masa.'}
+],
+t5:[
+{q:'Los núcleos del rafe envían serotonina de forma difusa a corteza y sistema límbico. ¿Qué tipo de función modulan, en lugar de transmitir un mensaje puntual?',a:'El tono del ánimo, junto con el sueño y el apetito.',h:'Es un neuromodulador: ajusta cómo responden las redes.'},
+{q:'Si falla la vía dopaminérgica que nace en el área tegmental ventral, ¿qué síntoma de ánimo esperas?',a:'Pérdida de interés y de placer (anhedonia).',h:'La dopamina señala qué merece la pena buscar.'},
+{q:'En el DSM-5-TR, los sentimientos de {{inutilidad}} o de culpa excesiva o inapropiada son uno de los criterios de qué cuadro?',a:'Del episodio depresivo mayor.',h:'Es un criterio, no el cuadro completo.'},
+{q:'Un paciente dice «no sirvo para nada». ¿Basta ese dato para hablar de un trastorno depresivo?',a:'No: es un síntoma; el trastorno exige agrupar varios criterios, con duración y deterioro.',h:'Distingue la pieza del diagnóstico.'},
+{q:'¿Qué separa el trastorno depresivo inducido por alcohol de un trastorno depresivo primario?',a:'En el inducido, los síntomas aparecen durante o poco después de intoxicación o abstinencia y se atribuyen a la sustancia.',h:'Mira la relación temporal con el alcohol.'},
+{q:'¿Por qué las ideas de inutilidad no equivalen a ideación suicida?',a:'La inutilidad es un juicio sobre el propio valor; la ideación suicida son pensamientos sobre quitarse la vida, un término distinto.',h:'Uno valora a la persona; el otro nombra pensamientos de muerte.'}
+],
+t6:[
+{q:'El etanol potencia la inhibición neuronal mediada por GABA-A. ¿Qué efecto conductual tiene, y por qué importa en la violencia de pareja?',a:'Reduce el freno conductual (desinhibición); por eso el alcohol se asocia con la conducta, sin ser su causa ni una excusa.',h:'Piensa en qué hace una neurona inhibida menos.'},
+{q:'¿Qué función cumple la corteza prefrontal frente a una respuesta impulsiva, y qué ocurre si su control claudica?',a:'Frena la respuesta impulsiva; si claudica, aumenta la conducta impulsiva y agresiva.',h:'Es el control inhibitorio.'},
+{q:'Según la OMS, la violencia de pareja es el comportamiento de la pareja o expareja que causa {{daño}} de qué tres tipos?',a:'Físico, sexual o psicológico.',h:'Incluye también conductas de control.'},
+{q:'¿Cuáles son los cuatro tipos que reúne la definición de la OMS?',a:'Agresión física, coerción sexual, maltrato psicológico y conductas de control.',h:'Cada uno se reconoce de forma distinta.'},
+{q:'¿Qué separa la violencia de pareja de un conflicto de pareja?',a:'En la violencia hay daño o conductas de control sobre el otro; el conflicto es un desacuerdo sin daño.',h:'Mira si hay daño o control.'},
+{q:'¿En qué se diferencia la violencia de pareja de la violencia intrafamiliar?',a:'La intrafamiliar es más amplia (hijos, adultos mayores, otros familiares); la de pareja es una de sus formas.',h:'Una es el conjunto; la otra, un subtipo.'}
+],
+t7:[
+{q:'¿Por qué el DSM-5-TR no usa «alcoholismo» como diagnóstico y qué término ofrece en su lugar?',a:'Porque no precisa gravedad ni criterios; usa «trastorno por consumo de alcohol», con criterios definidos.',h:'Un nombre coloquial frente a uno con criterios.'},
+{q:'¿Qué término de la CIE-11 equivale al uso común de «alcoholismo»?',a:'Dependencia del alcohol.',h:'Es el diagnóstico que recoge la pérdida de control y la dependencia.'},
+{q:'Si el consumo repetido ajusta los receptores cerebrales, ¿qué dos fenómenos físicos suele implicar lo que se llama «alcoholismo»?',a:'Tolerancia y abstinencia, es decir, dependencia física.',h:'Más cantidad para el mismo efecto y malestar al suspender.'},
+{q:'Un paciente tuvo una sola noche de borrachera tras una fiesta. ¿Por qué no corresponde llamarlo «alcoholismo»?',a:'El término alude a un patrón crónico y sostenido, no a un episodio aislado.',h:'Piensa en tiempo y repetición.'},
+{q:'En la historia clínica se escribe «alcoholismo». ¿Qué le falta a esa palabra frente al diagnóstico formal?',a:'Criterios, gravedad y duración definidos.',h:'Sirve para entenderse, no para clasificar.'},
+{q:'Un término tradicional para el consumo crónico con pérdida de control, hoy reemplazado en los manuales por términos precisos, es {{alcoholismo}}.',a:'Alcoholismo.',h:'Es el nombre histórico, no el diagnóstico actual.'}
+],
+t8:[
+{q:'Si un lugar asociado con beber libera dopamina en el accumbens antes del primer trago, ¿qué se ha formado y qué provoca?',a:'Una asociación condicionada; el estímulo dispara motivación y búsqueda del alcohol.',h:'La señal, no el alcohol, activa el impulso.'},
+{q:'¿Qué papel cumple la amígdala en el deseo de consumir ante una señal?',a:'Asocia señales y estados emocionales con la recompensa, y por eso las reactiva.',h:'Piensa en memoria emocional.'},
+{q:'Tras semanas sin beber, el paciente pasa por su antiguo bar y siente un deseo intenso. ¿Qué explica que reaparezca?',a:'La memoria asociativa persiste mucho más que el consumo y la señal la reactiva.',h:'La memoria dura más que la abstinencia.'},
+{q:'Deseo intenso o necesidad apremiante de consumir alcohol, criterio del DSM-5-TR, es el {{craving}}.',a:'Craving.',h:'Es un criterio subjetivo, no un signo físico.'},
+{q:'¿Qué separa el craving del síndrome de abstinencia?',a:'El craving es un deseo subjetivo que puede aparecer sin signos físicos; la abstinencia se caracteriza por signos de hiperactividad.',h:'Uno se refiere, el otro se mide.'},
+{q:'¿Por qué el craving no se explica solo por una necesidad del cuerpo?',a:'Se dispara por señales aprendidas o estrés, incluso sin dependencia física actual.',h:'Piensa en el olor del pan sin hambre.'}
+],
+t9:[
+{q:'Con consumo sostenido, el hígado induce CYP2E1. ¿Qué efecto tiene sobre la cantidad necesaria para el mismo efecto?',a:'Depura más rápido, por lo que hace falta más etanol: es la tolerancia metabólica.',h:'Mira la velocidad de eliminación.'},
+{q:'Si la masa de hepatocitos funcionantes cae tras años de consumo, ¿qué pasa con la alcoholemia al beber la misma cantidad?',a:'Sube más y se mantiene más tiempo, porque la depuración disminuye.',h:'Menos hígado, menos limpieza.'},
+{q:'Un paciente dice que antes aguantaba una botella y ahora se embriaga con la mitad. ¿Qué fenómeno describe?',a:'Inversión de la tolerancia.',h:'Menos cantidad basta; piensa en el sentido contrario a la tolerancia.'},
+{q:'¿Qué separa la inversión de la tolerancia de la tolerancia habitual?',a:'En la tolerancia hace falta más alcohol para el mismo efecto; en la inversión basta menos.',h:'Compara el sentido del cambio.'},
+{q:'¿Por qué la inversión de la tolerancia no se puede atribuir solo a que el cerebro «se acostumbró a menos»?',a:'Se debe sobre todo a la pérdida de reserva hepática, que reduce la depuración.',h:'El problema empieza en el órgano que elimina.'},
+{q:'Cuando la misma dosis de etanol intoxica antes porque la reserva hepática se agotó, se habla de {{inversión de la tolerancia}}.',a:'Inversión de la tolerancia (tolerancia inversa).',h:'Aparece tras años de consumo crónico.'}
+],
+t10:[
+{q:'¿Qué tres áreas de la persona altera, según el DSM-5-TR, un trastorno mental?',a:'La cognición, la regulación emocional y la conducta.',h:'Pensar, sentir y actuar.'},
+{q:'Si un duelo produce tristeza proporcionada a la pérdida, ¿por qué no es en sí un trastorno mental?',a:'Es una reacción esperable al estrés, no una disfunción individual subyacente.',h:'Piensa en lo proporcionado y lo esperable.'},
+{q:'Alguien no sufre y rinde bien, pero su conducta es poco frecuente en su medio. ¿Por qué eso no basta para hablar de trastorno, según los criterios de normalidad?',a:'Salirse del criterio estadístico no basta: faltan malestar y disfunción; y «enfermedad mental» es un término más amplio que trastorno mental.',h:'Compara frecuente, funcional y con malestar.'},
+{q:'Un paciente tiene tristeza, ideas de inutilidad y deterioro laboral. ¿Qué dos elementos acercan este cuadro al concepto de trastorno?',a:'Varias manifestaciones agrupadas con malestar y deterioro del funcionamiento.',h:'Un síntoma solo no alcanza.'},
+{q:'Si el ánimo depende de serotonina, noradrenalina y dopamina, ¿qué idea cubre que su alteración sostenida cause síntomas?',a:'Que un trastorno mental refleja disfunción de procesos biológicos, además de psicológicos o del desarrollo.',h:'La definición incluye una base biológica.'},
+{q:'Síndrome con alteración clínicamente significativa de la cognición, la emoción o la conducta, con malestar o discapacidad, es un {{trastorno mental}}.',a:'Trastorno mental.',h:'Es un concepto general, no un diagnóstico concreto.'}
+],
+};
+DECKS.tg=[].concat.apply([],Object.keys(TERMS).map(function(k){return DECKS[k].map(function(c){return {q:c.q,a:c.a,h:c.h,t:k};});}));
+const RC={};
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function el(k,s){return document.getElementById('rc-'+k+'-'+s);}
+function isCloze(c){return c.q.indexOf('{{')>=0;}
+function front(c){return esc(c.q).replace(/\{\{[^}]*\}\}/g,'[ ? ]');}
+function back(c){return esc(c.q).replace(/\{\{([^}]*)\}\}/g,'<b>$1</b>');}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function show(id,btn){
+  document.querySelectorAll('.tab').forEach(function(s){s.classList.toggle('active',s.id===id);});
+  document.querySelectorAll('.tb').forEach(function(b){b.classList.toggle('active',b===btn);});
+  try{btn.scrollIntoView({inline:'center',block:'nearest'});}catch(e){}
+}
+function tog(b){b.parentElement.classList.toggle('op');}
+function rc_reset(k){
+  var n=DECKS[k].length,idx=[];
+  for(var i=0;i<n;i++)idx.push(i);
+  RC[k]={queue:shuffle(idx),first:{},fails:{},shown:false,done:0,n:n};
+  if(el(k,'e'))el(k,'e').innerHTML='';
+  rc_render(k);
+}
+function rc_render(k){
+  var s=RC[k],card=el(k,'c');
+  if(!card)return;
+  if(!s.queue.length){rc_end(k);return;}
+  var c=DECKS[k][s.queue[0]],f=s.fails[s.queue[0]]||0;
+  el(k,'n').textContent='Tarjeta '+(s.done+1)+' de '+s.n+(k==='tg'&&s.shown?' · '+TERMS[c.t]:'');
+  var h='<p class="rc-q">'+(s.shown&&isCloze(c)?back(c):front(c))+'</p>';
+  if(s.shown&&!isCloze(c))h+='<p class="rc-a"><b>Respuesta.</b> '+esc(c.a)+'</p>';
+  if(!s.shown&&f>=2)h+='<p class="rc-hint">Pista: '+esc(c.h)+'</p>';
+  card.innerHTML=h;
+  var b='';
+  if(!s.shown){b+='<button class="go" onclick="rc_show(\''+k+'\')">Mostrar respuesta</button>';}
+  else{
+    b+='<button class="gr ok" onclick="rc_grade(\''+k+'\',\'ok\')">La sabía</button>';
+    b+='<button class="gr mid" onclick="rc_grade(\''+k+'\',\'mid\')">A medias</button>';
+    b+='<button class="gr ko" onclick="rc_grade(\''+k+'\',\'ko\')">No la sabía</button>';
+  }
+  b+='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  el(k,'b').innerHTML=b;
+}
+function rc_show(k){RC[k].shown=true;rc_render(k);}
+function rc_grade(k,g){
+  var s=RC[k],i=s.queue.shift();
+  if(s.first[i]===undefined)s.first[i]=(g==='ok');
+  if(g==='ok'){s.done++;}
+  else{s.fails[i]=(s.fails[i]||0)+1;s.queue.push(i);}
+  s.shown=false;
+  rc_render(k);
+}
+function rc_verdict(p){return p>=80?['ok','Término consolidado']:['rep','Repasar hoy'];}
+function rc_end(k){
+  var s=RC[k],ok=0,i,rows='';
+  for(i=0;i<s.n;i++)if(s.first[i])ok++;
+  var p=Math.round(100*ok/s.n),v=rc_verdict(p);
+  el(k,'n').textContent='Mazo completado';
+  el(k,'c').innerHTML='<p class="rc-q">Cola agotada: todas las tarjetas se resolvieron.</p>';
+  el(k,'b').innerHTML='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  var h='<div class="rc-end '+v[0]+'">Aciertos al primer intento: '+ok+' de '+s.n+' ('+p+' %). <b>'+v[1]+'</b>.</div>';
+  if(k==='tg'){
+    Object.keys(TERMS).forEach(function(t){
+      var tot=0,hit=0;
+      for(i=0;i<s.n;i++){if(DECKS.tg[i].t===t){tot++;if(s.first[i])hit++;}}
+      var pp=Math.round(100*hit/tot),vv=rc_verdict(pp);
+      rows+='<tr><td>'+esc(TERMS[t])+'</td><td>'+hit+' de '+tot+' ('+pp+' %)</td><td>'+vv[1]+'</td></tr>';
+    });
+    h+='<div class="tw"><table><thead><tr><th>Término</th><th>Aciertos 1er intento</th><th>Veredicto</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  }
+  el(k,'e').innerHTML=h;
+}
+Object.keys(DECKS).forEach(rc_reset);
+</script>
+</div></body></html>
