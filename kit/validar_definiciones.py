@@ -124,7 +124,7 @@ for sid,sh in sections:
     # siglas
     gl=re.search(r'<p class="gloss">(.*?)</p>',sh,re.S).group(1)
     core=sh.replace(re.search(r'<p class="gloss">.*?</p>',sh,re.S).group(0),'')
-    core=re.sub(r'<[^>]+>',' ',core)
+    core=re.sub(r'<[^>]+>',' ',core).replace('[VERIFICAR EN FUENTE]',' ')
     toks=set(re.findall(r'(?<![A-Za-zÁ-ú])[A-Z][A-Z0-9]{1,}(?![A-Za-zÁ-ú])',core))-{'IV'} 
     miss=[t for t in toks if t not in gl and not (t=='Roma')]
     if miss: fl.append((sid,'siglas sin glosario',miss))

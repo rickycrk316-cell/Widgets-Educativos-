@@ -1,0 +1,140 @@
+<script>
+const TERMS={t1:"Mácula",t2:"Mancha (patch)",t3:"Pápula",t4:"Placa",t5:"Nódulo",t6:"Tumor",t7:"Habón (roncha)",t8:"Quiste",t9:"Comedón"};
+const DECKS={
+t1:[
+{q:"Presionas con un portaobjetos una lesión plana roja y el color desaparece. ¿Dónde estaba la sangre?",a:"Dentro de los vasos dérmicos dilatados (eritema). Si el color persistiera, habría sangre fuera del vaso o pigmento.",h:"La presión vacía los vasos, no mueve el pigmento."},
+{q:"¿De qué depende sobre todo la diferencia de color de piel entre personas?",a:"Del tamaño, número y tipo de melanosomas y de su transferencia a los queratinocitos, no del número de melanocitos [1].",h:"Piensa en lo que cada melanocito reparte, no en cuántos hay."},
+{q:"¿Qué dato de la exploración separa una mácula de una pápula pequeña?",a:"La palpación: la mácula no tiene relieve; la pápula se siente con el pulpejo. La luz tangencial ayuda a verlo.",h:"Se resuelve con el tacto y con la luz rasante."},
+{q:"Una lesión plana café de 1,5 cm. ¿Cómo la llama Bolognia y por qué?",a:"Mancha (patch), porque supera el umbral de 1 cm [1].",h:"La diferencia con la mácula es solo de tamaño."},
+{q:"Una mácula roja que no blanquea a la vitropresión, ¿qué mecanismo sugiere?",a:"Sangre fuera del vaso (hemorragia, como la petequia), no vasodilatación.",h:"El vidrio solo vacía los vasos."}
+],
+t2:[
+{q:"Una mancha azul-grisácea de bordes difusos en el sacro de un lactante. ¿Dónde está el pigmento y por qué ese color?",a:"En la dermis; la luz azul se dispersa al atravesar la capa (efecto Tyndall).",h:"El color depende de la profundidad del pigmento."},
+{q:"Dos manchas rojas: una blanquea al presionar con vidrio y la otra no. ¿Cuál tiene sangre fuera del vaso?",a:"La que no blanquea.",h:"Piensa en qué cosa vacía el portaobjetos."},
+{q:"Una lesión plana y otra elevada miden más de 1 cm. ¿Qué las separa?",a:"La mancha es plana y no se palpa; la placa tiene relieve palpable.",h:"No es el tamaño, es el relieve."},
+{q:"Según Bolognia, una lesión plana de 2 cm de color café es una {{mancha}} porque supera {{1 cm}}.",a:"mancha; 1 cm",h:"Mira el umbral de tamaño de Bolognia."},
+{q:"Los libros usan umbrales de 1 cm y 0,5 cm. ¿Qué anotas al describir una lesión plana de 0,8 cm?",a:"El tamaño exacto en cm y no solo el nombre, porque según el libro sería mácula o mancha.",h:"El nombre cambia con el libro; la medida no."}
+],
+t3:[
+{q:"Si el relieve de una pápula lo produce un infiltrado de la dermis y no un engrosamiento de la epidermis, ¿cómo suele ser la superficie?",a:"Lisa, con la epidermis suprayacente poco alterada y sin escama marcada.",h:"La epidermis no es la que crece."},
+{q:"¿Qué maniobra revela una pápula sutil que a simple vista parece plana?",a:"La luz tangencial y la palpación con el pulpejo.",h:"Una usa la sombra y la otra el tacto."},
+{q:"Pápula: lesión sólida {{elevada}} y palpable de hasta {{1 cm}} según Bolognia.",a:"elevada; 1 cm",h:"Es el límite de tamaño con la placa."},
+{q:"¿Qué separa una pápula de un habón?",a:"El habón es edema dérmico que desaparece en menos de 24 horas y cambia de sitio; la pápula persiste días o semanas.",h:"Una es transitoria y la otra persistente."},
+{q:"Una lesión sólida de 0,8 cm, profunda y esférica, palpable en la hipodermis. ¿Es pápula?",a:"No; la profundidad y el volumen la hacen nódulo, aunque su tamaño sea pequeño.",h:"No decide solo el tamaño."}
+],
+t4:[
+{q:"Dos pápulas confluyen y forman una lesión elevada de 2 cm de superficie plana. ¿Cómo se llama ahora y por qué?",a:"Placa: supera el umbral de tamaño y es más ancha que alta.",h:"Cambia el nombre cuando el relieve se extiende."},
+{q:"Con luz tangencial, ¿qué aspecto caracteriza el perfil de una placa?",a:"Una meseta: borde elevado y superficie plana.",h:"Vista de lado, parece una colina de cima recta."},
+{q:"Según Bolognia, una lesión elevada superficial de más de {{1 cm}} se llama {{placa}}.",a:"1 cm; placa",h:"Es el límite con la pápula."},
+{q:"Una lesión elevada de 2 cm es esférica y se palpa en la hipodermis. ¿Placa o nódulo?",a:"Nódulo: la profundidad y el volumen esférico la separan de la meseta superficial.",h:"El tamaño es igual; cambia la profundidad."},
+{q:"Una lesión elevada de 0,8 cm. ¿Cómo se llama con el umbral de Bolognia y con el de 0,5 cm?",a:"Pápula en Bolognia (hasta 1 cm); placa con el umbral de 0,5 cm.",h:"Aplica cada umbral por separado, sin promediar."}
+],
+t5:[
+{q:"¿Por qué una lesión profunda puede palparse mejor de lo que se ve?",a:"Porque la epidermis suprayacente está intacta y el volumen está en la dermis profunda o la hipodermis.",h:"Qué capa se ve y qué capa se palpa."},
+{q:"Una inflamación de los lóbulos de la grasa subcutánea (paniculitis), ¿qué lesión elemental produce?",a:"Nódulos profundos, a menudo dolorosos, bajo piel con poco cambio.",h:"La grasa está debajo de la dermis."},
+{q:"Nódulo: lesión sólida {{redondeada}} en dermis profunda o {{hipodermis}}.",a:"redondeada; hipodermis",h:"Piensa en la capa más profunda."},
+{q:"Una lesión de 0,8 cm, esférica y palpable en la hipodermis. ¿Es pápula o nódulo?",a:"Nódulo: la profundidad y el volumen pesan más que el diámetro.",h:"No decide solo el tamaño."},
+{q:"Dermatofibroma: ¿qué maniobra sugiere que es un nódulo dérmico?",a:"El signo del hoyuelo: al pellizcar los lados la lesión se hunde.",h:"Se hace con dos dedos a los lados."}
+],
+t6:[
+{q:"¿En qué capas se extiende un tumor cutáneo grande?",a:"En la dermis profunda y la hipodermis, con volumen palpable de masa.",h:"Es la misma ubicación del nódulo."},
+{q:"Un paciente dice que tiene un «tumor» en la piel. ¿Significa que es cáncer?",a:"No: en la descripción dermatológica indica tamaño y volumen, no naturaleza benigna o maligna.",h:"Es un descriptor morfológico."},
+{q:"Una masa de 3 cm, elevada, de superficie plana y escaso espesor. ¿Tumor o placa?",a:"Placa: el tumor se define por volumen y profundidad, no solo por diámetro.",h:"Mira el espesor."},
+{q:"Además del tamaño, ¿qué hallazgos de la exploración describen una masa tumoral?",a:"Consistencia, movilidad sobre planos profundos y estado de la superficie (por ejemplo, ulceración).",h:"Se obtienen palpando y mirando la superficie."},
+{q:"¿Qué separa un nódulo de un tumor?",a:"El mayor tamaño y volumen del tumor; mismas capas, escala distinta.",h:"Una escala, no una capa."}
+],
+t7:[
+{q:"Si la histamina separa las células endoteliales de las vénulas, ¿qué sucede en la dermis y qué lesión aparece?",a:"Sale plasma a la dermis: edema dérmico circunscrito, el habón.",h:"Piensa en lo que atraviesa el endotelio."},
+{q:"¿Qué célula residente de la dermis libera histamina al degranularse?",a:"El mastocito.",h:"Reside alrededor de los vasos."},
+{q:"Habón: edema de la dermis {{superficial}} que desaparece en menos de {{24 horas}}.",a:"superficial; 24 horas",h:"El tiempo es el criterio."},
+{q:"Una roncha dura 3 días, duele y deja una mancha violácea. ¿Por qué no encaja con un habón típico?",a:"Porque el habón desaparece en menos de 24 horas sin marca; esta lesión orienta a vasculitis urticarial.",h:"Mira duración y marca residual."},
+{q:"¿Cómo se separa un habón de un angioedema por la capa afectada?",a:"El habón es edema de dermis superficial; el angioedema afecta dermis profunda e hipodermis y es más difuso.",h:"Cambia la profundidad del edema."}
+],
+t8:[
+{q:"¿Por qué un infundíbulo folicular ocluido puede formar una cavidad cerrada?",a:"Su epitelio sigue produciendo queratina, que queda atrapada porque el poro está tapado.",h:"Mira el poro y lo que sigue produciéndose."},
+{q:"¿Qué tramo del folículo está revestido de epidermis y recibe el sebo de la glándula?",a:"El infundíbulo.",h:"Es el tramo más superficial."},
+{q:"Quiste: cavidad cerrada con {{pared}} epitelial y contenido de {{queratina}} o sebo.",a:"pared; queratina",h:"Es lo que lo distingue del nódulo sólido."},
+{q:"Un nódulo caliente, doloroso y rojo sobre un quiste. ¿Qué cambió?",a:"Se infectó o se rompió su pared: ahora hay inflamación y pus; se entiende como absceso.",h:"Un quiste sin infección no duele."},
+{q:"¿Qué separa un quiste de un comedón?",a:"El quiste tiene pared epitelial propia; el comedón es un tapón de queratina y sebo dentro del folículo.",h:"Uno es una bolsa y el otro un tapón."}
+],
+t9:[
+{q:"¿Qué ocurre con el sebo cuando el infundíbulo se tapa y la glándula sigue activa?",a:"Se retiene: el folículo se dilata detrás del tapón y se forma el comedón.",h:"La glándula no se detiene."},
+{q:"¿Qué hormonas activan la glándula sebácea en la pubertad?",a:"Los andrógenos.",h:"Explica por qué aparece en la adolescencia."},
+{q:"Comedón abierto: orificio dilatado con tapón {{oscuro}}; cerrado: pápula del color de la {{piel}}.",a:"oscuro; piel",h:"Cambia el aspecto del orificio."},
+{q:"Una pápula roja y dolorosa en un paciente con acné. ¿Es comedón?",a:"No: es una lesión inflamatoria; el comedón es un tapón no inflamatorio.",h:"Uno duele y el otro no."},
+{q:"¿Cómo se separan un comedón cerrado y un milium?",a:"El comedón cerrado es un folículo obstruido; el milium es un quiste pequeño sin conexión con el poro.",h:"Uno es folículo, el otro es quiste."}
+]
+};
+DECKS.tg=[].concat.apply([],Object.keys(TERMS).map(function(k){return DECKS[k].map(function(c){return {q:c.q,a:c.a,h:c.h,t:k};});}));
+const RC={};
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function el(k,s){return document.getElementById('rc-'+k+'-'+s);}
+function isCloze(c){return c.q.indexOf('{{')>=0;}
+function front(c){return esc(c.q).replace(/\{\{[^}]*\}\}/g,'[ ? ]');}
+function back(c){return esc(c.q).replace(/\{\{([^}]*)\}\}/g,'<b>$1</b>');}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function show(id,btn){
+  document.querySelectorAll('.tab').forEach(function(s){s.classList.toggle('active',s.id===id);});
+  document.querySelectorAll('.tb').forEach(function(b){b.classList.toggle('active',b===btn);});
+  try{btn.scrollIntoView({inline:'center',block:'nearest'});}catch(e){}
+}
+function tog(b){b.parentElement.classList.toggle('op');}
+function rc_reset(k){
+  var n=DECKS[k].length,idx=[];
+  for(var i=0;i<n;i++)idx.push(i);
+  RC[k]={queue:shuffle(idx),first:{},fails:{},shown:false,done:0,n:n};
+  if(el(k,'e'))el(k,'e').innerHTML='';
+  rc_render(k);
+}
+function rc_render(k){
+  var s=RC[k],card=el(k,'c');
+  if(!card)return;
+  if(!s.queue.length){rc_end(k);return;}
+  var c=DECKS[k][s.queue[0]],f=s.fails[s.queue[0]]||0;
+  el(k,'n').textContent='Tarjeta '+(s.done+1)+' de '+s.n+(k==='tg'&&s.shown?' · '+TERMS[c.t]:'');
+  var h='<p class="rc-q">'+(s.shown&&isCloze(c)?back(c):front(c))+'</p>';
+  if(s.shown&&!isCloze(c))h+='<p class="rc-a"><b>Respuesta.</b> '+esc(c.a)+'</p>';
+  if(!s.shown&&f>=2)h+='<p class="rc-hint">Pista: '+esc(c.h)+'</p>';
+  card.innerHTML=h;
+  var b='';
+  if(!s.shown){b+='<button class="go" onclick="rc_show(\''+k+'\')">Mostrar respuesta</button>';}
+  else{
+    b+='<button class="gr ok" onclick="rc_grade(\''+k+'\',\'ok\')">La sabía</button>';
+    b+='<button class="gr mid" onclick="rc_grade(\''+k+'\',\'mid\')">A medias</button>';
+    b+='<button class="gr ko" onclick="rc_grade(\''+k+'\',\'ko\')">No la sabía</button>';
+  }
+  b+='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  el(k,'b').innerHTML=b;
+}
+function rc_show(k){RC[k].shown=true;rc_render(k);}
+function rc_grade(k,g){
+  var s=RC[k],i=s.queue.shift();
+  if(s.first[i]===undefined)s.first[i]=(g==='ok');
+  if(g==='ok'){s.done++;}
+  else{s.fails[i]=(s.fails[i]||0)+1;s.queue.push(i);}
+  s.shown=false;
+  rc_render(k);
+}
+function rc_verdict(p){return p>=80?['ok','Término consolidado']:['rep','Repasar hoy'];}
+function rc_end(k){
+  var s=RC[k],ok=0,i,rows='';
+  for(i=0;i<s.n;i++)if(s.first[i])ok++;
+  var p=Math.round(100*ok/s.n),v=rc_verdict(p);
+  el(k,'n').textContent='Mazo completado';
+  el(k,'c').innerHTML='<p class="rc-q">Cola agotada: todas las tarjetas se resolvieron.</p>';
+  el(k,'b').innerHTML='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  var h='<div class="rc-end '+v[0]+'">Aciertos al primer intento: '+ok+' de '+s.n+' ('+p+' %). <b>'+v[1]+'</b>.</div>';
+  if(k==='tg'){
+    Object.keys(TERMS).forEach(function(t){
+      var tot=0,hit=0;
+      for(i=0;i<s.n;i++){if(DECKS.tg[i].t===t){tot++;if(s.first[i])hit++;}}
+      var pp=Math.round(100*hit/tot),vv=rc_verdict(pp);
+      rows+='<tr><td>'+esc(TERMS[t])+'</td><td>'+hit+' de '+tot+' ('+pp+' %)</td><td>'+vv[1]+'</td></tr>';
+    });
+    h+='<div class="tw"><table><thead><tr><th>Término</th><th>Aciertos 1er intento</th><th>Veredicto</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  }
+  el(k,'e').innerHTML=h;
+}
+Object.keys(DECKS).forEach(rc_reset);
+</script>
+</div></body></html>

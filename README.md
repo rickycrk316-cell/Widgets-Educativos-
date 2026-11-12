@@ -27,6 +27,10 @@ Widgets HTML de estudio, autocontenidos y offline. Los nuevos siguen **v11** (`d
 | | `Apertura_trastornos_neurocognitivos.html` | apertura | caso + 9 términos (fatiga, «no actúa como él mismo», lúcido, somnoliento, estuporoso, inquietud, polidipsia, nocturia, estreñimiento), 15 problemas, jerarquización, 4 hipótesis, 5 diagramas, 73 tarjetas | 0 |
 | Síndrome confusional | `Apertura_sindrome_confusional.html` | apertura | caso de Doña Rosa + 9 términos (vacunas del adulto mayor, losartán, diltiazem, furosemida, paracetamol, pregabalina, glucosamina, insulina NPH + metformina, hipotiroidismo subclínico), 23 problemas (B, P, S, FR), jerarquización, 4 hipótesis, 5 diagramas, repaso | 0 |
 | Cicatrización (sin sílabo) | `Queloide_triamcinolona_widget_v10.html` | mono | cicatriz queloide + pestaña «Infiltración con triamcinolona» | 48 |
+| Dermatología (sin sílabo) | `Definiciones_lesiones_primarias_solidas.html` | definiciones | 9 términos (mácula, mancha, pápula, placa, nódulo, tumor, habón, quiste, comedón) + repaso | 15 |
+| | `Definiciones_lesiones_liquidas_vasculares.html` | definiciones | 9 términos (vesícula, ampolla, pústula, absceso, púrpura, equimosis, telangiectasia, surco acarino, vitropresión y Nikolsky) + repaso | 5 |
+| | `Definiciones_lesiones_secundarias.html` | definiciones | 9 términos (escama, costra, erosión, úlcera, fisura, excoriación, liquenificación, atrofia, cicatriz) + repaso | 8 |
+| | `Definiciones_descripcion_morfologica.html` | definiciones | 9 términos (eritema, anular/arciforme, numular, diana, lineal, reticulado, herpetiforme, dermatómica, fotodistribución) + repaso | 22 |
 | Ginecología (sin sílabo) | `Ciclo_ovarico_menopausia_TH_widget_v11.html` | v11 · mono (piloto) | menopausia y terapia hormonal + pestaña «Ciclo ovárico y cuerpo albo»: núcleo por pestaña, perlas por examen, ordenar pasos | 0 |
 
 «Marcas pendientes (legado)» = datos marcados `[VERIFICAR EN FUENTE]` en widgets v10.2 anteriores a la regla de cero marcas: compruébalos antes de estudiar con ellos. Los widgets v11 y las definiciones/aperturas nuevas no llevan marcas: lo no confirmado se elimina.

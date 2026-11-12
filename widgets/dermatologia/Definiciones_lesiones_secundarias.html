@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Definiciones · Lesiones secundarias</title>
+<style>
+/* Vademécum · variante del widget de definiciones (skill definiciones v5.1): mismas tintas y tipografía que DESIGN.md */
+:root{
+--paper:#FBFBFC;--paper-2:#F1F2F5;--ink:#16181D;--ink-2:#3A3D46;--ink-3:#686C78;--rule:#D7D9E0;--rule-strong:#16181D;
+--accent:#2342A6;--accent-ink:#1B358A;--accent-field:#EAEEFA;--on-accent:#FFFFFF;
+--am:#7A4A06;--am-f:#FBF1DF;--ro:#9E1F1F;--ro-f:#FBE9E7;--ve:#2F5E12;--ve-f:#EBF3E1;--pu:#4C3FA8;--pu-f:#EEECFB;--co:#8E3517;--co-f:#FAEDE6;--rs:#8A2C52;--rs-f:#FAEAF1;
+--f-serif:ui-serif,"New York","Iowan Old Style","Charter","Source Serif Pro",Georgia,"Times New Roman",serif;
+--f-sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+--r:3px;
+/* alias de la v10 para compatibilidad */
+--surface-0:var(--paper);--surface-1:var(--paper-2);--border:var(--rule);--border-accent:var(--accent);--bg-accent:var(--accent-field);--text-primary:var(--ink);--text-secondary:var(--ink-2);--text-muted:var(--ink-3);--text-accent:var(--accent-ink);--radius:var(--r);--font-sans:var(--f-sans);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}
+html{color-scheme:light dark;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:var(--accent);color:var(--on-accent)}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--f-sans);-webkit-text-size-adjust:100%;caret-color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:18px 16px 56px;background:transparent}
+h1{font:600 26px/1.2 var(--f-serif);letter-spacing:-.012em;margin:6px 0 14px;padding-bottom:12px;border-bottom:2px solid var(--rule-strong);text-wrap:balance}
+h2{font:600 19px/1.3 var(--f-serif);margin:34px 0 12px;padding-top:12px;border-top:1px solid var(--rule-strong);text-wrap:balance}
+h3{font:600 16px/1.35 var(--f-serif);margin:18px 0 6px;text-wrap:balance}
+p{margin:0 0 12px;text-wrap:pretty}
+button{font:inherit;color:inherit;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,color .15s ease-out}
+button:active{transform:translateY(1px)}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* índice de canto */
+.tabs{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 0 0;border-bottom:2px solid var(--rule-strong);margin-bottom:16px;position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);scroll-snap-type:x proximity;scroll-padding-inline:56px}
+.tabs::-webkit-scrollbar{display:none}
+.tb{flex:0 0 auto;min-height:44px;padding:9px 15px 8px;border:1px solid var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;background:var(--paper-2);color:var(--ink-2);font:600 13px/1.2 var(--f-sans);white-space:nowrap;scroll-snap-align:start}
+.tb:hover{background:var(--accent-field);color:var(--accent-ink)}
+.tb.active{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+.tab{display:none}
+.tab.active{display:block}
+/* idea rectora */
+.hb{border-radius:var(--r);padding:12px 14px;margin:14px 0;border:1px solid var(--accent);background:var(--accent-field);font-size:15px;line-height:1.6}
+.hb-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);margin-bottom:6px}
+/* prerrequisitos (rol rosa) */
+.pre{border:1px solid var(--rs);border-radius:var(--r);background:var(--rs-f);padding:12px 14px;margin:16px 0}
+.pre-t{font:600 16px/1.35 var(--f-serif);color:var(--rs);margin-bottom:8px}
+.pre .acc{background:var(--paper);border-color:var(--rs)}
+.pre .acc-h{background:var(--paper)}
+.rem-line{font-size:13px;color:var(--ink-2);margin:8px 0;line-height:1.5}
+.chip-rs{display:inline-block;font:700 11px/1.4 var(--f-sans);padding:1px 7px;border:1px solid var(--rs);border-radius:2px;background:var(--rs-f);color:var(--rs);margin-right:6px;vertical-align:1px}
+/* cards */
+.card{background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;margin:12px 0;font-size:15px;line-height:1.6}
+.card p:last-child{margin-bottom:0}
+.card-t{font:600 16px/1.35 var(--f-serif);margin:0 0 6px}
+.card.fey{background:var(--co-f);border-color:var(--co)}
+.card.fey .card-t{color:var(--co)}
+.card.fey p{font:400 16px/1.6 var(--f-serif)}
+.card.ej{background:var(--paper);border-top:2px solid var(--rule-strong)}
+.badge{display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.02em;padding:2px 7px;border-radius:2px;margin:6px 4px 0 0;vertical-align:middle;border:1px solid currentColor}
+.b-az{background:var(--accent-field);color:var(--accent-ink)}
+.b-ro{background:var(--ro-f);color:var(--ro)}
+.b-am{background:var(--am-f);color:var(--am)}
+.b-ve{background:var(--ve-f);color:var(--ve)}
+.b-pu{background:var(--pu-f);color:var(--pu)}
+.b-co{background:var(--co-f);color:var(--co)}
+.b-rs{background:var(--rs-f);color:var(--rs)}
+.mini{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:6px 0}
+.mini.am{color:var(--am);background:var(--am-f);border:1px solid var(--am);border-radius:var(--r);padding:6px 9px}
+/* acordeones */
+.acc{border:1px solid var(--rule);border-radius:var(--r);margin:10px 0;overflow:hidden;background:var(--paper)}
+.acc-h{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;min-height:44px;padding:9px 14px;border:0;background:var(--paper-2);font:600 14.5px/1.35 var(--f-sans);text-align:left}
+.acc-h:hover{background:var(--accent-field)}
+.chev{transition:transform .2s;color:var(--accent-ink);flex:0 0 auto}
+.acc.op .chev{transform:rotate(180deg)}
+.acc-b{display:none;padding:10px 14px;font-size:15px;line-height:1.6}
+.acc.op .acc-b{display:block}
+.acc.no .acc-h{color:var(--ro)}
+/* tablas */
+.tw{overflow-x:auto;margin:12px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;font-variant-numeric:tabular-nums}
+th,td{border:0;border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
+thead th{font:700 14.5px/1.35 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong);background:var(--paper-2)}
+tbody tr:last-child>*{border-bottom:1px solid var(--rule-strong)}
+tbody th{font-weight:700;background:var(--paper-2)}
+/* mini-timeline */
+.tl{list-style:none;margin:12px 0;padding:0 0 0 20px;border-left:2px solid var(--accent)}
+.tl>li{position:relative;margin:0 0 12px;padding:9px 12px;background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);font-size:14.5px;line-height:1.55}
+.tl>li::before{content:"";position:absolute;left:-27px;top:13px;width:12px;height:12px;border-radius:1px;background:var(--accent);box-shadow:0 0 0 3px var(--paper)}
+.tl b{font-family:var(--f-serif)}
+/* simulador de recall */
+.rc{border:1px solid var(--rule-strong);border-radius:var(--r);padding:14px 16px;margin:24px 0;background:var(--paper)}
+.rc-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);padding-bottom:8px;margin-bottom:10px;border-bottom:1px solid var(--rule)}
+.rc-count{font:600 13px/1.4 var(--f-sans);color:var(--ink-3);font-variant-numeric:tabular-nums;margin-bottom:8px}
+.rc-card{border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);padding:14px;min-height:110px}
+.rc-q{font:400 16px/1.6 var(--f-serif);margin:0}
+.rc-a{margin:12px 0 0;padding-top:10px;border-top:1px dashed var(--accent);font-size:15px;line-height:1.6}
+.rc-a b{color:var(--accent-ink)}
+.rc-hint{font-size:13px;color:var(--am);margin-top:8px}
+.rc-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.go{min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent);color:var(--on-accent);font:600 14px/1.2 var(--f-sans)}
+.go:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+.gr{min-height:44px;padding:8px 14px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper);font:600 14px/1.2 var(--f-sans)}
+.gr.ok{border-color:var(--ve);color:var(--ve)}
+.gr.mid{border-color:var(--am);color:var(--am)}
+.gr.ko{border-color:var(--ro);color:var(--ro)}
+.gr.ok:hover{background:var(--ve-f)}.gr.mid:hover{background:var(--am-f)}.gr.ko:hover{background:var(--ro-f)}
+.ghost{min-height:44px;padding:8px 14px;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);font:600 14px/1.2 var(--f-sans);color:var(--ink-2)}
+.rc-end{margin-top:12px;padding:12px 14px;border-radius:var(--r);border:1px solid var(--rule);font-size:15px}
+.rc-end.ok{background:var(--ve-f);border-color:var(--ve);color:var(--ve)}
+.rc-end.rep{background:var(--am-f);border-color:var(--am);color:var(--am)}
+.gloss{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:18px 0 0;padding-top:8px;border-top:1px solid var(--rule)}
+.vanc{font-size:12.5px;line-height:1.5;padding-left:24px}
+.vanc li{margin:5px 0;word-break:break-word}
+.vanc li::marker{color:var(--ink-3);font-variant-numeric:tabular-nums}
+@media (min-width:700px){body{font-size:15.5px}.wrap{padding:22px 24px 64px}h1{font-size:28px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- /DEF_HEAD -->
+<h1>Definiciones · Lesiones secundarias</h1>
+<p class="mini">Lesiones elementales de la dermatología (widget C de cuatro): aclarar términos para reconocerlos y nombrarlos en la ronda, sin resolver casos. Cada pestaña lleva su base morfofuncional, su definición y un simulador de recall. Orden de estudio: primarias sólidas, líquidas y vasculares, secundarias, descripción morfológica.</p>
+<nav class="tabs">
+<button class="tb active" onclick="show('t1',this)">Escama</button>
+<button class="tb" onclick="show('t2',this)">Costra</button>
+<button class="tb" onclick="show('t3',this)">Erosión</button>
+<button class="tb" onclick="show('t4',this)">Úlcera</button>
+<button class="tb" onclick="show('t5',this)">Fisura</button>
+<button class="tb" onclick="show('t6',this)">Excoriación</button>
+<button class="tb" onclick="show('t7',this)">Liquenificación</button>
+<button class="tb" onclick="show('t8',this)">Atrofia</button>
+<button class="tb" onclick="show('t9',this)">Cicatriz</button>
+<button class="tb" onclick="show('tg',this)">Repaso global</button>
+</nav>
+<section class="tab active" id="t1">
+<h2>Escama</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Lámina visible de estrato córneo que se desprende de la superficie de la piel.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Epidermis y estrato córneo</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Capa más superficial de la piel: epitelio plano estratificado queratinizado, sin vasos. Descansa sobre la dermis. De profundo a superficial tiene cinco estratos: basal, espinoso, granuloso, lúcido (solo en palmas y plantas) y córneo. La mayoría de las células son queratinocitos; entre ellos hay melanocitos, células de Langerhans y células de Merkel.</p>
+<p><b>Cómo está hecha.</b> Los queratinocitos se adhieren entre sí por desmosomas y a la capa subyacente por hemidesmosomas. Al ascender fabrican queratinas, gránulos de queratohialina y cuerpos laminares cargados de lípidos. El estrato córneo está formado por corneocitos planos y sin núcleo, como ladrillos, unidos por una matriz de lípidos que actúa como cemento.</p>
+<p><b>Qué permite hacer.</b> Forma la barrera que impide la pérdida de agua y la entrada de agentes externos, protege de la fricción y filtra la radiación con la melanina. Su límite es que no tiene vasos: se nutre por difusión desde la dermis.</p>
+<p><b>De qué depende.</b> La irrigación llega por difusión desde el plexo vascular de la dermis papilar. La sensibilidad la dan terminaciones nerviosas libres que entran en la epidermis y las células de Merkel.</p>
+<p><b>Correlato clínico.</b> Si la cohesión o el recambio del estrato córneo se alteran, este se desprende en láminas visibles: son las escamas. Se exploran con inspección, luz tangencial y raspado suave.</p>
+<p class="mini"><span class="badge b-pu">Bolognia 5.ª ed. 2024 [1]</span> Estructura y función de la epidermis.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Queratinización y descamación fisiológica</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Proliferación.</b> Los queratinocitos de la capa basal se dividen y envían células hijas hacia arriba.</li>
+<li><b>Diferenciación.</b> Al ascender por el estrato espinoso fabrican queratinas y se conectan entre sí por desmosomas.</li>
+<li><b>Cornificación.</b> En el estrato granuloso liberan sus lípidos y pierden núcleo y organelos: el queratinocito pasa a ser corneocito.</li>
+<li><b>Descamación.</b> Enzimas proteolíticas degradan los desmosomas del córneo y los corneocitos se sueltan de uno en uno, sin que se vean.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> El recorrido completo de la basal a la superficie dura alrededor de un mes [VERIFICAR EN FUENTE]. La descamación normal es microscópica: la piel sana no muestra láminas.</p>
+<p><b>Qué lo rompe.</b> Tres puntos: acelerar la proliferación, de modo que los corneocitos llegan inmaduros y aún unidos (psoriasis); frenar la descamación, de modo que se acumulan (ictiosis); o romper la cohesión por inflamación o infección.</p>
+<p><b>Correlato clínico.</b> Una escama visible indica siempre exceso de producción o retención de corneocitos. Al raspar una escama psoriásica se desprende en capas, como cera de vela, y puede dejar puntos sangrantes (signo de Auspitz).</p>
+<p class="mini"><span class="badge b-pu">Fitzpatrick 9.ª ed. 2019 [2]</span> Queratinización y recambio epidérmico.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Dermis: capas, células y matriz</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Tejido conectivo situado entre la epidermis y la hipodermis. Tiene dos zonas: la dermis papilar, superior y laxa, que se proyecta en papilas hacia la epidermis, y la dermis reticular, profunda y densa, que ocupa la mayor parte del espesor.</p>
+<p><b>Cómo está hecha.</b> Los fibroblastos fabrican colágeno (sobre todo tipo 1 y tipo 3), elastina y una sustancia fundamental de glucosaminoglicanos que retiene agua. Contiene además mastocitos, macrófagos y células dendríticas. El colágeno da resistencia a la tracción y la elastina permite recuperar la forma.</p>
+<p><b>Qué permite hacer.</b> Sostiene la epidermis, resiste el estiramiento y aloja vasos, nervios y anexos. Su límite es la capacidad de regeneración: cuando se destruye, repara con cicatriz y no con dermis nueva.</p>
+<p><b>De qué depende.</b> De sus plexos vasculares y de las fibras sensitivas que la atraviesan. La vascularización se desarrolla en «Úlcera».</p>
+<p><b>Correlato clínico.</b> La profundidad de una lesión se mide respecto de la dermis: lo que no la alcanza cura sin cicatriz y lo que la daña deja cicatriz. Se explora palpando la base de la lesión.</p>
+<p class="mini"><span class="badge b-pu">Bolognia 5.ª ed. 2024 [1]</span> Dermis y matriz extracelular.</p>
+</div></div>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Escama (<i>scale</i>): acúmulo visible de láminas de estrato córneo desprendidas, o a punto de desprenderse, de la superficie de la piel. Varía en tamaño, grosor y color, y resulta de una queratinización o una descamación alteradas.</p>
+<p><span class="badge b-pu">Bolognia 5.ª ed. 2024 [1]</span> <span class="badge b-pu">Fitzpatrick 9.ª ed. 2019 [2]</span></p>
+<p class="mini am">Se clasifica como lesión secundaria, pero en la ictiosis la descamación es el hallazgo primario. Qué libro la ubica como primaria o secundaria: [VERIFICAR EN FUENTE].</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>La capa más externa de la piel se renueva sin parar: las células nacen abajo, suben, mueren y se sueltan una a una, tan pequeñas que no se ven. Si nacen demasiado rápido o no se sueltan, se pegan en grupos y se levantan como láminas, igual que la pintura vieja de una pared. Esas láminas son las escamas.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Adulto con placas rojas bien delimitadas en codos y rodillas, cubiertas de láminas blanco-plateadas gruesas. Al raspar, las láminas se desprenden y quedan puntos sangrantes. Prototipos: psoriasis, dermatitis seborreica (escama untuosa), pitiriasis rosada (escama fina en collarete) e ictiosis vulgar (escama en polígonos, como piel de pez).</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Costra</b></td><td>Exudado seco y adherido sobre una erosión o úlcera; al despegarla queda una base húmeda. La escama deja piel íntegra debajo.</td></tr>
+<tr><td><b>Hiperqueratosis</b></td><td>Engrosamiento del estrato córneo que permanece pegado (callo, verruga); la escama se desprende en láminas.</td></tr>
+<tr><td><b>Descamación fisiológica</b></td><td>Pérdida normal de corneocitos aislados, invisible; solo es escama cuando se ve a simple vista.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t1"><div class="rc-t">Simulador · Recall de escama</div><div class="rc-count" id="rc-t1-n"></div><div class="rc-card" id="rc-t1-c"></div><div class="rc-btns" id="rc-t1-b"></div><div id="rc-t1-e"></div></div>
+
+<p class="gloss">Siglas: sin siglas; VERIFICAR EN FUENTE marca un dato por confirmar en el libro. Términos de apoyo: corneocito, queratinocito del estrato córneo sin núcleo; collarete, borde libre de una escama en anillo.</p>
+</section>
+<section class="tab" id="t2">
+<h2>Costra</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Exudado seco que se adhiere a la piel sobre una erosión o una úlcera.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Hemostasia y formación del coágulo</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Lesión vascular.</b> Los vasos rotos se contraen por reflejo y limitan la salida de sangre.</li>
+<li><b>Tapón plaquetario.</b> Las plaquetas se adhieren al colágeno expuesto y se agregan para taponar la brecha.</li>
+<li><b>Coagulación.</b> La cascada genera trombina, que convierte el fibrinógeno en fibrina; esta forma una red que atrapa eritrocitos y plaquetas.</li>
+<li><b>Desecación.</b> En la superficie, el suero y la fibrina pierden agua al contacto con el aire y se endurecen: ahí nace la costra.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> La hemostasia se completa en minutos; la costra queda como cubierta protectora mientras la piel se repara debajo.</p>
+<p><b>Qué lo rompe.</b> La falta de plaquetas o de factores de coagulación prolonga el sangrado. La infección o un exudado persistente producen costras gruesas y de colores anómalos.</p>
+<p><b>Correlato clínico.</b> El color de la costra orienta al líquido que la formó: rojizo-pardo o negro, sangre; amarillo meloso, suero; amarillo verdoso espeso, pus. Se explora con inspección y, con el clínico, al despegarla con suavidad para ver la base.</p>
+<p class="mini"><span class="badge b-pu">Bolognia 5.ª ed. 2024 [1]</span> Lesiones secundarias y exudado.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Cicatrización cutánea: fases</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Inflamación.</b> Los neutrófilos y luego los macrófagos retiran restos y bacterias.</li>
+<li><b>Proliferación.</b> Los fibroblastos depositan una matriz provisional y se forman vasos nuevos: el tejido de granulación, rojo y granular.</li>
+<li><b>Reepitelización.</b> Los queratinocitos migran desde los bordes y desde los anexos y cubren el lecho, casi siempre bajo la costra.</li>
+<li><b>Remodelación.</b> El colágeno provisional se reemplaza por colágeno más ordenado; dura meses.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> La inflamación dura días, la proliferación semanas y la remodelación meses; una herida superficial cierra mucho antes que una profunda.</p>
+<p><b>Qué lo rompe.</b> La isquemia, la infección, la presión repetida y los cuerpos extraños frenan la fase de proliferación o la reepitelización.</p>
+<p><b>Correlato clínico.</b> Si la costra se cae sola, la superficie ya está cubierta por epidermis nueva, rosada y fina. Si debajo hay un lecho húmedo o con pus, la reparación no terminó.</p>
+<p class="mini"><span class="badge b-pu">Fitzpatrick 9.ª ed. 2019 [2]</span> Cicatrización de las heridas.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Escama»: epidermis. La capa superficial queratinizada es la que la costra sustituye de forma temporal cuando se pierde.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Costra (<i>crust</i>): masa seca y adherente de suero, sangre o pus desecados, con restos celulares y a veces bacterias, que cubre una erosión o una úlcera. Su color orienta al origen del exudado.</p>
+<p><span class="badge b-pu">Bolognia 5.ª ed. 2024 [1]</span> <span class="badge b-pu">Fitzpatrick 9.ª ed. 2019 [2]</span></p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Cuando la piel se abre, sale líquido: suero, sangre o pus. Al secarse con el aire, ese líquido forma una tapa pegada, como la película que deja una gota de jarabe. Debajo de la tapa, la piel se está reparando. Por eso una costra siempre avisa de que antes hubo una pérdida de superficie.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Niño con lesiones alrededor de la boca: costras amarillas, como miel seca, sobre erosiones rojas. Al despegar una queda una base roja y húmeda. Prototipos: impétigo (melicérica), herpes simple labial tras la rotura de vesículas, dermatitis atópica aguda y pénfigo foliáceo.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Escama</b></td><td>Láminas de estrato córneo; se desprende y deja piel íntegra. La costra es exudado seco sobre pérdida de superficie.</td></tr>
+<tr><td><b>Escara</b></td><td>Tejido muerto, negro, seco y duro, con borde definido, sobre una úlcera por presión o isquemia; no es exudado seco.</td></tr>
+<tr><td><b>Costra hemática</b></td><td>Es una costra de sangre seca; el adjetivo describe el color, no un tipo distinto de lesión.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t2"><div class="rc-t">Simulador · Recall de costra</div><div class="rc-count" id="rc-t2-n"></div><div class="rc-card" id="rc-t2-c"></div><div class="rc-btns" id="rc-t2-b"></div><div id="rc-t2-e"></div></div>
+
+<p class="gloss">Siglas: sin siglas en esta pestaña. Términos de apoyo: melicérica, del color de la miel.</p>
+</section>
+<section class="tab" id="t3">
+<h2>Erosión</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Pérdida superficial de epidermis que no atraviesa la unión dermoepidérmica y cura sin cicatriz.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Unión dermoepidérmica</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Interfaz ondulada entre la capa basal de la epidermis y la dermis papilar. Al microscopio óptico se ve como una banda teñida con ácido peryódico de Schiff (PAS), la llamada membrana basal. Sus ondulaciones son las crestas epidérmicas y las papilas dérmicas.</p>
+<p><b>Cómo está hecha.</b> De arriba abajo: hemidesmosomas en la base de los queratinocitos basales, lámina lúcida (rica en laminina 332), lámina densa (colágeno tipo 4) y fibrillas de anclaje de colágeno tipo 7 que se hunden en la dermis. Cada capa une proteínas con la siguiente como un velcro en cadena.</p>
+<p><b>Qué permite hacer.</b> Mantiene la epidermis pegada a la dermis, resiste el cizallamiento, filtra moléculas y sirve de guía a las células que migran al reparar. El límite es mecánico: cuando una de sus proteínas falla, la epidermis se despega.</p>
+<p><b>De qué depende.</b> No tiene vasos: la nutrición llega por difusión desde la dermis. La fabrican los queratinocitos basales y los fibroblastos.</p>
+<p><b>Correlato clínico.</b> Si la adhesión se pierde en la unión, la epidermis se separa de la dermis y forma una ampolla subepidérmica; si se pierde entre queratinocitos, la separación es intraepidérmica. El techo roto de la ampolla deja una erosión. Se explora con la maniobra de Nikolsky.</p>
+<p class="mini"><span class="badge b-pu">Bolognia 5.ª ed. 2024 [1]</span> Membrana basal y adhesión.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Reepitelización</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Activación.</b> Al perder la epidermis, los queratinocitos del borde pierden cohesión y se activan.</li>
+<li><b>Migración.</b> Se deslizan sobre la membrana basal y la dermis íntegras para cubrir el lecho.</li>
+<li><b>Proliferación.</b> Los queratinocitos detrás del frente se dividen; los folículos y las glándulas ecrinas aportan células desde dentro de la dermis.</li>
+<li><b>Restitución.</b> Se rehacen los estratos y el córneo, y la epidermis recupera su espesor.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> Una erosión superficial cierra en días y la epidermis queda como antes, porque la dermis conserva sus reservas de células.</p>
+<p><b>Qué lo rompe.</b> La destrucción de la membrana basal o de los folículos, la infección y el contacto prolongado con humedad retrasan el cierre.</p>
+<p><b>Correlato clínico.</b> Por eso las erosiones curan sin cicatriz. A la luz tangencial se ven brillantes y húmedas, a veces con un borde fino de epitelio nuevo.</p>
+<p class="mini"><span class="badge b-pu">Fitzpatrick 9.ª ed. 2019 [2]</span> Reepitelización de heridas superficiales.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Escama»: epidermis; y en «Costra»: cicatrización. La epidermis es lo que se pierde; la cicatrización explica por qué la erosión cierra.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Erosión (<i>erosion</i>): pérdida de la epidermis, total o parcial, sin alcanzar la dermis. Es una superficie húmeda, brillante y algo deprimida, de borde definido, que cura sin cicatriz. Suele seguir a la rotura de una vesícula o una ampolla.</p>
+<p><span class="badge b-pu">Bolognia 5.ª ed. 2024 [1]</span> <span class="badge b-pu">Fitzpatrick 9.ª ed. 2019 [2]</span></p>
+<p class="mini am">El límite exacto entre erosión y úlcera (unión dermoepidérmica o dermis papilar superficial) puede variar según la fuente. Qué fija cada libro: [VERIFICAR EN FUENTE].</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Piensa en un raspón: se va solo la capa de arriba y queda una superficie roja, húmeda y brillante, sin que llegue a sangrar mucho. La capa que sostiene la piel sigue intacta, así que la piel nueva crece encima y no queda marca. Si en cambio la herida llega a esa capa de sostén, ya no es erosión.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Paciente con ampollas fláccidas en la boca y el tronco que se rompen y dejan áreas rojas, húmedas, con restos del techo en los bordes. Curan sin cicatriz. Prototipos: pénfigo vulgar, herpes simple genital (erosiones agrupadas de borde policíclico) e impétigo ampolloso.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Úlcera</b></td><td>Profundidad: llega a la dermis o más y deja cicatriz. La erosión solo pierde epidermis.</td></tr>
+<tr><td><b>Excoriación</b></td><td>Es una erosión producida por el rascado, lineal y con costra hemática; la erosión puede tener cualquier causa.</td></tr>
+<tr><td><b>Fisura</b></td><td>Hendidura lineal de paredes verticales por tensión; la erosión es una pérdida superficial ancha.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t3"><div class="rc-t">Simulador · Recall de erosión</div><div class="rc-count" id="rc-t3-n"></div><div class="rc-card" id="rc-t3-c"></div><div class="rc-btns" id="rc-t3-b"></div><div id="rc-t3-e"></div></div>
+
+<p class="gloss">Siglas: PAS, ácido peryódico de Schiff (tinción histológica); VERIFICAR EN FUENTE marca un dato por confirmar en el libro.</p>
+</section>
+<section class="tab" id="t4">
+<h2>Úlcera</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Pérdida de epidermis y dermis, al menos en parte, que cura con cicatriz.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Vascularización cutánea</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> La piel recibe sangre por dos plexos paralelos a la superficie: el subpapilar, en la dermis papilar, del que salen asas capilares hacia las papilas, y el profundo, en el límite entre dermis e hipodermis. Vasos perforantes verticales los conectan y los alimentan desde arterias de la fascia y del músculo.</p>
+<p><b>Cómo está hecha.</b> Arteriolas con músculo liso que regula el flujo, capilares de pared fina en las papilas y vénulas poscapilares. En los dedos hay anastomosis arteriovenosas que cortocircuitan el flujo para regular la temperatura.</p>
+<p><b>Qué permite hacer.</b> Nutre la epidermis por difusión, regula la temperatura al dilatarse o contraerse y trae las células que reparan las heridas. El límite es la perfusión: una presión sostenida mayor que la de los capilares o un flujo insuficiente causa isquemia.</p>
+<p><b>De qué depende.</b> Del flujo arterial, del retorno venoso (válvulas y bomba muscular de la pantorrilla) y del tono simpático.</p>
+<p><b>Correlato clínico.</b> Si falla el flujo arterial, aparecen úlceras distales, dolorosas, en piel fría y sin pulsos. Si falla el retorno venoso, el edema y la hipertensión venosa llevan a úlceras maleolares. Si la presión comprime la piel contra el hueso, aparece una úlcera por presión. Se exploran pulsos, llenado capilar y edema.</p>
+<p class="mini"><span class="badge b-pu">Bolognia 5.ª ed. 2024 [1]</span> Microcirculación cutánea.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Escama»: dermis. Sus fibroblastos fabrican la matriz que, al destruirse, impide regenerar dermis y deja cicatriz.</p>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisitos ya desarrollados en «Erosión» y «Costra»: unión dermoepidérmica, reepitelización y cicatrización. En la úlcera esas membranas y reservas se perdieron, por eso la cicatrización es más lenta.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Úlcera (<i>ulcer</i>): pérdida de la epidermis y de la dermis, al menos en parte, que puede llegar a la hipodermis o más profundo. Tiene borde, fondo y base palpable, y deja cicatriz al curar.</p>
+<p><span class="badge b-pu">Bolognia 5.ª ed. 2024 [1]</span> <span class="badge b-pu">Fitzpatrick 9.ª ed. 2019 [2]</span></p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Si la erosión es un raspón, la úlcera es un hoyo: se perdió la capa de arriba y también parte del tejido que sostiene la piel. Como ese tejido no vuelve a crecer igual, la reparación lo reemplaza con tejido fibroso y queda una cicatriz. Casi siempre la causa es falta de sangre, presión mantenida o una infección.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Mujer con várices y edema crónico: lesión sobre el maléolo medial, de borde irregular, fondo con fibrina amarilla y piel vecina pigmentada. Prototipos: úlcera venosa, neuropática del pie diabético, por presión, arterial, y pioderma gangrenoso (borde violáceo y socavado).</p>
+<p>Se explora el borde (cortado, socavado o violáceo), el fondo (granulación, fibrina, necrosis) y la base, palpándola entre dos dedos.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Erosión</b></td><td>Solo pierde epidermis y cura sin cicatriz; la úlcera llega a la dermis o más.</td></tr>
+<tr><td><b>Escara</b></td><td>Tejido necrótico seco y adherido que cubre el fondo de una úlcera; no es la úlcera misma.</td></tr>
+<tr><td><b>Fisura</b></td><td>Hendidura lineal estrecha por tensión; la úlcera es una pérdida de sustancia con fondo y borde.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t4"><div class="rc-t">Simulador · Recall de úlcera</div><div class="rc-count" id="rc-t4-n"></div><div class="rc-card" id="rc-t4-c"></div><div class="rc-btns" id="rc-t4-b"></div><div id="rc-t4-e"></div></div>
+
+<p class="gloss">Siglas: sin siglas en esta pestaña. Términos de apoyo: maleolar, del tobillo; maléolo medial, prominencia interna del tobillo.</p>
+</section>
+<section class="tab" id="t5">
+<h2>Fisura</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Hendidura lineal de la piel que llega a la dermis por pérdida de elasticidad.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Elasticidad y líneas de tensión de la piel</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> La piel es un tejido tensado y viscoelástico cuya resistencia depende de la dermis. Las fibras de colágeno se orientan en direcciones preferentes, que definen las líneas de tensión (líneas de Langer), y sobre las articulaciones se forman pliegues de flexión.</p>
+<p><b>Cómo está hecha.</b> El colágeno resiste la tracción y se estira poco; la elastina permite recuperar la forma tras estirar; el gel hidratado de glucosaminoglicanos amortigua. En palmas y plantas la epidermis es gruesa y menos extensible.</p>
+<p><b>Qué permite hacer.</b> Estirarse, plegarse en la flexión y volver a su forma. El límite aparece cuando la piel seca o engrosada pierde esa capacidad: se rompe en sentido perpendicular a la tensión.</p>
+<p><b>De qué depende.</b> De la hidratación del estrato córneo, del contenido de elastina y de la edad. No depende de vasos ni de nervios.</p>
+<p><b>Correlato clínico.</b> Con tensión repetida (cerrar la mano, abrir la boca, caminar) sobre piel con poca elasticidad se abre una grieta que duele y sangra. Se explora estirando la piel a ambos lados o flexionando la zona para abrirla.</p>
+<p class="mini"><span class="badge b-pu">Bolognia 5.ª ed. 2024 [1]</span> Propiedades mecánicas de la piel.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Barrera cutánea e hidratación del córneo</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Propiedad del estrato córneo de retener agua y evitar su pérdida hacia el exterior. Se apoya en la estructura de ladrillos y cemento descrita en «Escama».</p>
+<p><b>Cómo está hecha.</b> Los lípidos entre corneocitos (ceramidas, colesterol, ácidos grasos) sellan el espacio intercelular. Dentro de los corneocitos, el factor natural de hidratación, derivado de la filagrina, retiene agua. Sobre la superficie, el sebo y el sudor forman una película.</p>
+<p><b>Qué permite hacer.</b> Mantiene el córneo flexible y la superficie lisa. El límite son las condiciones que lo agotan: lavado frecuente, detergentes, frío y baja humedad ambiental.</p>
+<p><b>De qué depende.</b> De las glándulas sebáceas y sudoríparas, y de la filagrina. Palmas y plantas no tienen glándulas sebáceas, por lo que su película depende del sudor.</p>
+<p><b>Correlato clínico.</b> El córneo deshidratado se vuelve áspero, descama fino y pierde flexibilidad (xerosis). Es el terreno en que la flexión repetida abre fisuras.</p>
+<p class="mini"><span class="badge b-pu">Fitzpatrick 9.ª ed. 2019 [2]</span> Barrera epidérmica.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisitos ya desarrollados en «Escama»: epidermis y dermis. El estrato córneo es la capa que se agrieta; la dermis aporta colágeno y elastina.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Fisura (<i>fissure</i>): hendidura lineal de la piel, de paredes casi verticales, que atraviesa la epidermis y llega a la dermis. Aparece donde la piel pierde elasticidad y soporta tensión repetida. Duele y puede sangrar.</p>
+<p><span class="badge b-pu">Bolognia 5.ª ed. 2024 [1]</span> <span class="badge b-pu">Fitzpatrick 9.ª ed. 2019 [2]</span></p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Dobla muchas veces un cartón seco por el mismo lugar: en la línea de doblez se abre una grieta recta. La piel reseca o gruesa se comporta igual en los sitios que más se doblan o estiran. La grieta es angosta pero profunda, y como llega a la dermis, que tiene nervios y vasos, duele y sangra.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Albañil con manos secas y gruesas: líneas profundas en la yema de los dedos y en los pliegues de flexión, dolorosas al cerrar el puño. Prototipos: eccema hiperqueratósico de las manos, tiña interdigital del pie, queilitis angular en las comisuras y xerosis de los talones.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Excoriación</b></td><td>Erosión lineal por uñas, con costra hemática, en zonas alcanzables y con prurito. La fisura es hendidura por tensión en pliegues.</td></tr>
+<tr><td><b>Erosión</b></td><td>Pérdida superficial ancha y húmeda; la fisura es estrecha y profunda.</td></tr>
+<tr><td><b>Úlcera</b></td><td>Pérdida de sustancia con fondo y borde; la fisura es una hendidura cuyas paredes casi se tocan.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t5"><div class="rc-t">Simulador · Recall de fisura</div><div class="rc-count" id="rc-t5-n"></div><div class="rc-card" id="rc-t5-c"></div><div class="rc-btns" id="rc-t5-b"></div><div id="rc-t5-e"></div></div>
+
+<p class="gloss">Siglas: sin siglas en esta pestaña. Términos de apoyo: xerosis, sequedad de la piel; queilitis angular, inflamación de las comisuras de la boca.</p>
+</section>
+<section class="tab" id="t6">
+<h2>Excoriación</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Erosión o úlcera superficial, casi siempre lineal, producida por el rascado con las uñas.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Prurito y ciclo picor-rascado</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Estímulo.</b> La histamina y otros mediadores activan terminaciones libres de fibras C amielínicas en la epidermis y la dermis superior.</li>
+<li><b>Transmisión.</b> Las fibras C hacen sinapsis en el asta dorsal de la médula; la señal sube por el tracto espinotalámico hasta el tálamo y la corteza.</li>
+<li><b>Respuesta.</b> El rascado produce un dolor leve que inhibe la señal del picor en la médula: alivio momentáneo.</li>
+<li><b>Perpetuación.</b> El rascado rompe la barrera, libera más mediadores y mantiene la inflamación, que reactiva las fibras C. Es el ciclo picor-rascado.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> El picor ocasional, por un estímulo pasajero, cede solo y no deja lesión.</p>
+<p><b>Qué lo rompe.</b> Una dermatosis inflamatoria o una infestación activan la vía desde la piel; una enfermedad sistémica (colestasis, uremia) la activa desde dentro; la xerosis baja el umbral.</p>
+<p><b>Correlato clínico.</b> El rascado con uñas deja excoriaciones en las zonas que la mano alcanza. La zona central alta de la espalda, inalcanzable, queda indemne: es el signo de la mariposa. Se explora observando la distribución.</p>
+<p class="mini"><span class="badge b-pu">Bolognia 5.ª ed. 2024 [1]</span> Prurito y neurofisiología del picor.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisitos ya desarrollados en «Erosión» y «Úlcera»: profundidad de la pérdida. El rascado superficial es erosión; el profundo llega a la dermis.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Excoriación (<i>excoriation</i>): erosión o úlcera superficial, por lo general lineal o puntiforme, causada por el rascado con las uñas. Suele llevar costra hemática. Es un signo de prurito, no una enfermedad en sí misma.</p>
+<p><span class="badge b-pu">Bolognia 5.ª ed. 2024 [1]</span> <span class="badge b-pu">Fitzpatrick 9.ª ed. 2019 [2]</span></p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>El picor es una señal que la piel manda al cerebro. Rascarse calma esa señal un momento, pero las uñas arañan la superficie y la dañan. La piel dañada se inflama y vuelve a picar. Cada raya roja con costra es la huella de un rascado: la lesión primaria puede ser invisible, pero el rascado deja pruebas.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Adulto con picor nocturno intenso: líneas rojas con costras hemáticas en el abdomen y los espacios interdigitales, con la zona central alta de la espalda sin lesiones. Prototipos: escabiosis, dermatitis atópica, prurito colestásico o urémico y prurigo nodular.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Erosión</b></td><td>Pérdida superficial de cualquier causa; la excoriación es una erosión por rascado, lineal y con costra hemática.</td></tr>
+<tr><td><b>Fisura</b></td><td>Hendidura por tensión en un pliegue; la excoriación sigue la dirección de las uñas.</td></tr>
+<tr><td><b>Trastorno de excoriación</b></td><td>Manipulación compulsiva de la piel: lesiones de bordes angulares en varias etapas, sin prurito ni dermatosis que lo expliquen.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t6"><div class="rc-t">Simulador · Recall de excoriación</div><div class="rc-count" id="rc-t6-n"></div><div class="rc-card" id="rc-t6-c"></div><div class="rc-btns" id="rc-t6-b"></div><div id="rc-t6-e"></div></div>
+
+<p class="gloss">Siglas: sin siglas en esta pestaña. Términos de apoyo: prurito, sensación de picor; xerosis, sequedad de la piel.</p>
+</section>
+<section class="tab" id="t7">
+<h2>Liquenificación</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Engrosamiento de la piel con marcas cutáneas acentuadas por frotamiento o rascado crónico.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Respuesta de la epidermis al trauma crónico</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Estímulo repetido.</b> La fricción o el rascado sobre la misma zona, durante semanas.</li>
+<li><b>Respuesta del queratinocito.</b> Se activan la proliferación basal y la liberación de citocinas.</li>
+<li><b>Engrosamiento.</b> Aumentan las capas del estrato espinoso (acantosis) y del córneo (hiperqueratosis).</li>
+<li><b>Cronificación.</b> La piel engrosada y las fibras nerviosas sensibilizadas mantienen el picor y el rascado, que perpetúan el engrosamiento.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> La epidermis se adapta a la fricción con un engrosamiento reversible y protector, como un callo, que desaparece al cesar el estímulo.</p>
+<p><b>Qué lo rompe.</b> El estímulo continuo, sin pausa, junto con picor que no cede: el engrosamiento deja de ser adaptativo y se mantiene.</p>
+<p><b>Correlato clínico.</b> Placa gruesa, seca y áspera, a menudo más oscura que la piel vecina. Se explora con luz tangencial y palpando la rugosidad entre los dedos.</p>
+<p class="mini"><span class="badge b-pu">Fitzpatrick 9.ª ed. 2019 [2]</span> Respuesta epidérmica al frotamiento crónico.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Marcas cutáneas y dermatoglifos</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Relieve normal de la superficie de la piel: surcos finos que se cruzan y forman rombos y paralelogramos (marcas cutáneas). En las palmas y las plantas el relieve es de crestas paralelas, los dermatoglifos o huellas dactilares.</p>
+<p><b>Cómo está hecha.</b> Los surcos siguen la orientación de las fibras de la dermis y se corresponden con las crestas de la epidermis. En palmas y plantas las crestas epidérmicas se asientan sobre papilas dérmicas alineadas.</p>
+<p><b>Qué permite hacer.</b> Dan flexibilidad a la superficie, que se despliega al estirar la piel, y agarre en palmas y plantas. El límite es el grosor epidérmico: si la epidermis engruesa, las marcas se acentúan; si se adelgaza, se borran.</p>
+<p><b>De qué depende.</b> De la edad y de la zona: son más marcadas en flexuras y se pierden con el tiempo.</p>
+<p><b>Correlato clínico.</b> La liquenificación acentúa las marcas y da una cuadrícula visible, como corteza; la atrofia las borra. Se ve mejor con luz tangencial.</p>
+<p class="mini"><span class="badge b-pu">Bolognia 5.ª ed. 2024 [1]</span> Relieve de la superficie cutánea.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisitos ya desarrollados en «Escama» y «Excoriación»: epidermis y ciclo picor-rascado. El rascado crónico es el estímulo que engruesa la epidermis.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Liquenificación (<i>lichenification</i>): engrosamiento de la piel con acentuación de las marcas cutáneas, en forma de placa seca, áspera y a menudo hiperpigmentada, producido por frotamiento o rascado crónicos.</p>
+<p><span class="badge b-pu">Bolognia 5.ª ed. 2024 [1]</span> <span class="badge b-pu">Fitzpatrick 9.ª ed. 2019 [2]</span></p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Si frotas una zona todos los días durante semanas, la piel se defiende engrosándose, igual que la palma de un obrero. Con el engrosamiento, los surcos finos de la superficie se hacen más hondos y la zona parece una cuadrícula áspera, como corteza de árbol. Así que la liquenificación cuenta una historia: ahí hubo picor y rascado durante mucho tiempo.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Mujer con picor en la nuca y en la cara lateral de los tobillos: placa gruesa, cuadriculada, de bordes mal definidos y con excoriaciones; se rasca sobre todo de noche. Prototipos: liquen simple crónico, dermatitis atópica crónica en flexuras y eccema crónico de manos.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Liquen plano</b></td><td>Es una dermatosis, no una lesión secundaria: pápulas poligonales violáceas y brillantes con estrías de Wickham. El nombre solo se parece.</td></tr>
+<tr><td><b>Placa psoriásica</b></td><td>Borde nítido, escama gruesa plateada y sin cuadrícula; la liquenificación tiene bordes difusos y marcas acentuadas.</td></tr>
+<tr><td><b>Hiperqueratosis</b></td><td>Engrosamiento del córneo por presión (callo), sin cuadrícula ni picor.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t7"><div class="rc-t">Simulador · Recall de liquenificación</div><div class="rc-count" id="rc-t7-n"></div><div class="rc-card" id="rc-t7-c"></div><div class="rc-btns" id="rc-t7-b"></div><div id="rc-t7-e"></div></div>
+
+<p class="gloss">Siglas: sin siglas en esta pestaña. Términos de apoyo: acantosis, engrosamiento del estrato espinoso; estrías de Wickham, finas líneas blanquecinas sobre las pápulas del liquen plano.</p>
+</section>
+<section class="tab" id="t8">
+<h2>Atrofia</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Adelgazamiento de la piel por pérdida de epidermis, dermis o grasa subcutánea.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Homeostasis de la matriz dérmica</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Síntesis.</b> Los fibroblastos fabrican colágeno (tipo 1 y tipo 3), elastina y glucosaminoglicanos.</li>
+<li><b>Degradación.</b> Las metaloproteinasas de matriz (MMP) cortan el colágeno viejo o dañado.</li>
+<li><b>Equilibrio.</b> La renovación continua mantiene el grosor y la firmeza de la dermis.</li>
+<li><b>Desequilibrio.</b> Menos síntesis o más degradación hace que se pierda matriz y el tejido se adelgace.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> Equilibrio estable en el adulto joven; la síntesis declina con los años y la piel se adelgaza de forma gradual.</p>
+<p><b>Qué lo rompe.</b> La radiación ultravioleta (UV) activa las MMP, los glucocorticoides inhiben a los fibroblastos, la inflamación crónica daña la matriz y el estiramiento brusco rompe las fibras (estrías).</p>
+<p><b>Correlato clínico.</b> Piel fina y laxa, con depresión palpable y vasos visibles. Se explora con luz tangencial, pellizcando (se arruga como papel) y comparando con el lado sano.</p>
+<p class="mini"><span class="badge b-pu">Bolognia 5.ª ed. 2024 [1]</span> Envejecimiento y matriz dérmica.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Hipodermis</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Capa más profunda de la piel: tejido adiposo bajo la dermis reticular, sobre la fascia y el músculo. Se organiza en lóbulos de adipocitos separados por septos de tejido conectivo.</p>
+<p><b>Cómo está hecha.</b> Los adipocitos almacenan triglicéridos. Los septos conducen los vasos y los nervios que van de y hacia la dermis.</p>
+<p><b>Qué permite hacer.</b> Reserva de energía, aislamiento térmico, amortiguación de impactos y movilidad de la piel sobre los planos profundos. El límite es su volumen: depende del balance energético y de la inflamación.</p>
+<p><b>De qué depende.</b> De los vasos que cruzan los septos desde el plexo profundo.</p>
+<p><b>Correlato clínico.</b> Si se pierde la grasa (lipoatrofia) aparece una depresión; si se inflama, aparecen nódulos dolorosos (paniculitis). Se explora palpando el espesor entre los dedos.</p>
+<p class="mini"><span class="badge b-pu">Fitzpatrick 9.ª ed. 2019 [2]</span> Tejido adiposo subcutáneo.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisitos ya desarrollados en «Escama» y «Liquenificación»: epidermis, dermis y marcas cutáneas. La atrofia epidérmica borra las marcas; la dérmica adelgaza la matriz.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Atrofia (<i>atrophy</i>): disminución del espesor o del volumen de la epidermis, la dermis o la hipodermis. La epidérmica da piel fina, brillante y arrugada; la dérmica, depresión con piel laxa; la subcutánea, hundimiento más profundo.</p>
+<p><span class="badge b-pu">Bolognia 5.ª ed. 2024 [1]</span> <span class="badge b-pu">Fitzpatrick 9.ª ed. 2019 [2]</span></p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>La piel se renueva todo el tiempo y mantiene su grosor mientras fabrica tanto como pierde. Si la fabricación baja o la pérdida sube, la piel queda más delgada, como un colchón que va perdiendo relleno. Según la capa que falle, la piel se ve fina y arrugada, hundida o con un hoyo más profundo.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Paciente que usó durante meses un corticoide tópico potente en el pliegue inguinal: piel fina, brillante, con arrugas finas, vasos visibles y estrías. Prototipos: estrías de distensión, atrofia por corticoides, liquen escleroso (atrofia primaria, sin lesión previa).</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Erosión</b></td><td>Falta la epidermis y la superficie es húmeda; en la atrofia la piel está íntegra, solo adelgazada.</td></tr>
+<tr><td><b>Cicatriz atrófica</b></td><td>Reemplazo fibroso tras una lesión previa de la dermis; la atrofia no requiere daño previo.</td></tr>
+<tr><td><b>Esclerosis</b></td><td>Piel dura que no se pliega; la atrofia es blanda, fina y se arruga al pellizcar.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t8"><div class="rc-t">Simulador · Recall de atrofia</div><div class="rc-count" id="rc-t8-n"></div><div class="rc-card" id="rc-t8-c"></div><div class="rc-btns" id="rc-t8-b"></div><div id="rc-t8-e"></div></div>
+
+<p class="gloss">Siglas: MMP, metaloproteinasas de matriz; UV, ultravioleta. Término de apoyo: lipoatrofia, pérdida localizada de grasa subcutánea.</p>
+</section>
+<section class="tab" id="t9">
+<h2>Cicatriz</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Tejido fibroso que reemplaza a la dermis dañada y carece de anexos.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Anexos cutáneos</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Derivados de la epidermis que se hunden en la dermis: el folículo pilosebáceo (pelo y glándula sebácea), las glándulas sudoríparas ecrinas (casi toda la superficie) y apocrinas (axila e ingle), y las uñas.</p>
+<p><b>Cómo está hecha.</b> El folículo tiene un bulbo en la base y una zona con células madre en su porción media, el bulge. La glándula ecrina tiene un ovillo secretor en la dermis profunda y un conducto que sube a la superficie.</p>
+<p><b>Qué permite hacer.</b> Producen pelo y sudor, que regula la temperatura, y sebo, que lubrica. Además son reservas de células epiteliales para reepitelizar. El límite: una vez destruidos, no se regeneran.</p>
+<p><b>De qué depende.</b> De los vasos y los nervios de la dermis.</p>
+<p><b>Correlato clínico.</b> Si el daño destruye los anexos, la zona queda sin pelo y sin sudor. Se explora buscando ausencia de pelo y de orificios foliculares sobre la cicatriz.</p>
+<p class="mini"><span class="badge b-pu">Bolognia 5.ª ed. 2024 [1]</span> Anexos de la piel.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Fibroblasto y contracción de la herida</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Activación.</b> Las citocinas liberadas por plaquetas y macrófagos, entre ellas el factor de crecimiento transformante beta (TGF-β), activan a los fibroblastos.</li>
+<li><b>Síntesis.</b> Los fibroblastos depositan colágeno tipo 3 y luego tipo 1, en haces.</li>
+<li><b>Contracción.</b> Los miofibroblastos, con filamentos de actina de músculo liso, acercan los bordes de la herida.</li>
+<li><b>Remodelación.</b> Al cerrarse la herida, los miofibroblastos mueren por apoptosis y la matriz se reorganiza.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> De semanas a meses; al final el exceso de células desaparece y la cicatriz queda plana y pálida.</p>
+<p><b>Qué lo rompe.</b> La tensión mantenida, la inflamación prolongada o la infección impiden la apoptosis: se acumula colágeno de más (cicatriz hipertrófica o queloide). Un defecto de síntesis da una cicatriz deprimida (atrófica).</p>
+<p><b>Correlato clínico.</b> La cicatriz con exceso de colágeno es elevada, firme y a veces pruriginosa o dolorosa. Se explora palpando consistencia y bordes.</p>
+<p class="mini"><span class="badge b-pu">Fitzpatrick 9.ª ed. 2019 [2]</span> Fibroblastos y reparación.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisitos ya desarrollados en «Costra», «Atrofia» y «Liquenificación»: cicatrización, matriz dérmica y marcas cutáneas. La cicatriz es el resultado de esa reparación y no recupera las marcas.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Cicatriz (<i>scar</i>): reemplazo de la dermis dañada por tejido fibroso nuevo, sin anexos ni marcas cutáneas normales. Puede ser plana, atrófica o hipertrófica; en el queloide el exceso de tejido rebasa los bordes de la herida.</p>
+<p><span class="badge b-pu">Bolognia 5.ª ed. 2024 [1]</span> <span class="badge b-pu">Fitzpatrick 9.ª ed. 2019 [2]</span></p>
+<div class="tw"><table><thead><tr><th>Tipo</th><th>Rasgo que lo define</th></tr></thead><tbody>
+<tr><td><b>Hipertrófica</b></td><td>Elevada, firme y roja; se queda dentro de los bordes de la herida y puede aplanarse con el tiempo.</td></tr>
+<tr><td><b>Queloide</b></td><td>Elevada y firme; crece más allá de los bordes de la herida original y no regresa por sí sola.</td></tr>
+<tr><td><b>Esclerosis</b></td><td>Induración dérmica: piel dura, tensa y brillante, que no se pliega al pellizcar.</td></tr>
+</tbody></table></div>
+<p class="mini am">Cronología de aparición y predisposición según fototipo de la piel: [VERIFICAR EN FUENTE]. La esclerosis puede formar parte de una cicatriz o aparecer sin herida previa (morfea, esclerodermia); se agrupa aquí para compararla con la cicatriz.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Cuando se rompe la dermis, el cuerpo no puede rehacerla igual y la rellena con tejido de reparación, más compacto y sin pelos ni glándulas. Es como remendar una tela con un parche. Si el cuerpo pone parche de más y se pasa del borde del agujero, es un queloide. Si el parche es demasiado duro y tenso, es esclerosis.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Joven con una perforación en el lóbulo de la oreja de hace un año: nódulo firme, liso y brillante, mayor que el orificio original, que pica. Prototipos: queloide posperforación, cicatriz hipertrófica de quemadura y cicatriz atrófica de acné en las mejillas.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Hipertrófica y queloide</b></td><td>La hipertrófica respeta los bordes de la herida; el queloide los rebasa y no regresa.</td></tr>
+<tr><td><b>Atrofia</b></td><td>Adelgazamiento sin herida previa necesaria; la cicatriz atrófica sí exige una lesión dérmica anterior.</td></tr>
+<tr><td><b>Esclerosis</b></td><td>Induración que puede darse sin herida previa; la cicatriz siempre supone una lesión dérmica anterior.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t9"><div class="rc-t">Simulador · Recall de cicatriz</div><div class="rc-count" id="rc-t9-n"></div><div class="rc-card" id="rc-t9-c"></div><div class="rc-btns" id="rc-t9-b"></div><div id="rc-t9-e"></div></div>
+
+<p class="gloss">Siglas: VERIFICAR EN FUENTE marca un dato por confirmar en el libro; TGF-β, factor de crecimiento transformante beta. Términos de apoyo: bulge, zona del folículo rica en células madre; apoptosis, muerte celular programada.</p>
+</section>
+<section class="tab" id="tg">
+<h2>Repaso global</h2>
+<p class="mini">Mazo mixto con todas las tarjetas de las nueve pestañas, barajadas e intercaladas. Al terminar verás los aciertos al primer intento por término.</p>
+
+<div class="rc" id="rc-tg"><div class="rc-t">Simulador · Repaso global de los nueve términos</div><div class="rc-count" id="rc-tg-n"></div><div class="rc-card" id="rc-tg-c"></div><div class="rc-btns" id="rc-tg-b"></div><div id="rc-tg-e"></div></div>
+
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span>Referencias</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="vanc">
+<li>Bolognia JL, Schaffer JV, Cerroni L, editors. Dermatology. 5th ed. Philadelphia: Elsevier; 2024.</li>
+<li>Kang S, Amagai M, Bruckner AL, Enk AH, Margolis DJ, McMichael AJ, et al., editors. Fitzpatrick's dermatology. 9th ed. New York: McGraw-Hill Education; 2019.</li>
+</ol>
+<p class="mini am">Se citan las obras rectoras completas, sin capítulo ni página, porque no se consultaron los textos durante la redacción. Las cifras no sostenidas llevan [VERIFICAR EN FUENTE].</p>
+</div></div>
+</section>
+<script>
+const TERMS={t1:'Escama',t2:'Costra',t3:'Erosión',t4:'Úlcera',t5:'Fisura',t6:'Excoriación',t7:'Liquenificación',t8:'Atrofia',t9:'Cicatriz'};
+const DECKS={
+t1:[
+{q:'Un queratinocito asciende desde la capa basal y en el estrato granuloso pierde el núcleo. ¿Qué célula resulta y qué papel cumple en la barrera?',a:'Un corneocito: célula plana sin núcleo que, unida por lípidos, forma el estrato córneo que impide la pérdida de agua.',h:'Ladrillos y cemento.'},
+{q:'Si la proliferación basal se acelera, ¿cómo llegan los corneocitos a la superficie y qué signo se ve?',a:'Llegan inmaduros y todavía unidos; se desprenden en láminas gruesas visibles, es decir, escamas.',h:'Piensa en la velocidad de renovación.'},
+{q:'Escama: acúmulo visible de láminas de {{estrato córneo}} desprendidas, por queratinización o {{descamación}} alterada.',a:'estrato córneo; descamación',h:'Es la capa más externa de la epidermis.'},
+{q:'¿Cómo separas una escama de una costra al despegarla?',a:'La escama es estrato córneo y deja piel íntegra debajo; la costra es exudado seco y deja una erosión o úlcera húmeda.',h:'Mira qué queda debajo.'},
+{q:'Placas rojas bien delimitadas con láminas blanco-plateadas que, al raspar, dejan puntos sangrantes: ¿qué tipo de escama y qué signo?',a:'Escama psoriasiforme gruesa y plateada; signo de Auspitz.',h:'El raspado mete en el nombre a un autor.'},
+{q:'Lámina fina de escama, adherida por el centro y libre en el borde, que dibuja un anillo dentro del margen de la lesión: ¿cómo se llama?',a:'Collarete; es típico de la pitiriasis rosada.',h:'Su nombre alude a un cuello.'}
+],
+t2:[
+{q:'En una herida sangrante, ¿qué proteína forma la red que atrapa células y luego se seca como costra hemática?',a:'Fibrina, formada a partir del fibrinógeno por acción de la trombina.',h:'La cascada de coagulación termina en ella.'},
+{q:'¿Qué ocurre bajo una costra mientras está pegada y qué indica que se caiga sola?',a:'Los queratinocitos migran desde los bordes y los anexos y reepitelizan el lecho; al caer sola, ya hay epidermis nueva debajo.',h:'La costra protege una reparación en marcha.'},
+{q:'Costra: exudado {{seco}} y adherente de suero, sangre o {{pus}} sobre una erosión o una úlcera.',a:'seco; pus',h:'Se forma cuando el líquido se evapora.'},
+{q:'Una costra amarilla meloso, otra pardo-negra y otra amarillo verdosa espesa: ¿qué líquido forma cada una?',a:'Melicérica: suero; pardo-negra: sangre; amarillo verdosa espesa: pus.',h:'El color orienta el origen.'},
+{q:'Placa negra, seca, dura y de borde definido sobre el sacro de un paciente encamado: ¿costra o escara?',a:'Escara: es tejido muerto sobre una úlcera por presión, no exudado seco.',h:'Una es tejido; la otra, secreción.'}
+],
+t3:[
+{q:'Si fallan los hemidesmosomas y las fibrillas de anclaje de la unión dermoepidérmica, ¿qué lesión se forma y entre qué planos?',a:'Una ampolla subepidérmica: la epidermis se despega de la dermis; su techo roto deja una erosión.',h:'El pegamento entre dos capas.'},
+{q:'¿Por qué una erosión cura sin cicatriz?',a:'Porque la membrana basal y la dermis quedan íntegras y los queratinocitos del borde y del folículo reepitelizan el lecho.',h:'La dermis conserva sus reservas.'},
+{q:'Erosión: pérdida de {{epidermis}} que no alcanza la {{dermis}}, húmeda y sin cicatriz.',a:'epidermis; dermis',h:'Es la pérdida más superficial.'},
+{q:'¿Qué criterio separa erosión de úlcera?',a:'La profundidad: la erosión solo pierde epidermis y cura sin cicatriz; la úlcera llega a la dermis o más y deja cicatriz.',h:'Piensa en el plano que se alcanza.'},
+{q:'Ampollas fláccidas en la boca y el tronco que se rompen y dejan áreas rojas y húmedas con restos del techo en los bordes: ¿qué lesión secundaria predomina?',a:'Erosión; en la mucosa casi nunca se forma costra por la humedad.',h:'La mucosa siempre está húmeda.'}
+],
+t4:[
+{q:'Si el flujo arterial al lecho dérmico cae por debajo de lo que necesita, ¿qué le pasa a la epidermis y qué lesión resulta?',a:'La epidermis, que se nutre por difusión desde la dermis, se necrosa y aparece una úlcera distal, dolorosa y con piel fría.',h:'La epidermis no tiene vasos propios.'},
+{q:'Una presión sostenida sobre una prominencia ósea comprime los capilares: ¿qué secuencia lleva a la úlcera y dónde aparece?',a:'Compresión, isquemia y necrosis de piel y tejido blando; en sacro, trocánter o talón.',h:'Piensa en los puntos de apoyo del paciente encamado.'},
+{q:'Úlcera: pérdida de epidermis y {{dermis}}, al menos en parte, que cura con {{cicatriz}}.',a:'dermis; cicatriz',h:'Se diferencia de la erosión por la profundidad.'},
+{q:'¿Qué relación hay entre escara y úlcera?',a:'La escara es tejido necrótico seco adherido sobre el fondo de una úlcera; no es lo mismo que una costra de exudado.',h:'Una cubre a la otra.'},
+{q:'Al explorar una úlcera, ¿qué se palpa para valorar la base y qué sugiere una base dura e indolora?',a:'Se palpa entre dos dedos; una base indurada e indolora sugiere chancro sifilítico o neoplasia.',h:'No todas las úlceras duelen.'}
+],
+t5:[
+{q:'En la piel normal, ¿qué proteína dérmica permite recuperar la forma tras estirarla y cuál da resistencia a la tracción?',a:'La elastina recupera la forma; el colágeno resiste la tracción.',h:'Una es fibra elástica, la otra, de tracción.'},
+{q:'Si el estrato córneo pierde ceramidas y agua, ¿qué propiedad mecánica cambia y qué lesión puede aparecer con la flexión repetida?',a:'Pierde flexibilidad; con la flexión se abre una fisura perpendicular a la tensión.',h:'Piensa en un cartón seco.'},
+{q:'Fisura: hendidura {{lineal}} que atraviesa la epidermis hasta la {{dermis}}, dolorosa y sobre piel con poca elasticidad.',a:'lineal; dermis',h:'Es estrecha pero profunda.'},
+{q:'¿Cómo separas una fisura de una excoriación lineal?',a:'La fisura es hendidura por tensión en pliegues y se abre al estirar; la excoriación es erosión por uñas, con costra hemática y prurito.',h:'Una la causa la tensión; la otra, el rascado.'},
+{q:'Comisuras de la boca con grietas dolorosas y maceración en quien se lame los labios: ¿qué lesión y qué localización típica?',a:'Fisuras en un pliegue: queilitis angular.',h:'Las comisuras son zonas de flexión.'},
+{q:'¿Qué maniobra deja ver una fisura poco visible?',a:'Estirar la piel a ambos lados o flexionar la zona para abrir la hendidura.',h:'Se abre en el sentido contrario a su cierre.'}
+],
+t6:[
+{q:'¿Qué fibras conducen el picor y por dónde llega la señal al cerebro?',a:'Fibras C amielínicas; hacen sinapsis en el asta dorsal y suben por el tracto espinotalámico.',h:'Son las mismas fibras lentas del dolor.'},
+{q:'¿Por qué rascar alivia un momento pero perpetúa el picor?',a:'El dolor leve inhibe la señal del picor en la médula, pero el daño de la barrera libera mediadores que reactivan las fibras C.',h:'Alivio inmediato, daño posterior.'},
+{q:'Excoriación: erosión o úlcera superficial, {{lineal}}, por rascado con {{uñas}}, con costra hemática.',a:'lineal; uñas',h:'La forma sigue el gesto de rascar.'},
+{q:'Excoriaciones de bordes angulares en distintas etapas de curación, sin dermatosis ni prurito que las expliquen: ¿qué cambia respecto de la excoriación por picor?',a:'La causa no es el picor sino la manipulación compulsiva: trastorno de excoriación.',h:'Falta la dermatosis primaria.'},
+{q:'Espalda con líneas costrosas pero con la zona central alta sin lesión: ¿qué dato aporta?',a:'Indica prurito: el rascado ocurre donde la mano alcanza y la zona inaccesible queda indemne (signo de la mariposa).',h:'La mano no llega a todas partes.'}
+],
+t7:[
+{q:'La fricción repetida sobre la epidermis, ¿qué cambio histológico produce el engrosamiento?',a:'Acantosis (más capas del estrato espinoso) e hiperqueratosis, por mayor proliferación basal.',h:'Más células en el estrato espinoso y en el córneo.'},
+{q:'Al engrosarse la epidermis, ¿qué pasa con las marcas cutáneas normales y qué lesión resulta?',a:'Se acentúan y forman una cuadrícula marcada: liquenificación. En la atrofia, en cambio, se borran.',h:'Es la superficie de corteza.'},
+{q:'Liquenificación: engrosamiento con {{marcas cutáneas}} acentuadas por {{rascado}} crónico.',a:'marcas cutáneas; rascado',h:'Cuenta la historia de un picor largo.'},
+{q:'¿Qué separa la liquenificación del liquen plano, pese al nombre?',a:'La liquenificación es lesión secundaria por rascado, en placa cuadriculada; el liquen plano es una dermatosis con pápulas poligonales violáceas.',h:'Una es consecuencia, la otra es enfermedad.'},
+{q:'¿Con qué dos maniobras evidencias la liquenificación?',a:'Luz tangencial, que muestra la cuadrícula, y palpación o pellizco, que muestra engrosamiento y rugosidad.',h:'Una es visual, la otra táctil.'}
+],
+t8:[
+{q:'Si la síntesis de colágeno cae y las metaloproteinasas siguen degradándolo, ¿qué pasa con el grosor dérmico y qué signo aparece?',a:'La dermis se adelgaza: piel laxa con depresión y vasos visibles.',h:'Se fabrica menos de lo que se pierde.'},
+{q:'¿Qué función pierde la hipodermis y qué signo aparece si se pierde su grasa?',a:'Pierde amortiguación y relleno; aparece una depresión localizada (lipoatrofia).',h:'La grasa subcutánea rellena el volumen.'},
+{q:'Atrofia: {{disminución}} del espesor de la epidermis, la dermis o la {{hipodermis}}.',a:'disminución; hipodermis',h:'Pueden fallar tres capas.'},
+{q:'Si una zona se ve deprimida, ¿cómo separas la atrofia de la erosión?',a:'En la atrofia la piel está íntegra y adelgazada; en la erosión falta la epidermis y la superficie es húmeda.',h:'Mira la continuidad de la superficie.'},
+{q:'Piel como papel de cigarrillo, que se arruga al pellizcar y deja ver vasos: ¿qué capa está atrofiada?',a:'La epidermis, con probable compromiso de la dermis superficial.',h:'La capa más externa es la que da brillo.'}
+],
+t9:[
+{q:'¿Por qué una cicatriz no tiene pelo ni sudor?',a:'Porque el daño destruyó folículos y glándulas, que no se regeneran; el tejido fibroso que los reemplaza carece de anexos.',h:'Los anexos viven en la dermis.'},
+{q:'¿Qué células contraen la herida y qué les ocurre al cerrarse normalmente?',a:'Los miofibroblastos; mueren por apoptosis. Si persisten, se acumula colágeno de más.',h:'Si no mueren, siguen fabricando.'},
+{q:'Cicatriz: reemplazo fibroso de dermis dañada, sin {{anexos}} ni marcas cutáneas; el {{queloide}} rebasa los bordes de la herida.',a:'anexos; queloide',h:'Hay un tipo que se sale del borde.'},
+{q:'¿Qué separa la cicatriz hipertrófica del queloide?',a:'La hipertrófica se queda dentro de los bordes de la herida y puede aplanarse; el queloide los rebasa y no regresa por sí solo.',h:'Mira dónde está el borde de la herida original.'},
+{q:'Piel de las manos firme, brillante y que no se pliega, sin herida previa: ¿qué hallazgo es?',a:'Esclerosis (induración dérmica), como en la morfea o la esclerodermia; no es cicatriz porque no hubo herida.',h:'Falta el antecedente de lesión.'},
+{q:'Cicatrices deprimidas de bordes definidos en las mejillas tras acné: ¿qué tipo son?',a:'Cicatrices atróficas.',h:'Hay hundimiento, no relieve.'}
+]
+};
+DECKS.tg=[].concat.apply([],Object.keys(TERMS).map(function(k){return DECKS[k].map(function(c){return {q:c.q,a:c.a,h:c.h,t:k};});}));
+const RC={};
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function el(k,s){return document.getElementById('rc-'+k+'-'+s);}
+function isCloze(c){return c.q.indexOf('{{')>=0;}
+function front(c){return esc(c.q).replace(/\{\{[^}]*\}\}/g,'[ ? ]');}
+function back(c){return esc(c.q).replace(/\{\{([^}]*)\}\}/g,'<b>$1</b>');}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function show(id,btn){
+  document.querySelectorAll('.tab').forEach(function(s){s.classList.toggle('active',s.id===id);});
+  document.querySelectorAll('.tb').forEach(function(b){b.classList.toggle('active',b===btn);});
+  try{btn.scrollIntoView({inline:'center',block:'nearest'});}catch(e){}
+}
+function tog(b){b.parentElement.classList.toggle('op');}
+function rc_reset(k){
+  var n=DECKS[k].length,idx=[];
+  for(var i=0;i<n;i++)idx.push(i);
+  RC[k]={queue:shuffle(idx),first:{},fails:{},shown:false,done:0,n:n};
+  if(el(k,'e'))el(k,'e').innerHTML='';
+  rc_render(k);
+}
+function rc_render(k){
+  var s=RC[k],card=el(k,'c');
+  if(!card)return;
+  if(!s.queue.length){rc_end(k);return;}
+  var c=DECKS[k][s.queue[0]],f=s.fails[s.queue[0]]||0;
+  el(k,'n').textContent='Tarjeta '+(s.done+1)+' de '+s.n+(k==='tg'&&s.shown?' · '+TERMS[c.t]:'');
+  var h='<p class="rc-q">'+(s.shown&&isCloze(c)?back(c):front(c))+'</p>';
+  if(s.shown&&!isCloze(c))h+='<p class="rc-a"><b>Respuesta.</b> '+esc(c.a)+'</p>';
+  if(!s.shown&&f>=2)h+='<p class="rc-hint">Pista: '+esc(c.h)+'</p>';
+  card.innerHTML=h;
+  var b='';
+  if(!s.shown){b+='<button class="go" onclick="rc_show(\''+k+'\')">Mostrar respuesta</button>';}
+  else{
+    b+='<button class="gr ok" onclick="rc_grade(\''+k+'\',\'ok\')">La sabía</button>';
+    b+='<button class="gr mid" onclick="rc_grade(\''+k+'\',\'mid\')">A medias</button>';
+    b+='<button class="gr ko" onclick="rc_grade(\''+k+'\',\'ko\')">No la sabía</button>';
+  }
+  b+='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  el(k,'b').innerHTML=b;
+}
+function rc_show(k){RC[k].shown=true;rc_render(k);}
+function rc_grade(k,g){
+  var s=RC[k],i=s.queue.shift();
+  if(s.first[i]===undefined)s.first[i]=(g==='ok');
+  if(g==='ok'){s.done++;}
+  else{s.fails[i]=(s.fails[i]||0)+1;s.queue.push(i);}
+  s.shown=false;
+  rc_render(k);
+}
+function rc_verdict(p){return p>=80?['ok','Término consolidado']:['rep','Repasar hoy'];}
+function rc_end(k){
+  var s=RC[k],ok=0,i,rows='';
+  for(i=0;i<s.n;i++)if(s.first[i])ok++;
+  var p=Math.round(100*ok/s.n),v=rc_verdict(p);
+  el(k,'n').textContent='Mazo completado';
+  el(k,'c').innerHTML='<p class="rc-q">Cola agotada: todas las tarjetas se resolvieron.</p>';
+  el(k,'b').innerHTML='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  var h='<div class="rc-end '+v[0]+'">Aciertos al primer intento: '+ok+' de '+s.n+' ('+p+' %). <b>'+v[1]+'</b>.</div>';
+  if(k==='tg'){
+    Object.keys(TERMS).forEach(function(t){
+      var tot=0,hit=0;
+      for(i=0;i<s.n;i++){if(DECKS.tg[i].t===t){tot++;if(s.first[i])hit++;}}
+      var pp=Math.round(100*hit/tot),vv=rc_verdict(pp);
+      rows+='<tr><td>'+esc(TERMS[t])+'</td><td>'+hit+' de '+tot+' ('+pp+' %)</td><td>'+vv[1]+'</td></tr>';
+    });
+    h+='<div class="tw"><table><thead><tr><th>Término</th><th>Aciertos 1er intento</th><th>Veredicto</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  }
+  el(k,'e').innerHTML=h;
+}
+Object.keys(DECKS).forEach(rc_reset);
+</script>
+</div></body></html>
