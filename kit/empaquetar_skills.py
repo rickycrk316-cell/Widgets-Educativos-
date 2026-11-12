@@ -2,8 +2,8 @@
 """Empaqueta las skills del repo (.claude/skills/<nombre>/) como .skill instalables en claude.ai.
 
 Uso:
-  python3 kit/empaquetar_skills.py                  # definiciones, widget-ensenanza, flashcards
-  python3 kit/empaquetar_skills.py definiciones     # solo una
+  python3 kit/empaquetar_skills.py                  # definiciones, apertura, widget-ensenanza, flashcards
+  python3 kit/empaquetar_skills.py definiciones     # solo una (el impeccable es de terceros: no se empaqueta)
 
 Cada .skill (zip con la carpeta <nombre>/) lleva SKILL.md más:
   references/  sílabos y protocolo de verificación (copias de fuentes/)
@@ -16,8 +16,14 @@ RAIZ = pathlib.Path(__file__).resolve().parent.parent
 REFS = ['fuentes/syllabus_quirurgica2.md', 'fuentes/syllabus_quirurgica2_segunda_rotacion.md', 'fuentes/protocolo_verificacion.md']
 KIT = {
     'definiciones': ['def_head.html', 'validar_definiciones.py', 'auditar_definiciones.py', 'construir.py', 'probar_definiciones.js'],
-    'widget-ensenanza': ['kit_head.html', 'kit_script.html', 'validar.py', 'construir.py', 'auditar_diseno.py', 'probar_navegador.js'],
+    'apertura': ['apertura_head.html', 'validar_apertura.py', 'auditar_definiciones.py', 'construir.py', 'probar_definiciones.js'],
+    'widget-ensenanza': ['v11/head.html', 'v11/script.html', 'v11/validar.py', 'v11/probar.js', 'construir.py', 'renumerar.py'],
     'flashcards': [],
+}
+# Referencias propias de cada skill, además de REFS (se copian a references/)
+REFS_EXTRA = {
+    'apertura': ['fuentes/skill_apertura_v1.md', 'fuentes/skill_definiciones_v5.1.md', 'docs/DESIGN.md'],
+    'widget-ensenanza': ['docs/DECISIONES_v11.md', 'docs/DESIGN.md'],
 }
 EXTRA = {
     'definiciones': {'widgets/ansiedad_panico/definiciones/p96_js.html': 'assets/kit/p96_js_ejemplo.html'},
@@ -45,10 +51,10 @@ def empaquetar(nombre: str) -> bool:
         for f in sorted(skill.rglob('*')):
             if f.is_file() and '__pycache__' not in f.parts:
                 z.write(f, f'{nombre}/{f.relative_to(skill)}')
-        for r in REFS:
+        for r in REFS + REFS_EXTRA.get(nombre, []):
             z.write(RAIZ / r, f'{nombre}/references/{pathlib.Path(r).name}')
         for k in KIT[nombre]:
-            z.write(RAIZ / 'kit' / k, f'{nombre}/assets/kit/{k}')
+            z.write(RAIZ / 'kit' / k, f'{nombre}/assets/kit/{k}')  # conserva v11/ para que construir.py funcione
         for src, dst in EXTRA.get(nombre, {}).items():
             z.write(RAIZ / src, f'{nombre}/{dst}')
         n = len(z.namelist())

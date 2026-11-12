@@ -77,4 +77,4 @@ Don't: fuentes web o recursos remotos; `position:fixed` en las partes (solo el k
 
 ## Legado v10.2 (Vademécum)
 
-Los widgets anteriores siguen con `kit/kit_head.html`, `kit/def_head.html` y `kit/apertura_head.html`: monografía de vademécum, papel blanco frío, tinta azul única (`#2342A6`), serif en títulos, filetes en vez de sombras, columna de 880 px, radio de 3 px, pestañas como índice de canto. No se tocan; se reconstruyen con `python3 kit/construir.py`.
+Los widgets de enseñanza v10 (congelados; su `kit_head.html` se retiró) y las definiciones y aperturas (`kit/def_head.html`, `kit/apertura_head.html`, vivas) usan este estilo: monografía de vademécum, papel blanco frío, tinta azul única (`#2342A6`), serif en títulos, filetes en vez de sombras, columna de 880 px, radio de 3 px, pestañas como índice de canto. Los v10 no se tocan; definiciones y apertura se reconstruyen con `python3 kit/construir.py`.

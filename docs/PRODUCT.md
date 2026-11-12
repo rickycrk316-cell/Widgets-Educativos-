@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Static HTML/CSS/JS, single self-contained file per widget, assembled from a fixed kit (v11: `kit/v11/`; legacy v10.2 widgets: `kit/`) plus parts, and checked by the kit validator (skill `widget-ensenanza` v11). No framework.
+Static HTML/CSS/JS, single self-contained file per widget, assembled from a fixed kit (v11: `kit/v11/`; definitions and openings: `kit/`; v10.2 teaching widgets are frozen, their kit retired) plus parts, and checked by the kit validator (skill `widget-ensenanza` v11). No framework.
 
 ## Users
 
@@ -39,7 +39,7 @@ One accent color per theme (set in the manifest); red = alarm, amber = caution, 
 
 ## Evidence on Hand
 
-Existing widgets in `widgets/` (legacy v10.2, validated; pilot v11 in migration; see README.md). Syllabus in `fuentes/`. No user research, no screenshots of real use. Do not invent usage data.
+Existing widgets in `widgets/` (17 frozen v10.2 teaching widgets, not rebuilt until migrated; v11, definitions and opening widgets are live; see README.md). Syllabus in `fuentes/`. No user research, no screenshots of real use. Do not invent usage data.
 
 ## Product Principles
 

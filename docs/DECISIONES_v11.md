@@ -64,10 +64,10 @@ Solo donde aclaran más que el texto (sin mínimos por pestaña). Mismo vocabula
 
 ## 9 · Convivencia y alcance
 
-- **Kit v11 aparte**: `kit/v11/` (cabecera, script, validador, prueba de navegador). Solo lo usan los widgets con `"tipo": "v11"` en el manifiesto. Los widgets anteriores siguen con el kit v10.2 (legado) y **no se tocan**.
+- **Kit v11 aparte**: `kit/v11/` (cabecera, script, validador, prueba de navegador). Solo lo usan los widgets con `"tipo": "v11"` en el manifiesto. Los widgets v10.2 están **congelados** (sin `tipo`; el kit v10 se retiró): conservan partes y HTML, pero no se reconstruyen ni se editan hasta migrarlos.
 - **Piloto**: `widgets/ginecologia/menopausia_th` (ciclo ovárico, menopausia y terapia hormonal), **sin sílabo**.
 - Skills de definiciones y apertura: adoptan el diseño v11 y la regla de cero marcas para widgets futuros; los widgets ya hechos no se tocan.
-- Documentos obsoletos (prompt v10, skill v10 y v10.2, briefs) se **borran**; CLAUDE.md, README, DESIGN.md y PRODUCT.md se reescriben para v11. El kit v10.2 queda como «legado» para reconstruir los widgets antiguos.
+- Documentos obsoletos (prompt v10, skill v10 y v10.2, briefs) se **borran**; CLAUDE.md, README, DESIGN.md y PRODUCT.md se reescriben para v11. El kit v10.2 se retiró: los widgets antiguos quedan congelados.
 
 ## 10 · Contrato de clases nuevas del kit v11 (kit, validador y skill lo comparten)
 

@@ -25,7 +25,7 @@ Solo existe la ruta del repo (`kit/` en el directorio de trabajo); si falta, dil
 - Construir (ensambla y valida; imprime errores y `RESULTADO`): `python3 kit/construir.py widgets/<tema>/<id>`.
 - Probar: `node kit/v11/probar.js file://$PWD/<html> <carpeta_capturas_en_scratchpad>`; revisa capturas en 390, 820, 1180 y 1440 px.
 - Referencias: `python3 kit/renumerar.py` renumera Vancouver por primera aparición (§10).
-- Kit en `kit/v11/` (`head.html`, `script.html`, `validar.py`, `probar.js`). Los widgets sin `"tipo": "v11"` usan el kit v10.2 (legado) y no se tocan.
+- Kit en `kit/v11/` (`head.html`, `script.html`, `validar.py`, `probar.js`). Los widgets sin `"tipo"` son v10 congelados (kit retirado): no se reconstruyen ni se editan; migrar = reescribir con `tipo: "v11"`.
 - Un tema nuevo lleva `PLAN.md` y fila en `README.md`; en un tema existente, lee su `PLAN.md` antes de añadir o reordenar pestañas.
 - De skills de frontend o artefactos del entorno solo aplican rutas y entrega.
 

@@ -10,8 +10,9 @@ Cada carpeta de widget tiene partes numeradas (*.html, se concatenan en orden
 alfabético) y un manifiesto.json con, además de los campos del validador:
   "titulo": texto del <title>
   "salida": ruta del HTML final, relativa a la carpeta del widget
-  "tipo":   "v10" (por defecto), "definiciones", "apertura" o "v11"
-v10:          kit_head.html (título sustituido) + partes + kit_script.html → validar.py
+  "tipo":   "definiciones", "apertura" o "v11"
+v10:         (sin "tipo" o "v10") CONGELADO: el kit v10 se retiró; no se ensambla ni se toca el
+             HTML final. Se informa y cuenta como OK. Para reconstruirlo hay que migrarlo a v11.
 definiciones: def_head.html (título sustituido) + partes                  → validar_definiciones.py
 apertura:     apertura_head.html (título sustituido) + partes             → validar_apertura.py <html> <manifiesto>
 v11:          v11/head.html (título; <html data-tema> desde "tema") + partes + v11/script.html → v11/validar.py
@@ -25,15 +26,18 @@ RAIZ = KIT.parent
 def construir(d: pathlib.Path, validar: bool) -> bool:
     m = json.loads((d / 'manifiesto.json').read_text(encoding='utf-8'))
     tipo = m.get('tipo', 'v10')
-    cab = {'definiciones': 'def_head.html', 'apertura': 'apertura_head.html', 'v11': 'v11/head.html'}.get(tipo, 'kit_head.html')
+    if tipo == 'v10':
+        print(f'== {d.relative_to(RAIZ) if d.is_relative_to(RAIZ) else d}: congelado (v10), no se reconstruye')
+        return True
+    cab = {'definiciones': 'def_head.html', 'apertura': 'apertura_head.html', 'v11': 'v11/head.html'}[tipo]
     head = (KIT / cab).read_text(encoding='utf-8')
     if tipo == 'v11':
         head = head.replace('<html lang="es">', f'<html lang="es" data-tema="{m.get("tema", "otro")}">', 1)
     head = head.replace('<title>@@TITULO@@</title>', f'<title>{m["titulo"]}</title>')
     partes = sorted(p for p in d.glob('*.html'))
     html = head + ''.join(p.read_text(encoding='utf-8') for p in partes)
-    if tipo not in ('definiciones', 'apertura'):
-        html += (KIT / ('v11/script.html' if tipo == 'v11' else 'kit_script.html')).read_text(encoding='utf-8')
+    if tipo == 'v11':
+        html += (KIT / 'v11/script.html').read_text(encoding='utf-8')
     out = (d / m['salida']).resolve()
     out.write_text(html, encoding='utf-8')
     try:
@@ -48,18 +52,14 @@ def construir(d: pathlib.Path, validar: bool) -> bool:
     elif tipo == 'apertura':
         cmd = [sys.executable, str(KIT / 'validar_apertura.py'), str(out), str(d / 'manifiesto.json')]
     else:
-        # v11: mismo esquema, validador propio (si aún no existe, se avisa y no falla)
-        vcmd = KIT / ('v11/validar.py' if tipo == 'v11' else 'validar.py')
-        if not vcmd.exists():
-            print(f'   AVISO: {vcmd.relative_to(KIT)} no existe; no se validó')
-            return True
+        vcmd = KIT / 'v11/validar.py'
         # validar.py rechaza claves que no conoce: se le pasa el manifiesto sin las de ensamblaje.
         val = {k: v for k, v in m.items() if k not in ('titulo', 'salida', 'tipo')}
         tmp = tempfile.NamedTemporaryFile('w', suffix='.json', delete=False, encoding='utf-8')
         json.dump(val, tmp, ensure_ascii=False); tmp.close()
         cmd = [sys.executable, str(vcmd), str(out), tmp.name]
     r = subprocess.run(cmd, capture_output=True, text=True)
-    if tipo not in ('definiciones', 'apertura'):
+    if tipo == 'v11':
         pathlib.Path(tmp.name).unlink()
     lineas = (r.stdout + r.stderr).strip().splitlines()
     # Solo errores y la línea de resultado: ahorra contexto al revisar.

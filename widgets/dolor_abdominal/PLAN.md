@@ -1,6 +1,6 @@
 # Dolor abdominal agudo — plan de orquestación (widget-ensenanza v10)
 
-Fuente: `fuentes/Syllabus_primera_rotacion_10mo.md` · caso «Dolor abdominal agudo» (Quirúrgica 2, PUCE, 10.º nivel).
+Fuente: `fuentes/syllabus_quirurgica2.md` · caso «Dolor abdominal agudo» (Quirúrgica 2, PUCE, 10.º nivel).
 
 El caso nombra ~12 entidades. La skill v10 admite máximo 5 por widget, así que se parte en **3 widgets multi**. El router (§2) lo fija el orquestador para que los tres sean coherentes entre sí; cada ejecutor lo copia literal en su manifiesto.
 
@@ -35,5 +35,5 @@ El caso nombra ~12 entidades. La skill v10 admite máximo 5 por widget, así que
 
 - Contexto: Ecuador (MSP, GPC, INEC; Quito ~2 850 m), solo con datos sostenibles.
 - Bibliografía por defecto: Harrison 22e, Farreras-Rozman (última edición verificable; el sílabo cita «22a. ed. 2024»: verificar y, si es error, registrarlo como discrepancia propuesta, no como `hb vi` en `pan`/`sin`), y la guía internacional vigente más específica de cada entidad.
-- Kit en `kit/` (`kit_head.html`, `kit_script.html`, `validar.py`); partes en `<widget>/`. No leer ni editar el kit.
+- Kit v10 (retirado; widgets congelados) (`kit_head.html`, `kit_script.html`, `validar.py`); partes en `<widget>/`. No leer ni editar el kit.
 - Entrega: partes y `manifiesto.json` en `widgets/dolor_abdominal/<slug>/`; HTML final en `widgets/dolor_abdominal/`.
