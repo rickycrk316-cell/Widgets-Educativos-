@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""Auditoría del orquestador para el widget de definiciones (skill definiciones v5.1 + cabecera Vademécum).
+"""Auditoría del orquestador para el widget de definiciones (skill definiciones v5.1 + cabecera Vademécum)
+y para el de apertura (cabecera apertura_head.html: pestañas c0 + N términos + pb, jq, hx + tg).
 Uso: python3 auditar_definiciones.py widget.html N_TERMINOS"""
 import sys, re, pathlib
 from bs4 import BeautifulSoup
@@ -10,15 +11,16 @@ NT = int(sys.argv[2])
 F, W = [], []
 fail, warn = F.append, W.append
 
-head = (KIT / 'def_head.html').read_text(encoding='utf-8')
-MK = '<!-- /DEF_HEAD -->'
+APERTURA = '<!-- /APERTURA_HEAD -->' in H
+HEADF, MK = ('apertura_head.html', '<!-- /APERTURA_HEAD -->') if APERTURA else ('def_head.html', '<!-- /DEF_HEAD -->')
+head = (KIT / HEADF).read_text(encoding='utf-8')
 if MK not in H:
-    fail('cabecera: falta la marca <!-- /DEF_HEAD --> (no se usó def_head.html)')
+    fail(f'cabecera: falta la marca {MK} (no se usó {HEADF})')
     hpart, body = '', H
 else:
     hpart, body = H.split(MK, 1)
     exp = re.sub(r'<title>@@TITULO@@</title>', re.search(r'<title>.*?</title>', hpart, re.S).group(0), head).split(MK)[0]
-    if hpart != exp: fail('cabecera: def_head.html editada')
+    if hpart != exp: fail(f'cabecera: {HEADF} editada')
 if body.count('<style') or re.search(r'<[a-zA-Z][^>]*\sstyle\s*=', body): fail('regla 1: estilos propios o inline')
 
 S = BeautifulSoup(body, 'html.parser')
@@ -29,14 +31,28 @@ used |= set(re.findall(r"classList\.(?:add|toggle|remove)\('([\w-]+)'", js))
 used |= {c for m in re.findall(r'class="([^"]+)"', js) for c in m.split()}
 used |= {c for m in re.findall(r"className\s*=\s*'([^']+)'", js) for c in m.split()}
 extra = sorted(c for c in used - allowed if not re.search(r"[+'\"$]", c))
-if extra: fail(f'regla 1: clases fuera de def_head: {extra}')
+if extra: fail(f'regla 1: clases fuera de {HEADF}: {extra}')
 
 tabs = S.select('section.tab')
 btns = S.select('nav.tabs button.tb')
-if len(tabs) != NT + 1: fail(f'pestañas: {len(tabs)} secciones; se esperaban {NT} términos + Repaso global')
+if APERTURA:
+    esp = ['c0'] + [f't{i}' for i in range(1, NT + 1)] + ['pb', 'jq', 'hx', 'tg']
+    if [t.get('id') for t in tabs] != esp: fail(f'pestañas: {[t.get("id") for t in tabs]}; se esperaban {esp}')
+elif len(tabs) != NT + 1: fail(f'pestañas: {len(tabs)} secciones; se esperaban {NT} términos + Repaso global')
 if len(btns) != len(tabs): fail(f'pestañas: {len(btns)} botones ≠ {len(tabs)} secciones')
 for t in tabs[:-1]:
     tid = t.get('id')
+    if APERTURA:
+        if tid == 'c0':
+            if t.select_one('.rc'): fail('c0: no debe llevar simulador')
+            if not t.select_one('.card.caso'): fail('c0: falta card.caso')
+            if not t.select_one('.gloss'): warn('c0: sin glosario de siglas (.gloss)')
+            continue
+        if tid in ('pb', 'jq', 'hx'):
+            if not t.select_one('.rc'): fail(f'{tid}: falta simulador de recall')
+            if not t.select_one('figure.dg'): fail(f'{tid}: falta diagrama figure.dg')
+            if not t.select_one('.gloss'): warn(f'{tid}: sin glosario de siglas (.gloss)')
+            continue
     if not t.select_one('.hb'): fail(f'{tid}: falta idea rectora (.hb)')
     if not t.select_one('.card.fey'): fail(f'{tid}: falta card Feynman')
     if not t.select_one('.card.ej'): fail(f'{tid}: falta ejemplo de anclaje')
@@ -46,6 +62,11 @@ for t in tabs[:-1]:
     if not (t.select_one('.pre') or t.select_one('.rem-line')): warn(f'{tid}: sin prerrequisitos ni remisión (¿omisión declarada?)')
     for a in t.select('.pre .acc'):
         if 'op' not in (a.get('class') or []): fail(f'{tid}: acordeón de prerrequisito no nace abierto')
+if APERTURA:
+    for t in tabs:
+        if t.get('id') and re.fullmatch(r't\d+', t.get('id')) and not t.select_one('.card.vin'): fail(f'{t.get("id")}: falta card.vin (Por qué importa en este caso)')
+    for i, f in enumerate(S.select('figure.dg'), 1):
+        if not f.find('figcaption') or not f.select_one('.dg-t'): fail(f'diagrama {i}: falta dg-t o figcaption')
 last = tabs[-1] if tabs else None
 if last is not None and not last.select_one('ol.vanc'): fail('Repaso global: falta ol.vanc (Vancouver)')
 
@@ -80,5 +101,5 @@ for fn in ['rc_render', 'rc_show', 'rc_grade', 'rc_end', 'rc_reset']:
 if 'DECKS' not in js: fail('skill: falta const DECKS')
 
 print('\n'.join('FALLA ' + x for x in F)); print('\n'.join('AVISO ' + x for x in W))
-print(f'AUDITORÍA DEFINICIONES: {"FALLA" if F else "OK"} · fallas {len(F)} · avisos {len(W)}')
+print(f'AUDITORÍA {"APERTURA" if APERTURA else "DEFINICIONES"}: {"FALLA" if F else "OK"} · fallas {len(F)} · avisos {len(W)}')
 sys.exit(1 if F else 0)

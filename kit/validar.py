@@ -450,10 +450,10 @@ else:
            'fey': {k: len(secs[k].select('.fey')) for k in CONT if secs[k].select('.fey')}, 'nodos': {k: len(secs[k].select('.nodo')) for k in ENT if k in secs},
            'signos': {k: len(secs[k].select('.signo')) for k in ENT if k in secs}, 'dc': DCT}
 if M is not None:
-    ALL = ['modo', 'entidades', 'principal', 'amenaza', 'tabs', 'pg', 'fey', 'nodos', 'signos', 'dc', 'nucleo']
+    ALL = ['modo', 'entidades', 'principal', 'amenaza', 'tabs', 'pg', 'fey', 'nodos', 'signos', 'dc', 'nucleo', 'dg']
     for key in M:
         if key not in ALL: err('manifiesto', f'clave desconocida "{key}" (permitidas: {", ".join(ALL)})')
-    req = ALL if MODE == 'multi' else ['tabs', 'pg', 'fey', 'nodos', 'signos', 'dc']
+    req = [x for x in ALL if x != 'dg'] if MODE == 'multi' else ['tabs', 'pg', 'fey', 'nodos', 'signos', 'dc']
     for key in req:
         if key not in M: err('manifiesto', f'falta la clave "{key}"')
     if MODE == 'mono' and 'nucleo' not in M: warn('manifiesto', 'falta "nucleo" (lista ≤12)')
@@ -462,6 +462,16 @@ if M is not None:
             for k in M[key]:
                 if k not in CONT: err('manifiesto', f'{key}: clave "{k}" no es pestaña de contenido ({", ".join(CONT)})')
             if {k: v for k, v in M[key].items() if v != 0} == {k: v for k, v in cnt[key].items() if v}: M[key] = cnt[key]
+    # v10.2 (manifiesto con "dg"): diagramas por pestaña, columna de mecanismo de acción y cero marcas de verificación
+    if 'dg' in M:
+        cnt['dg'] = {k: len(secs[k].select('figure.dg')) for k in CONT if secs[k].select('figure.dg')}
+        for i, f in enumerate(L.select('figure.dg'), 1):
+            if not (f.select_one('.dg-t') and f.select_one('.dg-row') and f.find('figcaption')): err('diagramas', f'figure.dg #{i}: falta dg-t, dg-row o figcaption')
+        for tb in L.select('.tw table'):
+            hs = [txt(h) for h in tb.select('thead th')]
+            if hs and hs[0] == 'Fármaco' and 'Mecanismo de acción' not in hs: err('farmacos', 'tabla de fármacos sin columna «Mecanismo de acción»: ' + ' · '.join(hs))
+        nv = len(re.findall(r'VERIFICAR EN FUENTE', LLM))
+        if nv: err('verificacion', f'{nv} marca(s) [VERIFICAR EN FUENTE]: agota PubMed, Consensus, DailyMed y GPC del MSP; si no se confirma, elimina el dato')
     for key, v in cnt.items():
         if key in M and M[key] != v: err('manifiesto', f'{key}: manifiesto {json.dumps(M[key], ensure_ascii=False)} ≠ HTML {json.dumps(v, ensure_ascii=False)}')
     if MODE == 'multi':

@@ -20,7 +20,7 @@ Widgets HTML de estudio, autocontenidos y offline (skill `widget-ensenanza` v10,
 | | `Cojera_dolorosa_mecanica_widget_v10.html` | multi | Perthes (principal), epifisiólisis (amenaza), Osgood-Schlatter | 27 |
 | | `Marcha_sin_dolor_widget_v10.html` | multi | DDC (principal), dismetría, neuromuscular, Guillain-Barré (amenaza) | 65 |
 | | `Forma_piernas_pies_widget_v10.html` | multi | genu varo/valgo (principal), anteversión femoral, pie plano, pie cavo, equinovaro (amenaza) | 26 |
-| Sincronización y poliovulación (veterinaria, MVET3230 UDLA · prueba de la skill) | `Sincronizacion_celo_poliovulacion_widget_v10.html` | multi | PGF2α (principal y amenaza), GnRH + PGF2α, progestágenos, poliovulación · 29 esquemas SVG | 67 |
+| Sincronización y poliovulación (veterinaria, MVET3230 UDLA · prueba de la skill) | `Sincronizacion_celo_poliovulacion_widget_v11.html` | v11 · multi | PGF2α (principal y amenaza), GnRH + PGF2α, progestágenos, poliovulación · 29 esquemas SVG, núcleo por pestaña, perlas `udla`, ejercicio Ordenar | 0 |
 
 `[VERIFICAR]` = datos marcados `[VERIFICAR EN FUENTE]`: compruébalos antes de estudiar con ellos.
 

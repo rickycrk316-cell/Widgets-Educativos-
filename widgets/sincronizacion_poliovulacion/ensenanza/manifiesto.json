@@ -1,6 +1,8 @@
 {
  "titulo": "Sincronización del celo y poliovulación",
- "salida": "../Sincronizacion_celo_poliovulacion_widget_v10.html",
+ "salida": "../Sincronizacion_celo_poliovulacion_widget_v11.html",
+ "tipo": "v11",
+ "tema": "veterinaria",
  "modo": "multi",
  "entidades": {
   "e1": "PGF2α",

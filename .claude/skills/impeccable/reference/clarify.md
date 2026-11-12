@@ -1,4 +1,4 @@
-> **Nota de adaptación (Widgets educativos).** Ver `../SKILL.md`. Contenido clínico en español, para estudio. No cambies afirmaciones clínicas, cifras ni citas Vancouver `[n]` / `[VERIFICAR EN FUENTE]` sin preguntar. Las etiquetas, kickers y numeración de secciones del kit son válidos; no los "simplifiques". Ignora localización/traducción y estados de formulario/red que no existan en un widget estático.
+> **Nota de adaptación (Widgets educativos).** Ver `../SKILL.md`. Contenido clínico en español, para estudio. No cambies afirmaciones clínicas, cifras ni citas Vancouver `[n]` sin preguntar; un widget nunca se entrega con marcas de verificación pendientes. Las etiquetas, kickers y numeración de secciones del kit son válidos; no los "simplifiques". Ignora localización/traducción y estados de formulario/red que no existan en un widget estático.
 
 ---
 

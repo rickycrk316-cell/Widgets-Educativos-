@@ -18,6 +18,8 @@ const pausa = (page, ms) => page.evaluate(ms => new Promise(r => setTimeout(r, m
     { name: 'ipad-oscuro', width: 820, height: 1180, scheme: 'dark' },
     { name: 'movil', width: 390, height: 844, scheme: 'light' },
     { name: 'movil-oscuro', width: 390, height: 844, scheme: 'dark' },
+    { name: 'mac', width: 1440, height: 900, scheme: 'light' },
+    { name: 'ipad-horizontal', width: 1180, height: 820, scheme: 'dark' },
   ];
   for (const v of views) {
     const ctx = await browser.newContext({ viewport: { width: v.width, height: v.height }, colorScheme: v.scheme, deviceScaleFactor: 1 });

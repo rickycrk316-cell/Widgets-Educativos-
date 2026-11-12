@@ -1,14 +1,25 @@
 # Guía para Claude · Widgets educativos
 
-Repo solo de estudio médico (Ricardo, Quirúrgica 2 · PUCE, 10.º nivel). Índice de widgets en `README.md`. Sin contenido de marketing ni de otras marcas.
+Repo solo de estudio médico (Ricardo, Quirúrgica 2 · PUCE, 10.º nivel). Índice de widgets en `README.md`. **Regla de cero marcas**: ningún `[VERIFICAR EN FUENTE]` ni badge «Fuente por verificar» (el dato se confirma o se elimina), y sin contenido de marketing ni de otras marcas.
+
+Fuente de verdad del diseño y del contenido v11: `docs/DECISIONES_v11.md`. Si algo contradice ese documento, se corrige. Skill del repo: `.claude/skills/widget-ensenanza/SKILL.md` (v11).
 
 ## Dónde mirar (ahorra tokens)
 
-- **Edita y lee las partes**, nunca el HTML final: `widgets/<tema>/<id>/*.html`. El HTML final repite ~27 KB de kit en cada widget.
-- No leas `kit/kit_head.html`, `kit/kit_script.html`, `kit/def_head.html` ni `kit/validar.py` salvo que la tarea sea cambiar el kit. Clases y roles de color: `docs/DESIGN.md`.
+- **Edita y lee las partes**, nunca el HTML final: `widgets/<tema>/<id>/*.html`. El HTML final repite decenas de KB de kit en cada widget.
+- No leas `kit/` (cabeceras, scripts, validadores) salvo que la tarea sea cambiar el kit. Clases y roles de color: `docs/DESIGN.md` y el §10 de `docs/DECISIONES_v11.md`.
 - Para ubicar algo usa `grep -rn` sobre `widgets/<tema>/<id>/` en vez de abrir archivos enteros.
-- `fuentes/prompt_widget_ensenanza_v10.md` (60 KB) es el documento de proyecto con el kit v10 original (CSS v10, no Vademécum). Las reglas completas de la skill están en `fuentes/skill_widget_ensenanza_v10.md` y `fuentes/skill_definiciones_v5.1.md`: léelas solo por secciones cuando haga falta una regla concreta.
+- Contratos de las skills de definiciones y apertura: `fuentes/skill_definiciones_v5.1.md` y `fuentes/skill_apertura_v1.md` (léelos por secciones). Verificación de fuentes: `fuentes/protocolo_verificacion.md`.
 - `PLAN.md` de cada tema explica por qué se partió el caso así; léelo antes de añadir o reordenar pestañas.
+
+## Dos kits, según `manifiesto.json`
+
+| `tipo` | Kit | Uso |
+|---|---|---|
+| `"v11"` | `kit/v11/` (cabecera, script, validador, prueba de navegador) | widgets nuevos y migrados (piloto: `widgets/ginecologia/menopausia_th`) |
+| omitido, `"definiciones"`, `"apertura"` | `kit/` (v10.2 «Vademécum», **legado**) | solo para reconstruir los widgets antiguos; no se tocan ni se migran sin pedirlo |
+
+`kit/construir.py` elige el kit por `tipo`. `manifiesto.json`: `titulo`, `salida` (HTML final), `tipo`, `tema` (acento v11: `ginecologia`, `salud-mental`, `digestivo`, `urologia`, `pediatria-ortopedia`; otro → azul) y el resto que exige el validador (`modo`, `entidades`, `principal`, `amenaza`, `pg`, `fey`, `nodos`, `signos`, `dc`, `nucleo`). `nucleo` es la lista para Anki.
 
 ## Partes de un widget
 
@@ -17,26 +28,25 @@ Repo solo de estudio médico (Ricardo, Quirúrgica 2 · PUCE, 10.º nivel). Índ
 | multi | `01_nav` `02_pan` `05_vis` `21_e1`…`25_e5` `80_sin` `90_sim` |
 | mono | `01_nav` `02_pan` `10_def` `11_fis` `12_cli` `13_dx` `14_tx` `15_seg` `16x_*` (extra) `90_sim` |
 | definiciones | `p01_nav` `p10_t1`…`p90_t9` `p95_tg` `p96_js` |
+| apertura | `p01_nav` `p05_c0` `p10_t1`…`p90_t9` `p91_pb` `p92_jq` `p93_hx` `p95_tg` `p96_js` (manifiesto: `terminos` `problemas` `hipotesis` `diagramas`) |
+| v11 (multi/mono) | las mismas partes que multi/mono, con `div.nucleo`, `aside.perla`, `th>span.q+span.qx` y `li[data-paso]` (contrato en §10 de las decisiones) |
 
-`manifiesto.json`: `titulo`, `salida` (HTML final) y `tipo` son del ensamblador; el resto (`modo`, `entidades`, `principal`, `amenaza`, `pg`, `fey`, `nodos`, `signos`, `dc`, `nucleo`) los exige `validar.py`. `nucleo` es la lista para Anki.
-
-Construye siempre con `kit/construir.py`: el kit del repo (`kit/kit_head.html`) es la variante Vademécum y prevalece sobre el CSS del prompt/skill.
-
-Reglas del kit: las partes no llevan `<style>`, estilos en línea, recursos remotos, `localStorage` ni `position:fixed`. Cifras con cita Vancouver `[n]` o marcadas `[VERIFICAR EN FUENTE]`.
+Reglas del kit (ambos): las partes no llevan `<style>`, estilos en línea, recursos remotos, `localStorage` ni `position:fixed`. Cifras con cita Vancouver `[n]`; **cero `[VERIFICAR EN FUENTE]`**: se agotan PubMed, Consensus, fichas técnicas, GPC del MSP y web, y lo no confirmado se elimina (`fuentes/protocolo_verificacion.md`). Tablas de fármacos con columna «Mecanismo de acción». Sin preguntas de opción múltiple (van en Anki).
 
 ## Flujo de revisión
 
 1. Editar la parte.
 2. `python3 kit/construir.py widgets/<tema>/<id>` → reensambla y valida; imprime solo errores y la línea `RESULTADO`.
-3. Si cambió algo visual o de JS: `node kit/probar_navegador.js file://$PWD/<html> <carpeta_capturas_en_scratchpad>` (las capturas no se versionan). Instalación única de la herramienta: `cd kit && npm ci` (`playwright-core` 1.64.1 fijado en `kit/package.json`; no ejecutar `playwright install`; Chromium de `/opt/pw-browsers` o el de `PW_CHROMIUM`). Para definiciones usa `node kit/probar_definiciones.js` (mismos argumentos).
-4. Para definiciones: `python3 kit/auditar_definiciones.py <html> <n_terminos>`. Auditoría de diseño/router: `python3 kit/auditar_diseno.py <html> <manifiesto> "<línea del router del PLAN>"`.
-4b. (Opcional, cambios visuales) Revisión de accesibilidad/pulido: sigue `.claude/skills/impeccable/SKILL.md` (comandos `audit`, `polish`, `clarify`), leyendo solo la referencia del comando pedido. Es complementaria a `kit/auditar_diseno.py`; ante conflicto mandan `docs/DESIGN.md` y las reglas del kit.
-5. Commit de partes + HTML final juntos.
+3. `python3 kit/renumerar.py <carpeta>` si cambió el orden o el número de citas (Vancouver por primera aparición).
+4. Si cambió algo visual o de JS en un widget v11: `node kit/v11/probar.js file://$PWD/<html> <carpeta_capturas_en_scratchpad>` (las capturas no se versionan). Para widgets legado: `node kit/probar_navegador.js` (multi/mono) o `node kit/probar_definiciones.js` (definiciones y apertura). Instalación única: `cd kit && npm ci` (`playwright-core` fijado en `kit/package.json`; no ejecutar `playwright install`; Chromium de `/opt/pw-browsers` o el de `PW_CHROMIUM`).
+5. Definiciones: `python3 kit/auditar_definiciones.py <html> <n_terminos>`. Apertura: `python3 kit/validar_apertura.py <html> <manifiesto>` (lo corre `construir.py`) y el auditor de definiciones. Diseño/router: `python3 kit/auditar_diseno.py <html> <manifiesto> "<línea del router del PLAN>"`.
+6. (Opcional, cambios visuales) Accesibilidad/pulido: `.claude/skills/impeccable/SKILL.md` (`audit`, `polish`, `clarify`); ante conflicto mandan `docs/DESIGN.md` y las reglas del kit.
+7. Commit de partes + HTML final juntos.
 
 ## Widget nuevo
 
-Crear `widgets/<tema>/<id>/` con partes y `manifiesto.json` (con `titulo` y `salida: "../<Nombre>_widget_v10.html"`), añadir una fila en `README.md` y construir. Si el tema es nuevo, escribir su `PLAN.md`.
+Crear `widgets/<tema>/<id>/` con partes y `manifiesto.json` (`titulo`, `salida: "../<Nombre>_widget_v11.html"`, `tipo: "v11"`, `tema`), añadir fila en `README.md` y construir. Si el tema es nuevo, escribir su `PLAN.md`. Definiciones y apertura nuevas usarán las cabeceras v11 de `kit/v11/` cuando existan; hasta entonces, las de `kit/`.
 
-## Actualizar a una versión nueva (v11)
+## Qué cuenta como éxito
 
-Re-extraer el kit del nuevo documento de proyecto y comparar con `kit/`: `validar.py` y `kit_script.html` se reemplazan directo; `kit_head.html` se reaplica sobre Vademécum. Luego reconstruir todos los widgets y actualizar `fuentes/skill_*.md`.
+El widget condensa muchas fuentes con la regla 20/80 (núcleo arriba, detalle debajo, nada se recorta), perlas de examen etiquetadas (PUCE, CACES, USMLE 1/2, MIR, ENARM) y recuerdo activo con «Ordenar». Detalle en `docs/DECISIONES_v11.md` y `docs/PRODUCT.md`.

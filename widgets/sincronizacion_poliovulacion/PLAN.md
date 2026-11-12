@@ -13,3 +13,10 @@ Fuentes (prioridad): 1) presentación de clase «Sincronización de celos y poli
 - Eje del grupo: de controlar un evento (luteólisis) → dos eventos (onda folicular + luteólisis + ovulación) → sustituir el CL (progestágeno) → multiplicar la ovulación (poliovulación).
 - Etiquetas fijas del validador reinterpretadas (declarado en `vis` con `hb am` «Alcance»): «Qué verás» = respuesta observable; «Diagnóstico» = selección y verificación de hembras; «Tratamiento» = protocolos y dosis; «Epidemiología» = uso y categorías de hembra.
 - Petición de la alumna: aprende con esquemas → cada pestaña lleva ≥4 SVG en línea (líneas de tiempo de protocolos, ovario, curvas hormonales, flujos) con un color fijo por hormona.
+
+## Migración a v11
+
+- Kit `kit/v11/` traído de las ramas v11 (`claude/youthful-noether-fsuqnj`, idéntico a `claude/happy-mendel-ylorra`); manifiesto con `"tipo": "v11"` y `"tema": "veterinaria"` (sin acento propio: azul).
+- Ajuste mínimo del kit para veterinaria: etiqueta de perla `udla` (UDLA, sílabo MVET3230) añadida a `kit/v11/script.html` y `kit/v11/validar.py`, porque las etiquetas de examen v11 (PUCE, CACES, USMLE, MIR, ENARM) son de medicina humana.
+- Filas de `vis` como preguntas adaptadas a estrategias hormonales; núcleo por pestaña; perlas `udla`; `data-paso` en los pasos para «Ordenar»; columna «Mecanismo de acción» en las tablas de fármacos; cero `[VERIFICAR EN FUENTE]` (lo no confirmado se eliminó).
+- Se mantienen los esquemas SVG (la alumna aprende visualmente), sin `url(` (las flechas son triángulos dibujados).
