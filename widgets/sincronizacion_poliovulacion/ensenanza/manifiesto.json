@@ -55,10 +55,10 @@
  ],
  "nucleo": {
   "vis": [
-   "Eje 1 — Elige primero qué evento fijas: luteólisis, onda folicular u ovulación.",
-   "Eje 2 — Sin cuerpo lúteo no funciona la PGF2α.",
-   "Eje 3 — Con la hembra anéstrica, el progestágeno sustituye al cuerpo lúteo que falta.",
-   "Eje 4 — Para muchos embriones, la poliovulación con FSH o eCG."
+   "Elige primero qué evento fijas: luteólisis, onda folicular u ovulación",
+   "Sin cuerpo lúteo no funciona la PGF2α",
+   "En el anestro el progestágeno sustituye al cuerpo lúteo que falta",
+   "Para muchos embriones de una donante se usa la poliovulación con FSH o eCG"
   ],
   "e1": [
    "CL regresa y cae la progesterona",
@@ -66,26 +66,30 @@
    "Estradiol induce celo y receptividad",
    "Pico de LH, ovulación y nuevo CL",
    "Celo en pocos días tras PGF2α en hembra con CL",
-   "Selección de la hembra: ciclando, vacía y con CL maduro",
-   "Una o dos dosis de PGF2α según haya o no detección de celo y IATF"
+   "Descartar gestación antes de la PGF2α",
+   "Una o dos dosis de PGF2α según detección e IATF"
   ],
   "e2": [
    "Ovula el folículo dominante; nueva onda",
    "La PGF2α D7 regresa el cuerpo lúteo",
    "El folículo madura y sube el estradiol",
-   "Cuerpo lúteo nuevo y folículo ≥ 10 mm al examen ovárico",
-   "Ovsynch en leche y Cosynch en carne, con IATF"
+   "Cuerpo lúteo nuevo y folículo dominante al examen ovárico",
+   "Examen ovárico antes del D0",
+   "Ovsynch en leche, Cosynch en carne"
   ],
   "e3": [
-   "Retiro: cae la P4",
+   "Folículo dominante crece y secreta estradiol",
    "Pico de LH y ovulación",
    "eCG aporta soporte gonadotrópico",
+   "Celo agrupado 36–72 h tras el retiro",
    "Palpación o ecografía de ovarios para elegir la hembra ciclando o en anestro"
   ],
   "e4": [
    "Gonadotropina exógena sostiene muchos folículos",
    "Ovulación múltiple y varios cuerpos lúteos",
-   "eCG prolongada sobreestimula y deja quistes"
+   "Varios cuerpos lúteos en el ovario",
+   "FSH decreciente cada 12 h más PGF2α doble",
+   "eCG única, PGF2α doble y GnRH mitad"
   ]
  }
 }

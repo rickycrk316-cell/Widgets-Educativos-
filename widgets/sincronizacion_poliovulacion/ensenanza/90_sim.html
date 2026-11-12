@@ -7,20 +7,20 @@ function dcE1d(dc){
   if(!e.length){out(dc,e1_p('Elige el estado ovárico de la hembra para decidir si es candidata a PGF2α.'));return;}
   var r=[];
   if(e1_hv(e,'gest')){
-    r.push(e1_p('<b>No es candidata: hembra gestante.</b> La PGF2α destruye el cuerpo lúteo que mantiene la gestación y provoca aborto [@diapos][@frandson]. Confirma antes de inyectar: palpación rectal o ecografía y, si hay duda, progesterona sérica [@noakes].'));
-    r.push('<span class="cf">Si no puedes descartar la gestación (sin registro de servicio ni ecografía) → no inyectes PGF2α; confirma primero con ecografía [@noakes].</span>');
+    r.push(e1_p('<b>No es candidata: hembra gestante.</b> La PGF2α destruye el cuerpo lúteo que mantiene la gestación y provoca aborto [1][5]. Confirma antes de inyectar: palpación rectal o ecografía y, si hay duda, progesterona sérica [10].'));
+    r.push('<span class="cf">Si no puedes descartar la gestación (sin registro de servicio ni ecografía) → no inyectes PGF2α; confirma primero con ecografía [10].</span>');
   } else if(e1_hv(e,'cl')){
-    r.push(e1_p('<b>Candidata.</b> Cuerpo lúteo maduro (aprox. día 5–17 del ciclo bovino) y no gestante: la PGF2α provoca luteólisis y el celo llega en pocos días [@diapos][@frandson].'));
-    if(e1_hv(d,'celo')) r.push(e1_p('El registro de celos anteriores ayuda a ubicar la hembra en el ciclo; aun así confirma el CL por ecografía o palpación [@diapos].'));
-    if(e1_hv(d,'p4')) r.push(e1_p('Progesterona sérica alta apoya CL funcional; no distingue por sí sola ciclando de gestante: descarta la gestación [@noakes].'));
-    r.push('<span class="cf">Si el CL se ve pero la hembra pudo ser servida en el último ciclo → verifica gestación antes de inyectar; si es negativa → PGF2α y celo en pocos días [@diapos].</span>');
+    r.push(e1_p('<b>Candidata.</b> Cuerpo lúteo maduro (aprox. día 5–17 del ciclo bovino) y no gestante: la PGF2α provoca luteólisis y el celo llega en pocos días [1][5].'));
+    if(e1_hv(d,'celo')) r.push(e1_p('El registro de celos anteriores ayuda a ubicar la hembra en el ciclo; aun así confirma el CL por ecografía o palpación [1].'));
+    if(e1_hv(d,'p4')) r.push(e1_p('Progesterona sérica alta apoya CL funcional; no distingue por sí sola ciclando de gestante: descarta la gestación [10].'));
+    r.push('<span class="cf">Si el CL se ve pero la hembra pudo ser servida en el último ciclo → verifica gestación antes de inyectar; si es negativa → PGF2α y celo en pocos días [1].</span>');
   } else if(e1_hv(e,'clj')){
-    r.push(e1_p('<b>No candidata todavía: CL joven (primeros días tras la ovulación).</b> El CL es refractario a la PGF2α los primeros días y no regresa; la inyección no sincroniza nada [@frandson][@wiltbank2014]. Espera unos días y repite la evaluación.'));
-    r.push(e1_p('Por eso los protocolos de 2 dosis separan las inyecciones 11–14 días: tras la primera, todas las hembras ciclando tienen un CL maduro a la segunda [@diapos].'));
-    r.push('<span class="cf">Si la hembra tiene CL joven → no inyectes; si usas el esquema de 2 dosis, la 2.ª cae cuando el CL ya es sensible [@diapos].</span>');
+    r.push(e1_p('<b>No candidata todavía: CL joven (primeros días tras la ovulación).</b> El CL es refractario a la PGF2α los primeros días y no regresa; la inyección no sincroniza nada [5][8]. Espera unos días y repite la evaluación.'));
+    r.push(e1_p('Por eso los protocolos de 2 dosis separan las inyecciones 11–14 días: tras la primera, todas las hembras ciclando tienen un CL maduro a la segunda [1].'));
+    r.push('<span class="cf">Si la hembra tiene CL joven → no inyectes; si usas el esquema de 2 dosis, la 2.ª cae cuando el CL ya es sensible [1].</span>');
   } else {
-    r.push(e1_p('<b>No candidata: anestro (sin CL).</b> Sin cuerpo lúteo no hay receptor de PGF2α ni luteólisis que provocar; la hormona no inicia la ciclicidad [@diapos]. Corrige la causa (condición corporal, posparto, lactación) o usa un progestágeno o GnRH [@bo2014].'));
-    r.push('<span class="cf">Si la ecografía no muestra CL ni folículo en crecimiento → no uses PGF2α; si aparece un CL → es candidata [@bo2014].</span>');
+    r.push(e1_p('<b>No candidata: anestro (sin CL).</b> Sin cuerpo lúteo no hay receptor de PGF2α ni luteólisis que provocar; la hormona no inicia la ciclicidad [1]. Corrige la causa (condición corporal, posparto, lactación) o usa un progestágeno o GnRH [6].'));
+    r.push('<span class="cf">Si la ecografía no muestra CL ni folículo en crecimiento → no uses PGF2α; si aparece un CL → es candidata [6].</span>');
   }
   out(dc,r.join(''));
 }
@@ -30,27 +30,28 @@ function dcE1t(dc){
   if(!s.length){out(dc,e1_p('Elige la especie para obtener el protocolo con PGF2α y su dosis.'));return;}
   var r=[],iatf=e1_hv(c,'iatf'),gest=e1_hv(c,'gest');
   if(gest){
-    r.push(e1_p('<b>Alto: posible gestación.</b> No uses PGF2α hasta confirmar que la hembra está vacía: causa aborto [@diapos]. Con el protocolo de 2 dosis, las hembras gestantes del grupo abortan en la segunda inyección.'));
+    r.push(e1_p('<b>Alto: posible gestación.</b> No uses PGF2α hasta confirmar que la hembra está vacía: causa aborto [1]. Con el protocolo de 2 dosis, las hembras gestantes del grupo abortan en la segunda inyección.'));
   }
   if(e1_hv(s,'bov')){
     if(iatf){
-      r.push(e1_p('<b>Bovino, 2 dosis + IATF:</b> cloprostenol 500 µg IM (o dinoprost 25 mg IM) en el día 0 y otra dosis igual 11–14 días después; IATF a 72 y 96 h o una sola a 72–80 h tras la segunda [@diapos][@cimavet].'));
+      r.push(e1_p('<b>Bovino, 2 dosis + IATF:</b> cloprostenol 500 µg IM (o dinoprost 25 mg IM) en el día 0 y otra dosis igual 11–14 días después; IATF a 72 y 96 h o una sola a 72–80 h tras la segunda [1][11].'));
     } else if(e1_hv(c,'det')){
-      r.push(e1_p('<b>Bovino, 1 dosis con detección de CL:</b> cloprostenol 500 µg IM (o dinoprost 25 mg IM) a las hembras con CL; observa celo 5–7 días e insemina a celo detectado [@diapos][@cimavet].'));
+      r.push(e1_p('<b>Bovino, 1 dosis con detección de CL:</b> cloprostenol 500 µg IM (o dinoprost 25 mg IM) a las hembras con CL; observa celo 5–7 días e insemina a celo detectado [1][11].'));
     } else {
-      r.push(e1_p('<b>Bovino, 1 dosis + observación + 2.ª dosis:</b> una dosis (cloprostenol 500 µg IM), observa celos 5 días e insemina las positivas; a las no vistas, 2.ª dosis a los 11–14 días y observa 5–7 días [@diapos][@cimavet].'));
+      r.push(e1_p('<b>Bovino, 1 dosis + observación + 2.ª dosis:</b> una dosis (cloprostenol 500 µg IM), observa celos 5 días e insemina las positivas; a las no vistas, 2.ª dosis a los 11–14 días y observa 5–7 días [1][11].'));
     }
   } else if(e1_hv(s,'equ')){
-    r.push(e1_p('<b>Yegua:</b> con CL en diestro, dinoprost 5 mg IM (o cloprostenol 250 µg IM [VERIFICAR EN FUENTE]); el celo y el servicio se programan según el esquema de la presentación (servicio 4–6 días) [@diapos][@cimavet].'));
+    r.push(e1_p('<b>Yegua:</b> con CL en diestro, dinoprost 5 mg IM [1][11] (o cloprostenol 250–500 µg IM según la ficha de un producto de 250 µg/ml [12]); la presentación no da tiempos de celo ni servicio para la PGF2α sola en la yegua: el servicio a 4–6 días aparece en sus esquemas con GnRH y con progestágeno [1].'));
   } else if(e1_hv(s,'ovi')){
-    r.push(e1_p('<b>Oveja, 2 dosis:</b> cloprostenol 125 µg IM [VERIFICAR EN FUENTE] en dos tomas separadas por 10–14 días; el celo aparece a los 2–3 días y el servicio se programa en 4–6 días [@diapos][@cimavet] [VERIFICAR EN FUENTE el punto de partida del intervalo de servicio].'));
+    r.push(e1_p('<b>Oveja, 2 dosis:</b> cloprostenol IM, con la dosis por animal de la ficha del producto (no confirmada aquí), en dos tomas separadas por 10–14 días; la diapositiva marca 2–3 días hasta el celo y 4–6 días hasta el servicio, sin aclarar desde qué punto se cuenta cada intervalo [1].'));
   } else {
-    r.push(e1_p('<b>Cabra, 2 dosis:</b> cloprostenol 125 µg IM [VERIFICAR EN FUENTE] en dos tomas separadas por 11 días; celo a unas 50 h y servicio a 36–40 h [@diapos][@cimavet] [VERIFICAR EN FUENTE el punto de partida del servicio].'));
+    r.push(e1_p('<b>Cabra, 2 dosis:</b> cloprostenol 100–200 µg IM (rango de la ficha de un producto de 250 µg/ml [12]) en dos tomas separadas por 11 días; la diapositiva marca 50 h hasta el celo y 36–40 h hasta el servicio, sin aclarar desde qué punto se cuenta cada intervalo [1].'));
   }
-  if(!gest) r.push(e1_p('Antes de inyectar, confirma que la hembra no está gestante; manipula el producto con guantes: la PGF2α es peligrosa para mujeres embarazadas y asmáticas [VERIFICAR EN FUENTE].'));
-  r.push('<span class="cf">Si la hembra no muestra celo 5–7 días tras la dosis → revisa por ecografía si había CL maduro; si no lo había, no era candidata y no se repite la misma dosis [@diapos].</span>');
+  if(!gest) r.push(e1_p('Antes de inyectar, confirma que la hembra no está gestante; manipula el producto con guantes: la PGF2α se absorbe por la piel y puede provocar aborto y broncoespasmo; la embarazada y quien sea propenso al broncoespasmo deben evitar manipularla [2].'));
+  r.push('<span class="cf">Si la hembra no muestra celo 5–7 días tras la dosis → revisa por ecografía si había CL maduro; si no lo había, no era candidata y no se repite la misma dosis [1].</span>');
   out(dc,r.join(''));
 }
+
 
 function e2_par(t){return '<p>'+t+'</p>';}
 function e2_has(a,v){return a.indexOf(v)>-1;}
@@ -60,31 +61,32 @@ function dcE2(dc){
   if(!g.length){out(dc,e2_par('Elige la especie y el uso, y los datos adicionales, para obtener el protocolo.'));return;}
   var r=[],v=g[0],bov=(v==='leche'||v==='carne');
   if(e2_has(o,'prenez')&&v!=='prim'&&v!=='dest'){
-    r.push(e2_par('<b>Posible gestación</b>: confirma por ecografía antes de todo. No apliques PGF2α, porque provoca aborto [@diapos].'));
+    r.push(e2_par('<b>Posible gestación</b>: confirma por ecografía antes de todo. No apliques PGF2α, porque provoca aborto [1].'));
   }
   if(bov&&e2_has(o,'anestro')){
-    r.push(e2_par('<b>Sin CL ni folículo ≥ 10 mm</b>: la PGF2α no actúa sin cuerpo lúteo y la GnRH no ovula sin folículo capaz [@pursley1995] [VERIFICAR EN FUENTE]. No inicies Ovsynch: pasa a un protocolo con progestágeno (pestaña Progestágenos) [@diapos].'));
+    r.push(e2_par('<b>Sin CL ni folículo dominante</b>: la PGF2α no actúa sin cuerpo lúteo [1] y la GnRH no ovula sin folículo capaz [7]. No inicies Ovsynch: pasa a un protocolo con progestágeno (pestaña Progestágenos) [1].'));
   } else if(v==='leche'){
-    if(e2_has(o,'celo')) r.push(e2_par('<b>Select Synch</b>: gonadorelina 100 µg IM en D0, cloprostenol 500 µg IM en D7, observación de celo e IA a las positivas [@diapos] [@cimavet].'));
-    else if(e2_has(o,'ciclo')) r.push(e2_par('<b>Presynch + Ovsynch</b>: cloprostenol 500 µg IM en D-12; luego gonadorelina 100 µg en D0, cloprostenol 500 µg en D7, gonadorelina 100 µg en D9 e IATF 17–24 h después, para iniciar en los días 5–12 del ciclo [@moreira2001] [@diapos] [@cimavet].'));
-    else r.push(e2_par('<b>Ovsynch</b>: gonadorelina 100 µg IM en D0, cloprostenol 500 µg IM en D7, gonadorelina 100 µg IM en D9 e IATF 17–24 h después [@pursley1995] [@diapos] [@cimavet].'));
+    if(e2_has(o,'celo')) r.push(e2_par('<b>Select Synch</b>: gonadorelina 100 µg IM en D0, cloprostenol 500 µg IM en D7, observación de celo e IA a las positivas [1] [11].'));
+    else if(e2_has(o,'ciclo')) r.push(e2_par('<b>Presynch + Ovsynch</b>: cloprostenol 500 µg IM en D-12; luego gonadorelina 100 µg en D0, cloprostenol 500 µg en D7, gonadorelina 100 µg en D9 e IATF 17–24 h después, para iniciar en los días 5–12 del ciclo [14] [1] [11].'));
+    else r.push(e2_par('<b>Ovsynch</b>: gonadorelina 100 µg IM en D0, cloprostenol 500 µg IM en D7, gonadorelina 100 µg IM en D9 e IATF 17–24 h después [7] [1] [11].'));
   } else if(v==='carne'){
-    if(e2_has(o,'celo')) r.push(e2_par('<b>Heat Synch</b>: gonadorelina 100 µg IM en D0, cloprostenol 500 µg IM en D7, cipionato de estradiol (dosis [VERIFICAR EN FUENTE]) en D8, observación de celo e IATF en D10 [@diapos] [@cimavet].'));
-    else r.push(e2_par('<b>Cosynch</b>: gonadorelina 100 µg IM en D0, cloprostenol 500 µg IM en D7, gonadorelina 100 µg IM en D9 con IATF en el mismo momento [@diapos] [@bo2014] [@cimavet].'));
+    if(e2_has(o,'celo')) r.push(e2_par('<b>Heat Synch</b>: gonadorelina 100 µg IM en D0, cloprostenol 500 µg IM en D7, cipionato de estradiol (dosis no figura en la presentación) en D8, observación de celo e IATF en D10 [1] [11].'));
+    else r.push(e2_par('<b>Cosynch</b>: gonadorelina 100 µg IM en D0, cloprostenol 500 µg IM en D7, gonadorelina 100 µg IM en D9 con IATF en el mismo momento [1] [6] [11].'));
   } else if(v==='yegua'){
-    r.push(e2_par('<b>Yegua</b>: PGF2α en D0 (cloprostenol 250 µg o dinoprost 5 mg IM [VERIFICAR EN FUENTE]), GnRH en D6, PGF2α en D14, GnRH en D20 (dosis de GnRH [VERIFICAR EN FUENTE]); celo en D21 y servicio durante 4–6 días [@diapos] [@cimavet].'));
+    r.push(e2_par('<b>Yegua</b>: PGF2α en D0 (cloprostenol 250 µg IM [18]), GnRH en D6, PGF2α en D14, GnRH en D20 (dosis de GnRH no figura en la presentación); celo en D21 y servicio durante 4–6 días [1] [11].'));
   } else if(v==='oveja'){
-    r.push(e2_par('<b>Oveja</b>: Ovsynch con GnRH en D0, PGF2α en D7 (cloprostenol 125 µg IM [VERIFICAR EN FUENTE]) y GnRH en D9 (dosis [VERIFICAR EN FUENTE]); servicio 17–24 h después [@diapos] [@abecia2012].'));
+    r.push(e2_par('<b>Oveja</b>: Ovsynch con GnRH en D0, PGF2α en D7 y GnRH en D9 (las dosis no figuran en la presentación); servicio 17–24 h después [1] [19].'));
   } else if(v==='prim'){
-    r.push(e2_par('<b>Cerda primeriza</b>: altrenogest 20 mg VO cada 24 h durante 18 días; 1 día después GnRH, a las 78–80 h hCG, e IATF a las 24–26 h y a las 14–16 h [@diapos] [@cimavet]. Dosis de GnRH y hCG [VERIFICAR EN FUENTE].'));
+    r.push(e2_par('<b>Cerda primeriza</b>: altrenogest 20 mg VO cada 24 h durante 18 días; 1 día después GnRH, a las 78–80 h hCG, e IATF a las 24–26 h y a las 14–16 h [1] [11]. Dosis: hCG 500–1000 UI [20]; la de GnRH no figura en la presentación.'));
   } else {
-    r.push(e2_par('<b>Cerda destetada</b>: 1 día tras el destete GnRH, a las 72–74 h hCG, e IATF a las 24–26 h y a las 16–18 h [@diapos] [@knox2015]. Dosis de GnRH y hCG [VERIFICAR EN FUENTE].'));
+    r.push(e2_par('<b>Cerda destetada</b>: 1 día tras el destete GnRH, a las 72–74 h hCG, e IATF a las 24–26 h y a las 16–18 h [1] [20]. Dosis: hCG 500–1000 UI [20]; la de GnRH no figura en la presentación.'));
   }
-  if(bov||v==='oveja') r.push('<span class="cf">Si la hembra está anéstrica y no tiene folículo ≥ 10 mm → la GnRH no ovula y el protocolo falla; usa un progestágeno [@pursley1995] [VERIFICAR EN FUENTE].</span>');
-  else if(v==='yegua') r.push('<span class="cf">Si la yegua está en anestro estacional → la PGF2α no tiene cuerpo lúteo que regresar [VERIFICAR EN FUENTE].</span>');
-  else r.push('<span class="cf">Si la IATF se hace fuera de las 24–26 h tras la hCG → la inseminación cae antes o después de la ovulación y baja la fertilidad [@diapos].</span>');
+  if(bov||v==='oveja') r.push('<span class="cf">Si la hembra está anéstrica y no tiene folículo dominante → la GnRH no ovula y el protocolo falla; usa un progestágeno [7].</span>');
+  else if(v==='yegua') r.push('<span class="cf">Si la yegua está en anestro estacional → la PGF2α no tiene cuerpo lúteo que regresar [1].</span>');
+  else r.push('<span class="cf">Si la IATF se hace fuera de las 24–26 h tras la hCG → la inseminación cae antes o después de la ovulación y baja la fertilidad [1].</span>');
   out(dc,r.join(''));
 }
+
 
 function e3_p(t){return '<p>'+t+'</p>';}
 function e3_h(a,v){return a.indexOf(v)>-1;}
@@ -96,43 +98,44 @@ function dcE3(dc){
   var e=g[0],r=[],cf='';
   var anes=e3_h(o,'anes');
   if(e==='vl'){
-    r.push(e3_p('<b>Vaquilla de leche · Crestar</b>: día 0 implante de norgestomet 3 mg más inyección de 3 mg de norgestomet y 5 mg de valerato de estradiol IM; día 9 retiro; IATF a las 48 h. Sin eCG ni PGF2α [@diapos][@cimavet].'));
+    r.push(e3_p('<b>Vaquilla de leche · Crestar</b>: día 0 implante de norgestomet 3 mg más inyección de 3 mg de norgestomet y 5 mg de valerato de estradiol IM; día 9 retiro; IATF a las 48 h. Sin eCG ni PGF2α [1][11].'));
     cf='Si la vaquilla no estaba ciclando o perdió el implante → no cuentes con la IATF a 48 h: revisa ovarios y repite el esquema.';
   }else if(e==='cl'){
-    r.push(e3_p('<b>Vaca de leche · Crestar</b>: día 0 implante e inyección de norgestomet con valerato de estradiol; día 7 cloprostenol 500 µg IM para regresar el CL; día 9 retiro y eCG 400–500 UI IM [VERIFICAR EN FUENTE]; IATF a las 56 h [@diapos][@cimavet].'));
+    r.push(e3_p('<b>Vaca de leche · Crestar</b>: día 0 implante e inyección de norgestomet con valerato de estradiol; día 7 cloprostenol 500 µg IM para regresar el CL; día 9 retiro y eCG IM (dosis según ficha del producto); IATF a las 56 h [1][11].'));
     cf='Si hay CL y no das la PGF2α del día 7 → el CL mantiene la P4 y la ovulación se dispersa.';
   }else if(e==='vc'||e==='cc'){
     var h=e==='vc'?48:56;
-    r.push(e3_p('<b>'+(e==='vc'?'Vaquilla':'Vaca')+' de carne · Crestar</b>: día 0 implante e inyección; día 9 retiro con eCG (Folligon) 400–500 UI IM [VERIFICAR EN FUENTE]; IATF a las '+h+' h [@diapos][@cimavet].'));
-    cf='Si hay anestro o condición corporal baja → la eCG al retiro es el punto crítico; sin ella el folículo no ovula bien [@bo2014].';
+    r.push(e3_p('<b>'+(e==='vc'?'Vaquilla':'Vaca')+' de carne · Crestar</b>: día 0 implante e inyección; día 9 retiro con eCG (Folligon) IM (dosis según ficha del producto); IATF a las '+h+' h [1][11].'));
+    cf='Si hay anestro o condición corporal baja → la eCG al retiro es el punto crítico; sin ella el folículo no ovula bien [6].';
   }else if(e==='rep'){
-    r.push(e3_p('<b>Vaca repetidora · resincronización</b>: tras la IATF, 13 días después coloca CIDR 1,38 g de P4 más BE 2 mg IM; día 7 retiro; día 8 BE 1 mg IM; IA a celo visto los días 9 a 12 [@diapos][@cimavet].'));
+    r.push(e3_p('<b>Vaca repetidora · resincronización</b>: tras la IATF, 13 días después coloca CIDR 1,38 g de P4 más BE 2 mg IM; día 7 retiro; día 8 BE 1 mg IM; IA a celo visto los días 9 a 12 [1][11].'));
     cf='Si ves celo antes del día 7 → retira el CIDR y reinicia el protocolo.';
   }else if(e==='ove'||e==='cab'){
     var esp=e3_h(o,'esp');
-    if(e==='ove') r.push(e3_p('<b>Oveja · '+(esp?'esponja Chronogest CR':'CIDR')+'</b>: dispositivo 12–14 días '+(esp?'[VERIFICAR EN FUENTE la dosis]':'(0,3 g de P4)')+'; al retiro eCG 300–500 UI IM [VERIFICAR EN FUENTE]; celo y servicio a las 36–72 h [@diapos][@abecia2012].'));
-    else if(esp) r.push(e3_p('<b>Cabra · esponja</b>: día 0 esponja; día 10 cloprostenol 125 µg IM [VERIFICAR EN FUENTE]; día 12 retiro con eCG 300–500 UI IM [VERIFICAR EN FUENTE]; servicio a las 36–40 h [@diapos][@abecia2012].'));
-    else r.push(e3_p('<b>Cabra · CIDR</b>: 0,3 g de P4 por 14 días; al retiro eCG 300–500 UI IM [VERIFICAR EN FUENTE]; servicio a las 36–48 h [@diapos][@cimavet].'));
+    if(e==='ove') r.push(e3_p('<b>Oveja · '+(esp?'esponja Chronogest CR':'CIDR')+'</b>: dispositivo 12–14 días '+(esp?'(dosis según ficha del producto)':'(0,3 g de P4)')+'; al retiro eCG IM (dosis según ficha, raza y estación); celo y servicio a las 36–72 h [1][19].'));
+    else if(esp) r.push(e3_p('<b>Cabra · esponja</b>: día 0 esponja; día 10 cloprostenol IM (dosis según ficha); día 12 retiro con eCG IM (dosis según ficha, raza y estación); servicio a las 36–40 h [1][19].'));
+    else r.push(e3_p('<b>Cabra · CIDR</b>: 0,3 g de P4 por 14 días; al retiro eCG IM (dosis según ficha, raza y estación); servicio a las 36–48 h [1][11].'));
     cf='Si es la época de anestro estacional → el efecto del dispositivo depende de la eCG; revisa la condición corporal.';
   }else if(e==='yeg'){
-    r.push(e3_p('<b>Yegua · Regumate</b>: altrenogest 0,044 mg/kg VO cada 24 h por 15 días y PGF2α al retiro (dinoprost 5 mg IM); celo a los 4–6 días [VERIFICAR EN FUENTE el intervalo exacto] y servicio [@diapos][@cimavet].'));
+    r.push(e3_p('<b>Yegua · Regumate</b>: altrenogest 0,044 mg/kg VO cada 24 h por 15 días y PGF2α al retiro (dinoprost 5 mg IM); la diapositiva marca 2 días tras la PGF2α y 4–6 días hasta el celo y el servicio [1][11].'));
     cf='Si la yegua está gestante → no uses altrenogest ni PGF2α sin confirmar vacía.';
   }else if(e==='cerp'){
-    r.push(e3_p('<b>Cerda primeriza · Regumate</b>: altrenogest 20 mg por cerda VO cada 24 h por 18 días; celo a los 5–6 días tras el retiro; servicio al día siguiente [@diapos][@knox2015].'));
+    r.push(e3_p('<b>Cerda primeriza · Regumate</b>: altrenogest 20 mg por cerda VO cada 24 h por 18 días; celo a los 5–6 días tras el retiro; servicio al día siguiente [1][20].'));
     cf='Si no sale en celo a los 6 días → revisa edad, peso y alimentación antes de repetir.';
   }else if(e==='cerd'){
-    r.push(e3_p('<b>Cerda recién destetada · Regumate</b>: altrenogest 20 mg por cerda VO cada 24 h por 3 días desde el destete [VERIFICAR EN FUENTE]; celo a los 5–6 días; servicio al día siguiente [@diapos][@knox2015].'));
+    r.push(e3_p('<b>Cerda recién destetada · Regumate</b>: altrenogest 20 mg por cerda VO cada 24 h por 3 días desde el destete; celo a los 5–6 días; servicio al día siguiente [1][20].'));
     cf='Si la cerda llegó con mala condición corporal → el celo se retrasa; mejora la ración tras el destete.';
   }
   if(anes&&(e==='vl'||e==='cl'||e==='rep'))
-    r.push(e3_p('Con anestro o mala condición corporal, añade eCG al retiro aunque el esquema de leche no la lleve [@bo2014].'));
+    r.push(e3_p('Con anestro o mala condición corporal, añade eCG al retiro aunque el esquema de leche no la lleve [6].'));
   if(e3_h(o,'ovs')&&(e==='vl'||e==='cl'||e==='vc'||e==='cc'||e==='rep'))
-    r.push(e3_p('Alternativa CIDR + Ovsynch: día 0 CIDR más gonadorelina 100 µg IM; día 7 retiro y cloprostenol 500 µg IM; día 9 gonadorelina; IATF a las 18 h [@diapos][@cimavet].'));
+    r.push(e3_p('Alternativa CIDR + Ovsynch: día 0 CIDR más gonadorelina 100 µg IM; día 7 retiro y cloprostenol 500 µg IM; día 9 gonadorelina; IATF a las 18 h [1][11].'));
   else if(e3_h(o,'cidr')&&(e==='vl'||e==='cl'||e==='vc'||e==='cc'))
-    r.push(e3_p('Alternativa CIDR + BE: día 0 CIDR y BE 2 mg IM; día 7 retiro y cloprostenol 500 µg IM; día 8 BE 1 mg IM; IATF a las 30 h del BE [@diapos][@cimavet].'));
+    r.push(e3_p('Alternativa CIDR + BE: día 0 CIDR y BE 2 mg IM; día 7 retiro y cloprostenol 500 µg IM; día 8 BE 1 mg IM; IATF a las 30 h del BE [1][11].'));
   r.push('<span class="cf">'+cf+'</span>');
   out(dc,r.join(''));
 }
+
 
 function e4_has(a,v){return a.indexOf(v)>-1;}
 function dcE4(dc){
@@ -140,21 +143,22 @@ function dcE4(dc){
   if(!m.length){out(dc,'<p>Elige el método de superovulación y los datos adicionales para obtener el protocolo y la conducta con las receptoras.</p>');return;}
   var r=[];
   if(e4_has(m,'fsh')){
-    r.push('<p><b>FSH en dosis decrecientes</b>: se inicia unos 10 días tras el estro, dos veces al día (cada 12 h) durante 5 días, 5-4-3-2-2 mg por día o 6-5-4-3-2 mg por día repartidos en mañana y tarde, y PGF2α a doble dosis al final del esquema [@diapos]. Dosis de ficha: 400 mg NIH-FSH-P1 en total [@cimavet] [VERIFICAR EN FUENTE el número de dosis y el día de la PGF2α].</p>');
+    r.push('<p><b>FSH en dosis decrecientes</b>: se inicia unos 10 días tras el estro, dos veces al día (cada 12 h) durante 5 días, 5-4-3-2-2 mg o 6-5-4-3-2 mg por inyección, mañana y tarde, y PGF2α a doble dosis al final del esquema [1]. La diapositiva marca 2 días entre el esquema de FSH y la PGF2α [1].</p>');
   } else {
-    r.push('<p><b>eCG (PMSG) en inyección única</b>: 1 500 a 3 000 UI IM en el día 9 a 12 del ciclo [VERIFICAR EN FUENTE], PGF2α a doble dosis 2 días después y GnRH a mitad de dosis (50 µg) dos veces, 2 días más tarde y 1,5 h después [@diapos] [@cimavet] [VERIFICAR EN FUENTE los intervalos].</p>');
+    r.push('<p><b>eCG (PMSG) en inyección única</b>: el día 9 a 12, PGF2α a doble dosis 2 días después y GnRH a mitad de dosis dos veces, 2 días más tarde y 1,5 h después [1].</p>');
   }
-  if(e4_has(o,'onda')) r.push('<p>La onda emergente es el momento ideal para empezar: el grupo de folículos reclutado responde mejor [@adams2008] [@bomapletoft2014].</p>');
-  else r.push('<p>Sin onda confirmada, falta ecografía: iniciar sin ella aumenta la variabilidad de la respuesta [@bomapletoft2014].</p>');
+  if(e4_has(o,'onda')) r.push('<p>La onda emergente es el momento ideal para empezar: el grupo de folículos reclutado responde mejor [4] [22].</p>');
+  else r.push('<p>Sin onda confirmada, falta ecografía: iniciar sin ella aumenta la variabilidad de la respuesta [22].</p>');
   if(e4_has(o,'quiste')){
-    if(e4_has(m,'ecg')) r.push('<p><b>Cambia a FSH</b>: la eCG permanece días en la sangre y dejó quistes antes; considera anti-eCG [@bomapletoft2014].</p>');
-    else r.push('<p>La FSH, de vida media corta, evita la sobreestimulación prolongada de la eCG: buena elección tras quistes [@bomapletoft2014].</p>');
+    if(e4_has(m,'ecg')) r.push('<p><b>Cambia a FSH</b>: la eCG permanece días en la sangre y dejó quistes antes; considera anti-eCG [22].</p>');
+    else r.push('<p>La FSH, de vida media corta, evita la sobreestimulación prolongada de la eCG: buena elección tras quistes [22].</p>');
   }
-  if(e4_has(o,'sinrec')) r.push('<p><b>Falta sincronizar receptoras</b>: ajusta sus protocolos (PGF2α, GnRH o progestágenos, ver otras pestañas) para que el celo sea casi el de la donante; si no, no inicies la superovulación [@silabo].</p>');
-  else r.push('<p>Con receptoras sincronizadas, lava a los 7 días de la inseminación y transfiere los embriones evaluados [@silabo].</p>');
-  r.push('<span class="cf">Si la donante muestra ovarios muy grandes o quistes tras la eCG → cambia a FSH en dosis decrecientes o usa anti-eCG [@bomapletoft2014].</span>');
+  if(e4_has(o,'sinrec')) r.push('<p><b>Falta sincronizar receptoras</b>: ajusta sus protocolos (PGF2α, GnRH o progestágenos, ver otras pestañas) para que el celo sea casi el de la donante; si no, no inicies la superovulación [3].</p>');
+  else r.push('<p>Con receptoras sincronizadas, lava a los 7 días de la inseminación y transfiere los embriones evaluados [3].</p>');
+  r.push('<span class="cf">Si la donante muestra ovarios muy grandes o quistes tras la eCG → cambia a FSH en dosis decrecientes o usa anti-eCG [22].</span>');
   out(dc,r.join(''));
 }
+
 
 function vis_p(t){return '<p>'+t+'</p>';}
 function vis_r(est,falta,cond){return vis_p('<b>Estrategia compatible</b>: '+est)+vis_p('<b>Falta confirmar</b>: '+falta)+vis_p('<b>Conducta inicial</b>: '+cond);}
@@ -176,72 +180,73 @@ function dcVis(dc){
   if(!(e.length||c.length||o.length||v.length)){
     out(dc,vis_p('Elige la especie o la categoría, el objetivo y el estado del ovario. El simulador propone la estrategia compatible, lo que falta confirmar y la conducta inicial; no calcula probabilidades.'));return;}
   if(vis_has(v,'gest')){
-    out(dc,vis_r('ninguna: una hembra gestante no se sincroniza.','la gestación (ecografía o palpación) y la fecha de servicio [@frandson].','no apliques PGF2α, que provoca aborto; espera al parto o al diagnóstico de vacía [@diapos].')+'<span class="cf">Si la ecografía muestra que no hay gestación y sí cuerpo lúteo → la PGF2α vuelve a ser una opción [@diapos].</span>');return;}
+    out(dc,vis_r('ninguna: una hembra gestante no se sincroniza.','la gestación (ecografía o palpación) y la fecha de servicio.','no apliques PGF2α, que provoca aborto [2]; espera al parto o al diagnóstico de vacía [1].')+'<span class="cf">Si la ecografía muestra que no hay gestación y sí cuerpo lúteo → la PGF2α vuelve a ser una opción [1].</span>');return;}
   if(vis_choque(e,c)){
     out(dc,vis_p('La especie y la categoría elegidas no coinciden. Corrige una de las dos para obtener una estrategia.'));return;}
   var s=vis_esp(e,c),ob=o[0]||'',cl=vis_has(v,'cl'),sc=vis_has(v,'sincl'),ct=c[0]||'',r='',cf='';
   if(s==='peq'&&(e[0]==='ovi'||e[0]==='cap'))s=e[0];
   if(!s){out(dc,vis_p('Falta la especie o la categoría. Elígela para decidir.'));return;}
   if(ob==='terec'){
-    r=vis_r('sincronizar la receptora con la donante para que entren en celo el mismo día [@diapos].','que la receptora cicle, tenga útero sano y no esté gestante; el estado ovárico decide entre PGF2α (con cuerpo lúteo) y progestágeno (sin él) [@diapos].','aplica el protocolo de la especie con el calendario de la donante; la receptora no recibe FSH.');
-    cf='Si la receptora no tiene cuerpo lúteo → la PGF2α no sirve y hay que usar un progestágeno [@diapos].';
+    r=vis_r('sincronizar la receptora con la donante para que entren en celo el mismo día [1].','que la receptora cicle, tenga útero sano y no esté gestante; el estado ovárico decide entre PGF2α (con cuerpo lúteo) y progestágeno (sin él) [1].','aplica el protocolo de la especie con el calendario de la donante; la receptora no recibe FSH.');
+    cf='Si la receptora no tiene cuerpo lúteo → la PGF2α no sirve y hay que usar un progestágeno [1].';
   } else if(ob==='tedon'){
     if(s==='bov'){
-      r=vis_r('poliovulación: FSH en dosis decrecientes cada 12 h durante 4–5 días, con PGF2α en dosis doble hacia el final y IA en celo; alternativa, eCG en dosis única con PGF2α y GnRH [@diapos][@bomapletoft2014].','que la donante cicle (cuerpo lúteo, folículos) y tenga buena condición corporal'+(sc?'; sin cuerpo lúteo la respuesta es impredecible: resuelve el anestro antes':'')+' [@bomapletoft2014].','inicia la FSH entre los días 9 y 12 del ciclo, con la donante bajo supervisión veterinaria [@diapos].');
-      cf='Si la donante no tiene cuerpo lúteo al iniciar → la superovulación pierde sincronía y se pospone hasta confirmar el ciclo [@bomapletoft2014].';
+      r=vis_r('poliovulación: FSH en dosis decrecientes cada 12 h durante 4–5 días, con PGF2α en dosis doble hacia el final y IA en celo; alternativa, eCG en dosis única con PGF2α y GnRH [1][22].','que la donante cicle (cuerpo lúteo, folículos) y tenga buena condición corporal'+(sc?'; sin cuerpo lúteo la respuesta es impredecible: resuelve el anestro antes':'')+' [22].','inicia la FSH entre los días 9 y 12 del ciclo, con la donante bajo supervisión veterinaria [1].');
+      cf='Si la donante no tiene cuerpo lúteo al iniciar → la superovulación pierde sincronía y se pospone hasta confirmar el ciclo [22].';
     } else {
-      r=vis_p('<b>Estrategia compatible</b>: la poliovulación en esta especie no figura en la presentación [@diapos].')+vis_p('<b>Falta confirmar</b>: el protocolo de superovulación de la especie [VERIFICAR EN FUENTE].')+vis_p('<b>Conducta inicial</b>: sincroniza el ciclo de la donante con la estrategia de su especie y consulta al especialista.');
-      cf='Si la especie fuera bovina → la superovulación sería FSH decreciente con PGF2α en dosis doble [@diapos].';
+      r=vis_p('<b>Estrategia compatible</b>: la poliovulación en esta especie no figura en la presentación [1].')+vis_p('<b>Falta confirmar</b>: el protocolo de superovulación de la especie, que la presentación no describe.')+vis_p('<b>Conducta inicial</b>: sincroniza el ciclo de la donante con la estrategia de su especie y consulta al especialista.');
+      cf='Si la especie fuera bovina → la superovulación sería FSH decreciente con PGF2α en dosis doble [1].';
     }
   } else if(s==='bov'){
     if(sc){
-      r=vis_r('progestágeno (Crestar o CIDR) con eCG al retiro, útil en vaca de carne, Bos indicus y anéstricas [@bo2014][@diapos].','anestro real (ecografía y progesterona sérica), condición corporal y días posparto [@bo2014].','coloca el dispositivo, retira en la fecha y haz IATF o servicio al celo; sin dosis aquí: ver la pestaña «Progestágenos».');
-      cf='Si la vaca mejora su condición corporal y aparece cuerpo lúteo → basta PGF2α o GnRH + PGF2α y se ahorra el dispositivo [@diapos].';
+      r=vis_r('progestágeno (Crestar o CIDR) con eCG al retiro, útil en vaca de carne, Bos indicus y anéstricas [6][1].','anestro real (ecografía y progesterona sérica), condición corporal y días posparto [6].','coloca el dispositivo, retira en la fecha y haz IATF o servicio al celo; sin dosis aquí: ver la pestaña «Progestágenos».');
+      cf='Si la vaca mejora su condición corporal y aparece cuerpo lúteo → basta PGF2α o GnRH + PGF2α y se ahorra el dispositivo [1].';
     } else if(cl&&ob==='conc'&&ct!=='car'){
-      r=vis_r('PGF2α en una o dos dosis separadas 11–14 días, con observación de celo e IA de las positivas, o a tiempo fijo a las 72–96 h [@diapos].','la gestación y el cuerpo lúteo por ecografía o palpación [@frandson].','descarta gestación, inyecta y observa celos 5–7 días; cuadra el calendario de partos con el servicio.');
-      cf='Si la ecografía no muestra cuerpo lúteo → la PGF2α no hace efecto y debes pasar a progestágeno o a GnRH + PGF2α [@diapos].';
+      r=vis_r('PGF2α en una o dos dosis separadas 11–14 días, con observación de celo e IA de las positivas, o a tiempo fijo a las 72–96 h [1].','la gestación y el cuerpo lúteo por ecografía o palpación [5].','descarta gestación, inyecta y observa celos 5–7 días; cuadra el calendario de partos con el servicio.');
+      cf='Si la ecografía no muestra cuerpo lúteo → la PGF2α no hace efecto y debes pasar a progestágeno o a GnRH + PGF2α [1].';
     } else if(cl&&ct==='car'){
-      r=vis_r('Cosynch (GnRH + PGF2α con IATF) o progestágeno con estradiol y eCG si hay anestro posparto [@bo2014][@diapos].','condición corporal, días posparto y cuerpo lúteo [@bo2014].','elige el esquema de unos 10 días con IATF; confirma que haya cuerpo lúteo antes de la PGF2α.');
-      cf='Si la vaca es Bos indicus con baja condición corporal → conviene progestágeno con eCG y no solo PGF2α [@bo2014].';
+      r=vis_r('Cosynch (GnRH + PGF2α con IATF) o progestágeno con estradiol y eCG si hay anestro posparto [6][1].','condición corporal, días posparto y cuerpo lúteo [6].','elige el esquema de unos 10 días con IATF; confirma que haya cuerpo lúteo antes de la PGF2α.');
+      cf='Si la vaca es Bos indicus con baja condición corporal → conviene progestágeno con eCG y no solo PGF2α [6].';
     } else if(cl||ob==='iatf'){
-      r=vis_r((ct==='lec'?'Ovsynch (con Presynch si el hato es lechero) ':'GnRH + PGF2α (Ovsynch, Cosynch, Select Synch o Heat Synch) ')+'con IATF [@pursley1995][@moreira2001][@diapos].','el folículo y el cuerpo lúteo por ecografía, y la gestación [@diapos].','respeta las horas exactas entre GnRH, PGF2α, segunda GnRH e IATF; veterinario o técnico entrenado.');
-      cf='Si la vaca no tiene folículo respondedor a la primera GnRH → la ovulación a tiempo fijo falla; el Presynch mejora el punto de partida [@moreira2001].';
+      r=vis_r((ct==='lec'?'Ovsynch (con Presynch si el hato es lechero) ':'GnRH + PGF2α (Ovsynch, Cosynch, Select Synch o Heat Synch) ')+'con IATF [7][14][1].','el folículo y el cuerpo lúteo por ecografía, y la gestación [1].','respeta las horas exactas entre GnRH, PGF2α, segunda GnRH e IATF; veterinario o técnico entrenado.');
+      cf='Si la vaca no tiene folículo respondedor a la primera GnRH → la ovulación a tiempo fijo falla; el Presynch mejora el punto de partida [14].';
     } else {
-      r=vis_p('<b>Estrategia compatible</b>: aún no se puede decidir; falta el estado ovárico.')+vis_p('<b>Falta confirmar</b>: cuerpo lúteo, folículos y gestación por ecografía o palpación [@frandson].')+vis_p('<b>Conducta inicial</b>: explora el ovario y vuelve a elegir.');
-      cf='Si la exploración muestra cuerpo lúteo → PGF2α o GnRH + PGF2α; si no → progestágeno [@diapos].';
+      r=vis_p('<b>Estrategia compatible</b>: aún no se puede decidir; falta el estado ovárico.')+vis_p('<b>Falta confirmar</b>: cuerpo lúteo, folículos y gestación por ecografía o palpación [5].')+vis_p('<b>Conducta inicial</b>: explora el ovario y vuelve a elegir.');
+      cf='Si la exploración muestra cuerpo lúteo → PGF2α o GnRH + PGF2α; si no → progestágeno [1].';
     }
   } else if(s==='equ'){
     if(sc){
-      r=vis_r('Regumate (altrenogest) durante 15 días y PGF2α al final; celo en 4–6 días [@diapos].','que la yegua esté en época reproductiva y no gestante; ecografía del ovario [@noakes].','administra el progestágeno diario, inyecta PGF2α el último día y sigue el celo con teaser.');
-      cf='Si la yegua está en anestro estacional profundo → el progestágeno no basta y hay que esperar la época reproductiva [@noakes].';
+      r=vis_r('Regumate (altrenogest) durante 15 días y PGF2α al final; celo en 4–6 días [1].','que la yegua esté en época reproductiva y no gestante; ecografía del ovario [10].','administra el progestágeno diario, inyecta PGF2α el último día y sigue el celo con teaser.');
+      cf='Si la yegua está en anestro estacional profundo → el progestágeno no basta y hay que esperar la época reproductiva [10].';
     } else if(ob==='iatf'){
-      r=vis_r('GnRH + PGF2α en la yegua cíclica [@diapos].','cuerpo lúteo y folículo por ecografía [@diapos].','programa la inseminación según la ovulación seguida por ecografía.');
-      cf='Si no hay cuerpo lúteo → la PGF2α no luteoliza y se pasa a progestágeno [@diapos].';
+      r=vis_r('GnRH + PGF2α en la yegua cíclica [1].','cuerpo lúteo y folículo por ecografía [1].','programa la inseminación según la ovulación seguida por ecografía.');
+      cf='Si no hay cuerpo lúteo → la PGF2α no luteoliza y se pasa a progestágeno [1].';
     } else {
-      r=vis_r('PGF2α; la yegua entra en celo a los 4–6 días [@diapos].','cuerpo lúteo (diestro) y ausencia de gestación [@frandson].','descarta gestación, inyecta y vigila el celo para el servicio.');
-      cf='Si la yegua está gestante → la PGF2α provoca aborto [@frandson].';
+      r=vis_r('PGF2α; la yegua entra en celo a los 4–6 días [1].','cuerpo lúteo (diestro) y ausencia de gestación [5].','descarta gestación, inyecta y vigila el celo para el servicio.');
+      cf='Si la yegua está gestante → la PGF2α provoca aborto [5].';
     }
   } else if(s==='ovi'||s==='cap'||s==='peq'){
     if(ct==='peqfuera'||sc){
-      r=vis_r('progestágeno (CIDR o esponja) con eCG al retiro; celo tras el retiro [@diapos][@abecia2012].','que la hembra no esté gestante y la edad de la estación reproductiva [@abecia2012].','inserta el dispositivo, retíralo en la fecha y aplica eCG al retiro; servicio o IA según el celo.');
-      cf='Si la hembra entra en estación con cuerpo lúteo → bastaría PGF2α con observación de celos [@diapos].';
+      r=vis_r('progestágeno (CIDR o esponja) con eCG al retiro; celo tras el retiro [1][19].','que la hembra no esté gestante y la edad de la estación reproductiva [19].','inserta el dispositivo, retíralo en la fecha y aplica eCG al retiro; servicio o IA según el celo.');
+      cf='Si la hembra entra en estación con cuerpo lúteo → bastaría PGF2α con observación de celos [1].';
     } else if(s==='ovi'){
-      r=vis_r('PGF2α para la luteólisis, observación de celos y, si se quiere IA a tiempo fijo, inducción de la ovulación a las 17–24 h [@diapos].','cuerpo lúteo y estación reproductiva [@abecia2012].','inyecta PGF2α, observa celos y sirve a las positivas.');
-      cf='Si la oveja está fuera de estación → no hay cuerpo lúteo y hay que usar progestágeno con eCG [@abecia2012].';
+      r=vis_r('PGF2α para la luteólisis, observación de celos y, si se quiere IA a tiempo fijo, inducción de la ovulación a las 17–24 h [1].','cuerpo lúteo y estación reproductiva [19].','inyecta PGF2α, observa celos y sirve a las positivas.');
+      cf='Si la oveja está fuera de estación → no hay cuerpo lúteo y hay que usar progestágeno con eCG [19].';
     } else {
-      r=vis_r('en la cabra la presentación solo recoge progestágeno (CIDR o esponja) con eCG [@diapos].','la estación y la gestación [@abecia2012].','usa el dispositivo y la eCG al retiro; PGF2α en cabra [VERIFICAR EN FUENTE].');
-      cf='Si la cabra tiene cuerpo lúteo en estación → la PGF2α luteoliza, pero su protocolo en cabra [VERIFICAR EN FUENTE].';
+      r=vis_r('en la cabra la presentación solo recoge progestágeno (CIDR o esponja) con eCG [1].','la estación y la gestación [19].','usa el dispositivo y la eCG al retiro; la presentación no recoge PGF2α en cabra.');
+      cf='Si la cabra tiene cuerpo lúteo en estación → la presentación no recoge un protocolo con PGF2α en cabra [1]; consulta al especialista.';
     }
   } else if(s==='por'){
     if(ct==='cerda'||ob==='iatf'){
-      r=vis_r('GnRH + hCG con IA a tiempo fijo: GnRH 72–74 h tras el destete, hCG 24–26 h después, IA 16–18 h tras la hCG [@diapos].','destete reciente, condición corporal y celo posdestete [@knox2015].','aplica GnRH y hCG a las horas exactas y haz dos IA a tiempo fijo.');
-      cf='Si es una cerda primeriza → primero altrenogest 18 días y luego GnRH + hCG [@diapos].';
+      r=vis_r('GnRH + hCG con IA a tiempo fijo: GnRH 72–74 h tras el destete, hCG 24–26 h después, IA 16–18 h tras la hCG [1].','destete reciente, condición corporal y celo posdestete [20].','aplica GnRH y hCG a las horas exactas y haz dos IA a tiempo fijo.');
+      cf='Si es una cerda primeriza → primero altrenogest 18 días y luego GnRH + hCG [1].';
     } else {
-      r=vis_r('Regumate (altrenogest) durante 18 días en primerizas; celo 5–6 días después de retirarlo [@diapos].','que no estén gestantes y que sean primerizas cíclicas [@diapos].','administra el progestágeno diario y sirve en el celo.');
-      cf='Si la cerda acaba de destetar → el progestágeno de 3 días o GnRH + hCG a tiempo fijo [@diapos].';
+      r=vis_r('Regumate (altrenogest) durante 18 días en primerizas; celo 5–6 días después de retirarlo [1].','que no estén gestantes y que sean primerizas cíclicas [1].','administra el progestágeno diario y sirve en el celo.');
+      cf='Si la cerda acaba de destetar → el progestágeno de 3 días o GnRH + hCG a tiempo fijo [1].';
     }
   }
   out(dc,r+'<span class="cf">'+cf+'</span>');
 }
+
 
 </script>
