@@ -22,7 +22,7 @@ KIT = {
 }
 # Referencias propias de cada skill, además de REFS (se copian a references/)
 REFS_EXTRA = {
-    'apertura': ['fuentes/skill_apertura_v1.md', '.claude/skills/definiciones/SKILL.md:definiciones_SKILL.md', 'docs/DESIGN.md'],
+    'apertura': ['.claude/skills/definiciones/SKILL.md:definiciones_SKILL.md', 'docs/DESIGN.md'],
     'widget-ensenanza': ['docs/DECISIONES_v11.md', 'docs/DESIGN.md'],
 }
 EXTRA = {

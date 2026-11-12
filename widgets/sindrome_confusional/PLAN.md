@@ -2,7 +2,7 @@
 
 Fuentes (prioridad): 1) **Caso de Doña Rosa** (`fuentes/casos/caso_dona_rosa_sindrome_confusional.md`); 2) **sílabo de la segunda rotación, Caso 6 — Síndrome confusional agudo y demencia** (`fuentes/syllabus_quirurgica2_segunda_rotacion.md`), con su bibliografía (Harrison, Farreras, Kane *Principios de geriatría clínica* 8e, Ebert *Psiquiatría* 4e, MSP 2010 adulto mayor); 3) guía vigente más específica (DSM-5-TR, Inouye *Lancet* 2014, AGS Beers 2023, STOPP/START v3, Comisión *Lancet* de demencia 2024, ADA Standards 2025 adultos mayores, ACIP/CDC esquema de adultos vigente, MSP Ecuador).
 
-Skill: **apertura v1** (`fuentes/skill_apertura_v1.md`), un único widget `apertura/` → `Apertura_sindrome_confusional.html`.
+Skill: **apertura v1** (`.claude/skills/apertura/SKILL.md`), un único widget `apertura/` → `Apertura_sindrome_confusional.html`.
 
 ## Router
 
@@ -96,4 +96,4 @@ Necesidades de aprendizaje (Caso 6 del sílabo): definición, factores predispon
 | Integrador | sonnet | `p01_nav`, `p95_tg`, `p96_js`, numeración Vancouver, construir en verde |
 | Pruebas | haiku | navegador (iPad, oscuro, móvil), auditoría, informe de fallas |
 
-Convención para trabajo en paralelo: las citas se escriben `[@clave]` y cada ejecutor deja `_refs_<ejecutor>.tsv` (`clave<TAB>referencia Vancouver`) y `_mazos_<ejecutor>.json` (`{"t1":[{"q":…,"a":…,"h":…}]}`) en `apertura/`. El integrador numera por primera aparición, escribe la lista y borra los archivos `_*`.
+Convención para trabajo en paralelo: las citas se escriben `[@clave]` y cada ejecutor deja `_refs_<ejecutor>.tsv` (`clave<TAB>referencia Vancouver`) y `_recall_<ejecutor>.json` (`{"t1":[{"q":…,"a":…,"h":…}]}`) en `apertura/`. El integrador numera por primera aparición, escribe la lista y borra los archivos `_*`.

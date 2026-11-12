@@ -203,7 +203,7 @@ Reglas de diseño: tablas con `<thead>`/`<tbody>` en `div.tw`; sin recuadros ani
 
 ## Fallback sin kit (CSS)
 
-Solo si no existe `def_head.html`: todo el estilo en un `<style>`, fondo transparente, variables `--surface-1`, `--surface-0`, `--border`, `--border-accent`, `--bg-accent`, `--text-primary`, `--text-secondary`, `--text-muted`, `--text-accent`, `--radius`, `--font-sans`; 14px texto, 13px cards y tablas, 12px `.mini`, 11px badges; bordes `0.5px`, radio 12px en cards; sin gradientes ni sombras; modo oscuro por variables; objetivos táctiles ≥44px. Badges: azul `#E6F1FB` idea rectora; rojo `#FCEBEB`/`#A32D2D` no confundir; ámbar `#FAEEDA`/`#854F0B` fuente por verificar; verde `#EAF3DE`/`#3B6D11` consolidado; púrpura `#EEEDFE`/`#534AB7` fuente + año; coral `#FAECE7`/`#993C1D`; rosa `#FBEAF0`/`#993556` prerrequisitos y remisiones.
+Solo si no existe `def_head.html`: todo el estilo en un `<style>`, fondo transparente, variables `--surface-1`, `--surface-0`, `--border`, `--border-accent`, `--bg-accent`, `--text-primary`, `--text-secondary`, `--text-muted`, `--text-accent`, `--radius`, `--font-sans`; 14px texto, 13px cards y tablas, 12px `.mini`, 11px badges; bordes `0.5px`, radio 12px en cards; sin gradientes ni sombras; modo oscuro por variables; objetivos táctiles ≥44px. Badges: azul `#E6F1FB` idea rectora; rojo `#FCEBEB`/`#A32D2D` no confundir; ámbar `#FAEEDA`/`#854F0B` precaución clínica (nunca fuente: no existe «fuente por verificar»); verde `#EAF3DE`/`#3B6D11` consolidado; púrpura `#EEEDFE`/`#534AB7` fuente + año; coral `#FAECE7`/`#993C1D`; rosa `#FBEAF0`/`#993556` prerrequisitos y remisiones.
 
 
 ---

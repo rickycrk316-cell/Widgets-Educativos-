@@ -11,7 +11,7 @@ M = json.load(open(sys.argv[2], encoding='utf-8'))
 NT = int(M['terminos'])
 PROB = {k: int(M['problemas'].get(k, 0)) for k in ('B', 'P', 'S', 'FR')}
 NH = int(M['hipotesis'])
-ND = int(M['diagramas'])
+ND = max(4, int(M['diagramas']))  # suelo del contrato: 4 diagramas
 res = []
 
 
@@ -54,6 +54,11 @@ try:
 except Exception:
     chk('DECKS y TERMS se evalúan', False, r.stderr[:200])
     print('\nRESULTADO: ROJO'); sys.exit(1)
+
+# ---------- cero marcas (estricto) ----------
+PROHIB = ('VERIFICAR EN FUENTE', 'Fuente por verificar')
+hall = [x for x in PROHIB if re.search(re.escape(x), H, re.I)]
+chk('cero marcas: sin «[VERIFICAR EN FUENTE]» ni «Fuente por verificar»', not hall, str(hall))
 
 # ---------- estructura (balance) ----------
 from html.parser import HTMLParser
@@ -236,7 +241,7 @@ chk('todo pid usado existe en Problemas', not bad, str(sorted(bad)))
 
 # ---------- diagramas ----------
 figs = S.select('figure.dg')
-chk('diagramas ≥ manifiesto (%d)' % ND, len(figs) >= ND, str(len(figs)))
+chk('diagramas ≥ max(4, manifiesto) (%d)' % ND, len(figs) >= ND, str(len(figs)))
 fl = []
 for i, f in enumerate(figs, 1):
     if not f.select_one('.dg-t'): fl.append((i, 'dg-t'))
@@ -332,7 +337,7 @@ for t in tabs:
     gl = txt(gls[0])
     cc = BeautifulSoup(str(t), 'html.parser')
     for x in cc.select('.gloss,.pid'): x.decompose()
-    core = txt(cc).replace('[VERIFICAR EN FUENTE]', ' ')
+    core = txt(cc)
     toks = set(re.findall(r'(?<![A-Za-zÁ-ú])[A-Z][A-Z0-9]{1,}(?![A-Za-zÁ-ú0-9])', core)) - ROM
     toks = {x for x in toks if not re.fullmatch(r'(B|P|S|FR|H)\d+', x)}
     miss = sorted(x for x in toks if x not in gl)

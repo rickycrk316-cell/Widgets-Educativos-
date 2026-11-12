@@ -9,7 +9,7 @@ Fuente de verdad del diseño y del contenido v11: `docs/DECISIONES_v11.md`. Si a
 - **Edita y lee las partes**, nunca el HTML final: `widgets/<tema>/<id>/*.html`. El HTML final repite decenas de KB de kit en cada widget.
 - No leas `kit/` (cabeceras, scripts, validadores) salvo que la tarea sea cambiar el kit. Clases y roles de color: `docs/DESIGN.md` y el §10 de `docs/DECISIONES_v11.md`.
 - Para ubicar algo usa `grep -rn` sobre `widgets/<tema>/<id>/` en vez de abrir archivos enteros.
-- Contratos de las skills de definiciones y apertura: `.claude/skills/definiciones/SKILL.md` y `fuentes/skill_apertura_v1.md` (léelos por secciones). Verificación de fuentes: `fuentes/protocolo_verificacion.md`.
+- Contratos de las skills de definiciones y apertura: `.claude/skills/definiciones/SKILL.md` y `.claude/skills/apertura/SKILL.md` (léelos por secciones). Verificación de fuentes: `fuentes/protocolo_verificacion.md`.
 - `PLAN.md` de cada tema explica por qué se partió el caso así; léelo antes de añadir o reordenar pestañas.
 
 ## Kits vivos y v10 congelado, según `manifiesto.json`
@@ -32,7 +32,7 @@ Fuente de verdad del diseño y del contenido v11: `docs/DECISIONES_v11.md`. Si a
 | multi | `01_nav` `02_pan` `05_vis` `21_e1`…`25_e5` `80_sin` `90_sim` |
 | mono | `01_nav` `02_pan` `10_def` `11_fis` `12_cli` `13_dx` `14_tx` `15_seg` `16x_*` (extra) `90_sim` |
 | definiciones | `p01_nav` `p10_t1`…`p90_t9` `p95_tg` `p96_js` |
-| apertura | `p01_nav` `p05_c0` `p10_t1`…`p90_t9` `p91_pb` `p92_jq` `p93_hx` `p95_tg` `p96_js` (manifiesto: `terminos` `problemas` `hipotesis` `diagramas`) |
+| apertura | `p01_nav` `p05_c0` `p10_t1`…`p90_t9` `p91_pb` `p92_jq` `p93_hx` `p95_tg` `p96_js`; términos 10+ como `p90a_t10`, `p90b_t11` (manifiesto: `terminos` `problemas` `hipotesis` `diagramas`) |
 | v11 (multi/mono) | las mismas partes que multi/mono, con `div.nucleo`, `aside.perla`, `th>span.q+span.qx` y `li[data-paso]` (contrato en §10 de las decisiones) |
 
 Reglas del kit (todos): las partes no llevan `<style>`, estilos en línea, recursos remotos, `localStorage` ni `position:fixed`. Cifras con cita Vancouver `[n]`; **cero `[VERIFICAR EN FUENTE]`** en lo nuevo: se agotan PubMed, Consensus, fichas técnicas, GPC del MSP y web, y lo no confirmado se elimina (`fuentes/protocolo_verificacion.md`). Tablas de fármacos con columna «Mecanismo de acción». Sin preguntas de opción múltiple (van en Anki).

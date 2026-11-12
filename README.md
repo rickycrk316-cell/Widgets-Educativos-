@@ -21,7 +21,7 @@ Widgets HTML de estudio, autocontenidos y offline. Los nuevos siguen **v11** (`d
 |  | `Marcha_sin_dolor_widget_v10.html` | v10 congelado (multi) | DDC (principal), dismetría, neuromuscular, Guillain-Barré (amenaza) | 65 |
 |  | `Forma_piernas_pies_widget_v10.html` | v10 congelado (multi) | genu varo/valgo (principal), anteversión femoral, pie plano, pie cavo, equinovaro (amenaza) | 26 |
 | Trastornos del ánimo | `Crisis_de_angustia_widget_v10.html` | v10 congelado (multi) | trastorno de pánico (principal), ansiedad generalizada, depresión mayor, consumo de benzodiacepinas, síndrome coronario agudo (amenaza) | 0 |
-|  | `Apertura_trastornos_animo.html` | **apertura** | caso + 9 términos, 12 problemas (B, P, S, FR), jerarquización, 4 hipótesis, repaso | 1 (composición de Stresstabs) |
+|  | `Apertura_trastornos_animo.html` | **apertura** | caso + 9 términos, 12 problemas (B, P, S, FR), jerarquización, 4 hipótesis, repaso | 0 |
 |  | `Depresion_bipolar_suicidio_widget_v11.html` | **v11** | multi: depresión mayor (principal), trastorno bipolar, conducta suicida (amenaza) · núcleo por pestaña, 20 perlas de examen, ejercicio Ordenar (10 bloques), visión de conjunto en preguntas, referencias enlazadas | 0 |
 | Trastornos neurocognitivos | `Trastornos_neurocognitivos_widget_v11.html` | **v11** | multi: delirium (principal y amenaza), Alzheimer, neurocognitivo vascular, cuerpos de Lewy, frontotemporal · caso de Saquisilí (causas metabólicas del delirium), 82 referencias enlazadas | 0 |
 |  | `Apertura_trastornos_neurocognitivos.html` | **apertura** | caso + 9 términos (fatiga, «no actúa como él mismo», lúcido, somnoliento, estuporoso, inquietud, polidipsia, nocturia, estreñimiento), 15 problemas, jerarquización, 4 hipótesis, 5 diagramas, 73 tarjetas | 0 |
@@ -37,7 +37,7 @@ Widgets HTML de estudio, autocontenidos y offline. Los nuevos siguen **v11** (`d
 |  | `Definiciones_ansiedad_panico.html` | **definiciones** | 10 términos (opresión en el pecho, palpitaciones, angustia por perder el control, preinfarto, Stresstabs, Xanax, ansiedad, pánico, ataque de ansiedad, ataque de pánico) + repaso | 1 |
 | Ginecología (sin sílabo) | `Ciclo_ovarico_menopausia_TH_widget_v11.html` | **v11** (piloto) | mono: menopausia y terapia hormonal + pestaña «Ciclo ovárico y cuerpo albo»: núcleo por pestaña, perlas por examen, ordenar pasos | 0 |
 
-Estado: **v11** y **definiciones** / **apertura** son kits vivos; «v10 congelado» no se reconstruye. «Marcas» = datos marcados `[VERIFICAR EN FUENTE]`: los 17 v10 congelados y las definiciones de dermatología, consumo de alcohol y ansiedad/pánico, y la apertura de trastornos del ánimo (1 marca) las conservan hasta que se revisen; compruébalos antes de estudiar con ellos. Los widgets v11 y todo lo nuevo o migrado van con cero marcas: lo no confirmado se elimina.
+Estado: **v11** y **definiciones** / **apertura** son kits vivos; «v10 congelado» no se reconstruye. «Marcas» = datos marcados `[VERIFICAR EN FUENTE]`: los 17 v10 congelados y las definiciones de dermatología, consumo de alcohol y ansiedad/pánico, las conservan hasta que se revisen; compruébalos antes de estudiar con ellos. Los widgets v11 y todo lo nuevo o migrado van con cero marcas: lo no confirmado se elimina.
 
 ## Estructura
 
