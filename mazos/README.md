@@ -38,7 +38,7 @@ Prefijos retirados: `Q2-TOX` (mazo antiguo de toxicodependencias; el caso usa `Q
 | Q2R2-AZO | — | Azoados | 1762900710009 | — | 0 | — | — |
 | Q2R2-ENV | — | Envejecimiento | 1762900710010 | — | 0 | — | — |
 | Q2R2-GER | — | SindromesGeriatricos | 1762900710011 | — | 0 | — | — |
-| Q2R2-TOX | — | Toxicodependencias | 1762900710012 | — | 0 | — | — |
+| Q2R2-TOX | toxicodependencias | Toxicodependencias | 1762900710012 | Q2R2-TOX-0045 | 45 | 1.0 | 2026-11-13 |
 | Q2R2-ANS | — | AnsiedadPanico | 1762900710013 | — | 0 | — | — |
 | Q2R2-DEL | — | DeliriumDemencia | 1762900710014 | — | 0 | — | — |
 | Q2R2-ANI | — | TrastornosAnimo | 1762900710015 | — | 0 | — | — |

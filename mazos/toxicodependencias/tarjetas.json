@@ -1,0 +1,1102 @@
+{
+ "meta": {
+  "caso": "Toxicodependencias",
+  "rotacion": "2.ª",
+  "tag_raiz": "Toxicodependencias",
+  "prefijo": "Q2R2-TOX",
+  "version": "1.0",
+  "fecha": "2026-11-13",
+  "resultado_aprendizaje": "Maneja de manera integral a los pacientes con toxicodependencias, de acuerdo con evidencia científica.",
+  "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 2.ª rotación, Caso 4 — Toxicodependencias (contenidos y trabajo autónomo)",
+  "justificacion_exceso": "",
+  "mir_verificados": [],
+  "verificacion": {
+   "total": 163,
+   "verificados": 149,
+   "eliminados": [
+    {
+     "id": "Q2R2-TOX-0030",
+     "dato": "Las anfetaminas invierten el transportador de monoaminas (semilla e4)",
+     "motivo": "sin fuente leída en la sesión: eliminado; se dejó «exceso de catecolaminas» (Gresnigt 2026)"
+    },
+    {
+     "id": "Q2R2-TOX-0028",
+     "dato": "Benzodiacepinas aumentan la frecuencia y barbitúricos la duración de apertura del canal de cloro",
+     "motivo": "no se halló fuente consultable (PubMed sin resultados; libros no accesibles): eliminado"
+    },
+    {
+     "id": "Q2R2-TOX-0031",
+     "dato": "Bicarbonato sódico ante QRS ancho por cocaína",
+     "motivo": "Richards 2016 solo lo menciona entre otros agentes, sin recomendación: eliminado"
+    },
+    {
+     "id": "Q2R2-TOX-0001",
+     "dato": "Midriasis como signo de abstinencia de opioides",
+     "motivo": "Boyer 2012 lista bostezos, lagrimeo, piloerección, diaforesis, mialgias, vómitos y diarrea, sin midriasis: reformulado"
+    },
+    {
+     "id": "Q2R2-TOX-0040",
+     "dato": "Ventana de cannabinoides en orina en consumo crónico (10–15 o 30 días)",
+     "motivo": "tabla de Moeller 2017 no legible (dominio bloqueado): reformulado de forma cualitativa"
+    },
+    {
+     "id": "Q2R2-TOX-0039",
+     "dato": "Confirmación del tamizaje por cromatografía-espectrometría de masas",
+     "motivo": "no explícito en los resúmenes leídos: reformulado como resultado presuntivo"
+    },
+    {
+     "id": "Q2R2-TOX-0030",
+     "dato": "El infarto por cocaína aparece en las horas siguientes al consumo",
+     "motivo": "solo en resumen de Consensus sin PMID comprobado: sustituido por dato de Gresnigt 2026"
+    },
+    {
+     "id": "Q2R2-TOX-0032",
+     "dato": "Taquipnea en el simpaticomimético y respiración variable en el anticolinérgico (tabla)",
+     "motivo": "no descrito en Dutta 2025: celdas eliminadas"
+    },
+    {
+     "id": "Q2R2-TOX-0017",
+     "dato": "Alucinosis con hiperactividad autonómica leve (tabla)",
+     "motivo": "no descrito en Jesse 2017: fila sustituida por el inicio"
+    },
+    {
+     "id": "Q2R2-TOX-0025",
+     "dato": "Pupilas variables y náuseas en la abstinencia alcohólica (tabla)",
+     "motivo": "sin fuente: filas sustituidas"
+    },
+    {
+     "id": "Q2R2-TOX-0036",
+     "dato": "Mayor riesgo en personas con vulnerabilidad psicótica",
+     "motivo": "no consta en Di Forti 2019 ni Bloomfield 2019: eliminado"
+    },
+    {
+     "id": "Q2R2-TOX-0011",
+     "dato": "Exceso de NADH por ADH/ALDH como mecanismo de la hipoglucemia (semilla e1)",
+     "motivo": "resumen leído solo confirma inhibición de gluconeogénesis y glucogenólisis: reformulado"
+    },
+    {
+     "id": "plan",
+     "dato": "Abstinencia de estimulantes: disforia, hipersomnia, hiperfagia",
+     "motivo": "búsquedas en PubMed sin resultados en la sesión: tarjeta no redactada"
+    },
+    {
+     "id": "plan",
+     "dato": "Umbral COWS para iniciar buprenorfina",
+     "motivo": "sin fuente leída: no redactado; se dejó «abstinencia moderada» (Ahmed 2020)"
+    }
+   ]
+  },
+  "guia": {
+   "principios": [
+    "La abstinencia es la imagen en espejo de la intoxicación: el cerebro se adapta en sentido contrario a la droga (tolerancia) y, al retirarla, la adaptación queda sin oponente.",
+    "Todas las drogas adictivas convergen en el refuerzo dopaminérgico mesolímbico; la sensibilización del «querer» explica el craving y la recaída.",
+    "El toxíndrome es la huella del receptor: pupilas, ventilación y piel orientan antes que el laboratorio.",
+    "Tolerancia cruzada: la abstinencia se trata con un fármaco del mismo receptor y vida media larga (benzodiacepinas para alcohol, agonistas para opioides).",
+    "Un antídoto competitivo dura menos que muchos agonistas: tras revertir, se vigila la recurrencia.",
+    "En el bebedor crónico, la tiamina va antes que la glucosa."
+   ],
+   "palabras_clave": [
+    "tolerancia",
+    "dependencia física",
+    "adicción",
+    "sensibilización",
+    "saliencia del incentivo",
+    "craving",
+    "delirium tremens",
+    "alucinosis alcohólica",
+    "Wernicke",
+    "CIWA-Ar",
+    "PAWSS",
+    "AUDIT",
+    "FRAMES",
+    "toxíndrome",
+    "naloxona",
+    "flumazenil",
+    "buprenorfina",
+    "reducción de daños"
+   ],
+   "imagenes_oclusion": [
+    "Línea de tiempo de la abstinencia alcohólica (6 h, 6–48 h, 48–72 h) con los rótulos tapados",
+    "Tabla de toxíndromes (pupilas, ventilación, piel, temperatura, sensorio) con las celdas tapadas",
+    "Circuito de recompensa (área tegmental ventral, núcleo accumbens, prefrontal, amígdala extendida) con los nombres tapados"
+   ],
+   "preguntas_cierre": [
+    "Explica en voz alta, sin mirar, por qué la abstinencia alcohólica puede matar y la de opioides casi nunca.",
+    "Ante un paciente en coma sin historia, ¿qué tres hallazgos miras primero y qué te dice cada combinación?",
+    "Un paciente con AUDIT 18 y CIWA-Ar 11 con antecedente de convulsiones: dibuja tu plan en el primer nivel según el protocolo del MSP.",
+    "¿Por qué la naloxona y el flumazenil, siendo ambos antagonistas competitivos, se usan con criterios tan distintos?",
+    "Relaciona la sensibilización con la recaída tras meses de abstinencia y propone una medida de prevención."
+   ],
+   "subtemas": {
+    "Conceptos": "Concepto; mecanismo de adicción, dependencia física y psíquica, abstinencia, tolerancia e inversión de la tolerancia",
+    "Neurobiologia": "Trabajo autónomo: neurotransmisión dopamina-GABA y sistema límbico; mecanismo de la adicción",
+    "EpidemiologiaEtiologia": "Morbilidad y mortalidad global; teorías causales genéticas y socioculturales",
+    "IntoxicacionAlcoholica": "Cuadro clínico de la intoxicación alcohólica aguda y crónica; complicaciones sanitarias",
+    "AbstinenciaAlcoholica": "Cuadro clínico de la abstinencia alcohólica; tratamiento farmacológico; farmacología de benzodiacepinas",
+    "Opioides": "Intoxicación y abstinencia de otras drogas: opiáceos (depresoras)",
+    "Sedantes": "Intoxicación y abstinencia de hipnóticos y sedantes; farmacología de benzodiacepinas",
+    "Estimulantes": "Intoxicación de estimulantes (cocaína, anfetaminas) y diagnóstico diferencial por toxíndromes",
+    "CannabisPsicodelicos": "Intoxicación por cannabis y psicodélicos; clasificación de las drogas",
+    "Laboratorio": "Pruebas de laboratorio: metabolitos en sangre y orina",
+    "TratamientoAPS": "Tratamiento: objetivos, metas, farmacológico y no farmacológico en el nivel primario; complicaciones psicosociales"
+   },
+   "fechas": {
+    "apertura": null,
+    "cierre": null,
+    "examen": null
+   },
+   "referencias": [
+    "American Psychiatric Association. Diagnostic and statistical manual of mental disorders. 5th ed, text revision (DSM-5-TR). Washington (DC): American Psychiatric Association Publishing; 2022.",
+    "Hasin DS, O'Brien CP, Auriacombe M, Borges G, Bucholz K, Budney A, et al. DSM-5 criteria for substance use disorders: recommendations and rationale. Am J Psychiatry. 2013;170(8):834-51. doi:10.1176/appi.ajp.2013.12060782. PMID: 23903334.",
+    "Koob GF, Volkow ND. Neurobiology of addiction: a neurocircuitry analysis. Lancet Psychiatry. 2016;3(8):760-73. doi:10.1016/S2215-0366(16)00104-8. PMID: 27475769.",
+    "Robinson TE, Berridge KC. The neural basis of drug craving: an incentive-sensitization theory of addiction. Brain Res Brain Res Rev. 1993;18(3):247-91. doi:10.1016/0165-0173(93)90013-p. PMID: 8401595.",
+    "Verhulst B, Neale MC, Kendler KS. The heritability of alcohol use disorders: a meta-analysis of twin and adoption studies. Psychol Med. 2015;45(5):1061-72. doi:10.1017/S0033291714002165. PMID: 25171596.",
+    "World Health Organization. Global status report on alcohol and health and treatment of substance use disorders. Geneva: World Health Organization; 2024.",
+    "Jesse S, Bråthen G, Ferrara M, Keindl M, Ben-Menachem E, Tanasescu R, et al. Alcohol withdrawal syndrome: mechanisms, manifestations, and management. Acta Neurol Scand. 2017;135(1):4-16. doi:10.1111/ane.12671. PMID: 27586815.",
+    "Ministerio de Salud Pública del Ecuador. Atención integral del consumo nocivo de alcohol, tabaco y otras drogas. Protocolo. Quito: Dirección Nacional de Normatización; 2016.",
+    "Maldonado JR, Sher Y, Das S, Hills-Evans K, Frenklach A, Lolak S, et al. Prospective validation study of the Prediction of Alcohol Withdrawal Severity Scale (PAWSS) in medically ill inpatients. Alcohol Alcohol. 2015;50(5):509-18. doi:10.1093/alcalc/agv043. PMID: 25999438.",
+    "Bayard M, McIntyre J, Hill KR, Woodside J. Alcohol withdrawal syndrome. Am Fam Physician. 2004;69(6):1443-50. PMID: 15053409.",
+    "Sechi G, Serra A. Wernicke's encephalopathy: new clinical settings and recent advances in diagnosis and management. Lancet Neurol. 2007;6(5):442-55. doi:10.1016/S1474-4422(07)70104-7. PMID: 17434099.",
+    "van de Wiel A. Diabetes mellitus and alcohol. Diabetes Metab Res Rev. 2004;20(4):263-7. doi:10.1002/dmrr.492. PMID: 15250029.",
+    "Boyer EW. Management of opioid analgesic overdose. N Engl J Med. 2012;367(2):146-55. doi:10.1056/NEJMra1202561. PMID: 22784117.",
+    "Gold MS. Fifty years at the addiction bench and bedside: from withdrawal syndromes to adaptive brain states. Front Public Health. 2026;14:1969403. doi:10.3389/fpubh.2026.1969403. PMID: 43011373.",
+    "Ahmed S, Bhivandkar S, Lonergan BB, Suzuki J. Microinduction of buprenorphine/naloxone: a review of the literature. Am J Addict. 2021;30(4):305-15. doi:10.1111/ajad.13135. PMID: 33378137.",
+    "Penninga EI, Graudal N, Ladekarl MB, Jürgens G. Adverse events associated with flumazenil treatment for the management of suspected benzodiazepine intoxication: a systematic review with meta-analyses of randomised trials. Basic Clin Pharmacol Toxicol. 2016;118(1):37-44. doi:10.1111/bcpt.12434. PMID: 26096314.",
+    "Baehrendtz S, Höjer J. Flumazenil in self-induced benzodiazepine poisoning. Eur J Anaesthesiol Suppl. 1988;2:287-93. PMID: 2842140.",
+    "Dutta S, Buciuc AG, Barry P, Padilla V. A narrative review on toxidromes in the psychiatric population: implications for overdose prevention. J Clin Med. 2025;14(17):6160. doi:10.3390/jcm14176160. PMID: 40943922.",
+    "Hoffman RJ, Nillas A. Toxidromes and a general approach to poisoning. Arch Dis Child. 2025;110(9):681-6. doi:10.1136/archdischild-2024-326969. PMID: 39978865.",
+    "Stankowski RV, Kloner RA, Rezkalla SH. Cardiovascular consequences of cocaine use. Trends Cardiovasc Med. 2015;25(6):517-26. doi:10.1016/j.tcm.2014.12.013. PMID: 25657055.",
+    "Gresnigt FMJ. Acute cardiovascular complications of sympathomimetic recreational drug use. Clin Toxicol (Phila). 2026;64(10):850-64. doi:10.1080/15563650.2026.2701369. PMID: 42504704.",
+    "McCord J, Jneid H, Hollander JE, de Lemos JA, Cercek B, Hsue P, et al. Management of cocaine-associated chest pain and myocardial infarction: a scientific statement from the American Heart Association Acute Cardiac Care Committee of the Council on Clinical Cardiology. Circulation. 2008;117(14):1897-907. doi:10.1161/CIRCULATIONAHA.107.188950. PMID: 18347214.",
+    "Richards JR, Garber D, Laurin EG, Albertson TE, Derlet RW, Amsterdam EA, et al. Treatment of cocaine cardiovascular toxicity: a systematic review. Clin Toxicol (Phila). 2016;54(5):345-64. doi:10.3109/15563650.2016.1142090. PMID: 26919414.",
+    "Faria AC, Carmo H, Carvalho F, Silva JP, Bastos ML, Dias da Silva D. Drinking to death: hyponatraemia induced by synthetic phenethylamines. Drug Alcohol Depend. 2020;212:108045. doi:10.1016/j.drugalcdep.2020.108045. PMID: 32460203.",
+    "Sorensen CJ, DeSanto K, Borgelt L, Phillips KT, Monte AA. Cannabinoid hyperemesis syndrome: diagnosis, pathophysiology, and treatment — a systematic review. J Med Toxicol. 2017;13(1):71-87. doi:10.1007/s13181-016-0595-z. PMID: 28000146.",
+    "Di Forti M, Quattrone D, Freeman TP, Tripoli G, Gayer-Anderson C, Quigley H, et al. The contribution of cannabis use to variation in the incidence of psychotic disorder across Europe (EU-GEI): a multicentre case-control study. Lancet Psychiatry. 2019;6(5):427-36. doi:10.1016/S2215-0366(19)30048-3. PMID: 30902669.",
+    "Bloomfield MAP, Hindocha C, Green SF, Wall MB, Lees R, Petrilli K, et al. The neuropsychopharmacology of cannabis: a review of human imaging studies. Pharmacol Ther. 2019;195:132-61. doi:10.1016/j.pharmthera.2018.10.006. PMID: 30347211.",
+    "Dominici P, Kopec K, Manur R, Khalid A, Damiron K, Rowden A. Phencyclidine intoxication case series study. J Med Toxicol. 2015;11(3):321-5. doi:10.1007/s13181-014-0453-9. PMID: 25502414.",
+    "Farber NB. The NMDA receptor hypofunction model of psychosis. Ann N Y Acad Sci. 2003;1003:119-30. doi:10.1196/annals.1300.008. PMID: 14684440.",
+    "Nasini S, Barzon B, Casile A, Richardson B, Gobbi G, Comai S. Sex-sensitive serotonergic signaling in psychedelic pharmacology. Trends Pharmacol Sci. 2026;47(9):1008-20. doi:10.1016/j.tips.2026.07.006. PMID: 42575820.",
+    "Moeller KE, Kissack JC, Atayee RS, Lee KC. Clinical interpretation of urine drug tests: what clinicians need to know about urine drug screens. Mayo Clin Proc. 2017;92(5):774-96. doi:10.1016/j.mayocp.2016.12.007. PMID: 28325505.",
+    "Saunders JB, Aasland OG, Babor TF, de la Fuente JR, Grant M. Development of the Alcohol Use Disorders Identification Test (AUDIT): WHO collaborative project on early detection of persons with harmful alcohol consumption — II. Addiction. 1993;88(6):791-804. doi:10.1111/j.1360-0443.1993.tb02093.x. PMID: 8329970.",
+    "Searight R. Realistic approaches to counseling in the office setting. Am Fam Physician. 2009;79(4):277-84. PMID: 19235494.",
+    "Bien TH, Miller WR, Tonigan JS. Brief interventions for alcohol problems: a review. Addiction. 1993;88(3):315-35. doi:10.1111/j.1360-0443.1993.tb00820.x. PMID: 8461850.",
+    "Jonas DE, Amick HR, Feltner C, Bobashev G, Thomas K, Wines R, et al. Pharmacotherapy for adults with alcohol use disorders in outpatient settings: a systematic review and meta-analysis. JAMA. 2014;311(18):1889-900. doi:10.1001/jama.2014.3628. PMID: 24825644.",
+    "Naltrexone hydrochloride tablet, film coated [ficha técnica]. DailyMed. Bethesda (MD): National Library of Medicine; [citado 2026 nov 13]. Setid e71de213-5250-4a63-9ef7-9ef2f9954d8b.",
+    "Acamprosate calcium tablet, delayed release [ficha técnica]. DailyMed. Bethesda (MD): National Library of Medicine; [citado 2026 nov 13]. Setid 5ebfa8c9-acba-b77e-e063-6294a90ab712.",
+    "Disulfiram tablet [ficha técnica]. DailyMed. Bethesda (MD): National Library of Medicine; [citado 2026 nov 13]. Setid b90f8ff4-4fb3-46ab-8149-cb55f24a4044.",
+    "Sordo L, Barrio G, Bravo MJ, Indave BI, Degenhardt L, Wiessing L, et al. Mortality risk during and after opioid substitution treatment: systematic review and meta-analysis of cohort studies. BMJ. 2017;357:j1550. doi:10.1136/bmj.j1550. PMID: 28446428.",
+    "Dunlosky J, Rawson KA, Marsh EJ, Nathan MJ, Willingham DT. Improving students' learning with effective learning techniques. Psychol Sci Public Interest. 2013;14(1):4-58. doi:10.1177/1529100612453266. PMID: 26173288."
+   ]
+  }
+ },
+ "tarjetas": [
+  {
+   "id": "Q2R2-TOX-0001",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Tolerancia y abstinencia</span>¿Por qué la abstinencia de una droga produce, en general, signos opuestos a los de su intoxicación?",
+   "respuesta": "Porque el uso crónico induce una <span class=\"mec\">adaptación homeostática de sentido contrario</span> al efecto de la droga (tolerancia); al retirarla, esa adaptación queda sin oponente.",
+   "razonamiento": "Con el alcohol, la regulación a la baja de GABA-A y al alza de NMDA mantiene el equilibrio mientras se bebe; sin etanol queda un cerebro hiperexcitable. Con los opioides, la hiperactividad noradrenérgica del locus coeruleus explica lagrimeo, sudoración y diarrea, lo contrario de la intoxicación.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Jesse 2017, Acta Neurol Scand (PMID 27586815); Gold 2026, Front Public Health (PMID 43011373)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Conceptos",
+    "Nivel::Aplicacion",
+    "Fuente::Jesse2017",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0002",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Trastorno por consumo de sustancias · DSM-5-TR</span>Se diagnostica con {{c1::<span class=\"num\">≥ 2 de 11</span>}} criterios presentes en un periodo de {{c2::<span class=\"num\">12 meses</span>}}.",
+   "extra": "Gravedad: leve 2–3, moderado 4–5, grave ≥ 6. Tolerancia y abstinencia no cuentan si el fármaco se toma según prescripción médica. El DSM-5 añadió el craving y retiró los problemas legales.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Hasin 2013, Am J Psychiatry (PMID 23903334); APA, DSM-5-TR 2022",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Conceptos",
+    "Nivel::Recuerdo",
+    "Fuente::DSM5TR",
+    "Clase::Irreducible",
+    "Bloom::Recordar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0003",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Dependencia física</span>Paciente con dolor oncológico que toma morfina pautada, necesita más dosis y tiene abstinencia si la omite: ¿tiene un trastorno por consumo?",
+   "respuesta": "No por eso solo: tiene <span class=\"dx\">dependencia física</span> (tolerancia y abstinencia), que es una adaptación farmacológica esperable.",
+   "razonamiento": "La adicción (dependencia psíquica) exige pérdida de control, craving y consumo pese al daño. En el DSM-5, tolerancia y abstinencia bajo prescripción no cuentan como criterios.<br><span class=\"vs\">Contraste</span> dependencia física = cuerpo adaptado; adicción = conducta capturada.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Rasgo</th><th>Dependencia física</th><th>Adicción (psíquica)</th></tr></thead><tbody><tr><th>Base</th><td>Neuroadaptación</td><td>Saliencia del incentivo</td></tr><tr><th>Signo guía</th><td>Tolerancia y abstinencia</td><td>Craving, pérdida de control</td></tr><tr><th>¿Con fármaco pautado?</th><td>Esperable</td><td>No esperable</td></tr><tr><th>¿Basta para el DSM-5?</th><td>No</td><td>Sí, con ≥ 2 criterios</td></tr></tbody></table>",
+   "fuente": "Hasin 2013, Am J Psychiatry (PMID 23903334)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Conceptos",
+    "Nivel::Aplicacion",
+    "Fuente::Hasin2013",
+    "Clase::Contraste",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0004",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Inversión de la tolerancia</span>¿Qué es la sensibilización y por qué explica que el deseo de consumir crezca en lugar de agotarse?",
+   "respuesta": "Es la respuesta cada vez mayor a la misma droga: el uso repetido vuelve <span class=\"mec\">hipersensible el sistema dopaminérgico</span> a la droga y a sus señales.",
+   "razonamiento": "Robinson y Berridge separan el «querer» (saliencia del incentivo, que se sensibiliza) del «gustar» (placer, que no aumenta). Por eso el craving persiste aun cuando el consumo ya no da placer y tras largos periodos de abstinencia.<br><span class=\"vs\">Contraste</span> tolerancia = menos efecto con la misma dosis.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Robinson 1993, Brain Res Rev (PMID 8401595)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Conceptos",
+    "Nivel::Aplicacion",
+    "Fuente::RobinsonBerridge1993",
+    "Clase::Aplicacion",
+    "Bloom::Comprender"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0005",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Sistema de recompensa</span>¿Qué tienen en común el alcohol, los opioides y la cocaína, tan distintos en su receptor, para producir adicción?",
+   "respuesta": "Todas <span class=\"mec\">aumentan la neurotransmisión dopaminérgica mesotelencefálica</span>, que asigna saliencia de incentivo a la droga y a sus señales.",
+   "razonamiento": "El receptor inicial varía (GABA-A, μ, transportador de monoaminas), pero la vía final común es el refuerzo dopaminérgico del estriado ventral. Con el uso repetido, el hábito y el sistema de estrés toman el relevo del placer.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Robinson 1993, Brain Res Rev (PMID 8401595); Koob 2016, Lancet Psychiatry (PMID 27475769)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Neurobiologia",
+    "Nivel::Aplicacion",
+    "Fuente::RobinsonBerridge1993",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0006",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Ciclo de la adicción</span>Bebedor que ya no disfruta el alcohol y bebe «para no sentirse mal»: ¿en qué etapa del ciclo está y qué la sostiene?",
+   "respuesta": "En la etapa de <span class=\"dx\">abstinencia/afecto negativo</span>: cae la función dopaminérgica y se reclutan sistemas de estrés (CRF, dinorfina) en la amígdala extendida.",
+   "razonamiento": "El refuerzo pasa de positivo (buscar placer) a negativo (aliviar malestar). La tercera etapa, preocupación/anticipación, depende de la corteza prefrontal y la ínsula: craving y fallo del control ejecutivo.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Etapa</th><th>Región clave</th><th>Clínica</th></tr></thead><tbody><tr><th>Atracón / intoxicación</th><td>Ganglios basales</td><td>Refuerzo, hábito</td></tr><tr><th>Abstinencia / afecto negativo</th><td>Amígdala extendida</td><td>Disforia, estrés</td></tr><tr><th>Preocupación / anticipación</th><td>Prefrontal e ínsula</td><td>Craving, recaída</td></tr></tbody></table>",
+   "fuente": "Koob 2016, Lancet Psychiatry (PMID 27475769)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Neurobiologia",
+    "Nivel::Aplicacion",
+    "Fuente::KoobVolkow2016",
+    "Clase::Aplicacion",
+    "Bloom::Analizar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0007",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Recaída</span>Caso — hombre abstinente hace 8 meses recae al pasar frente a su bar habitual: ¿qué mecanismo explica la recaída?",
+   "respuesta": "El <span class=\"mec\">craving inducido por señales</span>: el sistema dopaminérgico sensibilizado atribuye saliencia excesiva a los estímulos asociados al consumo.",
+   "razonamiento": "La sensibilización está modulada por aprendizaje asociativo y puede ser duradera, por eso persiste tras meses sin beber. A ello se suma el déficit de control ejecutivo prefrontal de la etapa de preocupación/anticipación.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Robinson 1993, Brain Res Rev (PMID 8401595); Koob 2016, Lancet Psychiatry (PMID 27475769)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Neurobiologia",
+    "Nivel::Aplicacion",
+    "Fuente::RobinsonBerridge1993",
+    "Clase::Vineta",
+    "Bloom::Analizar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0008",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Teorías causales · genética</span>La heredabilidad del trastorno por consumo de alcohol en gemelos y adopción es de {{c1::<span class=\"num\">≈ 50 %</span>}}.",
+   "extra": "Metaanálisis de 12 estudios de gemelos y 5 de adopción: heredabilidad 0,49; ambiente compartido 0,10. La otra mitad del riesgo es ambiental y sociocultural: la genética predispone, no condena.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Verhulst 2015, Psychol Med (PMID 25171596)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::EpidemiologiaEtiologia",
+    "Nivel::Recuerdo",
+    "Fuente::Verhulst2015",
+    "Clase::Irreducible",
+    "Bloom::Recordar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0009",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Mortalidad global · OMS 2024</span>En 2019 el alcohol causó {{c1::<span class=\"num\">2,6 millones</span>}} de muertes en el mundo y las drogas psicoactivas {{c2::<span class=\"num\">0,6 millones</span>}}.",
+   "extra": "El alcohol explica el 4,7 % de todas las muertes; unos 2 millones son de hombres. El informe estima unos 400 millones de personas con trastornos por alcohol o drogas.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "OMS. Global status report on alcohol and health and treatment of substance use disorders, 2024",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::EpidemiologiaEtiologia",
+    "Nivel::Recuerdo",
+    "Fuente::OMS2024",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0010",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Morbimortalidad por alcohol</span>¿Qué causa más muertes atribuibles al alcohol: las enfermedades no transmisibles o las lesiones?",
+   "respuesta": "Las <span class=\"dx\">enfermedades no transmisibles</span> (cerca de 1,6 millones, en especial cardiovasculares y cáncer), frente a unas 0,7 millones por lesiones.",
+   "razonamiento": "Las lesiones (tránsito, autolesión, violencia) pesan más en jóvenes: el 13 % de las muertes atribuibles en 2019 fue en personas de 20 a 39 años. Por eso el consumo se interroga en toda consulta, no solo en urgencias.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "OMS. Global status report on alcohol and health and treatment of substance use disorders, 2024",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::EpidemiologiaEtiologia",
+    "Nivel::Recuerdo",
+    "Fuente::OMS2024",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0011",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Intoxicación etílica aguda</span>Caso — bebedor tras dos días de ayuno llega estuporoso y oliendo a alcohol: ¿qué medición haces antes de atribuir el cuadro al etanol y por qué?",
+   "respuesta": "La <span class=\"num\">glucemia capilar</span>: el alcohol <span class=\"mec\">inhibe la gluconeogénesis</span> y, con el glucógeno agotado por el ayuno, produce <span class=\"al\">hipoglucemia</span>.",
+   "razonamiento": "La hipoglucemia imita la intoxicación y se corrige en minutos. El protocolo del MSP incluye controlar la glucemia y administrar tiamina al bebedor crónico.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "van de Wiel 2004, Diabetes Metab Res Rev (PMID 15250029); MSP Ecuador 2016, Protocolo de atención integral",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::IntoxicacionAlcoholica",
+    "Nivel::Aplicacion",
+    "Fuente::vandeWiel2004",
+    "Clase::Vineta",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0012",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Bebedor crónico</span>¿Por qué la tiamina se administra antes de cualquier suero glucosado?",
+   "respuesta": "Porque aportar carbohidratos sin reponer antes la <span class=\"fx\">tiamina</span> puede precipitar una <span class=\"al\">encefalopatía de Wernicke</span>.",
+   "razonamiento": "La prevención con tiamina parenteral se indica en cualquier paciente en riesgo, incluida la abstinencia. El MSP pauta tiamina 100 mg IV o IM inmediata en el intoxicado con consumo crónico.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Jesse 2017, Acta Neurol Scand (PMID 27586815); Sechi 2007, Lancet Neurol (PMID 17434099); MSP Ecuador 2016",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::IntoxicacionAlcoholica",
+    "Nivel::Aplicacion",
+    "Fuente::Jesse2017",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0013",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Encefalopatía de Wernicke</span>Tríada clásica: {{c1::<span class=\"al\">confusión</span>}}, {{c2::ataxia}} y {{c3::oftalmoplejía}}.",
+   "extra": "La tríada completa es rara: basta la sospecha para tratar. Los criterios EFNS piden 2 de 4: déficit dietético, signos oculomotores, disfunción cerebelosa y alteración mental o de memoria.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Jesse 2017, Acta Neurol Scand (PMID 27586815); Sechi 2007, Lancet Neurol (PMID 17434099)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::IntoxicacionAlcoholica",
+    "Nivel::Recuerdo",
+    "Fuente::Jesse2017",
+    "Clase::Irreducible",
+    "Bloom::Recordar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0014",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Intoxicación etílica aguda</span>Joven muy confuso tras beber con desconocidos: además del soporte, ¿qué indica el protocolo ecuatoriano y por qué?",
+   "respuesta": "Hacer <span class=\"dx\">tamizaje de otras sustancias</span> (benzodiacepinas, escopolamina, metanol, antipsicóticos) ante la sospecha de origen delincuencial.",
+   "razonamiento": "La profundidad del cuadro puede no corresponder solo al alcohol. El manejo base es vía aérea y posición de seguridad, glucemia, hidratación isotónica y tiamina si el consumo es crónico.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "MSP Ecuador 2016, Protocolo de atención integral del consumo nocivo de alcohol, tabaco y otras drogas",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::IntoxicacionAlcoholica",
+    "Nivel::Aplicacion",
+    "Fuente::MSP2016",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0015",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Abstinencia alcohólica</span>¿Por qué un depresor, al suspenderse, deja temblor, taquicardia y convulsiones?",
+   "respuesta": "Porque el consumo crónico <span class=\"mec\">regula a la baja GABA-A y al alza NMDA</span>; sin etanol queda un cerebro hiperexcitable.",
+   "razonamiento": "El rebote autonómico da temblor, sudoración y taquicardia; el extremo es <span class=\"al\">convulsión</span> y <span class=\"al\">delirium tremens</span>.<br><span class=\"vs\">Contraste</span> la intoxicación deprime el SNC; la abstinencia da los signos opuestos.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Jesse 2017, Acta Neurol Scand (PMID 27586815)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::AbstinenciaAlcoholica",
+    "Nivel::Aplicacion",
+    "Fuente::Jesse2017",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0016",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Convulsión en el bebedor</span>Primera convulsión 4 días después de la última copa: ¿la atribuyes a la abstinencia?",
+   "respuesta": "No sin buscar otra causa: más del <span class=\"num\">90 %</span> de las convulsiones por abstinencia aparecen en las primeras <span class=\"num\">48 h</span>.",
+   "razonamiento": "Una convulsión tardía obliga a descartar <span class=\"al\">traumatismo craneal</span> o abstinencia de otra droga. Una convulsión por abstinencia precede a un delirium tremens hasta en el 30 % de los casos.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Desde la última copa</th><th>Cuadro</th><th>Clave</th></tr></thead><tbody><tr><th>≈ 6 h</th><td>Temblor, signos autonómicos</td><td>Orientado</td></tr><tr><th>6–48 h</th><td>Convulsiones</td><td>> 90 % antes de 48 h</td></tr><tr><th>Variable</th><td>Alucinosis</td><td>Sensorio claro</td></tr><tr><th>48–72 h (inicio)</th><td>Delirium tremens</td><td>Confusión global</td></tr></tbody></table>",
+   "fuente": "Jesse 2017, Acta Neurol Scand (PMID 27586815)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::AbstinenciaAlcoholica",
+    "Nivel::Aplicacion",
+    "Fuente::Jesse2017",
+    "Clase::Aplicacion",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0017",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Alucinaciones en la abstinencia</span>¿Qué dato de la exploración separa la alucinosis alcohólica del delirium tremens?",
+   "respuesta": "El sensorio: en la <span class=\"dx\">alucinosis</span> la conciencia está clara; en el <span class=\"dx\">delirium tremens</span> hay confusión global con agitación.",
+   "razonamiento": "La alucinosis puede evolucionar a delirium tremens, que es más tardío y grave. El tratamiento de ambos son las benzodiacepinas; el haloperidol solo como adyuvante, porque baja el umbral convulsivo.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Rasgo</th><th>Alucinosis</th><th>Delirium tremens</th></tr></thead><tbody><tr><th>Conciencia</th><td>Clara</td><td>Confusión global</td></tr><tr><th>Atención</th><td>Conservada</td><td>Alterada</td></tr><tr><th>Inicio</th><td>Aun bebiendo o al dejarlo</td><td>48–72 h</td></tr><tr><th>Curso</th><td>Puede progresar</td><td>Hasta 2 semanas</td></tr></tbody></table>",
+   "fuente": "Jesse 2017, Acta Neurol Scand (PMID 27586815); MSP Ecuador 2016",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::AbstinenciaAlcoholica",
+    "Nivel::Aplicacion",
+    "Fuente::Jesse2017",
+    "Clase::Contraste",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0018",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">CIWA-Ar</span>Caso — CIWA-Ar de 12 en un paciente con antecedente de delirium tremens: ¿tratas con fármacos y dónde?",
+   "respuesta": "Sí, con <span class=\"fx\">benzodiacepina</span>, y hospitalizado: el MSP indica manejo intrahospitalario con <span class=\"num\">9–15</span> si hay antecedente o riesgo de delirium tremens.",
+   "razonamiento": "MSP: ≤ 8 sin fármacos y ambulatorio; 9–15 considerar fármaco; ≥ 16 iniciar fármaco y hospitalizar. Guías internacionales sitúan el inicio en ≥ 8–10; en Ecuador manda el umbral del protocolo.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>CIWA-Ar (MSP)</th><th>Gravedad</th><th>Conducta</th></tr></thead><tbody><tr><th>≤ 8</th><td>Leve</td><td>Sin fármaco; ambulatorio</td></tr><tr><th>9–15</th><td>Moderada</td><td>Considerar BZD; ambulatorio solo sin riesgos</td></tr><tr><th>≥ 16</th><td>Grave</td><td>BZD; hospitalizar</td></tr></tbody></table>",
+   "fuente": "MSP Ecuador 2016, Protocolo de atención integral; Jesse 2017, Acta Neurol Scand (PMID 27586815)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::AbstinenciaAlcoholica",
+    "Nivel::Aplicacion",
+    "Fuente::MSP2016",
+    "Clase::Escala",
+    "Bloom::Aplicar",
+    "Escala::CIWAAr"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0019",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Riesgo de abstinencia complicada</span>Al ingreso para cirugía, un bebedor está asintomático: ¿te sirve la CIWA-Ar para decidir profilaxis?",
+   "respuesta": "No: la CIWA-Ar mide síntomas ya presentes; el riesgo se estima con la <span class=\"dx\">PAWSS</span>, y <span class=\"num\">≥ 4</span> indica alto riesgo de abstinencia complicada.",
+   "razonamiento": "Cuando la CIWA-Ar sube, la ventana de profilaxis ya pasó. La PAWSS se validó en pacientes médicos y quirúrgicos hospitalizados.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Maldonado 2015, Alcohol Alcohol (PMID 25999438); Jesse 2017, Acta Neurol Scand (PMID 27586815)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::AbstinenciaAlcoholica",
+    "Nivel::Aplicacion",
+    "Fuente::Maldonado2015",
+    "Clase::Escala",
+    "Bloom::Evaluar",
+    "Escala::PAWSS"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0020",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Abstinencia en el cirrótico</span>Caso — anciano con cirrosis avanzada inicia abstinencia: ¿qué benzodiacepina eliges y por qué no diazepam?",
+   "respuesta": "<span class=\"fx\">Lorazepam u oxazepam</span>: el diazepam depende del <span class=\"mec\">metabolismo oxidativo hepático</span> y se acumula con sus metabolitos activos.",
+   "razonamiento": "En la hepatopatía cae el aclaramiento del diazepam y su vida media se prolonga varias veces. En el adulto mayor rige el mismo razonamiento.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Jesse 2017, Acta Neurol Scand (PMID 27586815)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::AbstinenciaAlcoholica",
+    "Nivel::Aplicacion",
+    "Fuente::Jesse2017",
+    "Clase::Vineta",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0021",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Tolerancia cruzada</span>¿Por qué las benzodiacepinas tratan la abstinencia alcohólica?",
+   "respuesta": "Porque tienen <span class=\"mec\">tolerancia cruzada con el alcohol</span>: actúan sobre el receptor GABA-A y sustituyen la inhibición que el etanol ya no aporta.",
+   "razonamiento": "Se usan en pauta fija o guiada por síntomas y luego se retiran. El mismo principio explica la metadona o la buprenorfina en la dependencia de opioides.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Bayard 2004, Am Fam Physician (PMID 15053409); MSP Ecuador 2016",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::AbstinenciaAlcoholica",
+    "Nivel::Aplicacion",
+    "Fuente::Bayard2004",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0022",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Intoxicación por opioides</span>¿Qué signo define la intoxicación por opioides y cuál solo la sugiere?",
+   "respuesta": "La define la <span class=\"al\">depresión respiratoria</span>; la miosis solo la sugiere.",
+   "razonamiento": "Una frecuencia ≤ 12/min fuera del sueño, con miosis o estupor, apunta a opioides. Las pupilas pueden ser normales o midriáticas con meperidina, tramadol o mezclas.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Boyer 2012, N Engl J Med (PMID 22784117)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Opioides",
+    "Nivel::Aplicacion",
+    "Fuente::Boyer2012",
+    "Clase::Aplicacion",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0023",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Naloxona</span>¿Cuál es el objetivo clínico al titular la naloxona en una sobredosis de opioides?",
+   "respuesta": "Recuperar una <span class=\"mec\">ventilación adecuada</span>, no la vigilia completa.",
+   "razonamiento": "En el dependiente, dosis bajas restauran la respiración sin desencadenar abstinencia; la NEJM sugiere empezar con 0,04 mg y escalar, y el MSP pauta 0,4 mg IV lento repetible cada 3–5 min. Nunca se retrasa por esperar un tóxico en orina.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Boyer 2012, N Engl J Med (PMID 22784117); Dutta 2025, J Clin Med (PMID 40943922); MSP Ecuador 2016",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Opioides",
+    "Nivel::Aplicacion",
+    "Fuente::Boyer2012",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0024",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Antídotos competitivos</span>Paciente que despierta tras naloxona: ¿por qué no lo das de alta enseguida?",
+   "respuesta": "Porque la <span class=\"fx\">naloxona</span> dura <span class=\"num\">20–90 min</span>, menos que muchos opioides: la <span class=\"al\">depresión respiratoria puede reaparecer</span>.",
+   "razonamiento": "Se observa 4–6 h tras la respuesta. Con opioides de acción prolongada o recurrencia, infusión de naloxona o intubación en UCI.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Boyer 2012, N Engl J Med (PMID 22784117)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Opioides",
+    "Nivel::Aplicacion",
+    "Fuente::Boyer2012",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0025",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Abstinencia de opioides</span>¿Por qué la abstinencia de opioides, aunque muy molesta, preocupa menos que la alcohólica?",
+   "respuesta": "Porque sus signos (bostezos, lagrimeo, piloerección, diarrea) <span class=\"dx\">no amenazan la vida</span>, mientras la alcohólica puede dar <span class=\"al\">convulsiones y delirium tremens</span>.",
+   "razonamiento": "Su motor es la <span class=\"mec\">hiperactividad noradrenérgica del locus coeruleus</span>, que la clonidina atenúa.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Rasgo</th><th>Opioides</th><th>Alcohol / BZD</th></tr></thead><tbody><tr><th>Signos guía</th><td>Bostezos, lagrimeo, piloerección</td><td>Temblor, sudor, taquicardia</td></tr><tr><th>Convulsiones</th><td>No</td><td>Sí</td></tr><tr><th>Delirium</th><td>No</td><td>Sí (delirium tremens)</td></tr><tr><th>Riesgo vital</th><td>Bajo</td><td>Alto</td></tr></tbody></table>",
+   "fuente": "Boyer 2012, N Engl J Med (PMID 22784117); Gold 2026, Front Public Health (PMID 43011373)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Opioides",
+    "Nivel::Aplicacion",
+    "Fuente::Boyer2012",
+    "Clase::Contraste",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0026",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Buprenorfina</span>Usuario de heroína que acaba de consumir pide iniciar buprenorfina ya: ¿por qué esperar?",
+   "respuesta": "Porque la <span class=\"fx\">buprenorfina</span> es un <span class=\"mec\">agonista parcial μ de alta afinidad</span>: desplaza al agonista completo y desencadena una abstinencia precipitada.",
+   "razonamiento": "Por eso la inducción clásica espera a una abstinencia moderada. Las microinducciones con dosis muy bajas son una alternativa en evaluación.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Ahmed 2021, Am J Addict (PMID 33378137)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Opioides",
+    "Nivel::Aplicacion",
+    "Fuente::Ahmed2021",
+    "Clase::Aplicacion",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0027",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Flumazenil</span>¿Por qué no usar flumazenil de rutina en cualquier coma con sospecha de benzodiacepinas?",
+   "respuesta": "Porque aumenta los eventos adversos graves, en especial <span class=\"al\">convulsiones</span> y <span class=\"al\">arritmias</span>, frente al soporte solo.",
+   "razonamiento": "El riesgo es mayor en usuarios crónicos y en mezclas. El protocolo del MSP lo contempla si hay otro depresor asociado: decídelo caso a caso y con monitorización.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Penninga 2016, Basic Clin Pharmacol Toxicol (PMID 26096314); Dutta 2025, J Clin Med (PMID 40943922); MSP Ecuador 2016",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Sedantes",
+    "Nivel::Aplicacion",
+    "Fuente::Penninga2016",
+    "Clase::Relacional",
+    "Bloom::Evaluar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0028",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Sobredosis de benzodiacepinas</span>Benzodiacepina sola frente a benzodiacepina más opioide: ¿qué cambia el pronóstico y por qué?",
+   "respuesta": "La combinación: sola, la benzodiacepina rara vez mata, pero <span class=\"mec\">suma depresión respiratoria</span> a la del opioide.",
+   "razonamiento": "Las benzodiacepinas se asocian con fuerza a las muertes por sobredosis de opioides. Ante un intoxicado por sedantes, busca siempre coingesta de opioides o alcohol.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Boyer 2012, N Engl J Med (PMID 22784117); Baehrendtz 1988, Eur J Anaesthesiol Suppl (PMID 2842140)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Sedantes",
+    "Nivel::Aplicacion",
+    "Fuente::Boyer2012",
+    "Clase::Relacional",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0029",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Abstinencia de benzodiacepinas</span>¿Por qué una benzodiacepina de vida media larga da la abstinencia más tarde que una corta, y cómo se previene?",
+   "respuesta": "Porque su nivel cae más despacio: la abstinencia aparece a los <span class=\"num\">5–10 días</span> frente a <span class=\"num\">2–3 días</span> con las de vida media corta; se previene con <span class=\"fx\">retirada gradual</span>.",
+   "razonamiento": "Los signos mayores son <span class=\"al\">convulsiones</span>, alucinaciones y delirium, como en la abstinencia alcohólica. También aparece tras una reducción acelerada de la dosis.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "MSP Ecuador 2016, Protocolo de atención integral (capítulo de benzodiacepinas)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Sedantes",
+    "Nivel::Aplicacion",
+    "Fuente::MSP2016",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0030",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Cocaína</span>¿Por qué la cocaína puede infartar a un joven sin factores de riesgo?",
+   "respuesta": "Porque <span class=\"mec\">aumenta la demanda de oxígeno</span> (exceso de catecolaminas) y a la vez <span class=\"mec\">reduce el aporte</span> (vasoespasmo y trombosis).",
+   "razonamiento": "Además bloquea canales de sodio y potasio, con riesgo de arritmias. El cuadro puede ser más grave en jóvenes sin factores de riesgo clásicos.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Stankowski 2015, Trends Cardiovasc Med (PMID 25657055); Gresnigt 2026, Clin Toxicol (PMID 42504704)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Estimulantes",
+    "Nivel::Aplicacion",
+    "Fuente::Stankowski2015",
+    "Clase::Aplicacion",
+    "Bloom::Comprender",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0031",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Dolor torácico por cocaína</span>Caso — 25 años, dolor torácico, TA 170/100 y FC 120 tras consumir cocaína: ¿qué das primero y qué evitas?",
+   "respuesta": "Primero <span class=\"fx\">benzodiacepina</span> (con aspirina y nitroglicerina); evitas el <span class=\"al\">betabloqueante puro</span> en la fase aguda.",
+   "razonamiento": "La benzodiacepina reduce el tono simpático y con él la hipertensión y la taquicardia. La AHA 2008 desaconseja el betabloqueante por empeorar el vasoespasmo; revisiones posteriores admiten labetalol o carvedilol en casos seleccionados.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "McCord 2008, Circulation (PMID 18347214); Richards 2016, Clin Toxicol (PMID 26919414); Stankowski 2015 (PMID 25657055)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Estimulantes",
+    "Nivel::Aplicacion",
+    "Fuente::McCord2008",
+    "Clase::Vineta",
+    "Bloom::Evaluar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0032",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Toxíndromes</span>Paciente en coma sin historia fiable: ¿qué tres hallazgos de la exploración orientan a qué receptor está afectado?",
+   "respuesta": "Las <span class=\"mec\">pupilas</span>, la <span class=\"mec\">ventilación</span> y la <span class=\"mec\">piel</span> (sudor y temperatura): cada toxíndrome es la huella de un receptor.",
+   "razonamiento": "Miosis con depresión respiratoria sugiere opioide; midriasis con sudor, simpaticomimético; midriasis con piel seca, anticolinérgico. El reconocimiento del patrón permite tratar antes de tener el tóxico identificado.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Rasgo</th><th>Opioide</th><th>Simpático­mimético</th><th>Anti­colinérgico</th></tr></thead><tbody><tr><th>Pupilas</th><td>Miosis</td><td>Midriasis</td><td>Midriasis</td></tr><tr><th>Respi­ración</th><td>Deprimida</td><td>—</td><td>—</td></tr><tr><th>Piel</th><td>—</td><td>Sudorosa</td><td>Seca, roja</td></tr><tr><th>Tempe­ratura</th><td>—</td><td>Hiper­termia</td><td>Hiper­termia</td></tr><tr><th>Sensorio</th><td>Deprimido</td><td>Agitado</td><td>Delirium</td></tr></tbody></table>",
+   "fuente": "Dutta 2025, J Clin Med (PMID 40943922); Hoffman 2025, Arch Dis Child (PMID 39978865); Boyer 2012, N Engl J Med",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Estimulantes",
+    "Nivel::Aplicacion",
+    "Fuente::Dutta2025",
+    "Clase::Principio",
+    "Bloom::Analizar",
+    "Principio",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0033",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Agitación con midriasis</span>Agitado, taquicárdico, hipertérmico y con midriasis: ¿qué signo separa un simpaticomimético de un anticolinérgico?",
+   "respuesta": "La piel: <span class=\"dx\">sudorosa</span> en el simpaticomimético y <span class=\"dx\">seca</span> en el anticolinérgico.",
+   "razonamiento": "El anticolinérgico añade retención urinaria y ruidos intestinales disminuidos. En Ecuador piensa en la escopolamina ante un cuadro anticolinérgico tras una agresión.",
+   "mnemotecnia": "<span class=\"mne\">Mad as a hatter…</span> (inglés), síndrome anticolinérgico<ul><li><b>Mad as a hatter</b> loco como una cabra: delirium, alucinaciones</li><li><b>Blind as a bat</b> ciego como un murciélago: midriasis</li><li><b>Hot as a hare</b> caliente como una liebre: hipertermia</li><li><b>Dry as a bone</b> seco como un hueso: sin sudor, mucosas secas</li><li><b>Red as a beet</b> rojo como un tomate: piel enrojecida</li></ul>",
+   "esquema": "",
+   "fuente": "Dutta 2025, J Clin Med (PMID 40943922); MSP Ecuador 2016",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Estimulantes",
+    "Nivel::Aplicacion",
+    "Fuente::Dutta2025",
+    "Clase::Contraste",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0034",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">MDMA (éxtasis)</span>Caso — joven que tomó éxtasis en una fiesta y bebió mucha agua convulsiona con sodio bajo: ¿qué mecanismo explica la hiponatremia?",
+   "respuesta": "El <span class=\"mec\">aumento de ADH mediado por serotonina</span> más la <span class=\"mec\">polidipsia</span>: el riñón retiene agua libre y aparece <span class=\"al\">edema cerebral</span>.",
+   "razonamiento": "Es más grave en mujeres. La hiponatremia grave sintomática se corrige con suero hipertónico y restricción de líquidos.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Faria 2020, Drug Alcohol Depend (PMID 32460203)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Estimulantes",
+    "Nivel::Aplicacion",
+    "Fuente::Faria2020",
+    "Clase::Vineta",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0035",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Vómitos cíclicos</span>Caso — consumidor diario de cannabis con crisis de vómitos que se alivian con duchas calientes: ¿diagnóstico y tratamiento definitivo?",
+   "respuesta": "<span class=\"dx\">Síndrome de hiperémesis cannabinoide</span>; el tratamiento definitivo es <span class=\"fx\">dejar el cannabis</span>.",
+   "razonamiento": "En la crisis ayudan líquidos IV, antagonistas dopaminérgicos y capsaicina tópica; conviene evitar los opioides. El alivio con baños calientes aparece en la gran mayoría de los casos descritos.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Sorensen 2017, J Med Toxicol (PMID 28000146)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::CannabisPsicodelicos",
+    "Nivel::Aplicacion",
+    "Fuente::Sorensen2017",
+    "Clase::Vineta",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0036",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Cannabis y psicosis</span>¿Qué patrón de consumo de cannabis se asocia con más riesgo de psicosis?",
+   "respuesta": "El consumo <span class=\"al\">diario de cannabis de alta potencia</span> (THC ≥ 10 %), con odds casi <span class=\"num\">5 veces</span> mayores que en quien nunca consumió.",
+   "razonamiento": "El consumo diario sin más se asoció a odds unas 3 veces mayores. El THC es agonista parcial de CB1; el consejo apunta a frecuencia y potencia, en especial en adolescentes.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Di Forti 2019, Lancet Psychiatry (PMID 30902669); Bloomfield 2019, Pharmacol Ther (PMID 30347211)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::CannabisPsicodelicos",
+    "Nivel::Aplicacion",
+    "Fuente::DiForti2019",
+    "Clase::Aplicacion",
+    "Bloom::Evaluar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0037",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Alucinógenos</span>Agitado con alucinaciones, hipertensión y nistagmo vertical: ¿qué grupo sospechas y en qué receptor actúa?",
+   "respuesta": "Un <span class=\"dx\">disociativo (fenciclidina o ketamina)</span>, antagonista del <span class=\"mec\">receptor NMDA</span>.",
+   "razonamiento": "En urgencias, la fenciclidina dio nistagmo horizontal en dos tercios y vertical en la mitad de los casos. <span class=\"vs\">Contraste</span> LSD y psilocibina actúan como agonistas 5-HT2A.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Rasgo</th><th>Psicodélico clásico</th><th>Disociativo</th></tr></thead><tbody><tr><th>Ejemplos</th><td>LSD, psilocibina</td><td>Fenciclidina, ketamina</td></tr><tr><th>Receptor</th><td>Agonista 5-HT2A</td><td>Antagonista NMDA</td></tr><tr><th>Signo guía</th><td>Alteración perceptiva</td><td>Nistagmo, agitación</td></tr></tbody></table>",
+   "fuente": "Dominici 2015, J Med Toxicol (PMID 25502414); Farber 2003, Ann N Y Acad Sci (PMID 14684440); Nasini 2026, Trends Pharmacol Sci (PMID 42575820)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::CannabisPsicodelicos",
+    "Nivel::Aplicacion",
+    "Fuente::Dominici2015",
+    "Clase::Contraste",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0038",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Clasificación de las drogas</span>Por su efecto en el SNC: {{c1::depresoras}} (opiáceos, hipnóticos, sedantes), {{c2::estimulantes}} (cocaína, anfetaminas) y {{c3::psicodélicas}}.",
+   "extra": "El grupo predice el toxíndrome y la abstinencia: las depresoras comparten el riesgo de convulsiones al retirarlas (alcohol, benzodiacepinas). El cannabis tiene efectos mixtos y se estudia aparte.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Sílabo SIH2 Quirúrgica 2, PUCE 2026-2, Caso 4; MSP Ecuador 2016",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::CannabisPsicodelicos",
+    "Nivel::Recuerdo",
+    "Fuente::Silabo",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0039",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Tóxicos en orina</span>Paciente en apnea con sospecha de opioides y tóxicos en orina negativos: ¿qué pesa más, el examen o la clínica?",
+   "respuesta": "La <span class=\"dx\">clínica</span>: das <span class=\"fx\">naloxona</span> sin esperar el resultado.",
+   "razonamiento": "Los inmunoensayos habituales rara vez detectan metadona o fentanilo, y su resultado casi nunca cambia el manejo agudo. Un tamizaje positivo es presuntivo: se interpreta con la clínica y sus posibles falsos positivos.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Boyer 2012, N Engl J Med (PMID 22784117); Moeller 2017, Mayo Clin Proc (PMID 28325505)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Laboratorio",
+    "Nivel::Aplicacion",
+    "Fuente::Boyer2012",
+    "Clase::Relacional",
+    "Bloom::Evaluar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0040",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Metabolitos en orina</span>Un consumidor con orina positiva a cocaína dice que no ha consumido hoy: ¿miente necesariamente?",
+   "respuesta": "No: la orina detecta <span class=\"mec\">metabolitos</span> durante días (los de la cocaína, <span class=\"num\">2–4 días</span>), así que indica exposición reciente, no intoxicación actual.",
+   "razonamiento": "Con el cannabis la ventana se alarga cuanto más frecuente es el consumo. El estado clínico se juzga con la exploración, no con el tamizaje.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Moeller 2017, Mayo Clin Proc (PMID 28325505)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Laboratorio",
+    "Nivel::Aplicacion",
+    "Fuente::Moeller2017",
+    "Clase::Aplicacion",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0041",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Biomarcadores de alcohol</span>¿Por qué la transferrina deficiente en carbohidratos (CDT) no sirve para tamizar el consumo de riesgo?",
+   "respuesta": "Porque es un <span class=\"dx\">marcador indirecto</span> muy específico de consumo grave pero poco sensible: deja pasar a muchos bebedores.",
+   "razonamiento": "Los marcadores directos (etilglucurónido, fosfatidiletanol) son productos del propio etanol. Para tamizar se usan cuestionarios como el AUDIT.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Tipo</th><th>Ejemplos</th><th>Uso</th></tr></thead><tbody><tr><th>Directos</th><td>Etilglucurónido, fosfatidiletanol</td><td>Consumo reciente</td></tr><tr><th>Indirectos</th><td>GGT, VCM, CDT</td><td>Consumo crónico, seguimiento</td></tr><tr><th>Tamizaje</th><td>AUDIT</td><td>Consumo de riesgo</td></tr></tbody></table>",
+   "fuente": "Jesse 2017, Acta Neurol Scand (PMID 27586815)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::Laboratorio",
+    "Nivel::Aplicacion",
+    "Fuente::Jesse2017",
+    "Clase::Contraste",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0042",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">AUDIT</span>Caso — AUDIT de 12 en consulta de atención primaria: ¿qué conducta corresponde?",
+   "respuesta": "<span class=\"dx\">Consumo de riesgo</span> (<span class=\"num\">8–15</span>): identificar, evaluar y dar consejo breve.",
+   "razonamiento": "MSP: 0–7 educación; 8–15 consejo simple; 16–19 consejo, intervención breve y seguimiento; ≥ 20 derivación al especialista. El corte de 8 viene del estudio original de la OMS.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>AUDIT</th><th>Nivel de riesgo</th><th>Conducta (MSP)</th></tr></thead><tbody><tr><th>0–7</th><td>Bajo</td><td>Educación</td></tr><tr><th>8–15</th><td>Consumo de riesgo</td><td>Consejo simple</td></tr><tr><th>16–19</th><td>Consumo abusivo</td><td>Intervención breve y seguimiento</td></tr><tr><th>≥ 20</th><td>Probable dependencia</td><td>Derivar al especialista</td></tr></tbody></table>",
+   "fuente": "MSP Ecuador 2016, Protocolo de atención integral; Saunders 1993, Addiction (PMID 8329970)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::TratamientoAPS",
+    "Nivel::Aplicacion",
+    "Fuente::MSP2016",
+    "Clase::Escala",
+    "Bloom::Aplicar",
+    "Escala::AUDIT"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0043",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Intervención breve</span>Tienes 10 minutos con un bebedor de riesgo: ¿con qué modelo estructuras la intervención breve?",
+   "respuesta": "Con el modelo <span class=\"dx\">FRAMES</span>: devolución personalizada del riesgo, responsabilidad del paciente, consejo claro, menú de opciones, empatía y autoeficacia.",
+   "razonamiento": "Funciona mejor en quien está listo para cambiar; si hay ambivalencia, entrevista motivacional. Las intervenciones breves reducen el consumo frente a no aconsejar.",
+   "mnemotecnia": "<span class=\"mne\">FRAMES</span> (inglés)<ul><li><b>F</b> Feedback: devolución del riesgo personal</li><li><b>R</b> Responsibility: la decisión es del paciente</li><li><b>A</b> Advice: consejo claro de cambiar</li><li><b>M</b> Menu: menú de estrategias</li><li><b>E</b> Empathy: estilo empático</li><li><b>S</b> Self-efficacy: reforzar la autoeficacia</li></ul>",
+   "esquema": "",
+   "fuente": "Searight 2009, Am Fam Physician (PMID 19235494); Bien 1993, Addiction (PMID 8461850)",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::TratamientoAPS",
+    "Nivel::Aplicacion",
+    "Fuente::Searight2009",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0044",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Fármacos para el alcohol</span>Caso — paciente con trastorno por alcohol en mantenimiento con metadona quiere un fármaco para no recaer: ¿por qué no naltrexona y qué eliges?",
+   "respuesta": "La <span class=\"fx\">naltrexona</span> está contraindicada con opioides (precipita abstinencia); eliges <span class=\"fx\">acamprosato</span> si la función renal lo permite.",
+   "razonamiento": "El acamprosato se contraindica con aclaramiento de creatinina ≤ 30 mL/min. Acamprosato y naltrexona oral reducen la vuelta a beber sin diferencias entre ellos.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Fármaco</th><th>Mecanismo de acción</th><th>Ojo con</th></tr></thead><tbody><tr><th>Naltrexona</th><td>Antagonista opioide: menos refuerzo</td><td>Opioides</td></tr><tr><th>Acamprosato</th><td>Modula GABA/NMDA (taurina)</td><td>Insuficiencia renal grave</td></tr><tr><th>Disulfiram</th><td>Inhibe la oxidación del acetaldehído</td><td>Cardiopatía grave; metronidazol</td></tr></tbody></table>",
+   "fuente": "Ficha técnica naltrexona y acamprosato (DailyMed); Jonas 2014, JAMA (PMID 24825644); MSP Ecuador 2016",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::TratamientoAPS",
+    "Nivel::Aplicacion",
+    "Fuente::DailyMed",
+    "Clase::Vineta",
+    "Bloom::Evaluar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-TOX-0045",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Objetivos del tratamiento</span>Usuario de heroína que no quiere la abstinencia total: ¿abandonas el objetivo terapéutico o qué priorizas?",
+   "respuesta": "Priorizas la <span class=\"dx\">reducción de daños</span>: retención en tratamiento con agonistas, que reduce la mortalidad total y por sobredosis.",
+   "razonamiento": "Con metadona la mortalidad cayó de 36,1 a 11,3 por 1000 personas-año. Los periodos de más riesgo son la inducción y las semanas tras abandonar; el primer nivel detecta, motiva, deriva y reduce daños.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Sordo 2017, BMJ (PMID 28446428); MSP Ecuador 2016, Protocolo de atención integral",
+   "tags": [
+    "Quirurgica2::Toxicodependencias::TratamientoAPS",
+    "Nivel::Aplicacion",
+    "Fuente::Sordo2017",
+    "Clase::Relacional",
+    "Bloom::Evaluar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  }
+ ]
+}
