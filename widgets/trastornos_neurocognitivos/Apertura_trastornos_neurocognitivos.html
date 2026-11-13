@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Apertura · Trastornos neurocognitivos</title>
+<style>
+/* Vademécum · widget de apertura (def_head + clases de apertura): mismas tintas y tipografía que DESIGN.md */
+:root{
+--paper:#FBFBFC;--paper-2:#F1F2F5;--ink:#16181D;--ink-2:#3A3D46;--ink-3:#686C78;--rule:#D7D9E0;--rule-strong:#16181D;
+--accent:#2342A6;--accent-ink:#1B358A;--accent-field:#EAEEFA;--on-accent:#FFFFFF;
+--am:#7A4A06;--am-f:#FBF1DF;--ro:#9E1F1F;--ro-f:#FBE9E7;--ve:#2F5E12;--ve-f:#EBF3E1;--pu:#4C3FA8;--pu-f:#EEECFB;--co:#8E3517;--co-f:#FAEDE6;--rs:#8A2C52;--rs-f:#FAEAF1;
+--f-serif:ui-serif,"New York","Iowan Old Style","Charter","Source Serif Pro",Georgia,"Times New Roman",serif;
+--f-sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+--r:3px;
+/* alias de la v10 para compatibilidad */
+--surface-0:var(--paper);--surface-1:var(--paper-2);--border:var(--rule);--border-accent:var(--accent);--bg-accent:var(--accent-field);--text-primary:var(--ink);--text-secondary:var(--ink-2);--text-muted:var(--ink-3);--text-accent:var(--accent-ink);--radius:var(--r);--font-sans:var(--f-sans);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}
+html{color-scheme:light dark;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:var(--accent);color:var(--on-accent)}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--f-sans);-webkit-text-size-adjust:100%;caret-color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:18px 16px 56px;background:transparent}
+h1{font:600 26px/1.2 var(--f-serif);letter-spacing:-.012em;margin:6px 0 14px;padding-bottom:12px;border-bottom:2px solid var(--rule-strong);text-wrap:balance}
+h2{font:600 19px/1.3 var(--f-serif);margin:34px 0 12px;padding-top:12px;border-top:1px solid var(--rule-strong);text-wrap:balance}
+h3{font:600 16px/1.35 var(--f-serif);margin:18px 0 6px;text-wrap:balance}
+p{margin:0 0 12px;text-wrap:pretty}
+button{font:inherit;color:inherit;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,color .15s ease-out}
+button:active{transform:translateY(1px)}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* índice de canto */
+.tabs{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 0 0;border-bottom:2px solid var(--rule-strong);margin-bottom:16px;position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);scroll-snap-type:x proximity;scroll-padding-inline:56px}
+.tabs::-webkit-scrollbar{display:none}
+.tb{flex:0 0 auto;min-height:44px;padding:9px 15px 8px;border:1px solid var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;background:var(--paper-2);color:var(--ink-2);font:600 13px/1.2 var(--f-sans);white-space:nowrap;scroll-snap-align:start}
+.tb:hover{background:var(--accent-field);color:var(--accent-ink)}
+.tb.active{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+.tab{display:none}
+.tab.active{display:block}
+/* idea rectora */
+.hb{border-radius:var(--r);padding:12px 14px;margin:14px 0;border:1px solid var(--accent);background:var(--accent-field);font-size:15px;line-height:1.6}
+.hb-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);margin-bottom:6px}
+/* prerrequisitos (rol rosa) */
+.pre{border:1px solid var(--rs);border-radius:var(--r);background:var(--rs-f);padding:12px 14px;margin:16px 0}
+.pre-t{font:600 16px/1.35 var(--f-serif);color:var(--rs);margin-bottom:8px}
+.pre .acc{background:var(--paper);border-color:var(--rs)}
+.pre .acc-h{background:var(--paper)}
+.rem-line{font-size:13px;color:var(--ink-2);margin:8px 0;line-height:1.5}
+.chip-rs{display:inline-block;font:700 11px/1.4 var(--f-sans);padding:1px 7px;border:1px solid var(--rs);border-radius:2px;background:var(--rs-f);color:var(--rs);margin-right:6px;vertical-align:1px}
+/* cards */
+.card{background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;margin:12px 0;font-size:15px;line-height:1.6}
+.card p:last-child{margin-bottom:0}
+.card-t{font:600 16px/1.35 var(--f-serif);margin:0 0 6px}
+.card.fey{background:var(--co-f);border-color:var(--co)}
+.card.fey .card-t{color:var(--co)}
+.card.fey p{font:400 16px/1.6 var(--f-serif)}
+.card.ej{background:var(--paper);border-top:2px solid var(--rule-strong)}
+.badge{display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.02em;padding:2px 7px;border-radius:2px;margin:6px 4px 0 0;vertical-align:middle;border:1px solid currentColor}
+.b-az{background:var(--accent-field);color:var(--accent-ink)}
+.b-ro{background:var(--ro-f);color:var(--ro)}
+.b-am{background:var(--am-f);color:var(--am)}
+.b-ve{background:var(--ve-f);color:var(--ve)}
+.b-pu{background:var(--pu-f);color:var(--pu)}
+.b-co{background:var(--co-f);color:var(--co)}
+.b-rs{background:var(--rs-f);color:var(--rs)}
+.mini{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:6px 0}
+.mini.am{color:var(--am);background:var(--am-f);border:1px solid var(--am);border-radius:var(--r);padding:6px 9px}
+/* acordeones */
+.acc{border:1px solid var(--rule);border-radius:var(--r);margin:10px 0;overflow:hidden;background:var(--paper)}
+.acc-h{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;min-height:44px;padding:9px 14px;border:0;background:var(--paper-2);font:600 14.5px/1.35 var(--f-sans);text-align:left}
+.acc-h:hover{background:var(--accent-field)}
+.chev{transition:transform .2s;color:var(--accent-ink);flex:0 0 auto}
+.acc.op .chev{transform:rotate(180deg)}
+.acc-b{display:none;padding:10px 14px;font-size:15px;line-height:1.6}
+.acc.op .acc-b{display:block}
+.acc.no .acc-h{color:var(--ro)}
+/* tablas */
+.tw{overflow-x:auto;margin:12px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;font-variant-numeric:tabular-nums}
+th,td{border:0;border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
+thead th{font:700 14.5px/1.35 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong);background:var(--paper-2)}
+tbody tr:last-child>*{border-bottom:1px solid var(--rule-strong)}
+tbody th{font-weight:700;background:var(--paper-2)}
+/* mini-timeline */
+.tl{list-style:none;margin:12px 0;padding:0 0 0 20px;border-left:2px solid var(--accent)}
+.tl>li{position:relative;margin:0 0 12px;padding:9px 12px;background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);font-size:14.5px;line-height:1.55}
+.tl>li::before{content:"";position:absolute;left:-27px;top:13px;width:12px;height:12px;border-radius:1px;background:var(--accent);box-shadow:0 0 0 3px var(--paper)}
+.tl b{font-family:var(--f-serif)}
+/* simulador de recall */
+.rc{border:1px solid var(--rule-strong);border-radius:var(--r);padding:14px 16px;margin:24px 0;background:var(--paper)}
+.rc-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);padding-bottom:8px;margin-bottom:10px;border-bottom:1px solid var(--rule)}
+.rc-count{font:600 13px/1.4 var(--f-sans);color:var(--ink-3);font-variant-numeric:tabular-nums;margin-bottom:8px}
+.rc-card{border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);padding:14px;min-height:110px}
+.rc-q{font:400 16px/1.6 var(--f-serif);margin:0}
+.rc-a{margin:12px 0 0;padding-top:10px;border-top:1px dashed var(--accent);font-size:15px;line-height:1.6}
+.rc-a b{color:var(--accent-ink)}
+.rc-hint{font-size:13px;color:var(--am);margin-top:8px}
+.rc-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.go{min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent);color:var(--on-accent);font:600 14px/1.2 var(--f-sans)}
+.go:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+.gr{min-height:44px;padding:8px 14px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper);font:600 14px/1.2 var(--f-sans)}
+.gr.ok{border-color:var(--ve);color:var(--ve)}
+.gr.mid{border-color:var(--am);color:var(--am)}
+.gr.ko{border-color:var(--ro);color:var(--ro)}
+.gr.ok:hover{background:var(--ve-f)}.gr.mid:hover{background:var(--am-f)}.gr.ko:hover{background:var(--ro-f)}
+.ghost{min-height:44px;padding:8px 14px;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);font:600 14px/1.2 var(--f-sans);color:var(--ink-2)}
+.rc-end{margin-top:12px;padding:12px 14px;border-radius:var(--r);border:1px solid var(--rule);font-size:15px}
+.rc-end.ok{background:var(--ve-f);border-color:var(--ve);color:var(--ve)}
+.rc-end.rep{background:var(--am-f);border-color:var(--am);color:var(--am)}
+.gloss{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:18px 0 0;padding-top:8px;border-top:1px solid var(--rule)}
+.vanc{font-size:12.5px;line-height:1.5;padding-left:24px}
+.vanc li{margin:5px 0;word-break:break-word}
+.vanc li::marker{color:var(--ink-3);font-variant-numeric:tabular-nums}
+/* apertura: caso, ejes B/P/S/FR, problemas, jerarquía, hipótesis y diagramas (tokens existentes: el modo oscuro es automático) */
+.card.caso{background:var(--paper);border-left:3px solid var(--rule-strong)}
+.card.caso p{margin:0 0 10px}
+.card.vin{border-left:3px solid var(--accent)}
+.card.vin .card-t{color:var(--accent-ink)}
+.card.hx{background:var(--paper);border-left:3px solid var(--accent)}
+.card.hx .card-t{color:var(--accent-ink)}
+.ley{font-size:13px;line-height:1.9;color:var(--ink-2);margin:10px 0;padding:6px 10px;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2)}
+.chip-b,.chip-p,.chip-s,.chip-fr{display:inline-block;font:700 11px/1.4 var(--f-sans);padding:1px 7px;border:1px solid currentColor;border-radius:2px;margin-right:6px;vertical-align:1px}
+.chip-b{background:var(--co-f);color:var(--co)}
+.chip-p{background:var(--pu-f);color:var(--pu)}
+.chip-s{background:var(--ve-f);color:var(--ve)}
+.chip-fr{background:var(--am-f);color:var(--am)}
+mark.mk-b,mark.mk-p,mark.mk-s,mark.mk-fr{color:var(--ink);padding:0 2px;border-bottom:2px solid;border-radius:2px 2px 0 0;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+mark.mk-b{background:var(--co-f);border-bottom-color:var(--co)}
+mark.mk-p{background:var(--pu-f);border-bottom-color:var(--pu)}
+mark.mk-s{background:var(--ve-f);border-bottom-color:var(--ve)}
+mark.mk-fr{background:var(--am-f);border-bottom-color:var(--am)}
+.pid{display:inline-block;font:600 11.5px/1.4 var(--f-mono);padding:0 6px;border:1px solid var(--ink-3);border-radius:var(--r);background:var(--paper);color:var(--ink-2);margin-right:6px;vertical-align:1px;white-space:nowrap}
+.pbg{border-left:3px solid var(--ink-3);padding:2px 0 2px 12px;margin:22px 0}
+.pbg.b{border-left-color:var(--co)}
+.pbg.p{border-left-color:var(--pu)}
+.pbg.s{border-left-color:var(--ve)}
+.pbg.fr{border-left-color:var(--am)}
+.pbg-t{font:600 16px/1.35 var(--f-serif);margin:0 0 8px;color:var(--ink)}
+.pbg.b>.pbg-t{color:var(--co)}
+.pbg.p>.pbg-t{color:var(--pu)}
+.pbg.s>.pbg-t{color:var(--ve)}
+.pbg.fr>.pbg-t{color:var(--am)}
+ol.rank{list-style:none;counter-reset:rk;margin:14px 0;padding:0}
+ol.rank>li{counter-increment:rk;position:relative;margin:0 0 10px;padding:10px 12px 10px 60px;min-height:52px;background:var(--paper-2);border:1px solid var(--rule);border-left:4px solid var(--ink-3);border-radius:var(--r);font-size:14.5px;line-height:1.55}
+ol.rank>li::before{content:counter(rk);position:absolute;left:10px;top:6px;width:40px;text-align:center;font:600 28px/1.2 var(--f-serif);font-variant-numeric:tabular-nums;color:var(--ink-3)}
+ol.rank>li.g1{border-left-color:var(--ro)}
+ol.rank>li.g2{border-left-color:var(--co)}
+ol.rank>li.g3{border-left-color:var(--am)}
+ol.rank>li.g4{border-left-color:var(--ve)}
+ol.rank>li.g1::before{color:var(--ro)}
+ol.rank>li.g2::before{color:var(--co)}
+ol.rank>li.g3::before{color:var(--am)}
+ol.rank>li.g4::before{color:var(--ve)}
+/* diagramas HTML/CSS */
+.dg{margin:16px 0;padding:12px;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);max-width:100%;overflow-wrap:anywhere}
+.dg-t{font:600 15px/1.35 var(--f-serif);margin:0 0 10px}
+.dg figcaption{margin-top:10px}
+.dg-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;margin:8px 0}
+.dg-col{display:flex;flex-direction:column;gap:6px;flex:0 1 220px;min-width:0}
+.dg-n{border:1px solid var(--ink-3);border-radius:var(--r);background:var(--paper);color:var(--ink);padding:7px 10px;font-size:13.5px;line-height:1.4;min-width:0;max-width:100%}
+.dg-row>.dg-n{flex:0 1 220px}
+.dg-n.b{background:var(--co-f);border-color:var(--co);color:var(--co)}
+.dg-n.p{background:var(--pu-f);border-color:var(--pu);color:var(--pu)}
+.dg-n.s{background:var(--ve-f);border-color:var(--ve);color:var(--ve)}
+.dg-n.fr{background:var(--am-f);border-color:var(--am);color:var(--am)}
+.dg-n.ac{background:var(--accent-field);border-color:var(--accent);color:var(--accent-ink)}
+.dg-n.ro{background:var(--ro-f);border-color:var(--ro);color:var(--ro)}
+.dg-ar{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;min-width:28px;color:var(--ink-3)}
+.dg-ar::before{content:"→";order:2;font:400 22px/1 var(--f-sans);color:var(--ink-3)}
+.dg-lab{order:1;font-size:11.5px;line-height:1.3;color:var(--ink-3);text-align:center}
+@media (max-width:599px){
+.dg-row{flex-direction:column;align-items:stretch;flex-wrap:nowrap}
+.dg-col,.dg-row>.dg-n{flex:0 0 auto;width:100%}
+.dg-ar{flex-direction:row;align-self:center;gap:6px}
+.dg-ar::before{content:"↓";order:0}
+.dg-lab{order:1}
+.dg-row+.dg-row{border-top:1px dashed var(--ink-3);padding-top:12px;margin-top:12px}
+.dg-row>.dg-col+.dg-col{border-top:1px dashed var(--ink-3);padding-top:10px;margin-top:6px}
+}
+@media (min-width:700px){body{font-size:15.5px}.wrap{padding:22px 24px 64px}h1{font-size:28px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- /APERTURA_HEAD -->
+<h1>Apertura · Trastornos neurocognitivos</h1>
+<p class="mini">Sesión de apertura del ABP, caso del paciente que «no actúa como él mismo» en Saquisilí (Caso 6 del sílabo de la segunda rotación, con contenidos del Caso 3): términos desconocidos, problemas, jerarquización e hipótesis. No resuelve el caso.</p>
+<nav class="tabs">
+<button class="tb active" onclick="show('c0',this)">Caso</button>
+<button class="tb" onclick="show('t1',this)">Fatiga</button>
+<button class="tb" onclick="show('t2',this)">«No actúa como él mismo»</button>
+<button class="tb" onclick="show('t3',this)">Lúcido</button>
+<button class="tb" onclick="show('t4',this)">Somnoliento</button>
+<button class="tb" onclick="show('t5',this)">Estuporoso</button>
+<button class="tb" onclick="show('t6',this)">Inquietud</button>
+<button class="tb" onclick="show('t7',this)">Polidipsia</button>
+<button class="tb" onclick="show('t8',this)">Nocturia</button>
+<button class="tb" onclick="show('t9',this)">Estreñimiento</button>
+<button class="tb" onclick="show('pb',this)">Problemas</button>
+<button class="tb" onclick="show('jq',this)">Jerarquización</button>
+<button class="tb" onclick="show('hx',this)">Hipótesis</button>
+<button class="tb" onclick="show('tg',this)">Repaso global</button>
+</nav>
+<section class="tab active" id="c0">
+<h2>Caso</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Hombre mayor que vive solo, traído por su hijo porque desde hace dos días «no actúa como él mismo» y alterna lucidez con somnolencia.</p></div>
+
+<p class="ley">Marcas de color según el eje al que pertenece cada dato: <span class="chip-b">Biológico</span> <span class="chip-p">Psicológico</span> <span class="chip-s">Social</span> <span class="chip-fr">Factor de riesgo</span></p>
+
+<div class="card caso"><div class="card-t">Caso transcrito</div>
+
+<h3>Escenario</h3>
+<p>Usted se encuentra realizando la medicatura rural en el Centro de Salud de Saquisilí, y <mark class="mk-s">no tiene forma de derivar al paciente</mark>.</p>
+
+<h3>Contexto social</h3>
+<p><mark class="mk-s">Vive solo en su casa, cuenta con un hijo que lo visita ocasionalmente</mark>. Se mantiene físicamente activo, aunque <mark class="mk-b">ha reducido sus salidas</mark> <mark class="mk-fr">en los últimos meses</mark> <mark class="mk-b">debido a la fatiga</mark>.</p>
+
+<h3>Motivo y enfermedad actual</h3>
+<p>El paciente fue traído a la sala de emergencias <mark class="mk-s">por su hijo, quien refiere</mark> que el padre «<mark class="mk-b">no actúa como él mismo</mark>» <mark class="mk-b">desde hace dos días</mark>. Describe que <mark class="mk-b">parece estar lúcido un minuto y luego se vuelve somnoliento o estuporoso</mark>. El hijo informa que el paciente se encontraba <mark class="mk-p">caminando sin dirección en su barrio</mark>, <mark class="mk-fr">en clima caliente por varias horas</mark>. Un día antes de que aparecieran estos síntomas, su padre <mark class="mk-p">se le vio inquieto</mark>.</p>
+<p>El paciente menciona un <mark class="mk-fr">cuadro viral leve hace dos semanas, con fiebre y malestar general</mark>, que se resolvió sin tratamiento. <mark class="mk-b">Aumento en la frecuencia de micción y nocturia</mark> en los últimos días, pero con <mark class="mk-b">disminución significativo del volumen</mark>. Desde hace aproximadamente dos semanas, el paciente ha presentado <mark class="mk-b">estreñimiento, con evacuaciones dolorosas y menos frecuentes (una o dos veces por semana)</mark>.</p>
+<p><mark class="mk-b">Aumento de la sed</mark> <mark class="mk-fr">en las últimas semanas</mark>; indica que <mark class="mk-fr">camina en un clima caluroso para sus compras</mark> y que <mark class="mk-fr">ha disminuido la ingesta de agua a pesar de la sed</mark> en las tardes y noches <mark class="mk-p">por el aumento de la frecuencia urinaria en la noche</mark>.</p>
+</div>
+
+<p class="mini">Transcripción fiel. Las marcas no son diagnóstico: señalan datos que originan problemas en la pestaña Problemas.</p>
+
+<div class="mini am"><p><b>Incongruencias del caso.</b> «Aumento en la frecuencia de micción» con «disminución del volumen» admite tres lecturas: polaquiuria con poco volumen por micción, poliuria percibida como frecuencia, o caída de la diuresis total por deshidratación; solo la diuresis de 24 horas las separa. No se consigna la edad. El escenario es un Centro de Salud, pero el paciente es «traído a la sala de emergencias». El propio paciente «menciona» antecedentes pese a que su conciencia fluctúa: no queda claro cuándo y con qué fiabilidad los refiere.</p></div>
+
+<div class="card"><div class="card-t">Datos que faltan para la apertura</div>
+<ul>
+<li>Edad: no consignada.</li>
+<li>Fármacos (diuréticos, litio, vitamina D, calcio, anticolinérgicos, sedantes): no consignados.</li>
+<li>Antecedentes (diabetes, cáncer, hiperparatiroidismo, deterioro cognitivo previo, alcohol): no consignados.</li>
+<li>Signos vitales con temperatura y saturación de oxígeno: no consignados.</li>
+<li>Estado de hidratación: no consignado.</li>
+<li>Examen neurológico y búsqueda de focalidad: no consignados.</li>
+<li>Glucemia capilar: no consignada.</li>
+<li>Sodio, potasio, calcio corregido o iónico, albúmina, urea, creatinina y osmolalidad: no consignados.</li>
+<li>Examen elemental y microscópico de orina y ECG: no consignados.</li>
+<li>Diuresis medida: no consignada.</li>
+<li>Funcionalidad y cognición basales según el hijo: no consignadas.</li>
+</ul></div>
+
+<p class="gloss">Siglas: B, P, S y FR, ejes biológico, psicológico, social y factor de riesgo; ECG, electrocardiograma.</p>
+</section>
+<section class="tab" id="t1">
+<h2>Fatiga</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Síntoma de cansancio o falta de energía que limita la actividad; solo el paciente lo refiere, y no equivale a debilidad ni a sueño.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Contracción muscular y aporte de ATP</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Excitación.</b> El potencial de acción de la motoneurona llega a la unión neuromuscular, libera acetilcolina y despolariza la fibra muscular.</li>
+<li><b>Liberación de calcio.</b> La despolarización libera Ca²⁺ del retículo sarcoplásmico; el Ca²⁺ se une a la troponina C y deja libres los sitios de unión de la actina [1].</li>
+<li><b>Ciclo de puentes cruzados.</b> La cabeza de miosina se une a la actina y genera el golpe de fuerza. El ATP se une a la miosina y la suelta de la actina; su hidrólisis la prepara para un nuevo ciclo [1].</li>
+<li><b>Relajación.</b> La bomba de Ca²⁺ del retículo sarcoplásmico (SERCA), que gasta ATP, recapta el calcio y el músculo se relaja.</li>
+<li><b>Reposición de ATP.</b> La reserva muscular de ATP es mínima. Se resintetiza por tres vías: fosfocreatina (inmediata y breve), glucólisis anaerobia (rápida, con lactato) y fosforilación oxidativa (sostenida, con oxígeno y sustratos) [1].</li>
+</ol>
+<p><b>Ventana de normalidad.</b> Con el esfuerzo repetido o prolongado el rendimiento baja de forma gradual y se recupera con el reposo; la recuperación completa tras descansar es lo esperable.</p>
+<p><b>Qué lo rompe.</b> Los puntos vulnerables son la resíntesis de ATP, que depende del oxígeno y de los sustratos, y el manejo del calcio, que depende del medio iónico.</p>
+<p><b>Correlato clínico.</b> Si falla el aporte de ATP o el manejo del calcio, la fuerza cae con la repetición del esfuerzo (fatigabilidad); se explora repitiendo una maniobra de fuerza y comparando el inicio con el final.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Comando motor central y percepción del esfuerzo</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Intención y programa.</b> La corteza prefrontal, la premotora y el área motora suplementaria planifican el movimiento [2].</li>
+<li><b>Comando.</b> La corteza motora primaria envía la orden por el tracto corticoespinal hasta la motoneurona α del músculo.</li>
+<li><b>Copia de eferencia.</b> Una copia del comando (descarga corolaria) llega a áreas sensitivas y a la ínsula, sin esperar el resultado en el músculo [2].</li>
+<li><b>Retroalimentación.</b> Los aferentes del músculo informan de la longitud, la tensión y el estado metabólico.</li>
+<li><b>Percepción del esfuerzo.</b> El cerebro compara el comando enviado con lo que vuelve; el esfuerzo percibido refleja cuánto comando exige la tarea [3].</li>
+</ol>
+<p><b>Ventana de normalidad.</b> El esfuerzo percibido sube con la carga y la duración de la tarea y baja con el reposo; una misma tarea cuesta más cuanto más larga es.</p>
+<p><b>Qué lo rompe.</b> Cuando se necesita más comando para lograr la misma fuerza, o la programación central se hace con dificultad, la tarea se percibe más pesada aunque el músculo responda.</p>
+<p><b>Correlato clínico.</b> La queja de cansancio puede coexistir con fuerza normal en el examen; se explora preguntando qué actividad cuesta y midiendo la fuerza muscular.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [1]</span> <span class="badge b-pu">Kandel et al. 2021 [2]</span> <span class="badge b-pu">Enoka y Duchateau 2016 [3]</span> Fisiología del músculo, control motor y percepción del esfuerzo.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Síntoma incapacitante en el que la función física y cognitiva queda limitada, y que solo se mide por autorreporte. Se distingue de la fatigabilidad, que es la caída medible del rendimiento durante una tarea [3] [4].</p>
+<p><span class="badge b-pu">Enoka y Duchateau 2016 [3]</span> <span class="badge b-pu">Kluger et al. 2013 [4]</span></p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>El músculo funciona como un motor que gasta combustible (ATP) y que el cerebro dirige. La fatiga es la sensación de que hacer lo mismo cuesta cada vez más, aunque nadie la mida desde fuera. Puede venir del combustible, de las órdenes del cerebro o de cómo el cerebro percibe el esfuerzo. Por eso es un aviso, no un diagnóstico.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>El paciente redujo sus salidas en los últimos meses por la fatiga. Para reconocerla como fatiga hay que preguntar qué actividad se volvió costosa, desde cuándo y si mejora con el reposo, y comprobar en el examen si hay debilidad. El caso no aporta esos datos.</p></div>
+
+<div class="card vin"><div class="card-t">Por qué importa en este caso</div><p><span class="pid">B5</span> <span class="pid">FR4</span> La fatiga de meses antecede al cambio agudo de dos días. Como síntoma subjetivo no señala una causa por sí sola: sin examen de fuerza ni datos de sueño, ánimo, fármacos o laboratorio, queda como antecedente subagudo, no como diagnóstico.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Debilidad (paresia)</b></td><td>Es pérdida objetiva de fuerza, medible desde la primera contracción; la fatiga es sensación de cansancio y puede coexistir con fuerza normal.</td></tr>
+<tr><td><b>Astenia</b></td><td>Término de uso clínico en español, a menudo sinónimo de fatiga o de falta general de energía; conviene precisar qué describe el paciente.</td></tr>
+<tr><td><b>Somnolencia</b></td><td>Es tendencia a dormirse por baja alerta; la fatiga es falta de energía para actuar y no implica quedarse dormido.</td></tr>
+<tr><td><b>Fatigabilidad</b></td><td>Es la caída medible del rendimiento durante una tarea; la fatiga se refiere por el paciente [3].</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t1"><div class="rc-t">Simulador · Recall de fatiga</div><div class="rc-count" id="rc-t1-n"></div><div class="rc-card" id="rc-t1-c"></div><div class="rc-btns" id="rc-t1-b"></div><div id="rc-t1-e"></div></div>
+
+<p class="gloss">Siglas: ATP, trifosfato de adenosina; SERCA, ATPasa de Ca²⁺ del retículo sarco(endo)plásmico.</p>
+</section>
+<section class="tab" id="t2">
+<h2>«No actúa como él mismo»</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Frase coloquial que apunta a un cambio agudo del estado mental respecto de cómo era la persona antes; exige conocer esa línea basal.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Dominios cognitivos</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Criterio de agrupación.</b> Seis funciones mentales que el DSM-5-TR separa para describir la cognición; cada una se apoya en regiones y redes cerebrales distintas y se explora con tareas distintas [5] [6].</p>
+<div class="tw"><table><thead><tr><th>Dominio</th><th>Acción o papel</th><th>Regiones principales</th><th>Qué falla si claudica</th></tr></thead><tbody>
+<tr><td><b>Atención compleja</b></td><td>Sostener, dividir y seleccionar la atención; procesar a buena velocidad.</td><td>Redes frontoparietales y tálamo.</td><td>Se distrae, pierde el hilo y rinde mal en cualquier tarea.</td></tr>
+<tr><td><b>Función ejecutiva</b></td><td>Planificar, decidir, mantener datos en mente y corregir errores.</td><td>Corteza prefrontal.</td><td>No organiza ni corrige sus actos; es rígido o impulsivo.</td></tr>
+<tr><td><b>Aprendizaje y memoria</b></td><td>Registrar y recordar información nueva y reciente.</td><td>Hipocampo y lóbulo temporal medial.</td><td>Repite preguntas y olvida lo ocurrido hace poco.</td></tr>
+<tr><td><b>Lenguaje</b></td><td>Producir y comprender palabras.</td><td>Áreas perisilvianas del hemisferio dominante.</td><td>No encuentra palabras o no comprende lo que se le dice.</td></tr>
+<tr><td><b>Perceptivo-motor</b></td><td>Percibir el espacio, construir figuras y ejecutar movimientos aprendidos.</td><td>Lóbulos parietal y occipital.</td><td>Se pierde en espacios conocidos o falla al vestirse.</td></tr>
+<tr><td><b>Cognición social</b></td><td>Reconocer emociones y anticipar lo que otros piensan.</td><td>Prefrontal ventromedial y temporal anterior.</td><td>Conducta inapropiada, sin empatía ni ajuste al contexto.</td></tr>
+</tbody></table></div>
+<p><b>Jerarquía.</b> La atención compleja es la base de las demás: si falla, el paciente rinde mal en memoria o lenguaje sin que esos dominios estén dañados, por lo que se evalúa primero.</p>
+<p><b>Correlato clínico.</b> Cada dominio se explora con una tarea breve: repetir dígitos para la atención, recordar tres palabras para la memoria, nombrar objetos para el lenguaje.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Funcionalidad basal: ABVD y AIVD</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Criterio de agrupación.</b> Las actividades básicas (ABVD, índice de Katz) son las del autocuidado; las instrumentales (AIVD, escala de Lawton) son las que permiten vivir de forma independiente en la comunidad [7] [8].</p>
+<div class="tw"><table><thead><tr><th>Grupo</th><th>Actividades</th><th>Función que mide</th><th>Qué falla si claudica</th></tr></thead><tbody>
+<tr><td><b>ABVD (Katz)</b></td><td>Bañarse, vestirse, usar el retrete, trasladarse, continencia y alimentarse.</td><td>Autocuidado básico.</td><td>Necesita ayuda directa de otra persona para cuidarse.</td></tr>
+<tr><td><b>AIVD (Lawton)</b></td><td>Usar el teléfono, hacer compras, preparar comida, cuidar la casa, lavar la ropa, transportarse, manejar la medicación y las finanzas.</td><td>Independencia en la comunidad.</td><td>No puede vivir solo sin supervisión.</td></tr>
+</tbody></table></div>
+<p><b>Jerarquía.</b> Las AIVD son tareas más complejas, que exigen planificar, recordar y manejar dinero o medicación; las ABVD son más elementales. Por eso las AIVD informan más de la cognición.</p>
+<p><b>Correlato clínico.</b> La funcionalidad basal se pregunta al paciente y a un informante: qué hacía solo hace un mes. Sin esa línea basal no se puede afirmar que algo cambió.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">DSM-5-TR 2022 [5]</span> <span class="badge b-pu">Snell 2025 [6]</span> <span class="badge b-pu">Katz et al. 1963 [7]</span> <span class="badge b-pu">Lawton y Brody 1969 [8]</span> Dominios neurocognitivos y valoración funcional.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Término médico más cercano: alteración aguda del estado mental, es decir, un cambio de la atención, la conciencia o la cognición que aparece en horas o pocos días, se aparta del estado basal de la persona y tiende a fluctuar durante el día.</p>
+<p><span class="badge b-pu">DSM-5-TR 2022 [5]</span> <span class="badge b-pu">Inouye et al. 1990 [9]</span></p>
+<p class="mini am">Interpretación tomada: la frase del hijo se lee como cambio agudo respecto de la línea basal, no como diagnóstico. Alternativa: uso popular para cualquier cambio de carácter o ánimo, incluso gradual y sin alteración de la atención o la conciencia. No equivale a delirium.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Cada persona tiene una forma de ser: cómo habla, atiende, se organiza y se arregla sola. «No actúa como él mismo» dice que esa forma cambió de golpe. Para saberlo hay que comparar con cómo era antes; sin esa comparación solo hay una impresión. Qué función cambió y con qué rapidez son las preguntas que ordenan lo que sigue.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>El hijo dice que su padre «no actúa como él mismo» desde hace dos días. Para convertir la frase en dato hay que preguntar qué hacía hace un mes (compras, medicación, dinero), qué dejó de hacer y si el cambio fue brusco o gradual. El caso no da esa línea basal.</p></div>
+
+<div class="card vin"><div class="card-t">Por qué importa en este caso</div><p><span class="pid">B1</span> <span class="pid">S3</span> La frase es el motivo de consulta y viene del hijo, que visita solo ocasionalmente. Su valor depende de la línea basal que él pueda describir: sin ella, no se distingue un cambio de dos días de un deterioro previo que nadie había notado.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Cambio crónico de la cognición</b></td><td>Se instala en meses o años y no fluctúa durante el día; el cambio agudo lo hace en horas o días.</td></tr>
+<tr><td><b>Cambio de carácter o de ánimo</b></td><td>Puede ser reactivo y conservar atención y conciencia; el cambio agudo del estado mental compromete la atención.</td></tr>
+<tr><td><b>Delirium</b></td><td>Es un diagnóstico con criterios [5]; la frase solo orienta y no lo establece.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t2"><div class="rc-t">Simulador · Recall de «no actúa como él mismo»</div><div class="rc-count" id="rc-t2-n"></div><div class="rc-card" id="rc-t2-c"></div><div class="rc-btns" id="rc-t2-b"></div><div id="rc-t2-e"></div></div>
+
+<p class="gloss">Siglas: ABVD, actividades básicas de la vida diaria; AIVD, actividades instrumentales de la vida diaria; DSM-5-TR, Manual diagnóstico y estadístico de los trastornos mentales, 5.ª edición, texto revisado.</p>
+</section>
+<section class="tab" id="t3">
+<h2>Lúcido</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Persona despierta, atenta y con pensamiento coherente; la lucidez exige alerta y contenido a la vez, y puede perderse y volver.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Sistema activador reticular ascendente</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Criterio de agrupación.</b> Conjunto de núcleos del tronco encefálico, del hipotálamo y del prosencéfalo basal que proyectan al tálamo y a la corteza y mantienen la corteza despierta. Cada grupo usa su neurotransmisor [1] [6] [10].</p>
+<div class="tw"><table><thead><tr><th>Elemento</th><th>Acción o papel</th><th>Neurotransmisor</th><th>Qué falla si claudica</th></tr></thead><tbody>
+<tr><td><b>Locus coeruleus</b></td><td>Sostiene la vigilia y la respuesta de alerta.</td><td>Noradrenalina.</td><td>Baja la alerta y la reactividad al estímulo.</td></tr>
+<tr><td><b>Núcleos del rafe</b></td><td>Modulan el ciclo vigilia-sueño y el nivel de activación.</td><td>Serotonina.</td><td>Se altera la regulación de la vigilia y el sueño.</td></tr>
+<tr><td><b>Núcleos tegmentales laterodorsal y pedunculopontino</b></td><td>Activan el tálamo para transmitir señales a la corteza.</td><td>Acetilcolina.</td><td>El tálamo deja de activar la corteza.</td></tr>
+<tr><td><b>Hipotálamo posterior (tuberomamilar)</b></td><td>Promueve la vigilia.</td><td>Histamina.</td><td>Aumenta la tendencia al sueño.</td></tr>
+<tr><td><b>Prosencéfalo basal</b></td><td>Activa directamente la corteza cerebral.</td><td>Acetilcolina.</td><td>La corteza se activa menos.</td></tr>
+</tbody></table></div>
+<p><b>Jerarquía.</b> La parte alta del tegmento del tronco (puente y mesencéfalo) y el diencéfalo concentran las vías: una lesión bilateral pequeña ahí reduce la alerta más que una lesión grande en un hemisferio [10].</p>
+<p><b>Correlato clínico.</b> Si el sistema activador rinde menos, el paciente pasa de despierto a somnoliento, estuporoso o comatoso; se explora observando si abre los ojos al llamado y qué estímulo necesita.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Nivel y contenido de la conciencia</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Activación.</b> El sistema activador reticular ascendente mantiene la corteza en vigilia: es el nivel de la conciencia [10].</li>
+<li><b>Atención.</b> La red atencional dirige esa vigilia hacia lo que importa y sostiene el foco.</li>
+<li><b>Contenido.</b> La corteza y sus redes procesan lo percibido y lo recordado: orientación, pensamiento, lenguaje y conducta.</li>
+<li><b>Conciencia plena.</b> Nivel y contenido operan juntos; la persona se da cuenta de sí misma y del entorno y responde de forma coherente.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> En la vigilia el nivel es estable: se despierta con estímulo leve, atiende y mantiene una conversación coherente; durante el sueño el nivel baja y se recupera al despertar.</p>
+<p><b>Qué lo rompe.</b> El nivel baja si fallan el sistema activador o ambos hemisferios de forma amplia; el contenido se altera por lesión o disfunción cortical y puede alterarse con el nivel conservado [10].</p>
+<p><b>Correlato clínico.</b> Se distingue explorando primero el nivel (qué estímulo despierta al paciente) y luego el contenido (orientación, atención y coherencia de las respuestas).</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Red atencional</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Criterio de agrupación.</b> Tres redes que cumplen funciones distintas de la atención: estar preparado, dirigir el foco y resolver el conflicto. Cada una tiene regiones y un neurotransmisor dominante [11].</p>
+<div class="tw"><table><thead><tr><th>Red</th><th>Acción o papel</th><th>Regiones y neurotransmisor</th><th>Qué falla si claudica</th></tr></thead><tbody>
+<tr><td><b>Alerta</b></td><td>Alcanzar y mantener un estado de preparación para responder.</td><td>Frontal y parietal; noradrenalina.</td><td>No se mantiene la atención sostenida y el paciente se adormece.</td></tr>
+<tr><td><b>Orientación</b></td><td>Dirigir el foco hacia un estímulo y seleccionar información.</td><td>Parietal y campos oculares frontales; acetilcolina.</td><td>Tarda en dirigir la atención o ignora estímulos.</td></tr>
+<tr><td><b>Control ejecutivo</b></td><td>Resolver el conflicto entre estímulos y mantener el objetivo.</td><td>Cíngulo anterior y prefrontal; dopamina.</td><td>Se distrae con lo irrelevante y no sostiene la tarea.</td></tr>
+</tbody></table></div>
+<p><b>Jerarquía.</b> La alerta sostiene a las otras dos: sin un nivel de activación adecuado, la orientación y el control ejecutivo no rinden aunque sus regiones estén sanas.</p>
+<p><b>Correlato clínico.</b> La atención se explora a la cabecera con tareas breves, como repetir dígitos o decir los meses al revés; un fallo mantenido indica atención alterada.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «“No actúa como él mismo”»: dominios cognitivos. La atención compleja es uno de los seis dominios; la red atencional es su sustrato.</p>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [1]</span> <span class="badge b-pu">Snell 2025 [6]</span> <span class="badge b-pu">Posner et al. 2019 [10]</span> <span class="badge b-pu">Petersen y Posner 2012 [11]</span> Neuroanatomía, fisiología de la vigilia y atención.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>En la clínica, persona lúcida es la que está despierta (nivel de conciencia normal), atiende y piensa con coherencia (contenido normal). La conciencia se describe con esos dos componentes: nivel y contenido [10]. La atención y la conciencia sostenidas son lo que se altera en el delirium [5].</p>
+<p><span class="badge b-pu">Posner et al. 2019 [10]</span> <span class="badge b-pu">DSM-5-TR 2022 [5]</span></p>
+<p class="mini am">Interpretación tomada: «lúcido» no es un término con criterios propios en las fuentes; se lee como nivel normal de alerta más contenido coherente, en el momento en que se observa.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Para que una casa esté «encendida» hacen falta dos cosas: que llegue la corriente y que haya algo funcionando dentro. Estar lúcido es lo mismo: el tronco del encéfalo da la corriente (estar despierto) y la corteza hace el trabajo (atender, entender, responder con sentido). Si baja la corriente o falla el trabajo, la persona deja de estar lúcida.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Según el hijo, el paciente parece lúcido un minuto y luego se vuelve somnoliento. Reconocer lucidez en ese minuto exige comprobar que está despierto, que atiende cuando se le habla y que responde con coherencia. El caso no dice cuánto duran esos periodos ni qué se le preguntó.</p></div>
+
+<div class="card vin"><div class="card-t">Por qué importa en este caso</div><p><span class="pid">B1</span> «Lúcido un minuto y luego somnoliento» describe un nivel de conciencia que cambia durante el día: la fluctuación, rasgo que se reconoce con el método CAM [9]. Nombrar el rasgo no diagnostica; queda por documentar la atención y la causa.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Orientado</b></td><td>Sabe quién es, dónde está y en qué fecha: es contenido; se puede estar orientado un instante y dormirse al siguiente.</td></tr>
+<tr><td><b>Alerta</b></td><td>Es el nivel de vigilia y de respuesta al entorno; la persona alerta puede no estar lúcida si su pensamiento es incoherente.</td></tr>
+<tr><td><b>Vigil</b></td><td>Describe estar despierto con los ojos abiertos; no garantiza atención ni contenido coherente [10].</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t3"><div class="rc-t">Simulador · Recall de lúcido</div><div class="rc-count" id="rc-t3-n"></div><div class="rc-card" id="rc-t3-c"></div><div class="rc-btns" id="rc-t3-b"></div><div id="rc-t3-e"></div></div>
+
+<p class="gloss">Siglas: CAM, Confusion Assessment Method (método de evaluación de la confusión); DSM-5-TR, Manual diagnóstico y estadístico de los trastornos mentales, 5.ª edición, texto revisado.</p>
+</section>
+<section class="tab" id="t4">
+<h2>Somnoliento</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Nivel de conciencia con tendencia a dormirse que se corrige con un estímulo verbal; es un hallazgo del examen, no el sueño normal.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Ciclo sueño-vigilia</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Presión de sueño (proceso S).</b> Cuanto más tiempo lleva despierta la persona, más se acumulan sustancias promotoras del sueño, como la adenosina, y mayor es la necesidad de dormir [1].</li>
+<li><b>Reloj circadiano (proceso C).</b> El núcleo supraquiasmático del hipotálamo, sincronizado por la luz que llega desde la retina, fija un ritmo de aproximadamente 24 horas y ordena cuándo conviene estar despierto [1] [2].</li>
+<li><b>Interruptor del sueño.</b> El área preóptica ventrolateral (VLPO) inhibe los núcleos que mantienen la vigilia; la melatonina de la glándula pineal, liberada en la oscuridad, acompaña la señal nocturna [2].</li>
+<li><b>Estabilización de la vigilia.</b> Las neuronas de orexina (hipocretina) del hipotálamo lateral excitan los núcleos de vigilia e impiden que el sistema oscile entre sueño y vigilia [2].</li>
+</ol>
+<p><b>Ventana de normalidad.</b> La persona sana se duerme cuando S y C coinciden en la noche, y se despierta del todo ante cualquier estímulo suave; la somnolencia diurna cede al activarse [1].</p>
+<p><b>Qué lo rompe.</b> El punto vulnerable es el interruptor: si falla el soporte de la vigilia (por una enfermedad sistémica o cerebral), el sueño invade el día y la persona no se mantiene despierta sin estímulo.</p>
+<p><b>Correlato clínico.</b> Se observa si la persona mantiene los ojos abiertos y la conversación sin que nadie la estimule; se pregunta por el sueño nocturno y por cuánto duerme de día.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Lúcido»: sistema activador reticular ascendente (SARA). Las neuronas del tronco encefálico lo mantienen activo y sostienen la vigilia cortical.</p>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [1]</span> <span class="badge b-pu">Kandel et al. 2021 [2]</span> Fisiología y neurociencia del sueño.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Somnolencia: nivel de conciencia reducido en el que la persona tiende a dormirse y se despierta con un estímulo verbal, pero no mantiene la vigilia por sí sola. Forma parte de una escala que va de la alerta a la somnolencia, el estupor y el coma, ordenada por el estímulo que se necesita para despertarla [10].</p>
+<p><span class="badge b-pu">Plum y Posner 2019 [10]</span></p></div>
+
+<div class="card"><div class="card-t">Escala de niveles de conciencia y cómo se explora</div>
+<div class="tw"><table><thead><tr><th>Nivel</th><th>Qué se observa</th><th>Estímulo con que se explora</th></tr></thead><tbody>
+<tr><td><b>Alerta</b></td><td>Ojos abiertos, atención y respuesta apropiadas.</td><td>Ninguno; basta la conversación.</td></tr>
+<tr><td><b>Somnolencia</b></td><td>Tiende a dormirse si no se le habla; responde con lentitud.</td><td>Llamarlo por su nombre o hablarle en voz alta.</td></tr>
+<tr><td><b>Estupor</b></td><td>Solo despierta con un estímulo vigoroso y repetido, y vuelve a dormirse.</td><td>Estímulo doloroso o sacudida enérgica.</td></tr>
+<tr><td><b>Coma</b></td><td>No despierta con ningún estímulo [10].</td><td>Estímulo doloroso; no hay apertura ocular.</td></tr>
+</tbody></table></div>
+<p class="mini">Terminología: las fuentes usan «letargia» y «obtundación» para los grados intermedios entre alerta y estupor, sin acuerdo uniforme sobre dónde termina cada una. Por eso importa más describir el estímulo y la respuesta que fiarse de la etiqueta [10].</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Piensa en una lámpara con regulador. Alerta es luz plena; somnoliento es luz baja que se apaga sola si nadie la toca. Basta hablarle para que vuelva a subir. Si hace falta algo más fuerte, ya no es somnolencia. La clave está en cuánto estímulo se necesita para mantener la luz encendida.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>El hijo cuenta que el paciente parece lúcido un minuto y luego se vuelve «somnoliento o estuporoso». Para decir cuál de los dos, hay que probar el estímulo: si se despierta al llamarlo y conversa, es somnolencia; si solo responde a un estímulo vigoroso, es estupor. El caso no dice qué estímulo se usó.</p></div>
+
+<div class="card vin"><div class="card-t">Por qué importa en este caso</div><p><span class="pid">B1</span> Es uno de los niveles entre los que oscila el paciente. Medirlo con el estímulo verbal permite seguir si el nivel de conciencia sube o baja a lo largo de las horas; el caso no lo registra, y es un dato faltante en la sección «Caso».</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Fatiga</b></td><td>Es cansancio con el esfuerzo; la persona está despierta y atenta. La somnolencia es tendencia a dormirse.</td></tr>
+<tr><td><b>Sueño fisiológico</b></td><td>Se despierta del todo con estímulos suaves, de forma reversible y a su hora. La somnolencia persiste despierta.</td></tr>
+<tr><td><b>Letargia y obtundación</b></td><td>Se usan para grados intermedios sin acuerdo entre fuentes; en este widget somnolencia designa el grado que cede al estímulo verbal.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t4"><div class="rc-t">Simulador · Recall de somnoliento</div><div class="rc-count" id="rc-t4-n"></div><div class="rc-card" id="rc-t4-c"></div><div class="rc-btns" id="rc-t4-b"></div><div id="rc-t4-e"></div></div>
+
+<p class="gloss">Siglas: SARA, sistema activador reticular ascendente; VLPO, área preóptica ventrolateral.</p>
+</section>
+<section class="tab" id="t5">
+<h2>Estuporoso</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Nivel de conciencia muy bajo: solo despierta con un estímulo vigoroso y repetido, y en cuanto cesa vuelve a dormirse.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Respuesta al estímulo nociceptivo</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Receptor y primera neurona.</b> Los nociceptores de la piel y los músculos envían la señal por fibras finas hasta el asta posterior de la médula [2].</li>
+<li><b>Vía espinotalámica.</b> La segunda neurona cruza la línea media en la médula y asciende por el cordón anterolateral hasta el tálamo [6].</li>
+<li><b>Tálamo y corteza.</b> Desde el tálamo, la señal llega a la corteza somatosensitiva, donde se percibe el dolor [6] [2].</li>
+<li><b>Respuesta motora.</b> Si la corteza y el tronco están funcionantes, la persona dirige la mano al estímulo; si solo conservan el tronco o la médula, la respuesta es más primitiva [10].</li>
+</ol>
+<div class="tw"><table><thead><tr><th>Respuesta al dolor</th><th>Qué hace el paciente</th><th>Qué nivel de función indica</th></tr></thead><tbody>
+<tr><td><b>Localiza</b></td><td>Lleva la mano hacia el estímulo, a veces cruzando la línea media.</td><td>Percepción y conducta integradas: corteza y vías de conexión funcionantes.</td></tr>
+<tr><td><b>Retira</b></td><td>Aparta el miembro del estímulo sin dirigirlo.</td><td>Reflejo de retirada; el estímulo se percibe pero no se integra.</td></tr>
+<tr><td><b>Flexión anormal</b></td><td>Flexiona codo y muñeca y aduce el brazo.</td><td>Disfunción por encima del tronco encefálico medio.</td></tr>
+<tr><td><b>Extensión</b></td><td>Extiende codo y muñeca con rotación interna del brazo.</td><td>Disfunción más caudal del tronco encefálico.</td></tr>
+</tbody></table></div>
+<p><b>Ventana de normalidad.</b> En la persona despierta, un estímulo doloroso se localiza y se retira de forma inmediata y proporcionada [6].</p>
+<p><b>Qué lo rompe.</b> El punto vulnerable es la integración cortical: al fallar, el dolor se percibe sin conducta dirigida o solo queda el reflejo; la correlación con el nivel anatómico es aproximada y no localiza por sí sola [10].</p>
+<p><b>Correlato clínico.</b> Se explora con presión central, como el pellizco del trapecio o la presión esternal, y se anota la mejor respuesta motora; así se compara de un examen a otro.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Lúcido»: sistema activador reticular ascendente (SARA). Mantiene despierta a la corteza; su disfunción baja el nivel de conciencia.</p>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Lúcido»: nivel y contenido de la conciencia. El nivel es cuán despierto está; el contenido, lo que percibe y piensa.</p>
+
+<p class="mini"><span class="badge b-pu">Snell 2025 [6]</span> <span class="badge b-pu">Kandel et al. 2021 [2]</span> <span class="badge b-pu">Plum y Posner 2019 [10]</span> Neuroanatomía, neurociencia y neurología del coma.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Estupor: falta de respuesta de la que el sujeto solo puede despertar con estímulos vigorosos y repetidos; al cesar el estímulo, vuelve a su estado previo. Es el grado intermedio entre la somnolencia y el coma, que es la falta de respuesta sin despertar posible [10].</p>
+<p><span class="badge b-pu">Plum y Posner 2019 [10]</span></p></div>
+
+<div class="card"><div class="card-t">Relación con la escala de coma de Glasgow</div>
+<p>La escala de Glasgow evalúa por separado la apertura ocular, la respuesta verbal y la mejor respuesta motora, y suma los tres componentes en un puntaje [12]. Se creó para valorar coma y alteración de la conciencia con un lenguaje común. No equivale a la palabra «estupor»: el estupor se define por el estímulo que despierta; Glasgow, por la respuesta en cada componente.</p>
+<p><span class="badge b-pu">Teasdale y Jennett 1974 [12]</span></p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Es como una persona que duerme muy profundo en un cuarto ruidoso. Llamarla no sirve; hay que sacudirla fuerte y repetido para que abra los ojos. En cuanto se la suelta, vuelve a dormirse. Si ni así despierta, ya es coma.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Según el hijo, el paciente se vuelve «somnoliento o estuporoso» minutos después de estar lúcido. Esa alternancia es un dato del relato, no del examen. Para distinguir estupor de somnolencia hay que ver qué estímulo lo despierta y cuánto tiempo se mantiene despierto; el caso no lo describe.</p></div>
+
+<div class="card vin"><div class="card-t">Por qué importa en este caso</div><p><span class="pid">B1</span> El estupor marca el extremo más bajo que describe el relato. Que el nivel suba y baje en pocos minutos, de lúcido a estuporoso, es un rasgo que el examen debe documentar, con estímulo y respuesta, antes de sacar conclusiones sobre su causa.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Coma</b></td><td>No despierta con ningún estímulo; el estuporoso sí lo hace, de forma breve y con estímulo vigoroso [10].</td></tr>
+<tr><td><b>Catatonia</b></td><td>El estupor catatónico es inmovilidad y falta de relación con el entorno en un paciente que puede estar despierto; es un síndrome psiquiátrico o médico distinto [5].</td></tr>
+<tr><td><b>Mutismo acinético</b></td><td>Parece despierto, con ojos abiertos que siguen, pero casi no habla ni se mueve; suele deberse a lesión frontal o diencefálica [10].</td></tr>
+<tr><td><b>Síndrome de enclaustramiento</b></td><td>Está despierto y consciente, pero casi paralizado; conserva los movimientos oculares verticales y el parpadeo, con los que se comunica [10].</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t5"><div class="rc-t">Simulador · Recall de estuporoso</div><div class="rc-count" id="rc-t5-n"></div><div class="rc-card" id="rc-t5-c"></div><div class="rc-btns" id="rc-t5-b"></div><div id="rc-t5-e"></div></div>
+
+<p class="gloss">Siglas: SARA, sistema activador reticular ascendente.</p>
+</section>
+<section class="tab" id="t6">
+<h2>Inquietud</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Exceso de actividad motora sin un fin claro, desde no poder quedarse quieto hasta caminar sin rumbo; varias causas la producen.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Circuitos frontosubcorticales y control de la actividad motora</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Criterio de agrupación.</b> Cinco circuitos paralelos conectan la corteza frontal con el cuerpo estriado, el pálido y el tálamo, y regresan a la corteza. Cada uno controla una función distinta; una lesión en cualquier punto del circuito produce el mismo síndrome que una lesión de la corteza de origen [13] [6].</p>
+<div class="tw"><table><thead><tr><th>Circuito</th><th>Función que sostiene</th><th>Qué falla si claudica</th></tr></thead><tbody>
+<tr><td><b>Dorsolateral</b></td><td>Función ejecutiva: planificar, organizar y cambiar de tarea.</td><td>La conducta pierde planificación y flexibilidad.</td></tr>
+<tr><td><b>Orbitofrontal</b></td><td>Inhibe impulsos y ajusta la conducta al contexto social.</td><td>Aparece desinhibición: actos impulsivos y sin freno.</td></tr>
+<tr><td><b>Cingulado anterior</b></td><td>Motivación: iniciar y sostener la conducta con un propósito.</td><td>Aparece apatía: la conducta no se inicia.</td></tr>
+<tr><td><b>Motor</b></td><td>Selecciona y modula el movimiento, con los ganglios basales.</td><td>Aparecen trastornos del movimiento, entre ellos la hipercinesia o la lentitud.</td></tr>
+</tbody></table></div>
+<p><b>Jerarquía.</b> El circuito motor decide cuánto y cómo se mueve; los otros tres deciden para qué: planificar, frenar y dar propósito. La actividad motora con propósito necesita los cuatro [13].</p>
+<p><b>Correlato clínico.</b> Se explora observando si la actividad tiene meta y si responde a indicaciones, y con pruebas ejecutivas sencillas; el movimiento sin meta apunta a que falla el propósito, el freno o la selección del movimiento.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Lúcido»: sistema activador reticular ascendente (SARA). La noradrenalina del locus coeruleus aumenta la activación; su exceso eleva la inquietud.</p>
+
+<p class="mini"><span class="badge b-pu">Cummings 1993 [13]</span> <span class="badge b-pu">Snell 2025 [6]</span> Circuitos frontosubcorticales y neuroanatomía.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Agitación psicomotora: actividad motora excesiva sin propósito, impulsada por una tensión interna, como no poder estar sentado, caminar de un lado a otro o retorcerse las manos. El DSM-5-TR la describe entre los signos observables por otras personas [5].</p>
+<p><span class="badge b-pu">DSM-5-TR 2022 [5]</span></p></div>
+
+<div class="card"><div class="card-t">Cuatro términos vecinos</div>
+<div class="tw"><table><thead><tr><th>Término</th><th>Qué es</th><th>Cómo se reconoce</th></tr></thead><tbody>
+<tr><td><b>Inquietud</b></td><td>Término general y leve: necesidad de moverse o dificultad para estar quieto.</td><td>Se mueve, cambia de postura, no descansa.</td></tr>
+<tr><td><b>Agitación</b></td><td>Inquietud más intensa, con tensión interna y actividad sin propósito [5].</td><td>Camina de un lado a otro, se retuerce las manos.</td></tr>
+<tr><td><b>Acatisia</b></td><td>Inquietud interna con urgencia por moverse, vinculada sobre todo al efecto de fármacos [5].</td><td>No puede quedarse sentado; el paciente la describe.</td></tr>
+<tr><td><b>Deambulación errante</b></td><td>Caminar sin dirección clara, con aparente falta de meta o de orientación.</td><td>Marcha prolongada que no lleva a un destino.</td></tr>
+</tbody></table></div></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Imagina un coche con el motor acelerado y sin conductor claro. El motor funciona, pero nada lo dirige. La inquietud es ese motor encendido: la persona se mueve mucho, pero sin destino. Lo que cambia entre inquietud, agitación y errancia es cuánto empuje hay y si queda alguna meta.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>El hijo vio inquieto al padre un día antes del cambio, y luego lo encontró caminando sin dirección por su barrio durante horas. Son dos momentos de actividad motora sin meta clara. El caso no dice si el paciente podía explicar por qué caminaba, si sentía la urgencia de moverse ni si tomaba fármacos.</p></div>
+
+<div class="card vin"><div class="card-t">Por qué importa en este caso</div><p><span class="pid">P1</span> <span class="pid">P2</span> La inquietud previa y la marcha sin rumbo son conductas que el caso describe antes y durante el cambio de estado mental. Nombrarlas con precisión orienta qué preguntar: si fue agitación, acatisia o errancia, y qué había cambiado el día anterior.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Acatisia</b></td><td>Se acompaña de una sensación interna de inquietud que el paciente refiere; la agitación puede ocurrir sin esa vivencia [5].</td></tr>
+<tr><td><b>Deambulación errante</b></td><td>La actividad es caminar sin destino; la agitación abarca cualquier movimiento sin propósito, sentado o de pie.</td></tr>
+<tr><td><b>Hiperactividad con propósito</b></td><td>Se mueve mucho, pero cada acto tiene una meta; en la agitación los actos no tienen fin.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t6"><div class="rc-t">Simulador · Recall de inquietud</div><div class="rc-count" id="rc-t6-n"></div><div class="rc-card" id="rc-t6-c"></div><div class="rc-btns" id="rc-t6-b"></div><div id="rc-t6-e"></div></div>
+
+<p class="gloss">Siglas: DSM-5-TR, Manual diagnóstico y estadístico de los trastornos mentales, 5.ª edición, texto revisado; SARA, sistema activador reticular ascendente.</p>
+</section>
+<section class="tab" id="t7">
+<h2>Polidipsia · sed aumentada</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>La sed es la señal con que el cuerpo pide agua; polidipsia es beber más de lo habitual, casi siempre empujado por sed aumentada.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Osmorregulación: osmorreceptores, sed y ADH</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Detección.</b> El órgano vasculoso de la lámina terminal y el órgano subfornical, dos estructuras del encéfalo sin barrera hematoencefálica completa, miden la osmolalidad de la sangre y la angiotensina II circulante [1].</li>
+<li><b>Integración.</b> Esas señales llegan al hipotálamo: activan los núcleos supraóptico y paraventricular, que sintetizan la hormona antidiurética (ADH), y las áreas que generan la sensación de sed [1].</li>
+<li><b>Liberación de ADH.</b> La neurohipófisis libera ADH a la sangre cuando la osmolalidad plasmática sube o el volumen circulante baja [1].</li>
+<li><b>Acción renal.</b> La ADH se une al receptor V2 de las células del túbulo colector, lo que inserta acuaporina-2 en la membrana apical; el agua se reabsorbe y la orina se concentra [1].</li>
+<li><b>Sed hipovolémica.</b> Si baja el volumen, los barorreceptores y el sistema renina-angiotensina activan la angiotensina II, que actúa sobre el órgano subfornical y estimula la sed y la ADH [1].</li>
+</ol>
+<p><b>Ventana de normalidad.</b> El umbral de la sed se sitúa alrededor de 285 mOsm/kg de osmolalidad plasmática, casi igual al umbral de liberación de ADH (alrededor de 284 mOsm/kg); por encima, la sed crece de forma lineal con la osmolalidad [14].</p>
+<p><b>Qué lo rompe.</b> El punto vulnerable es la conducta final: aunque la señal exista, si la persona no puede o no quiere beber, el sistema solo compensa concentrando la orina, y la osmolalidad sigue subiendo. La falta de sed (hipodipsia) vuelve peligrosa cualquier pérdida de agua [15].</p>
+<p><b>Correlato clínico.</b> Si la osmolalidad sube y la ADH actúa, la orina sale concentrada y escasa; si la ADH falta o el túbulo no responde, la orina sale diluida y abundante a pesar de la sed. Se explora con sodio y osmolalidad en sangre, osmolalidad urinaria y balance de líquidos.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Agua corporal y sed en el envejecimiento</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Reserva.</b> Con la edad disminuye la proporción de agua corporal total, por la menor masa muscular y el mayor tejido graso; la reserva para amortiguar pérdidas es menor [16].</li>
+<li><b>Señal.</b> La percepción de la sed puede atenuarse (hipodipsia) y la persona bebe menos de lo que necesita; la magnitud de este cambio sigue discutida en la literatura [15] [17].</li>
+<li><b>Respuesta renal.</b> El riñón envejecido concentra peor la orina, así que pierde más agua para eliminar la misma carga de solutos [16].</li>
+<li><b>Consecuencia.</b> Reserva menor, sed atenuada y riñón menos eficaz se suman: una pérdida de agua pequeña eleva con rapidez la osmolalidad.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> Los cambios son graduales y empiezan a notarse en la vejez; no hay una edad exacta, y varían entre personas.</p>
+<p><b>Qué lo rompe.</b> El punto vulnerable es el acceso al agua: restricción voluntaria, calor, enfermedad aguda o dependencia de otra persona para beber dejan al adulto mayor sin margen.</p>
+<p><b>Correlato clínico.</b> Un adulto mayor puede estar deshidratado sin referir sed. Se explora con mucosas, turgencia, presión arterial, frecuencia cardiaca, peso y sodio sérico; la sed referida no descarta ni confirma el déficit.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [1]</span> <span class="badge b-pu">Hughes et al. 2018 [14]</span> <span class="badge b-pu">McKenna y Thompson 1998 [15]</span> <span class="badge b-pu">Kane et al. 2018 [16]</span> <span class="badge b-pu">Deshayes 2026 [17]</span> Fisiología renal y neuroendocrina, y envejecimiento.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Polidipsia es la ingesta aumentada de líquidos. La sed es la sensación que impulsa a beber, y su aumento por encima de lo habitual es el origen más frecuente de la polidipsia, aunque la sed puede aumentar sin que la persona logre beber más.</p>
+<p><span class="badge b-pu">Harrison 22.ª ed. 2025 [18]</span> <span class="badge b-pu">Guyton y Hall 2021 [1]</span></p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>El cuerpo tiene un termostato del agua. Cuando la sangre se vuelve más concentrada o hay menos líquido, el cerebro lo nota y nos da sed; a la vez, ordena al riñón retener agua. Beber más es la respuesta del cerebro a ese aviso. Si el aviso es falso o falta, o si no podemos beber, el termostato queda desajustado.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Una persona refiere que «siente la boca seca y tiene sed todo el día» y que se levanta varias veces a tomar agua. Para reconocer sed aumentada se pregunta cuánto bebe en 24 horas, desde cuándo y si el aumento es continuo o solo de ciertas horas. En este paciente, la sed aumentada coexiste con una ingesta que él mismo redujo.</p></div>
+
+<div class="card vin"><div class="card-t">Por qué importa en este caso</div><p><span class="pid">B3</span> <span class="pid">P3</span> <span class="pid">FR3</span> El paciente tiene más sed desde hace semanas, pero toma menos agua para no orinar de noche. El caso no dice si el origen de la sed es osmótico o por pérdida de volumen: un dato faltante que orienta las hipótesis H2, H3 y H4 de «Hipótesis».</p></div>
+
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span>Mecanismo mínimo</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Paso causal.</b> La osmolalidad plasmática sube, o el volumen circulante baja, por pérdida de agua o ganancia de solutos.</li>
+<li><b>Quién lo ejecuta.</b> Los osmorreceptores del órgano vasculoso de la lámina terminal y del órgano subfornical activan la sed y la ADH.</li>
+<li><b>Consecuencia.</b> Aparece la sed; si la persona no repone el agua, la osmolalidad sigue subiendo.</li>
+</ol>
+<p class="mini">Correlato clínico: sed referida, mucosas secas y sodio u osmolalidad elevados en sangre.</p>
+</div></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Potomanía o polidipsia primaria</b></td><td>La persona bebe en exceso sin estímulo osmótico ni de volumen que lo justifique, por hábito o por causa psiquiátrica; la sed no es la señal de un déficit.</td></tr>
+<tr><td><b>Xerostomía</b></td><td>Es la sensación de boca seca por poca saliva; puede acompañar a la sed, pero no mide la necesidad de agua del cuerpo.</td></tr>
+<tr><td><b>Sed fisiológica</b></td><td>Responde al calor, al ejercicio o a una comida salada y se calma al beber; la sed aumentada es persistente o desproporcionada al contexto.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t7"><div class="rc-t">Simulador · Recall de polidipsia y sed aumentada</div><div class="rc-count" id="rc-t7-n"></div><div class="rc-card" id="rc-t7-c"></div><div class="rc-btns" id="rc-t7-b"></div><div id="rc-t7-e"></div></div>
+
+<p class="gloss">Siglas: ADH, hormona antidiurética; V2, receptor de vasopresina tipo 2; mOsm/kg, miliosmoles por kilogramo de agua.</p>
+</section>
+<section class="tab" id="t8">
+<h2>Nocturia</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Nocturia es despertarse de noche para orinar; es un síntoma que puede nacer de la vejiga, del volumen de orina o del sueño.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Llenado y vaciado vesical</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Llenado.</b> Los uréteres vierten orina y el detrusor, el músculo de la pared vesical, se relaja y se acomoda sin que suba mucho la presión; el esfínter uretral se mantiene cerrado [1].</li>
+<li><b>Control del llenado.</b> La inervación simpática (nervio hipogástrico) favorece la relajación del detrusor y el cierre del cuello vesical; el nervio pudendo, somático, mantiene contraído el esfínter externo [1].</li>
+<li><b>Sensación.</b> Al alcanzar la capacidad funcional, las aferentes de estiramiento envían la señal de llenado a la médula y al encéfalo; la persona nota la necesidad de orinar [1].</li>
+<li><b>Vaciado.</b> Con permiso cortical, el centro pontino de la micción activa la inervación parasimpática (nervio pélvico): el detrusor se contrae y el esfínter se relaja [1].</li>
+<li><b>Fin.</b> Al terminar, el detrusor se relaja y se reinicia el llenado.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> La capacidad funcional es el volumen que la vejiga tolera antes de una necesidad imperiosa; varía entre personas y a lo largo del día.</p>
+<p><b>Qué lo rompe.</b> El punto vulnerable es la acomodación del detrusor: si se contrae antes de tiempo o la vejiga se irrita, la capacidad funcional baja y aparecen micciones frecuentes de poco volumen.</p>
+<p><b>Correlato clínico.</b> Con capacidad funcional reducida, la persona orina muchas veces en pequeñas cantidades; se explora con el diario miccional, que registra hora y volumen de cada micción.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Concentración de la orina y ritmo circadiano de la diuresis</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Gradiente medular.</b> La rama ascendente gruesa del asa de Henle bombea sodio y cloro sin agua; con la urea, crea una médula renal cada vez más concentrada, y los vasos rectos conservan ese gradiente [1].</li>
+<li><b>Contracorriente.</b> El líquido que desciende por el asa pierde agua hacia la médula hiperosmótica y el que asciende se diluye: el multiplicador de contracorriente mantiene la diferencia [1].</li>
+<li><b>Concentración final.</b> En el túbulo colector, la ADH inserta acuaporina-2 y el agua sale hacia la médula: la orina se concentra [1].</li>
+<li><b>Ritmo circadiano.</b> De noche aumenta la ADH, así que la diuresis baja y la orina es más concentrada; por eso, en la juventud, la mayoría de la orina se produce de día [1].</li>
+<li><b>Poliuria nocturna.</b> Se pierde ese ritmo y se produce un exceso de orina durante el sueño: más de 20 % de la orina diaria en jóvenes y más de 33 % en adultos mayores [19].</li>
+</ol>
+<p><b>Ventana de normalidad.</b> La poliuria global se define como una diuresis de 24 horas por encima de 40 ml/kg [19]. La Sociedad Internacional de Continencia (ICS) define la poliuria nocturna como producción excesiva de orina en el periodo principal de sueño [20].</p>
+<p><b>Qué lo rompe.</b> El punto vulnerable es el gradiente medular o la ADH: si el riñón no puede concentrar, se pierde agua en exceso, de día y de noche, y la orina sale diluida.</p>
+<p><b>Correlato clínico.</b> Si el volumen nocturno es excesivo, el diario miccional de 3 días lo muestra; con la osmolalidad urinaria se distingue orina diluida de orina concentrada.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Polidipsia · sed aumentada»: osmorregulación. La ADH, liberada por osmolalidad alta o volumen bajo, concentra la orina al insertar acuaporina-2.</p>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [1]</span> <span class="badge b-pu">Van Kerrebroeck y Andersson 2014 [19]</span> <span class="badge b-pu">ICS, Hashim et al. 2019 [20]</span> Fisiología urinaria y terminología.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Nocturia es el síntoma de despertarse una o más veces durante la noche para orinar, en el que cada micción está precedida y seguida de sueño o de la intención de dormir. Como signo, es el número de micciones durante el periodo principal de sueño.</p>
+<p><span class="badge b-pu">ICS, Hashim et al. 2019 [20]</span></p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>De noche, el cuerpo debería producir poca orina para que podamos dormir. Si la vejiga es pequeña o irritable, si el riñón hace demasiada orina por la noche, o si dormimos mal y nos despertamos, terminamos levantándonos a orinar. La nocturia es esa consecuencia; la causa hay que buscarla.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Una persona dice: «me levanto tres veces a orinar». Para reconocer nocturia se pregunta si cada micción interrumpe el sueño, cuántas veces ocurre, cuánto sale cada vez y cuánto bebe por la tarde. En este paciente, la nocturia coexiste con volúmenes bajos de orina, un dato que la definición sola no explica.</p></div>
+
+<div class="card vin"><div class="card-t">Por qué importa en este caso</div><p><span class="pid">B2</span> <span class="pid">P3</span> El paciente orina más veces de noche, con menos volumen cada vez, y reduce el agua de la tarde para evitarlo. La pista «frecuencia aumentada con volumen disminuido» obliga a medir la diuresis de 24 horas: sin ella no se sabe si la diuresis total sube o baja.</p></div>
+
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span>Mecanismo mínimo</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Paso causal.</b> Se rompe el equilibrio nocturno entre volumen de orina producido y capacidad funcional de la vejiga.</li>
+<li><b>Quién lo ejecuta.</b> El riñón, por exceso de orina o ADH insuficiente, o el detrusor, por capacidad reducida o hiperactividad.</li>
+<li><b>Consecuencia.</b> La vejiga llega a su capacidad durante el sueño y la persona se despierta a orinar.</li>
+</ol>
+<p class="mini">Correlato clínico: número de micciones nocturnas y volumen de cada una en el diario miccional.</p>
+</div></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Polaquiuria</b></td><td>Aumento del número de micciones durante el día; se define por la frecuencia, no por el despertar nocturno [20].</td></tr>
+<tr><td><b>Poliuria</b></td><td>Se define por el volumen: una diuresis de 24 horas por encima de 40 ml/kg [19]; puede dar nocturia o polaquiuria, pero es un aumento de volumen.</td></tr>
+<tr><td><b>Oliguria</b></td><td>Disminución de la diuresis, con umbral de menos de 0,5 ml/kg por hora durante al menos 6 horas en la literatura de cuidados críticos [21]; la frecuencia puede estar normal o aumentada.</td></tr>
+<tr><td><b>Enuresis nocturna</b></td><td>Es la pérdida involuntaria de orina durante el sueño; en la nocturia la persona se despierta para orinar y no hay incontinencia [20].</td></tr>
+</tbody></table></div>
+<p class="mini am">En el caso, «aumento de la frecuencia con disminución del volumen» admite tres lecturas: polaquiuria con volumen por micción bajo, poliuria percibida como frecuencia o caída real de la diuresis total. Solo la diuresis de 24 horas las separa.</p>
+</div></div>
+
+<div class="rc" id="rc-t8"><div class="rc-t">Simulador · Recall de nocturia</div><div class="rc-count" id="rc-t8-n"></div><div class="rc-card" id="rc-t8-c"></div><div class="rc-btns" id="rc-t8-b"></div><div id="rc-t8-e"></div></div>
+
+<p class="gloss">Siglas: ADH, hormona antidiurética; ICS, Sociedad Internacional de Continencia (International Continence Society).</p>
+</section>
+<section class="tab" id="t9">
+<h2>Estreñimiento</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Estreñimiento es evacuar poco, con esfuerzo o con heces duras; puede ser un trastorno funcional del colon o el signo de otra enfermedad.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Motilidad colónica y reflejo de la defecación</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Motor local.</b> El sistema nervioso entérico, formado por los plexos mientérico y submucoso de la pared, coordina las contracciones del colon con independencia del cerebro; el simpático y el parasimpático solo lo modulan [1].</li>
+<li><b>Mezcla y avance.</b> Las contracciones segmentarias de las haustras mezclan el contenido; unas pocas veces al día, un movimiento en masa (una contracción propulsiva amplia) lo empuja hacia el recto [1].</li>
+<li><b>Llenado rectal.</b> Cuando las heces distienden el recto, el reflejo rectoanal inhibitorio relaja el esfínter anal interno, de músculo liso e involuntario; el esfínter anal externo, de músculo estriado, se contrae por el nervio pudendo [1].</li>
+<li><b>Decisión.</b> Con el momento y el lugar adecuados, la persona decide evacuar; si no, el esfínter externo y el músculo puborrectal retienen las heces [1].</li>
+<li><b>Maniobra defecatoria.</b> La persona aumenta la presión abdominal con el pujo, el piso pélvico y el esfínter externo se relajan, el ángulo anorrectal se abre y las heces salen [1].</li>
+</ol>
+<p><b>Ventana de normalidad.</b> Los movimientos en masa suelen desencadenarse tras las comidas (reflejo gastrocólico); la frecuencia normal de evacuación varía entre personas.</p>
+<p><b>Qué lo rompe.</b> El punto vulnerable es la coordinación: un colon lento retiene las heces, y un piso pélvico que no se relaja al pujar impide expulsarlas aunque haya llegado el estímulo.</p>
+<p><b>Correlato clínico.</b> Si el avance colónico es lento, hay pocas evacuaciones; si falla la expulsión, hay esfuerzo y sensación de evacuación incompleta. Se explora con la historia de hábitos y con el tacto rectal, que valora el tono y la relajación del esfínter.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Absorción de agua en el colon</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Entrada.</b> El íleon vierte al colon un contenido todavía líquido; el colon recibe más agua de la que finalmente se elimina [1].</li>
+<li><b>Transporte.</b> El epitelio colónico absorbe sodio de forma activa y el agua lo sigue por ósmosis; la aldosterona aumenta esa absorción [1].</li>
+<li><b>Tiempo.</b> Cuanto más tiempo permanece el contenido en el colon, más agua se absorbe y más duras salen las heces [1].</li>
+<li><b>Salida.</b> Las heces formadas llegan al recto con una consistencia que permite su expulsión sin esfuerzo excesivo.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> La mayor parte del agua que llega al colon se reabsorbe y solo una pequeña parte sale en las heces; el equilibrio depende de la hidratación y del tránsito.</p>
+<p><b>Qué lo rompe.</b> El punto vulnerable es el tiempo de tránsito: si el contenido avanza lento o el cuerpo ahorra agua por deshidratación, las heces se secan y endurecen.</p>
+<p><b>Correlato clínico.</b> Las heces duras y fragmentadas indican tránsito lento; se clasifican con la escala de Bristol, cuya forma de las heces se correlaciona con el tiempo de tránsito total [22].</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [1]</span> <span class="badge b-pu">Lewis y Heaton 1997 [22]</span> Fisiología digestiva.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Estreñimiento es la dificultad o la baja frecuencia de las evacuaciones, a menudo con esfuerzo o sensación de evacuación incompleta [23]. El estreñimiento funcional es una de las categorías de trastornos funcionales intestinales que se diagnostican con los criterios Roma IV [24].</p>
+<p><span class="badge b-pu">Mearin et al. 2016 [24]</span> <span class="badge b-pu">Mearin et al. 2016, guía clínica [23]</span></p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>El colon es un tubo que seca y empuja lo que sobra de la comida. Si el empuje es lento, o si el cuerpo ahorra agua porque está deshidratado, las heces se secan y se vuelven duras. Entonces cuesta evacuar, duele y la persona va menos veces. Eso es estreñimiento; la pregunta clave es por qué el colon va lento.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Una persona dice: «voy poco al baño y me cuesta». Para reconocer estreñimiento se pregunta cada cuánto evacúa, cómo son las heces según la escala de Bristol, si puja mucho, si siente que no termina y si hay dolor. Luego se busca si es funcional o si lo causa una enfermedad o un fármaco.</p></div>
+
+<div class="card vin"><div class="card-t">Por qué importa en este caso</div><p><span class="pid">B4</span> <span class="pid">FR4</span> El paciente evacúa pocas veces por semana, con dolor, desde hace unas dos semanas, junto con sed y fatiga previas. El caso no dice si el estreñimiento es funcional o secundario: faltan fármacos, hidratación y exámenes que lo orienten.</p></div>
+
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span>Mecanismo mínimo</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Paso causal.</b> El contenido avanza lento por el colon, o la expulsión rectal es ineficaz.</li>
+<li><b>Quién lo ejecuta.</b> El sistema nervioso entérico y el músculo liso del colon, o el piso pélvico y los esfínteres anales.</li>
+<li><b>Consecuencia.</b> Más tiempo de absorción de agua, heces duras, esfuerzo y evacuaciones menos frecuentes.</li>
+</ol>
+<p class="mini">Correlato clínico: forma de las heces en la escala de Bristol y esfuerzo referido al evacuar.</p>
+</div></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Obstrucción intestinal</b></td><td>Hay una barrera mecánica que detiene el tránsito de heces y gases, con dolor cólico, distensión y vómitos; es una urgencia, no un hábito lento [25].</td></tr>
+<tr><td><b>Impactación fecal</b></td><td>Es una masa de heces duras retenida en el recto que no puede expulsarse; puede ser consecuencia del estreñimiento y a veces sale diarrea por rebosamiento [25].</td></tr>
+<tr><td><b>Disinergia defecatoria</b></td><td>El colon avanza, pero el piso pélvico o el esfínter no se relajan al pujar y la expulsión falla; es un trastorno de la defecación, no del tránsito [25].</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="card"><div class="card-t">Estreñimiento funcional frente a secundario</div>
+<p>El funcional no tiene una causa orgánica identificable y se diagnostica con criterios clínicos. El secundario nace de otra enfermedad o de un fármaco [25]. Los grupos que se buscan, sin decir cuál tiene el paciente, son:</p>
+<div class="tw"><table><thead><tr><th>Grupo</th><th>Ejemplos</th></tr></thead><tbody>
+<tr><td><b>Metabólico</b></td><td>Hipercalcemia, hipotiroidismo y deshidratación.</td></tr>
+<tr><td><b>Farmacológico</b></td><td>Opioides y fármacos anticolinérgicos.</td></tr>
+<tr><td><b>Neurológico</b></td><td>Enfermedad de Parkinson y lesiones de la médula espinal.</td></tr>
+<tr><td><b>Obstructivo</b></td><td>Tumores y estenosis del colon o del recto.</td></tr>
+</tbody></table></div>
+<p class="mini">Escala de Bristol: siete formas de heces, de separadas y duras a líquidas; sirve para registrar la consistencia, que se correlaciona con el tránsito [22].</p></div>
+
+<div class="rc" id="rc-t9"><div class="rc-t">Simulador · Recall de estreñimiento</div><div class="rc-count" id="rc-t9-n"></div><div class="rc-card" id="rc-t9-c"></div><div class="rc-btns" id="rc-t9-b"></div><div id="rc-t9-e"></div></div>
+
+<p class="gloss">Siglas: Roma IV, criterios de Roma, cuarta edición, para trastornos funcionales digestivos.</p>
+</section>
+<section class="tab" id="pb">
+<h2>Problemas</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Cada problema va del dato del caso a su mecanismo y su consecuencia; donde el caso calla, el mecanismo se plantea como posible, no como probado.</p></div>
+<figure class="dg">
+<div class="dg-t">Mapa biopsicosocial del paciente</div>
+<div class="dg-row">
+<div class="dg-col"><div class="dg-n b">Conciencia fluctuante desde hace dos días</div><div class="dg-n b">Polaquiuria y nocturia con poco volumen</div><div class="dg-n b">Sed, estreñimiento y fatiga</div></div>
+<div class="dg-col"><div class="dg-n p">Inquietud el día previo</div><div class="dg-n p">Deambulación sin rumbo</div><div class="dg-n p">Restricción de agua para no orinar</div></div>
+<div class="dg-col"><div class="dg-n s">Vive solo, hijo ocasional</div><div class="dg-n s">Sin posibilidad de derivar</div><div class="dg-n s">Informante que no convive</div></div>
+<div class="dg-col"><div class="dg-n fr">Horas de calor</div><div class="dg-n fr">Cuadro viral hace dos semanas</div><div class="dg-n fr">Ingesta reducida y síntomas subagudos</div></div>
+</div>
+<div class="dg-row"><div class="dg-ar"><span class="dg-lab">convergen en</span></div></div>
+<div class="dg-row"><div class="dg-n ro">Cambio agudo y fluctuante del estado mental</div></div>
+<figcaption class="mini">Los factores de riesgo bajan el umbral o disparan el cuadro; los problemas biológicos lo expresan y los psicológicos y sociales lo revelan o lo dejan sin vigilancia.</figcaption>
+</figure>
+<p class="mini">Los problemas B abren por defecto; los demás ejes están cerrados. Las remisiones evitan repetir un mecanismo ya explicado en otra pestaña.</p>
+<figure class="dg">
+<div class="dg-t">Fisiopatología del problema principal (B1)</div>
+<div class="dg-row">
+<div class="dg-n b">Cerebro vulnerable: edad, reserva baja, posible deterioro previo</div>
+<div class="dg-ar"><span class="dg-lab">más</span></div>
+<div class="dg-n fr">Insulto sistémico: deshidratación, calor, infección, alteración metabólica</div>
+</div>
+<div class="dg-row"><div class="dg-ar"><span class="dg-lab">alteran</span></div></div>
+<div class="dg-row">
+<div class="dg-n b">Red atencional y sistema activador reticular ascendente</div>
+<div class="dg-ar"><span class="dg-lab">producen</span></div>
+<div class="dg-n ro">Inatención y conciencia fluctuante</div>
+</div>
+<figcaption class="mini">El sustrato vulnerable y el insulto sistémico se suman; ninguno de los dos basta por sí solo en muchos pacientes [26] [27].</figcaption>
+</figure>
+<figure class="dg">
+<div class="dg-t">Círculo vicioso del agua</div>
+<div class="dg-row">
+<div class="dg-n b">Diuresis o frecuencia urinaria aumentada</div>
+<div class="dg-ar"><span class="dg-lab">produce</span></div>
+<div class="dg-n b">Nocturia</div>
+<div class="dg-ar"><span class="dg-lab">lleva a</span></div>
+<div class="dg-n p">Restricción voluntaria de agua</div>
+</div>
+<div class="dg-row">
+<div class="dg-ar"><span class="dg-lab">causa</span></div>
+<div class="dg-n b">Deshidratación con orina más concentrada</div>
+<div class="dg-ar"><span class="dg-lab">empeora</span></div>
+<div class="dg-n ro">Más confusión y menos capacidad de beber</div>
+</div>
+<figcaption class="mini">El paciente intenta resolver la nocturia bebiendo menos y agrava la causa de la confusión; el círculo se cierra porque la confusión reduce la capacidad de pedir o buscar agua.</figcaption>
+</figure>
+
+<div class="pbg b"><div class="pbg-t">Biológicos</div>
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span><span class="pid">B1</span> Alteración aguda y fluctuante de la conciencia y la conducta</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> El hijo refiere que el padre «no actúa como él mismo» desde hace dos días y que parece estar «lúcido un minuto y luego… somnoliento o estuporoso».</p>
+<p><b>Fisiopatología.</b> Un cerebro con poca reserva más un insulto sistémico puede fallar en su red atencional; el resultado clínico es un cambio agudo con fluctuación, compatible con delirium, aunque el caso no permite afirmarlo [26] [27].</p>
+<ol class="tl">
+<li><b>Sustrato vulnerable.</b> Con la edad hay menos reserva neuronal y sináptica; un deterioro previo no reconocido bajaría más el umbral [26].</li>
+<li><b>Insulto sistémico.</b> Deshidratación, calor, infección reciente o una alteración metabólica alteran el medio interno y la perfusión cerebral.</li>
+<li><b>Falla de la red.</b> La red atencional frontoparietal y el sistema activador reticular ascendente (SARA) pierden coordinación, y la atención sostenida se hace inestable [6].</li>
+<li><b>Fluctuación.</b> El nivel de activación sube y baja en horas: el paciente alterna lucidez y somnolencia, y puede pasar de la inquietud a la hipoactividad [26].</li>
+<li><b>Resultado.</b> Inatención, conciencia alterada y conducta distinta de la basal; el origen exacto depende de datos que faltan.</li>
+</ol>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Lúcido»: el SARA y la red atencional sostienen la vigilia y la atención.</p>
+<p><b>Por qué importa.</b> El cambio agudo con fluctuación suele tener una causa orgánica tratable y se asocia con mayor morbimortalidad si no se busca [26].</p>
+</div></div>
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span><span class="pid">B2</span> Polaquiuria y nocturia con volumen urinario disminuido</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> «Aumento en la frecuencia de micción y nocturia en los últimos días, pero con disminución significativa del volumen».</p>
+<p><b>Fisiopatología.</b> Más micciones con poco volumen pueden deberse a tres mecanismos que hay que separar; el caso no mide la diuresis de 24 horas, que es lo que los distingue [18].</p>
+<ol class="tl">
+<li><b>Diuresis osmótica.</b> Si la glucemia es muy alta, la glucosa filtrada arrastra agua en el túbulo y aumenta la diuresis; es un mecanismo conocido de las crisis hiperglucémicas [28].</li>
+<li><b>Resistencia a la ADH.</b> Un calcio elevado puede volver al túbulo colector poco sensible a la hormona antidiurética y reducir la concentración de la orina [29].</li>
+<li><b>Caída del filtrado.</b> La deshidratación disminuye el filtrado glomerular y la diuresis total puede caer aunque el paciente orine a menudo en volúmenes pequeños [18].</li>
+<li><b>Resultado.</b> «Frecuencia aumentada» puede significar polaquiuria, poliuria percibida o una diuresis total baja; son escenarios distintos con consecuencias distintas.</li>
+</ol>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Nocturia»: concentración de la orina y ritmo circadiano de la diuresis.</p>
+<p><b>Por qué importa.</b> Este síntoma orienta a la causa metabólica del cuadro; interpretarlo mal como un problema solo urinario retrasaría buscar glucosa, calcio y sodio.</p>
+</div></div>
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span><span class="pid">B3</span> Sed aumentada con ingesta de agua reducida</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> «Aumento de la sed en las últimas semanas»; «ha disminuido la ingesta de agua a pesar de la sed en las tardes y noches».</p>
+<p><b>Fisiopatología.</b> Perder agua libre y reponer menos de lo que se pierde eleva la osmolaridad del plasma; esa hiperosmolaridad es el estímulo de la sed y también deshidrata las neuronas [30] [1].</p>
+<ol class="tl">
+<li><b>Pérdida de agua libre.</b> La diuresis aumentada, el calor prolongado y la sudoración sacan más agua que sales.</li>
+<li><b>Reposición insuficiente.</b> El paciente bebe menos por la nocturia y vive solo, sin quien le ofrezca agua [30].</li>
+<li><b>Hiperosmolaridad.</b> El plasma se concentra; el agua sale de las células por gradiente osmótico [1].</li>
+<li><b>Deshidratación neuronal.</b> La célula cerebral se encoge, lo que puede alterar su función y contribuir a somnolencia y confusión [30].</li>
+</ol>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Polidipsia · sed aumentada»: osmorreceptores, sed y ADH.</p>
+<p><b>Por qué importa.</b> La sed persistente con ingesta reducida describe un balance hídrico negativo probable, corregible solo si se reconoce y se confirma con el sodio y la osmolalidad.</p>
+</div></div>
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span><span class="pid">B4</span> Estreñimiento de dos semanas con evacuaciones dolorosas</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> «Estreñimiento, con evacuaciones dolorosas y menos frecuentes (una o dos veces por semana)» desde hace unas dos semanas.</p>
+<p><b>Fisiopatología.</b> Un colon que se mueve poco y recibe poca agua produce heces duras y escasas; varias causas del caso actúan en esa dirección [25] [18].</p>
+<ol class="tl">
+<li><b>Causa metabólica.</b> Algunas alteraciones, como el calcio elevado, pueden reducir la motilidad del músculo liso intestinal.</li>
+<li><b>Deshidratación.</b> El colon reabsorbe más agua cuando el organismo la necesita y las heces se endurecen [1].</li>
+<li><b>Menor actividad.</b> Caminar menos por la fatiga disminuye el estímulo del reflejo gastrocólico.</li>
+<li><b>Resultado.</b> Heces duras, dolor al evacuar y frecuencia baja; el cuadro puede ser consecuencia y a la vez pista del mismo proceso de fondo.</li>
+</ol>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Estreñimiento»: motilidad colónica y absorción de agua en el colon.</p>
+<p><b>Por qué importa.</b> Un estreñimiento nuevo en un adulto mayor puede ser síntoma de una alteración sistémica, y a su vez precipitar o empeorar la confusión.</p>
+</div></div>
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span><span class="pid">B5</span> Fatiga con menor actividad en los últimos meses</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> Se mantiene físicamente activo, «aunque ha reducido sus salidas en los últimos meses debido a la fatiga».</p>
+<p><b>Fisiopatología.</b> La fatiga de meses es inespecífica; varias causas del cuadro actual pueden producirla y por eso la tomamos como síntoma subagudo de fondo [18].</p>
+<ol class="tl">
+<li><b>Causa sistémica posible.</b> Una alteración metabólica sostenida puede disminuir la energía disponible o la eficiencia muscular.</li>
+<li><b>Hipovolemia crónica leve.</b> La pérdida de agua reduce el volumen circulante y el rendimiento al esfuerzo.</li>
+<li><b>Círculo.</b> Menos salidas implica menos actividad, más desacondicionamiento y más fatiga.</li>
+</ol>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Fatiga»: aporte de ATP y percepción central del esfuerzo.</p>
+<p><b>Por qué importa.</b> Es el síntoma más antiguo del cuadro; su aparición meses antes sugiere un proceso de fondo y no un problema reciente.</p>
+</div></div>
+</div>
+
+<div class="pbg p"><div class="pbg-t">Psicológicos</div>
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span><span class="pid">P1</span> Inquietud el día previo al cambio</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> «Un día antes de que aparecieran estos síntomas, su padre se le vio inquieto».</p>
+<p><b>Fisiopatología.</b> La inquietud puede ser un pródromo del delirium: antes de la somnolencia, la desorganización de la atención puede expresarse como agitación [26] [27].</p>
+<ol class="tl">
+<li><b>Disfunción inicial.</b> El insulto sistémico altera primero el control frontosubcortical de la actividad motora.</li>
+<li><b>Hiperactividad.</b> La inatención y la percepción alterada se expresan como inquietud o ansiedad.</li>
+<li><b>Transición.</b> Al progresar, el cuadro puede pasar a una forma hipoactiva o mixta, con somnolencia [26].</li>
+</ol>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Inquietud»: circuitos frontosubcorticales y control de la actividad motora.</p>
+<p><b>Por qué importa.</b> Es el cambio más temprano que alguien notó; fija el inicio del cuadro y orienta el tiempo desde el cual buscar el insulto.</p>
+</div></div>
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span><span class="pid">P2</span> Deambulación sin rumbo durante horas</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> Se encontraba «caminando sin dirección en su barrio, en clima caliente por varias horas».</p>
+<p><b>Fisiopatología.</b> Caminar sin rumbo es compatible con desorientación y pérdida de la atención dirigida; además lo expone a calor y pérdida de líquidos [27] [26].</p>
+<ol class="tl">
+<li><b>Desorientación.</b> La falla atencional impide mantener la meta y el entorno; el paciente se pierde en un lugar conocido.</li>
+<li><b>Actividad motora aumentada.</b> La inquietud mantiene la marcha pese al cansancio.</li>
+<li><b>Exposición.</b> Las horas bajo el calor aumentan la sudoración y la pérdida de agua, que no se repone [30].</li>
+</ol>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Inquietud»: control frontosubcortical de la actividad motora.</p>
+<p><b>Por qué importa.</b> Convierte un problema cognitivo en un riesgo físico: golpe de calor, caídas, extravío y deshidratación.</p>
+</div></div>
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span><span class="pid">P3</span> Restricción voluntaria del agua para no orinar de noche</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> «Ha disminuido la ingesta de agua a pesar de la sed… por el aumento de la frecuencia urinaria en la noche».</p>
+<p><b>Fisiopatología.</b> Es una decisión lógica que agrava el cuadro: bebe menos para orinar menos, pero la causa de la poliuria persiste y el déficit de agua crece [30].</p>
+<ol class="tl">
+<li><b>Molestia nocturna.</b> La nocturia interrumpe el sueño y el paciente la atribuye al agua que bebe.</li>
+<li><b>Conducta compensatoria.</b> Restringe el agua en la tarde y la noche, justo cuando la sed aumenta.</li>
+<li><b>Efecto paradójico.</b> Si el origen no depende del agua ingerida, la diuresis no baja y el déficit se profundiza.</li>
+</ol>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Polidipsia · sed aumentada»: osmorregulación y sed.</p>
+<p><b>Por qué importa.</b> Es un punto de educación al paciente: la restricción casera del agua es un mecanismo que puede empeorar un cuadro metabólico.</p>
+</div></div>
+</div>
+
+<div class="pbg s"><div class="pbg-t">Sociales</div>
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span><span class="pid">S1</span> Vive solo; el hijo lo visita ocasionalmente</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> «Vive solo en su casa, cuenta con un hijo que lo visita ocasionalmente».</p>
+<p><b>Fisiopatología.</b> Vivir solo retrasa la detección de un cambio agudo y deja sin vigilancia la ingesta de agua, la medicación y la deambulación [16] [31].</p>
+<ol class="tl">
+<li><b>Sin observador.</b> Nadie nota el cambio inicial ni la inquietud el día previo.</li>
+<li><b>Sin apoyo.</b> Nadie recuerda beber, ni limita la salida bajo el calor.</li>
+<li><b>Detección tardía.</b> El paciente llega cuando el cuadro ya fluctúa entre lucidez y estupor.</li>
+</ol>
+<p><b>Por qué importa.</b> El retraso en reconocer el cambio y la falta de vigilancia posterior pueden hacer que el cuadro vuelva a ocurrir.</p>
+</div></div>
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span><span class="pid">S2</span> Medicatura rural sin posibilidad de derivar</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> «Centro de Salud de Saquisilí… no tiene forma de derivar al paciente».</p>
+<p><b>Fisiopatología.</b> No es un mecanismo biológico sino una restricción del sistema: toda la evaluación y la primera atención ocurren con los recursos del centro de salud [31].</p>
+<ol class="tl">
+<li><b>Recursos limitados.</b> El estudio inicial se limita a lo disponible en el centro de salud.</li>
+<li><b>Decisión local.</b> La vigilancia y la reevaluación recaen en el mismo equipo.</li>
+<li><b>Prioridad.</b> Lo accesible y rápido gana valor frente a lo que exige otro nivel de atención.</li>
+</ol>
+<p><b>Por qué importa.</b> Condiciona qué datos se pueden obtener y cómo se prioriza; es un dato del contexto, no un diagnóstico.</p>
+</div></div>
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span><span class="pid">S3</span> Historia que depende de un informante que no convive con él</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> El hijo relata que su padre «no actúa como él mismo»; solo lo visita ocasionalmente.</p>
+<p><b>Fisiopatología.</b> El paciente con atención y conciencia alteradas no puede dar una historia fiable, y el informante conoce solo fragmentos de su basal [27].</p>
+<ol class="tl">
+<li><b>Paciente no confiable.</b> La inatención limita lo que puede relatar sobre sí mismo.</li>
+<li><b>Informante parcial.</b> El hijo describe lo que vio, no el estado previo semanas atrás.</li>
+<li><b>Basal incierta.</b> Sin conocer la cognición y la funcionalidad previas, es difícil separar un cambio agudo de un deterioro crónico.</li>
+</ol>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «No actúa como él mismo»: funcionalidad basal y dominios cognitivos.</p>
+<p><b>Por qué importa.</b> Lo que el hijo sabe de la basal decide si el cuadro es un delirium nuevo o uno sobre un trastorno previo.</p>
+</div></div>
+</div>
+
+<div class="pbg fr"><div class="pbg-t">Factores de riesgo</div>
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span><span class="pid">FR1</span> Exposición prolongada al calor</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> «Clima caliente por varias horas»; «camina en un clima caluroso para sus compras».</p>
+<p><b>Fisiopatología.</b> El calor precipita porque obliga a perder agua por el sudor; el riesgo sube si hay enfermedad crónica, fármacos o deshidratación, más que por la edad aislada [32].</p>
+<ol class="tl">
+<li><b>Carga de calor.</b> Caminar horas al sol aumenta la producción y la ganancia de calor.</li>
+<li><b>Pérdida de agua.</b> El cuerpo disipa calor sudando; sin reposición se deshidrata [32].</li>
+<li><b>Precipita.</b> La hipovolemia y la hiperosmolaridad se suman a un cerebro vulnerable.</li>
+</ol>
+<p><b>Por qué importa.</b> Mantiene la hipótesis de deshidratación o golpe de calor, que exigiría temperatura central y sodio para confirmarse.</p>
+</div></div>
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span><span class="pid">FR2</span> Infección viral reciente</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> «Cuadro viral leve hace dos semanas, con fiebre y malestar general, que se resolvió sin tratamiento».</p>
+<p><b>Fisiopatología.</b> La infección precipita porque la inflamación sistémica puede alcanzar el cerebro, y también puede desencadenar una crisis hiperglucémica en un paciente con diabetes no conocida [26] [28].</p>
+<ol class="tl">
+<li><b>Inflamación sistémica.</b> Las citocinas circulantes activan la microglía y alteran la neurotransmisión.</li>
+<li><b>Paso al SNC.</b> Un cerebro vulnerable es más sensible a esta señal inflamatoria [26].</li>
+<li><b>Precipitante metabólico.</b> La infección es un desencadenante clásico de las crisis hiperglucémicas [28].</li>
+</ol>
+<p><b>Por qué importa.</b> El intervalo de dos semanas no excluye una relación; se debe preguntar por diabetes, síntomas urinarios y fiebre actual.</p>
+</div></div>
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span><span class="pid">FR3</span> Ingesta de agua reducida pese a la sed</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> «Ha disminuido la ingesta de agua a pesar de la sed».</p>
+<p><b>Fisiopatología.</b> Precipita porque cierra la última defensa del organismo contra la hiperosmolaridad, que es beber [30] [1].</p>
+<ol class="tl">
+<li><b>Defensa normal.</b> La sed corrige el déficit de agua si el acceso y la ingesta son libres.</li>
+<li><b>Defensa bloqueada.</b> La restricción voluntaria, y más adelante la confusión, impiden compensar [30].</li>
+<li><b>Consecuencia.</b> El déficit de agua libre se sostiene y la osmolaridad plasmática sube.</li>
+</ol>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Polidipsia · sed aumentada»: osmorregulación.</p>
+<p><b>Por qué importa.</b> Es el factor más modificable: corregir la ingesta e identificar la causa de la restricción cambia el curso.</p>
+</div></div>
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span><span class="pid">FR4</span> Síntomas subagudos que preceden al cuadro agudo</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Dato del caso.</b> Fatiga de meses, estreñimiento y sed de semanas, anteriores al cambio de conducta de hace dos días.</p>
+<p><b>Fisiopatología.</b> Una alteración de fondo que progresa lentamente predispone porque desgasta la reserva fisiológica, y el insulto final precipita la descompensación [26].</p>
+<ol class="tl">
+<li><b>Proceso lento.</b> Sed, estreñimiento y fatiga sugieren una alteración sistémica sostenida.</li>
+<li><b>Reserva consumida.</b> Cada semana el organismo compensa menos.</li>
+<li><b>Descompensación.</b> El calor, la infección o el ayuno hídrico llevan al umbral y aparece el cambio agudo.</li>
+</ol>
+<p><b>Por qué importa.</b> Esos síntomas son pistas: sin ellas el cuadro agudo parece caído del cielo y se pierde la causa.</p>
+</div></div>
+</div>
+<div class="rc" id="rc-pb"><div class="rc-t">Simulador · Recall de Problemas</div><div class="rc-count" id="rc-pb-n"></div><div class="rc-card" id="rc-pb-c"></div><div class="rc-btns" id="rc-pb-b"></div><div id="rc-pb-e"></div></div>
+<p class="gloss">Siglas: B, P, S y FR, ejes de problema (biológico, psicológico, social, riesgo); SARA, sistema activador reticular ascendente; ADH, hormona antidiurética; SNC, sistema nervioso central; ATP, adenosín trifosfato.</p>
+</section>
+<section class="tab" id="jq">
+<h2>Jerarquización</h2>
+<div class="hb"><div class="hb-t">Criterio</div><p>Primero lo que puede matarlo o dejar un daño irreversible si no se corrige a tiempo: un cambio agudo del estado mental sin estudio encabeza la lista.</p></div>
+
+<div class="card"><div class="card-t">Cómo se jerarquiza</div>
+<ol class="tl">
+<li><b>Amenaza vital inmediata.</b> Qué problema puede causar la muerte en horas si nadie lo reconoce, como un cambio agudo de la conciencia con una causa orgánica sin buscar [9].</li>
+<li><b>Tiempo-dependencia y reversibilidad.</b> Qué causa pierde margen de corrección con cada hora; lo reversible y urgente sube, porque la deshidratación y la hiperosmolaridad dañan más cuanto más duran [33].</li>
+<li><b>Riesgo de daño o dependencia.</b> Qué puede dejarlo con lesión renal, caídas, extravío o pérdida de autonomía, en un adulto mayor que vive solo.</li>
+<li><b>Impacto familiar y del sistema.</b> Qué limita la vigilancia y la respuesta: nadie convive con él y el centro de salud no puede derivar.</li>
+</ol>
+<p class="mini">Los factores de riesgo (FR1 a FR4) no se jerarquizan: se citan como argumento. El calor prolongado (FR1) y la ingesta reducida pese a la sed (FR3) agravan B3 y P2; la infección viral reciente (FR2) y los síntomas subagudos (FR4) orientan la causa de B1.</p></div>
+
+<div class="card"><div class="card-t">Criterios aplicados a los problemas</div>
+<div class="tw"><table><thead><tr><th>Problema</th><th>Amenaza vital</th><th>Tiempo-dependiente</th><th>Reversible</th><th>Riesgo de discapacidad</th></tr></thead><tbody>
+<tr><td><b>B1</b> Alteración aguda y fluctuante de la conciencia</td><td>Alto</td><td>Alto</td><td>Alto</td><td>Alto</td></tr>
+<tr><td><b>B3</b> Sed aumentada con ingesta reducida</td><td>Alto</td><td>Alto</td><td>Alto</td><td>Medio</td></tr>
+<tr><td><b>B2</b> Polaquiuria y nocturia con poco volumen</td><td>Medio</td><td>Medio</td><td>Alto</td><td>Medio</td></tr>
+<tr><td><b>P2</b> Deambulación sin rumbo durante horas</td><td>Medio</td><td>Medio</td><td>Alto</td><td>Medio</td></tr>
+<tr><td><b>S2</b> Sin posibilidad de derivar</td><td>Medio</td><td>Medio</td><td>Medio</td><td>Medio</td></tr>
+<tr><td><b>S1</b> Vive solo; hijo con visitas ocasionales</td><td>Medio</td><td>Medio</td><td>Alto</td><td>Medio</td></tr>
+<tr><td><b>B4</b> Estreñimiento de dos semanas</td><td>Bajo</td><td>Bajo</td><td>Alto</td><td>Bajo</td></tr>
+<tr><td><b>B5</b> Fatiga con menor actividad</td><td>Bajo</td><td>Bajo</td><td>Medio</td><td>Medio</td></tr>
+<tr><td><b>P1</b> Inquietud el día previo</td><td>Bajo</td><td>Medio</td><td>Alto</td><td>Bajo</td></tr>
+<tr><td><b>P3</b> Restricción voluntaria del agua</td><td>Bajo</td><td>Medio</td><td>Alto</td><td>Medio</td></tr>
+<tr><td><b>S3</b> Historia que depende de un informante</td><td>Bajo</td><td>Bajo</td><td>Alto</td><td>Bajo</td></tr>
+</tbody></table></div>
+<p class="mini">Valores cualitativos del razonamiento del caso, no puntajes validados.</p></div>
+
+<figure class="dg">
+<div class="dg-t">Escalera de gravedad</div>
+<div class="dg-row">
+<div class="dg-n ro">g1 Riesgo vital: B1, B3</div>
+<div class="dg-ar"><span class="dg-lab">luego</span></div>
+<div class="dg-n fr">g2 Alto: B2, P2, S2, S1</div>
+<div class="dg-ar"><span class="dg-lab">luego</span></div>
+<div class="dg-n ac">g3 Moderado: B4, B5, P1, P3</div>
+<div class="dg-ar"><span class="dg-lab">luego</span></div>
+<div class="dg-n s">g4 Bajo: S3</div>
+</div>
+<figcaption class="mini">Se lee de izquierda a derecha, o de arriba abajo en móvil: del que no puede esperar al que puede esperar.</figcaption>
+</figure>
+
+<div class="card"><div class="card-t">Por qué B1 y B3 van primero</div>
+<p>Una alteración aguda de la conciencia con curso fluctuante cumple los rasgos que el método CAM pide para sospechar delirium [9]. Esa sospecha obliga a buscar una causa orgánica; mientras no se busque, el riesgo vital pesa más que el resto de los problemas.</p>
+<p>La sed con ingesta reducida (B3) comparte el primer nivel porque puede ser la causa y también el agravante: la hipernatremia produce hiperosmolaridad y afecta sobre todo al sistema nervioso central, y los adultos mayores con conciencia alterada son el grupo de mayor riesgo [33].</p>
+<p class="mini">Fisiopatología de cada problema en la pestaña Problemas, por su código.</p></div>
+
+<ol class="rank">
+<li class="g1"><span class="pid">B1</span> <b>Alteración aguda y fluctuante de la conciencia y la conducta</b> <span class="badge b-ro">Riesgo vital</span><p>Dos días de evolución, lúcido y luego somnoliento o estuporoso. Compatible con delirium [9]; sin signos vitales, glucemia ni laboratorio en el caso. Es urgente porque la causa de fondo aún es desconocida.</p></li>
+<li class="g1"><span class="pid">B3</span> <b>Sed aumentada con ingesta de agua reducida</b> <span class="badge b-ro">Riesgo vital</span><p>Balance hídrico probablemente negativo tras horas de calor. La deshidratación hipertónica daña el sistema nervioso y el riñón, y se corrige mejor mientras es temprana [33]; el estado de hidratación no consta.</p></li>
+<li class="g2"><span class="pid">B2</span> <b>Polaquiuria y nocturia con volumen urinario disminuido</b> <span class="badge b-co">Alto</span><p>Puede marcar el trastorno metabólico que causa el cuadro o la caída de la diuresis por deshidratación; solo la diuresis de 24 horas lo separa. Orienta la causa, pero no mata por sí misma.</p></li>
+<li class="g2"><span class="pid">P2</span> <b>Deambulación sin rumbo durante horas</b> <span class="badge b-co">Alto</span><p>Expone a agotamiento por calor o golpe de calor, caídas y extravío [34]. Ya ocurrió: lo que importa es saber si dejó secuelas. La temperatura central no consta.</p></li>
+<li class="g2"><span class="pid">S2</span> <b>Medicatura rural sin posibilidad de derivar</b> <span class="badge b-co">Alto</span><p>No es un problema del paciente sino un modulador del riesgo: todo estudio y vigilancia inicial se resuelve en el centro de salud, sin segundo nivel. Eleva el peso de B1 y B3.</p></li>
+<li class="g2"><span class="pid">S1</span> <b>Vive solo; el hijo lo visita ocasionalmente</b> <span class="badge b-co">Alto</span><p>Nadie vigila la ingesta de agua ni los cambios del estado mental, lo que explica la detección tardía y el riesgo de recurrencia. Es reversible con apoyo familiar y seguimiento.</p></li>
+<li class="g3"><span class="pid">B4</span> <b>Estreñimiento de dos semanas con evacuaciones dolorosas</b> <span class="badge b-am">Moderado</span><p>Es molesto y reversible, pero no amenaza la vida. Su valor es de pista: con la fatiga, la sed y la nocturia sugiere una causa sistémica, como un trastorno metabólico [35].</p></li>
+<li class="g3"><span class="pid">B5</span> <b>Fatiga con menor actividad en los últimos meses</b> <span class="badge b-am">Moderado</span><p>Reduce su autonomía y sus salidas. Es un síntoma inespecífico que puede preceder al cuadro agudo; sin edad ni antecedentes, no permite asignarle una causa.</p></li>
+<li class="g3"><span class="pid">P1</span> <b>Inquietud el día previo al cambio</b> <span class="badge b-am">Moderado</span><p>Puede ser un pródromo del cuadro agudo. Por sí sola no tiene riesgo vital; su importancia es fijar el inicio y el curso, que el hijo debe precisar.</p></li>
+<li class="g3"><span class="pid">P3</span> <b>Restricción voluntaria del agua para no orinar de noche</b> <span class="badge b-am">Moderado</span><p>Es una conducta modificable que empeora B3 y cierra un círculo vicioso con la nocturia. Reversible con educación, pero hoy pesa menos que sus consecuencias.</p></li>
+<li class="g4"><span class="pid">S3</span> <b>Historia que depende de un informante que no convive con él</b> <span class="badge b-ve">Bajo</span><p>Limita la fiabilidad de la cronología y de la función basal. No daña al paciente, pero obliga a verificar los datos con el hijo y otros contactos.</p></li>
+</ol>
+
+<div class="rc" id="rc-jq"><div class="rc-t">Simulador · Recall de Jerarquización</div><div class="rc-count" id="rc-jq-n"></div><div class="rc-card" id="rc-jq-c"></div><div class="rc-btns" id="rc-jq-b"></div><div id="rc-jq-e"></div></div>
+
+<p class="gloss">Siglas: B, problema biológico; P, psicológico; S, social; FR, factor de riesgo; CAM, método de evaluación de la confusión; g1 a g4, niveles de gravedad.</p>
+</section>
+<section class="tab" id="hx">
+<h2>Hipótesis</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>H1 es el síndrome; H2 a H4 son causas posibles que pueden coexistir, y cada una se confirma con un dato que el caso no trae.</p></div>
+
+<figure class="dg">
+<div class="dg-t">Modelo multifactorial del cambio agudo del estado mental</div>
+<div class="dg-row">
+<div class="dg-col"><div class="dg-n fr">Predisponentes</div><div class="dg-n fr">Vive solo y con poca vigilancia (S1)</div><div class="dg-n fr">Síntomas subagudos: fatiga, sed, estreñimiento (FR4)</div><div class="dg-n fr">Edad, cognición basal y fármacos: no constan</div></div>
+<div class="dg-ar"><span class="dg-lab">bajan el umbral</span></div>
+<div class="dg-col"><div class="dg-n b">Precipitantes</div><div class="dg-n b">Calor prolongado (FR1)</div><div class="dg-n b">Ingesta de agua reducida pese a la sed (FR3)</div><div class="dg-n b">Cuadro viral hace dos semanas (FR2)</div></div>
+<div class="dg-ar"><span class="dg-lab">desencadenan</span></div>
+<div class="dg-col"><div class="dg-n ro">Cambio agudo y fluctuante del estado mental (B1)</div><div class="dg-n ac">H1 Delirium · H2 Hipercalcemia</div><div class="dg-n ac">H3 Estado hiperosmolar · H4 Deshidratación hipertónica</div></div>
+</div>
+<figcaption class="mini">Un mismo síndrome puede nacer de causas que se suman; la glucemia, el sodio y el calcio séricos las separan.</figcaption>
+</figure>
+
+<div class="card hx"><div class="card-t"><span class="pid">H1</span> Delirium (síndrome confusional agudo) de causa médica</div>
+<span class="badge b-ro">Probabilidad alta</span>
+<p class="mini">Explica: <span class="pid">B1</span> <span class="pid">P1</span> <span class="pid">P2</span></p>
+<div class="tw"><table><thead><tr><th>A favor (dato del caso)</th><th>En contra o dato que falta</th></tr></thead><tbody>
+<tr><td>Cambio de comportamiento de dos días de evolución, con inicio agudo [9].</td><td>No se evaluó la atención ni el pensamiento organizado.</td></tr>
+<tr><td>Conciencia que fluctúa entre lúcida y somnolienta o estuporosa.</td><td>Edad, cognición basal y funcionalidad previa no constan.</td></tr>
+<tr><td>Inquietud el día previo y deambulación sin rumbo, compatibles con una fase hiperactiva.</td><td>No hay examen neurológico ni signos vitales.</td></tr>
+</tbody></table></div>
+<p><b>Qué la confirmaría.</b> Un método CAM positivo: inicio agudo con curso fluctuante e inatención, más pensamiento desorganizado o alteración del nivel de conciencia [9]; el hallazgo obliga a identificar la causa, que es lo que las otras tres hipótesis intentan nombrar.</p></div>
+
+<div class="card hx"><div class="card-t"><span class="pid">H2</span> Hipercalcemia sintomática</div>
+<span class="badge b-am">Probabilidad media</span>
+<p class="mini">Explica: <span class="pid">B1</span> <span class="pid">B2</span> <span class="pid">B3</span> <span class="pid">B4</span> <span class="pid">B5</span> <span class="pid">FR4</span></p>
+<div class="tw"><table><thead><tr><th>A favor (dato del caso)</th><th>En contra o dato que falta</th></tr></thead><tbody>
+<tr><td>Fatiga de meses y estreñimiento de dos semanas, síntomas de la hipercalcemia leve [35].</td><td>No hay calcio sérico, albúmina ni calcio iónico.</td></tr>
+<tr><td>Deshidratación posible, que acompaña la hipercalcemia grave [35].</td><td>Fármacos (tiazidas, calcio, vitamina D) y antecedente de cáncer o de hiperparatiroidismo no constan [35].</td></tr>
+<tr><td>Confusión y somnolencia aparecen cuando la hipercalcemia es grave o de instalación rápida [35].</td><td>Los mismos síntomas se explican por hiperglucemia o por hipernatremia.</td></tr>
+</tbody></table></div>
+<p><b>Qué la confirmaría.</b> Un calcio corregido por albúmina o un calcio iónico elevado, con valores de 14 mg/dL o más (más de 3,5 mmol/L) para la forma grave; la PTH separa las causas por su origen, y un QT corto en el ECG apoya el diagnóstico [35] [36].</p></div>
+
+<div class="card hx"><div class="card-t"><span class="pid">H3</span> Estado hiperosmolar hiperglucémico (diabetes no conocida)</div>
+<span class="badge b-am">Probabilidad media</span>
+<p class="mini">Explica: <span class="pid">B1</span> <span class="pid">B2</span> <span class="pid">B3</span> <span class="pid">B5</span> <span class="pid">FR2</span></p>
+<div class="tw"><table><thead><tr><th>A favor (dato del caso)</th><th>En contra o dato que falta</th></tr></thead><tbody>
+<tr><td>Aumento de la sed y de la frecuencia urinaria durante semanas, con fatiga.</td><td>No consta diabetes previa ni glucemia alguna.</td></tr>
+<tr><td>Alteración del estado mental con deshidratación probable.</td><td>Falta la osmolalidad y la búsqueda de cetonas.</td></tr>
+<tr><td>Cuadro viral reciente, un posible antecedente inmediato del cuadro.</td><td>La edad y los antecedentes metabólicos no constan.</td></tr>
+</tbody></table></div>
+<p><b>Qué la confirmaría.</b> Hiperglucemia con hiperosmolalidad efectiva y sin cetonemia grave ni acidosis metabólica, es decir, con un pH de 7,30 o más y bicarbonato de 18 mmol/L o más, según los criterios del consenso ADA 2024 [28].</p></div>
+
+<div class="card hx"><div class="card-t"><span class="pid">H4</span> Deshidratación hipertónica con agotamiento o golpe de calor</div>
+<span class="badge b-am">Probabilidad media</span>
+<p class="mini">Explica: <span class="pid">B1</span> <span class="pid">B3</span> <span class="pid">P2</span> <span class="pid">P3</span> <span class="pid">FR1</span> <span class="pid">FR3</span></p>
+<div class="tw"><table><thead><tr><th>A favor (dato del caso)</th><th>En contra o dato que falta</th></tr></thead><tbody>
+<tr><td>Horas de caminata en clima caluroso y menor ingesta de agua pese a la sed.</td><td>No hay temperatura central, sodio sérico, urea ni creatinina.</td></tr>
+<tr><td>Los adultos mayores con conciencia alterada son el grupo de mayor riesgo de hipernatremia [33].</td><td>La edad no consta; el caso no dice que sea un adulto mayor.</td></tr>
+<tr><td>Alteración del sistema nervioso central tras exposición al calor, rasgo cardinal del golpe de calor [34].</td><td>Falta la temperatura central al ingreso y el tiempo exacto de exposición al calor.</td></tr>
+</tbody></table></div>
+<p><b>Qué la confirmaría.</b> Un sodio sérico mayor de 145 mmol/L define la hipernatremia [33]; el golpe de calor exige además disfunción del sistema nervioso central con hipertermia extrema, por lo general mayor de 40,5 °C [34].</p></div>
+
+<div class="card"><div class="card-t">Diagnóstico diferencial</div>
+<div class="tw"><table><thead><tr><th>Hipótesis alternativa</th><th>Dato que la acerca</th><th>Dato que la aleja</th></tr></thead><tbody>
+<tr><td><b>Hiponatremia</b></td><td>Confusión y somnolencia en un posible adulto mayor.</td><td>La sed intensa y la poca diuresis apuntan a pérdida de agua; falta el sodio sérico.</td></tr>
+<tr><td><b>Infección urinaria o sepsis</b></td><td>Polaquiuria y cuadro viral reciente.</td><td>No se refieren fiebre actual ni disuria; faltan signos vitales y examen de orina.</td></tr>
+<tr><td><b>Encefalitis viral</b></td><td>Cuadro viral con fiebre hace dos semanas y alteración de la conciencia.</td><td>La fiebre se resolvió sin tratamiento; no se refieren cefalea, convulsiones ni déficit focal.</td></tr>
+<tr><td><b>Ictus</b></td><td>Inicio agudo del cambio de conducta.</td><td>No hay déficit focal referido y la fluctuación de la conciencia no es lo habitual; falta el examen neurológico.</td></tr>
+<tr><td><b>Hipoglucemia</b></td><td>Alteración fluctuante de la conciencia.</td><td>La sed y la mayor frecuencia urinaria sugieren hiperglucemia; falta la glucemia capilar.</td></tr>
+<tr><td><b>Trastorno neurocognitivo mayor previo no reconocido (delirium sobre demencia)</b></td><td>Vive solo, redujo sus salidas y el hijo lo visita poco.</td><td>Se mantiene físicamente activo y el cambio ocurrió en dos días; falta la función basal según el hijo.</td></tr>
+<tr><td><b>Hipotiroidismo</b></td><td>Fatiga y estreñimiento.</td><td>No explica la sed ni el cambio agudo; faltan TSH, frecuencia cardiaca y temperatura.</td></tr>
+<tr><td><b>Intoxicación farmacológica</b></td><td>Un adulto mayor podría tomar fármacos con efecto sobre la cognición.</td><td>El caso no consigna fármacos, alcohol ni automedicación.</td></tr>
+</tbody></table></div>
+<p class="mini">Cada fila nombra el dato que falta para aceptarla o descartarla; ninguna se resuelve solo con el relato del hijo.</p></div>
+
+<div class="card"><div class="card-t">Necesidades de aprendizaje</div>
+<p>Contenidos del Caso 6 del sílabo de la segunda rotación que esta apertura deja abiertos, y las causas médicas que se discuten arriba [35] [28] [33] [34].</p>
+<ul>
+<li>Síndrome confusional agudo: definición, epidemiología, factores de riesgo y precipitantes, fisiopatología y clasificación.</li>
+<li>Características clínicas, diagnóstico y diagnóstico diferencial del síndrome confusional agudo.</li>
+<li>Pronóstico, prevención y tratamiento del síndrome confusional agudo, que corresponde al cierre del caso.</li>
+<li>Trastornos cognitivos menores por Alzheimer y por Parkinson.</li>
+<li>Demencias vascular, con cuerpos de Lewy, en la enfermedad de Parkinson y frontotemporal: concepto, epidemiología, factores de riesgo y de protección, evaluación, diagnóstico y manejo.</li>
+<li>Características del envejecimiento cerebral (trabajo autónomo).</li>
+<li>Evaluación cognitiva en la persona adulta mayor (trabajo autónomo).</li>
+</ul></div>
+
+<div class="rc" id="rc-hx"><div class="rc-t">Simulador · Recall de Hipótesis</div><div class="rc-count" id="rc-hx-n"></div><div class="rc-card" id="rc-hx-c"></div><div class="rc-btns" id="rc-hx-b"></div><div id="rc-hx-e"></div></div>
+
+<p class="gloss">Siglas: H, hipótesis; B, problema biológico; P, psicológico; S, social; FR, factor de riesgo; CAM, método de evaluación de la confusión; PTH, hormona paratiroidea; ECG, electrocardiograma; QT, intervalo QT; TSH, hormona estimulante de la tiroides; ADA, Asociación Americana de Diabetes.</p>
+</section>
+<section class="tab" id="tg">
+<h2>Repaso global</h2>
+<p class="mini">Mazo mixto con todas las tarjetas de los nueve términos y de Problemas, Jerarquización e Hipótesis, barajadas e intercaladas. La pestaña de cada tarjeta aparece solo después de «Mostrar respuesta». Al terminar verás los aciertos al primer intento por pestaña.</p>
+
+<div class="rc" id="rc-tg"><div class="rc-t">Simulador · Repaso global de la apertura</div><div class="rc-count" id="rc-tg-n"></div><div class="rc-card" id="rc-tg-c"></div><div class="rc-btns" id="rc-tg-b"></div><div id="rc-tg-e"></div></div>
+
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span>Referencias</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="vanc">
+<li>Hall JE, Hall ME. Guyton and Hall textbook of medical physiology. 14th ed. Philadelphia: Elsevier; 2021.</li>
+<li>Kandel ER, Koester JD, Mack SH, Siegelbaum SA, editors. Principles of neural science. 6th ed. New York: McGraw Hill; 2021.</li>
+<li>Enoka RM, Duchateau J. Translating fatigue to human performance. Med Sci Sports Exerc. 2016;48(11):2228-38. doi:10.1249/MSS.0000000000000929. PMID: 27015386.</li>
+<li>Kluger BM, Krupp LB, Enoka RM. Fatigue and fatigability in neurologic illnesses: proposal for a unified taxonomy. Neurology. 2013;80(4):409-16. doi:10.1212/WNL.0b013e31827f07be. PMID: 23339207.</li>
+<li>American Psychiatric Association. Diagnostic and statistical manual of mental disorders. 5th ed, text rev. Washington (DC): American Psychiatric Association; 2022.</li>
+<li>Splittgerber R. Snell's clinical neuroanatomy. 9th ed. Philadelphia: Wolters Kluwer; 2025.</li>
+<li>Katz S, Ford AB, Moskowitz RW, Jackson BA, Jaffe MW. Studies of illness in the aged. The index of ADL: a standardized measure of biological and psychosocial function. JAMA. 1963;185:914-9. doi:10.1001/jama.1963.03060120024016. PMID: 14044222.</li>
+<li>Lawton MP, Brody EM. Assessment of older people: self-maintaining and instrumental activities of daily living. Gerontologist. 1969;9(3):179-86. PMID: 5349366.</li>
+<li>Inouye SK, van Dyck CH, Alessi CA, Balkin S, Siegal AP, Horwitz RI. Clarifying confusion: the confusion assessment method. A new method for detection of delirium. Ann Intern Med. 1990;113(12):941-8. PMID: 2240918. DOI: 10.7326/0003-4819-113-12-941.</li>
+<li>Posner JB, Saper CB, Schiff ND, Claassen J. Plum and Posner's diagnosis and treatment of stupor and coma. 5th ed. New York: Oxford University Press; 2019.</li>
+<li>Petersen SE, Posner MI. The attention system of the human brain: 20 years after. Annu Rev Neurosci. 2012;35:73-89. doi:10.1146/annurev-neuro-062111-150525. PMID: 22524787.</li>
+<li>Teasdale G, Jennett B. Assessment of coma and impaired consciousness. A practical scale. Lancet. 1974;2(7872):81-4. doi:10.1016/s0140-6736(74)91639-0. PMID: 4136544</li>
+<li>Cummings JL. Frontal-subcortical circuits and human behavior. Arch Neurol. 1993;50(8):873-80. doi:10.1001/archneur.1993.00540080076020. PMID: 8352676</li>
+<li>Hughes F, Mythen M, Montgomery H. The sensitivity of the human thirst response to changes in plasma osmolality: a systematic review. Perioper Med (Lond). 2018;7:1. doi:10.1186/s13741-017-0081-4. PMID: 29344350.</li>
+<li>McKenna K, Thompson C. Osmoregulation in clinical disorders of thirst appreciation. Clin Endocrinol (Oxf). 1998;49(2):139-52. PMID: 9828896.</li>
+<li>Kane RL, Ouslander JG, Resnick B, Malone ML, editores. Principios de geriatría clínica. 8.ª ed. México: McGraw-Hill Education; 2018.</li>
+<li>Deshayes TA. Beyond the one-size-fits-all hydration recommendation for older adults: a call for more research on age-related change in thirst and hydration behavior. Eur J Appl Physiol. 2026;126(5):2405-8. doi:10.1007/s00421-026-06170-4. PMID: 41774103.</li>
+<li>Loscalzo J, Fauci AS, Kasper DL, Hauser SL, Longo DL, Jameson JL, editors. Harrison's principles of internal medicine. 22nd ed. New York: McGraw Hill; 2025.</li>
+<li>Van Kerrebroeck P, Andersson KE. Terminology, epidemiology, etiology, and pathophysiology of nocturia. Neurourol Urodyn. 2014;33 Suppl 1:S2-5. doi:10.1002/nau.22595. PMID: 24729150.</li>
+<li>Hashim H, Blanker MH, Drake MJ, Djurhuus JC, Meijlink J, Morris V, et al. International Continence Society (ICS) report on the terminology for nocturia and nocturnal lower urinary tract function. Neurourol Urodyn. 2019;38(2):499-508. doi:10.1002/nau.23917. PMID: 30644584.</li>
+<li>Klein SJ, Lehner GF, Forni LG, Joannidis M. Oliguria in critically ill patients: a narrative review. J Nephrol. 2018;31(6):855-62. doi:10.1007/s40620-018-0539-6. PMID: 30298272.</li>
+<li>Lewis SJ, Heaton KW. Stool form scale as a useful guide to intestinal transit time. Scand J Gastroenterol. 1997;32(9):920-4. doi:10.3109/00365529709011203. PMID: 9299672.</li>
+<li>Mearin F, Ciriza C, Mínguez M, Rey E, Mascort JJ, Peña E, et al. Clinical practice guideline: irritable bowel syndrome with constipation and functional constipation in the adult. Rev Esp Enferm Dig. 2016;108(6):332-63. doi:10.17235/reed.2016.4389/2016. PMID: 27230827.</li>
+<li>Mearin F, Lacy BE, Chang L, Chey WD, Lembo AJ, Simren M, et al. Bowel disorders. Gastroenterology. 2016. doi:10.1053/j.gastro.2016.02.031. PMID: 27144627.</li>
+<li>Rozman Borstnar C, Cardellach López F, editores. Farreras-Rozman. Medicina interna. 20.ª ed. Barcelona: Elsevier; 2024.</li>
+<li>Inouye SK, Westendorp RG, Saczynski JS. Delirium in elderly people. Lancet. 2014;383(9920):911-22. PMID: 23992774. DOI: 10.1016/S0140-6736(13)60688-1.</li>
+<li>National Institute for Health and Care Excellence. Delirium: prevention, diagnosis and management in hospital and long-term care (CG103). London: NICE; 2010 [actualizada 2023]. Disponible en: https://www.nice.org.uk/guidance/cg103</li>
+<li>Umpierrez GE, Davis GM, ElSayed NA, Fadini GP, Galindo RJ, Hirsch IB, et al. Hyperglycemic crises in adults with diabetes: a consensus report. Diabetes Care. 2024;47(8):1257-75. PMID 39052901. doi:10.2337/dci24-0032.</li>
+<li>Khanna A. Acquired nephrogenic diabetes insipidus. Semin Nephrol. 2006;26(3):244-8. PMID 16713497. doi:10.1016/j.semnephrol.2006.03.004.</li>
+<li>Adrogué HJ, Madias NE. Hypernatremia. N Engl J Med. 2000;342(20):1493-9. PMID 10816188. doi:10.1056/NEJM200005183422006.</li>
+<li>Ministerio de Salud Pública del Ecuador. Normas y protocolos de atención integral de salud de las y los adultos mayores. Quito: Dirección de Normalización del SNS; 2010.</li>
+<li>Kenney WL, Munce TA. Invited review: aging and human temperature regulation. J Appl Physiol (1985). 2003;95(6):2598-603. PMID 14600165. doi:10.1152/japplphysiol.00202.2003.</li>
+<li>Yun G, Baek SH, Kim S. Evaluation and management of hypernatremia in adults: clinical perspectives. Korean J Intern Med. 2023;38(3):290-302. doi:10.3904/kjim.2022.346. PMID: 36578134.</li>
+<li>Epstein Y, Yanovich R. Heatstroke. N Engl J Med. 2019;380(25):2449-59. doi:10.1056/NEJMra1810762. PMID: 31216400.</li>
+<li>Walker MD, Shane E. Hypercalcemia: a review. JAMA. 2022;328(16):1624-36. doi:10.1001/jama.2022.18331. PMID: 36282253.</li>
+<li>Bjerregaard P, Nallapaneni H, Gussak I. Short QT interval in clinical practice. J Electrocardiol. 2010;43(5):390-5. doi:10.1016/j.jelectrocard.2010.06.004. PMID: 20667544.</li>
+</ol>
+</div></div>
+</section>
+<script>
+const TERMS={"t1": "Fatiga", "t2": "«No actúa como él mismo»", "t3": "Lúcido", "t4": "Somnoliento", "t5": "Estuporoso", "t6": "Inquietud", "t7": "Polidipsia", "t8": "Nocturia", "t9": "Estreñimiento", "pb": "Problemas", "jq": "Jerarquización", "hx": "Hipótesis"};
+const DECKS={
+t1:[{"q": "Al contraerse el músculo, el ATP se une a la cabeza de miosina y {{la suelta de la actina}}; sin ATP el puente cruzado queda unido y el músculo no se relaja.", "a": "la suelta de la actina", "h": "Ciclo de puentes cruzados."}, {"q": "¿De qué depende el esfuerzo percibido según el modelo de la descarga corolaria?", "a": "De la copia del comando motor central enviada a áreas sensitivas, y no solo de la señal que vuelve del músculo.", "h": "Comando motor, copia de eferencia."}, {"q": "¿Cómo se mide la fatiga como síntoma y cómo se llama la caída medible del rendimiento en una tarea?", "a": "La fatiga se mide por autorreporte; la caída medible del rendimiento es la fatigabilidad.", "h": "Enoka y Duchateau 2016."}, {"q": "Si la fuerza máxima está disminuida en el examen desde la primera contracción, el problema es {{debilidad (paresia)}} y no fatiga.", "a": "debilidad (paresia)", "h": "Se mide en el examen."}, {"q": "Un paciente refiere que le falta energía para actuar, pero no se queda dormido. ¿Fatiga o somnolencia?", "a": "Fatiga; la somnolencia es la tendencia a dormirse por baja alerta.", "h": "Alerta frente a energía."}, {"q": "El paciente del caso redujo sus salidas por la fatiga. ¿Qué dato del examen falta para separar fatiga de debilidad?", "a": "El examen de fuerza muscular, comparado entre el inicio y la repetición del esfuerzo.", "h": "Caso: B5."}],
+t2:[{"q": "¿Qué dominio cognitivo del DSM-5-TR agrupa planificar, decidir, mantener datos en mente y corregir errores?", "a": "La función ejecutiva.", "h": "Corteza prefrontal."}, {"q": "¿Qué escala evalúa manejar la medicación, las finanzas, las compras y el teléfono, y a qué grupo de actividades pertenece?", "a": "La escala de Lawton, que evalúa actividades instrumentales de la vida diaria (AIVD).", "h": "Independencia en la comunidad."}, {"q": "¿Respecto de qué se define un cambio agudo del estado mental?", "a": "Respecto de la línea basal de la persona, que suele aportar un informante.", "h": "DSM-5-TR."}, {"q": "¿Qué dos rasgos temporales separan un cambio agudo del estado mental de uno crónico?", "a": "Inicio en horas o pocos días y curso que fluctúa durante el día.", "h": "DSM-5-TR; CAM."}, {"q": "«No actúa como él mismo» es una frase coloquial que orienta pero no establece un {{diagnóstico}}.", "a": "diagnóstico", "h": "Interpretación tomada."}, {"q": "En el caso, la línea basal depende de un hijo que visita ocasionalmente. ¿Qué limita esto y qué hay que preguntarle?", "a": "Limita la fiabilidad de la línea basal; hay que preguntarle qué hacía el padre solo hace un mes.", "h": "Caso: B1, S3."}],
+t3:[{"q": "¿Qué función cumplen las proyecciones del sistema activador reticular ascendente al tálamo y a la corteza?", "a": "Mantener la corteza despierta (el nivel de alerta).", "h": "Tronco, hipotálamo y prosencéfalo basal."}, {"q": "El locus coeruleus sostiene la vigilia y la respuesta de alerta liberando {{noradrenalina}}.", "a": "noradrenalina", "h": "Núcleo del tronco."}, {"q": "¿Cuáles son los dos componentes de la conciencia y qué sustrato sostiene cada uno?", "a": "Nivel (alerta), por el sistema activador; contenido, por la corteza y sus redes.", "h": "Plum y Posner."}, {"q": "¿Qué dos cosas implica que alguien esté lúcido en la clínica?", "a": "Que está despierto (nivel normal) y que atiende y piensa con coherencia (contenido normal).", "h": "Interpretación tomada."}, {"q": "Un paciente responde bien la fecha y el lugar, pero se duerme a los pocos segundos. ¿Qué falla: orientación o alerta?", "a": "La alerta (nivel de vigilia); la orientación es contenido y está conservada en ese momento.", "h": "Orientado frente a alerta."}, {"q": "«Lúcido un minuto y luego somnoliento» describe el rasgo de {{fluctuación}}, que se reconoce sin establecer por sí solo un diagnóstico.", "a": "fluctuación", "h": "Caso: B1; CAM."}],
+t4:[{"q": "Somnolencia: nivel de conciencia en el que la persona tiende a dormirse y se despierta con un {{estímulo verbal}}.", "a": "estímulo verbal", "h": "Nivel más leve de la escala después de la alerta."}, {"q": "¿Qué estructura hipotalámica funciona como reloj circadiano (proceso C) y se sincroniza con la luz de la retina?", "a": "El núcleo supraquiasmático.", "h": "Fija un ritmo de aproximadamente 24 horas."}, {"q": "Las neuronas de {{orexina (hipocretina)}} del hipotálamo lateral estabilizan la vigilia: si fallan, la persona oscila entre sueño y vigilia.", "a": "orexina (hipocretina)", "h": "Excitan los núcleos de vigilia."}, {"q": "Un paciente despierto y atento dice que se siente sin energía tras caminar poco. ¿Es somnolencia?", "a": "No; es fatiga. La somnolencia es tendencia a dormirse, no cansancio con el esfuerzo.", "h": "Fíjate si mantiene los ojos abiertos sin estímulo."}, {"q": "Ordena de mayor a menor nivel de conciencia: coma, alerta, estupor, somnolencia.", "a": "Alerta, somnolencia, estupor, coma.", "h": "Se ordenan por el estímulo que hace falta para despertar."}, {"q": "En el caso, el hijo dice que el paciente está lúcido y luego «somnoliento». ¿Qué dato necesita el examen para distinguir somnolencia de estupor?", "a": "El estímulo que lo despierta: el verbal indica somnolencia; solo uno vigoroso y repetido, estupor.", "h": "Conecta con B1."}],
+t5:[{"q": "Estupor: solo despierta con estímulos {{vigorosos y repetidos}} y vuelve a dormirse al cesar.", "a": "vigorosos y repetidos", "h": "Grado entre somnolencia y coma."}, {"q": "¿Por qué vía asciende la señal dolorosa desde la médula hasta el tálamo?", "a": "Por la vía espinotalámica, tras cruzar la línea media en la médula.", "h": "Cordón anterolateral."}, {"q": "¿Qué respuesta motora al dolor indica mayor integración cortical: localizar o retirar?", "a": "Localizar, porque dirige la mano al estímulo; retirar es un reflejo sin integración.", "h": "Piensa en la mano cruzando la línea media."}, {"q": "¿Cómo se distingue el estupor del coma?", "a": "El estuporoso despierta, brevemente, con un estímulo vigoroso; el comatoso no despierta con ninguno.", "h": "Mira la apertura ocular tras el estímulo."}, {"q": "La escala de Glasgow evalúa tres componentes por separado. ¿Cuáles?", "a": "Apertura ocular, respuesta verbal y mejor respuesta motora.", "h": "No define estupor: define respuestas."}, {"q": "El hijo describe al paciente alternando lúcido y estuporoso en minutos. ¿Qué debe documentar el examen, según esta pestaña?", "a": "Estímulo usado y respuesta obtenida en cada momento, para ver cómo oscila el nivel.", "h": "Conecta con B1."}],
+t6:[{"q": "Agitación psicomotora: actividad motora excesiva {{sin propósito}} impulsada por tensión interna.", "a": "sin propósito", "h": "Caminar de un lado a otro, retorcerse las manos."}, {"q": "¿Qué circuito frontosubcortical, al fallar, produce desinhibición?", "a": "El circuito orbitofrontal.", "h": "Inhibe impulsos y ajusta la conducta."}, {"q": "¿Qué falla si claudica el circuito del cingulado anterior?", "a": "La motivación: aparece apatía y la conducta no se inicia.", "h": "Es el circuito del propósito."}, {"q": "¿Qué separa la acatisia de la agitación?", "a": "La acatisia incluye una inquietud interna con urgencia de moverse que el paciente refiere, sobre todo por fármacos; la agitación puede ocurrir sin esa vivencia.", "h": "Pregunta al paciente qué siente."}, {"q": "¿Qué neurotransmisor del locus coeruleus, cuando se exagera su activación, aumenta la inquietud?", "a": "La noradrenalina.", "h": "Remisión a SARA, en «Lúcido»."}, {"q": "El hijo vio inquieto al paciente un día antes y luego caminando sin dirección por horas. ¿Qué dos términos de esta pestaña describen esas conductas?", "a": "Inquietud (o agitación) y deambulación errante.", "h": "Conecta con P1 y P2."}],
+t7:[{"q": "El órgano vasculoso de la lámina terminal y el órgano subfornical carecen de barrera hematoencefálica completa. ¿Qué ventaja funcional les da y qué ponen en marcha?", "a": "Pueden medir directamente la osmolalidad y la angiotensina II de la sangre; activan la sed y la liberación de ADH.", "h": "Detectan la sangre sin filtro."}, {"q": "La ADH se une al receptor V2 del túbulo colector e inserta {{acuaporina-2}} en la membrana apical. ¿Qué cambia en la orina?", "a": "acuaporina-2: el agua se reabsorbe y la orina sale más concentrada y escasa.", "h": "Piensa en el canal de agua."}, {"q": "Una pérdida pequeña de agua eleva con rapidez la osmolalidad en un adulto mayor. ¿Qué tres cambios de la edad lo explican?", "a": "Menor agua corporal total (reserva), sed atenuada (hipodipsia) y menor capacidad renal de concentrar la orina.", "h": "Reserva, señal y riñón."}, {"q": "¿Qué es la polidipsia y por qué no equivale a tener sed aumentada?", "a": "Es la ingesta aumentada de líquidos; la sed aumentada puede existir sin que la persona logre beber más.", "h": "Una es la señal, otra es la conducta."}, {"q": "Una persona bebe mucho por hábito, sin estímulo osmótico ni de volumen. ¿Con qué término vecino se corresponde y en qué se separa de la sed por deshidratación?", "a": "Potomanía o polidipsia primaria: bebe sin que la sed responda a un déficit; en la deshidratación la sed sí sube con la osmolalidad.", "h": "Fíjate en qué dispara la sed."}, {"q": "En este paciente la sed aumenta pero toma menos agua para no orinar de noche. ¿Qué dato de sangre ayudaría a ver el efecto de esa restricción sobre la osmolalidad?", "a": "El sodio sérico y la osmolalidad plasmática: si la sed sube y no se repone el agua, la osmolalidad sigue subiendo.", "h": "Un dato de laboratorio."}],
+t8:[{"q": "Durante el llenado vesical, ¿qué hace el detrusor y qué nervio mantiene cerrado el esfínter externo?", "a": "El detrusor se relaja y se acomoda sin subir mucho la presión; el nervio pudendo (somático) mantiene el esfínter externo contraído.", "h": "Relajación y control voluntario."}, {"q": "Si la acomodación del detrusor falla y la capacidad funcional de la vejiga baja, ¿qué patrón miccional aparece y con qué herramienta se registra?", "a": "Micciones frecuentes de poco volumen; se registra con el diario miccional.", "h": "Hora y volumen de cada micción."}, {"q": "De noche aumenta la {{ADH}}. ¿Qué efecto tiene sobre la diuresis nocturna y qué ocurre cuando se pierde ese ritmo?", "a": "ADH: la orina nocturna disminuye y se concentra; si se pierde, hay poliuria nocturna (exceso de orina en el sueño).", "h": "Ritmo circadiano de la orina."}, {"q": "¿Cómo define la ICS la nocturia como síntoma?", "a": "Despertarse una o más veces de noche para orinar, con cada micción precedida y seguida de sueño o de la intención de dormir.", "h": "No basta orinar de noche: debe despertar."}, {"q": "Una persona orina muchas veces de día, sin despertarse de noche. ¿Qué término describe eso y en qué se diferencia de la poliuria?", "a": "Polaquiuria, definida por la frecuencia diurna; la poliuria se define por el volumen de 24 horas.", "h": "Frecuencia frente a volumen."}, {"q": "En el caso, la frecuencia sube y el volumen por micción baja. ¿Qué medida separa polaquiuria, poliuria percibida y diuresis total baja?", "a": "La diuresis de 24 horas.", "h": "Un solo número lo resuelve."}],
+t9:[{"q": "El reflejo rectoanal inhibitorio relaja el esfínter anal interno cuando las heces distienden el recto. ¿Qué esfínter queda bajo control voluntario y por qué nervio?", "a": "El esfínter anal externo, de músculo estriado, por el nervio pudendo.", "h": "Interno involuntario, externo voluntario."}, {"q": "Un colon lento da heces duras. ¿Qué proceso de la absorción lo explica?", "a": "Cuanto más tiempo permanece el contenido, más agua se absorbe en el colon y más duras salen las heces.", "h": "El tiempo seca."}, {"q": "El colon avanza bien, pero la persona puja y no logra expulsar las heces. ¿Qué trastorno se sospecha y qué falla?", "a": "Disinergia defecatoria: el piso pélvico o el esfínter no se relajan al pujar.", "h": "Falla la expulsión, no el tránsito."}, {"q": "¿Qué mide la escala de Bristol y cómo se relaciona con el tránsito?", "a": "La forma de las heces en siete tipos; se correlaciona con el tiempo de tránsito intestinal total (heces duras, tránsito lento).", "h": "Forma frente a tiempo."}, {"q": "Un paciente con dolor cólico, distensión, vómitos y sin paso de heces ni gases. ¿Por qué no es solo estreñimiento?", "a": "Sugiere obstrucción intestinal, una barrera mecánica que detiene el tránsito y es una urgencia.", "h": "No es un hábito lento."}, {"q": "En el caso, ¿qué cuatro grupos de causas secundarias obligan a descartar antes de llamar funcional al estreñimiento?", "a": "Metabólica, farmacológica, neurológica y obstructiva.", "h": "Funcional es diagnóstico de exclusión clínica."}],
+pb:[{"q": "Un cerebro vulnerable más un insulto sistémico produce disfunción de la red {{atencional}} y del SARA.", "a": "atencional", "h": "Mecanismo de B1."}, {"q": "¿Qué tres mecanismos pueden explicar polaquiuria con poco volumen en este paciente?", "a": "Diuresis osmótica por glucosa, resistencia renal a la ADH por calcio elevado y caída del filtrado por deshidratación.", "h": "B2; los separa la diuresis de 24 horas."}, {"q": "En B3, la pérdida de agua libre con reposición insuficiente eleva la {{osmolaridad}} plasmática y deshidrata las {{neuronas}}.", "a": "osmolaridad; neuronas", "h": "Déficit de agua libre."}, {"q": "¿Por qué la restricción voluntaria de agua (P3) agrava el cuadro?", "a": "Porque la causa de la poliuria persiste: orina igual y bebe menos, así que el déficit de agua crece.", "h": "Círculo vicioso del agua."}, {"q": "¿Por qué el estreñimiento (B4) puede ser pista de un proceso metabólico y no solo un hábito?", "a": "Porque las alteraciones metabólicas y la deshidratación reducen la motilidad y endurecen las heces.", "h": "Hipomotilidad más agua colónica."}, {"q": "¿Cómo se diferencia un factor de riesgo (FR) de un problema B, P o S?", "a": "El FR no es un problema a resolver sino un argumento que predispone o precipita el cuadro.", "h": "Ejes de la pestaña."}, {"q": "Fatiga de meses, sed y estreñimiento de semanas (FR4) sugieren un proceso de {{fondo}} que precede al cuadro agudo.", "a": "fondo", "h": "Síntomas subagudos como pista."}],
+jq:[{"q": "¿Por qué B1 (alteración aguda de la conciencia) va antes que B2 (nocturia con poco volumen)?", "a": "B1 es una amenaza vital tiempo-dependiente; B2 solo orienta la causa y no mata por sí misma.", "h": "Criterio: amenaza vital inmediata."}, {"q": "¿Por qué B3 (sed con ingesta reducida) comparte el nivel g1 con B1?", "a": "Puede ser causa y agravante: la deshidratación hipertónica daña el sistema nervioso y el riñón y se corrige mejor si es temprana.", "h": "Tiempo-dependencia y reversibilidad."}, {"q": "¿Por qué P2 (deambulación por horas) va antes que P1 (inquietud previa)?", "a": "P2 expone a agotamiento o golpe de calor, caídas y extravío; P1 solo fija el inicio y el curso.", "h": "Riesgo de daño."}, {"q": "¿Por qué S2 (sin posibilidad de derivar) va en g2 aunque no es un problema del paciente?", "a": "Modula el riesgo: todo estudio y vigilancia inicial se resuelve en el centro de salud, lo que eleva el peso de B1 y B3.", "h": "Impacto en la respuesta del sistema."}, {"q": "¿Por qué S3 (historia que depende de un informante) es el último, en g4?", "a": "No daña al paciente y se corrige verificando los datos con el hijo y otros contactos.", "h": "Bajo en los cuatro criterios."}],
+hx:[{"q": "Método CAM para delirium: ¿qué dos rasgos deben estar presentes siempre?", "a": "Inicio agudo con curso fluctuante, e inatención.", "h": "Se añade pensamiento desorganizado o conciencia alterada."}, {"q": "CAM: además de inicio agudo e inatención, ¿qué rasgo adicional se necesita (uno de dos)?", "a": "Pensamiento desorganizado o alteración del nivel de conciencia.", "h": "Inouye 1990."}, {"q": "Hipernatremia: ¿por encima de qué sodio sérico se define en adultos?", "a": "145 mmol/L", "h": "Refleja hiperosmolalidad sérica."}, {"q": "¿Qué dos rasgos clínicos definen el golpe de calor, más allá de la exposición al calor?", "a": "Disfunción del sistema nervioso central e hipertermia extrema (por lo general sobre 40,5 °C).", "h": "Epstein 2019."}, {"q": "Hipercalcemia: ¿qué prueba hormonal distingue las causas dependientes de las no dependientes de PTH?", "a": "La PTH intacta sérica.", "h": "Walker 2022."}, {"q": "Estado hiperosmolar hiperglucémico: ¿qué debe estar ausente, a diferencia de la cetoacidosis?", "a": "Cetonemia grave y acidosis metabólica (la mayoría tiene pH de 7,30 o más y bicarbonato de 18 mmol/L o más).", "h": "Consenso ADA 2024."}, {"q": "En este caso, ¿qué dato separa la hipótesis hipercalcemia de la de estado hiperosmolar hiperglucémico?", "a": "El calcio corregido o iónico frente a la glucemia y la osmolalidad; el caso no trae ninguno.", "h": "Datos faltantes."}]
+};
+DECKS.tg=[].concat.apply([],Object.keys(TERMS).map(function(k){return DECKS[k].map(function(c){return {q:c.q,a:c.a,h:c.h,t:k};});}));
+const RC={};
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function el(k,s){return document.getElementById('rc-'+k+'-'+s);}
+function isCloze(c){return c.q.indexOf('{{')>=0;}
+function front(c){return esc(c.q).replace(/\{\{[^}]*\}\}/g,'[ ? ]');}
+function back(c){return esc(c.q).replace(/\{\{([^}]*)\}\}/g,'<b>$1</b>');}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function show(id,btn){
+  document.querySelectorAll('.tab').forEach(function(s){s.classList.toggle('active',s.id===id);});
+  document.querySelectorAll('.tb').forEach(function(b){b.classList.toggle('active',b===btn);});
+  try{btn.scrollIntoView({inline:'center',block:'nearest'});}catch(e){}
+}
+function tog(b){b.parentElement.classList.toggle('op');}
+function rc_reset(k){
+  var n=DECKS[k].length,idx=[];
+  for(var i=0;i<n;i++)idx.push(i);
+  RC[k]={queue:shuffle(idx),first:{},fails:{},shown:false,done:0,n:n};
+  if(el(k,'e'))el(k,'e').innerHTML='';
+  rc_render(k);
+}
+function rc_render(k){
+  var s=RC[k],card=el(k,'c');
+  if(!card)return;
+  if(!s.queue.length){rc_end(k);return;}
+  var c=DECKS[k][s.queue[0]],f=s.fails[s.queue[0]]||0;
+  el(k,'n').textContent='Tarjeta '+(s.done+1)+' de '+s.n+(k==='tg'&&s.shown?' · '+TERMS[c.t]:'');
+  var h='<p class="rc-q">'+(s.shown&&isCloze(c)?back(c):front(c))+'</p>';
+  if(s.shown&&!isCloze(c))h+='<p class="rc-a"><b>Respuesta.</b> '+esc(c.a)+'</p>';
+  if(!s.shown&&f>=2)h+='<p class="rc-hint">Pista: '+esc(c.h)+'</p>';
+  card.innerHTML=h;
+  var b='';
+  if(!s.shown){b+='<button class="go" onclick="rc_show(\''+k+'\')">Mostrar respuesta</button>';}
+  else{
+    b+='<button class="gr ok" onclick="rc_grade(\''+k+'\',\'ok\')">La sabía</button>';
+    b+='<button class="gr mid" onclick="rc_grade(\''+k+'\',\'mid\')">A medias</button>';
+    b+='<button class="gr ko" onclick="rc_grade(\''+k+'\',\'ko\')">No la sabía</button>';
+  }
+  b+='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  el(k,'b').innerHTML=b;
+}
+function rc_show(k){RC[k].shown=true;rc_render(k);}
+function rc_grade(k,g){
+  var s=RC[k],i=s.queue.shift();
+  if(s.first[i]===undefined)s.first[i]=(g==='ok');
+  if(g==='ok'){s.done++;}
+  else{s.fails[i]=(s.fails[i]||0)+1;s.queue.push(i);}
+  s.shown=false;
+  rc_render(k);
+}
+function rc_verdict(p){return p>=80?['ok','Término consolidado']:['rep','Repasar hoy'];}
+function rc_end(k){
+  var s=RC[k],ok=0,i,rows='';
+  for(i=0;i<s.n;i++)if(s.first[i])ok++;
+  var p=Math.round(100*ok/s.n),v=rc_verdict(p);
+  el(k,'n').textContent='Mazo completado';
+  el(k,'c').innerHTML='<p class="rc-q">Cola agotada: todas las tarjetas se resolvieron.</p>';
+  el(k,'b').innerHTML='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  var h='<div class="rc-end '+v[0]+'">Aciertos al primer intento: '+ok+' de '+s.n+' ('+p+' %). <b>'+v[1]+'</b>.</div>';
+  if(k==='tg'){
+    Object.keys(TERMS).forEach(function(t){
+      var tot=0,hit=0;
+      for(i=0;i<s.n;i++){if(DECKS.tg[i].t===t){tot++;if(s.first[i])hit++;}}
+      var pp=Math.round(100*hit/tot),vv=rc_verdict(pp);
+      rows+='<tr><td>'+esc(TERMS[t])+'</td><td>'+hit+' de '+tot+' ('+pp+' %)</td><td>'+vv[1]+'</td></tr>';
+    });
+    h+='<div class="tw"><table><thead><tr><th>Término</th><th>Aciertos 1er intento</th><th>Veredicto</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  }
+  el(k,'e').innerHTML=h;
+}
+Object.keys(DECKS).forEach(rc_reset);
+</script>
+</div></body></html>

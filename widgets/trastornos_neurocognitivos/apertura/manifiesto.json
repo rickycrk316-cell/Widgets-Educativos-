@@ -1,0 +1,9 @@
+{
+ "titulo": "Apertura · Trastornos neurocognitivos",
+ "salida": "../Apertura_trastornos_neurocognitivos.html",
+ "tipo": "apertura",
+ "terminos": 9,
+ "problemas": {"B": 5, "P": 3, "S": 3, "FR": 4},
+ "hipotesis": 4,
+ "diagramas": 5
+}

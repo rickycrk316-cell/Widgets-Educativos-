@@ -1,0 +1,9 @@
+{
+ "titulo": "Apertura · Trastornos del estado de ánimo",
+ "salida": "../Apertura_trastornos_animo.html",
+ "tipo": "apertura",
+ "terminos": 9,
+ "problemas": {"B": 3, "P": 3, "S": 3, "FR": 3},
+ "hipotesis": 4,
+ "diagramas": 4
+}

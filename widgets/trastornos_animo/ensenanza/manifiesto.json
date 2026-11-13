@@ -1,0 +1,108 @@
+{
+ "titulo": "Crisis de angustia con síntomas somáticos",
+ "salida": "../Crisis_de_angustia_widget_v10.html",
+ "modo": "multi",
+ "entidades": {
+  "e1": "Trastorno de pánico",
+  "e2": "Ansiedad generalizada",
+  "e3": "Depresión mayor",
+  "e4": "Consumo de benzodiacepinas",
+  "e5": "Síndrome coronario agudo"
+ },
+ "principal": "e1",
+ "amenaza": "e5",
+ "tabs": [
+  "pan",
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4",
+  "e5",
+  "sin"
+ ],
+ "pg": {
+  "vis": 4,
+  "e1": 4,
+  "e2": 3,
+  "e3": 3,
+  "e4": 3,
+  "e5": 3
+ },
+ "fey": {
+  "e1": 2,
+  "e2": 1,
+  "e3": 1,
+  "e4": 1,
+  "e5": 1
+ },
+ "nodos": {
+  "e1": 6,
+  "e2": 5,
+  "e3": 5,
+  "e4": 5,
+  "e5": 5
+ },
+ "signos": {
+  "e1": 4,
+  "e2": 3,
+  "e3": 3,
+  "e4": 3,
+  "e5": 3
+ },
+ "dc": [
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4",
+  "e5"
+ ],
+ "nucleo": {
+  "vis": [
+   "Eje 1 — Curso temporal: crisis con pico en minutos, preocupación de meses, ánimo bajo de semanas, síntomas entre dosis o dolor isquémico persistente.",
+   "Eje 2 — ECG de 12 derivaciones antes de etiquetar ansiedad: el pánico se diagnostica tras excluir la isquemia.",
+   "Eje 3 — En toda ansiedad recurrente se criba el ánimo y se pregunta directamente por ideación suicida."
+  ],
+  "e1": [
+   "Activación simpática súbita",
+   "Interpretación catastrófica de sensaciones corporales",
+   "Hiperventilación e hipocapnia",
+   "Condicionamiento y evitación agorafóbica",
+   "Crisis inesperadas recurrentes con pico en minutos y miedo a nuevas crisis",
+   "ECG de 12 derivaciones normal + criterios DSM-5-TR en la entrevista",
+   "ISRS a dosis de inicio bajas con titulación gradual, junto con TCC"
+  ],
+  "e2": [
+   "Intolerancia a la incertidumbre alimenta la preocupación",
+   "Activación simpática sostenida tensa el músculo",
+   "Hiperalerta cortical fragmenta el sueño",
+   "Preocupación excesiva, difícil de controlar, la mayoría de días ≥6 meses",
+   "GAD-7 más criterios DSM-5-TR en la entrevista",
+   "ISRS o IRSN (escitalopram, sertralina, venlafaxina XR, duloxetina) más terapia cognitivo-conductual (TCC)"
+  ],
+  "e3": [
+   "Prefrontal hipoactiva y recompensa apagada",
+   "Desesperanza y control inhibitorio debilitado",
+   "Ánimo deprimido o anhedonia casi todos los días ≥2 semanas",
+   "PHQ-9 más pregunta directa por ideación suicida",
+   "ISRS (sertralina, escitalopram, fluoxetina) más psicoterapia"
+  ],
+  "e4": [
+   "Caída interdosis por vida media corta",
+   "Hiperactividad glutamatérgica y noradrenérgica",
+   "Umbral convulsivo bajo en abstinencia grave",
+   "Ansiedad de rebote entre dosis y escalada de alprazolam",
+   "Anamnesis de consumo con criterios DSM-5-TR",
+   "Cambia a diazepam por equivalencia y reduce de forma escalonada cada 1–2 semanas"
+  ],
+  "e5": [
+   "Oclusión coronaria total o parcial",
+   "Isquemia y necrosis del miocardio",
+   "Descarga simpática y reflejo vagal",
+   "Opresión retroesternal >20 min con diaforesis, sobre todo con factores de riesgo",
+   "ECG de 12 derivaciones en ≤10 min desde el primer contacto",
+   "AAS masticada de inmediato, salvo alergia"
+  ]
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "titulo": "Cicatriz queloide: infiltración con triamcinolona",
+ "salida": "../Queloide_triamcinolona_widget_v10.html",
+ "modo": "mono",
+ "tabs": [
+  "pan",
+  "def",
+  "fis",
+  "cli",
+  "dx",
+  "tx",
+  "inf",
+  "seg"
+ ],
+ "pg": {
+  "def": 4,
+  "fis": 4,
+  "cli": 4,
+  "dx": 4,
+  "tx": 4,
+  "inf": 4,
+  "seg": 4
+ },
+ "fey": {
+  "def": 1,
+  "fis": 2,
+  "dx": 1,
+  "tx": 1,
+  "inf": 1,
+  "seg": 1
+ },
+ "nodos": 8,
+ "signos": 5,
+ "dc": [
+  "dx",
+  "tx",
+  "inf",
+  "seg"
+ ],
+ "nucleo": [
+  "sobrepasa los bordes de la herida original y no regresa con el tiempo",
+  "Silicona en lámina o gel",
+  "triamcinolona intralesional, sola o con 5-fluorouracilo",
+  "Concentración de triamcinolona de 10 a 40 mg/mL",
+  "Infiltrar cada 4 a 6 semanas",
+  "añade 5-fluorouracilo a la triamcinolona",
+  "Escisión solo con adyuvancia inmediata, triamcinolona o radioterapia",
+  "la escisión siempre lleva adyuvancia",
+  "reevaluar cada 4 a 8 semanas",
+  "Las concentraciones de 20 o 40 mg/mL aumentan el riesgo de atrofia",
+  "Atrofia cutánea",
+  "al exceder la dosis recomendada suprime el eje hipotálamo-hipófiso-suprarrenal"
+ ]
+}

@@ -1,0 +1,57 @@
+{
+ "titulo": "Ciclo ovárico, cuerpo albo y terapia hormonal",
+ "salida": "../Ciclo_ovarico_menopausia_TH_widget_v11.html",
+ "modo": "mono",
+ "tabs": [
+  "pan",
+  "def",
+  "cic",
+  "fis",
+  "cli",
+  "dx",
+  "tx",
+  "seg"
+ ],
+ "pg": {
+  "def": 4,
+  "cic": 4,
+  "fis": 4,
+  "cli": 4,
+  "dx": 5,
+  "tx": 5,
+  "seg": 4
+ },
+ "fey": {
+  "def": 1,
+  "cic": 1,
+  "fis": 2,
+  "cli": 1,
+  "dx": 1,
+  "tx": 1,
+  "seg": 1
+ },
+ "nodos": 8,
+ "signos": 5,
+ "dc": [
+  "cic",
+  "dx",
+  "tx",
+  "seg"
+ ],
+ "nucleo": [
+  "Inhibina B cae y la FSH sube",
+  "Ciclos anovulatorios sin cuerpo lúteo",
+  "Neuronas KNDy estrechan la zona termoneutral",
+  "Epitelio urogenital pierde trofismo",
+  "Resorción ósea supera a la formación",
+  "Bochorno y sudoración nocturna",
+  "Diagnóstico clínico en mujeres de 45 años o más con síntomas",
+  "Terapia hormonal en mujeres menores de 60 años o con menos de 10 años desde la menopausia",
+  "la mujer con útero recibe estrógeno más progestágeno; la histerectomizada, estrógeno solo",
+  "Estrógeno solo en mujer con útero",
+  "Sangrado posmenopáusico: ecografía transvaginal y estudio del endometrio",
+  "una cicatriz hialina, pálida y avascular, formada por colágeno denso y restos de células luteínicas, sin función endocrina"
+ ],
+ "tipo": "v11",
+ "tema": "ginecologia"
+}

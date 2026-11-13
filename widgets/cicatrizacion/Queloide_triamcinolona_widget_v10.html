@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cicatriz queloide: infiltración con triamcinolona</title>
+<style>
+/* Vademécum: monografía impresa con índice de canto; filetes y tinta llevan la jerarquía, no las sombras */
+:root{
+--paper:#FBFBFC;--paper-2:#F1F2F5;--ink:#16181D;--ink-2:#3A3D46;--ink-3:#686C78;--rule:#D7D9E0;--rule-strong:#16181D;
+--accent:#2342A6;--accent-ink:#1B358A;--accent-field:#EAEEFA;--on-accent:#FFFFFF;
+--am:#7A4A06;--am-f:#FBF1DF;--ro:#9E1F1F;--ro-f:#FBE9E7;--ve:#2F5E12;--ve-f:#EBF3E1;--pu:#4C3FA8;--pu-f:#EEECFB;--co:#8E3517;--co-f:#FAEDE6;--rs:#8A2C52;--rs-f:#FAEAF1;
+--f-serif:ui-serif,"New York","Iowan Old Style","Charter","Source Serif Pro",Georgia,"Times New Roman",serif;
+--f-sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+--r:3px;
+/* alias de la v10 para compatibilidad */
+--surface-0:var(--paper);--surface-1:var(--paper-2);--border:var(--rule);--border-accent:var(--accent);--bg-accent:var(--accent-field);--text-primary:var(--ink);--text-secondary:var(--ink-2);--text-muted:var(--ink-3);--text-accent:var(--accent-ink);--radius:var(--r);--font-sans:var(--f-sans);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}
+html{color-scheme:light dark;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:var(--accent);color:var(--on-accent)}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--f-sans);-webkit-text-size-adjust:100%;font-feature-settings:"kern" 1;text-rendering:optimizeLegibility;caret-color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:18px 16px 56px;background:transparent}
+h1{font:600 26px/1.2 var(--f-serif);letter-spacing:-.012em;margin:6px 0 14px;padding-bottom:12px;border-bottom:2px solid var(--rule-strong);text-wrap:balance}
+h2{font:600 19px/1.3 var(--f-serif);letter-spacing:-.006em;margin:40px 0 14px;padding-top:12px;border-top:1px solid var(--rule-strong);text-wrap:balance}
+h3{font:600 16px/1.35 var(--f-serif);margin:20px 0 6px;text-wrap:balance}
+p{margin:0 0 12px;text-wrap:pretty}
+a{color:var(--accent-ink);text-underline-offset:3px}
+button{font:inherit;color:inherit;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,color .15s ease-out}
+button:active{transform:translateY(1px)}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* índice de canto */
+.tabs{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 0 0;border-bottom:2px solid var(--rule-strong);margin-bottom:16px;position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);scroll-snap-type:x proximity;scroll-padding-inline:56px}
+.tabs-w{position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper)}
+.tabs-w::before,.tabs-w::after{content:"";position:absolute;top:0;bottom:2px;width:56px;pointer-events:none;opacity:0;transition:opacity .2s;z-index:6}
+.tabs-w::before{left:0;background:linear-gradient(to left,transparent,var(--paper) 85%)}
+.tabs-w::after{right:0;background:linear-gradient(to right,transparent,var(--paper) 85%)}
+.tabs-w.ov-l::before,.tabs-w.ov-r::after{opacity:1}
+.nodo,.signo,.qv,.dc,h2{scroll-margin-top:84px}
+.tabs::-webkit-scrollbar{display:none}
+.tb{flex:0 0 auto;min-height:44px;padding:9px 15px 8px;border:1px solid var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;background:var(--paper-2);color:var(--ink-2);font:600 13px/1.2 var(--f-sans);letter-spacing:.01em;white-space:nowrap;scroll-snap-align:start}
+.tb:hover{background:var(--accent-field);color:var(--accent-ink)}
+.tb.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+.tab{display:none}
+.tab.on{display:block}
+/* recuadros */
+.card{background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;margin:12px 0;font-size:15px;line-height:1.6}
+.card p{margin:0 0 8px}
+.card p:last-child{margin-bottom:0}
+.mini{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:6px 0}
+.hb{border-radius:var(--r);padding:12px 14px;margin:14px 0;border:1px solid transparent;font-size:15px;line-height:1.6}
+.hb.az{background:var(--accent-field);color:var(--ink);border-color:var(--accent)}
+.hb.am{background:var(--am-f);color:var(--am);border-color:var(--am)}
+.hb.ro{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.hb.ve{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+.hb.am .mini,.hb.ro .mini,.hb.ve .mini{color:inherit;opacity:.88}
+.hb-t{font:600 16px/1.35 var(--f-serif);margin-bottom:6px;text-wrap:balance}
+.hb.az .hb-t{color:var(--accent-ink)}
+.pg{margin:0;padding-left:22px}
+.pg li{margin:5px 0}
+.pg li::marker{color:var(--accent-ink);font-weight:700}
+.hb.az:has(.pg){margin-bottom:24px}
+.hb.az:not(:has(.pg)):not(.rec-go){background:transparent;border-left-color:transparent;border-right-color:transparent;border-radius:0;padding-left:0;padding-right:0}
+.hb.az:not(:has(.pg))+.etapa{border-top:0}
+h2+.card,h2+.hb,h2+.tw{margin-top:0}
+.badge{display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.04em;padding:2px 7px;border-radius:2px;margin:0 4px 4px 0;vertical-align:middle;border:1px solid currentColor}
+.b-az{background:var(--accent-field);color:var(--accent-ink)}
+.b-ro{background:var(--ro-f);color:var(--ro)}
+.b-am{background:var(--am-f);color:var(--am)}
+.b-ve{background:var(--ve-f);color:var(--ve)}
+.b-pu{background:var(--pu-f);color:var(--pu)}
+.badge.b-pu{display:block;width:fit-content;max-width:100%;white-space:normal;font-size:12px;line-height:1.5;font-weight:600;letter-spacing:.01em;margin:14px 0}
+.b-co{background:var(--co-f);color:var(--co)}
+.b-rs{background:var(--rs-f);color:var(--rs)}
+.rem{display:inline-block;font-size:12.5px;background:var(--rs-f);color:var(--rs);border:1px dashed var(--rs);border-radius:2px;padding:1px 7px;margin:4px 0}
+/* Feynman */
+.fey{background:var(--co-f);border:1px solid var(--co);border-radius:var(--r);padding:14px 16px;margin:18px 0 26px}
+.fey-t{display:inline-block;font:600 15px/1.35 var(--f-serif);color:var(--co);margin-bottom:8px}
+.fey-b{margin:0 0 10px;font:400 16px/1.6 var(--f-serif);color:var(--ink)}
+.fey-c{margin:2px 0;color:var(--ink-2)}
+/* Panorama: entradas de índice */
+.tab{counter-reset:et}
+.etapa{counter-increment:et;background:transparent;border:0;border-top:1px solid var(--rule);border-radius:0;padding:18px 0 8px;margin:4px 0}
+.etapa h3{font-size:19px;line-height:1.3;margin:0 0 8px}
+.etapa h3::before{content:counter(et,decimal-leading-zero);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;letter-spacing:.04em;color:var(--accent-ink);margin-right:10px;vertical-align:2px}
+.res{margin:0 0 10px}
+.perla{border-top:1px dotted var(--rule);padding-top:8px;margin:0 0 10px;font-weight:500}
+.perla::before{content:"Perla";display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;background:var(--ve-f);color:var(--ve);border:1px solid var(--ve);border-radius:2px;padding:1px 6px;margin-right:8px;vertical-align:1px}
+.go{min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent);color:var(--on-accent);font:600 13.5px/1.2 var(--f-sans)}
+.go:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+/* tablas de monografía */
+.tw{overflow-x:auto;margin:12px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.5;font-variant-numeric:tabular-nums}
+th,td{border:0;border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--paper-2);font-weight:700;color:var(--ink)}
+thead th{font:700 14.5px/1.35 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong)}
+tbody tr:last-child>*{border-bottom:1px solid var(--rule-strong)}
+.stats{display:grid;grid-template-columns:1fr;gap:10px;margin:12px 0}
+@media (min-width:600px){.stats{grid-template-columns:repeat(3,1fr)}}
+.stat{background:transparent;border:0;border-top:2px solid var(--accent);border-radius:0;padding:8px 2px}
+.stat b{display:block;font:600 22px/1.25 var(--f-serif);color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--ink-2);line-height:1.4;display:block}
+.steps{list-style:none;counter-reset:st;padding:0;margin:10px 0}
+.steps>li{counter-increment:st;position:relative;padding:5px 0 9px 40px}
+.steps>li::before{content:counter(st);position:absolute;left:0;top:3px;width:26px;height:26px;border-radius:2px;background:var(--ink);color:var(--paper);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;display:flex;align-items:center;justify-content:center}
+/* cascada */
+.tl{list-style:none;margin:14px 0;padding:0 0 0 20px;border-left:2px solid var(--accent)}
+.nodo{position:relative;margin:0 0 14px;padding:11px 13px;background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);font-size:14px;line-height:1.55}
+.nodo::before{content:"";position:absolute;left:-27px;top:15px;width:12px;height:12px;border-radius:1px;background:var(--accent);box-shadow:0 0 0 3px var(--paper)}
+.paso{display:block;font:600 15px/1.4 var(--f-serif);margin-bottom:5px}
+.pn{color:var(--accent-ink);margin-right:4px;font-variant-numeric:tabular-nums}
+.man{margin:8px 0 0;font-size:13px;color:var(--ink-2)}
+.signo{background:var(--paper);border:1px solid var(--rule);border-top:2px solid var(--rule-strong);border-radius:0 0 var(--r) var(--r);padding:12px 14px;margin:12px 0;font-size:14px;line-height:1.55}
+.signo h4{margin:0 0 6px;font:600 15.5px/1.35 var(--f-serif)}
+.signo dl{margin:0}
+.signo dt{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-3);margin-top:8px}
+.signo dd{margin:2px 0 0}
+.xref{display:inline-flex;align-items:center;min-height:44px;padding:4px 10px;margin:3px 6px 3px 0;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent-field);color:var(--accent-ink);font:600 12.5px/1.3 var(--f-sans);text-align:left}
+.xref:hover{background:var(--accent);color:var(--on-accent)}
+p .xref,td .xref,li .xref,dd .xref{display:inline;position:relative;min-height:0;padding:0 5px;margin:0 2px;line-height:inherit;border-radius:2px;white-space:normal;overflow-wrap:anywhere;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+p .xref::after,td .xref::after,li .xref::after,dd .xref::after{content:"";position:absolute;left:-4px;right:-4px;top:-12px;bottom:-12px}
+.hl{outline:2px solid var(--accent);background:var(--accent-field)!important;transition:background .3s}
+.acc{border:1px solid var(--rule);border-radius:var(--r);margin:12px 0;overflow:hidden}
+.acc-h{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:44px;padding:9px 14px;border:0;background:var(--paper-2);font:600 14px/1.35 var(--f-sans);text-align:left}
+.acc-h:hover{background:var(--accent-field)}
+.chev{transition:transform .2s;color:var(--accent-ink)}
+.acc.op .chev{transform:rotate(180deg)}
+.acc-b{display:none;padding:10px 14px;font-size:14px;line-height:1.55}
+.acc.op .acc-b{display:block}
+.vanc{font-size:12.5px;line-height:1.5;padding-left:24px}
+.vanc li{margin:5px 0;word-break:break-word}
+.vanc li::marker{font-variant-numeric:tabular-nums;color:var(--ink-3)}
+/* simulador */
+.dc{border:1px solid var(--rule-strong);border-radius:var(--r);padding:14px 16px;margin:22px 0;background:var(--paper)}
+.dc-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.dc-g{margin:10px 0}
+.dc-l{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);margin-bottom:5px;display:block}
+.chip{min-height:44px;padding:7px 13px;margin:3px 6px 3px 0;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);font-size:13.5px}
+.chip:hover{border-color:var(--accent);color:var(--accent-ink)}
+.chip.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:600}
+.dc input[type=number]{min-height:44px;width:120px;padding:6px 10px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper);color:var(--ink);font:15px var(--f-sans);font-variant-numeric:tabular-nums}
+.out{margin-top:12px;padding:12px 14px;border-radius:var(--r);background:var(--paper-2);border:1px solid var(--rule);font-size:14px;line-height:1.58;min-height:44px}
+.tag{display:inline-block;font:600 11px/1.4 var(--f-sans);padding:1px 7px;border-radius:2px;background:var(--accent-field);color:var(--accent-ink);margin:4px 4px 0 0}
+.rec-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.rec-bar textarea{width:100%;min-height:120px;margin-top:8px;padding:9px 11px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper-2);color:var(--ink);font:14px/1.55 var(--f-sans);resize:vertical}
+.chip:disabled{cursor:default;opacity:.85}
+.rec-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.rec-ctl{display:none;gap:6px;margin-top:6px}
+.recon .rec-ctl{display:flex}
+.recon>*:not(.rec-bar):not(.tl){display:none}
+.recon .nodo:not(.rev) .pt{display:none}
+.recon .nodo:not(.rev) .pn::after{content:" ?"}
+.recon .nodo:not(.rev) .det{display:none}
+.recon .nodo.pis:not(.rev) .det{display:block}
+.recon .nodo.pis:not(.rev) .det>*:not(.man){display:none}
+.recon .nodo:not(.pis):not(.rev) .man{display:none}
+.recon .nodo.rev{border-color:var(--accent)}
+.rec-go{margin:22px 0}
+.steps.tg>li{padding-left:40px}
+span.tg{display:inline-block;font:700 11px/1.4 var(--f-mono);letter-spacing:.02em;padding:2px 7px;margin:0 6px 2px 0;border-radius:2px;background:var(--paper-2);border:1px solid var(--rule);color:var(--ink-2);white-space:nowrap;vertical-align:1px}
+span.tg[data-t="clave"]{background:var(--accent-field);color:var(--accent-ink);border-color:var(--accent)}
+span.tg[data-t="ok"]{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+span.tg[data-t="cond"]{background:var(--am-f);color:var(--am);border-color:var(--am)}
+span.tg[data-t="no"]{background:var(--rs-f);color:var(--rs);border-color:var(--rs)}
+span.tg[data-t="alarma"]{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.qv{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:12px 0}
+.qv p{margin:0;padding:9px 11px;border-radius:var(--r);border:1px solid var(--rule);background:var(--paper-2);font-size:13.5px;line-height:1.45}
+.qv p::before{display:block;font:700 10.5px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px;color:var(--ink-3)}
+.qv p[data-e="p"]{background:var(--accent-field);border-color:var(--accent)}
+.qv p[data-e="p"]::before{content:"Presente";color:var(--accent-ink)}
+.qv p[data-e="v"]::before{content:"Variable"}
+.qv p[data-e="a"]{border:1px dashed var(--rule);color:var(--ink-3);background:transparent}
+.qv p[data-e="a"]::before{content:"Ausente"}
+.qv p[data-e="k"]{grid-column:1/-1;border:2px solid var(--accent);background:var(--accent-field);font-size:14.5px}
+.qv p[data-e="k"]::before{content:"Signo clave";color:var(--accent-ink)}
+.hb.vi{background:var(--pu-f);color:var(--pu);border-color:var(--pu)}
+.hb.vi .mini{color:inherit;opacity:.88}
+table.vis{min-width:620px}
+table.vis td{min-width:140px}
+table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index:1;background:var(--paper-2);min-width:118px;max-width:150px;font-weight:700;border-right:1px solid var(--rule)}
+.vb-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.tbl>*:not(.vb-bar):not(.vis-w){display:none}
+.tbl td.tap{cursor:pointer}
+.tbl td.tap:not(.rev){color:transparent;background:repeating-linear-gradient(135deg,var(--paper-2),var(--paper-2) 7px,var(--accent-field) 7px,var(--accent-field) 14px)}
+.tbl td.tap:not(.rev) *{visibility:hidden}
+.tbl td.tap.rev{box-shadow:inset 0 0 0 1px var(--accent)}
+.cf{display:block;margin-top:10px;padding-top:8px;border-top:1px dashed var(--accent);font-style:italic;color:var(--ink-2)}
+.cf::before{content:"Contrafactual · ";font-style:normal;font-weight:700;color:var(--accent-ink)}
+.fig{margin:14px 0}
+.fig img{display:block;max-width:100%;height:auto;border-radius:var(--r);border:1px solid var(--rule)}
+.fig figcaption{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin-top:6px}
+@media (min-width:700px){body{font-size:15.5px}.wrap{padding:22px 24px 64px}h1{font-size:28px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- /KIT_HEAD -->
+<h1>Cicatriz queloide: infiltración con triamcinolona</h1>
+<nav class="tabs">
+<button type="button" class="tb" data-tab="pan" onclick="show('pan')">Panorama</button>
+<button type="button" class="tb" data-tab="def" onclick="show('def')">Definición y epidemiología</button>
+<button type="button" class="tb" data-tab="fis" onclick="show('fis')">Etiología y fisiopatología</button>
+<button type="button" class="tb" data-tab="cli" onclick="show('cli')">Clínica</button>
+<button type="button" class="tb" data-tab="dx" onclick="show('dx')">Plan diagnóstico</button>
+<button type="button" class="tb" data-tab="tx" onclick="show('tx')">Plan de tratamiento</button>
+<button type="button" class="tb" data-tab="inf" onclick="show('inf')">Infiltración con triamcinolona</button>
+<button type="button" class="tb" data-tab="seg" onclick="show('seg')">Seguimiento y complicaciones</button>
+</nav>
+<section class="tab" data-tab="pan">
+<div class="hb az"><div class="hb-t">El tema en una frase</div><p>El queloide es una cicatriz que no se detiene: un fibroblasto que no apaga su señal fabrica colágeno más allá de la herida, y la triamcinolona intralesional busca frenarlo sin dañar la piel sana.</p></div>
+<div class="etapa" data-go="def"><h3>Definición</h3><p class="res">Es un crecimiento fibroso de la dermis que sobrepasa los bordes de la herida original y no regresa por sí solo. Esa frontera lo separa de la cicatriz hipertrófica, que respeta el límite de la lesión y suele aplanarse con los meses. También se distingue de tumores que lo imitan, como el dermatofibrosarcoma protuberans, y de la cicatriz ensanchada madura. Saber a quién afecta orienta la sospecha, y eso lo da la epidemiología.</p><p class="perla">Si la cicatriz invade piel sana, piensa en queloide y no en hipertrófica.</p><button type="button" class="go" data-go="def" onclick="show('def')">Ir a Definición y epidemiología →</button></div>
+<div class="etapa" data-go="def"><h3>Epidemiología</h3><p class="res">Predomina en personas con fototipos oscuros, con predisposición familiar de herencia autosómica dominante, y aparece sobre zonas de piel sometidas a tensión. Los datos de Ecuador no están establecidos en las fuentes revisadas. El terreno genético explica por qué dos personas con la misma herida evolucionan distinto, y esa diferencia se explica después en la fisiopatología. Por eso el antecedente familiar y los queloides previos se preguntan antes de cualquier cirugía electiva o perforación cosmética en esas personas.</p><p class="perla">Un queloide previo en el paciente o su familia pesa más que el tamaño de la herida nueva.</p><button type="button" class="go" data-go="def" onclick="show('def')">Ir a Definición y epidemiología →</button></div>
+<div class="etapa" data-go="fis"><h3>Etiología y fisiopatología</h3><p class="res">Una lesión que llega a la dermis profunda inicia una inflamación que no se apaga. El fibroblasto recibe una señal sostenida del factor TGF-β1, fabrica colágeno tipo I en exceso y lo deposita desordenado en haces gruesos. La tensión mecánica de la piel amplifica ese círculo y el tejido avanza más allá de la herida. Esos pasos explican el aspecto de la lesión y la recidiva tras cortarla. Cada paso se enlaza con un signo de la clínica y con un blanco del tratamiento, y eso permite razonar la terapéutica en lugar de memorizarla.</p><p class="perla">Cortar el queloide reabre la cascada: la escisión sola recidiva.</p><button type="button" class="go" data-go="fis" onclick="show('fis')">Ir a Etiología y fisiopatología →</button></div>
+<div class="etapa" data-go="cli"><h3>Clínica</h3><p class="res">La lesión es una placa o nódulo firme y brillante que sobrepasa la herida y emite prolongaciones laterales. El prurito y el dolor vienen de las fibras nerviosas nuevas, y el borde activo se ve rojo por los vasos nuevos. Las localizaciones frecuentes son zonas de tensión, como el tórax anterior, los hombros, el lóbulo de la oreja y la mandíbula. El diagnóstico se apoya en este cuadro. Reconocer estos signos por su mecanismo permite diferenciar una lesión activa de una cicatriz madura estable.</p><p class="perla">Prurito y dolor indican que la lesión sigue activa.</p><button type="button" class="go" data-go="cli" onclick="show('cli')">Ir a Clínica →</button></div>
+<div class="etapa" data-go="dx"><h3>Diagnóstico</h3><p class="res">El diagnóstico es clínico: historia de lesión previa, morfología y crecimiento más allá del borde. La biopsia se reserva para lesiones atípicas, de crecimiento rápido, que recidivan pronto o hacen sospechar malignidad. Antes de tratar conviene fotografiar, medir y puntuar la lesión con una escala, porque esa línea de base permite juzgar la respuesta. Con el diagnóstico hecho, se elige el escalón terapéutico. La conducta posterior depende de esa decisión inicial, por lo que conviene registrar bien el punto de partida.</p><p class="perla">La biopsia no es rutina: se pide cuando la lesión no se comporta como queloide.</p><button type="button" class="go" data-go="dx" onclick="show('dx')">Ir a Plan diagnóstico →</button></div>
+<div class="etapa" data-go="tx"><h3>Tratamiento</h3><p class="res">El manejo es escalonado y combinado. Primero la prevención y la silicona; luego el corticoide intralesional como primera opción invasiva, solo o con 5-fluorouracilo. La escisión se reserva para casos seleccionados y siempre con adyuvancia, sea corticoide o radioterapia, porque sola recidiva. Otras opciones son la crioterapia y el láser. El procedimiento central, la infiltración con triamcinolona, se detalla en la pestaña siguiente. Cada opción interrumpe un punto distinto de la cascada fibrótica, y por eso se combinan en lugar de usarse solas.</p><p class="perla">Nunca se extirpa un queloide sin plan de adyuvancia.</p><button type="button" class="go" data-go="tx" onclick="show('tx')">Ir a Plan de tratamiento →</button></div>
+<div class="etapa" data-go="inf"><h3>Infiltración con triamcinolona</h3><p class="res">La pestaña reúne el procedimiento: cuándo indicarlo, cuándo evitarlo, cómo se hace y con qué dosis y frecuencia. Funciona mejor en lesiones pequeñas y recientes, y la inyección debe llegar a la dermis, no al tejido subcutáneo, para frenar al fibroblasto sin atrofiar la piel. Se reevalúa tras unas pocas sesiones: si la respuesta es pobre, se combina o se cambia. Los efectos adversos se tratan en el seguimiento, donde se decide si ajustar.</p><p class="perla">Inyectar más profundo o más concentrado no mejora la respuesta: aumenta la atrofia.</p><button type="button" class="go" data-go="inf" onclick="show('inf')">Ir a Infiltración con triamcinolona →</button></div>
+<div class="etapa" data-go="seg"><h3>Seguimiento y complicaciones</h3><p class="res">El ciclo es revisar, evaluar y ajustar: se mide la respuesta a intervalos regulares y se decide si continuar, combinar o detener. Las complicaciones locales son atrofia, telangiectasias e hipopigmentación, esta última más visible en piel oscura. La más temida a distancia es el efecto sistémico del corticoide si se excede la dosis. La recidiva es la regla tras la escisión aislada, y su señal es el regreso del prurito y del borde activo.</p><p class="perla">Atrofia o hipopigmentación tras una sesión obligan a ajustar antes de repetir.</p><button type="button" class="go" data-go="seg" onclick="show('seg')">Ir a Seguimiento y complicaciones →</button></div>
+<p class="mini">Esto es el mapa, no el territorio: cada párrafo y cada perla se justifican en su pestaña.</p>
+</section>
+<section class="tab" data-tab="def">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Qué criterio clínico separa un queloide de una cicatriz hipertrófica y por qué esa diferencia cambia la expectativa de evolución?</li>
+<li>¿Qué proceso normal de cicatrización se altera en el queloide y en qué fase queda detenido?</li>
+<li>¿En qué se diferencia el queloide del dermatofibrosarcoma protuberans y de una cicatriz ensanchada madura, y cuándo esa duda obliga a tomar biopsia?</li>
+<li>¿Qué características del paciente y de la zona anatómica aumentan la probabilidad de queloide y por qué?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: Delaleu 2022 [1] y consenso JSW 2018 [2] (texto parcial)</span></p>
+<div class="hb am"><div class="hb-t">Alcance</div>
+<p>Cubre el queloide cutáneo y la infiltración intralesional con triamcinolona como procedimiento central. Trata la cicatriz hipertrófica solo como diferencial y no desarrolla el manejo de quemaduras extensas. No incluye cifras de Ecuador porque no se encontró una fuente sostenible.</p></div>
+
+<h2>Definición</h2>
+<div class="card"><p><b>Queloide</b>: pseudotumor dérmico crónico y progresivo, que crece en volumen y superficie más allá de los bordes de la herida original, sin invadir otros tejidos y sin regresión espontánea. Aunque se desencadena por una lesión o inflamación de la dermis, se considera «no una cicatriz en el sentido estricto» porque progresa durante años [1].</p>
+<span class="badge b-pu">Delaleu 2022 [1]</span></div>
+<div class="card"><p>La herida normal cierra en tres fases: inflamación, proliferación y remodelado. En la fase proliferativa los fibroblastos fabrican colágeno; en el remodelado lo reorganizan y la célula reduce su actividad hasta que la cicatriz madura. El queloide altera esa transición: la inflamación y la producción de colágeno se sostienen y el remodelado no se completa [3].</p>
+<span class="rem">↪ Mecanismo en «Etiología y fisiopatología»</span></div>
+<div class="card"><p>Criterio central: la lesión sobrepasa los bordes de la herida y no regresa. La cicatriz hipertrófica, en cambio, se queda dentro del límite de la lesión inicial y regresa de forma espontánea en 12–24 meses [1]. Las revisiones de manejo usan el mismo criterio de borde [3] [4].</p>
+<ul>
+<li>Clínicos: crecimiento más allá del borde, consistencia firme, persistencia y recidiva tras la escisión.</li>
+<li>Por antecedente: herencia familiar y lesión previa en la zona.</li>
+<li>Por localización: zonas con protocolo propio, como oreja, mandíbula y pared torácica anterior [2].</li>
+<li>Histológicos: colágeno hialinizado en haces gruesos [VERIFICAR EN FUENTE].</li>
+</ul></div>
+
+<h3>No confundir con…</h3>
+<div class="tw"><table>
+<thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Cicatriz hipertrófica</th><td>Placa elevada, firme y a veces pruriginosa sobre una herida previa</td><td>Respeta el borde de la herida y regresa en 12–24 meses [1]; el queloide sobrepasa el borde y no regresa</td></tr>
+<tr><th>Dermatofibrosarcoma protuberans</th><td>Nódulo o placa firme de crecimiento lento en la piel</td><td>Tumor maligno de la dermis que simula queloide y puede aparecer sin herida previa [VERIFICAR EN FUENTE]; el consenso JSW lo incluye en el diagnóstico diferencial [2]</td></tr>
+<tr><th>Cicatriz ensanchada madura</th><td>Cicatriz visible, a veces algo elevada, tras una herida</td><td>Está estable, no crece ni da síntomas y no tiene borde activo; no sobrepasa el límite de la herida [VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+
+<div class="card"><p>Ejemplo de anclaje: mujer de 24 años, fototipo V, con perforación del lóbulo hace ocho meses. Una masa firme y brillante, mayor que el orificio, crece sobre el lóbulo y le pica.</p></div>
+
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la cicatriz que no se detiene</span>
+<p class="fey-b">Cuando te haces una herida, la piel manda obreros que tapan el hueco con una masilla. Cuando el hueco se cierra, los obreros deberían irse a casa. En el queloide nadie les avisa: siguen echando masilla y pasan del borde de la herida hacia la piel sana. En la cicatriz común, en cambio, el trabajo se detiene a tiempo.</p>
+<p class="mini fey-c">En medicina esto se llama… fibroblasto (el obrero), colágeno (la masilla) y queloide (la masilla que se pasa del borde).</p>
+<p class="mini fey-c">Dónde falla la comparación: los obreros no reciben una orden externa que se pueda cancelar; la señal que los mantiene activos se sostiene dentro del propio tejido.</p></div>
+
+<h2>Epidemiología</h2>
+<div class="stats">
+<div class="stat"><b>IV–VI</b><span>fototipos de Fitzpatrick más afectados de forma desproporcionada [4]</span></div>
+<div class="stat"><b>12–24 meses</b><span>regresión espontánea de la cicatriz hipertrófica, que el queloide no tiene [1]</span></div>
+<div class="stat"><b>30–90 %</b><span>de las personas desarrollan cicatriz hipertrófica o queloide; cifra del resumen, sin población definida [3]</span></div>
+</div>
+<p>La enfermedad tiene predisposición familiar de herencia autosómica dominante y afecta de preferencia a personas de ascendencia no europea, sobre todo subsahariana [1]. Asiáticos y africanos son muy propensos; los caucásicos lo son menos y sus cicatrices suelen ser más leves [2]. La edad típica de aparición, entre 10 y 30 años, no se confirmó con fuente [VERIFICAR EN FUENTE].</p>
+<div class="tw"><table>
+<thead><tr><th>Factor de riesgo</th><th>¿Modificable?</th><th>Dónde se explica el mecanismo</th></tr></thead>
+<tbody>
+<tr><th>Ascendencia y fototipo IV–VI</th><td>No</td><td>Etiología y fisiopatología, tabla de causas</td></tr>
+<tr><th>Antecedente familiar de queloide</th><td>No</td><td>Etiología y fisiopatología, tabla de causas</td></tr>
+<tr><th>Lesión dérmica previa (cirugía, acné, perforación)</th><td>Parcial</td><td>Etiología y fisiopatología, primer nodo</td></tr>
+<tr><th>Zona de tensión de la piel</th><td>Parcial</td><td>Etiología y fisiopatología, tensión mecánica</td></tr>
+</tbody></table></div>
+<p class="mini">Ecuador y Latinoamérica: no se encontraron datos sobre queloide ni infiltración con triamcinolona en la búsqueda realizada; no se ofrece estimación.</p>
+</section>
+<section class="tab" data-tab="fis">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué una misma herida deja una cicatriz normal en una persona y un queloide en otra?</li>
+<li>¿Qué señal mantiene activo al fibroblasto y cómo eso produce el exceso de colágeno desordenado?</li>
+<li>¿Cómo la tensión mecánica de la piel convierte el queloide en un proceso que se alimenta a sí mismo?</li>
+<li>¿Por qué la escisión sin adyuvancia reactiva la cascada y favorece la recidiva?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: Ogawa y cols., consenso JSW 2018 [2] (texto parcial)</span></p>
+<p class="mini">Las moléculas de la cascada siguen las revisiones de fibrosis queloidea [3] [5] [4], leídas solo en resumen o en texto parcial. Vigencia no verificada.</p>
+
+<h2>Del daño dérmico al exceso de colágeno</h2>
+<ol class="tl">
+<li class="nodo" id="m-1" data-clin="0" data-paso="Lesión que alcanza la dermis reticular" data-rama="Rama A · Daño y señal sostenida"><div class="det"><p>La dermis reticular es la capa profunda de la dermis, rica en colágeno grueso y vasos. Una cirugía, quemadura, acné inflamatorio, perforación o vacuna que la alcanza activa la cicatrización. El queloide se desencadena por una lesión o inflamación de la dermis [1]; la profundidad exacta necesaria no se confirmó [VERIFICAR EN FUENTE]. El desencadenante es el primer golpe; el terreno genético es el segundo.</p></div></li>
+<li class="nodo" id="m-2" data-clin="0" data-paso="Inflamación crónica persistente en la dermis" data-rama="Rama A · Daño y señal sostenida"><div class="det"><p>Tras la lesión, las células inflamatorias (macrófagos, linfocitos y mastocitos) deberían retirarse al terminar la fase inflamatoria. En el queloide se quedan y siguen liberando mediadores sobre los fibroblastos vecinos. Esa inflamación sostenida, junto con la tensión, mantiene la proliferación de fibroblastos y el depósito excesivo de colágeno [3] [5] [4]. Aquí la herida deja de comportarse como una herida que cierra.</p></div></li>
+<li class="nodo" id="m-3" data-clin="0" data-paso="Fibroblasto hiperactivo por TGF-β1 sostenido" data-rama="Rama A · Daño y señal sostenida"><div class="det"><p>El TGF-β1 (factor de crecimiento transformante beta 1, mensajero que liberan plaquetas, macrófagos y los propios fibroblastos) se une a receptores del fibroblasto y activa a las proteínas Smad, que viajan al núcleo y encienden los genes del colágeno. En el queloide esa señal TGF-β/Smad no se apaga [5] [4]. La menor apoptosis del fibroblasto, que lo deja vivo y activo, no se confirmó [VERIFICAR EN FUENTE]. Este es un blanco farmacológico: ver «Infiltración con triamcinolona».</p></div></li>
+<li class="nodo" id="m-4" data-clin="1" data-paso="Exceso de colágeno tipo I en haces hialinos gruesos" data-rama="Rama A · Daño y señal sostenida"><div class="det"><p>El fibroblasto hiperactivo fabrica colágeno tipo I y III en exceso, además de fibronectina y periostina alteradas, con menos decorina y dermatopontina, proteínas que normalmente ordenan las fibras [4]. El colágeno se deposita en haces gruesos y desorganizados (hialinos), en lugar del entramado fino de la piel normal. Ese depósito forma la masa firme del queloide. También es blanco farmacológico: ver «Infiltración con triamcinolona».</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="s-1" onclick="ir('cli','s-1')">Placa firme y brillante</button></p></div></li>
+</ol>
+
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — el interruptor que se queda pegado</span>
+<p class="fey-b">Para arreglar una herida, el fibroblasto necesita que alguien encienda un interruptor que dice «fabrica masilla». Cuando la herida cierra, el interruptor debería apagarse solo. En el queloide se queda pegado: el fibroblasto sigue fabricando masilla sin parar y la acumula en capas gruesas y desordenadas, como un muro levantado sin plano.</p>
+<p class="mini fey-c">En medicina esto se llama… TGF-β1 (el interruptor), fibroblasto (el obrero) y colágeno tipo I (la masilla).</p>
+<p class="mini fey-c">Dónde falla la comparación: no es un solo interruptor; varias señales se refuerzan entre sí y no basta con una orden para apagarlas.</p></div>
+
+<h2>Amplificación mecánica y expansión</h2>
+<ol class="tl">
+<li class="nodo" id="m-5" data-clin="0" data-paso="Tensión mecánica de la piel amplifica la señal" data-rama="Rama B · Círculo vicioso"><div class="det"><p>El fibroblasto percibe la tracción a través de integrinas (receptores de adhesión a la matriz) y de las vías YAP/TAZ y del calcio, y responde con más proliferación y más matriz [5]. La matriz más rígida activa a su vez el fenotipo fibrótico, y se forma un círculo que se extiende a la piel vecina [5]. Por eso el queloide prefiere zonas de movimiento y tensión.</p></div></li>
+<li class="nodo" id="m-6" data-clin="1" data-paso="Neoangiogénesis y fibras nerviosas nuevas" data-rama="Rama B · Círculo vicioso"><div class="det"><p>El tejido en proliferación forma vasos nuevos y fibras nerviosas que le aportan oxígeno y señales. Los vasos nuevos dan el eritema y las telangiectasias del borde activo; las fibras nerviosas dan prurito y dolor neurogénico, que son síntomas importantes en el queloide [1]. El detalle de angiogénesis y de inervación del queloide no se confirmó en las fuentes leídas [VERIFICAR EN FUENTE].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="s-3" onclick="ir('cli','s-3')">Prurito</button> <button type="button" class="xref" data-ir="s-4" onclick="ir('cli','s-4')">Dolor o hiperestesia</button> <button type="button" class="xref" data-ir="s-5" onclick="ir('cli','s-5')">Borde activo eritematoso</button></p></div></li>
+<li class="nodo" id="m-7" data-clin="1" data-paso="Crecimiento invasivo más allá de los bordes" data-rama="Rama B · Círculo vicioso"><div class="det"><p>La rigidez y la señal fibrótica se propagan del tejido cicatricial a la dermis sana vecina, y el fibroblasto de la periferia se activa también [5]. La lesión crece en volumen y superficie, sin invadir otros tejidos [1]. El avance periférico, no la masa central, es la parte más activa de la lesión; por eso el borde importa en el tratamiento.</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="s-1" onclick="ir('cli','s-1')">Placa que sobrepasa la herida</button> <button type="button" class="xref" data-ir="s-2" onclick="ir('cli','s-2')">Prolongaciones laterales</button></p></div></li>
+<li class="nodo" id="m-8" data-clin="0" data-paso="Recidiva tras escisión aislada" data-rama="Rama B · Círculo vicioso"><div class="det"><p>Cortar el queloide es una nueva herida sobre el mismo terreno: reactiva la inflamación, la señal TGF-β/Smad y la tensión. Por eso la recidiva tras escisión sola es alta [4] y la escisión se acompaña de adyuvancia, como corticoide intralesional o radioterapia [6]. Con la combinación, la recidiva puede bajar, pero no desaparece: ver «Seguimiento y complicaciones».</p></div></li>
+</ol>
+
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — el círculo que se alimenta solo</span>
+<p class="fey-b">Imagina una tela que se estira al caminar. Cada tirón le dice a los obreros que traigan más masilla, y la masilla vuelve la tela más dura, que tira aún más. Así el bulto no solo crece: crece porque está creciendo. Y si lo cortas, haces una herida nueva en la misma tela tensa, y el círculo vuelve a empezar.</p>
+<p class="mini fey-c">En medicina esto se llama… mecanotransducción, rigidez de la matriz y recidiva.</p>
+<p class="mini fey-c">Dónde falla la comparación: en la piel la tensión no es solo un tirón; también influyen la inflamación y la herencia, que cambian cuánto responde cada persona.</p></div>
+
+<h2>Causas y puntos de entrada</h2>
+<div class="tw"><table>
+<thead><tr><th>Causa / grupo</th><th>Cómo entra en la cascada</th><th>Nodo</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Predisposición genética y ascendencia</th><td>Herencia autosómica dominante; fototipos IV–VI y ascendencia no europea responden con más fibrosis a la misma herida</td><td><button type="button" class="xref" data-ir="m-3" onclick="ir('fis','m-3')">Fibroblasto hiperactivo</button></td><td>[1] [4]</td></tr>
+<tr><th>Tipo de lesión: cirugía, quemadura, acné, perforación, vacuna</th><td>Cualquier lesión o inflamación de la dermis puede iniciar la cascada</td><td><button type="button" class="xref" data-ir="m-1" onclick="ir('fis','m-1')">Lesión dérmica</button></td><td>[1]</td></tr>
+<tr><th>Inflamación crónica de la herida (infección, acné, cuerpo extraño)</th><td>Mantiene a las células inflamatorias y a los mediadores sobre el fibroblasto</td><td><button type="button" class="xref" data-ir="m-2" onclick="ir('fis','m-2')">Inflamación persistente</button></td><td>[3] [5] [4]</td></tr>
+<tr><th>Tensión mecánica de la zona (tórax anterior, hombro, mandíbula)</th><td>La tracción activa mecanotransducción y rigidez de matriz</td><td><button type="button" class="xref" data-ir="m-5" onclick="ir('fis','m-5')">Tensión mecánica</button></td><td>[2] [5]</td></tr>
+<tr><th>Hormonas: pubertad y embarazo</th><td>Se asocian a aparición o crecimiento de queloides; mecanismo no confirmado</td><td><button type="button" class="xref" data-ir="m-2" onclick="ir('fis','m-2')">Inflamación persistente</button></td><td>[VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+</section>
+<section class="tab" data-tab="cli">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué el queloide produce prurito y dolor y qué indican esos síntomas sobre la actividad de la lesión?</li>
+<li>¿Qué hallazgo clínico del borde permite distinguir un queloide de una cicatriz hipertrófica y cómo se explica por la fisiopatología?</li>
+<li>¿Por qué el queloide aparece con más frecuencia en el esternón, los hombros, el lóbulo de la oreja y la mandíbula?</li>
+<li>¿Qué signos sugieren un crecimiento activo y cuáles deberían hacer dudar del diagnóstico?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: Delaleu 2022 [1] y consenso JSW 2018 [2] (texto parcial)</span></p>
+<div class="qv">
+<p data-e="p">Placa o nódulo firme sobre una herida previa</p>
+<p data-e="p">Superficie lisa y brillante</p>
+<p data-e="p">Persistencia sin regresión durante años</p>
+<p data-e="v">Prurito</p>
+<p data-e="v">Dolor o hiperestesia</p>
+<p data-e="a">Ulceración con bordes irregulares y crecimiento muy rápido</p>
+<p data-e="k"><button type="button" class="xref" data-ir="s-1" onclick="ir('cli','s-1')">Placa que sobrepasa los bordes de la herida</button></p>
+</div>
+
+<h2>Signos por mecanismo</h2>
+<div class="signo" id="s-1"><h4>Placa o nódulo firme, brillante, que sobrepasa los bordes</h4>
+<dl>
+<dt>Cómo se reconoce</dt><dd>Masa elevada, de consistencia firme y superficie lisa y brillante, mayor que la herida original. Crece durante años y no regresa [1].</dd>
+<dt>Por qué aparece</dt><dd>El exceso de colágeno tipo I en haces gruesos forma la masa firme, y el avance periférico la extiende más allá de la herida. <button type="button" class="xref" data-ir="m-4" onclick="ir('fis','m-4')">← Exceso de colágeno</button> <button type="button" class="xref" data-ir="m-7" onclick="ir('fis','m-7')">← Crecimiento invasivo</button></dd>
+<dt>Qué significa</dt><dd>Es el criterio que separa el queloide de la cicatriz hipertrófica, que respeta el borde [1]. Con él se orienta el diagnóstico clínico.</dd>
+</dl></div>
+<div class="signo" id="s-2"><h4>Prolongaciones en «pinza de cangrejo»</h4>
+<dl>
+<dt>Cómo se reconoce</dt><dd>Extensiones laterales de la lesión que rodean la piel sana, con aspecto de pinzas. Su descripción formal no se confirmó en las fuentes leídas [VERIFICAR EN FUENTE].</dd>
+<dt>Por qué aparece</dt><dd>La señal fibrótica se propaga a la dermis vecina siguiendo las líneas de mayor tensión. <button type="button" class="xref" data-ir="m-7" onclick="ir('fis','m-7')">← Crecimiento invasivo</button></dd>
+<dt>Qué significa</dt><dd>Indica crecimiento más allá de la herida: apoya el diagnóstico de queloide y no de cicatriz hipertrófica.</dd>
+</dl></div>
+<div class="signo" id="s-3"><h4>Prurito</h4>
+<dl>
+<dt>Cómo se reconoce</dt><dd>Picazón persistente sobre la lesión, a veces intensa, que empeora el rascado y puede alterar el sueño. Es frecuente y afecta la calidad de vida [1].</dd>
+<dt>Por qué aparece</dt><dd>Las fibras nerviosas nuevas y los mediadores de la inflamación estimulan los receptores de la piel. <button type="button" class="xref" data-ir="m-6" onclick="ir('fis','m-6')">← Neoangiogénesis y fibras nerviosas</button></dd>
+<dt>Qué significa</dt><dd>Sugiere que la lesión sigue activa. Su regreso tras el tratamiento puede anunciar recidiva.</dd>
+</dl></div>
+<div class="signo" id="s-4"><h4>Dolor o hiperestesia</h4>
+<dl>
+<dt>Cómo se reconoce</dt><dd>Dolor espontáneo o al roce, con sensibilidad aumentada del área, de tipo neurogénico [1].</dd>
+<dt>Por qué aparece</dt><dd>Las fibras nerviosas nuevas son sensibles a la inflamación y a la presión de la masa. <button type="button" class="xref" data-ir="m-6" onclick="ir('fis','m-6')">← Neoangiogénesis y fibras nerviosas</button></dd>
+<dt>Qué significa</dt><dd>Es un síntoma de actividad y justifica tratar la lesión, aunque sea pequeña. No orienta por sí solo a malignidad.</dd>
+</dl></div>
+<div class="signo" id="s-5"><h4>Borde activo eritematoso con telangiectasias</h4>
+<dl>
+<dt>Cómo se reconoce</dt><dd>Anillo rojo o violáceo en la periferia de la lesión, con vasos finos visibles. Su descripción no se confirmó en las fuentes leídas [VERIFICAR EN FUENTE].</dd>
+<dt>Por qué aparece</dt><dd>Los vasos nuevos del tejido en proliferación se dilatan y se ven a través de la epidermis. <button type="button" class="xref" data-ir="m-6" onclick="ir('fis','m-6')">← Neoangiogénesis y fibras nerviosas</button></dd>
+<dt>Qué significa</dt><dd>Marca la zona de crecimiento más activa. Diferencia la lesión activa de una cicatriz madura estable y se vigila al evaluar la respuesta.</dd>
+</dl></div>
+
+<h2>Localizaciones típicas</h2>
+<div class="tw"><table>
+<thead><tr><th>Localización</th><th>Por qué predomina</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Esternón y pared torácica anterior</th><td>Piel con tensión constante por respiración y movimiento; tras esternotomía, acné u otras incisiones</td><td>[2] [5]</td></tr>
+<tr><th>Hombros y deltoides</th><td>Zona de tracción por el movimiento del brazo; lugar habitual de vacunas</td><td>[2] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Lóbulo de la oreja</th><td>Perforaciones y cirugía auricular; la lesión es pequeña, pero el terreno decide la respuesta</td><td>[2]</td></tr>
+<tr><th>Mandíbula</th><td>Movimiento continuo al hablar y masticar; acné y cirugía local</td><td>[2]</td></tr>
+</tbody></table></div>
+<p class="mini">Siglas: JSW, Japan Scar Workshop. La frecuencia relativa de cada localización no se confirmó con cifra; el consenso JSW da un protocolo propio para cada una [2].</p>
+</section>
+<section class="tab" data-tab="dx">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Qué criterio clínico separa el queloide de la cicatriz hipertrófica, y por qué basta para decidir sin biopsia en la mayoría de los casos?</li>
+<li>¿Qué cuatro situaciones obligan a tomar biopsia antes de infiltrar?</li>
+<li>¿Qué miden POSAS, la escala de Vancouver y la escala JSW, y para qué sirven la foto y la medición basales?</li>
+<li>¿Por qué un queloide que recidiva pronto tras la escisión exige descartar un dermatofibrosarcoma protuberans?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: consenso JSW 2018 [2] (solo pies de figura); atlas clínico [1] (solo resumen)</span></p>
+<ol class="steps tg">
+<li><span class="tg">1.º</span> Diagnóstico clínico: placa o nódulo firme que sobrepasa los bordes de la herida original y no regresa con el tiempo [1].</li>
+<li><span class="tg">Añade</span> Fotografía con regla, medidas en dos ejes y altura, y una escala de cicatriz (POSAS o Vancouver) antes de la primera infiltración [2][7].</li>
+<li><span class="tg">Solo si</span> La lesión es atípica, crece rápido, se ulcera o recidiva pronto tras la escisión: descarta dermatofibrosarcoma protuberans y carcinoma escamocelular [2].</li>
+<li><span class="tg">Confirma</span> La histología de queloide (colágeno en haces gruesos y hialinos) no se pide de rutina cuando la clínica es típica [VERIFICAR EN FUENTE].</li>
+<li><span class="tg">No pidas</span> Imagen ni laboratorio para confirmar un queloide típico: no cambian la conducta.</li>
+<li><span class="tg">Alarma</span> Ulceración persistente, crecimiento acelerado o aspecto distinto al de un queloide: biopsia antes de cualquier infiltración.</li>
+</ol>
+
+<h2>Pruebas y herramientas diagnósticas</h2>
+<p class="mini">No se leyeron cifras de sensibilidad ni especificidad de estas herramientas, por eso se escribe «No establecida» [VERIFICAR EN FUENTE]. Glosario: S, sensibilidad; E, especificidad; VPP y VPN, valores predictivos; POSAS, Patient and Observer Scar Assessment Scale; VSS, Vancouver Scar Scale; JSS, JSW Scar Scale.</p>
+<div class="tw"><table>
+<thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad (descartar/confirmar)</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Examen clínico</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirma el queloide si sobrepasa los bordes y no regresa</td><td>Es la base del diagnóstico. Registra tiempo de evolución, lesión de origen, prurito y dolor. Mecanismo: <button type="button" class="xref" data-ir="m-7" onclick="ir('fis','m-7')">← Crecimiento invasivo</button></td><td>[1]</td></tr>
+<tr><th>Biopsia de piel</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Descarta tumores que simulan queloide</td><td>Se reserva para la lesión atípica, de crecimiento rápido, ulcerada o con recidiva precoz. Evita infiltrar un dermatofibrosarcoma protuberans.</td><td>[2]</td></tr>
+<tr><th>POSAS</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Mide la cicatriz y su evolución; no diagnostica</td><td>Combina la valoración del observador y la del paciente. En una revisión de 18 escalas de cicatriz de quemadura tuvo el mejor desempeño.</td><td>[7]</td></tr>
+<tr><th>Escala de Vancouver (VSS)</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Mide la respuesta al tratamiento</td><td>Puntúa vascularidad, pigmentación, flexibilidad y altura. Los ensayos la usan para definir respuesta como reducción de 50, 75 o 90 %.</td><td>[8] [7]</td></tr>
+<tr><th>Escala JSW (JSS)</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Distingue queloide, hipertrófica y cicatriz madura, y juzga gravedad</td><td>Puntúa factores de riesgo del paciente y de la zona afectada.</td><td>[2]</td></tr>
+<tr><th>Fotografía y medición basales</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Da el punto de comparación para decidir si continuar o cambiar</td><td>Misma luz, mismo ángulo y regla en cada visita.</td><td>[4]</td></tr>
+</tbody></table></div>
+
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — dentro o fuera de la herida</span>
+<p class="fey-b">Imagina que pintas una línea con tiza en el patio y alguien rellena la línea con arena. Si la arena se queda dentro de la línea y con el tiempo se aplana, es una cicatriz gruesa pero buena. Si la arena se desborda sobre el patio y nunca para, es un queloide. Para saber cuál es, solo hay que mirar si pasó la línea.</p>
+<p class="mini fey-c">En medicina esto se llama… cicatriz hipertrófica frente a queloide.</p>
+<p class="mini fey-c">Dónde falla la comparación: la arena no crece sola; el queloide sí sigue produciendo colágeno durante años.</p></div>
+
+<h2>Queloide, hipertrófica y lesión que exige biopsia</h2>
+<div class="tw"><table>
+<thead><tr><th>Característica</th><th>Cicatriz hipertrófica</th><th>Queloide</th><th>Lesión que exige biopsia</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Bordes de la herida</th><td>No los sobrepasa</td><td>Los sobrepasa</td><td>Aspecto atípico o ulcerado</td><td>[1] [4]</td></tr>
+<tr><th>Evolución</th><td>Regresa sola en 12 a 24 meses</td><td>Crece durante años y no regresa</td><td>Crecimiento rápido o recidiva precoz tras escisión</td><td>[1]</td></tr>
+<tr><th>Conducta</th><td>Prevención y observación; infiltración si es gruesa y sintomática</td><td>Tratamiento escalonado</td><td>Biopsia antes de tratar</td><td>[2] [4]</td></tr>
+</tbody></table></div>
+
+<div class="dc" data-fn="dcDx"><div class="dc-t">Simulador · Decisión clínica — predice el diagnóstico antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Bordes de la lesión</span>
+<button type="button" class="chip" data-g="bor" data-v="dentro" onclick="ch(this)">Dentro de la herida original</button>
+<button type="button" class="chip" data-g="bor" data-v="fuera" onclick="ch(this)">Sobrepasa los bordes</button></div>
+<div class="dc-g"><span class="dc-l">Evolución</span>
+<button type="button" class="chip" data-g="evo" data-v="regresa" onclick="ch(this)">Se aplana con los meses</button>
+<button type="button" class="chip" data-g="evo" data-v="progresa" onclick="ch(this)">Crece durante años</button></div>
+<div class="dc-g"><span class="dc-l">Señales de alarma</span>
+<button type="button" class="chip" data-g="al" data-v="rapido" data-m="1" onclick="ch(this)">Crecimiento rápido</button>
+<button type="button" class="chip" data-g="al" data-v="ulcera" data-m="1" onclick="ch(this)">Ulceración</button>
+<button type="button" class="chip" data-g="al" data-v="recidiva" data-m="1" onclick="ch(this)">Recidiva precoz tras escisión</button></div>
+<div class="out"></div></div>
+</section>
+<section class="tab" data-tab="tx">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿En qué orden se escalan las medidas en un queloide y qué justifica empezar por silicona y presión?</li>
+<li>¿Cuándo la triamcinolona sola deja de bastar y se combina con 5-fluorouracilo?</li>
+<li>¿Por qué la escisión aislada no se indica nunca en un queloide y qué adyuvancia la acompaña?</li>
+<li>¿Qué escenario clínico cambia la elección entre infiltrar, congelar, operar o cambiar de fármaco?</li>
+</ol></div>
+<p><span class="badge b-pu">Guías rectoras: recomendaciones internacionales 2014 [9][10] (solo resumen) y guía europea [11] (solo resumen)</span></p>
+<ol class="steps tg">
+<li><span class="tg">Principio</span> Silicona en lámina o gel, y presión en cicatrices extensas, desde que cierra la herida y durante meses [11][10]. <span class="rem">Pasos prácticos en Infiltración</span></li>
+<li><span class="tg">De elección</span> Queloide establecido: triamcinolona intralesional, sola o con 5-fluorouracilo [10][4]. <span class="rem">Dosis y técnica en Infiltración</span></li>
+<li><span class="tg">Escala</span> Si la mejoría es pequeña o se estanca tras unas 3 sesiones, añade 5-fluorouracilo a la triamcinolona [12][13][14].</li>
+<li><span class="tg">Alternativa</span> Crioterapia en lesión delgada y reciente; láser, bleomicina o verapamilo si la triamcinolona falla o no se tolera [15][16].</li>
+<li><span class="tg">Especialista</span> Escisión solo con adyuvancia inmediata, triamcinolona o radioterapia; la escisión aislada recidiva [6][17][4].</li>
+<li><span class="tg">Reevalúa</span> Cada 4 a 8 semanas con foto y escala; cambia de paso si hay efectos adversos o falta de respuesta [11].</li>
+<li><span class="tg">Evita</span> Operar un queloide sin plan de adyuvancia, e infiltrar una lesión atípica sin biopsia.</li>
+</ol>
+
+<h2>Escalera terapéutica</h2>
+<p class="mini">Una combinación de modalidades da la mayor probabilidad de éxito; el panel de 2014 propone un manejo inicial más agresivo del queloide [9][10]. Mecanismo: <button type="button" class="xref" data-ir="m-3" onclick="ir('fis','m-3')">← Fibroblasto hiperactivo</button> <button type="button" class="xref" data-ir="m-4" onclick="ir('fis','m-4')">← Colágeno desorganizado</button></p>
+<div class="tw"><table>
+<thead><tr><th>Escalón</th><th>Opción</th><th>Cuándo</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>0</th><td>Silicona y presión</td><td>Prevención y toda cicatriz de riesgo</td><td>Silicona como primera línea no invasiva, al menos 8 a 12 semanas. Presión de 20 a 30 mmHg durante meses solo en cicatrices extensas.</td><td>[11] [4]</td></tr>
+<tr><th>1</th><td>Triamcinolona intralesional</td><td>Queloide establecido y sintomático</td><td>Piedra angular del tratamiento; mejora rápido los síntomas, con dolor al inyectar. Útil a corto plazo.</td><td>[4] [2] [8]</td></tr>
+<tr><th>2</th><td>Triamcinolona con 5-fluorouracilo</td><td>Respuesta pobre o estancada, o lesión establecida</td><td>Eficacia mayor que la triamcinolona sola en cicatrices hipertróficas (OR 3,45; IC 95 %: 2,22–5,35) y menos telangiectasia (OR 0,24; IC 95 %: 0,11–0,52).</td><td>[12] [13] [14]</td></tr>
+<tr><th>3</th><td>Crioterapia</td><td>Lesión delgada y reciente</td><td>Dolor e hipopigmentación, que pesan más en piel oscura.</td><td>[4]</td></tr>
+<tr><th>4</th><td>Escisión con adyuvancia</td><td>Lesión grande, pediculada o sin respuesta</td><td>Nunca sola. Recidiva tras escisión con triamcinolona 21,7 %, y 13,7 % si se suma otra intervención. Con radioterapia 18,7 %, y 7,7 % en triple terapia.</td><td>[6]</td></tr>
+<tr><th>4</th><td>Escisión en oído con triamcinolona o radioterapia</td><td>Queloide auricular operado</td><td>Recidiva 15,4 % con triamcinolona y 14,0 % con radioterapia, sin diferencia significativa. La radioterapia se da en las primeras 24 h.</td><td>[17] [4]</td></tr>
+<tr><th>5</th><td>Láser, bleomicina, verapamilo</td><td>Fracaso o intolerancia a los escalones previos</td><td>Bleomicina: reducción media de VSS 72,0 % frente a 58,1 % con triamcinolona, con más dolor. Verapamilo rinde menos en la red de comparaciones.</td><td>[16] [15] [13]</td></tr>
+</tbody></table></div>
+
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — por qué la cirugía sola no basta</span>
+<p class="fey-b">Piensa en un jardín donde una planta trepadora crece sin parar. Si la cortas al ras, las raíces siguen vivas y vuelve a brotar, a veces más fuerte. Por eso, después de cortar, se pone algo que frene las raíces: una inyección que baja la inflamación o una dosis de radiación. Cortar quita lo visible; el frenado evita que regrese.</p>
+<p class="mini fey-c">En medicina esto se llama… escisión con terapia adyuvante para prevenir la recidiva.</p>
+<p class="mini fey-c">Dónde falla la comparación: las raíces de una planta son visibles al cavar; en el queloide la causa es una señal de las células de la piel que no se ve.</p></div>
+
+<div class="dc" data-fn="dcTx"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Escenario</span>
+<button type="button" class="chip" data-g="esc" data-v="peq" onclick="ch(this)">Queloide pequeño y reciente</button>
+<button type="button" class="chip" data-g="esc" data-v="lob" onclick="ch(this)">Queloide grande de lóbulo</button>
+<button type="button" class="chip" data-g="esc" data-v="rec" onclick="ch(this)">Recidiva tras escisión sin adyuvancia</button></div>
+<div class="dc-g"><span class="dc-l">Piel</span>
+<button type="button" class="chip" data-g="piel" data-v="osc" data-m="1" onclick="ch(this)">Fototipo IV a VI</button>
+<button type="button" class="chip" data-g="piel" data-v="sint" data-m="1" onclick="ch(this)">Lesión muy sintomática</button></div>
+<div class="out"></div></div>
+</section>
+<section class="tab" data-tab="inf">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué un corticoide inyectado dentro de la lesión frena el queloide, y en qué pasos de la cascada actúa?</li>
+<li>¿Qué situaciones justifican infiltrar y qué hallazgos obligan a no hacerlo o a tomar una biopsia antes?</li>
+<li>¿Qué decisiones de la técnica (punto de entrada, plano, volumen por punto) separan una infiltración eficaz de una que deja atrofia?</li>
+<li>¿Cómo se ajustan la concentración, el intervalo y el número de sesiones según la respuesta y los efectos adversos?</li>
+</ol></div>
+<p><span class="badge b-pu">Guías y revisiones: Gold 2014 [10] (solo resumen); consenso JSW 2018 [2] (texto parcial); Abbadi 2026 [4] (texto completo)</span></p>
+<div class="hb am"><div class="hb-t">Alcance</div>
+<p>No se encontró una guía que reúna técnica, contraindicaciones y dosis máxima. Esta pestaña combina protocolos de ensayos [18] [15], una revisión narrativa [4] y extractos de la ficha del fabricante [19] [20], que no se leyeron completos. Lo que ninguna fuente respalda lleva [VERIFICAR EN FUENTE]; confirma esos puntos con la ficha técnica vigente antes de aplicarlos.</p></div>
+
+<h2>Mecanismo de la triamcinolona en el queloide</h2>
+<p>La triamcinolona es un corticoide de depósito: inyectada en la dermis, libera el fármaco en el sitio de la lesión. Actúa sobre dos nodos de la cascada: el fibroblasto hiperactivo y el colágeno que fabrica. <button type="button" class="xref" data-ir="m-3" onclick="ir('fis','m-3')">← Fibroblasto hiperactivo</button> <button type="button" class="xref" data-ir="m-4" onclick="ir('fis','m-4')">← Colágeno desorganizado</button></p>
+<div class="tw"><table>
+<thead><tr><th>Nivel</th><th>Efecto del corticoide</th><th>Nodo</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Inflamación local</th><td>Efecto antiinflamatorio: baja el eritema, el prurito y el dolor de la lesión activa</td><td>m-2, m-6</td><td>[2] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Fibroblasto</th><td>Inhibe la proliferación fibroblástica</td><td>m-3</td><td>[VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Colágeno</th><td>Reduce la síntesis de colágeno y su depósito en haces gruesos</td><td>m-4</td><td>[VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Resultado clínico</th><td>Mejora rápida de los síntomas; el inconveniente principal es el dolor de la inyección</td><td>—</td><td>[2]</td></tr>
+</tbody></table></div>
+<p class="mini">La revisión [4] describe el corticoide intralesional como la piedra angular del queloide establecido y sintomático, solo o con 5-fluorouracilo (5-FU). El mecanismo celular detallado no figura en las fuentes leídas.</p>
+
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — bajar el grito del capataz</span>
+<p class="fey-b">Imagina un taller que fabrica sogas y no para, porque el capataz repite la orden a gritos. La medicina baja ese grito: los obreros trabajan más despacio y salen menos sogas. Hay que dejar el aviso dentro del taller; si cae en la bodega de abajo, se gasta la grasa que hay ahí. Y si se baja demasiado el volumen, el taller de al lado también se apaga.</p>
+<p class="mini fey-c">En medicina esto se llama… corticoide intralesional, fibroblasto, colágeno y atrofia.</p>
+<p class="mini fey-c">Dónde falla la comparación: en la piel no hay un capataz único; son varias señales químicas, y el fármaco tampoco se queda siempre donde se pone.</p></div>
+
+<h2>Indicaciones</h2>
+<div class="tw"><table>
+<thead><tr><th>Situación</th><th>Papel de la triamcinolona</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Queloide establecido, sintomático o en crecimiento</th><td>Primera opción invasiva tras silicona y medidas generales; columna farmacológica del tratamiento</td><td>[10] [4] [11]</td></tr>
+<tr><th>Lesión pequeña y reciente</th><td>Mejor respuesta: en el ensayo de lesiones menores de 6 cm² y de menos de 2 años, la altura llegó a cero a las 12 semanas</td><td>[15]</td></tr>
+<tr><th>Cicatriz hipertrófica que no cede a silicona y presión</th><td>Se infiltra cuando está gruesa y sintomática</td><td>[4] [11]</td></tr>
+<tr><th>Adyuvante tras escisión</th><td>Previene la recidiva; en queloide de oreja, recidiva de 15,4 % con triamcinolona</td><td>[6] [17]</td></tr>
+<tr><th>Recidiva o respuesta pobre</th><td>Reevaluar tras unas 3 sesiones y combinar con 5-FU</td><td>[12] [4]</td></tr>
+<tr><th>Lesiones muy extensas o múltiples</th><td>Sugieren un factor sistémico; el consenso añade fármacos orales</td><td>[2]</td></tr>
+</tbody></table></div>
+<p class="mini">El ensayo [15] excluyó la diátesis queloidea, así que su respuesta no se generaliza a quien tiene predisposición familiar marcada. A mediano y largo plazo el 5-FU y la combinación pueden rendir más que la triamcinolona sola [8].</p>
+
+<h2>Contraindicaciones</h2>
+<p>Ninguna fuente leída las enumera. La tabla recoge las habituales de la práctica y las marca para verificar en la ficha técnica.</p>
+<div class="tw"><table>
+<thead><tr><th>Tipo</th><th>Condición</th><th>Qué hacer</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Absoluta</th><td>Hipersensibilidad a la triamcinolona o a sus excipientes, como el alcohol bencílico</td><td>No infiltrar; elegir otra modalidad</td><td>[VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Absoluta</th><td>Infección local activa en la lesión o su piel vecina</td><td>Tratar la infección y diferir</td><td>[VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Absoluta</th><td>Lesión sin diagnóstico o con sospecha de malignidad (ulceración, crecimiento rápido, sin herida previa)</td><td>Biopsia primero; el diferencial incluye dermatofibrosarcoma protuberans y carcinoma escamocelular</td><td>[2] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Relativa</th><td>Embarazo y lactancia</td><td>Diferir o decidir con el especialista</td><td>[VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Relativa</th><td>Diabetes descompensada</td><td>Compensar antes; vigilar la glucemia</td><td>[VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Relativa</th><td>Inmunosupresión o infección sistémica</td><td>Valorar riesgo y beneficio</td><td>[VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Relativa</th><td>Atrofia previa en la zona</td><td>Cuidar el sitio y el volumen: el volumen y el sitio condicionan la atrofia cutánea</td><td>[19] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>Relativa</th><td>Factores predisponentes al síndrome de Cushing o dosis acumulada alta</td><td>Precaución: se describió Cushing iatrogénico y supresión del eje suprarrenal al exceder la dosis intralesional</td><td>[21]</td></tr>
+<tr><th>Relativa</th><td>Niños</td><td>Dosis ajustada al peso</td><td>[VERIFICAR EN FUENTE]</td></tr>
+</tbody></table></div>
+
+<h2>Técnica paso a paso</h2>
+<ol>
+<li>Mide la lesión, fotografíala y puntúala con una escala (VSS o POSAS) antes de empezar [4] [7].</li>
+<li>Haz la asepsia de la piel con el antiséptico de uso local [VERIFICAR EN FUENTE].</li>
+<li>Prepara la analgesia con anestesia tópica o lidocaína; el dolor es el principal inconveniente de la inyección [2] [VERIFICAR EN FUENTE].</li>
+<li>Considera crioterapia previa, opcional; es útil en lesiones delgadas y recientes, pero causa dolor e hipopigmentación, sobre todo en piel oscura [4].</li>
+<li>Agita el vial antes de cargar, porque es una suspensión [19]. Usa jeringa de 1 mL con cierre Luer-lock y aguja fina, de calibre [VERIFICAR EN FUENTE].</li>
+<li>Entra por el borde, en piel normal, y dirige la aguja hacia la periferia y la zona profunda. Evita la masa fibrosa central: el fármaco no se difunde y la presión aumenta el dolor [2].</li>
+<li>Mantén el plano intradérmico, dentro de la lesión, y nunca subcutáneo: el depósito fuera de la dermis produce atrofia grasa [19] [VERIFICAR EN FUENTE].</li>
+<li>Inyecta alícuotas pequeñas en puntos separados al menos 1 cm [19] [4]. Detén cada punto al ver el blanqueamiento de la lesión [VERIFICAR EN FUENTE].</li>
+<li>Comprime el sitio al terminar y asocia silicona, baja tensión y fotoprotección [4] [11] [VERIFICAR EN FUENTE].</li>
+</ol>
+
+<h2>Dosificación</h2>
+<span class="rem">↓ En la tabla</span>
+<p>La ficha del fabricante indica la presentación de 10 mg/mL para uso intralesional [19]. Concentración de triamcinolona de 10 a 40 mg/mL en la literatura; las concentraciones de 20 y 40 mg/mL aumentan el riesgo de atrofia y de telangiectasia [8] [4].</p>
+<div class="tw"><table>
+<thead><tr><th>Concentración</th><th>Cuándo</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>10 mg/mL</th><td>Lesiones delgadas, cara y primeras sesiones; esquema semanal en el ensayo de [18]</td><td>[18] [4] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>20 mg/mL</th><td>Lesiones gruesas, con más riesgo de atrofia que las concentraciones bajas</td><td>[8] [VERIFICAR EN FUENTE]</td></tr>
+<tr><th>40 mg/mL</th><td>Lesiones gruesas; protocolo del ensayo [15], con máximo orientativo de 1,5 mL por sesión en lesiones menores de 6 cm²</td><td>[8] [15]</td></tr>
+</tbody></table></div>
+<ul>
+<li>Dosis máxima por sesión: el único límite leído es 1,5 mL de 40 mg/mL, que equivale a 60 mg (cálculo propio) [15]. El máximo por mes en adultos no está establecido en las fuentes [VERIFICAR EN FUENTE].</li>
+<li>Un volumen total mayor deja más corticoide disponible para la absorción sistémica [19]; exceder la dosis intralesional causó síndrome de Cushing [21].</li>
+<li>Dosis en niños: [VERIFICAR EN FUENTE].</li>
+</ul>
+
+<h2>Frecuencia, reevaluación y criterios de parada</h2>
+<div class="tw"><table>
+<thead><tr><th>Esquema</th><th>Intervalo y duración</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Habitual</th><td>Infiltrar cada 4 a 6 semanas</td><td>[4]</td></tr>
+<tr><th>Protocolo de lesiones pequeñas</th><td>Cada 3 semanas hasta aplanar o hasta 8 sesiones</td><td>[15]</td></tr>
+<tr><th>Semanal</th><td>Cada semana por 8 semanas (10 mg/mL)</td><td>[18]</td></tr>
+<tr><th>Ficha del fabricante</th><td>Sitios múltiples y repetición semanal o menos frecuente</td><td>[19]</td></tr>
+</tbody></table></div>
+<ul>
+<li>Reevalúa tras unas 3 sesiones. Si la mejoría es pequeña o se estanca, combina con 5-FU: en cicatrices hipertróficas la combinación supera a la triamcinolona sola (OR de eficacia 3,45; IC 95 %: 2,22 a 5,35) [12] [4].</li>
+<li>Detén el tratamiento cuando la lesión quede aplanada y asintomática [15] [4].</li>
+<li>Si aparecen atrofia, telangiectasias o hipopigmentación, espacia las sesiones o baja la concentración [4] [VERIFICAR EN FUENTE].</li>
+</ul>
+
+<div class="dc" data-fn="dcInf"><div class="dc-t">Simulador · Decisión clínica — mujer de 28 años con queloide de lóbulo de 2 cm: elige concentración, volumen e intervalo</div>
+<div class="dc-g"><span class="dc-l">Concentración</span>
+<button type="button" class="chip" data-g="con" data-v="10" onclick="ch(this)">10 mg/mL</button>
+<button type="button" class="chip" data-g="con" data-v="20" onclick="ch(this)">20 mg/mL</button>
+<button type="button" class="chip" data-g="con" data-v="40" onclick="ch(this)">40 mg/mL</button></div>
+<div class="dc-g"><span class="dc-l">Volumen total en la sesión</span>
+<button type="button" class="chip" data-g="vol" data-v="05" onclick="ch(this)">0,5 mL</button>
+<button type="button" class="chip" data-g="vol" data-v="15" onclick="ch(this)">1,5 mL</button>
+<button type="button" class="chip" data-g="vol" data-v="30" onclick="ch(this)">3 mL</button></div>
+<div class="dc-g"><span class="dc-l">Cuándo regresa</span>
+<button type="button" class="chip" data-g="int" data-v="sem" onclick="ch(this)">En 1 semana</button>
+<button type="button" class="chip" data-g="int" data-v="m46" onclick="ch(this)">En 4 a 6 semanas</button>
+<button type="button" class="chip" data-g="int" data-v="m3" onclick="ch(this)">En 3 meses</button></div>
+<div class="out"></div></div>
+</section>
+<section class="tab" data-tab="seg">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Cada cuánto se reevalúa un queloide tratado y qué se mide en cada visita para decidir continuar, ajustar o cambiar?</li>
+<li>¿Por qué un queloide recidiva tras la escisión y qué define recidiva?</li>
+<li>¿Qué mecanismo explica cada complicación de la infiltración (atrofia, hipopigmentación, telangiectasias, necrosis y calcinosis)?</li>
+<li>¿Cuándo una infiltración deja de ser local y se vuelve un riesgo sistémico?</li>
+</ol></div>
+<p><span class="badge b-pu">Guía rectora: guía europea de cicatrices [11] (solo resumen); revisión narrativa por capas [4]</span></p>
+
+<h2>Ciclo de seguimiento</h2>
+<p>El seguimiento repite tres pasos: revisar síntomas y aspecto, evaluar con foto, medición y escala frente a la línea basal, y ajustar la conducta. La guía europea propone reevaluar cada 4 a 8 semanas [11]; con triamcinolona se decide tras unas 3 sesiones si continuar o combinar [4].</p>
+<div class="tw"><table>
+<thead><tr><th>Paso</th><th>Qué se hace</th><th>Criterio</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Revisar</th><td>Prurito, dolor, altura, color y efectos adversos en la piel y en el cuerpo</td><td>Cada 4 a 8 semanas</td><td>[11]</td></tr>
+<tr><th>Evaluar</th><td>Foto y medición contra la basal; POSAS o escala de Vancouver</td><td>Respuesta si baja 50 % o más en la escala</td><td>[16] [7]</td></tr>
+<tr><th>Ajustar: continuar</th><td>Mejoría clara sin efectos adversos</td><td>Seguir hasta aplanar</td><td>[15] [4]</td></tr>
+<tr><th>Ajustar: combinar o cambiar</th><td>Mejoría pequeña o estancada, o atrofia, telangiectasias o hipopigmentación</td><td>Añadir 5-fluorouracilo, espaciar o cambiar de fármaco</td><td>[4] [12]</td></tr>
+</tbody></table></div>
+
+<h2>Recidiva</h2>
+<p>La recidiva tras la escisión aislada es alta, por eso la escisión siempre lleva adyuvancia [4]. El seguimiento de 12 meses o más define si hubo recidiva [4]. La tensión sobre la herida y la señal fibrótica persistente reactivan la cascada <button type="button" class="xref" data-ir="m-8" onclick="ir('fis','m-8')">← Recidiva tras escisión aislada</button> [5]. Las cifras con adyuvancia están en la pestaña de tratamiento.</p>
+
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — por qué el esteroide adelgaza la piel</span>
+<p class="fey-b">Imagina que la piel es una pared que se construye con ladrillos. El esteroide le dice a los obreros que bajen el ritmo. En el queloide eso es lo que queremos, porque están poniendo ladrillos de más. Pero si la dosis es mucha o se repite muy seguido, también frena los ladrillos de la pared sana de alrededor, y esa zona se queda delgada y hundida.</p>
+<p class="mini fey-c">En medicina esto se llama… atrofia cutánea por corticoide intralesional.</p>
+<p class="mini fey-c">Dónde falla la comparación: los obreros no distinguen la pared buena de la mala; el médico controla dosis, intervalo y zona.</p></div>
+
+<h2>Complicaciones de la infiltración por mecanismo</h2>
+<p class="mini">Frecuencias de ensayos con protocolos distintos; no son una tasa única. Atrofia y telangiectasia en 37 % con triamcinolona de 10 mg/mL semanal [18]; atrofia 24 % y telangiectasia 22 % con triamcinolona frente a bleomicina [16]. Las concentraciones de 20 o 40 mg/mL aumentan el riesgo de atrofia frente a 5-fluorouracilo o verapamilo [8].</p>
+<div class="tw"><table>
+<thead><tr><th>Complicación</th><th>Mecanismo</th><th>Señal</th><th>Cómo se reduce</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Atrofia cutánea</th><td>El corticoide frena a los fibroblastos también en la dermis sana vecina si el volumen o la concentración son altos [VERIFICAR EN FUENTE]</td><td>Hundimiento y piel fina</td><td>Cuidar sitio y volumen, bajar la concentración y espaciar</td><td>[8] [19]</td></tr>
+<tr><th>Hipopigmentación</th><td>Efecto sobre los melanocitos, más visible en fototipos IV a VI [VERIFICAR EN FUENTE]</td><td>Mancha clara sobre la lesión</td><td>Consejería previa; evitar dosis altas superficiales</td><td>[4]</td></tr>
+<tr><th>Telangiectasias</th><td>Adelgazamiento de la dermis que deja visibles los vasos</td><td>Vasos finos rojos sobre la cicatriz</td><td>La combinación con 5-fluorouracilo da menos (OR 0,24)</td><td>[8] [12]</td></tr>
+<tr><th>Necrosis y ulceración</th><td>Inyección demasiado superficial o a presión alta compromete la irrigación local [VERIFICAR EN FUENTE]</td><td>Ulceración, costra o piel oscura</td><td>Alícuotas pequeñas y espaciadas</td><td>[4]</td></tr>
+<tr><th>Calcinosis</th><td>Depósito de calcio descrito tras uso intralesional</td><td>Nódulo duro o blanquecino</td><td>Registrar el volumen total por sesión</td><td>[20]</td></tr>
+<tr><th>Cushing iatrogénico y supresión del eje</th><td>La absorción sistémica de triamcinolona al exceder la dosis recomendada suprime el eje hipotálamo-hipófiso-suprarrenal</td><td>Cara redondeada, estrías, hiperglucemia, fatiga</td><td>Respetar la dosis; cuidado en pacientes predispuestos</td><td>[21] [19]</td></tr>
+</tbody></table></div>
+<p>La frecuencia del síndrome de Cushing por infiltración no tiene cifra en las fuentes leídas; solo hay casos publicados [21]. Mayor volumen total implica más fármaco disponible para absorción sistémica [19].</p>
+
+<div class="dc" data-fn="dcSeg"><div class="dc-t">Simulador · Decisión clínica — predice el ajuste antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Sesión</span>
+<button type="button" class="chip" data-g="ses" data-v="s2" onclick="ch(this)">Tras la 2.ª sesión</button>
+<button type="button" class="chip" data-g="ses" data-v="s3" onclick="ch(this)">Tras la 3.ª sesión</button></div>
+<div class="dc-g"><span class="dc-l">Efectos adversos</span>
+<button type="button" class="chip" data-g="ef" data-v="atrofia" data-m="1" onclick="ch(this)">Atrofia</button>
+<button type="button" class="chip" data-g="ef" data-v="hipo" data-m="1" onclick="ch(this)">Hipopigmentación</button>
+<button type="button" class="chip" data-g="ef" data-v="sist" data-m="1" onclick="ch(this)">Signos sistémicos</button></div>
+<div class="dc-g"><span class="dc-l">Respuesta de la lesión</span>
+<button type="button" class="chip" data-g="resp" data-v="buena" onclick="ch(this)">Aplana bien</button>
+<button type="button" class="chip" data-g="resp" data-v="parcial" onclick="ch(this)">Mejoría pequeña o estancada</button></div>
+<div class="out"></div></div>
+
+<div class="acc refs"><button type="button" class="acc-h" onclick="tog(this)">Referencias <span class="chev">▾</span></button>
+<div class="acc-b"><ol class="vanc">
+<li>Delaleu J, Charvet E, Petit A. Keloid disease: review with clinical atlas. Part I: definitions, history, epidemiology, clinics and diagnosis. Ann Dermatol Venereol. 2022;150(1):3-15. doi:10.1016/j.annder.2022.08.010. PMID 36494213. Revisión; solo resumen.</li>
+<li>Ogawa R, Akita S, Akaishi S, et al. Diagnosis and treatment of keloids and hypertrophic scars — Japan Scar Workshop Consensus Document 2018. Burns Trauma. 2019;7:39. doi:10.1186/s41038-019-0175-y. PMID 31890718. Consenso; el texto recuperado conserva sobre todo pies de figura e índices.</li>
+<li>Barone N, Safran T, Vorstenbosch J, et al. Current advances in hypertrophic scar and keloid management. Semin Plast Surg. 2021;35(3):145-52. doi:10.1055/s-0041-1731461. PMID 34526861. Revisión; solo resumen.</li>
+<li>Abbadi OS, Abdon F, Othman ZS, et al. Layered management of hypertrophic scars and keloids: from silicone and intralesional triamcinolone acetonide plus 5-fluorouracil to adjuvant strontium-90. Cureus. 2026;18(1):e101893. doi:10.7759/cureus.101893. PMID 41728580. Revisión narrativa; texto completo.</li>
+<li>Feng F, Liu M, Pan L, et al. Biomechanical regulatory factors and therapeutic targets in keloid fibrosis. Front Pharmacol. 2022;13:906212. doi:10.3389/fphar.2022.906212. PMID 35614943. Revisión; solo resumen.</li>
+<li>Ellis MM, Jones LR, Siddiqui F, et al. The efficacy of surgical excision plus adjuvant multimodal therapies in the treatment of keloids: a systematic review and meta-analysis. Dermatol Surg. 2020;46(8):1054-9. doi:10.1097/DSS.0000000000002362. PMID 32224709. Metaanálisis; solo resumen.</li>
+<li>Tyack Z, Simons M, Spinks A, et al. A systematic review of the quality of burn scar rating scales for clinical and research use. Burns. 2011;38(1):6-18. doi:10.1016/j.burns.2011.09.021. PMID 22047828. Revisión sistemática; solo resumen.</li>
+<li>Zhuang Z, Li Y, Wei X. The safety and efficacy of intralesional triamcinolone acetonide for keloids and hypertrophic scars: a systematic review and meta-analysis. Burns. 2021;47(5):987-98. doi:10.1016/j.burns.2021.02.013. PMID 33814214. Metaanálisis; solo resumen.</li>
+<li>Gold MH, Berman B, Clementoni MT, et al. Updated international clinical recommendations on scar management: part 1 — evaluating the evidence. Dermatol Surg. 2014;40(8):817-24. doi:10.1111/dsu.0000000000000049. PMID 25068543. Recomendaciones; solo resumen.</li>
+<li>Gold MH, McGuire M, Mustoe TA, et al. Updated international clinical recommendations on scar management: part 2 — algorithms for scar prevention and treatment. Dermatol Surg. 2014;40(8):825-31. doi:10.1111/dsu.0000000000000050. PMID 25068544. Recomendaciones; solo resumen.</li>
+<li>Meaume S, Le Pillouer-Prost A, Richert B, et al. Management of scars: updated practical guidelines and use of silicones. Eur J Dermatol. 2014;24(4):435-43. doi:10.1684/ejd.2014.2356. PMID 25141160. Guía; solo resumen.</li>
+<li>Mavilakandy AK, Vayalapra S, Minty I, et al. Comparing combination triamcinolone acetonide and 5-fluorouracil with monotherapy triamcinolone acetonide or 5-fluorouracil in the treatment of hypertrophic scars: a systematic review and meta-analysis. Plast Reconstr Surg. 2024;153(6):1318-30. doi:10.1097/PRS.0000000000010867. PMID 37337341. Metaanálisis; solo resumen.</li>
+<li>Yang HA, Jheng WL, Yu J, et al. Comparative efficacy of drug interventions for keloids: a network meta-analysis. Ann Plast Surg. 2024;92(1S Suppl 1):S52-9. doi:10.1097/SAP.0000000000003759. PMID 38285997. Metaanálisis en red; solo resumen.</li>
+<li>Bijlard E, Steltenpool S, Niessen FB. Intralesional 5-fluorouracil in keloid treatment: a systematic review. Acta Derm Venereol. 2015;95(7):778-82. doi:10.2340/00015555-2106. PMID 25805099. Revisión sistemática; solo resumen.</li>
+<li>Ahuja RB, Chatterjee P. Comparative efficacy of intralesional verapamil hydrochloride and triamcinolone acetonide in hypertrophic scars and keloids. Burns. 2014;40(4):583-8. doi:10.1016/j.burns.2013.09.029. PMID 24182692. Ensayo clínico aleatorizado; solo resumen.</li>
+<li>Bandaru DR, Tatavarthi NBL, Rao DS, et al. Evaluation of intralesional bleomycin and triamcinolone acetonide in the treatment of keloids: a prospective, randomized, open-label, comparative study. Int J Dermatol. 2026;65(11):2334-42. doi:10.1111/ijd.70554. PMID 42360873. Ensayo aleatorizado; solo resumen.</li>
+<li>Shin JY, Lee JW, Roh SG, et al. A comparison of the effectiveness of triamcinolone and radiation therapy for ear keloids after surgical excision: a systematic review and meta-analysis. Plast Reconstr Surg. 2016;137(6):1718-25. doi:10.1097/PRS.0000000000002165. PMID 27219228. Metaanálisis; solo resumen.</li>
+<li>Asilian A, Darougheh A, Shariati F. New combination of triamcinolone, 5-fluorouracil, and pulsed-dye laser for treatment of keloid and hypertrophic scars. Dermatol Surg. 2006;32(7):907-15. doi:10.1111/j.1524-4725.2006.32195.x. PMID 16875473. Ensayo clínico aleatorizado de 69 pacientes; solo resumen.</li>
+<li>Bristol-Myers Squibb. Kenalog-10 (triamcinolona acetonida, suspensión inyectable): dosificación [sitio web del fabricante]. Princeton (NJ): Bristol-Myers Squibb; s.f. [citado 2026 oct 23]. Disponible en: https://www.kenaloghcp.bmscustomerconnect.com/kenalog-10/dosing.html. No accesible desde el entorno; solo extracto de resultados de búsqueda, parafraseado.</li>
+<li>Bristol-Myers Squibb. Kenalog-40 (triamcinolona acetonida, suspensión inyectable, USP) [ficha técnica FDA]. Silver Spring (MD): U.S. Food and Drug Administration; 2018 [citado 2026 oct 23]. Disponible en: https://www.accessdata.fda.gov/drugsatfda_docs/label/2018/014901s045lbl.pdf. No accesible desde el entorno; solo metadatos y extracto de búsqueda.</li>
+<li>Sukhumthammarat W, Putthapiban P, Sriphrapradang C. Local injection of triamcinolone acetonide: a forgotten aetiology of Cushing's syndrome. J Clin Diagn Res. 2017;11(6):OR01-2. doi:10.7860/JCDR/2017/27238.10091. PMID 28764237. Serie de 2 casos; solo resumen.</li>
+</ol>
+<p class="mini">Harrison, Rook y Bolognia no se consultaron en esta sesión. No se hallaron datos de Ecuador ni de Latinoamérica. Las contraindicaciones, la dosis máxima y la técnica fina carecen de fuente leída directamente y se marcan en la pestaña de infiltración.</p></div></div>
+</section>
+<script>
+function dcDx(dc){
+  var b=sel(dc,'bor')[0], e=sel(dc,'evo')[0], al=sel(dc,'al'), h='';
+  if(al.length){
+    var w=[];
+    if(al.indexOf('rapido')>=0){w.push('crecimiento rápido');}
+    if(al.indexOf('ulcera')>=0){w.push('ulceración');}
+    if(al.indexOf('recidiva')>=0){w.push('recidiva precoz tras escisión');}
+    h='<p><b>Lesión que exige biopsia:</b> con '+w.join(', ')+' no infiltres ni trates como queloide hasta tener histología [2] [VERIFICAR EN FUENTE].</p>'
+     +'<p>El diferencial incluye dermatofibrosarcoma protuberans, carcinoma escamocelular y otros tumores que imitan un queloide [2].</p>'
+     +'<span class="cf">Si no hubiera ninguna señal de alarma y la lesión fuera típica → el diagnóstico es clínico, sin biopsia [1].</span>';
+    out(dc,h);return;
+  }
+  if(!b||!e){out(dc,'<p>Indica si la lesión sobrepasa la herida y cómo evoluciona para ver el diagnóstico.</p>');return;}
+  if(b==='fuera'&&e==='progresa'){
+    h='<p><b>Cicatriz queloide:</b> sobrepasa los bordes de la herida, crece durante años y no regresa por sí sola [1] [3].</p>'
+     +'<p>El diagnóstico es clínico [1]. Mide, fotografía y puntúa con VSS o POSAS antes de tratar [4] [7]; la infiltración con triamcinolona es una primera opción invasiva [10] [4].</p>'
+     +'<span class="cf">Si la lesión respetara los bordes de la herida y se aplanara con los meses → es hipertrófica.</span>';
+  } else if(b==='dentro'&&e==='regresa'){
+    h='<p><b>Cicatriz hipertrófica:</b> se queda en el sitio de la lesión y suele regresar sola en 12 a 24 meses [1].</p>'
+     +'<p>Empieza con medidas no invasivas, como silicona [11]; infiltra si está gruesa, sintomática y no cede [4].</p>'
+     +'<span class="cf">Si empezara a invadir piel sana y dejara de regresar → se reclasifica como queloide.</span>';
+  } else if(b==='fuera'){
+    h='<p><b>Datos discordantes:</b> sobrepasa la herida pero se aplana con el tiempo. Reexamina y puntúa con la escala JSS, que separa queloide, hipertrófica y cicatriz madura [2].</p>'
+     +'<span class="cf">Si el crecimiento continuara más allá de los bordes → queloide.</span>';
+  } else {
+    h='<p><b>Datos discordantes:</b> respeta la herida pero progresa sin regresar. Reexamina en unos meses y puntúa con la escala JSS [2]; una hipertrófica regresa en 12 a 24 meses [1].</p>'
+     +'<span class="cf">Si la lesión creciera de manera atípica o se ulcerara → biopsia antes de tratar.</span>';
+  }
+  out(dc,h);
+}
+
+function dcTx(dc){
+  var s=sel(dc,'esc')[0], pi=sel(dc,'piel'), osc=pi.indexOf('osc')>=0, sin=pi.indexOf('sint')>=0, h='';
+  if(!s){out(dc,'<p>Elige el escenario para ver la conducta.</p>');return;}
+  if(s==='peq'){
+    h='<p><b>Queloide pequeño y reciente:</b> silicona y medidas generales, y triamcinolona intralesional como primera opción invasiva [10] [4] [11].</p><ul>'
+     +'<li>Triamcinolona de 10 a 40 mg/mL cada 4 a 6 semanas [4]; detalle en «Infiltración con triamcinolona».</li>'
+     +'<li>Crioterapia previa en lesiones delgadas y recientes [4].</li>'
+     +'<li>Reevalúa tras unas 3 sesiones; si la mejoría es pequeña, combina con 5-FU [12] [4].</li></ul>'
+     +'<span class="cf">Si la respuesta fuera pobre tras unas 3 sesiones → triamcinolona más 5-FU.</span>';
+  } else if(s==='lob'){
+    h='<p><b>Queloide grande de lóbulo:</b> escisión con cierre sin tensión y adyuvancia obligatoria; la escisión sola recidiva [2] [4].</p><ul>'
+     +'<li>Adyuvancia con triamcinolona intralesional: recidiva de 15,4 % (IC 95 %: 9,4 a 24,1) en queloide de oreja [17].</li>'
+     +'<li>Alternativa: radioterapia posoperatoria, con recidiva de 14,0 % y sin diferencia significativa frente a la triamcinolona [17]; ejemplo del consenso: 10 Gy en 2 fracciones [2].</li>'
+     +'<li>Cuando se indica adyuvancia, se inicia dentro de unas 24 h de la escisión [4].</li></ul>'
+     +'<span class="cf">Si el queloide fuera pequeño y reciente → se intenta primero la infiltración sin cirugía.</span>';
+  } else {
+    h='<p><b>Recidiva tras escisión sin adyuvancia:</b> la escisión aislada recidiva; pasa a tratamiento combinado [4].</p><ul>'
+     +'<li>Triamcinolona más 5-FU, columna farmacológica del queloide establecido: supera a la triamcinolona sola [12] [4].</li>'
+     +'<li>La adyuvancia con una intervención adicional se asocia a menos recidiva (13,7 % frente a 21,7 %, sin significación) [6].</li>'
+     +'<li>Considera radioterapia adyuvante o estroncio-90 en lesiones adelgazadas [6] [4].</li></ul>'
+     +'<span class="cf">Si la recidiva fuera muy rápida o atípica → biopsia antes de escalar [VERIFICAR EN FUENTE].</span>';
+  }
+  if(osc){h+='<p>Fototipo IV a VI: el riesgo de hipopigmentación y atrofia pesa más; prefiere concentraciones bajas y aconseja al paciente antes [8] [4].</p>';}
+  if(sin){h+='<p>Lesión muy sintomática: la infiltración mejora rápido el prurito y el dolor [2]; si hay progresión rápida o compromiso funcional, escala sin esperar [4].</p>';}
+  out(dc,h);
+}
+
+function dcInf(dc){
+  var c=sel(dc,'con')[0], v=sel(dc,'vol')[0], t=sel(dc,'int')[0], h='';
+  if(!c||!v||!t){out(dc,'<p>Elige concentración, volumen e intervalo para ver la retroalimentación.</p>');return;}
+  var mg=(c*(v==='05'?0.5:v==='15'?1.5:3)).toString().replace('.',',');
+  if(c==='10'){
+    h='<p><b>10 mg/mL:</b> punto de partida defendible; es la presentación intralesional [19] y las concentraciones altas aumentan la atrofia [8]. Si el queloide es grueso, la lesión puede requerir más concentración en sesiones posteriores [VERIFICAR EN FUENTE].</p>';
+  } else if(c==='20'){
+    h='<p><b>20 mg/mL:</b> razonable en una lesión gruesa, pero con más riesgo de atrofia y telangiectasia que las concentraciones bajas [8] [4].</p>';
+  } else {
+    h='<p><b>40 mg/mL:</b> es la concentración del protocolo de [15], que excluyó la diátesis queloidea. En un lóbulo visible de una mujer joven suma riesgo de atrofia y telangiectasia [8].</p>';
+  }
+  if(v==='05'){
+    h+='<p>Volumen de 0,5 mL: unos '+mg+' mg en total (cálculo propio). Es coherente con una lesión de 2 cm: puntos separados al menos 1 cm [19], deteniéndose al blanqueamiento [VERIFICAR EN FUENTE].</p>';
+  } else if(v==='15'){
+    h+='<p>Volumen de 1,5 mL: unos '+mg+' mg (cálculo propio). Es el tope orientativo del protocolo [15] para lesiones de hasta 6 cm²; en 2 cm sobra volumen, que se escapa fuera de la dermis y se absorbe [19].</p>';
+  } else {
+    h+='<p>Volumen de 3 mL: unos '+mg+' mg (cálculo propio). Supera el tope leído [15]; exceder la dosis intralesional causó Cushing iatrogénico [21]. La dosis máxima por sesión no está establecida [VERIFICAR EN FUENTE].</p>';
+  }
+  if(t==='m46'){
+    h+='<p><b>Cada 4 a 6 semanas:</b> intervalo habitual [4]. Reevalúa tras unas 3 sesiones y, si la mejoría es pequeña, combina con 5-FU [12] [4].</p>';
+  } else if(t==='sem'){
+    h+='<p>Semanal: es el esquema de [18] y la ficha admite repetición semanal o menos frecuente [19], pero acumula dosis más rápido (inferencia propia); no es el intervalo habitual [4].</p>';
+  } else {
+    h+='<p>A los 3 meses: queda fuera del rango de 4 a 6 semanas [4]; la guía europea reevalúa cada 4 a 8 semanas [11]. El efecto de un intervalo tan largo no está establecido [VERIFICAR EN FUENTE].</p>';
+  }
+  if(c!=='40'&&v==='05'&&t==='m46'){h+='<p>La combinación elegida es coherente. Antes de infiltrar confirma que no esté embarazada ni lactando [VERIFICAR EN FUENTE].</p>';}
+  h+='<span class="cf">Si la lesión no mejorara tras unas 3 sesiones → añadir 5-FU a la triamcinolona [12] [4].</span>';
+  out(dc,h);
+}
+
+function dcSeg(dc){
+  var ses=sel(dc,'ses')[0], e=sel(dc,'ef'), r=sel(dc,'resp')[0], h='';
+  if(!ses||!r){out(dc,'<p>Elige la sesión y la respuesta de la lesión; marca los efectos adversos si los hay.</p>');return;}
+  var atr=e.indexOf('atrofia')>=0, hip=e.indexOf('hipo')>=0, sis=e.indexOf('sist')>=0;
+  if(sis){
+    h='<p><b>Signos sistémicos:</b> suspende la infiltración y sospecha supresión del eje suprarrenal o síndrome de Cushing iatrogénico por exceso de dosis [21] [VERIFICAR EN FUENTE].</p>'
+     +'<p>Revisa el volumen y la dosis acumulada [19] y deriva a endocrinología.</p>';
+  }
+  if(atr||hip){
+    h+='<p><b>'+(ses==='s3'?'Tras la 3.ª sesión':'Tras la 2.ª sesión')+', con efecto local:</b> la atrofia o la hipopigmentación son motivo de parar o cambiar el esquema [4].</p><ul>';
+    if(atr){h+='<li>Atrofia: baja la concentración, porque 20 y 40 mg/mL dan más atrofia y telangiectasia [8]; espacia las sesiones y no inyectes sobre la zona atrófica [VERIFICAR EN FUENTE]. Apareció en 24 % con triamcinolona en un ensayo [16].</li>';}
+    if(hip){h+='<li>Hipopigmentación: pesa más en fototipos IV a VI; avisa al paciente y evita sumar crioterapia sobre la zona [4].</li>';}
+    h+='</ul>';
+  }
+  if(!sis&&!atr&&!hip){
+    h='<p><b>Sin efectos adversos:</b> continúa el esquema y reevalúa en cada visita cada 4 a 8 semanas [4] [11].</p>';
+  }
+  if(r==='parcial'){
+    h+='<p>Con mejoría pequeña o estancada'+(ses==='s3'?' tras unas 3 sesiones':'')+', cambia a triamcinolona más 5-FU: mejora altura, flexibilidad y pigmentación frente a triamcinolona sola y causa menos telangiectasias [8] [12] [4].</p>';
+  } else {
+    h+='<p>Con buena respuesta, continúa a menor concentración o espacia, y detén cuando la lesión quede aplanada y asintomática [15] [4].</p>';
+  }
+  h+='<span class="cf">Si la lesión aplanara y quedara asintomática → se detiene la infiltración y se vigila la recidiva por al menos 12 meses [4].</span>';
+  out(dc,h);
+}
+</script>
+<!-- KIT_SCRIPT -->
+</div>
+<script>
+(function(){
+'use strict';
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+function secK(k){return $('section.tab[data-tab="'+k+'"]')}
+function secOf(el){return el&&el.closest?el.closest('section.tab'):null}
+function nameOf(k){var b=$('button.tb[data-tab="'+k+'"]');return b?b.textContent.replace(/\s+/g,' ').replace(/^\s+|\s+$/g,''):k}
+function btn(t,f,c){var b=document.createElement('button');b.type='button';b.className=c||'chip';b.textContent=t;b.addEventListener('click',f);return b}
+function recon(s,on){if(!s)return;s.classList.toggle('recon',!!on);$$('.nodo',s).forEach(function(n){n.classList.remove('rev');n.classList.remove('pis')});var st=$('.rec-state',s);if(st)st.textContent=on?'Modo reconstrucción activo':'Modo lectura';var a=$('.rec-bar [data-act="rec"]',s);if(a){a.disabled=!!on;a.classList.toggle('on',!!on);a.textContent=on?'Reconstrucción activa':'Activar reconstrucción'}}
+window.recon=function(k,on){recon(secK(k),on)};
+function navOv(){var n=$('nav.tabs');if(!n)return;var sl=n.scrollLeft,mx=n.scrollWidth-n.clientWidth,w=n.parentNode;[n,w].forEach(function(e){if(e===n||e.classList.contains('tabs-w')){e.classList.toggle('ov-l',sl>2);e.classList.toggle('ov-r',sl<mx-2)}})}
+function tabla(on){var t=$('table.vis'),s=secOf(t);if(!s)return;s.classList.toggle('tbl',!!on);$$('td.tap',t).forEach(function(c){c.classList.remove('rev')});var st=$('.vb-state',s);if(st)st.textContent=on?'Tabla tapada: toca cada celda para revelarla':'Modo lectura'}
+window.tabla=tabla;
+window.show=function(k){var ns=secK(k);if(!ns)return;$$('section.tab.on').forEach(function(s){if(s!==ns){if(s.classList.contains('recon'))recon(s,false);if(s.classList.contains('tbl'))tabla(false)}});$$('.tb,.tab').forEach(function(e){e.classList.toggle('on',e.getAttribute('data-tab')===k)});window.scrollTo(0,0);var b=$('.tb.on');if(b&&b.scrollIntoView){try{b.scrollIntoView({inline:'nearest',block:'nearest'})}catch(e){}}navOv()};
+window.ir=function(k,id){var el=document.getElementById(id),s=secOf(el);if(!s)return;var nodo=el.classList.contains('nodo');if(s.classList.contains('recon')&&!nodo)recon(s,false);if(s.classList.contains('tbl')&&!el.closest('.vis-w'))tabla(false);show(s.getAttribute('data-tab'));if(nodo&&s.classList.contains('recon'))el.classList.add('rev');var a=el.closest('.acc');if(a)a.classList.add('op');el.scrollIntoView({block:'start'});el.classList.add('hl');setTimeout(function(){el.classList.remove('hl')},1500)};
+window.tog=function(b){var a=b.closest('.acc');if(a)a.classList.toggle('op')};
+window.sel=function(dc,g){return $$('.chip.on[data-g="'+g+'"]',dc).map(function(c){return c.getAttribute('data-v')})};
+window.num=function(dc,n){var i=$('input[data-n="'+n+'"]',dc);if(!i||i.value==='')return NaN;return parseFloat(String(i.value).replace(',','.'))};
+window.out=function(dc,h){var o=$('.out',dc);if(o)o.innerHTML=h};
+window.rd=function(x,d){var p=Math.pow(10,d||0);return Math.round(x*p)/p};
+function outErr(dc,e){var o=$('.out',dc);if(o)o.textContent='Error de cálculo: '+(e&&e.message?e.message:String(e))}
+function runDc(dc){var fn=window[dc.getAttribute('data-fn')];if(typeof fn==='function'){try{fn(dc)}catch(e){outErr(dc,e)}}}
+window.ch=function(el){var dc=el.closest('.dc');if(!dc)return;if(el.classList.contains('chip')){var g=el.getAttribute('data-g');if(el.getAttribute('data-m')==='1'){el.classList.toggle('on')}else{var was=el.classList.contains('on');$$('.chip[data-g="'+g+'"]',dc).forEach(function(c){c.classList.remove('on')});if(!was)el.classList.add('on')}}runDc(dc)};
+function initNodos(f){var k=f.getAttribute('data-tab');$$('.nodo',f).forEach(function(n,i){var p=document.createElement('b');p.className='paso';var pn=document.createElement('span');pn.className='pn';pn.textContent=(i+1)+' ·';var pt=document.createElement('span');pt.className='pt';pt.textContent=n.getAttribute('data-paso')||'';p.appendChild(pn);p.appendChild(pt);var ra=n.getAttribute('data-rama');if(ra){var b=document.createElement('span');b.className='badge b-az rama';b.textContent=ra;p.appendChild(document.createTextNode(' '));p.appendChild(b)}n.insertBefore(p,n.firstChild);var c=document.createElement('div');c.className='rec-ctl';if($('.man',n))c.appendChild(btn('Pista',function(){n.classList.toggle('pis')}));c.appendChild(btn('Revelar',function(){n.classList.toggle('rev')}));n.appendChild(c)});
+var tl=$('ol.tl',f);if(!tl)return;var bar=document.createElement('div');bar.className='rec-bar';bar.id='rec-bar-'+k;var t=document.createElement('div');t.innerHTML='<b>Timeline en blanco</b> · <span class="rec-state">Modo lectura</span><p class="mini">Reconstruye la cascada sin mirar: escribe cada paso en orden, luego usa Pista (signos que produce) y Revelar nodo por nodo. Nada se guarda.</p>';bar.appendChild(t);var ta=document.createElement('textarea');ta.setAttribute('aria-label','Escribe aquí la cascada en orden');var bs=document.createElement('div');bs.className='rec-btns';var ab=btn('Activar reconstrucción',function(){recon(f,true);ta.focus()});ab.setAttribute('data-act','rec');bs.appendChild(ab);bs.appendChild(btn('Revelar todo',function(){$$('.nodo',f).forEach(function(n){n.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){recon(f,false)}));bar.appendChild(bs);bar.appendChild(ta);tl.parentNode.insertBefore(bar,tl)}
+var TGT={'1.º':'clave','De elección':'clave','Confirma':'ok','Solo si':'cond','Escala':'cond','Reevalúa':'cond','No pidas':'no','Evita':'no','Alarma':'alarma'};
+function initTg(){$$('ol.tg span.tg').forEach(function(s){var v=TGT[s.textContent.replace(/^\s+|\s+$/g,'')];if(v)s.setAttribute('data-t',v)})}
+function initTabla(){var t=$('table.vis'),s=secOf(t);if(!s)return;var w=t.parentNode;if(!w.classList.contains('tw')){w=document.createElement('div');w.className='tw';t.parentNode.insertBefore(w,t);w.appendChild(t)}w.classList.add('vis-w');var rows=$$('tbody tr',t);if(!rows.length)rows=$$('tr',t).slice(1);rows.forEach(function(r){Array.prototype.slice.call(r.children,1).forEach(function(c){c.classList.add('tap');c.addEventListener('click',function(){if(s.classList.contains('tbl'))c.classList.add('rev')})})});
+var bar=document.createElement('div');bar.className='vb-bar';bar.id='vb-bar';var h=document.createElement('div');h.innerHTML='<b>Tabla en blanco</b> · <span class="vb-state">Modo lectura</span><p class="mini">Tapa todas las celdas de las entidades (quedan visibles las cabeceras y los ejes). Di cada celda antes de tocarla; un toque la revela. Nada se guarda.</p>';bar.appendChild(h);var bs=document.createElement('div');bs.className='rec-btns';bs.appendChild(btn('Tapar la tabla',function(){tabla(true)}));bs.appendChild(btn('Revelar todo',function(){$$('td.tap',t).forEach(function(c){c.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){tabla(false)}));bar.appendChild(bs);w.parentNode.insertBefore(bar,w)}
+function initRecGo(){var TL=$$('section.tab').filter(function(s){return!!$('ol.tl',s)}),sin=secK('sin'),dst=sin||secK('seg');if(!dst)return;var ord=sin?TL.filter(function(s,i){return i%2===0}).concat(TL.filter(function(s,i){return i%2===1})):TL;var vt=$('table.vis');if(!ord.length&&!(sin&&vt))return;
+var w=document.createElement('div');w.className='hb az rec-go';w.innerHTML='<div class="hb-t">Antes de cerrar: recupera sin mirar</div><p class="mini">Cada botón te lleva a la función en blanco correspondiente. Intenta la respuesta completa antes de revelar.</p>';var bs=document.createElement('div');bs.className='rec-btns';w.appendChild(bs);
+if(sin&&vt){var vs=secOf(vt),vk=vs.getAttribute('data-tab'),b0=btn('Tabla en blanco — '+nameOf(vk),function(){show(vk);tabla(true);var b=document.getElementById('vb-bar');if(b)b.scrollIntoView({block:'start'})},'go');b0.setAttribute('data-rec',vk);bs.appendChild(b0)}
+ord.forEach(function(s){var k=s.getAttribute('data-tab'),b=btn('Reconstruir la cascada — '+nameOf(k),function(){show(k);recon(s,true);var r=document.getElementById('rec-bar-'+k);if(r)r.scrollIntoView({block:'start'})},'go');b.setAttribute('data-rec',k);bs.appendChild(b)});
+var rf=$('.acc.refs',dst);if(rf)dst.insertBefore(w,rf);else dst.appendChild(w)}
+function init(){var f=$('.tb'),ph=[function(){var n=$('nav.tabs');if(n){var w=document.createElement('div');w.className='tabs-w';n.parentNode.insertBefore(w,n);w.appendChild(n);n.addEventListener('scroll',navOv);window.addEventListener('resize',navOv)}},function(){$$('section.tab').forEach(function(s){if($('ol.tl',s))initNodos(s)})},initTg,initTabla,initRecGo,function(){$$('.dc').forEach(runDc)},function(){show(secK('pan')?'pan':(f?f.getAttribute('data-tab'):''))}];ph.forEach(function(p){try{p()}catch(e){if(window.console)console.error('kit v10:',e)}})}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+</body>
+</html>

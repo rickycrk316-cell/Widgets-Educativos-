@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Definiciones · Lesiones líquidas y vasculares</title>
+<style>
+/* Vademécum · variante del widget de definiciones (skill definiciones v5.1): mismas tintas y tipografía que DESIGN.md */
+:root{
+--paper:#FBFBFC;--paper-2:#F1F2F5;--ink:#16181D;--ink-2:#3A3D46;--ink-3:#686C78;--rule:#D7D9E0;--rule-strong:#16181D;
+--accent:#2342A6;--accent-ink:#1B358A;--accent-field:#EAEEFA;--on-accent:#FFFFFF;
+--am:#7A4A06;--am-f:#FBF1DF;--ro:#9E1F1F;--ro-f:#FBE9E7;--ve:#2F5E12;--ve-f:#EBF3E1;--pu:#4C3FA8;--pu-f:#EEECFB;--co:#8E3517;--co-f:#FAEDE6;--rs:#8A2C52;--rs-f:#FAEAF1;
+--f-serif:ui-serif,"New York","Iowan Old Style","Charter","Source Serif Pro",Georgia,"Times New Roman",serif;
+--f-sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+--r:3px;
+/* alias de la v10 para compatibilidad */
+--surface-0:var(--paper);--surface-1:var(--paper-2);--border:var(--rule);--border-accent:var(--accent);--bg-accent:var(--accent-field);--text-primary:var(--ink);--text-secondary:var(--ink-2);--text-muted:var(--ink-3);--text-accent:var(--accent-ink);--radius:var(--r);--font-sans:var(--f-sans);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}
+html{color-scheme:light dark;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:var(--accent);color:var(--on-accent)}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--f-sans);-webkit-text-size-adjust:100%;caret-color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:18px 16px 56px;background:transparent}
+h1{font:600 26px/1.2 var(--f-serif);letter-spacing:-.012em;margin:6px 0 14px;padding-bottom:12px;border-bottom:2px solid var(--rule-strong);text-wrap:balance}
+h2{font:600 19px/1.3 var(--f-serif);margin:34px 0 12px;padding-top:12px;border-top:1px solid var(--rule-strong);text-wrap:balance}
+h3{font:600 16px/1.35 var(--f-serif);margin:18px 0 6px;text-wrap:balance}
+p{margin:0 0 12px;text-wrap:pretty}
+button{font:inherit;color:inherit;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,color .15s ease-out}
+button:active{transform:translateY(1px)}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* índice de canto */
+.tabs{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 0 0;border-bottom:2px solid var(--rule-strong);margin-bottom:16px;position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);scroll-snap-type:x proximity;scroll-padding-inline:56px}
+.tabs::-webkit-scrollbar{display:none}
+.tb{flex:0 0 auto;min-height:44px;padding:9px 15px 8px;border:1px solid var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;background:var(--paper-2);color:var(--ink-2);font:600 13px/1.2 var(--f-sans);white-space:nowrap;scroll-snap-align:start}
+.tb:hover{background:var(--accent-field);color:var(--accent-ink)}
+.tb.active{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+.tab{display:none}
+.tab.active{display:block}
+/* idea rectora */
+.hb{border-radius:var(--r);padding:12px 14px;margin:14px 0;border:1px solid var(--accent);background:var(--accent-field);font-size:15px;line-height:1.6}
+.hb-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);margin-bottom:6px}
+/* prerrequisitos (rol rosa) */
+.pre{border:1px solid var(--rs);border-radius:var(--r);background:var(--rs-f);padding:12px 14px;margin:16px 0}
+.pre-t{font:600 16px/1.35 var(--f-serif);color:var(--rs);margin-bottom:8px}
+.pre .acc{background:var(--paper);border-color:var(--rs)}
+.pre .acc-h{background:var(--paper)}
+.rem-line{font-size:13px;color:var(--ink-2);margin:8px 0;line-height:1.5}
+.chip-rs{display:inline-block;font:700 11px/1.4 var(--f-sans);padding:1px 7px;border:1px solid var(--rs);border-radius:2px;background:var(--rs-f);color:var(--rs);margin-right:6px;vertical-align:1px}
+/* cards */
+.card{background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;margin:12px 0;font-size:15px;line-height:1.6}
+.card p:last-child{margin-bottom:0}
+.card-t{font:600 16px/1.35 var(--f-serif);margin:0 0 6px}
+.card.fey{background:var(--co-f);border-color:var(--co)}
+.card.fey .card-t{color:var(--co)}
+.card.fey p{font:400 16px/1.6 var(--f-serif)}
+.card.ej{background:var(--paper);border-top:2px solid var(--rule-strong)}
+.badge{display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.02em;padding:2px 7px;border-radius:2px;margin:6px 4px 0 0;vertical-align:middle;border:1px solid currentColor}
+.b-az{background:var(--accent-field);color:var(--accent-ink)}
+.b-ro{background:var(--ro-f);color:var(--ro)}
+.b-am{background:var(--am-f);color:var(--am)}
+.b-ve{background:var(--ve-f);color:var(--ve)}
+.b-pu{background:var(--pu-f);color:var(--pu)}
+.b-co{background:var(--co-f);color:var(--co)}
+.b-rs{background:var(--rs-f);color:var(--rs)}
+.mini{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:6px 0}
+.mini.am{color:var(--am);background:var(--am-f);border:1px solid var(--am);border-radius:var(--r);padding:6px 9px}
+/* acordeones */
+.acc{border:1px solid var(--rule);border-radius:var(--r);margin:10px 0;overflow:hidden;background:var(--paper)}
+.acc-h{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;min-height:44px;padding:9px 14px;border:0;background:var(--paper-2);font:600 14.5px/1.35 var(--f-sans);text-align:left}
+.acc-h:hover{background:var(--accent-field)}
+.chev{transition:transform .2s;color:var(--accent-ink);flex:0 0 auto}
+.acc.op .chev{transform:rotate(180deg)}
+.acc-b{display:none;padding:10px 14px;font-size:15px;line-height:1.6}
+.acc.op .acc-b{display:block}
+.acc.no .acc-h{color:var(--ro)}
+/* tablas */
+.tw{overflow-x:auto;margin:12px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;font-variant-numeric:tabular-nums}
+th,td{border:0;border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
+thead th{font:700 14.5px/1.35 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong);background:var(--paper-2)}
+tbody tr:last-child>*{border-bottom:1px solid var(--rule-strong)}
+tbody th{font-weight:700;background:var(--paper-2)}
+/* mini-timeline */
+.tl{list-style:none;margin:12px 0;padding:0 0 0 20px;border-left:2px solid var(--accent)}
+.tl>li{position:relative;margin:0 0 12px;padding:9px 12px;background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);font-size:14.5px;line-height:1.55}
+.tl>li::before{content:"";position:absolute;left:-27px;top:13px;width:12px;height:12px;border-radius:1px;background:var(--accent);box-shadow:0 0 0 3px var(--paper)}
+.tl b{font-family:var(--f-serif)}
+/* simulador de recall */
+.rc{border:1px solid var(--rule-strong);border-radius:var(--r);padding:14px 16px;margin:24px 0;background:var(--paper)}
+.rc-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);padding-bottom:8px;margin-bottom:10px;border-bottom:1px solid var(--rule)}
+.rc-count{font:600 13px/1.4 var(--f-sans);color:var(--ink-3);font-variant-numeric:tabular-nums;margin-bottom:8px}
+.rc-card{border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);padding:14px;min-height:110px}
+.rc-q{font:400 16px/1.6 var(--f-serif);margin:0}
+.rc-a{margin:12px 0 0;padding-top:10px;border-top:1px dashed var(--accent);font-size:15px;line-height:1.6}
+.rc-a b{color:var(--accent-ink)}
+.rc-hint{font-size:13px;color:var(--am);margin-top:8px}
+.rc-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.go{min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent);color:var(--on-accent);font:600 14px/1.2 var(--f-sans)}
+.go:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+.gr{min-height:44px;padding:8px 14px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper);font:600 14px/1.2 var(--f-sans)}
+.gr.ok{border-color:var(--ve);color:var(--ve)}
+.gr.mid{border-color:var(--am);color:var(--am)}
+.gr.ko{border-color:var(--ro);color:var(--ro)}
+.gr.ok:hover{background:var(--ve-f)}.gr.mid:hover{background:var(--am-f)}.gr.ko:hover{background:var(--ro-f)}
+.ghost{min-height:44px;padding:8px 14px;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);font:600 14px/1.2 var(--f-sans);color:var(--ink-2)}
+.rc-end{margin-top:12px;padding:12px 14px;border-radius:var(--r);border:1px solid var(--rule);font-size:15px}
+.rc-end.ok{background:var(--ve-f);border-color:var(--ve);color:var(--ve)}
+.rc-end.rep{background:var(--am-f);border-color:var(--am);color:var(--am)}
+.gloss{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:18px 0 0;padding-top:8px;border-top:1px solid var(--rule)}
+.vanc{font-size:12.5px;line-height:1.5;padding-left:24px}
+.vanc li{margin:5px 0;word-break:break-word}
+.vanc li::marker{color:var(--ink-3);font-variant-numeric:tabular-nums}
+@media (min-width:700px){body{font-size:15.5px}.wrap{padding:22px 24px 64px}h1{font-size:28px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- /DEF_HEAD -->
+<h1>Definiciones · Lesiones líquidas y vasculares</h1>
+<p class="mini">Dermatología, lesiones elementales (widget B de cuatro): aprender a reconocer y nombrar lesiones de contenido líquido y vasculares, sin resolver un caso. Cada pestaña lleva su sustrato histológico, su definición y un simulador de recall.</p>
+<nav class="tabs">
+<button class="tb active" onclick="show('t1',this)">Vesícula</button>
+<button class="tb" onclick="show('t2',this)">Ampolla</button>
+<button class="tb" onclick="show('t3',this)">Pústula</button>
+<button class="tb" onclick="show('t4',this)">Absceso</button>
+<button class="tb" onclick="show('t5',this)">Púrpura</button>
+<button class="tb" onclick="show('t6',this)">Equimosis</button>
+<button class="tb" onclick="show('t7',this)">Telangiectasia</button>
+<button class="tb" onclick="show('t8',this)">Surco acarino</button>
+<button class="tb" onclick="show('t9',this)">Vitropresión y Nikolsky</button>
+<button class="tb" onclick="show('tg',this)">Repaso global</button>
+</nav>
+<section class="tab active" id="t1">
+<h2>Vesícula</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Elevación pequeña y circunscrita de la piel, llena de líquido claro, que se forma dentro o justo debajo de la epidermis.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Epidermis: capas y cohesión</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Epitelio plano estratificado queratinizado que forma la capa más superficial de la piel [1]. De profunda a superficial tiene cuatro capas: basal, espinosa, granulosa y córnea. No tiene vasos propios. Es muy gruesa en palmas y plantas y fina en párpados y pliegues.</p>
+<p><b>Cómo está hecha.</b> Está formada sobre todo por queratinocitos, que nacen en la capa basal y suben mientras se diferencian. Se mantienen unidos por desmosomas, cuyas proteínas (desmogleínas y desmocolinas) se anclan a los filamentos de queratina del interior de la célula. En la capa córnea quedan corneocitos sin núcleo.</p>
+<p><b>Qué permite hacer.</b> Actúa como barrera mecánica y contra la pérdida de agua, y se renueva de forma continua. Su límite es la cohesión: soporta fricción mientras los desmosomas y los puentes intercelulares estén íntegros.</p>
+<p><b>De qué depende.</b> Se nutre por difusión desde los capilares de la dermis papilar. Recibe terminaciones nerviosas libres, que conducen prurito y dolor.</p>
+<p><b>Correlato clínico.</b> Si se pierde la cohesión entre queratinocitos (acantólisis) o se acumula líquido entre ellos (espongiosis), la epidermis se llena de líquido y forma una vesícula. Se explora con luz tangencial y con palpación suave, que nota el techo tenso.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Unión dermoepidérmica</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Interfaz ondulada entre la capa basal de la epidermis y la dermis papilar [1]. Las crestas epidérmicas encajan con las papilas dérmicas, lo que aumenta la superficie de contacto.</p>
+<p><b>Cómo está hecha.</b> Es una cadena de anclaje en cuatro niveles: hemidesmosomas en la base de los queratinocitos basales, lámina basal (lámina lúcida y lámina densa), fibrillas de anclaje de colágeno VII y fibras de la dermis papilar. Las proteínas BP180 y BP230 forman parte de los hemidesmosomas.</p>
+<p><b>Qué permite hacer.</b> Fija la epidermis a la dermis y resiste la fricción y el cizallamiento. Si un nivel de la cadena falla, el sitio de la separación define dónde se acumula el líquido.</p>
+<p><b>De qué depende.</b> De la síntesis correcta de sus proteínas por queratinocitos y fibroblastos y de la ausencia de autoanticuerpos o de enzimas que la degraden.</p>
+<p><b>Correlato clínico.</b> Si la cadena se rompe, toda la epidermis se separa de la dermis y se forma una ampolla subepidérmica de techo grueso y tenso. Se explora con presión tangencial sobre la piel vecina (signo de Nikolsky) y con la tensión del techo a la palpación.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Bolognia 2024 [1]</span> Dermatology, 5.ª edición; histología normal de la piel.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Lesión elevada y circunscrita, de contenido líquido seroso claro, con diámetro menor de 1 cm (<i>vesicle</i>). Se forma dentro de la epidermis o debajo de ella, y su techo es fino y se rompe con facilidad.</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span></p>
+<p class="mini am">Divergencia de umbral: Bolognia separa vesícula y ampolla en 1 cm; otras fuentes usan 0,5 cm. La cifra exacta de Fitzpatrick 2019 [2] queda como [VERIFICAR EN FUENTE]. No se promedian: al describir, indica el libro de referencia.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Piensa en una burbuja diminuta bajo una película de plástico. El líquido se acumula entre las células de la epidermis, o justo debajo, y la capa superior, muy fina, lo contiene como un techo. Por ser pequeña, se ve y se palpa como un grano transparente. Si el techo se rompe, queda una erosión húmeda.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Un niño con fiebre baja tiene granos de contenido claro sobre una base roja, en distintos estadios, en tronco y cara: varicela. Otros prototipos son las vesículas agrupadas del herpes simple en el labio y las del eccema dishidrótico en las caras laterales de los dedos.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Pápula</b></td><td>Elevación sólida, sin cavidad ni líquido; no se rompe ni se aplana al pinchar.</td></tr>
+<tr><td><b>Pústula</b></td><td>Contenido purulento, blanquecino o amarillento; la vesícula es de líquido claro.</td></tr>
+<tr><td><b>Ampolla</b></td><td>Misma lesión de mayor tamaño, desde 1 cm en Bolognia; cambia el techo y el nivel de separación.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t1"><div class="rc-t">Simulador · Recall de vesícula</div><div class="rc-count" id="rc-t1-n"></div><div class="rc-card" id="rc-t1-c"></div><div class="rc-btns" id="rc-t1-b"></div><div id="rc-t1-e"></div></div>
+
+<p class="gloss">Siglas: BP180 y BP230, antígenos del penfigoide ampolloso; VII, séptimo tipo de colágeno; VERIFICAR EN FUENTE, marca de cifra sin confirmar; cm, centímetro.</p>
+</section>
+<section class="tab" id="t2">
+<h2>Ampolla</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Elevación circunscrita de contenido líquido, de 1 cm o más; es la vesícula grande y puede ser tensa o flácida.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Vesícula»: epidermis, capas y cohesión. Los desmosomas unen queratinocitos; si fallan, el líquido queda dentro de la epidermis.</p>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Vesícula»: unión dermoepidérmica. Los hemidesmosomas anclan la capa basal; si fallan, el líquido queda debajo de la epidermis.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Lesión elevada y circunscrita de contenido líquido, con diámetro de 1 cm o más (<i>bulla</i>, <i>blister</i>). El techo puede ser tenso o flácido según el nivel en que se separó la piel.</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span></p>
+<p class="mini am">El umbral de 1 cm es el de Bolognia; otras fuentes usan 0,5 cm. La divergencia completa está en «Vesícula».</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Es la misma burbuja de la vesícula, pero grande. Según dónde se separe la piel, cambia el techo. Si la separación ocurre dentro de la epidermis, el techo es fino y se rompe con facilidad: ampolla flácida. Si ocurre debajo, el techo es la epidermis entera y la ampolla se mantiene tensa. Mirar el techo ayuda a deducir el nivel.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Una mujer de 70 años tiene ampollas tensas e íntegras sobre piel con eritema y prurito: penfigoide ampolloso. Otro paciente tiene erosiones dolorosas en la boca y ampollas flácidas que se rompen enseguida: pénfigo vulgar.</p></div>
+
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span>Mecanismo mínimo</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Pérdida de adhesión.</b> Autoanticuerpos, toxinas, necrosis o fricción rompen la unión entre queratinocitos o entre epidermis y dermis.</li>
+<li><b>Molécula diana.</b> Anti-desmogleína en el pénfigo (intraepidérmica), anti-BP180 en el penfigoide (subepidérmica) y toxina exfoliativa del estafilococo en el impétigo ampolloso (capa granulosa) [1].</li>
+<li><b>Consecuencia.</b> El nivel de la separación decide el techo: fino y flácido si es intraepidérmica, grueso y tenso si es subepidérmica.</li>
+</ol>
+<p><b>Correlato clínico.</b> Ampolla flácida con erosiones y Nikolsky positivo orienta a nivel intraepidérmico; ampolla tensa con Nikolsky negativo orienta a nivel subepidérmico.</p>
+</div></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Vesícula</b></td><td>Mismo contenido, pero menor de 1 cm en Bolognia.</td></tr>
+<tr><td><b>Habón</b></td><td>Elevación edematosa fugaz, sin cavidad ni techo, que desaparece en horas.</td></tr>
+<tr><td><b>Erosión</b></td><td>Lesión secundaria: pérdida de epidermis ya sin techo, a menudo resto de una ampolla rota.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t2"><div class="rc-t">Simulador · Recall de ampolla</div><div class="rc-count" id="rc-t2-n"></div><div class="rc-card" id="rc-t2-c"></div><div class="rc-btns" id="rc-t2-b"></div><div id="rc-t2-e"></div></div>
+
+<p class="gloss">Siglas: BP180, antígeno del penfigoide ampolloso; cm, centímetro.</p>
+</section>
+<section class="tab" id="t3">
+<h2>Pústula</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Elevación circunscrita llena de pus, de aspecto blanquecino o amarillento; puede centrarse en un pelo o no.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Unidad pilosebácea</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Estructura formada por el folículo piloso, la glándula sebácea y el músculo erector del pelo [1]. El folículo es un embudo epitelial que une la superficie con la dermis; su parte superior es el infundíbulo. Falta en palmas y plantas.</p>
+<p><b>Cómo está hecha.</b> El epitelio folicular continúa con la epidermis. La glándula sebácea, de tipo holocrino, vierte el sebo en el infundíbulo, y el sebo sale por el orificio folicular junto con el pelo.</p>
+<p><b>Qué permite hacer.</b> Produce el pelo y lubrica la piel. Su límite es el orificio estrecho: si se obstruye, el sebo y las células quedan retenidos.</p>
+<p><b>De qué depende.</b> Los andrógenos regulan el tamaño y la actividad de la glándula sebácea. Un plexo vascular rodea el folículo.</p>
+<p><b>Correlato clínico.</b> Si el folículo se obstruye o se infecta, los neutrófilos se acumulan en su luz y forman una pústula folicular centrada en un pelo. Se explora con luz tangencial buscando el pelo en el centro. Las pústulas que no se centran en un pelo son no foliculares.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Vesícula»: epidermis, capas y cohesión. El epitelio folicular continúa con la epidermis en su parte superior.</p>
+
+<p class="mini"><span class="badge b-pu">Bolognia 2024 [1]</span> Dermatology, 5.ª edición; histología normal de la piel.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Lesión elevada y circunscrita que contiene pus: neutrófilos y restos celulares. Se ve blanquecina o amarillenta, puede ser folicular o no folicular, e infecciosa o estéril.</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span><span class="badge b-pu">Fitzpatrick 2019 [2]</span></p>
+<p class="mini">Ninguno de los dos libros fija un umbral de tamaño propio para la pústula.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Cuando hay inflamación, los neutrófilos acuden al lugar y se acumulan con restos de células, y eso forma el pus. Si el pus queda atrapado bajo un techo fino de epidermis, se ve como un punto blanco o amarillo. Si el centro es un pelo, nace del folículo; si no, el pus está en la epidermis misma.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Un adolescente tiene puntos blancos sobre base roja en la frente y las mejillas, centrados en un pelo: pústulas foliculares del acné. Otro paciente tiene pústulas estériles dolorosas en las palmas, sin folículo: psoriasis pustulosa palmoplantar.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Vesícula</b></td><td>Líquido claro; una vesícula puede enturbiarse con los días, pero su origen es seroso.</td></tr>
+<tr><td><b>Absceso</b></td><td>Colección profunda en dermis o hipodermis, palpable y fluctuante.</td></tr>
+<tr><td><b>Pápula inflamatoria</b></td><td>Elevación sólida, sin cavidad con pus ni techo blanquecino.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t3"><div class="rc-t">Simulador · Recall de pústula</div><div class="rc-count" id="rc-t3-n"></div><div class="rc-card" id="rc-t3-c"></div><div class="rc-btns" id="rc-t3-b"></div><div id="rc-t3-e"></div></div>
+
+<p class="gloss">Siglas: ninguna.</p>
+</section>
+<section class="tab" id="t4">
+<h2>Absceso</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Colección localizada de pus en dermis o hipodermis, que se palpa como un nódulo doloroso y fluctuante.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Dermis e hipodermis</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> La dermis es el tejido conectivo bajo la epidermis, con una parte papilar laxa y otra reticular densa [1]. Debajo está la hipodermis o tejido subcutáneo, formada por lóbulos de adipocitos separados por septos de tejido conectivo, hasta la fascia.</p>
+<p><b>Cómo está hecha.</b> La dermis tiene colágeno, fibras elásticas y sustancia fundamental, con fibroblastos, mastocitos y macrófagos, además de vasos, nervios y anexos. La hipodermis tiene adipocitos y septos que llevan vasos y nervios.</p>
+<p><b>Qué permite hacer.</b> Da resistencia y elasticidad, sostiene los vasos, termorregula y almacena energía. Su límite es la poca extensibilidad: una colección en un tejido denso presiona y duele.</p>
+<p><b>De qué depende.</b> Los plexos vasculares y los nervios sensitivos recorren dermis y septos; la inflamación de esa zona activa los nociceptores.</p>
+<p><b>Correlato clínico.</b> Una infección profunda con necrosis deja una cavidad llena de pus rodeada de tejido inflamado: nódulo caliente, rojo y doloroso. Se explora con palpación bimanual: un dedo presiona y el otro percibe la onda del líquido (fluctuación).</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Bolognia 2024 [1]</span> Dermatology, 5.ª edición; histología normal de la piel.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Colección localizada de pus en dermis o hipodermis, con cavidad rodeada de tejido inflamatorio. Clínicamente es un nódulo o tumoración eritematosa, caliente, dolorosa y fluctuante.</p>
+<p><span class="badge b-am">Fuente por verificar</span></p>
+<p class="mini am">Definición de consenso; no se atribuye a un capítulo concreto de Bolognia ni de Fitzpatrick.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Imagina un globo con pus escondido bajo la piel. A diferencia de la pústula, no está en la superficie, sino en la dermis o más profundo, donde la piel no puede ceder. Por eso duele, da calor y, al palpar con dos dedos, se transmite una onda como en una bolsa de agua.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Un paciente tiene un nódulo doloroso de 3 cm en el glúteo, con eritema alrededor y calor local. Al palpar con dos dedos, la onda pasa de uno al otro: absceso. Es frecuente en el furúnculo (folículo infectado en profundidad) y en la hidradenitis supurativa.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Pústula</b></td><td>Superficial, de milímetros, en epidermis; el absceso es profundo, de centímetros y palpable.</td></tr>
+<tr><td><b>Nódulo inflamatorio</b></td><td>Masa sólida sin cavidad; no fluctúa a la palpación.</td></tr>
+<tr><td><b>Celulitis</b></td><td>Inflamación difusa sin colección; la piel está roja y caliente pero no fluctúa.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t4"><div class="rc-t">Simulador · Recall de absceso</div><div class="rc-count" id="rc-t4-n"></div><div class="rc-card" id="rc-t4-c"></div><div class="rc-btns" id="rc-t4-b"></div><div id="rc-t4-e"></div></div>
+
+<p class="gloss">Siglas: cm, centímetro.</p>
+</section>
+<section class="tab" id="t5">
+<h2>Púrpura</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Sangre extravasada en la dermis que no blanquea con la presión; incluye la petequia y la púrpura palpable.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Microvasculatura dérmica</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Dos plexos horizontales: uno superficial, subpapilar, y otro profundo, entre dermis e hipodermis [1]. Vasos verticales los conectan, y de ellos nacen asas capilares dentro de cada papila dérmica.</p>
+<p><b>Cómo está hecha.</b> De arteriola a capilar y a vénula poscapilar. La pared capilar es muy delgada, de endotelio y pericitos. Las vénulas poscapilares son el sitio donde los leucocitos salen del vaso, y por eso son la diana de la vasculitis de pequeño vaso.</p>
+<p><b>Qué permite hacer.</b> Nutre la epidermis, termorregula y permite la respuesta inflamatoria. Los vasos pueden dilatarse y contraerse, pero su pared delgada es frágil.</p>
+<p><b>De qué depende.</b> Del tono simpático, de mediadores locales (óxido nítrico, histamina) y de la integridad del endotelio.</p>
+<p><b>Correlato clínico.</b> Si la pared se daña o falla la hemostasia, los eritrocitos salen del vaso: mancha rojo-violácea que no blanquea. Si el vaso solo se dilata, la mancha roja blanquea. Se distingue con la vitropresión.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Hemostasia primaria</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Lesión.</b> Si el endotelio se daña, queda expuesto el colágeno subendotelial junto con el factor de von Willebrand.</li>
+<li><b>Adhesión.</b> Las plaquetas se pegan al sitio mediante la glucoproteína Ib y se activan.</li>
+<li><b>Agregación.</b> Las plaquetas se unen entre sí por la glucoproteína IIb/IIIa y el fibrinógeno, y forman un tapón. Rama: sin plaquetas suficientes o funcionales, no hay tapón.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> El tapón se forma en segundos a minutos, con plaquetas en número y función normales [1].</p>
+<p><b>Qué lo rompe.</b> El punto más vulnerable es el capilar de la dermis sin soporte: con muy pocas plaquetas o con plaquetas disfuncionales, los capilares pierden sangre aun sin trauma.</p>
+<p><b>Correlato clínico.</b> Aparecen petequias, sobre todo en las piernas (zona declive) y en las mucosas. Se explora con la vitropresión: no blanquean.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Bolognia 2024 [1]</span> Dermatology, 5.ª edición; histología normal de la piel y hemostasia cutánea.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Extravasación de eritrocitos en la dermis o en la mucosa que produce una mancha rojo-violácea que no blanquea a la vitropresión. La petequia es puntiforme; la púrpura palpable indica inflamación de la pared vascular.</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span><span class="badge b-pu">Fitzpatrick 2019 [2]</span></p>
+<p class="mini am">Los umbrales de tamaño que separan petequia, púrpura y equimosis varían entre fuentes y no se promedian; la cifra de cada libro queda como [VERIFICAR EN FUENTE].</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Un capilar roto es como una tubería con fuga bajo una tela: la sangre queda fuera del vaso, atrapada en la piel. Al presionar con un vidrio, la mancha no se va porque ya no está dentro del vaso. Si la fuga es un punto, es una petequia; si además se palpa elevada, la pared del vaso está inflamada.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Un niño de 8 años tiene puntos rojo-violáceos palpables en piernas y glúteos tras una infección respiratoria, con dolor abdominal: púrpura palpable de vasculitis IgA. Un adulto con petequias en las piernas y sangrado de encías: trombocitopenia.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Eritema</b></td><td>Enrojecimiento por vasodilatación; blanquea a la vitropresión.</td></tr>
+<tr><td><b>Telangiectasia</b></td><td>Vasos finos visibles que blanquean; la sangre sigue dentro del vaso.</td></tr>
+<tr><td><b>Equimosis</b></td><td>Extravasación más extensa y plana, de contorno irregular, que cambia de color.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t5"><div class="rc-t">Simulador · Recall de púrpura</div><div class="rc-count" id="rc-t5-n"></div><div class="rc-card" id="rc-t5-c"></div><div class="rc-btns" id="rc-t5-b"></div><div id="rc-t5-e"></div></div>
+
+<p class="gloss">Siglas: IgA, inmunoglobulina A; VERIFICAR EN FUENTE, marca de cifra sin confirmar.</p>
+</section>
+<section class="tab" id="t6">
+<h2>Equimosis</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Mancha plana por sangre extravasada, mayor que la púrpura y de contorno irregular, que cambia de color con los días.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Púrpura»: microvasculatura dérmica. La pared capilar es delgada y frágil; si se rompe, los eritrocitos salen a la dermis.</p>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Púrpura»: hemostasia primaria. Plaquetas escasas o disfuncionales dejan los capilares sin tapón.</p>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Degradación de la hemoglobina extravasada</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Sangre fuera del vaso.</b> La hemoglobina de los eritrocitos extravasados da un color rojo-violáceo.</li>
+<li><b>Fagocitosis.</b> Los macrófagos captan los eritrocitos; la hemooxigenasa convierte el hemo en biliverdina, de color verdoso.</li>
+<li><b>Biliverdina a bilirrubina.</b> La biliverdina reductasa la transforma en bilirrubina, amarilla.</li>
+<li><b>Hierro.</b> El hierro liberado se almacena como hemosiderina, de color pardo, que puede persistir [1].</li>
+</ol>
+<p><b>Ventana de normalidad.</b> La secuencia es la misma en todos, pero la velocidad varía con la edad, la profundidad y el volumen de sangre. El color no permite fechar un hematoma de forma fiable.</p>
+<p><b>Qué lo rompe.</b> Un volumen grande, una anticoagulación o una fragilidad vascular prolongan la lesión y favorecen la hemosiderina.</p>
+<p><b>Correlato clínico.</b> El cambio de color, de rojo-violáceo a verde, amarillo y pardo, delata que la lesión es sangre. Se explora con inspección seriada y con vitropresión, que no la blanquea.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Bolognia 2024 [1]</span> Dermatology, 5.ª edición; biología de la piel y de la pigmentación.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Mancha plana rojo-violácea, de mayor tamaño que la petequia y la púrpura, por sangre extravasada en dermis o hipodermis (<i>ecchymosis</i>). Cambia de color a medida que se degrada la hemoglobina y no blanquea a la vitropresión.</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span></p>
+<p class="mini am">Los umbrales de tamaño frente a la púrpura varían entre fuentes; ver la nota en «Púrpura». El hematoma es la sangre que forma una colección palpable.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Cuando la sangre queda atrapada bajo la piel, el cuerpo la limpia como si fuera basura: los macrófagos desarman la hemoglobina por pasos y cada producto tiene un color distinto. Por eso un moretón empieza violáceo, pasa a verde, luego a amarillo y a veces deja un tinte pardo. No es pigmento nuevo: es sangre en reciclaje.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Una mujer de 78 años tiene manchas violáceas planas en los antebrazos tras roces mínimos, sobre piel fina y atrófica por el sol. Otro caso es la mancha violácea alrededor del ojo tras un golpe, que a los pocos días se vuelve verde y luego amarilla.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Hematoma</b></td><td>Colección de sangre palpable y elevada; la equimosis es plana.</td></tr>
+<tr><td><b>Petequia</b></td><td>Punto de pocos milímetros; la equimosis es una mancha extensa.</td></tr>
+<tr><td><b>Mancha mongólica</b></td><td>Melanocitosis dérmica azul-grisácea, congénita y estable; no hay sangre ni cambio de color.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t6"><div class="rc-t">Simulador · Recall de equimosis</div><div class="rc-count" id="rc-t6-n"></div><div class="rc-card" id="rc-t6-c"></div><div class="rc-btns" id="rc-t6-b"></div><div id="rc-t6-e"></div></div>
+
+<p class="gloss">Siglas: ninguna.</p>
+</section>
+<section class="tab" id="t7">
+<h2>Telangiectasia</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Dilatación permanente de vasos pequeños y superficiales, visible como líneas rojas finas que blanquean con la presión.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Púrpura»: microvasculatura dérmica. El plexo subpapilar está justo bajo la epidermis; sus capilares dilatados se ven a través de ella.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Dilatación permanente de capilares, vénulas o arteriolas superficiales, visible como líneas finas, rectas o ramificadas, rojas o azuladas. Blanquea a la vitropresión porque la sangre sigue dentro del vaso.</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span></p>
+<p class="mini">El calibre exacto que separa la telangiectasia de otras ectasias vasculares no se fija aquí.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Los vasos más superficiales de la piel suelen ser invisibles. Si por algún estímulo sostenido se quedan dilatados, ya no se esconden: se ven como hilos rojos finos bajo la epidermis. Como la sangre sigue circulando dentro, al presionar con un vidrio los hilos se vacían y desaparecen un momento.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Una mujer de 45 años tiene líneas rojas finas y ramificadas en mejillas y alas nasales, que se acentúan con el calor: rosácea. En la esclerosis sistémica son manchas aplanadas en cara y manos, y en la telangiectasia hemorrágica hereditaria hay puntos rojos en labios y epistaxis repetidas.</p></div>
+
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span>Mecanismo mínimo</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Estímulo sostenido.</b> Daño actínico, hormonas, corticoides tópicos, enfermedad del tejido conectivo o una alteración genética de la pared vascular.</li>
+<li><b>Dilatación persistente.</b> La pared del capilar o de la vénula pierde tono o soporte y queda ancha, aun sin estímulo.</li>
+<li><b>Visibilidad.</b> Con la epidermis fina, cada vaso individual se hace visible.</li>
+</ol>
+<p><b>Correlato clínico.</b> La lesión blanquea con vitropresión y se distingue del eritema porque se ven vasos individuales.</p>
+</div></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Eritema</b></td><td>Enrojecimiento difuso, sin vasos individuales visibles.</td></tr>
+<tr><td><b>Petequia</b></td><td>Punto rojo que no blanquea: la sangre está fuera del vaso.</td></tr>
+<tr><td><b>Hemangioma</b></td><td>Proliferación de células endoteliales; la telangiectasia es solo dilatación de vasos existentes.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t7"><div class="rc-t">Simulador · Recall de telangiectasia</div><div class="rc-count" id="rc-t7-n"></div><div class="rc-card" id="rc-t7-c"></div><div class="rc-btns" id="rc-t7-b"></div><div id="rc-t7-e"></div></div>
+
+<p class="gloss">Siglas: ninguna.</p>
+</section>
+<section class="tab" id="t8">
+<h2>Surco acarino</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Trayecto lineal o serpiginoso, de pocos milímetros, que excava la hembra de <i>Sarcoptes scabiei</i> en la capa córnea.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Estrato córneo y piel acral</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Capa más externa de la epidermis, formada por corneocitos aplanados y sin núcleo, apilados en láminas [1]. Es gruesa en palmas y plantas, y más fina en los espacios interdigitales y en los pliegues de flexión de las muñecas.</p>
+<p><b>Cómo está hecha.</b> Cada corneocito tiene una envoltura cornificada y está unido a los vecinos por corneodesmosomas y por lípidos intercelulares, entre ellos ceramidas. Esa mezcla funciona como un muro de ladrillos y argamasa.</p>
+<p><b>Qué permite hacer.</b> Protege de la pérdida de agua y de agentes externos, y se renueva por descamación. Su límite es que está muerta: no tiene vasos, nervios ni células vivas.</p>
+<p><b>De qué depende.</b> Del flujo de queratinocitos que la reponen desde abajo. Las capas vivas bajo ella reaccionan a lo que se deposita en la córnea.</p>
+<p><b>Correlato clínico.</b> Un parásito que excava en esa capa deja un surco visible y no sangra. El picor aparece por hipersensibilidad de la epidermis y la dermis vivas. Se explora con luz tangencial, lupa o dermatoscopio.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Vesícula»: epidermis, capas y cohesión. La capa córnea es la más externa de las cuatro capas epidérmicas.</p>
+
+<p class="mini"><span class="badge b-pu">Bolognia 2024 [1]</span> Dermatology, 5.ª edición; histología normal de la piel.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Trayecto lineal o serpiginoso, ligeramente elevado y de color grisáceo o de piel, de pocos milímetros de longitud (<i>burrow</i>). Lo excava en el estrato córneo la hembra de <i>Sarcoptes scabiei</i> var. <i>hominis</i> y es característico de la escabiosis.</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span><span class="badge b-pu">Fitzpatrick 2019 [2]</span></p>
+<p class="mini">En el extremo ciego puede verse un punto oscuro, el ácaro; con dermatoscopio forma el signo del delta.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>La capa más externa de la piel está formada por células muertas. La hembra del ácaro cava en ella un túnel diminuto y deja sus huevos y sus heces. El túnel es el surco. El picor intenso, sobre todo de noche, no viene del túnel, sino de la reacción de la piel viva al ácaro y a lo que deja.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Un niño tiene picor nocturno intenso y varios familiares también se rascan. En los espacios interdigitales y las muñecas hay líneas finas, grisáceas y ligeramente elevadas, con pápulas alrededor: surcos de escabiosis.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Excoriación</b></td><td>Lesión lineal costrosa por el rascado; el surco es previo y no lo causa el rascado.</td></tr>
+<tr><td><b>Larva migrans cutánea</b></td><td>Trayecto serpiginoso eritematoso que avanza día a día, tras contacto con arena; el surco es corto y estable.</td></tr>
+<tr><td><b>Dermatitis lineal por contacto</b></td><td>Vesículas en línea por roce con una planta; aparecen en horas a días, sin ácaro.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t8"><div class="rc-t">Simulador · Recall de surco acarino</div><div class="rc-count" id="rc-t8-n"></div><div class="rc-card" id="rc-t8-c"></div><div class="rc-btns" id="rc-t8-b"></div><div id="rc-t8-e"></div></div>
+
+<p class="gloss">Siglas: ninguna.</p>
+</section>
+<section class="tab" id="t9">
+<h2>Vitropresión y signo de Nikolsky</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Dos maniobras: la vitropresión revela si el color es vascular; el signo de Nikolsky, si la epidermis se desprende.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Púrpura»: microvasculatura dérmica. La presión vacía los vasos dilatados; los eritrocitos extravasados no se desplazan.</p>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Vesícula»: epidermis, capas y cohesión. Los desmosomas resisten el cizallamiento; si fallan, la epidermis se desliza.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Vitropresión (diascopia): presión sobre la lesión con un vidrio o plástico transparente; el eritema vascular blanquea y la sangre extravasada no. Signo de Nikolsky: presión tangencial sobre la piel sana cercana a la ampolla; si la epidermis se desprende, indica pérdida de cohesión.</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span><span class="badge b-pu">Fitzpatrick 2019 [2]</span></p>
+<p class="mini">Ambas son maniobras de exploración, no lesiones elementales.</p></div>
+
+<div class="card"><div class="card-t">Cómo se interpreta</div>
+<div class="tw"><table><thead><tr><th>Hallazgo</th><th>Interpretación</th></tr></thead><tbody>
+<tr><td>Blanquea a la vitropresión</td><td>Sangre dentro del vaso: eritema, telangiectasia, hemangioma.</td></tr>
+<tr><td>No blanquea</td><td>Sangre fuera del vaso: petequia, púrpura, equimosis.</td></tr>
+<tr><td>Queda color amarillo-pardo</td><td>Infiltrado granulomatoso, en sarcoidosis o lupus vulgar.</td></tr>
+<tr><td>Nikolsky positivo</td><td>Pénfigo vulgar, síndrome de piel escaldada estafilocócica, necrólisis epidérmica tóxica.</td></tr>
+<tr><td>Nikolsky negativo</td><td>Típico del penfigoide ampolloso.</td></tr>
+</tbody></table></div></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>La vitropresión es como apretar una manguera con agua: si el líquido está dentro, se vacía y la mancha se aclara; si ya se derramó fuera, no hay nada que apretar. El Nikolsky prueba el pegamento de la piel: si las células están bien unidas, resisten el roce; si no, la epidermis se desliza como la piel de un tomate maduro.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Un paciente tiene manchas rojo-violáceas en las piernas; al presionar con un portaobjetos no cambian: púrpura. Otro, con ampollas flácidas y erosiones orales: al frotar la piel sana junto a una erosión, la epidermis se desprende, Nikolsky positivo.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Signo de Asboe-Hansen</b></td><td>Se presiona una ampolla íntegra y el líquido se extiende a la piel vecina; el Nikolsky se hace sobre piel sana.</td></tr>
+<tr><td><b>Fenómeno de Koebner</b></td><td>Nueva lesión que aparece días después de un traumatismo en piel sana; el Nikolsky es un despegamiento inmediato.</td></tr>
+<tr><td><b>Dermografismo</b></td><td>Habón lineal por roce, sin despegamiento de la epidermis.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t9"><div class="rc-t">Simulador · Recall de vitropresión y signo de Nikolsky</div><div class="rc-count" id="rc-t9-n"></div><div class="rc-card" id="rc-t9-c"></div><div class="rc-btns" id="rc-t9-b"></div><div id="rc-t9-e"></div></div>
+
+<p class="gloss">Siglas: ninguna.</p>
+</section>
+<section class="tab" id="tg">
+<h2>Repaso global</h2>
+<p class="mini">Mazo mixto con todas las tarjetas de las nueve pestañas, barajadas e intercaladas. Al terminar verás los aciertos al primer intento por término.</p>
+
+<div class="rc" id="rc-tg"><div class="rc-t">Simulador · Repaso global de los nueve términos</div><div class="rc-count" id="rc-tg-n"></div><div class="rc-card" id="rc-tg-c"></div><div class="rc-btns" id="rc-tg-b"></div><div id="rc-tg-e"></div></div>
+
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span>Referencias</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="vanc">
+<li>Bolognia JL, Schaffer JV, Cerroni L, editors. Dermatology. 5th ed. Philadelphia: Elsevier; 2024.</li>
+<li>Kang S, Amagai M, Bruckner AL, Enk AH, Margolis DJ, McMichael AJ, et al., editors. Fitzpatrick's dermatology. 9th ed. New York: McGraw-Hill Education; 2019.</li>
+</ol>
+<p class="mini">Se citan los textos completos, sin capítulos ni páginas, porque no se consultaron las ediciones impresas. La definición de absceso lleva el aviso «Fuente por verificar». Las cifras de umbral de Fitzpatrick quedan como [VERIFICAR EN FUENTE].</p>
+</div></div>
+</section>
+<script>
+const TERMS={t1:'Vesícula',t2:'Ampolla',t3:'Pústula',t4:'Absceso',t5:'Púrpura',t6:'Equimosis',t7:'Telangiectasia',t8:'Surco acarino',t9:'Vitropresión y signo de Nikolsky'};
+const DECKS={
+t1:[
+{q:'Los queratinocitos se unen por desmosomas. Si ese anclaje se pierde y las células se separan, ¿cómo se llama el proceso y qué lesión puede resultar?',a:'Acantólisis; una vesícula o ampolla intraepidérmica.',h:'El prefijo indica pérdida de las espinas o puentes entre células.'},
+{q:'Los hemidesmosomas anclan la capa basal a la lámina basal. Si ese anclaje falla, ¿dónde queda el líquido y cómo es el techo?',a:'Debajo de toda la epidermis (subepidérmica); el techo es la epidermis entera, grueso y tenso.',h:'Piensa qué capas quedan por encima del plano de separación.'},
+{q:'Vesícula: elevación circunscrita de contenido {{líquido seroso claro}} con diámetro menor de {{1 cm}} según Bolognia.',a:'líquido seroso claro; 1 cm',h:'Otras fuentes usan una cifra menor.'},
+{q:'Una lesión elevada de 4 mm tiene contenido turbio, blanco-amarillento. ¿Es vesícula o pústula y qué la separa?',a:'Pústula; su contenido es pus (neutrófilos), no líquido claro.',h:'Se separan por el contenido.'},
+{q:'Un clínico palpa una lesión de 3 mm llena de líquido claro, con techo fino que se rompe con el roce. ¿Qué lesión es y qué queda al romperse?',a:'Vesícula; queda una erosión húmeda y luego costra.',h:'El techo fino explica por qué no dura.'}
+],
+t2:[
+{q:'En una ampolla subepidérmica, ¿qué forma el techo y qué aspecto da?',a:'La epidermis entera; la ampolla es tensa y se rompe con dificultad.',h:'Piensa qué queda por encima del plano de separación.'},
+{q:'Si la separación ocurre entre queratinocitos, ¿qué techo queda y cómo se comporta la ampolla?',a:'Techo fino de pocas capas celulares; ampolla flácida que se rompe con facilidad y deja erosión.',h:'Hay menos tejido sobre el líquido.'},
+{q:'Ampolla (bulla): lesión de contenido {{líquido}} con diámetro de {{1 cm o más}} según Bolognia.',a:'líquido; 1 cm o más',h:'Es la vesícula grande.'},
+{q:'Dos pacientes con ampollas: A tiene ampollas tensas que duran días; B, ampollas flácidas que se rompen enseguida. ¿Qué nivel de separación sugiere cada una?',a:'A: subepidérmica (penfigoide). B: intraepidérmica (pénfigo vulgar).',h:'El techo grueso resiste; el fino no.'},
+{q:'Un paciente tiene erosiones dolorosas redondeadas y no se vio ninguna ampolla íntegra. ¿Qué lesión primaria precedió y por qué no se ve?',a:'Una ampolla flácida; el techo fino se rompe y deja la erosión.',h:'El techo fino dura poco.'}
+],
+t3:[
+{q:'El sebo sale por el infundíbulo folicular. Si el orificio se obstruye y hay inflamación, ¿qué lesión centrada en un pelo aparece y qué célula forma el pus?',a:'Pústula folicular; los neutrófilos.',h:'Es la célula inflamatoria aguda predominante.'},
+{q:'En las palmas no hay folículos pilosos. Si aparecen pústulas estériles allí, ¿son foliculares o no foliculares?',a:'No foliculares: no pueden centrarse en un pelo.',h:'Piensa qué estructura falta en la palma.'},
+{q:'Pústula: elevación circunscrita con contenido {{purulento}}, formado por {{neutrófilos}} y restos celulares.',a:'purulento; neutrófilos',h:'Es el contenido de color blanquecino o amarillento.'},
+{q:'Una lesión de 3 mm tiene líquido turbio. ¿Qué dato distingue una vesícula enturbiada de una pústula verdadera?',a:'La vesícula empezó con líquido claro y suele estar agrupada; la pústula contiene pus desde el inicio.',h:'Mira la evolución y el aspecto inicial.'},
+{q:'¿Toda pústula implica infección bacteriana?',a:'No; puede ser estéril, como en la psoriasis pustulosa.',h:'Hay pústulas sin microorganismos.'}
+],
+t4:[
+{q:'La dermis reticular es densa y poco extensible. ¿Qué consecuencia tiene eso para una colección de pus en ella?',a:'Comprime los nervios sensitivos y da dolor intenso; el tejido apenas cede.',h:'Piensa en lo que ocurre al llenar un espacio rígido.'},
+{q:'La hipodermis tiene lóbulos de grasa y septos con vasos y nervios. ¿Qué signo palpatorio indica líquido bajo la piel y cómo se busca?',a:'Fluctuación; un dedo presiona y el otro, en el lado opuesto, percibe la onda.',h:'Se usan los dos índices.'},
+{q:'Absceso: colección de {{pus}} en {{dermis o hipodermis}}, con signo de {{fluctuación}}.',a:'pus; dermis o hipodermis; fluctuación',h:'Se palpa como una bolsa de líquido.'},
+{q:'Una placa roja, caliente y dolorosa no transmite onda a la palpación. ¿Es absceso o celulitis?',a:'Celulitis: hay inflamación difusa sin colección.',h:'Falta el signo de la colección.'},
+{q:'¿Qué diferencia a la pústula del absceso por profundidad y tamaño?',a:'La pústula es epidérmica y de milímetros; el absceso es de dermis o hipodermis, centimétrico y palpable.',h:'Uno se ve; el otro se palpa.'}
+],
+t5:[
+{q:'Las vénulas poscapilares son la diana de la vasculitis de pequeño vaso. Si su pared se inflama y se rompe, ¿qué lesión aparece y qué la distingue al tacto?',a:'Púrpura palpable: está elevada porque hay infiltrado inflamatorio en la pared.',h:'La inflamación añade volumen.'},
+{q:'En la hemostasia primaria, las plaquetas forman el tapón sobre el endotelio lesionado. Si hay muy pocas, ¿qué lesión puntiforme aparece y dónde primero?',a:'Petequias, sobre todo en piernas (zonas declive).',h:'Es el sitio donde la presión hidrostática es mayor.'},
+{q:'La púrpura no {{blanquea}} a la vitropresión porque los eritrocitos están {{fuera del vaso}}.',a:'blanquea; fuera del vaso',h:'La presión solo vacía lo que está dentro de los vasos.'},
+{q:'Una mancha roja plana desaparece al presionar con un vidrio. ¿Es púrpura o eritema?',a:'Eritema por vasodilatación; la púrpura no blanquea.',h:'Depende de si la sangre está dentro del vaso.'},
+{q:'Dos pacientes con puntos rojos en las piernas: A tiene plaquetas bajas y lesiones planas; B, lesiones elevadas y palpables con inflamación vascular. ¿Qué lesión tiene cada uno?',a:'A: petequias o púrpura no palpable. B: púrpura palpable.',h:'La diferencia es la palpación.'}
+],
+t6:[
+{q:'Los macrófagos degradan la hemoglobina extravasada. ¿Qué pigmento da el color verdoso a la equimosis y en cuál se convierte después, con color amarillo?',a:'Biliverdina; se convierte en bilirrubina.',h:'Es la misma secuencia que sigue el hemo en el hígado.'},
+{q:'Cuando la sangre extravasada se resuelve, ¿qué pigmento pardo puede persistir y por qué?',a:'Hemosiderina: el hierro liberado de la hemoglobina se almacena en macrófagos.',h:'Contiene hierro.'},
+{q:'Una equimosis {{no blanquea}} a la vitropresión y {{cambia de color}} con los días.',a:'no blanquea; cambia de color',h:'Lo primero indica sangre fuera del vaso.'},
+{q:'Una mancha azul-grisácea sacra presente desde el nacimiento no cambia con los días. ¿Es equimosis?',a:'No; es una mancha mongólica (melanocitosis dérmica): estable, sin sangre.',h:'Una equimosis sí cambia de color.'},
+{q:'¿Qué separa la equimosis del hematoma?',a:'La equimosis es plana, sin masa; el hematoma es una colección de sangre palpable y elevada.',h:'Se separan por el relieve.'}
+],
+t7:[
+{q:'El plexo subpapilar está justo bajo la epidermis. Si sus capilares se dilatan de forma permanente, ¿por qué se ven como líneas finas individuales?',a:'Porque están superficiales y la epidermis fina deja ver cada vaso.',h:'Piensa en la distancia entre vaso y superficie.'},
+{q:'La telangiectasia {{blanquea}} a la vitropresión porque la sangre sigue {{dentro del vaso}}.',a:'blanquea; dentro del vaso',h:'La presión vacía el vaso dilatado.'},
+{q:'Un punto rojo de 1 mm no blanquea al presionar con un vidrio. ¿Es telangiectasia o petequia?',a:'Petequia: la sangre está fuera del vaso.',h:'Lo que no blanquea no está en el lumen.'},
+{q:'Una mancha roja confluente en la mejilla no muestra vasos individuales. ¿Es eritema o telangiectasia?',a:'Eritema: la telangiectasia muestra vasos finos individuales.',h:'Busca si se identifican hilos aislados.'},
+{q:'Una mujer tiene líneas rojas finas ramificadas en mejillas y alas nasales, que empeoran con el calor. ¿Qué lesión vascular y qué enfermedad prototipo sugieren?',a:'Telangiectasias; rosácea.',h:'El calor dilata los vasos faciales.'}
+],
+t8:[
+{q:'El estrato córneo no tiene células vivas ni vasos. ¿Por qué el surco acarino en sí no sangra, pero el paciente tiene prurito intenso?',a:'El ácaro está en una capa muerta y avascular; el prurito es hipersensibilidad de la epidermis y dermis vivas.',h:'Distingue la capa del ácaro de la capa que reacciona.'},
+{q:'Surco acarino: trayecto {{lineal o serpiginoso}} excavado en el {{estrato córneo}} por la hembra de {{Sarcoptes scabiei}}.',a:'lineal o serpiginoso; estrato córneo; Sarcoptes scabiei',h:'El ácaro de la sarna.'},
+{q:'Una línea costrosa de 2 cm aparece en la espalda de un paciente que se rasca mucho. ¿Es surco acarino?',a:'No; es una excoriación por rascado. El surco es fino, previo al rascado y típico de dedos y muñecas.',h:'Mira el sitio y la causa de la línea.'},
+{q:'Un trayecto serpiginoso eritematoso avanza día a día en el pie tras la playa. ¿Es surco acarino?',a:'No; es larva migrans cutánea. El surco acarino es corto y estable.',h:'Compara la evolución de ambos.'},
+{q:'¿Dónde se buscan surcos acarinos y con qué técnica?',a:'En espacios interdigitales, caras laterales de dedos y muñecas; con luz tangencial, lupa o dermatoscopio.',h:'Son zonas de capa córnea fina.'}
+],
+t9:[
+{q:'En la vitropresión el vidrio vacía los vasos dilatados. ¿Qué desaparece y qué persiste, y por qué?',a:'El eritema vascular desaparece porque la sangre está dentro del vaso; la púrpura persiste porque los eritrocitos están fuera.',h:'Compara sangre dentro y fuera del vaso.'},
+{q:'Si autoanticuerpos dañan los desmosomas, ¿qué ocurre al frotar con lateralidad la piel sana junto a una erosión?',a:'La epidermis se desprende: Nikolsky positivo.',h:'Piensa en qué mantiene unidas las células.'},
+{q:'En la vitropresión, el eritema {{blanquea}} y la púrpura {{no blanquea}}; en el Nikolsky la presión es {{tangencial}}.',a:'blanquea; no blanquea; tangencial',h:'Una maniobra explora vasos; la otra, adhesión.'},
+{q:'Se presiona una ampolla íntegra y el líquido se extiende hacia la piel vecina. ¿Es Nikolsky o Asboe-Hansen?',a:'Asboe-Hansen; el Nikolsky se explora sobre piel sana.',h:'Fíjate dónde se aplica la presión.'},
+{q:'Tras la vitropresión de un nódulo queda un color amarillo-pardo, como jalea de manzana. ¿Qué sugiere?',a:'Infiltrado granulomatoso, como en la sarcoidosis o el lupus vulgar.',h:'No es sangre ni vasodilatación.'}
+]
+};
+DECKS.tg=[].concat.apply([],Object.keys(TERMS).map(function(k){return DECKS[k].map(function(c){return {q:c.q,a:c.a,h:c.h,t:k};});}));
+const RC={};
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function el(k,s){return document.getElementById('rc-'+k+'-'+s);}
+function isCloze(c){return c.q.indexOf('{{')>=0;}
+function front(c){return esc(c.q).replace(/\{\{[^}]*\}\}/g,'[ ? ]');}
+function back(c){return esc(c.q).replace(/\{\{([^}]*)\}\}/g,'<b>$1</b>');}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function show(id,btn){
+  document.querySelectorAll('.tab').forEach(function(s){s.classList.toggle('active',s.id===id);});
+  document.querySelectorAll('.tb').forEach(function(b){b.classList.toggle('active',b===btn);});
+  try{btn.scrollIntoView({inline:'center',block:'nearest'});}catch(e){}
+}
+function tog(b){b.parentElement.classList.toggle('op');}
+function rc_reset(k){
+  var n=DECKS[k].length,idx=[];
+  for(var i=0;i<n;i++)idx.push(i);
+  RC[k]={queue:shuffle(idx),first:{},fails:{},shown:false,done:0,n:n};
+  if(el(k,'e'))el(k,'e').innerHTML='';
+  rc_render(k);
+}
+function rc_render(k){
+  var s=RC[k],card=el(k,'c');
+  if(!card)return;
+  if(!s.queue.length){rc_end(k);return;}
+  var c=DECKS[k][s.queue[0]],f=s.fails[s.queue[0]]||0;
+  el(k,'n').textContent='Tarjeta '+(s.done+1)+' de '+s.n+(k==='tg'&&s.shown?' · '+TERMS[c.t]:'');
+  var h='<p class="rc-q">'+(s.shown&&isCloze(c)?back(c):front(c))+'</p>';
+  if(s.shown&&!isCloze(c))h+='<p class="rc-a"><b>Respuesta.</b> '+esc(c.a)+'</p>';
+  if(!s.shown&&f>=2)h+='<p class="rc-hint">Pista: '+esc(c.h)+'</p>';
+  card.innerHTML=h;
+  var b='';
+  if(!s.shown){b+='<button class="go" onclick="rc_show(\''+k+'\')">Mostrar respuesta</button>';}
+  else{
+    b+='<button class="gr ok" onclick="rc_grade(\''+k+'\',\'ok\')">La sabía</button>';
+    b+='<button class="gr mid" onclick="rc_grade(\''+k+'\',\'mid\')">A medias</button>';
+    b+='<button class="gr ko" onclick="rc_grade(\''+k+'\',\'ko\')">No la sabía</button>';
+  }
+  b+='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  el(k,'b').innerHTML=b;
+}
+function rc_show(k){RC[k].shown=true;rc_render(k);}
+function rc_grade(k,g){
+  var s=RC[k],i=s.queue.shift();
+  if(s.first[i]===undefined)s.first[i]=(g==='ok');
+  if(g==='ok'){s.done++;}
+  else{s.fails[i]=(s.fails[i]||0)+1;s.queue.push(i);}
+  s.shown=false;
+  rc_render(k);
+}
+function rc_verdict(p){return p>=80?['ok','Término consolidado']:['rep','Repasar hoy'];}
+function rc_end(k){
+  var s=RC[k],ok=0,i,rows='';
+  for(i=0;i<s.n;i++)if(s.first[i])ok++;
+  var p=Math.round(100*ok/s.n),v=rc_verdict(p);
+  el(k,'n').textContent='Mazo completado';
+  el(k,'c').innerHTML='<p class="rc-q">Cola agotada: todas las tarjetas se resolvieron.</p>';
+  el(k,'b').innerHTML='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  var h='<div class="rc-end '+v[0]+'">Aciertos al primer intento: '+ok+' de '+s.n+' ('+p+' %). <b>'+v[1]+'</b>.</div>';
+  if(k==='tg'){
+    Object.keys(TERMS).forEach(function(t){
+      var tot=0,hit=0;
+      for(i=0;i<s.n;i++){if(DECKS.tg[i].t===t){tot++;if(s.first[i])hit++;}}
+      var pp=Math.round(100*hit/tot),vv=rc_verdict(pp);
+      rows+='<tr><td>'+esc(TERMS[t])+'</td><td>'+hit+' de '+tot+' ('+pp+' %)</td><td>'+vv[1]+'</td></tr>';
+    });
+    h+='<div class="tw"><table><thead><tr><th>Término</th><th>Aciertos 1er intento</th><th>Veredicto</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  }
+  el(k,'e').innerHTML=h;
+}
+Object.keys(DECKS).forEach(rc_reset);
+</script>
+</div></body></html>

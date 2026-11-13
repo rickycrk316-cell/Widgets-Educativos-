@@ -23,4 +23,4 @@ Origen y modificación: derivada de la skill `impeccable` (Apache 2.0, ver `LICE
 | `polish` | Pasada final de consistencia con el sistema del kit | `reference/polish.md` |
 | `clarify` | Mejora de etiquetas y microcopy sin alterar el contenido clínico | `reference/clarify.md` |
 
-Lee solo la referencia del comando pedido. Es complementaria a `kit/auditar_diseno.py` y `kit/probar_navegador.js`, no las sustituye. Resultado: informe en el chat.
+Lee solo la referencia del comando pedido. Es complementaria a los validadores y pruebas de navegador del kit vivo (`kit/v11/validar.py`, `kit/v11/probar.js`, `kit/validar_definiciones.py`, `kit/validar_apertura.py`, `kit/probar_definiciones.js`, `kit/auditar_definiciones.py`), no los sustituye. Resultado: informe en el chat.

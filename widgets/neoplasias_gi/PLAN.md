@@ -1,6 +1,6 @@
 # Neoplasias gastrointestinales — plan del orquestador
 
-Fuente: `fuentes/Syllabus_primera_rotacion_10mo.md` · caso «Dolor abdominal y pérdida de peso sin causa aparente (neoplasias gastrointestinales)». Objetivo: estudiar para el Examen Integral.
+Fuente: `fuentes/syllabus_quirurgica2.md` · caso «Dolor abdominal y pérdida de peso sin causa aparente (neoplasias gastrointestinales)». Objetivo: estudiar para el Examen Integral.
 
 El caso nombra 8 cánceres (boca, esófago, estómago, duodeno, colon, hígado, páncreas, vesícula y vías biliares). La skill v10 admite máximo 5 por widget, así que va en **3 widgets**. El router (§2) lo fija el orquestador; cada ejecutor copia literal su línea como primera línea del manifiesto.
 
@@ -33,7 +33,7 @@ El caso nombra 8 cánceres (boca, esófago, estómago, duodeno, colon, hígado, 
 
 - Contexto Ecuador (MSP, GPC, INEC, SOLCA si hay datos sostenibles; Quito ~2 850 m), solo con datos leídos.
 - Bibliografía por defecto: Harrison 22e, Farreras-Rozman (edición verificable; el sílabo cita «22a. ed. 2024», no verificada) y la guía vigente más específica.
-- Kit en `kit/`; partes en `<widget>/`. **No leas ni edites** `kit_head.html`, `kit_script.html` ni `validar.py`.
+- Kit v10 (retirado; widgets congelados); partes en `<widget>/`. **No leas ni edites** `kit_head.html`, `kit_script.html` ni `validar.py`.
 
 ## Reglas de diseño para ejecutores (kit «Vademécum»)
 

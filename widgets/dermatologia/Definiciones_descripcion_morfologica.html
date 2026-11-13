@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Definiciones · Descripción morfológica</title>
+<style>
+/* Vademécum · variante del widget de definiciones (skill definiciones v5.1): mismas tintas y tipografía que DESIGN.md */
+:root{
+--paper:#FBFBFC;--paper-2:#F1F2F5;--ink:#16181D;--ink-2:#3A3D46;--ink-3:#686C78;--rule:#D7D9E0;--rule-strong:#16181D;
+--accent:#2342A6;--accent-ink:#1B358A;--accent-field:#EAEEFA;--on-accent:#FFFFFF;
+--am:#7A4A06;--am-f:#FBF1DF;--ro:#9E1F1F;--ro-f:#FBE9E7;--ve:#2F5E12;--ve-f:#EBF3E1;--pu:#4C3FA8;--pu-f:#EEECFB;--co:#8E3517;--co-f:#FAEDE6;--rs:#8A2C52;--rs-f:#FAEAF1;
+--f-serif:ui-serif,"New York","Iowan Old Style","Charter","Source Serif Pro",Georgia,"Times New Roman",serif;
+--f-sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+--r:3px;
+/* alias de la v10 para compatibilidad */
+--surface-0:var(--paper);--surface-1:var(--paper-2);--border:var(--rule);--border-accent:var(--accent);--bg-accent:var(--accent-field);--text-primary:var(--ink);--text-secondary:var(--ink-2);--text-muted:var(--ink-3);--text-accent:var(--accent-ink);--radius:var(--r);--font-sans:var(--f-sans);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}
+html{color-scheme:light dark;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:var(--accent);color:var(--on-accent)}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--f-sans);-webkit-text-size-adjust:100%;caret-color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:18px 16px 56px;background:transparent}
+h1{font:600 26px/1.2 var(--f-serif);letter-spacing:-.012em;margin:6px 0 14px;padding-bottom:12px;border-bottom:2px solid var(--rule-strong);text-wrap:balance}
+h2{font:600 19px/1.3 var(--f-serif);margin:34px 0 12px;padding-top:12px;border-top:1px solid var(--rule-strong);text-wrap:balance}
+h3{font:600 16px/1.35 var(--f-serif);margin:18px 0 6px;text-wrap:balance}
+p{margin:0 0 12px;text-wrap:pretty}
+button{font:inherit;color:inherit;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,color .15s ease-out}
+button:active{transform:translateY(1px)}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* índice de canto */
+.tabs{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 0 0;border-bottom:2px solid var(--rule-strong);margin-bottom:16px;position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);scroll-snap-type:x proximity;scroll-padding-inline:56px}
+.tabs::-webkit-scrollbar{display:none}
+.tb{flex:0 0 auto;min-height:44px;padding:9px 15px 8px;border:1px solid var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;background:var(--paper-2);color:var(--ink-2);font:600 13px/1.2 var(--f-sans);white-space:nowrap;scroll-snap-align:start}
+.tb:hover{background:var(--accent-field);color:var(--accent-ink)}
+.tb.active{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+.tab{display:none}
+.tab.active{display:block}
+/* idea rectora */
+.hb{border-radius:var(--r);padding:12px 14px;margin:14px 0;border:1px solid var(--accent);background:var(--accent-field);font-size:15px;line-height:1.6}
+.hb-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);margin-bottom:6px}
+/* prerrequisitos (rol rosa) */
+.pre{border:1px solid var(--rs);border-radius:var(--r);background:var(--rs-f);padding:12px 14px;margin:16px 0}
+.pre-t{font:600 16px/1.35 var(--f-serif);color:var(--rs);margin-bottom:8px}
+.pre .acc{background:var(--paper);border-color:var(--rs)}
+.pre .acc-h{background:var(--paper)}
+.rem-line{font-size:13px;color:var(--ink-2);margin:8px 0;line-height:1.5}
+.chip-rs{display:inline-block;font:700 11px/1.4 var(--f-sans);padding:1px 7px;border:1px solid var(--rs);border-radius:2px;background:var(--rs-f);color:var(--rs);margin-right:6px;vertical-align:1px}
+/* cards */
+.card{background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;margin:12px 0;font-size:15px;line-height:1.6}
+.card p:last-child{margin-bottom:0}
+.card-t{font:600 16px/1.35 var(--f-serif);margin:0 0 6px}
+.card.fey{background:var(--co-f);border-color:var(--co)}
+.card.fey .card-t{color:var(--co)}
+.card.fey p{font:400 16px/1.6 var(--f-serif)}
+.card.ej{background:var(--paper);border-top:2px solid var(--rule-strong)}
+.badge{display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.02em;padding:2px 7px;border-radius:2px;margin:6px 4px 0 0;vertical-align:middle;border:1px solid currentColor}
+.b-az{background:var(--accent-field);color:var(--accent-ink)}
+.b-ro{background:var(--ro-f);color:var(--ro)}
+.b-am{background:var(--am-f);color:var(--am)}
+.b-ve{background:var(--ve-f);color:var(--ve)}
+.b-pu{background:var(--pu-f);color:var(--pu)}
+.b-co{background:var(--co-f);color:var(--co)}
+.b-rs{background:var(--rs-f);color:var(--rs)}
+.mini{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:6px 0}
+.mini.am{color:var(--am);background:var(--am-f);border:1px solid var(--am);border-radius:var(--r);padding:6px 9px}
+/* acordeones */
+.acc{border:1px solid var(--rule);border-radius:var(--r);margin:10px 0;overflow:hidden;background:var(--paper)}
+.acc-h{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;min-height:44px;padding:9px 14px;border:0;background:var(--paper-2);font:600 14.5px/1.35 var(--f-sans);text-align:left}
+.acc-h:hover{background:var(--accent-field)}
+.chev{transition:transform .2s;color:var(--accent-ink);flex:0 0 auto}
+.acc.op .chev{transform:rotate(180deg)}
+.acc-b{display:none;padding:10px 14px;font-size:15px;line-height:1.6}
+.acc.op .acc-b{display:block}
+.acc.no .acc-h{color:var(--ro)}
+/* tablas */
+.tw{overflow-x:auto;margin:12px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;font-variant-numeric:tabular-nums}
+th,td{border:0;border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
+thead th{font:700 14.5px/1.35 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong);background:var(--paper-2)}
+tbody tr:last-child>*{border-bottom:1px solid var(--rule-strong)}
+tbody th{font-weight:700;background:var(--paper-2)}
+/* mini-timeline */
+.tl{list-style:none;margin:12px 0;padding:0 0 0 20px;border-left:2px solid var(--accent)}
+.tl>li{position:relative;margin:0 0 12px;padding:9px 12px;background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);font-size:14.5px;line-height:1.55}
+.tl>li::before{content:"";position:absolute;left:-27px;top:13px;width:12px;height:12px;border-radius:1px;background:var(--accent);box-shadow:0 0 0 3px var(--paper)}
+.tl b{font-family:var(--f-serif)}
+/* simulador de recall */
+.rc{border:1px solid var(--rule-strong);border-radius:var(--r);padding:14px 16px;margin:24px 0;background:var(--paper)}
+.rc-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);padding-bottom:8px;margin-bottom:10px;border-bottom:1px solid var(--rule)}
+.rc-count{font:600 13px/1.4 var(--f-sans);color:var(--ink-3);font-variant-numeric:tabular-nums;margin-bottom:8px}
+.rc-card{border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);padding:14px;min-height:110px}
+.rc-q{font:400 16px/1.6 var(--f-serif);margin:0}
+.rc-a{margin:12px 0 0;padding-top:10px;border-top:1px dashed var(--accent);font-size:15px;line-height:1.6}
+.rc-a b{color:var(--accent-ink)}
+.rc-hint{font-size:13px;color:var(--am);margin-top:8px}
+.rc-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.go{min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent);color:var(--on-accent);font:600 14px/1.2 var(--f-sans)}
+.go:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+.gr{min-height:44px;padding:8px 14px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper);font:600 14px/1.2 var(--f-sans)}
+.gr.ok{border-color:var(--ve);color:var(--ve)}
+.gr.mid{border-color:var(--am);color:var(--am)}
+.gr.ko{border-color:var(--ro);color:var(--ro)}
+.gr.ok:hover{background:var(--ve-f)}.gr.mid:hover{background:var(--am-f)}.gr.ko:hover{background:var(--ro-f)}
+.ghost{min-height:44px;padding:8px 14px;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);font:600 14px/1.2 var(--f-sans);color:var(--ink-2)}
+.rc-end{margin-top:12px;padding:12px 14px;border-radius:var(--r);border:1px solid var(--rule);font-size:15px}
+.rc-end.ok{background:var(--ve-f);border-color:var(--ve);color:var(--ve)}
+.rc-end.rep{background:var(--am-f);border-color:var(--am);color:var(--am)}
+.gloss{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:18px 0 0;padding-top:8px;border-top:1px solid var(--rule)}
+.vanc{font-size:12.5px;line-height:1.5;padding-left:24px}
+.vanc li{margin:5px 0;word-break:break-word}
+.vanc li::marker{color:var(--ink-3);font-variant-numeric:tabular-nums}
+@media (min-width:700px){body{font-size:15.5px}.wrap{padding:22px 24px 64px}h1{font-size:28px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- /DEF_HEAD -->
+<h1>Definiciones · Descripción morfológica</h1>
+<p class="mini">Tema de dermatología fuera del sílabo, para la rotación clínica. Aclara los términos con que se describe cómo se organizan las lesiones sobre la piel, sin resolver ningún caso. Cada pestaña lleva su base morfofuncional, su definición y un simulador de recall.</p>
+<nav class="tabs">
+<button class="tb active" onclick="show('t1',this)">Eritema y eritrodermia</button>
+<button class="tb" onclick="show('t2',this)">Anular y arciforme</button>
+<button class="tb" onclick="show('t3',this)">Numular (discoide)</button>
+<button class="tb" onclick="show('t4',this)">Lesión en diana</button>
+<button class="tb" onclick="show('t5',this)">Disposición lineal</button>
+<button class="tb" onclick="show('t6',this)">Reticulado</button>
+<button class="tb" onclick="show('t7',this)">Herpetiforme</button>
+<button class="tb" onclick="show('t8',this)">Dermatómica</button>
+<button class="tb" onclick="show('t9',this)">Fotodistribución</button>
+<button class="tb" onclick="show('tg',this)">Repaso global</button>
+</nav>
+<section class="tab active" id="t1">
+<h2>Eritema y eritrodermia</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Eritema es el enrojecimiento que blanquea a la presión; la eritrodermia lo extiende a casi toda la piel.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Capas de la piel</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> La piel reviste todo el cuerpo y se organiza en tres capas, de la superficie a la profundidad: epidermis, dermis e hipodermis. La unión dermoepidérmica separa las dos primeras. Los anexos (folículos pilosebáceos y glándulas sudoríparas) nacen en la epidermis y se hunden en la dermis.</p>
+<p><b>Cómo está hecha.</b> La epidermis es un epitelio escamoso estratificado y queratinizado, sin vasos propios: sus queratinocitos maduran desde la capa basal hasta el estrato córneo, de células muertas. La dermis es tejido conectivo denso con colágeno y elastina, que contiene vasos, nervios y anexos. La hipodermis es tejido adiposo dividido por septos de conectivo.</p>
+<p><b>Qué permite hacer.</b> La piel es barrera mecánica, química y microbiana; regula la temperatura y recoge sensibilidad. Cada capa cambia lo que se ve y se palpa: la epidermis modifica la superficie (brillo, escama), la dermis aporta color y relieve, y la hipodermis da consistencia profunda.</p>
+<p><b>De qué depende.</b> La epidermis se nutre por difusión desde la dermis, que recibe sangre de plexos vasculares horizontales. Los nervios sensitivos llegan desde la hipodermis hasta la dermis y la epidermis.</p>
+<p><b>Correlato clínico.</b> Ubicar la capa afectada orienta qué se ve: un cambio superficial se aprecia con luz tangencial; uno profundo se reconoce al palpar. La inspección se hace con buena luz y la palpación comprueba relieve, temperatura y consistencia.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Eritema: flujo dérmico y vitropresión</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Plexo superficial.</b> Bajo la epidermis, la dermis papilar tiene una red de capilares y vénulas; el color de la piel depende de cuánta sangre contiene y de su oxigenación.</li>
+<li><b>Estímulo.</b> Calor, mediadores inflamatorios, fármacos o radiación ultravioleta dilatan las arteriolas y las vénulas poscapilares, y el plexo recibe más sangre.</li>
+<li><b>Eritema.</b> La piel se enrojece porque la sangre aumenta dentro de los vasos. Rama: si los eritrocitos salen del vaso (extravasación), el rojo cambia de naturaleza y se llama púrpura.</li>
+<li><b>Vitropresión.</b> Al presionar con un vidrio, el plexo se vacía y el eritema blanquea; la púrpura no blanquea, porque la sangre ya está fuera del vaso.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> El color basal varía con el fototipo, la temperatura y las emociones; el rubor transitorio es fisiológico y cede por sí solo.</p>
+<p><b>Qué lo rompe.</b> Una vasodilatación sostenida por inflamación, infección o fármaco mantiene el enrojecimiento. En piel muy pigmentada el eritema se ve apagado y se reconoce mejor por calor y por la palpación.</p>
+<p><b>Correlato clínico.</b> El hallazgo que delata el eritema es que blanquea a la vitropresión; se explora con un portaobjetos o con un depresor transparente.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Cómo se redacta una descripción dermatológica</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Tipo de lesión.</b> Se nombra la lesión elemental, primaria o secundaria (mácula, pápula, placa, escama, costra).</li>
+<li><b>Color.</b> Se indica el color real (eritematoso, violáceo, pardo, blanco), no el diagnóstico.</li>
+<li><b>Tamaño.</b> Se mide en centímetros; el cálculo a ojo no basta.</li>
+<li><b>Forma y borde.</b> Redonda, ovalada o irregular; borde bien o mal definido.</li>
+<li><b>Configuración.</b> Cómo se relacionan las lesiones entre sí: aisladas, agrupadas, anulares, lineales, reticuladas.</li>
+<li><b>Distribución.</b> Dónde están: localizada o generalizada, simétrica o no, zonas expuestas, flexoras o extensoras.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> No aplica: es un orden de redacción, no un proceso fisiológico.</p>
+<p><b>Qué lo rompe.</b> El punto más vulnerable es omitir la configuración y la distribución, que son las que orientan más el diagnóstico.</p>
+<p><b>Correlato clínico.</b> Ejemplo de frase completa: «placas eritematosas, bien delimitadas, de 3 a 5 cm, de borde anular, agrupadas en el tronco». Las siguientes ocho pestañas desarrollan la configuración y la distribución.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Bolognia 2024 [1]</span> Dermatology, 5.ª edición. Texto de referencia solicitado por el estudiante; la edición y el año se declaran tal como los entregó el estudiante.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Eritema (<i>erythema</i>): enrojecimiento de la piel por vasodilatación, que blanquea a la presión. Eritrodermia (<i>erythroderma</i>): eritema que compromete casi toda la superficie corporal, con frecuencia con descamación. Es un síndrome de causas diversas, no un diagnóstico.</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span></p>
+<p class="mini">El porcentaje mínimo de superficie corporal que define la eritrodermia (suele citarse alrededor del 90 %) no se fijó con certeza: [VERIFICAR EN FUENTE] en Bolognia [1] y en Fitzpatrick 2019 [2], y no se promedia.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>La piel se ve roja cuando sus capilares superficiales se llenan de sangre. Si presionas con un vidrio y el rojo desaparece, esa sangre estaba dentro de los vasos: es eritema. Si el rojo se queda, la sangre salió del vaso. Cuando casi toda la piel se pone así, hablamos de eritrodermia, y la piel pierde parte de su función de barrera.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Varón de 58 años con psoriasis de años: en pocas semanas toda la piel está roja, caliente y descama en láminas finas, y refiere escalofríos. Al presionar con un portaobjetos el rojo blanquea. Prototipos: psoriasis, dermatitis atópica, reacción a fármacos y linfoma cutáneo de células T.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Exantema</b></td><td>Erupción con muchas lesiones que aparece de forma aguda; el eritema es el color de las lesiones, no el tipo de erupción.</td></tr>
+<tr><td><b>Púrpura</b></td><td>Rojo violáceo que no blanquea a la vitropresión, porque la sangre está fuera del vaso.</td></tr>
+<tr><td><b>Telangiectasia</b></td><td>Vasos finos dilatados y visibles de forma permanente; el eritema es difuso y reversible.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t1"><div class="rc-t">Simulador · Recall de eritema y eritrodermia</div><div class="rc-count" id="rc-t1-n"></div><div class="rc-card" id="rc-t1-c"></div><div class="rc-btns" id="rc-t1-b"></div><div id="rc-t1-e"></div></div>
+
+<p class="gloss">Siglas: sin siglas en esta pestaña; las abreviaturas de unidades usadas son cm, centímetro. [VERIFICAR EN FUENTE], dato que debe comprobarse en el texto.</p>
+</section>
+<section class="tab" id="t2">
+<h2>Configuración anular y arciforme</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Lesiones que dibujan un anillo completo o un arco, porque crecen hacia afuera y se aclaran en el centro.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Crecimiento centrífugo y aclaramiento central</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Foco inicial.</b> Un punto de la piel inicia el proceso: un hongo que invade la queratina o un infiltrado inflamatorio en la dermis.</li>
+<li><b>Expansión radial.</b> El agente o el infiltrado avanza hacia afuera en todas direcciones. El frente de avance es el borde activo, de aspecto rojo, elevado y a veces escamoso.</li>
+<li><b>Resolución central.</b> Detrás del frente, el proceso cede por la respuesta del huésped o porque el agente se agota. El centro queda de aspecto casi normal o con cambios residuales.</li>
+<li><b>Anillo.</b> Borde activo más centro claro dan la forma anular. Rama: si el anillo se interrumpe queda un arco; si varios anillos confluyen, el contorno se festonea.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> No aplica a la piel sana; en lesiones anulares la expansión se mide en días o semanas, salvo en algunas reacciones inflamatorias, que migran en horas.</p>
+<p><b>Qué lo rompe.</b> El punto más vulnerable es el centro: si la respuesta es parcial, el centro conserva eritema o escama y el anillo se pierde, con lo que la lesión se vuelve numular.</p>
+<p><b>Correlato clínico.</b> El borde activo se explora con luz tangencial y con palpación suave; en las lesiones por hongos se aprecia escama adherida al borde y el prurito acompaña.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Estrato córneo y descamación</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Es la capa más externa de la epidermis, formada por varias hileras de corneocitos, células aplanadas y muertas sin núcleo, que ya terminaron su maduración desde la capa basal.</p>
+<p><b>Cómo está hecha.</b> Los corneocitos, llenos de queratina, se unen por corneodesmosomas y se rodean de una matriz de lípidos (ceramidas, colesterol, ácidos grasos). Esa disposición se describe como ladrillos y cemento y le da propiedad de barrera.</p>
+<p><b>Qué permite hacer.</b> Frena la pérdida de agua y la entrada de microorganismos y tóxicos. Se renueva de forma continua: las capas superficiales se desprenden en láminas microscópicas que normalmente no se ven.</p>
+<p><b>De qué depende.</b> Del recambio de queratinocitos desde la capa basal y de la hidratación; no tiene vasos ni nervios propios.</p>
+<p><b>Correlato clínico.</b> Si el recambio se acelera o el estrato córneo se inflama, los corneocitos se desprenden en grupos y forman escama visible. En el borde activo de un anillo la escama se dispone como collarete. Se explora con luz tangencial y con el raspado suave del borde.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Eritema y eritrodermia»: capas de la piel. El borde activo de un anillo asienta en la epidermis y la dermis superficial.</p>
+
+<p class="mini"><span class="badge b-pu">Bolognia 2024 [1]</span> Dermatology, 5.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Anular (<i>annular</i>): lesiones en forma de anillo, con borde visible y centro más claro. Arciforme (<i>arcuate</i>): fragmentos de anillo o arcos. Policíclico (<i>polycyclic</i>): anillos que confluyen y forman bordes festoneados. Describen la configuración, no la causa.</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span></p>
+<p class="mini">Si Bolognia [1] y Fitzpatrick 2019 [2] agrupan o separan «arciforme» y «policíclico» de forma distinta, no se concilian aquí: [VERIFICAR EN FUENTE] cuál término usa cada libro.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Imagina una gota de tinta sobre papel secante: se extiende hacia afuera en círculo. En la piel, un hongo o una inflamación avanzan desde un punto. El borde sigue activo, rojo y a veces con escama; el centro ya se calmó y casi parece piel normal. El resultado es un anillo. Si el anillo se rompe queda un arco, y si se unen varios queda un contorno de varios círculos.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Escolar con una placa de 3 cm en el antebrazo, de borde rojo, elevado y con escama fina, centro más claro y prurito, que crece por semanas. Descripción: placa anular eritematoescamosa con aclaramiento central. Prototipos: tiña del cuerpo, granuloma anular y eritema migratorio.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Numular</b></td><td>Forma de moneda, con el centro del mismo aspecto que el borde; el anillo se aclara en el centro.</td></tr>
+<tr><td><b>Lesión en diana</b></td><td>Tiene tres zonas concéntricas, con centro oscuro o ampolloso; el anillo simple tiene solo borde y centro.</td></tr>
+<tr><td><b>Habones policíclicos</b></td><td>Son elevaciones edematosas que cambian de sitio en horas; el borde de una tiña persiste en el mismo lugar durante semanas.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t2"><div class="rc-t">Simulador · Recall de configuración anular y arciforme</div><div class="rc-count" id="rc-t2-n"></div><div class="rc-card" id="rc-t2-c"></div><div class="rc-btns" id="rc-t2-b"></div><div id="rc-t2-e"></div></div>
+
+<p class="gloss">Siglas: cm, centímetro. [VERIFICAR EN FUENTE], dato que debe comprobarse en el texto.</p>
+</section>
+<section class="tab" id="t3">
+<h2>Numular (discoide)</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Lesión redonda u ovalada, como una moneda, de borde nítido y centro igual al resto de la lesión.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Barrera epidérmica y espongiosis</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Agresión a la barrera.</b> La sequedad, un irritante o un alérgeno alteran los lípidos del estrato córneo y la barrera deja pasar agua y sustancias.</li>
+<li><b>Respuesta inmune local.</b> Los queratinocitos y las células inmunes de la epidermis liberan mediadores inflamatorios; aparece prurito.</li>
+<li><b>Espongiosis.</b> El líquido se acumula entre los queratinocitos y los separa; la epidermis se ve como una esponja al microscopio.</li>
+<li><b>Lesión visible.</b> Rama: si el líquido forma cavidades, hay microvesículas que se rompen y dejan exudado y costra; si la inflamación persiste, la piel se engruesa.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> En la piel sana no hay líquido entre las células; la epidermis intacta mantiene el estrato córneo hidratado y cohesionado.</p>
+<p><b>Qué lo rompe.</b> El punto más vulnerable es la barrera lipídica: la piel seca o lavada en exceso la deteriora primero.</p>
+<p><b>Correlato clínico.</b> La placa redonda, rosada, exudativa o costrosa y muy pruriginosa delata el proceso; se explora con luz tangencial para ver el brillo del exudado y las costras finas.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Folículo pilosebáceo</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Es una invaginación de la epidermis que se hunde en la dermis y contiene el pelo. Lo acompañan la glándula sebácea, el músculo erector del pelo y, en algunas zonas, una glándula apocrina. El infundíbulo, su tramo superior, se abre a la superficie.</p>
+<p><b>Cómo está hecho.</b> El epitelio folicular continúa el de la epidermis. En el bulbo, en lo profundo, las células de la matriz producen el tallo piloso, y una zona de células madre, la protuberancia, regenera el folículo. La glándula sebácea desemboca en el infundíbulo.</p>
+<p><b>Qué permite hacer.</b> Forma el pelo y libera sebo, que lubrica la piel. Al contraerse, el músculo erector lo endereza.</p>
+<p><b>De qué depende.</b> La actividad sebácea depende de hormonas androgénicas. El folículo recibe terminales nerviosos sensitivos y un aporte sanguíneo propio.</p>
+<p><b>Correlato clínico.</b> Cuando la inflamación afecta la unión dermoepidérmica y el folículo, la boca folicular se dilata y se tapona con escama. Así se ve la placa discoide del lupus: escama adherida con tapones foliculares, atrofia y pérdida del pelo en esa zona. Se explora al despegar la escama y ver las espículas en su cara inferior.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Anular y arciforme»: estrato córneo y descamación. La barrera que se altera aquí es esa misma capa.</p>
+
+<p class="mini"><span class="badge b-pu">Bolognia 2024 [1]</span> Dermatology, 5.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Numular (<i>nummular</i>): lesión en forma de moneda, redonda u ovalada, de borde bien definido y superficie uniforme hasta el centro. Discoide (<i>discoid</i>): en forma de disco, a veces con atrofia o tapones foliculares. Tamaño habitual: 1 a 3 cm [VERIFICAR EN FUENTE].</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span></p>
+<p class="mini">En el eccema, «numular» y «discoide» se usan como sinónimos; en el lupus, «discoide» designa la placa atrófica con tapones foliculares. [VERIFICAR EN FUENTE] si Bolognia [1] y Fitzpatrick 2019 [2] los separan; no se promedia.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Piensa en una moneda apoyada sobre la piel: redonda, de borde claro y llena por dentro. A diferencia del anillo, no se aclara en el centro. La forma dice cómo luce la lesión, no por qué salió. Una piel seca que supura da monedas rojas y con costra; un lupus discoide da monedas con escama pegada y cicatriz.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Varón de 60 años con piel seca en invierno y placas redondas de 2 cm en las piernas, rojas, con exudado y costra fina, de bordes netos y muy pruriginosas. Descripción: placas numulares eritematocostrosas. Prototipos: eccema numular, lupus eritematoso discoide y psoriasis en placas pequeñas.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Anular</b></td><td>El centro se aclara y queda un borde activo; la moneda se mantiene llena.</td></tr>
+<tr><td><b>Placa</b></td><td>Describe relieve y tamaño (lesión elevada y plana por encima del umbral de cada libro); numular describe solo la forma.</td></tr>
+<tr><td><b>Lesión en diana</b></td><td>Tiene zonas concéntricas de distinto color; la moneda es uniforme.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t3"><div class="rc-t">Simulador · Recall de numular (discoide)</div><div class="rc-count" id="rc-t3-n"></div><div class="rc-card" id="rc-t3-c"></div><div class="rc-btns" id="rc-t3-b"></div><div id="rc-t3-e"></div></div>
+
+<p class="gloss">Siglas: cm, centímetro. [VERIFICAR EN FUENTE], dato que debe comprobarse en el texto.</p>
+</section>
+<section class="tab" id="t4">
+<h2>Lesión en diana (iris)</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Lesión redonda con tres zonas concéntricas, como una diana de tiro: centro, anillo pálido y anillo rojo.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Zonas de la lesión en diana, de dentro afuera</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Centro.</b> Es la zona de mayor daño: los queratinocitos mueren (necrosis) y el centro se ve oscuro, con ampolla o costra.</li>
+<li><b>Anillo intermedio.</b> El edema de la dermis superficial eleva y palidece esta franja, más clara que el resto.</li>
+<li><b>Anillo externo.</b> La vasodilatación del plexo superficial enrojece el borde (eritema, que blanquea a la vitropresión).</li>
+<li><b>Variante atípica.</b> Rama: si solo hay dos zonas o los bordes son mal definidos, se llama lesión en diana atípica.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> No aplica: es una lesión, no un proceso fisiológico.</p>
+<p><b>Qué lo rompe.</b> El punto más vulnerable es la distinción entre dos y tres zonas: se pierde si se mira de lejos o con poca luz, y el centro puede ser una ampolla que se rompe y deja costra.</p>
+<p><b>Correlato clínico.</b> Se explora de cerca, con buena luz, contando las zonas y midiendo el diámetro; la lesión típica aparece en palmas, plantas y dorso de manos.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Eritema y eritrodermia»: capas de la piel. El centro compromete la epidermis y los anillos externos, la dermis.</p>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Eritema y eritrodermia»: eritema y vitropresión. El anillo externo es eritema: blanquea a la presión.</p>
+
+<p class="mini"><span class="badge b-pu">Bolognia 2024 [1]</span> Dermatology, 5.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Lesión en diana (<i>target</i> o <i>iris lesion</i>): placa redonda con tres zonas concéntricas, centro oscuro, anillo intermedio pálido y anillo externo eritematoso. Las atípicas tienen dos zonas o bordes imprecisos. Diámetro típico: menor de 3 cm [VERIFICAR EN FUENTE].</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span></p>
+<p class="mini">Si Bolognia [1] y Fitzpatrick 2019 [2] difieren en exigir tres zonas para llamarla típica, no se concilia aquí: [VERIFICAR EN FUENTE].</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Imagina una diana de tiro: centro, aro claro y aro rojo. En la piel, el centro es lo más dañado y se oscurece o forma una ampolla; el aro claro está hinchado por edema; el aro externo está enrojecido por vasodilatación. Hay que mirar de cerca, porque a veces solo se ven dos aros. Contar zonas separa la lesión típica de la atípica.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Mujer de 25 años que, ocho días después de un herpes labial, presenta lesiones redondas de 1 a 2 cm en dorso de manos y antebrazos, con centro oscuro, anillo pálido y borde rojo, simétricas. Prototipos: eritema multiforme (típicas) y síndrome de Stevens-Johnson (atípicas, planas).</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Anular</b></td><td>Solo borde activo y centro claro; la diana añade un tercer anillo y un centro dañado.</td></tr>
+<tr><td><b>Eritema migratorio</b></td><td>Anillo que se expande con aclaramiento central, sin la secuencia oscuro, pálido y rojo.</td></tr>
+<tr><td><b>Habón</b></td><td>Elevación edematosa fugaz que desaparece en horas; la diana persiste varios días.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t4"><div class="rc-t">Simulador · Recall de lesión en diana</div><div class="rc-count" id="rc-t4-n"></div><div class="rc-card" id="rc-t4-c"></div><div class="rc-btns" id="rc-t4-b"></div><div id="rc-t4-e"></div></div>
+
+<p class="gloss">Siglas: cm, centímetro. [VERIFICAR EN FUENTE], dato que debe comprobarse en el texto.</p>
+</section>
+<section class="tab" id="t5">
+<h2>Disposición lineal (Koebner y líneas de Blaschko)</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Lesiones en hilera, por trauma sobre la piel (Koebner) o por mosaicismo del desarrollo (Blaschko).</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Fenómeno isomórfico de Koebner</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Trauma.</b> Un rascado, una quemadura, una cirugía o la fricción repetida lesionan una piel que parece sana.</li>
+<li><b>Respuesta local.</b> En una persona con dermatosis activa, el daño libera mediadores y expone antígenos propios en esa línea de piel.</li>
+<li><b>Aparición.</b> Tras un intervalo de días o semanas, surgen lesiones de la misma enfermedad exactamente sobre el trayecto del trauma.</li>
+<li><b>Variante.</b> Rama: si la línea la forma un agente inoculado por el rascado (verrugas, molusco), se habla de pseudo-Koebner.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> La piel sana no responde así; el fenómeno ocurre cuando la enfermedad está activa.</p>
+<p><b>Qué lo rompe.</b> El punto más vulnerable es la actividad de la enfermedad: con la dermatosis controlada, el mismo trauma no deja lesiones.</p>
+<p><b>Correlato clínico.</b> La hilera sigue el rasguño o la cicatriz; se interroga por el trauma previo. Aparece en psoriasis, liquen plano y vitíligo.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Mosaicismo y líneas de Blaschko</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Embrión.</b> Las células precursoras de la piel (queratinocitos y melanoblastos) proliferan y migran por trayectos definidos durante el desarrollo.</li>
+<li><b>Mutación posterior al cigoto.</b> Una célula progenitora cambia su ADN después de la fecundación y origina un clon distinto del resto.</li>
+<li><b>Clon en banda.</b> Ese clon sigue el trayecto de migración y ocupa franjas de piel que tienen una forma constante.</li>
+<li><b>Manifestación.</b> En el nacimiento o en la infancia, la franja se expresa como lesión lineal. Rama: según la capa afectada, será epidérmica, pigmentaria o inflamatoria.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> Las líneas se fijan durante la embriogénesis y no cambian después. Dibujan una V en la espalda, una S en el abdomen y ondas en el cuero cabelludo.</p>
+<p><b>Qué lo rompe.</b> El punto más vulnerable es la mutación posterior al cigoto, que crea el clon; no se debe a nervios, vasos ni linfáticos.</p>
+<p><b>Correlato clínico.</b> Una banda que no sigue un dermatoma ni cruza la línea media sin cortarse orienta a un mosaico. Se reconoce en el nevo epidérmico lineal, el liquen estriado y la incontinencia pigmentaria.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Eritema y eritrodermia»: capas de la piel. Los queratinocitos y los melanocitos del clon viven en la epidermis.</p>
+
+<p class="mini"><span class="badge b-pu">Bolognia 2024 [1]</span> Dermatology, 5.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Disposición lineal (<i>linear</i>): lesiones alineadas en hilera. Koebner (<i>isomorphic response</i>): aparición de lesiones de una dermatosis en sitios de trauma. Líneas de Blaschko: trayectos fijos de la piel, en V en la espalda y en S en el abdomen, donde se alinean lesiones de origen genético en mosaico.</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span></p>
+<p class="mini">Si Bolognia [1] y Fitzpatrick 2019 [2] distinguen de forma distinta Koebner y pseudo-Koebner, no se concilia aquí: [VERIFICAR EN FUENTE].</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Una línea de lesiones tiene dos explicaciones. La primera: algo golpeó la piel en línea, como un rasguño, y la enfermedad apareció justo ahí. La segunda: la piel nació con grupos de células distintos que siguieron trayectos del desarrollo, y esos trayectos dibujan líneas fijas. Preguntar si hubo un trauma y desde cuándo está la lesión separa las dos.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Niño de 6 años con una banda de pápulas rosadas y escamosas del hombro al antebrazo, aparecida en semanas, sin trauma: patrón de Blaschko. Adulto con psoriasis que, tras rascarse el codo, tiene una hilera de placas sobre el rasguño: Koebner. Otro prototipo es la hilera de verrugas por inoculación.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Dermatómica (zosteriforme)</b></td><td>Sigue el territorio de un nervio espinal, unilateral y sin cruzar la línea media; Blaschko traza V y S independientes del nervio.</td></tr>
+<tr><td><b>Dermatitis de contacto lineal</b></td><td>La sustancia roza la piel en una raya, como una planta que arrastra; hay antecedente de exposición reciente.</td></tr>
+<tr><td><b>Esporotricoide</b></td><td>Nódulos que siguen un trayecto linfático ascendente, desde un sitio de inoculación.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t5"><div class="rc-t">Simulador · Recall de disposición lineal</div><div class="rc-count" id="rc-t5-n"></div><div class="rc-card" id="rc-t5-c"></div><div class="rc-btns" id="rc-t5-b"></div><div id="rc-t5-e"></div></div>
+
+<p class="gloss">Siglas: ADN, ácido desoxirribonucleico. [VERIFICAR EN FUENTE], dato que debe comprobarse en el texto.</p>
+</section>
+<section class="tab" id="t6">
+<h2>Patrón reticulado</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Patrón en red, de líneas que se cruzan y dejan espacios libres, como una malla.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Red vascular de la dermis</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> La dermis tiene dos plexos horizontales: el subpapilar, superficial, bajo la epidermis, y el profundo, en el límite con la hipodermis. Vasos verticales los conectan. Las arterias perforantes, que vienen del músculo y la fascia, alimentan el plexo profundo.</p>
+<p><b>Cómo está hecha.</b> Cada arteria perforante irriga un cono de piel, y los conos vecinos se tocan en sus bordes. En el centro del cono el flujo es rápido; en el borde, donde dos territorios se encuentran, el flujo es más lento y la sangre pierde más oxígeno.</p>
+<p><b>Qué permite hacer.</b> Regula la temperatura: la piel abre o cierra sus vasos según la necesidad de perder o conservar calor. El límite lo marca el tono del sistema nervioso simpático y la viscosidad de la sangre.</p>
+<p><b>De qué depende.</b> Del tono simpático, de la temperatura y de la integridad de la pared vascular y de la sangre que circula.</p>
+<p><b>Correlato clínico.</b> Con frío o con flujo lento, los bordes de los conos se ven violáceos y dibujan una red: livedo reticular. Si desaparece al entibiar la piel, es fisiológica (cutis marmorata). Si persiste, orienta a una enfermedad vascular o de la sangre. Se explora entibiando la zona y comprobando si la red se borra.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Eritema y eritrodermia»: eritema y flujo dérmico. El color de la red cambia según la sangre contenida en el plexo.</p>
+
+<p class="mini"><span class="badge b-pu">Bolognia 2024 [1]</span> Dermatology, 5.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Patrón reticulado (<i>reticulate</i>): lesiones o color dispuestos en red, con espacios libres entre las líneas. Puede ser vascular (livedo reticular), pigmentado (red parda) o blanquecino (estrías de Wickham del liquen plano). El color de la malla orienta su origen.</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span></p>
+<p class="mini">Fitzpatrick 2019 [2] puede usar términos distintos para los patrones en red (reticulado, retiforme, en encaje): [VERIFICAR EN FUENTE] cuál emplea cada libro; no se unifican.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Imagina una red de pesca sobre la piel: líneas que se cruzan y dejan huecos. Si la red es violácea y se borra al calentar, es solo circulación lenta con el frío. Si persiste, o es parda o blanca, el origen cambia: vasos, melanina o inflamación. Primero se dice que es una red y después qué color tiene.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Lactante que, al destaparlo con frío, muestra una red violácea simétrica en las piernas que desaparece al entibiarlo. Descripción: patrón reticulado violáceo, reversible. Prototipos: cutis marmorata, livedo reticular patológico, papilomatosis confluente y reticulada y liquen plano.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Livedo racemosa</b></td><td>Red incompleta, de ramas rotas y asimétricas; la reticular es completa y regular.</td></tr>
+<tr><td><b>Anular</b></td><td>Un solo anillo con centro claro; la red tiene muchos huecos que se comunican.</td></tr>
+<tr><td><b>Estrías</b></td><td>Bandas lineales paralelas, de atrofia dérmica; no forman malla.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t6"><div class="rc-t">Simulador · Recall de patrón reticulado</div><div class="rc-count" id="rc-t6-n"></div><div class="rc-card" id="rc-t6-c"></div><div class="rc-btns" id="rc-t6-b"></div><div id="rc-t6-e"></div></div>
+
+<p class="gloss">Siglas: sin siglas en esta pestaña. [VERIFICAR EN FUENTE], dato que debe comprobarse en el texto.</p>
+</section>
+<section class="tab" id="t7">
+<h2>Agrupación herpetiforme</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Vesículas pequeñas agrupadas en racimos, como las del herpes, sobre piel normal o enrojecida.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Latencia y reactivación del herpesvirus</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Infección primaria.</b> El virus entra por la piel o la mucosa e infecta las terminaciones sensitivas.</li>
+<li><b>Latencia.</b> Asciende por el axón hasta el ganglio sensitivo, donde queda en reposo, sin replicarse, dentro de la neurona.</li>
+<li><b>Reactivación.</b> Con estrés, fiebre, radiación ultravioleta o caída de la inmunidad celular, el virus desciende por el axón.</li>
+<li><b>Lesión.</b> Llega al territorio de piel de ese nervio y causa vesículas en racimo, a menudo en el mismo sitio.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> La latencia puede durar años sin síntomas.</p>
+<p><b>Qué lo rompe.</b> El punto más vulnerable es la inmunidad celular, que mantiene al virus en reposo; su caída permite la reactivación.</p>
+<p><b>Correlato clínico.</b> Antes de las vesículas, el paciente suele notar ardor, hormigueo o dolor local (pródromo). Se explora el racimo sobre una base eritematosa y se pregunta por episodios previos en el mismo lugar.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Papila dérmica y unión dermoepidérmica</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> La unión dermoepidérmica es la interfaz ondulada entre la epidermis y la dermis. Las crestas de la epidermis se hunden entre las papilas de la dermis, que son salientes en forma de dedo hacia la epidermis.</p>
+<p><b>Cómo está hecha.</b> Descansa sobre la membrana basal (lámina lúcida y lámina densa). Los hemidesmosomas anclan los queratinocitos basales y las fibrillas de anclaje de colágeno VII fijan la membrana a la dermis. Cada papila contiene un asa capilar y terminales nerviosos.</p>
+<p><b>Qué permite hacer.</b> Aumenta la superficie de contacto, ancla la epidermis a la dermis para que resista el roce y deja pasar nutrientes y oxígeno desde la papila.</p>
+<p><b>De qué depende.</b> De la integridad de las proteínas de anclaje y del capilar de cada papila.</p>
+<p><b>Correlato clínico.</b> Si los anticuerpos o el trauma rompen la unión, se forma una vesícula subepidérmica. En la dermatitis herpetiforme, los depósitos de IgA en la punta de las papilas desencadenan vesículas agrupadas muy pruriginosas, con frecuencia en codos, rodillas y glúteos. Se explora por el rascado y la presencia de excoriaciones.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Numular (discoide)»: barrera epidérmica y espongiosis. El edema entre queratinocitos forma microvesículas dentro de la epidermis.</p>
+
+<p class="mini"><span class="badge b-pu">Bolognia 2024 [1]</span> Dermatology, 5.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Agrupación herpetiforme (<i>herpetiform</i>): vesículas o pápulas pequeñas reunidas en racimos, sobre piel normal o eritematosa, como en el herpes simple. Es una configuración y no implica infección por herpesvirus: la dermatitis herpetiforme la presenta sin virus.</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span></p>
+<p class="mini">El tamaño de las vesículas (alrededor de milímetros) y el número mínimo por racimo no se fijaron con certeza: [VERIFICAR EN FUENTE] en Bolognia [1] y Fitzpatrick 2019 [2].</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Herpetiforme significa con aspecto de herpes: racimos de vesículas pequeñas, juntas como granos de uva en un mismo punto. El nombre describe la forma, no la causa. El herpes simple dibuja racimos porque el virus sale por una rama nerviosa. La dermatitis herpetiforme dibuja racimos por depósitos inmunes en puntas de papilas, sin virus.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Joven con ardor en el labio dos días antes; después aparece un racimo de vesículas diminutas sobre base roja en el borde del labio, que se rompen y dejan costra. Descripción: vesículas agrupadas, de disposición herpetiforme. Prototipos: herpes simple recidivante, herpes zóster y dermatitis herpetiforme.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Zosteriforme</b></td><td>Racimos que siguen un dermatoma, unilaterales; herpetiforme solo dice que están agrupados.</td></tr>
+<tr><td><b>Dermatitis herpetiforme</b></td><td>Enfermedad con IgA en papilas; el nombre alude al aspecto y no a un virus.</td></tr>
+<tr><td><b>Lesiones diseminadas</b></td><td>Vesículas separadas entre sí por piel sana, repartidas al azar; no hay racimo.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t7"><div class="rc-t">Simulador · Recall de agrupación herpetiforme</div><div class="rc-count" id="rc-t7-n"></div><div class="rc-card" id="rc-t7-c"></div><div class="rc-btns" id="rc-t7-b"></div><div id="rc-t7-e"></div></div>
+
+<p class="gloss">Siglas: IgA, inmunoglobulina A; VII, tipo de colágeno. [VERIFICAR EN FUENTE], dato que debe comprobarse en el texto.</p>
+</section>
+<section class="tab" id="t8">
+<h2>Distribución dermatómica (zosteriforme)</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Lesiones confinadas a la franja de piel que inerva un nervio espinal, habitualmente de un solo lado.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Nervio espinal, ganglio y dermatoma</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Un dermatoma es el área de piel que inerva un solo nervio espinal a través de su raíz dorsal. Hay 31 pares de nervios espinales (8 cervicales, 12 torácicos, 5 lumbares, 5 sacros y 1 coccígeo). En la cara, la sensibilidad la reparte el trigémino en tres ramas.</p>
+<p><b>Cómo está hecho.</b> El cuerpo de la neurona sensitiva está en el ganglio de la raíz dorsal. De él sale una prolongación hacia la piel y otra hacia la médula. En el tronco los dermatomas forman bandas horizontales que rodean el cuerpo desde la columna hasta la línea media anterior.</p>
+<p><b>Qué permite hacer.</b> Recoge tacto, dolor y temperatura de su franja. Los dermatomas vecinos se solapan, por lo que una lesión de un solo nervio deja una zona de menor sensibilidad, no pérdida total.</p>
+<p><b>De qué depende.</b> De la integridad de la raíz dorsal y del ganglio, y del nervio periférico que continúa hacia la piel.</p>
+<p><b>Correlato clínico.</b> Si una enfermedad infecta el ganglio, las lesiones se limitan a una banda unilateral que respeta la línea media; el paciente nota dolor o ardor en esa banda. Se explora trazando el límite de las lesiones con el dedo y comparando con el lado contrario.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Referencias de dermatomas en tronco y cabeza</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Criterio de agrupación.</b> Son los dermatomas que sirven de punto de referencia al describir en qué nivel está una banda de lesiones.</p>
+<div class="tw"><table><thead><tr><th>Elemento</th><th>Territorio de piel</th><th>Inervación</th><th>Qué se ve si se afecta</th></tr></thead><tbody>
+<tr><td><b>Oftálmico</b></td><td>Frente, párpado superior y dorso de la nariz</td><td>Primera rama del trigémino</td><td>Lesiones en la punta de la nariz anuncian compromiso ocular</td></tr>
+<tr><td><b>Maxilar</b></td><td>Mejilla y labio superior</td><td>Segunda rama del trigémino</td><td>Banda en hemicara que no cruza la línea media</td></tr>
+<tr><td><b>Mandibular</b></td><td>Mentón, labio inferior y mandíbula</td><td>Tercera rama del trigémino</td><td>Banda en la parte inferior de la hemicara</td></tr>
+<tr><td><b>T4</b></td><td>Línea del pezón</td><td>Cuarto nervio torácico</td><td>Banda que pasa por el pezón</td></tr>
+<tr><td><b>T10</b></td><td>Ombligo</td><td>Décimo nervio torácico</td><td>Banda que pasa por el ombligo</td></tr>
+<tr><td><b>L1</b></td><td>Ingle</td><td>Primer nervio lumbar</td><td>Banda en ingle y cara anterior del muslo</td></tr>
+</tbody></table></div>
+<p><b>Jerarquía.</b> La rama oftálmica pesa más porque su afectación puede comprometer el ojo; las demás tienen sentido de localización.</p>
+<p><b>Correlato clínico del grupo.</b> Nombrar el nivel permite comunicar con exactitud dónde está la banda: se palpa el pezón o el ombligo como referencia y se cuenta desde allí.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Agrupación herpetiforme»: latencia y reactivación del herpesvirus. El virus latente en el ganglio desciende por el nervio hasta su dermatoma.</p>
+
+<p class="mini"><span class="badge b-pu">Bolognia 2024 [1]</span> Dermatology, 5.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Distribución dermatómica (<i>dermatomal</i>): lesiones confinadas al territorio cutáneo de una raíz nerviosa. Zosteriforme (<i>zosteriform</i>): lesiones agrupadas con esa distribución, unilaterales y que no cruzan la línea media, como en el herpes zóster. No equivale a diagnóstico de zóster.</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span></p>
+<p class="mini">Fitzpatrick 2019 [2] puede reservar «zosteriforme» para el herpes zóster o aplicarlo a cualquier patrón con ese trazado: [VERIFICAR EN FUENTE]; no se unifica.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Cada nervio espinal reparte sensibilidad a una franja de piel, como las bandas de un cinturón. Si el virus viaja por ese nervio, las lesiones aparecen solo en esa banda y de un solo lado: no cruzan el centro del cuerpo. Eso es distribución dermatómica. Zosteriforme es la misma idea cuando las lesiones además están agrupadas.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Mujer de 72 años con dolor ardiente en el hemitórax derecho durante tres días; luego aparecen racimos de vesículas sobre base roja en una banda desde la columna hasta el esternón, que se detiene en la línea media. Prototipos: herpes zóster y herpes simple zosteriforme.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Líneas de Blaschko</b></td><td>Trazan V y S fijas, presentes desde el nacimiento o la infancia; no siguen un nervio.</td></tr>
+<tr><td><b>Esporotricoide</b></td><td>Nódulos a lo largo de un trayecto linfático desde un sitio de inoculación, no de una franja nerviosa.</td></tr>
+<tr><td><b>Dermatitis de contacto lineal</b></td><td>Sigue el roce de una sustancia, sin respetar dermatomas ni línea media.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t8"><div class="rc-t">Simulador · Recall de distribución dermatómica</div><div class="rc-count" id="rc-t8-n"></div><div class="rc-card" id="rc-t8-c"></div><div class="rc-btns" id="rc-t8-b"></div><div id="rc-t8-e"></div></div>
+
+<p class="gloss">Siglas: T4, T10, nervios espinales torácicos cuarto y décimo; L1, primer nervio lumbar. [VERIFICAR EN FUENTE], dato que debe comprobarse en el texto.</p>
+</section>
+<section class="tab" id="t9">
+<h2>Fotodistribución</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Lesiones que siguen las zonas expuestas al sol y respetan las cubiertas o las que quedan en sombra.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Radiación ultravioleta y profundidad de penetración</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Fuente.</b> El sol emite radiación ultravioleta (UV) de dos tipos que llegan a la piel: UVA, de onda más larga, y UVB, de onda más corta.</li>
+<li><b>UVB.</b> Se absorbe sobre todo en la epidermis: causa el enrojecimiento solar y el bronceado, y no atraviesa el vidrio común.</li>
+<li><b>UVA.</b> Penetra hasta la dermis y atraviesa el vidrio de ventanas y parabrisas.</li>
+<li><b>Fotoactivación.</b> Rama: algunas moléculas de la piel o de fármacos absorben la luz y desencadenan una reacción tóxica o inmune solo donde llegó la luz.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> El enrojecimiento solar normal aparece horas después de la exposición y cede en días [VERIFICAR EN FUENTE].</p>
+<p><b>Qué lo rompe.</b> El punto más vulnerable es la fotoprotección natural (melanina, estrato córneo): al agotarse o ser insuficiente, la luz causa lesión o activa una molécula fotosensibilizante.</p>
+<p><b>Correlato clínico.</b> La lesión aparece donde llega la luz: cara, V del escote, dorso de manos y antebrazos. En quien conduce, la mitad izquierda de la cara puede afectarse más, porque la luz atraviesa la ventana.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Melanocito, melanina y fototipos</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> El melanocito es una célula de la capa basal de la epidermis, con prolongaciones que contactan a muchos queratinocitos. Produce melanina en organelos llamados melanosomas.</p>
+<p><b>Cómo está hecho.</b> Los melanosomas pasan a los queratinocitos vecinos y se disponen como un capuchón sobre el núcleo, que lo protege del daño del ADN. Hay dos tipos de melanina: la eumelanina, parda a negra y muy fotoprotectora, y la feomelanina, rojiza y menos protectora.</p>
+<p><b>Qué permite hacer.</b> Absorbe la radiación ultravioleta y reduce su daño. Tras la exposición solar se produce más melanina, que aparece como bronceado. El número de melanocitos es parecido entre personas; cambian la cantidad y el tipo de melanina.</p>
+<div class="tw"><table><thead><tr><th>Fototipo</th><th>Respuesta al sol</th><th>Melanina</th></tr></thead><tbody>
+<tr><td><b>I</b></td><td>Siempre se quema, nunca se broncea</td><td>Muy poca</td></tr>
+<tr><td><b>II</b></td><td>Se quema con facilidad, se broncea poco</td><td>Poca</td></tr>
+<tr><td><b>III</b></td><td>Se quema moderadamente, se broncea de forma gradual</td><td>Moderada</td></tr>
+<tr><td><b>IV</b></td><td>Se quema poco, se broncea con facilidad</td><td>Moderada a alta</td></tr>
+<tr><td><b>V</b></td><td>Rara vez se quema, se broncea mucho</td><td>Alta</td></tr>
+<tr><td><b>VI</b></td><td>Casi nunca se quema, piel muy pigmentada</td><td>Muy alta</td></tr>
+</tbody></table></div>
+<p><b>De qué depende.</b> De la genética y de la hormona estimulante de melanocitos, que la radiación ultravioleta induce.</p>
+<p><b>Correlato clínico.</b> A menor fototipo, la fotosensibilidad aparece antes. Se explora la historia de respuesta al sol y se compara la piel expuesta con la cubierta.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Eritema y eritrodermia»: capas de la piel. La UVB actúa en la epidermis y la UVA llega hasta la dermis.</p>
+
+<p class="mini"><span class="badge b-pu">Fitzpatrick 2019 [2]</span> Fitzpatrick's Dermatology, 9.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Fotodistribución (<i>photodistributed</i>): lesiones localizadas en la piel expuesta al sol (cara, V del escote, dorso de manos y antebrazos) que respetan las zonas cubiertas o sombreadas, como el área submentoniana y el párpado superior. Orienta a fotosensibilidad.</p>
+<p><span class="badge b-pu">Fitzpatrick 2019 [2]</span></p>
+<p class="mini">La distribución no separa fototoxicidad, fotoalergia ni fotoagravamiento; esa distinción pertenece a pasos posteriores. La lista exacta de zonas sombreadas varía: [VERIFICAR EN FUENTE] en Bolognia [1] y en Fitzpatrick [2].</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Si la luz participa, se afecta la piel que ve el sol y no la tapada. Piensa en la marca de un reloj en la muñeca: queda pálida donde no llegó la luz. Cara, escote en V, dorso de manos y antebrazos se afectan; la zona bajo el mentón, el párpado superior y lo que cubre la ropa se salvan.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Paciente con enrojecimiento y ampollas en cara, V del cuello y dorso de manos tras un día de playa mientras tomaba un antibiótico; el área bajo el mentón y detrás de las orejas está libre. Prototipos: lupus eritematoso cutáneo subagudo, fototoxia por fármacos y erupción polimorfa lumínica.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Distribución por contacto</b></td><td>Sigue la forma de lo que tocó la piel (banda de reloj, guantes), tenga o no luz.</td></tr>
+<tr><td><b>Distribución extensora o flexora</b></td><td>Se localiza en codos y rodillas o en pliegues, sin relación con la exposición solar.</td></tr>
+<tr><td><b>Fototipo</b></td><td>Describe la respuesta de la persona al sol; la fotodistribución describe dónde están las lesiones.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t9"><div class="rc-t">Simulador · Recall de fotodistribución</div><div class="rc-count" id="rc-t9-n"></div><div class="rc-card" id="rc-t9-c"></div><div class="rc-btns" id="rc-t9-b"></div><div id="rc-t9-e"></div></div>
+
+<p class="gloss">Siglas: UV, ultravioleta; UVA, ultravioleta A; UVB, ultravioleta B; ADN, ácido desoxirribonucleico; I, II, III, IV, V y VI, fototipos de Fitzpatrick. [VERIFICAR EN FUENTE], dato que debe comprobarse en el texto.</p>
+</section>
+<section class="tab" id="tg">
+<h2>Repaso global</h2>
+<p class="mini">Mazo mixto con todas las tarjetas de las nueve pestañas, barajadas e intercaladas. Al terminar verás los aciertos al primer intento por término.</p>
+
+<div class="rc" id="rc-tg"><div class="rc-t">Simulador · Repaso global de los nueve términos</div><div class="rc-count" id="rc-tg-n"></div><div class="rc-card" id="rc-tg-c"></div><div class="rc-btns" id="rc-tg-b"></div><div id="rc-tg-e"></div></div>
+
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span>Referencias</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="vanc">
+<li>Bolognia JL, Schaffer JV, Cerroni L, editors. Dermatology. 5th ed. Philadelphia: Elsevier; 2024.</li>
+<li>Kang S, Amagai M, Bruckner AL, Enk AH, Margolis DJ, McMichael AJ, et al., editors. Fitzpatrick's dermatology. 9th ed. New York: McGraw-Hill Education; 2019.</li>
+</ol>
+<p class="mini">Ambos libros son los pedidos por el estudiante. No se citan páginas ni capítulos concretos, y las cifras marcadas «[VERIFICAR EN FUENTE]» deben comprobarse en el texto antes de estudiarlas.</p>
+</div></div>
+</section>
+<script>
+const TERMS={t1:'Eritema y eritrodermia',t2:'Anular y arciforme',t3:'Numular (discoide)',t4:'Lesión en diana',t5:'Disposición lineal',t6:'Patrón reticulado',t7:'Agrupación herpetiforme',t8:'Distribución dermatómica',t9:'Fotodistribución'};
+const DECKS={
+t1:[
+{q:'Ante un eritema, ¿qué cambia en el plexo vascular superficial al presionar con un vidrio, y por qué la púrpura no se comporta igual?',a:'El plexo se vacía y el eritema blanquea porque la sangre está dentro de los vasos dilatados; la púrpura no blanquea porque los eritrocitos ya salieron del vaso.',h:'Piensa dónde está la sangre en cada caso.'},
+{q:'Al describir una lesión, ¿qué pasos van entre el color y la distribución?',a:'Tamaño, forma y borde, y configuración (en ese orden).',h:'El orden completo empieza por el tipo de lesión y termina en dónde está.'},
+{q:'¿Qué dos hallazgos de la exploración separan una eritrodermia de un eritema localizado?',a:'Compromiso de casi toda la superficie corporal y, con frecuencia, descamación; el eritema localizado afecta solo un área.',h:'Uno depende de cuánta piel está afectada.'},
+{q:'La {{vitropresión}} permite comprobar si un enrojecimiento blanquea y por tanto es eritema.',a:'vitropresión',h:'La maniobra usa un vidrio o portaobjetos.'},
+{q:'Un paciente con psoriasis tiene toda la piel roja, caliente y con descamación fina, y refiere escalofríos. ¿Cómo se llama el cuadro?',a:'Eritrodermia (psoriasis eritrodérmica).',h:'Casi toda la superficie corporal está comprometida.'},
+{q:'¿Qué separa el eritema de la telangiectasia?',a:'El eritema es difuso y reversible, con aumento de sangre en un plexo dilatado; la telangiectasia son vasos finos dilatados y visibles de forma permanente.',h:'Una es un color de fondo y la otra son vasos individuales.'}
+],
+t2:[
+{q:'En una tiña anular, ¿qué proceso explica el aclaramiento del centro?',a:'El proceso avanza hacia afuera y cede detrás del frente: el borde queda activo y el centro, casi normal.',h:'Piensa hacia dónde crece la lesión y qué queda atrás.'},
+{q:'¿Qué ocurre en el estrato córneo del borde activo que forma el collarete?',a:'El recambio se acelera o se inflama y los corneocitos se desprenden en grupos, formando escama visible.',h:'Esta capa está formada por células muertas.'},
+{q:'¿Qué distingue una configuración arciforme de una policíclica?',a:'Arciforme son fragmentos de anillo o arcos; policíclica son anillos que confluyen y forman bordes festoneados.',h:'Una se rompe y la otra se une.'},
+{q:'Una placa de 3 cm con borde rojo y escamoso y centro más claro que crece por semanas es una placa {{anular}}.',a:'anular',h:'Mira qué pasa en el centro.'},
+{q:'¿Cómo se separa una placa anular de una diana?',a:'La anular tiene borde y centro claro; la diana añade un tercer anillo y un centro oscuro o ampolloso.',h:'Cuenta las zonas concéntricas.'}
+],
+t3:[
+{q:'¿Qué proceso epidérmico forma las microvesículas y el exudado de una placa numular de eccema?',a:'Espongiosis: el líquido se acumula entre los queratinocitos, forma cavidades, estas se rompen y dejan exudado y costra.',h:'Ocurre dentro de la epidermis, entre las células.'},
+{q:'En una placa discoide de lupus, ¿por qué se ven tapones y atrofia en el folículo?',a:'La inflamación en la unión dermoepidérmica afecta el folículo: la boca se dilata y se tapona con escama, con atrofia y pérdida de pelo.',h:'Piensa en la relación entre folículo y epidermis.'},
+{q:'¿Cómo se define una lesión numular?',a:'Lesión en forma de moneda, redonda u ovalada, de borde nítido y superficie uniforme hasta el centro.',h:'Piensa en una moneda.'},
+{q:'¿Qué separa una lesión numular de una anular?',a:'En la numular el centro mantiene el mismo aspecto que el borde; en la anular se aclara.',h:'Fíjate en el centro.'},
+{q:'Varón de 60 años con placas redondas de 2 cm, rojas, con exudado y costra, muy pruriginosas, en piernas con piel seca. ¿Cuál es la configuración?',a:'Numular (eccema numular).',h:'Las placas son redondas y llenas.'}
+],
+t4:[
+{q:'¿Qué ocurre en cada zona de una lesión en diana típica, de dentro afuera?',a:'Centro: muerte de queratinocitos (oscuro o ampolla); anillo intermedio: edema dérmico (pálido); anillo externo: vasodilatación (rojo).',h:'Hay tres zonas con tres procesos distintos.'},
+{q:'Una lesión en diana típica tiene {{tres}} zonas concéntricas.',a:'tres',h:'Cuenta los anillos.'},
+{q:'¿Qué distingue una diana atípica de una típica?',a:'Tiene solo dos zonas o los bordes son mal definidos.',h:'Mira cuántas zonas tiene.'},
+{q:'¿Qué separa una diana de una lesión anular simple?',a:'La diana tiene un tercer anillo y un centro dañado (oscuro o con ampolla); la anular solo tiene borde y centro claro.',h:'Una es más compleja que la otra.'},
+{q:'Mujer de 25 años con lesiones de 1 a 2 cm, simétricas, en manos y antebrazos, ocho días después de un herpes labial. ¿Cuál es el prototipo?',a:'Eritema multiforme, con lesiones en diana típicas.',h:'El antecedente infeccioso orienta.'}
+],
+t5:[
+{q:'En el fenómeno de Koebner, ¿qué condición debe cumplirse en el paciente para que el trauma deje lesiones?',a:'Tener una dermatosis activa; en piel sana o con la enfermedad controlada, el mismo trauma no deja lesiones.',h:'Depende de la enfermedad de base.'},
+{q:'¿Cómo se origina una lesión lineal en las líneas de Blaschko?',a:'Una mutación posterior al cigoto crea un clon celular que migra por trayectos del desarrollo y ocupa una banda constante.',h:'Es un fenómeno del embrión.'},
+{q:'Un adulto con psoriasis desarrolla placas sobre un rasguño reciente. ¿Qué nombre recibe el fenómeno?',a:'Fenómeno isomórfico de Koebner.',h:'El trauma tiene forma de línea.'},
+{q:'Un niño tiene una banda de pápulas del hombro al antebrazo desde hace semanas, sin trauma. ¿Qué patrón es?',a:'Líneas de Blaschko (mosaicismo), como el liquen estriado.',h:'No hay trauma ni nervio implicados.'},
+{q:'¿Qué separa el pseudo-Koebner del Koebner verdadero?',a:'En el pseudo-Koebner la línea la forma un agente inoculado al rascarse (verrugas, molusco), no la enfermedad de base.',h:'Piensa en qué causa la lesión en la línea.'},
+{q:'¿Cómo se distingue una banda de Blaschko de una dermatómica?',a:'Blaschko traza V y S fijas desde el nacimiento sin relación con el nervio; la dermatómica sigue un nervio y respeta la línea media.',h:'Una es del desarrollo y otra de los nervios.'}
+],
+t6:[
+{q:'En el livedo reticular, ¿en qué parte del cono de perfusión se ve la red violácea?',a:'En los bordes entre conos vecinos, donde el flujo es más lento y la sangre pierde más oxígeno.',h:'Piensa dónde se tocan dos territorios arteriales.'},
+{q:'Un lactante con red violácea simétrica en las piernas que desaparece al entibiar. ¿Es fisiológica o patológica?',a:'Fisiológica (cutis marmorata): la red se borra al entibiar porque el flujo se normaliza.',h:'Observa si persiste o desaparece.'},
+{q:'Un patrón reticulado puede ser vascular, {{pigmentado}} o blanquecino, según el color de la malla.',a:'pigmentado',h:'El tercer color es el pardo.'},
+{q:'¿Cómo se distingue el livedo racemoso del reticular?',a:'El racemoso es una red incompleta, de ramas rotas y asimétricas; el reticular es completo y regular.',h:'Piensa en lo completo de la red.'},
+{q:'En el liquen plano, ¿qué patrón blanquecino reticulado se observa?',a:'Las estrías de Wickham.',h:'Llevan el nombre de un dermatólogo.'}
+],
+t7:[
+{q:'¿Por qué el herpes simple recurrente reaparece casi siempre en el mismo sitio?',a:'El virus queda latente en el ganglio sensitivo y, al reactivarse, desciende por el mismo nervio hasta el mismo territorio de piel.',h:'Piensa dónde descansa el virus.'},
+{q:'En la dermatitis herpetiforme, ¿qué estructura de la dermis contiene los depósitos de IgA que desencadenan las vesículas?',a:'La punta de las papilas dérmicas, en la unión dermoepidérmica.',h:'Es una saliente de la dermis hacia la epidermis.'},
+{q:'La agrupación herpetiforme describe vesículas {{en racimo}} y no implica infección por herpesvirus.',a:'en racimo',h:'Mira cómo se disponen las vesículas.'},
+{q:'¿Qué separa lo herpetiforme de lo zosteriforme?',a:'Herpetiforme solo dice que las vesículas están agrupadas; zosteriforme añade que siguen un dermatoma, unilateral.',h:'Una se refiere solo a la forma y otra incluye el nervio.'},
+{q:'Joven con ardor en el labio y luego un racimo de vesículas diminutas sobre base roja. ¿Cómo se describe la configuración?',a:'Vesículas agrupadas de disposición herpetiforme (herpes simple).',h:'El ardor previo es el pródromo.'}
+],
+t8:[
+{q:'Si el virus latente se reactiva en un ganglio sensitivo torácico, ¿qué territorio de piel afecta y cómo se ve?',a:'El dermatoma de ese nervio: una banda unilateral que respeta la línea media.',h:'El virus baja por el nervio de ese ganglio.'},
+{q:'¿Qué marcador de la nariz anuncia compromiso ocular en un zóster de la rama oftálmica?',a:'Lesiones en la punta de la nariz.',h:'Comparte inervación con el ojo.'},
+{q:'¿Qué define una distribución zosteriforme?',a:'Lesiones agrupadas sobre un dermatoma, unilaterales y sin cruzar la línea media.',h:'Combina agrupación y nervio.'},
+{q:'¿Cómo se distingue una banda dermatómica de una de Blaschko?',a:'La dermatómica sigue un nervio, respeta la línea media y aparece en un momento dado; Blaschko traza V y S fijas desde el nacimiento.',h:'Una depende del nervio y otra del desarrollo.'},
+{q:'Mujer de 72 años con dolor ardiente y luego vesículas en racimo en una banda del hemitórax derecho, que se detiene en la línea media. ¿Cuál es el prototipo?',a:'Herpes zóster en distribución dermatómica.',h:'Dolor previo y un solo lado.'}
+],
+t9:[
+{q:'¿Por qué la radiación UVA afecta más la cara izquierda de quien conduce?',a:'La UVA atraviesa el vidrio de la ventana y llega hasta la dermis de ese lado.',h:'Piensa qué atraviesa el vidrio.'},
+{q:'¿Por qué las personas de fototipo bajo desarrollan fotosensibilidad antes?',a:'Tienen menos melanina, que absorbe la radiación UV y protege el ADN del queratinocito.',h:'La melanina es el filtro natural.'},
+{q:'Una lesión fotodistribuida respeta {{la zona submentoniana}} y el párpado superior.',a:'la zona submentoniana',h:'Son zonas que quedan en sombra.'},
+{q:'¿Qué separa una distribución fotodistribuida de una por contacto?',a:'La fotodistribuida sigue las zonas expuestas a la luz y respeta las sombreadas; la de contacto copia la forma de la sustancia que tocó la piel.',h:'Una depende de la luz y otra de la sustancia.'},
+{q:'Paciente con eritema y ampollas en cara, escote en V y dorso de manos, con el área bajo el mentón libre. ¿Qué configuración sugiere?',a:'Fotodistribución (fotosensibilidad).',h:'Mira qué zonas quedaron libres.'},
+{q:'¿Qué dice el fototipo sobre un paciente y qué no dice?',a:'Describe la respuesta de la persona al sol; no indica dónde están las lesiones.',h:'Es una propiedad de la persona, no de la lesión.'}
+]
+};
+DECKS.tg=[].concat.apply([],Object.keys(TERMS).map(function(k){return DECKS[k].map(function(c){return {q:c.q,a:c.a,h:c.h,t:k};});}));
+const RC={};
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function el(k,s){return document.getElementById('rc-'+k+'-'+s);}
+function isCloze(c){return c.q.indexOf('{{')>=0;}
+function front(c){return esc(c.q).replace(/\{\{[^}]*\}\}/g,'[ ? ]');}
+function back(c){return esc(c.q).replace(/\{\{([^}]*)\}\}/g,'<b>$1</b>');}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function show(id,btn){
+  document.querySelectorAll('.tab').forEach(function(s){s.classList.toggle('active',s.id===id);});
+  document.querySelectorAll('.tb').forEach(function(b){b.classList.toggle('active',b===btn);});
+  try{btn.scrollIntoView({inline:'center',block:'nearest'});}catch(e){}
+}
+function tog(b){b.parentElement.classList.toggle('op');}
+function rc_reset(k){
+  var n=DECKS[k].length,idx=[];
+  for(var i=0;i<n;i++)idx.push(i);
+  RC[k]={queue:shuffle(idx),first:{},fails:{},shown:false,done:0,n:n};
+  if(el(k,'e'))el(k,'e').innerHTML='';
+  rc_render(k);
+}
+function rc_render(k){
+  var s=RC[k],card=el(k,'c');
+  if(!card)return;
+  if(!s.queue.length){rc_end(k);return;}
+  var c=DECKS[k][s.queue[0]],f=s.fails[s.queue[0]]||0;
+  el(k,'n').textContent='Tarjeta '+(s.done+1)+' de '+s.n+(k==='tg'&&s.shown?' · '+TERMS[c.t]:'');
+  var h='<p class="rc-q">'+(s.shown&&isCloze(c)?back(c):front(c))+'</p>';
+  if(s.shown&&!isCloze(c))h+='<p class="rc-a"><b>Respuesta.</b> '+esc(c.a)+'</p>';
+  if(!s.shown&&f>=2)h+='<p class="rc-hint">Pista: '+esc(c.h)+'</p>';
+  card.innerHTML=h;
+  var b='';
+  if(!s.shown){b+='<button class="go" onclick="rc_show(\''+k+'\')">Mostrar respuesta</button>';}
+  else{
+    b+='<button class="gr ok" onclick="rc_grade(\''+k+'\',\'ok\')">La sabía</button>';
+    b+='<button class="gr mid" onclick="rc_grade(\''+k+'\',\'mid\')">A medias</button>';
+    b+='<button class="gr ko" onclick="rc_grade(\''+k+'\',\'ko\')">No la sabía</button>';
+  }
+  b+='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  el(k,'b').innerHTML=b;
+}
+function rc_show(k){RC[k].shown=true;rc_render(k);}
+function rc_grade(k,g){
+  var s=RC[k],i=s.queue.shift();
+  if(s.first[i]===undefined)s.first[i]=(g==='ok');
+  if(g==='ok'){s.done++;}
+  else{s.fails[i]=(s.fails[i]||0)+1;s.queue.push(i);}
+  s.shown=false;
+  rc_render(k);
+}
+function rc_verdict(p){return p>=80?['ok','Término consolidado']:['rep','Repasar hoy'];}
+function rc_end(k){
+  var s=RC[k],ok=0,i,rows='';
+  for(i=0;i<s.n;i++)if(s.first[i])ok++;
+  var p=Math.round(100*ok/s.n),v=rc_verdict(p);
+  el(k,'n').textContent='Mazo completado';
+  el(k,'c').innerHTML='<p class="rc-q">Cola agotada: todas las tarjetas se resolvieron.</p>';
+  el(k,'b').innerHTML='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  var h='<div class="rc-end '+v[0]+'">Aciertos al primer intento: '+ok+' de '+s.n+' ('+p+' %). <b>'+v[1]+'</b>.</div>';
+  if(k==='tg'){
+    Object.keys(TERMS).forEach(function(t){
+      var tot=0,hit=0;
+      for(i=0;i<s.n;i++){if(DECKS.tg[i].t===t){tot++;if(s.first[i])hit++;}}
+      var pp=Math.round(100*hit/tot),vv=rc_verdict(pp);
+      rows+='<tr><td>'+esc(TERMS[t])+'</td><td>'+hit+' de '+tot+' ('+pp+' %)</td><td>'+vv[1]+'</td></tr>';
+    });
+    h+='<div class="tw"><table><thead><tr><th>Término</th><th>Aciertos 1er intento</th><th>Veredicto</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  }
+  el(k,'e').innerHTML=h;
+}
+Object.keys(DECKS).forEach(rc_reset);
+</script>
+</div></body></html>

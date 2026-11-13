@@ -1,0 +1,9 @@
+{
+ "titulo": "Apertura · Síndrome confusional (caso de Doña Rosa)",
+ "salida": "../Apertura_sindrome_confusional.html",
+ "tipo": "apertura",
+ "terminos": 9,
+ "problemas": {"B": 11, "P": 4, "S": 4, "FR": 4},
+ "hipotesis": 4,
+ "diagramas": 5
+}

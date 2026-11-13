@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Definiciones · Lesiones primarias sólidas</title>
+<style>
+/* Vademécum · variante del widget de definiciones (skill definiciones v5.1): mismas tintas y tipografía que DESIGN.md */
+:root{
+--paper:#FBFBFC;--paper-2:#F1F2F5;--ink:#16181D;--ink-2:#3A3D46;--ink-3:#686C78;--rule:#D7D9E0;--rule-strong:#16181D;
+--accent:#2342A6;--accent-ink:#1B358A;--accent-field:#EAEEFA;--on-accent:#FFFFFF;
+--am:#7A4A06;--am-f:#FBF1DF;--ro:#9E1F1F;--ro-f:#FBE9E7;--ve:#2F5E12;--ve-f:#EBF3E1;--pu:#4C3FA8;--pu-f:#EEECFB;--co:#8E3517;--co-f:#FAEDE6;--rs:#8A2C52;--rs-f:#FAEAF1;
+--f-serif:ui-serif,"New York","Iowan Old Style","Charter","Source Serif Pro",Georgia,"Times New Roman",serif;
+--f-sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+--r:3px;
+/* alias de la v10 para compatibilidad */
+--surface-0:var(--paper);--surface-1:var(--paper-2);--border:var(--rule);--border-accent:var(--accent);--bg-accent:var(--accent-field);--text-primary:var(--ink);--text-secondary:var(--ink-2);--text-muted:var(--ink-3);--text-accent:var(--accent-ink);--radius:var(--r);--font-sans:var(--f-sans);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}
+html{color-scheme:light dark;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:var(--accent);color:var(--on-accent)}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--f-sans);-webkit-text-size-adjust:100%;caret-color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:18px 16px 56px;background:transparent}
+h1{font:600 26px/1.2 var(--f-serif);letter-spacing:-.012em;margin:6px 0 14px;padding-bottom:12px;border-bottom:2px solid var(--rule-strong);text-wrap:balance}
+h2{font:600 19px/1.3 var(--f-serif);margin:34px 0 12px;padding-top:12px;border-top:1px solid var(--rule-strong);text-wrap:balance}
+h3{font:600 16px/1.35 var(--f-serif);margin:18px 0 6px;text-wrap:balance}
+p{margin:0 0 12px;text-wrap:pretty}
+button{font:inherit;color:inherit;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,color .15s ease-out}
+button:active{transform:translateY(1px)}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* índice de canto */
+.tabs{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 0 0;border-bottom:2px solid var(--rule-strong);margin-bottom:16px;position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);scroll-snap-type:x proximity;scroll-padding-inline:56px}
+.tabs::-webkit-scrollbar{display:none}
+.tb{flex:0 0 auto;min-height:44px;padding:9px 15px 8px;border:1px solid var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;background:var(--paper-2);color:var(--ink-2);font:600 13px/1.2 var(--f-sans);white-space:nowrap;scroll-snap-align:start}
+.tb:hover{background:var(--accent-field);color:var(--accent-ink)}
+.tb.active{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+.tab{display:none}
+.tab.active{display:block}
+/* idea rectora */
+.hb{border-radius:var(--r);padding:12px 14px;margin:14px 0;border:1px solid var(--accent);background:var(--accent-field);font-size:15px;line-height:1.6}
+.hb-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);margin-bottom:6px}
+/* prerrequisitos (rol rosa) */
+.pre{border:1px solid var(--rs);border-radius:var(--r);background:var(--rs-f);padding:12px 14px;margin:16px 0}
+.pre-t{font:600 16px/1.35 var(--f-serif);color:var(--rs);margin-bottom:8px}
+.pre .acc{background:var(--paper);border-color:var(--rs)}
+.pre .acc-h{background:var(--paper)}
+.rem-line{font-size:13px;color:var(--ink-2);margin:8px 0;line-height:1.5}
+.chip-rs{display:inline-block;font:700 11px/1.4 var(--f-sans);padding:1px 7px;border:1px solid var(--rs);border-radius:2px;background:var(--rs-f);color:var(--rs);margin-right:6px;vertical-align:1px}
+/* cards */
+.card{background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;margin:12px 0;font-size:15px;line-height:1.6}
+.card p:last-child{margin-bottom:0}
+.card-t{font:600 16px/1.35 var(--f-serif);margin:0 0 6px}
+.card.fey{background:var(--co-f);border-color:var(--co)}
+.card.fey .card-t{color:var(--co)}
+.card.fey p{font:400 16px/1.6 var(--f-serif)}
+.card.ej{background:var(--paper);border-top:2px solid var(--rule-strong)}
+.badge{display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.02em;padding:2px 7px;border-radius:2px;margin:6px 4px 0 0;vertical-align:middle;border:1px solid currentColor}
+.b-az{background:var(--accent-field);color:var(--accent-ink)}
+.b-ro{background:var(--ro-f);color:var(--ro)}
+.b-am{background:var(--am-f);color:var(--am)}
+.b-ve{background:var(--ve-f);color:var(--ve)}
+.b-pu{background:var(--pu-f);color:var(--pu)}
+.b-co{background:var(--co-f);color:var(--co)}
+.b-rs{background:var(--rs-f);color:var(--rs)}
+.mini{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:6px 0}
+.mini.am{color:var(--am);background:var(--am-f);border:1px solid var(--am);border-radius:var(--r);padding:6px 9px}
+/* acordeones */
+.acc{border:1px solid var(--rule);border-radius:var(--r);margin:10px 0;overflow:hidden;background:var(--paper)}
+.acc-h{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;min-height:44px;padding:9px 14px;border:0;background:var(--paper-2);font:600 14.5px/1.35 var(--f-sans);text-align:left}
+.acc-h:hover{background:var(--accent-field)}
+.chev{transition:transform .2s;color:var(--accent-ink);flex:0 0 auto}
+.acc.op .chev{transform:rotate(180deg)}
+.acc-b{display:none;padding:10px 14px;font-size:15px;line-height:1.6}
+.acc.op .acc-b{display:block}
+.acc.no .acc-h{color:var(--ro)}
+/* tablas */
+.tw{overflow-x:auto;margin:12px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;font-variant-numeric:tabular-nums}
+th,td{border:0;border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
+thead th{font:700 14.5px/1.35 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong);background:var(--paper-2)}
+tbody tr:last-child>*{border-bottom:1px solid var(--rule-strong)}
+tbody th{font-weight:700;background:var(--paper-2)}
+/* mini-timeline */
+.tl{list-style:none;margin:12px 0;padding:0 0 0 20px;border-left:2px solid var(--accent)}
+.tl>li{position:relative;margin:0 0 12px;padding:9px 12px;background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);font-size:14.5px;line-height:1.55}
+.tl>li::before{content:"";position:absolute;left:-27px;top:13px;width:12px;height:12px;border-radius:1px;background:var(--accent);box-shadow:0 0 0 3px var(--paper)}
+.tl b{font-family:var(--f-serif)}
+/* simulador de recall */
+.rc{border:1px solid var(--rule-strong);border-radius:var(--r);padding:14px 16px;margin:24px 0;background:var(--paper)}
+.rc-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);padding-bottom:8px;margin-bottom:10px;border-bottom:1px solid var(--rule)}
+.rc-count{font:600 13px/1.4 var(--f-sans);color:var(--ink-3);font-variant-numeric:tabular-nums;margin-bottom:8px}
+.rc-card{border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);padding:14px;min-height:110px}
+.rc-q{font:400 16px/1.6 var(--f-serif);margin:0}
+.rc-a{margin:12px 0 0;padding-top:10px;border-top:1px dashed var(--accent);font-size:15px;line-height:1.6}
+.rc-a b{color:var(--accent-ink)}
+.rc-hint{font-size:13px;color:var(--am);margin-top:8px}
+.rc-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.go{min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent);color:var(--on-accent);font:600 14px/1.2 var(--f-sans)}
+.go:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+.gr{min-height:44px;padding:8px 14px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper);font:600 14px/1.2 var(--f-sans)}
+.gr.ok{border-color:var(--ve);color:var(--ve)}
+.gr.mid{border-color:var(--am);color:var(--am)}
+.gr.ko{border-color:var(--ro);color:var(--ro)}
+.gr.ok:hover{background:var(--ve-f)}.gr.mid:hover{background:var(--am-f)}.gr.ko:hover{background:var(--ro-f)}
+.ghost{min-height:44px;padding:8px 14px;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);font:600 14px/1.2 var(--f-sans);color:var(--ink-2)}
+.rc-end{margin-top:12px;padding:12px 14px;border-radius:var(--r);border:1px solid var(--rule);font-size:15px}
+.rc-end.ok{background:var(--ve-f);border-color:var(--ve);color:var(--ve)}
+.rc-end.rep{background:var(--am-f);border-color:var(--am);color:var(--am)}
+.gloss{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:18px 0 0;padding-top:8px;border-top:1px solid var(--rule)}
+.vanc{font-size:12.5px;line-height:1.5;padding-left:24px}
+.vanc li{margin:5px 0;word-break:break-word}
+.vanc li::marker{color:var(--ink-3);font-variant-numeric:tabular-nums}
+@media (min-width:700px){body{font-size:15.5px}.wrap{padding:22px 24px 64px}h1{font-size:28px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- /DEF_HEAD -->
+<h1>Definiciones · Lesiones primarias sólidas</h1>
+<p class="mini">Paso previo al estudio de dermatología para la rotación clínica: aclarar nueve lesiones elementales sólidas, sin resolver casos. Cada pestaña lleva su base morfofuncional, su definición y un simulador de recall.</p>
+<nav class="tabs">
+<button class="tb active" onclick="show('t1',this)">Mácula</button>
+<button class="tb" onclick="show('t2',this)">Mancha</button>
+<button class="tb" onclick="show('t3',this)">Pápula</button>
+<button class="tb" onclick="show('t4',this)">Placa</button>
+<button class="tb" onclick="show('t5',this)">Nódulo</button>
+<button class="tb" onclick="show('t6',this)">Tumor</button>
+<button class="tb" onclick="show('t7',this)">Habón</button>
+<button class="tb" onclick="show('t8',this)">Quiste</button>
+<button class="tb" onclick="show('t9',this)">Comedón</button>
+<button class="tb" onclick="show('tg',this)">Repaso global</button>
+</nav>
+<section class="tab active" id="t1">
+<h2>Mácula</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Cambio de color circunscrito de la piel, plano, que se ve pero no se palpa.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Capas de la piel: epidermis, unión dermoepidérmica, dermis e hipodermis</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Criterio de agrupación.</b> La piel se organiza en capas superpuestas, de superficie a profundidad. Cada una tiene una estructura y una función propias, y el nombre de una lesión depende de en cuál de ellas está el cambio.</p><div class="tw"><table><thead><tr><th>Capa</th><th>De qué está hecha</th><th>Qué permite</th><th>Qué falla si se altera</th></tr></thead><tbody><tr><td><b>Epidermis</b></td><td>Epitelio plano estratificado queratinizado, sin vasos; queratinocitos, melanocitos y otras células</td><td>Barrera frente al medio y renovación continua</td><td>Descamación, costras, ampollas dentro de la epidermis</td></tr><tr><td><b>Unión dermoepidérmica</b></td><td>Membrana basal con hemidesmosomas que anclan la epidermis a la dermis</td><td>Mantiene unidas las dos capas</td><td>Ampollas por debajo de la epidermis</td></tr><tr><td><b>Dermis</b></td><td>Papilar (laxa, con capilares) y reticular (densa, colágeno y fibras elásticas); vasos, nervios y anejos</td><td>Resistencia, elasticidad, nutrición de la epidermis y sensibilidad</td><td>Pápulas, placas, nódulos, edema</td></tr><tr><td><b>Hipodermis</b></td><td>Lóbulos de adipocitos separados por septos de tejido conectivo</td><td>Aislamiento, amortiguación y reserva de energía</td><td>Nódulos profundos y dolorosos</td></tr></tbody></table></div><p><b>Jerarquía.</b> La dermis pesa más en la clínica: contiene los vasos y el colágeno, por eso casi todo lo que se palpa o enrojece nace en ella [1].</p><p><b>Correlato clínico.</b> Si el cambio es solo de color, la superficie sigue lisa (mácula o mancha). Si hay relieve, se palpa (pápula, placa). Si la lesión es profunda, se palpa más de lo que se ve (nódulo). Se explora con inspección y palpación.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Melanocitos y melanina</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Los melanocitos son células de la capa basal de la epidermis y del folículo piloso. Sus dendritas llegan hasta los queratinocitos vecinos.</p><p><b>Cómo está hecho.</b> Sintetizan melanina en orgánulos llamados melanosomas, con la enzima tirosinasa, y los transfieren a los queratinocitos. La eumelanina es marrón-negra y la feomelanina rojo-amarilla. La diferencia de color entre personas depende del tamaño, el número y el tipo de melanosomas, no del número de melanocitos [1].</p><p><b>Qué permite hacer.</b> Protege el núcleo de los queratinocitos de la radiación ultravioleta (UV). Su límite es la cantidad de melanina que se produce y se reparte.</p><p><b>De qué depende.</b> De la exposición a UV, de hormonas como la MSH y de la genética del pigmento.</p><p><b>Correlato clínico.</b> Más melanina da una mácula marrón; menos, una mácula blanca. La melanina no se desplaza con la presión, así que la lesión pigmentada no blanquea a la vitropresión.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Exploración de la lesión: ver, palpar y presionar</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Inspección.</b> Se observa con buena luz a distancia y de cerca. La luz tangencial (rasante) proyecta sombra sobre el relieve sutil.</li>
+<li><b>Palpación.</b> Se pasa el pulpejo del dedo para sentir relieve, consistencia, temperatura, dolor y profundidad.</li>
+<li><b>Vitropresión.</b> Se presiona con un portaobjetos transparente. Si el color desaparece, la sangre estaba dentro de los vasos dilatados; si persiste, hay pigmento o sangre fuera del vaso.</li>
+<li><b>Registro.</b> Se anotan tipo de lesión, color, tamaño en centímetros (cm), forma, borde, configuración y distribución.</li>
+</ol><p><b>Ventana de normalidad.</b> La piel sana es lisa, flexible y blanquea al presionar.</p><p><b>Qué lo rompe.</b> Explorar con luz plana o sin tocar la piel pierde el relieve sutil y confunde una pápula con una mácula.</p><p><b>Correlato clínico.</b> Lo que se ve pero no se palpa es una mácula o una mancha; lo que se palpa tiene relieve y se llama pápula, placa o nódulo.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Bolognia 2024 [1]</span> Dermatología, 5.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Lesión plana y circunscrita, definida solo por un cambio de color de la piel, sin relieve ni cambio de consistencia; no se palpa. En Bolognia mide hasta 1 cm; si es mayor se llama mancha (<i>patch</i>).</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span></p>
+<p class="mini am">Divergencia de umbral: Bolognia usa 1 cm [1]. Fitzpatrick 9e [2]: umbral por confirmar [VERIFICAR EN FUENTE]. Otras fuentes usan 0,5 cm. No se promedian: al describir, anota el tamaño real en cm.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Imagina una gota de tinta sobre un papel liso: cambia el color, pero al pasar el dedo no sientes nada. La mácula es eso en la piel. El cambio está en la epidermis o en la dermis, la superficie sigue igual y por eso se descubre con los ojos y no con los dedos. El color orienta al origen: melanina, sangre dilatada o sangre fuera del vaso.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Efélides (pecas) en mejillas y nariz de 0,2 a 0,4 cm: se ven café claro y el dedo no detecta relieve. Otros prototipos: mácula hipocrómica inicial del vitiligo y roséola del exantema viral (maculosa y rosada, blanquea a la vitropresión).</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Mancha (<i>patch</i>)</b></td><td>Es plana igual que la mácula, pero supera el umbral de tamaño (más de 1 cm en Bolognia).</td></tr><tr><td><b>Pápula</b></td><td>Tiene relieve: se palpa, aunque sea pequeña.</td></tr><tr><td><b>Petequia</b></td><td>Es una mácula roja por sangre fuera del vaso; no blanquea a la vitropresión.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t1"><div class="rc-t">Simulador · Recall de mácula</div><div class="rc-count" id="rc-t1-n"></div><div class="rc-card" id="rc-t1-c"></div><div class="rc-btns" id="rc-t1-b"></div><div id="rc-t1-e"></div></div>
+
+<p class="gloss">Siglas: MSH, hormona estimulante de los melanocitos; UV, ultravioleta; cm, centímetro; VERIFICAR EN FUENTE, marca de dato pendiente de confirmar en el libro.</p>
+</section>
+<section class="tab" id="t2">
+<h2>Mancha (patch)</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Mácula de mayor tamaño: cambio de color plano que se ve pero no se palpa.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Por qué una mancha tiene ese color</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Criterio de agrupación.</b> El color de una mancha depende de dónde esté el pigmento o la sangre. El orden de preguntas es: color, ubicación probable y comportamiento a la vitropresión.</p><div class="tw"><table><thead><tr><th>Origen del color</th><th>Color que produce</th><th>Vitropresión</th><th>Qué se altera</th></tr></thead><tbody><tr><td><b>Melanina epidérmica</b></td><td>Marrón claro a oscuro, borde nítido</td><td>No blanquea</td><td>Exceso (hiperpigmentación) o falta (hipopigmentación)</td></tr><tr><td><b>Melanina dérmica</b></td><td>Azul-grisáceo, borde difuso (efecto Tyndall, dispersión de la luz azul)</td><td>No blanquea</td><td>Pigmento que cae a la dermis</td></tr><tr><td><b>Ausencia de melanocitos o de melanina</b></td><td>Blanco marfil (acromía) o blanco tenue (hipocromía)</td><td>No cambia</td><td>Destrucción o falta de función del melanocito</td></tr><tr><td><b>Sangre dentro del vaso</b></td><td>Rojo (eritema)</td><td>Blanquea</td><td>Vasodilatación</td></tr><tr><td><b>Sangre fuera del vaso</b></td><td>Rojo violáceo; con los días, verde y amarillo</td><td>No blanquea</td><td>Extravasación de eritrocitos</td></tr></tbody></table></div><p><b>Jerarquía.</b> La vitropresión es la maniobra que más descarta: separa lo vascular (blanquea) de lo demás (no blanquea) en segundos [1].</p><p><b>Correlato clínico.</b> Un lactante con mancha azul-grisácea en el sacro tiene melanina en la dermis; una mancha blanca y nítida en el dorso de las manos orienta a falta de melanocitos.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Bolognia 2024 [1]</span> Dermatología, 5.ª edición.</p>
+</div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Mácula»: capas de la piel y melanocitos. El pigmento puede estar en la epidermis o en la dermis, y esa profundidad cambia el color.</p>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Mácula de mayor tamaño: cambio de color circunscrito, plano y no palpable. En Bolognia se distingue de la mácula por superar 1 cm. En inglés se llama <i>patch</i>.</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span></p>
+<p class="mini am">Misma divergencia de umbral descrita en «Mácula»: Bolognia usa 1 cm [1]; otras fuentes usan 0,5 cm. No se promedian.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>La mancha es la mácula crecida: sigue siendo plana y de un solo color distinto al de la piel vecina. Lo que cambia es el tamaño, y con él la forma de describirla. Para saber de qué está hecha, mira el color y presiona con un vidrio: si blanquea, es sangre dentro de los vasos; si no, es pigmento o sangre fuera.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Lactante con mancha café con leche de 3 cm en el tronco, plana y sin relieve. Otros prototipos: vitiligo (manchas acrómicas nítidas), mancha mongólica sacra (azul-grisácea, melanina dérmica) y melasma (manchas marrones en mejillas).</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Mácula</b></td><td>Mismo aspecto plano, pero de hasta 1 cm en Bolognia.</td></tr><tr><td><b>Placa</b></td><td>Es elevada y se palpa; la mancha no.</td></tr><tr><td><b>Eritema</b></td><td>Nombre del color rojo, no de una lesión; puede formar una mancha o una placa.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t2"><div class="rc-t">Simulador · Recall de mancha</div><div class="rc-count" id="rc-t2-n"></div><div class="rc-card" id="rc-t2-c"></div><div class="rc-btns" id="rc-t2-b"></div><div id="rc-t2-e"></div></div>
+
+<p class="gloss">Siglas: cm, centímetro.</p>
+</section>
+<section class="tab" id="t3">
+<h2>Pápula</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Lesión sólida, elevada y pequeña, que se ve y se palpa.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Qué produce el relieve de una lesión</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Criterio de agrupación.</b> Una lesión tiene relieve cuando algo ocupa espacio en una capa. El compartimento afectado explica la superficie y la consistencia.</p><div class="tw"><table><thead><tr><th>Compartimento</th><th>Qué produce el relieve</th><th>Ejemplo prototipo</th><th>Qué se observa y palpa</th></tr></thead><tbody><tr><td><b>Epidermis</b></td><td>Engrosamiento de la epidermis o de la capa córnea</td><td>Verruga vulgar</td><td>Superficie áspera, a menudo con escama</td></tr><tr><td><b>Dermis superficial</b></td><td>Infiltrado inflamatorio o células que se acumulan</td><td>Pápulas del liquen plano</td><td>Pápula lisa, firme, de color propio</td></tr><tr><td><b>Dermis, edema</b></td><td>Líquido que sale del vaso a la dermis</td><td>Habón de la urticaria</td><td>Elevación blanda y transitoria</td></tr><tr><td><b>Folículo</b></td><td>Folículo inflamado o tapado</td><td>Pápula folicular del acné</td><td>Pápula centrada en un pelo o poro</td></tr></tbody></table></div><p><b>Jerarquía.</b> La dermis es la capa que más contribuye al relieve palpable, porque tiene el volumen de tejido y los vasos que permiten edema e infiltrado [1].</p><p><b>Correlato clínico.</b> La luz tangencial revela el relieve sutil y la palpación mide dureza y profundidad. Si desaparece en horas y vuelve a otro sitio, orienta a edema (habón).</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Bolognia 2024 [1]</span> Dermatología, 5.ª edición.</p>
+</div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Mácula»: capas de la piel. Epidermis, dermis e hipodermis explican de dónde nace el relieve; la exploración con luz rasante y pulpejo es la misma.</p>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Lesión sólida, elevada, circunscrita y palpable, de hasta 1 cm en Bolognia. El relieve puede ser epidérmico, dérmico o ambos. Superficie variable: lisa, descamativa, umbilicada o con un punto central.</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span></p>
+<p class="mini am">Divergencia de umbral: Bolognia separa pápula de placa en 1 cm [1]. Fitzpatrick 9e [2]: cifra por confirmar [VERIFICAR EN FUENTE]. Otras fuentes usan 0,5 cm. No se promedian.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Pasa el dedo por la piel: si sientes un bultito pequeño, firme y bien delimitado, es una pápula. Algo ocupa espacio dentro de la epidermis o de la dermis y levanta la superficie. Si el bultito mide poco, es pápula; si es más ancho que alto, ya se llama placa. Si además es profundo y grande, se llama nódulo.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Niño con lesiones de 0,3 cm, firmes y con un hoyuelo central en el tronco: molusco contagioso. Otros prototipos: verruga vulgar y pápulas poligonales violáceas del liquen plano.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Placa</b></td><td>Es elevada, pero más extensa que alta y mayor de 1 cm en Bolognia.</td></tr><tr><td><b>Habón</b></td><td>Es edema dérmico transitorio; desaparece en menos de 24 horas.</td></tr><tr><td><b>Nódulo</b></td><td>Es más profundo y voluminoso, palpable en dermis profunda o hipodermis.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t3"><div class="rc-t">Simulador · Recall de pápula</div><div class="rc-count" id="rc-t3-n"></div><div class="rc-card" id="rc-t3-c"></div><div class="rc-btns" id="rc-t3-b"></div><div id="rc-t3-e"></div></div>
+
+<p class="gloss">Siglas: cm, centímetro; VERIFICAR EN FUENTE, marca de dato pendiente de confirmar en el libro.</p>
+</section>
+<section class="tab" id="t4">
+<h2>Placa</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Lesión elevada y de superficie plana, más ancha que alta.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Pápula»: qué produce el relieve. Epidermis, dermis o edema levantan la superficie; si el relieve se extiende, la lesión pasa de pápula a placa.</p>
+
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Lesión sólida, elevada, de superficie plana (meseta) y extensión mayor que su espesor. En Bolognia supera 1 cm. Suele formarse por confluencia de pápulas o por crecimiento de una sola lesión.</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span></p>
+<p class="mini am">Divergencia de umbral: Bolognia usa 1 cm [1]. Fitzpatrick 9e [2]: cifra por confirmar [VERIFICAR EN FUENTE]. Otras fuentes usan 0,5 cm. No se promedian.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Una pápula es un bultito; una placa es una meseta. Se parece a una colina de cima plana vista de lado: ocupa bastante superficie y poca altura. A menudo nace cuando varias pápulas se juntan. Se palpa como un relieve en la piel, sin la profundidad de un nódulo.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Adulto con placas eritematosas de 3 a 6 cm, con escama blanca plateada en codos y rodillas: psoriasis. Otros prototipos: tiña del cuerpo (placa con borde activo) y lupus discoide (placa con atrofia y escama folicular).</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Pápula</b></td><td>Es elevada y pequeña; hasta 1 cm en Bolognia.</td></tr><tr><td><b>Mancha</b></td><td>Es plana; la placa se palpa.</td></tr><tr><td><b>Nódulo</b></td><td>Es profundo y de forma esférica; la placa es superficial y de meseta.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t4"><div class="rc-t">Simulador · Recall de placa</div><div class="rc-count" id="rc-t4-n"></div><div class="rc-card" id="rc-t4-c"></div><div class="rc-btns" id="rc-t4-b"></div><div id="rc-t4-e"></div></div>
+
+<p class="gloss">Siglas: cm, centímetro; VERIFICAR EN FUENTE, marca de dato pendiente de confirmar en el libro.</p>
+</section>
+<section class="tab" id="t5">
+<h2>Nódulo</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Lesión sólida y redonda, palpable en profundidad, que importa más por su volumen que por su diámetro.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Dermis profunda e hipodermis</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> La hipodermis o tejido celular subcutáneo es la capa más profunda: debajo de la dermis y encima de la fascia muscular. La dermis reticular profunda es su vecina inmediata.</p><p><b>Cómo está hecha.</b> Lóbulos de adipocitos separados por septos de tejido conectivo que llevan vasos y nervios. El adipocito almacena lípidos y le da su volumen y su blandura.</p><p><b>Qué permite hacer.</b> Aísla del frío, amortigua golpes y reserva energía. Su espesor varía según la región y la persona [1].</p><p><b>De qué depende.</b> Del riego por los septos: una inflamación del septo o del lóbulo (paniculitis) altera el tejido sin tocar la epidermis.</p><p><b>Correlato clínico.</b> Si el proceso es profundo, la piel suprayacente puede verse normal y el hallazgo es un bulto que se palpa, de borde redondo y a veces doloroso. Se explora con palpación y observando si se mueve sobre el plano profundo.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Bolognia 2024 [1]</span> Dermatología, 5.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Lesión sólida, redondeada y palpable, que ocupa la dermis profunda o la hipodermis. La profundidad y el volumen la definen más que el diámetro. Tamaño habitual mayor de 1 cm [VERIFICAR EN FUENTE].</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span></p>
+<p class="mini am">Umbral de tamaño del nódulo: la cifra varía entre libros y no se confirmó aquí; usa el criterio de profundidad y volumen.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Imagina un guisante bajo un colchón fino: lo notas con la mano aunque la superficie se vea normal. El nódulo es ese guisante en la piel. Está en la dermis profunda o en la grasa. Por eso se palpa, tiene forma de esfera y no se limita a levantar la capa más superficial como la pápula.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Mujer joven con nódulos dolorosos de 2 a 4 cm en la cara anterior de las piernas, con piel eritematosa encima: eritema nudoso. Otros prototipos: lipoma (nódulo subcutáneo blando) y dermatofibroma (nódulo dérmico firme que se hunde al pellizcar).</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Pápula</b></td><td>Es pequeña y superficial; el nódulo es profundo.</td></tr><tr><td><b>Tumor</b></td><td>Es un nódulo de mayor tamaño; el nombre indica volumen, no malignidad.</td></tr><tr><td><b>Quiste</b></td><td>Es un nódulo con pared y contenido; el nódulo sólido no tiene cavidad.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t5"><div class="rc-t">Simulador · Recall de nódulo</div><div class="rc-count" id="rc-t5-n"></div><div class="rc-card" id="rc-t5-c"></div><div class="rc-btns" id="rc-t5-b"></div><div id="rc-t5-e"></div></div>
+
+<p class="gloss">Siglas: cm, centímetro; VERIFICAR EN FUENTE, marca de dato pendiente de confirmar en el libro.</p>
+</section>
+<section class="tab" id="t6">
+<h2>Tumor</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Masa sólida grande, más voluminosa que un nódulo; el nombre no dice si es maligna.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Nódulo»: dermis profunda e hipodermis. Un tumor ocupa las mismas capas, con mayor volumen; su forma se palpa como masa.</p>
+
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Masa sólida, elevada y palpable, de mayor tamaño y volumen que el nódulo. En dermatología es un descriptor de tamaño, no de naturaleza: no indica si es benigna o maligna. Umbral habitual mayor de 2 cm [VERIFICAR EN FUENTE].</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span></p>
+<p class="mini am">«Tumor» descriptivo y «tumor» como neoplasia no son lo mismo. La cifra de corte cambia entre libros y no se confirmó aquí.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Si un nódulo es un guisante, un tumor es una naranja: la misma idea, pero más grande y más voluminosa. En dermatología la palabra describe tamaño y relieve, no gravedad. Un lipoma gigante y un cáncer pueden ser ambos «tumor» en la descripción; la diferencia se averigua después, no al mirar.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Varón con una masa de 4 cm, firme y de superficie ulcerada en el cuero cabelludo. Otros prototipos: lipoma grande (blando, móvil) y estadio tumoral de la micosis fungoide.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Nódulo</b></td><td>Más pequeño; tamaño habitual mayor de 1 cm.</td></tr><tr><td><b>Placa</b></td><td>Es superficial y de meseta; el tumor tiene volumen y profundidad.</td></tr><tr><td><b>Neoplasia</b></td><td>Es un diagnóstico por naturaleza del tejido; «tumor» aquí solo describe la forma.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t6"><div class="rc-t">Simulador · Recall de tumor</div><div class="rc-count" id="rc-t6-n"></div><div class="rc-card" id="rc-t6-c"></div><div class="rc-btns" id="rc-t6-b"></div><div id="rc-t6-e"></div></div>
+
+<p class="gloss">Siglas: cm, centímetro; VERIFICAR EN FUENTE, marca de dato pendiente de confirmar en el libro.</p>
+</section>
+<section class="tab" id="t7">
+<h2>Habón (roncha)</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Edema dérmico superficial que aparece y desaparece en horas.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Vasos de la dermis y permeabilidad capilar</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> La dermis tiene dos plexos vasculares: uno superficial, bajo la dermis papilar, y otro profundo, en el límite con la hipodermis. De ellos salen asas capilares hacia las papilas dérmicas.</p><p><b>Cómo está hecha.</b> Capilares y vénulas poscapilares con endotelio y pericitos. En las vénulas, las uniones entre células endoteliales se abren con facilidad ante señales como la histamina.</p><p><b>Qué permite hacer.</b> Nutre a la epidermis, que no tiene vasos, y regula la temperatura al dilatarse o contraerse. Su límite es la permeabilidad: si aumenta, el plasma pasa a la dermis [1].</p><p><b>De qué depende.</b> De señales locales (histamina, óxido nítrico) y del tono simpático. La vasodilatación pone la piel roja; la fuga de plasma la hincha.</p><p><b>Correlato clínico.</b> Vasodilatación sola da eritema que blanquea; fuga de plasma da edema dérmico palpable. Se explora con inspección, palpación y vitropresión.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Mastocito y degranulación</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Estímulo.</b> Un alérgeno, el frío, la presión o un fármaco actúa sobre el mastocito de la dermis.</li>
+<li><b>Degranulación.</b> El mastocito libera histamina y otros mediadores almacenados en gránulos.</li>
+<li><b>Vasos.</b> La histamina dilata las vénulas y separa las células endoteliales: sale plasma a la dermis.</li>
+<li><b>Resultado.</b> El plasma acumulado forma un edema dérmico circunscrito: el habón. Rama: si la fuga es profunda y llega a la hipodermis, se forma un angioedema.</li>
+</ol><p><b>Ventana de normalidad.</b> El mastocito es una célula residente, abundante alrededor de los vasos; en reposo conserva sus gránulos.</p><p><b>Qué lo rompe.</b> El punto vulnerable es la degranulación: cualquier estímulo que la dispare produce edema en minutos.</p><p><b>Correlato clínico.</b> El edema se reabsorbe y cada habón desaparece en menos de 24 horas [1]. Se provoca trazando con una punta roma sobre la piel (dermografismo).</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Bolognia 2024 [1]</span> Dermatología, 5.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Elevación cutánea por edema de la dermis superficial: de bordes definidos, rosada o pálida, que suele picar. Es transitoria: cada lesión desaparece en menos de 24 horas sin dejar marca. En inglés, <i>wheal</i>.</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span></p>
+<p class="mini">«Roncha» es el término coloquial usado en la ronda; ambos nombres designan la misma lesión.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Si el plasma se escapa de los vasos hacia la dermis, la piel se hincha como una picadura de mosquito: eso es un habón. Los vasos se abren por la histamina del mastocito, el líquido se acumula, y a las pocas horas se reabsorbe. Por eso la lesión no deja marca y aparece en otro sitio.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Escolar con ronchas rosadas muy pruriginosas de 1 a 5 cm, que migran por el tronco y desaparecen en horas: urticaria. Otros prototipos: dermografismo (habón lineal al rayar con punta roma) y urticaria por frío.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Pápula</b></td><td>Persiste días o semanas; el habón se disuelve en menos de 24 horas.</td></tr><tr><td><b>Angioedema</b></td><td>Edema de dermis profunda o hipodermis: más difuso, menos prurito y más dolor o ardor.</td></tr><tr><td><b>Vasculitis urticarial</b></td><td>Lesiones que duran más de 24 horas y dejan mancha o púrpura.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t7"><div class="rc-t">Simulador · Recall de habón</div><div class="rc-count" id="rc-t7-n"></div><div class="rc-card" id="rc-t7-c"></div><div class="rc-btns" id="rc-t7-b"></div><div id="rc-t7-e"></div></div>
+
+<p class="gloss">Siglas: cm, centímetro.</p>
+</section>
+<section class="tab" id="t8">
+<h2>Quiste</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Bolsa cerrada con pared propia y contenido, palpable como nódulo.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Unidad pilosebácea e infundíbulo folicular</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Unidad pilosebácea: folículo piloso, glándula sebácea anexa y músculo erector del pelo. Se abre a la superficie por un poro. Está en toda la piel menos palmas y plantas.</p><p><b>Cómo está hecha.</b> El folículo tiene tres tramos: infundíbulo (del poro a la desembocadura de la glándula), istmo y segmento inferior con el bulbo. El infundíbulo está revestido de epidermis; la glándula sebácea desemboca en él y vierte sebo [1].</p><p><b>Qué permite hacer.</b> Forma el pelo y mantiene la superficie lubricada con sebo. Su límite es el poro: si se obstruye, el contenido queda retenido.</p><p><b>De qué depende.</b> De los andrógenos, que regulan el tamaño y la actividad de la glándula sebácea.</p><p><b>Correlato clínico.</b> Si el infundíbulo se tapa y su epitelio sigue produciendo queratina, se forma una cavidad cerrada: un quiste. Se explora palpando un nódulo móvil bajo la piel, a veces con punto central (punctum).</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Bolognia 2024 [1]</span> Dermatología, 5.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Cavidad cerrada con pared epitelial propia y contenido de queratina, sebo u otro material. Se palpa como nódulo firme o fluctuante, a menudo móvil, con o sin poro central (<i>punctum</i>).</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span></p>
+<p class="mini am">Los libros no ubican el quiste igual: algunos lo agrupan con las lesiones de contenido. Aquí va con las sólidas porque se explora como nódulo [VERIFICAR EN FUENTE].</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Un quiste es una bolsa que la piel arma sobre sí misma. Un trozo de epitelio se queda atrapado, sigue produciendo queratina que no tiene por dónde salir y la bolsa crece. Al palparlo se siente como un nódulo firme, redondo y que se mueve; si se aprieta, sale un material blanco pastoso.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Varón de 30 años con un bulto de 2 cm en la espalda, firme y móvil, con un punto central oscuro: quiste epidérmico. Otros prototipos: quiste pilar del cuero cabelludo y milium (quiste pequeño de 1 a 2 mm).</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Nódulo sólido</b></td><td>No tiene cavidad; el quiste tiene pared y contenido.</td></tr><tr><td><b>Absceso</b></td><td>Cavidad con pus, caliente y dolorosa; el quiste sin infección es indoloro.</td></tr><tr><td><b>Comedón</b></td><td>Folículo ocupado por tapón de queratina y sebo, sin pared propia.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t8"><div class="rc-t">Simulador · Recall de quiste</div><div class="rc-count" id="rc-t8-n"></div><div class="rc-card" id="rc-t8-c"></div><div class="rc-btns" id="rc-t8-b"></div><div id="rc-t8-e"></div></div>
+
+<p class="gloss">Siglas: mm, milímetro; cm, centímetro; VERIFICAR EN FUENTE, marca de dato pendiente de confirmar en el libro.</p>
+</section>
+<section class="tab" id="t9">
+<h2>Comedón</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Folículo tapado por queratina y sebo; lesión base del acné.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Obstrucción del folículo: queratinización y retención de sebo</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Queratinización.</b> El epitelio del infundíbulo se descama de forma anormal y las células se acumulan en la luz del folículo.</li>
+<li><b>Tapón.</b> Las células y el sebo forman un tapón que obstruye el poro.</li>
+<li><b>Retención.</b> La glándula sebácea sigue produciendo sebo; el folículo se dilata detrás del tapón.</li>
+<li><b>Resultado.</b> Si el poro sigue cerrado, el comedón es cerrado; si se abre, el comedón abierto expone el tapón oscuro. Rama: si hay inflamación, evoluciona a pápula o pústula.</li>
+</ol><p><b>Ventana de normalidad.</b> El folículo se vacía de sebo y de células por el poro de forma continua; la glándula se activa en la pubertad con los andrógenos.</p><p><b>Qué lo rompe.</b> El punto vulnerable es el infundíbulo: la queratinización anormal y el exceso de sebo tapan el poro.</p><p><b>Correlato clínico.</b> El comedón cerrado se palpa como pápula pequeña del color de la piel; el abierto se ve como un punto negro. Se exploran con luz tangencial.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Bolognia 2024 [1]</span> Dermatología, 5.ª edición.</p>
+</div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Quiste»: unidad pilosebácea. El folículo, su infundíbulo y la glándula sebácea son la estructura donde se forma el comedón.</p>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Lesión elemental del acné: folículo pilosebáceo dilatado y ocupado por queratina y sebo. Abierto: orificio dilatado con tapón oscuro (punto negro). Cerrado: pápula pequeña del color de la piel, sin orificio visible.</p>
+<p><span class="badge b-pu">Bolognia 2024 [1]</span></p>
+<p class="mini am">El color negro del comedón abierto no es suciedad; el mecanismo exacto del pigmento se debe confirmar [VERIFICAR EN FUENTE].</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Piensa en el poro como una puerta de salida del sebo. Si se tapa con células muertas, el sebo sigue entrando y la puerta se llena. Si la tapa queda cerrada bajo la piel, ves un bultito del color de la piel (comedón cerrado). Si queda abierta, ves un punto oscuro (comedón abierto).</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Adolescente con puntos negros y bultitos blancos pequeños en frente y nariz, sin enrojecimiento. Otros prototipos: acné vulgar comedoniano y acné por aceites o cosméticos.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Milium</b></td><td>Quiste pequeño sin conexión al poro; el comedón sí está ligado al folículo abierto o cerrado.</td></tr><tr><td><b>Pápula inflamatoria</b></td><td>Está roja y dolorosa; el comedón no es inflamatorio por sí mismo.</td></tr><tr><td><b>Quiste epidérmico</b></td><td>Es una bolsa con pared y mayor tamaño; el comedón es un tapón.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t9"><div class="rc-t">Simulador · Recall de comedón</div><div class="rc-count" id="rc-t9-n"></div><div class="rc-card" id="rc-t9-c"></div><div class="rc-btns" id="rc-t9-b"></div><div id="rc-t9-e"></div></div>
+
+<p class="gloss">Siglas: VERIFICAR EN FUENTE, marca de dato pendiente de confirmar en el libro.</p>
+</section>
+<section class="tab" id="tg">
+<h2>Repaso global</h2>
+<p class="mini">Mazo mixto con todas las tarjetas de las nueve pestañas, barajadas e intercaladas. Al terminar verás los aciertos al primer intento por término.</p>
+
+<div class="rc" id="rc-tg"><div class="rc-t">Simulador · Repaso global de los nueve términos</div><div class="rc-count" id="rc-tg-n"></div><div class="rc-card" id="rc-tg-c"></div><div class="rc-btns" id="rc-tg-b"></div><div id="rc-tg-e"></div></div>
+
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span>Referencias</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="vanc">
+<li>Bolognia JL, Schaffer JV, Cerroni L, editors. Dermatology. 5th ed. Philadelphia: Elsevier; 2024.</li>
+<li>Kang S, Amagai M, Bruckner AL, Enk AH, Margolis DJ, McMichael AJ, et al., editors. Fitzpatrick's dermatology. 9th ed. New York: McGraw-Hill Education; 2019.</li>
+</ol>
+<p class="mini">Los umbrales de tamaño de Fitzpatrick, el corte del nódulo y del tumor, la ubicación del quiste y el pigmento del comedón abierto llevan la marca «[VERIFICAR EN FUENTE]»: no se confirmaron con el texto. No se citan páginas ni identificadores.</p>
+</div></div>
+</section>
+<script>
+const TERMS={t1:"Mácula",t2:"Mancha (patch)",t3:"Pápula",t4:"Placa",t5:"Nódulo",t6:"Tumor",t7:"Habón (roncha)",t8:"Quiste",t9:"Comedón"};
+const DECKS={
+t1:[
+{q:"Presionas con un portaobjetos una lesión plana roja y el color desaparece. ¿Dónde estaba la sangre?",a:"Dentro de los vasos dérmicos dilatados (eritema). Si el color persistiera, habría sangre fuera del vaso o pigmento.",h:"La presión vacía los vasos, no mueve el pigmento."},
+{q:"¿De qué depende sobre todo la diferencia de color de piel entre personas?",a:"Del tamaño, número y tipo de melanosomas y de su transferencia a los queratinocitos, no del número de melanocitos [1].",h:"Piensa en lo que cada melanocito reparte, no en cuántos hay."},
+{q:"¿Qué dato de la exploración separa una mácula de una pápula pequeña?",a:"La palpación: la mácula no tiene relieve; la pápula se siente con el pulpejo. La luz tangencial ayuda a verlo.",h:"Se resuelve con el tacto y con la luz rasante."},
+{q:"Una lesión plana café de 1,5 cm. ¿Cómo la llama Bolognia y por qué?",a:"Mancha (patch), porque supera el umbral de 1 cm [1].",h:"La diferencia con la mácula es solo de tamaño."},
+{q:"Una mácula roja que no blanquea a la vitropresión, ¿qué mecanismo sugiere?",a:"Sangre fuera del vaso (hemorragia, como la petequia), no vasodilatación.",h:"El vidrio solo vacía los vasos."}
+],
+t2:[
+{q:"Una mancha azul-grisácea de bordes difusos en el sacro de un lactante. ¿Dónde está el pigmento y por qué ese color?",a:"En la dermis; la luz azul se dispersa al atravesar la capa (efecto Tyndall).",h:"El color depende de la profundidad del pigmento."},
+{q:"Dos manchas rojas: una blanquea al presionar con vidrio y la otra no. ¿Cuál tiene sangre fuera del vaso?",a:"La que no blanquea.",h:"Piensa en qué cosa vacía el portaobjetos."},
+{q:"Una lesión plana y otra elevada miden más de 1 cm. ¿Qué las separa?",a:"La mancha es plana y no se palpa; la placa tiene relieve palpable.",h:"No es el tamaño, es el relieve."},
+{q:"Según Bolognia, una lesión plana de 2 cm de color café es una {{mancha}} porque supera {{1 cm}}.",a:"mancha; 1 cm",h:"Mira el umbral de tamaño de Bolognia."},
+{q:"Los libros usan umbrales de 1 cm y 0,5 cm. ¿Qué anotas al describir una lesión plana de 0,8 cm?",a:"El tamaño exacto en cm y no solo el nombre, porque según el libro sería mácula o mancha.",h:"El nombre cambia con el libro; la medida no."}
+],
+t3:[
+{q:"Si el relieve de una pápula lo produce un infiltrado de la dermis y no un engrosamiento de la epidermis, ¿cómo suele ser la superficie?",a:"Lisa, con la epidermis suprayacente poco alterada y sin escama marcada.",h:"La epidermis no es la que crece."},
+{q:"¿Qué maniobra revela una pápula sutil que a simple vista parece plana?",a:"La luz tangencial y la palpación con el pulpejo.",h:"Una usa la sombra y la otra el tacto."},
+{q:"Pápula: lesión sólida {{elevada}} y palpable de hasta {{1 cm}} según Bolognia.",a:"elevada; 1 cm",h:"Es el límite de tamaño con la placa."},
+{q:"¿Qué separa una pápula de un habón?",a:"El habón es edema dérmico que desaparece en menos de 24 horas y cambia de sitio; la pápula persiste días o semanas.",h:"Una es transitoria y la otra persistente."},
+{q:"Una lesión sólida de 0,8 cm, profunda y esférica, palpable en la hipodermis. ¿Es pápula?",a:"No; la profundidad y el volumen la hacen nódulo, aunque su tamaño sea pequeño.",h:"No decide solo el tamaño."}
+],
+t4:[
+{q:"Dos pápulas confluyen y forman una lesión elevada de 2 cm de superficie plana. ¿Cómo se llama ahora y por qué?",a:"Placa: supera el umbral de tamaño y es más ancha que alta.",h:"Cambia el nombre cuando el relieve se extiende."},
+{q:"Con luz tangencial, ¿qué aspecto caracteriza el perfil de una placa?",a:"Una meseta: borde elevado y superficie plana.",h:"Vista de lado, parece una colina de cima recta."},
+{q:"Según Bolognia, una lesión elevada superficial de más de {{1 cm}} se llama {{placa}}.",a:"1 cm; placa",h:"Es el límite con la pápula."},
+{q:"Una lesión elevada de 2 cm es esférica y se palpa en la hipodermis. ¿Placa o nódulo?",a:"Nódulo: la profundidad y el volumen esférico la separan de la meseta superficial.",h:"El tamaño es igual; cambia la profundidad."},
+{q:"Una lesión elevada de 0,8 cm. ¿Cómo se llama con el umbral de Bolognia y con el de 0,5 cm?",a:"Pápula en Bolognia (hasta 1 cm); placa con el umbral de 0,5 cm.",h:"Aplica cada umbral por separado, sin promediar."}
+],
+t5:[
+{q:"¿Por qué una lesión profunda puede palparse mejor de lo que se ve?",a:"Porque la epidermis suprayacente está intacta y el volumen está en la dermis profunda o la hipodermis.",h:"Qué capa se ve y qué capa se palpa."},
+{q:"Una inflamación de los lóbulos de la grasa subcutánea (paniculitis), ¿qué lesión elemental produce?",a:"Nódulos profundos, a menudo dolorosos, bajo piel con poco cambio.",h:"La grasa está debajo de la dermis."},
+{q:"Nódulo: lesión sólida {{redondeada}} en dermis profunda o {{hipodermis}}.",a:"redondeada; hipodermis",h:"Piensa en la capa más profunda."},
+{q:"Una lesión de 0,8 cm, esférica y palpable en la hipodermis. ¿Es pápula o nódulo?",a:"Nódulo: la profundidad y el volumen pesan más que el diámetro.",h:"No decide solo el tamaño."},
+{q:"Dermatofibroma: ¿qué maniobra sugiere que es un nódulo dérmico?",a:"El signo del hoyuelo: al pellizcar los lados la lesión se hunde.",h:"Se hace con dos dedos a los lados."}
+],
+t6:[
+{q:"¿En qué capas se extiende un tumor cutáneo grande?",a:"En la dermis profunda y la hipodermis, con volumen palpable de masa.",h:"Es la misma ubicación del nódulo."},
+{q:"Un paciente dice que tiene un «tumor» en la piel. ¿Significa que es cáncer?",a:"No: en la descripción dermatológica indica tamaño y volumen, no naturaleza benigna o maligna.",h:"Es un descriptor morfológico."},
+{q:"Una masa de 3 cm, elevada, de superficie plana y escaso espesor. ¿Tumor o placa?",a:"Placa: el tumor se define por volumen y profundidad, no solo por diámetro.",h:"Mira el espesor."},
+{q:"Además del tamaño, ¿qué hallazgos de la exploración describen una masa tumoral?",a:"Consistencia, movilidad sobre planos profundos y estado de la superficie (por ejemplo, ulceración).",h:"Se obtienen palpando y mirando la superficie."},
+{q:"¿Qué separa un nódulo de un tumor?",a:"El mayor tamaño y volumen del tumor; mismas capas, escala distinta.",h:"Una escala, no una capa."}
+],
+t7:[
+{q:"Si la histamina separa las células endoteliales de las vénulas, ¿qué sucede en la dermis y qué lesión aparece?",a:"Sale plasma a la dermis: edema dérmico circunscrito, el habón.",h:"Piensa en lo que atraviesa el endotelio."},
+{q:"¿Qué célula residente de la dermis libera histamina al degranularse?",a:"El mastocito.",h:"Reside alrededor de los vasos."},
+{q:"Habón: edema de la dermis {{superficial}} que desaparece en menos de {{24 horas}}.",a:"superficial; 24 horas",h:"El tiempo es el criterio."},
+{q:"Una roncha dura 3 días, duele y deja una mancha violácea. ¿Por qué no encaja con un habón típico?",a:"Porque el habón desaparece en menos de 24 horas sin marca; esta lesión orienta a vasculitis urticarial.",h:"Mira duración y marca residual."},
+{q:"¿Cómo se separa un habón de un angioedema por la capa afectada?",a:"El habón es edema de dermis superficial; el angioedema afecta dermis profunda e hipodermis y es más difuso.",h:"Cambia la profundidad del edema."}
+],
+t8:[
+{q:"¿Por qué un infundíbulo folicular ocluido puede formar una cavidad cerrada?",a:"Su epitelio sigue produciendo queratina, que queda atrapada porque el poro está tapado.",h:"Mira el poro y lo que sigue produciéndose."},
+{q:"¿Qué tramo del folículo está revestido de epidermis y recibe el sebo de la glándula?",a:"El infundíbulo.",h:"Es el tramo más superficial."},
+{q:"Quiste: cavidad cerrada con {{pared}} epitelial y contenido de {{queratina}} o sebo.",a:"pared; queratina",h:"Es lo que lo distingue del nódulo sólido."},
+{q:"Un nódulo caliente, doloroso y rojo sobre un quiste. ¿Qué cambió?",a:"Se infectó o se rompió su pared: ahora hay inflamación y pus; se entiende como absceso.",h:"Un quiste sin infección no duele."},
+{q:"¿Qué separa un quiste de un comedón?",a:"El quiste tiene pared epitelial propia; el comedón es un tapón de queratina y sebo dentro del folículo.",h:"Uno es una bolsa y el otro un tapón."}
+],
+t9:[
+{q:"¿Qué ocurre con el sebo cuando el infundíbulo se tapa y la glándula sigue activa?",a:"Se retiene: el folículo se dilata detrás del tapón y se forma el comedón.",h:"La glándula no se detiene."},
+{q:"¿Qué hormonas activan la glándula sebácea en la pubertad?",a:"Los andrógenos.",h:"Explica por qué aparece en la adolescencia."},
+{q:"Comedón abierto: orificio dilatado con tapón {{oscuro}}; cerrado: pápula del color de la {{piel}}.",a:"oscuro; piel",h:"Cambia el aspecto del orificio."},
+{q:"Una pápula roja y dolorosa en un paciente con acné. ¿Es comedón?",a:"No: es una lesión inflamatoria; el comedón es un tapón no inflamatorio.",h:"Uno duele y el otro no."},
+{q:"¿Cómo se separan un comedón cerrado y un milium?",a:"El comedón cerrado es un folículo obstruido; el milium es un quiste pequeño sin conexión con el poro.",h:"Uno es folículo, el otro es quiste."}
+]
+};
+DECKS.tg=[].concat.apply([],Object.keys(TERMS).map(function(k){return DECKS[k].map(function(c){return {q:c.q,a:c.a,h:c.h,t:k};});}));
+const RC={};
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function el(k,s){return document.getElementById('rc-'+k+'-'+s);}
+function isCloze(c){return c.q.indexOf('{{')>=0;}
+function front(c){return esc(c.q).replace(/\{\{[^}]*\}\}/g,'[ ? ]');}
+function back(c){return esc(c.q).replace(/\{\{([^}]*)\}\}/g,'<b>$1</b>');}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function show(id,btn){
+  document.querySelectorAll('.tab').forEach(function(s){s.classList.toggle('active',s.id===id);});
+  document.querySelectorAll('.tb').forEach(function(b){b.classList.toggle('active',b===btn);});
+  try{btn.scrollIntoView({inline:'center',block:'nearest'});}catch(e){}
+}
+function tog(b){b.parentElement.classList.toggle('op');}
+function rc_reset(k){
+  var n=DECKS[k].length,idx=[];
+  for(var i=0;i<n;i++)idx.push(i);
+  RC[k]={queue:shuffle(idx),first:{},fails:{},shown:false,done:0,n:n};
+  if(el(k,'e'))el(k,'e').innerHTML='';
+  rc_render(k);
+}
+function rc_render(k){
+  var s=RC[k],card=el(k,'c');
+  if(!card)return;
+  if(!s.queue.length){rc_end(k);return;}
+  var c=DECKS[k][s.queue[0]],f=s.fails[s.queue[0]]||0;
+  el(k,'n').textContent='Tarjeta '+(s.done+1)+' de '+s.n+(k==='tg'&&s.shown?' · '+TERMS[c.t]:'');
+  var h='<p class="rc-q">'+(s.shown&&isCloze(c)?back(c):front(c))+'</p>';
+  if(s.shown&&!isCloze(c))h+='<p class="rc-a"><b>Respuesta.</b> '+esc(c.a)+'</p>';
+  if(!s.shown&&f>=2)h+='<p class="rc-hint">Pista: '+esc(c.h)+'</p>';
+  card.innerHTML=h;
+  var b='';
+  if(!s.shown){b+='<button class="go" onclick="rc_show(\''+k+'\')">Mostrar respuesta</button>';}
+  else{
+    b+='<button class="gr ok" onclick="rc_grade(\''+k+'\',\'ok\')">La sabía</button>';
+    b+='<button class="gr mid" onclick="rc_grade(\''+k+'\',\'mid\')">A medias</button>';
+    b+='<button class="gr ko" onclick="rc_grade(\''+k+'\',\'ko\')">No la sabía</button>';
+  }
+  b+='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  el(k,'b').innerHTML=b;
+}
+function rc_show(k){RC[k].shown=true;rc_render(k);}
+function rc_grade(k,g){
+  var s=RC[k],i=s.queue.shift();
+  if(s.first[i]===undefined)s.first[i]=(g==='ok');
+  if(g==='ok'){s.done++;}
+  else{s.fails[i]=(s.fails[i]||0)+1;s.queue.push(i);}
+  s.shown=false;
+  rc_render(k);
+}
+function rc_verdict(p){return p>=80?['ok','Término consolidado']:['rep','Repasar hoy'];}
+function rc_end(k){
+  var s=RC[k],ok=0,i,rows='';
+  for(i=0;i<s.n;i++)if(s.first[i])ok++;
+  var p=Math.round(100*ok/s.n),v=rc_verdict(p);
+  el(k,'n').textContent='Mazo completado';
+  el(k,'c').innerHTML='<p class="rc-q">Cola agotada: todas las tarjetas se resolvieron.</p>';
+  el(k,'b').innerHTML='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  var h='<div class="rc-end '+v[0]+'">Aciertos al primer intento: '+ok+' de '+s.n+' ('+p+' %). <b>'+v[1]+'</b>.</div>';
+  if(k==='tg'){
+    Object.keys(TERMS).forEach(function(t){
+      var tot=0,hit=0;
+      for(i=0;i<s.n;i++){if(DECKS.tg[i].t===t){tot++;if(s.first[i])hit++;}}
+      var pp=Math.round(100*hit/tot),vv=rc_verdict(pp);
+      rows+='<tr><td>'+esc(TERMS[t])+'</td><td>'+hit+' de '+tot+' ('+pp+' %)</td><td>'+vv[1]+'</td></tr>';
+    });
+    h+='<div class="tw"><table><thead><tr><th>Término</th><th>Aciertos 1er intento</th><th>Veredicto</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  }
+  el(k,'e').innerHTML=h;
+}
+Object.keys(DECKS).forEach(rc_reset);
+</script>
+</div></body></html>

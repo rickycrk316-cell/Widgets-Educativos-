@@ -1,4 +1,4 @@
-> **Nota de adaptación (Widgets educativos).** Ver `../SKILL.md`. Estos widgets son HTML autocontenidos y offline: ignora "bundle size", "lazy loading", imágenes y optimización de assets; la sección "Native" no aplica. No ejecutes el detector `impeccable` ni ningún script (no está en el repo): sustitúyelo por `kit/auditar_diseno.py` y `kit/probar_navegador.js`. Los tokens son los del kit (`docs/DESIGN.md`); no sugieras fuentes web, `position:fixed`, `<style>` en las partes ni `localStorage`. El tema oscuro ya lo cubre `probar_navegador.js`. Los "comandos sugeridos" se limitan a `audit`, `polish` y `clarify`. Entrega el informe en el chat y no modifiques el kit.
+> **Nota de adaptación (Widgets educativos).** Ver `../SKILL.md`. Estos widgets son HTML autocontenidos y offline: ignora "bundle size", "lazy loading", imágenes y optimización de assets; la sección "Native" no aplica. No ejecutes el detector `impeccable` ni ningún script (no está en el repo): sustitúyelo por el validador del tipo del widget (`kit/v11/validar.py`, `kit/validar_definiciones.py` o `kit/validar_apertura.py`) y la prueba de navegador (`kit/v11/probar.js` o `kit/probar_definiciones.js`). Los tokens son los del kit (`docs/DESIGN.md`); no sugieras fuentes web, `position:fixed`, `<style>` en las partes ni `localStorage`. El tema oscuro ya lo cubren `kit/v11/probar.js` y `kit/probar_definiciones.js`. Los "comandos sugeridos" se limitan a `audit`, `polish` y `clarify`. Entrega el informe en el chat y no modifiques el kit.
 
 ---
 
@@ -6,7 +6,7 @@ Run systematic **technical** quality checks and generate a comprehensive report.
 
 This is a code-level audit, not a design critique. Check what's measurable and verifiable in the implementation.
 
-**Web only.** Native platforms (`ios` / `android` / `adaptive`) route to [audit.native.md](audit.native.md) instead; if the project is native, switch to it now.
+**Web only.** (No aplica aquí: no hay plataformas nativas ni `audit.native.md`.)
 
 ## Diagnostic Scan
 
@@ -61,7 +61,7 @@ Run comprehensive checks across 5 dimensions. Score each dimension 0-4 using the
 
 ### 5. Implementation Integrity (CRITICAL)
 
-Run the bundled detector and verify each finding in context. Look for repeated implementation shortcuts, design-system drift, misleading or decorative content, and structure that is interchangeable with an unrelated product. Keep deterministic findings separate from visual judgment and call out false positives.
+Run the validators/browser tests of the kit (no bundled detector exists here) and verify each finding in context. Look for repeated implementation shortcuts, design-system drift, misleading or decorative content, and structure that is interchangeable with an unrelated product. Keep deterministic findings separate from visual judgment and call out false positives.
 
 **Score 0-4**: 0=systemic drift, 1=major repeated failures, 2=several verified issues, 3=minor isolated issues, 4=coherent and intentional
 

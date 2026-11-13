@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Crisis de angustia con síntomas somáticos</title>
+<style>
+/* Vademécum: monografía impresa con índice de canto; filetes y tinta llevan la jerarquía, no las sombras */
+:root{
+--paper:#FBFBFC;--paper-2:#F1F2F5;--ink:#16181D;--ink-2:#3A3D46;--ink-3:#686C78;--rule:#D7D9E0;--rule-strong:#16181D;
+--accent:#2342A6;--accent-ink:#1B358A;--accent-field:#EAEEFA;--on-accent:#FFFFFF;
+--am:#7A4A06;--am-f:#FBF1DF;--ro:#9E1F1F;--ro-f:#FBE9E7;--ve:#2F5E12;--ve-f:#EBF3E1;--pu:#4C3FA8;--pu-f:#EEECFB;--co:#8E3517;--co-f:#FAEDE6;--rs:#8A2C52;--rs-f:#FAEAF1;
+--f-serif:ui-serif,"New York","Iowan Old Style","Charter","Source Serif Pro",Georgia,"Times New Roman",serif;
+--f-sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+--r:3px;
+/* alias de la v10 para compatibilidad */
+--surface-0:var(--paper);--surface-1:var(--paper-2);--border:var(--rule);--border-accent:var(--accent);--bg-accent:var(--accent-field);--text-primary:var(--ink);--text-secondary:var(--ink-2);--text-muted:var(--ink-3);--text-accent:var(--accent-ink);--radius:var(--r);--font-sans:var(--f-sans);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}
+html{color-scheme:light dark;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:var(--accent);color:var(--on-accent)}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--f-sans);-webkit-text-size-adjust:100%;font-feature-settings:"kern" 1;text-rendering:optimizeLegibility;caret-color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:18px 16px 56px;background:transparent}
+h1{font:600 26px/1.2 var(--f-serif);letter-spacing:-.012em;margin:6px 0 14px;padding-bottom:12px;border-bottom:2px solid var(--rule-strong);text-wrap:balance}
+h2{font:600 19px/1.3 var(--f-serif);letter-spacing:-.006em;margin:40px 0 14px;padding-top:12px;border-top:1px solid var(--rule-strong);text-wrap:balance}
+h3{font:600 16px/1.35 var(--f-serif);margin:20px 0 6px;text-wrap:balance}
+p{margin:0 0 12px;text-wrap:pretty}
+a{color:var(--accent-ink);text-underline-offset:3px}
+button{font:inherit;color:inherit;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,color .15s ease-out}
+button:active{transform:translateY(1px)}
+button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* índice de canto */
+.tabs{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 0 0;border-bottom:2px solid var(--rule-strong);margin-bottom:16px;position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);scroll-snap-type:x proximity;scroll-padding-inline:56px}
+.tabs-w{position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper)}
+.tabs-w::before,.tabs-w::after{content:"";position:absolute;top:0;bottom:2px;width:56px;pointer-events:none;opacity:0;transition:opacity .2s;z-index:6}
+.tabs-w::before{left:0;background:linear-gradient(to left,transparent,var(--paper) 85%)}
+.tabs-w::after{right:0;background:linear-gradient(to right,transparent,var(--paper) 85%)}
+.tabs-w.ov-l::before,.tabs-w.ov-r::after{opacity:1}
+.nodo,.signo,.qv,.dc,h2{scroll-margin-top:84px}
+.tabs::-webkit-scrollbar{display:none}
+.tb{flex:0 0 auto;min-height:44px;padding:9px 15px 8px;border:1px solid var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;background:var(--paper-2);color:var(--ink-2);font:600 13px/1.2 var(--f-sans);letter-spacing:.01em;white-space:nowrap;scroll-snap-align:start}
+.tb:hover{background:var(--accent-field);color:var(--accent-ink)}
+.tb.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+.tab{display:none}
+.tab.on{display:block}
+/* recuadros */
+.card{background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;margin:12px 0;font-size:15px;line-height:1.6}
+.card p{margin:0 0 8px}
+.card p:last-child{margin-bottom:0}
+.mini{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:6px 0}
+.hb{border-radius:var(--r);padding:12px 14px;margin:14px 0;border:1px solid transparent;font-size:15px;line-height:1.6}
+.hb.az{background:var(--accent-field);color:var(--ink);border-color:var(--accent)}
+.hb.am{background:var(--am-f);color:var(--am);border-color:var(--am)}
+.hb.ro{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.hb.ve{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+.hb.am .mini,.hb.ro .mini,.hb.ve .mini{color:inherit;opacity:.88}
+.hb-t{font:600 16px/1.35 var(--f-serif);margin-bottom:6px;text-wrap:balance}
+.hb.az .hb-t{color:var(--accent-ink)}
+.pg{margin:0;padding-left:22px}
+.pg li{margin:5px 0}
+.pg li::marker{color:var(--accent-ink);font-weight:700}
+.hb.az:has(.pg){margin-bottom:24px}
+.hb.az:not(:has(.pg)):not(.rec-go){background:transparent;border-left-color:transparent;border-right-color:transparent;border-radius:0;padding-left:0;padding-right:0}
+.hb.az:not(:has(.pg))+.etapa{border-top:0}
+h2+.card,h2+.hb,h2+.tw{margin-top:0}
+.badge{display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.04em;padding:2px 7px;border-radius:2px;margin:0 4px 4px 0;vertical-align:middle;border:1px solid currentColor}
+.b-az{background:var(--accent-field);color:var(--accent-ink)}
+.b-ro{background:var(--ro-f);color:var(--ro)}
+.b-am{background:var(--am-f);color:var(--am)}
+.b-ve{background:var(--ve-f);color:var(--ve)}
+.b-pu{background:var(--pu-f);color:var(--pu)}
+.badge.b-pu{display:block;width:fit-content;max-width:100%;white-space:normal;font-size:12px;line-height:1.5;font-weight:600;letter-spacing:.01em;margin:14px 0}
+.b-co{background:var(--co-f);color:var(--co)}
+.b-rs{background:var(--rs-f);color:var(--rs)}
+.rem{display:inline-block;font-size:12.5px;background:var(--rs-f);color:var(--rs);border:1px dashed var(--rs);border-radius:2px;padding:1px 7px;margin:4px 0}
+/* Feynman */
+.fey{background:var(--co-f);border:1px solid var(--co);border-radius:var(--r);padding:14px 16px;margin:18px 0 26px}
+.fey-t{display:inline-block;font:600 15px/1.35 var(--f-serif);color:var(--co);margin-bottom:8px}
+.fey-b{margin:0 0 10px;font:400 16px/1.6 var(--f-serif);color:var(--ink)}
+.fey-c{margin:2px 0;color:var(--ink-2)}
+/* Panorama: entradas de índice */
+.tab{counter-reset:et}
+.etapa{counter-increment:et;background:transparent;border:0;border-top:1px solid var(--rule);border-radius:0;padding:18px 0 8px;margin:4px 0}
+.etapa h3{font-size:19px;line-height:1.3;margin:0 0 8px}
+.etapa h3::before{content:counter(et,decimal-leading-zero);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;letter-spacing:.04em;color:var(--accent-ink);margin-right:10px;vertical-align:2px}
+.res{margin:0 0 10px}
+.perla{border-top:1px dotted var(--rule);padding-top:8px;margin:0 0 10px;font-weight:500}
+.perla::before{content:"Perla";display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;background:var(--ve-f);color:var(--ve);border:1px solid var(--ve);border-radius:2px;padding:1px 6px;margin-right:8px;vertical-align:1px}
+.go{min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent);color:var(--on-accent);font:600 13.5px/1.2 var(--f-sans)}
+.go:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+/* tablas de monografía */
+.tw{overflow-x:auto;margin:12px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:13.5px;line-height:1.5;font-variant-numeric:tabular-nums}
+th,td{border:0;border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
+th{background:var(--paper-2);font-weight:700;color:var(--ink)}
+thead th{font:700 14.5px/1.35 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong)}
+tbody tr:last-child>*{border-bottom:1px solid var(--rule-strong)}
+.stats{display:grid;grid-template-columns:1fr;gap:10px;margin:12px 0}
+@media (min-width:600px){.stats{grid-template-columns:repeat(3,1fr)}}
+.stat{background:transparent;border:0;border-top:2px solid var(--accent);border-radius:0;padding:8px 2px}
+.stat b{display:block;font:600 22px/1.25 var(--f-serif);color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--ink-2);line-height:1.4;display:block}
+.steps{list-style:none;counter-reset:st;padding:0;margin:10px 0}
+.steps>li{counter-increment:st;position:relative;padding:5px 0 9px 40px}
+.steps>li::before{content:counter(st);position:absolute;left:0;top:3px;width:26px;height:26px;border-radius:2px;background:var(--ink);color:var(--paper);font:700 12px/1 var(--f-sans);font-variant-numeric:tabular-nums;display:flex;align-items:center;justify-content:center}
+/* cascada */
+.tl{list-style:none;margin:14px 0;padding:0 0 0 20px;border-left:2px solid var(--accent)}
+.nodo{position:relative;margin:0 0 14px;padding:11px 13px;background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);font-size:14px;line-height:1.55}
+.nodo::before{content:"";position:absolute;left:-27px;top:15px;width:12px;height:12px;border-radius:1px;background:var(--accent);box-shadow:0 0 0 3px var(--paper)}
+.paso{display:block;font:600 15px/1.4 var(--f-serif);margin-bottom:5px}
+.pn{color:var(--accent-ink);margin-right:4px;font-variant-numeric:tabular-nums}
+.man{margin:8px 0 0;font-size:13px;color:var(--ink-2)}
+.signo{background:var(--paper);border:1px solid var(--rule);border-top:2px solid var(--rule-strong);border-radius:0 0 var(--r) var(--r);padding:12px 14px;margin:12px 0;font-size:14px;line-height:1.55}
+.signo h4{margin:0 0 6px;font:600 15.5px/1.35 var(--f-serif)}
+.signo dl{margin:0}
+.signo dt{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-3);margin-top:8px}
+.signo dd{margin:2px 0 0}
+.xref{display:inline-flex;align-items:center;min-height:44px;padding:4px 10px;margin:3px 6px 3px 0;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent-field);color:var(--accent-ink);font:600 12.5px/1.3 var(--f-sans);text-align:left}
+.xref:hover{background:var(--accent);color:var(--on-accent)}
+p .xref,td .xref,li .xref,dd .xref{display:inline;position:relative;min-height:0;padding:0 5px;margin:0 2px;line-height:inherit;border-radius:2px;white-space:normal;overflow-wrap:anywhere;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+p .xref::after,td .xref::after,li .xref::after,dd .xref::after{content:"";position:absolute;left:-4px;right:-4px;top:-12px;bottom:-12px}
+.hl{outline:2px solid var(--accent);background:var(--accent-field)!important;transition:background .3s}
+.acc{border:1px solid var(--rule);border-radius:var(--r);margin:12px 0;overflow:hidden}
+.acc-h{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:44px;padding:9px 14px;border:0;background:var(--paper-2);font:600 14px/1.35 var(--f-sans);text-align:left}
+.acc-h:hover{background:var(--accent-field)}
+.chev{transition:transform .2s;color:var(--accent-ink)}
+.acc.op .chev{transform:rotate(180deg)}
+.acc-b{display:none;padding:10px 14px;font-size:14px;line-height:1.55}
+.acc.op .acc-b{display:block}
+.vanc{font-size:12.5px;line-height:1.5;padding-left:24px}
+.vanc li{margin:5px 0;word-break:break-word}
+.vanc li::marker{font-variant-numeric:tabular-nums;color:var(--ink-3)}
+/* simulador */
+.dc{border:1px solid var(--rule-strong);border-radius:var(--r);padding:14px 16px;margin:22px 0;background:var(--paper)}
+.dc-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.dc-g{margin:10px 0}
+.dc-l{font:700 13.5px/1.4 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);margin-bottom:5px;display:block}
+.chip{min-height:44px;padding:7px 13px;margin:3px 6px 3px 0;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);font-size:13.5px}
+.chip:hover{border-color:var(--accent);color:var(--accent-ink)}
+.chip.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:600}
+.dc input[type=number]{min-height:44px;width:120px;padding:6px 10px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper);color:var(--ink);font:15px var(--f-sans);font-variant-numeric:tabular-nums}
+.out{margin-top:12px;padding:12px 14px;border-radius:var(--r);background:var(--paper-2);border:1px solid var(--rule);font-size:14px;line-height:1.58;min-height:44px}
+.tag{display:inline-block;font:600 11px/1.4 var(--f-sans);padding:1px 7px;border-radius:2px;background:var(--accent-field);color:var(--accent-ink);margin:4px 4px 0 0}
+.rec-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.rec-bar textarea{width:100%;min-height:120px;margin-top:8px;padding:9px 11px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper-2);color:var(--ink);font:14px/1.55 var(--f-sans);resize:vertical}
+.chip:disabled{cursor:default;opacity:.85}
+.rec-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.rec-ctl{display:none;gap:6px;margin-top:6px}
+.recon .rec-ctl{display:flex}
+.recon>*:not(.rec-bar):not(.tl){display:none}
+.recon .nodo:not(.rev) .pt{display:none}
+.recon .nodo:not(.rev) .pn::after{content:" ?"}
+.recon .nodo:not(.rev) .det{display:none}
+.recon .nodo.pis:not(.rev) .det{display:block}
+.recon .nodo.pis:not(.rev) .det>*:not(.man){display:none}
+.recon .nodo:not(.pis):not(.rev) .man{display:none}
+.recon .nodo.rev{border-color:var(--accent)}
+.rec-go{margin:22px 0}
+.steps.tg>li{padding-left:40px}
+span.tg{display:inline-block;font:700 11px/1.4 var(--f-mono);letter-spacing:.02em;padding:2px 7px;margin:0 6px 2px 0;border-radius:2px;background:var(--paper-2);border:1px solid var(--rule);color:var(--ink-2);white-space:nowrap;vertical-align:1px}
+span.tg[data-t="clave"]{background:var(--accent-field);color:var(--accent-ink);border-color:var(--accent)}
+span.tg[data-t="ok"]{background:var(--ve-f);color:var(--ve);border-color:var(--ve)}
+span.tg[data-t="cond"]{background:var(--am-f);color:var(--am);border-color:var(--am)}
+span.tg[data-t="no"]{background:var(--rs-f);color:var(--rs);border-color:var(--rs)}
+span.tg[data-t="alarma"]{background:var(--ro-f);color:var(--ro);border-color:var(--ro)}
+.qv{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:12px 0}
+.qv p{margin:0;padding:9px 11px;border-radius:var(--r);border:1px solid var(--rule);background:var(--paper-2);font-size:13.5px;line-height:1.45}
+.qv p::before{display:block;font:700 10.5px/1.4 var(--f-sans);letter-spacing:.07em;text-transform:uppercase;margin-bottom:3px;color:var(--ink-3)}
+.qv p[data-e="p"]{background:var(--accent-field);border-color:var(--accent)}
+.qv p[data-e="p"]::before{content:"Presente";color:var(--accent-ink)}
+.qv p[data-e="v"]::before{content:"Variable"}
+.qv p[data-e="a"]{border:1px dashed var(--rule);color:var(--ink-3);background:transparent}
+.qv p[data-e="a"]::before{content:"Ausente"}
+.qv p[data-e="k"]{grid-column:1/-1;border:2px solid var(--accent);background:var(--accent-field);font-size:14.5px}
+.qv p[data-e="k"]::before{content:"Signo clave";color:var(--accent-ink)}
+.hb.vi{background:var(--pu-f);color:var(--pu);border-color:var(--pu)}
+.hb.vi .mini{color:inherit;opacity:.88}
+table.vis{min-width:620px}
+table.vis td{min-width:140px}
+table.vis tr>:first-child{position:-webkit-sticky;position:sticky;left:0;z-index:1;background:var(--paper-2);min-width:118px;max-width:150px;font-weight:700;border-right:1px solid var(--rule)}
+.vb-bar{border:1px dashed var(--accent);border-radius:var(--r);padding:12px 14px;margin:14px 0;font-size:14px;line-height:1.5;background:var(--paper)}
+.tbl>*:not(.vb-bar):not(.vis-w){display:none}
+.tbl td.tap{cursor:pointer}
+.tbl td.tap:not(.rev){color:transparent;background:repeating-linear-gradient(135deg,var(--paper-2),var(--paper-2) 7px,var(--accent-field) 7px,var(--accent-field) 14px)}
+.tbl td.tap:not(.rev) *{visibility:hidden}
+.tbl td.tap.rev{box-shadow:inset 0 0 0 1px var(--accent)}
+.cf{display:block;margin-top:10px;padding-top:8px;border-top:1px dashed var(--accent);font-style:italic;color:var(--ink-2)}
+.cf::before{content:"Contrafactual · ";font-style:normal;font-weight:700;color:var(--accent-ink)}
+.fig{margin:14px 0}
+.fig img{display:block;max-width:100%;height:auto;border-radius:var(--r);border:1px solid var(--rule)}
+.fig figcaption{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin-top:6px}
+@media (min-width:700px){body{font-size:15.5px}.wrap{padding:22px 24px 64px}h1{font-size:28px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+/* v10.2 · Diagramas de bloques y flechas (causa-efecto, mecanismo, representación) */
+.dg{margin:16px 0;padding:12px;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);max-width:100%;overflow-wrap:anywhere}
+.dg-t{font:600 15px/1.35 var(--f-serif);margin:0 0 10px}
+.dg figcaption{margin-top:10px}
+.dg-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;margin:8px 0}
+.dg-col{display:flex;flex-direction:column;gap:6px;flex:0 1 220px;min-width:0}
+.dg-n{border:1px solid var(--ink-3);border-radius:var(--r);background:var(--paper);color:var(--ink);padding:7px 10px;font-size:13.5px;line-height:1.4;min-width:0;max-width:100%}
+.dg-row>.dg-n{flex:0 1 220px}
+.dg-n.b{background:var(--co-f);border-color:var(--co);color:var(--co)}
+.dg-n.p{background:var(--pu-f);border-color:var(--pu);color:var(--pu)}
+.dg-n.s{background:var(--ve-f);border-color:var(--ve);color:var(--ve)}
+.dg-n.fr{background:var(--am-f);border-color:var(--am);color:var(--am)}
+.dg-n.ac{background:var(--accent-field);border-color:var(--accent);color:var(--accent-ink)}
+.dg-n.ro{background:var(--ro-f);border-color:var(--ro);color:var(--ro)}
+.dg-ar{flex:0 0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;min-width:28px;color:var(--ink-3)}
+.dg-ar::before{content:"→";order:2;font:400 22px/1 var(--f-sans);color:var(--ink-3)}
+.dg-lab{order:1;font-size:11.5px;line-height:1.3;color:var(--ink-3);text-align:center}
+/* v10.2 · Dos columnas: texto y su diagrama o tabla, lado a lado en pantallas anchas */
+.duo>*{min-width:0}
+/* v10.2 · iPhone: diagramas en vertical y tablas apiladas en fichas (el script etiqueta cada celda) */
+@media (max-width:599px){
+.dg-row{flex-direction:column;align-items:stretch;flex-wrap:nowrap}
+.dg-col,.dg-row>.dg-n{flex:0 0 auto;width:100%}
+.dg-ar{flex-direction:row;align-self:center;gap:6px}
+.dg-ar::before{content:"↓";order:0}
+.dg-lab{order:1}
+.dg-row+.dg-row{border-top:1px dashed var(--ink-3);padding-top:12px;margin-top:12px}
+.dg-row>.dg-col+.dg-col{border-top:1px dashed var(--ink-3);padding-top:10px;margin-top:6px}
+.tw table.stk,.tw table.stk tbody,.tw table.stk tr,.tw table.stk td,.tw table.stk tbody th{display:block;width:100%}
+.tw table.stk thead{display:none}
+.tw table.stk tr{border:1px solid var(--rule);border-radius:var(--r);margin:0 0 10px;padding:8px 10px;background:var(--paper)}
+.tw table.stk td,.tw table.stk tbody th{border:0;padding:3px 0;text-align:left}
+.tw table.stk tbody th{font-weight:700;padding-bottom:6px;border-bottom:1px solid var(--rule);margin-bottom:4px}
+.tw table.stk td[data-l]::before{content:attr(data-l);display:block;font:700 11px/1.3 var(--f-sans);letter-spacing:.04em;text-transform:uppercase;color:var(--ink-3);margin-top:4px}
+}
+/* v10.2 · Mac e iPad horizontal: página más ancha, prosa con línea legible y .duo en dos columnas */
+@media (min-width:1100px){
+.wrap{max-width:1240px}
+section.tab p,section.tab dd,section.tab li{max-width:82ch}
+.tw p,.tw li,.dg p,.duo p,.duo li{max-width:none}
+.duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start;margin:12px 0}
+.duo>.dg,.duo>.tw,.duo>.card,.duo>.fey{margin-top:0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- /KIT_HEAD -->
+<h1>Crisis de angustia con síntomas somáticos</h1>
+<nav class="tabs">
+<button type="button" class="tb" data-tab="pan" onclick="show('pan')">Panorama</button>
+<button type="button" class="tb" data-tab="vis" onclick="show('vis')">Visión de conjunto</button>
+<button type="button" class="tb" data-tab="e1" onclick="show('e1')">Trastorno de pánico</button>
+<button type="button" class="tb" data-tab="e2" onclick="show('e2')">Ansiedad generalizada</button>
+<button type="button" class="tb" data-tab="e3" onclick="show('e3')">Depresión mayor</button>
+<button type="button" class="tb" data-tab="e4" onclick="show('e4')">Consumo de benzodiacepinas</button>
+<button type="button" class="tb" data-tab="e5" onclick="show('e5')">Síndrome coronario agudo</button>
+<button type="button" class="tb" data-tab="sin" onclick="show('sin')">Errores</button>
+</nav>
+<section class="tab" data-tab="pan">
+<div class="hb az"><div class="hb-t">El grupo en una frase</div>
+<p>Cinco causas explican una crisis de angustia con síntomas somáticos; el curso temporal, el ECG y el examen mental las separan, y el síndrome coronario agudo es la amenaza.</p></div>
+<div class="etapa" data-go="vis"><h3>Una presentación común y tres ejes</h3>
+<p class="res">Un adulto llega a consulta con palpitaciones, opresión torácica, sudoración y miedo. Esa presentación es común porque todas las crisis activan la misma respuesta de lucha o huida, así que los síntomas no discriminan [8][9]. Discriminan tres ejes: el curso temporal (minutos, meses, semanas, horario de dosis o dolor persistente), el ECG de 12 derivaciones antes de etiquetar ansiedad y el cribado del ánimo con pregunta directa por ideación suicida [4][3]. Se empieza por el extremo de ansiedad primaria, el trastorno de pánico.</p>
+<p class="perla">Los síntomas no discriminan; el curso, el ECG y el examen mental sí.</p>
+<button type="button" class="go" data-go="vis" onclick="show('vis')">Ir a Visión de conjunto →</button></div>
+<div class="etapa" data-go="e1"><h3>Trastorno de pánico, la ansiedad primaria</h3>
+<p class="res">Cae en el extremo de ansiedad primaria del eje. Un circuito del miedo hipersensible, con amígdala que responde de más y corteza prefrontal que la frena poco, dispara una alarma simpática sin amenaza real [9]. El signo que lo delata son crisis inesperadas recurrentes con pico en minutos y miedo a nuevas crisis. La conducta decisiva es excluir la isquemia con un ECG normal antes de explicar el diagnóstico, y luego psicoeducación y tratamiento de mantenimiento sin benzodiacepinas [1][2]. Sigue la ansiedad que no tiene picos.</p>
+<p class="perla">El pánico se diagnostica tras excluir la isquemia, no antes.</p>
+<button type="button" class="go" data-go="e1" onclick="show('e1')">Ir a Trastorno de pánico →</button></div>
+<div class="etapa" data-go="e2"><h3>Ansiedad generalizada, la preocupación sostenida</h3>
+<p class="res">Cae también en la ansiedad primaria, pero sin picos. Un terreno de menor freno inhibitorio mantiene la vigilancia de amenaza, y la persona rumia buscando una certeza que no existe, con activación simpática baja y continua [9][10]. El signo que la delata es la preocupación excesiva, difícil de controlar, la mayoría de días durante seis meses o más. La conducta decisiva es descartar causa médica o de sustancias y tratar con antidepresivo y psicoterapia, no con benzodiacepinas de mantenimiento [1][2]. Sigue el polo afectivo del eje.</p>
+<p class="perla">Preocupación de meses sin crisis de minutos: piensa en generalizada.</p>
+<button type="button" class="go" data-go="e2" onclick="show('e2')">Ir a Ansiedad generalizada →</button></div>
+<div class="etapa" data-go="e3"><h3>Depresión mayor, el origen afectivo</h3>
+<p class="res">Cae en el tramo afectivo del eje. El estrés sostenido mantiene alto el cortisol, baja el factor neurotrófico y debilita la corteza prefrontal y el circuito de recompensa; ahí nacen la anhedonia y la ideación suicida [24][10]. El signo que la delata es el ánimo deprimido o la anhedonia casi todos los días durante dos semanas o más. La conducta decisiva es cribar con PHQ-9, preguntar de frente por ideación suicida y descartar antes un episodio de euforia, que cambia el antidepresivo [14][13]. Sigue la crisis inducida por una sustancia.</p>
+<p class="perla">En toda ansiedad recurrente, criba el ánimo y pregunta por suicidio.</p>
+<button type="button" class="go" data-go="e3" onclick="show('e3')">Ir a Depresión mayor →</button></div>
+<div class="etapa" data-go="e4"><h3>Consumo de benzodiacepinas, la crisis inducida</h3>
+<p class="res">Cae en el tramo inducido por sustancia. El ansiolítico potencia el freno GABA; con el uso sostenido el receptor se reduce, aparece tolerancia y, como el alprazolam tiene vida media corta, su caída entre dosis deja ansiedad de rebote [17][12]. El signo que la delata es esa ansiedad entre dosis con escalada del fármaco. La conducta decisiva es una anamnesis de consumo y una reducción gradual pactada, porque suspender de golpe puede causar convulsiones [12][19]. La última etapa del eje es la causa orgánica que amenaza la vida.</p>
+<p class="perla">Si los síntomas siguen el horario de las dosis, indaga el consumo.</p>
+<button type="button" class="go" data-go="e4" onclick="show('e4')">Ir a Consumo de benzodiacepinas →</button></div>
+<div class="etapa" data-go="e5"><h3>Síndrome coronario agudo, la amenaza</h3>
+<p class="res">Cae en el extremo orgánico amenazante del eje. Un trombo sobre una placa rota reduce el flujo coronario y el miocardio recibe menos oxígeno del que demanda; el dolor y la isquemia activan además el simpático, y por eso imita una crisis [3][18]. El signo que lo delata es la opresión retroesternal de más de 20 minutos con diaforesis, sobre todo con factores de riesgo. La conducta decisiva es un ECG de 12 derivaciones en pocos minutos, troponina y activar ECU 911 sin esperar a que el paciente se calme [4][3].</p>
+<p class="perla">Opresión torácica es isquemia hasta que el ECG demuestre lo contrario.</p>
+<button type="button" class="go" data-go="e5" onclick="show('e5')">Ir a Síndrome coronario agudo →</button></div>
+<p class="mini">Esto es el mapa, no el territorio: cada párrafo y cada perla se justifican en su pestaña.</p>
+</section>
+<section class="tab" data-tab="vis">
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>Ante un paciente con opresión torácica, palpitaciones y sudoración, ¿en qué se apoya decidir entre una crisis de angustia y una isquemia, y por qué el ECG va antes de la etiqueta?</li>
+<li>¿Qué diferencia de curso temporal separa el pánico, la ansiedad generalizada, la depresión, el efecto de las benzodiacepinas y el dolor isquémico, y qué mecanismo explica cada patrón?</li>
+<li>¿Por qué en toda ansiedad recurrente se criba el ánimo y se pregunta de frente por ideación suicida, y qué cambia en la conducta si la respuesta es afirmativa?</li>
+<li>¿Qué haces en el primer nivel, sin posibilidad de derivar, mientras el diagnóstico sigue abierto, y qué conductas evitas hasta cerrarlo?</li>
+</ol></div>
+<p><span class="badge b-pu">DSM-5-TR 2022 [1]</span> <span class="badge b-pu">NICE CG113 ansiedad y pánico, solo resumen [2]</span> <span class="badge b-pu">ESC SCA 2023, solo resumen [3]</span> <span class="badge b-pu">AHA/ACC dolor torácico 2021, solo resumen [4]</span> <span class="badge b-pu">OMS mhGAP, solo resumen [5]</span></p>
+<div class="hb am"><div class="hb-t">Alcance</div>
+<p>Este grupo cubre cinco entidades que comparten una presentación: crisis de angustia con síntomas somáticos en consulta externa de primer nivel. Responde al Caso 7 del sílabo (trastornos del estado de ánimo) y al Caso 5 (ansiedad generalizada y ataque de pánico), cuyos contenidos se cruzan en este cuadro.</p>
+<p>Quedan fuera, y solo aparecen como diferencial, la fobia social, el trastorno bipolar, el trastorno obsesivo-compulsivo y el estrés postraumático. El caso no permite derivar al paciente: toda conducta se plantea para el primer nivel [5].</p></div>
+<div class="hb vi"><div class="hb-t">Discrepancia: ediciones de los libros del sílabo</div>
+<p>El sílabo de la segunda rotación cita Harrison 19.ª edición y Farreras-Rozman 17.ª edición. Ambas están superadas por ediciones posteriores y desactualizadas frente a los criterios actuales [6][7]. <b>Regla correcta: usa Harrison 22.ª edición (2025) y Farreras-Rozman 20.ª edición (2024).</b></p></div>
+<div class="tw"><table class="vis"><thead><tr><th>Rasgo</th><th>Trastorno de pánico</th><th>Ansiedad generalizada</th><th>Depresión mayor</th><th>Consumo de benzodiacepinas</th><th>Síndrome coronario agudo</th></tr></thead>
+<tbody>
+<tr><th>Falla central</th><td>Circuito del miedo hipersensible que dispara alarmas sin amenaza real</td><td>Preocupación crónica con tensión somática, sin desencadenante único</td><td>Descenso del tono afectivo y del placer por disfunción monoaminérgica</td><td>Neuroadaptación del receptor GABA-A que produce tolerancia y rebote</td><td>Isquemia miocárdica por obstrucción aguda de una arteria coronaria</td></tr>
+<tr><th>Terreno típico</th><td>Adulto joven con crisis inesperadas y evitación de lugares</td><td>Adulto con preocupación crónica, tensión muscular y mal sueño</td><td>Adulto con antecedente familiar, pérdidas o enfermedad crónica</td><td>Paciente con ansiolítico por semanas sin diagnóstico claro</td><td>Adulto con hipertensión, diabetes, tabaquismo o dislipidemia</td></tr>
+<tr><th>Inicio y curso</th><td>Brusco, con pico en minutos y recurrente</td><td>Insidioso y fluctuante, de meses a años</td><td>Semanas, con curso episódico</td><td>Gradual, con empeoramiento al espaciar las dosis</td><td>Súbito o en crescendo, persistente más de 20 minutos</td></tr>
+<tr><th>Síntoma compartido aquí</th><td>Palpitaciones, opresión, sudoración y miedo a perder el control</td><td>Palpitaciones y opresión ocasionales sobre ansiedad basal</td><td>Ansiedad y quejas somáticas sobre ánimo bajo</td><td>Palpitaciones, temblor y sudoración entre dosis</td><td>Opresión torácica, sudoración y náuseas</td></tr>
+<tr><th>Signo que la delata</th><td>Crisis inesperadas recurrentes con pico en minutos y miedo a nuevas crisis</td><td>Preocupación excesiva, difícil de controlar, la mayoría de días ≥6 meses</td><td>Ánimo deprimido o anhedonia casi todos los días ≥2 semanas</td><td>Ansiedad de rebote entre dosis y escalada de alprazolam</td><td>Opresión retroesternal >20 min con diaforesis, sobre todo con factores de riesgo</td></tr>
+<tr><th>Negativo pertinente</th><td>Sin cambios isquémicos en el ECG ni causa orgánica</td><td>Sin crisis de pico en minutos ni miedo a nuevas crisis</td><td>Sin ánimo bajo ni anhedonia: cae</td><td>Sin uso de benzodiacepinas: cae</td><td>ECG y troponina seriada normales debilitan la sospecha</td></tr>
+<tr><th>Prueba que decide</th><td>ECG de 12 derivaciones normal + criterios DSM-5-TR en la entrevista</td><td>GAD-7 + criterios DSM-5-TR</td><td>PHQ-9 + pregunta directa por ideación suicida</td><td>Anamnesis de consumo con criterios DSM-5-TR</td><td>ECG de 12 derivaciones en ≤10 min + troponina</td></tr>
+<tr><th>Conducta inicial y quién maneja</th><td>Psicoeducación, ISRS y TCC; BZD no como mantenimiento</td><td>ISRS/IRSN y TCC</td><td>Evaluar riesgo suicida; ISRS y psicoterapia</td><td>Reducción gradual pactada; nunca suspensión brusca</td><td>AAS masticada, ECU 911 y monitorización</td></tr>
+<tr><th>Amenaza si se pierde</th><td>Agorafobia, consultas repetidas y uso crónico de benzodiacepinas</td><td>Cronicidad, depresión comórbida y abuso de sustancias</td><td>Suicidio y discapacidad funcional</td><td>Abstinencia grave con convulsiones y dependencia</td><td>Infarto, arritmia letal o muerte súbita</td></tr>
+</tbody></table></div>
+<div class="card"><p><b>Común al grupo</b>: todas las crisis con síntomas somáticos comparten la misma respuesta de lucha o huida, la activación simpática que prepara al cuerpo para enfrentar o escapar de una amenaza. Eleva la frecuencia cardiaca, la sudoración y el temblor sin importar la causa de fondo [8][9].</p>
+<p>Por eso los síntomas no discriminan; discriminan el curso, el ECG y el examen mental, que se hacen en la misma consulta. En este grupo ninguna entidad se resuelve derivando: el primer nivel maneja con la guía mhGAP [5].</p>
+<div class="tw"><table><thead><tr><th>Área del examen mental</th><th>Qué explorar</th><th>Qué orienta</th></tr></thead>
+<tbody>
+<tr><th>Aspecto y conducta</th><td>Inquietud, temblor, sudoración, evitación</td><td>Activación simpática y conducta de evitación [10]</td></tr>
+<tr><th>Afecto y ánimo</th><td>Miedo, tristeza, anhedonia, irritabilidad</td><td>Ansiedad frente a depresión [1]</td></tr>
+<tr><th>Pensamiento</th><td>Contenido catastrófico, preocupación, ideas de muerte</td><td>Pánico, generalizada, riesgo suicida [1]</td></tr>
+<tr><th>Sensopercepción y conciencia</th><td>Alucinaciones, desorientación, fluctuación</td><td>Si hay alteración, piensa en causa orgánica o tóxica [10]</td></tr>
+</tbody></table></div>
+<p>Dos reglas de seguridad acompañan a todo el grupo. Primero, toda opresión torácica recibe un ECG de 12 derivaciones, aunque el paciente parezca ansioso y joven [4][3]. Segundo, la entrevista incluye un cribado de ánimo y la pregunta directa por ideación suicida.</p>
+<ul>
+<li>Eje 1 — Curso temporal: crisis con pico en minutos, preocupación de meses, ánimo bajo de semanas, síntomas entre dosis o dolor isquémico persistente.</li>
+<li>Eje 2 — ECG de 12 derivaciones antes de etiquetar ansiedad: el pánico se diagnostica tras excluir la isquemia.</li>
+<li>Eje 3 — En toda ansiedad recurrente se criba el ánimo y se pregunta directamente por ideación suicida.</li>
+</ul></div>
+<div class="hb ro"><div class="hb-t">Banderas rojas ante una crisis de angustia</div>
+<ul>
+<li>Síndrome coronario agudo: opresión retroesternal con sudoración y náuseas es isquemia hasta que el ECG de 12 derivaciones y la troponina demuestren lo contrario [3][4].</li>
+<li>Ideación suicida: pregúntala de frente en toda ansiedad recurrente; si hay plan o intención, no dejes solo al paciente [11][5].</li>
+<li>Abstinencia de benzodiacepinas: temblor, insomnio de rebote o convulsiones tras suspender de golpe un ansiolítico usado por semanas [12].</li>
+<li>Causa orgánica oculta: hipertiroidismo, feocromocitoma, hipoglucemia, arritmia, embolia pulmonar o disección aórtica imitan una crisis; el primer episodio tardío o con signos focales pide estudio [6].</li>
+<li>Estimulantes o alcohol: cafeína, cocaína o abstinencia alcohólica producen el mismo cuadro y cambian la conducta.</li>
+<li>Trastorno bipolar: antes de iniciar un antidepresivo, pregunta por episodios de euforia o menor necesidad de dormir [13].</li>
+</ul></div>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Toma signos vitales y un ECG de 12 derivaciones ante toda opresión torácica antes de etiquetar ansiedad [4][3].</li>
+<li><span class="tg">Añade</span>Examen mental completo, cribado de ánimo con PHQ-9 y pregunta directa por ideación suicida [14][11].</li>
+<li><span class="tg">Confirma</span>Confirma el grupo con criterios DSM-5-TR en la entrevista: curso, duración y desencadenantes [1].</li>
+<li><span class="tg">Solo si</span>Pide troponina seriada si el dolor persiste o el ECG cambia, y TSH o glucemia capilar si la clínica los sugiere [3].</li>
+<li><span class="tg">No pidas</span>No rotules «preinfarto por estrés» ni des un ansiolítico antes del ECG: perpetúa la crisis y oculta la isquemia [4].</li>
+<li><span class="tg">Alarma</span>Dolor persistente, cambios en el ECG, síncope o ideación suicida activa: actúa de inmediato y activa ECU 911 si es coronario [3][5].</li>
+</ol>
+<div class="dc" data-fn="dcVis"><div class="dc-t">Simulador · Decisión clínica — predice la entidad antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Curso temporal</span>
+<button type="button" class="chip" data-g="curso" data-v="min" onclick="ch(this)">Pico en minutos</button>
+<button type="button" class="chip" data-g="curso" data-v="mes" onclick="ch(this)">Preocupación de meses</button>
+<button type="button" class="chip" data-g="curso" data-v="sem" onclick="ch(this)">Ánimo bajo de semanas</button>
+<button type="button" class="chip" data-g="curso" data-v="dosis" onclick="ch(this)">Síntomas entre dosis</button>
+<button type="button" class="chip" data-g="curso" data-v="isq" onclick="ch(this)">Dolor persistente más de 20 minutos</button></div>
+<div class="dc-g"><span class="dc-l">ECG de 12 derivaciones</span>
+<button type="button" class="chip" data-g="ecg" data-v="norm" onclick="ch(this)">Normal</button>
+<button type="button" class="chip" data-g="ecg" data-v="alt" onclick="ch(this)">Con cambios isquémicos</button>
+<button type="button" class="chip" data-g="ecg" data-v="no" onclick="ch(this)">No realizado</button></div>
+<div class="dc-g"><span class="dc-l">Hallazgos de la entrevista</span>
+<button type="button" class="chip" data-g="hall" data-v="miedo" data-m="1" onclick="ch(this)">Miedo a perder el control o a morir</button>
+<button type="button" class="chip" data-g="hall" data-v="evit" data-m="1" onclick="ch(this)">Evita conducir o salir solo</button>
+<button type="button" class="chip" data-g="hall" data-v="preoc" data-m="1" onclick="ch(this)">Preocupación por varios temas</button>
+<button type="button" class="chip" data-g="hall" data-v="anhed" data-m="1" onclick="ch(this)">Anhedonia y ánimo deprimido</button></div>
+<div class="dc-g"><span class="dc-l">Otros datos</span>
+<button type="button" class="chip" data-g="otros" data-v="xanax" data-m="1" onclick="ch(this)">Usa alprazolam hace semanas</button>
+<button type="button" class="chip" data-g="otros" data-v="frcv" data-m="1" onclick="ch(this)">Factores de riesgo cardiovascular</button>
+<button type="button" class="chip" data-g="otros" data-v="sudor" data-m="1" onclick="ch(this)">Sudoración y náuseas</button>
+<button type="button" class="chip" data-g="otros" data-v="ideas" data-m="1" onclick="ch(this)">Ideas de muerte o suicidio</button></div>
+<div class="out"></div></div>
+</section>
+<section class="tab" data-tab="e1">
+<div class="hb az"><div class="hb-t">Frente a Síndrome coronario agudo</div>
+<p>Se confunde con el síndrome coronario agudo porque ambos producen opresión torácica, palpitaciones, sudoración y miedo intenso. Se separa por el curso (pico en minutos con descenso frente a dolor isquémico persistente), por el ECG y la troponina normales y por el miedo recurrente a nuevas crisis; el pánico se diagnostica tras excluir la isquemia [4][3].</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué una alarma neurobiológica sin amenaza real produce a la vez síntomas cardiacos, respiratorios y miedo, y en qué orden se encadenan durante la crisis?</li>
+<li>¿Qué mantiene el ciclo después de la primera crisis y por qué eso explica que se repita y que aparezca la evitación de lugares?</li>
+<li>¿En qué se apoya decir que es pánico y no isquemia, y qué debes haber hecho antes de dar esa explicación al paciente?</li>
+<li>¿Por qué un ISRS tarda semanas y puede aumentar la ansiedad al inicio, mientras una benzodiacepina alivia en minutos, y qué implica eso para elegir el tratamiento de mantenimiento?</li>
+</ol></div>
+<p><span class="badge b-pu">DSM-5-TR 2022 [1]</span> <span class="badge b-pu">NICE CG113 ansiedad y pánico, solo resumen [2]</span> <span class="badge b-pu">WFSBP trastornos de ansiedad 2023, solo resumen [15]</span> <span class="badge b-pu">OMS mhGAP, solo resumen [5]</span></p>
+
+<h2>Qué es</h2>
+<div class="card"><p>El trastorno de pánico es un trastorno de ansiedad que se define por ataques de pánico inesperados y recurrentes, seguidos de al menos un mes de preocupación persistente por nuevos ataques o de un cambio desadaptativo de conducta para evitarlos [1].</p>
+<p>Un ataque de pánico es una oleada abrupta de miedo o malestar intenso que alcanza su pico en minutos. Exige cuatro o más de trece síntomas, entre ellos palpitaciones, sudoración, temblor, sensación de ahogo, dolor torácico, náuseas, mareo, parestesias, miedo a perder el control y miedo a morir [1].</p>
+<p>Criterios de consenso para llamarlo trastorno de pánico:</p>
+<ul>
+<li>Ataques de pánico inesperados y recurrentes, sin un desencadenante definido cada vez [1].</li>
+<li>Al menos un mes de miedo a nuevos ataques o de cambio de conducta (evitación).</li>
+<li>Causa orgánica o tóxica excluida y ningún otro trastorno mental que lo explique.</li>
+</ul></div>
+<p>Los subtipos existen porque la evolución depende de qué tan inesperadas son las crisis y de cuánto evita el paciente.</p>
+<div class="tw"><table><thead><tr><th>Subtipo</th><th>Qué lo define</th><th>Cómo se reconoce</th></tr></thead>
+<tbody>
+<tr><th>Crisis inesperada</th><td>Sin desencadenante ni señal que la anuncie</td><td>Aparece en reposo o mientras se conduce, sin motivo claro [1]</td></tr>
+<tr><th>Crisis esperada</th><td>Ligada a un estímulo conocido</td><td>Sola no basta: piensa en fobia específica o social [1]</td></tr>
+<tr><th>Con agorafobia</th><td>Miedo marcado a dos o más de cinco situaciones de las que escapar sería difícil</td><td>Evita transporte, espacios abiertos o cerrados, multitudes o salir solo; conducir ejemplifica una situación de escape difícil [1]</td></tr>
+</tbody></table></div>
+<p>No confundir con las vecinas que quedan fuera del grupo:</p>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Hipertiroidismo, feocromocitoma e hipoglucemia</th><td>Palpitaciones, temblor y sudoración</td><td>Síntomas sostenidos o con paroxismos hormonales; TSH, glucemia y signos sistémicos las muestran [6]</td></tr>
+<tr><th>Taquicardia supraventricular</th><td>Palpitaciones de inicio y fin bruscos</td><td>El ECG durante el episodio muestra la arritmia; el miedo es consecuencia y no motor [16]</td></tr>
+<tr><th>Intoxicación o abstinencia de sustancias</th><td>Activación simpática con miedo</td><td>Relación temporal con cafeína, estimulantes, alcohol o benzodiacepinas [1]</td></tr>
+<tr><th>Embolia pulmonar y disección aórtica</th><td>Disnea, dolor torácico y taquicardia</td><td>Dolor persistente o desgarrante, hipoxemia o asimetría de pulsos: emergencia [4]</td></tr>
+<tr><th>Trastorno bipolar</th><td>Inquietud, insomnio y activación</td><td>Episodios de euforia o menor necesidad de dormir; cambia el manejo del antidepresivo [1]</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Dato</th><th>Valor en la fuente</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>Prevalencia a 12 meses cercana a 2 a 3 % en adultos de países occidentales [1]</td></tr>
+<tr><th>Edad</th><td>Inicio habitual desde la adolescencia tardía hasta la tercera o cuarta década; el inicio después de los 45 años es poco común y obliga a descartar causa orgánica [1]</td></tr>
+<tr><th>Sexo</th><td>Más frecuente en mujeres que en varones, con una razón cercana a 2 a 1 [1]</td></tr>
+<tr><th>Factores clave</th><td>Antecedente familiar de ansiedad, temperamento ansioso, eventos estresantes y consumo de cafeína o estimulantes; la depresión y otros trastornos de ansiedad son comórbidos [1][10]</td></tr>
+</tbody></table></div>
+<p class="mini">No se leyeron cifras de Ecuador ni de Latinoamérica; no se aportan estimaciones.</p>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e1-m-1" data-clin="0" data-paso="Hipersensibilidad del circuito del miedo"><div class="det"><p>Primer golpe, el terreno: una predisposición genética y temperamental. La amígdala, conjunto de núcleos del lóbulo temporal medial que evalúa si un estímulo es amenazante, responde de más, y la corteza prefrontal medial, que normalmente la frena, la inhibe poco. Segundo golpe, el desencadenante: estrés, cafeína, privación de sueño o una sensación corporal inocua. La serotonina modula este circuito y es el blanco de los ISRS. <span class="rem">↪ Posología en «Tratamiento»</span></p></div></li>
+<li class="nodo" id="e1-m-2" data-clin="0" data-paso="Descarga noradrenérgica del locus coeruleus"><div class="det"><p>La amígdala activa el locus coeruleus, un núcleo del tronco encefálico cuyas neuronas liberan noradrenalina hacia la corteza, el tálamo y el hipotálamo. El resultado es hipervigilancia: el cerebro asume que hay peligro y ordena preparar al cuerpo. El ácido gamma-aminobutírico (GABA), neurotransmisor inhibidor, frena este circuito y es el blanco de las benzodiacepinas [9][17]. <span class="rem">↪ Posología en «Tratamiento»</span></p></div></li>
+<li class="nodo" id="e1-m-3" data-clin="1" data-paso="Activación simpática súbita"><div class="det"><p>El hipotálamo envía órdenes al sistema simpático y a la médula suprarrenal, que liberan noradrenalina y adrenalina. En el corazón activan receptores β1 y aceleran la frecuencia (palpitaciones); en el músculo esquelético, receptores β2 producen temblor; en la piel, fibras simpáticas colinérgicas activan las glándulas sudoríparas. El sistema digestivo se frena y aparecen náuseas [8].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-1" onclick="ir('e1','e1-s-1')">Crisis inesperadas recurrentes con pico en minutos y miedo a nuevas crisis</button> <button type="button" class="xref" data-ir="e1-s-4" onclick="ir('e1','e1-s-4')">Taquicardia, sudoración y temblor en la crisis</button></p></div></li>
+<li class="nodo" id="e1-m-4" data-clin="1" data-paso="Interpretación catastrófica de sensaciones corporales"><div class="det"><p>La interocepción, percepción de las señales internas del cuerpo mediada por la corteza insular, capta el latido acelerado. Una persona con sensibilidad a la ansiedad lo interpreta como amenaza grave («me da un infarto», «pierdo el control»). Esa interpretación realimenta a la amígdala, y el miedo sube más rápido que cualquier síntoma físico [10].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-2" onclick="ir('e1','e1-s-2')">Pensamiento catastrófico sobre las sensaciones corporales</button></p></div></li>
+<li class="nodo" id="e1-m-5" data-clin="1" data-paso="Hiperventilación e hipocapnia"><div class="det"><p>El miedo acelera la respiración. Al eliminar más CO₂ del que el cuerpo produce, cae la presión arterial de CO₂ (hipocapnia) y la sangre se vuelve alcalina. La alcalosis aumenta la unión del calcio a la albúmina y baja el calcio iónico, lo que excita los nervios periféricos (parestesias, espasmo carpopedal). La hipocapnia también contrae las arterias cerebrales y provoca mareo [8].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-3" onclick="ir('e1','e1-s-3')">Hiperventilación con parestesias y mareo</button></p></div></li>
+<li class="nodo" id="e1-m-6" data-clin="1" data-paso="Condicionamiento y evitación agorafóbica"><div class="det"><p>El cerebro asocia la crisis con el lugar y el momento en que ocurrió (condicionamiento del miedo). El paciente evita esos contextos, como conducir, y el alivio por evitar refuerza la conducta. Así el miedo a nuevas crisis se vuelve ansiedad anticipatoria y puede derivar en agorafobia. La TCC con exposición gradual interrumpe este eslabón [1][2]. <span class="rem">↪ Posología en «Tratamiento»</span></p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e1-s-1" onclick="ir('e1','e1-s-1')">Crisis inesperadas recurrentes con pico en minutos y miedo a nuevas crisis</button></p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la alarma de humo que suena sin fuego</span>
+<p class="fey-b">Imagina una alarma de humo muy sensible. Un día suena por una tostada un poco quemada, y toda la casa se pone en marcha: los bomberos corren, el corazón de la casa late fuerte y todos respiran rápido. No había incendio, pero la alarma no distingue entre un peligro real y uno falso. Después de varias falsas alarmas, la familia deja de entrar a la cocina para no volver a asustarse.</p>
+<p class="mini fey-c">En medicina esto se llama… ataque de pánico, hipersensibilidad del circuito del miedo (amígdala), activación simpática y evitación agorafóbica.</p>
+<p class="mini fey-c">Dónde falla la comparación: la alarma de humo es un aparato que se puede apagar; en el cerebro la alarma sí funciona y produce cambios reales en el cuerpo, por eso el miedo se siente tan verdadero.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Ansiedad y miedo intenso con inquietud motora</p>
+<p data-e="p">Pensamiento con contenido catastrófico (morir, perder el control)</p>
+<p data-e="p">Taquicardia, taquipnea y sudoración durante la crisis</p>
+<p data-e="v">Desrealización o despersonalización</p>
+<p data-e="v">Parestesias y mareo</p>
+<p data-e="a">Ideas delirantes o alucinaciones</p>
+<p data-e="a">Desorientación o alteración de la conciencia</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e1-s-1" onclick="ir('e1','e1-s-1')">Crisis inesperadas recurrentes con pico en minutos y miedo a nuevas crisis</button></p>
+</div>
+<div class="signo" id="e1-s-1"><h4>Crisis inesperadas recurrentes con pico en minutos y miedo a nuevas crisis</h4><dl>
+<dt>Cómo se reconoce</dt><dd>En la entrevista, el paciente describe oleadas de miedo con cuatro o más síntomas somáticos, un pico en pocos minutos y sin desencadenante evidente. Entre crisis teme la siguiente y evita lo que cree que la provoca. En el caso, el episodio ocurrió al conducir y es el tercero del año.</dd>
+<dt>Por qué aparece</dt><dd>La descarga simpática da el pico rápido, y el condicionamiento mantiene el miedo anticipatorio. <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Activación simpática súbita</button> <button type="button" class="xref" data-ir="e1-m-6" onclick="ir('e1','e1-m-6')">← Condicionamiento y evitación agorafóbica</button></dd>
+<dt>Qué significa</dt><dd>Es el patrón que sostiene el diagnóstico, pero solo con ECG normal y causa orgánica excluida [1].</dd></dl></div>
+<div class="signo" id="e1-s-2"><h4>Pensamiento catastrófico sobre las sensaciones corporales</h4><dl>
+<dt>Cómo se reconoce</dt><dd>En el examen mental, el paciente interpreta sensaciones inocuas como señales de muerte o de locura, con juicio conservado y sin ideas delirantes.</dd>
+<dt>Por qué aparece</dt><dd>La sensibilidad a la ansiedad convierte la señal interoceptiva en amenaza y realimenta a la amígdala. <button type="button" class="xref" data-ir="e1-m-4" onclick="ir('e1','e1-m-4')">← Interpretación catastrófica de sensaciones corporales</button></dd>
+<dt>Qué significa</dt><dd>Es el blanco de la TCC: se trabaja la interpretación, no solo el síntoma. Un pensamiento fijo e irreductible orienta a psicosis y no a pánico.</dd></dl></div>
+<div class="signo" id="e1-s-3"><h4>Hiperventilación con parestesias y mareo</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Respiración rápida y superficial, hormigueo en manos y alrededor de la boca, mareo y, a veces, espasmo de las manos.</dd>
+<dt>Por qué aparece</dt><dd>La hipocapnia genera alcalosis, baja el calcio iónico y contrae las arterias cerebrales. <button type="button" class="xref" data-ir="e1-m-5" onclick="ir('e1','e1-m-5')">← Hiperventilación e hipocapnia</button></dd>
+<dt>Qué significa</dt><dd>Explica síntomas que el paciente teme como graves; la respiración lenta y diafragmática los revierte.</dd></dl></div>
+<div class="signo" id="e1-s-4"><h4>Taquicardia, sudoración y temblor en la crisis</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Con signos vitales durante la crisis: frecuencia cardiaca y respiratoria elevadas, piel húmeda y temblor fino. El ritmo suele ser sinusal en el ECG.</dd>
+<dt>Por qué aparece</dt><dd>La noradrenalina y la adrenalina activan los receptores β del corazón y del músculo, y las fibras colinérgicas activan las glándulas sudoríparas. <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Activación simpática súbita</button></dd>
+<dt>Qué significa</dt><dd>No discrimina: el síndrome coronario agudo produce los mismos signos. Obliga a hacer el ECG antes de explicar [4].</dd></dl></div>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — el micrófono que chilla</span>
+<p class="fey-b">Cuando acercas un micrófono al parlante, el sonido sale, vuelve a entrar y se hace más fuerte hasta que chilla. En el pánico pasa algo parecido: sientes el corazón rápido, piensas que es grave, te asustas más y el corazón late aún más fuerte. Y como el chillido es horrible, la próxima vez te alejas del parlante, aunque eso tampoco apaga el problema.</p>
+<p class="mini fey-c">En medicina esto se llama… interpretación catastrófica, ansiedad anticipatoria y ciclo del miedo.</p>
+<p class="mini fey-c">Dónde falla la comparación: al micrófono basta alejarlo; en el pánico, alejarse (evitar) mantiene el ciclo, y se rompe enfrentando poco a poco lo que se evita.</p></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>ECG de 12 derivaciones normal + criterios DSM-5-TR en la entrevista [1][4]</li>
+<li><span class="tg">Añade</span>Signos vitales y glucemia capilar durante la crisis, y TSH si las palpitaciones persisten entre crisis [6].</li>
+<li><span class="tg">Añade</span>Examen mental, cribado de ánimo con PHQ-9 y pregunta directa por ideación suicida [14][11].</li>
+<li><span class="tg">Confirma</span>Confirma el trastorno de pánico con ataques inesperados recurrentes, al menos un mes de miedo o evitación y estudio orgánico negativo [1].</li>
+<li><span class="tg">Solo si</span>Pide troponina seriada si el dolor persiste, el ECG cambia o hay factores de riesgo coronario, y maneja como síndrome coronario agudo [3].</li>
+<li><span class="tg">No pidas</span>No pidas imagen ni paneles toxicológicos de rutina si la crisis es típica y el ECG es normal; no rotules «preinfarto por estrés» sin datos objetivos [4].</li>
+<li><span class="tg">Alarma</span>Dolor persistente, cambios en el ECG, síncope o ideación suicida con plan: trátalo como emergencia y activa ECU 911 si es coronario [3][5].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Entrevista con criterios DSM-5-TR</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar el trastorno</td><td>Verifica ataques inesperados y miedo persistente <button type="button" class="xref" data-ir="e1-m-6" onclick="ir('e1','e1-m-6')">← Condicionamiento y evitación agorafóbica</button></td><td>[1]</td></tr>
+<tr><th>ECG de 12 derivaciones</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Descartar isquemia y arritmia antes de etiquetar</td><td>Suele mostrar taquicardia sinusal en la crisis <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Activación simpática súbita</button>; un ECG normal no excluye por sí solo un síndrome coronario si el dolor persiste</td><td>[4][3]</td></tr>
+<tr><th>Troponina cardiaca seriada</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Excluir infarto cuando hay dolor persistente o riesgo</td><td>Disponibilidad variable en el primer nivel; sin ella, maneja el síndrome coronario como probable</td><td>[3][18]</td></tr>
+<tr><th>Glucemia capilar y TSH</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Excluir hipoglucemia e hipertiroidismo</td><td>Piden solo si la clínica los sugiere</td><td>[6]</td></tr>
+<tr><th>PHQ-9</th><td>No establecida</td><td>No establecida</td><td>No aplica: cuantifica, no diagnostica</td><td>Cribar depresión comórbida</td><td>Una respuesta afirmativa en el ítem de ideación suicida exige evaluación directa</td><td>[14]</td></tr>
+<tr><th>Pregunta directa por ideación suicida (C-SSRS)</th><td>No establecida</td><td>No establecida</td><td>No aplica</td><td>Estratificar el riesgo</td><td>Preguntar no induce suicidio; guía la conducta en el primer nivel</td><td>[11][5]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos positivo y negativo; TSH: hormona estimulante de la tiroides; PHQ-9: Patient Health Questionnaire de nueve ítems; C-SSRS: Columbia-Suicide Severity Rating Scale. No se aportan cifras de rendimiento porque no se leyeron en la fuente.</p>
+<div class="dc" data-fn="dcE1d"><div class="dc-t">Simulador · Decisión clínica — predice el diagnóstico antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Síntomas de la crisis</span>
+<button type="button" class="chip" data-g="sint" data-v="cuatro" onclick="ch(this)">Cuatro o más del DSM-5-TR</button>
+<button type="button" class="chip" data-g="sint" data-v="menos" onclick="ch(this)">Menos de cuatro</button></div>
+<div class="dc-g"><span class="dc-l">Curso del episodio</span>
+<button type="button" class="chip" data-g="pico" data-v="min" onclick="ch(this)">Pico en minutos y cede</button>
+<button type="button" class="chip" data-g="pico" data-v="pers" onclick="ch(this)">Dolor persistente más de 20 minutos</button></div>
+<div class="dc-g"><span class="dc-l">Tipo de crisis</span>
+<button type="button" class="chip" data-g="crisis" data-v="inesp" onclick="ch(this)">Inesperadas y recurrentes</button>
+<button type="button" class="chip" data-g="crisis" data-v="esp" onclick="ch(this)">Siempre ante un estímulo definido</button>
+<button type="button" class="chip" data-g="crisis" data-v="unica" onclick="ch(this)">Un solo ataque</button></div>
+<div class="dc-g"><span class="dc-l">Miedo a nuevas crisis o evitación (1 mes o más)</span>
+<button type="button" class="chip" data-g="miedo" data-v="si" onclick="ch(this)">Presente</button>
+<button type="button" class="chip" data-g="miedo" data-v="no" onclick="ch(this)">Ausente</button></div>
+<div class="dc-g"><span class="dc-l">ECG de 12 derivaciones</span>
+<button type="button" class="chip" data-g="ecg" data-v="norm" onclick="ch(this)">Normal</button>
+<button type="button" class="chip" data-g="ecg" data-v="alt" onclick="ch(this)">Con cambios isquémicos</button>
+<button type="button" class="chip" data-g="ecg" data-v="no" onclick="ch(this)">No realizado</button></div>
+<div class="dc-g"><span class="dc-l">Causa orgánica o tóxica</span>
+<button type="button" class="chip" data-g="org" data-v="exc" onclick="ch(this)">Excluida (glucemia, TSH, sustancias)</button>
+<button type="button" class="chip" data-g="org" data-v="pend" onclick="ch(this)">Sin estudiar</button>
+<button type="button" class="chip" data-g="org" data-v="estim" onclick="ch(this)">Cafeína o estimulantes presentes</button></div>
+<div class="out"></div></div>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Trata el ciclo del miedo y no solo el síntoma: explica el mecanismo, medica con ISRS y entrena con TCC; la explicación «no es un infarto» solo tras un ECG normal [2][15].</li>
+<li><span class="tg">De elección</span>ISRS a dosis de inicio bajas con titulación gradual, junto con TCC [2][15].</li>
+<li><span class="tg">Alternativa</span>Otro ISRS o un IRSN si falla el primero tras una prueba adecuada; la TCC sola es opción si el paciente rechaza el fármaco [15][2].</li>
+<li><span class="tg">Sintomático</span>Durante la crisis guía una respiración lenta y diafragmática; una benzodiacepina solo como puente breve mientras el ISRS hace efecto, con advertencia de tolerancia y dependencia [2][12].</li>
+<li><span class="tg">Escala</span>Si no hay respuesta, revisa adherencia y dosis, cambia de ISRS o a un IRSN y suma TCC con exposición interoceptiva y gradual [15].</li>
+<li><span class="tg">Reevalúa</span>Reevalúa en las primeras semanas: aumento inicial de ansiedad, efectos adversos, ideación suicida y frecuencia de las crisis [2].</li>
+<li><span class="tg">Especialista</span>Sin derivación posible, maneja en el primer nivel con mhGAP; ante ideación suicida con plan, no dejes solo al paciente y retira medios letales [5].</li>
+<li><span class="tg">Evita</span>Evita polivitamínicos como Stresstabs y ansiolíticos sin diagnóstico, y evita las benzodiacepinas como tratamiento de mantenimiento: causan tolerancia, rebote y dependencia [12][19].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Sertralina</th><td>25 mg durante 1 semana; luego 50 mg y ajuste según respuesta (máximo 200 mg al día)</td><td>VO</td><td>Cada 24 h</td><td>Continua; el efecto tarda semanas</td><td>Aumenta la serotonina sináptica y modula el circuito del miedo <button type="button" class="xref" data-ir="e1-m-1" onclick="ir('e1','e1-m-1')">← Hipersensibilidad del circuito del miedo</button>. Empezar bajo evita el aumento inicial de ansiedad. Náuseas, insomnio, disfunción sexual; advertencia de ideación suicida en menores de 25 años; evitar con IMAO o tramadol (síndrome serotoninérgico)</td><td>[15][2]</td></tr>
+<tr><th>Escitalopram</th><td>5 mg durante 1 semana; luego 10 mg (máximo 20 mg al día; máximo 10 mg en mayores de 65 años)</td><td>VO</td><td>Cada 24 h</td><td>Continua</td><td>Mismo mecanismo <button type="button" class="xref" data-ir="e1-m-1" onclick="ir('e1','e1-m-1')">← Hipersensibilidad del circuito del miedo</button>. Prolonga el QT de forma dependiente de la dosis: evitar si el QT ya está largo; vigilar el sodio en mayores</td><td>[15]</td></tr>
+<tr><th>Paroxetina</th><td>10 mg; subir 10 mg por semana hasta 40 mg al día (máximo 60 mg)</td><td>VO</td><td>Cada 24 h, por la mañana</td><td>Continua</td><td>Mismo mecanismo <button type="button" class="xref" data-ir="e1-m-1" onclick="ir('e1','e1-m-1')">← Hipersensibilidad del circuito del miedo</button>. Más efectos anticolinérgicos y síndrome de discontinuación; evitar en el embarazo; inhibe el CYP2D6</td><td>[15]</td></tr>
+<tr><th>Alprazolam (puente breve)</th><td>0,5 mg cada 8 h; 0,25 mg en mayores o debilitados</td><td>VO</td><td>Cada 8 h</td><td>2 a 4 semanas como máximo, mientras el ISRS hace efecto</td><td>Potencia el receptor GABA-A y frena la respuesta noradrenérgica <button type="button" class="xref" data-ir="e1-m-2" onclick="ir('e1','e1-m-2')">← Descarga noradrenérgica del locus coeruleus</button>. Somnolencia, caídas, tolerancia y rebote; no suspender de golpe</td><td>[20][12][2]</td></tr>
+</tbody></table></div>
+<p class="mini">VO: vía oral; ISRS: inhibidores selectivos de la recaptación de serotonina; IRSN: inhibidores de la recaptación de serotonina y noradrenalina; QT: intervalo QT del ECG; IMAO: inhibidores de la monoaminooxidasa. Dosis de ficha técnica y guías; las guías leídas solo en resumen recomiendan la clase de fármaco.</p>
+<div class="dc" data-fn="dcE1t"><div class="dc-t">Simulador · Decisión clínica — predice el tratamiento antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Fase</span>
+<button type="button" class="chip" data-g="fase" data-v="nuevo" onclick="ch(this)">Inicio del tratamiento</button>
+<button type="button" class="chip" data-g="fase" data-v="falla" onclick="ch(this)">Respuesta insuficiente al ISRS</button>
+<button type="button" class="chip" data-g="fase" data-v="crisis" onclick="ch(this)">Crisis en consulta</button>
+<button type="button" class="chip" data-g="fase" data-v="xanax" onclick="ch(this)">Ya usa alprazolam por semanas</button></div>
+<div class="dc-g"><span class="dc-l">Otros datos</span>
+<button type="button" class="chip" data-g="otros" data-v="ecg" data-m="1" onclick="ch(this)">ECG normal pendiente de explicar</button>
+<button type="button" class="chip" data-g="otros" data-v="qt" data-m="1" onclick="ch(this)">QT prolongado</button>
+<button type="button" class="chip" data-g="otros" data-v="emb" data-m="1" onclick="ch(this)">Embarazo</button>
+<button type="button" class="chip" data-g="otros" data-v="mayor" data-m="1" onclick="ch(this)">Mayor de 65 años</button>
+<button type="button" class="chip" data-g="otros" data-v="bzd" data-m="1" onclick="ch(this)">Se plantea una benzodiacepina como puente</button>
+<button type="button" class="chip" data-g="otros" data-v="ideas" data-m="1" onclick="ch(this)">Ideas de muerte o suicidio</button>
+<button type="button" class="chip" data-g="otros" data-v="polivit" data-m="1" onclick="ch(this)">Pide polivitamínicos para el estrés</button></div>
+<div class="out"></div></div>
+
+<h2>Seguimiento</h2>
+<p>El ciclo es revisar, evaluar y ajustar: mide la frecuencia de las crisis, la evitación y los efectos adversos, y ajusta la dosis o el esquema. Al remitir, mantén el ISRS durante meses y retíralo de forma gradual para evitar el síndrome de discontinuación [15]. Un ánimo bajo persistente o ideas de muerte cambian la pregunta: la depresión entra al diferencial [13].</p>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Agorafobia</th><td>La evitación se refuerza por el alivio y se generaliza a más situaciones</td><td><button type="button" class="xref" data-ir="e1-m-6" onclick="ir('e1','e1-m-6')">← Condicionamiento y evitación agorafóbica</button></td></tr>
+<tr><th>Consultas repetidas y exámenes cardiacos innecesarios</th><td>La interpretación catastrófica convierte cada sensación en sospecha de infarto</td><td><button type="button" class="xref" data-ir="e1-m-4" onclick="ir('e1','e1-m-4')">← Interpretación catastrófica de sensaciones corporales</button></td></tr>
+<tr><th>Hiperventilación crónica y síntomas persistentes</th><td>La hipocapnia mantenida sostiene parestesias y mareo</td><td><button type="button" class="xref" data-ir="e1-m-5" onclick="ir('e1','e1-m-5')">← Hiperventilación e hipocapnia</button></td></tr>
+<tr><th>Recaída tras suspender el ISRS</th><td>El circuito del miedo sigue hipersensible si la TCC no consolidó el aprendizaje</td><td><button type="button" class="xref" data-ir="e1-m-1" onclick="ir('e1','e1-m-1')">← Hipersensibilidad del circuito del miedo</button></td></tr>
+</tbody></table></div>
+</section>
+<section class="tab" data-tab="e2">
+<div class="hb az"><div class="hb-t">Frente a Trastorno de pánico</div>
+<p>Se confunde con el pánico porque ambos dan ansiedad y síntomas somáticos. Se separa por el curso: aquí la preocupación es sostenida, sin picos de minutos, y se dirige a eventos futuros, no a una nueva crisis.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué la preocupación no cede con el razonamiento y qué circuito mantiene tenso el cuerpo?</li>
+<li>¿En qué se apoya el diagnóstico y qué debes descartar antes de aceptar que la ansiedad es primaria?</li>
+<li>¿Por qué el mantenimiento se basa en antidepresivos y psicoterapia y no en benzodiacepinas?</li>
+</ol></div>
+<p><span class="badge b-pu">NICE CG113 2011 (actualizada 2020), solo resumen [2]</span> <span class="badge b-pu">WFSBP ansiedad 2023, solo resumen [15]</span></p>
+
+<h2>Qué es</h2>
+<div class="card"><p>El trastorno de ansiedad generalizada (TAG) es una preocupación excesiva y difícil de controlar, sobre varios temas de la vida diaria, que ocupa la mayoría de los días durante al menos 6 meses y se acompaña de síntomas físicos [1].</p>
+<ul>
+<li>Al menos 3 de 6 síntomas: inquietud, fatigabilidad, dificultad para concentrarse, irritabilidad, tensión muscular y alteración del sueño [1].</li>
+<li>Deterioro significativo, sin causa médica, sustancia ni otro trastorno que lo explique [1].</li>
+</ul></div>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Hipertiroidismo</th><td>Nerviosismo, temblor, palpitaciones e insomnio</td><td>TSH suprimida y signos tiroideos; la preocupación cognitiva no es el eje [6]</td></tr>
+<tr><th>Ansiedad por cafeína o estimulantes</th><td>Inquietud, taquicardia y tensión</td><td>Relación temporal con la sustancia y remisión al suspenderla [1]</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Dato</th><th>Valor en la fuente</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>Prevalencia a 12 meses en adultos de EE. UU. cercana al 3 %; sin cifras de Ecuador [1]</td></tr>
+<tr><th>Edad</th><td>Cualquier edad; mediana de inicio cerca de los 30 años [1]</td></tr>
+<tr><th>Sexo</th><td>Más frecuente en mujeres, cerca del doble que en varones [1]</td></tr>
+<tr><th>Factores clave</th><td>Temperamento ansioso, adversidad temprana, antecedente familiar [1][10]</td></tr>
+</tbody></table></div>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e2-m-1" data-clin="0" data-paso="Menor freno GABAérgico y serotoninérgico"><div class="det"><p>Primer golpe, el terreno: predisposición genética y temperamento ansioso. El GABA (ácido gamma-aminobutírico, neurotransmisor inhibidor principal) actúa en receptores GABA-A y frena la amígdala y la corteza. La serotonina, liberada por neuronas del rafe, modula esos circuitos. Con menos freno, la alarma se dispara fácil. Es blanco de ISRS y benzodiacepinas [17][9]. <span class="rem">↪ Posología en «Tratamiento»</span></p></div></li>
+<li class="nodo" id="e2-m-2" data-clin="0" data-paso="Amígdala hiperactiva y corteza prefrontal débil"><div class="det"><p>La amígdala, núcleo del cerebro que detecta amenaza, responde con fuerza ante estímulos neutros. La corteza prefrontal, que evalúa si el peligro es real, la frena poco: la vigilancia de amenaza se sostiene sin peligro concreto [9][10].</p></div></li>
+<li class="nodo" id="e2-m-3" data-clin="1" data-paso="Intolerancia a la incertidumbre alimenta la preocupación"><div class="det"><p>Segundo golpe, el desencadenante: un estresor cotidiano. Como tolera mal lo incierto, la persona interpreta cada duda como amenaza y la rumia buscando una certeza que no existe; cada ciclo refuerza el circuito [10][1].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-1" onclick="ir('e2','e2-s-1')">Preocupación excesiva y difícil de controlar</button></p></div></li>
+<li class="nodo" id="e2-m-4" data-clin="1" data-paso="Activación simpática sostenida tensa el músculo"><div class="det"><p>La amígdala activa el hipotálamo y el sistema simpático, que libera noradrenalina y eleva el tono de cuello y hombros. A diferencia del pánico, la activación es de bajo nivel y continua [8].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-2" onclick="ir('e2','e2-s-2')">Tensión muscular e inquietud</button></p></div></li>
+<li class="nodo" id="e2-m-5" data-clin="1" data-paso="Hiperalerta cortical fragmenta el sueño"><div class="det"><p>La rumiación y la activación simpática impiden que baje la vigilancia previa al sueño; el cansancio acumulado debilita aún más el control prefrontal [10].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e2-s-3" onclick="ir('e2','e2-s-3')">Insomnio de conciliación con rumiación</button></p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la preocupación que no se apaga</span>
+<p class="fey-b">Imagina una alarma de humo tan sensible que suena con cada tostada. El cerebro de esta persona tiene el detector de peligro encendido todo el día y le falta el freno que dice «esto no es un incendio». Cada duda sobre el futuro se vuelve amenaza y el cuerpo se queda tenso y sin dormir.</p>
+<p class="mini fey-c">En medicina esto se llama… ansiedad generalizada: hiperactividad de la amígdala con control insuficiente de la corteza prefrontal.</p>
+<p class="mini fey-c">Dónde falla la comparación: la alarma se calla al abrir la ventana; la preocupación sigue sin un peligro concreto que retirar.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Inquietud y sensación de estar al límite</p>
+<p data-e="p">Tensión en cuello y hombros</p>
+<p data-e="p">Fatigabilidad y dificultad para concentrarse</p>
+<p data-e="v">Irritabilidad</p>
+<p data-e="a">Crisis de minutos con miedo a morir</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e2-s-1" onclick="ir('e2','e2-s-1')">Preocupación excesiva, difícil de controlar, la mayoría de días ≥6 meses</button></p>
+</div>
+<div class="signo" id="e2-s-1"><h4>Preocupación excesiva y difícil de controlar</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Pregunta si no logra detener la preocupación; el GAD-7 la explora en sus dos primeros ítems [21]. En el examen mental, el contenido es realista pero desproporcionado.</dd>
+<dt>Por qué aparece</dt><dd>La intolerancia a la incertidumbre convierte cada duda en amenaza. <button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">← Intolerancia a la incertidumbre</button></dd>
+<dt>Qué significa</dt><dd>Es el criterio central; exige 6 meses o más para llamarlo TAG [1].</dd></dl></div>
+<div class="signo" id="e2-s-2"><h4>Tensión muscular e inquietud</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Hombros elevados, cuello rígido, temblor fino y movimiento constante de piernas.</dd>
+<dt>Por qué aparece</dt><dd>La activación simpática mantiene el tono muscular alto. <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Activación simpática sostenida</button></dd>
+<dt>Qué significa</dt><dd>Apoya el TAG si es continua; en picos de minutos con miedo intenso, piensa en pánico.</dd></dl></div>
+<div class="signo" id="e2-s-3"><h4>Insomnio de conciliación con rumiación</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Tarda en dormirse porque «la cabeza no para»; cansancio al día siguiente.</dd>
+<dt>Por qué aparece</dt><dd>La hiperalerta impide que baje la vigilancia previa al sueño. <button type="button" class="xref" data-ir="e2-m-5" onclick="ir('e2','e2-m-5')">← Hiperalerta cortical</button></dd>
+<dt>Qué significa</dt><dd>Pregunta por alcohol e hipnóticos como automedicación y descarta depresión, que da despertar precoz.</dd></dl></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>GAD-7 más criterios DSM-5-TR en la entrevista; un puntaje de 10 o más apoya el diagnóstico [21][1].</li>
+<li><span class="tg">Añade</span>PHQ-9, pregunta directa por ideación suicida y revisión de cafeína, alcohol y fármacos [2][1]. <span class="rem">↪ Cribado de ánimo y riesgo suicida en «Visión de conjunto»</span></li>
+<li><span class="tg">Confirma</span>Confirma con los criterios DSM-5-TR: 6 meses o más, 3 de 6 síntomas y deterioro funcional [1].</li>
+<li><span class="tg">Solo si</span>Pide TSH si hay pérdida de peso, temblor o taquicardia en reposo, y ECG ante opresión torácica o palpitaciones [4][6].</li>
+<li><span class="tg">No pidas</span>No pidas neuroimagen ni baterías de laboratorio de rutina si la historia y el examen no sugieren una causa orgánica [2].</li>
+<li><span class="tg">Alarma</span>Ideación suicida, abuso de alcohol o benzodiacepinas, o depresión mayor asociada: se tratan primero.</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>GAD-7</th><td>89 % con corte en 10 [21]</td><td>82 % con corte en 10 [21]</td><td>No establecida</td><td>Cribar y medir gravedad</td><td>Bandas 5, 10 y 15 para leve, moderada y grave <button type="button" class="xref" data-ir="e2-m-3" onclick="ir('e2','e2-m-3')">← Intolerancia a la incertidumbre</button></td><td>[21]</td></tr>
+<tr><th>TSH</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Descartar hipertiroidismo</td><td>Si está suprimida, la ansiedad es secundaria <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Activación simpática sostenida</button></td><td>[6]</td></tr>
+<tr><th>ECG de 12 derivaciones</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Descartar arritmia o isquemia</td><td>Indispensable ante opresión torácica antes de rotular ansiedad</td><td>[4]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos; TSH: tirotropina; ECG: electrocardiograma.</p>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Explica el diagnóstico y ofrece psicoterapia y fármaco según preferencia y gravedad; sin derivación posible, maneja el caso con mhGAP [2][5].</li>
+<li><span class="tg">De elección</span>ISRS o IRSN (escitalopram, sertralina, venlafaxina XR, duloxetina) más terapia cognitivo-conductual (TCC) [2][15].</li>
+<li><span class="tg">Alternativa</span>Pregabalina si no tolera o no responde a ISRS o IRSN [15].</li>
+<li><span class="tg">Sintomático</span>Higiene del sueño y relajación; si hace falta una benzodiacepina, solo en ciclo corto durante el inicio del antidepresivo [2][19].</li>
+<li><span class="tg">Reevalúa</span>Revisa a las 2 semanas la tolerancia y la ideación suicida; juzga la respuesta tras 4 a 6 semanas con dosis adecuada [2].</li>
+<li><span class="tg">Escala</span>Sin respuesta: sube la dosis, cambia a otro ISRS, IRSN o pregabalina, o añade TCC [2][15].</li>
+<li><span class="tg">Evita</span>Evita las benzodiacepinas como mantenimiento y suspender el antidepresivo de golpe [2][19].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Escitalopram</th><td>10 mg; máximo 20 mg</td><td>VO</td><td>Cada 24 h</td><td>Al menos 12 meses tras la respuesta [22]</td><td>Bloquea el transportador de serotonina y repone el freno <button type="button" class="xref" data-ir="e2-m-1" onclick="ir('e2','e2-m-1')">← Menor freno GABAérgico y serotoninérgico</button>. Prolonga el QT; en mayores de 65 años máximo 10 mg [23]</td><td>[2][15]</td></tr>
+<tr><th>Sertralina</th><td>50 mg; hasta 200 mg</td><td>VO</td><td>Cada 24 h; inicia con 25 mg la primera semana</td><td>Igual que el escitalopram</td><td>Mismo mecanismo <button type="button" class="xref" data-ir="e2-m-1" onclick="ir('e2','e2-m-1')">← Menor freno GABAérgico y serotoninérgico</button>. Náuseas y activación inicial; hiponatremia en mayores</td><td>[2][15]</td></tr>
+<tr><th>Venlafaxina XR</th><td>75 mg; hasta 225 mg</td><td>VO</td><td>Cada 24 h con alimentos</td><td>Igual que el escitalopram</td><td>Inhibe la recaptación de serotonina y noradrenalina <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Activación simpática sostenida</button>. Sube la presión arterial; síndrome de discontinuación marcado</td><td>[2][15]</td></tr>
+<tr><th>Duloxetina</th><td>60 mg; máximo 120 mg</td><td>VO</td><td>Cada 24 h; inicia con 30 mg la primera semana</td><td>Igual que el escitalopram</td><td>Mismo mecanismo dual <button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Activación simpática sostenida</button>. Evita en hepatopatía y con alcohol en exceso</td><td>[15]</td></tr>
+<tr><th>Pregabalina</th><td>75 mg; hasta 600 mg al día repartidos [15]</td><td>VO</td><td>Cada 12 h</td><td>Retirada gradual al suspender</td><td>Se une a la subunidad α2δ de canales de calcio y reduce la liberación de glutamato <button type="button" class="xref" data-ir="e2-m-2" onclick="ir('e2','e2-m-2')">← Amígdala hiperactiva</button>. Sedación y mareo; ajusta en insuficiencia renal; potencial de abuso</td><td>[15]</td></tr>
+</tbody></table></div>
+<p class="mini">VO: vía oral; XR: liberación prolongada; QT: intervalo del electrocardiograma; ISRS: inhibidor selectivo de la recaptación de serotonina; IRSN: inhibidor de la recaptación de serotonina y noradrenalina.</p>
+<div class="dc" data-fn="dcE2"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Situación</span>
+<button type="button" class="chip" data-g="sit" data-v="inicio" onclick="ch(this)">Inicio del tratamiento</button>
+<button type="button" class="chip" data-g="sit" data-v="nores" onclick="ch(this)">Sin respuesta tras 4 a 6 semanas</button>
+<button type="button" class="chip" data-g="sit" data-v="intol" onclick="ch(this)">No tolera el ISRS</button></div>
+<div class="dc-g"><span class="dc-l">Otros datos</span>
+<button type="button" class="chip" data-g="otros" data-v="hta" data-m="1" onclick="ch(this)">Hipertensión no controlada</button>
+<button type="button" class="chip" data-g="otros" data-v="hep" data-m="1" onclick="ch(this)">Hepatopatía</button>
+<button type="button" class="chip" data-g="otros" data-v="mayor" data-m="1" onclick="ch(this)">65 años o más</button>
+<button type="button" class="chip" data-g="otros" data-v="bzd" data-m="1" onclick="ch(this)">Usa benzodiacepina desde hace semanas</button>
+<button type="button" class="chip" data-g="otros" data-v="ide" data-m="1" onclick="ch(this)">Ideación suicida</button></div>
+<div class="out"></div></div>
+
+<h2>Seguimiento</h2>
+<p>Revisa en cada cita el GAD-7, el sueño, el consumo de alcohol o benzodiacepinas y el ánimo. Con respuesta, mantén el fármaco y retíralo despacio [2][15].</p>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Depresión mayor comórbida</th><td>El déficit serotoninérgico es compartido</td><td><button type="button" class="xref" data-ir="e2-m-1" onclick="ir('e2','e2-m-1')">← Menor freno GABAérgico y serotoninérgico</button></td></tr>
+<tr><th>Abuso de alcohol o benzodiacepinas</th><td>La automedicación repone el freno GABAérgico</td><td><button type="button" class="xref" data-ir="e2-m-1" onclick="ir('e2','e2-m-1')">← Menor freno GABAérgico y serotoninérgico</button></td></tr>
+<tr><th>Cefalea tensional y dolor cervical</th><td>La tensión muscular sostenida</td><td><button type="button" class="xref" data-ir="e2-m-4" onclick="ir('e2','e2-m-4')">← Activación simpática sostenida</button></td></tr>
+<tr><th>Insomnio crónico</th><td>La hiperalerta se retroalimenta</td><td><button type="button" class="xref" data-ir="e2-m-5" onclick="ir('e2','e2-m-5')">← Hiperalerta cortical</button></td></tr>
+</tbody></table></div>
+</section>
+<section class="tab" data-tab="e3">
+<div class="hb az"><div class="hb-t">Frente a Trastorno de pánico</div>
+<p>Se confunde con el pánico porque ambos dan ansiedad, insomnio y quejas somáticas, y coexisten. Se separa por el ánimo: aquí domina la tristeza o la pérdida de interés durante semanas, sin crisis de minutos.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Qué cambia en el cerebro bajo estrés crónico para que aparezcan anhedonia, lentitud y desesperanza, y por qué el antidepresivo tarda semanas en actuar?</li>
+<li>¿Qué debes descartar antes de indicar un antidepresivo y por qué un error en ese punto cambia el tratamiento?</li>
+<li>¿Cómo se determina el riesgo suicida y qué haces en un centro de primer nivel sin posibilidad de derivar?</li>
+</ol></div>
+<p><span class="badge b-pu">NICE NG222 2022, solo resumen [13]</span> <span class="badge b-pu">OMS mhGAP 2.0, solo resumen [5]</span></p>
+
+<h2>Qué es</h2>
+<div class="card"><p>El trastorno depresivo mayor (TDM) es un síndrome de ánimo deprimido o pérdida de interés (anhedonia) casi todos los días durante al menos 2 semanas, con otros síntomas y deterioro del funcionamiento [1].</p>
+<ul>
+<li>Al menos 5 de 9 síntomas, uno de ellos ánimo deprimido o anhedonia [1].</li>
+<li>Sin manía o hipomanía previas ni causa médica o por sustancia [1].</li>
+</ul></div>
+<p>El DSM-5-TR separa los trastornos del ánimo en dos familias según exista o no polo elevado:</p>
+<div class="tw"><table><thead><tr><th>Familia</th><th>Qué incluye</th><th>Qué la define</th></tr></thead>
+<tbody>
+<tr><th>Depresivos</th><td>TDM, trastorno depresivo persistente (distimia), disfórico premenstrual</td><td>Solo polo bajo del ánimo [1]</td></tr>
+<tr><th>Bipolares</th><td>Bipolar I, bipolar II, ciclotímico</td><td>Al menos un episodio de manía o hipomanía [1]</td></tr>
+</tbody></table></div>
+<p>Los subtipos existen porque la gravedad y los síntomas acompañantes cambian la conducta.</p>
+<div class="tw"><table><thead><tr><th>Subtipo</th><th>Qué domina</th><th>Cómo se reconoce</th></tr></thead>
+<tbody>
+<tr><th>Leve, moderado o grave</th><td>Número e intensidad de síntomas</td><td>PHQ-9 por bandas y deterioro funcional [14]</td></tr>
+<tr><th>Con características ansiosas</th><td>Tensión e inquietud con el ánimo bajo</td><td>Especificador DSM-5-TR; suele predecir peor respuesta y más riesgo suicida [1]</td></tr>
+<tr><th>Trastorno depresivo persistente</th><td>Ánimo bajo crónico menos intenso</td><td>Dos años o más con ánimo deprimido casi todo el día [1]</td></tr>
+</tbody></table></div>
+<p>No confundir con las vecinas fuera del grupo:</p>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Trastorno bipolar</th><td>Episodio depresivo idéntico al del TDM</td><td>Antecedente de manía o hipomanía; el antidepresivo solo puede inducir viraje [1]</td></tr>
+<tr><th>Hipotiroidismo</th><td>Fatiga, lentitud, ánimo bajo y aumento de peso</td><td>TSH elevada; el ánimo mejora al corregir la hormona [6]</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Dato</th><th>Valor en la fuente</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>Prevalencia a 12 meses cercana al 7 % en EE. UU.; sin cifras de Ecuador [1]</td></tr>
+<tr><th>Edad</th><td>Más frecuente entre 18 y 29 años que a partir de los 60 [1]</td></tr>
+<tr><th>Sexo</th><td>Mujeres, entre 1,5 y 3 veces más desde la adolescencia [1]</td></tr>
+<tr><th>Factores clave</th><td>Antecedente familiar, adversidad temprana, estrés crónico, enfermedad médica y consumo de sustancias [1][10]</td></tr>
+</tbody></table></div>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e3-m-1" data-clin="0" data-paso="Estrés crónico activa el eje hipotálamo-hipófiso-suprarrenal"><div class="det"><p>Primer golpe, el terreno: vulnerabilidad genética y adversidad temprana. Segundo golpe, el estresor sostenido. El hipotálamo libera CRH, que estimula la hipófisis a liberar ACTH, y esta, a la corteza suprarrenal a liberar cortisol. En la depresión el cortisol sigue alto porque falla la retroalimentación negativa en hipocampo y prefrontal [24].</p></div></li>
+<li class="nodo" id="e3-m-2" data-clin="0" data-paso="Cae la señal monoaminérgica en circuitos del ánimo"><div class="det"><p>Las neuronas del rafe (serotonina), del locus coeruleus (noradrenalina) y del área tegmental ventral (dopamina) proyectan a la corteza prefrontal y al sistema límbico, el conjunto de estructuras del ánimo. Con menos señal, baja la motivación, la energía y el afecto. La recaptación por el transportador de serotonina es el blanco de los ISRS [9][17]. <span class="rem">↪ Posología en «Tratamiento»</span></p></div></li>
+<li class="nodo" id="e3-m-3" data-clin="0" data-paso="Cortisol y falta de BDNF reducen la neuroplasticidad"><div class="det"><p>El cortisol alto disminuye el BDNF (factor neurotrófico derivado del encéfalo, proteína que sostiene las sinapsis y la formación de neuronas nuevas). El hipocampo y la corteza prefrontal pierden espinas dendríticas. Los antidepresivos aumentan el BDNF de forma gradual, y eso explica por qué tardan semanas en actuar [24][10].</p></div></li>
+<li class="nodo" id="e3-m-4" data-clin="1" data-paso="Prefrontal hipoactiva y recompensa apagada"><div class="det"><p>La corteza prefrontal dorsolateral, que planifica y sostiene la atención, funciona a menor ritmo. El circuito de recompensa, con dopamina en el núcleo accumbens, responde menos al placer. La amígdala y el sistema límbico quedan sin freno y el afecto se sesga hacia lo negativo [9][10].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-1" onclick="ir('e3','e3-s-1')">Ánimo deprimido y anhedonia</button> <button type="button" class="xref" data-ir="e3-s-2" onclick="ir('e3','e3-s-2')">Enlentecimiento psicomotor e hipoprosexia</button></p></div></li>
+<li class="nodo" id="e3-m-5" data-clin="1" data-paso="Desesperanza y control inhibitorio debilitado"><div class="det"><p>La prefrontal débil deja de proyectar futuro y de frenar impulsos; la serotonina baja se asocia a impulsividad. La persona percibe su dolor como inacabable y sin salida, y de ahí nace la ideación suicida [10][5].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e3-s-3" onclick="ir('e3','e3-s-3')">Ideación suicida</button></p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — el cerebro agotado</span>
+<p class="fey-b">Piensa en un teléfono que lleva meses sin cargarse bien: la pantalla se atenúa y todo va lento. Cuando el estrés dura demasiado, el cerebro gasta sus reservas y deja de reparar sus conexiones. Las partes que dan ganas de hacer cosas y de ver el futuro quedan en modo ahorro, y nada parece valer la pena.</p>
+<p class="mini fey-c">En medicina esto se llama… depresión mayor: alteración del eje del estrés, de las monoaminas y de la neuroplasticidad en la red límbico-prefrontal.</p>
+<p class="mini fey-c">Dónde falla la comparación: el cerebro no recupera enchufándolo; el antidepresivo y la psicoterapia tardan semanas en reconstruir conexiones.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Llanto fácil y afecto triste</p>
+<p data-e="p">Lentitud del pensamiento y poca concentración</p>
+<p data-e="p">Insomnio de despertar precoz</p>
+<p data-e="v">Ideas de culpa o inutilidad</p>
+<p data-e="a">Euforia, logorrea o disminución de la necesidad de dormir</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e3-s-1" onclick="ir('e3','e3-s-1')">Ánimo deprimido o anhedonia casi todos los días ≥2 semanas</button></p>
+</div>
+<div class="signo" id="e3-s-1"><h4>Ánimo deprimido y anhedonia</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Pregunta cómo se ha sentido y si ha perdido el interés o el placer; son los ítems 1 y 2 del PHQ-9 [14]. En el examen mental, el afecto es triste y poco reactivo.</dd>
+<dt>Por qué aparece</dt><dd>El circuito de recompensa responde menos y la amígdala queda sin freno. <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Prefrontal hipoactiva y recompensa apagada</button></dd>
+<dt>Qué significa</dt><dd>Al menos uno de los dos debe estar para llamarlo episodio depresivo [1].</dd></dl></div>
+<div class="signo" id="e3-s-2"><h4>Enlentecimiento psicomotor e hipoprosexia</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Habla lenta, latencia de respuesta larga, movimientos escasos y atención difícil de sostener.</dd>
+<dt>Por qué aparece</dt><dd>La corteza prefrontal y los circuitos dopaminérgicos del movimiento trabajan a bajo ritmo. <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Prefrontal hipoactiva y recompensa apagada</button></dd>
+<dt>Qué significa</dt><dd>Marca gravedad y orienta a depresión melancólica; con psicosis, el cuadro es grave.</dd></dl></div>
+<div class="signo" id="e3-s-3"><h4>Ideación suicida</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Se pregunta de forma directa: deseo de estar muerto, pensamientos de quitarse la vida, método, intención y plan; la C-SSRS ordena esos niveles [11]. Es el ítem 9 del PHQ-9.</dd>
+<dt>Por qué aparece</dt><dd>La desesperanza y el freno inhibitorio débil empujan a ver la muerte como salida. <button type="button" class="xref" data-ir="e3-m-5" onclick="ir('e3','e3-m-5')">← Desesperanza y control inhibitorio debilitado</button></dd>
+<dt>Qué significa</dt><dd>Preguntar no induce el acto; obliga a estratificar el riesgo en esa misma consulta [5].</dd></dl></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>PHQ-9 más pregunta directa por ideación suicida, dentro de una historia clínica psiquiátrica estructurada [14][5].</li>
+<li><span class="tg">Añade</span>Pregunta por manía o hipomanía previas, antecedente familiar bipolar, consumo de alcohol y sustancias, y fármacos que deprimen el ánimo [1][13].</li>
+<li><span class="tg">Confirma</span>Confirma con los criterios DSM-5-TR: 5 de 9 síntomas durante 2 semanas, con ánimo deprimido o anhedonia y deterioro funcional [1].</li>
+<li><span class="tg">Solo si</span>Pide TSH ante fatiga, aumento de peso o intolerancia al frío, y estratifica el riesgo con C-SSRS si hay ideación [6][11].</li>
+<li><span class="tg">No pidas</span>No pidas neuroimagen ni laboratorio de rutina sin sospecha orgánica; no inicies antidepresivo sin descartar manía previa [13].</li>
+<li><span class="tg">Alarma</span>Ideación con plan o intención, intento previo, acceso a medios o psicosis: actúa en esa consulta con el simulador de riesgo [5].</li>
+</ol>
+<p>Estructura breve de la historia clínica psiquiátrica, trabajo autónomo del sílabo:</p>
+<div class="tw"><table><thead><tr><th>Apartado</th><th>Qué explorar en depresión</th></tr></thead>
+<tbody>
+<tr><th>Motivo y enfermedad actual</th><td>Inicio, curso, desencadenantes, síntomas del TDM y de ansiedad [10]</td></tr>
+<tr><th>Antecedentes psiquiátricos</th><td>Episodios previos, manía, intentos, tratamientos y respuesta [25]</td></tr>
+<tr><th>Antecedentes familiares</th><td>Depresión, bipolaridad, suicidio</td></tr>
+<tr><th>Antecedentes médicos y consumo</th><td>Tiroides, dolor crónico, fármacos, alcohol y sustancias [10]</td></tr>
+<tr><th>Historia personal y apoyo</th><td>Pérdidas, trabajo, familia, acceso a medios</td></tr>
+<tr><th>Examen mental e impresión</th><td>Afecto, pensamiento, psicosis, riesgo y plan [25]</td></tr>
+</tbody></table></div>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>PHQ-9</th><td>88 % con corte en 10 [14]</td><td>88 % con corte en 10 [14]</td><td>No establecida</td><td>Cribar y medir gravedad</td><td>Bandas 5, 10, 15 y 20 <button type="button" class="xref" data-ir="e3-m-4" onclick="ir('e3','e3-m-4')">← Prefrontal hipoactiva y recompensa apagada</button></td><td>[14]</td></tr>
+<tr><th>C-SSRS</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Ordenar ideación y conducta suicida</td><td>Guía la conducta, no predice el acto <button type="button" class="xref" data-ir="e3-m-5" onclick="ir('e3','e3-m-5')">← Desesperanza y control inhibitorio</button></td><td>[11]</td></tr>
+<tr><th>TSH</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Descartar hipotiroidismo</td><td>Si está elevada, corrige antes de atribuir al TDM</td><td>[6]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos; C-SSRS: escala de Columbia de gravedad suicida; TSH: tirotropina.</p>
+<div class="dc" data-fn="dcE3r"><div class="dc-t">Simulador · Decisión clínica — predice el nivel de riesgo antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Ideación</span>
+<button type="button" class="chip" data-g="ide" data-v="ninguna" onclick="ch(this)">Sin ideación</button>
+<button type="button" class="chip" data-g="ide" data-v="pasiva" onclick="ch(this)">Deseo de morir sin método</button>
+<button type="button" class="chip" data-g="ide" data-v="activa" onclick="ch(this)">Pensamientos activos sin plan</button>
+<button type="button" class="chip" data-g="ide" data-v="plan" onclick="ch(this)">Plan o intención</button></div>
+<div class="dc-g"><span class="dc-l">Factores</span>
+<button type="button" class="chip" data-g="fac" data-v="intento" data-m="1" onclick="ch(this)">Intento previo</button>
+<button type="button" class="chip" data-g="fac" data-v="medios" data-m="1" onclick="ch(this)">Acceso a medios letales</button>
+<button type="button" class="chip" data-g="fac" data-v="solo" data-m="1" onclick="ch(this)">Sin apoyo familiar</button>
+<button type="button" class="chip" data-g="fac" data-v="agrav" data-m="1" onclick="ch(this)">Psicosis, alcohol o desesperanza grave</button></div>
+<div class="out"></div></div>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Elige según gravedad, preferencia y riesgo suicida; combina fármaco y psicoterapia en depresión moderada o grave [13].</li>
+<li><span class="tg">De elección</span>ISRS (sertralina, escitalopram, fluoxetina) más psicoterapia; en depresión leve, empieza con psicoterapia [13].</li>
+<li><span class="tg">Alternativa</span>Venlafaxina XR si fracasa un ISRS o no lo tolera [13].</li>
+<li><span class="tg">Sintomático</span>Higiene del sueño y activación conductual; evita hipnóticos prolongados [13][5].</li>
+<li><span class="tg">Reevalúa</span>Revisa en la primera semana si tiene de 18 a 25 años o riesgo suicida [13], y a las 4 a 6 semanas con dosis adecuada [13].</li>
+<li><span class="tg">Escala</span>Sin respuesta: optimiza la dosis, cambia de antidepresivo o añade psicoterapia [13].</li>
+<li><span class="tg">Especialista</span>Con psicosis, bipolaridad o riesgo alto que no se contiene, busca interconsulta o teleconsulta; sin derivación, sigue mhGAP en el centro [5].</li>
+<li><span class="tg">Evita</span>Evita iniciar un antidepresivo solo si hay antecedente de manía, y evita suspenderlo de golpe [13][1].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Sertralina</th><td>50 mg; hasta 200 mg</td><td>VO</td><td>Cada 24 h; inicia con 25 mg si hay ansiedad marcada</td><td>Al menos 6 meses tras la remisión [13]</td><td>Bloquea el transportador de serotonina y repone la señal <button type="button" class="xref" data-ir="e3-m-2" onclick="ir('e3','e3-m-2')">← Cae la señal monoaminérgica</button>. Náuseas y activación inicial; hiponatremia en mayores</td><td>[13]</td></tr>
+<tr><th>Escitalopram</th><td>10 mg; máximo 20 mg</td><td>VO</td><td>Cada 24 h</td><td>Igual que la sertralina</td><td>Mismo mecanismo <button type="button" class="xref" data-ir="e3-m-2" onclick="ir('e3','e3-m-2')">← Cae la señal monoaminérgica</button>. Prolonga el QT; en mayores de 65 años máximo 10 mg [23]</td><td>[13]</td></tr>
+<tr><th>Fluoxetina</th><td>20 mg; hasta 60 mg</td><td>VO</td><td>Cada 24 h por la mañana</td><td>Igual que la sertralina</td><td>Vida media larga, útil si olvida dosis <button type="button" class="xref" data-ir="e3-m-3" onclick="ir('e3','e3-m-3')">← Cortisol y falta de BDNF</button>. Inhibe CYP2D6 e interactúa con otros fármacos</td><td>[13]</td></tr>
+<tr><th>Venlafaxina XR</th><td>75 mg; hasta 225 mg</td><td>VO</td><td>Cada 24 h con alimentos</td><td>Igual que la sertralina</td><td>Inhibe la recaptación de serotonina y noradrenalina <button type="button" class="xref" data-ir="e3-m-2" onclick="ir('e3','e3-m-2')">← Cae la señal monoaminérgica</button>. Sube la presión arterial; discontinuación marcada</td><td>[13]</td></tr>
+</tbody></table></div>
+<p class="mini">VO: vía oral; XR: liberación prolongada; QT: intervalo del electrocardiograma; CYP2D6: enzima hepática que metaboliza fármacos.</p>
+<div class="dc" data-fn="dcE3"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Gravedad</span>
+<button type="button" class="chip" data-g="grav" data-v="leve" onclick="ch(this)">Leve</button>
+<button type="button" class="chip" data-g="grav" data-v="mod" onclick="ch(this)">Moderada</button>
+<button type="button" class="chip" data-g="grav" data-v="grave" onclick="ch(this)">Grave</button></div>
+<div class="dc-g"><span class="dc-l">Etapa</span>
+<button type="button" class="chip" data-g="etapa" data-v="inicio" onclick="ch(this)">Inicio</button>
+<button type="button" class="chip" data-g="etapa" data-v="nores" onclick="ch(this)">Sin respuesta tras 4 a 6 semanas</button>
+<button type="button" class="chip" data-g="etapa" data-v="remis" onclick="ch(this)">En remisión</button></div>
+<div class="dc-g"><span class="dc-l">Otros datos</span>
+<button type="button" class="chip" data-g="otros" data-v="bip" data-m="1" onclick="ch(this)">Antecedente de manía</button>
+<button type="button" class="chip" data-g="otros" data-v="joven" data-m="1" onclick="ch(this)">Menor de 25 años</button>
+<button type="button" class="chip" data-g="otros" data-v="mayor" data-m="1" onclick="ch(this)">65 años o más</button>
+<button type="button" class="chip" data-g="otros" data-v="psic" data-m="1" onclick="ch(this)">Síntomas psicóticos</button>
+<button type="button" class="chip" data-g="otros" data-v="sui" data-m="1" onclick="ch(this)">Ideación suicida</button></div>
+<div class="out"></div></div>
+
+<h2>Seguimiento</h2>
+<p>Mide el PHQ-9 en cada cita y pregunta por la ideación; busca remisión, no solo mejoría. Tras la remisión, mantén el fármaco al menos 6 meses y retíralo despacio [13].</p>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Suicidio</th><td>La desesperanza y el freno débil coinciden con el acceso a medios</td><td><button type="button" class="xref" data-ir="e3-m-5" onclick="ir('e3','e3-m-5')">← Desesperanza y control inhibitorio</button></td></tr>
+<tr><th>Recaída o cronicidad</th><td>Sin recuperar la neuroplasticidad, el circuito recae</td><td><button type="button" class="xref" data-ir="e3-m-3" onclick="ir('e3','e3-m-3')">← Cortisol y falta de BDNF</button></td></tr>
+</tbody></table></div>
+</section>
+<section class="tab" data-tab="e4">
+<div class="hb az"><div class="hb-t">Frente a Trastorno de pánico</div>
+<p>Se confunde con el trastorno de pánico porque el rebote y la abstinencia dan palpitaciones, temblor, sudoración y miedo intenso. Se separa porque los síntomas siguen el horario de las dosis o aparecen al bajar o suspender el alprazolam, y porque la anamnesis revela un consumo sostenido.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué un fármaco que calma la crisis al principio puede terminar produciendo más ansiedad entre una dosis y la siguiente?</li>
+<li>¿Cómo explica la vida media corta del alprazolam la escalada de dosis, y por qué la suspensión brusca es peligrosa?</li>
+<li>¿Qué diferencia una reducción gradual pactada de una suspensión, y qué debes tratar a la vez para que el paciente no recaiga?</li>
+</ol></div>
+<p><span class="badge b-pu">Manual de Ashton sobre retirada de benzodiacepinas, 2002 [12]</span> <span class="badge b-pu">FDA, advertencia de seguridad de la clase, 2020 [19]</span> <span class="badge b-pu">DSM-5-TR, 2022 [1]</span></p>
+<p class="mini">Vigencia no verificada: el manual de Ashton es de 2002 y solo se usó su pauta general.</p>
+
+<h2>Qué es</h2>
+<div class="card"><p>El consumo de benzodiacepinas es la adaptación del cerebro a un fármaco que potencia el freno inhibidor del GABA. Cursa en fases de una misma entidad, de la intoxicación a la dependencia fisiológica y la abstinencia, y puede llegar al trastorno por consumo [1].</p>
+<p>Criterios: el DSM-5-TR define el trastorno por consumo de sedantes, hipnóticos o ansiolíticos con 11 criterios en 12 meses; 2–3 es leve, 4–5 moderado y 6 o más grave. Tolerancia y abstinencia no cuentan si el fármaco se toma bajo supervisión médica [1].</p>
+<p><span class="rem">↪ Presentación común del caso en «Visión de conjunto»</span></p></div>
+<p>Las fases existen porque el receptor se adapta en etapas, y cada una pide una conducta distinta.</p>
+<div class="tw"><table><thead><tr><th>Fase</th><th>Qué la define</th><th>Cómo se maneja</th></tr></thead>
+<tbody>
+<tr><th>Intoxicación</th><td>Sedación, lenguaje farfullante, ataxia, incoordinación [1]</td><td>Observa y retira otros depresores; no combinar con alcohol u opioides [19]</td></tr>
+<tr><th>Tolerancia y dependencia fisiológica</th><td>Se necesita más dosis para el mismo efecto; aparecen síntomas si baja el nivel [1]</td><td>No subas la dosis; pacta la reducción [12]</td></tr>
+<tr><th>Abstinencia</th><td>Hiperactividad autonómica y ansiedad al bajar o suspender el fármaco [1]</td><td>Reinstala la dosis y reduce más lento [12]</td></tr>
+<tr><th>Trastorno por consumo</th><td>Patrón problemático con criterios DSM-5-TR [1]</td><td>Reducción pactada, tratamiento del trastorno de base y seguimiento [12][5]</td></tr>
+</tbody></table></div>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Intoxicación por estimulantes</th><td>Taquicardia, temblor y sudoración</td><td>Midriasis y antecedente de consumo; no sigue el horario del alprazolam [1]</td></tr>
+<tr><th>Hipertiroidismo</th><td>Palpitaciones, temblor e intolerancia al calor</td><td>Persiste sin relación con las dosis; TSH suprimida [6]</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Dato</th><th>Valor en la fuente</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>No establecida para el primer nivel en Ecuador; la advertencia de la clase señala abuso, dependencia y abstinencia [19]</td></tr>
+<tr><th>Edad</th><td>El riesgo crece con la duración del uso continuo, a cualquier edad [19]</td></tr>
+<tr><th>Sexo</th><td>No establecido</td></tr>
+<tr><th>Factores clave</th><td>Dosis altas, uso prolongado, benzodiacepina potente y de vida media corta, trastorno de base sin tratar y mezcla con alcohol u opioides [19][12]</td></tr>
+</tbody></table></div>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e4-m-1" data-clin="0" data-paso="Modulación alostérica del receptor GABA-A"><div class="det"><p>El alprazolam se une al receptor GABA-A, un canal de cloruro de las neuronas que el ácido gamma-aminobutírico (GABA, principal neurotransmisor inhibidor) abre. Aumenta la frecuencia de apertura y hiperpolariza la neurona: calma la crisis [17].</p></div></li>
+<li class="nodo" id="e4-m-2" data-clin="0" data-paso="Regulación a la baja y tolerancia"><div class="det"><p>Con el uso sostenido, la neurona reduce y desacopla sus receptores GABA-A para recuperar el equilibrio. El mismo fármaco inhibe menos: tolerancia, y el paciente sube la dosis [17][12].</p></div></li>
+<li class="nodo" id="e4-m-3" data-clin="1" data-paso="Caída interdosis por vida media corta"><div class="det"><p>El alprazolam tiene vida media corta: su nivel cae antes de la toma siguiente. Con receptores ya reducidos, esa caída deja la neurona sin freno y aparece ansiedad de rebote. <span class="rem">↪ Posología en «Tratamiento»</span></p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-1" onclick="ir('e4','e4-s-1')">Ansiedad de rebote entre dosis y escalada de alprazolam</button></p></div></li>
+<li class="nodo" id="e4-m-4" data-clin="1" data-paso="Hiperactividad glutamatérgica y noradrenérgica"><div class="det"><p>Sin el freno GABA, el glutamato (neurotransmisor excitador) y la noradrenalina del locus coeruleus, núcleo del tronco con proyecciones difusas, se descargan sin oposición: temblor, taquicardia y sudoración [12][17].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-1" onclick="ir('e4','e4-s-1')">Ansiedad de rebote entre dosis y escalada de alprazolam</button> <button type="button" class="xref" data-ir="e4-s-2" onclick="ir('e4','e4-s-2')">Temblor, taquicardia y sudoración</button></p></div></li>
+<li class="nodo" id="e4-m-5" data-clin="1" data-paso="Umbral convulsivo bajo en abstinencia grave"><div class="det"><p>Si el nivel cae de golpe, la corteza se hiperexcita y puede descargar de forma sincrónica: convulsión o confusión. Es la razón de no suspender de forma brusca [12][19]. <span class="rem">↪ Propiedades en «Diagnóstico»</span></p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e4-s-3" onclick="ir('e4','e4-s-3')">Convulsiones y alteración de la conciencia</button></p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — el freno que se afloja</span>
+<p class="fey-b">El cerebro tiene un freno propio que lo calma. La pastilla aprieta ese freno desde fuera. Al cabo de un tiempo el cerebro se acostumbra y afloja el suyo para compensar. Cuando el efecto de la pastilla se acaba antes de la siguiente, el freno propio ya no está y todo se acelera: tiembla, suda, se asusta. Por eso se baja poco a poco.</p>
+<p class="mini fey-c">En medicina esto se llama… tolerancia, ansiedad de rebote y abstinencia.</p>
+<p class="mini fey-c">Dónde falla la comparación: un freno de auto no se adapta solo; el cerebro cambia la cantidad y el acoplamiento de sus receptores.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Inquietud psicomotora y ansiedad que reaparece antes de la toma siguiente</p>
+<p data-e="p">Temblor fino de manos</p>
+<p data-e="p">Taquicardia y sudoración</p>
+<p data-e="v">Insomnio y sobresalto a ruidos</p>
+<p data-e="v">Convulsión en la abstinencia grave</p>
+<p data-e="a">Sedación y lenguaje farfullante</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e4-s-1" onclick="ir('e4','e4-s-1')">Ansiedad de rebote entre dosis y escalada de alprazolam</button></p>
+</div>
+<div class="signo" id="e4-s-1"><h4>Ansiedad de rebote entre dosis y escalada de alprazolam</h4><dl>
+<dt>Cómo se reconoce</dt><dd>El paciente refiere que la angustia regresa horas después de la toma y que necesita más dosis o tomas más seguidas. En el examen mental hay inquietud y tensión.</dd>
+<dt>Por qué aparece</dt><dd>La vida media corta deja la neurona sin freno entre tomas, y el exceso excitador activa la amígdala. <button type="button" class="xref" data-ir="e4-m-3" onclick="ir('e4','e4-m-3')">← Caída interdosis</button> <button type="button" class="xref" data-ir="e4-m-4" onclick="ir('e4','e4-m-4')">← Hiperactividad excitadora</button></dd>
+<dt>Qué significa</dt><dd>Orienta a dependencia fisiológica, no a un trastorno de pánico más grave; subir la dosis empeora el ciclo.</dd></dl></div>
+<div class="signo" id="e4-s-2"><h4>Temblor, taquicardia y sudoración</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Temblor fino de manos extendidas, pulso rápido y piel húmeda al bajar o saltar una dosis.</dd>
+<dt>Por qué aparece</dt><dd>La noradrenalina del locus coeruleus activa el simpático sin oposición del GABA. <button type="button" class="xref" data-ir="e4-m-4" onclick="ir('e4','e4-m-4')">← Hiperactividad excitadora</button></dd>
+<dt>Qué significa</dt><dd>Es compatible con abstinencia, pero igual de compatible con isquemia o arritmia: pide ECG si hay opresión torácica.</dd></dl></div>
+<div class="signo" id="e4-s-3"><h4>Convulsiones y alteración de la conciencia</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Crisis tonicoclónica, confusión o alucinaciones tras bajar o suspender el fármaco.</dd>
+<dt>Por qué aparece</dt><dd>La caída brusca del nivel baja el umbral convulsivo cortical. <button type="button" class="xref" data-ir="e4-m-5" onclick="ir('e4','e4-m-5')">← Umbral convulsivo bajo</button></dd>
+<dt>Qué significa</dt><dd>Es abstinencia grave: urgencia vital que obliga a reinstalar el fármaco y activar ECU 911.</dd></dl></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>Anamnesis de consumo con criterios DSM-5-TR [1]</li>
+<li><span class="tg">Añade</span>Pregunta por dosis, horario, tiempo de uso, intentos de reducir, alcohol y opioides, e ideación suicida; mide signos vitales y examen mental [19][13].</li>
+<li><span class="tg">Confirma</span>Confirma con síntomas que aparecen al bajar la dosis o entre tomas y ceden al reponerla, más 2 o más criterios del DSM-5-TR [1].</li>
+<li><span class="tg">Solo si</span>Pide ECG de 12 derivaciones si hay opresión torácica o palpitaciones, y glucemia capilar si hay temblor y sudoración [4].</li>
+<li><span class="tg">No pidas</span>No pidas laboratorio para confirmar la dependencia: el diagnóstico es clínico [1].</li>
+<li><span class="tg">Alarma</span>Convulsión, confusión, alucinaciones o fiebre: es abstinencia grave; sin derivación posible, reinstala el fármaco y activa ECU 911 [12][5].</li>
+</ol>
+<p><span class="rem">↪ ECG antes de etiquetar ansiedad en «Visión de conjunto»</span></p>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Entrevista de consumo con criterios DSM-5-TR</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar el trastorno y su gravedad</td><td>Cuenta criterios en 12 meses <button type="button" class="xref" data-ir="e4-m-2" onclick="ir('e4','e4-m-2')">← Tolerancia</button></td><td>[1]</td></tr>
+<tr><th>ECG de 12 derivaciones</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Descartar isquemia o arritmia</td><td>Palpitaciones y opresión no se atribuyen a abstinencia sin él <button type="button" class="xref" data-ir="e4-m-4" onclick="ir('e4','e4-m-4')">← Hiperactividad excitadora</button></td><td>[4]</td></tr>
+<tr><th>GAD-7</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Medir el trastorno de base</td><td>Un puntaje alto en abstinencia no confirma por sí solo un trastorno de ansiedad</td><td>[21]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos; GAD-7: escala de ansiedad generalizada. No se leyeron cifras de rendimiento.</p>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Pacta la reducción gradual con el paciente y trata a la vez el trastorno de base con ISRS y TCC [12][2].</li>
+<li><span class="tg">De elección</span>Cambia a diazepam por equivalencia y reduce de forma escalonada cada 1–2 semanas [12][19].</li>
+<li><span class="tg">Alternativa</span>Si el cambio no se tolera, reduce el propio alprazolam en pasos más lentos [19].</li>
+<li><span class="tg">Reevalúa</span>Reevalúa cada 1–2 semanas síntomas de abstinencia y ritmo; si aparecen, mantén o retrocede un paso [12].</li>
+<li><span class="tg">Especialista</span>Sin derivación posible, sigue la reducción en primer nivel con mhGAP; ante abstinencia grave activa ECU 911 [5].</li>
+<li><span class="tg">Evita</span>Evita la suspensión brusca y evita combinar benzodiacepinas con alcohol u opioides [19][12].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Diazepam</th><td>10 mg por cada 0,5 mg de alprazolam</td><td>VO</td><td>Cada 24 h por la noche, o repartido en 2–3 tomas</td><td>Reducción del 10 al 25 % de la dosis cada 1–2 semanas, durante semanas o meses</td><td>Su vida media larga suaviza la caída interdosis <button type="button" class="xref" data-ir="e4-m-3" onclick="ir('e4','e4-m-3')">← Caída interdosis</button>. Sedación; ajustar en adulto mayor y hepatopatía; sin alcohol ni opioides</td><td>[12][19]</td></tr>
+<tr><th>Alprazolam</th><td>Dosis actual del paciente; la ficha admite hasta 10 mg al día en pánico</td><td>VO</td><td>La pauta que ya usa, hasta completar el cambio</td><td>Hasta sustituirlo por diazepam</td><td>Su vida media corta origina el rebote <button type="button" class="xref" data-ir="e4-m-3" onclick="ir('e4','e4-m-3')">← Caída interdosis</button>. No aumentes la dosis para controlar el rebote</td><td>[20][12]</td></tr>
+<tr><th>Sertralina</th><td>25 mg una semana y luego 50 mg</td><td>VO</td><td>Cada 24 h</td><td>Mantén durante la reducción y después, según la evolución</td><td>No interrumpe la cadena: trata la ansiedad de base y evita confundir el rebote con recaída <button type="button" class="xref" data-ir="e4-m-3" onclick="ir('e4','e4-m-3')">← Caída interdosis</button>. Tarda semanas en actuar; no reemplaza al puente con diazepam</td><td>[2][15]</td></tr>
+</tbody></table></div>
+<p class="mini">VO: vía oral; ISRS: inhibidor selectivo de la recaptación de serotonina; TCC: terapia cognitivo-conductual. La equivalencia de la fila de diazepam es la de Ashton y varía entre pacientes [12].</p>
+<div class="dc" data-fn="dcE4"><div class="dc-t">Simulador · Decisión clínica — predice la pauta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Alprazolam al día (mg)</span><input type="number" data-n="dosis" min="0.25" max="10" step="0.25" oninput="ch(this)"></div>
+<div class="dc-g"><span class="dc-l">Evolución</span>
+<button type="button" class="chip" data-g="ritmo" data-v="tol" onclick="ch(this)">Tolera la reducción</button>
+<button type="button" class="chip" data-g="ritmo" data-v="sint" onclick="ch(this)">Síntomas de abstinencia en el paso</button></div>
+<div class="dc-g"><span class="dc-l">Otros datos</span>
+<button type="button" class="chip" data-g="otros" data-v="alc" data-m="1" onclick="ch(this)">Alcohol u opioides</button>
+<button type="button" class="chip" data-g="otros" data-v="conv" data-m="1" onclick="ch(this)">Convulsión o confusión</button>
+<button type="button" class="chip" data-g="otros" data-v="isq" data-m="1" onclick="ch(this)">Opresión torácica actual</button></div>
+<div class="out"></div></div>
+
+<h2>Seguimiento</h2>
+<p>Revisa cada 1–2 semanas durante la reducción y mantén el tratamiento del trastorno de base. Una recaída de la ansiedad tras el último paso no obliga a volver al alprazolam [12][2].</p>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Abstinencia grave con convulsiones</th><td>La caída brusca baja el umbral convulsivo</td><td><button type="button" class="xref" data-ir="e4-m-5" onclick="ir('e4','e4-m-5')">← Umbral convulsivo bajo</button></td></tr>
+<tr><th>Rebote confundido con recaída</th><td>La caída interdosis imita la ansiedad de base</td><td><button type="button" class="xref" data-ir="e4-m-3" onclick="ir('e4','e4-m-3')">← Caída interdosis</button></td></tr>
+<tr><th>Depresión respiratoria por mezcla con alcohol u opioides</th><td>Los depresores suman su efecto sobre el receptor GABA-A</td><td><button type="button" class="xref" data-ir="e4-m-1" onclick="ir('e4','e4-m-1')">← Modulación alostérica</button></td></tr>
+</tbody></table></div>
+</section>
+<section class="tab" data-tab="e5">
+<div class="hb az"><div class="hb-t">Frente a Trastorno de pánico</div>
+<p>Se confunde con el trastorno de pánico porque ambos dan opresión precordial, sudoración, náuseas y miedo a morir. Se separa porque el dolor isquémico persiste más de 20 min y se acompaña de factores de riesgo, y solo el ECG y la troponina lo descartan: no se etiqueta ansiedad sin ECG.</p></div>
+<div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
+<ol class="pg">
+<li>¿Por qué una opresión precordial con sudoración y náuseas no puede atribuirse a ansiedad sin ECG, aunque el paciente ya haya tenido crisis de angustia?</li>
+<li>¿Cómo explica la rotura de la placa vulnerable la diferencia entre SCACEST, IAMSEST y angina inestable, y qué cambia en la conducta?</li>
+<li>¿Qué haces en un primer nivel sin derivación posible mientras llega el traslado, y por qué cada medida tiene una condición previa?</li>
+</ol></div>
+<p><span class="badge b-pu">ESC, síndromes coronarios agudos, 2023 [3]</span> <span class="badge b-pu">AHA/ACC, dolor torácico, 2021 [4]</span> <span class="badge b-pu">Cuarta definición universal de infarto, 2018 [18]</span></p>
+
+<h2>Qué es</h2>
+<div class="card"><p>El síndrome coronario agudo (SCA) es la isquemia miocárdica aguda por reducción súbita del flujo coronario, casi siempre por un trombo sobre una placa aterosclerótica rota o erosionada [3][18].</p>
+<p>Criterios: dolor torácico isquémico, cambios del ECG y troponina con curva de ascenso o descenso; la troponina separa el infarto de la angina inestable [18].</p>
+<p><span class="rem">↪ Presentación común del caso en «Visión de conjunto»</span></p></div>
+<p>Los subtipos existen porque el grado de oclusión cambia la urgencia de la reperfusión.</p>
+<div class="tw"><table><thead><tr><th>Subtipo</th><th>Qué lo define</th><th>Cómo se maneja</th></tr></thead>
+<tbody>
+<tr><th>SCACEST</th><td>Elevación persistente del ST; oclusión coronaria total [3]</td><td>Reperfusión inmediata con ICP [3]</td></tr>
+<tr><th>IAMSEST</th><td>Sin elevación persistente del ST, con troponina elevada [3]</td><td>Estrategia invasiva según riesgo [3]</td></tr>
+<tr><th>Angina inestable</th><td>Isquemia sin necrosis: troponina no elevada [18]</td><td>Estratificación y tratamiento antiisquémico en hospital [3]</td></tr>
+</tbody></table></div>
+<div class="tw"><table><thead><tr><th>Entidad vecina</th><th>Qué comparte</th><th>Criterio que las separa</th></tr></thead>
+<tbody>
+<tr><th>Tromboembolia pulmonar</th><td>Dolor torácico, disnea y taquicardia</td><td>Dolor pleurítico, hipoxemia y factor de riesgo trombótico; angio-TC [4]</td></tr>
+<tr><th>Disección aórtica</th><td>Dolor torácico intenso y sudoración</td><td>Dolor desgarrante de inicio máximo, diferencia de presión entre brazos; no anticoagular antes de descartarla [4]</td></tr>
+<tr><th>Pericarditis</th><td>Dolor torácico y posible elevación del ST</td><td>Dolor pleurítico que alivia al inclinarse, roce y ST elevado difuso [4]</td></tr>
+</tbody></table></div>
+
+<h2>Epidemiología</h2>
+<div class="tw"><table><thead><tr><th>Dato</th><th>Valor en la fuente</th></tr></thead>
+<tbody>
+<tr><th>Frecuencia</th><td>No establecida para el primer nivel en Ecuador; el dolor torácico obliga a descartarla antes de otras causas [4]</td></tr>
+<tr><th>Edad</th><td>Aumenta con la edad; un adulto joven con factores de riesgo no la excluye [3]</td></tr>
+<tr><th>Sexo</th><td>Las mujeres presentan con más frecuencia síntomas atípicos, como náuseas o disnea [4]</td></tr>
+<tr><th>Factores clave</th><td>Hipertensión, diabetes, dislipidemia, tabaquismo y antecedente familiar [3]</td></tr>
+</tbody></table></div>
+
+<h2>Cadena</h2>
+<ol class="tl">
+<li class="nodo" id="e5-m-1" data-clin="0" data-paso="Placa aterosclerótica vulnerable"><div class="det"><p>Terreno: la placa coronaria con núcleo lipídico grande y capa fibrosa fina es inestable. La inflamación de los macrófagos, células inmunes que fagocitan lípidos, adelgaza esa capa [3][6].</p></div></li>
+<li class="nodo" id="e5-m-2" data-clin="0" data-paso="Rotura o erosión y trombo plaquetario"><div class="det"><p>Desencadenante: la placa se rompe o se erosiona y expone material trombogénico. Las plaquetas se adhieren, se activan con tromboxano A2 y se agregan: es el blanco del ácido acetilsalicílico (AAS). <span class="rem">↪ Posología en «Tratamiento»</span></p></div></li>
+<li class="nodo" id="e5-m-3" data-clin="1" data-paso="Oclusión coronaria total o parcial"><div class="det"><p>El trombo obstruye la arteria por completo (SCACEST) o de forma parcial o intermitente (IAMSEST, angina inestable), y el músculo aguas abajo recibe menos oxígeno que el que demanda [3].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e5-s-1" onclick="ir('e5','e5-s-1')">Opresión retroesternal >20 min con diaforesis, sobre todo con factores de riesgo</button></p></div></li>
+<li class="nodo" id="e5-m-4" data-clin="1" data-paso="Isquemia y necrosis del miocardio"><div class="det"><p>Sin oxígeno, los miocardiocitos alteran su repolarización (cambios del ST) y, si la isquemia se prolonga, mueren y liberan troponina, proteína del sarcómero cardiaco [18]. <span class="rem">↪ Propiedades en «Diagnóstico»</span></p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e5-s-2" onclick="ir('e5','e5-s-2')">Cambios isquémicos en el ECG de 12 derivaciones</button></p></div></li>
+<li class="nodo" id="e5-m-5" data-clin="1" data-paso="Descarga simpática y reflejo vagal"><div class="det"><p>El dolor y la isquemia activan el simpático (sudoración, miedo). En la cara inferior, los receptores vagales del ventrículo disparan un reflejo que causa náuseas, bradicardia e hipotensión [3][6].</p>
+<p class="man">Se manifiesta como: <button type="button" class="xref" data-ir="e5-s-1" onclick="ir('e5','e5-s-1')">Opresión retroesternal >20 min con diaforesis, sobre todo con factores de riesgo</button> <button type="button" class="xref" data-ir="e5-s-3" onclick="ir('e5','e5-s-3')">Náuseas con bradicardia o hipotensión</button></p></div></li>
+</ol>
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la tubería tapada</span>
+<p class="fey-b">El corazón es un músculo que trabaja sin parar y recibe su comida por tubos finos. Si un tubo se tapa con un tapón, la parte que le tocaba se queda sin alimento y duele, y el cuerpo se asusta: suda y se le revuelve el estómago. Mientras más tiempo sigue tapado, más músculo se daña, así que hay que destaparlo rápido.</p>
+<p class="mini fey-c">En medicina esto se llama… síndrome coronario agudo, isquemia y necrosis.</p>
+<p class="mini fey-c">Dónde falla la comparación: el tapón se forma sobre una pared enferma que se rompe, no llega de afuera como una piedra.</p></div>
+
+<h2>Qué verás</h2>
+<div class="qv">
+<p data-e="p">Dolor opresivo retroesternal que irradia a brazo, mandíbula o espalda</p>
+<p data-e="p">Diaforesis fría y palidez</p>
+<p data-e="p">Ansiedad con sensación de muerte inminente</p>
+<p data-e="v">Náuseas, vómito y disnea</p>
+<p data-e="v">Hipotensión o galope en un infarto extenso</p>
+<p data-e="a">Dolor pleurítico que cambia con la respiración</p>
+<p data-e="k"><button type="button" class="xref" data-ir="e5-s-1" onclick="ir('e5','e5-s-1')">Opresión retroesternal >20 min con diaforesis, sobre todo con factores de riesgo</button></p>
+</div>
+<div class="signo" id="e5-s-1"><h4>Opresión retroesternal >20 min con diaforesis, sobre todo con factores de riesgo</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Dolor en peso o presión que no cede con el reposo, con piel fría y sudorosa; el paciente inquieto o con miedo a morir.</dd>
+<dt>Por qué aparece</dt><dd>La isquemia estimula las fibras aferentes cardiacas y la descarga simpática activa las glándulas sudoríparas. <button type="button" class="xref" data-ir="e5-m-3" onclick="ir('e5','e5-m-3')">← Oclusión coronaria</button> <button type="button" class="xref" data-ir="e5-m-5" onclick="ir('e5','e5-m-5')">← Descarga simpática</button></dd>
+<dt>Qué significa</dt><dd>Obliga a hacer ECG de inmediato; la inquietud o el miedo no la distinguen de una crisis de angustia.</dd></dl></div>
+<div class="signo" id="e5-s-2"><h4>Cambios isquémicos en el ECG de 12 derivaciones</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Elevación del ST en derivaciones contiguas, o descenso del ST e inversión de la onda T.</dd>
+<dt>Por qué aparece</dt><dd>El músculo isquémico se repolariza distinto al sano y genera una corriente de lesión que el ECG registra. <button type="button" class="xref" data-ir="e5-m-4" onclick="ir('e5','e5-m-4')">← Isquemia y necrosis</button></dd>
+<dt>Qué significa</dt><dd>Con elevación persistente del ST se activa la reperfusión; un ECG normal inicial no descarta el síndrome.</dd></dl></div>
+<div class="signo" id="e5-s-3"><h4>Náuseas con bradicardia o hipotensión</h4><dl>
+<dt>Cómo se reconoce</dt><dd>Náuseas o vómito con pulso lento y presión baja, sobre todo si el dolor viene de la cara inferior.</dd>
+<dt>Por qué aparece</dt><dd>La isquemia inferior activa aferencias vagales que frenan el nodo sinusal y dilatan los vasos. <button type="button" class="xref" data-ir="e5-m-5" onclick="ir('e5','e5-m-5')">← Reflejo vagal</button></dd>
+<dt>Qué significa</dt><dd>Las náuseas no son un dato de ansiedad; si hay hipotensión, la nitroglicerina está contraindicada.</dd></dl></div>
+
+<h2>Diagnóstico</h2>
+<ol class="steps tg">
+<li><span class="tg">1.º</span>ECG de 12 derivaciones en ≤10 min desde el primer contacto [3][4]</li>
+<li><span class="tg">Añade</span>Troponina de alta sensibilidad con algoritmo 0/1 h si hay disponible, y ECG seriados; el puntaje HEART apoya la estratificación [3][26].</li>
+<li><span class="tg">Confirma</span>Confirma con elevación persistente del ST en derivaciones contiguas o con troponina con ascenso o descenso más isquemia [18].</li>
+<li><span class="tg">Solo si</span>Pide angio-TC o ecocardiograma si sospechas disección aórtica o tromboembolia pulmonar [4].</li>
+<li><span class="tg">No pidas</span>No pidas radiografía ni laboratorio antes del ECG, y no uses el puntaje HEART para descartar si el ECG es isquémico [4].</li>
+<li><span class="tg">Alarma</span>Dolor más de 20 min, hipotensión, síncope, arritmia, disnea o elevación del ST: es una emergencia; activa ECU 911 sin esperar resultados [3].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Prueba</th><th>S</th><th>E</th><th>VPP/VPN</th><th>Utilidad</th><th>Notas</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>ECG de 12 derivaciones</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Clasificar SCACEST y orientar el SCASEST</td><td>Un ECG normal inicial no descarta el síndrome; repítelo <button type="button" class="xref" data-ir="e5-m-4" onclick="ir('e5','e5-m-4')">← Isquemia y necrosis</button></td><td>[3][4]</td></tr>
+<tr><th>Troponina de alta sensibilidad (algoritmo 0/1 h)</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar o descartar el infarto</td><td>Marca el daño miocárdico <button type="button" class="xref" data-ir="e5-m-4" onclick="ir('e5','e5-m-4')">← Isquemia y necrosis</button>; si no hay en el centro, ECG seriados y traslado</td><td>[3][18]</td></tr>
+<tr><th>Puntaje HEART</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Apoyar la estratificación del dolor torácico</td><td>Combina historia, ECG, edad, factores de riesgo y troponina; no sustituye al ECG</td><td>[26][4]</td></tr>
+</tbody></table></div>
+<p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos; HEART: historia, ECG, edad, factores de riesgo y troponina. No se leyeron cifras de rendimiento.</p>
+
+<h2>Tratamiento</h2>
+<ol class="steps tg">
+<li><span class="tg">Principio</span>Trata como emergencia: estabiliza en el primer nivel mientras se organiza la reperfusión en un centro con ICP [3].</li>
+<li><span class="tg">De elección</span>AAS masticada de inmediato, salvo alergia [3].</li>
+<li><span class="tg">Sintomático</span>Nitroglicerina sublingual para el dolor si la presión sistólica es adecuada y no hay inhibidores de PDE5; oxígeno solo con SatO₂ menor de 90 % [3].</li>
+<li><span class="tg">Reevalúa</span>Mientras llega el traslado, repite ECG y signos vitales, y deja el desfibrilador listo [3].</li>
+<li><span class="tg">Especialista</span>Activa ECU 911 para traslado a un centro con ICP, con monitorización y desfibrilador [3].</li>
+<li><span class="tg">Evita</span>Evita etiquetar ansiedad sin ECG y evita dar benzodiacepinas para «calmar» sin descartar isquemia [4][3].</li>
+</ol>
+<p><span class="rem">↓ En la tabla</span></p>
+<div class="tw"><table><thead><tr><th>Fármaco</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
+<tbody>
+<tr><th>Ácido acetilsalicílico</th><td>150–300 mg</td><td>VO, masticada</td><td>Dosis única de carga</td><td>Una dosis; el centro con ICP continúa</td><td>Inhibe la ciclooxigenasa 1 y la síntesis de tromboxano A2 <button type="button" class="xref" data-ir="e5-m-2" onclick="ir('e5','e5-m-2')">← Trombo plaquetario</button>. Contraindicado si hay alergia a AAS o sangrado activo</td><td>[3]</td></tr>
+<tr><th>Nitroglicerina</th><td>0,4 mg</td><td>Sublingual</td><td>Cada 5 min, hasta 3 dosis</td><td>Mientras dure el dolor</td><td>Dilata las venas y las coronarias <button type="button" class="xref" data-ir="e5-m-3" onclick="ir('e5','e5-m-3')">← Oclusión coronaria</button>. No dar con presión sistólica menor de 90 mmHg, infarto del ventrículo derecho ni sildenafilo o tadalafilo recientes</td><td>[3]</td></tr>
+<tr><th>Oxígeno</th><td>Titular hasta SatO₂ de 90 % o más</td><td>Inhalada</td><td>Continuo</td><td>Mientras SatO₂ sea menor de 90 %</td><td>Solo corrige la hipoxemia <button type="button" class="xref" data-ir="e5-m-3" onclick="ir('e5','e5-m-3')">← Oclusión coronaria</button>. En Quito (~2 850 m) la SatO₂ basal es menor que a nivel del mar: interpreta el umbral con el valor basal local [27]</td><td>[3]</td></tr>
+</tbody></table></div>
+<p class="mini">VO: vía oral; ICP: intervención coronaria percutánea; PDE5: fosfodiesterasa 5. La anticoagulación y el segundo antiagregante los inicia el centro con ICP [3].</p>
+<div class="dc" data-fn="dcE5"><div class="dc-t">Simulador · Decisión clínica — predice la conducta antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">ECG inicial</span>
+<button type="button" class="chip" data-g="ecg" data-v="stel" onclick="ch(this)">Elevación persistente del ST</button>
+<button type="button" class="chip" data-g="ecg" data-v="sest" onclick="ch(this)">Descenso del ST o T invertida</button>
+<button type="button" class="chip" data-g="ecg" data-v="norm" onclick="ch(this)">Sin cambios</button></div>
+<div class="dc-g"><span class="dc-l">Otros datos</span>
+<button type="button" class="chip" data-g="otros" data-v="dolor" data-m="1" onclick="ch(this)">Dolor más de 20 min en curso</button>
+<button type="button" class="chip" data-g="otros" data-v="tro" data-m="1" onclick="ch(this)">Troponina elevada</button>
+<button type="button" class="chip" data-g="otros" data-v="pas" data-m="1" onclick="ch(this)">Presión sistólica menor de 90 mmHg</button>
+<button type="button" class="chip" data-g="otros" data-v="pde5" data-m="1" onclick="ch(this)">Sildenafilo o tadalafilo reciente</button>
+<button type="button" class="chip" data-g="otros" data-v="sat" data-m="1" onclick="ch(this)">SatO₂ menor de 90 %</button>
+<button type="button" class="chip" data-g="otros" data-v="aas" data-m="1" onclick="ch(this)">Alergia a AAS</button></div>
+<div class="out"></div></div>
+
+<h2>Seguimiento</h2>
+<p>Tras el traslado, el centro con ICP decide la reperfusión y la prevención secundaria. En primer nivel, vigila hasta la entrega del paciente y registra la hora de inicio del dolor y del ECG [3].</p>
+<div class="tw"><table><thead><tr><th>Complicación</th><th>Mecanismo</th><th>Nodo</th></tr></thead>
+<tbody>
+<tr><th>Arritmia ventricular y muerte súbita</th><td>El miocardio isquémico se vuelve eléctricamente inestable</td><td><button type="button" class="xref" data-ir="e5-m-4" onclick="ir('e5','e5-m-4')">← Isquemia y necrosis</button></td></tr>
+<tr><th>Hipotensión y bradicardia</th><td>El reflejo vagal de la isquemia inferior</td><td><button type="button" class="xref" data-ir="e5-m-5" onclick="ir('e5','e5-m-5')">← Reflejo vagal</button></td></tr>
+<tr><th>Reoclusión o extensión del infarto</th><td>El trombo sigue activo si la placa no se estabiliza</td><td><button type="button" class="xref" data-ir="e5-m-2" onclick="ir('e5','e5-m-2')">← Trombo plaquetario</button></td></tr>
+</tbody></table></div>
+</section>
+<section class="tab" data-tab="sin">
+<div class="hb ro"><div class="hb-t">Errores que no se pueden cometer</div>
+<ul>
+<li>Etiquetar de ansiedad una opresión precordial con sudoración y náuseas sin ECG de 12 derivaciones en los primeros 10 min [3][4].</li>
+<li>Dar una benzodiacepina para «calmar» a un paciente con dolor torácico sin descartar isquemia [4].</li>
+<li>Diagnosticar trastorno de pánico sin excluir causas orgánicas, como arritmia, hipertiroidismo o consumo de sustancias [1].</li>
+<li>Suspender de golpe una benzodiacepina tomada por semanas, o sostenerla como tratamiento de mantenimiento del pánico [19][12].</li>
+<li>Indicar un antidepresivo o un ansiolítico sin cribar el ánimo ni preguntar de forma directa por ideación suicida [13][5].</li>
+<li>Dar el alta por un único ECG o una troponina normales mientras el dolor isquémico persiste, sin repetirlos [3].</li>
+<li>Dar nitroglicerina con hipotensión o con inhibidores de PDE5 recientes [3].</li>
+</ul></div>
+<div class="acc refs"><button type="button" class="acc-h" onclick="tog(this)">Referencias <span class="chev">▾</span></button>
+<div class="acc-b"><ol class="vanc">
+<li>American Psychiatric Association. Diagnostic and statistical manual of mental disorders. 5th ed., text revision (DSM-5-TR). Washington (DC): American Psychiatric Association Publishing; 2022.</li>
+<li>National Institute for Health and Care Excellence. Generalised anxiety disorder and panic disorder in adults: management. Clinical guideline CG113. London: NICE; 2011 [actualizada 2020].</li>
+<li>Byrne RA, Rossello X, Coughlan JJ, Barbato E, Berry C, Chieffo A, et al. 2023 ESC Guidelines for the management of acute coronary syndromes. Eur Heart J. 2023;44(38):3720-826. doi:10.1093/eurheartj/ehad191. PMID: 37622654.</li>
+<li>Gulati M, Levy PD, Mukherjee D, Amsterdam E, Bhatt DL, Birtcher KK, et al. 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR guideline for the evaluation and diagnosis of chest pain. Circulation. 2021;144(22):e368-454. doi:10.1161/CIR.0000000000001029. PMID: 34709879.</li>
+<li>Organización Mundial de la Salud. Guía de intervención mhGAP para los trastornos mentales, neurológicos y por consumo de sustancias en el nivel de atención de salud no especializada. Versión 2.0. Ginebra: OMS; 2016.</li>
+<li>Loscalzo J, Fauci AS, Kasper DL, Hauser SL, Longo DL, Jameson JL, editors. Harrison's principles of internal medicine. 22nd ed. New York: McGraw Hill; 2025.</li>
+<li>Rozman Borstnar C, Cardellach López F, editores. Farreras-Rozman. Medicina interna. 20.ª ed. Barcelona: Elsevier; 2024.</li>
+<li>Hall JE, Hall ME. Guyton and Hall textbook of medical physiology. 14th ed. Philadelphia: Elsevier; 2021.</li>
+<li>Kandel ER, Koester JD, Mack SH, Siegelbaum SA, editors. Principles of neural science. 6th ed. New York: McGraw Hill; 2021.</li>
+<li>Boland R, Verduin ML, editors. Kaplan & Sadock's synopsis of psychiatry. 12th ed. Philadelphia: Wolters Kluwer; 2022.</li>
+<li>Posner K, Brown GK, Stanley B, Brent DA, Yershova KV, Oquendo MA, et al. The Columbia-Suicide Severity Rating Scale: initial validity and internal consistency findings from three multisite studies with adolescents and adults. Am J Psychiatry. 2011;168(12):1266-77. doi:10.1176/appi.ajp.2011.10111704. PMID: 22193671.</li>
+<li>Ashton CH. Benzodiazepines: how they work and how to withdraw (The Ashton Manual). Newcastle: University of Newcastle; 2002.</li>
+<li>National Institute for Health and Care Excellence. Depression in adults: treatment and management. NICE guideline NG222. London: NICE; 2022.</li>
+<li>Kroenke K, Spitzer RL, Williams JB. The PHQ-9: validity of a brief depression severity measure. J Gen Intern Med. 2001;16(9):606-13. doi:10.1046/j.1525-1497.2001.016009606.x. PMID: 11556941.</li>
+<li>Bandelow B, Allgulander C, Baldwin DS, Costa DLDC, Denys D, Dilbaz N, et al. World Federation of Societies of Biological Psychiatry (WFSBP) guidelines for treatment of anxiety, obsessive-compulsive and posttraumatic stress disorders - Version 3. Part I: Anxiety disorders. World J Biol Psychiatry. 2023;24(2):79-117. doi:10.1080/15622975.2022.2086295. PMID: 35900161.</li>
+<li>Raviele A, Giada F, Bergfeldt L, Blanc JJ, Blomstrom-Lundqvist C, Mont L, et al. Management of patients with palpitations: a position paper from the European Heart Rhythm Association. Europace. 2011;13(7):920-34. doi:10.1093/europace/eur130. PMID: 21697315.</li>
+<li>Brunton LL, Knollmann BC, editors. Goodman & Gilman's the pharmacological basis of therapeutics. 14th ed. New York: McGraw Hill; 2023.</li>
+<li>Thygesen K, Alpert JS, Jaffe AS, Chaitman BR, Bax JJ, Morrow DA, et al. Fourth universal definition of myocardial infarction (2018). Eur Heart J. 2019;40(3):237-69. doi:10.1093/eurheartj/ehy462. PMID: 30165617.</li>
+<li>U.S. Food and Drug Administration. FDA requiring Boxed Warning updated to improve safe use of benzodiazepine drug class. Drug Safety Communication. Silver Spring (MD): FDA; 2020.</li>
+<li>Pfizer. XANAX (alprazolam) tablets, for oral use, CIV [ficha técnica]. DailyMed. Bethesda (MD): National Library of Medicine; 2023.</li>
+<li>Spitzer RL, Kroenke K, Williams JB, Löwe B. A brief measure for assessing generalized anxiety disorder: the GAD-7. Arch Intern Med. 2006;166(10):1092-7. doi:10.1001/archinte.166.10.1092. PMID: 16717171.</li>
+<li>Batelaan NM, Bosman RC, Muntingh A, Scholten WD, Huijbregts KM, van Balkom AJLM. Risk of relapse after antidepressant discontinuation in anxiety disorders, obsessive-compulsive disorder, and post-traumatic stress disorder: systematic review and meta-analysis of relapse prevention trials. BMJ. 2017;358:j3927. doi:10.1136/bmj.j3927. PMID: 28903922.</li>
+<li>Medicines and Healthcare products Regulatory Agency. Citalopram and escitalopram: QT interval prolongation. Drug Safety Update. 2011;5(5):A1.</li>
+<li>McEwen BS. Physiology and neurobiology of stress and adaptation: central role of the brain. Physiol Rev. 2007;87(3):873-904. doi:10.1152/physrev.00041.2006. PMID: 17615391.</li>
+<li>Ebert MH, Martin PR, McVoy M, Ronis RJ, Weissman SH, editores. Diagnóstico y tratamiento en psiquiatría. 4.ª ed. Nueva York: McGraw Hill; 2025.</li>
+<li>Six AJ, Backus BE, Kelder JC. Chest pain in the emergency room: value of the HEART score. Neth Heart J. 2008;16(6):191-6. doi:10.1007/BF03086144. PMID: 18665203.</li>
+<li>Rojas-Camayo J, Mejia CR, Callacondo D, Dawson JA, Posso M, Galvan CA, et al. Reference values for oxygen saturation from sea level to the highest human habitation in the Andes in acclimatised persons. Thorax. 2018;73(8):776-8. doi:10.1136/thoraxjnl-2017-210598. PMID: 29054885.</li>
+</ol></div></div>
+</section>
+<script>
+function par(t){return '<p>'+t+'</p>';}
+function hv(a,v){return a.indexOf(v)>-1;}
+function vacio(dc,t){out(dc,par(t));}
+
+function dcVis(dc){
+  var c=sel(dc,'curso'),e=sel(dc,'ecg'),h=sel(dc,'hall'),o=sel(dc,'otros');
+  if(!(c.length||e.length||h.length||o.length)){
+    vacio(dc,'Elige el curso, el ECG y los hallazgos de la consulta. El simulador propone qué entidad es compatible, qué dato falta para confirmarla y la conducta inicial; no calcula probabilidades.');return;}
+  var r=[],n=0;
+  var isq=hv(e,'alt')||hv(c,'isq');
+  if(isq){n++;
+    r.push(par('<b>Síndrome coronario agudo</b>: el dolor persistente o los cambios en el ECG lo hacen la primera hipótesis. Falta la troponina seriada y la monitorización [3]. Conducta inicial: AAS masticada, ECU 911 y monitorización; no rotules ansiedad.'));
+  } else if(hv(e,'no')&&(hv(c,'min')||hv(o,'sudor')||hv(o,'frcv'))){n++;
+    r.push(par('Falta el ECG de 12 derivaciones: con opresión torácica, sudoración o factores de riesgo no se etiqueta ansiedad hasta tenerlo [4]. Conducta inicial: ECG en la misma consulta y troponina si está disponible.'));
+  }
+  if(hv(c,'min')&&hv(e,'norm')){n++;
+    r.push(par('<b>Trastorno de pánico</b>: crisis con pico en minutos y ECG normal lo hacen compatible'+(hv(h,'miedo')||hv(h,'evit')?', y el miedo o la evitación lo refuerzan':'')+'. Falta confirmar que las crisis son inesperadas y recurrentes, con miedo persistente a nuevas crisis, y excluir causa orgánica o tóxica [1]. Conducta inicial: psicoeducación, ISRS y TCC; la benzodiacepina no es mantenimiento [2].'));
+  } else if(hv(c,'min')&&!isq&&!hv(e,'no')){n++;
+    r.push(par('El pico en minutos sugiere pánico, pero necesita un ECG normal antes de aceptarlo [4].'));
+  }
+  if(hv(c,'mes')||(hv(h,'preoc')&&!hv(c,'min'))){n++;
+    r.push(par('<b>Ansiedad generalizada</b>: preocupación excesiva y difícil de controlar durante meses. Falta el GAD-7 y confirmar la duración de al menos 6 meses con criterios DSM-5-TR [21][1]. Conducta inicial: ISRS o IRSN y TCC.'));
+  }
+  if(hv(c,'sem')||hv(h,'anhed')){n++;
+    r.push(par('<b>Depresión mayor</b>: ánimo bajo o anhedonia casi todos los días. Falta el PHQ-9 y la pregunta directa por ideación suicida [14][11]. Conducta inicial: evaluar el riesgo suicida; ISRS y psicoterapia [13].'));
+  }
+  if(hv(c,'dosis')||hv(o,'xanax')){n++;
+    r.push(par('<b>Consumo de benzodiacepinas</b>: síntomas entre dosis o alprazolam por semanas sugieren tolerancia y rebote. Falta la anamnesis de consumo con criterios DSM-5-TR [1]. Conducta inicial: reducción gradual pactada; nunca suspensión brusca [12].'));
+  }
+  if(hv(o,'ideas')) r.push(par('Ideas de muerte o suicidio: pregunta por plan, intención y medios, acompaña al paciente y retira el acceso a medios letales; el primer nivel maneja el riesgo con mhGAP [11][5].'));
+  if(hv(o,'frcv')&&hv(c,'min')&&!isq) r.push(par('Con factores de riesgo cardiovascular, un cuadro que parece pánico sigue exigiendo ECG y troponina si el dolor dura o se repite [3].'));
+  if(!n) r.push(par('Los hallazgos elegidos no bastan para sostener una entidad. Completa el curso temporal y el ECG antes de decidir.'));
+  r.push('<span class="cf">Si el ECG normal pasa a cambios isquémicos o el dolor supera los 20 minutos → la conducta cambia de psicoeducación e ISRS a AAS masticada, ECU 911 y monitorización [3].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE1d(dc){
+  var s=sel(dc,'sint'),p=sel(dc,'pico'),k=sel(dc,'crisis'),m=sel(dc,'miedo'),e=sel(dc,'ecg'),g=sel(dc,'org');
+  if(!(s.length||p.length||k.length||m.length||e.length||g.length)){
+    vacio(dc,'Elige los hallazgos de la crisis, el ECG y el estudio orgánico. El simulador indica si cumple ataque de pánico, si cumple trastorno de pánico y qué falta excluir.');return;}
+  var r=[];
+  if(hv(e,'alt')||hv(p,'pers')){
+    r.push(par('La isquemia no está excluida: el ECG alterado o el dolor persistente mandan sobre cualquier criterio psiquiátrico [3]. Conducta inicial: manejo de síndrome coronario agudo y ECU 911; no diagnostiques pánico.'));
+    r.push('<span class="cf">Si el ECG vuelve a ser normal y el dolor cede en minutos → se retoma la evaluación de pánico [4].</span>');
+    out(dc,r.join(''));return;
+  }
+  var ataque=hv(s,'cuatro')&&hv(p,'min');
+  if(hv(s,'cuatro')||hv(p,'min')){
+    if(ataque) r.push(par('<b>Cumple ataque de pánico</b>: cuatro o más síntomas con pico en minutos [1]. Es un síndrome, no un diagnóstico por sí solo: aparece también en otros trastornos y en causas orgánicas.'));
+    else r.push(par('No cumple ataque de pánico: se necesitan cuatro o más síntomas con pico en minutos [1].'));
+  } else r.push(par('Falta definir cuántos síntomas hubo y cómo fue el pico para valorar el ataque de pánico.'));
+  if(hv(k,'unica')) r.push(par('Un solo ataque no basta para trastorno de pánico: exige ataques inesperados recurrentes [1].'));
+  if(hv(k,'esp')) r.push(par('Si las crisis aparecen siempre ante un estímulo definido, piensa en fobia específica o social antes que en pánico [1].'));
+  var tp=ataque&&hv(k,'inesp')&&hv(m,'si');
+  if(hv(k,'inesp')&&hv(m,'no')) r.push(par('Hay ataques inesperados sin miedo persistente a nuevas crisis ni cambio de conducta durante al menos un mes: aún no cumple trastorno de pánico [1].'));
+  if(hv(e,'no')) r.push(par('Falta el ECG de 12 derivaciones: sin él no se diagnostica pánico [4].'));
+  if(hv(g,'estim')) r.push(par('La cafeína, los estimulantes o la abstinencia pueden causar el cuadro: se clasifica como inducido por sustancia hasta retirarlos y reevaluar [1].'));
+  if(tp&&hv(e,'norm')&&hv(g,'exc')) r.push(par('<b>Cumple trastorno de pánico</b>: ataques inesperados recurrentes, miedo persistente, ECG normal y causa orgánica excluida [1]. Anota si hay agorafobia. Pasa a «Tratamiento».'));
+  else if(tp&&hv(e,'norm')) r.push(par('Los criterios clínicos están completos, pero falta excluir causa orgánica: glucemia capilar, TSH y consumo de cafeína, estimulantes, alcohol o benzodiacepinas [1][6].'));
+  else if(tp) r.push(par('Los criterios clínicos del trastorno de pánico se perfilan, pero faltan el ECG normal y la exclusión de causa orgánica [1].'));
+  r.push('<span class="cf">Si el ECG no se hizo o muestra cambios, o aparece dolor persistente → no se diagnostica pánico y se maneja como síndrome coronario agudo [3].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE1t(dc){
+  var f=sel(dc,'fase'),o=sel(dc,'otros');
+  if(!f.length&&!o.length){
+    vacio(dc,'Elige la fase del tratamiento y los otros datos para obtener el fármaco, la dosis de inicio y la titulación.');return;}
+  var r=[];
+  if(hv(o,'ecg')) r.push(par('Antes de explicar «no es un infarto», confirma un ECG normal; sin él, no tranquilices [4].'));
+  if(hv(f,'nuevo')){
+    var sert='sertralina 25 mg VO cada 24 h durante 1 semana y luego 50 mg cada 24 h, con ajuste según respuesta hasta 200 mg al día [15][2]';
+    var esc='escitalopram 5 mg VO cada 24 h durante 1 semana y luego 10 mg cada 24 h, hasta 20 mg al día [15]';
+    var par10='paroxetina 10 mg VO cada 24 h, con aumento de 10 mg por semana hasta 40 mg al día [15]';
+    if(hv(o,'qt')) r.push(par('ISRS de inicio: '+sert+'. Evita escitalopram si el intervalo QT está prolongado.'));
+    else if(hv(o,'emb')) r.push(par('ISRS de inicio: '+sert+'. Evita paroxetina en el embarazo.'));
+    else if(hv(o,'mayor')) r.push(par('ISRS de inicio: '+esc.replace('hasta 20 mg al día','con tope de 10 mg al día en mayores de 65 años')+'; empieza en la mitad de la dosis habitual y vigila el sodio.'));
+    else r.push(par('ISRS de inicio: '+sert+'. Alternativas: '+esc+'; o '+par10+'.'));
+    r.push(par('Empieza con dosis bajas porque el ISRS puede aumentar la ansiedad al inicio, y avisa que el efecto tarda semanas. Suma TCC con exposición interoceptiva y gradual [2].'));
+  }
+  if(hv(f,'falla')) r.push(par('Respuesta insuficiente: revisa adherencia y dosis, sube a la dosis máxima tolerada, cambia a otro ISRS o a un IRSN tras una prueba adecuada y suma TCC si no la recibe [15].'));
+  if(hv(f,'crisis')) r.push(par('Crisis en consulta: con ECG normal, guía respiración lenta y diafragmática y tranquiliza. Si la crisis es intensa, alprazolam 0,5 mg VO una vez como puente, sin pauta de mantenimiento [20][2].'));
+  if(hv(f,'xanax')) r.push(par('Alprazolam por semanas: no lo suspendas de golpe. Inicia el ISRS y planifica una reducción gradual pactada (ver «Consumo de benzodiacepinas»); la benzodiacepina no es tratamiento de mantenimiento [12][20].'));
+  if(hv(o,'bzd')&&!hv(f,'xanax')) r.push(par('Si se usa alprazolam como puente: 0,5 mg VO cada 8 h, 0,25 mg en adultos mayores o debilitados, durante 2 a 4 semanas como máximo mientras el ISRS hace efecto; advierte somnolencia, caídas, tolerancia y dependencia [20][12].'));
+  if(hv(o,'ideas')) r.push(par('Con ideas de muerte o suicidio, vigila de cerca el inicio del ISRS, sobre todo en menores de 25 años, y retira el acceso a medios letales [13][5].'));
+  if(hv(o,'polivit')) r.push(par('Evita polivitamínicos como Stresstabs y otros suplementos como tratamiento de la ansiedad: no son ansiolíticos y retrasan el diagnóstico.'));
+  if(!r.length) r.push(par('Con esos datos no hay una pauta clara: define la fase del tratamiento.'));
+  r.push('<span class="cf">Si el paciente ya usa alprazolam por semanas → no se suspende de golpe: se inicia el ISRS y se planea una reducción gradual [12].</span>');
+  out(dc,r.join(''));
+}
+function dcE2(dc){
+  var s=sel(dc,'sit'),o=sel(dc,'otros');
+  if(!s.length){
+    vacio(dc,'Elige la situación del tratamiento y los otros datos para obtener el fármaco, la dosis y la conducta.');return;}
+  var r=[];
+  if(hv(s,'inicio')){
+    if(hv(o,'hta')) r.push(par('Inicio con hipertensión no controlada: prefiere un ISRS, como escitalopram 10 mg VO cada 24 h (máximo 20 mg) o sertralina 50 mg VO cada 24 h (inicia con 25 mg la primera semana, hasta 200 mg), y evita venlafaxina XR porque sube la presión arterial; añade terapia cognitivo-conductual [2][15].'));
+    else r.push(par('Inicio: escitalopram 10 mg VO cada 24 h (máximo 20 mg) o sertralina 50 mg VO cada 24 h (inicia con 25 mg la primera semana, hasta 200 mg), más terapia cognitivo-conductual. Alternativa IRSN: venlafaxina XR 75 mg VO cada 24 h con alimentos (hasta 225 mg) o duloxetina 60 mg VO cada 24 h (inicia con 30 mg la primera semana, máximo 120 mg) [2][15].'));
+    r.push(par('El efecto tarda 4 a 6 semanas: avísalo al paciente y revisa a las 2 semanas la tolerancia y la ideación suicida [2].'));
+  }
+  if(hv(s,'nores')) r.push(par('Sin respuesta tras 4 a 6 semanas: confirma adherencia y dosis, sube la dosis del ISRS hasta el máximo tolerado, cambia a otro ISRS, a un IRSN o a pregabalina 75 mg VO cada 12 h con ajuste renal [15], y refuerza la terapia cognitivo-conductual [2][15].'));
+  if(hv(s,'intol')) r.push(par('No tolera el ISRS: si fue activación o náusea, reinicia con la mitad de la dosis y titula despacio, por ejemplo sertralina 25 mg VO cada 24 h; si persiste, cambia a pregabalina 75 mg VO cada 12 h o a duloxetina 60 mg VO cada 24 h [15].'));
+  if(hv(o,'hep')) r.push(par('Hepatopatía: evita duloxetina y usa dosis menores de ISRS con titulación lenta [2].'));
+  if(hv(o,'mayor')) r.push(par('65 años o más: empieza con la mitad de la dosis, vigila hiponatremia y caídas, y limita escitalopram a 10 mg [23].'));
+  if(hv(o,'bzd')) r.push(par('Usa benzodiacepina desde hace semanas: no la suspendas de golpe; mantenla mientras el ISRS empieza a actuar y redúcela de forma gradual y pactada para evitar rebote y abstinencia [2][19][12].'));
+  if(hv(o,'ide')) r.push(par('Ideación suicida: el ISRS puede activar en las primeras semanas; da pocas dosis por receta, revisa cada semana y estratifica el riesgo (ver «Visión de conjunto») [5].'));
+  r.push('<span class="cf">Si aparecen ideación suicida o una depresión mayor asociada → deja de ser solo ansiedad y se trata primero el riesgo y el episodio depresivo [5][2].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE3r(dc){
+  var i=sel(dc,'ide'),f=sel(dc,'fac');
+  if(!i.length){
+    vacio(dc,'Elige el nivel de ideación y los factores presentes para obtener el nivel de riesgo y la conducta en primer nivel sin derivación.');return;}
+  var base={ninguna:0,pasiva:1,activa:2,plan:3},b=0,k;
+  for(k in base){if(hv(i,k)) b=base[k];}
+  var n=f.length,lvl=b;
+  if(b>=1&&n>=1) lvl++;
+  if(b>=1&&n>=3) lvl++;
+  if(lvl>3) lvl=3;
+  var nom=['bajo','bajo con vigilancia','moderado','alto'],r=[];
+  r.push(par('Nivel de riesgo: <b>'+nom[lvl]+'</b>. Los factores presentes ('+n+') suben el nivel; el simulador no calcula probabilidades [11][5].'));
+  if(lvl===0){
+    r.push(par('Sin ideación: explica que puede consultar si cambia, trata el episodio depresivo y vuelve a preguntar en cada cita [5].'));
+    if(n) r.push(par('Con antecedentes o factores de riesgo, sigue preguntando de forma directa y verifica que haya apoyo y plan de contacto [5].'));
+  }
+  if(lvl===1){
+    r.push(par('Conducta: plan de seguridad escrito (señales de alarma, estrategias de afrontamiento, personas y números de contacto), psicoeducación a la familia y seguimiento cercano en 1 semana [5].'));
+  }
+  if(lvl===2){
+    r.push(par('Conducta: plan de seguridad escrito, restricción de medios con ayuda de un familiar (retirar fármacos, plaguicidas y armas), acompañamiento por una persona de confianza y seguimiento cercano en pocos días [5].'));
+  }
+  if(lvl===3){
+    r.push(par('Riesgo inminente: no dejes solo al paciente en ningún momento, retira los medios del entorno, mantén observación continua en el centro y activa ECU 911 para el traslado; mientras llega, conversa, escucha y no lo dejes marchar [5].'));
+    r.push(par('Después de la crisis: plan de seguridad escrito, familia comprometida y seguimiento diario o muy cercano hasta que baje el riesgo [5].'));
+  }
+  if(hv(f,'agrav')) r.push(par('Psicosis, alcohol o desesperanza grave: trátalo como factor que sube el riesgo; si es psicosis, pide interconsulta o teleconsulta con psiquiatría [5].'));
+  if(hv(f,'medios')) r.push(par('El acceso a medios letales es el factor más modificable: retíralos o restríngelos de inmediato con la familia [5].'));
+  r.push('<span class="cf">Si el paciente pasa de pensamientos sin plan a plan o intención, o aparece acceso a medios → la conducta cambia de plan de seguridad y seguimiento a no dejarlo solo y activar ECU 911 [5][11].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE3(dc){
+  var g=sel(dc,'grav'),e=sel(dc,'etapa'),o=sel(dc,'otros');
+  if(!e.length){
+    vacio(dc,'Elige la etapa del tratamiento (y la gravedad si estás iniciando) para obtener la conducta y la posología.');return;}
+  var r=[];
+  if(hv(e,'inicio')){
+    if(!g.length) r.push(par('Elige la gravedad (PHQ-9 por bandas) para decidir entre psicoterapia sola o combinada con fármaco [14][13].'));
+    else if(hv(g,'leve')) r.push(par('Depresión leve: empieza con psicoterapia (activación conductual o terapia cognitivo-conductual) y revisa en 2 semanas; añade un ISRS si no mejora o el paciente lo prefiere [13].'));
+    else{
+      r.push(par('Depresión '+(hv(g,'grave')?'grave':'moderada')+': ISRS más psicoterapia. Sertralina 50 mg VO cada 24 h (inicia con 25 mg si hay ansiedad marcada, hasta 200 mg), o escitalopram 10 mg VO cada 24 h (máximo 20 mg), o fluoxetina 20 mg VO cada 24 h por la mañana (hasta 60 mg) [13].'));
+      if(hv(g,'grave')) r.push(par('Grave: revisa cada semana el riesgo suicida y la tolerancia durante el primer mes [13][5].'));
+    }
+  }
+  if(hv(e,'nores')) r.push(par('Sin respuesta tras 4 a 6 semanas: confirma adherencia, sube la dosis hasta el máximo tolerado, cambia a otro ISRS o a venlafaxina XR 75 mg VO cada 24 h con alimentos (hasta 225 mg), o añade psicoterapia [13].'));
+  if(hv(e,'remis')) r.push(par('En remisión: mantén el mismo fármaco y la misma dosis al menos 6 meses y retira de forma gradual para evitar discontinuación y recaída [13].'));
+  if(hv(o,'bip')) r.push(par('Antecedente de manía o hipomanía: no inicies un antidepresivo solo, porque puede inducir viraje; requiere estrategia con estabilizador, idealmente con psiquiatría [1][13].'));
+  if(hv(o,'joven')) r.push(par('Menor de 25 años: vigila activación e ideación en las primeras semanas con revisión durante la primera semana [13].'));
+  if(hv(o,'mayor')) r.push(par('65 años o más: inicia con la mitad de la dosis, vigila hiponatremia y caídas, y limita escitalopram a 10 mg [23].'));
+  if(hv(o,'psic')) r.push(par('Síntomas psicóticos: la depresión con psicosis no se maneja con ISRS solo; pide interconsulta o teleconsulta con psiquiatría y, si no es posible, sigue mhGAP en el centro [5].'));
+  if(hv(o,'sui')) r.push(par('Ideación suicida: estratifica el riesgo en esa consulta (ver «Diagnóstico») y no entregues fármacos en cantidad letal [5].'));
+  r.push('<span class="cf">Si el paciente tiene antecedente de manía o aparece ideación con plan → la conducta pasa de iniciar o ajustar el antidepresivo a descartar bipolaridad o asegurar la vida primero [1][5].</span>');
+  out(dc,r.join(''));
+}
+function dcE4(dc){
+  var d=num(dc,'dosis'),ri=sel(dc,'ritmo'),o=sel(dc,'otros');
+  if(isNaN(d)&&!ri.length&&!o.length){
+    vacio(dc,'Escribe la dosis diaria de alprazolam y elige la evolución y los otros datos para obtener la pauta de reducción.');return;}
+  var f=function(x){return String(x).replace('.',',');};
+  var r=[];
+  if(hv(o,'conv')) r.push(par('Convulsión o confusión: es abstinencia grave. Reinstala la benzodiacepina, estabiliza y activa ECU 911; no sigas reduciendo [12][5].'));
+  if(hv(o,'isq')) r.push(par('Opresión torácica actual: haz ECG de 12 derivaciones antes de atribuirla a rebote o abstinencia; si hay cambios isquémicos, sigue el manejo de «Síndrome coronario agudo» [4].'));
+  if(hv(o,'alc')) r.push(par('Alcohol u opioides: suman depresión respiratoria con la benzodiacepina; suspéndelos o trátalos antes de iniciar la reducción [19].'));
+  if(!isNaN(d)){
+    if(d<=0){
+      r.push(par('Escribe una dosis diaria mayor de 0 mg.'));
+    } else {
+      if(d>10) r.push(par('La dosis supera los 10 mg al día que admite la ficha en pánico; confirma la dosis real [20].'));
+      var eq=d*20;
+      var sub=eq;
+      var lo=Math.max(0.5,rd(sub*0.10*2,0)/2),hi=Math.max(0.5,rd(sub*0.25*2,0)/2);
+      r.push(par('Equivalencia: alprazolam '+f(d)+' mg al día ≈ diazepam '+f(rd(eq,1))+' mg al día (0,5 mg de alprazolam ≈ 10 mg de diazepam) [12].'));
+      r.push(par('Sustituye por diazepam '+f(rd(sub,1))+' mg al día VO, repartido en 2–3 tomas o por la noche, y retira el alprazolam [12].'));
+      if(hv(ri,'sint')) r.push(par('Con síntomas de abstinencia en el paso, mantén la dosis actual o retrocede un paso, y alarga el intervalo a 2 semanas o más; baja el 10 % en el paso siguiente [12].'));
+      else r.push(par('Reducción: baja entre '+f(lo)+' y '+f(hi)+' mg de diazepam al día (10 a 25 % de la dosis) cada 1–2 semanas, según tolere [12][19].'));
+      r.push(par('Trata a la vez el trastorno de base con sertralina 25 mg VO cada 24 h durante una semana y luego 50 mg, más TCC [2][15].'));
+    }
+  } else {
+    r.push(par('Escribe la dosis diaria de alprazolam para calcular la equivalencia en diazepam y el primer paso de reducción.'));
+  }
+  r.push('<span class="cf">Si aparecen convulsión, confusión o síntomas intensos de abstinencia en un paso → reinstala la dosis previa, enlentece la reducción y activa ECU 911 si hay compromiso vital [12][5].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE5(dc){
+  var e=sel(dc,'ecg'),o=sel(dc,'otros');
+  if(!e.length&&!o.length){
+    vacio(dc,'Elige el hallazgo del ECG y los otros datos para obtener la conducta inicial con su posología.');return;}
+  var r=[];
+  var stel=hv(e,'stel'),sest=hv(e,'sest'),norm=hv(e,'norm');
+  var isq=stel||sest||hv(o,'tro');
+  if(stel) r.push(par('SCACEST: emergencia con reperfusión inmediata. Activa ECU 911 para traslado a un centro con ICP, con monitorización y desfibrilador [3].'));
+  else if(sest||hv(o,'tro')) r.push(par('Compatible con IAMSEST o angina inestable: activa ECU 911 para traslado a un centro con ICP; no esperes más resultados [3].'));
+  else if(norm&&hv(o,'dolor')) r.push(par('ECG sin cambios con dolor en curso: no descartes isquemia. Repite el ECG, mide troponina si hay, usa HEART como apoyo y trata como SCA hasta descartarlo [3][26].'));
+  else if(norm) r.push(par('ECG inicial sin cambios: no descarta el síndrome. Repite el ECG, toma troponina si hay y observa; considera otras causas solo después [3][4].'));
+  else r.push(par('Con dolor torácico y sin ECG, hazlo en los primeros 10 min antes de cualquier otra decisión [3].'));
+  if(isq||hv(o,'dolor')){
+    if(hv(o,'aas')) r.push(par('Alergia a AAS: no lo des. El segundo antiagregante lo decide el centro con ICP [3].'));
+    else r.push(par('Ácido acetilsalicílico 150–300 mg VO masticada, dosis única [3].'));
+    if(hv(o,'pas')||hv(o,'pde5')){
+      r.push(par('No des nitroglicerina: '+(hv(o,'pas')?'la presión sistólica es menor de 90 mmHg':'hay un inhibidor de PDE5 reciente')+' [3]. Acuesta al paciente y vigila.'));
+    } else {
+      r.push(par('Si persiste el dolor: nitroglicerina 0,4 mg sublingual cada 5 min, hasta 3 dosis, mientras la presión sistólica se mantenga adecuada [3].'));
+    }
+    if(hv(o,'sat')) r.push(par('SatO₂ menor de 90 %: oxígeno inhalado, titulado hasta una SatO₂ de 90 % o más; en Quito compara con el valor basal local [27] [3].'));
+    else r.push(par('Sin hipoxemia, no des oxígeno de rutina [3].'));
+    r.push(par('Evita las benzodiacepinas para calmar la angustia mientras no se descarte isquemia [4].'));
+  }
+  r.push('<span class="cf">Si el ECG sigue sin cambios, la troponina seriada es negativa y el dolor cede → considera crisis de angustia y pasa a «Trastorno de pánico»; si el dolor persiste o la troponina sube → trata como SCASEST y mantén el traslado [3].</span>');
+  out(dc,r.join(''));
+}
+</script>
+<!-- KIT_SCRIPT -->
+</div>
+<script>
+(function(){
+'use strict';
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+function secK(k){return $('section.tab[data-tab="'+k+'"]')}
+function secOf(el){return el&&el.closest?el.closest('section.tab'):null}
+function nameOf(k){var b=$('button.tb[data-tab="'+k+'"]');return b?b.textContent.replace(/\s+/g,' ').replace(/^\s+|\s+$/g,''):k}
+function btn(t,f,c){var b=document.createElement('button');b.type='button';b.className=c||'chip';b.textContent=t;b.addEventListener('click',f);return b}
+function recon(s,on){if(!s)return;s.classList.toggle('recon',!!on);$$('.nodo',s).forEach(function(n){n.classList.remove('rev');n.classList.remove('pis')});var st=$('.rec-state',s);if(st)st.textContent=on?'Modo reconstrucción activo':'Modo lectura';var a=$('.rec-bar [data-act="rec"]',s);if(a){a.disabled=!!on;a.classList.toggle('on',!!on);a.textContent=on?'Reconstrucción activa':'Activar reconstrucción'}}
+window.recon=function(k,on){recon(secK(k),on)};
+function navOv(){var n=$('nav.tabs');if(!n)return;var sl=n.scrollLeft,mx=n.scrollWidth-n.clientWidth,w=n.parentNode;[n,w].forEach(function(e){if(e===n||e.classList.contains('tabs-w')){e.classList.toggle('ov-l',sl>2);e.classList.toggle('ov-r',sl<mx-2)}})}
+function tabla(on){var t=$('table.vis'),s=secOf(t);if(!s)return;s.classList.toggle('tbl',!!on);$$('td.tap',t).forEach(function(c){c.classList.remove('rev')});var st=$('.vb-state',s);if(st)st.textContent=on?'Tabla tapada: toca cada celda para revelarla':'Modo lectura'}
+window.tabla=tabla;
+window.show=function(k){var ns=secK(k);if(!ns)return;$$('section.tab.on').forEach(function(s){if(s!==ns){if(s.classList.contains('recon'))recon(s,false);if(s.classList.contains('tbl'))tabla(false)}});$$('.tb,.tab').forEach(function(e){e.classList.toggle('on',e.getAttribute('data-tab')===k)});window.scrollTo(0,0);var b=$('.tb.on');if(b&&b.scrollIntoView){try{b.scrollIntoView({inline:'nearest',block:'nearest'})}catch(e){}}navOv()};
+window.ir=function(k,id){var el=document.getElementById(id),s=secOf(el);if(!s)return;var nodo=el.classList.contains('nodo');if(s.classList.contains('recon')&&!nodo)recon(s,false);if(s.classList.contains('tbl')&&!el.closest('.vis-w'))tabla(false);show(s.getAttribute('data-tab'));if(nodo&&s.classList.contains('recon'))el.classList.add('rev');var a=el.closest('.acc');if(a)a.classList.add('op');el.scrollIntoView({block:'start'});el.classList.add('hl');setTimeout(function(){el.classList.remove('hl')},1500)};
+window.tog=function(b){var a=b.closest('.acc');if(a)a.classList.toggle('op')};
+window.sel=function(dc,g){return $$('.chip.on[data-g="'+g+'"]',dc).map(function(c){return c.getAttribute('data-v')})};
+window.num=function(dc,n){var i=$('input[data-n="'+n+'"]',dc);if(!i||i.value==='')return NaN;return parseFloat(String(i.value).replace(',','.'))};
+window.out=function(dc,h){var o=$('.out',dc);if(o)o.innerHTML=h};
+window.rd=function(x,d){var p=Math.pow(10,d||0);return Math.round(x*p)/p};
+function outErr(dc,e){var o=$('.out',dc);if(o)o.textContent='Error de cálculo: '+(e&&e.message?e.message:String(e))}
+function runDc(dc){var fn=window[dc.getAttribute('data-fn')];if(typeof fn==='function'){try{fn(dc)}catch(e){outErr(dc,e)}}}
+window.ch=function(el){var dc=el.closest('.dc');if(!dc)return;if(el.classList.contains('chip')){var g=el.getAttribute('data-g');if(el.getAttribute('data-m')==='1'){el.classList.toggle('on')}else{var was=el.classList.contains('on');$$('.chip[data-g="'+g+'"]',dc).forEach(function(c){c.classList.remove('on')});if(!was)el.classList.add('on')}}runDc(dc)};
+function initNodos(f){var k=f.getAttribute('data-tab');$$('.nodo',f).forEach(function(n,i){var p=document.createElement('b');p.className='paso';var pn=document.createElement('span');pn.className='pn';pn.textContent=(i+1)+' ·';var pt=document.createElement('span');pt.className='pt';pt.textContent=n.getAttribute('data-paso')||'';p.appendChild(pn);p.appendChild(pt);var ra=n.getAttribute('data-rama');if(ra){var b=document.createElement('span');b.className='badge b-az rama';b.textContent=ra;p.appendChild(document.createTextNode(' '));p.appendChild(b)}n.insertBefore(p,n.firstChild);var c=document.createElement('div');c.className='rec-ctl';if($('.man',n))c.appendChild(btn('Pista',function(){n.classList.toggle('pis')}));c.appendChild(btn('Revelar',function(){n.classList.toggle('rev')}));n.appendChild(c)});
+var tl=$('ol.tl',f);if(!tl)return;var bar=document.createElement('div');bar.className='rec-bar';bar.id='rec-bar-'+k;var t=document.createElement('div');t.innerHTML='<b>Timeline en blanco</b> · <span class="rec-state">Modo lectura</span><p class="mini">Reconstruye la cascada sin mirar: escribe cada paso en orden, luego usa Pista (signos que produce) y Revelar nodo por nodo. Nada se guarda.</p>';bar.appendChild(t);var ta=document.createElement('textarea');ta.setAttribute('aria-label','Escribe aquí la cascada en orden');var bs=document.createElement('div');bs.className='rec-btns';var ab=btn('Activar reconstrucción',function(){recon(f,true);ta.focus()});ab.setAttribute('data-act','rec');bs.appendChild(ab);bs.appendChild(btn('Revelar todo',function(){$$('.nodo',f).forEach(function(n){n.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){recon(f,false)}));bar.appendChild(bs);bar.appendChild(ta);tl.parentNode.insertBefore(bar,tl)}
+var TGT={'1.º':'clave','De elección':'clave','Confirma':'ok','Solo si':'cond','Escala':'cond','Reevalúa':'cond','No pidas':'no','Evita':'no','Alarma':'alarma'};
+function initTg(){$$('ol.tg span.tg').forEach(function(s){var v=TGT[s.textContent.replace(/^\s+|\s+$/g,'')];if(v)s.setAttribute('data-t',v)})}
+function initTabla(){var t=$('table.vis'),s=secOf(t);if(!s)return;var w=t.parentNode;if(!w.classList.contains('tw')){w=document.createElement('div');w.className='tw';t.parentNode.insertBefore(w,t);w.appendChild(t)}w.classList.add('vis-w');var rows=$$('tbody tr',t);if(!rows.length)rows=$$('tr',t).slice(1);rows.forEach(function(r){Array.prototype.slice.call(r.children,1).forEach(function(c){c.classList.add('tap');c.addEventListener('click',function(){if(s.classList.contains('tbl'))c.classList.add('rev')})})});
+var bar=document.createElement('div');bar.className='vb-bar';bar.id='vb-bar';var h=document.createElement('div');h.innerHTML='<b>Tabla en blanco</b> · <span class="vb-state">Modo lectura</span><p class="mini">Tapa todas las celdas de las entidades (quedan visibles las cabeceras y los ejes). Di cada celda antes de tocarla; un toque la revela. Nada se guarda.</p>';bar.appendChild(h);var bs=document.createElement('div');bs.className='rec-btns';bs.appendChild(btn('Tapar la tabla',function(){tabla(true)}));bs.appendChild(btn('Revelar todo',function(){$$('td.tap',t).forEach(function(c){c.classList.add('rev')})}));bs.appendChild(btn('Salir',function(){tabla(false)}));bar.appendChild(bs);w.parentNode.insertBefore(bar,w)}
+function initRecGo(){var TL=$$('section.tab').filter(function(s){return!!$('ol.tl',s)}),sin=secK('sin'),dst=sin||secK('seg');if(!dst)return;var ord=sin?TL.filter(function(s,i){return i%2===0}).concat(TL.filter(function(s,i){return i%2===1})):TL;var vt=$('table.vis');if(!ord.length&&!(sin&&vt))return;
+var w=document.createElement('div');w.className='hb az rec-go';w.innerHTML='<div class="hb-t">Antes de cerrar: recupera sin mirar</div><p class="mini">Cada botón te lleva a la función en blanco correspondiente. Intenta la respuesta completa antes de revelar.</p>';var bs=document.createElement('div');bs.className='rec-btns';w.appendChild(bs);
+if(sin&&vt){var vs=secOf(vt),vk=vs.getAttribute('data-tab'),b0=btn('Tabla en blanco — '+nameOf(vk),function(){show(vk);tabla(true);var b=document.getElementById('vb-bar');if(b)b.scrollIntoView({block:'start'})},'go');b0.setAttribute('data-rec',vk);bs.appendChild(b0)}
+ord.forEach(function(s){var k=s.getAttribute('data-tab'),b=btn('Reconstruir la cascada — '+nameOf(k),function(){show(k);recon(s,true);var r=document.getElementById('rec-bar-'+k);if(r)r.scrollIntoView({block:'start'})},'go');b.setAttribute('data-rec',k);bs.appendChild(b)});
+var rf=$('.acc.refs',dst);if(rf)dst.insertBefore(w,rf);else dst.appendChild(w)}
+function initStk(){$$('.tw table').forEach(function(tb){if(tb.classList.contains('vis'))return;var hs=$$('thead th',tb).map(function(h){return h.textContent.replace(/\s+/g,' ').trim()});if(!hs.length)return;tb.classList.add('stk');$$('tbody tr',tb).forEach(function(tr){Array.prototype.slice.call(tr.children).forEach(function(c,i){if(c.tagName==='TD'&&hs[i])c.setAttribute('data-l',hs[i])})})})}
+function init(){var f=$('.tb'),ph=[function(){var n=$('nav.tabs');if(n){var w=document.createElement('div');w.className='tabs-w';n.parentNode.insertBefore(w,n);w.appendChild(n);n.addEventListener('scroll',navOv);window.addEventListener('resize',navOv)}},function(){$$('section.tab').forEach(function(s){if($('ol.tl',s))initNodos(s)})},initTg,initTabla,initStk,initRecGo,function(){$$('.dc').forEach(runDc)},function(){show(secK('pan')?'pan':(f?f.getAttribute('data-tab'):''))}];ph.forEach(function(p){try{p()}catch(e){if(window.console)console.error('kit v10:',e)}})}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
+</body>
+</html>

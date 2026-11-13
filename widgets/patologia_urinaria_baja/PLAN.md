@@ -2,7 +2,7 @@
 
 Fuentes (prioridad en este orden):
 1. **Caso de Carlos** (adjunto del estudiante): `fuentes/casos/caso_carlos_patologia_urinaria_baja.md` (transcripción fiel de `caso_carlos_p1.jpg` y `caso_carlos_p2.jpg`).
-2. **Sílabo**, caso «PATOLOGÍA URINARIA BAJA»: `fuentes/Syllabus_primera_rotacion_10mo.md`, con su bibliografía complementaria (DynaMed 2024 de HPB, prostatitis aguda/crónica, cáncer de próstata; Epstein 2016 ISUP/Gleason; Bradley 2017 dieta y STUI; Harrison «síndrome de dolor vesical»).
+2. **Sílabo**, caso «PATOLOGÍA URINARIA BAJA»: `fuentes/syllabus_quirurgica2.md`, con su bibliografía complementaria (DynaMed 2024 de HPB, prostatitis aguda/crónica, cáncer de próstata; Epstein 2016 ISUP/Gleason; Bradley 2017 dieta y STUI; Harrison «síndrome de dolor vesical»).
 3. Guía internacional vigente más específica (p. ej. EAU 2024–2025 STUI masculinos no neurogénicos, AUA 2023 HPB, EAU/AUA cáncer de próstata, EAU infecciones urológicas, CDC 2021 ITS para uretritis).
 
 Decisiones confirmadas por el estudiante: amenaza = cáncer de próstata; el caso es el **ancla** (fuente prioritaria) de los dos widgets, que siguen siendo de estudio general; diseño **Vademécum** en ambos.
@@ -30,7 +30,7 @@ Decisiones confirmadas por el estudiante: amenaza = cáncer de próstata; el cas
 - «No confundir con…» (vecinas fuera del grupo, sílabo): **tuberculosis renal y vesical** y **trauma/estenosis uretral**; también vejiga hiperactiva y poliuria nocturna.
 - Simuladores esperados: e1 dx = **I-PSS** (escala → banda → conducta, permitido por §7.10) + tamaño/síntomas → tratamiento; e3 = decisión compartida de PSA según edad y antecedente familiar (sin probabilidades: §7.10); `vis` = diferencial desde los hallazgos de Carlos.
 - Título: `Patología urinaria baja` · Slug: `Patologia_urinaria_baja_widget_v10.html`.
-- Kit: Vademécum (`kit/kit_head.html`). No lo leas ni lo edites.
+- Kit: Vademécum (`kit_head.html` (v10, retirado)). No lo leas ni lo edites.
 
 ## Widget B · Definiciones (skill definiciones v5.1) — `definiciones/`
 
@@ -67,5 +67,5 @@ Decisiones confirmadas por el estudiante: amenaza = cáncer de próstata; el cas
 
 ## Pruebas finales del orquestador
 
-- Enseñanza: `validar.py` + `kit/auditar_diseno.py` (router, kit intacto, reglas 1–9) + `probar_navegador.js` + detector impeccable + revisión de diseño independiente.
+- Enseñanza: `validar.py` + `auditar_diseno.py` (router, kit intacto, reglas 1–9) + `probar_navegador.js` (herramientas v10 retiradas; widgets congelados) + revisión con `.claude/skills/impeccable` adaptada + revisión de diseño independiente.
 - Definiciones: validación propia de la skill (el ejecutor) + `auditar_definiciones.py` (contrato de la skill, cabecera intacta, reglas 1–9) + `probar_definiciones.js` (pestañas, desborde, motor de recall por pestaña y repaso global) + detector impeccable.

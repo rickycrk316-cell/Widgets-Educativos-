@@ -1,6 +1,6 @@
 # Disbasia en la infancia — plan del orquestador
 
-Fuente: `fuentes/Syllabus_primera_rotacion_10mo.md`, caso «DISBASIA» (Quirúrgica 2, PUCE). Sin caso problema adjunto: widgets genéricos del sílabo. Tema pediátrico: bibliografía por defecto **Nelson 22e** + Harrison/Farreras si aplica + la guía vigente más específica de cada entidad.
+Fuente: `fuentes/syllabus_quirurgica2.md`, caso «DISBASIA» (Quirúrgica 2, PUCE). Sin caso problema adjunto: widgets genéricos del sílabo. Tema pediátrico: bibliografía por defecto **Nelson 22e** + Harrison/Farreras si aplica + la guía vigente más específica de cada entidad.
 
 El caso nombra ~20 entidades. La skill v10 admite máximo 5 por widget: **4 widgets multi**, confirmados por el estudiante. El router lo fija el orquestador; cada ejecutor copia literal su línea como primera línea del manifiesto.
 
@@ -57,4 +57,4 @@ Contenido transversal del sílabo que **debe aparecer en el `vis` de cada widget
 
 ## Pruebas finales del orquestador
 
-`validar.py` + `kit/auditar_diseno.py` (router, kit intacto, reglas) + `probar_navegador.js` + detector impeccable + revisión clínica del orquestador.
+`validar.py` + `auditar_diseno.py` (router, kit intacto, reglas) + `probar_navegador.js` (herramientas v10 retiradas; widget congelado) + revisión con `.claude/skills/impeccable` adaptada + revisión clínica del orquestador.

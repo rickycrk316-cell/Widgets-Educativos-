@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Definiciones · Ansiedad y pánico</title>
+<style>
+/* Vademécum · variante del widget de definiciones (skill definiciones v5.1): mismas tintas y tipografía que DESIGN.md */
+:root{
+--paper:#FBFBFC;--paper-2:#F1F2F5;--ink:#16181D;--ink-2:#3A3D46;--ink-3:#686C78;--rule:#D7D9E0;--rule-strong:#16181D;
+--accent:#2342A6;--accent-ink:#1B358A;--accent-field:#EAEEFA;--on-accent:#FFFFFF;
+--am:#7A4A06;--am-f:#FBF1DF;--ro:#9E1F1F;--ro-f:#FBE9E7;--ve:#2F5E12;--ve-f:#EBF3E1;--pu:#4C3FA8;--pu-f:#EEECFB;--co:#8E3517;--co-f:#FAEDE6;--rs:#8A2C52;--rs-f:#FAEAF1;
+--f-serif:ui-serif,"New York","Iowan Old Style","Charter","Source Serif Pro",Georgia,"Times New Roman",serif;
+--f-sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--f-mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+--r:3px;
+/* alias de la v10 para compatibilidad */
+--surface-0:var(--paper);--surface-1:var(--paper-2);--border:var(--rule);--border-accent:var(--accent);--bg-accent:var(--accent-field);--text-primary:var(--ink);--text-secondary:var(--ink-2);--text-muted:var(--ink-3);--text-accent:var(--accent-ink);--radius:var(--r);--font-sans:var(--f-sans);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#121317;--paper-2:#1C1E24;--ink:#E7E8EC;--ink-2:#C3C5CD;--ink-3:#9497A3;--rule:#33363F;--rule-strong:#E7E8EC;--accent:#8EA4FF;--accent-ink:#B4C3FF;--accent-field:#1A2347;--on-accent:#0E1330;--am:#F2C27A;--am-f:#2C2112;--ro:#FF9D93;--ro-f:#341716;--ve:#A9D88A;--ve-f:#1A2A12;--pu:#BDB4FF;--pu-f:#221D44;--co:#F4AE8E;--co-f:#33201A;--rs:#F3A2C3;--rs-f:#331A26;color-scheme:dark}
+html{color-scheme:light dark;-webkit-tap-highlight-color:transparent}
+*,*::before,*::after{box-sizing:border-box}
+::selection{background:var(--accent);color:var(--on-accent)}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 var(--f-sans);-webkit-text-size-adjust:100%;caret-color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:18px 16px 56px;background:transparent}
+h1{font:600 26px/1.2 var(--f-serif);letter-spacing:-.012em;margin:6px 0 14px;padding-bottom:12px;border-bottom:2px solid var(--rule-strong);text-wrap:balance}
+h2{font:600 19px/1.3 var(--f-serif);margin:34px 0 12px;padding-top:12px;border-top:1px solid var(--rule-strong);text-wrap:balance}
+h3{font:600 16px/1.35 var(--f-serif);margin:18px 0 6px;text-wrap:balance}
+p{margin:0 0 12px;text-wrap:pretty}
+button{font:inherit;color:inherit;cursor:pointer;transition:background-color .15s ease-out,border-color .15s ease-out,color .15s ease-out}
+button:active{transform:translateY(1px)}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* índice de canto */
+.tabs{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:8px 0 0;border-bottom:2px solid var(--rule-strong);margin-bottom:16px;position:-webkit-sticky;position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);scroll-snap-type:x proximity;scroll-padding-inline:56px}
+.tabs::-webkit-scrollbar{display:none}
+.tb{flex:0 0 auto;min-height:44px;padding:9px 15px 8px;border:1px solid var(--rule);border-bottom:0;border-radius:var(--r) var(--r) 0 0;background:var(--paper-2);color:var(--ink-2);font:600 13px/1.2 var(--f-sans);white-space:nowrap;scroll-snap-align:start}
+.tb:hover{background:var(--accent-field);color:var(--accent-ink)}
+.tb.active{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+.tab{display:none}
+.tab.active{display:block}
+/* idea rectora */
+.hb{border-radius:var(--r);padding:12px 14px;margin:14px 0;border:1px solid var(--accent);background:var(--accent-field);font-size:15px;line-height:1.6}
+.hb-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);margin-bottom:6px}
+/* prerrequisitos (rol rosa) */
+.pre{border:1px solid var(--rs);border-radius:var(--r);background:var(--rs-f);padding:12px 14px;margin:16px 0}
+.pre-t{font:600 16px/1.35 var(--f-serif);color:var(--rs);margin-bottom:8px}
+.pre .acc{background:var(--paper);border-color:var(--rs)}
+.pre .acc-h{background:var(--paper)}
+.rem-line{font-size:13px;color:var(--ink-2);margin:8px 0;line-height:1.5}
+.chip-rs{display:inline-block;font:700 11px/1.4 var(--f-sans);padding:1px 7px;border:1px solid var(--rs);border-radius:2px;background:var(--rs-f);color:var(--rs);margin-right:6px;vertical-align:1px}
+/* cards */
+.card{background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);padding:12px 14px;margin:12px 0;font-size:15px;line-height:1.6}
+.card p:last-child{margin-bottom:0}
+.card-t{font:600 16px/1.35 var(--f-serif);margin:0 0 6px}
+.card.fey{background:var(--co-f);border-color:var(--co)}
+.card.fey .card-t{color:var(--co)}
+.card.fey p{font:400 16px/1.6 var(--f-serif)}
+.card.ej{background:var(--paper);border-top:2px solid var(--rule-strong)}
+.badge{display:inline-block;font:700 11px/1.4 var(--f-sans);letter-spacing:.02em;padding:2px 7px;border-radius:2px;margin:6px 4px 0 0;vertical-align:middle;border:1px solid currentColor}
+.b-az{background:var(--accent-field);color:var(--accent-ink)}
+.b-ro{background:var(--ro-f);color:var(--ro)}
+.b-am{background:var(--am-f);color:var(--am)}
+.b-ve{background:var(--ve-f);color:var(--ve)}
+.b-pu{background:var(--pu-f);color:var(--pu)}
+.b-co{background:var(--co-f);color:var(--co)}
+.b-rs{background:var(--rs-f);color:var(--rs)}
+.mini{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:6px 0}
+.mini.am{color:var(--am);background:var(--am-f);border:1px solid var(--am);border-radius:var(--r);padding:6px 9px}
+/* acordeones */
+.acc{border:1px solid var(--rule);border-radius:var(--r);margin:10px 0;overflow:hidden;background:var(--paper)}
+.acc-h{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;min-height:44px;padding:9px 14px;border:0;background:var(--paper-2);font:600 14.5px/1.35 var(--f-sans);text-align:left}
+.acc-h:hover{background:var(--accent-field)}
+.chev{transition:transform .2s;color:var(--accent-ink);flex:0 0 auto}
+.acc.op .chev{transform:rotate(180deg)}
+.acc-b{display:none;padding:10px 14px;font-size:15px;line-height:1.6}
+.acc.op .acc-b{display:block}
+.acc.no .acc-h{color:var(--ro)}
+/* tablas */
+.tw{overflow-x:auto;margin:12px 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.5;font-variant-numeric:tabular-nums}
+th,td{border:0;border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left;vertical-align:top}
+thead th{font:700 14.5px/1.35 var(--f-sans);font-variant-caps:all-small-caps;letter-spacing:.04em;color:var(--ink-2);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule-strong);background:var(--paper-2)}
+tbody tr:last-child>*{border-bottom:1px solid var(--rule-strong)}
+tbody th{font-weight:700;background:var(--paper-2)}
+/* mini-timeline */
+.tl{list-style:none;margin:12px 0;padding:0 0 0 20px;border-left:2px solid var(--accent)}
+.tl>li{position:relative;margin:0 0 12px;padding:9px 12px;background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r);font-size:14.5px;line-height:1.55}
+.tl>li::before{content:"";position:absolute;left:-27px;top:13px;width:12px;height:12px;border-radius:1px;background:var(--accent);box-shadow:0 0 0 3px var(--paper)}
+.tl b{font-family:var(--f-serif)}
+/* simulador de recall */
+.rc{border:1px solid var(--rule-strong);border-radius:var(--r);padding:14px 16px;margin:24px 0;background:var(--paper)}
+.rc-t{font:600 16px/1.35 var(--f-serif);color:var(--accent-ink);padding-bottom:8px;margin-bottom:10px;border-bottom:1px solid var(--rule)}
+.rc-count{font:600 13px/1.4 var(--f-sans);color:var(--ink-3);font-variant-numeric:tabular-nums;margin-bottom:8px}
+.rc-card{border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);padding:14px;min-height:110px}
+.rc-q{font:400 16px/1.6 var(--f-serif);margin:0}
+.rc-a{margin:12px 0 0;padding-top:10px;border-top:1px dashed var(--accent);font-size:15px;line-height:1.6}
+.rc-a b{color:var(--accent-ink)}
+.rc-hint{font-size:13px;color:var(--am);margin-top:8px}
+.rc-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.go{min-height:44px;padding:8px 16px;border:1px solid var(--accent);border-radius:var(--r);background:var(--accent);color:var(--on-accent);font:600 14px/1.2 var(--f-sans)}
+.go:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+.gr{min-height:44px;padding:8px 14px;border:1px solid var(--rule-strong);border-radius:var(--r);background:var(--paper);font:600 14px/1.2 var(--f-sans)}
+.gr.ok{border-color:var(--ve);color:var(--ve)}
+.gr.mid{border-color:var(--am);color:var(--am)}
+.gr.ko{border-color:var(--ro);color:var(--ro)}
+.gr.ok:hover{background:var(--ve-f)}.gr.mid:hover{background:var(--am-f)}.gr.ko:hover{background:var(--ro-f)}
+.ghost{min-height:44px;padding:8px 14px;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper-2);font:600 14px/1.2 var(--f-sans);color:var(--ink-2)}
+.rc-end{margin-top:12px;padding:12px 14px;border-radius:var(--r);border:1px solid var(--rule);font-size:15px}
+.rc-end.ok{background:var(--ve-f);border-color:var(--ve);color:var(--ve)}
+.rc-end.rep{background:var(--am-f);border-color:var(--am);color:var(--am)}
+.gloss{font-size:12.5px;color:var(--ink-3);line-height:1.5;margin:18px 0 0;padding-top:8px;border-top:1px solid var(--rule)}
+.vanc{font-size:12.5px;line-height:1.5;padding-left:24px}
+.vanc li{margin:5px 0;word-break:break-word}
+.vanc li::marker{color:var(--ink-3);font-variant-numeric:tabular-nums}
+@media (min-width:700px){body{font-size:15.5px}.wrap{padding:22px 24px 64px}h1{font-size:28px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<!-- /DEF_HEAD -->
+<h1>Definiciones · Ansiedad y pánico</h1>
+<p class="mini">Paso 1 del ABP, caso Ansiedad y pánico (primera sesión, consulta externa sin derivación): aclarar términos, sin resolver el caso. Cada pestaña lleva su base morfofuncional, su definición y un simulador de recall.</p>
+<nav class="tabs">
+<button class="tb active" onclick="show('t1',this)">Opresión en el pecho</button>
+<button class="tb" onclick="show('t2',this)">Palpitaciones</button>
+<button class="tb" onclick="show('t3',this)">Angustia por perder el control</button>
+<button class="tb" onclick="show('t4',this)">Preinfarto</button>
+<button class="tb" onclick="show('t5',this)">Stresstabs</button>
+<button class="tb" onclick="show('t6',this)">Xanax (alprazolam)</button>
+<button class="tb" onclick="show('t7',this)">Ansiedad</button>
+<button class="tb" onclick="show('t8',this)">Pánico</button>
+<button class="tb" onclick="show('t9',this)">Ataque de ansiedad</button>
+<button class="tb" onclick="show('t10',this)">Ataque de pánico</button>
+<button class="tb" onclick="show('tg',this)">Repaso global</button>
+</nav>
+<section class="tab active" id="t1">
+<h2>Opresión en el pecho (opresión precordial)</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Sensación de presión, peso o constricción en el tórax que el paciente describe; nombra cómo se siente, no el órgano de origen.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Inervación sensitiva del corazón y dolor visceral referido</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Estímulo.</b> La isquemia, el estiramiento o la inflamación activan receptores químicos y mecánicos del miocardio y de las arterias coronarias.</li>
+<li><b>Aferencia.</b> Fibras aferentes viscerales viajan junto con los nervios simpáticos y entran a la médula en los segmentos T1–T4/T5 [1].</li>
+<li><b>Convergencia.</b> En la médula, esas fibras comparten neuronas de segundo orden con aferentes somáticas del pecho y del brazo izquierdo; el cerebro no distingue de cuál de las dos viene la señal.</li>
+<li><b>Percepción.</b> El dolor es sordo, mal localizado y opresivo, y puede irradiarse al brazo izquierdo o a la mandíbula. Rama: el esófago, la pleura y la pared torácica también envían señales a segmentos cercanos.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> En condiciones normales el corazón no produce dolor perceptible: responde sobre todo a la isquemia y a la distensión, no al roce ni al corte [1].</p>
+<p><b>Qué lo rompe.</b> El punto vulnerable es la convergencia: al compartir vía con estructuras somáticas, el dolor visceral no se localiza con exactitud y no revela qué víscera lo origina.</p>
+<p><b>Correlato clínico.</b> El paciente señala el pecho con el puño cerrado, no con un dedo (signo de Levine). Si el origen es visceral, el dolor no cambia al palpar la pared torácica.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Balance entre aporte y demanda de oxígeno del miocardio</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Aporte.</b> La sangre llega por las arterias coronarias; la coronaria izquierda se perfunde sobre todo en la diástole, cuando el músculo se relaja y deja de comprimir los vasos [1].</li>
+<li><b>Extracción.</b> El miocardio extrae casi todo el oxígeno que recibe ya en reposo, así que no tiene reserva para extraer más.</li>
+<li><b>Ajuste.</b> Si la demanda sube, el aporte solo puede aumentar con más flujo coronario, mediante vasodilatación de las arterias.</li>
+<li><b>Desequilibrio.</b> La taquicardia acorta la diástole: baja el tiempo de perfusión y sube la demanda a la vez. Rama: una estenosis coronaria limita el flujo máximo y el desequilibrio aparece antes.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> En reposo el aporte cubre la demanda con una extracción cercana al máximo; con el esfuerzo, el flujo coronario aumenta para igualar la demanda [1].</p>
+<p><b>Qué lo rompe.</b> La falta de reserva de extracción: cualquier caída del aporte o alza de la demanda que el flujo no compense produce isquemia.</p>
+<p><b>Correlato clínico.</b> La isquemia se siente como opresión retroesternal. Entre episodios la exploración puede ser normal; durante el episodio hay taquicardia y el ECG puede mostrar cambios.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [1]</span> Tratado de fisiología médica, 14.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Sensación de presión, peso, constricción o aplastamiento en el tórax, que el paciente suele situar en la región precordial o retroesternal. La guía AHA/ACC 2021 describe así el dolor isquémico y desaconseja llamarlo «atípico». La opresión es un síntoma: no indica por sí sola el órgano de origen.</p>
+<p><span class="badge b-pu">AHA/ACC 2021 [2]</span></p>
+<p class="mini">Que la opresión sea compatible con isquemia no equivale a que lo sea; esa distinción pertenece a pasos posteriores del ABP.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Imagina que el corazón manda sus quejas por una línea telefónica compartida con el pecho, el brazo y la mandíbula. Cuando le falta oxígeno, el mensaje llega a la médula mezclado con las señales de esas zonas, y el cerebro lo interpreta como un peso difuso en un área amplia, no como un punto. Por eso el paciente cierra el puño sobre el esternón en vez de señalar con un dedo.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>El paciente del caso dice «siento una opresión en el pecho» y la ubica en la región precordial, desde hace 40 minutos. Describe una sensación de presión, no de punzada. El síntoma nombra cómo se siente el dolor; todavía no dice de qué órgano viene.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Dolor pleurítico</b></td><td>Punzante, se acentúa al inspirar profundo o toser; la opresión visceral no cambia con la respiración.</td></tr>
+<tr><td><b>Dolor de pared torácica</b></td><td>Localizado con un dedo y reproducible al palpar o mover el tórax; la opresión visceral es difusa y no se reproduce así.</td></tr>
+<tr><td><b>Pirosis</b></td><td>Ardor retroesternal ligado a la comida o al decúbito; la opresión es presión o peso, no ardor.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t1"><div class="rc-t">Simulador · Recall de opresión en el pecho</div><div class="rc-count" id="rc-t1-n"></div><div class="rc-card" id="rc-t1-c"></div><div class="rc-btns" id="rc-t1-b"></div><div id="rc-t1-e"></div></div>
+
+<p class="gloss">Siglas: AHA/ACC, American Heart Association y American College of Cardiology; ABP, aprendizaje basado en problemas; ECG, electrocardiograma; T1, T4, T5, segmentos medulares torácicos.</p>
+</section>
+<section class="tab" id="t2">
+<h2>Palpitaciones</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Percepción incómoda del propio latido cardiaco, que se siente rápido, fuerte o irregular; es lo que el paciente refiere, no lo que se mide.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Sistema de excitación y conducción del corazón</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Criterio de agrupación.</b> Estructuras de células musculares especializadas que generan el impulso eléctrico y lo reparten en orden: primero las aurículas y después los ventrículos [1].</p>
+<div class="tw"><table><thead><tr><th>Elemento</th><th>Acción o papel</th><th>Inervación</th><th>Qué falla si claudica</th></tr></thead><tbody>
+<tr><td><b>Nodo sinusal</b></td><td>Marcapasos dominante: despolariza solo y fija la frecuencia cardiaca.</td><td>Simpático acelera; vago frena</td><td>Otro marcapasos, más lento, toma el mando.</td></tr>
+<tr><td><b>Nodo AV</b></td><td>Retrasa el impulso entre aurículas y ventrículos para que las aurículas se vacíen primero.</td><td>Simpático acelera la conducción; vago la frena</td><td>Bloqueo: el impulso llega tarde o no llega a los ventrículos.</td></tr>
+<tr><td><b>Haz de His y ramas</b></td><td>Conducen el impulso rápido por el tabique hacia ambos ventrículos.</td><td>No aplica: tejido de conducción</td><td>Un ventrículo se activa tarde.</td></tr>
+<tr><td><b>Fibras de Purkinje</b></td><td>Reparten el impulso por la pared ventricular para una contracción casi simultánea.</td><td>No aplica: tejido de conducción</td><td>Contracción ventricular menos sincrónica.</td></tr>
+</tbody></table></div>
+<p><b>Jerarquía.</b> El nodo sinusal domina porque su despolarización espontánea es la más rápida; los demás elementos quedan en reserva y solo mandan cuando él falla.</p>
+<p><b>Correlato clínico.</b> El pulso se palpa regular o irregular y el ECG registra la actividad eléctrica; una alteración del ritmo se explora con pulso y ECG.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Respuesta simpaticoadrenal de lucha o huida</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Amenaza.</b> La amenaza percibida activa el hipotálamo y el locus coeruleus.</li>
+<li><b>Descarga.</b> El simpático y la médula suprarrenal liberan noradrenalina y adrenalina [1].</li>
+<li><b>Efectos.</b> Los receptores β1 aumentan la frecuencia cardiaca (FC) y la contractilidad; la sudoración depende del simpático colinérgico; el temblor, de receptores β2 del músculo; y la motilidad gastrointestinal baja, lo que da náuseas.</li>
+<li><b>Cese.</b> Al desaparecer la amenaza, el vago recupera el control del corazón. Rama: si la amenaza se percibe sin existir, la respuesta se dispara igual.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> Es una respuesta breve y proporcional a la amenaza, que se apaga cuando esta cesa [1].</p>
+<p><b>Qué lo rompe.</b> El punto vulnerable es el disparo: puede activarse sin peligro externo, y las sensaciones corporales que produce alimentan a su vez la percepción de amenaza.</p>
+<p><b>Correlato clínico.</b> Taquicardia sinusal, temblor fino y diaforesis; se exploran con el pulso, la inspección de las manos y la piel.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [1]</span> Tratado de fisiología médica, 14.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Percepción desagradable del propio latido cardiaco, que la persona describe como rápido, fuerte o irregular, a veces como golpes, aleteo o saltos en el pecho o el cuello. Es un síntoma, no un signo: lo refiere el paciente y puede coincidir o no con una alteración del ritmo medida.</p>
+<p><span class="badge b-pu">Raviele et al. 2011 [3]</span></p>
+<p class="mini">La definición parte de lo que siente el paciente; el ritmo que tiene en ese momento es otra pregunta.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>El corazón late todo el día y casi nunca lo notamos. Una palpitación es el momento en que sí lo notamos: porque late más rápido, más fuerte o fuera de ritmo, o porque la atención está tan puesta en el pecho que hasta un latido normal se siente. Lo que define el síntoma es la percepción, no el ritmo. Por eso dos personas con el mismo pulso pueden referir cosas distintas.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>El paciente del caso dice que «se me va a salir el corazón» y refiere palpitaciones mientras conducía. Describe lo que siente; nadie ha medido todavía su pulso. El síntoma nombra la percepción del latido, no el ritmo que tenía.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Taquicardia</b></td><td>Es un signo medido: la frecuencia cardiaca en el pulso o el ECG está aumentada. Puede darse sin palpitaciones y al revés.</td></tr>
+<tr><td><b>Extrasístole</b></td><td>Es un latido prematuro del ritmo; a menudo se percibe como salto o pausa, y es una de las causas de palpitaciones, no su sinónimo.</td></tr>
+<tr><td><b>Ansiedad</b></td><td>Es un estado emocional; puede producir palpitaciones, pero la palpitación es solo la sensación del latido.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t2"><div class="rc-t">Simulador · Recall de palpitaciones</div><div class="rc-count" id="rc-t2-n"></div><div class="rc-card" id="rc-t2-c"></div><div class="rc-btns" id="rc-t2-b"></div><div id="rc-t2-e"></div></div>
+
+<p class="gloss">Siglas: AV, auriculoventricular; ECG, electrocardiograma; FC, frecuencia cardiaca; EHRA, European Heart Rhythm Association.</p>
+</section>
+<section class="tab" id="t3">
+<h2>Angustia por perder el control mental</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Miedo intenso a enloquecer o a perder el dominio de uno mismo, que el paciente vive como una amenaza inmediata a su mente.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Circuito del miedo</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Criterio de agrupación.</b> Estructuras del sistema nervioso central que detectan una amenaza, la valoran en su contexto y activan la respuesta del cuerpo [4].</p>
+<div class="tw"><table><thead><tr><th>Elemento</th><th>Acción o papel</th><th>Tipo de estructura</th><th>Qué falla si claudica</th></tr></thead><tbody>
+<tr><td><b>Amígdala</b></td><td>Detecta y valora la amenaza; activa al hipotálamo y al tronco encefálico.</td><td>Núcleo subcortical</td><td>Falsas alarmas o ausencia de alarma ante peligro real.</td></tr>
+<tr><td><b>Corteza prefrontal medial</b></td><td>Evalúa la situación y frena la respuesta de la amígdala.</td><td>Corteza cerebral</td><td>El miedo se prolonga sin freno.</td></tr>
+<tr><td><b>Hipocampo</b></td><td>Aporta el contexto: dónde y cuándo ocurre el estímulo.</td><td>Corteza cerebral</td><td>El miedo aparece fuera de contexto.</td></tr>
+<tr><td><b>Hipotálamo</b></td><td>Convierte la alarma en respuesta corporal por el simpático y el eje suprarrenal.</td><td>Núcleo subcortical</td><td>La respuesta corporal es excesiva o no se produce.</td></tr>
+<tr><td><b>Locus coeruleus</b></td><td>Libera noradrenalina y mantiene el estado de alerta.</td><td>Núcleo subcortical</td><td>Hipervigilancia persistente.</td></tr>
+</tbody></table></div>
+<p><b>Jerarquía.</b> La amígdala es el elemento dominante: decide si hay amenaza, y su fallo se propaga a todo el circuito, mientras que la corteza solo la modula.</p>
+<p><b>Correlato clínico.</b> No hay un signo exploratorio propio. La respuesta se ve como sobresalto, taquicardia y sudoración, y el examen mental recoge el miedo referido y si el juicio de realidad se conserva.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Ventilación y CO2: hiperventilación y alcalosis respiratoria</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Control.</b> Los quimiorreceptores vigilan la presión arterial de CO2 (PaCO2) y ajustan la ventilación para mantenerla estable [1].</li>
+<li><b>Hiperventilación.</b> Respirar más de lo que exige el metabolismo elimina CO2 en exceso y la PaCO2 baja.</li>
+<li><b>Alcalosis.</b> Con menos CO2 el pH de la sangre sube: alcalosis respiratoria.</li>
+<li><b>Efectos.</b> Las arterias cerebrales se contraen y llega menos flujo, lo que da mareo y sensación de irrealidad. La alcalosis también baja el calcio ionizado, y los nervios se excitan: parestesias peribucales y distales.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> La PaCO2 normal es de 35 a 45 mmHg a nivel del mar [1]. En Quito, por la altitud, el valor normal es menor [VERIFICAR EN FUENTE].</p>
+<p><b>Qué lo rompe.</b> El punto vulnerable es la respiración rápida mantenida por el miedo: las sensaciones que produce se interpretan como amenaza y refuerzan el miedo.</p>
+<p><b>Correlato clínico.</b> Hormigueo peribucal y en las manos, espasmo carpopedal y signo de Trousseau; se explora inflando un manguito por encima de la presión sistólica durante unos minutos.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Palpitaciones»: respuesta simpaticoadrenal de lucha o huida. La amenaza activa el simpático y la médula suprarrenal, que liberan adrenalina y noradrenalina.</p>
+
+<p class="mini"><span class="badge b-pu">Kandel 2021 [4]</span><span class="badge b-pu">Guyton y Hall 2021 [1]</span> Principios de neurociencia, 6.ª edición; Tratado de fisiología médica, 14.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>El DSM-5-TR lista entre los síntomas del ataque de pánico el «miedo a perder el control o a volverse loco», junto con la desrealización, que es la sensación de irrealidad del entorno, y la despersonalización, el desapego de uno mismo. Es un miedo vivido como inminente; el síntoma por sí solo no establece un diagnóstico.</p>
+<p><span class="badge b-pu">DSM-5-TR 2022 [5]</span></p>
+<p class="mini">El manual lo cita como un síntoma dentro de un cuadro mayor; esta pestaña define solo el síntoma.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Cuando el cerebro cree que hay peligro, la amígdala da la alarma y el cuerpo reacciona: corazón rápido, respiración rápida, mareo. La persona nota esas sensaciones, no encuentra explicación y concluye que algo grave le pasa a su mente. Ese miedo a enloquecer es un temor, no una pérdida del juicio de realidad: quien lo siente sigue reconociendo que lo que vive es un miedo.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>El paciente del caso conducía hacia su trabajo cuando sintió «angustia por perder el control mental». El relato describe el miedo a que su mente se descontrole, sin mencionar alucinaciones ni ideas delirantes. El síntoma nombra ese miedo; no dice qué lo produce.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Preocupación de la ansiedad generalizada</b></td><td>Pensamiento repetitivo sobre problemas futuros, persistente y sin miedo súbito a enloquecer.</td></tr>
+<tr><td><b>Psicosis</b></td><td>Hay pérdida real del juicio de realidad: delirios o alucinaciones que la persona no reconoce como tales.</td></tr>
+<tr><td><b>Despersonalización y desrealización</b></td><td>Sensación de desapego o de irrealidad; puede acompañar al miedo, pero no es el miedo a enloquecer.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t3"><div class="rc-t">Simulador · Recall de angustia por perder el control mental</div><div class="rc-count" id="rc-t3-n"></div><div class="rc-card" id="rc-t3-c"></div><div class="rc-btns" id="rc-t3-b"></div><div id="rc-t3-e"></div></div>
+
+<p class="gloss">Siglas: CO2, dióxido de carbono; PaCO2, presión arterial de dióxido de carbono; DSM-5-TR, Manual diagnóstico y estadístico de los trastornos mentales, quinta edición, texto revisado; mmHg, milímetros de mercurio.</p>
+</section>
+<section class="tab" id="t4">
+<h2>Preinfarto</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Término popular, no diagnóstico: lo más cercano es la angina inestable, isquemia coronaria en reposo o progresiva sin necrosis.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Arterias coronarias</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Dos arterias que nacen de los senos aórticos, justo por encima de la válvula aórtica. La coronaria izquierda se divide en la descendente anterior y la circunfleja; la coronaria derecha recorre el surco auriculoventricular derecho [6].</p>
+<p><b>Cómo está hecha.</b> Pared arterial con endotelio, músculo liso y adventicia. Las ramas son arterias terminales funcionales: tienen pocas anastomosis eficaces, de modo que una rama ocluida deja sin riego a su territorio.</p>
+<p><b>Qué permite hacer.</b> Irrigar el miocardio, que extrae casi todo el oxígeno de la sangre y por eso depende del flujo coronario. La descendente anterior irriga la pared anterior del ventrículo izquierdo y gran parte del tabique; la circunfleja, la pared lateral; la derecha, el ventrículo derecho y la pared inferior. La coronaria derecha da la rama del nodo sinusal en la mayoría de las personas y la del nodo auriculoventricular.</p>
+<p><b>De qué depende.</b> De una luz sin obstrucción y de la presión de perfusión en diástole, cuando el ventrículo se relaja y las coronarias reciben la mayor parte de su flujo.</p>
+<p><b>Correlato clínico.</b> Si una rama se estrecha o se obstruye, el territorio que irriga sufre isquemia; el síntoma típico es el dolor u opresión torácica, que se reconoce por la historia y se registra en el electrocardiograma (ECG) según la pared afectada.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Complejo de troponinas del sarcómero cardiaco</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Tres proteínas reguladoras (troponinas C, I y T) unidas a la tropomiosina sobre el filamento fino de actina, dentro del sarcómero del cardiomiocito [1].</p>
+<p><b>Cómo está hecho.</b> La troponina C fija calcio, la troponina I inhibe la interacción actina-miosina en reposo y la troponina T ancla el complejo a la tropomiosina. Las isoformas cardiacas de la I y de la T son específicas del miocardio; la C es la misma que en el músculo esquelético lento.</p>
+<p><b>Qué permite hacer.</b> Regular la contracción: cuando sube el calcio, la troponina C lo une, el complejo se desplaza y la miosina puede unirse a la actina. Sin calcio, el complejo bloquea esa unión.</p>
+<p><b>De qué depende.</b> Del calcio liberado por el retículo sarcoplásmico en cada latido y de la integridad de la membrana del cardiomiocito, que mantiene las troponinas dentro de la célula.</p>
+<p><b>Correlato clínico.</b> Cuando el miocito muere, su membrana se rompe y la troponina pasa a la sangre, donde se detecta su elevación. Que la troponina esté elevada indica daño del miocardio, no su causa.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Opresión en el pecho»: balance entre aporte y demanda de oxígeno del miocardio. La isquemia aparece cuando el aporte no alcanza a la demanda.</p>
+
+<p class="mini"><span class="badge b-pu">Moore 2023 [6]</span> <span class="badge b-pu">Guyton y Hall 2021 [1]</span> Anatomía con orientación clínica, 9.ª edición; Tratado de fisiología médica, 14.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>«Preinfarto» no es un diagnóstico. El término médico más cercano es la angina inestable: isquemia miocárdica en reposo o progresiva sin necrosis, es decir, sin elevación de troponina, dentro del síndrome coronario agudo sin elevación del ST. La Cuarta definición universal separa el infarto (lesión miocárdica con cambio de troponina más isquemia) de la angina inestable [7].</p>
+<p><span class="badge b-pu">Thygesen et al. 2018 [7]</span></p>
+<p class="mini am">Interpretación tomada: «preinfarto» equivale a angina inestable. Alternativa: uso popular para cualquier dolor torácico «del corazón», sin criterio diagnóstico.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Las arterias del corazón son las tuberías que le llevan oxígeno. En la angina inestable una de ellas se estrecha de forma brusca y el músculo sufre por falta de riego, aun en reposo. Si el riego vuelve, el músculo se recupera y no hay muerte celular: no sube la troponina. Si la falta de riego se prolonga, las células mueren y ya es un infarto. «Preinfarto» es la palabra de la calle para el primer caso.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>El paciente cuenta que en los episodios anteriores le dijeron «preinfarto debido a estrés». Ese rótulo no dice si hubo isquemia ni si hubo necrosis: son justo los dos criterios que separan la angina inestable del infarto y de la opresión sin origen coronario.</p></div>
+
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span>Mecanismo mínimo</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Ruptura.</b> Una placa de ateroma inestable se rompe o se erosiona y expone material trombogénico.</li>
+<li><b>Trombo.</b> Las plaquetas se agregan y forman un trombo que ocluye la luz de forma parcial.</li>
+<li><b>Isquemia.</b> El flujo cae por debajo de la demanda, incluso en reposo; si el trombo persiste, aparece necrosis.</li>
+</ol>
+<p class="mini">Correlato clínico: dolor torácico en reposo o de inicio reciente con ECG que puede mostrar cambios del segmento ST; la troponina separa angina inestable (normal) de infarto (elevada).</p>
+</div></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Infarto agudo de miocardio</b></td><td>Hay necrosis: la troponina está elevada o cambia, con evidencia de isquemia [7].</td></tr>
+<tr><td><b>Angina estable</b></td><td>Aparece con el esfuerzo y cede con el reposo; el patrón es predecible, a diferencia de la angina inestable.</td></tr>
+<tr><td><b>Síndrome de Takotsubo</b></td><td>Miocardiopatía por estrés: desencadenada por una emoción intensa, con disfunción apical transitoria del ventrículo izquierdo [8].</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t4"><div class="rc-t">Simulador · Recall de preinfarto</div><div class="rc-count" id="rc-t4-n"></div><div class="rc-card" id="rc-t4-c"></div><div class="rc-btns" id="rc-t4-b"></div><div id="rc-t4-e"></div></div>
+
+<p class="gloss">Siglas: ECG, electrocardiograma; ST, segmento del electrocardiograma entre el complejo QRS y la onda T; QRS, complejo de despolarización ventricular.</p>
+</section>
+<section class="tab" id="t5">
+<h2>Stresstabs</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Marca comercial de un multivitamínico del complejo B con vitamina C; no es un ansiolítico.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Vitaminas hidrosolubles como cofactores del metabolismo</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Criterio de agrupación.</b> Vitaminas solubles en agua que el cuerpo almacena poco y debe recibir en la dieta; casi todas funcionan como coenzimas o cofactores de reacciones metabólicas [1].</p>
+<div class="tw"><table><thead><tr><th>Elemento</th><th>Acción o papel</th><th>Tejido más sensible al déficit</th><th>Qué falla si claudica</th></tr></thead><tbody>
+<tr><td><b>B1 (tiamina)</b></td><td>Coenzima del metabolismo de la glucosa en la mitocondria.</td><td>Sistema nervioso central y periférico</td><td>Neuropatía periférica y encefalopatía de Wernicke.</td></tr>
+<tr><td><b>B2 (riboflavina)</b></td><td>Forma las coenzimas FAD y FMN de la cadena oxidativa.</td><td>Piel y mucosas</td><td>Lesiones en las comisuras de la boca y la lengua.</td></tr>
+<tr><td><b>B3 (niacina)</b></td><td>Forma NAD y NADP, aceptores de electrones.</td><td>Piel, intestino y cerebro</td><td>Pelagra: dermatitis, diarrea y demencia.</td></tr>
+<tr><td><b>B6 (piridoxina)</b></td><td>Coenzima del metabolismo de aminoácidos y de neurotransmisores.</td><td>Nervios periféricos</td><td>Neuropatía periférica.</td></tr>
+<tr><td><b>B12 (cobalamina)</b></td><td>Cofactor en la síntesis de ADN y en la mielina.</td><td>Columna posterior y nervios periféricos</td><td>Anemia megaloblástica y neuropatía.</td></tr>
+<tr><td><b>Folato</b></td><td>Transfiere unidades de carbono para sintetizar ADN.</td><td>Médula ósea</td><td>Anemia megaloblástica.</td></tr>
+<tr><td><b>Vitamina C</b></td><td>Cofactor en la síntesis de colágeno.</td><td>Tejido conectivo y encías</td><td>Escorbuto: encías sangrantes.</td></tr>
+</tbody></table></div>
+<p><b>Jerarquía.</b> Las vitaminas B actúan como coenzimas de vías distintas: ninguna reemplaza a otra. El efecto sobre un órgano aparece cuando falta la vitamina de la vía que ese órgano más usa; con ingesta suficiente, añadir más no aumenta la función.</p>
+<p><b>Correlato clínico.</b> El déficit de una vitamina deja un signo propio: la neuropatía se explora con la sensibilidad y los reflejos, la anemia con la palidez y el hemograma, el escorbuto con las encías.</p>
+</div></div>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [1]</span> Tratado de fisiología médica, 14.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Marca comercial de un suplemento multivitamínico del complejo B con vitamina C; algunas presentaciones añaden zinc o hierro. No es un ansiolítico ni un fármaco con acción sobre el sistema nervioso en ausencia de déficit.</p>
+<p><span class="badge b-am">Fuente por verificar</span></p>
+<p class="mini">Composición tomada del conocimiento farmacológico general; la ficha técnica de la presentación no fue consultada. Su uso corresponde al paso 7.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Las vitaminas del complejo B y la C son ayudantes de las enzimas: sin ellas ciertas reacciones del cuerpo se frenan. Stresstabs reúne varias en una tableta. Sirve para cubrir lo que falta si hay un déficit. No actúa sobre los receptores del cerebro que calman la ansiedad, como lo hace una benzodiacepina; por eso el nombre sugiere un efecto contra el estrés que la composición no respalda por sí sola.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>El paciente recibió Stresstabs junto con Xanax y los tomó por varias semanas. Al revisar qué contiene cada producto, queda claro que solo uno de ellos actúa directamente sobre la ansiedad; el otro aporta vitaminas.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Ansiolítico (benzodiacepina)</b></td><td>Actúa sobre el receptor GABA-A y reduce la ansiedad; el multivitamínico no tiene ese mecanismo.</td></tr>
+<tr><td><b>Placebo y efecto expectativa</b></td><td>El placebo es una sustancia sin acción específica; el multivitamínico sí aporta cofactores, pero su efecto sobre la ansiedad puede deberse a la expectativa.</td></tr>
+<tr><td><b>Suplemento con hierro</b></td><td>Corrige un déficit de hierro; el complejo B no lo contiene, salvo en algunas presentaciones.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t5"><div class="rc-t">Simulador · Recall de Stresstabs</div><div class="rc-count" id="rc-t5-n"></div><div class="rc-card" id="rc-t5-c"></div><div class="rc-btns" id="rc-t5-b"></div><div id="rc-t5-e"></div></div>
+
+<p class="gloss">Siglas: B1, B2, B3, B6, B12, vitaminas del complejo B; FAD, flavina adenina dinucleótido; FMN, flavina mononucleótido; NAD, nicotinamida adenina dinucleótido; NADP, NAD fosfato; ADN, ácido desoxirribonucleico; GABA, ácido gamma-aminobutírico.</p>
+</section>
+<section class="tab" id="t6">
+<h2>Xanax (alprazolam)</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Xanax es la marca de alprazolam, una benzodiacepina ansiolítica que potencia la inhibición del ácido gamma-aminobutírico (GABA).</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Receptor GABA-A y la inhibición sináptica</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> Canal de cloruro pentamérico de la membrana postsináptica de las neuronas del sistema nervioso central (SNC). El GABA es el principal neurotransmisor inhibidor y su sitio de unión está en la interfaz de las subunidades α y β [9].</p>
+<p><b>Cómo está hecho.</b> Cinco subunidades forman un poro central. El sitio benzodiacepínico queda entre las subunidades α y γ, distinto del sitio del GABA.</p>
+<p><b>Qué permite hacer.</b> Cuando el GABA se une, el canal se abre, entra cloruro y la neurona se hiperpolariza: es menos probable que dispare. La benzodiacepina es un modulador alostérico positivo: no abre el canal por sí sola, aumenta la frecuencia de apertura cuando hay GABA.</p>
+<p><b>De qué depende.</b> De que haya GABA liberado y de la composición de subunidades, que cambia entre regiones del cerebro. Otros depresores, como el alcohol, actúan sobre el mismo canal y suman su efecto.</p>
+<p><b>Correlato clínico.</b> Más inhibición produce sedación, ataxia y nistagmo; si se suma alcohol, puede haber depresión respiratoria. La ataxia se explora con la marcha en tándem y el nistagmo con el seguimiento ocular.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Vida media de eliminación y estado estacionario</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Absorción.</b> El fármaco pasa del tubo digestivo a la sangre.</li>
+<li><b>Pico.</b> La concentración plasmática alcanza su máximo y empieza a distribuirse a los tejidos.</li>
+<li><b>Eliminación.</b> El hígado y el riñón lo retiran; la concentración cae a la mitad cada vida media.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> Con tomas repetidas, la concentración se estabiliza en el estado estacionario tras 4 a 5 vidas medias; con el mismo plazo se elimina casi por completo después de la última toma. Si la vida media es corta, los niveles oscilan entre una toma y otra [9].</p>
+<p><b>Qué lo rompe.</b> La suspensión brusca tras un uso continuo con neuroadaptación: el cerebro se ajustó a la presencia del fármaco y, al retirarlo, queda sin su efecto inhibidor.</p>
+<p><b>Correlato clínico.</b> Aparecen ansiedad de rebote y síndrome de abstinencia: temblor e insomnio y, en casos graves, convulsiones; se explora con el temblor de manos extendidas y los signos vitales.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Angustia por perder el control mental»: circuito del miedo. La amígdala dispara la respuesta de alarma y la corteza prefrontal la modula.</p>
+
+<p class="mini"><span class="badge b-pu">Goodman &amp; Gilman 2023 [9]</span> Las bases farmacológicas de la terapéutica, 14.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Xanax es la marca comercial de alprazolam, una benzodiacepina triazólica de acción corta-intermedia con efecto ansiolítico. Se une al receptor GABA-A y potencia la inhibición del GABA. Se metaboliza en el hígado por la enzima CYP3A4 [9].</p>
+<p><span class="badge b-pu">Goodman &amp; Gilman 2023 [9]</span></p>
+<p class="mini">Su indicación, dosis, duración y retirada corresponden al paso 7.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>El cerebro tiene un freno natural, el GABA. Cuando el GABA se une a su canal, entra cloruro a la neurona y esta se calma. Alprazolam no pisa el freno por sí mismo: hace que el freno responda mejor cada vez que el GABA llega. Como se elimina relativamente rápido, el efecto sube y baja entre tomas, y si se quita de golpe después de usarlo mucho, el cerebro queda con el freno debilitado.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>El paciente tomó Xanax por varias semanas tras los episodios anteriores. Esa exposición continua es la situación en la que el cerebro se adapta al fármaco, de modo que su retirada tiene un perfil propio de síntomas.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Clonazepam</b></td><td>Otra benzodiacepina, con vida media larga: los niveles oscilan menos entre tomas.</td></tr>
+<tr><td><b>ISRS</b></td><td>Inhibidores selectivos de la recaptación de serotonina: no actúan sobre el receptor GABA-A y su efecto ansiolítico tarda semanas.</td></tr>
+<tr><td><b>Fármacos Z (zolpidem)</b></td><td>No son benzodiacepinas por estructura, pero se unen al mismo receptor GABA-A con selectividad por ciertas subunidades.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t6"><div class="rc-t">Simulador · Recall de Xanax (alprazolam)</div><div class="rc-count" id="rc-t6-n"></div><div class="rc-card" id="rc-t6-c"></div><div class="rc-btns" id="rc-t6-b"></div><div id="rc-t6-e"></div></div>
+
+<p class="gloss">Siglas: GABA, ácido gamma-aminobutírico; GABA-A, receptor ionotrópico del GABA; SNC, sistema nervioso central; ISRS, inhibidores selectivos de la recaptación de serotonina; CYP3A4, isoenzima 3A4 del citocromo P450; P450, familia de enzimas hepáticas de oxidación.</p>
+</section>
+<section class="tab" id="t7">
+<h2>Ansiedad</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Emoción de anticipación ante una amenaza futura, con tensión muscular y vigilancia; normal en dosis ajustada, trastorno cuando es excesiva o persistente.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Eje hipotálamo-hipófiso-suprarrenal</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Estrés.</b> Una demanda o amenaza percibida activa el núcleo paraventricular del hipotálamo.</li>
+<li><b>CRH.</b> El hipotálamo libera hormona liberadora de corticotropina (CRH) hacia la adenohipófisis [1].</li>
+<li><b>ACTH.</b> La adenohipófisis libera hormona adrenocorticotrópica (ACTH) a la sangre.</li>
+<li><b>Cortisol.</b> La ACTH estimula la corteza suprarrenal, que libera cortisol.</li>
+<li><b>Freno.</b> El cortisol inhibe al hipotálamo y a la hipófisis: retroalimentación negativa que apaga el eje.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> El eje sigue un ritmo circadiano, con pico matutino y descenso a lo largo del día; ante un estrés se activa y luego se apaga [1].</p>
+<p><b>Qué lo rompe.</b> El punto vulnerable es el apagado: una activación sostenida que no cede mantiene el cortisol alto y el organismo en alerta.</p>
+<p><b>Correlato clínico.</b> Estado de alerta sostenido, insomnio y tensión muscular; se exploran con la anamnesis y con la exploración del tono muscular.</p>
+</div></div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Sistema serotoninérgico</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Criterio de agrupación.</b> Neuronas que liberan serotonina desde el tronco encefálico y la reparten por el encéfalo; la enzima monoaminooxidasa (MAO) la degrada y limita su acción [4].</p>
+<div class="tw"><table><thead><tr><th>Elemento</th><th>Acción o papel</th><th>Tipo de estructura</th><th>Qué falla si claudica</th></tr></thead><tbody>
+<tr><td><b>Núcleos del rafe</b></td><td>Sintetizan serotonina y la envían a todo el encéfalo.</td><td>Núcleos del tronco encefálico</td><td>Cae la modulación de todas las proyecciones.</td></tr>
+<tr><td><b>Proyección a la amígdala</b></td><td>Modula la reactividad ante estímulos amenazantes.</td><td>Vía de proyección</td><td>La amígdala responde de forma exagerada.</td></tr>
+<tr><td><b>Proyección a la corteza prefrontal</b></td><td>Participa en la regulación del ánimo y del control de la respuesta emocional.</td><td>Vía de proyección</td><td>Menor control sobre la respuesta emocional.</td></tr>
+<tr><td><b>Proyección al hipocampo</b></td><td>Modula la memoria y el contexto de la experiencia.</td><td>Vía de proyección</td><td>El contexto se integra peor.</td></tr>
+<tr><td><b>MAO</b></td><td>Degrada la serotonina en la terminal y limita su efecto.</td><td>Enzima</td><td>Si falta, la serotonina se acumula; si sobra, escasea.</td></tr>
+</tbody></table></div>
+<p><b>Jerarquía.</b> Los núcleos del rafe son el elemento dominante: son la única fuente de serotonina, y su fallo reduce todas las proyecciones a la vez.</p>
+<p><b>Correlato clínico.</b> No hay un signo exploratorio propio. Se infiere por el estado de ánimo, el sueño y el nivel de inquietud que se recogen en la anamnesis y el examen mental.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Angustia por perder el control mental»: circuito del miedo. La amígdala detecta la amenaza y la corteza prefrontal la frena.</p>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Palpitaciones»: respuesta simpaticoadrenal de lucha o huida. El simpático y la médula suprarrenal liberan adrenalina y noradrenalina.</p>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [1]</span><span class="badge b-pu">Kandel 2021 [4]</span> Tratado de fisiología médica, 14.ª edición; Principios de neurociencia, 6.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>El DSM-5-TR distingue el miedo, respuesta emocional a una amenaza inminente, real o percibida, de la ansiedad, anticipación de una amenaza futura, con tensión muscular, vigilancia y conducta de evitación. La ansiedad es una emoción normal; se vuelve trastorno cuando es excesiva o persistente y causa malestar o deterioro.</p>
+<p><span class="badge b-pu">DSM-5-TR 2022 [5]</span></p>
+<p class="mini">La definición describe la emoción y su umbral; no nombra ningún trastorno concreto.</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>El miedo responde a un peligro que está aquí; la ansiedad se prepara para uno que quizá llegue. El cuerpo se pone en guardia: músculos tensos, atención en alerta, ganas de evitar lo temido. Esa preparación sirve para un examen o una entrevista. Deja de servir cuando se enciende sin motivo proporcional, no se apaga y empieza a estorbar la vida diaria.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>En un paciente como el del caso, que consulta por sensaciones físicas y miedo, la ansiedad se reconoce preguntando si anticipa algo malo, si está tenso o en guardia y si evita situaciones por eso. El término describe esa anticipación; no dice qué la origina ni si llega a ser un trastorno.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Miedo</b></td><td>Responde a una amenaza inminente, real o percibida; la ansiedad anticipa una amenaza futura [5].</td></tr>
+<tr><td><b>Estrés</b></td><td>Es la demanda o el desafío que activa al organismo; la ansiedad es la emoción anticipatoria que puede acompañarlo.</td></tr>
+<tr><td><b>Trastorno de ansiedad generalizada</b></td><td>Es un diagnóstico: preocupación excesiva, difícil de controlar, la mayoría de los días durante al menos 6 meses [5]. La ansiedad por sí sola es solo la emoción.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t7"><div class="rc-t">Simulador · Recall de ansiedad</div><div class="rc-count" id="rc-t7-n"></div><div class="rc-card" id="rc-t7-c"></div><div class="rc-btns" id="rc-t7-b"></div><div id="rc-t7-e"></div></div>
+
+<p class="gloss">Siglas: HHS, hipotálamo-hipófiso-suprarrenal; CRH, hormona liberadora de corticotropina; ACTH, hormona adrenocorticotrópica; MAO, monoaminooxidasa; DSM-5-TR, Manual diagnóstico y estadístico de los trastornos mentales, quinta edición, texto revisado.</p>
+</section>
+<section class="tab" id="t8">
+<h2>Pánico</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Miedo extremo, súbito e intenso; en el DSM-5-TR el término forma parte de «ataque de pánico» y «trastorno de pánico».</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Interocepción y corteza insular</span><span class="chev">▾</span></button><div class="acc-b">
+<p><b>Qué es y dónde está.</b> La ínsula es una corteza situada en la profundidad del surco lateral, tapada por los opérculos frontal, parietal y temporal. Recibe por el tálamo las señales del cuerpo: latido, respiración, temperatura y víscera [4].</p>
+<p><b>Cómo está hecha.</b> Es corteza de asociación que integra la señal corporal con la emoción: se conecta con la amígdala y con la corteza del cíngulo anterior.</p>
+<p><b>Qué permite hacer.</b> Construye la percepción consciente del estado corporal, la interocepción: saber que el corazón late rápido o que falta el aire.</p>
+<p><b>De qué depende.</b> De las vías sensitivas viscerales que llegan por el tálamo; la calidad de la señal depende de ellas y de la atención que se le dedique.</p>
+<p><b>Correlato clínico.</b> Si la señal corporal se amplifica o se interpreta como peligro, sensaciones normales, como un latido fuerte, se viven como amenaza. Se explora con la anamnesis: qué sensación notó primero y cómo la interpretó.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Angustia por perder el control mental»: circuito del miedo. La amígdala valora la amenaza y activa la respuesta corporal.</p>
+
+<p class="mini"><span class="badge b-pu">Kandel 2021 [4]</span> Principios de neurociencia, 6.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>«Pánico» designa un miedo extremo, súbito e intenso. En el DSM-5-TR el término aparece en «ataque de pánico», el episodio, y en «trastorno de pánico»: ataques recurrentes e inesperados seguidos de al menos un mes de preocupación por nuevos ataques o de un cambio de conducta.</p>
+<p><span class="badge b-pu">DSM-5-TR 2022 [5]</span></p>
+<p class="mini am">Interpretación tomada: «pánico» como la emoción de miedo extremo súbito. Alternativa: abreviatura popular de «trastorno de pánico».</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>Pánico es el miedo llevado al máximo: aparece de golpe y la persona siente que lo supera. El cuerpo manda sensaciones, la ínsula las registra y la mente las lee como peligro. Esa lectura alimenta más miedo y más sensaciones. Por eso la palabra describe la intensidad de la emoción; que sea un episodio o un trastorno es otra pregunta.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>En un paciente como el del caso, el pánico se reconoce por el relato de un miedo que irrumpe de golpe y con gran intensidad, junto a sensaciones corporales que él interpreta como amenazantes. El término nombra esa intensidad; no dice si hubo un ataque ni un trastorno.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Ataque de pánico</b></td><td>Es un episodio concreto de miedo intenso con síntomas corporales; se desarrolla en su propia pestaña [5].</td></tr>
+<tr><td><b>Trastorno de pánico</b></td><td>Exige ataques recurrentes e inesperados y al menos un mes de preocupación por nuevos ataques o cambio de conducta [5].</td></tr>
+<tr><td><b>Fobia</b></td><td>Miedo ligado a un objeto o situación predecible; el pánico puede surgir sin un desencadenante claro.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t8"><div class="rc-t">Simulador · Recall de pánico</div><div class="rc-count" id="rc-t8-n"></div><div class="rc-card" id="rc-t8-c"></div><div class="rc-btns" id="rc-t8-b"></div><div id="rc-t8-e"></div></div>
+
+<p class="gloss">Siglas: DSM-5-TR, Manual diagnóstico y estadístico de los trastornos mentales, quinta edición, texto revisado.</p>
+</section>
+<section class="tab" id="t9">
+<h2>Ataque de ansiedad</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Expresión popular, no diagnóstica: nombra un episodio de ansiedad intensa que puede ser un ataque de pánico o un aumento gradual de ansiedad.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+<p class="mini">Término coloquial: no requiere base morfofuncional nueva, solo estas dos remisiones.</p>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Palpitaciones»: respuesta simpaticoadrenal de lucha o huida. Una amenaza percibida libera adrenalina y noradrenalina, con taquicardia, temblor y sudoración.</p>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Ansiedad»: eje hipotálamo-hipófiso-suprarrenal. El estrés sostenido activa hipotálamo, hipófisis y corteza suprarrenal, que libera cortisol.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>«Ataque de ansiedad» no es una categoría del DSM-5-TR [5]. En el uso popular nombra un episodio de ansiedad intensa que puede corresponder a un ataque de pánico, de inicio abrupto y pico en minutos, o a un aumento gradual de ansiedad ligado a una preocupación o estresor, sin pico abrupto.</p>
+<p><span class="badge b-pu">DSM-5-TR 2022 [5]</span></p>
+<p class="mini am">Interpretación tomada: episodio de ansiedad intensa de instauración gradual, distinto del ataque de pánico. Alternativa: sinónimo popular de «ataque de pánico».</p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>La gente usa «ataque de ansiedad» para decir que la ansiedad se desbordó. A veces es un golpe repentino que sube en minutos, y eso se llama ataque de pánico. Otras veces la preocupación crece poco a poco, con un motivo a la vista, y se mantiene en una meseta incómoda. Para reconocerlo, pregunta cómo empezó, si hubo un pico y si había un desencadenante anticipado.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Dos relatos distintos podrían recibir el mismo nombre popular. En uno, la persona cuenta que de pronto, sin aviso, sintió que se ahogaba. En otro, refiere varios días de nerviosismo creciente antes de una entrega de trabajo. Lo que los separa es la forma de inicio y la presencia de un pico.</p></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Ataque de pánico</b></td><td>Inicio abrupto con pico en minutos y síntomas definidos por el DSM-5-TR [5].</td></tr>
+<tr><td><b>Preocupación de la ansiedad generalizada</b></td><td>Es persistente y se mantiene durante meses, sin episodios con pico.</td></tr>
+<tr><td><b>Reacción aguda al estrés</b></td><td>Responde a un evento traumático o estresante identificable y es transitoria.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t9"><div class="rc-t">Simulador · Recall de ataque de ansiedad</div><div class="rc-count" id="rc-t9-n"></div><div class="rc-card" id="rc-t9-c"></div><div class="rc-btns" id="rc-t9-b"></div><div id="rc-t9-e"></div></div>
+
+<p class="gloss">Siglas: DSM-5-TR, Manual diagnóstico y estadístico de los trastornos mentales, quinta edición, texto revisado.</p>
+</section>
+<section class="tab" id="t10">
+<h2>Ataque de pánico</h2>
+<div class="hb"><div class="hb-t">Idea rectora</div><p>Episodio de miedo o malestar intenso de inicio abrupto, con pico en minutos y síntomas físicos y cognitivos acompañantes.</p></div>
+
+<div class="pre">
+<div class="pre-t">Prerrequisitos — lo que debes tener claro antes de leer la definición</div>
+
+<div class="acc op"><button class="acc-h" onclick="tog(this)"><span>Curso temporal de la descarga de catecolaminas</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Amenaza.</b> Una amenaza, real o percibida, activa el hipotálamo y el locus coeruleus.</li>
+<li><b>Descarga.</b> El simpático y la médula suprarrenal liberan adrenalina y noradrenalina a la sangre [1].</li>
+<li><b>Pico.</b> Con la hormona circulante, el efecto en el corazón, la piel y el músculo alcanza su máximo en minutos.</li>
+<li><b>Retirada.</b> La recaptación neuronal y la degradación enzimática por MAO y COMT retiran las catecolaminas con rapidez [9].</li>
+<li><b>Cese.</b> Si la descarga no se renueva, los síntomas ceden. Rama: si se renueva, el cuadro se prolonga.</li>
+</ol>
+<p><b>Ventana de normalidad.</b> Es una respuesta breve y autolimitada: sube, alcanza un máximo y baja sin intervención [1].</p>
+<p><b>Qué lo rompe.</b> Un bucle en que las sensaciones corporales se interpretan como peligro y renuevan la descarga, de modo que el pico no baja.</p>
+<p><b>Correlato clínico.</b> Pico de taquicardia, temblor y sudoración que cede de forma espontánea. Se explora con el pulso y los signos vitales seriados.</p>
+</div></div>
+
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Palpitaciones»: respuesta simpaticoadrenal de lucha o huida. La amenaza percibida libera catecolaminas y acelera el corazón.</p>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Angustia por perder el control mental»: ventilación y CO2: hiperventilación y alcalosis respiratoria. Respirar de más baja el CO2 y causa hormigueo y mareo.</p>
+<p class="rem-line"><span class="chip-rs">Remisión</span>↪ Prerrequisito ya desarrollado en «Pánico»: interocepción y corteza insular. La ínsula integra las señales internas del cuerpo en una sensación consciente.</p>
+
+<p class="mini"><span class="badge b-pu">Guyton y Hall 2021 [1]</span> <span class="badge b-pu">Goodman &amp; Gilman 2023 [9]</span> Tratado de fisiología médica, 14.ª edición; Las bases farmacológicas de la terapéutica, 14.ª edición.</p>
+</div>
+
+<div class="card"><div class="card-t">Definición de referencia</div>
+<p>Aparición abrupta de miedo o malestar intenso que alcanza su máximo en minutos, con cuatro o más de 13 síntomas, entre ellos palpitaciones, sudoración, temblor, disnea, dolor u opresión torácica, náuseas, mareo, desrealización y miedo a perder el control o a morir. Puede ser esperado, con desencadenante, o inesperado [5].</p>
+<p><span class="badge b-pu">DSM-5-TR 2022 [5]</span></p></div>
+
+<div class="card fey"><div class="card-t">Explicación Feynman</div>
+<p>El cuerpo dispara su alarma de peligro cuando no hay un peligro visible. En pocos minutos llegan el corazón acelerado, el temblor, el sudor y el miedo intenso. Esas sensaciones asustan y pueden renovar la alarma, así que el pico sube más. Luego la adrenalina se degrada y el episodio cede por sí solo. Lo definitorio es el inicio abrupto, el pico en minutos y los síntomas.</p></div>
+
+<div class="card ej"><div class="card-t">Ejemplo de anclaje</div>
+<p>Los rasgos del término se reconocerían en un relato así: inicio abrupto mientras conducía, palpitaciones, opresión torácica, sudoración, náuseas y miedo a perder el control. Reconocer ese patrón no dice qué tiene el paciente ni descarta causas orgánicas, que pertenecen a pasos posteriores.</p></div>
+
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span>Mecanismo mínimo</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="tl">
+<li><b>Interpretación.</b> Una sensación corporal, como un latido fuerte, se interpreta como señal de catástrofe.</li>
+<li><b>Descarga.</b> El miedo activa el simpático y libera más catecolaminas.</li>
+<li><b>Bucle.</b> Aparecen más sensaciones, que refuerzan la interpretación y elevan el pico.</li>
+</ol>
+<p class="mini">Correlato clínico: el pulso y la frecuencia respiratoria suben durante el pico y bajan cuando el bucle se interrumpe.</p>
+</div></div>
+
+<div class="acc no"><button class="acc-h" onclick="tog(this)"><span>No confundir con</span><span class="chev">▾</span></button><div class="acc-b">
+<div class="tw"><table><thead><tr><th>Término vecino</th><th>Criterio que lo separa</th></tr></thead><tbody>
+<tr><td><b>Trastorno de pánico</b></td><td>Exige ataques recurrentes inesperados más al menos un mes de preocupación o cambio de conducta [5]; el ataque es solo el episodio.</td></tr>
+<tr><td><b>Síndrome coronario agudo</b></td><td>Puede dar los mismos síntomas: el patrón del relato no lo separa sin estudio.</td></tr>
+<tr><td><b>Ataque de ansiedad</b></td><td>Término popular; si el inicio es gradual y sin pico abrupto, no cumple el patrón del ataque de pánico.</td></tr>
+</tbody></table></div>
+</div></div>
+
+<div class="rc" id="rc-t10"><div class="rc-t">Simulador · Recall de ataque de pánico</div><div class="rc-count" id="rc-t10-n"></div><div class="rc-card" id="rc-t10-c"></div><div class="rc-btns" id="rc-t10-b"></div><div id="rc-t10-e"></div></div>
+
+<p class="gloss">Siglas: DSM-5-TR, Manual diagnóstico y estadístico de los trastornos mentales, quinta edición, texto revisado; MAO, monoaminooxidasa; COMT, catecol-O-metiltransferasa; CO2, dióxido de carbono.</p>
+</section>
+<section class="tab" id="tg">
+<h2>Repaso global</h2>
+<p class="mini">Mazo mixto con todas las tarjetas de las diez pestañas, barajadas e intercaladas. Al terminar verás los aciertos al primer intento por término.</p>
+
+<div class="rc" id="rc-tg"><div class="rc-t">Simulador · Repaso global de los diez términos</div><div class="rc-count" id="rc-tg-n"></div><div class="rc-card" id="rc-tg-c"></div><div class="rc-btns" id="rc-tg-b"></div><div id="rc-tg-e"></div></div>
+
+<div class="acc"><button class="acc-h" onclick="tog(this)"><span>Referencias</span><span class="chev">▾</span></button><div class="acc-b">
+<ol class="vanc">
+<li>Hall JE, Hall ME. Guyton and Hall textbook of medical physiology. 14th ed. Philadelphia: Elsevier; 2021.</li>
+<li>Gulati M, Levy PD, Mukherjee D, Amsterdam E, Bhatt DL, Birtcher KK, et al. 2021 AHA/ACC/ASE/CHEST/SAEM/SCCT/SCMR guideline for the evaluation and diagnosis of chest pain. Circulation. 2021;144(22):e368-454. doi:10.1161/CIR.0000000000001029.</li>
+<li>Raviele A, Giada F, Bergfeldt L, Blanc JJ, Blomstrom-Lundqvist C, Mont L, et al. Management of patients with palpitations: a position paper from the European Heart Rhythm Association. Europace. 2011;13(7):920-34. doi:10.1093/europace/eur130.</li>
+<li>Kandel ER, Koester JD, Mack SH, Siegelbaum SA. Principles of neural science. 6th ed. New York: McGraw Hill; 2021.</li>
+<li>American Psychiatric Association. Diagnostic and statistical manual of mental disorders. 5th ed, text rev. Washington (DC): American Psychiatric Association Publishing; 2022.</li>
+<li>Dalley AF II, Agur AMR. Moore's clinically oriented anatomy. 9th ed. Philadelphia: Wolters Kluwer; 2023.</li>
+<li>Thygesen K, Alpert JS, Jaffe AS, Chaitman BR, Bax JJ, Morrow DA, et al. Fourth universal definition of myocardial infarction (2018). Circulation. 2018;138(20):e618-51. doi:10.1161/CIR.0000000000000617.</li>
+<li>Ghadri JR, Wittstein IS, Prasad A, Sharkey S, Dote K, Akashi YJ, et al. International expert consensus document on Takotsubo syndrome (part I): clinical characteristics, diagnostic criteria, and pathophysiology. Eur Heart J. 2018;39(22):2032-46. doi:10.1093/eurheartj/ehy076.</li>
+<li>Brunton LL, Knollmann BC, editors. Goodman &amp; Gilman's the pharmacological basis of therapeutics. 14th ed. New York: McGraw Hill; 2023.</li>
+</ol>
+<p class="mini">Stresstabs lleva el aviso «Fuente por verificar»: no se cita su ficha técnica porque no fue consultada. Los artículos 2, 3, 7 y 8 se verificaron en PubMed (PMID 34709879, 21697315, 30571511 y 29850871).</p>
+</div></div>
+</section>
+<script>
+const TERMS={t1:'Opresión en el pecho',t2:'Palpitaciones',t3:'Angustia por perder el control mental',t4:'Preinfarto',t5:'Stresstabs',t6:'Xanax (alprazolam)',t7:'Ansiedad',t8:'Pánico',t9:'Ataque de ansiedad',t10:'Ataque de pánico'};
+const DECKS={
+t1:[
+{q:'¿Por qué el dolor de origen cardiaco puede percibirse en el brazo izquierdo?',a:'Las aferentes viscerales del corazón convergen en la médula con aferentes somáticas del brazo, y el cerebro no distingue el origen de la señal.',h:'Piensa en una neurona de segundo orden compartida.'},
+{q:'La taquicardia acorta la {{diástole}}, y como la coronaria izquierda se perfunde sobre todo en esa fase, baja el aporte mientras sube la demanda de oxígeno.',a:'diástole',h:'Es la fase en que el músculo se relaja.'},
+{q:'Un dolor torácico que se acentúa al inspirar profundo y se reproduce al palpar la pared, ¿se parece a la opresión de origen visceral?',a:'No: el dolor visceral es difuso, no cambia con la respiración ni se reproduce al palpar; el pleurítico y el de pared sí.',h:'Compara qué maniobra cambia cada dolor.'},
+{q:'La guía AHA/ACC 2021 desaconseja llamar {{atípico}} al dolor torácico.',a:'atípico',h:'Es un adjetivo que sugiere que el dolor no sería cardiaco.'},
+{q:'Un paciente cierra el puño sobre el esternón al describir su molestia. ¿Cómo se llama el signo y qué sugiere sobre el dolor?',a:'Signo de Levine: dolor visceral difuso, que el paciente no puede localizar con un dedo.',h:'Lleva el nombre de un cardiólogo.'},
+],
+t2:[
+{q:'¿Qué hace el nodo AV con el impulso que viene de las aurículas y qué permite?',a:'Lo retrasa, de modo que las aurículas se vacíen antes de que se contraigan los ventrículos.',h:'Piensa en el orden de la contracción.'},
+{q:'En la respuesta de lucha o huida, ¿qué receptores explican el temblor fino y cuál es el mecanismo de la sudoración?',a:'Temblor: receptores β2 del músculo esquelético; sudoración: simpático colinérgico sobre las glándulas sudoríparas.',h:'Un mecanismo usa catecolaminas y el otro acetilcolina.'},
+{q:'Un paciente refiere «palpitaciones» pero su pulso es regular y de frecuencia normal. ¿Hay palpitaciones? ¿Qué las distingue de una taquicardia?',a:'Sí: son un síntoma, la percepción del paciente; la taquicardia es un signo medido.',h:'Una se refiere, la otra se mide.'},
+{q:'El consenso EHRA define las palpitaciones por lo que {{siente el paciente}}, no por el ritmo medido.',a:'siente el paciente',h:'El énfasis está en el relato.'},
+{q:'Un paciente describe «un salto», una pausa y un golpe fuerte en el pecho. ¿Qué evento del ritmo suele producir esa sensación?',a:'Una extrasístole: un latido prematuro seguido de una pausa y un latido siguiente más fuerte.',h:'Es un latido que llega antes de tiempo.'},
+],
+t3:[
+{q:'¿Qué función cumple la amígdala en el circuito del miedo y qué estructuras activa?',a:'Detecta y valora la amenaza; activa el hipotálamo y el locus coeruleus, que disparan la respuesta corporal.',h:'Es el elemento dominante del circuito.'},
+{q:'Al hiperventilar baja la {{PaCO2}}, sube el pH y baja el calcio ionizado; por eso aparecen {{parestesias peribucales}}.',a:'PaCO2; parestesias peribucales',h:'La baja de calcio ionizado excita a los nervios.'},
+{q:'¿Cómo se distingue el miedo a enloquecer de la psicosis?',a:'En la psicosis hay pérdida real del juicio de realidad, con delirios o alucinaciones que no se reconocen como tales; en el miedo a enloquecer el juicio se conserva.',h:'Pregunta si la persona reconoce lo que vive.'},
+{q:'Desrealización es sentir irrealidad del {{entorno}}; despersonalización es sentir desapego de {{uno mismo}}.',a:'entorno; uno mismo',h:'Una mira hacia afuera y la otra hacia adentro.'},
+{q:'¿Qué rasgo del relato separa el miedo a enloquecer de la preocupación de la ansiedad generalizada?',a:'El miedo a enloquecer es súbito, intenso y referido a la propia mente durante un episodio; la preocupación es un pensamiento repetitivo y persistente sobre problemas futuros.',h:'Compara la duración y el objeto del temor.'},
+{q:'Tras respirar rápido, un paciente nota hormigueo alrededor de la boca y espasmo de la mano. ¿Qué maniobra provoca ese espasmo y cómo se llama el signo?',a:'Inflar un manguito por encima de la presión sistólica durante unos minutos; signo de Trousseau.',h:'Se usa el mismo aparato que para la presión arterial.'},
+],
+t4:[
+{q:'La coronaria {{derecha}} da la rama del nodo sinusal en la mayoría de las personas y la del nodo auriculoventricular.',a:'derecha',h:'Una sola arteria irriga ambos nodos en la mayoría.'},
+{q:'Al ser arterias terminales funcionales, ¿qué le pasa al territorio de una rama coronaria que se ocluye?',a:'Queda sin riego eficaz por falta de anastomosis y sufre isquemia.',h:'Piensa en cuántas rutas alternas tiene.'},
+{q:'Cuando el cardiomiocito muere, su membrana se rompe y la {{troponina}} cardiaca pasa a la sangre, donde se detecta su elevación.',a:'troponina',h:'Proteína del sarcómero específica del miocardio.'},
+{q:'¿Qué término médico es el más cercano a «preinfarto» y qué lo distingue del infarto?',a:'Angina inestable: isquemia en reposo o progresiva sin necrosis, sin elevación de troponina.',h:'La diferencia está en un marcador de daño celular.'},
+{q:'¿Qué rasgo del patrón del dolor separa la angina estable de la inestable?',a:'La estable aparece con un esfuerzo predecible y cede con el reposo; la inestable aparece en reposo, es de inicio reciente o se agrava.',h:'Fíjate en qué la desencadena y si es predecible.'},
+{q:'¿Qué distingue al síndrome de Takotsubo de la angina inestable por placa rota?',a:'Es una miocardiopatía por estrés emocional con disfunción apical transitoria del ventrículo izquierdo, no un trombo sobre una placa.',h:'El desencadenante es una emoción intensa.'},
+],
+t5:[
+{q:'Stresstabs es la marca de un suplemento multivitamínico del complejo {{B}} con vitamina {{C}}.',a:'B; C',h:'Dos grupos de vitaminas hidrosolubles.'},
+{q:'¿Qué diferencia de mecanismo separa a Stresstabs de una benzodiacepina frente a la ansiedad?',a:'Stresstabs aporta cofactores vitamínicos y no actúa sobre el receptor GABA-A; la benzodiacepina potencia ese receptor.',h:'Compara qué receptor toca cada uno.'},
+{q:'El déficit de vitamina {{B12}} produce anemia megaloblástica y neuropatía.',a:'B12',h:'Cofactor de la síntesis de ADN y de la mielina.'},
+{q:'¿Qué falla en el escorbuto y qué signo se explora?',a:'La síntesis de colágeno por falta de vitamina C; se ven encías sangrantes.',h:'La vitamina C cofactoriza una proteína estructural.'},
+{q:'Frente a un placebo, un multivitamínico se distingue porque {{aporta cofactores}} reales, aunque el alivio de la ansiedad pueda deberse a la expectativa.',a:'aporta cofactores',h:'Tiene composición activa, pero no mecanismo ansiolítico.'},
+],
+t6:[
+{q:'Cuando el GABA se une al receptor GABA-A, entra {{cloruro}} y la neurona se {{hiperpolariza}}.',a:'cloruro; hiperpolariza',h:'La entrada de un anión vuelve la célula más negativa.'},
+{q:'¿Por qué una benzodiacepina se llama modulador alostérico positivo?',a:'Se une entre las subunidades α y γ y aumenta la frecuencia de apertura del canal cuando hay GABA, sin abrirlo por sí sola.',h:'Necesita al GABA presente.'},
+{q:'Si se suma alcohol a una benzodiacepina, puede haber {{depresión respiratoria}}; la ataxia se explora con la marcha en {{tándem}}.',a:'depresión respiratoria; tándem',h:'Ambos actúan sobre el mismo canal.'},
+{q:'Tras la suspensión brusca de un uso continuo con neuroadaptación, ¿qué cuadro aparece?',a:'Ansiedad de rebote y síndrome de abstinencia: temblor, insomnio y, en casos graves, convulsiones.',h:'El cerebro se ajustó a la presencia del fármaco.'},
+{q:'El estado estacionario y la eliminación casi completa del fármaco se alcanzan en unas {{4 a 5}} vidas medias.',a:'4 a 5',h:'Es un número pequeño de vidas medias.'},
+{q:'¿En qué se diferencia un ISRS de alprazolam en su sitio de acción y su tiempo de efecto?',a:'El ISRS no actúa sobre GABA-A y su efecto ansiolítico tarda semanas; alprazolam potencia el GABA-A con efecto rápido.',h:'Uno modula serotonina, el otro GABA.'},
+],
+t7:[
+{q:'Cuando el cortisol sube, frena al hipotálamo y a la hipófisis: es un control por {{retroalimentación negativa}}.',a:'retroalimentación negativa',h:'El producto final apaga lo que lo estimula.'},
+{q:'En la anamnesis, ¿qué tres preguntas permiten reconocer la ansiedad como emoción?',a:'Si anticipa algo malo; si está tenso o en guardia; si evita situaciones por eso.',h:'Anticipación, tensión y conducta.'},
+{q:'Los núcleos del rafe, en el tronco encefálico, liberan {{serotonina}} y la proyectan a la {{amígdala}}, donde modula la reactividad ante la amenaza.',a:'serotonina; amígdala',h:'Es la única fuente de este neurotransmisor en el encéfalo.'},
+{q:'¿En qué se diferencia el miedo de la ansiedad según el DSM-5-TR?',a:'El miedo responde a una amenaza inminente, real o percibida; la ansiedad anticipa una amenaza futura.',h:'Uno mira al presente, la otra al futuro.'},
+{q:'La ansiedad pasa de emoción normal a trastorno cuando es {{excesiva o persistente}} y causa {{malestar o deterioro}}.',a:'excesiva o persistente; malestar o deterioro',h:'Se mide por proporción y por su efecto en la vida diaria.'},
+],
+t8:[
+{q:'La ínsula recibe por el {{tálamo}} las señales del cuerpo y construye la percepción consciente del estado corporal, llamada {{interocepción}}.',a:'tálamo; interocepción',h:'Es la relación entre el cuerpo y la conciencia de él.'},
+{q:'En un relato, ¿qué dos rasgos permiten reconocer que la persona describe pánico y no solo nerviosismo?',a:'Que el miedo irrumpió de golpe y que fue de intensidad extrema, desbordante.',h:'Velocidad de inicio e intensidad.'},
+{q:'¿Cómo se explora en la anamnesis la contribución de la interocepción al miedo?',a:'Preguntando qué sensación corporal notó primero y cómo la interpretó.',h:'Interesa el orden: sensación, luego interpretación.'},
+{q:'¿Qué separa el pánico, como emoción, de la ansiedad?',a:'El pánico irrumpe de golpe con intensidad extrema; la ansiedad es anticipatoria y puede crecer de forma gradual.',h:'Compara el momento y la forma de inicio.'},
+{q:'¿Cómo se distingue el miedo de una fobia del pánico?',a:'La fobia se liga a un objeto o situación predecible; el pánico puede surgir sin un desencadenante claro.',h:'Piensa en si el disparador se puede anticipar.'},
+],
+t9:[
+{q:'Un episodio de ansiedad que sube poco a poco durante horas, ligado a una preocupación, sin pico abrupto, ¿qué patrón sigue frente al ataque de pánico?',a:'Es el patrón gradual, con meseta; el ataque de pánico es abrupto y alcanza el pico en minutos',h:'Forma de inicio y presencia de pico'},
+{q:'¿Por qué «ataque de ansiedad» no basta como término en una historia clínica?',a:'Porque no es una categoría del DSM-5-TR: puede nombrar un ataque de pánico o un aumento gradual de ansiedad, y hay que precisar cuál por el inicio y el pico',h:'Piensa en los dos significados que admite'},
+{q:'¿Qué tres rasgos del relato ayudan a distinguir un ataque de ansiedad gradual de un ataque de pánico?',a:'Forma de inicio (gradual o abrupta); pico en minutos o meseta; desencadenante anticipado o no',h:'Inicio, curso y desencadenante'},
+{q:'En el uso popular, «ataque de ansiedad» puede nombrar un {{ataque de pánico}} o un aumento {{gradual}} de ansiedad ligado a un estresor.',a:'ataque de pánico; gradual',h:'Dos significados posibles del mismo nombre'},
+{q:'¿Qué diferencia a la preocupación de la ansiedad generalizada de un episodio con pico?',a:'La preocupación es persistente durante meses y no tiene episodios con pico',h:'Duración y curso temporal'},
+],
+t10:[
+{q:'Tras la descarga de catecolaminas, ¿qué dos procesos las retiran rápido de la sangre y los receptores?',a:'Recaptación neuronal; degradación enzimática por MAO y COMT',h:'Uno es transporte y otro es enzimático'},
+{q:'Si la descarga de catecolaminas no se renueva, los síntomas {{ceden de forma espontánea}} en minutos.',a:'ceden de forma espontánea',h:'Respuesta breve y autolimitada'},
+{q:'Un ataque de pánico se define por inicio abrupto, pico en {{minutos}} y {{cuatro o más}} de 13 síntomas.',a:'minutos; cuatro o más',h:'Tiempo al máximo y umbral de síntomas'},
+{q:'¿Qué ocurre en el bucle que mantiene un ataque de pánico?',a:'Una sensación corporal se interpreta como peligro, renueva la descarga simpática y produce más sensaciones',h:'Interpretación, descarga, más sensaciones'},
+{q:'¿Qué separa un ataque de pánico del trastorno de pánico?',a:'El trastorno exige ataques recurrentes inesperados más al menos un mes de preocupación o cambio de conducta; el ataque es solo el episodio',h:'Episodio frente a diagnóstico con recurrencia'},
+{q:'¿Por qué un relato de inicio abrupto con palpitaciones, opresión torácica y sudoración no basta para separar un ataque de pánico de un síndrome coronario agudo?',a:'Porque ambos pueden dar los mismos síntomas: el patrón del relato no los separa sin estudio',h:'Los síntomas se solapan'},
+]
+};
+DECKS.tg=[].concat.apply([],Object.keys(TERMS).map(function(k){return DECKS[k].map(function(c){return {q:c.q,a:c.a,h:c.h,t:k};});}));
+const RC={};
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function el(k,s){return document.getElementById('rc-'+k+'-'+s);}
+function isCloze(c){return c.q.indexOf('{{')>=0;}
+function front(c){return esc(c.q).replace(/\{\{[^}]*\}\}/g,'[ ? ]');}
+function back(c){return esc(c.q).replace(/\{\{([^}]*)\}\}/g,'<b>$1</b>');}
+function shuffle(a){for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+function show(id,btn){
+  document.querySelectorAll('.tab').forEach(function(s){s.classList.toggle('active',s.id===id);});
+  document.querySelectorAll('.tb').forEach(function(b){b.classList.toggle('active',b===btn);});
+  try{btn.scrollIntoView({inline:'center',block:'nearest'});}catch(e){}
+}
+function tog(b){b.parentElement.classList.toggle('op');}
+function rc_reset(k){
+  var n=DECKS[k].length,idx=[];
+  for(var i=0;i<n;i++)idx.push(i);
+  RC[k]={queue:shuffle(idx),first:{},fails:{},shown:false,done:0,n:n};
+  if(el(k,'e'))el(k,'e').innerHTML='';
+  rc_render(k);
+}
+function rc_render(k){
+  var s=RC[k],card=el(k,'c');
+  if(!card)return;
+  if(!s.queue.length){rc_end(k);return;}
+  var c=DECKS[k][s.queue[0]],f=s.fails[s.queue[0]]||0;
+  el(k,'n').textContent='Tarjeta '+(s.done+1)+' de '+s.n+(k==='tg'&&s.shown?' · '+TERMS[c.t]:'');
+  var h='<p class="rc-q">'+(s.shown&&isCloze(c)?back(c):front(c))+'</p>';
+  if(s.shown&&!isCloze(c))h+='<p class="rc-a"><b>Respuesta.</b> '+esc(c.a)+'</p>';
+  if(!s.shown&&f>=2)h+='<p class="rc-hint">Pista: '+esc(c.h)+'</p>';
+  card.innerHTML=h;
+  var b='';
+  if(!s.shown){b+='<button class="go" onclick="rc_show(\''+k+'\')">Mostrar respuesta</button>';}
+  else{
+    b+='<button class="gr ok" onclick="rc_grade(\''+k+'\',\'ok\')">La sabía</button>';
+    b+='<button class="gr mid" onclick="rc_grade(\''+k+'\',\'mid\')">A medias</button>';
+    b+='<button class="gr ko" onclick="rc_grade(\''+k+'\',\'ko\')">No la sabía</button>';
+  }
+  b+='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  el(k,'b').innerHTML=b;
+}
+function rc_show(k){RC[k].shown=true;rc_render(k);}
+function rc_grade(k,g){
+  var s=RC[k],i=s.queue.shift();
+  if(s.first[i]===undefined)s.first[i]=(g==='ok');
+  if(g==='ok'){s.done++;}
+  else{s.fails[i]=(s.fails[i]||0)+1;s.queue.push(i);}
+  s.shown=false;
+  rc_render(k);
+}
+function rc_verdict(p){return p>=80?['ok','Término consolidado']:['rep','Repasar hoy'];}
+function rc_end(k){
+  var s=RC[k],ok=0,i,rows='';
+  for(i=0;i<s.n;i++)if(s.first[i])ok++;
+  var p=Math.round(100*ok/s.n),v=rc_verdict(p);
+  el(k,'n').textContent='Mazo completado';
+  el(k,'c').innerHTML='<p class="rc-q">Cola agotada: todas las tarjetas se resolvieron.</p>';
+  el(k,'b').innerHTML='<button class="ghost" onclick="rc_reset(\''+k+'\')">Reiniciar mazo</button>';
+  var h='<div class="rc-end '+v[0]+'">Aciertos al primer intento: '+ok+' de '+s.n+' ('+p+' %). <b>'+v[1]+'</b>.</div>';
+  if(k==='tg'){
+    Object.keys(TERMS).forEach(function(t){
+      var tot=0,hit=0;
+      for(i=0;i<s.n;i++){if(DECKS.tg[i].t===t){tot++;if(s.first[i])hit++;}}
+      var pp=Math.round(100*hit/tot),vv=rc_verdict(pp);
+      rows+='<tr><td>'+esc(TERMS[t])+'</td><td>'+hit+' de '+tot+' ('+pp+' %)</td><td>'+vv[1]+'</td></tr>';
+    });
+    h+='<div class="tw"><table><thead><tr><th>Término</th><th>Aciertos 1er intento</th><th>Veredicto</th></tr></thead><tbody>'+rows+'</tbody></table></div>';
+  }
+  el(k,'e').innerHTML=h;
+}
+Object.keys(DECKS).forEach(rc_reset);
+</script>
+</div></body></html>

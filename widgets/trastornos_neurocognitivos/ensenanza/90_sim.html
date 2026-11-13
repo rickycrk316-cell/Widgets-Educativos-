@@ -1,0 +1,276 @@
+<script>
+function par(t){return '<p>'+t+'</p>';}
+function hv(a,v){return a.indexOf(v)>-1;}
+function vacio(dc,t){out(dc,par(t));}
+
+function dcVis(dc){
+  var c=sel(dc,'curso'),a=sel(dc,'aten'),d=sel(dc,'dom'),s=sel(dc,'sig');
+  if(!(c.length||a.length||d.length||s.length)){
+    vacio(dc,'Elige el tiempo y curso, la atención, el dominio que cayó primero y los signos acompañantes. El simulador propone la entidad compatible, el hallazgo que falta y la conducta inicial; no calcula probabilidades.');return;}
+  var x=[],n=0;
+  var cron=hv(c,'cron')||hv(c,'esc');
+  var inat=hv(a,'alt');
+  var delir=hv(c,'agudo')||(inat&&!cron);
+  var lewy=cron&&((inat&&(hv(d,'vis')||hv(s,'park')))||(hv(d,'vis')&&hv(s,'park')));
+  var vasc=!delir&&!lewy&&(hv(c,'esc')||((hv(s,'foc')||hv(s,'vas'))&&(hv(d,'eje')||!d.length)));
+  var ft=!delir&&!lewy&&!vasc&&(hv(d,'con')||hv(s,'des')||hv(s,'afa'));
+  var ea=!delir&&!lewy&&!vasc&&!ft&&(hv(d,'mem')||(cron&&!d.length));
+  if(delir){n++;
+    x.push(par('<b>Delirium</b>: el inicio en horas o días con inatención y conciencia que fluctúa define el cuadro, y se busca primero aunque haya una demencia de fondo [1][2]. Falta confirmarlo con el CAM o el 4AT en la cabecera y identificar la causa'+(hv(s,'pre')?' (el precipitante elegido orienta dónde buscar)':'')+' [18]. Conducta inicial: buscar y corregir la causa, medidas no farmacológicas y antipsicótico solo si hay riesgo; si no distingues delirium de demencia, trata primero el delirium [2]. Detalle en «Delirium».'));
+    if(cron||hv(d,'mem')) x.push(par('Si además hay un declive de meses, piensa en <b>delirium sobre demencia</b>: la demencia aumenta el riesgo de delirium y no se rotula hasta que el delirium se resuelva [2].'));
+  }
+  if(lewy){n++;
+    x.push(par('<b>Demencia con cuerpos de Lewy</b>: la fluctuación cognitiva con alucinaciones visuales o parkinsonismo en un declive crónico es su perfil [8]. Descarta primero un delirium, que imita la fluctuación [2]. Falta confirmar con los criterios de McKeith 2017; si hay duda, NICE propone SPECT con 123I-FP-CIT [8][2]. Conducta inicial: inhibidor de colinesterasa (donepezilo o rivastigmina) y evitar los antipsicóticos, que pueden causar reacciones graves [2].'));
+  }
+  if(vasc){n++;
+    x.push(par('<b>Neurocognitivo vascular</b>: el declive escalonado, ejecutivo, con signos focales y factores vasculares apunta a una causa cerebrovascular [10]. Falta la RM con una lesión vascular que explique el déficit; la carga de lesiones sola no basta para el diagnóstico [2]. Conducta inicial: control estricto de los factores de riesgo vascular y prevención secundaria; los inhibidores de colinesterasa solo si se sospecha Alzheimer, Lewy o demencia de Parkinson asociados [2].'));
+  }
+  if(ft){n++;
+    x.push(par('<b>Degeneración frontotemporal</b>: el cambio temprano de conducta o de lenguaje con memoria relativamente conservada separa este grupo del Alzheimer [11][12]. Falta confirmar con los criterios de Rascovsky (conducta) o Gorno-Tempini (lenguaje) y la neuroimagen con atrofia frontotemporal; FDG-PET o SPECT de perfusión si hay duda [2]. Conducta inicial: no ofrezcas inhibidores de colinesterasa ni memantina [2]; el manejo de la conducta se detalla en «Frontotemporal».'));
+  }
+  if(ea){n++;
+    x.push(par('<b>Enfermedad de Alzheimer</b>: el olvido progresivo de lo reciente con fallo para aprender información nueva, de inicio insidioso y con atención conservada, es su perfil [9]. Falta medir la cognición con MoCA o MMSE, la función diaria, las causas reversibles y la neuroimagen estructural [2]. Conducta inicial: inhibidor de colinesterasa si hay demencia leve a moderada, intervención no farmacológica y apoyo al cuidador [2]. Detalle en «Enfermedad de Alzheimer».'));
+  }
+  if(hv(s,'rap')) x.push(par('<b>Declive en semanas a pocos meses</b>: sospecha enfermedad de Creutzfeldt-Jakob u otra causa de demencia rápidamente progresiva y refiere a neurología con acceso a estudio de líquido cefalorraquídeo [2].'));
+  if(!n&&!hv(s,'rap')) x.push(par('Los datos elegidos no bastan para sostener una entidad. Define el tiempo de instalación, la atención y el dominio que cayó primero.'));
+  if(cron&&!delir) x.push(par('En todo declive crónico descarta antes las causas reversibles: B12, TSH, depresión y fármacos anticolinérgicos [4][2].'));
+  x.push('<span class="cf">Si el inicio fuera de horas a días con inatención → delirium, aunque el dominio inicial parezca de Alzheimer; si aparecen signos focales con declive escalonado → vascular; si hay alucinaciones visuales con parkinsonismo y fluctuación → cuerpos de Lewy [2][8].</span>');
+  out(dc,x.join(''));
+}
+
+function dcE2(dc){
+  var m=num(dc,'mmse'),mo=num(dc,'moca'),f=sel(dc,'fun'),s=sel(dc,'sit');
+  if(isNaN(m)&&isNaN(mo)&&!f.length&&!s.length){
+    vacio(dc,'Escribe el puntaje del MMSE (y el del MoCA si lo tienes), elige si conserva su independencia y marca la situación. El simulador propone el estadio, la conducta y el fármaco con su posología; no calcula probabilidades.');return;}
+  var x=[];
+  var ya=hv(s,'iche'),into=hv(s,'into')||hv(s,'brad'),brad=hv(s,'brad'),ren=hv(s,'renal'),cond=hv(s,'cond');
+  var DON='donepezilo 5 mg VO una vez al día por la noche; tras 4 a 6 semanas, 10 mg (máximo en la fase leve a moderada) [37]';
+  var RIV='rivastigmina 1,5 mg VO cada 12 h con las comidas; sube a 3, 4,5 y 6 mg cada 12 h, con al menos 2 semanas en cada paso (máximo 12 mg al día) [50]';
+  var GAL='galantamina 4 mg VO cada 12 h con comida; 8 mg cada 12 h tras al menos 4 semanas, y 12 mg cada 12 h tras otras 4 semanas si lo tolera [43]';
+  var MEM='memantina 5 mg VO una vez al día; sube 5 mg cada semana hasta 10 mg cada 12 h (20 mg al día)'+(ren?'; con depuración de creatinina de 5 a 29 mL/min, la dosis objetivo es 5 mg cada 12 h':'')+' [51]';
+  var bad=false;
+  if(!isNaN(mo)){
+    if(mo<0||mo>30){x.push(par('El MoCA va de 0 a 30 puntos: revisa el puntaje [14].'));bad=true;}
+    else x.push(par('MoCA de '+mo+' puntos: '+(mo<23?'bajo el corte original de 26 y también bajo 23, el corte que mejora la exactitud':(mo<26?'bajo el corte original de 26 pero no bajo 23, zona donde aumentan los falsos positivos':'sin alteración con el corte original de 26'))+' [14][16]. El MoCA tamiza; no tiene bandas de gravedad verificadas aquí, así que estadifica con el MMSE y la función diaria.'));
+  }
+  if(!isNaN(m)){
+    if(m<0||m>30){x.push(par('El MMSE va de 0 a 30 puntos: revisa el puntaje [13].'));bad=true;}
+    else {
+      var est,ing=hv(f,'ind');
+      if(m>=26){
+        x.push(par('<b>MMSE de '+m+' puntos</b>: '+(m===30?'sin deterioro':'rango dudoso (26 a 29)')+' [13]. El MMSE detecta poco el deterioro leve, así que un valor alto no descarta un trastorno neurocognitivo leve [14]. Conducta inicial: valora la función con un informante, completa con MoCA y reevalúa; sin demencia no hay indicación de inhibidor de colinesterasa [2].'));
+      } else {
+        est=m>=21?'leve':(m>=11?'moderada':'grave');
+        x.push(par('<b>MMSE de '+m+' puntos: demencia '+est+' por Alzheimer</b> si hay declive que compromete la independencia (21 a 25 leve, 11 a 20 moderada, 0 a 10 grave) [13][1].'));
+        if(ing&&m<=20) x.push(par('Dato incongruente: un MMSE de 20 o menos con independencia conservada exige confirmar la función con un informante; la escala por sí sola no estadifica [2].'));
+        else if(ing) x.push(par('Con independencia conservada se trata de un <b>trastorno neurocognitivo leve</b> y no de demencia [1]. Las recomendaciones de tratamiento de NICE se refieren a la demencia; aquí el manejo es no farmacológico, control de factores de riesgo y reevaluación periódica [2]. Los anticuerpos antiamiloide son los únicos con indicación de etiqueta en la fase de deterioro leve, con amiloide confirmado y vigilancia de ARIA, y quedan fuera del primer nivel [46][47].'));
+        else if(est==='leve'){
+          if(into) x.push(par('Demencia leve con '+(brad?'bradicardia, bloqueo o síncope':'intolerancia o contraindicación a los inhibidores de colinesterasa')+': NICE no recomienda memantina en la fase leve; mantén las medidas no farmacológicas'+(brad?', obtén un ECG y consulta al especialista antes de cualquier colinesterásico, porque estos fármacos tienen efecto vagotónico y pueden causar bloqueo o síncope [37]':'')+' [2].'));
+          else if(ya) x.push(par('Demencia leve que ya toma un inhibidor de colinesterasa: continúa el mismo; no lo suspendas por la gravedad sola [2]. Añadir memantina se reserva para la fase moderada o grave [2].'));
+          else x.push(par('Demencia leve: inhibidor de colinesterasa. NICE empieza por el de menor costo, salvo razón para otro. Opciones: '+DON+'; o '+RIV+'; o '+GAL+' [2].'));
+        } else if(est==='moderada'){
+          if(ya) x.push(par('Demencia moderada que ya toma un inhibidor de colinesterasa: continúa y considera añadir memantina: '+MEM+' [2].'));
+          else if(into) x.push(par('Demencia moderada con '+(brad?'bradicardia, bloqueo o síncope':'intolerancia o contraindicación a los inhibidores de colinesterasa')+': memantina en monoterapia: '+MEM+' [2].'+(brad?' Obtén un ECG antes de cualquier colinesterásico [37].':'')));
+          else x.push(par('Demencia moderada: inhibidor de colinesterasa de primera línea. Opciones: '+DON+'; o '+RIV+'; o '+GAL+' [2]. Si no lo tolera, pasa a memantina.'));
+        } else {
+          if(ya) x.push(par('Demencia grave que ya toma un inhibidor de colinesterasa: ofrece memantina añadida y no suspendas el inhibidor por la gravedad sola: '+MEM+' [2].'));
+          else x.push(par('Demencia grave: memantina en monoterapia: '+MEM+' [2].'));
+        }
+        if(ren&&est!=='grave'&&!ing) x.push(par('Con depuración de creatinina de 5 a 29 mL/min, la galantamina no debe pasar de 16 mg al día [43] y la memantina se limita a 5 mg cada 12 h [51].'));
+      }
+    }
+  }
+  if(!bad&&isNaN(m)&&isNaN(mo)) x.push(par('Con la función y la situación elegidas falta un puntaje: mide el MMSE para estadificar [13].'));
+  if(cond) x.push(par('<b>Agitación o psicosis</b>: primero busca dolor, delirium y causas del entorno y ofrece intervenciones psicosociales; el antipsicótico solo si hay riesgo de daño o angustia grave, a la dosis mínima eficaz, por el menor tiempo y con reevaluación al menos cada 6 semanas [2]. Los antipsicóticos aumentan el riesgo de muerte en ancianos con psicosis por demencia [19].'));
+  x.push(par('En todos los casos: apoyo al cuidador, actividades, revisión de fármacos anticolinérgicos y planificación anticipada [2].'));
+  x.push('<span class="cf">Si el MMSE baja de 21 a 20 puntos o menos (leve → moderada) → se considera la memantina junto al inhibidor; si aparece bradicardia, bloqueo o síncope → se evita el colinesterásico y, en la fase moderada o grave, se pasa a memantina [2][37].</span>');
+  out(dc,x.join(''));
+}
+
+function dcE1d(dc){
+  var cu=sel(dc,'curso'),at=sel(dc,'atn'),cam=sel(dc,'cam'),mo=sel(dc,'mot'),de=sel(dc,'dem'),pi=sel(dc,'pista');
+  if(!(cu.length||at.length||cam.length||mo.length||de.length||pi.length)){
+    vacio(dc,'Elige el inicio y curso, la atención, los rasgos adicionales de la CAM, el patrón psicomotor, la demencia previa y las pistas del caso. El simulador dice si cumple el algoritmo de la CAM, el subtipo y qué causa buscar primero con los recursos del centro de salud; no calcula probabilidades.');return;}
+  var x=[];
+  var c1=hv(cu,'agudo'),c2=hv(at,'alt'),c34=hv(cam,'pens')||hv(cam,'conc');
+  var cumple=false;
+  if(!cu.length||!at.length){
+    x.push(par('Faltan los dos rasgos que abren el algoritmo de la CAM: el inicio y curso, y la atención. Sin ellos no puedes aplicar el criterio [18].'));
+  } else if(c1&&c2&&c34){
+    cumple=true;
+    x.push(par('<b>Cumple el algoritmo de la CAM: delirium</b>. Hay inicio agudo con curso fluctuante, inatención y, además, '+(hv(cam,'pens')&&hv(cam,'conc')?'pensamiento desorganizado y conciencia alterada':(hv(cam,'pens')?'pensamiento desorganizado':'conciencia alterada'))+' [18][20].'));
+  } else if(c1&&c2){
+    x.push(par('Hay inicio agudo e inatención, pero falta pensamiento desorganizado o conciencia alterada: la CAM exige uno de los dos. Interroga de nuevo estos rasgos antes de descartar; con un 4AT positivo se mantiene la sospecha [18][28].'));
+  } else if(!c1&&hv(cu,'cronico')&&hv(at,'cons')){
+    x.push(par('Declive de meses con la atención conservada no es delirium: orienta a un trastorno neurocognitivo. Revisa su pestaña y descarta causas reversibles. <span class="rem">↪ Diferencia en «Visión de conjunto»</span>'));
+  } else {
+    x.push(par('El patrón no cumple los dos rasgos iniciales de la CAM (inicio agudo fluctuante e inatención). Si el cambio es de horas a días y el informante lo confirma, repite la evaluación [18].'));
+  }
+  if(cumple){
+    if(hv(mo,'hiper')) x.push(par('Subtipo <b>hiperactivo</b>: el riesgo es la lesión (caídas, golpe de calor); empieza por las medidas no farmacológicas [17].'));
+    else if(hv(mo,'hipo')) x.push(par('Subtipo <b>hipoactivo</b>: pasa por cansancio o depresión y en cuidados críticos se asoció a mayor mortalidad hospitalaria; aplica la CAM en cada contacto [26].'));
+    else if(hv(mo,'mixto')) x.push(par('Subtipo <b>mixto</b>: alterna fases; reevalúa en cada contacto y no clasifiques por un solo momento [17]. Es la secuencia del caso: inquietud el día previo y luego somnolencia.'));
+    else x.push(par('Define el patrón psicomotor para fijar el subtipo (hiperactivo, hipoactivo o mixto) [17].'));
+    if(hv(de,'si')) x.push(par('<b>Delirium sobre demencia</b>: la demencia es predisponente; no atribuyas el cambio agudo a ella y busca la misma causa [20].'));
+    else if(hv(de,'ign')) x.push(par('La demencia previa es desconocida porque vive solo: pregunta al hijo por la basal y reevalúa la cognición cuando el cuadro agudo resuelva [1][25].'));
+    var cs=[];
+    if(hv(pi,'t40')) cs.push('<b>Golpe de calor</b>: temperatura central por encima de 40 °C con disfunción neurológica. Prueba: temperatura central; conducta: enfriamiento rápido y apoyo remoto del especialista [31].');
+    if(hv(pi,'gl')) cs.push('<b>Estado hiperosmolar hiperglucémico</b>: glucemia capilar muy alta, con pH de 7,30 o más y bicarbonato de 18 mmol/L o más en la mayoría. Prueba: glucemia, sodio y osmolalidad si hay laboratorio, y búsqueda de cetoacidosis [22].');
+    if(hv(pi,'ca')) cs.push('<b>Hipercalcemia</b>: poliuria, sed y estreñimiento de semanas. Prueba: ECG (QTc corto), calcio corregido o ionizado y PTH [30][21].');
+    if(hv(pi,'calor')) cs.push('<b>Deshidratación hipertónica</b>: horas de calor y poca ingesta de agua. Prueba: signos vitales con hidratación, sodio, urea y creatinina [22][35].');
+    if(hv(pi,'inf')) cs.push('<b>Infección</b>: el cuadro viral o urinario es un precipitante clásico. Prueba: temperatura y tira de orina [20].');
+    if(hv(pi,'farm')) cs.push('<b>Fármacos</b>: los anticolinérgicos y sedantes inducen o empeoran el delirium. Prueba: revisión de la lista de fármacos con el hijo [23].');
+    if(hv(pi,'hip')) cs.push('<b>Hipoxemia</b>: SpO₂ baja. Prueba: oximetría y búsqueda de neumonía o falla cardiaca [5].');
+    if(cs.length){
+      x.push(par('Busca primero: '+cs[0]));
+      for(var i=1;i<cs.length;i++) x.push(par('También: '+cs[i]));
+    } else {
+      x.push(par('Sin pistas: mide la glucemia capilar, los signos vitales con temperatura y SpO₂, haz tira de orina y ECG, y revisa los fármacos [18][30].'));
+    }
+  }
+  x.push('<span class="cf">Si la atención se conserva y el curso pasa a meses → el cuadro se aleja del delirium hacia un trastorno neurocognitivo; si aparece una temperatura central por encima de 40 °C → la prioridad cambia a golpe de calor y enfriamiento rápido [18][31].</span>');
+  out(dc,x.join(''));
+}
+
+function dcE1t(dc){
+  var ca=sel(dc,'causa'),si=sel(dc,'sit'),ag=sel(dc,'ag'),d=num(dc,'dosis');
+  if(!(ca.length||si.length||ag.length||!isNaN(d))){
+    vacio(dc,'Elige la causa identificada, la situación del paciente, la agitación y, si quieres, la dosis de haloperidol por toma. El simulador propone la reposición y el antipsicótico con su tope; los fármacos son los de la tabla.');return;}
+  var x=[];
+  var cr=hv(si,'cr'),may=hv(si,'mayor'),pk=hv(si,'park'),qt=hv(si,'qt');
+  if(!ca.length){
+    x.push(par('Sin causa elegida, la conducta es buscarla: glucemia capilar, signos vitales, ECG y electrolitos. El delirium se trata corrigiendo la causa [20][3].'));
+  }
+  if(hv(ca,'ca')){
+    x.push(par('<b>Hipercalcemia sintomática</b>: solución salina 0,9 % IV, 1 a 2 L al inicio y luego 200 a 300 mL/h con diuresis objetivo de 100 a 150 mL/h; calcitonina 4 U/kg SC o IM cada 12 h si hay disponibilidad; el bisfosfonato intravenoso (ácido zoledrónico 4 a 8 mg IV en 15 min) es el tratamiento inicial de la hipercalcemia sintomática o grave junto con la hidratación [30][21].'+(cr?' Con insuficiencia cardiaca o renal vigila la sobrecarga y pide apoyo del especialista: la revisión plantea denosumab o diálisis en insuficiencia renal y limita la furosemida a la sobrecarga de volumen [21][30].':'')));
+  }
+  if(hv(ca,'hhs')){
+    var inicio=(cr||may)?'bolos menores (por ejemplo 250 mL) con reevaluación':'500 a 1 000 mL/h durante las primeras 2 a 4 h';
+    x.push(par('<b>Hiperglucemia con hiperosmolaridad</b>: solución salina 0,9 % IV, '+inicio+'; corrige el déficit en 24 a 48 h y baja el sodio no más de 10 mmol/L en 24 h. La insulina se difiere hasta que la glucemia deje de bajar solo con líquidos y el potasio sea mayor de 3,5 mmol/L [22].'));
+  }
+  if(hv(ca,'na')){
+    x.push(par('<b>Hipernatremia por deshidratación</b>: repón volumen y corrige el sodio despacio con controles seriados; se ha sugerido no más de 0,5 mmol/L por hora, aunque no hay una guía firme [35]. '+((cr||may)?'En el adulto mayor frágil o con insuficiencia cardiaca o renal usa bolos menores y vigila la sobrecarga [22].':'')));
+  }
+  if(hv(ca,'golpe')) x.push(par('<b>Golpe de calor</b>: enfriamiento rápido, único tratamiento específico, junto con la reposición de volumen y apoyo remoto del especialista [31].'));
+  if(hv(ca,'inf')) x.push(par('<b>Infección</b>: trata el foco que identifiques y reevalúa el delirium cuando ceda [20].'));
+  if(hv(ca,'farm')) x.push(par('<b>Fármaco nocivo</b>: retira o sustituye anticolinérgicos, benzodiacepinas, hipnóticos Z, opioides y antagonistas H2 [23].'));
+  x.push(par('<b>Medidas no farmacológicas</b> en todos los casos: hidratación, orientación, sueño, movilización, gafas y audífonos, y acompañamiento del hijo [29][34].'));
+  if(hv(ag,'no')||hv(ag,'leve')){
+    x.push(par('<b>Sin antipsicótico</b>: no hay riesgo ni angustia grave; la angustia leve cede con desescalada verbal y medidas ambientales. Los antipsicóticos no acortaron el delirium frente a placebo [3][24].'));
+  } else if(hv(ag,'riesgo')){
+    if(pk){
+      x.push(par('<b>Parkinson: no uses haloperidol</b>, contraindicado en la ficha; la Beers 2023 solo exceptúa clozapina, pimavanserina y quetiapina. La dosis de quetiapina no está establecida en las fuentes revisadas: pide apoyo especializado [33][23].'));
+    } else {
+      var tope=2,dd=isNaN(d)?0.5:d;
+      if(dd<=0){
+        x.push(par('La dosis debe ser mayor de cero. Inicia en el extremo bajo del rango geriátrico de la ficha (0,5 mg) [33].'));
+      } else {
+        var dm=Math.min(dd,tope);
+        var t='<b>Haloperidol '+String(rd(dm,1)).replace('.',',')+' mg VO por toma</b>, cada 8 a 12 h y por una semana o menos, a la dosis más baja que controle el riesgo [33][3].';
+        if(dd>tope) t+=' Pediste '+String(rd(dd,1)).replace('.',',')+' mg: el tope por toma del rango geriátrico de la ficha es '+tope+' mg y se aplicó.';
+        t+=' Uso fuera de la indicación de la ficha; el haloperidol no mejoró la duración del delirium frente a placebo [24].';
+        if(qt) t+=' Con QT prolongado, la ficha describe torsades de pointes con haloperidol: pide apoyo especializado antes de usarlo [33].';
+        x.push(par(t));
+      }
+    }
+  } else if(!isNaN(d)){
+    x.push(par('Elige el nivel de agitación: el antipsicótico solo se considera si hay riesgo para el paciente o para otros, o angustia grave [3].'));
+  }
+  x.push(par('Evita benzodiacepinas (salvo abstinencia alcohólica) y anticolinérgicos [23].'));
+  x.push('<span class="cf">Si hay enfermedad de Parkinson → el haloperidol deja de ser opción y pasa a quetiapina con apoyo del especialista; si la agitación pasa de angustia a riesgo para sí o para otros → de ningún antipsicótico a haloperidol a dosis baja por una semana o menos [33][23][3].</span>');
+  out(dc,x.join(''));
+}
+
+function dcE3(dc){
+  var ev=sel(dc,'ev'),st=sel(dc,'sit'),pas=num(dc,'pas'),pad=num(dc,'pad'),ldl=num(dc,'ldl'),a1c=num(dc,'a1c');
+  if(!(ev.length||st.length)&&isNaN(pas)&&isNaN(pad)&&isNaN(ldl)&&isNaN(a1c)){
+    vacio(dc,'Elige el evento cerebrovascular previo y la situación, y escribe presión, LDL y HbA1c si los tienes. El simulador propone las medidas de prevención secundaria con su posología; no calcula probabilidades.');return;}
+  var x=[],icas=hv(st,'icas'),hr=hv(st,'hemrisk');
+  if(hv(ev,'isq')){
+    if(icas){
+      x.push(par('<b>Antiagregación</b>: aspirina 325 mg VO cada 24 h a largo plazo'+(hr?'. Con riesgo alto de transformación hemorrágica no se añade clopidogrel; sigue en monoterapia':'; añade clopidogrel 75 mg VO cada 24 h hasta 90 días')+' [55]. Pasado ese plazo no mantengas ambos [53].'));
+    } else {
+      x.push(par('<b>Antiagregación</b>: un solo antiagregante a largo plazo, por ejemplo clopidogrel 75 mg VO cada 24 h sin dosis de carga [59], o aspirina de liberación prolongada 162,5 mg VO cada 24 h según la ficha FDA [58]. Evita la doble antiagregación después de los primeros 90 días [53].'));
+    }
+  } else if(hv(ev,'hem')){
+    x.push(par('<b>Hemorragia intracerebral previa</b>: las fuentes leídas no fijan un esquema antiagregante; la decisión pesa el riesgo de resangrado y la hace neurología. Si usas atorvastatina 80 mg, sopesa riesgo y beneficio: en SPARCL el ictus hemorrágico fue más frecuente (2,3 % frente a 1,4 %) [60].'));
+  } else if(hv(ev,'nin')){
+    x.push(par('<b>Sin evento clínico</b>: las fuentes leídas no fijan el uso de antiagregante en lesión silente; el eje es controlar presión, lípidos y glucemia y vigilar la aparición de eventos [53][10].'));
+  }
+  if(!isNaN(pas)||!isNaN(pad)){
+    var meta=icas?'menor de 140/90 mmHg':'menor de 130/80 mmHg';
+    var alta=icas?(pas>=140||pad>=90):(pas>=130||pad>=80);
+    if(alta) x.push(par('<b>Presión</b> de '+(isNaN(pas)?'?':pas)+'/'+(isNaN(pad)?'?':pad)+' mmHg: sobre la meta ('+meta+'). Inicia o intensifica antihipertensivos; la guía apoya la combinación de fármacos y la medición fuera de consulta, pero no fija una dosis única [53]'+(icas?'; en estenosis intracraneal sintomática la meta es menos estricta [55]':'')+'.'));
+    else x.push(par('<b>Presión</b> de '+(isNaN(pas)?'?':pas)+'/'+(isNaN(pad)?'?':pad)+' mmHg: dentro de la meta ('+meta+'). Mantén el esquema y controla fuera de consulta [53].'));
+  }
+  if(!isNaN(ldl)){
+    if(ldl>=70) x.push(par('<b>LDL</b> de '+ldl+' mg/dL: sobre la meta de 70 mg/dL [53]. Atorvastatina 80 mg VO cada 24 h (rango de la ficha 10 a 80 mg) [60]; si no llega a la meta con estatina, considera ezetimiba o un inhibidor de PCSK9 [53].'));
+    else x.push(par('<b>LDL</b> de '+ldl+' mg/dL: en meta (menor de 70 mg/dL). Mantén la estatina [53].'));
+  } else if(hv(ev,'isq')){
+    x.push(par('<b>Estatina</b>: mide el LDL; indica atorvastatina 80 mg VO cada 24 h, la dosis del ensayo SPARCL tras ictus o AIT, hasta LDL menor de 70 mg/dL [60][53].'));
+  }
+  if(hv(st,'dm')||!isNaN(a1c)){
+    if(!isNaN(a1c)&&a1c>=7) x.push(par('<b>HbA1c</b> de '+String(a1c).replace('.',',')+' %: sobre la meta de menos de 7 % que apoya la mayoría del grupo ESO; ajusta el tratamiento antidiabético [53].'));
+    else if(!isNaN(a1c)) x.push(par('<b>HbA1c</b> de '+String(a1c).replace('.',',')+' %: en la meta de menos de 7 % [53].'));
+    else x.push(par('<b>Diabetes</b>: falta la HbA1c; la meta que apoya el grupo ESO es menor de 7 % [53].'));
+  }
+  if(hv(st,'cog')){
+    x.push(par('<b>Demencia establecida</b>: un inhibidor de colinesterasa da un beneficio modesto con más abandonos por efectos digestivos [54]. Rivastigmina VO con las comidas: 1,5 mg cada 12 h, sube a 3, 4,5 y 6 mg cada 12 h tras al menos 2 semanas en cada dosis, máximo 12 mg/día; vigila el peso (ficha FDA, indicada en Alzheimer) [61].'));
+  }
+  if(!x.length) x.push(par('Los datos elegidos no bastan para proponer medidas; añade el evento previo o las cifras de presión, LDL y HbA1c.'));
+  x.push('<span class="cf">Si hay estenosis intracraneal sintomática grave con bajo riesgo de transformación hemorrágica → se añade clopidogrel 75 mg/día a la aspirina hasta 90 días; si no, la doble antiagregación no pasa de 90 días [55][53].</span>');
+  out(dc,x.join(''));
+}
+
+function dcE4(dc){
+  var sub=sel(dc,'sub'),sx=sel(dc,'sx'),rx=sel(dc,'rx');
+  if(!(sub.length||sx.length||rx.length)){
+    vacio(dc,'Elige el subtipo, los síntomas que más molestan y el fármaco que recibe ahora. El simulador propone el fármaco con su posología cuando está verificada y lo que se evita.');return;}
+  var x=[],pdd=hv(sub,'pdd');
+  if(hv(rx,'tip')){
+    x.push(par('<b>Antipsicótico típico en curso</b>: sospecha sensibilidad grave si hay rigidez, somnolencia o confusión; en autopsias 13 de 16 pacientes con Lewy reaccionaron mal y 7 de 13 de forma grave [65]. Suspéndelo y trata la causa de la agitación; no lo cambies por otro del mismo grupo [8].'));
+  }
+  if(hv(sx,'cog')||(hv(sx,'vh')&&!hv(sx,'cog'))){
+    if(pdd) x.push(par('<b>Cognición</b> (demencia de Parkinson): rivastigmina VO con las comidas, 1,5 mg cada 12 h; sube a 3, 4,5 y 6 mg cada 12 h tras al menos 4 semanas en cada dosis; máximo 12 mg/día. Si interrumpes más de 3 días, reinicia en 1,5 mg [61][67]. Alternativa: donepezilo, 5 mg cada noche y 10 mg tras 4 a 6 semanas [69].'));
+    else x.push(par('<b>Cognición</b> (DLB): inhibidor de colinesterasa de primera línea [8]. Donepezilo VO, 5 mg cada noche y 10 mg tras 4 a 6 semanas (ficha FDA, indicada en Alzheimer; en DLB, 10 mg mejoró el MMSE en 1,4 puntos en un análisis post hoc) [69][68]; o rivastigmina VO, 1,5 mg cada 12 h con las comidas, con ascenso lento [61].'));
+  }
+  if(hv(sx,'vh')) x.push(par('<b>Alucinaciones visuales</b>: el inhibidor de colinesterasa es el primer paso porque puede reducirlas [8]; revisa también dopaminérgicos y anticolinérgicos que las empeoran. Si persisten y son graves, quetiapina a dosis baja con evidencia débil (un ensayo pequeño fue negativo); la clozapina y la pimavanserina no tienen eficacia establecida en DLB [8]. No se fija una dosis en la fuente leída.'));
+  if(hv(sx,'agit')) x.push(par('<b>Agitación o psicosis grave</b>: descarta delirium por enfermedad intercurrente y fármacos, aplica medidas no farmacológicas y capacita al cuidador [8]. Evita haloperidol y los antipsicóticos típicos (reacción adversa en 81 % y grave en 54 % de los que reaccionaron) [65]; si el riesgo lo exige, quetiapina a dosis baja con vigilancia [8].'));
+  if(hv(sx,'park')) x.push(par('<b>Parkinsonismo</b>: levodopa a dosis baja y ascenso lento; responde peor que en el Parkinson y puede aumentar la psicosis. Evalúa caídas, densidad ósea y vitamina D [8]. No se fija una dosis en la fuente leída.'));
+  if(hv(sx,'rbd')) x.push(par('<b>Conducta del sueño REM</b>: melatonina, posiblemente más segura; clonazepam nocturno con cautela porque puede empeorar cognición y marcha [8]. No se fija una dosis en la fuente leída.'));
+  if(hv(sx,'dep')) x.push(par('<b>Depresión</b>: ISRS, IRSN o mirtazapina según tolerabilidad y respuesta; hay pocos datos específicos en DLB [8].'));
+  if(!x.length) x.push(par('Elige al menos un síntoma que moleste para proponer el fármaco.'));
+  x.push('<span class="cf">Si el paciente recibe haloperidol y aparece rigidez, somnolencia o confusión graves → sospecha sensibilidad a antipsicóticos de la DLB; suspéndelo y no lo sustituyas por otro típico [65][8].</span>');
+  out(dc,x.join(''));
+}
+
+function dcE5(dc){
+  var s=sel(dc,'sint'),t=sel(dc,'sit');
+  if(!s.length&&!t.length){
+    vacio(dc,'Elige el síntoma conductual predominante y la situación del paciente. El simulador propone el fármaco con su posología y lo que se evita; no calcula probabilidades.');return;}
+  var may=hv(t,'may60'),hna=hv(t,'hipona'),ice=hv(t,'ichE');
+  var CIT='citalopram 20 mg VO cada 24 h; en mayores de 60 años el máximo es 20 mg al día [77]';
+  var SER='sertralina VO cada 24 h: inicio 25 a 50 mg al día, con aumentos de 25 a 50 mg por semana; en frontotemporal se reportó 50 a 100 mg al día [78][73]';
+  var TRA='trazodona VO en dosis divididas: la ficha sugiere 150 mg al día con aumentos de 50 mg al día cada 3 a 4 días, hasta 400 mg al día como máximo ambulatorio; los ensayos en demencia usaron 50 a 300 mg al día [79][80]';
+  var r=[];
+  if(hv(s,'desinh')){
+    r.push(par('<b>Desinhibición, compulsiones o hiperoralidad</b>: un ISRS es la primera opción. '+(may?CIT:CIT+'; alternativa: '+SER)+(may?'; alternativa: '+SER:'')+' [72].'));
+    if(hna) r.push(par('Con hiponatremia o diurético, vigila el sodio: los ISRS pueden bajarlo, sobre todo en el adulto mayor [78]; mide el sodio antes y a las semanas del inicio.'));
+  }
+  if(hv(s,'inq')){
+    r.push(par('<b>Inquietud motora o irritabilidad</b>: trazodona. '+TRA+'. En el ensayo cruzado mejoró irritabilidad, agitación y conducta alimentaria [75].'));
+  }
+  if(hv(s,'agr')){
+    r.push(par('<b>Agresión con riesgo para el paciente o el cuidador</b>: primero medidas no farmacológicas y seguridad; si persiste el peligro, quetiapina con psiquiatría. No hay dosis establecida para frontotemporal en las fuentes leídas, así que la fija el especialista a la dosis mínima [72].'));
+    r.push(par('Cautela con cualquier antipsicótico: advertencia de caja negra en demencia y riesgo de efectos extrapiramidales [72][73].'));
+  }
+  if(hv(s,'apat')){
+    r.push(par('<b>Apatía</b>: no hay fármaco con eficacia probada que se pueda recomendar con dosis en este grupo; usa medidas no farmacológicas y apoyo al cuidador, y evita la bupropiona, que el consenso desaconsejó en la mayoría de los síntomas [72].'));
+  }
+  if(ice) r.push(par('<b>Ya toma un inhibidor de colinesterasa</b>: reevalúa suspenderlo; no mejora la cognición en frontotemporal y puede empeorar los síntomas neuropsiquiátricos [72][73].'));
+  if(!s.length) r.push(par('Elige también el síntoma predominante para proponer el fármaco; evita siempre los inhibidores de colinesterasa y la memantina [73].'));
+  else r.push(par('Evita los inhibidores de colinesterasa y la memantina [73]. Reevalúa con el cuidador la respuesta a las semanas [76].'));
+  r.push('<span class="cf">Si el paciente tenía memoria alterada y alucinaciones visuales con fluctuación (cuerpos de Lewy) o un Alzheimer → el inhibidor de colinesterasa pasa a ser útil, y el antipsicótico típico se evita [8].</span>');
+  out(dc,r.join(''));
+}
+</script>

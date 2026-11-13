@@ -1,0 +1,224 @@
+<script>
+function par(t){return '<p>'+t+'</p>';}
+function hv(a,v){return a.indexOf(v)>-1;}
+function vacio(dc,t){out(dc,par(t));}
+function dcVis(dc){
+  var d=sel(dc,'dis'),u=sel(dc,'dur'),o=sel(dc,'otros');
+  if(!(d.length||u.length||o.length)){
+    vacio(dc,'Elige qué dispara la ansiedad, la duración y otros datos. El simulador propone la entidad compatible, el dato que falta y la conducta inicial; no calcula probabilidades.');return;}
+  var r=[],n=0,cf='';
+  if(hv(o,'dolor')){
+    r.push(par('<b>Imitación orgánica</b>: el dolor torácico con factores de riesgo no se atribuye a ansiedad. Falta el ECG y la valoración cardiovascular antes de cualquier diagnóstico psiquiátrico [4]. Conducta inicial: estudiar y derivar si hay datos de síndrome coronario.'));
+  }
+  if(hv(d,'crisis')){n++;
+    r.push(par('<b>Trastorno de pánico</b>: las crisis inesperadas con pico en minutos lo hacen compatible'+(hv(o,'evit')?'; la evitación sugiere agorafobia asociada':'')+'. Falta el mes de preocupación por nuevas crisis y el examen normal entre ellas, con ECG y glucemia normales [1] [2]. Conducta inicial: psicoeducación, TCC e ISRS; benzodiacepina solo como puente breve.'));
+    cf='Si las crisis dejan de ser inesperadas y aparecen solo ante un estímulo concreto → el diagnóstico pasa a trastorno fóbico y la conducta a exposición gradual [1] [2].';
+  }
+  if(hv(d,'preoc')){n++;
+    r.push(par('<b>Ansiedad generalizada</b>: la preocupación crónica difícil de controlar la hace compatible'+(hv(u,'larga')?', y la duración mayor de seis meses la refuerza':'')+'. Falta'+(hv(u,'larga')?' el GAD-7 y descartar hipertiroidismo y consumo':' documentar seis meses de curso y el GAD-7')+' [1] [6]. Conducta inicial: psicoeducación, autoayuda guiada y TCC; ISRS si persiste [2].'));
+    if(!cf) cf='Si la preocupación se centra en un solo síntoma corporal pese a estudios normales → el diagnóstico pasa a síntomas somáticos y la conducta a visitas programadas [1] [8].';
+  }
+  if(hv(d,'estimulo')){n++;
+    r.push(par('<b>Trastorno fóbico</b>: el miedo a un estímulo concreto lo hace compatible'+(hv(o,'evit')?', y la evitación lo refuerza':'')+'. Falta documentar la evitación, la ansiedad anticipatoria y la duración [1]. Conducta inicial: exposición gradual con TCC; ISRS según el subtipo [2].'));
+    if(!cf) cf='Si aparecen crisis sin estímulo identificable → el diagnóstico pasa a trastorno de pánico y la conducta a ISRS con TCC [1] [2].';
+  }
+  if(hv(d,'evento')){n++;
+    var t=hv(u,'corta')?'trastorno de estrés agudo, porque han pasado menos de un mes':(hv(u,'media')||hv(u,'larga')?'TEPT si hay reexperimentación, evitación e hipervigilancia, o trastorno de adaptación si no cumple criterios':'estrés agudo, TEPT o adaptación según el tiempo transcurrido');
+    r.push(par('<b>Trauma y estrés</b>: el evento traumático lo hace compatible; piensa en '+t+'. Falta fijar la fecha del evento y aplicar el PC-PTSD-5 [1] [7]. Conducta inicial: seguridad, pregunta directa por ideación suicida y TCC centrada en el trauma [27].'));
+    cf='Si hay ideación suicida o consumo de sustancias → la conducta pasa de seguimiento ambulatorio a plan de seguridad y derivación urgente [27].';
+  }
+  if(hv(d,'somat')){n++;
+    r.push(par('<b>Síntomas somáticos</b>: el foco en el síntoma corporal con preocupación desproporcionada lo hace compatible. Falta confirmar estudios previos normales y aplicar el SSS-8 [1] [8]. Conducta inicial: visitas programadas, validar el síntoma y evitar estudios repetidos [1].'));
+    if(!cf) cf='Si aparece un hallazgo objetivo nuevo → se reabre el estudio orgánico antes de mantener el diagnóstico [1].';
+  }
+  if(!n&&!hv(o,'dolor')) r.push(par('Los datos elegidos no bastan para sostener una entidad. Indica qué dispara la ansiedad y revisa las banderas rojas.'));
+  if(!cf) cf='Si el ECG o la glucemia resultan anormales → la conducta cambia de manejo de la ansiedad a estudio de la causa orgánica [4] [2].';
+  r.push('<span class="cf">'+cf+'</span>');
+  out(dc,r.join(''));
+}
+
+function dcE1dx(dc){
+  var cu=sel(dc,'cuadro'),al=sel(dc,'ala'),su=sel(dc,'sust'),cr=sel(dc,'curso');
+  if(!(cu.length||al.length||su.length||cr.length)){
+    vacio(dc,'Elige los datos de la crisis. El simulador propone si es compatible con pánico o si debes tratarla como causa orgánica, y la conducta inicial en una consulta sin derivación; no calcula probabilidades.');return;}
+  var r=[];
+  var org=hv(al,'ecg')||hv(al,'sincope')||(hv(al,'dolor')&&hv(al,'frcv'));
+  var tip=hv(cu,'abrupto')&&hv(cu,'pico');
+  if(org){
+    var a=[];
+    if(hv(al,'dolor')) a.push('dolor torácico típico');
+    if(hv(al,'frcv')) a.push('factores de riesgo cardiovascular');
+    if(hv(al,'sincope')) a.push('síncope');
+    if(hv(al,'ecg')) a.push('ECG alterado');
+    r.push(par('<b>Tratar como posible síndrome coronario agudo u otra causa orgánica</b> ('+a.join(', ')+'). No lo atribuyas a pánico mientras no se descarte [4].'));
+    r.push(par('Conducta inicial sin posibilidad de derivar: monitoriza signos vitales, repite el ECG de 12 derivaciones, pide troponina seriada si está disponible, canaliza una vía y activa el traslado de emergencia; este es el caso en que la consulta debe movilizar al sistema [4].'));
+  } else {
+    if(hv(al,'dolor')) r.push(par('Dolor torácico típico sin factores de riesgo ni ECG alterado referidos: estratifica con ECG de 12 derivaciones y troponina seriada antes de atribuirlo a pánico [4].'));
+    if(hv(su,'estim')||hv(su,'abst')){
+      var s=[];
+      if(hv(su,'estim')) s.push('estimulantes');
+      if(hv(su,'abst')) s.push('abstinencia de benzodiacepinas o alcohol');
+      r.push(par('<b>Crisis posiblemente inducida por sustancia</b> ('+s.join(' y ')+'): el DSM-5-TR exige excluir el efecto de una sustancia antes de diagnosticar el trastorno [1]. Conducta inicial: suspende el estimulante o reintroduce y retira de forma escalonada el sedante, vigila la retirada del alcohol y reevalúa tras la resolución.'));
+    }
+    if(tip&&hv(cr,'rec')&&!hv(su,'estim')&&!hv(su,'abst')){
+      r.push(par('<b>Compatible con trastorno de pánico</b> tras descartar causa orgánica: crisis abruptas con pico en minutos, recurrentes y con preocupación de un mes o más [1]. Falta confirmar con ECG de 12 derivaciones, glucemia capilar y signos vitales normales [4].'));
+      r.push(par('Conducta inicial en la consulta: explica el mecanismo, corrige la etiqueta de infarto, inicia TCC o un ISRS y pauta el seguimiento (ver «Tratamiento») [2].'));
+    } else if(tip&&!hv(cr,'rec')&&!hv(su,'estim')&&!hv(su,'abst')){
+      r.push(par('<b>Ataque de pánico aislado</b>: es un especificador, no un trastorno, mientras no haya recurrencia con preocupación de un mes o más [1]. Conducta inicial: ECG de 12 derivaciones, glucemia capilar y signos vitales; psicoeducación y cita de control.'));
+    } else if(!tip&&!hv(su,'estim')&&!hv(su,'abst')&&!hv(al,'dolor')){
+      r.push(par('Faltan el inicio abrupto y el pico en minutos para sostener un ataque de pánico. Completa la historia temporal de la crisis y descarta causa orgánica con ECG y glucemia [1] [4].'));
+    }
+  }
+  r.push('<span class="cf">Si el ECG pasa de normal a alterado, o aparece dolor torácico con factores de riesgo → la conducta cambia de pánico con psicoeducación a manejo como síndrome coronario agudo y traslado de emergencia [4].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE1tx(dc){
+  var p=sel(dc,'perfil');
+  if(!p.length){
+    vacio(dc,'Elige el perfil del paciente. El simulador propone el plan con su posología; si no hay un perfil especial, el plan base es psicoeducación más TCC o un ISRS.');return;}
+  var r=[];
+  r.push(par('Base: psicoeducación y corrección de la etiqueta «preinfarto por estrés», más TCC o un ISRS según preferencia [2].'));
+  if(hv(p,'emb')){
+    r.push(par('<b>Embarazo</b>: la TCC es la primera opción. Si el cuadro obliga a un fármaco, decide junto con obstetricia sopesando riesgo y beneficio; evita paroxetina por el riesgo de malformaciones cardiacas en el primer trimestre [2] [19]. No uses benzodiacepinas sostenidas.'));
+  } else if(hv(p,'mayor')){
+    r.push(par('<b>Adulto mayor</b>: sertralina 25 mg VO cada 24 h, subir despacio hasta 50 mg tras 1 semana según respuesta, con control del sodio por riesgo de hiponatremia [17]. Evita clomipramina e imipramina por su efecto anticolinérgico y arritmogénico, y evita benzodiacepinas sostenidas [2] [20].'));
+  } else if(hv(p,'tcc')){
+    r.push(par('<b>Prefiere TCC</b>: ofrécela como tratamiento inicial, presencial o como autoayuda guiada; añade un ISRS solo si no hay respuesta o el paciente lo acepta [2]. Si inicias fármaco: sertralina 25 mg VO cada 24 h y, tras 1 semana, 50 mg [17].'));
+  } else {
+    r.push(par('Si eliges ISRS: sertralina 25 mg VO cada 24 h durante 1 semana y luego 50 mg, subiendo 25 a 50 mg por semana hasta un máximo de 200 mg [17]; alternativa, paroxetina 10 mg VO cada 24 h, subiendo 10 mg por semana hasta 40 mg [19] o escitalopram 5 mg y luego 10 mg [VERIFICAR EN FUENTE] [18].'));
+  }
+  if(hv(p,'bzd')){
+    r.push(par('<b>Uso previo de benzodiacepinas</b>: no las suspendas de golpe. Reduce el alprazolam no más de 0,5 mg cada 3 días, con un descenso más lento si hace falta, e inicia el ISRS en paralelo [15]. La retirada brusca puede causar reacciones de abstinencia potencialmente mortales, incluidas convulsiones [15] [16]. Explica el riesgo de dependencia [2].'));
+  }
+  if(hv(p,'parcial')){
+    r.push(par('<b>Respuesta parcial a las 8 semanas</b>: confirma adherencia y dosis plena (sertralina hasta 200 mg VO cada 24 h) [17]; añade o intensifica la TCC; si persiste, cambia a otro ISRS o a venlafaxina de liberación prolongada 75 mg VO cada 24 h tras 7 días con 37,5 mg, hasta 225 mg [14]; clomipramina o imipramina como siguiente paso, con ECG previo [2] [20]. Si falla un segundo tratamiento, pide valoración de psiquiatría [2].'));
+  }
+  r.push('<span class="cf">Si el paciente tiene riesgo suicida, abuso de sustancias o falla de dos tratamientos → pasa de manejo en la consulta a valoración de psiquiatría, o a documentar la limitación si no puedes derivar [2].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE2(dc){
+  var g=num(dc,'gad'),d=sel(dc,'det'),p=sel(dc,'pref'),o=sel(dc,'otros');
+  if(isNaN(g)&&!d.length&&!p.length&&!o.length){
+    vacio(dc,'Escribe el GAD-7 y elige el deterioro, la preferencia y los otros datos para obtener la banda y el paso del modelo escalonado.');return;}
+  var r=[],paso3=false;
+  if(isNaN(g)){r.push(par('Falta el GAD-7: aplícalo antes de decidir; el puntaje cribe y gradúa, y el diagnóstico exige los criterios del DSM-5-TR [6] [1].'));}
+  else if(g<0||g>21){r.push(par('El GAD-7 va de 0 a 21: revisa el valor.'));}
+  else{
+    var b=g<5?'mínima':(g<10?'leve':(g<15?'moderada':'grave'));
+    r.push(par('Banda <b>'+b+'</b> (GAD-7 '+g+'; leve 5 a 9, moderada 10 a 14, grave 15 a 21) [6].'));
+    if(g<5) r.push(par('Con puntaje bajo es poco probable un TAG: revisa el diagnóstico y busca otra causa de los síntomas [6].'));
+    paso3=(g>=10)||hv(d,'marcado');
+  }
+  if(!isNaN(g)&&g>=5&&g<=21){
+    if(!paso3) r.push(par('Paso 1 y 2: psicoeducación a la persona y a la familia, vigilancia activa y autoayuda guiada; revisa en pocas semanas [2].'));
+    else r.push(par('Paso 3 (alta intensidad)'+(g<10?', por el deterioro funcional marcado':'')+': TCC o relajación aplicada, o un ISRS, según la preferencia [2].'));
+  }
+  if(paso3||(isNaN(g)&&(hv(d,'marcado')||hv(p,'farmaco')||hv(p,'psico')))){
+    if(hv(o,'notol')) r.push(par('No tolera ISRS ni IRSN: pregabalina 150 mg al día dividida cada 12 h, con ajuste en insuficiencia renal [2] [VERIFICAR EN FUENTE].'));
+    else if(hv(o,'falla')) r.push(par('Falla de un ISRS con dosis y tiempo adecuados: cambia a escitalopram 10 mg VO cada 24 h (máximo 20 mg) [18], o a un IRSN: duloxetina 60 mg VO cada 24 h (máximo 120 mg, sin beneficio demostrado por encima de 60 mg) [23] o venlafaxina de liberación prolongada 75 mg VO cada 24 h (máximo 225 mg) [14] [2].'));
+    else if(hv(p,'psico')&&!hv(o,'sinpsico')) r.push(par('Prefiere terapia: TCC o relajación aplicada como primera opción de alta intensidad; el fármaco queda como alternativa si no responde [2].'));
+    else{
+      r.push(par('Fármaco: sertralina, primera opción por coste, 25 mg VO cada 24 h una semana y luego 50 mg [17]; en TAG es uso recomendado por NICE, no indicación de ficha en EE. UU. [2]. Reevalúa a las 2, 4, 6 y 12 semanas, y en menores de 30 años a la semana por riesgo de ideación suicida [2].'));
+      if(hv(o,'sinpsico')) r.push(par('Sin acceso a psicoterapia: combina el fármaco con psicoeducación y autoayuda guiada en la consulta; en este caso no hay derivación posible [2].'));
+    }
+  }
+  if(hv(o,'bzd')) r.push(par('Benzodiacepina por semanas: no la sigas como tratamiento; se reserva para una crisis breve por su riesgo de dependencia [2]. Si ya la toma, reduce no más de 0,5 mg cada 3 días, más lento si hace falta [15]; la retirada brusca puede causar abstinencia potencialmente mortal, incluidas convulsiones [15] [16].'));
+  if(hv(o,'suic')) r.push(par('Ideación suicida: valora el riesgo y acuerda un plan de seguridad antes de cualquier tratamiento; programa control cercano.'));
+  if(!r.length) r.push(par('Con esos datos no hay una conducta clara: escribe el GAD-7 y elige el deterioro funcional.'));
+  r.push('<span class="cf">Si el GAD-7 pasa de 9 a 10, o aparece deterioro funcional marcado → la conducta cambia de autoayuda guiada a TCC o fármaco; si aparecen crisis con pico en minutos → se piensa en trastorno de pánico [6] [2].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE3(dc){
+  var s=sel(dc,'sub'),g=sel(dc,'grav'),p=sel(dc,'pref'),o=sel(dc,'otros');
+  if(!s.length&&!g.length&&!p.length&&!o.length){
+    vacio(dc,'Elige el subtipo, la gravedad y la preferencia del paciente para obtener la conducta.');return;}
+  var r=[];
+  if(!s.length) r.push(par('Elige el subtipo para precisar la conducta; la base de todos es la exposición gradual [24].'));
+  if(hv(s,'agora')){
+    r.push(par('Agorafobia: exposición gradual por jerarquía a las situaciones evitadas (conducir, transporte, multitudes), con tareas entre consultas; en el caso, sin derivación posible, la guía el médico de atención primaria [24] [1].'));
+    if(hv(o,'panico')) r.push(par('Con crisis de pánico inesperadas, trata también el trastorno de pánico (ver su pestaña) [2].'));
+  }
+  if(hv(s,'social')){
+    if(hv(o,'desemp')&&!hv(g,'grave')) r.push(par('Ansiedad solo en una actuación puntual: psicoeducación y práctica gradual; propranolol 10 a 40 mg VO una sola dosis, 30 a 60 min antes, puede valorarse, pero no es de rutina [24] [26] [VERIFICAR EN FUENTE].'));
+    else if(hv(p,'rechaza')) r.push(par('Rechaza terapia y autoayuda: ISRS, escitalopram 10 mg VO cada 24 h (máximo 20 mg) o sertralina 25 mg una semana y luego 50 mg VO cada 24 h (máximo 200 mg) [17], con control de efectos adversos [24] [18]. La dosis de escitalopram en ansiedad social es [VERIFICAR EN FUENTE].'));
+    else if(hv(g,'grave')) r.push(par('Moderada o grave: TCC centrada en la ansiedad social, con exposición; si no es accesible, autoayuda apoyada [24].'));
+    else r.push(par('Leve: psicoeducación y autoayuda apoyada con ejercicios de exposición; escala a TCC si no mejora [24].'));
+  }
+  if(hv(s,'espec')){
+    r.push(par('Fobia específica: exposición gradual al estímulo, centrada en el objeto o la situación temidos.'));
+    if(hv(p,'rechaza')) r.push(par('Si rechaza la exposición, explica la lógica de la evitación y ofrece retomarla; no uses benzodiacepinas como tratamiento [24].'));
+  }
+  if(hv(g,'grave')&&(hv(s,'agora')||hv(s,'espec'))&&hv(p,'rechaza')) r.push(par('Con deterioro marcado y rechazo de la terapia, valora un ISRS como apoyo y revisa la depresión comórbida [24].'));
+  if(hv(o,'alcohol')) r.push(par('Alcohol como afrontamiento: pregunta cantidad y dependencia, explica que mantiene la evitación y no uses benzodiacepinas como sustituto [24].'));
+  if(hv(o,'suic')) r.push(par('Ideación suicida: valora el riesgo y acuerda un plan de seguridad antes de continuar.'));
+  r.push('<span class="cf">Si aparecen crisis inesperadas sin situación desencadenante → se piensa en trastorno de pánico; si rechaza la terapia y la autoayuda en ansiedad social → pasa a un ISRS [24].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE4(dc){
+  var d=num(dc,'dias'),es=sel(dc,'estres'),id=sel(dc,'ide'),si=sel(dc,'sint'),ot=sel(dc,'otros');
+  if(isNaN(d)&&!es.length&&!id.length&&!si.length&&!ot.length){
+    vacio(dc,'Escribe los días desde el evento y elige el tipo de estresor, la ideación suicida y los grupos de síntomas para obtener el subtipo y la conducta; no calcula probabilidades.');return;}
+  var r=[];
+  if(!id.length){r.push(par('Falta explorar la ideación suicida antes de decidir la conducta.'));}
+  else if(hv(id,'activa')) r.push(par('<b>Ideación activa o con plan</b>: no dejes solo al paciente, retira los medios y haz plan de seguridad con la familia en esta visita. Si no puedes derivar, programa seguimiento propio cercano; es la prioridad sobre el subtipo.'));
+  else if(hv(id,'pasiva')) r.push(par('<b>Ideación pasiva</b>: indaga plan, medios y factores protectores, involucra a la familia y agenda un seguimiento cercano.'));
+  else r.push(par('Sin ideación suicida hoy: vuelve a preguntar en cada visita.'));
+  if(isNaN(d)||d<0){r.push(par(isNaN(d)?'Falta el tiempo desde el evento: el subtipo se decide por ese dato [1].':'Los días no pueden ser negativos: revisa el valor.'));}
+  else if(!es.length){r.push(par('Falta el tipo de estresor: traumático o no traumático separa el trastorno de adaptación de los otros dos [1].'));}
+  else if(hv(es,'notrauma')){
+    if(d<=92) r.push(par('<b>Trastorno de adaptación</b>: estresor no traumático con síntomas dentro de los 3 meses [1]. Conducta: psicoeducación, apoyo y resolución del estresor; descarta depresión mayor y reevalúa si persiste.'));
+    else r.push(par('<b>Estresor no traumático con más de 3 meses</b>: el inicio ya no cumple el criterio de adaptación [1]. Revisa si hay depresión mayor o ansiedad y trátala según su guía.'));
+  } else {
+    var n=si.length;
+    if(d<3) r.push(par('<b>Menos de 3 días del evento</b>: aún no hay trastorno de estrés agudo, que exige de 3 días a 1 mes [1]. Conducta: seguridad, apoyo práctico y psicoeducación; evita el debriefing de sesión única y las benzodiacepinas [27]. Cita de reevaluación.'));
+    else if(d<=30) r.push(par('<b>Trastorno de estrés agudo</b> si cumple criterios completos (de 3 días a 1 mes desde el evento) [1]. Conducta: seguridad y psicoeducación; con síntomas clínicamente importantes, ofrece terapia centrada en el trauma [27]; sin debriefing de sesión única [27].'));
+    else if(n===4){
+      r.push(par('<b>TEPT</b>: evento traumático, más de 1 mes y los cuatro grupos de síntomas [1]. Conducta: terapia cognitivo-conductual centrada en el trauma o EMDR [27].'));
+      r.push(par('Si el paciente prefiere un fármaco: sertralina 25 mg VO cada 24 h la primera semana y luego 50 mg, con ajuste según respuesta hasta 200 mg/día como máximo [17] [27]; alternativa: venlafaxina, dosis [VERIFICAR EN FUENTE] [27]. Evita las benzodiacepinas [27].'));
+    } else if(n>0) r.push(par('<b>Más de 1 mes con grupos incompletos</b> ('+n+' de 4): no cumple todos los criterios de TEPT [1]. Explora los grupos que faltan, descarta depresión y consumo, y reevalúa en la siguiente visita.'));
+    else r.push(par('Más de 1 mes tras un evento traumático pero sin grupos de síntomas marcados: no hay base para TEPT; pregunta de nuevo por evitación y por cambios del ánimo [1].'));
+  }
+  if(hv(ot,'sust')) r.push(par('Consumo de sustancias: trátalo en paralelo, porque alivia la hiperactivación a corto plazo y la perpetúa [1].'));
+  if(hv(ot,'benzo')) r.push(par('Con benzodiacepinas previas: no las inicies ni las prolongues porque no previenen el TEPT y pueden empeorarlo [27]; si ya las usa por semanas, retíralas de forma gradual.'));
+  r.push('<span class="cf">Si el tiempo desde el evento pasa de 1 mes con los cuatro grupos de síntomas → el diagnóstico cambia de estrés agudo a TEPT y se suma la opción farmacológica [1] [27].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE5(dc){
+  var s=num(dc,'sss'),b=sel(dc,'band'),c=sel(dc,'com'),o=sel(dc,'otros');
+  if(isNaN(s)&&!b.length&&!c.length&&!o.length){
+    vacio(dc,'Escribe el SSS-8 y elige las banderas, la comorbilidad y los otros datos para obtener la banda y la conducta en atención primaria; no calcula probabilidades.');return;}
+  var r=[];
+  if(b.length){
+    var a=[];
+    if(hv(b,'signo')) a.push('signo objetivo nuevo');
+    if(hv(b,'peso')) a.push('pérdida de peso');
+    if(hv(b,'fiebre')) a.push('fiebre');
+    r.push(par('<b>Banderas de organicidad</b> ('+a.join(', ')+'): no atribuyas el cuadro a un trastorno de síntomas somáticos. Reabre el estudio dirigido a la causa orgánica antes de iniciar psicoterapia.'));
+  }
+  if(isNaN(s)){r.push(par('Falta el SSS-8: aplícalo para medir la carga de síntomas [8].'));}
+  else if(s<0||s>32){r.push(par('El SSS-8 va de 0 a 32: revisa el valor.'));}
+  else{
+    var k=s<=3?'mínima':(s<=7?'baja':(s<=11?'media':(s<=15?'alta':'muy alta')));
+    r.push(par('Carga de síntomas <b>'+k+'</b> (SSS-8 '+s+'; 0 a 3 mínima, 4 a 7 baja, 8 a 11 media, 12 a 15 alta, 16 a 32 muy alta) [8].'));
+    if(!b.length){
+      if(k==='mínima'||k==='baja') r.push(par('Conducta: valida los síntomas, explica el mecanismo y programa una cita de control; la carga no justifica más estudios [28].'));
+      else r.push(par('Conducta: un solo médico de cabecera con citas programadas, validación de los síntomas y terapia cognitivo-conductual [28]; mide la función en cada cita.'));
+      if(k==='alta'||k==='muy alta') r.push(par('Con carga alta valora la discapacidad y, si no puedes derivar, sostén tú el seguimiento con citas fijas sin esperar a que el paciente las pida.'));
+    }
+  }
+  if(hv(c,'dep')||hv(c,'ans')){
+    var x=hv(c,'dep')&&hv(c,'ans')?'depresión y ansiedad':(hv(c,'dep')?'depresión':'ansiedad');
+    r.push(par('Con '+x+' comórbida considera un antidepresivo: sertralina 50 mg VO cada 24 h, con ajuste según respuesta hasta 200 mg/día como máximo [17]; mantenla tras la respuesta y reevalúa periódicamente. Si hay depresión, explora la ideación suicida.'));
+  }
+  if(hv(o,'benzo')) r.push(par('Con benzodiacepinas: no las prolongues por el riesgo de dependencia y retíralas de forma gradual [2].'));
+  if(hv(o,'estudios')) r.push(par('Pide más estudios sin dato nuevo: no los solicites; explica por qué y agenda la siguiente cita para sostener la relación [28].'));
+  r.push('<span class="cf">Si aparece pérdida de peso, fiebre o un signo objetivo nuevo → la conducta cambia de manejo del trastorno de síntomas somáticos a reabrir el estudio orgánico [1].</span>');
+  out(dc,r.join(''));
+}
+
+</script>
