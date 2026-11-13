@@ -161,3 +161,7 @@ Las 10 reglas de `widgets/patologia_urinaria_baja/PLAN.md` § «Reglas de diseñ
 - Verificación: catálogo y referencias de ejecutores comprobados por `haiku` en PubMed (78 artículos confirmados, 1 corregido —Cao 2020—, 1 eliminado —estudio poblacional de Lewy 2026 sin registro en PubMed—, con sus cifras).
 - Datos eliminados por no poder leerse en la sesión (hosts bloqueados o figura en imagen): umbrales numéricos de glucemia y osmolalidad del estado hiperosmolar (ADA 2024, figura 2B), umbrales numéricos de Roma IV, punto de corte del Mini-Cog y del 4AT, dosis de quetiapina, risperidona, levodopa y melatonina en demencia, nota de altitud de Saquisilí, hidratación por kg en el simulador (se usan las tasas absolutas de ADA 2024). AHA/ASA 2021 y SIGN 157 no se citan (sin acceso al texto).
 - Los archivos de trabajo `_refs_*`, `_pend_*`, `_sim_*`, `_recall_*` y los briefs se borraron tras integrar.
+
+## Widget complementario
+
+El manejo de las causas metabólicas y por calor del delirium de este caso (hipernatremia, azotemia prerrenal, hipercalcemia, estado hiperosmolar, golpe de calor) se desarrolla en `widgets/sindrome_confusional/causas_metabolicas/` (plan en `widgets/sindrome_confusional/PLAN.md`). Este widget no se modifica por ello.

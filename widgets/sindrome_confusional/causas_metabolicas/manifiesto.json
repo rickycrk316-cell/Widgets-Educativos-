@@ -1,0 +1,87 @@
+{
+ "titulo": "Síndrome confusional: causas metabólicas y calor",
+ "salida": "../Sindrome_confusional_causas_widget_v11.html",
+ "tipo": "v11",
+ "tema": "salud-mental",
+ "modo": "multi",
+ "entidades": {
+  "e1": "Hipernatremia",
+  "e2": "Azotemia prerrenal",
+  "e3": "Hipercalcemia",
+  "e4": "Estado hiperosmolar",
+  "e5": "Golpe de calor"
+ },
+ "principal": "e1",
+ "amenaza": "e5",
+ "tabs": [
+  "pan",
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4",
+  "e5",
+  "sin"
+ ],
+ "pg": {
+  "vis": 4,
+  "e1": 5,
+  "e2": 3,
+  "e3": 3,
+  "e4": 3,
+  "e5": 3
+ },
+ "fey": {
+  "e1": 2,
+  "e2": 1,
+  "e3": 1,
+  "e4": 1,
+  "e5": 1
+ },
+ "nodos": {
+  "e1": 6,
+  "e2": 5,
+  "e3": 6,
+  "e4": 5,
+  "e5": 5
+ },
+ "signos": {
+  "e1": 4,
+  "e2": 3,
+  "e3": 4,
+  "e4": 3,
+  "e5": 4
+ },
+ "dc": [
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4",
+  "e5"
+ ],
+ "nucleo": {
+  "vis": [
+   "Eje 1 — Temperatura central: muy alta con encefalopatía tras exposición al calor es golpe de calor; se enfría antes de cualquier otro estudio.",
+   "Eje 2 — Glucemia capilar: muy alta con hiperosmolalidad y sin cetosis importante es estado hiperosmolar; normal lo descarta en un minuto.",
+   "Eje 3 — Sodio y diuresis: sodio alto es déficit de agua libre; diuresis escasa con urea desproporcionada a la creatinina es azotemia prerrenal.",
+   "Eje 4 — Semanas de sed, poliuria, estreñimiento y fatiga sin hiperglucemia apuntan a hipercalcemia: calcio corregido y QT corto.",
+   "Eje 5 — Las causas no se excluyen: la hiperglucemia o el calcio alto producen poliuria, hipernatremia y azotemia prerrenal; se buscan todas."
+  ],
+  "e1": [
+   "PROVISIONAL: data-paso de nodos clin=1, celda k, paso 1.º y De elección de e1 (texto literal del widget)"
+  ],
+  "e2": [
+   "PROVISIONAL"
+  ],
+  "e3": [
+   "PROVISIONAL"
+  ],
+  "e4": [
+   "PROVISIONAL"
+  ],
+  "e5": [
+   "PROVISIONAL"
+  ]
+ }
+}

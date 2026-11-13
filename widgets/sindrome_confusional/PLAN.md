@@ -97,3 +97,77 @@ Necesidades de aprendizaje (Caso 6 del sílabo): definición, factores predispon
 | Pruebas | haiku | navegador (iPad, oscuro, móvil), auditoría, informe de fallas |
 
 Convención para trabajo en paralelo: las citas se escriben `[@clave]` y cada ejecutor deja `_refs_<ejecutor>.tsv` (`clave<TAB>referencia Vancouver`) y `_recall_<ejecutor>.json` (`{"t1":[{"q":…,"a":…,"h":…}]}`) en `apertura/`. El integrador numera por primera aparición, escribe la lista y borra los archivos `_*`.
+
+---
+
+# Widget de enseñanza · Causas metabólicas y por calor del síndrome confusional (caso de Saquisilí) — `causas_metabolicas/`
+
+Caso: `fuentes/casos/caso_saquisili_trastornos_neurocognitivos.md` (medicatura rural en el Centro de Salud de Saquisilí, **sin posibilidad de derivar**; varón que vive solo; «no actúa como él mismo» desde hace dos días, lúcido un minuto y somnoliento o estuporoso al siguiente; inquieto el día previo; horas caminando al calor; cuadro viral hace dos semanas; polaquiuria y nocturia con volumen disminuido; estreñimiento de dos semanas; sed aumentada con ingesta de agua reducida; fatiga de meses).
+
+Sílabo: 2.ª rotación, **Caso 6** (síndrome confusional agudo: factores precipitantes, diagnóstico diferencial, tratamiento, prevención), con **Caso 1** (azotemia prerrenal) y **Caso 3** (delirio como síndrome geriátrico). La etiqueta `puce` vale para contenido nombrado en cualquiera de esos tres casos de la 2.ª rotación (declarado en `vis`, `hb am` «Alcance»). Bibliografía: ediciones vigentes del protocolo § 4 (el sílabo cita Harrison 19.ª y Farreras 17.ª: discrepancia ya declarada en el widget hermano; aquí se repite solo como `hb am` «Precisión sobre el sílabo» en `vis`).
+
+## Por qué un widget nuevo y por qué así
+
+- Ya existe `widgets/trastornos_neurocognitivos/Trastornos_neurocognitivos_widget_v11.html` (multi: delirium, Alzheimer, vascular, Lewy, frontotemporal) con el mismo caso. Su eje es **delirium frente a demencia**; el delirium ocupa una sola pestaña y las causas del caso caben ahí en una tabla de etiología y unas pocas filas de fármacos.
+- Lo que falta para **manejar a este paciente en un primer nivel sin derivación** es lo que el sílabo llama «factores precipitantes, diagnóstico diferencial, tratamiento y prevención» del síndrome confusional: cada causa metabólica o ambiental del caso tiene **mecanismo propio y manejo propio** (regla de entidad de la skill), y se discriminan ante **una misma presentación**. Eso es un multi, no un mono: un mono de «delirium» repetiría la pestaña e1 del widget hermano.
+- Reconocer el delirium (CAM, 4AT, subtipos, fluctuación), el estudio mínimo común, el manejo común del delirium mientras se corrige la causa (no farmacológico, antipsicótico solo con riesgo, qué no dar) y las banderas de gravedad son **comunes al grupo**: van una vez en `vis` («Común al grupo») y remiten al widget hermano para la profundidad. La prevención común (plan de hidratación del adulto mayor que vive solo, calor, el hijo como vigía, revisión de fármacos) va en «Seguimiento» de e1, y las demás entidades remiten con `span.rem`.
+- Se excluyen como entidades: la **infección** (el cuadro viral ya se resolvió; entra como precipitante del estado hiperosmolar y en la búsqueda sistemática de `vis`, y está en el widget hermano) y los **fármacos** (no hay lista de fármacos en el caso; dato faltante en `vis`). La **lesión renal aguda** entra como «Azotemia prerrenal» (Caso 1 del sílabo) porque la oliguria es pista directa del caso y su manejo (volumen, nefrotóxicos, potasio, qué hacer sin diálisis) es propio.
+
+## Router
+
+`Modo: multi · Entidades: e1=Hipernatremia (principal), e2=Azotemia prerrenal, e3=Hipercalcemia, e4=Estado hiperosmolar, e5=Golpe de calor · Amenaza: e5 · Override: no`
+
+- Presentación común: **adulto mayor que vive solo, confuso y fluctuante tras días de calor, con sed, cambios en la diuresis y poca ingesta de agua, en un centro de salud sin derivación**.
+- Eje (declarado): de lo más frecuente y lento a lo que mata en horas: hipernatremia → azotemia prerrenal → hipercalcemia → estado hiperosmolar → golpe de calor.
+- Principal e1 = deshidratación hipernatrémica: la ESPEN considera a todo adulto mayor en riesgo de deshidratación por baja ingesta [Volkert 2022], y es el denominador de las otras cuatro (todas la producen o la agravan).
+- Amenaza e5 = golpe de calor: si no se reconoce, mata o deja secuela neurológica en horas y su tratamiento (enfriar) no espera ningún examen; por eso abre el `hb ro` de `vis` y lleva pasos `Alarma` y `Evita`.
+- Textos de botón (exactos): `Panorama` · `Visión de conjunto` · `Hipernatremia` · `Azotemia prerrenal` · `Hipercalcemia` · `Estado hiperosmolar` · `Golpe de calor` · `Errores`.
+- Título: «Síndrome confusional: causas metabólicas y calor» · salida `../Sindrome_confusional_causas_widget_v11.html` · `tema` `salud-mental` (mismo acento que el widget hermano del Caso 6).
+- Alcance declarado en `vis`: se asume que el centro de salud tiene glucómetro, tira reactiva de orina, termómetro (rectal para temperatura central), pulsioxímetro, ECG, soluciones IV y laboratorio básico (electrolitos, glucosa, urea, creatinina, calcio, albúmina); cuando un examen no exista, la conducta se guía por lo que sí hay, y se dice. No se afirma la dotación real del centro de Saquisilí.
+
+## Ejes de `vis` (literales, van a `nucleo.vis`)
+
+1. `Eje 1 — Temperatura central: muy alta con encefalopatía tras exposición al calor es golpe de calor; se enfría antes de cualquier otro estudio.`
+2. `Eje 2 — Glucemia capilar: muy alta con hiperosmolalidad y sin cetosis importante es estado hiperosmolar; normal lo descarta en un minuto.`
+3. `Eje 3 — Sodio y diuresis: sodio alto es déficit de agua libre; diuresis escasa con urea desproporcionada a la creatinina es azotemia prerrenal.`
+4. `Eje 4 — Semanas de sed, poliuria, estreñimiento y fatiga sin hiperglucemia apuntan a hipercalcemia: calcio corregido y QT corto.`
+5. `Eje 5 — Las causas no se excluyen: la hiperglucemia o el calcio alto producen poliuria, hipernatremia y azotemia prerrenal; se buscan todas.`
+
+## Contrato de `vis` por entidad (filas 5, 7, 8 y 9; ≤12 palabras por celda)
+
+| | 5 · Hallazgo que la delata (= celda `k` de su `.qv`) | 7 · Prueba que la confirma (= su paso `1.º` o `Confirma`) | 8 · Primera conducta y quién maneja | 9 · Si no la reconoces |
+|---|---|---|---|---|
+| e1 | Somnolencia o confusión con sed y poca ingesta de agua | Sodio sérico mayor de 145 mEq/L | Agua libre calculada; bajar el sodio despacio; médico rural | Coma y hemorragia cerebral por retracción del encéfalo |
+| e2 | Diuresis escasa con signos de hipovolemia | Creatinina en ascenso (KDIGO) que mejora con volumen | Volumen, suspender nefrotóxicos, diuresis horaria; médico rural | Necrosis tubular, hiperpotasemia y uremia sin diálisis disponible |
+| e3 | Semanas de estreñimiento, poliuria, sed y fatiga | Calcio corregido o iónico alto; luego PTH | Solución salina; calcitonina y bisfosfonato si es grave | Arritmia, coma y lesión renal; cáncer oculto sin diagnosticar |
+| e4 | Glucemia capilar muy alta sin respiración de Kussmaul | Glucemia y osmolalidad efectiva altas con cetonas escasas | Solución salina primero; potasio antes de la insulina | Coma, trombosis y muerte |
+| e5 | Temperatura central muy alta con encefalopatía tras calor | Temperatura rectal de 40 °C o más con disfunción neurológica | Enfriar de inmediato; luego volumen y vigilancia | Falla multiorgánica, coagulación intravascular y muerte en horas |
+
+Las cifras de estas celdas llevan su `[@clave]` en el widget; si un ejecutor no confirma una cifra, la reescribe sin ella y avisa al integrador para alinear `vis`.
+
+## Conteos (manifiesto)
+
+`pg` vis 4, e1 5, e2–e5 3 · `fey` e1 2, e2–e5 1 · `nodos` e1 6, e2 5, e3 6, e4 5, e5 5 · `signos` e1 4, e2 3, e3 4, e4 3, e5 4 · `dc` vis, e1 (dos: `dcE1d` en Diagnóstico y `dcE1t` en Tratamiento), e2, e3, e4, e5. Si un ejecutor necesita otro conteo, lo informa y el integrador ajusta el manifiesto.
+
+## Reparto
+
+| Ejecutor | Modelo | Partes | Simuladores (en `_sim_<X>.js`) |
+|---|---|---|---|
+| E1 | sonnet | `21_e1` (Hipernatremia, principal, profundidad mono; incluye la prevención común en «Seguimiento») | `dcE1d`, `dcE1t` |
+| E2 | sonnet | `22_e2` (Azotemia prerrenal) + `23_e3` (Hipercalcemia) | `dcE2`, `dcE3` |
+| E3 | sonnet | `24_e4` (Estado hiperosmolar) + `25_e5` (Golpe de calor, amenaza) | `dcE4`, `dcE5` |
+| E4 | sonnet | `05_vis` (incluye «Común al grupo»: reconocer el delirium, estudio mínimo, manejo común del delirium con tabla corta de fármacos comunes) + `80_sin` (solo `hb ro`) | `dcVis` |
+| H1 | haiku | control mecánico de partes y comprobación de PMID/DOI/Setid de `_refs_*` | — |
+| INT | integrador | `02_pan`, `90_sim` (une `_sim_*.js`), coherencia, conversión de claves, construir, renumerar, navegador, README, cierre del manifiesto | — |
+
+El decisor escribió `01_nav`, el manifiesto provisional, `_refs_catalogo.tsv` (48 referencias comprobadas el 2026-11-13: 34 por PubMed, 5 fichas DailyMed por su API, NICE CG103 y GPC MSP de diabetes 2017 leídas en la web, 7 libros de la tabla del protocolo § 4) y `_sim_00_ayudas.js`. No se cita MSP «Normas y protocolos del adulto mayor» 2010: su único PDF localizado (iess.gob.ec) está bloqueado en la sesión y no se leyó.
+
+## Citas y verificación
+
+- Las partes citan con `[@clave]` (una clave por corchete, precedida de espacio). Claves del catálogo común `causas_metabolicas/_refs_catalogo.tsv`; fuentes nuevas en `_refs_<X>.tsv` del ejecutor, solo con PMID/DOI/Setid devueltos por la herramienta.
+- Cada ejecutor verifica al redactar los datos que cambian conducta y anota en `_pend_<X>.tsv` (`dato<TAB>parte<TAB>fuente<TAB>resultado`) lo confirmado, corregido o eliminado. Lo no confirmado no se escribe (cero marcas).
+- La conversión a `[n]` se hace una sola vez, al final, con `claves_a_numeros.py` (scratchpad del decisor, copia en el encargo del integrador) y luego `kit/renumerar.py`.
+
+## Relación con el widget hermano
+
+Este widget no repite el contraste con las demencias ni la profundidad del delirium (CAM, subtipos, fisiopatología neurotransmisora, pronóstico): los resume en «Común al grupo» y remite a `Trastornos_neurocognitivos_widget_v11.html`. Si un ejecutor encuentra un dato erróneo en el widget hermano, lo corrige aquí con `hb vi` (error de un widget previo) y lo informa al integrador.
