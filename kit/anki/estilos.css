@@ -78,7 +78,8 @@ hr#answer { border: 0; height: 1px; background: var(--line); margin: 18px 0; }
 .esq table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: .92em; line-height: 1.35;
   border: 1px solid var(--line); border-radius: 10px; overflow: hidden; color: var(--tx); }
 .esq caption { caption-side: top; text-align: left; font-size: .85em; color: var(--tx3); padding: 0 0 .35em; }
-.esq th, .esq td { padding: .45em .55em; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.esq th, .esq td { padding: .45em .55em; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line);
+  hyphens: auto; -webkit-hyphens: auto; overflow-wrap: anywhere; } /* requiere lang="es" (div.esq en la plantilla) */
 .esq th { background: var(--surf2); font-weight: 700; color: var(--tx); }
 .esq td { background: var(--surf); }
 .esq tr:last-child td { border-bottom: 0; }

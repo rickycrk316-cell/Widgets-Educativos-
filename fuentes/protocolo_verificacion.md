@@ -1,6 +1,6 @@
 # Protocolo de verificación de fuentes (compartido por las skills definiciones, widget-ensenanza y flashcards)
 
-Objetivo: **cero marcas**. Ningún widget (v11, definiciones, apertura) se entrega con `[VERIFICAR EN FUENTE]` ni con el badge «Fuente por verificar»: cada dato se confirma o se elimina.
+Objetivo: **cero marcas**. Aplica a widgets y a mazos de flashcards. Ningún widget (v11, definiciones, apertura) ni mazo se entrega con `[VERIFICAR EN FUENTE]` ni con el badge «Fuente por verificar»: cada dato se confirma o se elimina.
 
 ## 1 · Qué exige cita
 
@@ -14,19 +14,17 @@ Objetivo: **cero marcas**. Ningún widget (v11, definiciones, apertura) se entre
 ## 2 · Orden de búsqueda (de más a menos prioritario)
 
 1. Adjuntos del mensaje.
-2. Sílabo y su bibliografía: `fuentes/syllabus_*.md` en el repo, o `references/syllabus_*.md` dentro de la skill. Si la bibliografía del sílabo trae una edición, usa **esa** (p. ej. Harrison 22e 2025, Farreras-Rozman 22.ª ed. 2024).
-3. Guía internacional vigente del área; GPC del MSP del Ecuador cuando exista.
-4. Bibliografía de la tabla del § 4.
-5. Fármacos de marca: ARCSA → ficha del fabricante → CIMA-AEMPS / EMA / DailyMed.
+2. Sílabo y su bibliografía: `fuentes/syllabus_*.md` en el repo, o `references/syllabus_*.md` dentro de la skill. Es el alcance; para la edición de un libro rige la regla del § 4.
+3. Cascada de verificación, en este orden: PubMed → Consensus → fichas técnicas (ARCSA, fabricante, CIMA-AEMPS, EMA, DailyMed) → GPC/lineamientos del MSP del Ecuador → textos de la bibliografía (§ 4) → web.
 
 ## 3 · Pasada de verificación (obligatoria antes de entregar)
 
 1. Mientras redactas, no te detengas a buscar cada dato. Anota el dato en una lista `pendientes` (texto exacto, pestaña o tarjeta, tipo de fuente que lo respaldaría).
-2. Al terminar el borrador, una **sola pasada** de verificación sobre `pendientes`. Si hay subagentes, delega la pasada a uno ligero (modelo `haiku`). Si no, hazla tú. Herramientas, en este orden y según estén disponibles:
+2. Al terminar el borrador, verificación sobre `pendientes`, no en «una sola pasada»: se agotan las fuentes. La hace un ejecutor capaz (nunca `haiku`); si no hay subagentes, la haces tú. Herramientas, en el orden de la cascada del § 2 y según estén disponibles:
    - PubMed (`search_articles`, `lookup_article_by_citation`, `get_article_metadata`) para artículos, guías publicadas en revista y consensos. Devuelve PMID y DOI.
    - Consensus (`search`) para preguntas clínicas con evidencia de estudios.
    - WebSearch/WebFetch para guías de sociedades, ARCSA, fichas técnicas y catálogos editoriales.
-3. Agota las fuentes (regla vigente, pedida por el estudiante): cada pendiente pasa por PubMed, Consensus, fichas técnicas oficiales (DailyMed, CIMA-AEMPS, EMA, ARCSA), GPC y lineamientos del MSP del Ecuador (www.salud.gob.ec) y guías o web, hasta 2 búsquedas por dato y por fuente, sin tope de datos. Si un dominio está bloqueado por la red de la sesión, pide habilitarlo antes de darlo por perdido.
+3. Agota las fuentes (regla vigente, pedida por el estudiante): cada pendiente recorre la cascada del § 2 (PubMed → Consensus → fichas técnicas → GPC/lineamientos MSP www.salud.gob.ec → textos de la bibliografía → web), hasta 2 búsquedas por dato y por fuente, sin tope de datos. Si un dominio está bloqueado por la red de la sesión, pide habilitarlo antes de darlo por perdido.
 4. Resultado por dato:
    - **Confirmado** → quita la marca y añade la referencia en Vancouver a la lista, con PMID/DOI si la herramienta los devolvió.
    - **Contradicho** → corrige el dato con la fuente encontrada.
@@ -36,14 +34,12 @@ Objetivo: **cero marcas**. Ningún widget (v11, definiciones, apertura) se entre
 
 ## 4 · Ediciones de referencia (verificadas el 2026-10-26)
 
-Usa estas ediciones tal cual. Si necesitas un libro que no está en la tabla, verifica su edición con una búsqueda (§ 3) antes de citarlo.
-
-Citar una edición que existe es veraz aunque haya otra más nueva; prefiere la más reciente de la columna «Edición».
+Regla única: se cita la edición **realmente consultada**; si no pudiste consultar el libro, no se cita. La tabla da la edición y los datos de referencia de cada libro; si el sílabo indica otra edición, la discrepancia se anota, pero se cita la que consultaste. Si necesitas un libro que no está en la tabla, verifica su edición con una búsqueda (§ 3) antes de citarlo.
 
 | Libro | Edición · año | Vancouver (inicio) | Confianza |
 |---|---|---|---|
 | Harrison's Principles of Internal Medicine | 22.ª · 2025 | Loscalzo J, Fauci AS, Kasper DL, Hauser SL, Longo DL, Jameson JL, editors. | alta |
-| Farreras-Rozman. Medicina interna | 20.ª · 2024 | Rozman Borstnar C, Cardellach López F, editores. | alta · el sílabo de la 1.ª rotación dice «22.ª»: discrepancia del sílabo |
+| Farreras-Rozman. Medicina interna | 20.ª · 2024 | Rozman Borstnar C, Cardellach López F, editores. | alta |
 | Sabiston Textbook of Surgery | 22.ª · 2025 | Townsend CM Jr, Beauchamp RD, Evers BM, Mattox KL, editors. | alta (edición); verificar editores al citar |
 | Schwartz's Principles of Surgery | 11.ª · 2019 | Brunicardi FC, editor. | media |
 | Guyton and Hall Textbook of Medical Physiology | 14.ª · 2021 (existe 15.ª · 2026, sin confirmar) | Hall JE, Hall ME. | alta para la 14.ª |

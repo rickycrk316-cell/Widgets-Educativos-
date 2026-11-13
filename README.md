@@ -39,6 +39,14 @@ Widgets HTML de estudio, autocontenidos y offline. Los nuevos siguen **v11** (`d
 
 Estado: **v11** y **definiciones** / **apertura** son kits vivos; «v10 congelado» no se reconstruye. «Marcas» = datos marcados `[VERIFICAR EN FUENTE]`: los 17 v10 congelados y las definiciones de dermatología, consumo de alcohol y ansiedad/pánico, las conservan hasta que se revisen; compruébalos antes de estudiar con ellos. Los widgets v11 y todo lo nuevo o migrado van con cero marcas: lo no confirmado se elimina.
 
+## Mazos Anki
+
+Generados con la skill `flashcards` (`kit/anki/`); registro de IDs en `mazos/README.md`. «Notas» no es «tarjetas»: cada hueco cloze genera una tarjeta.
+
+| Caso | Ruta | Notas | Versión | Prefijo |
+|---|---|---|---|---|
+| Toxicodependencias | `mazos/toxicodependencias/` | 45 | 1.0 | `Q2R2-TOX` |
+
 ## Estructura
 
 ```

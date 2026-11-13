@@ -27,8 +27,12 @@ RAIZ_REPO = pathlib.Path(__file__).resolve().parents[2]
 REGISTRO = RAIZ_REPO / 'mazos' / 'README.md'
 
 # Marcas prohibidas (decisión del dueño: cero marcas en campos, tags y metadatos de la guía).
-MARCAS = re.compile(r'VERIFICAR|por\s+verificar|\bpendientes?\b|sin\s+confirmar|no\s+confirmad[oa]|'
-                    r'\bTODO\b|\bFIXME\b|\bXXX\b|\?\?|\[\s*cita\s*\]|\[\s*ref\s*\]|\[\s*n\s*\]', re.I)
+# TODO/FIXME/XXX/VERIFICAR solo en mayúsculas («todo», «sobre todo» son español normal); «pendiente(s)» suelto
+# es uso clínico legítimo: solo abortan sus formas de marca (y el campo `pendientes` no vacío, más abajo).
+MARCAS = re.compile(r'\b(?:TODO|FIXME|XXX)\b|VERIFICAR|'
+                    r'(?i:verificar\s+en\s+fuente|por\s+verificar|fuente\s+pendiente|'
+                    r'pendientes?\s+de\s+verifica(?:r|ci[oó]n)|sin\s+confirmar|no\s+confirmad[oa]|'
+                    r'\[\s*\?\s*\]|\?\?|\[\s*cita\s*\]|\[\s*ref\s*\]|\[\s*n\s*\])')
 # Tarjetas que hablan de un widget, del mazo o de la propia fuente: prohibidas.
 METATEXTO = re.compile(r'\bwidgets?\b|\best[ea]s?\s+(mazo|tarjeta)s?\b|\bla\s+fuente\s+(cita|dice|indica|menciona)\b|'
                        r'\bel\s+s[ií]labo\s+(dice|pide|cita)\b|\bseg[uú]n\s+(el|la)\s+(widget|tarjeta)\b', re.I)

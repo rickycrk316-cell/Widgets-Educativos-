@@ -29,7 +29,7 @@ CAMPOS_CLOZE = [('text', 'Text'), ('extra', 'Extra'), ('mnemotecnia', 'Mnemotecn
                 ('esquema', 'Esquema'), ('fuente', 'Fuente')]
 
 _BLOQUES = ('{{#Mnemotecnia}}<div class="bloque mnemo"><div class="rot">Mnemotecnia</div>{{Mnemotecnia}}</div>{{/Mnemotecnia}}'
-            '{{#Esquema}}<div class="bloque esquema"><div class="rot">Esquema</div><div class="esq">{{Esquema}}</div></div>{{/Esquema}}'
+            '{{#Esquema}}<div class="bloque esquema"><div class="rot">Esquema</div><div class="esq" lang="es">{{Esquema}}</div></div>{{/Esquema}}'
             '{{#Fuente}}<div class="fuente">{{Fuente}}</div>{{/Fuente}}')
 QFMT_QA = '<div class="q">{{Pregunta}}</div>'
 AFMT_QA = ('{{FrontSide}}<hr id=answer><div class="resp">{{Respuesta}}</div>'

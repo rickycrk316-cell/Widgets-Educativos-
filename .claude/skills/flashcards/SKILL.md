@@ -14,8 +14,10 @@ description: "Genera mazo Anki .apkg (v7) y guía de estudio .docx para cualquie
 |---|---|
 | `kit/anki/compilar_mazo.py <mazos/tema/tarjetas.json> [--solo-lint] [--demo]` | lint completo; si pasa, genera `.apkg`, lo inspecciona (zip + sqlite) y actualiza `mazos/README.md`. Requiere `pip install genanki` (sin él, `--solo-lint` funciona) |
 | `kit/anki/guia_docx.py <tarjetas.json>` | guía `.docx` desde `meta.guia` + tarjetas (python-docx) |
-| `node kit/anki/previsualizar.js <tarjetas.json> <scratchpad>/capturas [N]` | anverso/reverso × claro/noche × iPhone 390 px / iPad 820 px; avisa de desbordes e imágenes rotas |
+| `node kit/anki/previsualizar.js <tarjetas.json> <scratchpad>/capturas [N \| --ids ID1,ID2]` | anverso/reverso × claro/noche × iPhone 390 px / iPad 820 px, una captura por hueco de cada cloze (c1, c2…); avisa de desbordes e imágenes rotas. `--ids Q2R2-TOX-0002,Q2R2-TOX-0018` elige tarjetas concretas en vez de las N primeras |
 | `kit/anki/estilos.css`, `kit/anki/modelo.py` | CSS del tema A, IDs, campos, plantillas y lista blanca HTML |
+
+**Entorno:** genanki (`pip install genanki`, o `PYTHONPATH` a una copia local) para compilar, y Playwright (global preinstalado, o `cd kit && npm ci`) para previsualizar.
 
 Requiere ejecución de código. Si no hay, dilo y entrega el JSON de tarjetas para compilar después (no hay Plan B sin compilador: el lint es parte del contrato).
 
@@ -25,7 +27,7 @@ Requiere ejecución de código. Si no hay, dilo y entrega el JSON de tarjetas pa
 
 - **Caso ABP / tema** (obligatorio). **Modo**: autónomo (defecto), coautor o mixto.
 - **Subtemas a priorizar**, **escalas** a incluir, **profundidad** (prueba del caso o examen integral; pregunta solo si no se infiere).
-- **Volumen**: derivado con P11 (banda 25–45; techo ~45 salvo que el dueño pida otro).
+- **Volumen**: derivado con P11 (banda 25–45 **notas**; techo ~45 salvo que el dueño pida otro). Nº de notas ≠ nº de tarjetas: cada hueco cloze genera una tarjeta en Anki, y el techo se cuenta en notas.
 - **Fechas** (opcionales, para el calendario de la guía): apertura, cierre, examen.
 - **Material adjunto**: fuente prioritaria.
 - **Continuidad de IDs**: lee `mazos/README.md` (prefijo, ID de mazo, último ID). Los nuevos continúan desde el último; un ID publicado nunca se reasigna a otro contenido (sobrescribiría la tarjeta). Si el prefijo no está, añade la fila antes de compilar.
@@ -51,7 +53,7 @@ Estudiante de 10.º nivel, PUCE (Quito). ABP de 3 sesiones por caso (apertura, m
 
 El prefijo `Q2-TOX` (mazo antiguo) está retirado: toxicodependencias empieza en `Q2R2-TOX-0001`. El ID de mazo de cada prefijo está en `mazos/README.md`.
 
-**Fuentes (prioridad):** adjuntos → sílabo del caso y su bibliografía → guía internacional vigente y GPC del MSP Ecuador → textos de la tabla §4 del protocolo, con **su** edición (Harrison 22.ª 2025, Farreras-Rozman 20.ª 2024…; si el sílabo cita otra edición, se usa la del protocolo y la discrepancia va a la auditoría).
+**Fuentes (prioridad):** adjuntos → sílabo del caso y su bibliografía → guía internacional vigente y GPC del MSP Ecuador → textos de la tabla §4 del protocolo, con **su** edición (Harrison 22.ª 2025, Farreras-Rozman 20.ª 2024…; si el sílabo cita otra edición, se cita la realmente consultada y la discrepancia va a la auditoría). Un libro solo puede ser `Fuente` si se consultó de verdad el pasaje citado; si no, se usa una fuente comprobable (artículo, guía, ficha) o se omite la cita.
 
 **Integración con el repo (si existe `widgets/`).** El `nucleo` del `manifiesto.json` del widget del caso es semilla prioritaria (registrar `semilla` en el plan); reescríbelo con P1–P12, respeta sus cifras verificadas. Los términos del widget de definiciones solo dan tarjeta si aportan comprensión. No edites widgets desde esta skill. **Prohibidas** las tarjetas que hablan del estado de un widget, del mazo o de la propia fuente («el widget cita…»): el lint las rechaza.
 
@@ -95,23 +97,24 @@ El prefijo `Q2-TOX` (mazo antiguo) está retirado: toxicodependencias empieza en
    ```json
    {"id": "Q2R2-TOX-0001", "tipo": "QA", "clase": "Principio", "nivel": "Aplicacion", "bloom": "Comprender",
     "subtema": "Abstinencia", "objetivo": "Explicar el rebote de la abstinencia alcohólica",
-    "fuente_prevista": "Goodman & Gilman 14.ª ed.", "alto_rendimiento": ["USMLE"],
+    "fuente_prevista": "Jesse 2017, Acta Neurol Scand", "alto_rendimiento": ["USMLE"],
     "mnemotecnia": null, "esquema": "tabla intoxicación vs. abstinencia", "anverso_usuario": null, "semilla": null}
    ```
 2. **F2 Redacción (ejecutor).** Recibe plan + §3 + §6 + ejemplos (§7) y devuelve el JSON de tarjetas (§5, esquema). No añade ni quita IDs (propuestas en `notas_ejecutor`). **Ante un dato dudoso no escribe marcas en la tarjeta**: lo añade a `pendientes` (`{"dato": texto exacto, "campo": "razonamiento", "fuente_esperada": "guía | PubMed | ficha técnica | libro §4"}`) y redacta el resto. No inventa referencias, PMID, DOI, ediciones, años ni tags MIR.
 3. **F3 Lint + rúbrica (orquestador).** `python3 kit/anki/compilar_mazo.py <json> --solo-lint` (esquema, IDs, tags, lista blanca HTML, límite de marcas, cloze, cuotas…); con `pendientes` aún abiertos, el lint falla solo por eso y por lo demás debe estar limpio. Rúbrica por tarjeta: P3, P2, P8, exactitud clínica, alineación con `objetivo`, trazabilidad al sílabo, uso correcto de las clases de color (§6), calidad de mnemotecnia/esquema. Salida: `id → regla → corrección exigida`.
 4. **F3c Corrección (ejecutor).** Corrige solo los IDs listados y devuelve el JSON completo. Bucle F3→F3c hasta cero defectos o 2 vueltas; si persisten, el orquestador corrige lo trivial o elimina la tarjeta. Nunca se compila con defectos de exactitud.
-5. **F4 Verificación obligatoria en cascada (ejecutor capaz, sin tope de datos).** Sobre **todos** los `pendientes` y además sobre toda cifra, dosis, umbral, criterio y cita de `Fuente` del mazo. Cascada por dato, hasta 2 búsquedas por fuente: **PubMed** (`search_articles`, `lookup_article_by_citation`, `get_article_metadata`) → **Consensus** (`search`) → **fichas técnicas** (DailyMed, CIMA-AEMPS, EMA, ARCSA) → **GPC/lineamientos MSP Ecuador** (salud.gob.ec) → **web/guías de sociedades**. Si un dominio está bloqueado por la red, pide habilitarlo antes de darlo por perdido. Resultado por dato:
+5. **F4 Verificación obligatoria en cascada (ejecutor capaz, sin tope de datos).** Sobre **todos** los `pendientes` y además sobre toda cifra, dosis, umbral, criterio y cita de `Fuente` del mazo. Cascada por dato, hasta 2 búsquedas por fuente: **PubMed** (`search_articles`, `lookup_article_by_citation`, `get_article_metadata`) → **Consensus** (`search`) → **fichas técnicas** (DailyMed, CIMA-AEMPS, EMA, ARCSA) → **GPC/lineamientos MSP Ecuador** (salud.gob.ec) → **web/guías de sociedades**. Si un dominio está bloqueado por la red: en coautor, pide habilitarlo; en autónomo, anota el dominio en el informe y degrada a una fuente secundaria verificable o elimina el dato (nunca queda marca). Resultado por dato:
    - **confirmado** → cita en `Fuente` (forma corta `Autor Año, Revista (PMID n)`) y en `meta.guia.referencias` (Vancouver completa);
    - **contradicho** → se corrige con la fuente hallada;
-   - **divergente** → ambas cifras, cada una con su cita;
+   - **divergente** → se muestran ambas cifras, cada una con su cita;
+   - **MSP frente a evidencia reciente** → si la conducta del MSP contradice evidencia posterior de mayor calidad, la tarjeta muestra ambas con su cita y deja claro cuál aplica en el examen local (la del MSP);
    - **sin confirmar** → se elimina el dato o la tarjeta, o se reformula cualitativamente. Nunca queda marca.
-   El verificador devuelve `[{"id", "dato", "resultado", "correccion", "cita", "pmid_doi", "url"}]`; no inventa PMID/DOI/ediciones; UpToDate/DynaMed solo con `[citado AAAA mmm dd]` real. El orquestador aplica, vacía `pendientes` y rellena `meta.verificacion = {"total": M, "verificados": N, "eliminados": [{"id", "dato", "motivo"}]}`.
+   El verificador devuelve `[{"id", "dato", "resultado", "correccion", "cita", "pmid_doi", "url"}]`; no inventa PMID/DOI/ediciones; UpToDate/DynaMed solo con `[citado AAAA mmm dd]` real. El orquestador aplica, vacía `pendientes` y rellena `meta.verificacion = {"total": M, "verificados": N, "eliminados": [{"id", "dato", "motivo"}]}`. Un «dato» es cada cifra, dosis, umbral, mecanismo o afirmación causal comprobable; los datos reformulados y los eliminados se listan en `eliminados` con su `motivo`.
 6. **F5 Re-lint y rúbrica** de las tarjetas tocadas por F4 (un dato corregido puede romper P3 o el límite de 2 frases). El lint completo debe dar `RESULTADO: lint OK`.
 7. **F6 Compilación.** `python3 kit/anki/compilar_mazo.py mazos/<tema>/tarjetas.json` → `.apkg` + inspección + registro actualizado. Aborta ante cualquier marca, `pendientes` no vacío o error.
-8. **F7 Previsualización.** `node kit/anki/previsualizar.js mazos/<tema>/tarjetas.json <scratchpad>/capturas_<tema> 8`; mira tú las capturas (al menos una QA con esquema y un cloze, en iPhone noche) y corrige desbordes o tablas ilegibles. Las capturas no se versionan.
+8. **F7 Previsualización.** `node kit/anki/previsualizar.js mazos/<tema>/tarjetas.json <scratchpad>/capturas_<tema> 8` (o `--ids` con las tarjetas de esquema y cloze en lugar de `8`); mira tú las capturas (al menos una QA con esquema y un cloze, en iPhone noche) y corrige desbordes o tablas ilegibles. Las capturas no se versionan.
 9. **F8 Guía.** `python3 kit/anki/guia_docx.py mazos/<tema>/tarjetas.json`. Revisa que `meta.guia` tenga principios, palabras clave, preguntas de cierre, subtemas y referencias verificadas.
-10. **F9 Auditoría y entrega** (§9). Commit de `tarjetas.json`, `media/`, `.apkg`, `.docx` y `mazos/README.md` juntos.
+10. **F9 Auditoría y entrega** (§9). Añade (o actualiza) la fila del mazo en la sección «Mazos Anki» del `README.md` raíz (ruta, nº de notas, versión, prefijo). Commit de `tarjetas.json`, `media/`, `.apkg`, `.docx`, `mazos/README.md` y `README.md` juntos.
 
 ---
 
@@ -132,6 +135,7 @@ El prefijo `Q2-TOX` (mazo antiguo) está retirado: toxicodependencias empieza en
    "mnemotecnia": "", "esquema": "", "fuente": "…", "tags": ["…"], "pendientes": []}]}
 ```
 
+- **Citas.** `Fuente` en forma corta `Autor Año, Revista (PMID n)`; el año es el de publicación impresa (el del volumen), no el de la edición electrónica previa. Fuentes no PubMed: sílabo → `Sílabo Q2 2.ª rotación, Caso N`; ficha técnica → `Ficha técnica <fármaco> (DailyMed, setid <uuid>)` y en `referencias` con `[citado AAAA mmm dd]`; protocolo MSP → `MSP Ecuador 2016, Protocolo de atención integral…`. Ejemplos reales en `mazos/toxicodependencias/tarjetas.json` (`meta.guia.referencias`).
 - Media (SVG/PNG del esquema) en `mazos/<tema>/media/`, nombre `<prefijo-en-minúsculas>-<nnnn>-<tema>.svg` (sin espacios, no empieza por `_`).
 - **Tags** (sin espacios ni tildes): exactamente uno de `Quirurgica2::<TagRaíz>::<Subtema>`, `Nivel::<Recuerdo|Aplicacion>`, `Fuente::<Abrev>`, `Clase::<Principio|Aplicacion|Vineta|Contraste|Relacional|Irreducible|Escala>`, `Bloom::<Recordar|Comprender|Aplicar|Analizar|Evaluar>`; opcionales `Principio` (solo clase Principio), `Escala::<Nombre>`, `AltoRendimiento::<USMLE|MIR>`, `MIR::<AAAA>-<NNN>` (verificado), `Origen::<Usuario|Claude>`. La raíz `Quirurgica2` se conserva en ambas rotaciones.
 - **El compilador valida**: esquema y claves; formato y unicidad de IDs (GUID = `guid_for(id)`), prefijo contra el registro (y retirados); tags; lista blanca HTML; ≤4 marcas semánticas por campo (Esquema exento); `.tema` único al inicio del anverso; **cero marcas** de verificación en campos, tags y `meta` (salvo `meta.verificacion`); metatexto; `pendientes` vacío; cloze bien formado (c1… contiguos, sin anidar, span dentro del hueco); `Fuente` no vacía; Respuesta ≤2 frases; listas abiertas; cifras de S/E/VPP/VPN/LR/AUC; mnemotecnia expandida; tablas ≤4 columnas y ≤9 filas con cabecera; media existente; cuotas (Cloze ≤15 %, Recuerdo ≤40 %, subtema ≤8, N>45 con justificación). `--demo` (con `meta.demo: true`, fuera de `mazos/`) convierte las cuotas en avisos y no toca el registro.
@@ -159,7 +163,7 @@ Reglas: marca solo lo que el estudiante debe recuperar (≤4 marcas por campo; l
 
 **Mnemotecnia** (campo opcional). Solo si existe una **establecida y popular** (inglés o español; se prioriza la más usada: CAGE, MUDPILES, etc.); no inventes acrónimos forzados; si no hay una buena, el campo queda vacío. Siempre **expandida**: una `<span class="mne">` con la mnemotecnia, idioma entre paréntesis si es inglesa, y `<ul><li><b>L</b> significado</li>…</ul>` (≥2 ítems). La mnemotecnia sirve para listas genuinamente arbitrarias; no sustituye al principio (si hay principio, la tarjeta pregunta el principio).
 
-**Esquema** (campo opcional). Cuando el tema lo pide: contrastes de 3+ rasgos, clasificaciones, cronologías, algoritmos cortos. Tabla HTML de ≤4 columnas y ≤9 filas, celdas breves (2–5 palabras), primera columna `<th>` con el rasgo. O diagrama SVG en `media/` con fondo transparente, colores de la paleta clara y texto ≥12 px en un viewBox de ~360 px de ancho (en noche Anki lo verá invertido con `invert(1) hue-rotate(180deg)`, igual que hace con los dibujos). El esquema complementa: la respuesta debe poder producirse sin mirarlo.
+**Esquema** (campo opcional). Cuando el tema lo pide: contrastes de 3+ rasgos, clasificaciones, cronologías, algoritmos cortos. Tabla HTML de ≤4 columnas y ≤9 filas, celdas breves (2–5 palabras) y **encabezados cortos** (una palabra: en iPhone las palabras largas se parten con guion), primera columna `<th>` con el rasgo. O diagrama SVG en `media/` con fondo transparente, colores de la paleta clara y texto ≥12 px en un viewBox de ~360 px de ancho (en noche Anki lo verá invertido con `invert(1) hue-rotate(180deg)`, igual que hace con los dibujos). El esquema complementa: la respuesta debe poder producirse sin mirarlo.
 
 ---
 
@@ -171,8 +175,8 @@ Reglas: marca solo lo que el estudiante debe recuperar (≤4 marcas por campo; l
  "pregunta": "<span class=\"tema\">Abstinencia alcohólica</span>¿Por qué un depresor, al suspenderse, deja temblor, taquicardia y convulsiones?",
  "respuesta": "Porque el consumo crónico <span class=\"mec\">regula a la baja GABA-A y al alza NMDA</span>; sin etanol queda un cerebro hiperexcitable.",
  "razonamiento": "El rebote noradrenérgico da temblor, sudoración y taquicardia; el extremo es <span class=\"al\">convulsión</span> y <span class=\"al\">delirium tremens</span>.<br><span class=\"vs\">Contraste</span> la intoxicación deprime el SNC; la abstinencia da los signos opuestos.",
- "fuente": "Goodman &amp; Gilman 14.ª ed. 2023",
- "tags": ["Quirurgica2::Toxicodependencias::Abstinencia", "Nivel::Aplicacion", "Fuente::GoodmanGilman", "Clase::Principio", "Bloom::Comprender", "Principio"]}
+ "fuente": "Jesse 2017, Acta Neurol Scand (PMID 27586815)",
+ "tags": ["Quirurgica2::Toxicodependencias::Abstinencia", "Nivel::Aplicacion", "Fuente::Jesse2017", "Clase::Principio", "Bloom::Comprender", "Principio"]}
 ```
 
 **✅ Irreducible con mnemotecnia establecida · QA**
