@@ -1,0 +1,18 @@
+dato	parte	fuente usada	resultado
+CAM 4 rasgos y regla	05_vis	PubMed 2240918	confirmado
+4AT componentes y corte 4 o mas	05_vis	Tieges 2021 PMC8099016	confirmado
+Haloperidol VO geriatrico 0,5-2 mg 2-3 veces/dia	05_vis	DailyMed 31e33656	confirmado
+Haloperidol IM dosis para adulto mayor	05_vis	ficha 2-5 mg adulto; sin dosis geriatrica	eliminado (se declara no establecida)
+Haloperidol IM cada 4-8 h; QTc mayor de 500 ms; IV no aprobada	05_vis	DailyMed b1ad2abd	confirmado
+Golpe de calor mayor de 40 C; evitar antipireticos	05_vis,80_sin	Bouchama 2007 PMC2206402	confirmado
+Calcio grave 14 mg/dL (3,5 mmol/L)	05_vis	PubMed 36282253	confirmado
+Sodio mayor de 145	05_vis	Chauhan 2019 PMC6500955	confirmado
+Furosemida limitada en hipercalcemia	80_sin	Tonon 2022 PMC8889795	confirmado
+Signo aislado no confiable deshidratacion	05_vis	Hooper 2015	confirmado
+QT corto hipercalcemia; T picudas K	05_vis	PubMed 21660912	confirmado
+Beers delirium evitar benzodiacepinas/anticolinergicos	05_vis	PMC12478568	confirmado
+Metformina riesgo acidosis lactica	80_sin	DailyMed metformina	confirmado
+PLAN fila 9 e1 hemorragia cerebral; e5 en horas	05_vis	sin leer	e5 en horas eliminado; e1 copiado del PLAN sin verificar
+Umbral de potasio con insulina	80_sin	no confirmado	eliminado
+Plazo HHS glucosa 600 y osmolalidad 300	05_vis	figura no leible	eliminado
+PTH no disponible	05_vis	-	sin cifra
