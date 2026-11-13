@@ -1,0 +1,102 @@
+/* Tema A · Chips clínicos (flashcards v7). CSS de los modelos «Q2 v7 QA» y «Q2 v7 Cloze».
+   El reviewer de Anki NO invierte colores: pone nightMode/night_mode en <body class="card ...">.
+   Todo color sale de variables definidas en .card y redefinidas en .card.nightMode/.card.night_mode.
+   Las clases de plataforma (ipad, iphone, mobile) van en <html>: aquí se usa @media (max-width).
+   El color significa TIPO DE DATO, igual en todos los mazos:
+   .fx fármaco · .num cifra/dosis/umbral · .al alarma · .dx diagnóstico/entidad · .mec mecanismo
+   .mne mnemotecnia · .vs contraste · .tema sujeto de la tarjeta. */
+
+.card {
+  --bg:#F7F7FA; --surf:#FFFFFF; --surf2:#EEEEF5; --tx:#16161D; --tx2:#3A3A46; --tx3:#5F5F6C;
+  --line:#DCDCE6; --ac:#4F46C8;
+  --fx:#6B2FB3;  --fx-b:#F1E8FD;
+  --num:#0B5CAD; --num-b:#E5F0FC;
+  --al:#B42318;  --al-b:#FDE8E6;
+  --dx:#1E6B3A;  --dx-b:#E3F4E8;
+  --mec:#8F4500; --mec-b:#FDF0E1;
+  --mne:#8A1C5B; --mne-b:#FCE7F3;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 19px; line-height: 1.55; text-align: left;
+  color: var(--tx); background: var(--bg);
+  max-width: 680px; margin: 20px auto; padding: 0 16px;
+  -webkit-text-size-adjust: 100%; overflow-wrap: break-word;
+}
+.card.nightMode, .card.night_mode {
+  --bg:#141418; --surf:#1D1D24; --surf2:#262630; --tx:#ECECF2; --tx2:#C4C4D0; --tx3:#9A9AA8;
+  --line:#33333E; --ac:#A5A0FF;
+  --fx:#D7B8FF;  --fx-b:#33254A;
+  --num:#9CC8FF; --num-b:#1C2E45;
+  --al:#FFA49A;  --al-b:#4A1F1C;
+  --dx:#8FE0A9;  --dx-b:#173323;
+  --mec:#FFC38A; --mec-b:#41290F;
+  --mne:#FFA6D5; --mne-b:#45203A;
+  color: var(--tx); background: var(--bg);
+}
+
+/* Estructura */
+.q { font-size: 1.18em; font-weight: 650; line-height: 1.35; color: var(--tx); }
+.tema { display: block; font-size: .62em; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  color: var(--ac); margin-bottom: .45em; }
+hr#answer { border: 0; height: 1px; background: var(--line); margin: 18px 0; }
+.resp { font-size: 1.04em; font-weight: 600; background: var(--surf); border: 1px solid var(--line);
+  border-left: 4px solid var(--ac); border-radius: 12px; padding: 12px 14px; }
+.razon { font-size: .9em; color: var(--tx2); margin-top: 14px; padding: 0 2px; }
+.fuente { font-size: .72em; color: var(--tx3); margin-top: 16px; }
+.fuente::before { content: "Fuente · "; font-weight: 700; letter-spacing: .03em; }
+
+/* Cloze: Anki genera <span class="cloze"> (activo) y <span class="cloze-inactive">. */
+.cloze { font-weight: 750; color: var(--ac); text-decoration: underline; text-decoration-color: var(--ac);
+  text-decoration-thickness: 2px; text-underline-offset: .22em; }
+.cloze-inactive { color: inherit; }
+.cloze .fx, .cloze .num, .cloze .al, .cloze .dx, .cloze .mec, .cloze .mne { font-weight: 750; }
+
+/* Píldoras semánticas */
+.fx, .num, .al, .dx, .mec, .mne { border-radius: 6px; padding: 0 .28em; font-weight: 650;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.fx  { color: var(--fx);  background: var(--fx-b); }
+.num { color: var(--num); background: var(--num-b); font-variant-numeric: tabular-nums; }
+.al  { color: var(--al);  background: var(--al-b); }
+.dx  { color: var(--dx);  background: var(--dx-b); }
+.mec { color: var(--mec); background: var(--mec-b); }
+.mne { color: var(--mne); background: var(--mne-b); font-style: italic; }
+.vs  { font-weight: 700; color: var(--ac); }
+
+/* Bloques del reverso: Mnemotecnia y Esquema */
+.bloque { margin-top: 14px; background: var(--surf); border: 1px solid var(--line); border-radius: 12px;
+  padding: 10px 14px 12px; font-size: .9em; color: var(--tx2); }
+.bloque .rot { font-size: .66em; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--tx3); margin-bottom: .4em; }
+.mnemo { border-left: 4px solid var(--mne); }
+.mnemo ul { list-style: none; margin: .35em 0 0; padding: 0; }
+.mnemo li { margin: .12em 0; padding-left: 1.6em; text-indent: -1.6em; }
+.mnemo li b { display: inline-block; min-width: 1.35em; text-indent: 0; color: var(--mne); font-weight: 800; }
+.esquema { border-left: 4px solid var(--tx3); }
+.esquema ul, .esquema ol { margin: .3em 0; padding-left: 1.2em; }
+
+/* Tablas del campo Esquema (máx. 4 columnas; el contenedor desplaza si no cabe) */
+.esq { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.esq table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: .92em; line-height: 1.35;
+  border: 1px solid var(--line); border-radius: 10px; overflow: hidden; color: var(--tx); }
+.esq caption { caption-side: top; text-align: left; font-size: .85em; color: var(--tx3); padding: 0 0 .35em; }
+.esq th, .esq td { padding: .45em .55em; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.esq th { background: var(--surf2); font-weight: 700; color: var(--tx); }
+.esq td { background: var(--surf); }
+.esq tr:last-child td { border-bottom: 0; }
+.esq td + td, .esq th + th { border-left: 1px solid var(--line); }
+.esq tbody th { font-weight: 700; }
+.esq .fx, .esq .num, .esq .al, .esq .dx, .esq .mec, .esq .mne { padding: 0 .2em; }
+
+/* Diagramas SVG/PNG en media: fondo transparente, colores del tema claro; en noche se invierten como
+   hace Anki con img.drawing (invert + hue-rotate conserva el matiz). */
+.esq img { display: block; max-width: 100%; height: auto; margin: .2em auto; }
+.card.nightMode .esq img, .card.night_mode .esq img { filter: invert(1) hue-rotate(180deg); }
+
+/* iPhone y ventanas estrechas */
+@media (max-width: 480px) {
+  .card { font-size: 17.5px; margin: 14px auto; padding: 0 14px; }
+  .q { font-size: 1.12em; }
+  .resp { padding: 10px 12px; }
+  .bloque { padding: 9px 11px 10px; }
+  .esq table { font-size: .86em; }
+  .esq th, .esq td { padding: .38em .42em; }
+}

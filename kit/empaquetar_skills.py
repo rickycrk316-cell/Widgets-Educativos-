@@ -18,7 +18,8 @@ KIT = {
     'definiciones': ['def_head.html', 'validar_definiciones.py', 'auditar_definiciones.py', 'construir.py', 'probar_definiciones.js'],
     'apertura': ['apertura_head.html', 'validar_apertura.py', 'auditar_definiciones.py', 'construir.py', 'probar_definiciones.js'],
     'widget-ensenanza': ['v11/head.html', 'v11/script.html', 'v11/validar.py', 'v11/probar.js', 'construir.py', 'renumerar.py'],
-    'flashcards': [],
+    'flashcards': ['anki/estilos.css', 'anki/modelo.py', 'anki/compilar_mazo.py', 'anki/guia_docx.py',
+                   'anki/paginas.py', 'anki/previsualizar.js'],
 }
 # Referencias propias de cada skill, además de REFS (se copian a references/)
 REFS_EXTRA = {
@@ -27,6 +28,7 @@ REFS_EXTRA = {
 }
 EXTRA = {
     'definiciones': {'widgets/ansiedad_panico/definiciones/p96_js.html': 'assets/kit/p96_js_ejemplo.html'},
+    'flashcards': {'mazos/README.md': 'assets/mazos/README.md'},
 }
 
 

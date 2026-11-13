@@ -2,7 +2,7 @@
 
 Repo solo de estudio médico (Ricardo, Quirúrgica 2 · PUCE, 10.º nivel). Índice de widgets en `README.md`. **Regla de cero marcas** (widgets nuevos y migrados): ningún `[VERIFICAR EN FUENTE]` ni badge «Fuente por verificar» (el dato se confirma o se elimina). Los heredados (v10 congelados y las definiciones de dermatología, consumo de alcohol y ansiedad/pánico) conservan sus marcas hasta que se revisen. Sin contenido de marketing ni de otras marcas.
 
-Fuente de verdad del diseño y del contenido v11: `docs/DECISIONES_v11.md`. Si algo contradice ese documento, se corrige. Skills del repo en `.claude/skills/`: `widget-ensenanza` (v11), `definiciones`, `apertura`, `flashcards` e `impeccable` (revisión, de terceros adaptada).
+Fuente de verdad del diseño y del contenido v11: `docs/DECISIONES_v11.md`. Si algo contradice ese documento, se corrige. Skills del repo en `.claude/skills/`: `widget-ensenanza` (v11), `definiciones`, `apertura`, `flashcards` (v7: herramientas en `kit/anki/`, mazos y registro de IDs en `mazos/`) e `impeccable` (revisión, de terceros adaptada).
 
 ## Dónde mirar (ahorra tokens)
 

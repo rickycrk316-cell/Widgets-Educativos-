@@ -49,6 +49,8 @@ kit/construir.py                ensamblador y validador (según "tipo" del manif
 kit/v11/                        kit v11: head.html, script.html, validar.py, probar.js
 kit/                            def_head.html, apertura_head.html, validar_definiciones.py, validar_apertura.py,
                                 auditar_definiciones.py, probar_definiciones.js, renumerar.py, empaquetar_skills.py
+kit/anki/                       flashcards v7: estilos.css, modelo.py, compilar_mazo.py (lint + .apkg), guia_docx.py, previsualizar.js
+mazos/<tema>/                   mazos Anki: tarjetas.json (fuente), media/, .apkg y guía .docx; mazos/README.md = registro de IDs
 .claude/skills/                 widget-ensenanza (v11), definiciones, apertura, flashcards, impeccable (revisión opcional)
 dist/                           *.skill empaquetados de las skills propias (generados)
 fuentes/                        sílabos (dos rotaciones), contratos de definiciones y apertura, protocolo de verificación, casos

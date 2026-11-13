@@ -1,702 +1,258 @@
 ---
 name: "flashcards"
-description: "Genera mazo Anki .apkg (v6) y guía .docx para cualquier caso ABP de Salud Integral Hospitalaria 2 (sílabos de 1.ª y 2.ª rotación): alcance leído del sílabo, modos autónomo/coautor, loop orquestador-ejecutor con pasada de verificación de fuentes (PubMed/Consensus), alto rendimiento USMLE/MIR, genanki con IDs fijos."
+description: "Genera mazo Anki .apkg (v7) y guía de estudio .docx para cualquier caso ABP de Salud Integral Hospitalaria 2 (sílabos de 1.ª y 2.ª rotación): alcance leído del sílabo, modos autónomo/coautor, orquestador-ejecutores con verificación obligatoria en cascada y cero marcas (lo no confirmado se elimina), diseño visual «Chips clínicos» con color por tipo de dato, campos Mnemotecnia y Esquema, compilador con lint y registro de IDs en mazos/."
 ---
 
-# Generador de flashcards basadas en evidencia — v6
-## Salud Integral Hospitalaria 2 (PUCE, décimo nivel) → Anki iPad (.apkg) + guía del caso (.docx)
+# Flashcards basadas en evidencia — v7
+## Salud Integral Hospitalaria 2 (PUCE, 10.º nivel) → Anki (.apkg) + guía de estudio (.docx)
 
-**Qué cambió en v6:** sirve para cualquier caso de los dos sílabos (16 casos, 1.ª y 2.ª rotación) leyendo el alcance del sílabo en vez de un mapa fijo; añade la pasada de verificación de fuentes (F3b, `protocolo_verificacion.md`) para reducir `[VERIFICAR EN FUENTE]`; ejemplos de varias áreas e integración con los widgets del repo.
+**Qué cambió en v7.** (1) **Cero marcas**: ningún mazo lleva `[VERIFICAR EN FUENTE]`, «por verificar», «pendiente» ni similar; verificación obligatoria y sin tope de datos; el compilador aborta si encuentra una marca. (2) **Diseño «A · Chips clínicos»**: el color significa tipo de dato, igual en todos los mazos. (3) **Modelos nuevos** `Q2 v7 QA` y `Q2 v7 Cloze` con campos **Mnemotecnia** y **Esquema**. (4) Se **deroga la prohibición de mnemotecnias** (antigua P9). (5) Mazos versionados en `mazos/<tema>/` con registro de IDs. (6) Guía .docx rediseñada (por qué, cuándo y cómo). (7) El código vive en `kit/anki/`, no en este archivo.
 
-**Rutas de referencia.** En el repo: `fuentes/syllabus_quirurgica2.md`, `fuentes/syllabus_quirurgica2_segunda_rotacion.md`, `fuentes/protocolo_verificacion.md`. Empaquetada (claude.ai): los mismos tres archivos en `references/` (relativo a la carpeta de la skill). Usa la ruta que exista; abre solo la sección que necesites.
+**Rutas.** Repo: sílabos y protocolo en `fuentes/` (`syllabus_quirurgica2.md`, `syllabus_quirurgica2_segunda_rotacion.md`, `protocolo_verificacion.md`); herramientas en `kit/anki/`; mazos y registro en `mazos/`. Skill empaquetada: `references/` y `assets/kit/anki/` (registro de partida en `assets/mazos/README.md`; fuera del repo pasa `--registro <carpeta_de_mazos>/README.md` al compilador). Abre solo la sección que necesites.
 
-## Parámetros de la ejecución
+| Herramienta | Uso |
+|---|---|
+| `kit/anki/compilar_mazo.py <mazos/tema/tarjetas.json> [--solo-lint] [--demo]` | lint completo; si pasa, genera `.apkg`, lo inspecciona (zip + sqlite) y actualiza `mazos/README.md`. Requiere `pip install genanki` (sin él, `--solo-lint` funciona) |
+| `kit/anki/guia_docx.py <tarjetas.json>` | guía `.docx` desde `meta.guia` + tarjetas (python-docx) |
+| `node kit/anki/previsualizar.js <tarjetas.json> <scratchpad>/capturas [N]` | anverso/reverso × claro/noche × iPhone 390 px / iPad 820 px; avisa de desbordes e imágenes rotas |
+| `kit/anki/estilos.css`, `kit/anki/modelo.py` | CSS del tema A, IDs, campos, plantillas y lista blanca HTML |
 
-- **Caso ABP / tema** — obligatorio.
-- **Modo:** autónomo (defecto) o coautor (si el usuario pega anversos). Ver MODOS.
-- **Subtemas a priorizar** (opcional).
-- **Volumen:** derivar con P11 (defecto) o forzar a N.
-- **Profundidad:** esencial para la prueba del caso, o completa para el examen integral (defecto: preguntar solo si no se infiere del mensaje).
-- **Escalas a incluir explícitamente** (opcional).
-- **Material adjunto:** si hay archivos, son fuente prioritaria.
-- **Widgets del repo** (si existe `widgets/`): ver INTEGRACIÓN CON EL REPO.
-
-**Continuidad de IDs:** antes de numerar, busca el último ID usado del prefijo del caso (tabla del MAPA) (memoria del proyecto o lo que diga el usuario). Si no lo encuentras, pregunta desde qué número empezar. Repetir un ID con contenido distinto sobrescribe una tarjeta anterior.
-
-Requiere ejecución de código. Si no está disponible, dilo y usa el Plan B.
+Requiere ejecución de código. Si no hay, dilo y entrega el JSON de tarjetas para compilar después (no hay Plan B sin compilador: el lint es parte del contrato).
 
 ---
 
-# MODOS
+# 0 · Parámetros
 
-- **Autónomo (por defecto).** Claude selecciona y redacta todas las tarjetas. Criterio de selección = intersección de: (a) contenido declarado del caso en el sílabo, leído de su sección (obligatorio; delimita el alcance); (b) alto rendimiento en exámenes de acreditación (USMLE Step 1/2 CK y MIR); (c) peso en la decisión clínica. **Limitación honesta:** se pierde el efecto de generación (escribir uno mismo el anverso); se mitiga con la guía de priming, el mapa propio y el cierre con recuerdo libre (ver GUÍA DEL CASO).
-- **Coautor.** Se activa cuando el usuario pega anversos (o hipótesis). Claude NO reescribe el anverso: redacta `Respuesta`/`Razonamiento`/`Fuente`/tags, asigna tipo y nivel, añade contrastes faltantes como sugerencias separadas y señala anversos que violen P3/P8/P9 proponiendo una versión corregida que el usuario aprueba. Puede completar huecos de cobertura con tarjetas propias. Tags: `Origen::Usuario` / `Origen::Claude`.
-- **Mixto:** si el usuario aporta algunos anversos, el resto va en autónomo.
+- **Caso ABP / tema** (obligatorio). **Modo**: autónomo (defecto), coautor o mixto.
+- **Subtemas a priorizar**, **escalas** a incluir, **profundidad** (prueba del caso o examen integral; pregunta solo si no se infiere).
+- **Volumen**: derivado con P11 (banda 25–45; techo ~45 salvo que el dueño pida otro).
+- **Fechas** (opcionales, para el calendario de la guía): apertura, cierre, examen.
+- **Material adjunto**: fuente prioritaria.
+- **Continuidad de IDs**: lee `mazos/README.md` (prefijo, ID de mazo, último ID). Los nuevos continúan desde el último; un ID publicado nunca se reasigna a otro contenido (sobrescribiría la tarjeta). Si el prefijo no está, añade la fila antes de compilar.
 
----
+# 1 · Modos
 
-# ROL
+- **Autónomo.** Claude selecciona y redacta. Criterio = intersección de (a) contenido del caso en el sílabo (delimita el alcance), (b) alto rendimiento USMLE/MIR, (c) peso en la decisión clínica. Se pierde el efecto de generación al no escribir el estudiante el anverso; la guía lo compensa (decir la respuesta antes de voltear, mapa propio, recuerdo libre).
+- **Coautor.** El usuario pega anversos: Claude no los reescribe; redacta el resto, asigna tipo y nivel, sugiere contrastes y señala anversos que violen P3/P8 proponiendo una corrección que el usuario aprueba. Tags `Origen::Usuario` / `Origen::Claude`.
+- **Mixto.** Lo aportado va en coautor; el resto, autónomo.
 
-Especialista en neuroaprendizaje aplicado a educación médica de alto rendimiento, experto en repetición espaciada, práctica de recuperación y diseño de flashcards basado en evidencia, y en la construcción de paquetes Anki con genanki.
+# 2 · Contexto y alcance
 
-No eres un generador de datos: eres un diseñador de instrumentos de recuperación. **La métrica de éxito no es cuántas tarjetas produces, sino cuánta comprensión sostiene cada una.** Un mazo de 30 tarjetas construidas sobre principios vence a uno de 90 de hechos sueltos.
+Estudiante de 10.º nivel, PUCE (Quito). ABP de 3 sesiones por caso (apertura, monitoreo, cierre), ~un caso por semana, 40–60 min/día de repaso, estudia en iPad (y iPhone). La evaluación se toma de la sección «Evaluación» del sílabo del caso; no fijes porcentajes. El ABP evalúa razonamiento y conducta: las tarjetas construyen modelos explicativos, no datos sueltos.
 
-# CONTEXTO DEL ESTUDIANTE
+**Regla de alcance.** Lee del sílabo solo la sección del caso (resultado de aprendizaje, contenidos, trabajo autónomo) y transcribe el resultado de aprendizaje en `meta.resultado_aprendizaje`. 1.ª rotación: secciones «CASO …» de `syllabus_quirurgica2.md`; 2.ª: «Caso N — …» de `syllabus_quirurgica2_segunda_rotacion.md`. Tema fuera de ambos sílabos: dilo, pide confirmación, prefijo `Q2X-<ABREV>` y guía clínica vigente como alcance. Un tema MIR/USMLE fuera del caso no genera tarjeta.
 
-- Décimo nivel, PUCE (Quito, Ecuador). **Salud Integral Hospitalaria 2**; la rotación y el docente figuran en el sílabo del caso (1.ª rotación: Quirúrgica 2, código 09-Q0989; 2.ª rotación: casos de medicina interna, geriatría, psiquiatría y dermatología).
-- ABP, 3 sesiones por caso (apertura, monitoreo, cierre); 8 casos por rotación.
-- **Evaluación:** tómala del sílabo del caso (sección «Evaluación»); no fijes porcentajes. En la 1.ª rotación el sílabo da 3 parciales (promedio de los 8 casos, 25% c/u) + evaluación final integral (25%); en la 2.ª, 3 parciales y una evaluación final de 50 puntos c/u, con puntos por caso y sin porcentajes explícitos. Si el usuario cita otra ponderación, usa la suya.
-- ~Un caso por semana; 9 h semanales de aprendizaje autónomo (comprobar en el sílabo del caso).
-- Estudia exclusivamente en iPad; un mazo por caso.
-- Presupuesto de repaso: 40–60 min/día. Usuario reciente de Anki.
-
-**Implicación:** el ABP evalúa razonamiento diagnóstico y justificación de conducta, no el dato aislado. Las tarjetas construyen modelos explicativos aplicables.
-
-# MAPA DEL SÍLABO
-
-**Regla de alcance.** El alcance del caso **se lee del sílabo**, no de una lista fija: abre `fuentes/…` (repo) o `references/…` (skill empaquetada) y lee **solo la sección del caso**: resultado de aprendizaje, contenidos y trabajo autónomo. Eso delimita lo que puede tener tarjeta. 1.ª rotación: `syllabus_quirurgica2.md` (secciones «CASO …»). 2.ª rotación: `syllabus_quirurgica2_segunda_rotacion.md` (secciones «Caso N — …»). Transcribe el resultado de aprendizaje en F1.
-
-**Casos y convenciones de ID** (conservar tal cual: cambiar un tag o prefijo rompe la continuidad de IDs en Anki).
-
-| Rotación | Caso | Tag raíz | Prefijo ID |
+| Rotación | Caso | Tag raíz | Prefijo |
 |---|---|---|---|
-| 1.ª | Ojo Rojo | `OjoRojo` | `Q2-OJO` |
-| 1.ª | Disbasia (infancia) | `Disbasia` | `Q2-DISB` |
-| 1.ª | Dolor Abdominal Agudo | `AbdomenAgudo` | `Q2-ABD` |
-| 1.ª | Neoplasias GI | `NeoplasiasGI` | `Q2-NEO` |
-| 1.ª | Hematuria | `Hematuria` | `Q2-HEM` |
-| 1.ª | Patología Urinaria Baja | `UrinariaBaja` | `Q2-URI` |
-| 1.ª | Coma / TCE | `Coma` | `Q2-COMA` |
-| 1.ª | Patologías Vasculares | `Vascular` | `Q2-VASC` |
-| 2.ª | Elevación aguda y crónica de los azoados | `Azoados` | `Q2R2-AZO` |
-| 2.ª | Envejecimiento | `Envejecimiento` | `Q2R2-ENV` |
-| 2.ª | Síndromes geriátricos | `SindromesGeriatricos` | `Q2R2-GER` |
-| 2.ª | Toxicodependencias | `Toxicodependencias` | `Q2R2-TOX` |
-| 2.ª | Trastorno de ansiedad generalizada, ataque de pánico | `AnsiedadPanico` | `Q2R2-ANS` |
-| 2.ª | Síndrome confusional agudo y demencia | `DeliriumDemencia` | `Q2R2-DEL` |
-| 2.ª | Trastornos del estado de ánimo | `TrastornosAnimo` | `Q2R2-ANI` |
-| 2.ª | Lesiones dérmicas | `LesionesDermicas` | `Q2R2-DER` |
+| 1.ª | Ojo Rojo · Disbasia · Dolor Abdominal Agudo · Neoplasias GI | `OjoRojo` · `Disbasia` · `AbdomenAgudo` · `NeoplasiasGI` | `Q2-OJO` · `Q2-DISB` · `Q2-ABD` · `Q2-NEO` |
+| 1.ª | Hematuria · Patología Urinaria Baja · Coma/TCE · Patologías Vasculares | `Hematuria` · `UrinariaBaja` · `Coma` · `Vascular` | `Q2-HEM` · `Q2-URI` · `Q2-COMA` · `Q2-VASC` |
+| 2.ª | Azoados · Envejecimiento · Síndromes geriátricos · Toxicodependencias | `Azoados` · `Envejecimiento` · `SindromesGeriatricos` · `Toxicodependencias` | `Q2R2-AZO` · `Q2R2-ENV` · `Q2R2-GER` · `Q2R2-TOX` |
+| 2.ª | Ansiedad/pánico · Delirium y demencia · Trastornos del ánimo · Lesiones dérmicas | `AnsiedadPanico` · `DeliriumDemencia` · `TrastornosAnimo` · `LesionesDermicas` | `Q2R2-ANS` · `Q2R2-DEL` · `Q2R2-ANI` · `Q2R2-DER` |
 
-**Tema fuera de ambos sílabos.** Dilo, pide confirmación y usa el prefijo `Q2X-<ABREV>` (3–5 letras mayúsculas, declarado en F1) con tag raíz CamelCase. El alcance lo da entonces la guía clínica vigente del tema (y el material adjunto), no un sílabo; declara que no hay sílabo de respaldo.
+El prefijo `Q2-TOX` (mazo antiguo) está retirado: toxicodependencias empieza en `Q2R2-TOX-0001`. El ID de mazo de cada prefijo está en `mazos/README.md`.
 
-**Casos de otra rotación o cohorte:** si el sílabo adjunto es distinto, úsalo como fuente del alcance y aplica la misma regla de prefijo.
+**Fuentes (prioridad):** adjuntos → sílabo del caso y su bibliografía → guía internacional vigente y GPC del MSP Ecuador → textos de la tabla §4 del protocolo, con **su** edición (Harrison 22.ª 2025, Farreras-Rozman 20.ª 2024…; si el sílabo cita otra edición, se usa la del protocolo y la discrepancia va a la auditoría).
 
-### Fuentes (prioridad descendente)
-1. **Adjuntos** del mensaje (caso del estudiante, apuntes, guías).
-2. **Sílabo del caso con su bibliografía y ediciones.**
-   - 1.ª rotación: Harrison 22e (2025) · Farreras-Rozman 20.ª ed. (2024) · DynaMed 2024 / UpToDate · ATLS 10e · artículos del sílabo (p. ej. Jubber 2020; Bolenz 2018; Di Nisio 2016; Epstein 2016 ISUP/Gleason; Singhi 2019; Leibowitz 2000) · AAFP, USPSTF, NEJM.
-   - 2.ª rotación: los complementarios del sílabo (Fitzpatrick Atlas de Dermatología Clínica 9e 2023; Guzmán Dermatología 8e 2024; Kane Principios de geriatría clínica 8e 2018; Ebert Diagnóstico y tratamiento en psiquiatría 4e 2025; MSP, Normas y protocolos de atención integral de salud de las y los adultos mayores, 2010) y DynaMed/AAFP/NEJM.
-   - **Edición de los textos básicos:** usa la de la tabla del §4 de `protocolo_verificacion.md` (p. ej. Harrison 22.ª 2025, Farreras-Rozman 20.ª 2024), no las antiguas que cite el sílabo (la 2.ª rotación cita Harrison 19 y Farreras 17). Si el sílabo trae una edición inexistente o equivocada (el de la 1.ª rotación dice «Farreras-Rozman 22.ª»), se usa la del protocolo y se declara como discrepancia en la auditoría final.
-3. **Guía internacional vigente** del área + **GPC del MSP Ecuador** cuando exista.
-4. **Textos de la tabla del §4 del protocolo** (con su edición); si el libro no está en la tabla, verifica su edición (F3b) antes de citarlo.
+**Integración con el repo (si existe `widgets/`).** El `nucleo` del `manifiesto.json` del widget del caso es semilla prioritaria (registrar `semilla` en el plan); reescríbelo con P1–P12, respeta sus cifras verificadas. Los términos del widget de definiciones solo dan tarjeta si aportan comprensión. No edites widgets desde esta skill. **Prohibidas** las tarjetas que hablan del estado de un widget, del mazo o de la propia fuente («el widget cita…»): el lint las rechaza.
+
+**Alto rendimiento.** USMLE solo como patrón (`AltoRendimiento::USMLE`), nunca «pregunta USMLE» concreta. MIR: tag `MIR::<AAAA>-<NNN>` solo si el orquestador verificó la pregunta en el cuaderno oficial del Ministerio de Sanidad (registrar en `meta.mir_verificados` con URL en la auditoría); si no, `AltoRendimiento::MIR`. Nunca inventes año, número ni enunciado. La conducta local (GPC MSP) prevalece y se anota en el razonamiento.
 
 ---
 
-# INTEGRACIÓN CON EL REPO (solo si existe `widgets/`)
+# 3 · Principios de redacción
 
-- **Widget v10 del caso:** busca `widgets/<tema>/*/manifiesto.json`. Si el caso tiene widget, usa su `nucleo` (dict por pestaña de listas de enunciados) como **semilla prioritaria** de las tarjetas: cada ítem sugiere un principio, contraste o umbral. Reescríbelo con P1–P12 (no copies el enunciado tal cual) y respeta sus cifras y citas `[n]`; no cambies un dato que el widget ya verificó sin avisar. Registra `semilla` en el plan.
-- **Widget de definiciones:** si hay `widgets/<tema>/definiciones/manifiesto.json`, sus términos pueden alimentar tarjetas de definición (solo si aportan comprensión, P1) sin duplicar las del recall del propio widget; lo que el widget ya cubre como recall se menciona en la guía, no se repite.
-- No edites los widgets desde esta skill. Sin `widgets/` (skill empaquetada), omite esta sección.
+**P1. Principio antes que hechos.** 3–8 principios organizadores; por cada uno, 1 tarjeta de principio + 2–3 de aplicación a situaciones distintas (redacciones distintas). Lo no explicado por un principio es irreducible (P6). Base: construcción de esquemas y transferencia (Pan & Rickard 2018, d≈0,40). Ejemplos: *Vascular* — la obstrucción venosa masiva eleva la presión compartimental hasta comprometer el flujo arterial. *Coma* — la conciencia requiere corteza bilateral o SRAA intactos. *Delirium* — un cerebro con poca reserva se desorganiza ante un estresor agudo: se busca el desencadenante antes de sedar. *Azoados* — se clasifica por dónde falla la depuración (perfusión, parénquima, vía de salida).
 
----
+**P2. Atomicidad.** Una tarjeta = un elemento recuperable (mínima información, Wozniak).
 
-# ALTO RENDIMIENTO EN EXÁMENES (USMLE y MIR)
+**P3. Recuerdo, no reconocimiento.** Ni gramática, ni longitud del hueco, ni contexto delatan la respuesta. Prueba: tapa la respuesta; si alguien que no estudió acierta por sintaxis, reescribe.
 
-- **USMLE:** sus bancos no son públicos. Úsalo solo como **patrón** de alto rendimiento (temas y tipos de decisión que se preguntan). Nunca cites una "pregunta USMLE" concreta. Tag `AltoRendimiento::USMLE`.
-- **MIR:** el Ministerio de Sanidad de España publica los cuadernos de examen y las respuestas oficiales (portal de Formación Sanitaria Especializada; verifica la URL al usarla). Si hay búsqueda web, busca preguntas MIR del tema del caso en esas fuentes oficiales.
-  - Solo si verificas la pregunta (año y número) en el cuaderno oficial: tag `MIR::<AAAA>-<NNN>` y mención en `Fuente`.
-  - Si no se verifica: solo `AltoRendimiento::MIR`, como patrón.
-  - **Nunca inventes año, número ni enunciado.**
-- **Adaptación local:** prevalece la conducta del contexto local (GPC del MSP Ecuador) cuando difiere de la de EE. UU. o España; anótalo en `Razonamiento`.
-- **El examen no amplía el alcance:** un tema MIR/USMLE fuera del sílabo del caso no genera tarjeta.
+**P4. Troqueles de comprensión.** «¿Por qué tiene sentido X?» · «¿Cómo se conecta X con Y?» · «Usa el principio A para explicar B». Máximo tres pasos de razonamiento por tarjeta. (Dunlosky 2013: utilidad moderada para la interrogación elaborativa.)
 
----
+**P5. Tipo de nota.** QA ≥85 % (principios, mecanismos, discriminación, decisión, viñetas). Cloze ≤15 %, solo para umbrales, convenciones y etiquetas no derivables.
 
-# PRINCIPIOS DE DISEÑO
+**P6. Techo de Recuerdo.** `Nivel::Recuerdo` ≤40 % y solo para lo no derivable (cortes, convenciones, epónimos, nombres de fármacos y pruebas, epidemiología, morfología). Todo irreducible que necesiten las de aplicación tiene tarjeta o está en el razonamiento.
 
-## P1. Filtro de principios — ANTES de generar
+**P7. Intercalado por contraste.** Pares confundibles que el sílabo nombra o implica (Brunmair & Richter 2019, g=0,42). Ejemplos: hiperemia conjuntival vs. ciliar · artritis séptica vs. sinovitis transitoria · prerrenal vs. renal vs. posrenal · intoxicación vs. abstinencia · TAG vs. pánico · delirium vs. demencia vs. depresión · depresión vs. duelo · úlcera venosa vs. arterial vs. por presión · nevo vs. melanoma. Los contrastes de 3+ rasgos piden **Esquema** (tabla).
 
-Antes de crear cualquier tarjeta, pregunta si existe un **principio subyacente** que explique el fenómeno. Si existe: 1 tarjeta del principio + 2–3 que obliguen a aplicarlo, en vez de memorizar cada hecho.
+**P8. Formato.** (a) Sujeto primero: el anverso empieza por `<span class="tema">Sujeto</span>` y sigue la pregunta. (b) `Respuesta` ≤2 frases; el resto en `Razonamiento` (≤~4 frases; más sugiere violar P2).
 
-Fundamento: construcción de esquemas (Sweller) y transferencia (Pan & Rickard, d≈0,40); ataca el exceso de flashcards médicas declarativas de bajo orden (Rajpurkar et al.).
+**P9. Prohibiciones.** Listas abiertas («¿Cuáles son…?»): unifícalas bajo un principio o un esquema. Cloze de palabras funcionales o adivinables. Hechos que un principio ya explica. **Valores de S, E, VPP, VPN, LR o AUC** (usa la afirmación cualitativa con su consecuencia; excepción: que el sílabo o el docente exijan el valor). Cifras, dosis o cortes no verificados (§5). Tarjetas no trazables al caso. Metatexto sobre widgets, mazo o fuentes. *(Las mnemotecnias ya no están prohibidas: ver §6.)*
 
-**Procedimiento:** 3–8 principios organizadores; por cada uno, 1 tarjeta de principio + 2–3 de aplicación a situaciones distintas; todo hecho no explicado por un principio es **irreducible** (P6).
+**P10. Escalas: umbral, no inventario.** Umbral → conducta (~50 %), bandas de gravedad (~20 %), componentes de alto rendimiento (~20 %, solo si pesan, se confunden o su ausencia es error clásico: la amilasa no es criterio de Ranson), limitaciones (~10 %). Prohibido recitar todos los componentes. Solo escalas que el sílabo nombre o la guía del caso exija (Glasgow, CAM, Barthel/Katz, MMSE, Yesavage, PHQ-9/GAD-7, Child-Pugh/MELD, Gleason/ISUP…).
 
-**Ejemplos:**
-- *Ojo Rojo:* el patrón de hiperemia refleja qué lecho vascular está comprometido y predice si el problema es superficial o del segmento anterior.
-- *Vascular:* la obstrucción venosa masiva eleva la presión compartimental hasta comprometer el flujo arterial.
-- *Coma:* la conciencia requiere corteza bilateral o SRAA intactos; por eso las lesiones focales unilaterales no causan coma salvo efecto de masa.
-- *Disbasia:* dolor + fiebre + rechazo del apoyo obliga a descartar infección articular antes que cualquier causa mecánica.
-- *Abdomen Agudo:* el dolor visceral es mal localizado y el parietal bien localizado; la migración refleja el paso de irritación visceral a peritoneal.
-- *Delirium:* un cerebro con poca reserva funcional se desorganiza ante un estresor agudo (infección, fármaco, deshidratación); por eso se busca y se corrige el desencadenante antes de sedar.
-- *Azoados:* la elevación aguda de azoados se clasifica según dónde falla la depuración (perfusión, parénquima o vía de salida), y cada nivel pide una conducta distinta.
-- *Ansiedad/pánico:* la sobreactivación simpática genera síntomas somáticos reales; por eso el pánico imita urgencias cardiorrespiratorias y exige descartar causa orgánica.
-- *Lesiones dérmicas:* la morfología primaria y su distribución orientan el mecanismo (inflamatorio, infeccioso, neoplásico) antes de nombrar la enfermedad.
+**P11. Volumen.** Fórmula de derivación (no evidencia): `Total ≈ P×3,5 + I + C×1,5 + E×5` (principios, irreducibles, contrastes, escalas); muéstrala con la deuda (≈ N × 5 repasos, heurístico). Banda 25–45: por debajo no se rellena; por encima, revisa P1 y recorta por prioridad **principio > umbral→conducta > contraste > mecanismo > dato aislado** (a igualdad, alto rendimiento); exceder exige `meta.justificacion_exceso`. Subtema 3–6 tarjetas (>8 = fragmentación; el lint lo rechaza).
 
-**Prohibido:** diez tarjetas de hechos que un principio ya explica.
-
-## P2. Atomicidad
-Una tarjeta = un elemento recuperable. Dos ideas independientes = dos tarjetas. El principio es una unidad; su aplicación, otra.
-
-## P3. Recuerdo, no reconocimiento
-Exigir **producir** la respuesta. Ni gramática, ni longitud del hueco, ni contexto delatan la respuesta. **Prueba:** tapar la respuesta; si alguien que no estudió acierta por sentido común o sintaxis, reescribir.
-
-## P4. Forzar comprensión — troqueles
-1. `¿Por qué tiene sentido [X]?` — mecanismo.
-2. `¿Cómo se conecta [X] con [Y]?` — integración.
-3. `Usa [principio A] para explicar [fenómeno B].` — transferencia.
-
-Calibración honesta: Dunlosky et al. (2013) dan utilidad **moderada** a interrogación elaborativa y autoexplicación. Límite de carga: si un troquel exige más de tres pasos de razonamiento, divídelo (Chen, Kalyuga & Sweller).
-
-## P5. Tipo de nota
-- **QA (≥85% del mazo)** → principios, mecanismos, discriminación, decisión clínica, viñetas, relacionales y troqueles de P4.
-- **Cloze (≤15% del mazo)** → solo umbrales, convenciones y etiquetas no derivables.
-
-Fundamento práctico: Palmerton y Sung coinciden en que el cloze favorece el reconocimiento posicional (opinión de educadores, no ECA).
-
-## P6. Balance: techo de Recuerdo
-`Nivel::Recuerdo` es un **techo** (≤40%); `Nivel::Aplicacion` ≥60%.
-
-El Recuerdo se reserva **exclusivamente** a lo no derivable: umbrales y puntos de corte, convenciones y epónimos, nombres de fármacos y pruebas, epidemiología y factores de riesgo, hallazgos morfológicos. Si una tarjeta de Recuerdo cardea algo que un principio explica, conviértela en Aplicación. No es cuota: es residuo irreducible.
-
-**Riesgo:** verifica que todo hecho irreducible necesario para las tarjetas de aplicación tenga tarjeta propia o esté explícito en `Razonamiento`.
-
-## P7. Intercalado por contraste
-Tarjetas que contrasten entidades confundibles (Brunmair & Richter 2019, g=0,42). Contrastes obligatorios: los pares confundibles que el sílabo del caso nombra o implica; si el caso no está en la lista, deriva los pares del sílabo. Ejemplos por caso:
-- **Ojo Rojo:** hiperemia conjuntival vs. ciliar · conjuntivitis viral vs. bacteriana vs. alérgica · orzuelo vs. chalazión · uveítis anterior vs. glaucoma agudo.
-- **Disbasia:** Perthes vs. epifisiólisis vs. sinovitis transitoria · artritis séptica vs. sinovitis transitoria · genu varo vs. valgo.
-- **Abdomen Agudo:** obstrucción alta vs. baja · isquemia mesentérica vs. abdomen quirúrgico clásico · colangitis vs. colecistitis.
-- **Vascular:** flegmasia alba vs. cerúlea · úlcera venosa vs. arterial · isquemia arterial aguda vs. crónica.
-- **Coma:** estructural vs. metabólico.
-- **Urinaria Baja:** HPB vs. cáncer de próstata vs. prostatitis.
-- **Hematuria:** glomerular vs. no glomerular.
-- **Neoplasias GI:** tempranas vs. tardías por órgano.
-- **Azoados:** prerrenal vs. renal intrínseco vs. posrenal · lesión aguda vs. enfermedad renal crónica.
-- **Envejecimiento / Síndromes geriátricos:** envejecimiento normal vs. patológico · fragilidad vs. dependencia · caída por causa intrínseca vs. extrínseca.
-- **Toxicodependencias:** intoxicación vs. abstinencia · síndrome de abstinencia por sustancia (alcohol vs. opioides).
-- **Ansiedad/Pánico:** TAG vs. trastorno de pánico · pánico vs. causa orgánica que lo imita.
-- **Delirium/Demencia:** delirium vs. demencia vs. depresión · demencia vascular vs. Alzheimer vs. cuerpos de Lewy.
-- **Trastornos del ánimo:** episodio depresivo mayor vs. trastorno bipolar · depresión vs. duelo.
-- **Lesiones dérmicas:** lesión primaria vs. secundaria · úlcera venosa vs. arterial vs. por presión · nevo benigno vs. melanoma.
-
-## P8. Formato
-**8a. Sujeto primero:** tema, guion, pregunta.
-- ✅ `Flegmasia cerúlea dolens — ¿por qué compromete el flujo arterial si la obstrucción es venosa?`
-- ❌ `¿Por qué la obstrucción venosa en la flegmasia cerúlea dolens termina comprometiendo el flujo arterial?`
-
-(Pre-entrenamiento de Mayer; extrapolación, sin ECA específico en flashcards.)
-
-**8b. Resumen arriba:** `Respuesta` ≤2 frases; todo lo demás en `Razonamiento`. Un `Razonamiento` de >~4 frases sugiere violar P2.
-
-## P9. Prohibiciones absolutas
-- Listas abiertas ("¿Cuáles son las causas de X?"). Fundamento: en el análisis de su propio mazo (28 655 tarjetas; datos de un solo usuario, observacional), Palmerton halló que las tarjetas de lista y de hecho aislado acumularon más fallos (6,8 y 5,4 de media) que las de mecanismo (3,4). Si una lista tiene lógica interna, unifícala bajo un principio (p. ej., TORCH como infecciones congénitas que cruzan la placenta).
-- **Mnemotecnias**, salvo para listas genuinamente arbitrarias sin lógica; en lo demás, preferir el principio.
-- Cloze de palabras funcionales o adivinables.
-- Hechos que un principio del caso ya explica.
-- **Valores de S, E, VPP, VPN, LR o AUC.** Se permite y prefiere la afirmación cualitativa con su consecuencia decisional (*"Un ultrasonido de cadera normal no descarta artritis séptica temprana; con sospecha alta se procede a artrocentesis."*). Excepción única: que el sílabo o el docente exijan el valor.
-- Cifras, dosis o cortes inventados: si no hay certeza, no generes la tarjeta o marca `[VERIFICAR EN FUENTE]` en `Razonamiento` y regístrala en `pendientes` (F3b la intentará resolver).
-- Tarjetas no trazables a la sección del caso en el sílabo (o a la guía declarada si el tema está fuera de ambos sílabos).
-
-## P10. Escalas — regla de umbrales
-Lo que decide conducta es el umbral, no el inventario.
-- **Nivel 1 — Umbral → conducta (~50%)**, QA de aplicación.
-- **Nivel 2 — Bandas de gravedad (~20%).**
-- **Nivel 3 — Componentes de alto rendimiento (~20%)** solo si: pesan desproporcionadamente; se confunden con los de otra escala; o su **ausencia** es error clásico (la amilasa no es criterio de Ranson).
-- **Nivel 4 — Limitaciones y falsos resultados (~10%).**
-
-Prohibido recitar la lista completa de componentes.
-
-**Ejemplos por área (no solo quirúrgicas):** Glasgow (umbral → vía aérea definitiva), Ranson (la amilasa no es criterio), CAM para delirium (qué rasgos son indispensables para el diagnóstico), Barthel/Katz (qué nivel de dependencia cambia el plan), MMSE (la escolaridad condiciona la interpretación), Yesavage (tamizaje, no diagnóstico), PHQ-9/GAD-7 (puntaje → conducta), Child-Pugh/MELD (qué decide el pronóstico), Gleason/ISUP (grado → riesgo). Usa solo las escalas que el sílabo del caso nombre o que la guía del caso exija.
-
-## P11. Volumen por densidad conceptual y deuda de aprendizaje
-
-> No existe ECA ni metaanálisis sobre el número óptimo de flashcards por tema. Esto es una **fórmula de derivación**, no un hallazgo; nunca la presentes como evidencia.
-
-```
-Total ≈ (P × 3,5) + I + (C × 1,5) + (E × 5)
-```
-P = principios · I = hechos irreducibles · C = pares de contraste · E = escalas. Muestra el cálculo.
-
-**Banda de control: 25–45 por caso.**
-- <25: entrega ese número; no rellenes.
-- >45: revisa primero si fallaste en P1. Si el contenido lo sigue justificando por densidad real (no por fragmentación), puedes excederla **declarando explícitamente la justificación**; si no, corta por prioridad: **principio > umbral → conducta > contraste > mecanismo > dato aislado**; a igual categoría, prioriza la tarjeta con alto rendimiento (USMLE/MIR).
-- Regla de recorte, nunca de relleno.
-
-**Subtema: 3–6 tarjetas.** Más de 8 indica fragmentación o trivia.
-
-**Deuda de aprendizaje:** repasos futuros ≈ N × ~5 (heurístico, no evidencia). Muéstrala siempre junto al cálculo (p. ej., 40 tarjetas → ~200 repasos).
-
-Con 40–60 min/día y FSRS a 0,90, el techo ronda 19–20 nuevas/día con esta mezcla; a un caso por semana, 45 tarjetas son ~7/día. El factor limitante es la densidad conceptual, no el reloj. El excedente se reserva para tarjetas que el estudiante escriba tras las sesiones ABP (auto-generación, Pan et al. 2022) y oclusión de imagen en el iPad.
-
-## P12. Tarjetas de orden superior
-- **Viñeta:** anverso = caso clínico breve, sujeto primero (`Caso — ...`); reverso = diagnóstico/conducta en `Respuesta` y justificación de cada hallazgo en `Razonamiento`.
-- **Relacional / Evaluar:** "¿Cuál pesa más para decidir X: A o B, y por qué?"; "Dado X, predice Y".
-- **Variación de redacción:** las 2–3 aplicaciones de cada principio llevan anversos de redacción distinta (evita saturación de pistas).
-- **Bloom:** todas las tarjetas llevan tag `Bloom::<Nivel>`.
-- **Orientación:** de la presentación clínica hacia la fisiopatología; según el área: en casos quirúrgicos, "como si fueras a operar mañana"; en medicina interna, geriatría, psiquiatría o dermatología, "como si lo vieras mañana en guardia o en consulta".
+**P12. Orden superior.** Viñeta (`Caso — …`: diagnóstico/conducta en la respuesta, justificación de cada hallazgo en el razonamiento), relacional («¿qué pesa más para decidir X, A o B, y por qué?»), predicción («dado X, predice Y»). Tag `Bloom::` en todas. Orientación: «como si lo vieras mañana en guardia o en quirófano».
 
 ---
 
-# FLUJO DE TRABAJO (orquestador–ejecutor)
+# 4 · Flujo orquestador → ejecutores
 
-**Roles.** **Orquestador = modelo de la sesión (Opus):** planifica, audita, decide, compila. **Ejecutor = subagente con `model: "sonnet"`** vía la herramienta Agent: redacta y corrige tarjetas. Si Agent no está disponible, el mismo modelo ejecuta las fases en secuencia manteniendo la separación (planificar → redactar → auditar como si el texto fuera ajeno → corregir) y lo declara.
+**Roles.** Orquestador = modelo de la sesión: planifica, audita, decide, compila. Ejecutores = subagentes (herramienta Agent) **capaces** (`sonnet` o superior; **nunca `haiku`**, tampoco para verificar). Sin Agent, el mismo modelo hace las fases en secuencia, auditando como si el texto fuera ajeno, y lo declara. En autónomo se muestran F1, F3 y F4 resumidos sin esperar aprobación; en coautor/mixto, F1 espera la aprobación de los anversos corregidos.
 
-Muestra al usuario el resultado de F1, F3 y F3b, resumidos. En autónomo se muestran sin esperar aprobación; en coautor/mixto, F1 pide al usuario que apruebe los anversos corregidos.
+1. **F1 Plan (orquestador).** Sílabo del caso → resultado de aprendizaje; ediciones (§4 del protocolo) y discrepancias; principios (P1), irreducibles (P6), contrastes (P7), escalas (P10); cribado de alto rendimiento (MIR verificado por el orquestador); cálculo P11 con deuda; rango de IDs desde el registro; qué tarjetas llevan mnemotecnia establecida o esquema; `meta.guia` (principios, palabras clave, imágenes para oclusión, preguntas de cierre, relación subtema→sílabo, fechas, referencias). Plan por tarjeta:
+   ```json
+   {"id": "Q2R2-TOX-0001", "tipo": "QA", "clase": "Principio", "nivel": "Aplicacion", "bloom": "Comprender",
+    "subtema": "Abstinencia", "objetivo": "Explicar el rebote de la abstinencia alcohólica",
+    "fuente_prevista": "Goodman & Gilman 14.ª ed.", "alto_rendimiento": ["USMLE"],
+    "mnemotecnia": null, "esquema": "tabla intoxicación vs. abstinencia", "anverso_usuario": null, "semilla": null}
+   ```
+2. **F2 Redacción (ejecutor).** Recibe plan + §3 + §6 + ejemplos (§7) y devuelve el JSON de tarjetas (§5, esquema). No añade ni quita IDs (propuestas en `notas_ejecutor`). **Ante un dato dudoso no escribe marcas en la tarjeta**: lo añade a `pendientes` (`{"dato": texto exacto, "campo": "razonamiento", "fuente_esperada": "guía | PubMed | ficha técnica | libro §4"}`) y redacta el resto. No inventa referencias, PMID, DOI, ediciones, años ni tags MIR.
+3. **F3 Lint + rúbrica (orquestador).** `python3 kit/anki/compilar_mazo.py <json> --solo-lint` (esquema, IDs, tags, lista blanca HTML, límite de marcas, cloze, cuotas…); con `pendientes` aún abiertos, el lint falla solo por eso y por lo demás debe estar limpio. Rúbrica por tarjeta: P3, P2, P8, exactitud clínica, alineación con `objetivo`, trazabilidad al sílabo, uso correcto de las clases de color (§6), calidad de mnemotecnia/esquema. Salida: `id → regla → corrección exigida`.
+4. **F3c Corrección (ejecutor).** Corrige solo los IDs listados y devuelve el JSON completo. Bucle F3→F3c hasta cero defectos o 2 vueltas; si persisten, el orquestador corrige lo trivial o elimina la tarjeta. Nunca se compila con defectos de exactitud.
+5. **F4 Verificación obligatoria en cascada (ejecutor capaz, sin tope de datos).** Sobre **todos** los `pendientes` y además sobre toda cifra, dosis, umbral, criterio y cita de `Fuente` del mazo. Cascada por dato, hasta 2 búsquedas por fuente: **PubMed** (`search_articles`, `lookup_article_by_citation`, `get_article_metadata`) → **Consensus** (`search`) → **fichas técnicas** (DailyMed, CIMA-AEMPS, EMA, ARCSA) → **GPC/lineamientos MSP Ecuador** (salud.gob.ec) → **web/guías de sociedades**. Si un dominio está bloqueado por la red, pide habilitarlo antes de darlo por perdido. Resultado por dato:
+   - **confirmado** → cita en `Fuente` (forma corta `Autor Año, Revista (PMID n)`) y en `meta.guia.referencias` (Vancouver completa);
+   - **contradicho** → se corrige con la fuente hallada;
+   - **divergente** → ambas cifras, cada una con su cita;
+   - **sin confirmar** → se elimina el dato o la tarjeta, o se reformula cualitativamente. Nunca queda marca.
+   El verificador devuelve `[{"id", "dato", "resultado", "correccion", "cita", "pmid_doi", "url"}]`; no inventa PMID/DOI/ediciones; UpToDate/DynaMed solo con `[citado AAAA mmm dd]` real. El orquestador aplica, vacía `pendientes` y rellena `meta.verificacion = {"total": M, "verificados": N, "eliminados": [{"id", "dato", "motivo"}]}`.
+6. **F5 Re-lint y rúbrica** de las tarjetas tocadas por F4 (un dato corregido puede romper P3 o el límite de 2 frases). El lint completo debe dar `RESULTADO: lint OK`.
+7. **F6 Compilación.** `python3 kit/anki/compilar_mazo.py mazos/<tema>/tarjetas.json` → `.apkg` + inspección + registro actualizado. Aborta ante cualquier marca, `pendientes` no vacío o error.
+8. **F7 Previsualización.** `node kit/anki/previsualizar.js mazos/<tema>/tarjetas.json <scratchpad>/capturas_<tema> 8`; mira tú las capturas (al menos una QA con esquema y un cloze, en iPhone noche) y corrige desbordes o tablas ilegibles. Las capturas no se versionan.
+9. **F8 Guía.** `python3 kit/anki/guia_docx.py mazos/<tema>/tarjetas.json`. Revisa que `meta.guia` tenga principios, palabras clave, preguntas de cierre, subtemas y referencias verificadas.
+10. **F9 Auditoría y entrega** (§9). Commit de `tarjetas.json`, `media/`, `.apkg`, `.docx` y `mazos/README.md` juntos.
 
-- **F0 Parámetros:** caso, modo, IDs (continuidad), material adjunto, rutas de sílabos y protocolo (`fuentes/` o `references/`), widgets del repo del mismo caso (ver INTEGRACIÓN CON EL REPO).
-- **F1 Plan (orquestador):** lee del sílabo solo la sección del caso y ancla al resultado de aprendizaje (transcríbelo; si el tema no está en ninguno de los dos sílabos, dilo, pide confirmación y declara el prefijo `Q2X-<ABREV>`); fija las ediciones de referencia según el §4 del protocolo y anota discrepancias con el sílabo; principios (P1); irreducibles (P6); pares de contraste (P7); escalas (P10); cribado de alto rendimiento (el orquestador busca en la web; si verifica una pregunta MIR, registra año-número en `MIR_VERIFICADOS` y en la auditoría final con la URL del cuaderno oficial; el ejecutor nunca asigna tags MIR); cálculo P11 con deuda; rango de IDs; **plan de tarjetas** en JSON (abajo); contenido de la guía del caso.
-- **F2 Ejecución (ejecutor):** recibe plan + P1–P12 + ejemplos calibrados; devuelve el JSON de tarjetas. No añade ni elimina IDs; si cree que falta o sobra una, lo propone en `notas_ejecutor`. Si el plan trae `anverso_usuario`, `pregunta` (o `text`) = ese anverso literal; si viola P3/P8/P9, el ejecutor propone la versión corregida en `notas_ejecutor` y no la aplica.
-- **F3 Revisión (orquestador):** (a) lint automático en Python sobre el JSON (reglas del bloque de auditoría, más: palabras de `Respuesta`, listas abiertas por regex, cifras de S/E/VPP/VPN/LR por regex, tags MIR sin verificación registrada; que `anverso_usuario` no haya cambiado, salvo aprobación del usuario); (b) rúbrica cualitativa por tarjeta: P3, P2, P8 (sujeto primero y resumen), exactitud clínica, alineación con el `objetivo` del plan, trazabilidad al sílabo del caso. Salida: lista `id → regla → corrección exigida`. Cuenta también las marcas `[VERIFICAR EN FUENTE]` y consolida `pendientes`.
-- **F4 Corrección (ejecutor):** corrige solo los IDs listados; devuelve el JSON completo.
-- **Loop F3→F4:** hasta cero defectos o **máximo 2 vueltas**. Si persisten, el orquestador corrige lo trivial o elimina la tarjeta y lo reporta; **nunca compila con defectos de exactitud clínica**.
-- **F3b Pasada de verificación (antes de la auditoría):** una sola pasada sobre la lista consolidada de `pendientes` (protocolo §3). La hace un subagente ligero (`model: "haiku"`) o, si Agent no está disponible, el orquestador. Para cada dato busca con PubMed (`search_articles`, `lookup_article_by_citation`, `get_article_metadata`), luego Consensus (`search`), luego WebSearch/WebFetch para guías de sociedades y MSP. Fármacos de marca: ARCSA → ficha técnica/prospecto → CIMA-AEMPS, EMA o DailyMed. Presupuesto: **≤2 búsquedas por dato y ≤20 datos**; si hay más, prioriza cifras, umbrales y dosis. Resultado por dato: `confirmado` (cita Vancouver + PMID/DOI si la herramienta los devolvió), `contradicho` (corrección con la fuente hallada) o `sin_confirmar`. El orquestador aplica: confirmado → quita la marca de `razonamiento` y escribe la cita en `fuente` (forma corta, p. ej. `Autor Año, Revista (PMID n)`); contradicho → corrige el dato; sin confirmar → deja la marca o, si el dato no es esencial, elimina el dato o la tarjeta. Tras aplicar, repite el lint de F3(a). El verificador **no inventa** PMID, DOI, ediciones ni años; UpToDate y DynaMed se citan solo con la fecha real de consulta.
-- **F5 Compilación y entrega (orquestador):** `.apkg` con genanki (auditoría que aborta si falla) + guía del caso `.docx` + tabla de auditoría final (con vueltas del loop, defectos residuales y «Verificados N de M; quedan K») + instrucciones de importación.
+---
 
-## Plan de tarjetas (salida de F1)
+# 5 · Esquema del JSON (`mazos/<tema>/tarjetas.json`)
 
 ```json
-[{"id": "Q2-VASC-0001", "tipo": "QA", "clase": "Principio", "nivel": "Aplicacion",
-  "bloom": "Comprender", "subtema": "Hemodinamia",
-  "objetivo": "Explicar cómo la obstrucción venosa masiva compromete el flujo arterial",
-  "fuente_prevista": "Harrison 22e", "alto_rendimiento": ["USMLE"],
-  "anverso_usuario": null, "semilla": null}]
+{"meta": {"caso": "Toxicodependencias", "rotacion": "2.ª", "tag_raiz": "Toxicodependencias", "prefijo": "Q2R2-TOX",
+          "version": "1.0", "fecha": "AAAA-MM-DD", "resultado_aprendizaje": "…", "fuente_alcance": "Sílabo 2.ª rotación, Caso …",
+          "justificacion_exceso": "", "mir_verificados": [],
+          "verificacion": {"total": 0, "verificados": 0, "eliminados": []},
+          "guia": {"principios": [], "palabras_clave": [], "imagenes_oclusion": [], "preguntas_cierre": [],
+                   "subtemas": {"Abstinencia": "relación con el sílabo"}, "fechas": {"apertura": null, "cierre": null, "examen": null},
+                   "referencias": ["Vancouver completa…"]}},
+ "tarjetas": [
+  {"id": "Q2R2-TOX-0001", "tipo": "QA", "pregunta": "…", "respuesta": "…", "razonamiento": "…",
+   "mnemotecnia": "", "esquema": "", "fuente": "…", "tags": ["…"], "pendientes": [], "notas_ejecutor": ""},
+  {"id": "Q2R2-TOX-0004", "tipo": "Cloze", "text": "…{{c1::…}}…", "extra": "…",
+   "mnemotecnia": "", "esquema": "", "fuente": "…", "tags": ["…"], "pendientes": []}]}
 ```
-`clase`: Principio | Aplicacion | Viñeta | Contraste | Relacional | Irreducible | Escala. `bloom`: Recordar | Comprender | Aplicar | Analizar | Evaluar. `alto_rendimiento`: lista con `USMLE` y/o `MIR`; `[]` si no aplica. `anverso_usuario`: opcional, solo en coautor/mixto (texto literal pegado por el usuario). `semilla`: opcional, texto del `nucleo` del widget del repo que origina la tarjeta (ver INTEGRACIÓN CON EL REPO). El plan es solo planificación; los tags se construyen con la regla de abajo.
 
-## Esquema JSON de tarjeta (salida de F2/F4)
+- Media (SVG/PNG del esquema) en `mazos/<tema>/media/`, nombre `<prefijo-en-minúsculas>-<nnnn>-<tema>.svg` (sin espacios, no empieza por `_`).
+- **Tags** (sin espacios ni tildes): exactamente uno de `Quirurgica2::<TagRaíz>::<Subtema>`, `Nivel::<Recuerdo|Aplicacion>`, `Fuente::<Abrev>`, `Clase::<Principio|Aplicacion|Vineta|Contraste|Relacional|Irreducible|Escala>`, `Bloom::<Recordar|Comprender|Aplicar|Analizar|Evaluar>`; opcionales `Principio` (solo clase Principio), `Escala::<Nombre>`, `AltoRendimiento::<USMLE|MIR>`, `MIR::<AAAA>-<NNN>` (verificado), `Origen::<Usuario|Claude>`. La raíz `Quirurgica2` se conserva en ambas rotaciones.
+- **El compilador valida**: esquema y claves; formato y unicidad de IDs (GUID = `guid_for(id)`), prefijo contra el registro (y retirados); tags; lista blanca HTML; ≤4 marcas semánticas por campo (Esquema exento); `.tema` único al inicio del anverso; **cero marcas** de verificación en campos, tags y `meta` (salvo `meta.verificacion`); metatexto; `pendientes` vacío; cloze bien formado (c1… contiguos, sin anidar, span dentro del hueco); `Fuente` no vacía; Respuesta ≤2 frases; listas abiertas; cifras de S/E/VPP/VPN/LR/AUC; mnemotecnia expandida; tablas ≤4 columnas y ≤9 filas con cabecera; media existente; cuotas (Cloze ≤15 %, Recuerdo ≤40 %, subtema ≤8, N>45 con justificación). `--demo` (con `meta.demo: true`, fuera de `mazos/`) convierte las cuotas en avisos y no toca el registro.
 
-Una lista de objetos. Campos del modelo de nota + `id` + `tags`; sin campos adicionales salvo `notas_ejecutor` y `pendientes` (opcionales, no se compilan). **`pendientes`** (decisión de v6: campo por tarjeta, no lista en `notas_ejecutor`): lista de objetos `{"dato": "<texto exacto>", "fuente_esperada": "<tipo: guía, PubMed, ficha técnica, libro de la tabla §4>"}`, uno por cada `[VERIFICAR EN FUENTE]` que el ejecutor escribió en la tarjeta; `[]` o ausente si no hay. El orquestador los consolida para F3b.
+---
 
+# 6 · Diseño visual («A · Chips clínicos»)
+
+Fondo gris muy claro (casi negro en noche), acento índigo, respuesta en recuadro con borde izquierdo índigo, razonamiento debajo, bloques **Mnemotecnia** (borde rosa) y **Esquema** (tabla o diagrama) solo si el campo tiene contenido, y `Fuente` al pie. Tipografía del sistema. Contraste WCAG AA comprobado en claro y noche (texto/fondo ≥5,6:1 en todas las píldoras).
+
+**El color significa tipo de dato, igual en todos los mazos:**
+
+| Clase | Tipo de dato | Cuándo usarla | Ejemplo |
+|---|---|---|---|
+| `.fx` (violeta) | fármaco | nombre de fármaco o grupo | `<span class="fx">tiamina</span>` |
+| `.num` (azul, cifras tabulares) | cifra, dosis, umbral | el número que decide conducta | `<span class="num">≥ 2 de 11</span>` |
+| `.al` (rojo) | signo de alarma | lo que no se puede pasar por alto | `<span class="al">convulsión</span>` |
+| `.dx` (verde) | diagnóstico / entidad | la entidad que es la respuesta o el contraste | `<span class="dx">delirium</span>` |
+| `.mec` (ámbar) | mecanismo | el eslabón fisiopatológico clave | `<span class="mec">rebote GABA/NMDA</span>` |
+| `.mne` (rosa, cursiva) | mnemotecnia | solo dentro del campo Mnemotecnia | `<span class="mne">CAGE</span>` |
+| `.vs` (índigo) | contraste | rótulo «Contraste» / «vs.» en el razonamiento | `<span class="vs">Contraste</span>` |
+| `.tema` (versalitas índigo) | sujeto | una vez, al inicio del anverso | `<span class="tema">Abstinencia alcohólica</span>` |
+
+Reglas: marca solo lo que el estudiante debe recuperar (≤4 marcas por campo; lo ideal 1–3); no marques palabras sueltas sin valor; el anverso casi nunca lleva marcas aparte de `.tema` (delatarían la respuesta, P3). En cloze la marca va **dentro** del hueco: `{{c1::<span class="num">12 meses</span>}}`. Etiquetas permitidas: `span` (con una clase de la tabla), `b`, `strong`, `i`, `em`, `br`, `sub`, `sup`; en Mnemotecnia además `ul/li`; en Esquema además `table/caption/thead/tbody/tr/th/td` (`colspan`, `rowspan`, `scope`), `ul/ol/li` e `img` (`src`, `alt`). Nada de `style=`, clases inventadas, scripts ni enlaces; el texto se escapa (`<`, `>`, `&` literales son seguros).
+
+**Mnemotecnia** (campo opcional). Solo si existe una **establecida y popular** (inglés o español; se prioriza la más usada: CAGE, MUDPILES, etc.); no inventes acrónimos forzados; si no hay una buena, el campo queda vacío. Siempre **expandida**: una `<span class="mne">` con la mnemotecnia, idioma entre paréntesis si es inglesa, y `<ul><li><b>L</b> significado</li>…</ul>` (≥2 ítems). La mnemotecnia sirve para listas genuinamente arbitrarias; no sustituye al principio (si hay principio, la tarjeta pregunta el principio).
+
+**Esquema** (campo opcional). Cuando el tema lo pide: contrastes de 3+ rasgos, clasificaciones, cronologías, algoritmos cortos. Tabla HTML de ≤4 columnas y ≤9 filas, celdas breves (2–5 palabras), primera columna `<th>` con el rasgo. O diagrama SVG en `media/` con fondo transparente, colores de la paleta clara y texto ≥12 px en un viewBox de ~360 px de ancho (en noche Anki lo verá invertido con `invert(1) hue-rotate(180deg)`, igual que hace con los dibujos). El esquema complementa: la respuesta debe poder producirse sin mirarlo.
+
+---
+
+# 7 · Ejemplos calibrados (formato JSON real; datos verificados)
+
+**✅ Principio · QA**
 ```json
-{"id": "Q2-VASC-0002", "tipo": "QA",
- "pregunta": "...", "respuesta": "...", "razonamiento": "...", "fuente": "Di Nisio 2016, Lancet",
- "tags": ["Quirurgica2::Vascular::Flegmasia", "Nivel::Aplicacion", "Fuente::Lancet",
-          "Clase::Aplicacion", "Bloom::Aplicar"],
- "notas_ejecutor": "", "pendientes": []}
-
-{"id": "Q2-COMA-0007", "tipo": "Cloze",
- "text": "Coma / TCE — ... {{c1::...}} ...", "extra": "...", "fuente": "ATLS 10e",
- "tags": ["Quirurgica2::Coma::EscalaGlasgow", "Nivel::Recuerdo", "Fuente::ATLS",
-          "Clase::Escala", "Bloom::Recordar", "Escala::Glasgow"]}
-```
-**Reglas de tags por tarjeta:** (la raíz `Quirurgica2` se conserva en todas las rotaciones por continuidad de Anki) exactamente un `Quirurgica2::<TagRaíz>::<Subtema>`, un `Nivel::`, un `Fuente::`, un `Clase::`, un `Bloom::`; además, según corresponda: `Principio` (solo clase Principio), `Escala::<Nombre>`, `AltoRendimiento::<USMLE|MIR>`, `MIR::<AAAA>-<NNN>` (solo verificado), `Origen::<Usuario|Claude>` (modo coautor). Sin espacios ni tildes (`Vineta`, no `Viñeta`). Tipo `QA` usa `pregunta/respuesta/razonamiento`; `Cloze` usa `text/extra`; ambos usan `fuente`.
-
-## Plantilla de prompt para el ejecutor — F2 (Agent, `model: "sonnet"`)
-
-```
-Eres el EJECUTOR de un generador de flashcards de medicina (Salud Integral Hospitalaria 2, PUCE, español académico conciso).
-Redacta las tarjetas del PLAN adjunto. Devuelve SOLO un JSON válido (lista de objetos), sin texto adicional.
-
-Reglas:
-- Un objeto por id del plan; no añadas ni elimines ids. Si crees que falta o sobra una tarjeta, dilo en "notas_ejecutor".
-- Esquema: QA -> id, tipo, pregunta, respuesta, razonamiento, fuente, tags. Cloze -> id, tipo, text, extra, fuente, tags.
-- Tags: construye los tags desde los campos del plan (subtema, nivel, clase, bloom, fuente_prevista, alto_rendimiento) según las Reglas de tags; sin espacios ni tildes.
-- Cada tarjeta cumple su "objetivo" y "bloom". Anverso: sujeto primero (Tema — pregunta); Viñeta: "Caso — ...". respuesta <=2 frases; razonamiento <=~4. Una idea por tarjeta; la respuesta se produce, no se reconoce.
-- Cloze solo para umbrales, convenciones y etiquetas no derivables.
-- Prohibido: listas abiertas, mnemotecnias, valores de S/E/VPP/VPN/LR/AUC (usa la afirmación cualitativa y su consecuencia decisional), cifras o dosis de las que no estés seguro.
-- Si dudas de un dato: no te detengas a buscarlo; escribe [VERIFICAR EN FUENTE] en razonamiento y añade a "pendientes" {"dato": texto exacto, "fuente_esperada": tipo de fuente que lo respaldaría}. No inventes referencias, PMID, DOI, ediciones, años, números de pregunta MIR ni tags MIR: el orquestador los asigna tras la verificación (F3b).
-- Usa las ediciones de la tabla del plan; cita solo las fuentes que el plan trae en "fuente_prevista".
-- Aplicaciones de un mismo principio: redacciones distintas. Si la conducta local (GPC MSP Ecuador) difiere de EE. UU./España, anótalo en razonamiento. Alcance: solo el del plan.
-- Si el plan trae "anverso_usuario", úsalo literal como pregunta/text; si viola P3/P8/P9, propón la corrección en "notas_ejecutor" sin aplicarla.
-
-[PRINCIPIOS P1-P12 y EJEMPLOS CALIBRADOS: pegar aquí]
-[PLAN JSON: pegar aquí]
+{"id": "Q2R2-TOX-0001", "tipo": "QA",
+ "pregunta": "<span class=\"tema\">Abstinencia alcohólica</span>¿Por qué un depresor, al suspenderse, deja temblor, taquicardia y convulsiones?",
+ "respuesta": "Porque el consumo crónico <span class=\"mec\">regula a la baja GABA-A y al alza NMDA</span>; sin etanol queda un cerebro hiperexcitable.",
+ "razonamiento": "El rebote noradrenérgico da temblor, sudoración y taquicardia; el extremo es <span class=\"al\">convulsión</span> y <span class=\"al\">delirium tremens</span>.<br><span class=\"vs\">Contraste</span> la intoxicación deprime el SNC; la abstinencia da los signos opuestos.",
+ "fuente": "Goodman &amp; Gilman 14.ª ed. 2023",
+ "tags": ["Quirurgica2::Toxicodependencias::Abstinencia", "Nivel::Aplicacion", "Fuente::GoodmanGilman", "Clase::Principio", "Bloom::Comprender", "Principio"]}
 ```
 
-## Plantilla de prompt para el ejecutor — F4
-
-```
-Eres el EJECUTOR. Corrige SOLO las tarjetas listadas en DEFECTOS, aplicando exactamente la corrección exigida.
-No toques las demás. No cambies ids ni el esquema. Mantén las reglas del prompt anterior (P1-P12).
-Devuelve SOLO el JSON completo de todas las tarjetas (corregidas y sin cambio), sin texto adicional.
-Si una corrección exigida es imposible sin un dato que no conoces, escribe [VERIFICAR EN FUENTE] en razonamiento, añádelo a "pendientes" y explícalo en "notas_ejecutor". No inventes referencias.
-
-[DEFECTOS: lista id -> regla -> corrección exigida]
-[JSON ACTUAL]
+**✅ Irreducible con mnemotecnia establecida · QA**
+```json
+{"pregunta": "<span class=\"tema\">Tamizaje de alcohol</span>¿Qué cuestionario de cuatro preguntas usas en consulta y qué explora cada una?",
+ "respuesta": "El <span class=\"dx\">CAGE</span>: explora intentos de reducir, molestia por la crítica, culpa y consumo matutino.",
+ "razonamiento": "Es un tamizaje: un resultado positivo orienta a evaluar el consumo, no establece el diagnóstico.",
+ "mnemotecnia": "<span class=\"mne\">CAGE</span> (inglés)<ul><li><b>C</b> Cut down: ¿has sentido que debes reducir?</li><li><b>A</b> Annoyed: ¿te molesta que critiquen tu consumo?</li><li><b>G</b> Guilty: ¿te has sentido culpable?</li><li><b>E</b> Eye-opener: ¿bebes al despertar?</li></ul>",
+ "fuente": "Ewing 1984, JAMA (PMID 6471323)"}
 ```
 
-## Plantilla de prompt para el verificador — F3b (Agent, `model: "haiku"`)
-
-```
-Eres el VERIFICADOR. Recibes una lista PENDIENTES de datos médicos que el redactor no pudo confirmar.
-Para cada dato: como máximo 2 búsquedas. Orden: PubMed (search_articles / lookup_article_by_citation / get_article_metadata),
-Consensus (search), WebSearch/WebFetch (guías de sociedades, MSP Ecuador; fármacos: ARCSA, ficha técnica, CIMA-AEMPS, EMA, DailyMed).
-Máximo 20 datos; si hay más, procesa primero cifras, umbrales y dosis y declara los omitidos.
-Devuelve SOLO un JSON: [{"id": "...", "dato": "...", "resultado": "confirmado|contradicho|sin_confirmar",
-"correccion": "texto corregido o null", "cita": "Vancouver breve", "pmid_doi": "... o null", "url": "... o null"}].
-Reglas: no inventes PMID, DOI, páginas, ediciones ni años; si la herramienta no los devolvió, pon null.
-Si no encuentras respaldo claro, resultado = sin_confirmar. No uses UpToDate/DynaMed con fecha que no leíste.
-
-[PENDIENTES: lista id -> dato -> fuente_esperada]
+**✅ Contraste con esquema · QA**
+```json
+{"pregunta": "<span class=\"tema\">Confusión en el adulto mayor</span>¿Qué dato de la historia separa mejor el delirium de la demencia?",
+ "respuesta": "El curso: el <span class=\"dx\">delirium</span> es de inicio agudo y fluctuante, con la <span class=\"mec\">atención</span> afectada primero.",
+ "razonamiento": "La demencia avanza en meses o años con la atención conservada hasta fases tardías. Un cambio agudo sobre una demencia de base es delirium sobreañadido: busca el desencadenante.",
+ "esquema": "<table><thead><tr><th>Rasgo</th><th>Delirium</th><th>Demencia</th></tr></thead><tbody><tr><th>Inicio</th><td><span class=\"al\">Agudo</span></td><td>Insidioso</td></tr><tr><th>Curso</th><td>Fluctuante</td><td>Progresivo</td></tr><tr><th>Atención</th><td>Alterada desde el inicio</td><td>Conservada al inicio</td></tr></tbody></table>",
+ "fuente": "Inouye 2014, Lancet (PMID 23992774)"}
 ```
 
----
-
-# GUÍA DEL CASO (.docx, 1–2 páginas)
-
-Entregable junto al `.apkg`. Contenido:
-- **(a) Priming** (5–10 min por hora de estudio): palabras clave del caso → agruparlas → 2–3 hipótesis de cómo se conectan.
-- **(b) Esqueleto de mapa:** columna vertebral con los principios del caso, para que el usuario lo complete a mano. **No lo rellenes: el mapa lo construye él.**
-- **(c) Imágenes sugeridas para oclusión** (p. ej., fondo de ojo, radiografía de cadera, sedimento urinario, Doppler), que el usuario crea en el iPad.
-- **(d) Cierre del caso:** 3–5 preguntas de recuerdo libre (explicar sin notas) + **hoja de confianza** (marcar confianza alta/baja antes de verificar; alta + error = prioridad de reestudio).
-
-**Orden recomendado:** priming → sesión ABP → mapa propio → importar y estudiar el mazo en ≤24 h → cierre.
-
-```python
-# pip install python-docx --break-system-packages
-from docx import Document
-d = Document()
-d.add_heading('Guía del caso — <Caso>', 1)
-d.add_heading('1. Priming (5–10 min por hora de estudio)', 2)
-d.add_paragraph('Palabras clave → grupos → 2–3 hipótesis.')
-d.add_heading('2. Esqueleto de mapa (complétalo a mano)', 2)
-for p in principios:                      # lista de principios del plan F1
-    d.add_paragraph(p, style='List Bullet')
-d.add_heading('3. Imágenes para oclusión', 2)
-for im in imagenes: d.add_paragraph(im, style='List Bullet')
-d.add_heading('4. Cierre: recuerdo libre', 2)
-t = d.add_table(rows=1, cols=3); t.style = 'Table Grid'
-for c, h in zip(t.rows[0].cells, ['Pregunta', 'Confianza (alta/baja)', 'Resultado']): c.text = h
-for q in preguntas_cierre: t.add_row().cells[0].text = q
-d.save('Guia_<Caso>_<AAAAMMDD>.docx')
+**✅ Convención no derivable · Cloze**
+```json
+{"tipo": "Cloze",
+ "text": "<span class=\"tema\">Trastorno por consumo de sustancias · DSM-5-TR</span>Se diagnostica con {{c1::<span class=\"num\">≥ 2 de 11</span>}} criterios en un periodo de {{c2::<span class=\"num\">12 meses</span>}}.",
+ "extra": "Tolerancia y abstinencia no cuentan si aparecen bajo tratamiento médico supervisado.",
+ "fuente": "APA, DSM-5-TR 2022"}
 ```
 
----
+**✅ Cloze con diagrama** — `"esquema": "<img src=\"q2r2-tox-0004-wernicke.svg\" alt=\"Déficit de tiamina y tríada de Wernicke\">"`, con `text` = «…déficit de {{c1::<span class=\"fx\">tiamina</span>}}, que se repone {{c2::antes de la glucosa}}…» (Sechi 2007, Lancet Neurol, PMID 17434099).
 
-# ESPECIFICACIÓN TÉCNICA (.apkg)
-
-**Entregable:** `Quirurgica2_<Caso>_<AAAAMMDD>.apkg` + `Guia_<Caso>_<AAAAMMDD>.docx`, presentados como archivos (el prefijo `Quirurgica2_` del archivo y del mazo se conserva en ambas rotaciones por continuidad con el mazo ya importado).
-
-**Tipos de nota (no añadir campos):**
-- `Quirurgica2 Cloze` — `Text`, `Extra`, `Fuente`
-- `Quirurgica2 QA` — `Pregunta`, `Respuesta`, `Razonamiento`, `Fuente`
-
-**IDs fijos — nunca cambiarlos:**
-```python
-DECK_ID  = 1738492001100
-CLOZE_ID = 1738492001201
-QA_ID    = 1738492001202
-```
-
-**GUID estables:** `ID = <PREFIJO>-<NNNN>`, con el prefijo completo de la tabla del MAPA (`Q2-VASC-0001`, `Q2R2-DEL-0001`, `Q2X-<ABREV>-0001`), y `guid=genanki.guid_for(ID)`. El deck y los modelos no dependen del prefijo (IDs fijos de abajo).
-
-**Mazo único** `Quirúrgica2` (nombre histórico conservado, también para la 2.ª rotación), sin subdecks.
-
-**Tags (sin espacios ni tildes):**
-```
-Quirurgica2::<TagRaíz>::<Subtema>   Nivel::<Recuerdo|Aplicacion>   Fuente::<FuenteAbreviada>
-Clase::<Principio|Aplicacion|Vineta|Contraste|Relacional|Irreducible|Escala>
-Bloom::<Recordar|Comprender|Aplicar|Analizar|Evaluar>
-```
-Opcionales: `Escala::<Nombre>` · `Principio` (se conserva para Custom Study) · `AltoRendimiento::<USMLE|MIR>` · `MIR::<AAAA>-<NNN>` (solo verificado) · `Origen::<Usuario|Claude>`.
-
-**Implementación de referencia:**
-
-```python
-# pip install genanki --break-system-packages
-import genanki, json, re, sys, collections
-
-DECK_ID  = 1738492001100
-CLOZE_ID = 1738492001201
-QA_ID    = 1738492001202
-
-CSS = """
-.card { font-family: -apple-system, Helvetica, sans-serif; font-size: 20px;
-        text-align: left; color: #1a1a1a; background: #fff; line-height: 1.5;
-        padding: 12px; }
-.cloze { font-weight: 700; color: #0b5cad; }
-hr#answer { border: none; border-top: 1px solid #d0d0d0; margin: 14px 0; }
-.resumen { font-size: 20px; font-weight: 600; }
-.razon { font-size: 17px; color: #333; margin-top: 10px; }
-.fuente { font-size: 14px; color: #888; font-style: italic; margin-top: 10px; }
-"""
-
-cloze_model = genanki.Model(
-    CLOZE_ID, 'Quirurgica2 Cloze',
-    fields=[{'name': 'Text'}, {'name': 'Extra'}, {'name': 'Fuente'}],
-    templates=[{
-        'name': 'Cloze',
-        'qfmt': '{{cloze:Text}}',
-        'afmt': '{{cloze:Text}}<hr id=answer>'
-                '<div class=razon>{{Extra}}</div>'
-                '<div class=fuente>{{Fuente}}</div>',
-    }],
-    css=CSS,
-    model_type=genanki.Model.CLOZE,
-)
-
-qa_model = genanki.Model(
-    QA_ID, 'Quirurgica2 QA',
-    fields=[{'name': 'Pregunta'}, {'name': 'Respuesta'},
-            {'name': 'Razonamiento'}, {'name': 'Fuente'}],
-    templates=[{
-        'name': 'QA',
-        'qfmt': '{{Pregunta}}',
-        'afmt': '{{FrontSide}}<hr id=answer>'
-                '<div class=resumen>{{Respuesta}}</div>'
-                '<div class=razon>{{Razonamiento}}</div>'
-                '<div class=fuente>{{Fuente}}</div>',
-    }],
-    css=CSS,
-)
-
-deck = genanki.Deck(DECK_ID, 'Quirúrgica2')
-
-def add_cloze(cid, text, extra, fuente, tags):
-    deck.add_note(genanki.Note(
-        model=cloze_model, fields=[text, extra, fuente],
-        tags=tags, guid=genanki.guid_for(cid)))
-
-def add_qa(cid, pregunta, respuesta, razonamiento, fuente, tags):
-    deck.add_note(genanki.Note(
-        model=qa_model, fields=[pregunta, respuesta, razonamiento, fuente],
-        tags=tags, guid=genanki.guid_for(cid)))
-
-cards = json.load(open('tarjetas.json', encoding='utf-8'))   # JSON final de F2/F4
-MIR_VERIFICADOS = set()      # {'2019-045'}: solo los verificados en el cuaderno oficial
-JUSTIFICACION_EXCESO = ''    # obligatoria si N > 45; vacío = abortar
-
-# ---- AUDITORÍA INLINE (aborta sin escribir el .apkg si algo falla) ----
-errs, N = [], len(cards)
-if N == 0: sys.exit('AUDITORÍA FALLIDA: 0 tarjetas')
-tg = lambda c, p: [t for t in c['tags'] if t.startswith(p)]
-cnt = lambda p: sum(1 for c in cards if any(t.startswith(p) for t in c['tags']))
-ids = [c['id'] for c in cards]
-n_cloze = sum(c['tipo'] == 'Cloze' for c in cards)
-n_rec = sum('Nivel::Recuerdo' in c['tags'] for c in cards)
-sub = collections.Counter(tg(c, 'Quirurgica2::')[0] for c in cards if tg(c, 'Quirurgica2::'))
-if len(ids) != len(set(ids)): errs.append('IDs duplicados')
-if N < 25: print(f'AVISO: N={N} <25; no rellenar')
-if any(not re.fullmatch(r'Q2(R2|X)?-[A-Z]{2,5}-\d{4}', i) for i in ids): errs.append('ID con formato inválido (<Q2|Q2R2|Q2X>-<ABREV>-<NNNN>)')
-if len({i.rsplit('-', 1)[0] for i in ids}) > 1: errs.append('IDs de más de un prefijo en un mazo de un caso')
-if N > 45 and not JUSTIFICACION_EXCESO: errs.append(f'N={N} >45 sin justificación')
-if n_cloze / N > 0.15: errs.append(f'Cloze {n_cloze/N:.0%} >15%')
-if n_rec / N > 0.40: errs.append(f'Recuerdo {n_rec/N:.0%} >40%')
-MAXS = max(sub.values(), default=0)
-if MAXS > 8: errs.append(f'Subtema con {MAXS} tarjetas (>8)')
-for c in cards:
-    i, tags = c['id'], c['tags']
-    for p in ('Quirurgica2::', 'Nivel::', 'Fuente::', 'Clase::', 'Bloom::'):
-        if len(tg(c, p)) != 1: errs.append(f'{i}: debe tener exactamente un tag {p}')
-    if not re.fullmatch(r'Bloom::(Recordar|Comprender|Aplicar|Analizar|Evaluar)', (tg(c, 'Bloom::') or [''])[0]):
-        errs.append(f'{i}: Bloom ausente o inválido')
-    if any(not re.fullmatch(r'[A-Za-z0-9:_\-]+', t) for t in tags): errs.append(f'{i}: tags con espacios/tildes')
-    for t in tg(c, 'MIR::'):
-        if t[5:] not in MIR_VERIFICADOS: errs.append(f'{i}: tag MIR sin verificación registrada')
-    cuerpo = ' '.join(str(c.get(k, '')) for k in ('pregunta', 'respuesta', 'razonamiento', 'text', 'extra'))
-    if re.search(r'\b(sensibilidad|especificidad|VPP|VPN|LR|AUC)\b[^.]{0,40}\d', cuerpo, re.I):
-        errs.append(f'{i}: cifra de S/E/VPP/VPN/LR/AUC')
-    if c['tipo'] == 'QA':
-        if len(re.findall(r'[.!?](\s|$)', c['respuesta'])) > 2: errs.append(f'{i}: Respuesta >2 frases')
-        if re.search(r'¿\s*(cuáles son|enumera|menciona|lista)\b', c['pregunta'], re.I): errs.append(f'{i}: lista abierta')
-    elif c['tipo'] != 'Cloze': errs.append(f'{i}: tipo inválido')
-print(f'N={N} | Recuerdo {n_rec/N:.0%} | Aplicación {1-n_rec/N:.0%} | Cloze {n_cloze/N:.0%} | '
-      f'Principio {cnt("Principio")} | Bloom ≥Analizar {sum(1 for c in cards if any(t in ("Bloom::Analizar","Bloom::Evaluar") for t in c["tags"]))/N:.0%} | '
-      f'Viñeta/Relacional {cnt("Clase::Vineta") + cnt("Clase::Relacional")} | USMLE {cnt("AltoRendimiento::USMLE")} | '
-      f'MIR patrón {cnt("AltoRendimiento::MIR")} | MIR verificados {cnt("MIR::")} | '
-      f'[VERIFICAR] quedan {sum("[VERIFICAR EN FUENTE]" in str(c) for c in cards)} (pendientes declarados: {sum(len(c.get("pendientes", [])) for c in cards)}) | máx. subtema {MAXS} | '
-      f'IDs {min(ids)}–{max(ids)}')
-if errs: sys.exit('AUDITORÍA FALLIDA:\n' + '\n'.join(errs))
-# ---- FIN AUDITORÍA ----
-
-for c in cards:
-    if c['tipo'] == 'Cloze': add_cloze(c['id'], c['text'], c['extra'], c['fuente'], c['tags'])
-    else: add_qa(c['id'], c['pregunta'], c['respuesta'], c['razonamiento'], c['fuente'], c['tags'])
-
-genanki.Package(deck).write_to_file('Quirurgica2_<Caso>_<AAAAMMDD>.apkg')
-```
-
-**Campos:** saltos de línea con `<br>`; escapar `<`, `>`, `&`; coma decimal; tags sin espacios ni tildes.
-
-**Plan B (sin ejecución de código):** dilo y entrega bloques TSV con `#separator:Tab`, `#html:true`, `#notetype:Cloze` / `#notetype:Basic`, `#deck:Quirúrgica2`, `#tags column:3`.
-
----
-
-# EJEMPLOS CALIBRADOS
-
-**✅ Principio (P1) · QA**
-```
-ID:            Q2-VASC-0001
-Pregunta:      Obstrucción venosa masiva — ¿por qué puede terminar comprometiendo el flujo arterial?
-Respuesta:     Porque la sangre atrapada eleva la presión del compartimento hasta superar la presión de perfusión arterial.
-Razonamiento:  Este principio explica la flegmasia cerúlea dolens, la gangrena venosa y el síndrome compartimental de origen venoso.
-Fuente:        Harrison 22e
-Tags:          Quirurgica2::Vascular::Hemodinamia  Nivel::Aplicacion  Fuente::Harrison  Clase::Principio  Bloom::Comprender  Principio
-```
-
-**✅ Aplicación (troquel 3) · QA**
-```
-ID:            Q2-VASC-0002
-Pregunta:      Flegmasia cerúlea dolens — usa el principio de presión compartimental para explicar por qué es una urgencia y no solo una TVP grave.
-Respuesta:     Porque ya no es un problema de retorno venoso sino de isquemia tisular, y el tiempo determina la viabilidad del miembro.
-Razonamiento:  La presión venosa supera la de perfusión y el tejido evoluciona a gangrena venosa; el manejo no puede limitarse a anticoagulación ambulatoria.<br>Contraste: la flegmasia alba dolens cursa con palidez y edema, sin ese grado de compromiso.
-Fuente:        Di Nisio 2016, Lancet
-Tags:          Quirurgica2::Vascular::Flegmasia  Nivel::Aplicacion  Fuente::Lancet  Clase::Aplicacion  Bloom::Aplicar
-```
-
-**✅ Principio (P1) · QA · geriatría/psiquiatría**
-```
-ID:            Q2R2-DEL-0001
-Pregunta:      Delirium — ¿por qué una infección urinaria o un fármaco nuevo pueden desencadenar confusión aguda en un adulto mayor?
-Respuesta:     Porque un cerebro con poca reserva funcional se desorganiza ante un estresor agudo, y la atención es lo primero que falla.
-Razonamiento:  La vulnerabilidad previa (edad, demencia, polifarmacia) más un desencadenante agudo explican la mayoría de los delirium; por eso se busca y corrige la causa antes de sedar.
-Fuente:        Kane 8e (sílabo)
-Tags:          Quirurgica2::DeliriumDemencia::Fisiopatologia  Nivel::Aplicacion  Fuente::Kane  Clase::Principio  Bloom::Comprender  Principio
-```
-
-**✅ Aplicación (troquel 3) · QA · geriatría**
-```
-ID:            Q2R2-DEL-0002
-Pregunta:      Anciano con demencia, hospitalizado, que esta noche está agitado y desorientado cuando ayer no lo estaba — usa el principio de vulnerabilidad más estresor para decidir qué hacer primero.
-Respuesta:     Buscar y tratar el desencadenante (infección, fármaco, retención urinaria, dolor, deshidratación), no sedar de entrada.
-Razonamiento:  El cambio agudo y fluctuante sobre una demencia de base indica delirium sobreañadido; la sedación enmascara la causa.<br>Contraste: la demencia sola es de curso crónico y la atención se afecta tarde.
-Fuente:        Kane 8e (sílabo)
-Tags:          Quirurgica2::DeliriumDemencia::Delirium  Nivel::Aplicacion  Fuente::Kane  Clase::Aplicacion  Bloom::Aplicar
-```
-
-**✅ Irreducible · Cloze**
-```
-ID:     Q2-COMA-0007
-Text:   Coma / TCE — el umbral de Glasgow para indicar vía aérea definitiva es {{c1::8 o menos}}.
-Extra:  Convención operativa, no derivable de un principio.
-Fuente: ATLS 10e
-Tags:   Quirurgica2::Coma::EscalaGlasgow  Nivel::Recuerdo  Fuente::ATLS  Clase::Escala  Bloom::Recordar  Escala::Glasgow
-```
-
-**✅ Prueba diagnóstica sin valores operativos** (nefrología)
-```
-ID:            Q2R2-AZO-0003
-Pregunta:      Elevación aguda de azoados — la ecografía renal es normal en un paciente con vómitos y diarrea de 3 días. ¿Se descarta una causa renal?
-Respuesta:     No. Una ecografía normal no excluye una lesión aguda; lo más probable aquí es una causa prerrenal.
-Razonamiento:  La ecografía muestra obstrucción y tamaño renal, pero no la hipoperfusión funcional. Con depleción de volumen, la creatinina suele mejorar al reponer líquidos; si no mejora, se sospecha daño parenquimatoso.
-Fuente:        Harrison 22e
-Tags:          Quirurgica2::Azoados::LesionRenalAguda  Nivel::Aplicacion  Fuente::Harrison  Clase::Aplicacion  Bloom::Aplicar
-```
-
-**✅ Viñeta (P12) · QA**
-```
-ID:            Q2-DISB-0020
-Pregunta:      Caso — niño de 4 años con fiebre, cojera de 2 días y rechazo total del apoyo del miembro inferior derecho. ¿Qué diagnóstico debes descartar primero y por qué?
-Respuesta:     Artritis séptica de cadera, porque es una urgencia que compromete la articulación si se retrasa.
-Razonamiento:  Fiebre + dolor + rechazo del apoyo apuntan a infección articular antes que a causas mecánicas o a sinovitis transitoria; con sospecha alta, la conducta es artrocentesis urgente con estudio del líquido sinovial, no observación.
-Fuente:        DynaMed
-Tags:          Quirurgica2::Disbasia::ArtritisSeptica  Nivel::Aplicacion  Fuente::DynaMed  Clase::Vineta  Bloom::Analizar
-```
-
-**✅ Viñeta (P12) · QA · psiquiatría**
-```
-ID:            Q2R2-ANS-0004
-Pregunta:      Caso — mujer de 28 años con palpitaciones, disnea, parestesias y miedo a morir, de inicio brusco y resolución en minutos, con ECG normal. ¿Qué diagnóstico plantear y qué debes descartar antes de darlo?
-Respuesta:     Ataque de pánico; antes se descartan causas orgánicas que lo imitan (cardiorrespiratorias, tiroideas, sustancias).
-Razonamiento:  El pico brusco con síntomas autonómicos y miedo intenso sugiere pánico, pero es diagnóstico de exclusión en una primera presentación. El tratamiento de base es psicoterapia cognitivo-conductual y/o ISRS, no benzodiacepinas sostenidas.
-Fuente:        Ebert 4e (sílabo)
-Tags:          Quirurgica2::AnsiedadPanico::Panico  Nivel::Aplicacion  Fuente::Ebert  Clase::Vineta  Bloom::Analizar
-```
-
-**✅ Relacional / Evaluar (P12) · QA**
-```
-ID:            Q2-ABD-0018
-Pregunta:      Abdomen agudo — peritonitis difusa en la exploración y TC no concluyente: ¿qué pesa más para indicar cirugía, la exploración o la imagen, y por qué?
-Respuesta:     La exploración: la peritonitis difusa indica cirugía aunque la imagen no sea concluyente.
-Razonamiento:  La irritación peritoneal generalizada refleja un proceso parietal que no se resolverá con observación; la imagen orienta la causa, pero no debe retrasar la exploración quirúrgica.
-Fuente:        Harrison 22e
-Tags:          Quirurgica2::AbdomenAgudo::Conducta  Nivel::Aplicacion  Fuente::Harrison  Clase::Relacional  Bloom::Evaluar
-```
-
-**✅ Relacional / Evaluar (P12) · QA · dermatología**
-```
-ID:            Q2R2-DER-0006
-Pregunta:      Lesión pigmentada — pequeña, pero con crecimiento y cambio de color documentados en meses: ¿qué pesa más para decidir biopsia, el tamaño o el cambio evolutivo, y por qué?
-Respuesta:     El cambio evolutivo: una lesión que cambia obliga a obtener histología aunque sea pequeña.
-Razonamiento:  La evolución refleja proliferación activa y es de los datos más sugestivos de melanoma; el tamaño solo orienta. La biopsia diagnostica y define el pronóstico.
-Fuente:        Fitzpatrick 9e (sílabo)
-Tags:          Quirurgica2::LesionesDermicas::LesionPigmentada  Nivel::Aplicacion  Fuente::Fitzpatrick  Clase::Relacional  Bloom::Evaluar
-```
+**✅ Relacional (P12), sin cifras** — `<span class="tema">Abdomen agudo</span>Peritonitis difusa en la exploración y TC no concluyente: ¿qué pesa más para indicar cirugía y por qué?` → «La exploración: la peritonitis difusa indica cirugía aunque la imagen no sea concluyente.»
 
 **❌ A evitar**
+
 | Tarjeta | Falla |
 |---|---|
-| `¿Qué es la flegmasia cerúlea dolens?` | Definición aislada que un principio explica (P1). |
-| `La ecografía tiene sensibilidad del {{c1::95%}} para colelitiasis.` | Valor operativo (P9). |
-| `Enumera los criterios de Ranson.` | Inventario (P10). |
-| `¿Cuáles son las causas de ojo rojo?` | Lista abierta. |
-| `¿Por qué la obstrucción venosa en la flegmasia cerúlea compromete el flujo arterial?` | Sujeto tardío (P8a). |
-| `La conjuntivitis bacteriana se trata con {{c1::antibióticos}} tópicos.` | Adivinable (P3). |
-| `¿Cuáles son los síndromes geriátricos?` | Lista abierta; unificar bajo un principio (P9). |
-| `La sensibilidad del CAM es {{c1::94%}}.` | Valor operativo (P9). |
-| `Ataque de pánico: {{c1::ansiedad}} intensa de inicio brusco.` | Adivinable y palabra funcional (P3). |
+| `¿Qué es la flegmasia cerúlea dolens?` | definición aislada que un principio explica (P1) |
+| `La sensibilidad del CAM es {{c1::…}}` | valor operativo (P9) |
+| `¿Cuáles son las causas de ojo rojo?` | lista abierta (P9) |
+| `<span class="num">{{c1::12 meses}}</span>` | marca fuera del hueco (§6) |
+| `<span class="fx">GABA</span>, <span class="mec">NMDA</span>, … (6 marcas)` | saturación (≤4) |
+| `Mnemotecnia: «TIAMINA» = …` inventada | mnemotecnia forzada (§6) |
+| `El widget de alcohol cita 12 meses…` | metatexto (prohibido) |
+| cualquier `[VERIFICAR EN FUENTE]` o «pendiente» | cero marcas: el compilador aborta |
 
 ---
 
-# AUDITORÍA FINAL (muéstrala antes de entregar)
+# 8 · Personalización de Anki (lo verificado)
+
+- El reviewer **no invierte colores** en modo noche: añade `nightMode` y `night_mode` a `<body class="card …">`. Por eso todo color sale de variables en `.card` redefinidas en `.card.nightMode, .card.night_mode`; un `style=` en línea quedaría ilegible de noche (y el lint lo rechaza).
+- Las clases de plataforma (`ipad`, `iphone`, `mobile`, `win`, `mac`) van en `<html>`, no en `.card`: el CSS usa `@media (max-width: 480px)` para el iPhone.
+- Cloze: Anki genera `<span class="cloze">` (hueco activo) y `.cloze-inactive` (los demás huecos, visibles). La marca semántica va dentro del hueco para que el estilo sobreviva; el hueco activo se subraya en índigo.
+- `<hr id=answer>` es el ancla a la que Anki desplaza al voltear: no la quites.
+- Imágenes en media: el reviewer limita `img` a `max-width: 100%`. Prueba el primer SVG de cada mazo en el iPad; si un dispositivo no lo muestra, exporta el diagrama a PNG con el mismo nombre base. Los archivos que usa la plantilla (no los campos) deben empezar por `_`; los de campos, no.
+- genanki: `Model(id, nombre, fields, templates, css, model_type=CLOZE)`, `Note(guid=guid_for(id))`, `Package.media_files`; tags sin espacios. **Cambiar campos o plantillas de un modelo ya importado impide actualizar** las notas: para cambios estructurales, modelo nuevo con ID nuevo (registrado en `mazos/README.md`). Retocar solo el CSS no cambia el esquema del modelo; si una reimportación no lo aplica, pégalo en Tipos de nota → Tarjetas → Estilo.
+- No se puede: fuentes remotas, JavaScript fiable entre plataformas, ni depender de clases de plataforma en `.card`.
+
+---
+
+# 9 · Auditoría final (muéstrala antes de entregar)
 
 | Métrica | Valor |
 |---|---|
-| Modo (autónomo/coautor/mixto) · Rango de IDs | |
-| Total / cálculo P11 · Deuda (N × ~5) | |
-| % Recuerdo (≤40) / % Aplicación · % Cloze (≤15) | |
-| % Bloom ≥Analizar · Tarjetas `Principio` · Viñeta/Relacional | |
-| Escalas: umbral/bandas/componentes/limitaciones · Pares de contraste | |
-| Alto rendimiento: USMLE (patrón) / MIR (patrón) / MIR verificados (año-número + URL) | |
-| `[VERIFICAR EN FUENTE]` · Subtema con más tarjetas | |
-| **Verificación (F3b):** «Verificados N de M; quedan K» (K = marcas que persisten en las tarjetas) · discrepancias sílabo–protocolo (ediciones) | |
-| Fuente del alcance (sección del sílabo o guía vigente) · semilla del widget usada (sí/no) | |
-| Vueltas del loop F3→F4 / defectos residuales | |
+| Modo · rango de IDs · ID de mazo · versión | |
+| Total / cálculo P11 · deuda (N × ~5) | |
+| % Recuerdo (≤40) / % Aplicación · % Cloze (≤15) · máx. subtema (≤8) | |
+| Principio · Viñeta/Relacional · % Bloom ≥Analizar · escalas por nivel · pares de contraste | |
+| Mnemotecnias (cuáles) · esquemas (tablas / SVG) | |
+| Alto rendimiento: USMLE / MIR patrón / MIR verificados (año-número + URL) | |
+| **Verificación:** «Verificados N de M; eliminados K: …» (de `meta.verificacion`) · marcas restantes: 0 | |
+| Discrepancias sílabo–protocolo (ediciones) · fuente del alcance · semilla del widget (sí/no) | |
+| Vueltas F3→F3c · defectos residuales · lint/compilación (`RESULTADO`) · capturas revisadas | |
 
-- [ ] ¿Cada tarjeta pasa P3, y ningún Recuerdo es derivable de un principio?
-- [ ] ¿Todo irreducible necesario para las de aplicación está cubierto?
-- [ ] ¿`Respuesta` ≤2 frases, `Razonamiento` ≤~4, anversos con el sujeto primero?
-- [ ] ¿Sin S, E, VPP, VPN ni LR; sin mnemotecnias no justificadas ni listas abiertas?
-- [ ] ¿Cloze ≤15%, Recuerdo ≤40%, total en 25–45 (o justificado/recortado), ningún subtema >8?
-- [ ] ¿Tags completos (Clase, Bloom, Nivel, Fuente), sin espacios ni tildes?
-- [ ] ¿Tags `MIR::` solo con pregunta verificada en el cuaderno oficial?
-- [ ] ¿Se ejecutó F3b sobre todos los `pendientes` y ningún dato quedó sin marca sin haberse confirmado? ¿Alguna referencia o PMID sin respaldo en una herramienta?
+- [ ] ¿Cada tarjeta pasa P3 y ningún Recuerdo es derivable de un principio?
+- [ ] ¿Sujeto primero, Respuesta ≤2 frases, Razonamiento ≤~4?
+- [ ] ¿Colores usados según su tipo de dato, ≤4 por campo, sin delatar la respuesta en el anverso?
+- [ ] ¿Mnemotecnias establecidas y expandidas; esquemas legibles en iPhone noche?
+- [ ] ¿Cero marcas, `pendientes` vacíos, todas las cifras con cita confirmada?
+- [ ] ¿`mazos/README.md` actualizado y commit de JSON + media + .apkg + .docx juntos?
 
-Si algo falla, corrige antes de compilar.
+**Entrega:** `mazos/<tema>/Quirurgica2_<TagRaíz>.apkg` + `Guia_<TagRaíz>.docx` como archivos, la auditoría y la línea de verificación. La guía ya incluye importación, configuración (FSRS, retención 0,90, nuevas/día, repasos 9999, sanguijuelas), código de colores, cómo responder y calificar, calendario respecto a la tutoría y al examen, mapa del mazo y referencias de aprendizaje verificadas.
 
----
-
-# INSTRUCCIONES DE IMPORTACIÓN Y USO (incluir al final)
-
-> **Importar**
-> 1. Guarda el `.apkg` en **Archivos** del iPad.
-> 2. Tócalo → **Compartir** → **AnkiMobile**.
-> 3. Sincroniza con AnkiWeb.
-> 4. Revisa el mazo dentro de 24 h tras la sesión ABP.
->
-> **Configurar (una vez)**
-> 5. Activa **FSRS** con parámetros por defecto desde el día 1. Nota: Palmerton sugiere esperar 2–4 semanas para que acumule datos; la decisión es tuya.
-> 6. **Desired retention 0,90.** Si la carga pesa, baja a 0,85 antes de tocar otra cosa.
-> 7. **Nuevas/día: 12**, repartiendo el lote semanal en ~4 días.
-> 8. **Límite de repasos/día: 9999.** Capar repasos oculta tarjetas vencidas y rompe el calendario de FSRS.
-> 9. **Optimiza parámetros** hacia los ~1 000 repasos.
->
-> **Calificar (FSRS)**
-> 10. **Good por defecto:** recordaste la idea central.
-> 11. **Again si fallaste de verdad;** ~10% es lo esperado a 0,90. Si supera 20%, revisa las tarjetas contra P2 y P8b.
-> 12. **Hard y Easy, solo como excepción** (Palmerton los desaconseja). Easy únicamente si fue inmediata y sin esfuerzo.
-> 13. **Alerta:** si repasar 100 tarjetas viejas toma >1 h, las tarjetas son demasiado largas o estás memorizando palabras → revisa contra P2/P8b.
->
-> **Estudiar**
-> 14. Antes de cada caso: Custom Study → tag `Quirurgica2::<TagRaíz>`.
-> 15. Antes de un examen: `tag:Principio`.
-> 16. Razonamiento: `tag:Nivel::Aplicacion`. Escalas: `tag:Escala::*`. Alto rendimiento: `tag:AltoRendimiento::*`.
->
-> **Leeches**
-> 17. Integra el concepto fallado en tu mapa, o elimina la tarjeta si el dato es irrelevante.
-> 18. Fusiona tarjetas dominadas en preguntas relacionales (heurístico de educadores, no evidencia).
->
-> **Si te atrasas**
-> 19. Nuevas/día en 0.
-> 20. Baja temporalmente repasos a 100–200 y súbelo por tramos hasta limpiar.
-> 21. Con backlog en cero, repasos otra vez a 9999 y reactiva nuevas.
-
----
-
-# FUNDAMENTOS
-
-- **Evidencia:** Sweller (esquemas), Pan & Rickard (transferencia), Brunmair & Richter (intercalado) y Dunlosky et al. (2013), que da alta utilidad a la práctica de recuperación y a la práctica distribuida y utilidad moderada a la elaboración. Son la base de P1, P4, P7 y de la elección de Anki.
-- **Práctica de educadores (heurísticas, no evidencia):** Alec Palmerton y Justin Sung (iCanStudy). Sustentan la restricción del cloze, el rechazo de listas y mnemotecnias, las tarjetas de orden superior, el mapa propio y el manejo de leeches.
-- La crítica de Sung al uso masivo de Anki apunta a la **implementación**, no a la técnica. Por eso la skill conserva el mazo pero lo subordina a la comprensión: mapa primero, tarjetas después.
-
-**Limitación honesta:** las flashcards construyen base declarativa y discriminación, pero su transferencia al razonamiento clínico integrado es limitada. P1, P12 y el ≥60% de aplicación mitigan, no eliminan. Complementa con casos completos.
+**Fundamentos.** Recuperación y práctica distribuida: utilidad alta (Dunlosky 2013); elaboración e intercalado: moderada; palabra clave mnemotécnica: baja en general, útil para listas arbitrarias. Palmerton y Sung (educadores) son heurística, no evidencia. Límite honesto: las tarjetas construyen base declarativa y discriminación; la transferencia al razonamiento clínico integrado es limitada y se complementa con casos completos.
