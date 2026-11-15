@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lumen · biblioteca de widgets</title>
+<meta name="description" content="Biblioteca de widgets de estudio médico por semestre, rotación y tema del sílabo.">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#04060c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2304060c'/%3E%3Cpath d='M16 3c1 8 5 12 13 13-8 1-12 5-13 13-1-8-5-12-13-13 8-1 12-5 13-13z' fill='%2335e1ff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="biblioteca/app.css">
+</head>
+<body>
+<a class="salto" href="#catalogo-inicio" data-salto>Saltar al catálogo</a>
+
+<div id="app">
+  <header class="hero" id="portada">
+    <canvas id="flujo" aria-hidden="true"></canvas>
+    <div class="hero-brillo" aria-hidden="true"></div>
+    <svg class="estrella e-a" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.8 7.2 4.8 11.2 12 12-7.2.8-11.2 4.8-12 12-.8-7.2-4.8-11.2-12-12 7.2-.8 11.2-4.8 12-12z"/></svg>
+    <svg class="estrella e-b" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.8 7.2 4.8 11.2 12 12-7.2.8-11.2 4.8-12 12-.8-7.2-4.8-11.2-12-12 7.2-.8 11.2-4.8 12-12z"/></svg>
+    <svg class="estrella e-c" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.8 7.2 4.8 11.2 12 12-7.2.8-11.2 4.8-12 12-.8-7.2-4.8-11.2-12-12 7.2-.8 11.2-4.8 12-12z"/></svg>
+    <div class="wrap hero-in">
+      <div class="cartel mono">
+        <span id="h-nivel"></span>
+        <span id="h-fecha"></span>
+      </div>
+      <h1 class="titulo">
+        <span class="eco eco-2" aria-hidden="true">Lumen</span>
+        <span class="eco eco-1" aria-hidden="true">Lumen</span>
+        <span class="titulo-main">Lumen</span>
+      </h1>
+      <div class="hero-pie">
+        <p class="hero-lead" id="h-lead"></p>
+        <ul class="hero-cifras mono" id="h-cifras" aria-label="Resumen del catálogo"></ul>
+      </div>
+    </div>
+  </header>
+
+  <div class="controles" id="catalogo-inicio">
+    <div class="bar">
+      <div class="wrap bar-in">
+        <div class="bar-sem" id="c-sem"></div>
+        <div class="tabs" id="c-rot" role="group" aria-label="Rotación"></div>
+        <div class="buscar">
+          <label class="sr" for="buscar">Buscar en el catálogo</label>
+          <svg class="buscar-ico" viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13 13l4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <input id="buscar" type="search" placeholder="Buscar tema, entidad o término" autocomplete="off" spellcheck="false" enterkeyhint="search">
+          <kbd class="atajo mono" aria-hidden="true">/</kbd>
+        </div>
+      </div>
+    </div>
+    <div class="filtros">
+      <div class="wrap filtros-in">
+        <div class="chips" id="c-tipos" role="group" aria-label="Tipo de widget"></div>
+        <p class="conteo mono" id="conteo" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+
+  <main id="catalogo" class="wrap catalogo" tabindex="-1">
+    <p class="aviso-falta" id="falta" hidden></p>
+  </main>
+
+  <footer class="pie">
+    <div class="wrap pie-in mono">
+      <span id="p-nombre">Lumen</span>
+      <span id="p-fecha"></span>
+    </div>
+  </footer>
+</div>
+
+<!-- Panel de tema -->
+<div id="panel" class="capa" hidden>
+  <div class="capa-fondo" data-cerrar-panel></div>
+  <section class="hoja" role="dialog" aria-modal="true" aria-labelledby="p-titulo" tabindex="-1">
+    <div class="hoja-barra">
+      <button type="button" class="btn btn-icono" data-cerrar-panel aria-label="Cerrar tema">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <span class="hoja-sup mono" id="p-sup"></span>
+    </div>
+    <div class="hoja-cuerpo" id="p-cuerpo"></div>
+  </section>
+</div>
+
+<!-- Visor de widget -->
+<div id="visor" class="visor" role="dialog" aria-modal="true" aria-labelledby="v-titulo" hidden>
+  <header class="v-barra">
+    <button type="button" class="btn v-volver" id="v-volver" aria-label="Volver">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 4l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="v-volver-t">Volver</span>
+    </button>
+    <div class="v-tit">
+      <span class="v-tema mono" id="v-tema"></span>
+      <h2 id="v-titulo"></h2>
+    </div>
+    <div class="v-acc">
+      <button type="button" class="btn btn-icono" id="v-ant" aria-label="Widget anterior del tema">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 4l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button type="button" class="btn btn-icono" id="v-sig" aria-label="Widget siguiente del tema">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M8 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <a class="btn btn-icono" id="v-ext" target="_blank" rel="noopener" href="#" aria-label="Abrir en pestaña nueva">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M8 4H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3M11 4h5v5M16 4l-7 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <button type="button" class="btn btn-icono" id="v-fs" aria-label="Pantalla completa">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 8V4h4M16 8V4h-4M4 12v4h4M16 12v4h-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="v-marco" id="v-marco">
+    <iframe id="v-iframe" title="Widget" allow="fullscreen"></iframe>
+    <div class="v-estado" id="v-estado" role="status"></div>
+  </div>
+</div>
+
+<script src="biblioteca/catalogo.js"></script>
+<script src="biblioteca/app.js"></script>
+</body>
+</html>
