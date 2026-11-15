@@ -1,0 +1,208 @@
+{
+  "_ayuda": [
+    "Fuente editable de Lumen. El orden de rotaciones y temas es el del sílabo; kit/biblioteca/generar.py lo vuelca en biblioteca/catalogo.js.",
+    "Semestre nuevo: añade un objeto a «semestres» con id, etiqueta, asignatura, institucion y rotaciones. Rotación nueva: añade un objeto a «rotaciones» con id, etiqueta, descripcion, silabo (archivo del sílabo, opcional) y temas. Tema nuevo: añade un objeto a «temas» en su posición.",
+    "Campos del tema: id (a-z, 0-9 y guiones, único), titulo, caso (texto o null), carpetas (carpetas de widgets/ que lo cubren), silabo {ancla: texto exacto del encabezado del sílabo, archivo: solo si difiere del de la rotación} o null, casos (archivos de fuentes/casos/), mazos (carpetas de mazos/), resumen (opcional; si falta se extrae del sílabo), estado (opcional: pendiente, parcial o completo; por defecto pendiente sin widgets y completo con widgets), nota (opcional).",
+    "Toda carpeta de widgets/ debe figurar en exactamente un tema; el generador falla si queda alguna sin asignar. Regenerar: python3 kit/biblioteca/generar.py"
+  ],
+  "nombre": "Lumen",
+  "semestres": [
+    {
+      "id": "s10",
+      "etiqueta": "10.º nivel",
+      "asignatura": "Salud Integral Hospitalaria 2 · Quirúrgica 2",
+      "institucion": "PUCE",
+      "rotaciones": [
+        {
+          "id": "r1",
+          "etiqueta": "1.ª rotación",
+          "descripcion": "Ocho casos ABP del sílabo de la primera rotación: apertura, monitoreo y cierre.",
+          "silabo": "fuentes/syllabus_quirurgica2.md",
+          "temas": [
+            {
+              "id": "ojo-rojo",
+              "titulo": "Ojo rojo",
+              "caso": null,
+              "carpetas": [],
+              "silabo": { "ancla": "CASO OJO ROJO" },
+              "casos": [],
+              "mazos": []
+            },
+            {
+              "id": "disbasia",
+              "titulo": "Disbasia",
+              "caso": null,
+              "carpetas": ["disbasia"],
+              "silabo": { "ancla": "CASO DISBASIA" },
+              "casos": [],
+              "mazos": []
+            },
+            {
+              "id": "dolor-abdominal-agudo",
+              "titulo": "Dolor abdominal agudo",
+              "caso": null,
+              "carpetas": ["dolor_abdominal"],
+              "silabo": { "ancla": "CASO DOLOR ABDOMINAL AGUDO" },
+              "casos": [],
+              "mazos": []
+            },
+            {
+              "id": "neoplasias-gi",
+              "titulo": "Dolor abdominal y pérdida de peso (neoplasias gastrointestinales)",
+              "caso": null,
+              "carpetas": ["neoplasias_gi"],
+              "silabo": { "ancla": "CASO DOLOR ABDOMINAL Y PÉRDIDA DE PESO SIN CAUSA APARENTE (NEOPLASIAS GASTROINTESTINALES)" },
+              "casos": [],
+              "mazos": []
+            },
+            {
+              "id": "hematuria",
+              "titulo": "Hematuria",
+              "caso": null,
+              "carpetas": [],
+              "silabo": { "ancla": "CASO HEMATURIA" },
+              "casos": [],
+              "mazos": []
+            },
+            {
+              "id": "patologia-urinaria-baja",
+              "titulo": "Patología urinaria baja",
+              "caso": null,
+              "carpetas": ["patologia_urinaria_baja"],
+              "silabo": { "ancla": "CASO PATOLOGÍA URINARIA BAJA" },
+              "casos": ["caso_carlos_patologia_urinaria_baja.md"],
+              "mazos": []
+            },
+            {
+              "id": "coma-tce",
+              "titulo": "Coma y traumatismo craneoencefálico",
+              "caso": null,
+              "carpetas": [],
+              "silabo": { "ancla": "CASO COMA / TRAUMATISMO CRANEOENCEFÁLICO" },
+              "casos": [],
+              "mazos": []
+            },
+            {
+              "id": "patologias-vasculares",
+              "titulo": "Patologías vasculares frecuentes",
+              "caso": null,
+              "carpetas": [],
+              "silabo": { "ancla": "CASO PATOLOGÍAS VASCULARES FRECUENTES" },
+              "casos": [],
+              "mazos": []
+            }
+          ]
+        },
+        {
+          "id": "r2",
+          "etiqueta": "2.ª rotación",
+          "descripcion": "Ocho casos ABP del sílabo de la segunda rotación (período 2026-2).",
+          "silabo": "fuentes/syllabus_quirurgica2_segunda_rotacion.md",
+          "temas": [
+            {
+              "id": "azoados",
+              "titulo": "Elevación aguda y crónica de los azoados",
+              "caso": "Caso 1",
+              "carpetas": [],
+              "silabo": { "ancla": "Caso 1 — Elevación aguda y crónica de los azoados" },
+              "casos": [],
+              "mazos": []
+            },
+            {
+              "id": "envejecimiento",
+              "titulo": "Envejecimiento",
+              "caso": "Caso 2",
+              "carpetas": [],
+              "silabo": { "ancla": "Caso 2 — Envejecimiento" },
+              "casos": [],
+              "mazos": []
+            },
+            {
+              "id": "sindromes-geriatricos",
+              "titulo": "Síndromes geriátricos",
+              "caso": "Caso 3",
+              "carpetas": [],
+              "silabo": { "ancla": "Caso 3 — Síndromes geriátricos" },
+              "casos": [],
+              "mazos": []
+            },
+            {
+              "id": "toxicodependencias",
+              "titulo": "Toxicodependencias",
+              "caso": "Caso 4",
+              "carpetas": ["consumo_alcohol"],
+              "silabo": { "ancla": "Caso 4 — Toxicodependencias" },
+              "casos": [],
+              "mazos": ["toxicodependencias"]
+            },
+            {
+              "id": "ansiedad-panico",
+              "titulo": "Trastorno de ansiedad generalizada y ataque de pánico",
+              "caso": "Caso 5",
+              "carpetas": ["ansiedad_panico"],
+              "silabo": { "ancla": "Caso 5 — Trastorno de ansiedad generalizada, ataque de pánico" },
+              "casos": ["caso_ansiedad_panico.md"],
+              "mazos": []
+            },
+            {
+              "id": "sca-demencia",
+              "titulo": "Síndrome confusional agudo y demencia",
+              "caso": "Caso 6",
+              "carpetas": ["sindrome_confusional", "trastornos_neurocognitivos"],
+              "silabo": { "ancla": "Caso 6 — Síndrome confusional agudo y demencia" },
+              "casos": ["caso_dona_rosa_sindrome_confusional.md", "caso_saquisili_trastornos_neurocognitivos.md"],
+              "mazos": []
+            },
+            {
+              "id": "trastornos-animo",
+              "titulo": "Trastornos del estado de ánimo",
+              "caso": "Caso 7",
+              "carpetas": ["trastornos_animo"],
+              "silabo": { "ancla": "Caso 7 — Trastornos del estado de ánimo" },
+              "casos": ["caso_crisis_angustia_trastornos_animo.md"],
+              "mazos": []
+            },
+            {
+              "id": "lesiones-dermicas",
+              "titulo": "Lesiones dérmicas",
+              "caso": "Caso 8",
+              "carpetas": ["dermatologia"],
+              "silabo": { "ancla": "Caso 8 — Lesiones dérmicas" },
+              "casos": [],
+              "mazos": [],
+              "estado": "parcial",
+              "nota": "Solo morfología de lesiones; faltan las entidades del caso."
+            }
+          ]
+        },
+        {
+          "id": "extras",
+          "etiqueta": "Extras",
+          "descripcion": "Temas fuera del sílabo",
+          "temas": [
+            {
+              "id": "cicatrizacion",
+              "titulo": "Cicatrización patológica",
+              "caso": null,
+              "carpetas": ["cicatrizacion"],
+              "resumen": "Cicatriz queloide e infiltración de triamcinolona. Tema que no figura en los sílabos, de estudio complementario en cirugía plástica y heridas.",
+              "silabo": null,
+              "casos": [],
+              "mazos": []
+            },
+            {
+              "id": "ginecologia",
+              "titulo": "Ginecología: ciclo ovárico y menopausia",
+              "caso": null,
+              "carpetas": ["ginecologia"],
+              "resumen": "Ciclo ovárico, cuerpo albo y terapia hormonal de la menopausia. Tema que no figura en los sílabos; el caso más cercano es Envejecimiento.",
+              "silabo": null,
+              "casos": [],
+              "mazos": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1121 @@
+window.CATALOGO = {
+ "generado": "2026-11-15",
+ "nombre": "Lumen",
+ "semestres": [
+  {
+   "id": "s10",
+   "etiqueta": "10.º nivel",
+   "asignatura": "Salud Integral Hospitalaria 2 · Quirúrgica 2",
+   "institucion": "PUCE",
+   "rotaciones": [
+    {
+     "id": "r1",
+     "etiqueta": "1.ª rotación",
+     "descripcion": "Ocho casos ABP del sílabo de la primera rotación: apertura, monitoreo y cierre.",
+     "temas": [
+      "ojo-rojo",
+      "disbasia",
+      "dolor-abdominal-agudo",
+      "neoplasias-gi",
+      "hematuria",
+      "patologia-urinaria-baja",
+      "coma-tce",
+      "patologias-vasculares"
+     ]
+    },
+    {
+     "id": "r2",
+     "etiqueta": "2.ª rotación",
+     "descripcion": "Ocho casos ABP del sílabo de la segunda rotación (período 2026-2).",
+     "temas": [
+      "azoados",
+      "envejecimiento",
+      "sindromes-geriatricos",
+      "toxicodependencias",
+      "ansiedad-panico",
+      "sca-demencia",
+      "trastornos-animo",
+      "lesiones-dermicas"
+     ]
+    },
+    {
+     "id": "extras",
+     "etiqueta": "Extras",
+     "descripcion": "Temas fuera del sílabo",
+     "temas": [
+      "cicatrizacion",
+      "ginecologia"
+     ]
+    }
+   ]
+  }
+ ],
+ "temas": [
+  {
+   "id": "ojo-rojo",
+   "semestre": "s10",
+   "rotacion": "r1",
+   "orden": 1,
+   "caso": null,
+   "titulo": "Ojo rojo",
+   "resumen": "Definición clínica de ojo rojo y diferenciación con otras alteraciones oculares relevantes como \"ojo vago\" o ambliopía. Clasificación semiológica del ojo rojo según el patrón de hiperemia: conjuntival, ciliar, hemorragia subconjuntival y formas mixtas.",
+   "estado": "pendiente",
+   "nota": null,
+   "silaboHtml": "<p><strong>Contenidos:</strong> Definición clínica de ojo rojo y diferenciación con otras alteraciones oculares relevantes como &quot;ojo vago&quot; o ambliopía. Clasificación semiológica del ojo rojo según el patrón de hiperemia: conjuntival, ciliar, hemorragia subconjuntival y formas mixtas. Evaluación clínica del ojo rojo doloroso y no doloroso, enfatizando su valor en el diagnóstico diferencial. Etiología, fisiopatología, clasificación, diagnóstico clínico y abordaje terapéutico de las principales causas de ojo rojo conjuntival: conjuntivitis (bacteriana, viral y alérgica), queratoconjuntivitis y blefaritis. Complicaciones frecuentes: orzuelo, chalazión y celulitis orbitaria. Etiología, fisiopatología, diagnóstico y manejo del ojo rojo ciliar, incluyendo uveítis anterior, coroidoretinitis y glaucoma agudo. Identificación de signos de alarma que requieren referencia urgente. Interpretación de pruebas diagnósticas oftalmológicas (lámpara de hendidura, tinción con fluoresceína, tonometría, evaluación de agudeza visual). Discusión sistemática de diagnósticos diferenciales del ojo rojo. Impacto psicoemocional y funcional de los trastornos oculares en la calidad de vida del paciente, con especial énfasis en las consecuencias visuales y psicológicas de la ambliopía.</p>\n<ul><li><strong>Horas:</strong> 6</li><li><strong>Resultado de aprendizaje de la asignatura:</strong> Evalúa y diferencia las principales causas de ojo rojo, identificando signos de alarma y estableciendo el manejo inicial y la referencia oportuna.</li><li><strong>Metodología — Contacto con el docente:</strong> Metodología de ABP en 3 sesiones (Apertura, Monitoreo, Cierre)</li><li><strong>Metodología — Aprendizaje Práctico-Experimental:</strong> No aplicable</li><li><strong>Metodología — Trabajo Autónomo (Actividades):</strong> Búsqueda, análisis y síntesis individual sobre prerrequisitos: anatomía ocular, fisiología de la visión, semiología oftalmológica básica y principios de farmacología oftálmica.</li><li><strong>Evaluación (Técnica o Instrumento):</strong> Ver esquema general de evaluación ABP arriba.</li></ul>",
+   "planHtml": null,
+   "casos": [],
+   "widgets": [],
+   "mazos": []
+  },
+  {
+   "id": "disbasia",
+   "semestre": "s10",
+   "rotacion": "r1",
+   "orden": 2,
+   "caso": null,
+   "titulo": "Disbasia",
+   "resumen": "Definición de disbasia y aproximación clínica al trastorno de la marcha en pediatría. Historia clínica dirigida en el niño con disbasia: elementos clave de anamnesis, antecedentes relevantes, evolución temporal del síntoma y caracterización del dolor.",
+   "estado": "completo",
+   "nota": null,
+   "silaboHtml": "<p><strong>Contenidos:</strong> Definición de disbasia y aproximación clínica al trastorno de la marcha en pediatría. Historia clínica dirigida en el niño con disbasia: elementos clave de anamnesis, antecedentes relevantes, evolución temporal del síntoma y caracterización del dolor. Evaluación clínica y semiológica de la marcha: tipos de marcha, alteraciones biomecánicas y análisis funcional. Clasificación etiológica de la disbasia en dolorosa y no dolorosa. Disbasia dolorosa: sinovitis transitoria de cadera, epifisiólisis de la cabeza femoral, osteomielitis, artritis séptica, enfermedad de Perthes, enfermedad de Osgood-Schlatter y neoplasias malignas óseas. Disbasia no dolorosa: displasia del desarrollo de la cadera, dismetría de miembros inferiores y patología neuromuscular. Estudio del síndrome de Guillain-Barré como diagnóstico diferencial neurológico relevante en alteraciones de la marcha. Alteraciones rotacionales y angulares: genu varo, genu valgo y anteversión femoral. Alteraciones del pie: pie plano, pie cavo, pie equino, pie varo y pie valgo. Interpretación de pruebas diagnósticas (radiografía, ultrasonido de cadera, resonancia magnética, estudios neurológicos) y establecimiento sistemático de diagnósticos diferenciales. Abordaje integral del niño con disbasia, identificación de signos de alarma y criterios de referencia al especialista.</p>\n<ul><li><strong>Horas:</strong> 6</li><li><strong>Resultado de aprendizaje de la asignatura:</strong> Realiza la evaluación integral de los trastornos de la marcha infantil diferenciando causas ortopédicas, neurológicas e infecciosas.</li><li><strong>Metodología — Contacto con el docente:</strong> Metodología de ABP en 3 sesiones (Apertura, Monitoreo, Cierre)</li><li><strong>Metodología — Aprendizaje Práctico-Experimental:</strong> No aplicable</li><li><strong>Metodología — Trabajo Autónomo (Actividades):</strong> Búsqueda y síntesis: desarrollo musculoesquelético infantil, exploración ortopédica pediátrica.</li><li><strong>Evaluación (Técnica o Instrumento):</strong> Ver esquema general de evaluación ABP arriba.</li></ul>",
+   "planHtml": "<p>Fuente: <code>fuentes/syllabus_quirurgica2.md</code>, caso «DISBASIA» (Quirúrgica 2, PUCE). Sin caso problema adjunto: widgets genéricos del sílabo. Tema pediátrico: bibliografía por defecto <strong>Nelson 22e</strong> + Harrison/Farreras si aplica + la guía vigente más específica de cada entidad.</p>\n<p>El caso nombra ~20 entidades. La skill v10 admite máximo 5 por widget: <strong>4 widgets multi</strong>, confirmados por el estudiante. El router lo fija el orquestador; cada ejecutor copia literal su línea como primera línea del manifiesto.</p>\n<p>Contenido transversal del sílabo que <strong>debe aparecer en el <code>vis</code> de cada widget</strong> (como «Común al grupo» o en el diferencial, según corresponda): historia clínica dirigida del niño con disbasia (anamnesis, antecedentes, evolución temporal, caracterización del dolor), evaluación semiológica de la marcha (tipos de marcha: antálgica, de Trendelenburg, en estepaje, equina, atáxica…), signos de alarma y criterios de referencia al especialista, interpretación de pruebas (radiografía, ecografía de cadera, RM, estudios neurológicos).</p>\n<h3>Widget A · Cojera dolorosa con fiebre o signos sistémicos — <code>dolorosa_sistemica/</code></h3>\n<ul><li>Presentación común: niño que cojea o rechaza apoyar, con dolor, con o sin fiebre.</li><li><code>Modo: multi · Entidades: e1=Sinovitis transitoria de cadera (principal), e2=Artritis séptica, e3=Osteomielitis, e4=Neoplasia ósea maligna · Amenaza: e2 · Override: sí</code></li><li>Eje: inflamatoria benigna autolimitada → infección articular → infección ósea → tumor (benigno → grave, con la amenaza en e2 por la destrucción articular en horas).</li><li>Subtipos: osteomielitis aguda hematógena, subaguda y crónica (e3); osteosarcoma y sarcoma de Ewing (e4; la leucemia como «No confundir con…» fuera del grupo).</li><li>Criterios de Kocher (y modificaciones) como simulador de diferencial sinovitis vs artritis séptica: escala → banda → conducta, sin probabilidades (§7.10).</li><li>Slug: <code>Cojera_dolorosa_sistemica_widget_v10.html</code> · título <code>Cojera dolorosa con fiebre</code>.</li></ul>\n<h3>Widget B · Cojera dolorosa mecánica según la edad — <code>dolorosa_mecanica/</code></h3>\n<ul><li>Presentación común: dolor de cadera o rodilla de curso subagudo con cojera, sin fiebre, cuya causa depende de la edad (el dolor de cadera puede referirse a la rodilla).</li><li><code>Modo: multi · Entidades: e1=Enfermedad de Legg-Calvé-Perthes (principal), e2=Epifisiólisis de la cabeza femoral, e3=Enfermedad de Osgood-Schlatter · Amenaza: e2 · Override: sí</code></li><li>Eje: por edad (Perthes 4–8 años → epifisiólisis en la adolescencia temprana y obesidad → Osgood-Schlatter en adolescente deportista) y de cadera a rodilla.</li><li>Subtipos: epifisiólisis estable vs inestable (Loder) (e2); estadios/clasificación de Perthes (Waldenström, Herring) (e1).</li><li>Slug: <code>Cojera_dolorosa_mecanica_widget_v10.html</code> · título <code>Cojera dolorosa mecánica</code>.</li></ul>\n<h3>Widget C · Marcha alterada sin dolor — <code>sin_dolor/</code></h3>\n<ul><li>Presentación común: alteración de la marcha sin dolor articular (asimetría, marcha de pato, caídas, debilidad).</li><li><code>Modo: multi · Entidades: e1=Displasia del desarrollo de la cadera (principal), e2=Dismetría de miembros inferiores, e3=Enfermedad neuromuscular, e4=Síndrome de Guillain-Barré · Amenaza: e4 · Override: sí</code></li><li>Eje: estructural de cadera → estructural de longitud → neuromuscular crónica → neurológica aguda (el sílabo trae Guillain-Barré como diferencial neurológico relevante).</li><li>Subtipos: Ortolani/Barlow y Graf (e1); dismetría real vs aparente (e2); distrofia muscular de Duchenne como forma prototípica, con parálisis cerebral y atrofia muscular espinal como subtipos/vecinas (e3; «Precisión sobre el sílabo»: el sílabo dice «patología neuromuscular» genérica); variantes de Guillain-Barré (e4).</li><li>Slug: <code>Marcha_sin_dolor_widget_v10.html</code> · título <code>Marcha alterada sin dolor</code>.</li></ul>\n<h3>Widget D · Alteraciones de la forma de piernas y pies — <code>forma_piernas_pies/</code></h3>\n<ul><li>Presentación común: los padres consultan por la forma de las piernas o los pies, o por cómo camina el niño (rodillas juntas o separadas, «camina con los pies hacia dentro», pie plano).</li><li><code>Modo: multi · Entidades: e1=Genu varo y genu valgo (principal), e2=Anteversión femoral, e3=Pie plano, e4=Pie cavo, e5=Pie equinovaro · Amenaza: e5 · Override: sí</code></li><li>Eje: de proximal a distal (rodilla → fémur → pie) y de variante fisiológica a deformidad estructural.</li><li>Subtipos: fisiológico vs patológico (Blount, raquitismo) en e1; perfil rotacional (anteversión femoral, torsión tibial, metatarso aducto) en e2; pie plano flexible vs rígido (coalición tarsal) en e3; pie cavo neurológico vs idiopático en e4; pie equinovaro congénito (pie zambo) en e5, con <strong>pie varo y pie valgo</strong> (talo valgo, astrágalo vertical) tratados como subtipos o vecinas, declarado en «Precisión sobre el sílabo».</li><li>Amenaza e5: el pie zambo no tratado en la ventana del método de Ponseti deja secuela; el pie cavo exige descartar causa neurológica (alarma).</li><li>Slug: <code>Forma_piernas_pies_widget_v10.html</code> · título <code>Forma de piernas y pies</code>.</li></ul>\n<h3>Reglas de diseño para ejecutores (kit «Vademécum»)</h3>\n<ol><li>Solo clases del contrato v10 (§11). Nada de <code>style=</code>, <code>&lt;style&gt;</code>, clases inventadas ni recursos remotos.</li><li>Toda tabla con <code>&lt;thead&gt;</code> (fila de cabecera en <code>&lt;th&gt;</code>) y <code>&lt;tbody&gt;</code>, dentro de <code>div.tw</code>.</li><li>Nada de recuadros anidados (<code>.card</code> dentro de <code>.card</code>/<code>.hb</code>/<code>.fey</code>; <code>.hb</code> dentro de <code>.hb</code>).</li><li>Títulos en tipo oración; <code>hb-t</code> no literales ≤8 palabras.</li><li>Párrafos de ≤90 palabras (salvo <code>p.res</code> y Feynman); enumeraciones de más de 3 elementos → lista o tabla.</li><li>Como máximo un <code>&lt;b&gt;</code> por párrafo; sin negrita en celdas de cuerpo salvo la primera columna.</li><li>Voz activa, español de Ecuador, sin exclamaciones ni muletillas.</li><li>Sin emojis ni pictogramas Unicode (solo ↪ ↓ ← → y símbolos de unidades).</li><li>Coma decimal y espacio fino de miles; cifras con unidad y <code>[n]</code>.</li><li>Respeta los conteos de palabras de la skill; no alargues para llenar.</li><li>En el núcleo (Anki), cada ítem que venga de un paso <code>No pidas</code>/<code>Evita</code> conserva esa etiqueta al inicio.</li><li>Dosis pediátricas por peso siempre con <code>Math.min</code> al tope adulto y el tope visible (§7.10).</li></ol>\n<h3>Pruebas finales del orquestador</h3>\n<p><code>validar.py</code> + <code>auditar_diseno.py</code> (router, kit intacto, reglas) + <code>probar_navegador.js</code> (herramientas v10 retiradas; widget congelado) + revisión con <code>.claude/skills/impeccable</code> adaptada + revisión clínica del orquestador.</p>",
+   "casos": [],
+   "widgets": [
+    "disbasia-dolorosa-mecanica",
+    "disbasia-dolorosa-sistemica",
+    "disbasia-forma-piernas-pies",
+    "disbasia-sin-dolor"
+   ],
+   "mazos": []
+  },
+  {
+   "id": "dolor-abdominal-agudo",
+   "semestre": "s10",
+   "rotacion": "r1",
+   "orden": 3,
+   "caso": null,
+   "titulo": "Dolor abdominal agudo",
+   "resumen": "Definición y criterios clínicos de abdomen agudo. Diferenciación entre abdomen agudo clínico y quirúrgico.",
+   "estado": "completo",
+   "nota": null,
+   "silaboHtml": "<p><strong>Contenidos:</strong> Definición y criterios clínicos de abdomen agudo. Diferenciación entre abdomen agudo clínico y quirúrgico. Etiologías médicas: pancreatitis aguda, porfiria, saturnismo y alteraciones metabólicas como hipocalemia. Patología biliar aguda: colelitiasis, coledocolitiasis y colangitis. Etiologías quirúrgicas: perforación de víscera hueca (gástrica o intestinal), apendicitis aguda, obstrucción intestinal alta y baja, isquemia mesentérica y aneurisma de aorta abdominal. Fisiopatología de las principales causas de abdomen agudo. Evaluación clínica del dolor abdominal: características semiológicas, signos peritoneales y criterios de gravedad. Interpretación de pruebas diagnósticas (laboratorio clínico, ecografía abdominal, tomografía computarizada y marcadores bioquímicos). Aplicación de escalas pronósticas como criterios de Ranson modificados y comparación con otras escalas de valoración clínica. Discusión sistemática de diagnósticos diferenciales del dolor abdominal agudo. Identificación de signos de alarma y criterios de referencia quirúrgica urgente.</p>\n<ul><li><strong>Horas:</strong> 6</li><li><strong>Resultado de aprendizaje de la asignatura:</strong> Evalúa pacientes con abdomen agudo diferenciando causas médicas y quirúrgicas.</li><li><strong>Metodología — Contacto con el docente:</strong> Metodología de ABP en 3 sesiones (Apertura, Monitoreo, Cierre)</li><li><strong>Metodología — Aprendizaje Práctico-Experimental:</strong> No aplicable</li><li><strong>Metodología — Trabajo Autónomo (Actividades):</strong> Búsqueda y síntesis: anatomía abdominal, fisiopatología del dolor abdominal, diagnóstico por imágenes.</li><li><strong>Evaluación (Técnica o Instrumento):</strong> Ver esquema general de evaluación ABP arriba.</li></ul>",
+   "planHtml": "<p>Fuente: <code>fuentes/syllabus_quirurgica2.md</code> · caso «Dolor abdominal agudo» (Quirúrgica 2, PUCE, 10.º nivel).</p>\n<p>El caso nombra ~12 entidades. La skill v10 admite máximo 5 por widget, así que se parte en <strong>3 widgets multi</strong>. El router (§2) lo fija el orquestador para que los tres sean coherentes entre sí; cada ejecutor lo copia literal en su manifiesto.</p>\n<h3>Widget A · Abdomen agudo quirúrgico — <code>quirurgico/</code></h3>\n<ul><li>Presentación común: dolor abdominal agudo con sospecha de causa quirúrgica (peritonismo, obstrucción o dolor desproporcionado).</li><li><code>Modo: multi · Entidades: e1=Apendicitis aguda (principal), e2=Obstrucción intestinal, e3=Perforación de víscera hueca, e4=Isquemia mesentérica aguda, e5=Aneurisma de aorta abdominal roto · Amenaza: e5 · Override: sí</code></li><li>Eje declarado: de inflamatoria localizada → mecánica → perforativa → vascular (benigna → grave).</li><li>Subtipos: obstrucción alta/baja y por bridas, hernia o tumor (en e2); perforación gástrica/duodenal e intestinal (en e3); isquemia embólica, trombótica, venosa y no oclusiva (en e4).</li><li><code>vis</code> además: definición de abdomen agudo y diferencia clínico vs quirúrgico (común al grupo), signos peritoneales y criterios de gravedad, remisión a los widgets B y C.</li><li>Slug de entrega: <code>Abdomen_agudo_quirurgico_widget_v10.html</code></li></ul>\n<h3>Widget B · Dolor biliopancreático — <code>biliopancreatico/</code></h3>\n<ul><li>Presentación común: dolor en hipocondrio derecho o epigastrio de origen biliar o pancreático.</li><li><code>Modo: multi · Entidades: e1=Colelitiasis y colecistitis aguda (principal), e2=Coledocolitiasis, e3=Colangitis aguda, e4=Pancreatitis aguda · Amenaza: e3 · Override: sí</code></li><li>e1 cubre colelitiasis asintomática → cólico biliar → colecistitis aguda como espectro de un mismo proceso (subtipos/estadios en su tabla).</li><li>Eje declarado: proximal → distal en la vía biliopancreática y de menor a mayor gravedad sistémica.</li><li>e4: incluir criterios de Ranson modificados (sílabo) y compararlos con otras escalas (BISAP, Atlanta revisada, APACHE II) en la tabla de pruebas o pronóstico.</li><li>Slug de entrega: <code>Dolor_biliopancreatico_widget_v10.html</code></li></ul>\n<h3>Widget C · Abdomen agudo médico — <code>medico/</code></h3>\n<ul><li>Presentación común: dolor abdominal intenso sin causa quirúrgica demostrable (abdomen «blando» o desproporcionado a la exploración), con riesgo de laparotomía innecesaria.</li><li><code>Modo: multi · Entidades: e1=Hipopotasemia con íleo paralítico (principal), e2=Saturnismo, e3=Porfiria aguda intermitente · Amenaza: e3 · Override: sí</code></li><li>El sílabo dice «hipocalemia»: el término correcto en español es hipopotasemia (hipocalemia se acepta como sinónimo). Si se considera impreciso, <code>hb am</code> «Precisión sobre el sílabo».</li><li>El sílabo lista la pancreatitis como etiología médica: se desarrolla en el widget B; aquí solo se remite en <code>vis</code>.</li><li>Eje declarado: metabólica frecuente → tóxica → genética rara con riesgo neurológico.</li><li>Slug de entrega: <code>Abdomen_agudo_medico_widget_v10.html</code></li></ul>\n<h3>Reglas comunes a los tres ejecutores</h3>\n<ul><li>Contexto: Ecuador (MSP, GPC, INEC; Quito ~2 850 m), solo con datos sostenibles.</li><li>Bibliografía por defecto: Harrison 22e, Farreras-Rozman (última edición verificable; el sílabo cita «22a. ed. 2024»: verificar y, si es error, registrarlo como discrepancia propuesta, no como <code>hb vi</code> en <code>pan</code>/<code>sin</code>), y la guía internacional vigente más específica de cada entidad.</li><li>Kit v10 (retirado; widgets congelados) (<code>kit_head.html</code>, <code>kit_script.html</code>, <code>validar.py</code>); partes en <code>&lt;widget&gt;/</code>. No leer ni editar el kit.</li><li>Entrega: partes y <code>manifiesto.json</code> en <code>widgets/dolor_abdominal/&lt;slug&gt;/</code>; HTML final en <code>widgets/dolor_abdominal/</code>.</li></ul>",
+   "casos": [],
+   "widgets": [
+    "dolor-abdominal-biliopancreatico",
+    "dolor-abdominal-medico",
+    "dolor-abdominal-quirurgico"
+   ],
+   "mazos": []
+  },
+  {
+   "id": "neoplasias-gi",
+   "semestre": "s10",
+   "rotacion": "r1",
+   "orden": 4,
+   "caso": null,
+   "titulo": "Dolor abdominal y pérdida de peso (neoplasias gastrointestinales)",
+   "resumen": "Epidemiología de las neoplasias digestivas y factores de riesgo asociados. Etiología y factores predisponentes de lesiones premalignas.",
+   "estado": "completo",
+   "nota": null,
+   "silaboHtml": "<p><strong>Contenidos:</strong> Epidemiología de las neoplasias digestivas y factores de riesgo asociados. Etiología y factores predisponentes de lesiones premalignas. Fisiopatología, presentación clínica y estadiaje de los cánceres del tracto digestivo: cáncer de boca, esófago, estómago, duodeno, colon, hígado, páncreas y vesícula y vías biliares. Manifestaciones clínicas tempranas y tardías. Estrategias de screening y de búsqueda activa para detección precoz de neoplasias digestivas. Interpretación de pruebas diagnósticas utilizadas en el abordaje del cáncer digestivo y discusión de diagnósticos diferenciales en pacientes con dolor abdominal y pérdida de peso. Algoritmos clínicos para el estudio cuando las pruebas de cribado resultan positivas. Importancia del diagnóstico temprano y de la referencia oportuna a servicios especializados.</p>\n<ul><li><strong>Horas:</strong> 6</li><li><strong>Resultado de aprendizaje de la asignatura:</strong> Analiza cánceres digestivos y estrategias de diagnóstico temprano.</li><li><strong>Metodología — Contacto con el docente:</strong> Metodología de ABP en 3 sesiones (Apertura, Monitoreo, Cierre)</li><li><strong>Metodología — Aprendizaje Práctico-Experimental:</strong> No aplicable</li><li><strong>Metodología — Trabajo Autónomo (Actividades):</strong> Búsqueda y síntesis: carcinogénesis digestiva, factores de riesgo y programas de tamizaje.</li><li><strong>Evaluación (Técnica o Instrumento):</strong> Ver esquema general de evaluación ABP arriba.</li></ul>",
+   "planHtml": "<p>Fuente: <code>fuentes/syllabus_quirurgica2.md</code> · caso «Dolor abdominal y pérdida de peso sin causa aparente (neoplasias gastrointestinales)». Objetivo: estudiar para el Examen Integral.</p>\n<p>El caso nombra 8 cánceres (boca, esófago, estómago, duodeno, colon, hígado, páncreas, vesícula y vías biliares). La skill v10 admite máximo 5 por widget, así que va en <strong>3 widgets</strong>. El router (§2) lo fija el orquestador; cada ejecutor copia literal su línea como primera línea del manifiesto.</p>\n<h3>Widget A · Cáncer del tubo digestivo alto — <code>alto/</code> (multi)</h3>\n<ul><li>Presentación común: síntomas digestivos altos (disfagia, odinofagia, dispepsia) con pérdida de peso o signos de alarma (anemia, sangrado, vómito persistente, masa).</li><li><code>Modo: multi · Entidades: e1=Cáncer gástrico (principal), e2=Cáncer de cavidad oral, e3=Cáncer de esófago, e4=Cáncer de duodeno · Amenaza: e1 · Override: sí</code></li><li>Eje declarado: proximal → distal (boca → esófago → duodeno), con el gástrico como principal por su frecuencia en Ecuador.</li><li>Subtipos: esófago escamoso vs adenocarcinoma (en e3); gástrico intestinal vs difuso (Lauren) y precoz vs avanzado (en e1); lesiones premalignas en cada una (leucoplasia/eritroplasia, Barrett, gastritis atrófica/metaplasia intestinal y <em>H. pylori</em>, adenoma duodenal y PAF).</li><li>Contenido explícito del sílabo: epidemiología y factores de riesgo, lesiones premalignas, estadiaje (TNM por entidad), manifestaciones tempranas y tardías, tamizaje y búsqueda activa, pruebas diagnósticas, algoritmo ante cribado positivo, referencia oportuna.</li><li>Slug: <code>Cancer_digestivo_alto_widget_v10.html</code></li></ul>\n<h3>Widget B · Cáncer hepatobiliopancreático — <code>hepatobiliopancreatico/</code> (multi)</h3>\n<ul><li>Presentación común: ictericia o dolor epigástrico/hipocondrio derecho con pérdida de peso.</li><li><code>Modo: multi · Entidades: e1=Adenocarcinoma de páncreas (principal), e2=Carcinoma hepatocelular, e3=Cáncer de vesícula biliar, e4=Colangiocarcinoma · Amenaza: e1 · Override: sí</code></li><li>Eje declarado: parénquima → vía biliar proximal → distal (hígado → vesícula → conductos), con el páncreas como principal.</li><li>Subtipos: colangiocarcinoma intrahepático, perihiliar y distal (en e4); HCC sobre cirrosis vs sin cirrosis (en e2); lesiones premalignas (IPMN y PanIN, cirrosis y hepatitis B/C, vesícula en porcelana y pólipos &gt;10 mm, colangitis esclerosante primaria).</li><li>Incluir vigilancia de HCC en cirróticos (ecografía ± AFP) y signo de Courvoisier-Terrier; CA 19-9 y AFP en su tabla de pruebas con sus límites.</li><li>Slug: <code>Cancer_hepatobiliopancreatico_widget_v10.html</code></li></ul>\n<h3>Widget C · Cáncer colorrectal — <code>colorrectal/</code> (mono)</h3>\n<ul><li><code>Modo: mono · Entidades: e1=Cáncer colorrectal · Amenaza: — · Override: sí</code></li><li>Pestaña adicional <code>tam</code> («Tamizaje y lesiones premalignas»), parte <code>16x_tam.html</code>, después de <code>seg</code> y con su etapa en <code>pan</code>. Cubre secuencia adenoma-carcinoma y vía serrada, pólipos (tipos y riesgo), síndromes hereditarios (Lynch, PAF), estrategias de tamizaje (FIT, colonoscopia, edad de inicio, intervalos) y el algoritmo ante cribado positivo, que el sílabo pide explícitamente.</li><li>Fuentes por defecto: USPSTF 2021 (está en la bibliografía digital del sílabo), US Multi-Society Task Force, ESMO/NCCN para estadiaje y tratamiento.</li><li>Slug: <code>Cancer_colorrectal_widget_v10.html</code></li></ul>\n<h3>Reglas de contenido comunes (widget-ensenanza v10)</h3>\n<ul><li>Contexto Ecuador (MSP, GPC, INEC, SOLCA si hay datos sostenibles; Quito ~2 850 m), solo con datos leídos.</li><li>Bibliografía por defecto: Harrison 22e, Farreras-Rozman (edición verificable; el sílabo cita «22a. ed. 2024», no verificada) y la guía vigente más específica.</li><li>Kit v10 (retirado; widgets congelados); partes en <code>&lt;widget&gt;/</code>. <strong>No leas ni edites</strong> <code>kit_head.html</code>, <code>kit_script.html</code> ni <code>validar.py</code>.</li></ul>\n<h3>Reglas de diseño para ejecutores (kit «Vademécum»)</h3>\n<p>El orquestador rediseñó el CSS del kit con impeccable y taste-skill (dirección «Vademécum»: monografía impresa con índice de canto). Las clases son las mismas de la v10; lo visual ya está resuelto. Tu parte es que el contenido aproveche ese sistema. El orquestador comprobará cada regla con un script.</p>\n<ol><li><strong>Solo clases del contrato v10 (§11).</strong> Nada de <code>style=</code>, <code>&lt;style&gt;</code>, clases inventadas ni recursos remotos.</li><li><strong>Toda tabla lleva <code>&lt;thead&gt;</code></strong> con la fila de cabecera en <code>&lt;th&gt;</code>; el cuerpo en <code>&lt;tbody&gt;</code>. Va siempre dentro de <code>div.tw</code>.</li><li><strong>Nada de recuadros anidados.</strong> Ni <code>.card</code> dentro de <code>.card</code>/<code>.hb</code>/<code>.fey</code>, ni <code>.hb</code> dentro de <code>.hb</code>. Una idea por recuadro.</li><li><strong>Títulos en tipo oración</strong>, nunca en MAYÚSCULAS ni Título De Cada Palabra. Los <code>hb-t</code> que no son literales de la skill: ≤8 palabras.</li><li><strong>Párrafos de ≤90 palabras.</strong> Si un párrafo enumera más de 3 elementos, conviértelo en lista o tabla.</li><li><strong>Negrita con propósito:</strong> como máximo un <code>&lt;b&gt;</code> por párrafo (el término que se define o la regla). En tablas, sin negrita en celdas de cuerpo salvo la primera columna.</li><li><strong>Redacción:</strong> voz activa, español de Ecuador, sin signos de exclamación, sin muletillas («cabe destacar», «es importante mencionar», «en el mundo de», «sin lugar a dudas», «crucial», «fundamental» como relleno).</li><li><strong>Sin emojis ni pictogramas Unicode.</strong> Solo las flechas que la skill exige (↪ ↓ ← →) y los símbolos de unidades.</li><li><strong>Cifras con unidad y fuente</strong> (<code>[n]</code>); usa la coma decimal (3,5 mEq/L) y el espacio fino de miles cuando aplique (10 000).</li><li><strong>Etapas del Panorama y Feynman</strong> respetan sus conteos de palabras: el kit los compone como entradas de índice y recuadros de lectura; no los alargues para «llenar».</li></ol>",
+   "casos": [],
+   "widgets": [
+    "neoplasias-gi-alto",
+    "neoplasias-gi-colorrectal",
+    "neoplasias-gi-hepatobiliopancreatico"
+   ],
+   "mazos": []
+  },
+  {
+   "id": "hematuria",
+   "semestre": "s10",
+   "rotacion": "r1",
+   "orden": 5,
+   "caso": null,
+   "titulo": "Hematuria",
+   "resumen": "Definición de hematuria y criterios diagnósticos. Clasificación de la hematuria en microscópica y macroscópica, y según su origen en hematuria renal, ureteral, vesical o uretral.",
+   "estado": "pendiente",
+   "nota": null,
+   "silaboHtml": "<p><strong>Contenidos:</strong> Definición de hematuria y criterios diagnósticos. Clasificación de la hematuria en microscópica y macroscópica, y según su origen en hematuria renal, ureteral, vesical o uretral. Etiología y características clínicas de cada tipo de hematuria. Fisiopatología de las principales causas: glomerulonefritis que cursan con hematuria, litiasis urinaria, tuberculosis urinaria, traumatismos uretrales y cáncer del tracto urinario. Factores pronósticos asociados a la hematuria persistente. Cuadro clínico y evaluación semiológica del paciente con hematuria. Interpretación de pruebas diagnósticas (examen general de orina, sedimento urinario, citología urinaria, ecografía renal y vesical, tomografía y cistoscopía según indicación). Establecimiento sistemático de diagnósticos diferenciales de hematuria según localización anatómica. Estrategias de prevención, tratamiento y criterios de referencia a nefrología o urología.</p>\n<ul><li><strong>Horas:</strong> 6</li><li><strong>Resultado de aprendizaje de la asignatura:</strong> Diferencia hematuria renal y de vías urinarias y establece manejo inicial.</li><li><strong>Metodología — Contacto con el docente:</strong> Metodología de ABP en 3 sesiones (Apertura, Monitoreo, Cierre)</li><li><strong>Metodología — Aprendizaje Práctico-Experimental:</strong> No aplicable</li><li><strong>Metodología — Trabajo Autónomo (Actividades):</strong> Búsqueda y síntesis: anatomía renal, fisiología de filtración glomerular.</li><li><strong>Evaluación (Técnica o Instrumento):</strong> Ver esquema general de evaluación ABP arriba.</li></ul>",
+   "planHtml": null,
+   "casos": [],
+   "widgets": [],
+   "mazos": []
+  },
+  {
+   "id": "patologia-urinaria-baja",
+   "semestre": "s10",
+   "rotacion": "r1",
+   "orden": 6,
+   "caso": null,
+   "titulo": "Patología urinaria baja",
+   "resumen": "Definición y etiopatogenia de las patologías urinarias bajas. Clasificación y fisiopatología de las principales entidades nosológicas: prostatitis, hiperplasia prostática benigna, cáncer de próstata, cistitis y uretritis.",
+   "estado": "completo",
+   "nota": null,
+   "silaboHtml": "<p><strong>Contenidos:</strong> Definición y etiopatogenia de las patologías urinarias bajas. Clasificación y fisiopatología de las principales entidades nosológicas: prostatitis, hiperplasia prostática benigna, cáncer de próstata, cistitis y uretritis. Manifestaciones clínicas y evolución natural de cada patología. Interpretación de pruebas diagnósticas (uroanálisis, PSA, estudios de imagen y urodinamia). Discusión de diagnósticos diferenciales, incluyendo tuberculosis renal y vesical y trauma uretral, que pueden simular patología urinaria baja. Enfoque clínico para el diagnóstico temprano y criterios de referencia especializada.</p>\n<ul><li><strong>Horas:</strong> 6</li><li><strong>Resultado de aprendizaje de la asignatura:</strong> Evalúa y maneja inicialmente patologías urinarias bajas frecuentes del adulto.</li><li><strong>Metodología — Contacto con el docente:</strong> Metodología de ABP en 3 sesiones (Apertura, Monitoreo, Cierre)</li><li><strong>Metodología — Aprendizaje Práctico-Experimental:</strong> No aplicable</li><li><strong>Metodología — Trabajo Autónomo (Actividades):</strong> Búsqueda y síntesis: anatomía prostática, fisiología miccional, farmacología urológica.</li><li><strong>Evaluación (Técnica o Instrumento):</strong> Ver esquema general de evaluación ABP arriba.</li></ul>",
+   "planHtml": "<p>Fuentes (prioridad en este orden):</p>\n<ol><li><strong>Caso de Carlos</strong> (adjunto del estudiante): <code>fuentes/casos/caso_carlos_patologia_urinaria_baja.md</code> (transcripción fiel de <code>caso_carlos_p1.jpg</code> y <code>caso_carlos_p2.jpg</code>).</li><li><strong>Sílabo</strong>, caso «PATOLOGÍA URINARIA BAJA»: <code>fuentes/syllabus_quirurgica2.md</code>, con su bibliografía complementaria (DynaMed 2024 de HPB, prostatitis aguda/crónica, cáncer de próstata; Epstein 2016 ISUP/Gleason; Bradley 2017 dieta y STUI; Harrison «síndrome de dolor vesical»).</li><li>Guía internacional vigente más específica (p. ej. EAU 2024–2025 STUI masculinos no neurogénicos, AUA 2023 HPB, EAU/AUA cáncer de próstata, EAU infecciones urológicas, CDC 2021 ITS para uretritis).</li></ol>\n<p>Decisiones confirmadas por el estudiante: amenaza = cáncer de próstata; el caso es el <strong>ancla</strong> (fuente prioritaria) de los dos widgets, que siguen siendo de estudio general; diseño <strong>Vademécum</strong> en ambos.</p>\n<h3>Pistas del caso que los widgets deben usar (sin resolver el caso por el estudiante)</h3>\n<div class=\"tabla\"><table><thead><tr><th>Pista</th><th>Por qué importa</th><th>Dónde usarla</th></tr></thead><tbody><tr><td>Varón de 64 años, STUI desde los 58: polaquiuria 10/día, nicturia 5/noche, vaciado incompleto, goteo posmiccional, «moja los zapatos»</td><td>Patrón de llenado + vaciado + posmiccional de crecimiento prostático</td><td><code>vis</code> (presentación común), e1</td></tr><tr><td>Tacto rectal: próstata aumentada, <strong>blanda, contornos regulares</strong></td><td>Separa HPB de cáncer (duro, nodular) y de prostatitis aguda (dolorosa, caliente)</td><td><code>vis</code> («Signo que la delata», «Negativo pertinente»), e1, e3</td></tr><tr><td>Hermano con cáncer de próstata</td><td>Antecedente familiar de primer grado: cambia la decisión compartida sobre PSA</td><td>e3 (amenaza) y simulador</td></tr><tr><td>Niega disuria, fiebre y mal olor</td><td>Negativos pertinentes frente a cistitis, prostatitis aguda y uretritis</td><td><code>vis</code>, e2, e4, e5</td></tr><tr><td><strong>Clortalidona</strong> 25 mg QD</td><td>Diurético: poliuria; si se toma tarde, nicturia; la nicturia puede ser poliuria nocturna y no solo próstata</td><td>e1 (Diagnóstico: diario miccional; Tratamiento: horario del diurético)</td></tr><tr><td><strong>Sertal compuesto</strong> ocasional (propinox, antiespasmódico antimuscarínico, + clonixinato de lisina)</td><td>Los antimuscarínicos pueden precipitar retención urinaria en el crecimiento prostático</td><td>e1 (<code>Evita</code>), hb ro de <code>vis</code> si corresponde</td></tr><tr><td>Dolor a la palpación del <strong>escroto izquierdo</strong></td><td>Hallazgo que no explica la HPB: epididimitis u orquiepididimitis (prostatitis, uretritis), varicocele, hernia</td><td>e2/e5 («Qué verás» o seguimiento) y <code>vis</code> como hallazgo a explicar</td></tr><tr><td><strong>StO₂ 89 %</strong> en Quito (~2 850 m) y tabaquismo ≈29 paquetes-año (1 cajetilla/día de los 15 a los 44)</td><td>Por debajo de lo esperado aun en altura: repetir y estudiar; el tabaco es además factor de riesgo de cáncer vesical (hematuria)</td><td>Nota de altitud solo si cambia una conducta; <code>vis</code> como hallazgo fuera del eje</td></tr><tr><td>Colon irritable, colecistectomía, herpes zóster</td><td>Contexto; no explican los STUI</td><td>Solo si aportan (no forzar)</td></tr></tbody></table></div>\n<h3>Widget A · Patología urinaria baja (widget-ensenanza v10, multi) — <code>ensenanza/</code></h3>\n<ul><li>Presentación común: <strong>síntomas del tracto urinario inferior (STUI) en el varón adulto</strong>.</li><li><code>Modo: multi · Entidades: e1=Hiperplasia prostática benigna (principal), e2=Prostatitis, e3=Cáncer de próstata, e4=Cistitis, e5=Uretritis · Amenaza: e3 · Override: sí</code></li><li>Eje declarado: glándula prostática (proliferativa benigna → inflamatoria → neoplásica… ordenado como e2 inflamatoria, e3 neoplásica) y luego vía urinaria baja de proximal a distal (vejiga → uretra).</li><li>Subtipos: prostatitis bacteriana aguda, bacteriana crónica y síndrome de dolor pélvico crónico (en e2); cistitis no complicada vs complicada (en el varón siempre complicada) y síndrome de dolor vesical (en e4); uretritis gonocócica vs no gonocócica (en e5); Gleason/ISUP (en e3).</li><li>«No confundir con…» (vecinas fuera del grupo, sílabo): <strong>tuberculosis renal y vesical</strong> y <strong>trauma/estenosis uretral</strong>; también vejiga hiperactiva y poliuria nocturna.</li><li>Simuladores esperados: e1 dx = <strong>I-PSS</strong> (escala → banda → conducta, permitido por §7.10) + tamaño/síntomas → tratamiento; e3 = decisión compartida de PSA según edad y antecedente familiar (sin probabilidades: §7.10); <code>vis</code> = diferencial desde los hallazgos de Carlos.</li><li>Título: <code>Patología urinaria baja</code> · Slug: <code>Patologia_urinaria_baja_widget_v10.html</code>.</li><li>Kit: Vademécum (<code>kit_head.html</code> (v10, retirado)). No lo leas ni lo edites.</li></ul>\n<h3>Widget B · Definiciones (skill definiciones v5.1) — <code>definiciones/</code></h3>\n<ul><li>Caso/semana: Patología urinaria baja (primera sesión, precaso de Carlos).</li><li>Términos, en este orden de pestañas (9 → régimen normal, tope 5 prerrequisitos):<ol><li>Patología urinaria baja</li><li>Frecuencia miccional</li><li>Insomnio (de inicio y de mantenimiento) — una pestaña con ambos tipos</li><li>Tenesmo vesical</li><li>Incontinencia urinaria</li><li>Clortalidona — el estudiante escribió «Clortaridona»: aplica la regla de término mal escrito (<code>.mini</code> ámbar con la interpretación)</li><li>Sertal — en el caso es «Sertal compuesto»: define el producto y sus componentes (propinox y clonixinato de lisina), qué son, no cómo se usan; <code>.mini</code> ámbar con la interpretación</li><li>Colon irritable</li><li>Próstata aumentada de tamaño</li><li>pestaña final <strong>Repaso global</strong>.</li></ol></li><li>Alcance: paso 1 del ABP (qué es, qué lo distingue, cómo se reconoce). Clortalidona y Sertal: qué son y su mecanismo; su manejo va al paso 7 (decláralo en <code>.mini</code>). Los ejemplos de anclaje pueden usar a Carlos.</li><li>Diseño: usa <strong>exactamente</strong> <code>kit/def_head.html</code> como cabecera (sustituye <code>@@TITULO@@</code> por <code>Definiciones · Patología urinaria baja</code>) y <strong>solo sus clases</strong>. Escribe las partes del cuerpo y el motor JS al final; nada de <code>&lt;style&gt;</code> propio ni <code>style=</code>.<ul><li>Vocabulario: <code>nav.tabs&gt;button.tb</code> (activa <code>.active</code>) · <code>section.tab</code> (activa <code>.active</code>) · <code>.hb&gt;.hb-t</code> (idea rectora) · <code>.pre&gt;.pre-t</code> + <code>.acc.op</code> (prerrequisitos, abiertos) · <code>.rem-line</code> con <code>.chip-rs</code> (remisiones) · <code>.card</code> (<code>.card-t</code>), <code>.card.fey</code> (Feynman), <code>.card.ej</code> (ejemplo de anclaje) · <code>.badge.b-pu|b-am|b-ro|b-ve|b-az|b-co|b-rs</code> · <code>.acc</code> (<code>.acc-h</code> + <code>.chev</code> + <code>.acc-b</code>; <code>.acc.no</code> para «No confundir con…») · <code>.tw&gt;table</code> con <code>thead</code>/<code>tbody</code> · <code>ol.tl&gt;li</code> (mini-timeline) · <code>.rc</code> (<code>.rc-t</code>, <code>.rc-count</code>, <code>.rc-card</code>, <code>.rc-q</code>, <code>.rc-a</code>, <code>.rc-hint</code>, <code>.rc-btns</code>, <code>button.go</code>, <code>button.gr.ok|mid|ko</code>, <code>button.ghost</code>, <code>.rc-end.ok|rep</code>) · <code>.mini</code>, <code>.mini.am</code> · <code>.gloss</code> · <code>ol.vanc</code>.</li><li>Glifos: los botones de calificación dicen «La sabía / A medias / No la sabía» con su color (<code>.gr.ok/.mid/.ko</code>) y el badge dice «Fuente por verificar» (<code>.b-am</code>), <strong>sin</strong> ✅ ⚠️ ❌: la regla de diseño 8 prevalece sobre esos glifos (decisión del orquestador; decláralo en el manifiesto).</li></ul></li><li>Archivo: <code>Definiciones_patologia_urinaria_baja.html</code>.</li></ul>\n<h3>Reglas de diseño para ejecutores (ambos widgets)</h3>\n<ol><li>Solo clases del kit/cabecera. Nada de <code>style=</code>, <code>&lt;style&gt;</code> propio, clases inventadas ni recursos remotos.</li><li>Toda tabla con <code>&lt;thead&gt;</code> (fila de cabecera en <code>&lt;th&gt;</code>) y <code>&lt;tbody&gt;</code>, dentro de <code>div.tw</code>.</li><li>Nada de recuadros anidados (<code>.card</code> dentro de <code>.card</code>/<code>.hb</code>/<code>.fey</code>/<code>.pre</code>; <code>.hb</code> dentro de <code>.hb</code>). En definiciones, los acordeones de prerrequisito sí van dentro de <code>.pre</code>.</li><li>Títulos en tipo oración, nunca en MAYÚSCULAS ni Título De Cada Palabra; <code>hb-t</code> no literales ≤8 palabras.</li><li>Párrafos de ≤90 palabras (salvo <code>p.res</code> y Feynman, con sus conteos de skill); enumeraciones de más de 3 elementos → lista o tabla.</li><li>Como máximo un <code>&lt;b&gt;</code> por párrafo; sin negrita en celdas de cuerpo salvo la primera columna.</li><li>Voz activa, español de Ecuador, sin exclamaciones ni muletillas («cabe destacar», «es importante mencionar», «sin lugar a dudas», «vale la pena»).</li><li>Sin emojis ni pictogramas Unicode (solo ↪ ↓ ← → ▾ y símbolos de unidades).</li><li>Coma decimal y espacio fino de miles; cifras con unidad y <code>[n]</code>.</li><li>Respeta los conteos de palabras de cada skill; no alargues para llenar.</li></ol>\n<h3>Pruebas finales del orquestador</h3>\n<ul><li>Enseñanza: <code>validar.py</code> + <code>auditar_diseno.py</code> (router, kit intacto, reglas 1–9) + <code>probar_navegador.js</code> (herramientas v10 retiradas; widgets congelados) + revisión con <code>.claude/skills/impeccable</code> adaptada + revisión de diseño independiente.</li><li>Definiciones: validación propia de la skill (el ejecutor) + <code>auditar_definiciones.py</code> (contrato de la skill, cabecera intacta, reglas 1–9) + <code>probar_definiciones.js</code> (pestañas, desborde, motor de recall por pestaña y repaso global) + detector impeccable.</li></ul>",
+   "casos": [
+    {
+     "titulo": "Caso problema · Patología urinaria baja (primera sesión, precaso)",
+     "html": "<p>Transcripción fiel de las imágenes <code>caso_carlos_p1.jpg</code> y <code>caso_carlos_p2.jpg</code> entregadas por el estudiante.</p>\n<h3>Escenario</h3>\n<p>Usted se encuentra atendiendo en un centro de salud tipo B del MSP, en el sector de Las Casas, Distrito Metropolitano de Quito, Provincia de Pichincha.</p>\n<h3>Datos de filiación</h3>\n<p>Carlos de 64 años, casado, profesor de secundaria, nacido y residente en Quito, ORH +.</p>\n<h3>Motivo de consulta</h3>\n<p>Molestias al orinar e interrumpir el sueño constantemente para ir al baño.</p>\n<h3>Enfermedad actual</h3>\n<p>Carlos refiere molestias urinarias de aumento de frecuencia de micciones de 10 veces al día y de 5 veces en la noche, refiere que no puede dormir adecuadamente debido a que debe interrumpir su sueño para ir a orinar. Además también refiere que mancha de orina su ropa interior luego de haber orinado, a manera de gotas, lo que le ha obligado a cambiarse varias veces de interior en el día; también se acompaña de sensación de vaciado incompleto y ha notado que moja los zapatos. Carlos indica que desde los 58 años tiene estas molestias, pero no le dio importancia hasta que empezó a manchar su ropa interior hace unos ocho meses.</p>\n<h3>Revisión de aparatos y sistemas</h3>\n<p>Niega mal olor o dolor al orinar, y niega alza térmica. Niega disfunción eréctil o pérdida de líbido.</p>\n<h3>Antecedentes patológicos personales</h3>\n<ul><li>Hipertensión arterial desde hace 10 años controlada con clortalidona 25 mg 1 vez al día.</li><li>Herpes zóster en muslo derecho hace 5 años.</li><li>Colecistectomía abierta hace 10 años por colelitiasis sintomática.</li><li>Colon irritable desde los 30 años de edad que lo controla con dieta y muy ocasionalmente con antiespasmódicos.</li></ul>\n<h3>Antecedentes patológicos familiares</h3>\n<ul><li>Hermano mayor tuvo cáncer de próstata y recibió tratamiento quirúrgico, aparentemente está curado.</li><li>Padre falleció con cáncer del pulmón.</li></ul>\n<h3>Hábitos</h3>\n<ul><li>Alimentario: 3 veces al día, balanceada.</li><li>Miccional: 10 veces al día y 5 veces en la noche.</li><li>Defecatorio: 1 vez cada día.</li><li>Ejercicio: 30 minutos todos los días de la semana.</li><li>Sexuales: PS: 2, IVSA: 20 años, heterosexual.</li></ul>\n<h3>Hábitos perniciosos</h3>\n<ul><li>Cigarrillo: fumó hasta 1 cajetilla diaria desde los 15 años, pero hace 20 años que no fuma.</li><li>Alcohol: refiere que una vez cada 15 días se toma una copa de vino tinto junto con su esposa.</li><li>Otras drogas: niega.</li></ul>\n<h3>Medicamentos</h3>\n<ul><li>Clortalidona 25 mg VO QD.</li><li>Sertal compuesto ocasionalmente.</li></ul>\n<h3>Antecedentes psicosociales</h3>\n<p>Carlos vive en una casa propia con todos los servicios básicos con su esposa Ana de 58 años de edad, trabajan como profesores de secundaria. Carlos tiene 2 hijos varones, Juan y Pedro, los cuales están casados y ya no viven con ellos. Pedro vive en una casa justo al lado de la casa de Carlos y refiere que casi siempre los visita al menos unas 5 veces a la semana para reunirse a cenar y conversar. Carlos y Ana manejan sus propias finanzas y hacen sus quehaceres ellos mismos. Carlos conduce su automóvil para realizar sus compras e ir a trabajar y movilizarse con Ana cuando lo necesitan.</p>\n<h3>Examen físico</h3>\n<div class=\"tabla\"><table><thead><tr><th>Signo</th><th>Valor</th></tr></thead><tbody><tr><td>FC</td><td>80 x&#x27;</td></tr><tr><td>FR</td><td>18 x&#x27;</td></tr><tr><td>T</td><td>37 °C</td></tr><tr><td>TA</td><td>120/70</td></tr><tr><td>StO2</td><td>89 %</td></tr><tr><td>Peso</td><td>60 kg</td></tr><tr><td>Talla</td><td>1,65 m</td></tr></tbody></table></div>\n<ul><li>Cabeza: sin patología aparente.</li><li>Tórax: CP normal, MV conservado, ruidos cardiacos rítmicos sin soplos.</li><li>Abdomen: se evidencia cicatriz de colecistectomía. RHA son normales y no existe dolor a la palpación profunda y no se palpa globo vesical; región inguinogenital: dolor a la palpación en escroto izquierdo.</li><li>Extremidades: normales.</li><li>Tacto rectal: impresiona una próstata aumentada de tamaño, blanda y de contornos regulares, tono esfínter anal normal.</li></ul>"
+    }
+   ],
+   "widgets": [
+    "patologia-urinaria-baja-definiciones",
+    "patologia-urinaria-baja-cancer-prostata",
+    "patologia-urinaria-baja-ensenanza",
+    "patologia-urinaria-baja-prostatitis-cistitis-cancer-vesical"
+   ],
+   "mazos": []
+  },
+  {
+   "id": "coma-tce",
+   "semestre": "s10",
+   "rotacion": "r1",
+   "orden": 7,
+   "caso": null,
+   "titulo": "Coma y traumatismo craneoencefálico",
+   "resumen": "Definición de coma y alteraciones del estado de conciencia. Clasificación del coma según su etiología y fisiopatología.",
+   "estado": "pendiente",
+   "nota": null,
+   "silaboHtml": "<p><strong>Contenidos:</strong> Definición de coma y alteraciones del estado de conciencia. Clasificación del coma según su etiología y fisiopatología. Exploración clínica de la conciencia normal y patológica. Aplicación e interpretación de la Escala de Glasgow. Etiología del coma: lesiones estructurales del sistema nervioso central y causas no estructurales. Fisiopatología del daño del sistema reticular activante ascendente y su relevancia clínica. Clasificación del coma en estructural y metabólico. Diagnósticos diferenciales de coma de origen metabólico/tóxico y electrolítico: hiponatremia, hipoglucemia, hiperuricemia, intoxicaciones agudas (por ejemplo benzodiacepinas) y otras causas metabólicas. Interpretación de pruebas diagnósticas (neuroimagen, laboratorio metabólico y estudios toxicológicos). Identificación de diagnósticos diferenciales y criterios de manejo urgente.</p>\n<ul><li><strong>Horas:</strong> 6</li><li><strong>Resultado de aprendizaje de la asignatura:</strong> Evalúa el estado de conciencia e identifica causas estructurales y metabólicas de coma.</li><li><strong>Metodología — Contacto con el docente:</strong> Metodología de ABP en 3 sesiones (Apertura, Monitoreo, Cierre)</li><li><strong>Metodología — Aprendizaje Práctico-Experimental:</strong> No aplicable</li><li><strong>Metodología — Trabajo Autónomo (Actividades):</strong> Búsqueda y síntesis: neuroanatomía del sistema reticular activante, fisiopatología del coma.</li><li><strong>Evaluación (Técnica o Instrumento):</strong> Ver esquema general de evaluación ABP arriba.</li></ul>",
+   "planHtml": null,
+   "casos": [],
+   "widgets": [],
+   "mazos": []
+  },
+  {
+   "id": "patologias-vasculares",
+   "semestre": "s10",
+   "rotacion": "r1",
+   "orden": 8,
+   "caso": null,
+   "titulo": "Patologías vasculares frecuentes",
+   "resumen": "Definición y etiopatogenia de las enfermedades vasculares. Clasificación de las patologías venosas y arteriales.",
+   "estado": "pendiente",
+   "nota": null,
+   "silaboHtml": "<p><strong>Contenidos:</strong> Definición y etiopatogenia de las enfermedades vasculares. Clasificación de las patologías venosas y arteriales. Insuficiencia venosa aguda y crónica, superficial y profunda. Trombosis venosa profunda y sus complicaciones. Formas graves de trombosis venosa profunda: flegmasia cerúlea dolens y flegmasia alba dolens, su fisiopatología, manifestaciones clínicas y manejo urgente. Insuficiencia arterial aguda y enfermedad arterial periférica. Fisiopatología de las alteraciones hemodinámicas del sistema vascular. Manifestaciones clínicas y evolución natural de estas enfermedades. Complicaciones vasculares, incluyendo úlceras venosas y arteriales, tromboembolismo y compromiso isquémico tisular. Interpretación de pruebas diagnósticas vasculares (Doppler vascular, índice tobillo-brazo y angiografía). Discusión sistemática de diagnósticos diferenciales en patología vascular y criterios de referencia a cirugía vascular.</p>\n<ul><li><strong>Horas:</strong> 6</li><li><strong>Resultado de aprendizaje de la asignatura:</strong> Identifica y maneja inicialmente patologías vasculares venosas y arteriales.</li><li><strong>Metodología — Contacto con el docente:</strong> Metodología de ABP en 3 sesiones (Apertura, Monitoreo, Cierre)</li><li><strong>Metodología — Aprendizaje Práctico-Experimental:</strong> No aplicable</li><li><strong>Metodología — Trabajo Autónomo (Actividades):</strong> Búsqueda y síntesis: fisiopatología vascular, factores de riesgo trombóticos.</li><li><strong>Evaluación (Técnica o Instrumento):</strong> Ver esquema general de evaluación ABP arriba.</li></ul>",
+   "planHtml": null,
+   "casos": [],
+   "widgets": [],
+   "mazos": []
+  },
+  {
+   "id": "azoados",
+   "semestre": "s10",
+   "rotacion": "r2",
+   "orden": 1,
+   "caso": "Caso 1",
+   "titulo": "Elevación aguda y crónica de los azoados",
+   "resumen": "Elevación de azoados aguda y crónica; Azotemia prerrenal; Azotemia renal; Necrosis tubular aguda; nefritis intersticial; Azotemia crónica secundaria a diabetes mellitus, hipertensión arterial y glomerulonefritis.",
+   "estado": "pendiente",
+   "nota": null,
+   "silaboHtml": "<p><strong>Resultado:</strong> Maneja de manera integral a los pacientes con elevación aguda y crónica de los azoados, según evidencia científica.</p>\n<p><strong>Contenidos:</strong></p>\n<ul><li>Elevación de azoados aguda y crónica</li><li>Azotemia prerrenal</li><li>Azotemia renal</li><li>Necrosis tubular aguda; nefritis intersticial</li><li>Azotemia crónica secundaria a diabetes mellitus, hipertensión arterial y glomerulonefritis</li></ul>\n<p><strong>Trabajo autónomo (prerrequisitos; búsqueda, análisis y síntesis individual):</strong></p>\n<ul><li>Anatomía macroscópica y microscópica del riñón</li><li>Fisiología renal: filtración, transporte tubular, balance glomérulo-tubular, sistema renina-angiotensina-aldosterona, sistema de concentración y dilución urinaria, manejo renal del calcio, función endocrina renal</li><li>Farmacología de IECA, calcioantagonistas y diuréticos</li></ul>",
+   "planHtml": null,
+   "casos": [],
+   "widgets": [],
+   "mazos": []
+  },
+  {
+   "id": "envejecimiento",
+   "semestre": "s10",
+   "rotacion": "r2",
+   "orden": 2,
+   "caso": "Caso 2",
+   "titulo": "Envejecimiento",
+   "resumen": "Situación actual de los ancianos en el Ecuador; Ley del anciano; Situación del adulto mayor en Ecuador, América Latina y el mundo; Abuso y maltrato en el adulto mayor; Fisiología de los procesos de envejecimiento y sus teorías; Grandes síndromes geriátricos.",
+   "estado": "pendiente",
+   "nota": null,
+   "silaboHtml": "<p><strong>Resultado:</strong> Realiza la evaluación integral del adulto mayor de acuerdo a evidencia científica.</p>\n<p><strong>Contenidos:</strong></p>\n<ul><li>Situación actual de los ancianos en el Ecuador</li><li>Ley del anciano</li><li>Situación del adulto mayor en Ecuador, América Latina y el mundo</li><li>Abuso y maltrato en el adulto mayor</li><li>Fisiología de los procesos de envejecimiento y sus teorías</li><li>Grandes síndromes geriátricos</li><li>Escalas de evaluación para el adulto mayor: Barthel, MMSE, Yesavage, MNA, velocidad de la marcha, TINNETI, UP and GO, ECOG</li></ul>\n<p><strong>Trabajo autónomo:</strong></p>\n<ul><li>Indicadores de salud del Ecuador y en el mundo sobre el adulto mayor</li><li>Historia clínica y semiología general</li><li>Envejecimiento satisfactorio, envejecimiento activo</li></ul>",
+   "planHtml": null,
+   "casos": [],
+   "widgets": [],
+   "mazos": []
+  },
+  {
+   "id": "sindromes-geriatricos",
+   "semestre": "s10",
+   "rotacion": "r2",
+   "orden": 3,
+   "caso": "Caso 3",
+   "titulo": "Síndromes geriátricos",
+   "resumen": "Evaluación de los problemas de salud del adulto mayor: delirio, incontinencia, depresión, demencia, úlceras por presión, iatrogenia, maltrato, dismovilidad, desnutrición, caídas, fragilidad, polifarmacia.",
+   "estado": "pendiente",
+   "nota": null,
+   "silaboHtml": "<p><strong>Resultado:</strong> Realiza la valoración geriátrica integral del adulto mayor con patología relacionada con los síndromes geriátricos de acuerdo con evidencia científica.</p>\n<p><strong>Contenidos:</strong></p>\n<ul><li>Evaluación de los problemas de salud del adulto mayor: delirio, incontinencia, depresión, demencia, úlceras por presión, iatrogenia, maltrato, dismovilidad, desnutrición, caídas, fragilidad, polifarmacia</li><li>Tamizaje de los problemas de salud de acuerdo con el nivel de atención: ambulatorio, institucionalización, hospitalario</li><li>Controles por patologías crónicas</li><li>Criterios bioéticos</li><li>Medidas de apoyo a la familia: funciones</li></ul>\n<p><strong>Trabajo autónomo:</strong></p>\n<ul><li>Conceptos: fragilidad, integralidad, intersectorialidad, transdisciplinariedad, discapacidad, minusvalía, resiliencia, comorbilidad, envejecimiento, vulnerabilidad, senescencia, senectud, senilidad, expectativa de vida, esperanza de vida libre de discapacidad, alostasis, carga alostática, hormésis, deficiencia</li><li>Concepto de funcionalidad, importancia y manera de identificarlo</li><li>Componentes de la valoración geriátrica integral; instrumentos de la valoración geriátrica integral</li></ul>",
+   "planHtml": null,
+   "casos": [],
+   "widgets": [],
+   "mazos": []
+  },
+  {
+   "id": "toxicodependencias",
+   "semestre": "s10",
+   "rotacion": "r2",
+   "orden": 4,
+   "caso": "Caso 4",
+   "titulo": "Toxicodependencias",
+   "resumen": "Concepto; Morbilidad y mortalidad global; Teorías causales: genética, socioculturales; Mecanismo fisiopatológico de: adicción, dependencia física, psíquica, abstinencia, tolerancia, inversión de la tolerancia; Complicaciones sanitarias y psicosociales de las adicciones.",
+   "estado": "completo",
+   "nota": null,
+   "silaboHtml": "<p><strong>Resultado:</strong> Maneja de manera integral a los pacientes con toxicodependencias, de acuerdo con evidencia científica.</p>\n<p><strong>Contenidos:</strong></p>\n<ul><li>Concepto</li><li>Morbilidad y mortalidad global</li><li>Teorías causales: genética, socioculturales</li><li>Mecanismo fisiopatológico de: adicción, dependencia física, psíquica, abstinencia, tolerancia, inversión de la tolerancia</li><li>Complicaciones sanitarias y psicosociales de las adicciones</li><li>Cuadro clínico de: intoxicación alcohólica aguda y crónica, abstinencia alcohólica, intoxicación y abstinencia de las otras drogas</li><li>Pruebas de laboratorio: metabolitos en sangre y orina</li><li>Tratamiento: objetivos, metas, tratamiento farmacológico y no farmacológico en el nivel primario</li></ul>\n<p><strong>Trabajo autónomo:</strong></p>\n<ul><li>Historia clínica psiquiátrica</li><li>Conceptos de normalidad, enfermedad mental</li><li>Neurotransmisión: dopamina y GABA y sistema límbico</li><li>Funciones psíquicas: concepto, características</li><li>Alteraciones de las funciones psíquicas: enunciado y conceptos</li><li>Farmacología: benzodiacepinas</li><li>Clasificación de las drogas: depresoras (opiáceos, hipnóticos, sedantes y tranquilizantes), estimulantes (cocaína, anfetaminas), psicodélicas (psicodélicos mayores y menores)</li></ul>",
+   "planHtml": "<p>Caso: varón que ingresa a emergencia en estado etílico tras una semana de consumo intenso de aguardiente (zhumir, trópico seco, puntas). Consumo desde los 17 años (cerveza de fin de semana) que progresó desde los 20 (entre semana, más volumen, mezcla de bebidas). Agresividad y maltrato físico y verbal a la pareja en el último año. Hace 6 meses intentó suspender y presentó temblores, mareos e irritabilidad. Deterioro laboral; tristeza, ideas de inutilidad y minusvalía.</p>\n<h3>Widget · Definiciones (skill definiciones v5.1) — <code>definiciones/</code></h3>\n<ul><li>Caso/semana: Consumo de alcohol, paso 1 del ABP.</li><li>Términos (los dos primeros los pidió el estudiante; 3–6 los añadió el orquestador por ser claves del caso). 6 términos → régimen normal, tope 5 prerrequisitos (usar 1–2 por pestaña):</li></ul>\n<div class=\"tabla\"><table><thead><tr><th>Pestaña</th><th>Término</th><th>Prerrequisitos canónicos</th><th>Remisiones</th></tr></thead><tbody><tr><td>t1</td><td>Estado etílico (intoxicación alcohólica aguda)</td><td>Farmacocinética del etanol (tipo C: absorción, distribución en agua corporal, ADH → acetaldehído → ALDH → acetato, CYP2E1, cinética de orden cero); Neurotransmisión GABA-A y glutamato NMDA (tipo B, tabla)</td><td>—</td></tr><tr><td>t2</td><td>Síndrome de abstinencia alcohólica</td><td>Neuroadaptación por consumo crónico (tipo C: regulación a la baja de GABA-A, al alza de NMDA, rebote noradrenérgico)</td><td>GABA/NMDA («Estado etílico»)</td></tr><tr><td>t3</td><td>Trastorno por consumo de alcohol (incluye tolerancia y dependencia)</td><td>Circuito de recompensa mesolímbico y control prefrontal (tipo B, tabla: ATV, núcleo accumbens, corteza prefrontal, amígdala)</td><td>neuroadaptación («Síndrome de abstinencia»)</td></tr><tr><td>t4</td><td>Aguardiente y bebida estándar (zhumir, trópico seco, puntas)</td><td>Grado alcohólico y cálculo de gramos de etanol (tipo C: % vol × volumen × 0,8 g/mL)</td><td>farmacocinética («Estado etílico»)</td></tr><tr><td>t5</td><td>Ideas de inutilidad y minusvalía (síntomas depresivos)</td><td>Sistemas monoaminérgicos y regulación del ánimo (tipo B, tabla: serotonina, noradrenalina, dopamina)</td><td>recompensa («Trastorno por consumo»)</td></tr><tr><td>t6</td><td>Violencia de pareja</td><td>(sin prerrequisito propio: se declara omisión)</td><td>corteza prefrontal y control inhibitorio («Trastorno por consumo»); GABA/desinhibición («Estado etílico»)</td></tr></tbody></table></div>\n<ul><li>pestaña final <strong>Repaso global</strong>.</li><li>Mecanismo mínimo (<code>ol.tl</code> de ≤3 nodos dentro de un <code>.acc</code> normal, colapsado, título «Mecanismo mínimo»): t1 y t2.</li><li>Alcance: paso 1. Nada de tratamiento, dosis, CIWA-Ar como algoritmo, epidemiología ni S/E/VPP/VPN. El delirium tremens, la encefalopatía de Wernicke y la intoxicación por metanol se nombran solo en «No confundir con…» o correlatos. Ejemplos de anclaje usan al paciente del caso.</li><li>Marcas: zhumir y trópico seco aparecen solo como las bebidas que refiere el caso; sin descripciones comerciales. Grados alcohólicos concretos de cada bebida → <code>[VERIFICAR EN FUENTE]</code>.</li><li>t6 y t5: sin juicio moral; t5 nombra el riesgo suicida solo como «No confundir con» / correlato (ideación suicida es otro término), sin conducta.</li></ul>\n<h3>Referencias (Vancouver, numeración fija por primera aparición)</h3>\n<ol><li>Brunton LL, Knollmann BC, editores. Goodman &amp; Gilman&#x27;s the pharmacological basis of therapeutics. 14th ed. New York: McGraw Hill; 2023.</li><li>World Health Organization. International classification of diseases for mortality and morbidity statistics, 11th revision (ICD-11). Geneva: World Health Organization; 2019.</li><li>American Psychiatric Association. Diagnostic and statistical manual of mental disorders. 5th ed, text revision (DSM-5-TR). Washington (DC): American Psychiatric Association Publishing; 2022.</li><li>Kandel ER, Koester JD, Mack SH, Siegelbaum SA, editores. Principles of neural science. 6th ed. New York: McGraw Hill; 2021.</li><li>Babor TF, Higgins-Biddle JC, Saunders JB, Monteiro MG. AUDIT: the alcohol use disorders identification test. Guidelines for use in primary care. 2nd ed. Geneva: World Health Organization; 2001.</li><li>Krug EG, Dahlberg LL, Mercy JA, Zwi AB, Lozano R, editores. World report on violence and health. Geneva: World Health Organization; 2002.</li></ol>\n<p>Uso: t1 cita [1] en prerrequisitos y [2][3] en la definición; t2–t3 reutilizan [1]–[3]; t3 introduce [4]; t4 introduce [5] (bebida estándar de 10 g de etanol de la OMS); t5 usa [4] y [3]; t6 introduce [6]. Nadie usa un número fuera de este orden.</p>\n<h3>Diseño</h3>\n<p>Idéntico al widget de definiciones de <code>patologia_urinaria_baja/PLAN.md</code> (sección «Widget B» y «Reglas de diseño para ejecutores»): mismo vocabulario de clases, mismos glifos (sin ✅ ⚠️ ❌), mismas reglas 1–10. Archivo: <code>Definiciones_consumo_alcohol.html</code>.</p>\n<h3>Ampliación 1 · temas del sílabo (monitoreo miércoles, cierre viernes)</h3>\n<p>Temas pedidos por el docente y dónde se resuelven:</p>\n<div class=\"tabla\"><table><thead><tr><th>Tema del sílabo</th><th>Dónde</th></tr></thead><tbody><tr><td>Conceptos: alcoholismo, abuso, dependencia, tolerancia, inversión de la tolerancia, craving, trastorno mental</td><td>Definiciones t3 (abuso, dependencia, tolerancia) + t7–t10 nuevas; resumen en enseñanza <code>def</code></td></tr><tr><td>Morbilidad y mortalidad global</td><td>enseñanza <code>def</code> (Epidemiología)</td></tr><tr><td>Teorías causales (genética, socioculturales, personalidad, otras) y factores de riesgo</td><td>enseñanza <code>fis</code></td></tr><tr><td>Mecanismo de adicción, dependencia física y psíquica, abstinencia, tolerancia, inversión</td><td>enseñanza <code>fis</code> (timeline)</td></tr><tr><td>Cuadro clínico: intoxicación aguda y crónica, abstinencia alcohólica</td><td>enseñanza <code>cli</code></td></tr><tr><td>Clasificación de drogas e intoxicación/abstinencia de otras drogas</td><td>enseñanza adicional <code>dro</code></td></tr><tr><td>Laboratorio: metabolitos en sangre y orina</td><td>enseñanza <code>dx</code></td></tr><tr><td>Tratamiento en el primer nivel: objetivos, metas, farmacológico y no farmacológico</td><td>enseñanza <code>tx</code></td></tr><tr><td>Complicaciones sanitarias y psicosociales, patología dual, criterios de referencia</td><td>enseñanza <code>seg</code></td></tr></tbody></table></div>\n<h4>Definiciones · pestañas nuevas (10 términos, régimen normal)</h4>\n<div class=\"tabla\"><table><thead><tr><th>Pestaña</th><th>Término</th><th>Prerrequisito canónico</th><th>Remisiones</th></tr></thead><tbody><tr><td>t7</td><td>Alcoholismo</td><td>— (término histórico; se declara omisión)</td><td>recompensa («Trastorno por consumo»), neuroadaptación («Síndrome de abstinencia»)</td></tr><tr><td>t8</td><td>Craving (deseo intenso de consumir)</td><td>Condicionamiento y memoria asociativa de la recompensa (tipo C) [4]</td><td>recompensa y amígdala («Trastorno por consumo»)</td></tr><tr><td>t9</td><td>Inversión de la tolerancia</td><td>Sensibilización y reserva funcional hepática (tipo C) [1]</td><td>farmacocinética («Estado etílico»), neuroadaptación («Síndrome de abstinencia»)</td></tr><tr><td>t10</td><td>Trastorno mental</td><td>— (concepto; se declara omisión)</td><td>monoaminas («Ideas de inutilidad»)</td></tr></tbody></table></div>\n<p>Mazo: 5–6 tarjetas por término. Referencias: solo las 6 ya fijadas; alcoholismo cita [2] y [3] (la CIE-11 y el DSM-5-TR no usan «alcoholismo» como diagnóstico); trastorno mental cita [3] (definición de trastorno mental del DSM-5-TR). Repaso global pasa a «diez términos».</p>\n<h4>Enseñanza · <code>ensenanza/</code> (skill widget-ensenanza v10, modo mono)</h4>\n<ul><li>Línea del router: <code>Modo: mono · Entidades: e1=Trastorno por consumo de alcohol y otras drogas · Amenaza: — · Override: no</code>. Las intoxicaciones y abstinencias son formas clínicas del mismo proceso (en <code>cli</code> y <code>dro</code>), no entidades aparte.</li><li>Pestañas: <code>pan def fis cli dro dx tx seg</code>; adicional <code>dro</code> = «Otras drogas» (parte <code>12x_dro.html</code>).</li><li>Caso de anclaje: el paciente del caso de emergencia (en ejemplos y simuladores).</li><li>Guía rectora: OMS mhGAP 2.0 (2016) para el primer nivel; DSM-5-TR (2022) para criterios; ASAM 2020 para abstinencia. Vigencia: mhGAP tiene actualización de recomendaciones 2023 no leída → <code>.mini</code> «Vigencia no verificada».</li><li>Citas: los ejecutores citan con claves <code>[@clave]</code> del banco de referencias de <code>ensenanza/REFS.md</code>; el orquestador numera por primera aparición. No usar fuentes fuera del banco.</li></ul>\n<h4>Contraste con el sílabo (segunda rotación, Caso 4 · Toxicodependencias)</h4>\n<p>El sílabo añade a la lista del docente (trabajo autónomo): historia clínica psiquiátrica y examen de funciones psíquicas → <code>dx</code>; normalidad y enfermedad mental → <code>def</code> y definiciones t10; neurotransmisión dopamina-GABA-sistema límbico → <code>fis</code>; farmacología de benzodiacepinas → <code>tx</code>. El docente añade al sílabo: factores de riesgo, personalidad y otras teorías, craving, inversión de la tolerancia (también en el sílabo), patología dual y criterios de referencia. Bibliografía del sílabo (Harrison 19e, Farreras 17e, Ebert 2025) no consultada: se declara en <code>Alcance</code>.</p>\n<h3>Ampliación 2 · unión con el widget previo de Ricardo</h3>\n<p>El widget mono <code>ensenanza/</code> se fusionó con el widget multi previo de Ricardo (Toxicodependencias v10: alcohol, opioides, sedantes e hipnóticos, estimulantes, cannabis y psicodélicos) en <code>toxicodependencias/</code>. Base = widget previo (fuente de verdad); del mono se sumó lo que faltaba: en <code>vis</code> (lo común) tablas de conceptos, neurotransmisión, etiología y factores de riesgo, historia clínica psiquiátrica y examen mental, complicaciones psicosociales, patología dual, criterios de referencia, metas y tratamiento no farmacológico; en <code>e1</code> alcoholemia, cronología de abstinencia, inversión de la tolerancia, AUDIT y grupos DSM-5-TR, ciclo de seguimiento; en <code>e3</code> farmacología de benzodiacepinas. Citas renumeradas por primera aparición (banco en <code>toxicodependencias/REFS.md</code>). El mono se retiró para no duplicar.</p>",
+   "casos": [],
+   "widgets": [
+    "consumo-alcohol-definiciones",
+    "consumo-alcohol-toxicodependencias"
+   ],
+   "mazos": [
+    {
+     "titulo": "Toxicodependencias",
+     "notas": 45,
+     "version": "1.0",
+     "archivos": [
+      {
+       "etiqueta": "Mazo Anki (.apkg)",
+       "ruta": "mazos/toxicodependencias/Quirurgica2_Toxicodependencias.apkg"
+      },
+      {
+       "etiqueta": "Guía (.docx)",
+       "ruta": "mazos/toxicodependencias/Guia_Toxicodependencias.docx"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ansiedad-panico",
+   "semestre": "s10",
+   "rotacion": "r2",
+   "orden": 5,
+   "caso": "Caso 5",
+   "titulo": "Trastorno de ansiedad generalizada y ataque de pánico",
+   "resumen": "Trastorno de ansiedad generalizado; Ataque de pánico; Trastornos por estrés; Trastornos fóbicos; Trastornos somatomorfos.",
+   "estado": "completo",
+   "nota": null,
+   "silaboHtml": "<p><strong>Resultado:</strong> Maneja de manera integral a los pacientes con ansiedad de acuerdo con evidencia científica.</p>\n<p><strong>Contenidos:</strong></p>\n<ul><li>Trastorno de ansiedad generalizado</li><li>Ataque de pánico</li><li>Trastornos por estrés</li><li>Trastornos fóbicos</li><li>Trastornos somatomorfos</li></ul>\n<p><strong>Trabajo autónomo:</strong></p>\n<ul><li>Concepto de ansiedad</li><li>Fisiología neuroendocrina del cerebro: serotonina, acetilcolina, GABA, MAO</li><li>Farmacología: benzodiacepinas e inhibidores de la recaptación de serotonina</li></ul>",
+   "planHtml": "<p>Fuentes (prioridad en este orden):</p>\n<ol><li><strong>Caso</strong> (texto del estudiante): <code>fuentes/casos/caso_ansiedad_panico.md</code>.</li><li><strong>Sílabo</strong>, segunda rotación, caso 5 «Trastorno de ansiedad generalizada, ataque de pánico» (<code>fuentes/syllabus_quirurgica2_segunda_rotacion.md</code>): trabajo autónomo = concepto de ansiedad; fisiología neuroendocrina (serotonina, acetilcolina, GABA, MAO); benzodiacepinas e ISRS.</li><li>Guía o texto de referencia vigente: DSM-5-TR 2022 (ataque de pánico), AHA/ACC 2021 (dolor torácico), Cuarta definición universal del infarto 2018, EHRA (palpitaciones), Goodman &amp; Gilman 14.ª ed. 2023, Guyton y Hall 14.ª ed. 2021, Kandel 6.ª ed. 2021, Moore 9.ª ed. 2023.</li></ol>\n<h3>Widget · Definiciones (skill definiciones v5.1) — <code>definiciones/</code></h3>\n<ul><li>Caso/semana: Ansiedad y pánico (primera sesión). Consulta externa sin posibilidad de derivar.</li><li>Términos, en este orden de pestañas (10 → régimen normal, tope 5 prerrequisitos):<ol><li>Opresión en el pecho (opresión precordial)</li><li>Palpitaciones</li><li>Angustia por perder el control mental</li><li>Preinfarto — término coloquial, no diagnóstico: <code>.mini</code> ámbar con la interpretación (angina inestable / síndrome coronario agudo sin elevación del ST) y la alternativa (uso popular para cualquier dolor torácico «de corazón»)</li><li>Stresstabs — producto comercial (multivitamínico del complejo B con vitamina C; composición según presentación): define qué es; badge «Fuente por verificar» para la composición; manejo al paso 7</li><li>Xanax (alprazolam) — una pestaña con ambos nombres (marca y principio activo); qué es y su mecanismo; manejo al paso 7</li><li>Ansiedad</li><li>Pánico — la emoción de miedo extremo súbito; «trastorno de pánico» va en «No confundir con»</li><li>Ataque de ansiedad — término coloquial (regla de la skill v6)</li><li>Ataque de pánico — episodio según DSM-5-TR</li><li>pestaña final <strong>Repaso global</strong>.</li></ol></li><li>Alcance: paso 1 del ABP (qué es, qué lo distingue, cómo se reconoce). No se resuelve el caso: el widget no dice que sea un ataque de pánico ni que se haya descartado un síndrome coronario. Los ejemplos de anclaje pueden usar al paciente del caso.</li></ul>\n<h4>Manifiesto de prerrequisitos</h4>\n<div class=\"tabla\"><table><thead><tr><th>Pestaña / término</th><th>Prerrequisitos canónicos (tipo)</th><th>Remisiones</th><th>Tarjetas</th></tr></thead><tbody><tr><td>t1 Opresión en el pecho</td><td>Inervación sensitiva del corazón y dolor visceral referido (C) · Balance entre aporte y demanda de oxígeno del miocardio (C)</td><td>—</td><td>5</td></tr><tr><td>t2 Palpitaciones</td><td>Sistema de excitación y conducción del corazón (B) · Respuesta simpaticoadrenal de lucha o huida (C)</td><td>—</td><td>5</td></tr><tr><td>t3 Angustia por perder el control mental</td><td>Circuito del miedo: amígdala, corteza prefrontal, hipocampo, hipotálamo, locus coeruleus (B) · Ventilación y CO₂: hiperventilación y alcalosis respiratoria (C)</td><td>respuesta simpaticoadrenal (t2)</td><td>6</td></tr><tr><td>t4 Preinfarto</td><td>Arterias coronarias (A) · Complejo de troponinas del sarcómero cardiaco (A) + mecanismo mínimo (placa inestable → trombo → isquemia)</td><td>balance de oxígeno del miocardio (t1)</td><td>6</td></tr><tr><td>t5 Stresstabs</td><td>Vitaminas hidrosolubles como cofactores del metabolismo (B)</td><td>—</td><td>5</td></tr><tr><td>t6 Xanax (alprazolam)</td><td>Receptor GABA-A y la inhibición sináptica (A) · Vida media de eliminación y estado estacionario (C)</td><td>circuito del miedo (t3)</td><td>6</td></tr></tbody></table></div>\n<p>| t7 Ansiedad | Eje hipotálamo-hipófiso-suprarrenal (C) · Sistema serotoninérgico: núcleos del rafe y proyecciones (B) | circuito del miedo (t3) · lucha o huida (t2) | 5 | | t8 Pánico | Interocepción y corteza insular (A) | circuito del miedo (t3) | 5 | | t9 Ataque de ansiedad | — (término coloquial sin base nueva: declarado) | lucha o huida (t2) · eje HHS (t7) | 5 | | t10 Ataque de pánico | Curso temporal de la descarga de catecolaminas (C) | lucha o huida (t2) · hiperventilación (t3) · interocepción (t8) | 6 |</p>\n<p>Totales: 15 prerrequisitos canónicos · 11 remisiones · 54 tarjetas. Ampliación (skill definiciones v6): t7–t10 añadidas tras t6 para no mover prerrequisitos canónicos ni la numeración de referencias; 10 términos → régimen normal (tope 5). Partes <code>p70_t7</code>, <code>p80_t8</code>, <code>p90_t9</code>, <code>p92_t10</code> (orden alfabético &lt; <code>p95</code>). Fuentes: solo [1] Guyton, [4] Kandel, [5] DSM-5-TR y [9] Goodman &amp; Gilman ya numeradas. «Ataque de ansiedad»: término coloquial (no es categoría del DSM-5-TR) → término cercano + <code>.mini</code> ámbar.</p>\n<h4>Referencias (numeración fija por primera aparición)</h4>\n<div class=\"tabla\"><table><thead><tr><th>[n]</th><th>Fuente</th><th>Dónde aparece primero</th></tr></thead><tbody><tr><td>1</td><td>Guyton y Hall 2021</td><td>t1 prerrequisitos (también t2, t3, t4, t5)</td></tr><tr><td>2</td><td>AHA/ACC 2021, dolor torácico (Gulati)</td><td>t1 definición</td></tr><tr><td>3</td><td>EHRA, palpitaciones (Raviele 2011)</td><td>t2 definición</td></tr><tr><td>4</td><td>Kandel 2021</td><td>t3 prerrequisitos</td></tr><tr><td>5</td><td>DSM-5-TR 2022</td><td>t3 definición</td></tr><tr><td>6</td><td>Moore 2023</td><td>t4 prerrequisitos</td></tr><tr><td>7</td><td>Cuarta definición universal del infarto (Thygesen 2018)</td><td>t4 definición</td></tr><tr><td>8</td><td>Consenso internacional de Takotsubo (Ghadri 2018)</td><td>t4 «No confundir con»</td></tr><tr><td>9</td><td>Goodman &amp; Gilman 2023</td><td>t6 prerrequisitos y definición</td></tr></tbody></table></div>\n<p>Stresstabs: definición con «Fuente por verificar» (ficha técnica no consultada).</p>\n<ul><li>Diseño: igual que <code>patologia_urinaria_baja/PLAN.md</code> § Widget B (cabecera <code>kit/def_head.html</code>, solo sus clases, glifos sin ✅ ⚠️ ❌, remisión con ↪) y sus reglas de diseño 1–10.</li><li>Validación: <code>python3 kit/construir.py widgets/ansiedad_panico/definiciones</code> + <code>auditar_definiciones.py &lt;html&gt; 6</code> + <code>probar_definiciones.js</code>.</li><li>Archivo: <code>Definiciones_ansiedad_panico.html</code>.</li></ul>\n<h3>Widget · Enseñanza (skill widget-ensenanza v10.1, multi) — <code>ensenanza/</code></h3>\n<ul><li>Sílabo, 2.ª rotación, caso 5. Resultado: «Maneja de manera integral a los pacientes con ansiedad de acuerdo con evidencia científica». Contenidos: TAG, ataque de pánico, trastornos por estrés, trastornos fóbicos, trastornos somatomorfos. Trabajo autónomo: concepto de ansiedad; serotonina, acetilcolina, GABA, MAO; benzodiacepinas e ISRS. Objetivo general: manejo integral en el nivel de atención, factores de riesgo y repercusiones psicológicas, sociales, personales y familiares (APS, comunicación, ética).</li><li>Presentación común: <strong>síntomas físicos de ansiedad (palpitaciones, opresión torácica, disnea, temblor) y miedo en la consulta de atención primaria</strong>.</li><li><code>Modo: multi · Entidades: e1=Trastorno de pánico (principal), e2=Ansiedad generalizada, e3=Trastornos fóbicos, e4=Trauma y estrés, e5=Síntomas somáticos · Amenaza: e4 · Override: no</code> (e2 = trastorno de ansiedad generalizada; e4 = trastornos relacionados con trauma y factores de estrés; e5 = trastorno de síntomas somáticos y relacionados)</li><li>Eje declarado: <strong>qué dispara la ansiedad</strong> — nada (crisis inesperadas, e1) → el futuro difuso (preocupación, e2) → un objeto o situación concretos (e3; la agorafobia es el subtipo que conecta con conducir) → un evento traumático o estresante (e4) → el propio síntoma corporal (e5).</li><li>Principal: el trastorno de pánico (es el patrón del caso y la consulta más frecuente por síntomas cardiopulmonares en APS). Amenaza: trauma y estrés, por riesgo suicida y cronificación si no se pregunta por el evento; las imitaciones orgánicas (síndrome coronario agudo, arritmia, hipertiroidismo, abstinencia de benzodiacepinas o alcohol, hipoglucemia, feocromocitoma) abren el <code>hb ro</code> de <code>vis</code> como banderas del grupo.</li><li>Precisión sobre el sílabo (<code>hb am</code> en e5): «trastornos somatomorfos» fue reemplazado en el DSM-5 (y DSM-5-TR) por «trastorno de síntomas somáticos y trastornos relacionados».</li><li>Subtipos: e3 = agorafobia, ansiedad social, fobia específica; e4 = trastorno de estrés agudo, TEPT, trastorno de adaptación; e5 = síntomas somáticos, ansiedad por enfermedad, conversión (síntomas neurológicos funcionales).</li><li>«No confundir con…» fuera del grupo: síndrome coronario agudo y arritmias (e1), depresión mayor (e2), TOC (e3), hipertiroidismo (e2), enfermedad orgánica no diagnosticada (e5).</li><li>Simuladores: <code>dcVis</code> (diferencial por desencadenante y curso) · <code>dcE1dx</code> (ataque de pánico + banderas orgánicas → conducta en consulta sin derivación) · <code>dcE1tx</code> (ISRS por perfil; benzodiacepina solo puente) · <code>dcE2</code> (GAD-7 → banda → conducta escalonada) · <code>dcE3</code> (subtipo → tratamiento) · <code>dcE4</code> (tiempo desde el evento → TEA/TEPT/adaptación → conducta y riesgo suicida) · <code>dcE5</code> (SSS-8/banderas → manejo en APS).</li><li>Título: <code>Ansiedad y pánico</code> · Slug: <code>Ansiedad_y_panico_widget_v10.html</code>.</li></ul>\n<h4>Referencias: claves simbólicas</h4>\n<p>Los ejecutores citan con <code>[@clave]</code> (varias: <code>[@a, @b]</code>); el orquestador renumera por primera aparición en orden de barra y genera <code>ol.vanc</code> al final. Clave nueva → el ejecutor la propone en su archivo <code>refs_&lt;parte&gt;.txt</code> con la referencia Vancouver completa; la verifica <code>haiku</code>.</p>\n<div class=\"tabla\"><table><thead><tr><th>Clave</th><th>Fuente</th></tr></thead><tbody><tr><td><code>dsm</code></td><td>DSM-5-TR 2022</td></tr><tr><td><code>nice113</code></td><td>NICE CG113, TAG y trastorno de pánico en adultos (2011, actualizada 2020)</td></tr><tr><td><code>nice159</code></td><td>NICE CG159, ansiedad social (2013)</td></tr><tr><td><code>nice116</code></td><td>NICE NG116, TEPT (2018)</td></tr><tr><td><code>gad7</code></td><td>Spitzer 2006, GAD-7</td></tr><tr><td><code>sss8</code></td><td>Gierk 2014, SSS-8</td></tr><tr><td><code>pcptsd5</code></td><td>Prins 2016, PC-PTSD-5</td></tr><tr><td><code>gulati</code></td><td>AHA/ACC 2021, dolor torácico</td></tr><tr><td><code>harrison</code></td><td>Harrison 22e 2025</td></tr><tr><td><code>goodman</code></td><td>Goodman &amp; Gilman 14.ª 2023</td></tr><tr><td><code>kandel</code></td><td>Kandel 6.ª 2021</td></tr><tr><td><code>guyton</code></td><td>Guyton y Hall 14.ª 2021</td></tr><tr><td><code>ebert</code></td><td>Ebert, Diagnóstico y tratamiento en psiquiatría 4e 2025 (sílabo)</td></tr><tr><td><code>dm_&lt;fármaco&gt;</code></td><td>Ficha DailyMed del fármaco (posología); la verifica <code>haiku</code></td></tr></tbody></table></div>",
+   "casos": [
+    {
+     "titulo": "Caso problema · Ansiedad y pánico (primera sesión)",
+     "html": "<p>Transcripción fiel del texto entregado por el estudiante.</p>\n<h3>Escenario</h3>\n<p>Usted se encuentra en la consulta externa de su centro de salud, no tiene forma de derivar al paciente.</p>\n<h3>Motivo de consulta</h3>\n<p>«Doctor siento una opresión en el pecho, estoy temblando y se me va a salir el corazón».</p>\n<h3>Enfermedad actual</h3>\n<p>Paciente refiere que hace 40 minutos, mientras conducía su auto en dirección a su lugar de trabajo, presentó palpitaciones, opresión precordial y sensación de angustia por perder el control mental, por lo cual acude a consulta.</p>\n<p>Este es el tercer episodio que se presenta en el último año. En los dos episodios anteriores fue atendido y, según el paciente, le diagnosticaron un preinfarto debido a estrés, por lo cual recibió Stresstabs y Xanax (alprazolam) que el paciente consumió por varias semanas.</p>\n<p>En el presente episodio presenta además sudoración y náuseas.</p>"
+    }
+   ],
+   "widgets": [
+    "ansiedad-panico-definiciones",
+    "ansiedad-panico-ensenanza"
+   ],
+   "mazos": []
+  },
+  {
+   "id": "sca-demencia",
+   "semestre": "s10",
+   "rotacion": "r2",
+   "orden": 6,
+   "caso": "Caso 6",
+   "titulo": "Síndrome confusional agudo y demencia",
+   "resumen": "Síndrome confusional agudo, trastornos cognitivos menores por: Alzheimer, Parkinson; Definición, epidemiología, factores de riesgo, factores precipitantes, fisiopatología, clasificación, características clínicas, diagnóstico, diagnóstico diferencial, pronóstico, prevención y tratamiento.",
+   "estado": "completo",
+   "nota": null,
+   "silaboHtml": "<p><strong>Resultado:</strong> Maneja de manera integral a los pacientes con síndrome confusional agudo y demencias de acuerdo con evidencia científica.</p>\n<p><strong>Contenidos:</strong></p>\n<ul><li>Síndrome confusional agudo, trastornos cognitivos menores por: Alzheimer, Parkinson</li><li>Definición, epidemiología, factores de riesgo, factores precipitantes, fisiopatología, clasificación, características clínicas, diagnóstico, diagnóstico diferencial, pronóstico, prevención y tratamiento</li><li>Demencias: vascular, con cuerpos de Lewy, en la enfermedad de Parkinson, frontotemporal: concepto, epidemiología, factores de riesgo, factores de protección, evaluación, diagnóstico, manejo farmacológico y manejo no farmacológico</li></ul>\n<p><strong>Trabajo autónomo:</strong></p>\n<ul><li>Características del envejecimiento cerebral</li><li>Evaluación cognitiva en la persona adulta mayor</li></ul>",
+   "planHtml": "<h3>Síndrome confusional — plan del orquestador</h3>\n<p>Fuentes (prioridad): 1) <strong>Caso de Doña Rosa</strong> (<code>fuentes/casos/caso_dona_rosa_sindrome_confusional.md</code>); 2) <strong>sílabo de la segunda rotación, Caso 6 — Síndrome confusional agudo y demencia</strong> (<code>fuentes/syllabus_quirurgica2_segunda_rotacion.md</code>), con su bibliografía (Harrison, Farreras, Kane <em>Principios de geriatría clínica</em> 8e, Ebert <em>Psiquiatría</em> 4e, MSP 2010 adulto mayor); 3) guía vigente más específica (DSM-5-TR, Inouye <em>Lancet</em> 2014, AGS Beers 2023, STOPP/START v3, Comisión <em>Lancet</em> de demencia 2024, ADA Standards 2025 adultos mayores, ACIP/CDC esquema de adultos vigente, MSP Ecuador).</p>\n<p>Skill: <strong>apertura v1</strong> (<code>.claude/skills/apertura/SKILL.md</code>), un único widget <code>apertura/</code> → <code>Apertura_sindrome_confusional.html</code>.</p>\n<h4>Router</h4>\n<p><code>Modo: apertura · Términos: 9 · Pestañas: c0, t1–t9, pb, jq, hx, tg · Problema central: síndrome confusional agudo sobre deterioro cognitivo crónico</code></p>\n<div class=\"tabla\"><table><thead><tr><th>id</th><th>Pestaña</th><th>Término / contenido</th></tr></thead><tbody><tr><td>c0</td><td>Caso</td><td>Caso transcrito y marcado B/P/S/FR, incongruencias, datos faltantes</td></tr><tr><td>t1</td><td>Vacunas</td><td>Vacunas del adulto ≥80 años: recomendado frente a lo que tiene Doña Rosa</td></tr><tr><td>t2</td><td>Losartán</td><td>ARA II</td></tr><tr><td>t3</td><td>Diltiazem</td><td>Calcioantagonista no dihidropiridínico</td></tr><tr><td>t4</td><td>Furosemida</td><td>Diurético de asa</td></tr><tr><td>t5</td><td>Paracetamol</td><td>Analgésico-antipirético</td></tr><tr><td>t6</td><td>Pregabalina</td><td>Gabapentinoide</td></tr><tr><td>t7</td><td>Glucosamina</td><td>Suplemento «condroprotector» (Artrin)</td></tr><tr><td>t8</td><td>Insulina + metformina</td><td>Insulina NPH (escrita «HPH» en el caso) + biguanida</td></tr><tr><td>t9</td><td>Hipotiroidismo subclínico</td><td>TSH alta con T4 libre normal</td></tr><tr><td>pb</td><td>Problemas</td><td>B/P/S/FR con fisiopatología</td></tr><tr><td>jq</td><td>Jerarquización</td><td>Orden por morbimortalidad</td></tr><tr><td>hx</td><td>Hipótesis</td><td>Hipótesis diagnósticas y diferencial</td></tr><tr><td>tg</td><td>Repaso global</td><td>Mazo mixto + Referencias</td></tr></tbody></table></div>\n<p>Decisiones: el caso escribe «Tramal» (tramadol), que no está en la lista de términos; se trata <strong>dentro de <code>pb</code></strong> (B3 polifarmacia) y en remisiones, no como pestaña. «HPH» se interpreta como insulina NPH (nota <code>.mini.am</code>). «Herpes zorter» = herpes zóster.</p>\n<h4>Esqueleto clínico (el ejecutor desarrolla; no cambia el orden sin avisar)</h4>\n<h5>Problemas</h5>\n<p><strong>Biológicos</strong></p>\n<ul><li><strong>B1 · Alteración aguda de la conducta y la cognición de 1–2 semanas</strong> (irritabilidad, inversión del ciclo sueño-vigilia, ideas de robo, ve a su difunto esposo) → síndrome confusional agudo (delirium), probablemente hiperactivo o mixto. Fisiopatología: hipótesis neurotransmisora (déficit colinérgico / exceso dopaminérgico), neuroinflamación, estrés oxidativo, red de atención; umbral bajo por reserva cognitiva reducida.</li><li><strong>B2 · Deterioro cognitivo crónico progresivo de ~2 años con pérdida de actividades instrumentales</strong> (olvida nombres, quema la comida, plancha encendida, no ordena casa, comida ni ropa) → trastorno neurocognitivo mayor probable. Fisiopatología: neurodegeneración (amiloide/tau) y daño vascular (DM2, HTA, IC).</li><li><strong>B3 · Polifarmacia (≥9 fármacos) con medicamentos potencialmente inapropiados</strong> para el adulto mayor y con efecto sobre el SNC: tramadol + pregabalina (sedación, deliriogénicos, tramadol serotoninérgico e hiponatremia), insulina NPH nocturna (hipoglucemia), furosemida (deshidratación, hiponatremia, hipopotasemia), losartán + furosemida (lesión renal, hiperpotasemia, que a su vez acumula pregabalina y metformina), diltiazem en IC (inotropo negativo, bradicardia), metformina (déficit de B12 a largo plazo). Criterios Beers 2023 / STOPP.</li><li><strong>B4 · Riesgo de hipoglucemia y disglucemia</strong> en DM2 insulinorrequiriente de 83 años (NPH nocturna + metformina): neuroglucopenia nocturna puede imitar o precipitar delirium. Glucemia no reportada.</li><li><strong>B5 · Insuficiencia cardiaca hipertensiva NYHA II</strong>: bajo gasto / hipoperfusión cerebral, congestión, nicturia; diltiazem y FEVI desconocida.</li><li><strong>B6 · Infección de vías urinarias recurrente</strong> (última hace 4 meses, malla de cistopexia, nicturia 2–3) → foco precipitante frecuente de delirium en la mujer mayor; puede no tener fiebre ni disuria.</li><li><strong>B7 · Dolor crónico osteoarticular</strong> (escoliosis, anterolistesis L5–S1 grado II, lumbociatalgia, gonartrosis): dolor no controlado y sus analgésicos precipitan delirium; limitan movilidad.</li><li><strong>B8 · Riesgo de caídas y fractura</strong> (osteopenia, pregabalina/tramadol, nicturia, diurético, deterioro cognitivo, lumbociatalgia).</li><li><strong>B9 · Hipotiroidismo subclínico en observación</strong>: causa potencialmente contribuyente y reversible de deterioro cognitivo a reevaluar.</li><li><strong>B10 · Esquema de vacunación incompleto para la edad</strong> (sin dT/Tdap, sin zóster recombinante, neumococo una dosis de tipo no especificado, VSR no consignado).</li><li><strong>B11 · Exposición a humo de leña</strong>: riesgo de EPOC/hipoxemia crónica (dato faltante: síntomas respiratorios, saturación).</li></ul>\n<p><strong>Psicológicos</strong></p>\n<ul><li><strong>P1 · Síntomas psicóticos</strong>: ideas delirantes de perjuicio (robo) y alucinaciones visuales (difunto marido).</li><li><strong>P2 · Irritabilidad y labilidad</strong> («carácter dañado»), con impacto en la relación con el hijo.</li><li><strong>P3 · Alteración del ciclo sueño-vigilia</strong> (somnolencia diurna, vigilia nocturna).</li><li><strong>P4 · Duelo / viudez y posible ánimo depresivo</strong> no evaluado (la depresión puede simular deterioro cognitivo).</li></ul>\n<p><strong>Sociales</strong></p>\n<ul><li><strong>S1 · Cuidador único (hijo) con riesgo de sobrecarga</strong> y conflicto por las acusaciones de robo.</li><li><strong>S2 · Inseguridad en el hogar</strong> (plancha encendida, comida quemada: riesgo de quemadura e incendio) y dependencia en actividades instrumentales.</li><li><strong>S3 · Escolaridad primaria</strong> (menor reserva cognitiva; condiciona la interpretación de las pruebas cognitivas).</li><li><strong>S4 · Viuda, adulta mayor de 83 años</strong>: fragilidad de la red; la religiosidad (católica) como recurso de apoyo.</li></ul>\n<p><strong>Factores de riesgo (para las hipótesis)</strong></p>\n<ul><li><strong>FR1 · Predisponentes de delirium</strong>: edad ≥80, deterioro cognitivo previo, multimorbilidad, dependencia funcional, baja escolaridad.</li><li><strong>FR2 · Precipitantes de delirium</strong>: fármacos psicoactivos (tramadol, pregabalina), infección (ITU recurrente), disglucemia, trastornos hidroelectrolíticos por diurético, dolor, privación de sueño, nicturia.</li><li><strong>FR3 · Factores de riesgo de demencia (modificables y no modificables)</strong>: edad, sexo femenino, baja escolaridad, DM2, HTA, IC, contaminación del aire intradomiciliaria (humo de leña), aislamiento tras la viudez.</li><li><strong>FR4 · Antecedentes familiares cardiometabólicos</strong>: hijo con DM, hermanas con HTA (carga vascular familiar).</li></ul>\n<h5>Jerarquización propuesta (de mayor a menor riesgo)</h5>\n<p>g1 B1 → g1 B4 → g1 B3 → g2 B6 → g2 P1 → g2 B8 → g2 S2 → g2 B5 → g3 B2 → g3 P3 → g3 S1 → g3 B7 → g3 P2 → g3 P4 → g4 B9 → g4 B10 → g4 B11 → g4 S3 → g4 S4. Lógica: el delirium es una urgencia con mortalidad alta y siempre tiene causa; las causas tiempo-dependientes y reversibles (hipoglucemia, toxicidad farmacológica, infección) van arriba; luego el riesgo de daño inmediato (caídas, accidentes domésticos, psicosis); después lo crónico.</p>\n<h5>Hipótesis (orden de probabilidad)</h5>\n<ul><li><strong>H1 · Síndrome confusional agudo (delirium) multifactorial</strong>, hiperactivo/mixto — explica B1, P1, P2, P3. Precipitantes candidatos: farmacológico (tramadol + pregabalina), metabólico (hipoglucemia por NPH, hiponatremia por furosemida/tramadol), infeccioso (ITU). Criterios DSM-5-TR / CAM.</li><li><strong>H2 · Trastorno neurocognitivo mayor (demencia) de base</strong>, probable enfermedad de Alzheimer o mixta (Alzheimer + vascular) — explica B2, S2. A favor: 2 años, memoria episódica, pérdida de AIVD, carga vascular.</li><li><strong>H3 · Delirium inducido por medicamentos / prescripción potencialmente inapropiada</strong> (sub-hipótesis de H1 con identidad propia por ser reversible) — explica B3, B4.</li><li><strong>H4 · ITU como foco precipitante</strong> — B6.</li><li><strong>Diferencial</strong>: demencia con cuerpos de Lewy (alucinaciones visuales bien formadas, fluctuación; pero las alucinaciones son recientes), depresión con quejas cognitivas, hipotiroidismo, déficit de B12 (metformina), hematoma subdural (riesgo de caídas), psicosis de inicio tardío, hipoxemia (humo de leña / IC).</li></ul>\n<p>Necesidades de aprendizaje (Caso 6 del sílabo): definición, factores predisponentes y precipitantes, fisiopatología, clasificación y diagnóstico del delirium (CAM); demencias (Alzheimer, vascular, Lewy, Parkinson, frontotemporal); envejecimiento cerebral; evaluación cognitiva del adulto mayor (MMSE/MoCA, actividades instrumentales de Lawton).</p>\n<h4>Diagramas mínimos (≥5)</h4>\n<ol><li><code>pb</code>: mapa biopsicosocial de Doña Rosa (cuatro ejes → síndrome confusional sobre deterioro crónico).</li><li><code>pb</code>: fisiopatología del delirium (insulto → neuroinflamación / desequilibrio ACh-DA → falla de red de atención → signos).</li><li><code>pb</code>: cascada de la polifarmacia (furosemida + losartán → función renal ↓ → acumulación de pregabalina/metformina; tramadol + furosemida → hiponatremia; NPH → hipoglucemia nocturna → confusión).</li><li><code>jq</code>: escalera de gravedad / agrupación de problemas en síndromes.</li><li><code>hx</code>: modelo multifactorial predisponentes × precipitantes (Inouye) → H1 sobre H2.</li></ol>\n<h4>Reparto de ejecutores</h4>\n<div class=\"tabla\"><table><thead><tr><th>Ejecutor</th><th>Modelo</th><th>Entrega</th></tr></thead><tbody><tr><td>Kit</td><td>sonnet</td><td><code>kit/apertura_head.html</code>, tipo <code>apertura</code> en <code>construir.py</code>, <code>kit/validar_apertura.py</code>, ajuste de <code>probar_definiciones.js</code></td></tr><tr><td>Términos A</td><td>sonnet</td><td><code>p10_t1</code>…<code>p50_t5</code> (vacunas, losartán, diltiazem, furosemida, paracetamol)</td></tr><tr><td>Términos B</td><td>sonnet</td><td><code>p60_t6</code>…<code>p90_t9</code> (pregabalina, glucosamina, insulina + metformina, hipotiroidismo subclínico)</td></tr><tr><td>Razonamiento</td><td>sonnet</td><td><code>p05_c0</code>, <code>p91_pb</code>, <code>p92_jq</code>, <code>p93_hx</code></td></tr><tr><td>Integrador</td><td>sonnet</td><td><code>p01_nav</code>, <code>p95_tg</code>, <code>p96_js</code>, numeración Vancouver, construir en verde</td></tr><tr><td>Pruebas</td><td>haiku</td><td>navegador (iPad, oscuro, móvil), auditoría, informe de fallas</td></tr></tbody></table></div>\n<p>Convención para trabajo en paralelo: las citas se escriben <code>[@clave]</code> y cada ejecutor deja <code>_refs_&lt;ejecutor&gt;.tsv</code> (<code>clave&lt;TAB&gt;referencia Vancouver</code>) y <code>_recall_&lt;ejecutor&gt;.json</code> (<code>{&quot;t1&quot;:[{&quot;q&quot;:…,&quot;a&quot;:…,&quot;h&quot;:…}]}</code>) en <code>apertura/</code>. El integrador numera por primera aparición, escribe la lista y borra los archivos <code>_*</code>.</p>\n<h3>Trastornos neurocognitivos — plan del orquestador</h3>\n<p>Caso: <code>fuentes/casos/caso_saquisili_trastornos_neurocognitivos.md</code> (medicatura rural, Centro de Salud de Saquisilí, <strong>sin posibilidad de derivar</strong>; varón que vive solo, traído por su hijo porque «no actúa como él mismo» desde hace dos días, con conciencia que fluctúa entre lúcido y somnoliento o estuporoso; deambuló horas al calor; inquieto el día previo; cuadro viral hace dos semanas; polaquiuria y nocturia con volumen disminuido; estreñimiento de dos semanas; sed aumentada con ingesta de agua reducida; fatiga de meses).</p>\n<p>Sílabo: 2.ª rotación, <strong>Caso 6 — Síndrome confusional agudo y demencia</strong> (síndrome confusional agudo; trastornos cognitivos menores por Alzheimer y Parkinson; demencias vascular, con cuerpos de Lewy, en la enfermedad de Parkinson y frontotemporal; trabajo autónomo: envejecimiento cerebral y evaluación cognitiva del adulto mayor). Toca también el <strong>Caso 3 — Síndromes geriátricos</strong> (delirio, demencia, valoración geriátrica integral).</p>\n<p>Bibliografía: sílabo de la 2.ª rotación con las ediciones vigentes del protocolo § 4 (el sílabo cita Harrison 19.ª y Farreras 17.ª: <strong>discrepancia</strong>; se usan Harrison 22.ª 2025 y Farreras 20.ª 2024; Snell 7.ª 2010 → Snell 9.ª 2025) + Kane 8.ª 2018 + Ebert 4.ª 2025 + MSP Adultos mayores 2010 + DSM-5-TR 2022 + guías: NICE CG103 delirium (actualizada 2023), SIGN 157 (2019), NICE NG97 demencia (2018), NIA-AA (2011 y revisión 2024), McKeith 2017 (cuerpos de Lewy), Rascovsky 2011 y Gorno-Tempini 2011 (frontotemporal), VASCOG/Sachdev 2014 (vascular), AGS Beers 2023, Comisión Lancet 2024 (factores modificables), y para las causas del caso: ADA 2024 crisis hiperglucémicas, revisiones de hipercalcemia, hipernatremia y golpe de calor.</p>\n<h4>Versión del kit</h4>\n<p>v11 real (rama <code>claude/happy-mendel-ylorra</code>): enseñanza con <code>tipo: &quot;v11&quot;</code> (<code>kit/v11/</code>); apertura con <code>tipo: &quot;apertura&quot;</code> (<code>kit/apertura_head.html</code>, aún sin cabecera v11). Regla de cero marcas en ambos (<code>docs/DECISIONES_v11.md</code>).</p>\n<h4>Pistas del caso (sin resolver el caso por el estudiante)</h4>\n<div class=\"tabla\"><table><thead><tr><th>Pista</th><th>Por qué importa</th><th>Dónde</th></tr></thead><tbody><tr><td>Cambio agudo (2 días) con conciencia que fluctúa entre lúcido y somnoliento/estuporoso</td><td>Inicio agudo + curso fluctuante + nivel de conciencia alterado: rasgos cardinales del delirium (CAM)</td><td>vis (eje 1 y 2), e1</td></tr><tr><td>Inquieto el día previo; luego somnoliento</td><td>Pródromo y paso de forma hiperactiva a hipoactiva o mixta</td><td>e1 (subtipos)</td></tr><tr><td>Polaquiuria/nocturia, sed aumentada, estreñimiento, fatiga de semanas</td><td>Constelación de <strong>hipercalcemia</strong> (diabetes insípida nefrogénica, hipomotilidad, astenia) y de <strong>hiperglucemia</strong> (diuresis osmótica): causa metabólica del delirium</td><td>e1 (tabla de etiología, simulador dx), vis</td></tr><tr><td>Calor por horas + ingesta de agua reducida pese a la sed</td><td>Deshidratación hipertónica, agotamiento o golpe de calor; el adulto mayor pierde sed y capacidad de concentrar</td><td>e1 (Cadena, Tratamiento)</td></tr><tr><td>Cuadro viral hace dos semanas</td><td>Precipitante infeccioso clásico (y del estado hiperosmolar)</td><td>e1</td></tr><tr><td>Vive solo; hijo visita ocasionalmente; reducción de salidas</td><td>Detección tardía; ¿demencia previa no reconocida como terreno? El hijo es informante intermitente</td><td>vis (no confundir delirium con demencia; delirium sobre demencia), e2</td></tr><tr><td>Saquisilí sin derivación</td><td>Todo el estudio y manejo inicial en el centro de salud: glucometría capilar, tira de orina, ECG (QT corto en hipercalcemia), hidratación IV, vigilancia</td><td>e1 (Diagnóstico y Tratamiento), vis («quién maneja»)</td></tr><tr><td>Altitud de Saquisilí (~2 900 m)</td><td>Nota de altitud solo si cambia una conducta (SpO₂ como causa de delirium)</td><td>e1, solo si el ejecutor encuentra fuente</td></tr></tbody></table></div>\n<h4>Widget A · Enseñanza (widget-ensenanza v11, multi) — <code>ensenanza/</code></h4>\n<p>Router: <code>Modo: multi · Entidades: e1=Delirium (principal), e2=Enfermedad de Alzheimer, e3=Neurocognitivo vascular, e4=Cuerpos de Lewy, e5=Frontotemporal · Amenaza: e1 · Override: no</code> (los nombres son los textos de botón; e3 = trastorno neurocognitivo vascular, e4 = enfermedad por cuerpos de Lewy, e5 = degeneración frontotemporal)</p>\n<ul><li>Presentación común: <strong>adulto mayor con cambio cognitivo o conductual («no actúa como él mismo») en el primer nivel</strong>.</li><li>Eje (declarado): tiempo de instalación y curso (horas-días y fluctuante → meses-años y progresivo) y, dentro de lo crónico, el dominio que cae primero (memoria → función ejecutiva escalonada → fluctuación con alucinaciones y parkinsonismo → conducta o lenguaje).</li><li>Principal y amenaza = e1: el delirium es lo más frecuente en urgencias y lo que mata si no se busca la causa.</li><li>Textos de botón (exactos): <code>Visión de conjunto</code> · <code>Delirium</code> · <code>Enfermedad de Alzheimer</code> · <code>Neurocognitivo vascular</code> · <code>Cuerpos de Lewy</code> · <code>Frontotemporal</code> · <code>Errores</code>.</li><li>Subtipos: e1 hiperactivo · hipoactivo · mixto (y delirium sobre demencia); e2 TNC leve frente a mayor (DSM-5-TR), inicio temprano/tardío, variantes atípicas (atrofia cortical posterior, afasia logopénica); e3 multiinfarto cortical · subcortical de pequeño vaso · infarto estratégico; e4 demencia con cuerpos de Lewy · demencia en la enfermedad de Parkinson (regla del año; cubre «trastorno cognitivo menor por Parkinson» del sílabo); e5 variante conductual · afasia primaria progresiva semántica · no fluente.</li><li>Vecinas fuera del grupo («No confundir con…»): depresión con quejas cognitivas, hidrocefalia normotensiva, hipotiroidismo y déficit de B12, encefalopatía de Wernicke, enfermedad de Creutzfeldt-Jakob, encefalitis, hematoma subdural crónico.</li><li>Tema de acento: <code>salud-mental</code>.</li></ul>\n<p>Ejes de <code>vis</code> (literales, van a <code>nucleo.vis</code>):</p>\n<ol><li><code>Eje 1 — Tiempo y curso: horas o días con fluctuación es delirium hasta demostrar lo contrario; meses o años de declive progresivo es un trastorno neurocognitivo.</code></li><li><code>Eje 2 — Atención y conciencia: la inatención y la conciencia alterada definen el delirium; en la demencia temprana se conservan, salvo en cuerpos de Lewy.</code></li><li><code>Eje 3 — Todo delirium tiene una causa orgánica que se busca y se corrige: metabólica, infecciosa, farmacológica o por deshidratación.</code></li><li><code>Eje 4 — El primer dominio que cae orienta la demencia: memoria, función ejecutiva escalonada, alucinaciones con parkinsonismo, o conducta y lenguaje.</code></li></ol>\n<p>Contrato de <code>vis</code> por entidad (celda «¿Qué hallazgo la delata?» = <code>k</code> de la <code>.qv</code>; «¿Qué prueba la confirma?» = su paso <code>1.º</code> o <code>Confirma</code>):</p>\n<div class=\"tabla\"><table><thead><tr><th></th><th>Hallazgo que la delata (k)</th><th>1.º dx / Confirma</th><th>Conducta inicial</th></tr></thead><tbody><tr><td>e1</td><td>Inicio agudo con inatención y conciencia que fluctúa</td><td>CAM o 4AT en la cabecera + glucemia capilar</td><td>Buscar y corregir la causa; medidas no farmacológicas; antipsicótico solo si hay riesgo</td></tr><tr><td>e2</td><td>Olvido progresivo de lo reciente con fallo para aprender información nueva</td><td>MoCA o MMSE + funcionalidad + laboratorio de causas reversibles + neuroimagen</td><td>Inhibidor de colinesterasa, intervención no farmacológica y apoyo al cuidador</td></tr><tr><td>e3</td><td>Declive escalonado, ejecutivo, con signos focales y factores vasculares</td><td>Neuroimagen (RM) con lesión vascular que explica el déficit</td><td>Control estricto de factores de riesgo vascular y prevención secundaria</td></tr><tr><td>e4</td><td>Fluctuación cognitiva con alucinaciones visuales y parkinsonismo</td><td>Criterios de McKeith 2017 (biomarcador: SPECT de transportador de dopamina)</td><td>Inhibidor de colinesterasa; evita antipsicóticos típicos</td></tr><tr><td>e5</td><td>Cambio temprano de conducta o lenguaje con memoria relativamente conservada</td><td>Criterios de Rascovsky o Gorno-Tempini + RM con atrofia frontotemporal</td><td>ISRS o trazodona para la conducta; no inhibidores de colinesterasa</td></tr></tbody></table></div>\n<p>Conteos (manifiesto): <code>pg</code> vis 4, e1 5, e2–e5 3 · <code>fey</code> e1 2, e2–e5 1 · <code>nodos</code> e1 7, e2 6, e3 5, e4 5, e5 5 · <code>signos</code> e1 5, e2 4, e3 3, e4 4, e5 3 · <code>dc</code> vis, e1, e2, e3, e4, e5. Si un ejecutor necesita otro conteo, lo informa y el orquestador ajusta el manifiesto.</p>\n<p>Simuladores: <code>dcVis</code> (diferencial desde hallazgos); <code>dcE1d</code> (CAM: rasgos → delirium sí/no y subtipo; chips del caso → causa metabólica a buscar primero y qué prueba hacer en el centro de salud, en «Diagnóstico»); <code>dcE1t</code> (conducta según causa y agitación; hidratación por peso con tope, antipsicótico solo si hay riesgo, con tope de dosis del adulto mayor, en «Tratamiento»); <code>dcE2</code> (estadio por MMSE/MoCA → fármaco con posología); <code>dcE3</code> (perfil vascular → prevención secundaria); <code>dcE4</code> (síntoma dominante → fármaco y lo que se evita); <code>dcE5</code> (síntoma conductual → fármaco; qué no usar).</p>\n<h5>Reparto enseñanza (ejecutores <code>sonnet</code>)</h5>\n<div class=\"tabla\"><table><thead><tr><th>Ejecutor</th><th>Partes</th><th>Simuladores (en <code>_sim_&lt;X&gt;.js</code>)</th></tr></thead><tbody><tr><td>A</td><td><code>21_e1</code></td><td><code>dcE1d</code>, <code>dcE1t</code></td></tr><tr><td>B</td><td><code>05_vis</code> + <code>22_e2</code></td><td><code>dcVis</code>, <code>dcE2</code></td></tr><tr><td>C</td><td><code>23_e3</code> + <code>24_e4</code></td><td><code>dcE3</code>, <code>dcE4</code></td></tr><tr><td>D</td><td><code>25_e5</code> + <code>80_sin</code> (solo <code>hb ro</code> «Errores que no se pueden cometer»; el orquestador añade <code>.acc.refs</code>)</td><td><code>dcE5</code></td></tr><tr><td>E (al final)</td><td><code>02_pan</code></td><td>—</td></tr></tbody></table></div>\n<p>El orquestador escribe <code>01_nav</code>, une <code>90_sim</code> y fija el manifiesto.</p>\n<h4>Widget B · Apertura (skill apertura v1) — <code>apertura/</code></h4>\n<p>Título <code>Apertura · Trastornos neurocognitivos</code> · salida <code>../Apertura_trastornos_neurocognitivos.html</code> · manifiesto <code>terminos 9</code>, <code>problemas {B:5,P:3,S:3,FR:4}</code>, <code>hipotesis 4</code>, <code>diagramas 5</code>.</p>\n<h5>Términos (9: los 5 del estudiante + 4 que añade el orquestador por ser fundamentales en el caso)</h5>\n<div class=\"tabla\"><table><thead><tr><th>Pestaña · término</th><th>Prerrequisitos canónicos (tipo)</th><th>Remisiones</th><th>pid (card.vin)</th></tr></thead><tbody><tr><td>t1 · Fatiga</td><td>Contracción muscular y aporte de ATP (C) · Comando motor central y percepción del esfuerzo (C)</td><td>—</td><td>B5, FR4</td></tr><tr><td>t2 · «No actúa como él mismo» (coloquial → cambio agudo del estado mental respecto de su basal; <code>.mini.am</code> con la interpretación)</td><td>Dominios cognitivos (B) · Funcionalidad basal: ABVD y AIVD (B)</td><td>—</td><td>B1, S3</td></tr><tr><td>t3 · Lúcido</td><td>Sistema activador reticular ascendente (B) · Nivel y contenido de la conciencia (C) · Red atencional (B)</td><td>dominios cognitivos (t2)</td><td>B1</td></tr><tr><td>t4 · Somnoliento</td><td>Ciclo sueño-vigilia (C)</td><td>SARA (t3)</td><td>B1</td></tr><tr><td>t5 · Estuporoso</td><td>Respuesta al estímulo nociceptivo (C)</td><td>SARA (t3) · nivel y contenido de la conciencia (t3)</td><td>B1</td></tr><tr><td>t6 · Inquietud (añadido)</td><td>Circuitos frontosubcorticales y control de la actividad motora (B)</td><td>SARA (t3)</td><td>P1, P2</td></tr><tr><td>t7 · Polidipsia · sed aumentada (añadido)</td><td>Osmorregulación: osmorreceptores, sed y ADH (C) · Agua corporal y sed en el envejecimiento (C)</td><td>—</td><td>B3, P3, FR3</td></tr><tr><td>t8 · Nocturia (añadido; «No confundir» con polaquiuria, poliuria y oliguria)</td><td>Llenado y vaciado vesical (C) · Concentración de la orina y ritmo circadiano de la diuresis (C)</td><td>osmorregulación (t7)</td><td>B2, P3</td></tr><tr><td>t9 · Estreñimiento (añadido)</td><td>Motilidad colónica y reflejo de la defecación (C) · Absorción de agua en el colon (C)</td><td>—</td><td>B4, FR4</td></tr></tbody></table></div>\n<p>Cada término: card <code>.card.vin</code> «Por qué importa en este caso» (≤70 palabras, chips <code>span.pid</code>), ejemplo de anclaje en el paciente (sin afirmar el diagnóstico) y 6 tarjetas (5 + 1 que conecta con el caso). Tope de prerrequisitos: 5.</p>\n<h5>Problemas (ids fijos)</h5>\n<div class=\"tabla\"><table><thead><tr><th>id</th><th>Problema</th><th>Dato del caso</th></tr></thead><tbody><tr><td>B1</td><td>Alteración aguda y fluctuante de la conciencia y la conducta</td><td>«no actúa como él mismo» desde hace dos días; «lúcido un minuto y luego… somnoliento o estuporoso»</td></tr><tr><td>B2</td><td>Polaquiuria y nocturia con volumen urinario disminuido</td><td>«aumento en la frecuencia de micción y nocturia… con disminución significativa del volumen»</td></tr><tr><td>B3</td><td>Sed aumentada con ingesta de agua reducida (balance hídrico negativo probable)</td><td>«aumento de la sed en las últimas semanas»; «ha disminuido la ingesta de agua a pesar de la sed»</td></tr><tr><td>B4</td><td>Estreñimiento de dos semanas con evacuaciones dolorosas</td><td>«una o dos veces por semana», «evacuaciones dolorosas»</td></tr><tr><td>B5</td><td>Fatiga con menor actividad en los últimos meses</td><td>«ha reducido sus salidas en los últimos meses debido a la fatiga»</td></tr><tr><td>P1</td><td>Inquietud el día previo al cambio</td><td>«un día antes… se le vio inquieto»</td></tr><tr><td>P2</td><td>Deambulación sin rumbo durante horas</td><td>«caminando sin dirección en su barrio… por varias horas»</td></tr><tr><td>P3</td><td>Restricción voluntaria del agua para no orinar de noche</td><td>«disminuido la ingesta de agua… por el aumento de la frecuencia urinaria en la noche»</td></tr><tr><td>S1</td><td>Vive solo; el hijo lo visita ocasionalmente</td><td>«vive solo… un hijo que lo visita ocasionalmente»</td></tr><tr><td>S2</td><td>Medicatura rural sin posibilidad de derivar</td><td>«Centro de Salud de Saquisilí… no tiene forma de derivar»</td></tr><tr><td>S3</td><td>Historia que depende de un informante que no convive con él</td><td>el hijo relata; visitas ocasionales</td></tr><tr><td>FR1</td><td>Exposición prolongada al calor</td><td>«clima caliente por varias horas»; «camina en un clima caluroso para sus compras»</td></tr><tr><td>FR2</td><td>Infección viral reciente</td><td>«cuadro viral leve hace dos semanas, con fiebre y malestar general»</td></tr><tr><td>FR3</td><td>Ingesta de agua reducida pese a la sed</td><td>ídem B3/P3 (como argumento)</td></tr><tr><td>FR4</td><td>Síntomas subagudos (fatiga, sed, estreñimiento) que preceden al cuadro agudo</td><td>semanas a meses antes del cambio de conducta</td></tr></tbody></table></div>\n<p>Datos que faltan (c0 y hx): edad; fármacos (diuréticos, litio, vitamina D, calcio, anticolinérgicos, sedantes); antecedentes (diabetes, cáncer, hiperparatiroidismo, deterioro cognitivo previo, alcohol); signos vitales con temperatura y SpO₂; estado de hidratación; examen neurológico y de focalidad; glucemia capilar; sodio, potasio, calcio corregido o iónico, albúmina, urea, creatinina, osmolalidad; EMO; ECG; diuresis medida; funcionalidad y cognición basales según el hijo.</p>\n<h5>Jerarquía propuesta (<code>ol.rank</code>, todos los B, P, S una vez)</h5>\n<p>g1: B1 (delirium: urgencia médica con mortalidad), B3 (deshidratación con riesgo de hiperosmolaridad, lesión renal y golpe de calor). g2: B2 (marcador del trastorno metabólico causal), P2 (golpe de calor, caídas, extravío), S2 (todo se resuelve en el centro de salud), S1 (nadie vigila hidratación ni recurrencia). g3: B4, B5, P1, P3. g4: S3. Los FR no se jerarquizan.</p>\n<h5>Hipótesis (<code>.card.hx</code>, por probabilidad)</h5>\n<div class=\"tabla\"><table><thead><tr><th>id</th><th>Hipótesis</th><th>Probabilidad</th><th>Explica</th><th>Qué la confirmaría</th></tr></thead><tbody><tr><td>H1</td><td>Delirium (síndrome confusional agudo) de causa médica</td><td>Alta</td><td>B1, P1, P2</td><td>CAM o 4AT positivos; búsqueda de la causa</td></tr><tr><td>H2</td><td>Hipercalcemia sintomática</td><td>Media</td><td>B1, B2, B3, B4, B5, FR4</td><td>Calcio corregido o iónico elevado; QT corto en el ECG; PTH para la causa</td></tr><tr><td>H3</td><td>Estado hiperosmolar hiperglucémico (diabetes no conocida)</td><td>Media</td><td>B1, B2, B3, B5, FR2</td><td>Glucemia y osmolalidad efectiva elevadas sin cetoacidosis importante</td></tr><tr><td>H4</td><td>Deshidratación hipertónica (hipernatremia) con agotamiento o golpe de calor</td><td>Media</td><td>B1, B3, P2, P3, FR1, FR3</td><td>Sodio sérico elevado; temperatura central; urea/creatinina</td></tr></tbody></table></div>\n<p>Diferencial (tabla fuera de las cards): hiponatremia, infección urinaria o sepsis, encefalitis viral, ictus, hipoglucemia, trastorno neurocognitivo mayor previo no reconocido (delirium sobre demencia), hipotiroidismo, intoxicación farmacológica.</p>\n<h5>Diagramas (<code>figure.dg</code>, mínimo 5)</h5>\n<ol><li><code>pb</code> · mapa biopsicosocial: B, P, S y FR convergiendo en «Cambio agudo y fluctuante del estado mental».</li><li><code>pb</code> · fisiopatología del problema principal: sustrato vulnerable + insulto metabólico → disfunción de la red atencional y del SARA → inatención y conciencia fluctuante.</li><li><code>pb</code> · círculo vicioso del agua: diuresis aumentada → nocturia → restricción de agua → deshidratación → más concentración y más confusión.</li><li><code>jq</code> · escalera de gravedad (g1 → g4).</li><li><code>hx</code> · predisponentes + precipitantes → síndrome → hipótesis H1–H4.</li></ol>\n<h5>Reparto apertura (ejecutores <code>sonnet</code>)</h5>\n<div class=\"tabla\"><table><thead><tr><th>Ejecutor</th><th>Partes</th><th>Mazos</th></tr></thead><tbody><tr><td>K</td><td><code>p05_c0</code> + <code>p10_t1</code> <code>p20_t2</code> <code>p30_t3</code></td><td>t1–t3</td></tr><tr><td>L</td><td><code>p40_t4</code> <code>p50_t5</code> <code>p60_t6</code></td><td>t4–t6</td></tr><tr><td>M</td><td><code>p70_t7</code> <code>p80_t8</code> <code>p90_t9</code></td><td>t7–t9</td></tr><tr><td>N</td><td><code>p91_pb</code></td><td>pb (6–8)</td></tr><tr><td>O</td><td><code>p92_jq</code> + <code>p93_hx</code></td><td>jq (5–6), hx (6–8)</td></tr></tbody></table></div>\n<p>El orquestador escribe <code>p01_nav</code>, <code>p95_tg</code>, <code>p96_js</code> y el manifiesto.</p>\n<h4>Citas y verificación (ambos widgets)</h4>\n<ul><li>Los ejecutores citan con claves <code>[@clave]</code> del catálogo común <code>widgets/trastornos_neurocognitivos/_refs_catalogo.tsv</code>; si necesitan otra fuente, la añaden a <code>_refs_&lt;X&gt;.tsv</code> en su carpeta de widget (<code>clave&lt;TAB&gt;Vancouver</code>), con PMID/DOI solo si PubMed o la web los devolvieron.</li><li>Datos que cambian conducta (dosis, umbrales, puntos de corte) se verifican al redactar con PubMed/Consensus/DailyMed/web; lo no confirmado no se escribe (cero marcas). Cada ejecutor anota en <code>_pend_&lt;X&gt;.tsv</code> (<code>dato&lt;TAB&gt;parte&lt;TAB&gt;fuente</code>) lo que confirmó y con qué.</li><li><code>haiku</code>: pasada de verificación de catálogo y <code>_refs_*</code> (que cada PMID/DOI exista y corresponda) y de una muestra de <code>_pend_*</code>.</li><li>Integrador (orquestador): convierte <code>[@clave]</code> en <code>[n]</code>, arma <code>ol.vanc</code> (en <code>80_sin</code> y en <code>p95_tg</code>), ejecuta <code>kit/renumerar.py</code>, une mazos y simuladores, y borra los <code>_*</code>.</li></ul>\n<h4>Reglas de diseño para ejecutores (ambos widgets)</h4>\n<p>Las 10 reglas de <code>widgets/patologia_urinaria_baja/PLAN.md</code> § «Reglas de diseño para ejecutores» (clases solo del kit; tablas con thead/tbody en <code>div.tw</code>; sin recuadros anidados; tipo oración; párrafos ≤90 palabras; un <code>&lt;b&gt;</code> por párrafo; voz activa, español de Ecuador; sin emojis; coma decimal; conteos de la skill), más las de v11: <code>div.nucleo</code> tras las PG, <code>aside.perla[data-ex]</code> junto al tema, <code>li[data-paso]</code> en pasos, filas-pregunta en <code>vis</code>, columna «Mecanismo de acción» en tablas de fármacos, cero <code>[VERIFICAR EN FUENTE]</code>.</p>\n<h4>Resultado (2026-11-09)</h4>\n<ul><li>Enseñanza: <code>Trastornos_neurocognitivos_widget_v11.html</code> (v11, multi), 82 referencias, validador OK (7 avisos de longitud aceptados: profundidad de examen, como en <code>depresion_bipolar_suicidio</code>). Apertura: <code>Apertura_trastornos_neurocognitivos.html</code>, 36 referencias, validador, auditoría y navegador en verde. Cero marcas en ambos.</li><li>Verificación: catálogo y referencias de ejecutores comprobados por <code>haiku</code> en PubMed (78 artículos confirmados, 1 corregido —Cao 2020—, 1 eliminado —estudio poblacional de Lewy 2026 sin registro en PubMed—, con sus cifras).</li><li>Datos eliminados por no poder leerse en la sesión (hosts bloqueados o figura en imagen): umbrales numéricos de glucemia y osmolalidad del estado hiperosmolar (ADA 2024, figura 2B), umbrales numéricos de Roma IV, punto de corte del Mini-Cog y del 4AT, dosis de quetiapina, risperidona, levodopa y melatonina en demencia, nota de altitud de Saquisilí, hidratación por kg en el simulador (se usan las tasas absolutas de ADA 2024). AHA/ASA 2021 y SIGN 157 no se citan (sin acceso al texto).</li><li>Los archivos de trabajo <code>_refs_*</code>, <code>_pend_*</code>, <code>_sim_*</code>, <code>_recall_*</code> y los briefs se borraron tras integrar.</li></ul>",
+   "casos": [
+    {
+     "titulo": "Caso de Doña Rosa · Síndrome confusional (transcripción fiel del texto entregado por el estudiante)",
+     "html": "<p>Doña Rosa de 83 años, primaria completa, diestra, viuda, católica, vive con su hijo.</p>\n<p>Tabaquismo negativo, alcoholismo negativo, exposición a humo de leña positivo</p>\n<p>Vacunas: Covid-19 tres dosis, influenza si este año, neumococo una dosis hace 1 año, no vacuna de DT, dupla viral, varicela herpes zorter no.</p>\n<p>Alimentaria: 3 porciones + 2 colaciones diarias,</p>\n<p>Miccional: 4 por día y 2-3 por noche.</p>\n<p>Defecatorio: 1 a 2 al día.</p>\n<h3>Motivo de consulta</h3>\n<p>El hijo de la paciente refiere que la misma está con &quot;el carácter dañado&quot; desde hace una semana y que se olvida las cosas</p>\n<h3>Enfermedad actual</h3>\n<p>El hijo de la paciente refiere que la paciente está de peor carácter desde hace dos semanas; está irritable, duerme en el día y en la noche pasa despierta, le acusa de robo de dinero y ve a su difunto marido.</p>\n<p>Desde hace aproximadamente dos años, ha perdido la memoria. Se confunde con los nombres de los hijos, quema mucho la comida, se olvida la plancha prendida. No se acuerda donde pone las cosas. No es capaz de mantener en orden la casa, ni su comida, ni su ropa.</p>\n<h3>Antecedentes patológicos quirúrgicos</h3>\n<p>Cistopexia con colocación de una malla, hace 15 años.</p>\n<h3>Antecedentes gineco-obstétricos</h3>\n<p>G6 P2 C1, A3.</p>\n<p>Menarquia a los 12 años, menopausia a los 53 años, método de planificación con Tcu.</p>\n<p>Mamografía normal hace 5 años, DMO osteopenia hace 5 años, Paptest normal a los 68 años.</p>\n<h3>Antecedentes patológicos no quirúrgicos</h3>\n<ul><li>Insuficiencia cardiaca hipertensiva grado II NYHA, desde hace 10 años, en tratamiento con: Losartan 25mg am y 12,5mg pm + Diltiazem 60mg bid + Furosemida 40mg am</li><li>Escoliosis derecha con anterolistesis grado II, a nivel L5 sobre S1 y lumbociatalgia crónica, en tratamiento con paracetamol 500mg tid + Tramal 5 gotas bid + Pregabalina 25mg am y 50mg hs.</li><li>Gonartrosis en tratamiento con Glucosamina (Artrin) 1 tableta cada dia</li><li>Hipotiroidismo subclínico en observación</li><li>Diabetes Mellitus Tipo II, insulino requiriente, recibe 12 unidades de insulina HPH en la noche mas metformina 500mgm BID.</li><li>Infección de vías urinarias recurrente en seguimiento, la última infección fue hace 4 meses.</li></ul>\n<h3>Antecedentes patológicos familiares</h3>\n<p>Hijo con Diabetes Mellitus. Hermanas con hipertensión arterial.</p>\n<h3>Hábitos</h3>\n<p>Alimentaria: 3 porciones + 2 colaciones diarias,</p>\n<p>Miccional: 4 por día y 2-3 por noche.</p>\n<p>Defecatorio: 1 a 2 al día.</p>\n<h3>Términos a definir (lista del estudiante)</h3>\n<p>Vacunas que debería tener el paciente adulto mayor de 80 años; losartán; diltiazem; furosemida; paracetamol; pregabalina; glucosamina; insulina + metformina; hipotiroidismo subclínico.</p>"
+    },
+    {
+     "titulo": "Caso · Trastornos neurocognitivos (Saquisilí)",
+     "html": "<p>Transcripción fiel del caso entregado por el estudiante (2026-11-09). Sílabo: 2.ª rotación, Caso 6 — Síndrome confusional agudo y demencia.</p>\n<p><strong>Escenario.</strong> Usted se encuentra realizando la medicatura rural en el Centro de Salud de Saquisilí, y no tiene forma de derivar al paciente.</p>\n<p><strong>Contexto social.</strong> Vive solo en su casa, cuenta con un hijo que lo visita ocasionalmente. Se mantiene físicamente activo, aunque ha reducido sus salidas en los últimos meses debido a la fatiga.</p>\n<p><strong>Motivo y enfermedad actual.</strong> El paciente fue traído a la sala de emergencias por su hijo, quien refiere que el padre «no actúa como él mismo» desde hace dos días. Describe que parece estar lúcido un minuto y luego se vuelve somnoliento o estuporoso. El hijo informa que el paciente se encontraba caminando sin dirección en su barrio, en clima caliente por varias horas. Un día antes de que aparecieran estos síntomas, su padre se le vio inquieto.</p>\n<p>El paciente menciona un cuadro viral leve hace dos semanas, con fiebre y malestar general, que se resolvió sin tratamiento. Aumento en la frecuencia de micción y nocturia en los últimos días, pero con disminución significativo del volumen. Desde hace aproximadamente dos semanas, el paciente ha presentado estreñimiento, con evacuaciones dolorosas y menos frecuentes (una o dos veces por semana). Aumento de la sed en las últimas semanas; indica que camina en un clima caluroso para sus compras y que ha disminuido la ingesta de agua a pesar de la sed en las tardes y noches por el aumento de la frecuencia urinaria en la noche.</p>\n<p><strong>Términos pedidos por el estudiante.</strong> fatiga, «no actúa como él mismo», lúcido, somnoliento, estuporoso (y otros términos fundamentales que el orquestador identifique).</p>\n<h3>Notas del orquestador (no forman parte del caso)</h3>\n<ul><li>No se consignan edad, signos vitales, examen físico, glucemia, electrolitos, calcio, función renal, EMO ni fármacos: son <strong>datos faltantes</strong>.</li><li>Incongruencia a señalar: «aumento en la frecuencia de micción» con «disminución del volumen»: puede ser polaquiuria con volumen por micción bajo, poliuria percibida como frecuencia o caída de la diuresis total por deshidratación; solo la diuresis de 24 h lo separa.</li></ul>"
+    }
+   ],
+   "widgets": [
+    "sindrome-confusional-apertura",
+    "trastornos-neurocognitivos-apertura",
+    "trastornos-neurocognitivos-ensenanza"
+   ],
+   "mazos": []
+  },
+  {
+   "id": "trastornos-animo",
+   "semestre": "s10",
+   "rotacion": "r2",
+   "orden": 7,
+   "caso": "Caso 7",
+   "titulo": "Trastornos del estado de ánimo",
+   "resumen": "Definición y clasificación; Fisiopatología y etiopatogenia; Características clínicas de los trastornos del estado de ánimo; Evaluación diagnóstica; Tratamiento farmacológico y no farmacológico; Determinación del riesgo suicida; Manejo inicial del riesgo suicida.",
+   "estado": "completo",
+   "nota": null,
+   "silaboHtml": "<p><strong>Resultado:</strong> Maneja de manera integral a los pacientes con trastornos del ánimo de acuerdo con evidencia científica.</p>\n<p><em>(Horas de contacto no consignadas en el PDF para este caso; la metodología y evaluación son las comunes.)</em></p>\n<p><strong>Contenidos:</strong></p>\n<ul><li>Definición y clasificación</li><li>Fisiopatología y etiopatogenia</li><li>Características clínicas de los trastornos del estado de ánimo</li><li>Evaluación diagnóstica</li><li>Tratamiento farmacológico y no farmacológico</li><li>Determinación del riesgo suicida</li><li>Manejo inicial del riesgo suicida</li></ul>\n<p><strong>Trabajo autónomo:</strong></p>\n<ul><li>Técnica y estructura de la historia clínica psiquiátrica</li></ul>",
+   "planHtml": "<p>Caso: <code>fuentes/casos/caso_crisis_angustia_trastornos_animo.md</code> (consulta externa de primer nivel, <strong>sin posibilidad de derivar</strong>; tercer episodio en un año de palpitaciones, opresión precordial y miedo a perder el control mientras conduce; antes «preinfarto por estrés» tratado con Stresstabs y Xanax por semanas; hoy además sudoración y náuseas).</p>\n<p>Sílabo: 2.ª rotación, <strong>Caso 7 — Trastornos del estado de ánimo</strong> (definición y clasificación, fisiopatología, clínica, evaluación diagnóstica, tratamiento, riesgo suicida y su manejo inicial; trabajo autónomo: historia clínica psiquiátrica). El cuadro de presentación pertenece además al <strong>Caso 5 — TAG y ataque de pánico</strong> (trabajo autónomo: serotonina, acetilcolina, GABA, MAO; benzodiacepinas e ISRS). Ambos se cubren.</p>\n<p>Bibliografía: la del sílabo de la 2.ª rotación con ediciones vigentes del protocolo § 4 (el sílabo cita Harrison 19.ª y Farreras 17.ª: <strong>discrepancia</strong>; se usan Harrison 22.ª 2025 y Farreras 20.ª 2024) + Ebert 4.ª 2025 (complementaria del sílabo) + DSM-5-TR 2022 + guías: NICE CG113 (ansiedad/pánico), NICE NG222 (depresión), WFSBP 2023, ESC 2023 SCA, AHA/ACC 2021 dolor torácico, OMS mhGAP 2.0 (primer nivel sin especialista).</p>\n<h3>Citas (ambos widgets)</h3>\n<p>Los ejecutores citaron con claves de un catálogo común, que se verificó en PubMed (los 10 artículos de revista, con PMID) y en la web (documentos de organismos). El orquestador las numeró por primera aparición: en enseñanza se cuenta desde <code>vis</code> y el Panorama reutiliza los números. Las partes ya llevan <code>[n]</code>, así que una cita nueva se numera a mano según el validador.</p>\n<p>Lo que no se pudo confirmar: la composición de Stresstabs, que cambia según el país (badge ámbar en t8; DailyMed no es accesible desde la sesión). La duración del ISRS en TAG quedó respaldada por Batelaan 2017 (BMJ, PMID 28903922) y la nota de altitud para la SatO₂ en Quito por Rojas-Camayo 2018 (Thorax, PMID 29054885). También se quitó un tope de 40 mg de diazepam en la sustitución, porque no se encontró en Ashton.</p>\n<h3>Pistas del caso (sin resolver el caso)</h3>\n<div class=\"tabla\"><table><thead><tr><th>Pista</th><th>Por qué importa</th><th>Dónde</th></tr></thead><tbody><tr><td>Inicio brusco al conducir, pico en minutos, miedo a perder el control, tercer episodio</td><td>Patrón de crisis de angustia recurrente; conducir = situación de la que es difícil escapar (agorafobia)</td><td>vis, e1</td></tr><tr><td>Opresión precordial + sudoración + náuseas</td><td>Igual de compatibles con SCA: obligan a ECG antes de etiquetar ansiedad</td><td>vis (hb ro), e5</td></tr><tr><td>«Preinfarto por estrés» sin datos objetivos</td><td>Término popular; error de rotulación que perpetúa la crisis y la consulta repetida</td><td>e1, e5, def t6</td></tr><tr><td>Xanax por semanas</td><td>Riesgo de tolerancia, rebote interdosis y abstinencia; BZD no es tratamiento de mantenimiento del pánico</td><td>e4, e1 tx</td></tr><tr><td>Stresstabs</td><td>Polivitamínico sin efecto ansiolítico demostrado; tratamiento sin diagnóstico</td><td>def t8, e1 (Evita)</td></tr><tr><td>Sin derivación</td><td>Manejo integral en primer nivel (mhGAP) y estabilización del SCA mientras se activa ECU 911</td><td>e1 tx, e3 riesgo suicida, e5</td></tr></tbody></table></div>\n<h3>Widget A · Enseñanza (widget-ensenanza v10.1, multi) — <code>ensenanza/</code></h3>\n<p>Router: <code>Modo: multi · Entidades: e1=Trastorno de pánico (principal), e2=Ansiedad generalizada, e3=Depresión mayor, e4=Consumo de benzodiacepinas, e5=Síndrome coronario agudo · Amenaza: e5 · Override: no</code></p>\n<ul><li>Presentación común: <strong>crisis de angustia con síntomas somáticos (opresión torácica, palpitaciones, sudoración) en consulta externa de primer nivel</strong>.</li><li>Eje (declarado): origen de la crisis, de ansiedad primaria → afectivo → inducido por sustancia → orgánico amenazante (e1 → e5).</li><li>Textos de botón (exactos): <code>Trastorno de pánico</code> · <code>Ansiedad generalizada</code> · <code>Depresión mayor</code> · <code>Consumo de benzodiacepinas</code> · <code>Síndrome coronario agudo</code>.</li><li>Subtipos: e1 con/sin agorafobia y crisis esperadas/inesperadas; e2 —; e3 gravedad (leve/moderada/grave), con características ansiosas, distimia como vecina; e4 intoxicación · tolerancia/dependencia · abstinencia · trastorno por consumo (fases de una entidad); e5 SCACEST · SCASEST (IAMSEST/angina inestable).</li><li>Vecinas fuera del grupo («No confundir con…»): hipertiroidismo, feocromocitoma, arritmias (TSV), hipoglucemia, intoxicación por estimulantes, trastorno bipolar, TEP, disección aórtica.</li></ul>\n<p>Ejes de <code>vis</code> (literales, van a <code>nucleo.vis</code>):</p>\n<ol><li><code>Eje 1 — Curso temporal: crisis con pico en minutos, preocupación de meses, ánimo bajo de semanas, síntomas entre dosis o dolor isquémico persistente.</code></li><li><code>Eje 2 — ECG de 12 derivaciones antes de etiquetar ansiedad: el pánico se diagnostica tras excluir la isquemia.</code></li><li><code>Eje 3 — En toda ansiedad recurrente se criba el ánimo y se pregunta directamente por ideación suicida.</code></li></ol>\n<p>Contrato de <code>vis</code> por entidad (celdas <code>Signo que la delata</code> = <code>k</code> de la <code>.qv</code> de esa entidad; <code>Prueba que decide</code> = su paso <code>1.º</code> o <code>Confirma</code>):</p>\n<div class=\"tabla\"><table><thead><tr><th></th><th>Signo que la delata (k)</th><th>1.º dx</th><th>Conducta inicial</th></tr></thead><tbody><tr><td>e1</td><td>Crisis inesperadas recurrentes con pico en minutos y miedo persistente a nuevas crisis</td><td>ECG de 12 derivaciones normal + criterios DSM-5-TR en la entrevista</td><td>Psicoeducación, ISRS y TCC; BZD no como mantenimiento</td></tr><tr><td>e2</td><td>Preocupación excesiva, difícil de controlar, la mayoría de días ≥6 meses</td><td>GAD-7 + criterios DSM-5-TR</td><td>ISRS/IRSN y TCC</td></tr><tr><td>e3</td><td>Ánimo deprimido o anhedonia casi todos los días ≥2 semanas</td><td>PHQ-9 + pregunta directa por ideación suicida</td><td>Evaluar riesgo suicida; ISRS y psicoterapia</td></tr><tr><td>e4</td><td>Ansiedad de rebote entre dosis y escalada de alprazolam</td><td>Anamnesis de consumo con criterios DSM-5-TR</td><td>Reducción gradual pactada; nunca suspensión brusca</td></tr><tr><td>e5</td><td>Opresión retroesternal &gt;20 min con diaforesis, sobre todo con factores de riesgo</td><td>ECG de 12 derivaciones en ≤10 min + troponina</td><td>AAS masticada, ECU 911 y monitorización</td></tr></tbody></table></div>\n<p>Conteos (manifiesto): <code>pg</code> vis 4, e1 4, e2–e5 3 · <code>fey</code> e1 2, e2–e5 1 · <code>nodos</code> e1 6, e2 5, e3 5, e4 5, e5 5 · <code>signos</code> e1 4, e2 3, e3 3, e4 3, e5 3 · <code>dc</code> vis, e1, e2, e3, e4, e5. Simuladores: <code>dcVis</code> (diferencial), <code>dcE1d</code> y <code>dcE1t</code> (e1 dx y tx), <code>dcE2</code> (tx), <code>dcE3r</code> (riesgo suicida → conducta en primer nivel, en «Diagnóstico») y <code>dcE3</code> (tx), <code>dcE4</code> (pauta de reducción por dosis), <code>dcE5</code> (conducta inicial en primer nivel sin derivación). Helpers comunes en <code>90_sim</code>: <code>par(t)</code>, <code>hv(a,v)</code>, <code>vacio(dc,t)</code> + los del kit (<code>sel num out rd</code>).</p>\n<p>Reparto (hecho): ejecutor A → <code>05_vis</code> + <code>21_e1</code>; B → <code>22_e2</code> + <code>23_e3</code>; C → <code>24_e4</code> + <code>25_e5</code> + <code>80_sin</code>; D → <code>02_pan</code>; el orquestador escribió <code>01_nav</code> y unió los simuladores en <code>90_sim</code>. El botón de <code>vis</code> es «Visión de conjunto».</p>\n<p>Título <code>Crisis de angustia con síntomas somáticos</code> · salida <code>Crisis_de_angustia_widget_v10.html</code>.</p>\n<h3>Widget B · Apertura (skill apertura v1) — <code>apertura/</code></h3>\n<p>Reemplaza al widget de definiciones (el estudiante pidió apertura). Conserva las 9 pestañas de término y su fuente única de prerrequisitos (tabla de abajo), y añade <code>c0</code>, <code>pb</code>, <code>jq</code> y <code>hx</code>. Título <code>Apertura · Trastornos del estado de ánimo</code> · salida <code>../Apertura_trastornos_animo.html</code> · manifiesto <code>problemas {B:3,P:3,S:3,FR:3}</code>, <code>hipotesis 4</code>, <code>diagramas 4</code>.</p>\n<h4>Términos (sin cambios en prerrequisitos)</h4>\n<div class=\"tabla\"><table><thead><tr><th>Pestaña · término</th><th>Prerrequisitos canónicos (tipo)</th><th>Remisiones</th><th>pid que toca (card.vin)</th></tr></thead><tbody><tr><td>t1 · Trastornos del estado de ánimo</td><td>Sistema límbico (B) · Sistemas monoaminérgicos (B) · Afecto, ánimo y emoción (C)</td><td>—</td><td>P3, H4</td></tr><tr><td>t2 · Angustia</td><td>Circuito del miedo (C) · Interocepción e ínsula (A)</td><td>sistema límbico (t1)</td><td>P1, FR3</td></tr><tr><td>t3 · Opresión precordial</td><td>Precordio y mediastino (A) · Dolor visceral y referido (C) · Aporte y demanda de O₂ (C)</td><td>—</td><td>B1</td></tr><tr><td>t4 · Palpitaciones</td><td>Sistema de conducción (B) · SNA (B)</td><td>—</td><td>B1, B2</td></tr><tr><td>t5 · Sudoración y náuseas</td><td>Glándula sudorípara ecrina (A) · Reflejo del vómito (C)</td><td>SNA (t4) · circuito del miedo (t2)</td><td>B1</td></tr><tr><td>t6 · Preinfarto</td><td>Isquemia y necrosis en el tiempo (C) · Troponinas (A)</td><td>circulación coronaria y dolor referido (t3)</td><td>P2, S3</td></tr><tr><td>t7 · Estrés</td><td>Eje HHS (C) · Simpático-adrenomedular (C)</td><td>SNA (t4) · circuito del miedo (t2)</td><td>FR1, P3</td></tr><tr><td>t8 · Stresstabs</td><td>Vitaminas B y C como coenzimas (B)</td><td>eje HHS (t7)</td><td>S3</td></tr><tr><td>t9 · Xanax (alprazolam)</td><td>Receptor GABA-A (A) · Vida media, CYP3A4 y neuroadaptación (C)</td><td>circuito del miedo (t2) · afecto/ánimo (t1)</td><td>B3, FR2</td></tr></tbody></table></div>\n<p>En apertura cada término lleva la card <code>.card.vin</code> «Por qué importa en este caso» (≤70 palabras, chips <code>span.pid</code>), su ejemplo de anclaje pasa a estar anclado en el paciente (sin afirmar el diagnóstico) y cada mazo suma 1 tarjeta que conecta el término con el caso (5 → 6).</p>\n<h4>Problemas (ids fijos)</h4>\n<div class=\"tabla\"><table><thead><tr><th>id</th><th>Problema</th><th>Dato del caso</th></tr></thead><tbody><tr><td>B1</td><td>Dolor torácico opresivo agudo con palpitaciones, sudoración y náuseas, no filiado</td><td>«opresión en el pecho… se me va a salir el corazón»; hace 40 min; sudoración y náuseas</td></tr><tr><td>B2</td><td>Episodios paroxísticos recurrentes de activación autonómica</td><td>tercer episodio en el último año</td></tr><tr><td>B3</td><td>Uso de alprazolam por semanas sin diagnóstico ni seguimiento claros</td><td>«recibió… Xanax (alprazolam) que consumió por varias semanas»</td></tr><tr><td>P1</td><td>Miedo intenso a perder el control mental durante la crisis</td><td>«sensación de angustia por perder el control mental»</td></tr><tr><td>P2</td><td>Creencia de enfermedad cardiaca grave («preinfarto»)</td><td>«le diagnosticaron un preinfarto debido a estrés» (según el paciente)</td></tr><tr><td>P3</td><td>Estrés referido como causa, con ánimo y ansiedad basal sin explorar</td><td>«debido a estrés»; el caso no describe ánimo ni preocupación entre crisis</td></tr><tr><td>S1</td><td>Crisis mientras conduce: riesgo vial y para su trabajo</td><td>«mientras conducía su auto en dirección a su lugar de trabajo»</td></tr><tr><td>S2</td><td>Atención en primer nivel sin posibilidad de derivar</td><td>«no tiene forma de derivar al paciente»</td></tr><tr><td>S3</td><td>Atención previa fragmentada: rótulo impreciso y tratamientos sin diagnóstico</td><td>dos atenciones previas, «preinfarto», Stresstabs y Xanax</td></tr><tr><td>FR1</td><td>Estrés percibido (predisponente y precipitante)</td><td>«debido a estrés»</td></tr><tr><td>FR2</td><td>Benzodiacepina de vida media corta usada semanas (rebote, abstinencia)</td><td>alprazolam por varias semanas</td></tr><tr><td>FR3</td><td>Situación de la que es difícil escapar (conducir)</td><td>episodio al conducir</td></tr></tbody></table></div>\n<p>Datos que faltan (c0 y hx): edad y sexo; factores de riesgo cardiovascular; signos vitales; ECG y troponina actuales y de los episodios previos; glucemia; TSH; consumo de cafeína, alcohol, tabaco y otras sustancias; dosis, horario y fecha de la última toma de alprazolam; ánimo, preocupación entre crisis, ideación suicida; evitación posterior; antecedentes personales y familiares; ocupación.</p>\n<h4>Jerarquía propuesta (<code>ol.rank</code>, todos los B, P, S una vez)</h4>\n<p>g1: B1 (amenaza vital hasta ECG y troponina). g2: B3 (abstinencia con convulsiones si se suspende de golpe; dependencia), S1 (riesgo vial inmediato si la crisis se repite al conducir), B2 (recurrencia que sostiene el diagnóstico y el deterioro). g3: P2 (sostiene la ansiedad anticipatoria y las consultas), P1, S3, S2. g4: P3. Los FR no se jerarquizan.</p>\n<h4>Hipótesis (<code>.card.hx</code>, por probabilidad)</h4>\n<div class=\"tabla\"><table><thead><tr><th>id</th><th>Hipótesis</th><th>Probabilidad</th><th>Explica</th><th>Qué la confirmaría</th></tr></thead><tbody><tr><td>H1</td><td>Ataques de pánico recurrentes / trastorno de pánico (con posible agorafobia)</td><td>Alta</td><td>B1, B2, P1, P2, FR3</td><td>ECG y troponina normales; criterios DSM-5-TR (≥4 síntomas con pico en minutos, ≥1 mes de miedo o evitación)</td></tr><tr><td>H2</td><td>Síndrome coronario agudo</td><td>Media (no descartada)</td><td>B1</td><td>ECG en ≤10 min y troponina seriada</td></tr><tr><td>H3</td><td>Ansiedad inducida por benzodiacepinas (rebote o abstinencia)</td><td>Media</td><td>B2, B3, FR2</td><td>Relación temporal con la última toma y el horario de dosis</td></tr><tr><td>H4</td><td>Trastorno del ánimo o ansiedad generalizada comórbidos</td><td>Baja (por datos faltantes)</td><td>P3, FR1</td><td>PHQ-9, GAD-7, pregunta directa por ideación suicida</td></tr></tbody></table></div>\n<p>Diferencial (tabla fuera de las cards): taquicardia supraventricular, hipertiroidismo, hipoglucemia, feocromocitoma, intoxicación por estimulantes o cafeína, tromboembolia pulmonar.</p>\n<h4>Diagramas (<code>figure.dg</code>, mínimo 4)</h4>\n<ol><li><code>pb</code> · mapa biopsicosocial: B, P, S y FR convergiendo en «Crisis de angustia con síntomas somáticos recurrente».</li><li><code>pb</code> · círculo del pánico: sensación corporal → interpretación catastrófica → miedo → descarga simpática → más síntomas.</li><li><code>jq</code> · escalera de gravedad (g1 → g4).</li><li><code>hx</code> · predisponentes + precipitantes → síndrome → hipótesis H1–H4.</li></ol>\n<p>Reparto (hecho): ejecutor K → <code>p05_c0</code> + vin/anclaje/tarjeta de t1–t4; L → lo mismo en t5–t9; M → <code>p91_pb</code>; N → <code>p92_jq</code> + <code>p93_hx</code>. El orquestador armó <code>p01_nav</code>, <code>p95_tg</code>, <code>p96_js</code> y el manifiesto. Las partes ya llevan <code>[n]</code> numerados.</p>\n<h3>Reglas de diseño para ejecutores (ambos widgets)</h3>\n<p>Las 10 reglas de <code>widgets/patologia_urinaria_baja/PLAN.md</code> § «Reglas de diseño para ejecutores» aplican tal cual (clases solo del kit; tablas con thead/tbody en <code>div.tw</code>; sin recuadros anidados; tipo oración; párrafos ≤90 palabras; un <code>&lt;b&gt;</code> por párrafo; voz activa, español de Ecuador; sin emojis; coma decimal; conteos de la skill).</p>\n<h3>Widget C · Depresión, trastorno bipolar y suicidio (widget-ensenanza v10.1, multi) — <code>depresion_bipolar_suicidio/</code></h3>\n<p>Pedido del estudiante: «todo lo que tengo que saber» del Caso 7 (trastornos del estado de ánimo), centrado en depresión, trastorno bipolar y suicidio, con el esquema de explicación de temas del DSM-5-TR. No hay un esquema propio en el repo; se toma la estructura de texto del DSM-5-TR para cada trastorno y se declara en el widget.</p>\n<p>Router: <code>Modo: multi · Entidades: e1=Depresión mayor (principal), e2=Trastorno bipolar, e3=Conducta suicida · Amenaza: e3 · Override: no</code></p>\n<ul><li>Presentación común: <strong>adulto con síntomas depresivos (ánimo bajo o anhedonia) en consulta de primer nivel</strong>.</li><li>Eje (declarado): polaridad y letalidad. Depresión unipolar → espectro bipolar (aparece el polo elevado) → la complicación letal común a ambos (conducta suicida).</li><li>Textos de botón: <code>Visión de conjunto</code> · <code>Depresión mayor</code> · <code>Trastorno bipolar</code> · <code>Conducta suicida</code>.</li><li>Conducta suicida: en el DSM-5-TR el «trastorno de comportamiento suicida» está en la Sección III (afecciones que necesitan más estudio) y existen códigos de comportamiento suicida actual o pasado entre las afecciones que pueden ser objeto de atención clínica. Se trata como entidad por su mecanismo propio (modelo diátesis-estrés) y su manejo propio (estratificación, plan de seguridad, restricción de medios).</li><li>Subtipos: e1 gravedad (leve, moderada, grave), especificadores (con características ansiosas, mixtas, melancólicas, atípicas, psicóticas, con patrón estacional, con inicio en el periparto) y trastorno depresivo persistente; e2 bipolar I, bipolar II, ciclotímico y especificadores (ciclación rápida, características mixtas); e3 ideación pasiva, ideación activa sin plan, con plan o intención, intento interrumpido o abortado, intento, y autolesión sin intención suicida como vecina.</li></ul>\n<p><strong>Esquema DSM-5-TR</strong> (obligatorio en cada <code>eK</code>, dentro de «Qué es»): tabla <code>Sección del DSM-5-TR · Lo esencial · Dónde se desarrolla</code>, con estas filas en este orden: Criterios diagnósticos · Especificadores · Características diagnósticas · Características asociadas · Prevalencia · Desarrollo y curso · Factores de riesgo y pronóstico · Cuestiones culturales · Sexo y género · Asociación con pensamientos o comportamientos suicidas · Consecuencias funcionales · Diagnóstico diferencial · Comorbilidad. «Lo esencial» ≤15 palabras; «Dónde se desarrolla» = el <code>h2</code> de la pestaña que lo amplía. Los criterios se parafrasean (no se copian literales) en una tabla aparte <code>Criterio · Qué exige</code>.</p>\n<p>Ejes de <code>vis</code> (literales, van a <code>nucleo.vis</code>):</p>\n<ol><li><code>Eje 1 — Polaridad: antes de nombrar una depresión, pregunta por manía o hipomanía previas; un solo episodio elevado la convierte en bipolar.</code></li><li><code>Eje 2 — Riesgo suicida: en todo paciente con síntomas del ánimo se pregunta de forma directa por ideación, plan, intento previo y acceso a medios.</code></li><li><code>Eje 3 — Tratamiento según el polo: el antidepresivo en monoterapia es de elección solo en la depresión unipolar; en la bipolar manda el estabilizador.</code></li></ol>\n<p>Contrato de <code>vis</code> por entidad:</p>\n<div class=\"tabla\"><table><thead><tr><th></th><th>Signo que la delata (k)</th><th>1.º dx</th><th>Conducta inicial</th></tr></thead><tbody><tr><td>e1</td><td>Ánimo deprimido o anhedonia casi todos los días ≥2 semanas</td><td>PHQ-9 + criterios DSM-5-TR en la entrevista</td><td>ISRS y psicoterapia según gravedad</td></tr><tr><td>e2</td><td>Antecedente de manía o hipomanía: ánimo elevado, más energía, menos sueño</td><td>Entrevista dirigida a manía o hipomanía + criterios DSM-5-TR</td><td>Estabilizador del ánimo; no antidepresivo en monoterapia</td></tr><tr><td>e3</td><td>Ideación suicida con plan o intención, o intento reciente</td><td>Pregunta directa por ideación + C-SSRS</td><td>Plan de seguridad, restricción de medios y ECU 911 si es inminente</td></tr></tbody></table></div>\n<p>Conteos (manifiesto): <code>pg</code> vis 4, e1 5, e2 3, e3 3 · <code>fey</code> e1 2, e2 1, e3 1 · <code>nodos</code> e1 6, e2 6, e3 6 · <code>signos</code> e1 5, e2 4, e3 4 · <code>dc</code> vis, e1, e2, e3. Simuladores: <code>dcVis</code> (diferencial), <code>dcE1d</code> (PHQ-9 por bandas → gravedad → conducta inicial, en «Diagnóstico»), <code>dcE1t</code> (tratamiento por gravedad y situación especial, en «Tratamiento»), <code>dcE2</code> (fase: manía aguda, depresión bipolar, mantenimiento → fármaco con posología; litio con función renal y litemia), <code>dcE3</code> (estratificación del riesgo → conducta en primer nivel, en «Tratamiento»). Profundidad: e2 y e3 se escriben a profundidad de examen aunque superen las 1 200 palabras (aviso del validador aceptado: lo pidió el estudiante).</p>\n<p>Reparto (hecho): A → <code>05_vis</code> + <code>21_e1</code>; B → <code>22_e2</code>; C → <code>23_e3</code> + <code>80_sin</code>; D → <code>02_pan</code>; el orquestador armó <code>01_nav</code>, <code>90_sim</code> y el manifiesto.</p>\n<p>Verificación: PubMed (PMID de los artículos), GPC MSP 2017 de depresión (primera línea fluoxetina o sertralina), Lineamientos MSP 2026 de comportamiento suicida (primera cita en 24–72 h, máximo 7 días; línea 171 opción 6), fichas FDA en DailyMed (litio: 0,8–1,2 mmol/L en manía y 0,8–1,0 en mantenimiento frente a 0,6–0,8 de NICE; valproato: valle 50–125 µg/mL; lamotrigina: titulación). El DSM-5-TR retiró el trastorno de comportamiento suicida de la Sección III; sus criterios de 2013 se muestran como propuesta retirada. Sin marcas <code>[VERIFICAR EN FUENTE]</code>. Título <code>Depresión, trastorno bipolar y suicidio</code> · salida <code>../Depresion_bipolar_suicidio_widget_v10.html</code>.</p>",
+   "casos": [
+    {
+     "titulo": "Caso · Trastornos del estado de ánimo (2.ª rotación, caso 7; contenidos afines al caso 5)",
+     "html": "<p>Transcripción fiel del caso entregado por el estudiante.</p>\n<blockquote><p>Usted se encuentra en la consulta externa de su centro de salud, no tiene forma de derivar al paciente.</p>\n<p>«Doctor siento una opresión en el pecho, estoy temblando y se me va a salir el corazón».</p>\n<p>Paciente refiere que hace 40 minutos, mientras conducía su auto en dirección a su lugar de trabajo, presentó palpitaciones, opresión precordial y sensación de angustia por perder el control mental, por lo cual acude a consulta.</p>\n<p>Este es el tercer episodio que se presenta en el último año. En los dos episodios anteriores fue atendido y, según el paciente, le diagnosticaron un preinfarto debido a estrés, por lo cual recibió Stresstabs y Xanax (alprazolam) que el paciente consumió por varias semanas.</p>\n<p>En el presente episodio presenta además sudoración y náuseas.</p></blockquote>"
+    }
+   ],
+   "widgets": [
+    "trastornos-animo-apertura",
+    "trastornos-animo-depresion-bipolar-suicidio",
+    "trastornos-animo-ensenanza"
+   ],
+   "mazos": []
+  },
+  {
+   "id": "lesiones-dermicas",
+   "semestre": "s10",
+   "rotacion": "r2",
+   "orden": 8,
+   "caso": "Caso 8",
+   "titulo": "Lesiones dérmicas",
+   "resumen": "Conceptos y semiología de lesiones primarias y secundarias de piel; Enfermedades de piel que generan lesiones descamativas.",
+   "estado": "parcial",
+   "nota": "Solo morfología de lesiones; faltan las entidades del caso.",
+   "silaboHtml": "<p><strong>Resultado:</strong> Maneja de manera integral a los pacientes con lesiones dérmicas, según evidencia científica.</p>\n<p><em>(Horas de contacto no consignadas en el PDF para este caso; la metodología y evaluación son las comunes.)</em></p>\n<p><strong>Contenidos:</strong></p>\n<ul><li>Conceptos y semiología de lesiones primarias y secundarias de piel</li><li>Enfermedades de piel que generan lesiones descamativas</li><li>Epidemiología, fisiopatología, clínica y tratamiento de las diferentes patologías que cursan con lesiones descamativas: dermatitis atópica, dermatitis seborreica, dermatitis de contacto y su diagnóstico diferencial con tiñas, pitiriasis y psoriasis</li><li>La relación médico-paciente-familia en el contexto de infantes con lesiones crónicas de pie</li></ul>\n<p><strong>Trabajo autónomo:</strong></p>\n<ul><li>Piel normal: histología y fisiología</li><li>Lesiones primarias y secundarias de piel</li><li>Relación médico-paciente-familia en problemas crónicos</li><li>Historia clínica en problemas cutáneos</li><li>Farmacología básica</li></ul>",
+   "planHtml": "<p>Tema fuera del sílabo, pedido por el estudiante para su rotación clínica hospitalaria. Sin caso problema: widgets genéricos de terminología. Bibliografía rectora pedida por el estudiante: <strong>Bolognia, Dermatology 5e (2024)</strong> y <strong>Fitzpatrick&#x27;s Dermatology 9e (2019)</strong>; si la edición o el año no se sostienen, badge ámbar «Fuente por verificar» (no inventar edición, página ni ISBN).</p>\n<p>Formato: <strong>skill definiciones v5.1</strong> (una pestaña por lesión + repaso global), porque el objetivo es reconocer y nombrar lesiones, no razonar un caso. Son ~36 términos: más de 15 obliga a partir (§Escala), así que van <strong>4 widgets de 9 términos</strong> (régimen normal, tope 5 prerrequisitos). Orden de estudio: A → B → C → D.</p>\n<p>Reglas transversales de contenido:</p>\n<ul><li>Cada lesión: definición (tamaño, relieve, contenido, profundidad), sustrato histológico mínimo (epidermis, unión dermoepidérmica, dermis, hipodermis) en prerrequisitos, cómo se explora (inspección, palpación, vitropresión/diascopia, luz tangencial) y 2–3 enfermedades prototipo como ejemplo de anclaje, sin tratamiento.</li><li><strong>Umbrales de tamaño divergentes:</strong> Bolognia usa 1 cm (mácula/mancha, pápula/placa, vesícula/ampolla); otras fuentes, incluida parte de la tradición Fitzpatrick, usan 0,5 cm. Nota <code>.mini</code> con la divergencia y cuál usa cada libro; nunca promediar. Si no hay certeza de la cifra de un libro, <code>[VERIFICAR EN FUENTE]</code>.</li><li>Terminología en español de uso clínico en Ecuador, con el término inglés del libro entre paréntesis en la definición (p. ej. mancha (<em>patch</em>)).</li></ul>\n<h3>Widget A · Lesiones primarias sólidas — <code>primarias_solidas/</code></h3>\n<p>Términos: 1 Mácula · 2 Mancha (<em>patch</em>) · 3 Pápula · 4 Placa · 5 Nódulo · 6 Tumor · 7 Habón (roncha) · 8 Quiste · 9 Comedón. Archivo <code>Definiciones_lesiones_primarias_solidas.html</code> · título <code>Definiciones · Lesiones primarias sólidas</code>.</p>\n<h3>Widget B · Lesiones de contenido líquido y vasculares — <code>liquidas_vasculares/</code></h3>\n<p>Términos: 1 Vesícula · 2 Ampolla · 3 Pústula · 4 Absceso · 5 Púrpura (petequia y púrpura palpable) · 6 Equimosis · 7 Telangiectasia · 8 Surco acarino (<em>burrow</em>) · 9 Vitropresión (diascopia) y signo de Nikolsky — una pestaña con ambas maniobras de exploración. Archivo <code>Definiciones_lesiones_liquidas_vasculares.html</code> · título <code>Definiciones · Lesiones líquidas y vasculares</code>.</p>\n<h3>Widget C · Lesiones secundarias — <code>secundarias/</code></h3>\n<p>Términos: 1 Escama · 2 Costra · 3 Erosión · 4 Úlcera · 5 Fisura · 6 Excoriación · 7 Liquenificación · 8 Atrofia · 9 Cicatriz (hipertrófica, queloide y esclerosis). Archivo <code>Definiciones_lesiones_secundarias.html</code> · título <code>Definiciones · Lesiones secundarias</code>.</p>\n<h3>Widget D · Descripción morfológica — <code>descripcion_morfologica/</code></h3>\n<p>Términos: 1 Eritema y eritrodermia · 2 Configuración anular y arciforme · 3 Numular (discoide) · 4 Lesión en diana (iris) · 5 Disposición lineal (Koebner y líneas de Blaschko) · 6 Patrón reticulado · 7 Agrupación herpetiforme · 8 Distribución dermatómica (zosteriforme) · 9 Fotodistribución. Archivo <code>Definiciones_descripcion_morfologica.html</code> · título <code>Definiciones · Descripción morfológica</code>. La pestaña 1 incluye cómo redactar una descripción completa (tipo de lesión → color → tamaño → forma/borde → configuración → distribución), como puente al uso en la ronda.</p>\n<h3>Diseño</h3>\n<p>Igual que <code>widgets/patologia_urinaria_baja/PLAN.md</code>, Widget B: cabecera <code>kit/def_head.html</code> sin tocar, solo su vocabulario de clases, glifos sustituidos por texto («La sabía / A medias / No la sabía», «Fuente por verificar»), reglas de diseño 1–11 de ese PLAN. Modelo de partes: <code>widgets/patologia_urinaria_baja/definiciones/</code>.</p>\n<h3>Pruebas finales del orquestador</h3>\n<p><code>construir.py</code> + <code>auditar_definiciones.py &lt;html&gt; 9</code> + <code>probar_definiciones.js</code>. Sin más revisiones.</p>",
+   "casos": [],
+   "widgets": [
+    "dermatologia-descripcion-morfologica",
+    "dermatologia-liquidas-vasculares",
+    "dermatologia-primarias-solidas",
+    "dermatologia-secundarias"
+   ],
+   "mazos": []
+  },
+  {
+   "id": "cicatrizacion",
+   "semestre": "s10",
+   "rotacion": "extras",
+   "orden": 1,
+   "caso": null,
+   "titulo": "Cicatrización patológica",
+   "resumen": "Cicatriz queloide e infiltración de triamcinolona. Tema que no figura en los sílabos, de estudio complementario en cirugía plástica y heridas.",
+   "estado": "completo",
+   "nota": null,
+   "silaboHtml": null,
+   "planHtml": "<p>Pedido del estudiante: widget educativo sobre la <strong>infiltración de triamcinolona en cicatrices queloides</strong>. El tema no figura en los sílabos de <code>fuentes/</code>; es estudio complementario de Quirúrgica 2 (cirugía plástica y heridas).</p>\n<h3>Router (§2)</h3>\n<p>La infiltración es un procedimiento, no una entidad: no tiene mecanismo de enfermedad propio. La entidad es el <strong>queloide</strong>; la cicatriz hipertrófica es su diferencial principal (va en «No confundir con…» y en el simulador de <code>dx</code>, no como segunda entidad). Una entidad → <strong>mono</strong>. El procedimiento, que es el foco del pedido, ocupa la pestaña adicional.</p>\n<ul><li><code>Modo: mono · Entidades: e1=Cicatriz queloide · Amenaza: — · Override: no</code></li><li>Pestaña adicional <code>inf</code> («Infiltración con triamcinolona»), parte <code>14x_inf.html</code>, en su lugar lógico <strong>entre <code>tx</code> y <code>seg</code></strong> (barra: <code>pan def fis cli dx tx inf seg</code>), con su etapa en <code>pan</code> tras Tratamiento.</li><li>Slug: <code>Queloide_triamcinolona_widget_v10.html</code> · carpeta <code>queloide_triamcinolona/</code>.</li></ul>\n<h3>Reparto entre pestañas (qué va dónde)</h3>\n<div class=\"tabla\"><table><thead><tr><th>Pestaña</th><th>Qué cubre</th><th>Qué no</th></tr></thead><tbody><tr><td><code>def</code></td><td>Definición (sobrepasa los bordes de la herida, no regresa), sustrato normal (fases de cicatrización y remodelado del colágeno), criterios, «No confundir con…» (hipertrófica, dermatofibrosarcoma protuberans, cicatriz madura/ensanchada), epidemiología (fototipos IV–VI, 10–30 años, zonas de tensión)</td><td>Dosis, técnica</td></tr><tr><td><code>fis</code></td><td>Cascada fija (nodos abajo), etiología: genética/étnica, tipo de lesión, tensión mecánica, hormonas (embarazo, pubertad)</td><td>Fármacos</td></tr><tr><td><code>cli</code></td><td>Signos fijos (abajo), localizaciones típicas, síntomas</td><td>Conducta</td></tr><tr><td><code>dx</code></td><td>Diagnóstico clínico; biopsia solo si atípico, recidiva rápida o sospecha de malignidad; escalas (POSAS, Vancouver Scar Scale, JSS); fotografía y medición basales</td><td>Tratamiento</td></tr><tr><td><code>tx</code></td><td>Escalera terapéutica: prevención (silicona, presoterapia), primera línea intralesional (triamcinolona), combinaciones (5-FU, crioterapia), escisión <strong>siempre</strong> con adyuvancia (triamcinolona o radioterapia), láser, alternativas</td><td>Técnica fina de inyección (va en <code>inf</code>)</td></tr><tr><td><code>inf</code></td><td><strong>Prioridad del estudiante: indicaciones, contraindicaciones, técnica, dosificación y frecuencia</strong>, cada uno con su tabla o lista. El procedimiento: mecanismo farmacológico del corticoide sobre el fibroblasto, presentaciones y concentraciones (10–40 mg/mL), dosis máxima por sesión, intervalo, plano correcto (dermis, no subcutáneo), aguja/jeringa, anestesia previa, crioterapia previa, signo de blanqueamiento, cuántas sesiones, criterios de respuesta y de parada, contraindicaciones</td><td>Complicaciones en detalle (van en <code>seg</code>)</td></tr><tr><td><code>seg</code></td><td>Ciclo revisar-evaluar-ajustar, recidiva, complicaciones de la infiltración por su mecanismo (atrofia, hipopigmentación, telangiectasias, necrosis, efectos sistémicos: Cushing, alteración menstrual, hiperglucemia), <code>.acc.refs</code></td><td>—</td></tr></tbody></table></div>\n<h3>Nodos de <code>fis</code> (fijos: ids <code>m-1</code>…<code>m-8</code>)</h3>\n<ol><li><code>m-1</code> Lesión que alcanza la dermis reticular (cirugía, quemadura, acné, piercing, vacuna).</li><li><code>m-2</code> Inflamación crónica persistente en la dermis reticular.</li><li><code>m-3</code> Fibroblasto hiperactivo: señal TGF-β1/Smad sostenida y menor apoptosis.</li><li><code>m-4</code> Exceso de colágeno tipo I desorganizado en haces hialinos gruesos.</li><li><code>m-5</code> Tensión mecánica de la piel amplifica la señal (mecanotransducción).</li><li><code>m-6</code> Neoangiogénesis y fibras nerviosas nuevas: eritema, prurito y dolor.</li><li><code>m-7</code> Crecimiento invasivo más allá de los bordes de la herida original.</li><li><code>m-8</code> Recidiva tras escisión aislada por reactivar la cascada.</li></ol>\n<p><code>inf</code> y <code>tx</code> enlazan con <code>.xref</code> a <code>m-3</code> y <code>m-4</code> (donde actúa la triamcinolona) y <code>seg</code> a <code>m-8</code>.</p>\n<h3>Signos de <code>cli</code> (fijos: ids <code>s-1</code>…<code>s-5</code>)</h3>\n<ol><li><code>s-1</code> Placa o nódulo firme, brillante, que sobrepasa los bordes de la herida.</li><li><code>s-2</code> Prolongaciones en «pinza de cangrejo».</li><li><code>s-3</code> Prurito.</li><li><code>s-4</code> Dolor o hiperestesia.</li><li><code>s-5</code> Borde activo eritematoso con telangiectasias.</li></ol>\n<h3>Simuladores</h3>\n<ul><li><code>dx</code>: queloide frente a cicatriz hipertrófica frente a lesión que exige biopsia.</li><li><code>tx</code>: elegir conducta por escenario (queloide pequeño reciente, queloide grande en lóbulo para escisión, recidiva tras escisión).</li><li><code>seg</code>: atrofia e hipopigmentación tras la tercera sesión → qué ajustar.</li></ul>\n<h3>Fuentes</h3>\n<p>Hoja de datos verificada en PubMed por el ejecutor de investigación (<code>queloide_triamcinolona/FUENTES.md</code>), con numeración Vancouver única para todas las partes. Prioridad: recomendaciones internacionales (Gold 2014; Ogawa/JSW 2019 y consenso actualizado), revisiones sistemáticas sobre triamcinolona intralesional y combinaciones, Rook/Bolognia como texto. Cifras sin fuente leída → <code>[VERIFICAR EN FUENTE]</code>.</p>\n<h3>Reglas de contenido y diseño</h3>\n<p>Las mismas del plan de <code>neoplasias_gi/PLAN.md</code> (§ «Reglas de diseño para ejecutores»): solo clases del contrato v10, tablas con <code>&lt;thead&gt;</code>, sin recuadros anidados, tipo oración, párrafos ≤90 palabras, ≤1 <code>&lt;b&gt;</code> por párrafo, sin emojis, coma decimal.</p>",
+   "casos": [],
+   "widgets": [
+    "cicatrizacion-queloide-triamcinolona"
+   ],
+   "mazos": []
+  },
+  {
+   "id": "ginecologia",
+   "semestre": "s10",
+   "rotacion": "extras",
+   "orden": 2,
+   "caso": null,
+   "titulo": "Ginecología: ciclo ovárico y menopausia",
+   "resumen": "Ciclo ovárico, cuerpo albo y terapia hormonal de la menopausia. Tema que no figura en los sílabos; el caso más cercano es Envejecimiento.",
+   "estado": "completo",
+   "nota": null,
+   "silaboHtml": null,
+   "planHtml": "<p>Fuente del pedido: Ricardo (estudio personal). <strong>El tema no figura en ninguno de los dos sílabos</strong> (<code>fuentes/syllabus_quirurgica2*.md</code>); el caso más cercano es «Envejecimiento» (2.ª rotación: fisiología del envejecimiento, evaluación integral de la mujer adulta mayor). Alcance y bibliografía salen de la guía vigente y de los libros de la tabla de ediciones del protocolo (Guyton 14e, Ross 8e, Harrison 22e, Goodman &amp; Gilman 14e), más lo verificado en PubMed, Consensus y NIH (NIA, NCBI Bookshelf, ClinicalTrials.gov).</p>\n<h3>Router</h3>\n<p><code>Modo: mono · Entidades: e1=Menopausia y terapia hormonal · Amenaza: — · Override: no</code></p>\n<ul><li>Una sola entidad con mecanismo y manejo propios: la deficiencia estrogénica de la menopausia y su tratamiento hormonal.</li><li>El ciclo ovárico normal (folículo → cuerpo lúteo → <strong>cuerpo albo</strong>) es el sustrato: va en la pestaña adicional <code>cic</code> («Ciclo ovárico y cuerpo albo», parte <code>10x_cic.html</code>, entre <code>def</code> y <code>fis</code>).</li><li>Puente conceptual que vertebra el widget: el cuerpo albo es la cicatriz sin función endocrina del cuerpo lúteo. Tras la menopausia ya no se forman cuerpos lúteos: no hay progesterona endógena. Por eso, en la mujer con útero, el estrógeno de la terapia hormonal se acompaña siempre de un progestágeno (el que «reemplaza» al cuerpo lúteo) para proteger el endometrio; sin útero, estrógeno solo.</li></ul>\n<h3>Pestañas (orden de barra)</h3>\n<p><code>pan def cic fis cli dx tx seg</code></p>\n<div class=\"tabla\"><table><thead><tr><th>Pestaña</th><th>Parte</th><th>Simulador</th><th>Feynman</th></tr></thead><tbody><tr><td>def</td><td>10_def</td><td>—</td><td>1</td></tr><tr><td>cic</td><td>10x_cic</td><td>fase del ciclo por día y duración → estructura dominante y perfil hormonal</td><td>1</td></tr><tr><td>fis</td><td>11_fis</td><td>—</td><td>2</td></tr><tr><td>cli</td><td>12_cli</td><td>—</td><td>1</td></tr><tr><td>dx</td><td>13_dx</td><td>estadio STRAW+10 y cuándo pedir FSH</td><td>1</td></tr><tr><td>tx</td><td>14_tx</td><td>esquema de terapia hormonal según útero, edad/tiempo desde la menopausia, contraindicaciones y síntoma</td><td>1</td></tr><tr><td>seg</td><td>15_seg</td><td>vigilancia y conducta ante sangrado o duración de la terapia</td><td>1</td></tr></tbody></table></div>\n<h3>Mapa de nodos (<code>fis</code>) y signos (<code>cli</code>)</h3>\n<div class=\"tabla\"><table><thead><tr><th>id</th><th>data-paso</th><th>clin</th><th>signo</th></tr></thead><tbody><tr><td>m-1</td><td>Atresia agota la reserva folicular</td><td>0</td><td>—</td></tr><tr><td>m-2</td><td>Inhibina B cae y la FSH sube</td><td>1</td><td>s-1</td></tr><tr><td>m-3</td><td>Ciclos anovulatorios sin cuerpo lúteo</td><td>1</td><td>s-1</td></tr><tr><td>m-4</td><td>Estradiol cae de forma definitiva</td><td>1</td><td>s-1</td></tr><tr><td>m-5</td><td>Neuronas KNDy estrechan la zona termoneutral</td><td>1</td><td>s-2, s-3</td></tr><tr><td>m-6</td><td>Epitelio urogenital pierde trofismo</td><td>1</td><td>s-4</td></tr><tr><td>m-7</td><td>Resorción ósea supera a la formación</td><td>1</td><td>s-5</td></tr><tr><td>m-8</td><td>Endotelio y lípidos pierden protección estrogénica</td><td>0</td><td>—</td></tr></tbody></table></div>\n<p>Signos: s-1 Cambio del patrón menstrual · s-2 Bochorno y sudoración nocturna · s-3 Insomnio y cambios del ánimo · s-4 Síndrome genitourinario de la menopausia · s-5 Pérdida de talla o fractura por fragilidad.</p>\n<h3>Orquestación</h3>\n<p>Orquestador: router, PLAN, manifiesto, numeración de referencias, <code>01_nav</code>, ensamblaje de <code>90_sim</code>, construir/validar/auditar/probar. Ejecutores <code>sonnet</code>: investigación (PubMed, Consensus, NIH), redacción por pares de pestañas y Panorama. <code>haiku</code>: pasada de verificación de <code>pendientes</code>, renumeración Vancouver y conteos.</p>\n<p>Slug: <code>Ciclo_ovarico_menopausia_TH_widget_v10.html</code> · título <code>Ciclo ovárico, cuerpo albo y terapia hormonal</code>.</p>",
+   "casos": [],
+   "widgets": [
+    "ginecologia-menopausia-th"
+   ],
+   "mazos": []
+  }
+ ],
+ "widgets": [
+  {
+   "id": "disbasia-dolorosa-mecanica",
+   "tema": "disbasia",
+   "titulo": "Cojera dolorosa mecánica",
+   "tipo": "ensenanza",
+   "kit": "v10",
+   "modo": "multi",
+   "ruta": "widgets/disbasia/Cojera_dolorosa_mecanica_widget_v10.html",
+   "contenido": "Perthes (principal), epifisiólisis (amenaza), Osgood-Schlatter",
+   "entidades": [
+    "Enfermedad de Legg-Calvé-Perthes",
+    "Epifisiólisis de la cabeza femoral",
+    "Enfermedad de Osgood-Schlatter"
+   ],
+   "terminos": [],
+   "principal": "Enfermedad de Legg-Calvé-Perthes",
+   "amenaza": "Epifisiólisis de la cabeza femoral",
+   "marcas": 27,
+   "acento": null,
+   "busqueda": "cojera dolorosa mecanica disbasia perthes (principal), epifisiolisis (amenaza), osgood-schlatter enfermedad de legg-calve-perthes epifisiolisis de la cabeza femoral enfermedad de osgood-schlatter"
+  },
+  {
+   "id": "disbasia-dolorosa-sistemica",
+   "tema": "disbasia",
+   "titulo": "Cojera dolorosa con fiebre",
+   "tipo": "ensenanza",
+   "kit": "v10",
+   "modo": "multi",
+   "ruta": "widgets/disbasia/Cojera_dolorosa_sistemica_widget_v10.html",
+   "contenido": "sinovitis transitoria (principal), artritis séptica (amenaza), osteomielitis, neoplasia ósea",
+   "entidades": [
+    "Sinovitis transitoria de cadera",
+    "Artritis séptica",
+    "Osteomielitis",
+    "Neoplasia ósea maligna"
+   ],
+   "terminos": [],
+   "principal": "Sinovitis transitoria de cadera",
+   "amenaza": "Artritis séptica",
+   "marcas": 27,
+   "acento": null,
+   "busqueda": "cojera dolorosa con fiebre disbasia sinovitis transitoria (principal), artritis septica (amenaza), osteomielitis, neoplasia osea sinovitis transitoria de cadera artritis septica osteomielitis neoplasia osea maligna"
+  },
+  {
+   "id": "disbasia-forma-piernas-pies",
+   "tema": "disbasia",
+   "titulo": "Forma de piernas y pies",
+   "tipo": "ensenanza",
+   "kit": "v10",
+   "modo": "multi",
+   "ruta": "widgets/disbasia/Forma_piernas_pies_widget_v10.html",
+   "contenido": "genu varo/valgo (principal), anteversión femoral, pie plano, pie cavo, equinovaro (amenaza)",
+   "entidades": [
+    "Genu varo y genu valgo",
+    "Anteversión femoral",
+    "Pie plano",
+    "Pie cavo",
+    "Pie equinovaro"
+   ],
+   "terminos": [],
+   "principal": "Genu varo y genu valgo",
+   "amenaza": "Pie equinovaro",
+   "marcas": 26,
+   "acento": null,
+   "busqueda": "forma de piernas y pies disbasia genu varo/valgo (principal), anteversion femoral, pie plano, pie cavo, equinovaro (amenaza) genu varo y genu valgo anteversion femoral pie plano pie cavo pie equinovaro"
+  },
+  {
+   "id": "disbasia-sin-dolor",
+   "tema": "disbasia",
+   "titulo": "Marcha alterada sin dolor",
+   "tipo": "ensenanza",
+   "kit": "v10",
+   "modo": "multi",
+   "ruta": "widgets/disbasia/Marcha_sin_dolor_widget_v10.html",
+   "contenido": "DDC (principal), dismetría, neuromuscular, Guillain-Barré (amenaza)",
+   "entidades": [
+    "Displasia del desarrollo de la cadera",
+    "Dismetría de miembros inferiores",
+    "Enfermedad neuromuscular",
+    "Síndrome de Guillain-Barré"
+   ],
+   "terminos": [],
+   "principal": "Displasia del desarrollo de la cadera",
+   "amenaza": "Síndrome de Guillain-Barré",
+   "marcas": 65,
+   "acento": null,
+   "busqueda": "marcha alterada sin dolor disbasia ddc (principal), dismetria, neuromuscular, guillain-barre (amenaza) displasia del desarrollo de la cadera dismetria de miembros inferiores enfermedad neuromuscular sindrome de guillain-barre"
+  },
+  {
+   "id": "dolor-abdominal-biliopancreatico",
+   "tema": "dolor-abdominal-agudo",
+   "titulo": "Dolor biliopancreático",
+   "tipo": "ensenanza",
+   "kit": "v10",
+   "modo": "multi",
+   "ruta": "widgets/dolor_abdominal/Dolor_biliopancreatico_widget_v10.html",
+   "contenido": "colelitiasis/colecistitis (principal), coledocolitiasis, colangitis (amenaza), pancreatitis",
+   "entidades": [
+    "Colelitiasis y colecistitis aguda",
+    "Coledocolitiasis",
+    "Colangitis aguda",
+    "Pancreatitis aguda"
+   ],
+   "terminos": [],
+   "principal": "Colelitiasis y colecistitis aguda",
+   "amenaza": "Colangitis aguda",
+   "marcas": 85,
+   "acento": null,
+   "busqueda": "dolor biliopancreatico dolor abdominal agudo colelitiasis/colecistitis (principal), coledocolitiasis, colangitis (amenaza), pancreatitis colelitiasis y colecistitis aguda coledocolitiasis colangitis aguda pancreatitis aguda"
+  },
+  {
+   "id": "dolor-abdominal-medico",
+   "tema": "dolor-abdominal-agudo",
+   "titulo": "Abdomen agudo médico",
+   "tipo": "ensenanza",
+   "kit": "v10",
+   "modo": "multi",
+   "ruta": "widgets/dolor_abdominal/Abdomen_agudo_medico_widget_v10.html",
+   "contenido": "hipopotasemia con íleo (principal), saturnismo, porfiria aguda (amenaza)",
+   "entidades": [
+    "Hipopotasemia con íleo paralítico",
+    "Saturnismo",
+    "Porfiria aguda intermitente"
+   ],
+   "terminos": [],
+   "principal": "Hipopotasemia con íleo paralítico",
+   "amenaza": "Porfiria aguda intermitente",
+   "marcas": 17,
+   "acento": null,
+   "busqueda": "abdomen agudo medico dolor abdominal agudo hipopotasemia con ileo (principal), saturnismo, porfiria aguda (amenaza) hipopotasemia con ileo paralitico saturnismo porfiria aguda intermitente"
+  },
+  {
+   "id": "dolor-abdominal-quirurgico",
+   "tema": "dolor-abdominal-agudo",
+   "titulo": "Abdomen agudo quirúrgico",
+   "tipo": "ensenanza",
+   "kit": "v10",
+   "modo": "multi",
+   "ruta": "widgets/dolor_abdominal/Abdomen_agudo_quirurgico_widget_v10.html",
+   "contenido": "apendicitis (principal), obstrucción, perforación, isquemia mesentérica, AAA roto (amenaza)",
+   "entidades": [
+    "Apendicitis aguda",
+    "Obstrucción intestinal",
+    "Perforación de víscera hueca",
+    "Isquemia mesentérica aguda",
+    "Aneurisma de aorta abdominal roto"
+   ],
+   "terminos": [],
+   "principal": "Apendicitis aguda",
+   "amenaza": "Aneurisma de aorta abdominal roto",
+   "marcas": 42,
+   "acento": null,
+   "busqueda": "abdomen agudo quirurgico dolor abdominal agudo apendicitis (principal), obstruccion, perforacion, isquemia mesenterica, aaa roto (amenaza) apendicitis aguda obstruccion intestinal perforacion de viscera hueca isquemia mesenterica aguda aneurisma de aorta abdominal roto"
+  },
+  {
+   "id": "neoplasias-gi-alto",
+   "tema": "neoplasias-gi",
+   "titulo": "Cáncer del tubo digestivo alto",
+   "tipo": "ensenanza",
+   "kit": "v10",
+   "modo": "multi",
+   "ruta": "widgets/neoplasias_gi/Cancer_digestivo_alto_widget_v10.html",
+   "contenido": "gástrico (principal y amenaza), cavidad oral, esófago, duodeno",
+   "entidades": [
+    "Cáncer gástrico",
+    "Cáncer de cavidad oral",
+    "Cáncer de esófago",
+    "Cáncer de duodeno"
+   ],
+   "terminos": [],
+   "principal": "Cáncer gástrico",
+   "amenaza": "Cáncer gástrico",
+   "marcas": 113,
+   "acento": null,
+   "busqueda": "cancer del tubo digestivo alto dolor abdominal y perdida de peso (neoplasias gastrointestinales) gastrico (principal y amenaza), cavidad oral, esofago, duodeno cancer gastrico cancer de cavidad oral cancer de esofago cancer de duodeno"
+  },
+  {
+   "id": "neoplasias-gi-colorrectal",
+   "tema": "neoplasias-gi",
+   "titulo": "Cáncer colorrectal",
+   "tipo": "ensenanza",
+   "kit": "v10",
+   "modo": "mono",
+   "ruta": "widgets/neoplasias_gi/Cancer_colorrectal_widget_v10.html",
+   "contenido": "+ pestaña de tamizaje y lesiones premalignas",
+   "entidades": [],
+   "terminos": [],
+   "principal": null,
+   "amenaza": null,
+   "marcas": 62,
+   "acento": null,
+   "busqueda": "cancer colorrectal dolor abdominal y perdida de peso (neoplasias gastrointestinales) + pestana de tamizaje y lesiones premalignas"
+  },
+  {
+   "id": "neoplasias-gi-hepatobiliopancreatico",
+   "tema": "neoplasias-gi",
+   "titulo": "Cáncer hepatobiliopancreático",
+   "tipo": "ensenanza",
+   "kit": "v10",
+   "modo": "multi",
+   "ruta": "widgets/neoplasias_gi/Cancer_hepatobiliopancreatico_widget_v10.html",
+   "contenido": "páncreas (principal y amenaza), hepatocelular, vesícula, colangiocarcinoma",
+   "entidades": [
+    "Adenocarcinoma de páncreas",
+    "Carcinoma hepatocelular",
+    "Cáncer de vesícula biliar",
+    "Colangiocarcinoma"
+   ],
+   "terminos": [],
+   "principal": "Adenocarcinoma de páncreas",
+   "amenaza": "Adenocarcinoma de páncreas",
+   "marcas": 7,
+   "acento": null,
+   "busqueda": "cancer hepatobiliopancreatico dolor abdominal y perdida de peso (neoplasias gastrointestinales) pancreas (principal y amenaza), hepatocelular, vesicula, colangiocarcinoma adenocarcinoma de pancreas carcinoma hepatocelular cancer de vesicula biliar colangiocarcinoma"
+  },
+  {
+   "id": "patologia-urinaria-baja-definiciones",
+   "tema": "patologia-urinaria-baja",
+   "titulo": "Definiciones · Patología urinaria baja",
+   "tipo": "definiciones",
+   "kit": "definiciones",
+   "modo": null,
+   "ruta": "widgets/patologia_urinaria_baja/Definiciones_patologia_urinaria_baja.html",
+   "contenido": "9 términos + repaso",
+   "entidades": [],
+   "terminos": [
+    "Patología urinaria baja",
+    "Frecuencia miccional",
+    "Insomnio (de inicio y de mantenimiento)",
+    "Tenesmo vesical",
+    "Incontinencia urinaria",
+    "Clortalidona",
+    "Sertal (Sertal compuesto)",
+    "Colon irritable",
+    "Próstata aumentada de tamaño"
+   ],
+   "principal": null,
+   "amenaza": null,
+   "marcas": 0,
+   "acento": null,
+   "busqueda": "definiciones · patologia urinaria baja patologia urinaria baja 9 terminos + repaso patologia urinaria baja frecuencia miccional insomnio (de inicio y de mantenimiento) tenesmo vesical incontinencia urinaria clortalidona sertal (sertal compuesto) colon irritable prostata aumentada de tamano"
+  },
+  {
+   "id": "patologia-urinaria-baja-cancer-prostata",
+   "tema": "patologia-urinaria-baja",
+   "titulo": "Cáncer de próstata",
+   "tipo": "ensenanza",
+   "kit": "v10",
+   "modo": "mono",
+   "ruta": "widgets/patologia_urinaria_baja/Cancer_de_prostata_widget_v10.html",
+   "contenido": "cáncer de próstata",
+   "entidades": [],
+   "terminos": [],
+   "principal": null,
+   "amenaza": null,
+   "marcas": 7,
+   "acento": null,
+   "busqueda": "cancer de prostata patologia urinaria baja cancer de prostata"
+  },
+  {
+   "id": "patologia-urinaria-baja-ensenanza",
+   "tema": "patologia-urinaria-baja",
+   "titulo": "Patología urinaria baja",
+   "tipo": "ensenanza",
+   "kit": "v10",
+   "modo": "multi",
+   "ruta": "widgets/patologia_urinaria_baja/Patologia_urinaria_baja_widget_v10.html",
+   "contenido": "HPB (principal), prostatitis, cáncer de próstata (amenaza), cistitis, uretritis · caso de Carlos",
+   "entidades": [
+    "Hiperplasia prostática benigna",
+    "Prostatitis",
+    "Cáncer de próstata",
+    "Cistitis",
+    "Uretritis"
+   ],
+   "terminos": [],
+   "principal": "Hiperplasia prostática benigna",
+   "amenaza": "Cáncer de próstata",
+   "marcas": 38,
+   "acento": null,
+   "busqueda": "patologia urinaria baja patologia urinaria baja hpb (principal), prostatitis, cancer de prostata (amenaza), cistitis, uretritis · caso de carlos hiperplasia prostatica benigna prostatitis cancer de prostata cistitis uretritis"
+  },
+  {
+   "id": "patologia-urinaria-baja-prostatitis-cistitis-cancer-vesical",
+   "tema": "patologia-urinaria-baja",
+   "titulo": "Prostatitis, cistitis y cáncer vesical",
+   "tipo": "ensenanza",
+   "kit": "v10",
+   "modo": "multi",
+   "ruta": "widgets/patologia_urinaria_baja/Prostatitis_cistitis_cancer_vesical_widget_v10.html",
+   "contenido": "cistitis infecciosa (principal), prostatitis (amenaza), cáncer vesical",
+   "entidades": [
+    "Cistitis infecciosa",
+    "Prostatitis",
+    "Cáncer vesical"
+   ],
+   "terminos": [],
+   "principal": "Cistitis infecciosa",
+   "amenaza": "Prostatitis",
+   "marcas": 15,
+   "acento": null,
+   "busqueda": "prostatitis, cistitis y cancer vesical patologia urinaria baja cistitis infecciosa (principal), prostatitis (amenaza), cancer vesical cistitis infecciosa prostatitis cancer vesical"
+  },
+  {
+   "id": "consumo-alcohol-definiciones",
+   "tema": "toxicodependencias",
+   "titulo": "Definiciones · Consumo de alcohol",
+   "tipo": "definiciones",
+   "kit": "definiciones",
+   "modo": null,
+   "ruta": "widgets/consumo_alcohol/Definiciones_consumo_alcohol.html",
+   "contenido": "10 términos (estado etílico, abstinencia, trastorno por consumo, aguardiente y bebida estándar, ideas de inutilidad, violencia de pareja, alcoholismo, craving, inversión de la tolerancia, trastorno mental) + repaso",
+   "entidades": [],
+   "terminos": [
+    "Estado etílico (intoxicación alcohólica aguda)",
+    "Síndrome de abstinencia alcohólica",
+    "Trastorno por consumo de alcohol (incluye tolerancia y dependencia)",
+    "Aguardiente y bebida estándar (zhumir, trópico seco, puntas)",
+    "Ideas de inutilidad y minusvalía (síntomas depresivos)",
+    "Violencia de pareja",
+    "Alcoholismo",
+    "Craving (deseo intenso de consumir)",
+    "Inversión de la tolerancia",
+    "Trastorno mental"
+   ],
+   "principal": null,
+   "amenaza": null,
+   "marcas": 4,
+   "acento": null,
+   "busqueda": "definiciones · consumo de alcohol toxicodependencias 10 terminos (estado etilico, abstinencia, trastorno por consumo, aguardiente y bebida estandar, ideas de inutilidad, violencia de pareja, alcoholismo, craving, inversion de la tolerancia, trastorno mental) + repaso estado etilico (intoxicacion alcoholica aguda) sindrome de abstinencia alcoholica trastorno por consumo de alcohol (incluye tolerancia y dependencia) aguardiente y bebida estandar (zhumir, tropico seco, puntas) ideas de inutilidad y minusvalia (sintomas depresivos) violencia de pareja alcoholismo craving (deseo intenso de consumir) inversion de la tolerancia trastorno mental"
+  },
+  {
+   "id": "consumo-alcohol-toxicodependencias",
+   "tema": "toxicodependencias",
+   "titulo": "Toxicodependencias",
+   "tipo": "ensenanza",
+   "kit": "v10",
+   "modo": "multi",
+   "ruta": "widgets/consumo_alcohol/Toxicodependencias_widget_v10.html",
+   "contenido": "alcohol (principal), opioides (amenaza), sedantes e hipnóticos, estimulantes, cannabis y psicodélicos",
+   "entidades": [
+    "Alcohol",
+    "Opioides",
+    "Sedantes e hipnóticos",
+    "Estimulantes",
+    "Cannabis y psicodélicos"
+   ],
+   "terminos": [],
+   "principal": "Alcohol",
+   "amenaza": "Opioides",
+   "marcas": 33,
+   "acento": null,
+   "busqueda": "toxicodependencias toxicodependencias alcohol (principal), opioides (amenaza), sedantes e hipnoticos, estimulantes, cannabis y psicodelicos alcohol opioides sedantes e hipnoticos estimulantes cannabis y psicodelicos"
+  },
+  {
+   "id": "ansiedad-panico-definiciones",
+   "tema": "ansiedad-panico",
+   "titulo": "Definiciones · Ansiedad y pánico",
+   "tipo": "definiciones",
+   "kit": "definiciones",
+   "modo": null,
+   "ruta": "widgets/ansiedad_panico/Definiciones_ansiedad_panico.html",
+   "contenido": "10 términos (opresión en el pecho, palpitaciones, angustia por perder el control, preinfarto, Stresstabs, Xanax, ansiedad, pánico, ataque de ansiedad, ataque de pánico) + repaso",
+   "entidades": [],
+   "terminos": [
+    "Opresión en el pecho (opresión precordial)",
+    "Palpitaciones",
+    "Angustia por perder el control mental",
+    "Preinfarto",
+    "Stresstabs",
+    "Xanax (alprazolam)",
+    "Ansiedad",
+    "Pánico",
+    "Ataque de ansiedad",
+    "Ataque de pánico"
+   ],
+   "principal": null,
+   "amenaza": null,
+   "marcas": 1,
+   "acento": null,
+   "busqueda": "definiciones · ansiedad y panico trastorno de ansiedad generalizada y ataque de panico 10 terminos (opresion en el pecho, palpitaciones, angustia por perder el control, preinfarto, stresstabs, xanax, ansiedad, panico, ataque de ansiedad, ataque de panico) + repaso opresion en el pecho (opresion precordial) palpitaciones angustia por perder el control mental preinfarto stresstabs xanax (alprazolam) ansiedad panico ataque de ansiedad ataque de panico"
+  },
+  {
+   "id": "ansiedad-panico-ensenanza",
+   "tema": "ansiedad-panico",
+   "titulo": "Ansiedad y pánico",
+   "tipo": "ensenanza",
+   "kit": "v10",
+   "modo": "multi",
+   "ruta": "widgets/ansiedad_panico/Ansiedad_y_panico_widget_v10.html",
+   "contenido": "trastorno de pánico (principal), ansiedad generalizada, trastornos fóbicos, trauma y estrés (amenaza), síntomas somáticos",
+   "entidades": [
+    "Trastorno de pánico",
+    "Ansiedad generalizada",
+    "Trastornos fóbicos",
+    "Trauma y estrés",
+    "Síntomas somáticos"
+   ],
+   "terminos": [],
+   "principal": "Trastorno de pánico",
+   "amenaza": "Trauma y estrés",
+   "marcas": 17,
+   "acento": null,
+   "busqueda": "ansiedad y panico trastorno de ansiedad generalizada y ataque de panico trastorno de panico (principal), ansiedad generalizada, trastornos fobicos, trauma y estres (amenaza), sintomas somaticos trastorno de panico ansiedad generalizada trastornos fobicos trauma y estres sintomas somaticos"
+  },
+  {
+   "id": "sindrome-confusional-apertura",
+   "tema": "sca-demencia",
+   "titulo": "Apertura · Síndrome confusional (caso de Doña Rosa)",
+   "tipo": "apertura",
+   "kit": "apertura",
+   "modo": null,
+   "ruta": "widgets/sindrome_confusional/Apertura_sindrome_confusional.html",
+   "contenido": "caso de Doña Rosa + 9 términos (vacunas del adulto mayor, losartán, diltiazem, furosemida, paracetamol, pregabalina, glucosamina, insulina NPH + metformina, hipotiroidismo subclínico), 23 problemas (B, P, S, FR), jerarquización, 4 hipótesis, 5 diagramas, repaso",
+   "entidades": [],
+   "terminos": [
+    "Vacunas del adulto mayor ≥80 años",
+    "Losartán (ARA II)",
+    "Diltiazem (calcioantagonista no dihidropiridínico)",
+    "Furosemida (diurético de asa)",
+    "Paracetamol",
+    "Pregabalina (gabapentinoide)",
+    "Glucosamina (Artrin)",
+    "Insulina + metformina",
+    "Hipotiroidismo subclínico"
+   ],
+   "principal": null,
+   "amenaza": null,
+   "marcas": 0,
+   "acento": null,
+   "busqueda": "apertura · sindrome confusional (caso de dona rosa) sindrome confusional agudo y demencia caso de dona rosa + 9 terminos (vacunas del adulto mayor, losartan, diltiazem, furosemida, paracetamol, pregabalina, glucosamina, insulina nph + metformina, hipotiroidismo subclinico), 23 problemas (b, p, s, fr), jerarquizacion, 4 hipotesis, 5 diagramas, repaso vacunas del adulto mayor ≥80 anos losartan (ara ii) diltiazem (calcioantagonista no dihidropiridinico) furosemida (diuretico de asa) paracetamol pregabalina (gabapentinoide) glucosamina (artrin) insulina + metformina hipotiroidismo subclinico"
+  },
+  {
+   "id": "trastornos-neurocognitivos-apertura",
+   "tema": "sca-demencia",
+   "titulo": "Apertura · Trastornos neurocognitivos",
+   "tipo": "apertura",
+   "kit": "apertura",
+   "modo": null,
+   "ruta": "widgets/trastornos_neurocognitivos/Apertura_trastornos_neurocognitivos.html",
+   "contenido": "caso + 9 términos (fatiga, «no actúa como él mismo», lúcido, somnoliento, estuporoso, inquietud, polidipsia, nocturia, estreñimiento), 15 problemas, jerarquización, 4 hipótesis, 5 diagramas, 73 tarjetas",
+   "entidades": [],
+   "terminos": [
+    "Fatiga",
+    "«No actúa como él mismo»",
+    "Lúcido",
+    "Somnoliento",
+    "Estuporoso",
+    "Inquietud",
+    "Polidipsia · sed aumentada",
+    "Nocturia",
+    "Estreñimiento"
+   ],
+   "principal": null,
+   "amenaza": null,
+   "marcas": 0,
+   "acento": null,
+   "busqueda": "apertura · trastornos neurocognitivos sindrome confusional agudo y demencia caso + 9 terminos (fatiga, «no actua como el mismo», lucido, somnoliento, estuporoso, inquietud, polidipsia, nocturia, estrenimiento), 15 problemas, jerarquizacion, 4 hipotesis, 5 diagramas, 73 tarjetas fatiga «no actua como el mismo» lucido somnoliento estuporoso inquietud polidipsia · sed aumentada nocturia estrenimiento"
+  },
+  {
+   "id": "trastornos-neurocognitivos-ensenanza",
+   "tema": "sca-demencia",
+   "titulo": "Trastornos neurocognitivos",
+   "tipo": "ensenanza",
+   "kit": "v11",
+   "modo": "multi",
+   "ruta": "widgets/trastornos_neurocognitivos/Trastornos_neurocognitivos_widget_v11.html",
+   "contenido": "multi: delirium (principal y amenaza), Alzheimer, neurocognitivo vascular, cuerpos de Lewy, frontotemporal · caso de Saquisilí (causas metabólicas del delirium), 82 referencias enlazadas",
+   "entidades": [
+    "Delirium",
+    "Enfermedad de Alzheimer",
+    "Neurocognitivo vascular",
+    "Cuerpos de Lewy",
+    "Frontotemporal"
+   ],
+   "terminos": [],
+   "principal": "Delirium",
+   "amenaza": "Delirium",
+   "marcas": 0,
+   "acento": "salud-mental",
+   "busqueda": "trastornos neurocognitivos sindrome confusional agudo y demencia multi: delirium (principal y amenaza), alzheimer, neurocognitivo vascular, cuerpos de lewy, frontotemporal · caso de saquisili (causas metabolicas del delirium), 82 referencias enlazadas delirium enfermedad de alzheimer neurocognitivo vascular cuerpos de lewy frontotemporal"
+  },
+  {
+   "id": "trastornos-animo-apertura",
+   "tema": "trastornos-animo",
+   "titulo": "Apertura · Trastornos del estado de ánimo",
+   "tipo": "apertura",
+   "kit": "apertura",
+   "modo": null,
+   "ruta": "widgets/trastornos_animo/Apertura_trastornos_animo.html",
+   "contenido": "caso + 9 términos, 12 problemas (B, P, S, FR), jerarquización, 4 hipótesis, repaso",
+   "entidades": [],
+   "terminos": [
+    "Trastornos del estado de ánimo",
+    "Angustia (miedo a perder el control)",
+    "Opresión precordial",
+    "Palpitaciones",
+    "Sudoración y náuseas",
+    "Preinfarto",
+    "Estrés",
+    "Stresstabs (polivitamínico del complejo B)",
+    "Xanax (alprazolam)"
+   ],
+   "principal": null,
+   "amenaza": null,
+   "marcas": 0,
+   "acento": null,
+   "busqueda": "apertura · trastornos del estado de animo trastornos del estado de animo caso + 9 terminos, 12 problemas (b, p, s, fr), jerarquizacion, 4 hipotesis, repaso trastornos del estado de animo angustia (miedo a perder el control) opresion precordial palpitaciones sudoracion y nauseas preinfarto estres stresstabs (polivitaminico del complejo b) xanax (alprazolam)"
+  },
+  {
+   "id": "trastornos-animo-depresion-bipolar-suicidio",
+   "tema": "trastornos-animo",
+   "titulo": "Depresión, trastorno bipolar y suicidio",
+   "tipo": "ensenanza",
+   "kit": "v11",
+   "modo": "multi",
+   "ruta": "widgets/trastornos_animo/Depresion_bipolar_suicidio_widget_v11.html",
+   "contenido": "multi: depresión mayor (principal), trastorno bipolar, conducta suicida (amenaza) · núcleo por pestaña, 20 perlas de examen, ejercicio Ordenar (10 bloques), visión de conjunto en preguntas, referencias enlazadas",
+   "entidades": [
+    "Depresión mayor",
+    "Trastorno bipolar",
+    "Conducta suicida"
+   ],
+   "terminos": [],
+   "principal": "Depresión mayor",
+   "amenaza": "Conducta suicida",
+   "marcas": 0,
+   "acento": "salud-mental",
+   "busqueda": "depresion, trastorno bipolar y suicidio trastornos del estado de animo multi: depresion mayor (principal), trastorno bipolar, conducta suicida (amenaza) · nucleo por pestana, 20 perlas de examen, ejercicio ordenar (10 bloques), vision de conjunto en preguntas, referencias enlazadas depresion mayor trastorno bipolar conducta suicida"
+  },
+  {
+   "id": "trastornos-animo-ensenanza",
+   "tema": "trastornos-animo",
+   "titulo": "Crisis de angustia con síntomas somáticos",
+   "tipo": "ensenanza",
+   "kit": "v10",
+   "modo": "multi",
+   "ruta": "widgets/trastornos_animo/Crisis_de_angustia_widget_v10.html",
+   "contenido": "trastorno de pánico (principal), ansiedad generalizada, depresión mayor, consumo de benzodiacepinas, síndrome coronario agudo (amenaza)",
+   "entidades": [
+    "Trastorno de pánico",
+    "Ansiedad generalizada",
+    "Depresión mayor",
+    "Consumo de benzodiacepinas",
+    "Síndrome coronario agudo"
+   ],
+   "terminos": [],
+   "principal": "Trastorno de pánico",
+   "amenaza": "Síndrome coronario agudo",
+   "marcas": 0,
+   "acento": null,
+   "busqueda": "crisis de angustia con sintomas somaticos trastornos del estado de animo trastorno de panico (principal), ansiedad generalizada, depresion mayor, consumo de benzodiacepinas, sindrome coronario agudo (amenaza) trastorno de panico ansiedad generalizada depresion mayor consumo de benzodiacepinas sindrome coronario agudo"
+  },
+  {
+   "id": "dermatologia-descripcion-morfologica",
+   "tema": "lesiones-dermicas",
+   "titulo": "Definiciones · Descripción morfológica",
+   "tipo": "definiciones",
+   "kit": "definiciones",
+   "modo": null,
+   "ruta": "widgets/dermatologia/Definiciones_descripcion_morfologica.html",
+   "contenido": "9 términos (eritema, anular/arciforme, numular, diana, lineal, reticulado, herpetiforme, dermatómica, fotodistribución) + repaso",
+   "entidades": [],
+   "terminos": [
+    "Eritema y eritrodermia",
+    "Configuración anular y arciforme",
+    "Numular (discoide)",
+    "Lesión en diana (iris)",
+    "Disposición lineal (Koebner y líneas de Blaschko)",
+    "Patrón reticulado",
+    "Agrupación herpetiforme",
+    "Distribución dermatómica (zosteriforme)",
+    "Fotodistribución"
+   ],
+   "principal": null,
+   "amenaza": null,
+   "marcas": 22,
+   "acento": null,
+   "busqueda": "definiciones · descripcion morfologica lesiones dermicas 9 terminos (eritema, anular/arciforme, numular, diana, lineal, reticulado, herpetiforme, dermatomica, fotodistribucion) + repaso eritema y eritrodermia configuracion anular y arciforme numular (discoide) lesion en diana (iris) disposicion lineal (koebner y lineas de blaschko) patron reticulado agrupacion herpetiforme distribucion dermatomica (zosteriforme) fotodistribucion"
+  },
+  {
+   "id": "dermatologia-liquidas-vasculares",
+   "tema": "lesiones-dermicas",
+   "titulo": "Definiciones · Lesiones líquidas y vasculares",
+   "tipo": "definiciones",
+   "kit": "definiciones",
+   "modo": null,
+   "ruta": "widgets/dermatologia/Definiciones_lesiones_liquidas_vasculares.html",
+   "contenido": "9 términos (vesícula, ampolla, pústula, absceso, púrpura, equimosis, telangiectasia, surco acarino, vitropresión y Nikolsky) + repaso",
+   "entidades": [],
+   "terminos": [
+    "Vesícula",
+    "Ampolla",
+    "Pústula",
+    "Absceso",
+    "Púrpura",
+    "Equimosis",
+    "Telangiectasia",
+    "Surco acarino",
+    "Vitropresión y signo de Nikolsky"
+   ],
+   "principal": null,
+   "amenaza": null,
+   "marcas": 5,
+   "acento": null,
+   "busqueda": "definiciones · lesiones liquidas y vasculares lesiones dermicas 9 terminos (vesicula, ampolla, pustula, absceso, purpura, equimosis, telangiectasia, surco acarino, vitropresion y nikolsky) + repaso vesicula ampolla pustula absceso purpura equimosis telangiectasia surco acarino vitropresion y signo de nikolsky"
+  },
+  {
+   "id": "dermatologia-primarias-solidas",
+   "tema": "lesiones-dermicas",
+   "titulo": "Definiciones · Lesiones primarias sólidas",
+   "tipo": "definiciones",
+   "kit": "definiciones",
+   "modo": null,
+   "ruta": "widgets/dermatologia/Definiciones_lesiones_primarias_solidas.html",
+   "contenido": "9 términos (mácula, mancha, pápula, placa, nódulo, tumor, habón, quiste, comedón) + repaso",
+   "entidades": [],
+   "terminos": [
+    "Mácula",
+    "Mancha (patch)",
+    "Pápula",
+    "Placa",
+    "Nódulo",
+    "Tumor",
+    "Habón (roncha)",
+    "Quiste",
+    "Comedón"
+   ],
+   "principal": null,
+   "amenaza": null,
+   "marcas": 15,
+   "acento": null,
+   "busqueda": "definiciones · lesiones primarias solidas lesiones dermicas 9 terminos (macula, mancha, papula, placa, nodulo, tumor, habon, quiste, comedon) + repaso macula mancha (patch) papula placa nodulo tumor habon (roncha) quiste comedon"
+  },
+  {
+   "id": "dermatologia-secundarias",
+   "tema": "lesiones-dermicas",
+   "titulo": "Definiciones · Lesiones secundarias",
+   "tipo": "definiciones",
+   "kit": "definiciones",
+   "modo": null,
+   "ruta": "widgets/dermatologia/Definiciones_lesiones_secundarias.html",
+   "contenido": "9 términos (escama, costra, erosión, úlcera, fisura, excoriación, liquenificación, atrofia, cicatriz) + repaso",
+   "entidades": [],
+   "terminos": [
+    "Escama",
+    "Costra",
+    "Erosión",
+    "Úlcera",
+    "Fisura",
+    "Excoriación",
+    "Liquenificación",
+    "Atrofia",
+    "Cicatriz"
+   ],
+   "principal": null,
+   "amenaza": null,
+   "marcas": 8,
+   "acento": null,
+   "busqueda": "definiciones · lesiones secundarias lesiones dermicas 9 terminos (escama, costra, erosion, ulcera, fisura, excoriacion, liquenificacion, atrofia, cicatriz) + repaso escama costra erosion ulcera fisura excoriacion liquenificacion atrofia cicatriz"
+  },
+  {
+   "id": "cicatrizacion-queloide-triamcinolona",
+   "tema": "cicatrizacion",
+   "titulo": "Cicatriz queloide: infiltración con triamcinolona",
+   "tipo": "ensenanza",
+   "kit": "v10",
+   "modo": "mono",
+   "ruta": "widgets/cicatrizacion/Queloide_triamcinolona_widget_v10.html",
+   "contenido": "cicatriz queloide + pestaña «Infiltración con triamcinolona»",
+   "entidades": [],
+   "terminos": [],
+   "principal": null,
+   "amenaza": null,
+   "marcas": 48,
+   "acento": null,
+   "busqueda": "cicatriz queloide: infiltracion con triamcinolona cicatrizacion patologica cicatriz queloide + pestana «infiltracion con triamcinolona»"
+  },
+  {
+   "id": "ginecologia-menopausia-th",
+   "tema": "ginecologia",
+   "titulo": "Ciclo ovárico, cuerpo albo y terapia hormonal",
+   "tipo": "ensenanza",
+   "kit": "v11",
+   "modo": "mono",
+   "ruta": "widgets/ginecologia/Ciclo_ovarico_menopausia_TH_widget_v11.html",
+   "contenido": "mono: menopausia y terapia hormonal + pestaña «Ciclo ovárico y cuerpo albo»: núcleo por pestaña, perlas por examen, ordenar pasos",
+   "entidades": [],
+   "terminos": [],
+   "principal": null,
+   "amenaza": null,
+   "marcas": 0,
+   "acento": "ginecologia",
+   "busqueda": "ciclo ovarico, cuerpo albo y terapia hormonal ginecologia: ciclo ovarico y menopausia mono: menopausia y terapia hormonal + pestana «ciclo ovarico y cuerpo albo»: nucleo por pestana, perlas por examen, ordenar pasos"
+  }
+ ]
+};

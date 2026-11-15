@@ -49,7 +49,7 @@ Reglas del kit (todos): las partes no llevan `<style>`, estilos en línea, recur
 
 ## Widget nuevo
 
-Crear `widgets/<tema>/<id>/` con partes y `manifiesto.json` (`titulo`, `salida: "../<Nombre>_widget_v11.html"`, `tipo: "v11"`, `tema`), añadir fila en `README.md` y construir. Si el tema es nuevo, escribir su `PLAN.md`. Definiciones y apertura nuevas usarán las cabeceras v11 de `kit/v11/` cuando existan; hasta entonces, las de `kit/`. Nunca se crean widgets v10.
+Crear `widgets/<tema>/<id>/` con partes y `manifiesto.json` (`titulo`, `salida: "../<Nombre>_widget_v11.html"`, `tipo: "v11"`, `tema`), añadir fila en `README.md`, construir y registrar la carpeta en `biblioteca/estructura.json` (tema del sílabo o «Extras») y correr `python3 kit/biblioteca/generar.py` (falla si una carpeta de `widgets/` queda sin tema; versionar `biblioteca/catalogo.js`). Si el tema es nuevo, escribir su `PLAN.md`. Definiciones y apertura nuevas usarán las cabeceras v11 de `kit/v11/` cuando existan; hasta entonces, las de `kit/`. Nunca se crean widgets v10.
 
 ## Qué cuenta como éxito
 

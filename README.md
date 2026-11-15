@@ -47,6 +47,19 @@ Generados con la skill `flashcards` (`kit/anki/`); registro de IDs en `mazos/REA
 |---|---|---|---|---|
 | Toxicodependencias | `mazos/toxicodependencias/` | 45 | 1.0 | `Q2R2-TOX` |
 
+## Biblioteca (Lumen)
+
+Lumen es la web estática que cataloga los widgets por semestre, rotación y tema del sílabo (`index.html` + `biblioteca/`). Abre con `file://` y se publica en GitHub Pages. La estructura se edita a mano en `biblioteca/estructura.json`; `biblioteca/catalogo.js` es generado (se versiona) y no se edita.
+
+```sh
+python3 kit/biblioteca/generar.py                 # regenera biblioteca/catalogo.js
+python3 kit/biblioteca/generar.py --sitio _site   # además arma el sitio publicable en _site/ (ignorado por git)
+```
+
+El generador falla si un tema referencia una carpeta inexistente, si una carpeta de `widgets/` no está asignada a ningún tema, si falta un HTML de salida o si un id se repite o no cumple `^[a-z0-9-]+$`. Para añadir un tema, rotación o semestre, copia un objeto vecino en `estructura.json` (la clave `_ayuda` resume los campos) y vuelve a generar. Un tema sin carpetas queda «pendiente».
+
+Activar Pages (una vez): Settings → Pages → Source: GitHub Actions. El workflow `.github/workflows/pages.yml` publica en cada push a `main`.
+
 ## Estructura
 
 ```
@@ -57,6 +70,8 @@ kit/construir.py                ensamblador y validador (según "tipo" del manif
 kit/v11/                        kit v11: head.html, script.html, validar.py, probar.js
 kit/                            def_head.html, apertura_head.html, validar_definiciones.py, validar_apertura.py,
                                 auditar_definiciones.py, probar_definiciones.js, renumerar.py, empaquetar_skills.py
+kit/biblioteca/generar.py        generador de Lumen: catalogo.js y sitio publicable
+biblioteca/                     estructura.json (editable), catalogo.js (generado), app.css y app.js (front)
 kit/anki/                       flashcards v7: estilos.css, modelo.py, compilar_mazo.py (lint + .apkg), guia_docx.py, previsualizar.js
 mazos/<tema>/                   mazos Anki: tarjetas.json (fuente), media/, .apkg y guía .docx; mazos/README.md = registro de IDs
 .claude/skills/                 widget-ensenanza (v11), definiciones, apertura, flashcards, impeccable (revisión opcional)
