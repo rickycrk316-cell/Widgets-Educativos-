@@ -14,9 +14,8 @@
 <link rel="stylesheet" href="biblioteca/app.css">
 </head>
 <body>
-<a class="salto" href="#catalogo-inicio" data-salto>Saltar al catálogo</a>
-
 <div id="app">
+  <a class="salto" href="#catalogo-inicio" data-salto>Saltar al catálogo</a>
   <header class="hero" id="portada">
     <canvas id="flujo" aria-hidden="true"></canvas>
     <div class="hero-brillo" aria-hidden="true"></div>
@@ -48,7 +47,7 @@
         <div class="buscar">
           <label class="sr" for="buscar">Buscar en el catálogo</label>
           <svg class="buscar-ico" viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13 13l4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          <input id="buscar" type="search" placeholder="Buscar tema, entidad o término" autocomplete="off" spellcheck="false" enterkeyhint="search">
+          <input id="buscar" type="search" placeholder="Buscar tema o entidad" autocomplete="off" spellcheck="false" enterkeyhint="search">
           <kbd class="atajo mono" aria-hidden="true">/</kbd>
         </div>
       </div>
@@ -76,6 +75,7 @@
 <!-- Panel de tema -->
 <div id="panel" class="capa" hidden>
   <div class="capa-fondo" data-cerrar-panel></div>
+  <span class="trampa" tabindex="0" aria-hidden="true"></span>
   <section class="hoja" role="dialog" aria-modal="true" aria-labelledby="p-titulo" tabindex="-1">
     <div class="hoja-barra">
       <button type="button" class="btn btn-icono" data-cerrar-panel aria-label="Cerrar tema">
@@ -85,10 +85,12 @@
     </div>
     <div class="hoja-cuerpo" id="p-cuerpo"></div>
   </section>
+  <span class="trampa" tabindex="0" aria-hidden="true" data-fin="1"></span>
 </div>
 
 <!-- Visor de widget -->
 <div id="visor" class="visor" role="dialog" aria-modal="true" aria-labelledby="v-titulo" hidden>
+  <span class="trampa" tabindex="0" aria-hidden="true"></span>
   <header class="v-barra">
     <button type="button" class="btn v-volver" id="v-volver" aria-label="Volver">
       <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 4l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -114,9 +116,9 @@
     </div>
   </header>
   <div class="v-marco" id="v-marco">
-    <iframe id="v-iframe" title="Widget" allow="fullscreen"></iframe>
     <div class="v-estado" id="v-estado" role="status"></div>
   </div>
+  <span class="trampa" tabindex="0" aria-hidden="true" data-fin="1"></span>
 </div>
 
 <script src="biblioteca/catalogo.js"></script>

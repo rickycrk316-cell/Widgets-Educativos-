@@ -153,7 +153,7 @@
   // En pantallas anchas chips y conteo suben a la barra pegajosa
   (function () {
     if (!window.matchMedia) return;
-    var mq = matchMedia('(min-width: 1360px)');
+    var mq = matchMedia('(min-width: 1440px)');
     var barIn = $('.bar-in'), filtrosIn = $('.filtros-in'), chips = $('#c-tipos'), conteo = $('#conteo'), buscar = $('.buscar');
     function coloca() {
       if (mq.matches) { barIn.insertBefore(chips, buscar); barIn.appendChild(conteo); }
@@ -289,7 +289,7 @@
   // ---------- Capas: panel y visor ----------
   var panel = $('#panel'), visor = $('#visor');
   var hoja = $('.hoja', panel);
-  var iframe = $('#v-iframe'), estadoV = $('#v-estado');
+  var iframe = $('#v-iframe'), estadoV = $('#v-estado'), marco = $('#v-marco');
   var cierreTimers = {};
   var foco = { panel: null, visor: null };
   var desdePanel = null;     // tema del panel desde el que se abrió el visor
@@ -300,6 +300,9 @@
     var hay = panel.classList.contains('abierta') || visor.classList.contains('abierta');
     document.documentElement.classList.toggle('bloqueado', hay);
     if (hay) app.setAttribute('inert', ''); else app.removeAttribute('inert');
+    var pa = panel.classList.contains('abierta'), va = visor.classList.contains('abierta');
+    panel.toggleAttribute('inert', va && !pa);
+    visor.toggleAttribute('inert', pa && !va);
   }
   function abrirCapa(capa, key) {
     clearTimeout(cierreTimers[key]);
@@ -315,6 +318,28 @@
     if (inmediato || reduce.matches) fin(); else cierreTimers[key] = setTimeout(fin, 210);
     bloquear();
   }
+
+  // Bucle de foco: centinelas al inicio y al final de cada capa
+  function enfocables(capa) {
+    return $$('a[href],button,input,select,textarea,iframe,[tabindex]', capa).filter(function (n) {
+      if (n.classList.contains('trampa') || n.disabled || n.tabIndex < 0) return false;
+      return n.getClientRects().length > 0;
+    });
+  }
+  $$('.trampa').forEach(function (t) {
+    t.addEventListener('focus', function () {
+      var capa = t.closest('.capa, .visor');
+      var l = enfocables(capa);
+      if (!l.length) { (capa.querySelector('.hoja') || capa).focus(); return; }
+      (t.dataset.fin ? l[0] : l[l.length - 1]).focus();
+    });
+  });
+  document.addEventListener('focusin', function (e) {
+    var capa = visor.classList.contains('abierta') ? visor : (panel.classList.contains('abierta') ? panel : null);
+    if (!capa || capa.contains(e.target)) return;
+    var l = enfocables(capa);
+    (l[0] || capa.querySelector('.hoja') || capa).focus();
+  });
 
   function recuerdaFoco(key) {
     var a = document.activeElement;
@@ -462,21 +487,35 @@
       acc.appendChild(el('a', { class: 'btn', href: w.ruta, target: '_blank', rel: 'noopener', text: 'Abrir en pestaña nueva' }));
       estadoV.appendChild(acc);
     };
-    iframe.onload = function () {
-      if (!iframe.getAttribute('src')) return;
+    var nuevo = document.createElement('iframe');
+    nuevo.id = 'v-iframe';
+    nuevo.title = w.titulo;
+    nuevo.setAttribute('allow', 'fullscreen');
+    nuevo.onload = function () {
+      if (mine !== cargaId) return;
       ok();
       try { // mismo origen: Escape dentro del iframe también cierra
-        iframe.contentDocument.addEventListener('keydown', onKey);
+        nuevo.contentDocument.addEventListener('keydown', onKey);
       } catch (e) { /* file:// u otro origen */ }
     };
-    iframe.onerror = function () { fallo(); };
     cargaTimer = setTimeout(function () { fallo('Tarda más de lo esperado.'); }, 20000);
-    var empieza = function () { if (mine === cargaId) iframe.src = w.ruta; };
+    // Un iframe nuevo por apertura: src se asigna antes de insertarlo para no añadir entradas al historial
+    var empieza = function () {
+      if (mine !== cargaId) return;
+      quitaIframe();
+      nuevo.src = w.ruta;
+      iframe = nuevo;
+      marco.insertBefore(nuevo, estadoV);
+    };
     if (/^https?:$/.test(location.protocol) && window.fetch) {
       fetch(w.ruta, { method: 'HEAD' }).then(function (r) {
         if (!r.ok) fallo('El archivo no existe o no está disponible (' + r.status + ').'); else empieza();
       }, function () { empieza(); });
     } else empieza();
+  }
+  function quitaIframe() {
+    var f = $('#v-iframe');
+    if (f) { f.onload = null; f.parentNode.removeChild(f); }
   }
   function mostrarVisor(id) {
     var w = widgetsPorId[id];
@@ -500,7 +539,6 @@
     sig.dataset.id = hermanos[(i + 1) % hermanos.length];
     ant.setAttribute('aria-label', 'Anterior: ' + (widgetsPorId[ant.dataset.id] || {}).titulo);
     sig.setAttribute('aria-label', 'Siguiente: ' + (widgetsPorId[sig.dataset.id] || {}).titulo);
-    iframe.title = w.titulo;
     abrirCapa(visor, 'visor');
     cargarIframe(w);
     if (nuevo) $('#v-volver').focus({ preventScroll: true });
@@ -509,9 +547,7 @@
     if (visor.hidden && !visor.classList.contains('abierta')) return;
     abierto.visor = null;
     cargaId++; clearTimeout(cargaTimer);
-    iframe.onload = null;
-    iframe.removeAttribute('src'); // limpia el widget al cerrar
-    try { iframe.contentWindow.location.replace('about:blank'); } catch (e) {}
+    quitaIframe();
     if (document.fullscreenElement) { try { document.exitFullscreen(); } catch (e) {} }
     cerrarCapa(visor, 'visor', false);
   }
