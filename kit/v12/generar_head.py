@@ -91,7 +91,7 @@ def urls(m):
 
 # --- tema oscuro (noche egea: tinta sobre pizarra) ------------------------------------------------------
 OSCURO_BASE = ('--bg:#10171d;--surface:#18222b;--surface-2:#1f2b36;--ink:#efe6d0;--ink-2:#cfc5ac;--ink-3:#a69d88;--line:#2c3945;--line-2:#43535f;'
-               '--marmol:#10171d;--marmol-2:#1f2b36;--veta:#2c3945;--oro:#d6a94a;--egeo:#52b3c4;--laurel:#a7bb6e;--sanguina:#e6916f;--tinta:#efe6d0;--tinta-2:#cfc5ac;'
+               '--marmol:#10171d;--marmol-2:#1f2b36;--veta:#2c3945;--oro:#d6a94a;--egeo:#52b3c4;--laurel:#a7bb6e;--sanguina:#e6916f;--sanguina-nota:#f4c0a8;--tinta:#efe6d0;--tinta-2:#cfc5ac;'
                '--am:#e8c27a;--am-f:#2e2412;--ro:#ff9d93;--ro-f:#361a18;--ve:#b5cf84;--ve-f:#1e2a15;--pu:#aab8e8;--pu-f:#1e2440;--co:#efae8c;--co-f:#33211a;--rs:#eea0bd;--rs-f:#33192a;'
                '--accent:#e6916f;--accent-ink:#f0a98c;--accent-field:#2b2320;--on-accent:#1a0f0a;'
                '--nota:#2d261a;--nota-2:#3d3322;--nota-l:#322a1c;--nota-borde:#cdb67f;--nota-lin:rgba(217,199,156,.7);--nota-sombra:rgba(0,0,0,.45);--nota-ink:#f1e7cf;'
