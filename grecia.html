@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lumen · biblioteca de widgets (Grecia)</title>
+<meta name="description" content="Biblioteca de widgets de estudio médico por semestre, rotación y tema del sílabo.">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f7f3ea">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23f7f3ea'/%3E%3Cpath d='M5 12h22L16 5zM8 14h3v12H8zM14.500 14h3v12h-3zM21 14h3v12h-3zM5 27h22v2H5z' fill='%238f3a1e'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=EB+Garamond:ital,wght@0,400..700;1,400..600&family=IM+Fell+English:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="biblioteca/grecia.css">
+</head>
+<body>
+<svg class="defs" width="0" height="0" aria-hidden="true" focusable="false"><defs>
+  <filter id="rugoso" x="-2%" y="-2%" width="104%" height="104%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"/></filter>
+</defs></svg>
+<div id="app">
+  <a class="salto" href="#catalogo-inicio" data-salto>Saltar al catálogo</a>
+  <header class="hero" id="portada">
+    <div class="cielo" aria-hidden="true">
+<svg class="escena" viewBox="0 0 1600 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+<defs>
+<linearGradient id="g-cielo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9cc7dd"/><stop offset=".45" stop-color="#cfe2e4"/><stop offset=".75" stop-color="#f3e6c2"/><stop offset="1" stop-color="#f6d98f"/></linearGradient>
+<radialGradient id="g-sol" cx="430" cy="500" r="430" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff6cf" stop-opacity=".95"/><stop offset=".22" stop-color="#ffe29a" stop-opacity=".7"/><stop offset=".55" stop-color="#ffd27a" stop-opacity=".22"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/></radialGradient>
+<linearGradient id="g-mar" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fffaf0"/><stop offset=".45" stop-color="#f1e8d3"/><stop offset="1" stop-color="#c9bb9d"/></linearGradient>
+<linearGradient id="g-timp" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d9cdb2"/><stop offset="1" stop-color="#b3a583"/></linearGradient>
+<linearGradient id="g-roca" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ead9b4"/><stop offset=".5" stop-color="#cdb98f"/><stop offset="1" stop-color="#a99572"/></linearGradient>
+<linearGradient id="g-roca2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#4b5a3c" stop-opacity=".45"/></linearGradient>
+<linearGradient id="g-mar-agua" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fd0cf"/><stop offset=".45" stop-color="#3da3a8"/><stop offset="1" stop-color="#17697a"/></linearGradient>
+<linearGradient id="g-nube" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffdf6"/><stop offset=".6" stop-color="#fdf1d6"/><stop offset="1" stop-color="#f6cf86"/></linearGradient>
+<linearGradient id="g-cip" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#55632f"/><stop offset="1" stop-color="#26301a"/></linearGradient>
+<linearGradient id="g-lejos" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bcd1d6"/><stop offset="1" stop-color="#d5dfd8"/></linearGradient>
+<path id="nube" d="M0 34C-2 20 12 12 26 18C32 0 60 -2 70 16C84 6 108 14 106 34Z"/>
+<g id="cip"><path d="M0 0C9 26 13 66 11 118H-11C-13 66 -9 26 0 0Z" fill="url(#g-cip)"/><path d="M-1 8C-6 34 -8 70 -7 114" stroke="#7a8a48" stroke-width="2" fill="none" opacity=".55" stroke-linecap="round"/></g>
+<g id="col">
+<path d="M-10.5 0L-8.4 -100H8.4L10.5 0Z" fill="url(#g-mar)"/>
+<path d="M-6 -2L-4.7 -98M-2 -2L-1.6 -98M2 -2L1.6 -98M6 -2L4.7 -98" stroke="#b9ab8d" stroke-width=".8" fill="none" opacity=".75"/>
+<path d="M-8.4 -100C-8.4 -104 -12.5 -103 -13 -109H13C12.5 -103 8.4 -104 8.4 -100Z" fill="url(#g-mar)"/>
+<rect x="-14" y="-113" width="28" height="4.5" fill="url(#g-mar)"/>
+</g>
+</defs>
+<rect width="1600" height="544" fill="url(#g-cielo)"/>
+<rect width="1600" height="544" fill="url(#g-sol)"/>
+<g opacity=".11" fill="#fff6cf">
+<path d="M430 500L-637 234L-616 160Z"/>
+<path d="M430 500L-523 -50L-482 -115Z"/>
+<path d="M430 500L-334 -291L-277 -343Z"/>
+<path d="M430 500L-87 -471L-17 -505Z"/>
+<path d="M430 500L201 -576L277 -589Z"/>
+<path d="M430 500L545 -594L621 -583Z"/>
+<path d="M430 500L842 -520L912 -489Z"/>
+</g>
+<g class="nubes n1" opacity=".9">
+<use href="#nube" transform="translate(90 290) scale(1.4)" fill="url(#g-nube)"/>
+<use href="#nube" transform="translate(600 240) scale(1.0)" fill="url(#g-nube)"/>
+<use href="#nube" transform="translate(1180 190) scale(1.0)" fill="url(#g-nube)"/>
+<use href="#nube" transform="translate(1500 300) scale(1.0)" fill="url(#g-nube)"/>
+</g><g class="nubes n2">
+<use href="#nube" transform="translate(300 160) scale(1.9)" fill="url(#g-nube)" opacity=".92"/>
+<use href="#nube" transform="translate(900 120) scale(1.5)" fill="url(#g-nube)" opacity=".92"/>
+<use href="#nube" transform="translate(1290 80) scale(1.3)" fill="url(#g-nube)" opacity=".92"/>
+<use href="#nube" transform="translate(30 90) scale(1.1)" fill="url(#g-nube)" opacity=".92"/>
+</g>
+<g fill="#fff7dc" opacity=".6"><rect x="0" y="448" width="260" height="3" rx="1.5"/><rect x="60" y="462" width="340" height="3" rx="1.5"/><rect x="660" y="430" width="200" height="3" rx="1.5"/><rect x="580" y="446" width="260" height="3" rx="1.5"/></g>
+<circle cx="430" cy="500" r="64" fill="#fff3c0" opacity=".45"/><circle cx="430" cy="500" r="40" fill="#fffbe6"/><circle cx="430" cy="500" r="40" fill="none" stroke="#f3c969" stroke-width="2" opacity=".8"/>
+<path d="M0 540 L0 508 C60 498 110 488 170 500 C210 484 250 478 300 490 C340 498 380 500 420 540Z" fill="url(#g-lejos)" opacity=".85"/>
+<path d="M560 540 C600 520 640 512 690 522 C740 508 800 512 860 540Z" fill="#c4d6d8" opacity=".9"/>
+<path d="M0 540 L0 522 C70 514 150 520 230 540Z" fill="#a9c3c4"/>
+<rect y="540" width="1600" height="160" fill="url(#g-mar-agua)"/>
+<g class="brillo" fill="#fff6d0">
+<rect x="373" y="548" width="95" height="1.6" rx="1" opacity="0.90"/>
+<rect x="369" y="555" width="98" height="1.7" rx="1" opacity="0.88"/>
+<rect x="380" y="562" width="93" height="1.8" rx="1" opacity="0.85"/>
+<rect x="389" y="570" width="83" height="2.0" rx="1" opacity="0.82"/>
+<rect x="388" y="577" width="80" height="2.1" rx="1" opacity="0.80"/>
+<rect x="379" y="584" width="78" height="2.2" rx="1" opacity="0.78"/>
+<rect x="399" y="591" width="81" height="2.3" rx="1" opacity="0.75"/>
+<rect x="385" y="598" width="74" height="2.4" rx="1" opacity="0.72"/>
+<rect x="403" y="606" width="79" height="2.6" rx="1" opacity="0.70"/>
+<rect x="389" y="613" width="76" height="2.7" rx="1" opacity="0.68"/>
+<rect x="377" y="620" width="80" height="2.8" rx="1" opacity="0.65"/>
+<rect x="387" y="627" width="75" height="2.9" rx="1" opacity="0.62"/>
+<rect x="389" y="634" width="61" height="3.0" rx="1" opacity="0.60"/>
+<rect x="408" y="642" width="61" height="3.2" rx="1" opacity="0.57"/>
+<rect x="404" y="649" width="56" height="3.3" rx="1" opacity="0.55"/>
+<rect x="396" y="656" width="61" height="3.4" rx="1" opacity="0.53"/>
+<rect x="389" y="663" width="57" height="3.5" rx="1" opacity="0.50"/>
+<rect x="398" y="670" width="47" height="3.6" rx="1" opacity="0.47"/>
+<rect x="401" y="678" width="54" height="3.8" rx="1" opacity="0.45"/>
+<rect x="410" y="685" width="46" height="3.9" rx="1" opacity="0.42"/>
+<rect x="402" y="692" width="45" height="4.0" rx="1" opacity="0.40"/>
+<rect x="412" y="699" width="48" height="4.1" rx="1" opacity="0.38"/>
+</g>
+<g stroke="#d7f1ee" stroke-linecap="round" fill="none" opacity=".55">
+<path d="M906 562h42" stroke-width="1.2"/>
+<path d="M1396 592h67" stroke-width="1.6"/>
+<path d="M439 626h86" stroke-width="2.0"/>
+<path d="M162 685h108" stroke-width="2.4"/>
+<path d="M1204 578h58" stroke-width="1.5"/>
+<path d="M767 557h34" stroke-width="1.0"/>
+<path d="M1059 554h24" stroke-width="0.9"/>
+<path d="M904 634h89" stroke-width="2.0"/>
+<path d="M481 658h99" stroke-width="2.2"/>
+<path d="M939 620h83" stroke-width="1.9"/>
+<path d="M714 600h72" stroke-width="1.7"/>
+<path d="M1510 650h96" stroke-width="2.1"/>
+<path d="M1053 585h63" stroke-width="1.6"/>
+<path d="M1113 555h25" stroke-width="0.9"/>
+<path d="M1589 611h78" stroke-width="1.8"/>
+<path d="M434 646h94" stroke-width="2.1"/>
+<path d="M1060 574h55" stroke-width="1.4"/>
+<path d="M723 554h22" stroke-width="0.8"/>
+<path d="M161 558h35" stroke-width="1.1"/>
+<path d="M1222 554h25" stroke-width="0.9"/>
+<path d="M374 556h32" stroke-width="1.0"/>
+<path d="M1390 575h55" stroke-width="1.4"/>
+<path d="M702 555h27" stroke-width="0.9"/>
+<path d="M1410 595h69" stroke-width="1.7"/>
+<path d="M1378 645h94" stroke-width="2.1"/>
+<path d="M647 565h45" stroke-width="1.2"/>
+<path d="M1411 572h52" stroke-width="1.4"/>
+<path d="M216 679h106" stroke-width="2.3"/>
+<path d="M348 558h36" stroke-width="1.1"/>
+<path d="M760 561h41" stroke-width="1.2"/>
+<path d="M398 601h73" stroke-width="1.7"/>
+<path d="M653 554h20" stroke-width="0.8"/>
+<path d="M893 573h53" stroke-width="1.4"/>
+<path d="M1096 678h106" stroke-width="2.3"/>
+</g>
+<path d="M640 572 L652 540 L676 500 L700 470 L722 452 L750 420 L786 392 L812 368 L852 344 L905 330 L960 326 L1470 324 L1520 340 L1556 380 L1584 430 L1600 470 L1600 572Z" fill="url(#g-roca)"/>
+<path d="M640 572 L652 540 L676 500 L700 470 L722 452 L750 420 L786 392 L812 368 L852 344 L905 330 L960 326 L1470 324 L1520 340 L1556 380 L1584 430 L1600 470 L1600 572Z" fill="url(#g-roca2)"/>
+<g stroke="#8d7a58" stroke-linecap="round" fill="none" opacity=".35">
+<path d="M1259 448h91" stroke-width="0.8"/>
+<path d="M1395 521h109" stroke-width="1.4"/>
+<path d="M1075 425h39" stroke-width="1.3"/>
+<path d="M1026 362h45" stroke-width="1.1"/>
+<path d="M986 360h39" stroke-width="1.1"/>
+<path d="M1310 355h43" stroke-width="1.0"/>
+<path d="M1046 416h41" stroke-width="1.5"/>
+<path d="M1131 539h74" stroke-width="0.9"/>
+<path d="M1065 369h105" stroke-width="0.9"/>
+<path d="M1250 354h43" stroke-width="1.2"/>
+<path d="M1565 355h108" stroke-width="1.4"/>
+<path d="M997 400h99" stroke-width="1.2"/>
+<path d="M1017 498h50" stroke-width="1.4"/>
+<path d="M1456 537h103" stroke-width="1.5"/>
+<path d="M930 491h77" stroke-width="1.1"/>
+<path d="M1076 356h53" stroke-width="1.4"/>
+<path d="M1116 532h114" stroke-width="1.6"/>
+<path d="M1046 531h50" stroke-width="1.0"/>
+<path d="M1317 387h111" stroke-width="1.5"/>
+<path d="M1289 441h102" stroke-width="0.9"/>
+<path d="M1504 476h100" stroke-width="1.4"/>
+<path d="M890 441h101" stroke-width="1.1"/>
+<path d="M1556 502h66" stroke-width="1.1"/>
+<path d="M1349 530h45" stroke-width="0.9"/>
+<path d="M1445 379h43" stroke-width="1.5"/>
+<path d="M1292 536h62" stroke-width="1.2"/>
+<path d="M1560 375h88" stroke-width="1.2"/>
+<path d="M1104 527h108" stroke-width="1.5"/>
+<path d="M1085 390h52" stroke-width="1.3"/>
+<path d="M972 399h112" stroke-width="1.1"/>
+<path d="M1230 437h111" stroke-width="1.1"/>
+<path d="M1161 524h78" stroke-width="1.2"/>
+<path d="M1008 354h30" stroke-width="1.4"/>
+<path d="M1388 383h80" stroke-width="1.1"/>
+<path d="M1207 448h101" stroke-width="0.9"/>
+<path d="M949 456h55" stroke-width="1.4"/>
+<path d="M1212 446h98" stroke-width="1.5"/>
+<path d="M1255 434h75" stroke-width="1.2"/>
+<path d="M1120 482h78" stroke-width="1.2"/>
+<path d="M1327 529h109" stroke-width="1.6"/>
+<path d="M1540 399h106" stroke-width="0.9"/>
+<path d="M931 373h52" stroke-width="0.9"/>
+<path d="M1399 477h111" stroke-width="0.9"/>
+<path d="M1295 486h43" stroke-width="1.5"/>
+<path d="M924 534h116" stroke-width="1.1"/>
+<path d="M1571 443h105" stroke-width="0.9"/>
+</g>
+<path d="M1330 326L1470 324L1520 340L1556 380L1584 430L1600 470V572H1500C1480 480 1420 400 1330 326Z" fill="#6e5f45" opacity=".18"/>
+<path d="M812 368L852 344L905 330L930 420L880 470L760 430Z" fill="#fff6dc" opacity=".16"/><path d="M930 420L905 330L1010 328L1000 440Z" fill="#fff6dc" opacity=".07"/><path d="M880 470L930 420L1000 440L980 560L700 560L690 520Z" fill="#6e5f45" opacity=".10"/><path d="M1100 560L1180 400L1260 400L1230 560Z" fill="#6e5f45" opacity=".08"/><path d="M1180 400L1200 330L1250 330L1260 400Z" fill="#fff6dc" opacity=".08"/>
+<path d="M620 574C700 560 760 566 820 572C900 580 980 566 1060 574C1180 584 1300 566 1420 574C1500 580 1560 570 1600 574V588H620Z" fill="#e9f6f1" opacity=".5"/>
+<path d="M900 330C940 318 990 326 1030 322C1100 330 1160 320 1230 324C1320 318 1420 326 1470 322L1522 340L1530 346C1480 336 1400 340 1340 336C1200 338 1000 340 900 336Z" fill="#7b8a4e"/>
+<path d="M910 331C960 336 1010 334 1060 338" stroke="#4d5a2c" stroke-width="2" fill="none" opacity=".5"/>
+<rect x="890" y="322" width="460" height="9" fill="#e9dfc7"/><rect x="900" y="314" width="440" height="8" fill="#f2ead7"/><rect x="910" y="306" width="420" height="8" fill="#faf4e4"/>
+<rect x="890" y="329" width="460" height="2" fill="#a99572" opacity=".5"/>
+<g stroke="#b8a985" stroke-width=".8" opacity=".6"><path d="M890 322H1350M900 314H1340"/></g>
+<rect x="950" y="193" width="340" height="113" fill="#9d8e74"/>
+<rect x="950" y="193" width="340" height="113" fill="#5f5240" opacity=".25"/>
+<rect x="1103" y="236" width="34" height="70" fill="#4f4434"/><rect x="1101" y="233" width="38" height="4" fill="#b9ab8d"/>
+<g stroke="#7f705a" stroke-width="1" opacity=".5"><path d="M1000 193V306M1240 193V306"/></g>
+<use href="#col" x="970" y="306"/>
+<use href="#col" x="1030" y="306"/>
+<use href="#col" x="1090" y="306"/>
+<use href="#col" x="1150" y="306"/>
+<use href="#col" x="1210" y="306"/>
+<use href="#col" x="1270" y="306"/>
+<rect x="932" y="177" width="376" height="16" fill="url(#g-mar)"/>
+<rect x="932" y="192" width="376" height="1.2" fill="#a99572" opacity=".6"/>
+<rect x="932" y="161" width="376" height="16" fill="#efe6d1"/>
+<rect x="967" y="162.5" width="8" height="13" fill="#cdbf9f"/><path d="M969.7 162.5v13M972.3 162.5v13" stroke="#8d7d5e" stroke-width=".9"/>
+<rect x="997" y="162.5" width="8" height="13" fill="#cdbf9f"/><path d="M999.7 162.5v13M1002.3 162.5v13" stroke="#8d7d5e" stroke-width=".9"/>
+<rect x="1027" y="162.5" width="8" height="13" fill="#cdbf9f"/><path d="M1029.7 162.5v13M1032.3 162.5v13" stroke="#8d7d5e" stroke-width=".9"/>
+<rect x="1057" y="162.5" width="8" height="13" fill="#cdbf9f"/><path d="M1059.7 162.5v13M1062.3 162.5v13" stroke="#8d7d5e" stroke-width=".9"/>
+<rect x="1087" y="162.5" width="8" height="13" fill="#cdbf9f"/><path d="M1089.7 162.5v13M1092.3 162.5v13" stroke="#8d7d5e" stroke-width=".9"/>
+<rect x="1117" y="162.5" width="8" height="13" fill="#cdbf9f"/><path d="M1119.7 162.5v13M1122.3 162.5v13" stroke="#8d7d5e" stroke-width=".9"/>
+<rect x="1147" y="162.5" width="8" height="13" fill="#cdbf9f"/><path d="M1149.7 162.5v13M1152.3 162.5v13" stroke="#8d7d5e" stroke-width=".9"/>
+<rect x="1177" y="162.5" width="8" height="13" fill="#cdbf9f"/><path d="M1179.7 162.5v13M1182.3 162.5v13" stroke="#8d7d5e" stroke-width=".9"/>
+<rect x="1207" y="162.5" width="8" height="13" fill="#cdbf9f"/><path d="M1209.7 162.5v13M1212.3 162.5v13" stroke="#8d7d5e" stroke-width=".9"/>
+<rect x="1237" y="162.5" width="8" height="13" fill="#cdbf9f"/><path d="M1239.7 162.5v13M1242.3 162.5v13" stroke="#8d7d5e" stroke-width=".9"/>
+<rect x="1267" y="162.5" width="8" height="13" fill="#cdbf9f"/><path d="M1269.7 162.5v13M1272.3 162.5v13" stroke="#8d7d5e" stroke-width=".9"/>
+<rect x="924" y="153" width="392" height="8" fill="url(#g-mar)"/><rect x="924" y="160" width="392" height="1.4" fill="#8d7d5e" opacity=".55"/>
+<path d="M924 153L1120 112L1316 153Z" fill="url(#g-mar)"/>
+<path d="M944 150.5L1120 118L1296 150.5Z" fill="url(#g-timp)"/>
+<path d="M944 150.5L1120 118L1296 150.5" fill="none" stroke="#8d7d5e" stroke-width="1" opacity=".5"/>
+<path d="M1111 113c3-8 15-8 18 0l-9 -3z" fill="#e6d6ab"/>
+<path d="M924 153L1120 112L1316 153" fill="none" stroke="#a99572" stroke-width="1.2" opacity=".7"/>
+<use href="#cip" transform="translate(884 330) scale(0.78) translate(0 -118)"/>
+<use href="#cip" transform="translate(912 330) scale(0.62) translate(0 -118)"/>
+<use href="#cip" transform="translate(1384 330) scale(0.92) translate(0 -118)"/>
+<use href="#cip" transform="translate(1416 330) scale(0.7) translate(0 -118)"/>
+<use href="#cip" transform="translate(1470 330) scale(0.85) translate(0 -118)"/>
+<use href="#cip" transform="translate(1545 330) scale(0.6) translate(0 -118)"/>
+<use href="#cip" transform="translate(205 520) scale(0.18) translate(0 -118)" opacity=".65"/>
+<use href="#cip" transform="translate(214 521) scale(0.14) translate(0 -118)" opacity=".65"/>
+<use href="#cip" transform="translate(232 520) scale(0.16) translate(0 -118)" opacity=".65"/>
+<path d="M0 700 L0 640 C40 628 90 626 140 640 C190 650 230 664 270 700Z" fill="#6f7a45"/>
+<path d="M0 700 L0 668 C50 660 110 664 170 680 C200 688 220 694 240 700Z" fill="#4e5a30"/>
+<use href="#cip" transform="translate(34 646) scale(1.05) translate(0 -118)"/>
+<use href="#cip" transform="translate(70 650) scale(0.78) translate(0 -118)"/>
+<use href="#cip" transform="translate(118 654) scale(0.5) translate(0 -118)"/>
+<path d="M1600 700 L1600 628 C1560 618 1500 624 1450 640 C1410 652 1380 668 1350 700Z" fill="#6f7a45"/>
+<path d="M1600 700 L1600 662 C1550 656 1500 664 1460 684 C1440 692 1425 696 1415 700Z" fill="#4e5a30"/>
+</svg>
+    </div>
+    <div class="wrap hero-in">
+      <div class="friso">
+        <div class="cartel mono">
+          <span id="h-nivel"></span>
+          <span id="h-fecha"></span>
+        </div>
+        <h1 class="titulo">Lumen</h1>
+        <div class="hero-pie">
+          <p class="hero-lead" id="h-lead"></p>
+          <ul class="hero-cifras" id="h-cifras" aria-label="Resumen del catálogo"></ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="controles" id="catalogo-inicio">
+    <div class="bar">
+      <div class="wrap bar-in">
+        <div class="bar-sem" id="c-sem"></div>
+        <div class="tabs" id="c-rot" role="group" aria-label="Rotación"></div>
+        <div class="buscar">
+          <label class="sr" for="buscar">Buscar en el catálogo</label>
+          <svg class="buscar-ico" viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M13 13l4.5 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <input id="buscar" type="search" placeholder="Buscar tema o entidad" autocomplete="off" spellcheck="false" enterkeyhint="search">
+          <kbd class="atajo mono" aria-hidden="true">/</kbd>
+        </div>
+      </div>
+    </div>
+    <div class="filtros">
+      <div class="wrap filtros-in">
+        <div class="chips" id="c-tipos" role="group" aria-label="Tipo de widget"></div>
+        <p class="conteo mono" id="conteo" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+
+  <main id="catalogo" class="wrap catalogo" tabindex="-1">
+    <p class="aviso-falta" id="falta" hidden></p>
+  </main>
+
+  <footer class="pie">
+    <div class="wrap pie-in mono">
+      <span id="p-nombre">Lumen</span>
+      <span id="p-fecha"></span>
+    </div>
+  </footer>
+</div>
+
+<!-- Panel de tema -->
+<div id="panel" class="capa" hidden>
+  <div class="capa-fondo" data-cerrar-panel></div>
+  <span class="trampa" tabindex="0" aria-hidden="true"></span>
+  <section class="hoja" role="dialog" aria-modal="true" aria-labelledby="p-titulo" tabindex="-1">
+    <svg class="constr" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+      <g fill="none" stroke="currentColor" stroke-width=".9" stroke-linecap="round">
+        <circle cx="200" cy="186" r="142"/><rect x="66" y="66" width="268" height="268"/>
+        <path d="M200 20V380M20 200H380M66 66L334 334M334 66L66 334"/>
+        <circle cx="200" cy="200" r="94" stroke-dasharray="3 5"/>
+        <rect x="106" y="106" width="188" height="188" stroke-dasharray="2 4"/>
+        <path d="M66 334a268 268 0 0 1 268 -268" stroke-dasharray="1 5"/>
+        <path d="M66 346v8M99.500 346v6M133 346v8M166.500 346v6M200 346v8M233.500 346v6M267 346v8M300.500 346v6M334 346v8M66 350H334"/>
+      </g>
+    </svg>
+    <span class="espejo" aria-hidden="true">lumen · cuaderno de estudio</span>
+    <div class="hoja-barra">
+      <button type="button" class="btn btn-icono" data-cerrar-panel aria-label="Cerrar tema">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+      <span class="hoja-sup mono" id="p-sup"></span>
+    </div>
+    <div class="hoja-cuerpo" id="p-cuerpo"></div>
+  </section>
+  <span class="trampa" tabindex="0" aria-hidden="true" data-fin="1"></span>
+</div>
+
+<!-- Visor de widget -->
+<div id="visor" class="visor" role="dialog" aria-modal="true" aria-labelledby="v-titulo" hidden>
+  <span class="trampa" tabindex="0" aria-hidden="true"></span>
+  <header class="v-barra">
+    <button type="button" class="btn v-volver" id="v-volver" aria-label="Volver">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 4l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="v-volver-t">Volver</span>
+    </button>
+    <div class="v-tit">
+      <span class="v-tema mono" id="v-tema"></span>
+      <h2 id="v-titulo"></h2>
+    </div>
+    <div class="v-acc">
+      <button type="button" class="btn btn-icono" id="v-ant" aria-label="Widget anterior del tema">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M12 4l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button type="button" class="btn btn-icono" id="v-sig" aria-label="Widget siguiente del tema">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M8 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <a class="btn btn-icono" id="v-ext" target="_blank" rel="noopener" href="#" aria-label="Abrir en pestaña nueva">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M8 4H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-3M11 4h5v5M16 4l-7 7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <button type="button" class="btn btn-icono" id="v-fs" aria-label="Pantalla completa">
+        <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 8V4h4M16 8V4h-4M4 12v4h4M16 12v4h-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </header>
+  <div class="v-marco" id="v-marco">
+    <div class="v-estado" id="v-estado" role="status"></div>
+  </div>
+  <span class="trampa" tabindex="0" aria-hidden="true" data-fin="1"></span>
+</div>
+
+<script src="biblioteca/catalogo.js"></script>
+<script src="biblioteca/app.js"></script>
+</body>
+</html>
