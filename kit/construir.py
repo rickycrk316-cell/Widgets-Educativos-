@@ -10,12 +10,14 @@ Cada carpeta de widget tiene partes numeradas (*.html, se concatenan en orden
 alfabético) y un manifiesto.json con, además de los campos del validador:
   "titulo": texto del <title>
   "salida": ruta del HTML final, relativa a la carpeta del widget
-  "tipo":   "definiciones", "apertura" o "v11"
+  "tipo":   "definiciones", "apertura", "v11" o "v12"
 v10:         (sin "tipo" o "v10") CONGELADO: el kit v10 se retiró; no se ensambla ni se toca el
              HTML final. Se informa y cuenta como OK. Para reconstruirlo hay que migrarlo a v11.
 definiciones: def_head.html (título sustituido) + partes                  → validar_definiciones.py
 apertura:     apertura_head.html (título sustituido) + partes             → validar_apertura.py <html> <manifiesto>
 v11:          v11/head.html (título; <html data-tema> desde "tema") + partes + v11/script.html → v11/validar.py
+v12:          v12/head.html («Grecia + cuadernos de Leonardo») + partes + v11/script.html → v11/validar.py
+              (mismo contrato, script y validador que v11: solo cambia la cabecera visual)
 """
 import sys, json, pathlib, subprocess, tempfile
 
@@ -29,14 +31,14 @@ def construir(d: pathlib.Path, validar: bool) -> bool:
     if tipo == 'v10':
         print(f'== {d.relative_to(RAIZ) if d.is_relative_to(RAIZ) else d}: congelado (v10), no se reconstruye')
         return True
-    cab = {'definiciones': 'def_head.html', 'apertura': 'apertura_head.html', 'v11': 'v11/head.html'}[tipo]
+    cab = {'definiciones': 'def_head.html', 'apertura': 'apertura_head.html', 'v11': 'v11/head.html', 'v12': 'v12/head.html'}[tipo]
     head = (KIT / cab).read_text(encoding='utf-8')
-    if tipo == 'v11':
+    if tipo in ('v11', 'v12'):
         head = head.replace('<html lang="es">', f'<html lang="es" data-tema="{m.get("tema", "otro")}">', 1)
     head = head.replace('<title>@@TITULO@@</title>', f'<title>{m["titulo"]}</title>')
     partes = sorted(p for p in d.glob('*.html'))
     html = head + ''.join(p.read_text(encoding='utf-8') for p in partes)
-    if tipo == 'v11':
+    if tipo in ('v11', 'v12'):
         html += (KIT / 'v11/script.html').read_text(encoding='utf-8')
     out = (d / m['salida']).resolve()
     out.write_text(html, encoding='utf-8')
@@ -59,7 +61,7 @@ def construir(d: pathlib.Path, validar: bool) -> bool:
         json.dump(val, tmp, ensure_ascii=False); tmp.close()
         cmd = [sys.executable, str(vcmd), str(out), tmp.name]
     r = subprocess.run(cmd, capture_output=True, text=True)
-    if tipo == 'v11':
+    if tipo in ('v11', 'v12'):
         pathlib.Path(tmp.name).unlink()
     lineas = (r.stdout + r.stderr).strip().splitlines()
     # Solo errores y la línea de resultado: ahorra contexto al revisar.
