@@ -1,5 +1,5 @@
 window.CATALOGO = {
- "generado": "2026-11-15",
+ "generado": "2026-11-16",
  "nombre": "Lumen",
  "semestres": [
   {
