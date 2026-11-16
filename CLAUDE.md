@@ -19,7 +19,7 @@ Fuente de verdad del diseño y del contenido v11: `docs/DECISIONES_v11.md`. Si a
 | `"v11"` | `kit/v11/` (cabecera, script, validador, prueba de navegador) | widgets de enseñanza nuevos y migrados |
 | `"definiciones"` | `kit/def_head.html`, `validar_definiciones.py`, `auditar_definiciones.py`, `probar_definiciones.js` | paso 1 del ABP |
 | `"apertura"` | `kit/apertura_head.html`, `validar_apertura.py` (+ auditor y prueba de definiciones) | apertura del ABP |
-| sin `tipo` (o `"v10"`) | ninguno: **congelado** | 17 widgets de enseñanza v10 |
+| sin `tipo` (o `"v10"`) | ninguno: **congelado** | 16 widgets de enseñanza v10 |
 
 **Congelado (v10)** = se conservan partes y HTML final versionados, pero no se reconstruyen ni se editan; el kit v10 se retiró. `construir.py` los reconoce (manifiesto sin `tipo`), lo informa y no toca el HTML. Migrar uno a v11 = reescribir sus partes con `tipo: "v11"` según `docs/DECISIONES_v11.md`, y recién entonces se construye.
 

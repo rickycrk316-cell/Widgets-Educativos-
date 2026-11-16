@@ -5,18 +5,18 @@ function dcVis(dc){
   if(!p&&!f&&!t&&!a&&!s&&!o.length){out(dc,'Marca al menos pupilas, frecuencia respiratoria y sensorio; añade los hallazgos que veas. Predice la entidad antes de pulsar.');return;}
   var c=[];
   if(p==='mio'&&has('sal')){c.push({e:'Toxíndrome colinérgico (fuera del grupo)',f:'Bradicardia, broncorrea y sudoración que confirmen el exceso muscarínico',k:'Vía aérea, aspiración de secreciones y atropina; no naloxona',cf:'Si hay miosis con bradipnea y sin secreciones ni diarrea → Opioides: naloxona'});}
-  else if(p==='mio'&&(f==='bra'||s==='dep')){c.push({e:'Opioides (amenaza)',f:'Respuesta de la ventilación a la naloxona; saturación y frecuencia respiratoria seriadas',k:'Ventilar con bolsa-mascarilla y naloxona titulada hasta recuperar la ventilación; observación prolongada por resedación [6] <span class="rem">↪ Posología en «Tratamiento»</span>',cf:'Si las pupilas fueran normales con ventilación conservada → Sedantes e hipnóticos: soporte, sin antídoto rutinario'});}
-  if(has('lag')&&p!=='mio'){c.push({e:'Opioides — abstinencia',f:'Último opioide y su duración; graduar con COWS [14]',k:'Tratar la abstinencia y enlazar tratamiento de mantenimiento; la buprenorfina solo con signos objetivos de abstinencia',cf:'Si hubiera temblor tras suspender alcohol sin lagrimeo ni bostezos → Alcohol: CIWA-Ar y BZD'});}
-  if(has('vis')){c.push({e:'Alcohol — sospecha de metanol (vecina fuera del grupo)',f:'Gasometría con anion gap y osmolalidad; la brecha osmolar normal no lo descarta [15]',k:'Emergencia: bloqueo de la alcohol deshidrogenasa y valorar hemodiálisis',cf:'Si el anion gap y la osmolalidad fueran normales → intoxicación etílica simple: vía aérea, glucemia y tiamina'});}
-  if((has('trb')||(has('con')&&(has('fet')||a==='hta')))&&!has('lag')&&p!=='mid'){c.push({e:'Alcohol — abstinencia',f:'Horas desde la última ingesta, CIWA-Ar y PAWSS; convulsión o delirium la definen como complicada [17]',k:'Benzodiacepina pautada por síntomas según CIWA-Ar y tiamina; emergencia si es complicada <span class="rem">↪ Posología en «Tratamiento»</span>',cf:'Si el usuario crónico suspendió benzodiacepinas en vez de alcohol → Sedantes e hipnóticos: pauta descendente con una BZD de vida larga'});}
+  else if(p==='mio'&&(f==='bra'||s==='dep')){c.push({e:'Opioides (amenaza)',f:'Respuesta de la ventilación a la naloxona; saturación y frecuencia respiratoria seriadas',k:'Ventilar con bolsa-mascarilla y naloxona titulada hasta recuperar la ventilación; observación prolongada por resedación [8] <span class="rem">↪ Posología en «Tratamiento»</span>',cf:'Si las pupilas fueran normales con ventilación conservada → Sedantes e hipnóticos: soporte, sin antídoto rutinario'});}
+  if(has('lag')&&p!=='mio'){c.push({e:'Opioides — abstinencia',f:'Último opioide y su duración; graduar con COWS [2]',k:'Tratar la abstinencia y enlazar tratamiento de mantenimiento; la buprenorfina solo con signos objetivos de abstinencia',cf:'Si hubiera temblor tras suspender alcohol sin lagrimeo ni bostezos → Alcohol: CIWA-Ar y BZD'});}
+  if(has('vis')){c.push({e:'Alcohol — sospecha de metanol (vecina fuera del grupo)',f:'Gasometría con anion gap y osmolalidad; la brecha osmolar normal no lo descarta [19]',k:'Emergencia: bloqueo de la alcohol deshidrogenasa y valorar hemodiálisis',cf:'Si el anion gap y la osmolalidad fueran normales → intoxicación etílica simple: vía aérea, glucemia y tiamina'});}
+  if((has('trb')||(has('con')&&(has('fet')||a==='hta')))&&!has('lag')&&p!=='mid'){c.push({e:'Alcohol — abstinencia',f:'Horas desde la última ingesta, CIWA-Ar y PAWSS; convulsión o delirium la definen como complicada [20]',k:'Benzodiacepina pautada por síntomas según CIWA-Ar y tiamina; emergencia si es complicada <span class="rem">↪ Posología en «Tratamiento»</span>',cf:'Si el usuario crónico suspendió benzodiacepinas en vez de alcohol → Sedantes e hipnóticos: pauta descendente con una BZD de vida larga'});}
   else if(has('fet')&&s==='dep'&&p!=='mio'){c.push({e:'Alcohol — intoxicación aguda',f:'Glucemia capilar y alcoholemia; si bebió aguardiente artesanal, gasometría con anion gap',k:'Vía aérea primero, glucemia capilar y tiamina; observar hasta recuperar la conciencia',cf:'Si apareciera visión borrosa con acidosis tras aguardiente artesanal → metanol: emergencia'});}
-  if(s==='dep'&&p==='nor'&&f!=='taq'&&!has('fet')){c.push({e:'Sedantes e hipnóticos',f:'Historia de consumo y coingesta de alcohol u opioides; vigilar la ventilación',k:'Soporte ventilatorio y observación; flumazenil no rutinario por riesgo de convulsiones [7]',cf:'Si las pupilas fueran puntiformes con bradipnea → Opioides: naloxona'});}
-  if(has('nis')){c.push({e:'Cannabis y psicodélicos — disociativo (PCP o ketamina)',f:'CK y glucemia; buscar traumatismos ocultos por la analgesia [11]',k:'Benzodiacepina para agitación, hipertensión, convulsiones e hipertermia; entorno seguro',cf:'Si hubiera midriasis con diaforesis e hipertermia sin nistagmo → Estimulantes'});}
-  if(has('vom')){c.push({e:'Cannabis y psicodélicos — hiperémesis cannabinoide',f:'Consumo crónico al menos semanal y alivio con baños calientes [12]',k:'Hidratación y electrolitos; haloperidol o capsaicina tópica; el tratamiento definitivo es suspender el cannabis [13]',cf:'Si los vómitos fueran agudos sin consumo crónico → buscar causa digestiva o metabólica'});}
+  if(s==='dep'&&p==='nor'&&f!=='taq'&&!has('fet')){c.push({e:'Sedantes e hipnóticos',f:'Historia de consumo y coingesta de alcohol u opioides; vigilar la ventilación',k:'Soporte ventilatorio y observación; flumazenil no rutinario por riesgo de convulsiones [12]',cf:'Si las pupilas fueran puntiformes con bradipnea → Opioides: naloxona'});}
+  if(has('nis')){c.push({e:'Cannabis y psicodélicos — disociativo (PCP o ketamina)',f:'CK y glucemia; buscar traumatismos ocultos por la analgesia [15]',k:'Benzodiacepina para agitación, hipertensión, convulsiones e hipertermia; entorno seguro',cf:'Si hubiera midriasis con diaforesis e hipertermia sin nistagmo → Estimulantes'});}
+  if(has('vom')){c.push({e:'Cannabis y psicodélicos — hiperémesis cannabinoide',f:'Consumo crónico al menos semanal y alivio con baños calientes [16]',k:'Hidratación y electrolitos; haloperidol o capsaicina tópica; el tratamiento definitivo es suspender el cannabis [17]',cf:'Si los vómitos fueran agudos sin consumo crónico → buscar causa digestiva o metabólica'});}
   if(t==='sec'&&p==='mid'){c.push({e:'Toxíndrome anticolinérgico (fuera del grupo)',f:'Retención urinaria y ausencia de ruidos intestinales',k:'Soporte, entorno tranquilo y benzodiacepina si agita',cf:'Si la piel estuviera sudorosa → Estimulantes'});}
-  else if(p==='mid'&&(a==='hta'||t==='dia'||has('dto'))&&!has('lag')&&!has('nis')){c.push({e:'Estimulantes',f:'Temperatura central, ECG, glucemia y sodio si consumió MDMA [8]',k:'Benzodiacepina para agitación, taquicardia e hipertensión; enfriamiento externo; ECG si hay dolor torácico <span class="rem">↪ Posología en «Tratamiento»</span>',cf:'Si la piel estuviera caliente y seca → anticolinérgico'});}
+  else if(p==='mid'&&(a==='hta'||t==='dia'||has('dto'))&&!has('lag')&&!has('nis')){c.push({e:'Estimulantes',f:'Temperatura central, ECG, glucemia y sodio si consumió MDMA [13]',k:'Benzodiacepina para agitación, taquicardia e hipertensión; enfriamiento externo; ECG si hay dolor torácico <span class="rem">↪ Posología en «Tratamiento»</span>',cf:'Si la piel estuviera caliente y seca → anticolinérgico'});}
   if(has('cnj')){c.push({e:'Cannabis y psicodélicos — cannabis',f:'Coingesta de otras sustancias; ECG si hay dolor torácico',k:'Entorno tranquilo y benzodiacepina si hay agitación',cf:'Si hubiera midriasis con hipertermia y diaforesis marcadas → Estimulantes'});}
-  if(has('alu')&&p==='mid'&&a!=='hta'&&t!=='dia'&&!has('nis')){c.push({e:'Cannabis y psicodélicos — LSD u otro psicodélico',f:'Temperatura y CK para descartar rabdomiólisis [10]',k:'Ambiente tranquilo con supervisión directa; benzodiacepina si agita',cf:'Si se sumaran hipertensión, hipertermia y diaforesis → Estimulantes'});}
+  if(has('alu')&&p==='mid'&&a!=='hta'&&t!=='dia'&&!has('nis')){c.push({e:'Cannabis y psicodélicos — LSD u otro psicodélico',f:'Temperatura y CK para descartar rabdomiólisis [1]',k:'Ambiente tranquilo con supervisión directa; benzodiacepina si agita',cf:'Si se sumaran hipertensión, hipertermia y diaforesis → Estimulantes'});}
   if(!c.length){
     var h='Patrón incompleto o inespecífico: ninguna entidad encaja todavía. ';
     if(has('con'))h+='Una convulsión aislada obliga a pensar en abstinencia de alcohol o sedantes, estimulantes, hiponatremia por MDMA o flumazenil. ';
@@ -40,28 +40,28 @@ function dcE1dx(dc){
   if(bad.length){out(dc,'<p><b>Valor fuera de rango:</b> '+bad.join('; ')+'. Corrige el dato para graduar la abstinencia.</p><span class="cf">Si introduces un valor válido → se gradúa la abstinencia y se decide el nivel de atención</span>');return}
   var r=[],cf='';
   if(has('meoh')){
-    r.push('<p><b>Alarma: sospecha de metanol.</b> Gasometría con anión gap y osmolalidad; una brecha osmolar normal no lo descarta. Traslado a un centro con fomepizol o etanol y hemodiálisis [15,63].</p>');
+    r.push('<p><b>Alarma: sospecha de metanol.</b> Gasometría con anión gap y osmolalidad; una brecha osmolar normal no lo descarta. Traslado a un centro con fomepizol o etanol y hemodiálisis [19,66].</p>');
   }
   var band='';
   if(has('delir')){
-    r.push('<p><b>Delirium:</b> la CIWA-Ar no es válida (depende del autorreporte); usa CAM-ICU, RASS o MINDS. Manejo como delirium tremens, a menudo en UCI [17].</p>');
+    r.push('<p><b>Delirium:</b> la CIWA-Ar no es válida (depende del autorreporte); usa CAM-ICU, RASS o MINDS. Manejo como delirium tremens, a menudo en UCI [20].</p>');
     band='dt';
   }else if(!isNaN(c)){
     band=c>=19?'grave':(c>=10?'moderada':'leve');
-    r.push('<p><b>CIWA-Ar '+c+' → abstinencia '+band+'</b> (ASAM: &lt;10 leve; 10–18 moderada; ≥19 grave) [17].</p>');
+    r.push('<p><b>CIWA-Ar '+c+' → abstinencia '+band+'</b> (ASAM: &lt;10 leve; 10–18 moderada; ≥19 grave) [20].</p>');
   }
   var alto=(!isNaN(p)&&p>=4)||has('conv')||has('dt');
-  if(!isNaN(p))r.push('<p><b>PAWSS '+p+'</b>: '+(p>=4?'alto riesgo de abstinencia complicada':'riesgo bajo (≤3)')+' [45,55].</p>');
-  if(has('conv')||has('dt'))r.push('<p>Antecedente de '+(has('conv')?'convulsión':'')+(has('conv')&&has('dt')?' y ':'')+(has('dt')?'delirium tremens':'')+': umbral convulsivo descendido (encendido) [5].</p>');
+  if(!isNaN(p))r.push('<p><b>PAWSS '+p+'</b>: '+(p>=4?'alto riesgo de abstinencia complicada':'riesgo bajo (≤3)')+' [47,55].</p>');
+  if(has('conv')||has('dt'))r.push('<p>Antecedente de '+(has('conv')?'convulsión':'')+(has('conv')&&has('dt')?' y ':'')+(has('dt')?'delirium tremens':'')+': umbral convulsivo descendido (encendido) [7].</p>');
   var hosp=band==='grave'||band==='dt'||alto||has('psiq')||has('med')||has('red')||has('meoh');
   var nivel;
-  if(band==='dt')nivel='<b>Nivel:</b> hospital, observación estrecha, a menudo UCI [17].';
-  else if(hosp)nivel='<b>Nivel:</b> hospital o emergencia. Reevaluar cada 1–4 h durante 24 h; si CIWA-Ar &lt;10 durante 24 h, cada 4–8 h [17]. Contraindicaciones del manejo ambulatorio presentes [5].';
-  else nivel='<b>Nivel:</b> ambulatorio posible si tolera VO, acepta controles y tiene cuidador; contacto diario hasta 5 días tras el cese [5,17].';
+  if(band==='dt')nivel='<b>Nivel:</b> hospital, observación estrecha, a menudo UCI [20].';
+  else if(hosp)nivel='<b>Nivel:</b> hospital o emergencia. Reevaluar cada 1–4 h durante 24 h; si CIWA-Ar &lt;10 durante 24 h, cada 4–8 h [20]. Contraindicaciones del manejo ambulatorio presentes [7].';
+  else nivel='<b>Nivel:</b> ambulatorio posible si tolera VO, acepta controles y tiene cuidador; contacto diario hasta 5 días tras el cese [7,20].';
   r.push('<p>'+nivel+'</p>');
   if(isNaN(c)&&band!=='dt')r.push('<p class="mini">Sin CIWA-Ar la gravedad actual no está graduada: el nivel es provisional hasta puntuarla.</p>');
   if(has('psiq'))r.push('<p>Ideación suicida o psicosis: valoración psiquiátrica y vigilancia.</p>');
-  if(has('meoh'))cf='Si no hubiera síntomas visuales ni acidosis tras 12–24 h → el cuadro se explica por etanol y se gradúa solo con CIWA-Ar [15]';
+  if(has('meoh'))cf='Si no hubiera síntomas visuales ni acidosis tras 12–24 h → el cuadro se explica por etanol y se gradúa solo con CIWA-Ar [19]';
   else if(band==='dt')cf='Si el paciente estuviera orientado y pudiera responder → volvería a graduarse con CIWA-Ar';
   else if(band==='grave')cf='Si la CIWA-Ar bajara a &lt;10 tras la carga → pauta guiada por síntomas y reevaluación cada 4–8 h';
   else if(hosp&&!alto)cf='Si tuviera red de apoyo, sin comorbilidad aguda ni ideación suicida → podría manejarse ambulatoriamente';
@@ -75,26 +75,26 @@ function dcE1tx(dc){
   if(!g){out(dc,'<p>Elige el cuadro (y, si quieres, hígado/edad y riesgo de Wernicke) para ver la benzodiacepina, el esquema y la tiamina.</p>');return}
   var H=hep==='si',r=[],cf;
   if(g==='leve'){
-    r.push(H?'<p><b>Lorazepam VO, ambulatorio 5 días:</b> pauta fija D1–2 2 mg c/8 h; D3 1 mg c/8 h; D4 1 mg c/12 h; D5 1 mg al acostarse. Guiada por síntomas (solo si CIWA-Ar &gt;9): D1–2 2 mg c/6 h; D3 1 mg c/8 h; D4–5 1 mg c/12 h [5].</p>'
-      :'<p><b>Diazepam 10 mg VO, ambulatorio 5 días, guiado por síntomas (CIWA-Ar &gt;9):</b> D1 c/4 h; D2 c/6 h; D3 c/6 h; D4–5 c/12 h. Pauta fija si no puede automonitorizarse: D1 c/6 h; D2 c/8 h; D3 c/12 h; D4–5 al acostarse [5,17].</p>');
-    r.push('<p>Contacto diario hasta 5 días tras el cese [17].</p>');
+    r.push(H?'<p><b>Lorazepam VO, ambulatorio 5 días:</b> pauta fija D1–2 2 mg c/8 h; D3 1 mg c/8 h; D4 1 mg c/12 h; D5 1 mg al acostarse. Guiada por síntomas (solo si CIWA-Ar &gt;9): D1–2 2 mg c/6 h; D3 1 mg c/8 h; D4–5 1 mg c/12 h [7].</p>'
+      :'<p><b>Diazepam 10 mg VO, ambulatorio 5 días, guiado por síntomas (CIWA-Ar &gt;9):</b> D1 c/4 h; D2 c/6 h; D3 c/6 h; D4–5 c/12 h. Pauta fija si no puede automonitorizarse: D1 c/6 h; D2 c/8 h; D3 c/12 h; D4–5 al acostarse [7,20].</p>');
+    r.push('<p>Contacto diario hasta 5 días tras el cese [20].</p>');
   }else if(g==='mod'){
-    r.push(H?'<p><b>Lorazepam 1–2 mg VO</b> si hay síntomas; cada dosis siguiente 1,5–2 veces la previa, reevaluando c/1–2 h; u <b>oxazepam</b> 15 mg (CIWA-Ar 8–15) o 30 mg (&gt;15) [17,50].</p>'
-      :'<p><b>Clordiazepóxido 25–100 mg VO</b> por cada CIWA-Ar ≥10 (guiado por síntomas) [17]; alternativa diazepam.</p>');
-    r.push('<p>Reevaluar cada 1–4 h durante 24 h [17].</p>');
+    r.push(H?'<p><b>Lorazepam 1–2 mg VO</b> si hay síntomas; cada dosis siguiente 1,5–2 veces la previa, reevaluando c/1–2 h; u <b>oxazepam</b> 15 mg (CIWA-Ar 8–15) o 30 mg (&gt;15) [20,49].</p>'
+      :'<p><b>Clordiazepóxido 25–100 mg VO</b> por cada CIWA-Ar ≥10 (guiado por síntomas) [20]; alternativa diazepam.</p>');
+    r.push('<p>Reevaluar cada 1–4 h durante 24 h [20].</p>');
   }else if(g==='grave'){
-    r.push(H?'<p><b>Hepatopatía:</b> BZD de menor metabolismo hepático: <b>lorazepam 1–2 mg</b>, escalando 1,5–2 veces la dosis previa c/1–2 h hasta control; vigila acumulación [17,50].</p>'
-      :'<p><b>Carga con diazepam 20 mg c/1 h</b> hasta CIWA-Ar &lt;10 (o 20 mg c/1 h por 1–2 h o hasta sedación) [17].</p>');
-    r.push(H?'<p>Hospitalización. Sin respuesta a varias dosis adecuadas de lorazepam, o sedación excesiva: escalar a emergencia o UCI [17].</p>':'<p>Hospitalización. Sin respuesta a ≈80 mg de diazepam o sedación: escalar a emergencia u hospital [17].</p>');
+    r.push(H?'<p><b>Hepatopatía:</b> BZD de menor metabolismo hepático: <b>lorazepam 1–2 mg</b>, escalando 1,5–2 veces la dosis previa c/1–2 h hasta control; vigila acumulación [20,49].</p>'
+      :'<p><b>Carga con diazepam 20 mg c/1 h</b> hasta CIWA-Ar &lt;10 (o 20 mg c/1 h por 1–2 h o hasta sedación) [20].</p>');
+    r.push(H?'<p>Hospitalización. Sin respuesta a varias dosis adecuadas de lorazepam, o sedación excesiva: escalar a emergencia o UCI [20].</p>':'<p>Hospitalización. Sin respuesta a ≈80 mg de diazepam o sedación: escalar a emergencia u hospital [20].</p>');
   }else if(g==='conv'){
-    r.push('<p><b>Lorazepam o diazepam IV</b> (acción rápida, parenteral). La guía no fija mg para la crisis: titula como en la carga [17]. Fenitoína solo si hay epilepsia de base; betabloqueante y clonidina no previenen convulsiones.</p>');
+    r.push('<p><b>Lorazepam o diazepam IV</b> (acción rápida, parenteral). La guía no fija mg para la crisis: titula como en la carga [20]. Fenitoína solo si hay epilepsia de base; betabloqueante y clonidina no previenen convulsiones.</p>');
   }else{
-    r.push('<p><b>Delirium tremens:</b> BZD IV de primera línea hasta sedación ligera, a menudo en UCI; pueden requerirse dosis muy altas: vigila hiponatremia y acidosis metabólica. Antipsicótico solo como adyuvante [17].</p>');
-    if(!H)r.push('<p>Diazepam IV con la pauta de carga (20 mg c/1 h) como referencia [17].</p>');
-    else r.push('<p>Hepatopatía: lorazepam IV, titulado [50].</p>');
+    r.push('<p><b>Delirium tremens:</b> BZD IV de primera línea hasta sedación ligera, a menudo en UCI; pueden requerirse dosis muy altas: vigila hiponatremia y acidosis metabólica. Antipsicótico solo como adyuvante [20].</p>');
+    if(!H)r.push('<p>Diazepam IV con la pauta de carga (20 mg c/1 h) como referencia [20].</p>');
+    else r.push('<p>Hepatopatía: lorazepam IV, titulado [49].</p>');
   }
-  if(w==='signos')r.push('<p><b>Tiamina 200 mg IV c/8 h antes de cualquier carbohidrato</b>, mientras haya mejoría (EFNS); otra pauta, 500 mg IV c/8 h por 5 días. Magnesio solo si está bajo [4,46,52].</p>');
-  else r.push('<p><b>Tiamina 100 mg c/24 h por 3–5 días</b>: VO en ambulatorio; IV/IM en hospital si hay malnutrición, malabsorción o gravedad [17].</p>');
+  if(w==='signos')r.push('<p><b>Tiamina 200 mg IV c/8 h antes de cualquier carbohidrato</b>, mientras haya mejoría (EFNS); otra pauta, 500 mg IV c/8 h por 5 días. Magnesio solo si está bajo [11,48,52].</p>');
+  else r.push('<p><b>Tiamina 100 mg c/24 h por 3–5 días</b>: VO en ambulatorio; IV/IM en hospital si hay malnutrición, malabsorción o gravedad [20].</p>');
   if(g==='leve'||g==='mod')cf=H?'Si no hubiera hepatopatía ni edad avanzada → diazepam o clordiazepóxido, de vida larga':'Si hubiera hepatopatía o edad avanzada → lorazepam u oxazepam';
   else if(g==='grave')cf='Si no pudieran usarse BZD → fenobarbital solo con experiencia y monitorización estrecha';
   else cf='Si apareciera delirium → CIWA-Ar inválida; CAM-ICU o RASS y manejo en UCI';
@@ -109,14 +109,14 @@ function dcE1seg(dc){
   var ntx=!has('opi')&&!has('hep'),aca=!has('ir30'),dis=o==='abs'&&has('sup')&&!has('cv')&&!has('hep');
   var r=[],cf;
   if(o==='abs'){
-    if(aca)r.push('<p><b>Acamprosato 666 mg VO c/8 h</b>, iniciado en la abstinencia, idealmente en 7 días; mantiene la abstinencia (NNT 11)'+(has('ir50')?'; ClCr 30–50: iniciar 333 mg c/8 h [66]':'')+(has('hep')?'; seguro en hepatopatía':'')+' [37,64,65].</p>');
-    if(ntx)r.push('<p><b>Naltrexona 50 mg VO c/24 h</b> (25 mg si efectos adversos), igualmente de primera línea [37,65].</p>');
-    if(dis)r.push('<p><b>Disulfiram 250 mg VO c/24 h</b> (hasta 500 mg), con toma supervisada y tras ≥12 h sin alcohol; 2C [37,68].</p>');
+    if(aca)r.push('<p><b>Acamprosato 666 mg VO c/8 h</b>, iniciado en la abstinencia, idealmente en 7 días; mantiene la abstinencia (NNT 11)'+(has('ir50')?'; ClCr 30–50: iniciar 333 mg c/8 h [69]':'')+(has('hep')?'; seguro en hepatopatía':'')+' [40,67,68].</p>');
+    if(ntx)r.push('<p><b>Naltrexona 50 mg VO c/24 h</b> (25 mg si efectos adversos), igualmente de primera línea [40,68].</p>');
+    if(dis)r.push('<p><b>Disulfiram 250 mg VO c/24 h</b> (hasta 500 mg), con toma supervisada y tras ≥12 h sin alcohol; 2C [40,71].</p>');
   }else{
-    if(ntx)r.push('<p><b>Naltrexona 50 mg VO c/24 h</b>: reduce el consumo intenso (NNT 11) [64,65].</p>');
-    r.push('<p><b>Gabapentina</b> desde 300 mg/día, +300 mg, en 3 tomas; dosis estudiada en ensayos hasta 1800 mg/día (NYSDOH permite hasta 3600 mg/día)'+(has('ir30')||has('ir50')?'; ajustar a función renal':'')+'; reduce días de consumo intenso, 2C [65,67,68].</p>');
+    if(ntx)r.push('<p><b>Naltrexona 50 mg VO c/24 h</b>: reduce el consumo intenso (NNT 11) [67,68].</p>');
+    r.push('<p><b>Gabapentina</b> desde 300 mg/día, +300 mg, en 3 tomas; dosis estudiada en ensayos hasta 1800 mg/día (NYSDOH permite hasta 3600 mg/día)'+(has('ir30')||has('ir50')?'; ajustar a función renal':'')+'; reduce días de consumo intenso, 2C [68,70,71].</p>');
   }
-  if(!aca&&!ntx&&o==='abs')r.push('<p><b>Topiramato</b> 25 mg/día, +50 mg/semana hasta 200–400 mg/día en 2 tomas (mitad si ClCr &lt;60–70), 2C; o gabapentina con ajuste renal [65,67].</p>');
+  if(!aca&&!ntx&&o==='abs')r.push('<p><b>Topiramato</b> 25 mg/día, +50 mg/semana hasta 200–400 mg/día en 2 tomas (mitad si ClCr &lt;60–70), 2C; o gabapentina con ajuste renal [68,70].</p>');
   var no=[],nr=[],dr=[];
   if(has('opi'))nr.push('uso de opioides; suspenderlos ≥7 días antes');
   if(has('hep')){nr.push('daño hepático');dr.push('daño hepático');}
@@ -125,8 +125,8 @@ function dcE1seg(dc){
   if(nr.length)no.push('naltrexona ('+nr.join('; ')+')');
   if(o==='abs'&&dr.length)no.push('disulfiram ('+dr.join('; ')+')');
   if(has('ir30'))no.push('acamprosato (ClCr &lt;30)');
-  if(no.length)r.push('<p><b>Descartados:</b> '+no.join('; ')+' [37,68].</p>');
-  r.push('<p>No antidepresivos para el TCA sin comorbilidad que los indique ni BZD fuera de la abstinencia aguda [37].</p>');
+  if(no.length)r.push('<p><b>Descartados:</b> '+no.join('; ')+' [40,71].</p>');
+  r.push('<p>No antidepresivos para el TCA sin comorbilidad que los indique ni BZD fuera de la abstinencia aguda [40].</p>');
   if(has('opi')&&has('hep'))cf='Si no usara opioides y no tuviera daño hepático → naltrexona volvería a ser de primera línea';
   else if(has('opi'))cf='Si no usara opioides → naltrexona volvería a ser de primera línea';
   else if(has('hep'))cf='Si no hubiera daño hepático → naltrexona volvería a ser de primera línea';
@@ -140,24 +140,24 @@ function dcE2tx(dc){
   var via=sel(dc,'via')[0],resp=sel(dc,'resp')[0],dep=sel(dc,'dep')[0],op=sel(dc,'op')[0];
   if(!resp){out(dc,'Elige primero la ventilación; luego vía, dependencia y opioide sospechado.<br><span class="cf">Si ya ves apnea con miosis → ventila con bolsa-mascarilla y da naloxona sin esperar al resto de datos.</span>');return;}
   if(resp==='normal'){
-    out(dc,'<b>Sin indicación de naloxona.</b> Con frecuencia respiratoria normal no hay depresión respiratoria que revertir: vigila ventilación, saturación y pupilas, y reevalúa si cae la frecuencia [6].<br><span class="cf">Si la frecuencia cae o aparece apnea con miosis → ventila y da naloxona sin esperar pruebas.</span>');
+    out(dc,'<b>Sin indicación de naloxona.</b> Con frecuencia respiratoria normal no hay depresión respiratoria que revertir: vigila ventilación, saturación y pupilas, y reevalúa si cae la frecuencia [8].<br><span class="cf">Si la frecuencia cae o aparece apnea con miosis → ventila y da naloxona sin esperar pruebas.</span>');
     return;
   }
   if(!via||!dep){out(dc,'Completa la vía disponible y si hay dependencia conocida.<br><span class="cf">Si la dependencia es desconocida → trátala como posible: empieza con dosis baja y titula, salvo apnea o paro.</span>');return;}
   var h='';
-  if(resp==='apnea')h+='<b>Apnea:</b> ventila con bolsa-mascarilla y oxígeno ahora; el antídoto no sustituye a la ventilación [6].<br>';
-  else h+='<b>Bradipnea:</b> oxígeno, soporte ventilatorio si hace falta y naloxona [6].<br>';
+  if(resp==='apnea')h+='<b>Apnea:</b> ventila con bolsa-mascarilla y oxígeno ahora; el antídoto no sustituye a la ventilación [8].<br>';
+  else h+='<b>Bradipnea:</b> oxígeno, soporte ventilatorio si hace falta y naloxona [8].<br>';
   if(via==='iv'){
-    if(resp==='apnea'&&dep!=='si')h+='<b>Naloxona IV 0,4–1 mg</b> (apnea: no esperes a titular); repetir según ventilación [6].<br>';
-    else h+='<b>Naloxona IV 0,04–0,4 mg</b>'+(dep==='no'?' (dependencia desconocida: trátala como posible)':'')+', repetir cada 1–3 min titulando hasta recuperar la ventilación, no la conciencia: evita precipitar abstinencia [6].<br>';
+    if(resp==='apnea'&&dep!=='si')h+='<b>Naloxona IV 0,4–1 mg</b> (apnea: no esperes a titular); repetir según ventilación [8].<br>';
+    else h+='<b>Naloxona IV 0,04–0,4 mg</b>'+(dep==='no'?' (dependencia desconocida: trátala como posible)':'')+', repetir cada 1–3 min titulando hasta recuperar la ventilación, no la conciencia: evita precipitar abstinencia [8].<br>';
   }else{
-    h+='<b>Naloxona '+(via==='im'?'IM':'intranasal')+' 2 mg</b>'+(via==='im'?' (inicio en 3–10 min)':' (biodisponibilidad ≈25 %)')+'; repetir según ventilación y obtener vía IV para titular [6].<br>';
+    h+='<b>Naloxona '+(via==='im'?'IM':'intranasal')+' 2 mg</b>'+(via==='im'?' (inicio en 3–10 min)':' (biodisponibilidad ≈25 %)')+'; repetir según ventilación y obtener vía IV para titular [8].<br>';
   }
-  if(op==='largo')h+='<b>Metadona o fentanilo:</b> pueden requerir 2 mg cada 3–4 min hasta 10 mg; en dosis masivas, infusión horaria (pauta en la tabla de Tratamiento); retirar parches de fentanilo. Riesgo alto de renarcotización [6].<br>';
-  h+='<b>Sin respuesta con 10 mg acumulados:</b> replantea el diagnóstico (coingesta de sedantes, otra causa de coma) [6].<br>';
-  if(op==='corto')h+='<b>Observación:</b> 12–24 h si hubo reversión; con heroína y paciente asintomático, alta posible tras 6–12 h con signos estables [6]. La regla de St. Paul\'s propone alta a la 1 h si deambula, SatO₂ &gt;92 %, FR 10–20, T 35–37,5 °C, FC 50–100 y Glasgow 15 (estudio de derivación) [74].<br>';
-  else h+='<b>Observación:</b> ingreso de 12–24 h tras la reversión; la naloxona dura menos que el opioide; prolóngala con metadona o formulaciones de liberación prolongada [6].<br>';
-  if(dep==='si')h+='<b>Al estabilizar:</b> naloxona para llevar y enlace con buprenorfina o metadona; buprenorfina solo con abstinencia objetiva [41].<br>';
+  if(op==='largo')h+='<b>Metadona o fentanilo:</b> pueden requerir 2 mg cada 3–4 min hasta 10 mg; en dosis masivas, infusión horaria (pauta en la tabla de Tratamiento); retirar parches de fentanilo. Riesgo alto de renarcotización [8].<br>';
+  h+='<b>Sin respuesta con 10 mg acumulados:</b> replantea el diagnóstico (coingesta de sedantes, otra causa de coma) [8].<br>';
+  if(op==='corto')h+='<b>Observación:</b> 12–24 h si hubo reversión; con heroína y paciente asintomático, alta posible tras 6–12 h con signos estables [8]. La regla de St. Paul\'s propone alta a la 1 h si deambula, SatO₂ &gt;92 %, FR 10–20, T 35–37,5 °C, FC 50–100 y Glasgow 15 (estudio de derivación) [78].<br>';
+  else h+='<b>Observación:</b> ingreso de 12–24 h tras la reversión; la naloxona dura menos que el opioide; prolóngala con metadona o formulaciones de liberación prolongada [8].<br>';
+  if(dep==='si')h+='<b>Al estabilizar:</b> naloxona para llevar y enlace con buprenorfina o metadona; buprenorfina solo con abstinencia objetiva [44].<br>';
   h+='<span class="cf">Si las pupilas no son mióticas y la ventilación no responde a la naloxona → piensa en Sedantes e hipnóticos (soporte ventilatorio; flumazenil no rutinario).</span>';
   out(dc,h);
 }
@@ -166,21 +166,21 @@ function dcE3tx(dc){
   if(!ctx||!vent){out(dc,'Elige contexto y ventilación; luego marca el riesgo convulsivo y la BZD habitual.<br><span class="cf">Si ya hay bradipnea o hipoxemia → oxígeno y ventilación primero; el antídoto nunca sustituye a la vía aérea.</span>');return;}
   if(!r.length){out(dc,'Marca el riesgo convulsivo (o «Ninguno»): decide si el flumazenil es seguro.<br><span class="cf">Si hay uso crónico de BZD, convulsiones o tricíclicos → flumazenil contraindicado.</span>');return;}
   var riesgo=r.filter(function(x){return x!=='no'}),h='';
-  if(vent==='baja')h+='<b>Bradipnea o hipoxemia:</b> oxígeno, vía aérea y ventilación asistida si hace falta; busca coingesta de alcohol, opioides o GHB, porque la BZD sola rara vez da apnea [77].<br>';
-  else h+='<b>Ventilación conservada:</b> soporte y observación; el antídoto no aporta seguridad [7].<br>';
+  if(vent==='baja')h+='<b>Bradipnea o hipoxemia:</b> oxígeno, vía aérea y ventilación asistida si hace falta; busca coingesta de alcohol, opioides o GHB, porque la BZD sola rara vez da apnea [81].<br>';
+  else h+='<b>Ventilación conservada:</b> soporte y observación; el antídoto no aporta seguridad [12].<br>';
   if(riesgo.length){
     var m={dep:'uso crónico de BZD',conv:'convulsión o epilepsia',tca:'tricíclicos u otro proconvulsivante'};
-    h+='<b>Flumazenil: NO.</b> Contraindicado por '+riesgo.map(function(x){return m[x]}).join(', ')+': puede precipitar abstinencia y convulsiones (recuadro negro) [7].<br>';
+    h+='<b>Flumazenil: NO.</b> Contraindicado por '+riesgo.map(function(x){return m[x]}).join(', ')+': puede precipitar abstinencia y convulsiones (recuadro negro) [12].<br>';
   }else if(ctx==='iatro'){
-    h+='<b>Flumazenil: opción razonable</b> en sedación iatrogénica sin uso crónico: 0,2 mg IV; dosis adicionales hasta 3 mg acumulados (5 mg si respuesta parcial). Sin respuesta con 5 mg, la causa no es una BZD. Efecto 19–50 min: vigila resedación [7].<br>';
+    h+='<b>Flumazenil: opción razonable</b> en sedación iatrogénica sin uso crónico: 0,2 mg IV; dosis adicionales hasta 3 mg acumulados (5 mg si respuesta parcial). Sin respuesta con 5 mg, la causa no es una BZD. Efecto 19–50 min: vigila resedación [12].<br>';
   }else{
-    h+='<b>Flumazenil: no rutinario.</b> Su uso está en declive y encaja mejor en el paciente sin exposición previa; si se usa, 0,2 mg IV titulando hasta 3 mg (5 mg si respuesta parcial) y vigilando resedación [7].<br>';
+    h+='<b>Flumazenil: no rutinario.</b> Su uso está en declive y encaja mejor en el paciente sin exposición previa; si se usa, 0,2 mg IV titulando hasta 3 mg (5 mg si respuesta parcial) y vigilando resedación [12].<br>';
   }
   if(r.indexOf('dep')>-1||bzd==='corta'||bzd==='larga'){
-    if(bzd==='corta')h+='<b>Retirada:</b> considera cambiar a dosis equivalente de diazepam (o clonazepam si viene de alprazolam; equivalencias en la tabla de Tratamiento) [23] y desciende de forma gradual e individualizada (reducciones iniciales del 5–10 %, sin superar en general el 25 % cada 2 semanas; más lento si dosis alta durante más de 1 año) [82].<br>';
+    if(bzd==='corta')h+='<b>Retirada:</b> considera cambiar a dosis equivalente de diazepam (o clonazepam si viene de alprazolam; equivalencias en la tabla de Tratamiento) [26] y desciende de forma gradual e individualizada (reducciones iniciales del 5–10 %, sin superar en general el 25 % cada 2 semanas; más lento si dosis alta durante más de 1 año) [82].<br>';
     else if(bzd==='larga')h+='<b>Retirada:</b> mantén la BZD de vida larga y desciende de forma gradual e individualizada (reducciones iniciales del 5–10 %, sin superar en general el 25 % cada 2 semanas; más lento si dosis alta durante más de 1 año) [82].<br>';
-    else h+='<b>Retirada:</b> identifica la BZD habitual; si es de acción corta, considera pasar a dosis equivalente de diazepam [23]; desciende de forma gradual e individualizada (reducciones iniciales del 5–10 %, sin superar en general el 25 % cada 2 semanas; más lento si dosis alta durante más de 1 año) [82].<br>';
-    h+='Nunca suspensión brusca: la abstinencia puede ser mortal [23]. El 25 % semanal de los ensayos es demasiado rápido para muchos pacientes [82].<br>';
+    else h+='<b>Retirada:</b> identifica la BZD habitual; si es de acción corta, considera pasar a dosis equivalente de diazepam [26]; desciende de forma gradual e individualizada (reducciones iniciales del 5–10 %, sin superar en general el 25 % cada 2 semanas; más lento si dosis alta durante más de 1 año) [82].<br>';
+    h+='Nunca suspensión brusca: la abstinencia puede ser mortal [26]. El 25 % semanal de los ensayos es demasiado rápido para muchos pacientes [82].<br>';
   }else h+='<b>Retirada:</b> sin uso crónico no hace falta pauta descendente.<br>';
   h+='<span class="cf">Si la bradipnea se acompaña de miosis puntiforme → Opioides: ventila y da naloxona antes que pensar en flumazenil.</span>';
   out(dc,h);
@@ -198,30 +198,30 @@ function dcE4tx(dc){
   var resuelto = has('res') && !activos;
   if (has('agit') || has('dolor') || has('temp') || has('hta')) {
     if (!resuelto) {
-      L.push('<b>Primer escalón:</b> benzodiacepina titulada por agitación y constantes; vigila sobresedación y ventilación [8]. Lorazepam 2–3 mg IV cada 10–20 min (midazolam o diazepam desde 5 mg); sin mejoría, duplica la dosis [94].');
+      L.push('<b>Primer escalón:</b> benzodiacepina titulada por agitación y constantes; vigila sobresedación y ventilación [13]. Lorazepam 2–3 mg IV cada 10–20 min (midazolam o diazepam desde 5 mg); sin mejoría, duplica la dosis [98].');
     }
   }
   if (has('dolor')) {
-    L.push('<b>Dolor torácico:</b> ECG y troponina; benzodiacepina + nitroglicerina [8].');
+    L.push('<b>Dolor torácico:</b> ECG y troponina; benzodiacepina + nitroglicerina [13].');
     if (resuelto) {
-      L.push('<b>Signos de intoxicación resueltos:</b> maneja como cualquier síndrome coronario agudo, betabloqueante incluido (clase I) [91].');
-      cf = 'Si reaparecen signos de intoxicación aguda → no betabloqueante (clase III, nivel C) [91].';
+      L.push('<b>Signos de intoxicación resueltos:</b> maneja como cualquier síndrome coronario agudo, betabloqueante incluido (clase I) [88].');
+      cf = 'Si reaparecen signos de intoxicación aguda → no betabloqueante (clase III, nivel C) [88].';
     } else {
-      L.push('<b>No betabloqueante</b> mientras haya signos de intoxicación aguda (AHA/ACC 2014, clase III, nivel C; abarca a los betabloqueantes, labetalol incluido por inferencia) [91]; la evidencia del veto es débil [92]. Lo que dice la guía 2025 no se ha verificado.');
-      cf = 'Si los signos de intoxicación ya cedieron → síndrome coronario agudo estándar, con betabloqueante (clase I) [91].';
+      L.push('<b>No betabloqueante</b> mientras haya signos de intoxicación aguda (AHA/ACC 2014, clase III, nivel C; abarca a los betabloqueantes, labetalol incluido por inferencia) [88]; la evidencia del veto es débil [89]. Lo que dice la guía 2025 no se ha verificado.');
+      cf = 'Si los signos de intoxicación ya cedieron → síndrome coronario agudo estándar, con betabloqueante (clase I) [88].';
     }
   }
   if (has('hta')) {
-    L.push('<b>HTA persistente tras BZD:</b> nitroglicerina, fentolamina, diltiazem o verapamilo [8]; estos dos bajan la PA y pueden bajar la FC [96]; evita nifedipino por taquicardia refleja [8].');
+    L.push('<b>HTA persistente tras BZD:</b> nitroglicerina, fentolamina, diltiazem o verapamilo [13]; estos dos bajan la PA y pueden bajar la FC [100]; evita nifedipino por taquicardia refleja [13].');
   }
   if (has('temp')) {
-    L.push('<b>Hipertermia:</b> enfriamiento externo inmediato (agua tibia nebulizada y ventilador), benzodiacepina, sin sujeción física; pide CPK y mioglobinuria [8].');
+    L.push('<b>Hipertermia:</b> enfriamiento externo inmediato (agua tibia nebulizada y ventilador), benzodiacepina, sin sujeción física; pide CPK y mioglobinuria [13].');
   }
   if (has('qrs')) {
-    L.push('<b>QRS ancho:</b> bloqueo de canales de sodio; monitorización continua en área crítica. Bolos de bicarbonato sódico para estrecharlo (↪ «Tratamiento»); lidocaína si fracasa; evita amiodarona [98].');
+    L.push('<b>QRS ancho:</b> bloqueo de canales de sodio; monitorización continua en área crítica. Bolos de bicarbonato sódico para estrecharlo (↪ «Tratamiento»); lidocaína si fracasa; evita amiodarona [96].');
   }
   if (has('na')) {
-    L.push('<b>Hiponatremia por MDMA con convulsión, coma u otro síntoma neurológico grave:</b> salino hipertónico al 3 % en bolo IV, 100 mL en 10 min, repetible si persisten los síntomas; objetivo +4–6 mEq/L en 4 h [90]. La convulsión no cede solo con BZD. La restricción hídrica no trata esta urgencia; resérvala para la hiponatremia leve o asintomática [90,93].');
+    L.push('<b>Hiponatremia por MDMA con convulsión, coma u otro síntoma neurológico grave:</b> salino hipertónico al 3 % en bolo IV, 100 mL en 10 min, repetible si persisten los síntomas; objetivo +4–6 mEq/L en 4 h [90]. La convulsión no cede solo con BZD. La restricción hídrica no trata esta urgencia; resérvala para la hiponatremia leve o asintomática [90,97].');
     if (!cf) { cf = 'Si el sodio está bajo pero el paciente está asintomático → restricción hídrica y control seriado del sodio, sin bolo [90].'; }
   }
   if (resuelto && !has('dolor')) {
@@ -236,37 +236,37 @@ function dcE5tx(dc){
   var sus=s[0]||'nd', agi=h.indexOf('agi')>-1, vom=h.indexOf('vom')>-1, psi=h.indexOf('psi')>-1, nis=h.indexOf('nis')>-1;
   var L=[], dx='', cf='';
   var disoc=(sus==='dis'||(sus==='nd'&&nis));
-  if(nis&&sus!=='dis'&&sus!=='nd'){L.push('El nistagmo no encaja con la sustancia elegida: piensa en ketamina o PCP o en coingesta [11,103].');}
+  if(nis&&sus!=='dis'&&sus!=='nd'){L.push('El nistagmo no encaja con la sustancia elegida: piensa en ketamina o PCP o en coingesta [15,107].');}
   if(disoc){
     dx='Intoxicación por disociativo (antagonista NMDA)';
-    L.push('Soporte: vía aérea, ventilación, temperatura; glucemia y CK (rabdomiólisis e hipoglucemia con PCP); busca lesiones ocultas por la analgesia [11,103].');
-    L.push('Observación: si fue ketamina, asintomático 6 h y sintomático hasta 1–2 h después de resolverse [103]; si fue PCP, hasta que se normalice la clínica.');
+    L.push('Soporte: vía aérea, ventilación, temperatura; glucemia y CK (rabdomiólisis e hipoglucemia con PCP); busca lesiones ocultas por la analgesia [15,107].');
+    L.push('Observación: si fue ketamina, asintomático 6 h y sintomático hasta 1–2 h después de resolverse [107]; si fue PCP, hasta que se normalice la clínica.');
     cf='Si además hay diaforesis profusa e hipertermia sin nistagmo → piensa en Estimulantes y temperatura central con ECG.';
   } else if(sus==='psi'){
     dx='Intoxicación por psicodélico clásico (agonista 5-HT2A)';
-    L.push('Entorno tranquilo con supervisión individual; CK para descartar rabdomiólisis; no esperes confirmación en orina: el LSD no se detecta en pruebas de rutina [10].');
+    L.push('Entorno tranquilo con supervisión individual; CK para descartar rabdomiólisis; no esperes confirmación en orina: el LSD no se detecta en pruebas de rutina [1].');
     cf='Si aparece nistagmo → reorienta a disociativo (ketamina o PCP).';
   } else if(sus==='can'){
     dx=vom?'Síndrome de hiperémesis cannabinoide':'Intoxicación por cannabis';
-    L.push('Soporte; ECG si hay dolor torácico (riesgo de IAM en la primera hora); busca coingestas [101].');
+    L.push('Soporte; ECG si hay dolor torácico (riesgo de IAM en la primera hora); busca coingestas [105].');
     cf=vom?'Si los vómitos no se asocian a consumo prolongado ni ceden con baños calientes → busca otra causa de vómito antes de etiquetar SHC.':'Si hay midriasis, diaforesis e hipertermia marcadas → piensa en Estimulantes.';
   } else {
     dx='Sustancia no identificada con percepción alterada';
-    L.push('Signos vitales, glucemia y búsqueda de coingesta; trata por toxíndrome, no por el nombre de la droga [11,101].');
+    L.push('Signos vitales, glucemia y búsqueda de coingesta; trata por toxíndrome, no por el nombre de la droga [15,105].');
     cf='Si encuentras inyección conjuntival → cannabis; si nistagmo → disociativo.';
   }
   if(vom){
     if(sus==='can'||(sus==='nd'&&!nis)){
-      L.push('SHC (si hay consumo prolongado de cannabis): suspender el cannabis (tratamiento definitivo), líquidos IV, capsaicina tópica al 0,1 % en el abdomen [108]; haloperidol 0,05–0,1 mg/kg IV, superior a ondansetrón (vigila distonía) [107]; droperidol como alternativa (↪ «Tratamiento»); evita opioides; electrolitos y función renal [12,13,104].');
+      L.push('SHC (si hay consumo prolongado de cannabis): suspender el cannabis (tratamiento definitivo), líquidos IV, capsaicina tópica al 0,1 % en el abdomen [114]; haloperidol 0,05–0,1 mg/kg IV, superior a ondansetrón (vigila distonía) [112]; droperidol como alternativa (↪ «Tratamiento»); evita opioides; electrolitos y función renal [16,17,104].');
     } else {
-      L.push('Vómitos con la sustancia elegida: no los etiquetes como SHC (exige consumo prolongado de cannabis) [12]; hidrata, controla electrolitos y busca otra causa.');
+      L.push('Vómitos con la sustancia elegida: no los etiquetes como SHC (exige consumo prolongado de cannabis) [16]; hidrata, controla electrolitos y busca otra causa.');
     }
   }
   if(agi){
-    L.push('Agitación: benzodiacepina, lorazepam o diazepam (↪ posología en «Tratamiento»)'+(disoc?'; en disociativos es el fármaco de elección [11,103]':'')+(sus==='psi'?'; en LSD, a dosis bajas [10]':'')+'. Si es grave y no cede: haloperidol 2–5 mg IM, reevaluando antes de repetir (cada 4–8 h, máximo 20 mg/d); vigila QTc y distonía [106].');
+    L.push('Agitación: benzodiacepina, lorazepam o diazepam (↪ posología en «Tratamiento»)'+(disoc?'; en disociativos es el fármaco de elección [15,107]':'')+(sus==='psi'?'; en LSD, a dosis bajas [1]':'')+'. Si es grave y no cede: haloperidol 2–5 mg IM, reevaluando antes de repetir (cada 4–8 h, máximo 20 mg/d); vigila QTc y distonía [111].');
   }
   if(psi){
-    L.push('Psicosis que persiste: no es una emergencia de sedación. Valoración psiquiátrica y, si procede, antipsicótico oral pautado (↪ «Tratamiento») [106].'+(sus==='can'?' La inducida por cannabis suele ceder en torno a un día [101]; si no, sospecha un trastorno psicótico primario.':' Si no cede en el plazo esperable para la sustancia, sospecha un trastorno psicótico primario.'));
+    L.push('Psicosis que persiste: no es una emergencia de sedación. Valoración psiquiátrica y, si procede, antipsicótico oral pautado (↪ «Tratamiento») [111].'+(sus==='can'?' La inducida por cannabis suele ceder en torno a un día [105]; si no, sospecha un trastorno psicótico primario.':' Si no cede en el plazo esperable para la sustancia, sospecha un trastorno psicótico primario.'));
   }
   if(!agi&&!psi&&!vom&&!disoc){L.push('Sin agitación: entorno tranquilo y observación; la benzodiacepina no es rutinaria.');}
   out(dc,'<b>'+dx+'</b><ul><li>'+L.join('</li><li>')+'</li></ul><span class="cf">'+cf+'</span>');

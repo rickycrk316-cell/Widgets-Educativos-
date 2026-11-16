@@ -1,6 +1,6 @@
 {
  "titulo": "Toxicodependencias",
- "salida": "../Toxicodependencias_widget_v10.html",
+ "salida": "../Toxicodependencias_widget_v11.html",
  "modo": "multi",
  "entidades": {
   "e1": "Alcohol",
@@ -102,11 +102,13 @@
   "e5": [
    "THC activa receptores CB1 presinápticos",
    "Uso crónico desregula CB1 hipotalámico y entérico",
-   "Exceso dopaminérgico en vulnerables precipita psicosis",
+   "Cannabis en vulnerables precipita psicosis",
    "LSD y psilocibina activan receptores 5-HT2A corticales",
    "Ketamina y PCP bloquean receptores NMDA",
    "Signos vitales, glucemia y búsqueda de coingesta ante percepción alterada",
    "Entorno tranquilo y benzodiacepina si hay agitación"
   ]
- }
+ },
+ "tipo": "v11",
+ "tema": "salud-mental"
 }

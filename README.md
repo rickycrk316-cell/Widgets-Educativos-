@@ -31,13 +31,13 @@ Widgets HTML de estudio, autocontenidos y offline. Los nuevos siguen **v11** (`d
 |  | `Definiciones_lesiones_liquidas_vasculares.html` | **definiciones** | 9 términos (vesícula, ampolla, pústula, absceso, púrpura, equimosis, telangiectasia, surco acarino, vitropresión y Nikolsky) + repaso | 5 |
 |  | `Definiciones_lesiones_secundarias.html` | **definiciones** | 9 términos (escama, costra, erosión, úlcera, fisura, excoriación, liquenificación, atrofia, cicatriz) + repaso | 8 |
 |  | `Definiciones_descripcion_morfologica.html` | **definiciones** | 9 términos (eritema, anular/arciforme, numular, diana, lineal, reticulado, herpetiforme, dermatómica, fotodistribución) + repaso | 22 |
-| Consumo de alcohol | `Toxicodependencias_widget_v10.html` | v10 congelado (multi) | alcohol (principal), opioides (amenaza), sedantes e hipnóticos, estimulantes, cannabis y psicodélicos | 33 |
+| Consumo de alcohol | `Toxicodependencias_widget_v11.html` | **v11** | multi: alcohol (principal), opioides (amenaza), sedantes e hipnóticos, estimulantes, cannabis y psicodélicos · núcleo por pestaña, perlas de examen por tipo de dato, ordenar pasos, tablas de fármacos con mecanismo de acción y simuladores | 0 |
 |  | `Definiciones_consumo_alcohol.html` | **definiciones** | 10 términos (estado etílico, abstinencia, trastorno por consumo, aguardiente y bebida estándar, ideas de inutilidad, violencia de pareja, alcoholismo, craving, inversión de la tolerancia, trastorno mental) + repaso | 4 |
 | Ansiedad y pánico | `Ansiedad_y_panico_widget_v10.html` | v10 congelado (multi) | trastorno de pánico (principal), ansiedad generalizada, trastornos fóbicos, trauma y estrés (amenaza), síntomas somáticos | 17 |
 |  | `Definiciones_ansiedad_panico.html` | **definiciones** | 10 términos (opresión en el pecho, palpitaciones, angustia por perder el control, preinfarto, Stresstabs, Xanax, ansiedad, pánico, ataque de ansiedad, ataque de pánico) + repaso | 1 |
 | Ginecología (sin sílabo) | `Ciclo_ovarico_menopausia_TH_widget_v11.html` | **v11** (piloto) | mono: menopausia y terapia hormonal + pestaña «Ciclo ovárico y cuerpo albo»: núcleo por pestaña, perlas por examen, ordenar pasos | 0 |
 
-Estado: **v11** y **definiciones** / **apertura** son kits vivos; «v10 congelado» no se reconstruye. «Marcas» = datos marcados `[VERIFICAR EN FUENTE]`: los 17 v10 congelados y las definiciones de dermatología, consumo de alcohol y ansiedad/pánico, las conservan hasta que se revisen; compruébalos antes de estudiar con ellos. Los widgets v11 y todo lo nuevo o migrado van con cero marcas: lo no confirmado se elimina.
+Estado: **v11** y **definiciones** / **apertura** son kits vivos; «v10 congelado» no se reconstruye. «Marcas» = datos marcados `[VERIFICAR EN FUENTE]`: los 16 v10 congelados y las definiciones de dermatología, consumo de alcohol y ansiedad/pánico, las conservan hasta que se revisen; compruébalos antes de estudiar con ellos. Los widgets v11 y todo lo nuevo o migrado van con cero marcas: lo no confirmado se elimina.
 
 ## Mazos Anki
 
@@ -80,7 +80,7 @@ fuentes/                        sílabos (dos rotaciones), contratos de definici
 docs/                           DECISIONES_v11.md (fuente de verdad), PRODUCT.md (propósito), DESIGN.md (sistema visual)
 ```
 
-El kit v10 (`kit_head`, `kit_script`, `validar.py`, `probar_navegador.js`, `auditar_diseno.py`) se retiró; los 17 widgets v10 (manifiesto sin `tipo`) quedan congelados.
+El kit v10 (`kit_head`, `kit_script`, `validar.py`, `probar_navegador.js`, `auditar_diseno.py`) se retiró; los 16 widgets v10 (manifiesto sin `tipo`) quedan congelados.
 
 ## Reconstruir y validar
 
