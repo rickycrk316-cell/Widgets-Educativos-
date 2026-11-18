@@ -1,0 +1,14 @@
+{
+ "titulo": "Envejecimiento: fisiología, valoración y síndromes geriátricos",
+ "salida": "../Envejecimiento_widget_v11.html",
+ "tipo": "v11",
+ "tema": "geriatria",
+ "modo": "mono",
+ "tabs": ["pan", "def", "eco", "fis", "cli", "dx", "tx", "seg"],
+ "pg": {"def": 4, "eco": 4, "fis": 4, "cli": 4, "dx": 5, "tx": 4, "seg": 4},
+ "fey": {"def": 1, "eco": 1, "fis": 2, "cli": 1, "dx": 1, "tx": 1, "seg": 1},
+ "nodos": 10,
+ "signos": 9,
+ "dc": ["dx", "tx", "seg"],
+ "nucleo": []
+}
