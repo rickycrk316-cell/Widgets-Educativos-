@@ -1,0 +1,144 @@
+<script>
+function dcDx(dc){
+  var ev=sel(dc,'evo')[0], bar=num(dc,'bar'), gds=num(dc,'gds'), mna=num(dc,'mna'), vel=num(dc,'vel'), tug=num(dc,'tug');
+  var hay=!isNaN(bar)||!isNaN(gds)||!isNaN(mna)||!isNaN(vel)||!isNaN(tug);
+  if(!ev&&!hay){out(dc,'<p>Elige la evolución funcional y escribe al menos una escala (Barthel, GDS-15, MNA-SF, velocidad de marcha o TUG) para ver su banda y la conducta.</p>');return;}
+  var h='', cf='';
+  if(ev==='agu'){
+    h+='<p><b>Alarma:</b> pérdida funcional aguda. No es senescencia: busca una causa aguda (infección, fármaco, delirium, descompensación de una enfermedad crónica) antes de usar las escalas como línea basal.</p>';
+    cf='Si la pérdida fuera gradual en meses → las escalas sirven de línea basal y se descarta enfermedad crónica antes de atribuirla a la edad.';
+  } else if(ev==='gra'){
+    h+='<p>Evolución gradual: compatible con deterioro crónico; antes de atribuirlo a la edad descarta enfermedad, fármacos y depresión.</p>';
+  }
+  if(!isNaN(bar)){
+    if(bar<0||bar>100){h+='<p>El Barthel va de 0 a 100: revisa el valor.</p>';}
+    else{
+      var b=bar===100?'independencia completa en las actividades básicas':'algún grado de dependencia (a menor puntaje, más dependencia)';
+      h+='<p><b>Barthel '+bar+':</b> '+b+'. Los cortes por categoría varían entre versiones y poblaciones [73] [74].'+(bar<100?' Define cuánta ayuda requiere; busca la causa y entra en el plan de valoración integral [62].':'')+'</p>';
+      if(!cf&&bar<100) cf='Si el Barthel fuera 100 → independencia completa en las actividades básicas [75].';
+    }
+  }
+  if(!isNaN(gds)){
+    if(gds<0||gds>15||gds!==Math.round(gds)){h+='<p>El GDS-15 va de 0 a 15 en números enteros: revisa el valor.</p>';}
+    else if(gds>=5){
+      h+='<p><b>GDS-15 '+gds+':</b> cribado positivo (corte de 5). Confirma con entrevista clínica: la escala no confirma ni excluye depresión [64] [80].</p>';
+      if(!cf) cf='Si el GDS-15 fuera menor de 5 → cribado negativo, aunque la clínica puede justificar evaluar igual [64].';
+    } else {
+      h+='<p><b>GDS-15 '+gds+':</b> por debajo del corte de 5; no excluye depresión si la clínica la sugiere [64] [80].</p>';
+    }
+  }
+  if(!isNaN(mna)){
+    if(mna<0||mna>14||mna!==Math.round(mna)){h+='<p>El MNA-SF va de 0 a 14 en números enteros: revisa el valor.</p>';}
+    else if(mna>=11){
+      h+='<p><b>MNA-SF '+mna+':</b> normal (11 o más) [67].</p>';
+    } else {
+      h+='<p><b>MNA-SF '+mna+':</b> riesgo nutricional (10 o menos). Aplica el MNA completo (24 o más normal, 17 a 23,5 riesgo, menos de 17 desnutrición) y planifica la intervención nutricional [67] [66].</p>';
+      if(!cf) cf='Si el MNA-SF fuera 11 o más → sin riesgo nutricional en esta prueba [67].';
+    }
+  }
+  if(!isNaN(vel)){
+    if(vel<=0||vel>3){h+='<p>Escribe la velocidad en m/s sobre 4 m (por ejemplo 0,8): revisa el valor.</p>';}
+    else if(vel<=0.8){
+      h+='<p><b>Marcha '+String(vel).replace('.',',')+' m/s:</b> en el umbral de sarcopenia grave (0,8 m/s o menos). Mide fuerza de agarre y masa muscular y valora riesgo de caídas y discapacidad [65].</p>';
+      if(!cf) cf='Si la velocidad fuera mayor de 0,8 m/s → no alcanza el indicador de sarcopenia grave [65].';
+    } else {
+      h+='<p><b>Marcha '+String(vel).replace('.',',')+' m/s:</b> sobre el umbral de 0,8 m/s; no excluye sarcopenia, que se define primero por la fuerza [65].</p>';
+    }
+  }
+  if(!isNaN(tug)){
+    if(tug<=0||tug>120){h+='<p>Escribe el TUG en segundos: revisa el valor.</p>';}
+    else if(tug>=13.5){
+      h+='<p><b>TUG '+String(tug).replace('.',',')+' s:</b> positivo con ambos cortes (12 s del CDC y 13,5 s del estudio comunitario). Continúa la valoración del riesgo de caídas [68] [69].</p>';
+      if(!cf) cf='Si el TUG fuera menor de 12 s → negativo con ambos cortes [68] [69].';
+    } else if(tug>=12){
+      h+='<p><b>TUG '+String(tug).replace('.',',')+' s:</b> positivo con el corte del CDC (12 s) y negativo con el del estudio (13,5 s); las fuentes difieren. Aplica el criterio del CDC en el cribado y continúa la valoración [68] [69].</p>';
+      if(!cf) cf='Si el TUG fuera 13,5 s o más → positivo con ambos cortes [68] [69].';
+    } else {
+      h+='<p><b>TUG '+String(tug).replace('.',',')+' s:</b> por debajo de 12 s: negativo con ambos cortes; no es un diagnóstico [68] [69].</p>';
+    }
+  }
+  if(!cf) cf='Si hubiera pérdida funcional aguda → se busca una causa aguda antes de interpretar cualquier escala.';
+  out(dc,h+'<span class="cf">'+cf+'</span>');
+}
+
+function dcTx(dc){
+  var ed=sel(dc,'ed')[0], co=sel(dc,'co'), ej=sel(dc,'ej')[0], vp=sel(dc,'vp'), h='';
+  var rsv=co.indexOf('rsv')>=0, inm=co.indexOf('inm')>=0, cro=co.indexOf('cro')>=0, ren=co.indexOf('ren')>=0;
+  var pcv=vp.indexOf('pcv')>=0, rzv=vp.indexOf('rzv')>=0, vrs=vp.indexOf('rsv')>=0, td=vp.indexOf('td')>=0;
+  if(!ed){out(dc,'<p>Elige la edad para ver el plan de vacunación y la receta de ejercicio y proteína.</p>');return;}
+  var may=(ed==='65'||ed==='75');
+  h+='<p><b>Vacunación</b></p><ul>';
+  if(may){
+    h+='<li>Influenza: una dosis cada temporada de HD-IIV3, RIV3 o aIIV3; si no hay ninguna, otra vacuna de la edad [88].</li>';
+  } else {
+    h+='<li>Influenza: una dosis cada temporada de una vacuna de la edad; la preferencia por dosis alta, recombinante o adyuvada aplica desde los 65 años [88].</li>';
+  }
+  if(pcv){
+    h+='<li>Neumocócica: ya recibió PCV; no necesita otra dosis de PCV según la recomendación de 2024 [89].</li>';
+  } else {
+    h+='<li>Neumocócica: una dosis de PCV20 o PCV21, o PCV15 seguida de PPSV23 (intervalo según la guía ACIP) [89].</li>';
+  }
+  if(rzv){
+    h+='<li>Zóster: serie de RZV completa; no se repite en este plan [90].</li>';
+  } else if(inm){
+    h+='<li>Zóster: RZV 0,5 mL IM, 2 dosis, en inmunosuprimido desde los 19 años [99]; en la tabla la segunda dosis se da a los 2 a 6 meses [90].</li>';
+  } else {
+    h+='<li>Zóster: RZV 0,5 mL IM, 2 dosis separadas por 2 a 6 meses [90].</li>';
+  }
+  if(vrs){
+    h+='<li>VSR: ya recibió una dosis; no se da otra [91].</li>';
+  } else if(ed==='75'){
+    h+='<li>VSR: una dosis única IM (Arexvy o Abrysvo, o mResvia) a todo adulto de 75 años o más [91] [100].</li>';
+  } else if(rsv){
+    h+='<li>VSR: una dosis única de un producto aprobado, por riesgo aumentado de enfermedad grave entre 60 y 74 años [91].</li>';
+  } else if(ed==='65'){
+    h+='<li>VSR: no se indica de rutina de 60 a 74 años sin condición de riesgo [91].</li>';
+  } else {
+    h+='<li>VSR: de 60 a 64 años solo si hay condición de riesgo [91].</li>';
+  }
+  h+='<li>'+(td?'Td o Tdap: aplicada en los últimos 10 años; el próximo refuerzo a los 10 años o ante una herida [92].':'Td o Tdap: una dosis de refuerzo cada 10 años o por manejo de heridas [92].')+'</li></ul>';
+  h+='<p><b>Receta de ejercicio y nutrición</b></p><ul>';
+  h+='<li>Aeróbico: de 150 a 300 minutos por semana de intensidad moderada, o de 75 a 150 de vigorosa, o una combinación equivalente [86].</li>';
+  h+='<li>Fuerza muscular de forma regular [86]'+(ej==='no'?'; si es sedentario, empieza con lo que tolere: algo de actividad es mejor que ninguna [86]':'')+'.</li>';
+  if(ren){
+    h+='<li>Proteína: con filtrado menor de 30 mL/min/1,73 m² sin diálisis puede ser necesario limitarla; decisión con el especialista [87].</li>';
+  } else if(cro){
+    h+='<li>Proteína: de 1,2 a 1,5 g/kg/día con enfermedad aguda o crónica [87].</li>';
+  } else if(ej==='si'){
+    h+='<li>Proteína: 1,2 g/kg/día o más porque hace ejercicio [87].</li>';
+  } else {
+    h+='<li>Proteína: al menos de 1,0 a 1,2 g/kg/día [87].</li>';
+  }
+  h+='</ul>';
+  h+='<p>Revisa la lista de medicamentos con Beers 2023 y STOPP/START v3 [93] [94].</p>';
+  h+='<span class="cf">'+(may?'Si tuviera de 60 a 64 años → la preferencia por influenza de dosis alta, recombinante o adyuvada y el VSR sin riesgo no se aplicarían [88] [91].':'Si tuviera 75 años o más → recibiría VSR de forma sistemática y la influenza preferente [91] [88].')+'</span>';
+  out(dc,h);
+}
+
+function dcSeg(dc){
+  var cf='', cr=sel(dc,'cr'), ca=sel(dc,'ca')[0]==='si', n=cr.length, h='';
+  if(!n&&!ca){out(dc,'<p>Marca los criterios de Fried presentes y si hubo una caída reciente para ver la categoría y la conducta.</p>');return;}
+  var nom={peso:'pérdida de peso',agot:'agotamiento',fuerza:'debilidad de prensión',marcha:'marcha lenta',act:'baja actividad'};
+  var lista=cr.map(function(k){return nom[k];}).join(', ');
+  if(n>=3){
+    h='<p><b>Frágil</b> ('+n+' de 5 criterios: '+lista+') [102].</p>';
+    h+='<p><b>Conducta:</b> valoración geriátrica integral; ejercicio supervisado; proteína y calorías suficientes con vitamina D; revisión de fármacos para reducir la polifarmacia [104] [93]. Busca causas tratables de cada criterio y vigila el riesgo de dependencia y hospitalización [102].</p>';
+    if(cr.indexOf('marcha')>=0||cr.indexOf('fuerza')>=0){h+='<p>Fuerza de prensión baja o marcha lenta: evalúa sarcopenia con el algoritmo F-A-C-S (marcha de 0,8 m/s o menos indica gravedad) [65].</p>';}
+    if(cr.indexOf('peso')>=0){h+='<p>Pérdida de peso: busca causa y valora el estado nutricional; una pérdida mayor de 5% por enfermedad crónica obliga a tamizar fragilidad [104].</p>';}
+    cf='<span class="cf">Si cumpliera solo 1 o 2 criterios → sería prefrágil: se actuaría sobre cada criterio para evitar la progresión [102].</span>';
+  } else if(n>=1){
+    h='<p><b>Prefrágil</b> ('+n+' de 5 criterios: '+lista+') [102].</p>';
+    h+='<p><b>Conducta:</b> el estado intermedio tiene riesgo intermedio y mayor probabilidad de pasar a fragilidad, así que es el momento de intervenir: ejercicio, nutrición con proteína y vitamina D, y revisión de fármacos [102] [104] [93].</p>';
+    cf='<span class="cf">Si sumara un tercer criterio → pasaría a frágil y se haría valoración geriátrica integral [102].</span>';
+  } else {
+    h='<p><b>Robusto por fenotipo</b> (ningún criterio de Fried) [102].</p><p>Mantén la actividad física y aconseja sobre prevención de caídas [103].</p>';
+    cf='<span class="cf">Si apareciera un criterio → sería prefrágil [102].</span>';
+  }
+  if(ca){
+    h+='<p><b>Caída reciente:</b> ofrece una valoración multifactorial del riesgo con intervención personalizada multidominio, que incluye revisar los fármacos [103] [93].</p>';
+    if(!n){cf='<span class="cf">Si además hubiera marcha lenta o debilidad → se evaluaría fragilidad y sarcopenia [102] [65].</span>';}
+  }
+  out(dc,h+cf);
+}
+
+</script>
