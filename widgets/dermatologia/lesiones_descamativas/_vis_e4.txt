@@ -1,0 +1,40 @@
+(a) Celdas de la columna «Psoriasis» (9 filas)
+1. IL-23, Th17 e IL-17 aceleran el recambio del queratinocito.
+2. Adulto joven o cualquier edad; HLA-C*06:02, obesidad, tabaco, estrés.
+3. Crónico en brotes; recurre, con Koebner tras trauma.
+4. Placas con escama; prurito leve; uñas con pits.
+5. Signo de Auspitz tras retirar la escama plateada.
+6. Vesículas, exudado o hifas en KOH; si hay, piensa en otra.
+7. Clínica con Auspitz; KOH si duda con tiña; biopsia si atípica.
+8. Tópicos (corticoide más calcipotriol); dermatología si es moderada o grave.
+9. Eritrodermia, pústulas generalizadas, artritis y comorbilidad cardiometabólica.
+
+(b) Banderas rojas
+- Eritrodermia o psoriasis pustulosa generalizada con fiebre: urgencia dermatológica; es la amenaza del grupo.
+- Dolor articular, dactilitis o uñas con pits: artritis psoriásica.
+
+(c) Etapa de Panorama (Psoriasis)
+Cae en el extremo inmunomediado crónico del eje: la placa descamativa que no es un eccema ni una infección. Su mecanismo es el eje IL-23, Th17 e IL-17, que acelera el recambio del queratinocito y produce escama y vasos dilatados. La delata el signo de Auspitz, con placas simétricas en codos, rodillas y uñas con pits. La conducta decisiva es medir BSA y zonas especiales: tópicos si es leve, derivar para fototerapia, sistémico o biológico si no, y nunca corticoide sistémico. Es la amenaza del grupo por su forma eritrodérmica o pustulosa. Puente: frente a ella, la pitiriasis rosada es autolimitada.
+Perla (≤20 palabras): Placa con Auspitz y uñas con pits: psoriasis; nunca corticoide sistémico, el rebote puede ser pustuloso.
+
+(d) nucleo (Anki)
+- Terreno HLA-C*06:02 más desencadenante
+- Hiperproliferación queratinocitaria y recambio acelerado
+- Paraqueratosis: queratinocitos llegan inmaduros
+- Vasos dilatados bajo epidermis adelgazada
+- Signo de Auspitz tras retirar la escama
+- Clínica: placa escamosa y Auspitz
+- Leve: corticoide más calcipotriol tópicos
+
+(e) Conteos
+pg=3, fey=1, nodos=6, signos=4, perlas=5, simuladores=1 (dcE4tx)
+
+(f) Errores que no se pueden cometer
+- Dar corticoide sistémico a un paciente con psoriasis: al retirarlo puede brotar psoriasis pustulosa o eritrodérmica.
+- Iniciar un biológico sin cribado de tuberculosis y hepatitis.
+
+(g) Chips para el simulador diferencial
+- Auspitz positivo: apunta a psoriasis, por los capilares dilatados bajo la escama.
+- Uñas con pits o mancha en aceite: apunta a psoriasis por el compromiso de matriz y lecho.
+- Placas en codos, rodillas y sacro: distribución de extensión típica de psoriasis.
+- Koebner: lesiones sobre rasguños, propias de psoriasis activa.

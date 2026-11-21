@@ -1,0 +1,40 @@
+(a) Columna D. seborreica (9 celdas)
+1. Malassezia hidroliza sebo; ácidos grasos inflaman y alteran la barrera
+2. Lactante menor de 3 meses y adulto de 40 a 60 años
+3. Crónica y recurrente; en el lactante, autolimitada
+4. Placa roja con escama en cuero cabelludo y cara
+5. Escama grasienta simétrica en cuero cabelludo, cejas, surcos nasogenianos y preesternal
+6. Sin pérdida de pelo ni compromiso de extensores
+7. Clínica; KOH del pelo o dermatoscopia si hay duda
+8. Ketoconazol 2 % tópico; primer nivel, dermatología si refractaria
+9. Recaídas; si es extensa o súbita, VIH sin diagnosticar
+
+(b) Banderas rojas
+- Forma extensa, súbita o refractaria: pide prueba de VIH.
+- Lactante con lesión generalizada, diarrea y falla de crecimiento: inmunodeficiencia.
+
+(c) Etapa de Panorama
+Cae en el extremo de los eccemas con escama grasienta, ligada al sebo y no a la atopia. Su mecanismo: Malassezia hidroliza el sebo y los ácidos grasos libres alteran la barrera e inflaman. El signo que la delata es la escama amarillenta y grasienta, simétrica, en cuero cabelludo, cejas, surcos nasogenianos y preesternal, sin pérdida de pelo. La conducta decisiva es el antifúngico tópico de base, corticoide de baja potencia solo breve, y prueba de VIH si es extensa o súbita. Si la placa es gruesa, plateada y neta, con extensores o uñas, pasa a psoriasis.
+Perla: sin pérdida de pelo es seborreica; con puntos negros en un niño, tiña capitis.
+
+(d) nucleo (Anki)
+- Sebo activo en zonas seborreicas según edad
+- Ácidos grasos libres alteran queratinización y barrera
+- Inflamación por citocinas y prostaglandinas
+- Falla inmune: forma extensa y recurrente
+- Escama grasienta simétrica en cuero cabelludo, cejas, surcos nasogenianos y preesternal
+- Diagnóstico clínico por zona y aspecto
+- Ketoconazol tópico: champú en cuero cabelludo, crema en cara
+
+(e) Conteos: pg 3, fey 1, nodos 5, signos 5, perlas 5, simuladores 1 (dcE2tx)
+
+(f) Errores que no se pueden cometer
+- No omitir la prueba de VIH en una forma extensa, súbita o refractaria.
+- No prolongar corticoide potente en cara y pliegues; no tratar con champú una tiña capitis.
+
+(g) Chips para el simulador diferencial
+- Escama amarillenta y grasienta: apunta a seborreica por la lipasa de Malassezia que libera ácidos grasos del sebo.
+- Cejas, surcos nasogenianos o retroauricular afectados: son zonas con sebo.
+- Costra en el vértex de un lactante menor de 3 meses: costra láctea por andrógenos maternos.
+- Sin pérdida de pelo ni extensores: respeta lo que sí afecta la atopia y la psoriasis.
+- Parkinson o VIH de fondo: bajan el control de la levadura.

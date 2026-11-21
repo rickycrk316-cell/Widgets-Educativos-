@@ -1,0 +1,40 @@
+(a) Celdas de la columna «P. versicolor» (9 preguntas, en orden)
+1. Malassezia comensal pasa de levadura a micelio en el estrato córneo [@e6_gupta2015]
+2. Adolescentes y adultos jóvenes; trópico, calor y humedad [@bolognia5][@e6_gupta2015]
+3. Insidioso y crónico, con recidivas en clima cálido [@e6_gupta2015]
+4. Mancha o mácula con escama fina, casi sin prurito [@e6_gupta2015]
+5. Escama furfurácea a la uñada, con KOH «espagueti con albóndigas» [@bolognia5][@e6_mayser2012]
+6. Sin medallón heráldico, collarete ni borde anular activo [@ely2014]
+7. KOH del raspado: levaduras e hifas cortas [@e6_gupta2015]
+8. Tópico antifúngico; oral (fluconazol o itraconazol) si es extensa o recurrente; primer nivel [@e6_gupta2015]
+9. Recidiva y discromía prolongada; tratamiento erróneo con corticoide [@e6_gupta2015][@e6_sepaskhah2017]
+
+(b) Banderas rojas
+- Mancha clara sin escama y KOH negativo: no es pitiriasis versicolor; piensa en vitíligo [@e6_sepaskhah2017].
+- Antifúngico oral inapropiado: terbinafina oral no sirve y ketoconazol oral es hepatotóxico [@e6_gupta2015].
+
+(c) Etapa de Panorama (h3: P. versicolor)
+Párrafo: En el eje cae al final, como infección superficial: una levadura comensal, Malassezia, pasa a forma micelial con calor, humedad y sudor, y sus metabolitos alteran el pigmento. La delata la mácula con escama fina en el tronco superior, que se evidencia con la uñada y se confirma con KOH de espagueti con albóndigas. La conducta decisiva depende de la extensión: tópico si es limitada y fluconazol o itraconazol oral si es extensa o recurrente; la terbinafina oral no sirve. Con esto se cierra el diferencial de las lesiones descamativas: confirma con KOH antes de tratar.
+Perla (p.perla): Máculas con escama fina y KOH positivo: Malassezia; terbinafina y ketoconazol por vía oral no se usan.
+
+(d) nucleo (Anki)
+- Ácido azelaico inhibe la melanogénesis
+- Pigmentos indólicos: hiperpigmentación y fluorescencia
+- Paso de levadura a forma micelial
+- Escama fina por invasión del estrato córneo
+- Signo de la uñada (Besnier)
+- Máculas con escama fina en tronco superior
+- Elimina el micelio y explica la recidiva / Tópico si es limitada
+
+(e) Conteos: pg 3 · fey 1 · nodos 6 · signos 4 · perlas 5 · simuladores 1 (dcE6tx)
+
+(f) Errores que no se pueden cometer
+- Tratar con terbinafina oral o ketoconazol oral una pitiriasis versicolor [@e6_gupta2015].
+- Dar antifúngico o corticoide a una mancha clara sin escama sin hacer KOH [@e6_sepaskhah2017].
+
+(g) Chips del simulador diferencial (hallazgo → por qué apunta a P. versicolor)
+- Máculas de color variable con escama fina en tronco superior → lesión típica de Malassezia [@e6_gupta2015]
+- Uñada con escama furfurácea → capa córnea invadida por micelio [@bolognia5]
+- Fluorescencia amarilla con luz de Wood → fluorocromos de Malassezia [@e6_mayser2003]
+- KOH con espagueti y albóndigas → levaduras e hifas cortas [@e6_mayser2012]
+- Clima cálido y húmedo, sudor → desencadenante de la forma micelial [@e6_gupta2015]

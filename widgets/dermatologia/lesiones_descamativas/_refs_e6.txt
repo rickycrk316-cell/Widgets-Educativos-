@@ -1,0 +1,5 @@
+@e6_gupta2015 | Gupta AK, Foley KA. Antifungal treatment for pityriasis versicolor. J Fungi (Basel). 2015;1(1):13-29. doi:10.3390/jof1010013. PMID: 29376896.
+@e6_mendez2010 | Mendez-Tovar LJ. Pathogenesis of dermatophytosis and tinea versicolor. Clin Dermatol. 2010;28(2):185-9. doi:10.1016/j.clindermatol.2009.12.015. PMID: 20347661.
+@e6_mayser2012 | Mayser P, Preuss J. Pityriasis versicolor: neue Aspekte einer alten Erkrankung [Pityriasis versicolor: new aspects of an old disease]. Hautarzt. 2012;63(11):859-67. doi:10.1007/s00105-012-2380-5. PMID: 23114508.
+@e6_mayser2003 | Mayser P, Stapelkamp H, Krämer HJ, Podobinska M, Wallbott W, Irlinger B, et al. Pityrialactone - a new fluorochrome from the tryptophan metabolism of Malassezia furfur. Antonie Van Leeuwenhoek. 2003;84(3):185-91. doi:10.1023/a:1026042903354. PMID: 14574113.
+@e6_sepaskhah2017 | Sepaskhah M, Sadat MS, Pakshir K, Bagheri Z. Comparative efficacy of topical application of tacrolimus and clotrimazole in the treatment of pityriasis versicolor: a single blind, randomised clinical trial. Mycoses. 2017;60(5):338-42. doi:10.1111/myc.12598. PMID: 28120351.
