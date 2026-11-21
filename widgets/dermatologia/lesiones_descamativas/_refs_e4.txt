@@ -1,2 +1,6 @@
 @e4_armstrong2020 | Armstrong AW, Read C. Pathophysiology, clinical presentation, and treatment of psoriasis: a review. JAMA. 2020;323(19):1945-60. doi:10.1001/jama.2020.4006 PMID: 32427307
 @e4_taylor2006 | Taylor W, Gladman D, Helliwell P, Marchesoni A, Mease P, Mielants H; CASPAR Study Group. Classification criteria for psoriatic arthritis: development of new criteria from a large international study. Arthritis Rheum. 2006;54(8):2665-73. doi:10.1002/art.21972 PMID: 16871531
+@e4_dm_metotrexato | Mylan Pharmaceuticals Inc. METHOTREXATE tablets [ficha técnica]. DailyMed; 2026. Setid 70c09984-2b36-424f-8b27-3fd0cd4e833d
+@e4_dm_ciclosporina | Novartis Pharmaceuticals Corporation. NEORAL (ciclosporina) cápsulas y solución [ficha técnica]. DailyMed; 2026. Setid 94461af3-11f1-4670-95d4-2965b9538ae3
+@e4_dm_acitretina | AvKARE. ACITRETIN capsules [ficha técnica]. DailyMed; 2026. Setid 6af396c2-af3e-436d-ba9a-583637495910
+@e4_dm_apremilast | Amgen Inc. OTEZLA (apremilast) [ficha técnica]. DailyMed; 2026. Setid f6b1f516-4972-4d82-bced-113e47b41cc5

@@ -9,25 +9,24 @@ function dcE4tx(dc){
   if(e4hv(s,'alarma')){
     r.push(e4par('<b>Alarma</b>: eritrodermia o pústulas generalizadas con fiebre son una urgencia dermatológica. Deriva sin demora y <b>no uses corticoide sistémico</b>: al retirarlo puede producir un brote pustuloso o eritrodérmico [@bolognia5][@griffiths2021].'));
   }
-  var mod=e4hv(g,'mod')||(!isNaN(b)&&b>=5)||zona||art;
-  var leve=!mod&&(e4hv(g,'leve')||(!isNaN(b)&&b<5));
+  var mod=e4hv(g,'mod')||zona||art;
+  var leve=!mod&&(e4hv(g,'leve'));
   if(leve){
     r.push(e4par('<b>Enfermedad leve'+(!isNaN(b)?' (BSA '+String(b).replace('.',',')+' %)':'')+'</b>: corticoide tópico más calcipotriol, aplicación fina una vez al día sobre la placa, con potencia del corticoide según la zona [@elmets2021]. Escalera de potencias en «Visión».'));
-    if(!isNaN(b)&&b>=3) r.push(e4par('BSA entre 3 y 5 %: zona intermedia; si no responde en la reevaluación o aparece una zona especial, escala a fototerapia o sistémico [@elmets2021][@menter2019].'));
   }
   if(mod){
     r.push(e4par('<b>Moderada a grave'+(zona?' o con zona especial':'')+(art?' o con artritis':'')+'</b>: deriva a dermatología (y reumatología si hay artritis) y elige según comorbilidad [@menter2019][@griffiths2021].'));
     if(art) r.push(e4par('Con artritis psoriásica, prefiere un fármaco que trate también la articulación: anti-TNF o anti-IL-17, con cribado previo de TB y hepatitis [@menter2019][@e4_armstrong2020].'));
     var opc=[];
     opc.push('fototerapia NB-UVB, varias sesiones por semana en centro de fototerapia, con dosis según tipo de piel [@elmets2019foto]');
-    if(!emb&&!hep&&!ren) opc.push('metotrexato 7,5–25 mg VO una vez por semana con ácido fólico 1–5 mg al día; vigila hemograma y función hepática [@menter2020]');
+    if(!emb&&!hep&&!ren) opc.push('metotrexato 10–25 mg VO una vez por semana hasta respuesta adecuada (no más de 30 mg por semana) con ácido fólico o folínico [@e4_dm_metotrexato]; vigila hemograma y función hepática [@menter2020]');
     if(!ren&&!emb){
-      if(!isNaN(pe)&&pe>0){var ini=Math.min(Math.round(2.5*pe),Math.round(5*pe)),tope=Math.round(5*pe);
-        opc.push('ciclosporina 2,5 mg/kg/día VO cada 12 h, es decir, '+ini+' mg al día con tope de 5 mg/kg/día ('+tope+' mg al día), a corto plazo [@menter2020]');}
-      else opc.push('ciclosporina 2,5 mg/kg/día VO cada 12 h con tope de 5 mg/kg/día, a corto plazo; escribe el peso para calcular los mg [@menter2020]');
+      if(!isNaN(pe)&&pe>0){var ini=Math.round(2.5*pe),tope=Math.round(4*pe);
+        opc.push('ciclosporina 2,5 mg/kg/día VO cada 12 h, es decir, '+ini+' mg al día, con aumentos de unos 0,5 mg/kg/día y un máximo de 4 mg/kg/día ('+tope+' mg al día) según la ficha técnica; no se recomienda más de un año seguido [@e4_dm_ciclosporina]');}
+      else opc.push('ciclosporina 2,5 mg/kg/día VO cada 12 h con máximo de 4 mg/kg/día según la ficha técnica; escribe el peso para calcular los mg [@e4_dm_ciclosporina]');
     }
-    if(!emb&&!hep) opc.push('acitretina VO cada 24 h con dosis según ficha técnica, solo si no puede embarazarse [@menter2020]');
-    opc.push('apremilast VO cada 12 h con titulación inicial según ficha técnica; vigila el ánimo [@menter2020]');
+    if(!emb&&!hep) opc.push('acitretina 25–50 mg VO al día con la comida principal, solo si no puede embarazarse [@e4_dm_acitretina][@menter2020]');
+    opc.push('apremilast con titulación de 5 días hasta 30 mg VO cada 12 h; vigila el ánimo [@e4_dm_apremilast][@menter2020]');
     opc.push('biológico (anti-TNF, anti-IL-17 o anti-IL-23) con esquema de la ficha técnica y cribado previo de TB y hepatitis [@menter2019]');
     r.push(e4par('Opciones: '+opc.join('; ')+'.'));
     if(emb) r.push(e4par('Embarazo o posible embarazo: evita metotrexato y acitretina (teratógenos); la fototerapia NB-UVB es una base posible; coordina el biológico con dermatología y obstetricia [@menter2020][@elmets2019foto].'));
@@ -42,6 +41,6 @@ function dcE4tx(dc){
     r.push(e4par('Registra '+m.join(', ')+' como línea de base para medir la respuesta en la reevaluación [@elmets2021].'));
   }
   r.push(e4par('Evita el corticoide sistémico y los desencadenantes (litio, betabloqueadores, antipalúdicos) [@bolognia5].'));
-  r.push('<span class="cf">Si aparecen pústulas generalizadas, eritrodermia o fiebre → alarma y derivación urgente; si el BSA pasa de 3–5 % o hay zona especial o artritis → escala de tópicos a fototerapia, sistémico o biológico [@elmets2021][@menter2019].</span>');
+  r.push('<span class="cf">Si aparecen pústulas generalizadas, eritrodermia o fiebre → alarma y derivación urgente; si la enfermedad deja de ser limitada o hay zona especial o artritis → escala de tópicos a fototerapia, sistémico o biológico [@elmets2021][@menter2019].</span>');
   out(dc,r.join(''));
 }
