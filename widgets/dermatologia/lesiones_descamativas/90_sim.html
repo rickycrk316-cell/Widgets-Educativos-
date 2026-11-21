@@ -1,0 +1,323 @@
+<script>
+function e1par(t){return '<p>'+t+'</p>';}
+function e1hv(a,v){return a.indexOf(v)>-1;}
+function e1vacio(dc,t){out(dc,e1par(t));}
+
+function dcE1dx(dc){
+  var ed=sel(dc,'edad'),pr=sel(dc,'prur'),pa=sel(dc,'panal'),al=sel(dc,'alarma'),ig=sel(dc,'iga');
+  var uk=num(dc,'uk'),sc=num(dc,'scorad'),ea=num(dc,'easi');
+  if(!(ed.length||pr.length||pa.length||al.length||ig.length)&&isNaN(uk)&&isNaN(sc)&&isNaN(ea)){
+    e1vacio(dc,'Elige la edad, el prurito, los criterios del Reino Unido presentes, el área del pañal y las escalas de gravedad. El simulador integra el diagnóstico, la gravedad y la conducta inicial; no calcula probabilidades.');return;}
+  var x=[];
+  if(e1hv(al,'si')){
+    x.push(e1par('<b>Eccema herpético</b>: vesiculopústulas dolorosas con fiebre sobre una dermatitis atópica son una urgencia. Falta confirmar el virus del herpes simple con cultivo o PCR, sin retrasar el tratamiento; el hemograma suele mostrar leucopenia y linfopenia relativas [10][19]. Conducta inicial: derivación urgente a hospital y aciclovir intravenoso [25].'));
+  }
+  if(!isNaN(uk)&&(uk<0||uk>5)){
+    x.push(e1par('Los criterios del Reino Unido adicionales al prurito van de 0 a 5: revisa el número [16].'));
+  } else if(e1hv(pr,'no')){
+    x.push(e1par('<b>Sin prurito marcado</b>: la dermatitis atópica pierde sustento, porque la condición pruriginosa es la puerta de entrada de los criterios del Reino Unido [16]. '+(e1hv(ed,'lact')?'En el lactante con placas rojas y escama en cuero cabelludo y cara, considera la dermatitis seborreica; falta ver si el área del pañal está afectada. ':'')+'Conducta inicial: revisa otra dermatosis descamativa; ver la pestaña «D. seborreica» y «Visión».'));
+  } else if(e1hv(pr,'si')){
+    if(e1hv(ed,'lact')&&e1hv(pa,'afect')){
+      x.push(e1par('<b>Prurito con afectación del área del pañal en un lactante</b>: una erupción del pañal rara vez es dermatitis atópica [11]. Falta explorar cuero cabelludo y pliegues y valorar la dermatitis seborreica. Conducta inicial: no cierres como atópica sin otro dato; revisa el diferencial en «Visión».'));
+    } else if(!isNaN(uk)){
+      if(uk>=3){
+        x.push(e1par('<b>Dermatitis atópica</b>: prurito más '+uk+' criterios adicionales cumple la regla de tres o más de los criterios del Reino Unido [16]. Falta medir la gravedad con SCORAD, EASI o IGA y buscar sobreinfección. Conducta inicial: emoliente diario y tratamiento según la gravedad (ver «Tratamiento») [6].'));
+      } else {
+        x.push(e1par('<b>Prurito con menos de tres criterios adicionales</b>: no cumple la regla de los criterios del Reino Unido [16]. Falta completar la historia (piel seca, inicio antes de 2 años, asma, dermatitis flexural visible) y evaluar el diferencial. Conducta inicial: seguimiento y reevaluación; los criterios son clínicos y no hay prueba definitiva [22].'));
+      }
+    } else {
+      x.push(e1par('<b>Prurito presente</b>: compatible con dermatitis atópica si hay curso crónico y distribución típica por edad [11]. Falta contar los criterios del Reino Unido adicionales al prurito [16].'));
+    }
+  }
+  var g=[];
+  if(!isNaN(sc)){
+    if(sc<0||sc>103){g.push('SCORAD fuera de rango (0 a 103) [26]');}
+    else{var b=sc<10?'piel clara':sc<29?'leve':sc<49?'moderada':'grave';g.push('SCORAD '+sc+': '+b);}
+  }
+  if(!isNaN(ea)){
+    if(ea<0||ea>72){g.push('EASI fuera de rango (0 a 72) [27]');}
+    else{var c=ea===0?'piel clara':ea<6?'leve':ea<23?'moderada':'grave';g.push('EASI '+ea+': '+c);}
+  }
+  if(ig.length){var m={claro:'clara',leve:'leve',mod:'moderada',grave:'grave'};g.push('IGA: '+m[ig[0]]);}
+  if(g.length){
+    var nota=e1hv(ed,'adol')?'':' Los cortes de SCORAD y EASI se establecieron en 13 años o más; en niños úsalos con cautela.';
+    x.push(e1par('<b>Gravedad</b>: '+g.join('; ')+' [28].'+nota+' La gravedad fija el escalón del tratamiento; ver «Tratamiento».'));
+  }
+  if(!x.length) x.push(e1par('Los datos elegidos no bastan para sostener un diagnóstico. Define el prurito y cuenta los criterios del Reino Unido.'));
+  x.push('<span class="cf">Si el lactante tiene afectado el área del pañal y no hay prurito → el diagnóstico pasa de dermatitis atópica a dermatitis seborreica; si aparecen vesiculopústulas dolorosas con fiebre → eccema herpético y urgencia con aciclovir [11][10].</span>');
+  out(dc,x.join(''));
+}
+
+function dcE1tx(dc){
+  var ed=sel(dc,'edad'),gr=sel(dc,'grav'),zo=sel(dc,'zona'),fa=sel(dc,'fase'),inf=sel(dc,'inf'),p=num(dc,'peso');
+  if(!(ed.length||gr.length||zo.length||fa.length||inf.length)&&isNaN(p)){
+    e1vacio(dc,'Elige la edad, la gravedad, la zona, la situación y los signos de infección; escribe el peso si el niño pasa a dupilumab. El simulador propone el escalón con posología y no calcula probabilidades.');return;}
+  var x=[];
+  if(e1hv(inf,'vesic')){
+    x.push(e1par('<b>Eccema herpético</b>: derivación urgente a hospital y <b>aciclovir intravenoso</b>; la dosis pediátrica por peso sigue el protocolo hospitalario y no se fija aquí [25][19]. El diagnóstico y el tratamiento rápidos son cruciales [10].'));
+    x.push('<span class="cf">Si las vesiculopústulas dolorosas y la fiebre no están y solo hay costras → es sobreinfección bacteriana y se maneja con cultivo y el plan tópico [11].</span>');
+    out(dc,x.join(''));return;
+  }
+  x.push(e1par('<b>Base para todos</b>: emoliente diario sobre toda la piel, incluso sin lesiones, y plan de acción escrito para la familia [6][21]. Posología en «Tratamiento».'));
+  if(e1hv(inf,'costras')){
+    x.push(e1par('Costras y exudado: sospecha sobreinfección por <i>S. aureus</i>; toma cultivo para guiar el tratamiento y no uses antimicrobianos ni antisépticos tópicos de rutina [11][6].'));
+  }
+  var refr=e1hv(fa,'refrac')||e1hv(gr,'grave');
+  if(!refr){
+    if(e1hv(zo,'cara')){
+      x.push(e1par('<b>Cara, pliegues o genitales</b>: corticoide de baja potencia (hidrocortisona 1 %) o tacrolimus ungüento 0,03 % en niños (0,1 % en mayores), capa fina sobre las lesiones activas [21][29][33].'));
+    } else if(e1hv(zo,'cuerpo')){
+      x.push(e1par('<b>Tronco y extremidades</b>: corticoide tópico con potencia según la gravedad, capa fina sobre las lesiones activas; ver «Visión» para la escalera de potencias [6][21].'));
+    }
+    if(e1hv(gr,'leve')||e1hv(gr,'mod')){
+      if(e1hv(ed,'lact')){
+        x.push(e1par('En menores de 2 años no hay ensayos verificados de crisaborol ni de ruxolitinib aquí: usa corticoide de baja potencia o tacrolimus [30][31].'));
+      } else if(e1hv(ed,'pre')||e1hv(ed,'esc')){
+        x.push(e1par('Alternativa en dermatitis leve a moderada: crisaborol ungüento dos veces al día por 28 días (ensayos desde los 2 años) o ruxolitinib crema 0,75 % o 1,5 % dos veces al día por 8 semanas (2 a 11 años, IGA 2 o 3, 3 a 20 % de superficie) [30][31].'));
+      } else if(e1hv(ed,'adol')){
+        x.push(e1par('Alternativa en dermatitis leve a moderada: crisaborol (dos veces al día, 28 días en ensayos) o ruxolitinib crema; la guía AAD da recomendación fuerte a los agentes PDE-4 y JAK tópicos en adultos [30][6].'));
+      }
+    }
+  } else {
+    x.push(e1par('<b>Enfermedad grave o sin respuesta a tópicos optimizados</b>: revisa adherencia, sobreinfección y diagnóstico, y deriva a dermatología. Considera fototerapia o un sistémico [18].'));
+    if(e1hv(ed,'lact')||e1hv(ed,'pre')){
+      if(isNaN(p)){
+        x.push(e1par('Escribe el peso para fijar la dosis de dupilumab por banda de peso (6 meses a menos de 6 años) [32].'));
+      } else if(p<5){
+        x.push(e1par('Peso de '+p+' kg: por debajo de los 5 kg del ensayo; dupilumab no está respaldado en esta banda, decide el especialista [32].'));
+      } else if(p>=30){
+        x.push(e1par('Peso de '+p+' kg: sobre la banda estudiada en menores de 6 años; la dosis la fija el especialista y no se verificó aquí [32].'));
+      } else {
+        var d=Math.min(300,p<15?200:300);
+        x.push(e1par('<b>Dupilumab subcutáneo: '+rd(d)+' mg cada 4 semanas</b> (5 kg a menos de 15 kg: 200 mg; 15 kg a menos de 30 kg: 300 mg; tope 300 mg por dosis), con corticoide tópico de baja potencia durante 16 semanas en el ensayo; vigila conjuntivitis [32].'));
+      }
+    } else if(e1hv(ed,'esc')){
+      x.push(e1par('De 6 a 11 años: la dosis de dupilumab y de los demás sistémicos no se verificó aquí y la fija el especialista [18].'));
+    } else if(e1hv(ed,'adol')){
+      x.push(e1par('La guía AAD 2024 (adultos) recomienda con fuerza dupilumab, tralokinumab, abrocitinib, baricitinib y upadacitinib; de forma condicional fototerapia, azatioprina, ciclosporina, metotrexato y micofenolato, y condicional en contra el corticoide sistémico. La dosis la fija el especialista [18].'));
+    }
+  }
+  x.push('<span class="cf">Si aparecen vesiculopústulas dolorosas con fiebre → eccema herpético: el plan cambia de tópicos a aciclovir intravenoso en hospital [10][25].</span>');
+  out(dc,x.join(''));
+}
+
+function e2par(t){return '<p>'+t+'</p>';}
+function e2hv(a,v){return a.indexOf(v)>-1;}
+function dcE2tx(dc){
+  var ed=sel(dc,'edad'),z=sel(dc,'zona'),s=sel(dc,'sit');
+  if(!(ed.length||z.length||s.length)){
+    out(dc,e2par('Elige la edad, la zona y la situación. El simulador propone el tratamiento con su posología según la tabla de fármacos; no calcula probabilidades.'));return;}
+  var KC='ketoconazol 2 % champú 2 veces por semana por 4 semanas [12]';
+  var KCR='ketoconazol 2 % crema 2 veces al día por 4 semanas [12]';
+  var CC='ciclopirox 1 % champú 3 veces por semana por 4 semanas [12]';
+  var CCR='ciclopirox 1 % crema 2 veces al día por 4 semanas [12]';
+  var SE='sulfuro de selenio 2,5 % champú 2 veces por semana por 2 semanas y luego 1 vez por semana por 2 semanas [35]';
+  var HC='hidrocortisona 1 % crema 1 vez al día hasta 4 semanas [12]';
+  var TC='tacrolimus 0,1 % ungüento o pimecrolimus 1 % crema 1 o 2 veces al día por 4 a 8 semanas, fuera de indicación [12]';
+  var x=[];
+  var lact=e2hv(ed,'lact'),cuero=e2hv(z,'cuero'),cara=e2hv(z,'cara'),pl=e2hv(z,'pliegues');
+  var infl=e2hv(s,'infl'),ext=e2hv(s,'ext'),rec=e2hv(s,'recae');
+  if(lact){
+    x.push(e2par('<b>Lactante</b>: la evidencia de fármacos tópicos es escasa y hay riesgo de absorción. Usa champú emoliente y aceites vegetales con retiro mecánico suave de las escamas [12].'));
+    if(infl&&(cara||pl||!z.length)) x.push(e2par('Con inflamación marcada, la hidrocortisona 1 % crema tiene evidencia escasa y no hay pauta establecida en las fuentes: úsala solo pocos días y con indicación de pediatría o dermatología [12].'));
+    if(pl) x.push(e2par('En pliegues la lesión es húmeda y brillante: mantén la zona limpia y seca y evita oclusión [35].'));
+  } else {
+    if(cuero) x.push(e2par('<b>Cuero cabelludo</b>: primera línea '+KC+'. Alternativas: '+CC+', o '+SE+' [12].'));
+    if(cara||pl) x.push(e2par('<b>'+(cara&&pl?'Cara y pliegues':cara?'Cara':'Pliegues')+'</b>: primera línea '+KCR+'. Alternativa: '+CCR+'.'));
+    if(!z.length&&ed.length) x.push(e2par('Elige la zona: cuero cabelludo, cara o pliegues cambian la presentación del fármaco.'));
+    if(infl&&(cara||pl||!z.length)) x.push(e2par('<b>Inflamación marcada</b>: añade '+HC+', o '+TC+'. No prolongues el corticoide en cara ni pliegues por atrofia y telangiectasias [12].'));
+    if(infl&&cuero&&!cara&&!pl) x.push(e2par('<b>Inflamación marcada en cuero cabelludo</b>: puedes asociar un corticoide tópico por pocas semanas junto al antifúngico; no lo prolongues [36][12]. ↪ Escalera de potencias en «Visión».'));
+  }
+  if(rec) x.push(e2par('<b>Recaída tras remisión</b>: retoma el antifúngico y mantén ketoconazol 2 % champú 1 vez por semana (por 6 meses redujo las recaídas) [12].'));
+  if(ext) x.push(e2par('<b>Extensa, súbita o refractaria</b>: pide prueba de VIH y busca otras causas de inmunosupresión; deriva a dermatología, que valora antifúngico oral o UVB [12][37].'));
+  x.push('<span class="cf">Si aparecen parches con pérdida de pelo y puntos negros en un niño → cambia a tiña capitis: KOH y cultivo del pelo y antifúngico sistémico, no champú [35].</span>');
+  out(dc,x.join(''));
+}
+
+function dcE3tx(dc){
+  var t=sel(dc,'tipo'),f=sel(dc,'fase'),z=sel(dc,'zona'),g=sel(dc,'ag'),sc=num(dc,'sc');
+  function e3par(x){return '<p>'+x+'</p>';}
+  function e3hv(a,v){return a.indexOf(v)>-1;}
+  if(!t.length&&!f.length&&!z.length&&!g.length&&isNaN(sc)){
+    out(dc,e3par('Elige el tipo, la fase, la zona y la superficie afectada. El simulador propone el tratamiento con su posología; no calcula probabilidades.'));return;}
+  var r=[];
+  var TRI='triamcinolona 0,1 % crema, una capa sobre la zona afectada, tópica, 2 a 3 veces al día, hasta resolver [8]';
+  var CLO='clobetasol 0,05 % crema, capa fina, tópica, 2 veces al día, máximo 2 semanas seguidas y 50 g por semana, sin oclusión y nunca en cara, ingle ni axilas [9]';
+  var PRE='prednisona VO en dosis única por la mañana, con dosis inicial entre 5 y 60 mg al día según la gravedad (rango de la ficha) y descenso gradual en 2 a 3 semanas [38][45]';
+  var cara=e3hv(z,'cara');
+  var ext=!isNaN(sc)&&sc>20;
+  if(e3hv(t,'irr')){
+    r.push(e3par('<b>Irritativa</b>: daño directo sin inmunidad específica. Identifica y evita el irritante, usa barreras en el trabajo y emoliente de forma regular [39][43].'));
+  }
+  if(e3hv(t,'ale')){
+    r.push(e3par('<b>Alérgica</b> (tipo IV): el pilar es evitar el alérgeno, que no se pierde por la memoria de los linfocitos T; el corticoide alivia el brote pero no previene la recaída [38].'));
+  }
+  if(e3hv(g,'desc')||(!e3hv(t,'irr')&&e3hv(f,'cro'))){
+    r.push(e3par('Agente desconocido o cuadro crónico: si no cede al retirar lo sospechoso, deriva a la prueba del parche con lectura a las 48 h y a las 72–96 h; exige relevancia clínica y no se coloca sobre piel con corticoide [38][14][40].'));
+  }
+  if(e3hv(f,'agu')){
+    r.push(e3par('<b>Aguda vesicular</b>: potencia media o alta en lesión localizada. '+(cara?'En cara o pliegues baja la potencia y evita el clobetasol [9]; ↪ escalera de potencias en «Visión». ':'Primera línea: '+TRI+'; alternativa más potente: '+CLO+'. ')+'No rompas las ampollas [38].'));
+  }
+  if(e3hv(f,'cro')){
+    r.push(e3par('<b>Crónica liquenificada</b>: la piel gruesa necesita mayor potencia en la placa, con emoliente y evitación sostenida. '+(cara?'En cara o pliegues evita el clobetasol y usa una potencia baja [9]; ↪ escalera de potencias en «Visión».':'Opción: '+CLO+'; tras las 2 semanas pasa a '+TRI+' [1].')));
+  }
+  if(!f.length&&!ext&&isNaN(sc)&&(t.length||z.length)){
+    r.push(e3par('Elige la fase para fijar la potencia del corticoide tópico; ↪ escalera de potencias en «Visión».'));
+  }
+  if(!isNaN(sc)){
+    if(ext) r.push(e3par('<b>Superficie de '+String(sc).replace('.',',')+' %</b>: supera el 20 %, por lo que suele requerir esteroide sistémico: '+PRE+'. No lo suspendas de golpe porque produce rebote [38].'));
+    else r.push(e3par('<b>Superficie de '+String(sc).replace('.',',')+' %</b>: no pasa del 20 %, por lo que basta el corticoide tópico más evitación; no necesitas esteroide sistémico [38].'));
+  }
+  r.push('<span class="cf">Si la superficie supera el 20 % o el brote es grave → pasa de corticoide tópico a prednisona oral con descenso en 2 a 3 semanas; si no cede al evitar el agente o este se ignora → deriva a la prueba del parche [38].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE4tx(dc){
+  var g=sel(dc,'grav'),s=sel(dc,'sit'),b=num(dc,'bsa'),pa=num(dc,'pasi'),dl=num(dc,'dlqi'),pe=num(dc,'peso');
+  function e4par(t){return '<p>'+t+'</p>';}
+  function e4hv(a,v){return a.indexOf(v)>-1;}
+  if(!g.length&&!s.length&&isNaN(b)&&isNaN(pa)&&isNaN(dl)){
+    out(dc,e4par('Elige la gravedad (o escribe el BSA), la situación del paciente y, si lo tienes, PASI, DLQI y peso. El simulador propone el escalón de tratamiento con su posología; no calcula probabilidades.'));return;}
+  var r=[];
+  var zona=e4hv(s,'zona'),art=e4hv(s,'art'),emb=e4hv(s,'emb'),hep=e4hv(s,'hep'),ren=e4hv(s,'ren');
+  if(e4hv(s,'alarma')){
+    r.push(e4par('<b>Alarma</b>: eritrodermia o pústulas generalizadas con fiebre son una urgencia dermatológica. Deriva sin demora y <b>no uses corticoide sistémico</b>: al retirarlo puede producir un brote pustuloso o eritrodérmico [1][5].'));
+  }
+  var mod=e4hv(g,'mod')||zona||art;
+  var leve=!mod&&(e4hv(g,'leve'));
+  if(leve){
+    r.push(e4par('<b>Enfermedad leve'+(!isNaN(b)?' (BSA '+String(b).replace('.',',')+' %)':'')+'</b>: corticoide tópico más calcipotriol, aplicación fina una vez al día sobre la placa, con potencia del corticoide según la zona [46]. Escalera de potencias en «Visión».'));
+  }
+  if(mod){
+    r.push(e4par('<b>Moderada a grave'+(zona?' o con zona especial':'')+(art?' o con artritis':'')+'</b>: deriva a dermatología (y reumatología si hay artritis) y elige según comorbilidad [47][5].'));
+    if(art) r.push(e4par('Con artritis psoriásica, prefiere un fármaco que trate también la articulación: anti-TNF o anti-IL-17, con cribado previo de TB y hepatitis [47][49].'));
+    var opc=[];
+    opc.push('fototerapia NB-UVB, varias sesiones por semana en centro de fototerapia, con dosis según tipo de piel [53]');
+    if(!emb&&!hep&&!ren) opc.push('metotrexato 10–25 mg VO una vez por semana hasta respuesta adecuada (no más de 30 mg por semana) con ácido fólico o folínico [54]; vigila hemograma y función hepática [48]');
+    if(!ren&&!emb){
+      if(!isNaN(pe)&&pe>0){var ini=Math.round(2.5*pe),tope=Math.round(4*pe);
+        opc.push('ciclosporina 2,5 mg/kg/día VO cada 12 h, es decir, '+ini+' mg al día, con aumentos de unos 0,5 mg/kg/día y un máximo de 4 mg/kg/día ('+tope+' mg al día) según la ficha técnica; no se recomienda más de un año seguido [55]');}
+      else opc.push('ciclosporina 2,5 mg/kg/día VO cada 12 h con máximo de 4 mg/kg/día según la ficha técnica; escribe el peso para calcular los mg [55]');
+    }
+    if(!emb&&!hep) opc.push('acitretina 25–50 mg VO al día con la comida principal, solo si no puede embarazarse [56][48]');
+    opc.push('apremilast con titulación de 5 días hasta 30 mg VO cada 12 h; vigila el ánimo [57][48]');
+    opc.push('biológico (anti-TNF, anti-IL-17 o anti-IL-23) con esquema de la ficha técnica y cribado previo de TB y hepatitis [47]');
+    r.push(e4par('Opciones: '+opc.join('; ')+'.'));
+    if(emb) r.push(e4par('Embarazo o posible embarazo: evita metotrexato y acitretina (teratógenos); la fototerapia NB-UVB es una base posible; coordina el biológico con dermatología y obstetricia [48][53].'));
+    if(hep) r.push(e4par('Hepatopatía o alcohol: evita metotrexato y acitretina [48].'));
+    if(ren) r.push(e4par('Insuficiencia renal o hipertensión: evita ciclosporina [48].'));
+  }
+  if(!isNaN(b)||!isNaN(pa)||!isNaN(dl)){
+    var m=[];
+    if(!isNaN(b)) m.push('BSA '+String(b).replace('.',',')+' %');
+    if(!isNaN(pa)) m.push('PASI '+String(pa).replace('.',','));
+    if(!isNaN(dl)) m.push('DLQI '+String(dl).replace('.',','));
+    r.push(e4par('Registra '+m.join(', ')+' como línea de base para medir la respuesta en la reevaluación [46].'));
+  }
+  r.push(e4par('Evita el corticoide sistémico y los desencadenantes (litio, betabloqueadores, antipalúdicos) [1].'));
+  r.push('<span class="cf">Si aparecen pústulas generalizadas, eritrodermia o fiebre → alarma y derivación urgente; si la enfermedad deja de ser limitada o hay zona especial o artritis → escala de tópicos a fototerapia, sistémico o biológico [46][47].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE5tx(dc){
+  var c=sel(dc,'cuadro'),s=sel(dc,'sit');
+  function e5par(t){return '<p>'+t+'</p>';}
+  function e5hv(a,v){return a.indexOf(v)>-1;}
+  if(!c.length&&!s.length){
+    out(dc,e5par('Elige el cuadro y la situación de la paciente. El simulador propone la conducta con su posología; no calcula probabilidades.'));return;}
+  var pru=e5hv(s,'pru'),emb=e5hv(s,'emb'),pal=e5hv(s,'pal'),sinm=e5hv(s,'sinm'),rf=e5hv(s,'rf'),nino=e5hv(s,'nino');
+  var ext=e5hv(c,'ext');
+  var r=[];
+  r.push(e5par('<b>Base</b>: tranquiliza y espera la resolución en 6 a 8 semanas; explica que es autolimitada [58][13].'));
+  if(pru){
+    if(nino) r.push(e5par('<b>Prurito en menor de 6 años</b>: la ficha de cetirizina cubre desde los 6 años y la de hidrocortisona 1 % desde los 2; no hay dosis de ficha para este grupo, así que usa emoliente y consulta con pediatría o dermatología [70][7].'));
+    else r.push(e5par('<b>Prurito</b>: emoliente, más cetirizina 10 mg VO cada 24 h (máximo una tableta en 24 h) [70]; si hay placas muy pruriginosas, hidrocortisona 1 % crema en capa fina hasta 3 a 4 veces al día, hasta 7 días y consulta si persiste [7].'));
+  }
+  if(ext){
+    if(emb) r.push(e5par('<b>Cuadro extenso en embarazo</b>: no hay dosis gestacional de aciclovir en las fuentes revisadas; decide el antiviral con obstetricia en alto riesgo [61].'));
+    else if(nino) r.push(e5par('<b>Cuadro extenso en menor de 6 años</b>: no hay dosis pediátrica de aciclovir en las fuentes revisadas; deriva a pediatría o dermatología [67].'));
+    else r.push(e5par('<b>Cuadro extenso o de la primera semana</b>: puedes considerar aciclovir 800 mg VO 5 veces al día por 7 días, de mayor beneficio si se inicia en la primera semana; uso fuera de indicación, con evidencia moderada para la erupción e inconclusa para el prurito [67][62][68].'));
+  }
+  if(emb){
+    r.push(e5par('<b>Embarazo</b>: pide vigilancia obstétrica; el riesgo de pérdida es mayor si el inicio es antes de la semana 15, con enantema, síntomas generales o afectación de más de la mitad del cuerpo [66][61].'));
+  }
+  if(pal||sinm||rf){
+    r.push(e5par('<b>Descarta sífilis secundaria</b>: solicita VDRL o RPR antes de rotular como pitiriasis rosada; si es reactivo, maneja como sífilis y no como pitiriasis [13][63].'));
+  }
+  r.push('<span class="cf">Si el medallón único es anular con borde escamoso y el KOH es positivo → es tiña del cuerpo y se trata con antifúngico; si hay palmas o plantas con VDRL o RPR reactivo → es sífilis secundaria [60][63].</span>');
+  out(dc,r.join(''));
+}
+
+function dcE6tx(dc){
+  var e=sel(dc,'ext'),s=sel(dc,'sit');
+  function e6vacio(m){out(dc,'<p class="mini">'+m+'</p>');}
+  function e6par(t){return '<p>'+t+'</p>';}
+  function e6hv(a,v){return a.indexOf(v)>=0;}
+  if(!e.length&&!s.length){
+    e6vacio('Elige la extensión y la situación del paciente. El simulador propone el tratamiento con su posología; no calcula probabilidades.');return;}
+  var KT='ketoconazol 2 % crema tópica 1 vez al día por 14 días, o ketoconazol 2 % champú 1 vez al día por 3 días o 1 vez por semana por 3 semanas [72]';
+  var TB='terbinafina 1 % crema o solución tópica cada 12 h por 7 días [72]';
+  var CX='ciclopirox 1 % crema cada 12 h por 14 días [72]';
+  var SE='sulfuro de selenio 2,5 % en champú (pauta no establecida en la fuente revisada) [72]';
+  var FL='fluconazol 300 mg VO una vez por semana por 2 semanas (alternativa: 400 mg en dosis única) [72]';
+  var IT='itraconazol 200 mg VO cada 24 h por 5 a 7 días [72]';
+  var PR='profilaxis: itraconazol 200 mg VO cada 12 h un día al mes por 6 meses, o sulfuro de selenio [72]';
+  var r=[];
+  var oral=e6hv(e,'ext')||e6hv(s,'recid')||e6hv(s,'fallo');
+  if(e6hv(e,'lim')&&!oral){
+    r.push(e6par('<b>Pitiriasis versicolor limitada</b>: tópico de primera línea. Elige '+KT+'; o '+TB+'; o '+CX+'; o '+SE+'.'));
+  }
+  if(oral){
+    r.push(e6par('<b>'+(e6hv(e,'ext')?'Extensa':'Recurrente o con fracaso del tópico')+'</b>: antifúngico oral. De elección '+FL+'; alternativa '+IT+'. Se prefiere fluconazol por menos interacciones [72].'));
+  }
+  if(e6hv(s,'recid')) r.push(e6par('Recidivas frecuentes: tras la curación añade '+PR+'; la evidencia es limitada [72].'));
+  if(e6hv(s,'tbo')) r.push(e6par('<b>Evita la terbinafina oral</b>: no es eficaz en pitiriasis versicolor (no se excreta en el sudor ni alcanza concentración suficiente en el estrato córneo); cámbiala por fluconazol o itraconazol, o por terbinafina tópica [72].'));
+  if(e6hv(s,'kto')) r.push(e6par('<b>Evita el ketoconazol oral</b>: ya no se indica por hepatotoxicidad (cerca de 1 de cada 500) y las agencias de EE. UU. lo limitaron en 2013 a micosis sistémicas graves; usa fluconazol o itraconazol [72].'));
+  r.push(e6par('Explica que el color tarda meses en normalizarse y que la recidiva es frecuente en clima cálido; reevalúa con KOH, no con el aspecto [72].'));
+  r.push('<span class="cf">Si el KOH es negativo y la mancha clara no tiene escama → no es pitiriasis versicolor: piensa en vitíligo o pitiriasis alba y no des antifúngico; si la extensión o las recaídas aumentan → pasa de tópico a fluconazol o itraconazol oral [72][76].</span>');
+  out(dc,r.join(''));
+}
+
+function vsHas(a,v){return a.indexOf(v)>-1;}
+function vsP(t){return '<p>'+t+'</p>';}
+function dcVis(dc){
+  var ed=sel(dc,'ed'),zo=sel(dc,'zona'),es=sel(dc,'esc'),pr=sel(dc,'pru'),sg=sel(dc,'sg'),al=sel(dc,'al');
+  if(!(ed.length||zo.length||es.length||pr.length||sg.length||al.length)){
+    out(dc,vsP('Elige la edad, la zona, la escama, el prurito y los hallazgos que tengas. El simulador propone la entidad compatible, el hallazgo que falta para confirmarla y la conducta inicial; no calcula probabilidades.'));return;}
+  var E=[
+    {k:'e1',n:'Dermatitis atópica',f:'prurito con distribución según la edad y curso crónico, que cumpla los criterios del Reino Unido [16]',c:'emoliente diario y corticoide tópico por potencia y zona, baja en cara y pliegues [6]',h:0},
+    {k:'e2',n:'Dermatitis seborreica',f:'simetría en zonas seborreicas y ausencia de pérdida de pelo; KOH si hay duda con tiña [36]',c:'antifúngico tópico de base y corticoide de baja potencia por pocas semanas [36]',h:0},
+    {k:'e3',n:'Dermatitis de contacto',f:'la exposición y la mejoría al evitar el agente; parche si es crónica o el alérgeno se ignora [38][14]',c:'evitar el agente y corticoide tópico según la zona [38]',h:0},
+    {k:'e4',n:'Psoriasis',f:'Auspitz tras retirar la escama y revisión de uñas y superficie afectada [1][5]',c:'corticoide más calcipotriol tópicos si es leve, derivación si es moderada o grave, y nunca corticoide sistémico [46][47]',h:0},
+    {k:'e5',n:'Pitiriasis rosada',f:'medallón previo y KOH negativo; VDRL o RPR si hay palmas o plantas [13][58]',c:'tranquilizar y aliviar el prurito; cede en 6 a 8 semanas [13]',h:0},
+    {k:'e6',n:'Pitiriasis versicolor',f:'KOH del raspado con levaduras e hifas cortas [72]',c:'antifúngico tópico; oral si es extensa o recurrente; la terbinafina oral no sirve [72]',h:0}
+  ];
+  function add(a,l,ks){if(vsHas(a,l))for(var i=0;i<ks.length;i++)E[ks[i]].h++;}
+  add(ed,'lact',[0,1]);add(ed,'adol',[3,4,5]);add(ed,'adul',[1,2,3]);
+  add(zo,'flex',[0]);add(zo,'seb',[1]);add(zo,'geo',[2]);add(zo,'ext',[3]);add(zo,'tron',[4,5]);
+  add(es,'gras',[1]);add(es,'plat',[3]);add(es,'fina',[5]);add(es,'col',[4]);
+  add(pr,'int',[0,2]);add(pr,'leve',[1,3,5]);
+  add(sg,'atop',[0]);add(sg,'med',[4]);add(sg,'aus',[3]);add(sg,'pits',[3]);add(sg,'una',[5]);add(sg,'evita',[2]);add(sg,'kohp',[5]);
+  var x=[];
+  if(vsHas(al,'erit')) x.push(vsP('<b>Alarma, psoriasis eritrodérmica o pustulosa generalizada</b>: es la amenaza del grupo y pasa por delante de cualquier otro diagnóstico. Falta confirmar el antecedente de psoriasis y descartar causas de eritrodermia. Conducta inicial: deriva sin demora y no des corticoide sistémico [1][5].'));
+  if(vsHas(al,'herp')) x.push(vsP('<b>Alarma, eccema herpético</b> sobre una dermatitis atópica. Falta confirmar el antecedente de eccema y la fiebre. Conducta inicial: urgencia con antiviral intravenoso; no lo rotules como sobreinfección bacteriana [10][19].'));
+  if(vsHas(al,'palm')) x.push(vsP('<b>Palmas o plantas</b>: piensa en sífilis secundaria antes de aceptar una pitiriasis rosada. Falta el VDRL o RPR. Conducta inicial: pídelo y busca factor de riesgo y lesiones mucosas [13][63].'));
+  if(vsHas(al,'vih')) x.push(vsP('<b>Forma extensa o súbita</b> de dermatitis seborreica: marcador cutáneo de inmunosupresión. Falta la prueba de VIH. Conducta inicial: pídela con consejería [12].'));
+  var mx=0,i;
+  for(i=0;i<E.length;i++) if(E[i].h>mx) mx=E[i].h;
+  var top=[];
+  if(mx>0) for(i=0;i<E.length;i++) if(E[i].h===mx) top.push(E[i]);
+  if(vsHas(sg,'kohn')) x.push(vsP('KOH negativo: descarta pitiriasis versicolor y tiña; quedan los eccemas, la psoriasis y la pitiriasis rosada [3][72].'));
+  if(vsHas(sg,'kohn')) top=top.filter(function(e){return e.k!=='e6';});
+  if(!top.length){
+    x.push(vsP('Los datos elegidos no bastan para sostener una entidad. Describe la lesión, la escama y la distribución, y haz un KOH si la escama es dudosa [3].'));
+  } else {
+    for(i=0;i<top.length&&i<3;i++){
+      var e=top[i];
+      x.push(vsP('<b>'+e.n+'</b> es la compatible'+(top.length>1?' (empata con otras: busca el dato que las separe)':'')+'. Falta confirmar: '+e.f+'. Conducta inicial: '+e.c+'. Detalle en su pestaña.'));
+    }
+  }
+  x.push('<span class="cf">Si aparece Auspitz tras retirar la escama → de eccema a psoriasis; si el KOH muestra levaduras e hifas → pitiriasis versicolor y antifúngico en lugar de corticoide [1][72].</span>');
+  out(dc,x.join(''));
+}
+</script>

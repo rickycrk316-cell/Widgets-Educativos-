@@ -27,7 +27,7 @@
   "sin"
  ],
  "pg": {
-  "vis": 0,
+  "vis": 4,
   "e1": 5,
   "e2": 3,
   "e3": 3,
@@ -69,7 +69,12 @@
   "e6"
  ],
  "nucleo": {
-  "vis": [],
+  "vis": [
+   "Eje 1, la lesión: color, escama, borde y distribución de la placa separan los eccemas (borde difuso, prurito), las papuloescamosas (borde neto, escama gruesa o collarete) y la infección superficial (escama fina).",
+   "Eje 2, la prueba: ante una escama dudosa el KOH del raspado descarta o confirma un hongo antes de recetar un corticoide.",
+   "Eje 3, el tratamiento común: emoliente como base y corticoide tópico por potencia y zona; en cara, pliegues y pañal solo baja potencia.",
+   "Amenaza del grupo: la psoriasis eritrodérmica o pustulosa generalizada exige derivación sin demora y nunca corticoide sistémico."
+  ],
   "e1": [
    "Ciclo prurito-rascado y liquenificación",
    "IL-31 y prurito",
