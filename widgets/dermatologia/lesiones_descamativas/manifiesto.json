@@ -1,0 +1,128 @@
+{
+ "titulo": "Lesiones descamativas",
+ "salida": "../Lesiones_descamativas_widget_v11.html",
+ "tipo": "v11",
+ "tema": "dermatologia",
+ "modo": "multi",
+ "excepcion_entidades": "pedido expreso del estudiante: un solo widget con 6 entidades (Caso 8, 2.ª rotación)",
+ "entidades": {
+  "e1": "D. atópica",
+  "e2": "D. seborreica",
+  "e3": "D. contacto",
+  "e4": "Psoriasis",
+  "e5": "P. rosada",
+  "e6": "P. versicolor"
+ },
+ "principal": "e1",
+ "amenaza": "e4",
+ "tabs": [
+  "pan",
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4",
+  "e5",
+  "e6",
+  "sin"
+ ],
+ "pg": {
+  "vis": 0,
+  "e1": 5,
+  "e2": 3,
+  "e3": 3,
+  "e4": 3,
+  "e5": 3,
+  "e6": 3
+ },
+ "fey": {
+  "e1": 2,
+  "e2": 1,
+  "e3": 1,
+  "e4": 1,
+  "e5": 1,
+  "e6": 1
+ },
+ "nodos": {
+  "e1": 8,
+  "e2": 5,
+  "e3": 6,
+  "e4": 6,
+  "e5": 6,
+  "e6": 6
+ },
+ "signos": {
+  "e1": 6,
+  "e2": 5,
+  "e3": 4,
+  "e4": 4,
+  "e5": 4,
+  "e6": 4
+ },
+ "dc": [
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4",
+  "e5",
+  "e6"
+ ],
+ "nucleo": {
+  "vis": [],
+  "e1": [
+   "Ciclo prurito-rascado y liquenificación",
+   "IL-31 y prurito",
+   "Entrada de alérgenos y S. aureus",
+   "Defensa antiviral débil y eccema herpético",
+   "Prurito intenso con sueño interrumpido",
+   "Prurito, curso crónico y distribución por edad",
+   "Corticoide tópico por potencia y zona"
+  ],
+  "e2": [
+   "Sebo activo en zonas seborreicas según edad",
+   "Ácidos grasos libres alteran queratinización y barrera",
+   "Inflamación por citocinas y prostaglandinas",
+   "Falla inmune: forma extensa y recurrente",
+   "Escama grasienta simétrica en cuero cabelludo, cejas, surcos nasogenianos y preesternal",
+   "Diagnóstico clínico por zona y aspecto",
+   "Ketoconazol tópico: champú en cuero cabelludo, crema en cara"
+  ],
+  "e3": [
+   "Contacto con la sustancia y barrera cutánea alterada",
+   "Reexposición: linfocitos T de memoria a las 48–72 h",
+   "Espongiosis: edema entre los queratinocitos forma vesículas",
+   "Rascado y contacto repetido: liquenificación y fisuras",
+   "Forma geométrica con límite neto que copia el contacto",
+   "Historia dirigida a la exposición y examen de forma y distribución",
+   "Corticoide tópico de potencia media o alta según zona"
+  ],
+  "e4": [
+   "Terreno HLA-C*06:02 más desencadenante",
+   "Hiperproliferación queratinocitaria y recambio acelerado",
+   "Paraqueratosis: queratinocitos llegan inmaduros",
+   "Vasos dilatados bajo epidermis adelgazada",
+   "Signo de Auspitz tras retirar la escama",
+   "Clínica: placa escamosa y Auspitz",
+   "Leve: corticoide más calcipotriol tópicos"
+  ],
+  "e5": [
+   "Respuesta inmune sistémica y pródromo",
+   "Medallón heráldico en el sitio inicial",
+   "Erupción secundaria de 1 a 2 semanas después",
+   "Inflamación epidérmica y collarete descamativo",
+   "Medallón heráldico seguido de erupción en árbol de Navidad",
+   "Diagnóstico clínico: medallón y árbol de Navidad",
+   "Tranquilizar y esperar 6 a 8 semanas"
+  ],
+  "e6": [
+   "Ácido azelaico inhibe la melanogénesis",
+   "Pigmentos indólicos: hiperpigmentación y fluorescencia",
+   "Paso de levadura a forma micelial",
+   "Escama fina por invasión del estrato córneo",
+   "Signo de la uñada (Besnier)",
+   "Máculas con escama fina en tronco superior",
+   "Tópico si es limitada"
+  ]
+ }
+}

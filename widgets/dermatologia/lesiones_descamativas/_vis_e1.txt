@@ -1,0 +1,40 @@
+(a) Columna D. atópica (9 celdas)
+1. Barrera por filagrina defectuosa más inmunidad Th2 y ciclo prurito-rascado
+2. Lactante y niño con atopia familiar; asma o rinitis asociadas
+3. Crónica y recidivante; inicio en la infancia temprana
+4. Prurito intenso, peor de noche, con sueño interrumpido
+5. Prurito con eccema en mejillas, extremidades o flexuras según la edad
+6. Sin afectación del área del pañal en el lactante
+7. Clínica con criterios del Reino Unido; sin prueba definitiva
+8. Emoliente diario y corticoide tópico por zona; primer nivel
+9. Eccema herpético con fiebre, o sobreinfección por S. aureus
+
+(b) Banderas rojas
+- Vesiculopústulas dolorosas con fiebre sobre un eccema: eccema herpético, urgencia con aciclovir intravenoso.
+- Costras y exudado que no ceden con el tratamiento: sobreinfección por S. aureus; toma cultivo.
+
+(c) Etapa de Panorama
+Cae en el extremo de los eccemas: placas rojas con escama y prurito que dominan el cuadro. Su mecanismo: una barrera defectuosa por pérdida de filagrina deja entrar alérgenos y bacterias, la inmunidad Th2 libera IL-4, IL-13 e IL-31 y el rascado vuelve a abrir la piel. El signo que la delata es el prurito intenso con el eccema según la edad, que respeta el área del pañal. La conducta decisiva es el emoliente diario con antiinflamatorio tópico por potencia y zona, y urgencia si hay vesiculopústulas con fiebre. Si la escama es grasienta en cuero cabelludo y pliegues sin prurito, pasa a la seborreica.
+Perla: prurito con eccema que respeta el pañal es atópica; vesículas dolorosas con fiebre, eccema herpético.
+
+(d) nucleo (Anki)
+- Ciclo prurito-rascado y liquenificación
+- IL-31 y prurito
+- Entrada de alérgenos y S. aureus
+- Defensa antiviral débil y eccema herpético
+- Prurito intenso con sueño interrumpido
+- Prurito, curso crónico y distribución por edad
+- Corticoide tópico por potencia y zona
+
+(e) Conteos
+pg: 5; fey: 2; nodos: 8; signos: 6; perlas: 7; simuladores: 2 (dcE1dx, dcE1tx); dc: ["e1"] bajo Diagnóstico y Tratamiento
+
+(f) Errores que no se pueden cometer
+- Rotular como sobreinfección bacteriana un eccema con vesiculopústulas dolorosas y fiebre sin pensar en eccema herpético ni dar aciclovir.
+- Indicar dietas de eliminación o IgE de rutina en un niño con dermatitis atópica sin historia de alergia alimentaria.
+
+(g) Chips para el simulador diferencial
+- Prurito intenso con sueño interrumpido: apunta a atópica; la seborreica no suele dar picor.
+- Eccema en mejillas y extremidades del lactante, con área del pañal respetada: atópica.
+- Eccema en flexuras con piel seca y antecedente de asma: atópica.
+- Vesiculopústulas dolorosas con fiebre sobre un eccema: eccema herpético, complicación de la atópica.

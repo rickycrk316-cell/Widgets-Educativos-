@@ -26,7 +26,7 @@ def nz(s):
     s = s.replace('º', 'o').replace('°', 'o').casefold()
     s = ''.join(c for c in unicodedata.normalize('NFKD', s) if not unicodedata.combining(c))
     return re.sub(r'[\s.]', '', s)
-IDRE = re.compile(r'^(?:(e[1-5])-)?([ms])-(\d+)$')
+IDRE = re.compile(r'^(?:(e[1-6])-)?([ms])-(\d+)$')
 def kind(i):
     m = IDRE.match(i or ''); return m.group(2) if m else None
 # --- ensamblaje: separa kit / partes del LLM
@@ -497,7 +497,7 @@ else:
            'fey': {k: len(secs[k].select('.fey')) for k in CONT if secs[k].select('.fey')}, 'nodos': {k: len(secs[k].select('.nodo')) for k in ENT if k in secs},
            'signos': {k: len(secs[k].select('.signo')) for k in ENT if k in secs}, 'dc': DCT}
 if M is not None:
-    ALL = ['modo', 'entidades', 'principal', 'amenaza', 'tabs', 'pg', 'fey', 'nodos', 'signos', 'dc', 'nucleo', 'dg', 'tema']
+    ALL = ['modo', 'entidades', 'principal', 'amenaza', 'tabs', 'pg', 'fey', 'nodos', 'signos', 'dc', 'nucleo', 'dg', 'tema', 'excepcion_entidades']
     for key in M:
         if key not in ALL and key not in ('titulo', 'salida', 'tipo'): err('manifiesto', f'clave desconocida "{key}" (permitidas: {", ".join(ALL)})')
     req = [x for x in ALL if x not in ('dg', 'tema')] if MODE == 'multi' else ['tabs', 'pg', 'fey', 'nodos', 'signos', 'dc']
