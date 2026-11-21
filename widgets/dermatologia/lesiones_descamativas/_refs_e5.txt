@@ -1,0 +1,15 @@
+@e5_leung2021 | Leung AKC, Lam JM, Leong KF, Hon KL. Pityriasis rosea: an updated review. Curr Pediatr Rev. 2021;17(3):201-11. doi:10.2174/1573396316666200923161330 PMID: 32964824
+@e5_mashoudy2025 | Mashoudy KD, Kim S, Farhadi L, Elman SA. Beyond the herald patch: exploring the complex landscape of pityriasis rosea. Am J Clin Dermatol. 2025;26(2):237-50. doi:10.1007/s40257-024-00915-7 PMID: 39798062
+@e5_villalon2018 | Villalon-Gomez JM. Pityriasis rosea: diagnosis and treatment. Am Fam Physician. 2018;97(1):38-44. PMID: 29365241
+@e5_stulberg2004 | Stulberg DL, Wolfrey J. Pityriasis rosea. Am Fam Physician. 2004;69(1):87-91. PMID: 14727822
+@e5_contreras2019 | Contreras-Ruiz J, Peternel S, Jiménez Gutiérrez C, Culav-Koscak I, Reveiz L, Silbermann-Reynoso ML. Interventions for pityriasis rosea. Cochrane Database Syst Rev. 2019;10:CD005068. doi:10.1002/14651858.CD005068.pub3 PMID: 31684696
+@e5_drago2006 | Drago F, Vecchio F, Rebora A. Use of high-dose acyclovir in pityriasis rosea. J Am Acad Dermatol. 2006;54(1):82-5. doi:10.1016/j.jaad.2005.06.042 PMID: 16384760
+@e5_rodriguez2018 | Rodriguez-Zuniga M, Torres N, Garcia-Perdomo H. Effectiveness of acyclovir in the treatment of pityriasis rosea. A systematic review and meta-analysis. An Bras Dermatol. 2018;93(5):686-95. doi:10.1590/abd1806-4841.20187252 PMID: 30156618
+@e5_manduca2025 | Manduca S, Oh CS, Ong M, Lipner SR, Pomeranz MK, Bieber AK. The risks of pityriasis rosea in pregnancy: a review. Int J Womens Dermatol. 2025;11(1):e191. doi:10.1097/JW9.0000000000000191 PMID: 39822983
+@e5_drago2018 | Drago F, Ciccarese G, Herzum A, Rebora A, Parodi A. Pityriasis rosea during pregnancy: major and minor alarming signs. Dermatology. 2018;234(1-2):31-6. doi:10.1159/000489879 PMID: 29936509
+@e5_wenger2022 | Wenger-Oehn L, Graier T, Ambros-Rudolph C, Müllegger R, Bittighofer C, Wolf P, et al. Pityriasis rosea in pregnancy: a case series and literature review. J Dtsch Dermatol Ges. 2022;20(7):953-9. doi:10.1111/ddg.14763 PMID: 35616213
+@e5_trayes2018 | Trayes KP, Savage K, Studdiford JS. Annular lesions: diagnosis and treatment. Am Fam Physician. 2018;98(5):283-91. PMID: 30216021
+@e5_scarvaglieri2025 | Scarvaglieri I, Cesanelli F, Tiecco G, Ghini I, Minisci D, Davoli C, et al. Atypical dermatological manifestations of syphilis in advanced HIV: a case-based narrative review. Mediterr J Hematol Infect Dis. 2025;17(1):e2025056. doi:10.4084/MJHID.2025.056 PMID: 40937317
+@e5_saad2022 | Saad S, Gammoudi R, Abdessayed N, Denguezli M. Domperidone-induced pityriasis rosea-like drug eruption. Clin Case Rep. 2022;10(4):e05674. doi:10.1002/ccr3.5674 PMID: 35414911
+@e5_dmcet | BJWC. Allergy Relief (cetirizine hydrochloride) tablet, film coated [Drug Facts]. DailyMed. Setid caa22bcb-6617-4724-8dcb-e63bfeef41a9
+@e5_dmhc | Rida LLC. Terramed Just Think Comfort hydrocortisone 1% cream [Drug Facts]. DailyMed. Setid 0d2c0c2c-370f-4adb-b0ea-1e218c927f8b

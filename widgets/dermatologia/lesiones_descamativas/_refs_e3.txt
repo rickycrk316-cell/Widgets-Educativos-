@@ -1,0 +1,10 @@
+@e3_usatine2010 | Usatine RP, Riojas M. Diagnosis and management of contact dermatitis. Am Fam Physician. 2010;82(3):249-55. PMID: 20672788.
+@e3_bains2019 | Bains SN, Nash P, Fonacier L. Irritant contact dermatitis. Clin Rev Allergy Immunol. 2019;56(1):99-109. doi:10.1007/s12016-018-8713-0. PMID: 30293200.
+@e3_patel2022 | Patel K, Nixon R. Irritant contact dermatitis - a review. Curr Dermatol Rep. 2022;11(2):41-51. doi:10.1007/s13671-021-00351-4. PMID: 35433115.
+@e3_ahlstrom2019 | Ahlström MG, Thyssen JP, Wennervaldt M, Menné T, Johansen JD. Nickel allergy and allergic contact dermatitis: a clinical review of immunology, epidemiology, exposure, and treatment. Contact Dermatitis. 2019;81(4):227-41. doi:10.1111/cod.13327. PMID: 31140194.
+@e3_thyssen2022 | Thyssen JP, Schuttelaar MLA, Alfonso JH, Andersen KE, Angelova-Fischer I, Arents BWM, et al. Guidelines for diagnosis, prevention, and treatment of hand eczema. Contact Dermatitis. 2022;86(5):357-78. doi:10.1111/cod.14035. PMID: 34971008.
+@e3_matiz2011 | Matiz C, Russell K, Jacob SE. The importance of checking for delayed reactions in pediatric patch testing. Pediatr Dermatol. 2011;28(1):12-4. doi:10.1111/j.1525-1470.2010.01297.x. PMID: 21208272.
+@e3_fonacierpg2015 | Fonacier L. A practical guide to patch testing. J Allergy Clin Immunol Pract. 2015;3(5):669-75. doi:10.1016/j.jaip.2015.05.001. PMID: 26054552.
+@e3_dm_triamcinolona | Triamcinolone acetonide cream USP, 0.1% [ficha técnica]. A-S Medication Solutions. DailyMed. Setid ef529d69-d75c-4f9b-a493-fbd95359a4ab.
+@e3_dm_clobetasol | Clobetasol propionate cream USP, 0.05% [ficha técnica]. A-S Medication Solutions. DailyMed. Setid 98b23b99-fab4-49fb-b070-758fb030e9bb.
+@e3_dm_prednisona | Prednisone tablets USP, 20 mg [ficha técnica]. PD-Rx Pharmaceuticals. DailyMed. Setid 6b360c1f-c862-47ee-a40e-3903c2d6162f.

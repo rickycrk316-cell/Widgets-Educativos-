@@ -1,0 +1,40 @@
+(a) Celdas columna «P. rosada» (orden de las 9 preguntas)
+1. Reactivación de HHV-6 y HHV-7 con respuesta inmune; autolimitada
+2. Adolescentes y adultos jóvenes; más en mujeres
+3. Medallón y, 1 a 2 semanas después, erupción; cede en 6 a 8 semanas
+4. Placas ovales rosadas con escama en tronco; prurito variable
+5. Medallón heráldico, luego erupción en árbol de Navidad con collarete interno
+6. KOH negativo; palmas y plantas respetadas
+7. Clínica; KOH o VDRL/RPR solo para descartar tiña o sífilis
+8. Tranquilizar y aliviar el prurito; primer nivel, sin derivar
+9. Se pasa por alto sífilis o el riesgo en el embarazo temprano
+
+(b) Banderas rojas
+- Embarazo con inicio antes de la semana 15, enantema, síntomas generales o afectación extensa: vigilancia obstétrica.
+- Palmas, plantas, lesiones mucosas o sin medallón con riesgo sexual: pide VDRL o RPR por sífilis secundaria.
+
+(c) Etapa de Panorama (e5)
+Texto: Cae en el extremo autolimitado del eje: una papuloescamosa viral que se cura sola. El mecanismo probable es la reactivación de HHV-6 y HHV-7 con respuesta inmune, que produce un medallón heráldico y, una o dos semanas después, lesiones ovales con collarete interno orientadas según las líneas de clivaje. El signo que la delata es el árbol de Navidad con KOH negativo. La conducta decisiva es tranquilizar, tratar el prurito, vigilar el embarazo temprano y descartar sífilis si hay palmas o plantas. Falta un último vecino: una infección superficial que se confirma con KOH, la pitiriasis versicolor.
+Perla (≤20 palabras): Medallón más árbol de Navidad con KOH negativo es pitiriasis rosada; «tiña rosada» no es tiña.
+
+(d) nucleo Anki (texto literal de data-paso / k / 1.º / De elección)
+- Respuesta inmune sistémica y pródromo
+- Medallón heráldico en el sitio inicial
+- Erupción secundaria de 1 a 2 semanas después
+- Inflamación epidérmica y collarete descamativo
+- k: Medallón heráldico seguido de erupción en árbol de Navidad
+- 1.º: Diagnóstico clínico: medallón y árbol de Navidad
+- De elección: Tranquilizar y esperar 6 a 8 semanas
+
+(e) Conteos: pg 3 · fey 1 · nodos 6 (4 clin=1) · signos 4 · perlas 4 · simuladores 1 (dcE5tx)
+
+(f) Errores que no se pueden cometer
+- Tratar con antifúngico una pitiriasis rosada («tiña rosada»): no es fúngica y el KOH es negativo.
+- Rotular como pitiriasis rosada una erupción con palmas o plantas sin pedir VDRL o RPR.
+
+(g) Chips para el simulador diferencial (hallazgo → por qué apunta a P. rosada)
+- Medallón previo: lesión inicial grande que precede a la erupción por 1 a 2 semanas
+- Árbol de Navidad: lesiones ovales alineadas con las líneas de clivaje
+- Collarete interno: escama adherida al borde, libre hacia el centro
+- KOH negativo: descarta tiña
+- Cede sola en 6 a 8 semanas

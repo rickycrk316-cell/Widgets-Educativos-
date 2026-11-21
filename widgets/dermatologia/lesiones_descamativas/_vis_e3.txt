@@ -1,0 +1,38 @@
+(a) Celdas de la columna D. contacto (9 preguntas en orden de §9)
+1. Eccema tras el contacto con una sustancia externa
+2. Placa eritematosa con escama y límite neto, a veces vesículas
+3. Daño directo (irritativa) o hipersensibilidad tipo IV (alérgica)
+4. Adultos expuestos por trabajo, joyas o cosméticos; níquel más en mujeres
+5. Forma geométrica con límite neto que copia el contacto
+6. Historia de exposición y mejoría al evitar el agente
+7. 1.º historia de exposición y forma; parche si crónica o alérgeno ignorado
+8. Evitar agente y corticoide tópico; derivar parche u ocupacional
+9. Cronificación, dermatitis ocupacional y sobreinfección
+
+(b) Banderas rojas
+- Más del 20 % de superficie o brote grave: requiere esteroide sistémico con descenso en 2 a 3 semanas, no suspender de golpe [@e3_usatine2010].
+- Costras, exudado o fisuras con fiebre: sospecha sobreinfección bacteriana [@bolognia5].
+
+(c) Etapa de Panorama (eccemas): Dermatitis de contacto
+Cae en el extremo de los eccemas, junto a la atópica, pero con causa externa. El mecanismo es daño directo de la barrera (irritativa) o hipersensibilidad retardada tipo IV tras sensibilización y reexposición (alérgica). La delata la placa de forma geométrica y límite neto que copia el punto de contacto, con vesículas si es aguda. La conducta decisiva es identificar y evitar el agente, tratar con corticoide tópico según zona y pedir el parche si es crónica o el alérgeno se ignora. El puente a la siguiente entidad es la placa papuloescamosa crónica sin causa externa: si el límite neto no copia ningún contacto y la placa es gruesa y plateada, piensa en psoriasis.
+Perla: forma geométrica y límite neto: busca el objeto que la dibuja [@e3_usatine2010].
+
+(d) nucleo (Anki)
+- Contacto con la sustancia y barrera cutánea alterada
+- Reexposición: linfocitos T de memoria a las 48–72 h
+- Espongiosis: edema entre los queratinocitos forma vesículas
+- Rascado y contacto repetido: liquenificación y fisuras
+- Forma geométrica con límite neto que copia el contacto
+- Historia dirigida a la exposición y examen de forma y distribución (1.º)
+- Corticoide tópico de potencia media o alta según zona (De elección)
+
+(e) Conteos: pg 3, fey 1, nodos 6 (4 con data-clin=1), signos 4, perlas 5, simuladores 1 (dcE3tx)
+
+(f) Errores que no se pueden cometer
+- Suspender de golpe la prednisona tras el brote extenso (rebote) [@e3_usatine2010].
+- Poner el parche sobre piel tratada con corticoide o en quien toma inmunosupresores [@e3_fonacierpg2015].
+
+(g) Chips para el simulador diferencial de vis
+- Forma geométrica con límite neto: copia el punto de contacto, apunta a dermatitis de contacto.
+- Mejora al evitar el agente (joya, tinte, guante, planta): sugiere alérgica o irritativa.
+- Vesículas lineales tras contacto con plantas: alérgica aguda [@e3_usatine2010].
