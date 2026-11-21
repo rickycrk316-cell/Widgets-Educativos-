@@ -65,7 +65,9 @@ if MODE == 'mono':
     if [k for k in tbs if k in BASE] != [k for k in BASE if k in tbs]: err('pestañas', f'orden de barra: {" ".join(BASE)} (+1 adicional en su lugar lógico)')
 else:
     exp = ['pan', 'vis'] + [f'e{i}' for i in range(1, N + 1)] + ['sin']
-    if N > 5: err('entidades', f'{N} entidades: máximo 5; propone dividir el tema en dos widgets')
+    EXC = (M or {}).get('excepcion_entidades')
+    if N > 5 and not (EXC and N <= 6): err('entidades', f'{N} entidades: máximo 5; propone dividir el tema en dos widgets')
+    elif N > 5: warn('entidades', f'{N} entidades por excepción declarada del estudiante: {EXC}')
     if N < 3: err('entidades', f'{N} entidades: multi exige 3–5 (con 1–2 usa mono)')
     if tbs != exp: err('pestañas', f'barra multi debe ser exactamente {" ".join(exp)}; hay {" ".join(map(str, tbs))}')
 CONT = [k for k in tbs if k != 'pan' and k in secs]

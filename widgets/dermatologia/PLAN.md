@@ -30,3 +30,16 @@ Igual que `widgets/patologia_urinaria_baja/PLAN.md`, Widget B: cabecera `kit/def
 
 ## Pruebas finales del orquestador
 `construir.py` + `auditar_definiciones.py <html> 9` + `probar_definiciones.js`. Sin más revisiones.
+
+## Widget E · Lesiones descamativas (enseñanza v11, multi) — `lesiones_descamativas/`
+
+Sílabo: 2.ª rotación, **Caso 8 — Lesiones dérmicas** («dermatitis atópica, dermatitis seborreica, dermatitis de contacto y su diagnóstico diferencial con tiñas, pitiriasis y psoriasis»; relación médico-paciente-familia en infantes con lesiones crónicas).
+
+Router: `Modo: multi · Entidades: e1=D. atópica (principal), e2=D. seborreica, e3=D. contacto, e4=Psoriasis, e5=P. rosada, e6=P. versicolor · Amenaza: e4 · Override: sí (6 entidades por pedido expreso del estudiante: un solo widget)`
+
+- **Excepción al máximo de 5 entidades**: el estudiante pidió un solo widget. `kit/v11/validar.py` acepta hasta 6 solo si el manifiesto declara `excepcion_entidades` (con aviso).
+- «Tiña versicolor» y «pitiriasis versicolor» son la misma entidad; «tiña rosada» se lee como pitiriasis rosada (no es una tiña). La tiña del cuerpo (*tinea corporis*) entra como vecina fuera del grupo en «No confundir con…» de e4, e5 y e6 y en el paso «Añade» (KOH) de `vis`.
+- Presentación común: **placa o mancha eritematosa con escama** (lesión descamativa) en consulta de primer nivel.
+- Eje de orden: eccemas (barrera/inmunidad tipo 2 → *Malassezia*-inflamación → exógeno) → papuloescamosa inmunomediada crónica → papuloescamosa autolimitada → infección superficial.
+- Principal e1 = dermatitis atópica (la más frecuente en la infancia y la que nombra el sílabo con «infantes con lesiones crónicas»). Amenaza e4 = psoriasis (eritrodermia y psoriasis pustulosa generalizada, a menudo tras retirar corticoide sistémico; artritis psoriásica con daño articular irreversible; comorbilidad cardiometabólica).
+- Citas: base común verificada en PubMed (1–30) + tramos por entidad (e1 101–, e2 201–, … e6 601–, vis/sin 701–), fusionados y renumerados por el orquestador.
