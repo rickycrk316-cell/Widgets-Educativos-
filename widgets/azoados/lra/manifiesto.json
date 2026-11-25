@@ -4,14 +4,95 @@
  "tipo": "v11",
  "tema": "urologia",
  "modo": "multi",
- "entidades": {"e1": "Necrosis tubular", "e2": "Prerrenal", "e3": "Nefritis intersticial", "e4": "Posrenal"},
+ "entidades": {
+  "e1": "Necrosis tubular",
+  "e2": "Prerrenal",
+  "e3": "Nefritis intersticial",
+  "e4": "Posrenal"
+ },
  "principal": "e1",
  "amenaza": "e1",
- "tabs": ["pan", "vis", "e1", "e2", "e3", "e4", "sin"],
- "pg": {"vis": 4, "e1": 5, "e2": 3, "e3": 3, "e4": 3},
- "fey": {"e1": 2, "e2": 1, "e3": 1, "e4": 1},
- "nodos": {"e1": 7, "e2": 5, "e3": 5, "e4": 5},
- "signos": {"e1": 4, "e2": 3, "e3": 3, "e4": 3},
- "dc": ["vis", "e1", "e2", "e3", "e4"],
- "nucleo": {"vis": [], "e1": [], "e2": [], "e3": [], "e4": []}
+ "tabs": [
+  "pan",
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4",
+  "sin"
+ ],
+ "pg": {
+  "vis": 4,
+  "e1": 5,
+  "e2": 3,
+  "e3": 3,
+  "e4": 3
+ },
+ "fey": {
+  "e1": 2,
+  "e2": 1,
+  "e3": 1,
+  "e4": 1
+ },
+ "nodos": {
+  "e1": 7,
+  "e2": 5,
+  "e3": 5,
+  "e4": 5
+ },
+ "signos": {
+  "e1": 4,
+  "e2": 3,
+  "e3": 3,
+  "e4": 3
+ },
+ "dc": [
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4"
+ ],
+ "nucleo": {
+  "vis": [
+   "Eje 1 — ¿Hay lesión renal aguda y qué estadio? Se define por creatinina, diuresis o ambas, y el estadio KDIGO marca la gravedad.",
+   "Eje 2 — ¿Antes, dentro o después del riñón? Falla la perfusión (prerrenal), el parénquima (necrosis tubular, nefritis intersticial) o el drenaje (posrenal).",
+   "Eje 3 — Sedimento, índices urinarios y respuesta a volumen separan la prerrenal de la necrosis tubular y de la nefritis intersticial.",
+   "Eje 4 — La ecografía descarta la obstrucción, la causa más reversible; las complicaciones comunes deciden la diálisis."
+  ],
+  "e1": [
+   "Necrosis, apoptosis y desprendimiento celular",
+   "Retroalimentación tubuloglomerular y caída del FG",
+   "Fases: inicio, mantenimiento y recuperación",
+   "Cilindros granulosos pardos y células tubulares en el sedimento",
+   "Confirmar LRA y estadio KDIGO",
+   "Cristaloide balanceado guiado por respuesta"
+  ],
+  "e2": [
+   "Cae el volumen circulante efectivo",
+   "Falla la autorregulación y cae el FG",
+   "Reabsorción ávida de sodio, agua y urea",
+   "BUN/creatinina mayor de 20 con orina concentrada y sodio urinario bajo",
+   "Volemia, fármacos y pérdidas en la historia",
+   "Cristaloide balanceado en alícuotas con reevaluación"
+  ],
+  "e3": [
+   "Hipersensibilidad tipo IV con linfocitos T y eosinófilos",
+   "Infiltrado y edema comprimen túbulos y capilares",
+   "Disfunción tubular y caída del filtrado",
+   "Piuria estéril con cilindros leucocitarios",
+   "Biopsia renal confirma la nefritis intersticial",
+   "Retirar el agente causal",
+   "Corticoide pronto si no mejora"
+  ],
+  "e4": [
+   "Obstrucción del flujo urinario",
+   "Sube la presión en Bowman y la pelvis",
+   "Vasoconstricción aferente y caída del filtrado",
+   "Al liberar: diuresis posobstructiva",
+   "Hidronefrosis en la ecografía renal",
+   "Ecografía renal y vesical como primera prueba",
+   "Sonda vesical, doble J o nefrostomía según nivel"
+  ]
+ }
 }
