@@ -1,0 +1,17 @@
+{
+ "titulo": "Lesión renal aguda",
+ "salida": "../Lesion_renal_aguda_widget_v11.html",
+ "tipo": "v11",
+ "tema": "urologia",
+ "modo": "multi",
+ "entidades": {"e1": "Necrosis tubular", "e2": "Prerrenal", "e3": "Nefritis intersticial", "e4": "Posrenal"},
+ "principal": "e1",
+ "amenaza": "e1",
+ "tabs": ["pan", "vis", "e1", "e2", "e3", "e4", "sin"],
+ "pg": {"vis": 4, "e1": 5, "e2": 3, "e3": 3, "e4": 3},
+ "fey": {"e1": 2, "e2": 1, "e3": 1, "e4": 1},
+ "nodos": {"e1": 7, "e2": 5, "e3": 5, "e4": 5},
+ "signos": {"e1": 4, "e2": 3, "e3": 3, "e4": 3},
+ "dc": ["vis", "e1", "e2", "e3", "e4"],
+ "nucleo": {"vis": [], "e1": [], "e2": [], "e3": [], "e4": []}
+}
