@@ -1,0 +1,258 @@
+<script>
+function dcVis(dc){
+  var v=sel(dc,'vol'),s=sel(dc,'sed'),f=sel(dc,'fe'),e=sel(dc,'exp'),c=sel(dc,'eco'),g=sel(dc,'glo');
+  function h(a,x){return a.indexOf(x)>-1;}
+  function p(t){return '<p>'+t+'</p>';}
+  if(!(v.length||s.length||f.length||e.length||c.length||g.length)){
+    out(dc,p('Elige la respuesta a volumen, el sedimento, el FENa, la exposición, la ecografía y la vejiga. El simulador propone la entidad compatible, el hallazgo que falta y la conducta inicial; no calcula probabilidades.'));return;}
+  var x=[],n=0;
+  var pos=h(c,'h')||h(g,'s');
+  var nia=h(s,'le')||(h(e,'far')&&!h(s,'gr'));
+  var nta=!pos&&!nia&&(h(s,'gr')||(h(f,'a')&&!h(v,'si'))||(h(e,'nef')&&h(v,'no')));
+  var pre=!pos&&!nia&&!nta&&(h(v,'si')||h(s,'bl')||h(f,'b')||h(e,'hip'));
+  if(pos){n++;
+    x.push(p('<b>LRA posrenal</b>: la hidronefrosis, el globo vesical o la anuria apuntan a una obstrucción, la causa más reversible [3][29]. Falta localizar el nivel: ecografía renal y vesical, y la causa (próstata, litiasis, tumor pélvico) [3]. Conducta inicial: sondaje vesical, y si la sonda no drena o hay hidronefrosis, derivación urinaria con urología; tras aliviar, vigila la diuresis posobstructiva [29].'));
+  }
+  if(nia){n++;
+    x.push(p('<b>Nefritis intersticial aguda</b>: la piuria estéril con cilindros leucocitarios o un fármaco nuevo con fiebre o exantema es su perfil [8][14]. Falta confirmarla: la biopsia renal es el patrón de referencia si hay duda o no mejora al retirar el fármaco [8]. Conducta inicial: suspende el fármaco sospechoso y consulta a nefrología sobre el esteroide, que da mejor recuperación cuanto más temprano [10][11].'));
+  }
+  if(nta){n++;
+    x.push(p('<b>Necrosis tubular aguda</b>: los cilindros granulosos pardos, un FENa mayor de 2 % o la falta de respuesta al volumen tras una isquemia o un nefrotóxico la delatan [14][16][25]. Falta descartar la obstrucción con ecografía y vigilar potasio y diuresis [3]. Conducta inicial: retira nefrotóxicos, ajusta el volumen sin sobrecargar, trata hiperpotasemia, acidosis y sobrecarga, y valora diálisis si hay indicación (AEIOU) [1][22][3].'));
+    if(h(f,'a')&&h(e,'hip')&&!h(s,'gr')) x.push(p('Un FENa alto con hipovolemia puede deberse a un diurético: si hubo uno, usa la fracción de excreción de urea antes de rotular necrosis [15].'));
+  }
+  if(pre){n++;
+    x.push(p('<b>Azotemia prerrenal</b>: el sedimento blando, el FENa menor de 1 % y la mejoría con volumen indican un riñón que aún funciona con poca perfusión [16][3]. Falta ver la creatinina bajar al corregir la causa; si no baja, es necrosis tubular [25]. Conducta inicial: repón volumen o corrige la causa (sangrado, falla cardiaca, vasodilatación) y suspende IECA, ARA-II, AINE y diuréticos [1][3].'));
+    if(h(f,'b')) x.push(p('Un FENa bajo no es exclusivo de la prerrenal: aparece también en la nefropatía por contraste y en algunas glomerulonefritis [3].'));
+  }
+  if(!n) x.push(p('Los datos elegidos no bastan para sostener una entidad. Define la respuesta a volumen, el sedimento y la ecografía.'));
+  if(pos&&(nia||nta||pre)) x.push(p('Con obstrucción presente, trátala primero y revalúa: puede sumarse a otra causa [3][29].'));
+  if(h(g,'s')&&!h(c,'h')) x.push(p('Pide la ecografía aunque el sondaje drene: confirma si hay hidronefrosis y su causa [3].'));
+  x.push('<span class="cf">Si el sedimento mostrara cilindros granulosos pardos con FENa mayor de 2 % → necrosis tubular y no prerrenal; si aparece piuria estéril con fiebre y un fármaco nuevo → nefritis intersticial; si la ecografía muestra hidronefrosis → posrenal [14][16][8][3].</span>');
+  out(dc,x.join(''));
+}
+
+function e1hv(a,v){return a.indexOf(v)>=0;}
+function e1par(t){return '<p>'+t+'</p>';}
+function e1n(x,d){return String(rd(x,d)).replace('.',',');}
+function dcE1dx(dc){
+  var cb=num(dc,'cb'),ca=num(dc,'ca'),uo=num(dc,'uo');
+  var du=sel(dc,'dur'),se=sel(dc,'sed'),ind=sel(dc,'ind'),vo=sel(dc,'vol');
+  if(!(!isNaN(cb)||!isNaN(ca)||!isNaN(uo)||du.length||se.length||ind.length||vo.length)){
+    out(dc,'<p>Escribe la creatinina basal y la actual, la diuresis en mL/kg/h y elige el sedimento, los índices urinarios y la respuesta a volumen. El simulador da el estadio KDIGO y si el cuadro orienta a necrosis tubular o a prerrenal.</p>');return;}
+  var x=[],st=0,razon=[];
+  if(!isNaN(cb)&&!isNaN(ca)&&cb>0){
+    var r=ca/cb,dif=ca-cb;
+    if(r>=3||ca>=4){st=3;razon.push('creatinina '+e1n(r,1)+' veces la basal o 4,0 mg/dL o más');}
+    else if(r>=2){st=2;razon.push('creatinina '+e1n(r,1)+' veces la basal');}
+    else if(r>=1.5||dif>=0.3){st=1;razon.push('creatinina '+e1n(r,1)+' veces la basal o aumento de 0,3 mg/dL o más');}
+  }
+  var d=du[0];
+  if(d==='anuria'){if(st<3)st=3;razon.push('anuria de 12 h o más');}
+  else if(!isNaN(uo)&&d){
+    if(uo<0.3&&d==='24'){if(st<3)st=3;razon.push('diuresis menor de 0,3 mL/kg/h por 24 h o más');}
+    else if(uo<0.5&&(d==='12'||d==='24')){if(st<2)st=2;razon.push('diuresis menor de 0,5 mL/kg/h por 12 h o más');}
+    else if(uo<0.5&&d==='6'){if(st<1)st=1;razon.push('diuresis menor de 0,5 mL/kg/h por 6 a 12 h');}
+  }
+  if(st>0) x.push(e1par('<b>Estadio KDIGO '+st+'</b> ('+razon.join('; ')+'); se toma el peor criterio [1].'+(st===3?' En estadio 3 mide ya potasio y pH y pide nefrología [1].':' Vigila potasio y diuresis y busca la causa [1].')));
+  else if(!isNaN(cb)&&!isNaN(ca)) x.push(e1par('Con estos valores no se cumple el criterio de creatinina de LRA (aumento de 0,3 mg/dL o más, o 1,5 veces la basal) [1]. Revisa la diuresis.'));
+  var barro=e1hv(se,'barro'),bland=e1hv(se,'bland'),alto=e1hv(ind,'alto'),bajo=e1hv(ind,'bajo'),noi=e1hv(ind,'nointer'),mej=e1hv(vo,'mejora'),nom=e1hv(vo,'no');
+  var nta=(barro?1:0)+(alto?1:0)+(nom?1:0),pre=(bland?1:0)+(bajo?1:0)+(mej?1:0);
+  if(se.length||ind.length||vo.length){
+    if(nta>=2&&nta>pre){
+      x.push(e1par('<b>Perfil de necrosis tubular aguda</b>: '+(barro?'cilindros granulosos pardos, ':'')+(alto?'FENa mayor de 2 % o FEUrea mayor de 50 %, ':'')+(nom?'sin respuesta a volumen, ':'')+'compatibles con daño tubular establecido [14][16][15][2]. Retira nefrotóxicos, no repongas volumen sin guía y vigila potasio, pH y sobrecarga; la ecografía descarta obstrucción [1].'));
+      if(noi) x.push(e1par('Los índices no son interpretables (diurético, ERC o sepsis temprana): decide por el sedimento y la respuesta a volumen, no por el FENa [16][2].'));
+      x.push(e1par('Para anticipar la evolución en estadio 1 o 2 euvolémico puedes hacer la prueba de estrés con furosemida: diuresis menor de 200 mL en 2 h predice progresión a estadio 3 [17].'));
+    } else if(pre>=2&&pre>nta){
+      x.push(e1par('<b>Perfil prerrenal</b>: '+(bland?'sedimento inactivo, ':'')+(bajo?'FENa menor de 1 % o FEUrea menor de 35 %, ':'')+(mej?'mejoría con volumen en 24 a 72 h, ':'')+'compatible con hipoperfusión sin daño tubular establecido [2][16]. Repón volumen según causa, retira IECA, AINE y diuréticos, y reevalúa; si no mejora, se convierte en NTA [2].'));
+    } else {
+      x.push(e1par('<b>Indeterminado</b>: hallazgos mezclados. El FENa puede ser menor de 1 % en una NTA por contraste o rabdomiólisis, y el sedimento puede ser inactivo. Decide por el sedimento fresco y por la respuesta a volumen en 24 a 72 h [16][14][2].'));
+    }
+  } else if(st>0) x.push(e1par('Falta el sedimento, los índices y la respuesta a volumen para separar NTA de prerrenal [2].'));
+  x.push('<span class="cf">Si la creatinina mejora tras reponer volumen y el sedimento es inactivo con FENa menor de 1 % → prerrenal; si no mejora con cilindros pardos → necrosis tubular [2][14].</span>');
+  out(dc,x.join(''));
+}
+function dcE1tx(dc){
+  var k=num(dc,'k'),ph=num(dc,'ph'),bun=num(dc,'bun'),kg=num(dc,'kg');
+  var ecg=sel(dc,'ecg'),vo=sel(dc,'vol'),ot=sel(dc,'otro'),trr=sel(dc,'trr');
+  if(!(!isNaN(k)||!isNaN(ph)||!isNaN(bun)||!isNaN(kg)||ecg.length||vo.length||ot.length||trr.length)){
+    out(dc,'<p>Escribe potasio, pH, BUN y peso, y elige el ECG, el volumen, el soporte renal y los otros datos. El simulador propone la conducta de la hiperpotasemia, la acidosis y la sobrecarga, la indicación de diálisis y la meta nutricional; los fármacos son los de la tabla.</p>');return;}
+  var x=[],dial=[];
+  var ecgs=e1hv(ecg,'si'),diu=e1hv(ot,'diu'),olig=e1hv(ot,'olig'),uci=e1hv(ot,'uci');
+  if(!isNaN(k)){
+    if(k>=6.5||ecgs){
+      x.push(e1par('<b>Hiperpotasemia grave</b> (potasio '+e1n(k,1)+' mmol/L'+(ecgs?', con cambios en el ECG':'')+'): gluconato de calcio al 10 %, 10 mL (1 g) IV lento en 2 a 3 min, repetido a los 5 min si persisten los cambios; insulina regular 10 U IV con 25 g de glucosa; salbutamol 10 a 20 mg nebulizados [2][22]. Vigila la glucemia durante horas por riesgo de hipoglucemia en LRA. Añade ciclosilicato de sodio y zirconio 10 g VO cada 8 h hasta 48 h como fijador de potasio [50].'));
+    } else if(k>=5.5){
+      x.push(e1par('<b>Hiperpotasemia moderada</b> (potasio '+e1n(k,1)+' mmol/L) sin cambios en el ECG: insulina regular 10 U IV con 25 g de glucosa y salbutamol 10 a 20 mg nebulizados; ciclosilicato de sodio y zirconio 10 g VO cada 8 h hasta 48 h [2][22][50]. Controla el potasio en horas y limita la dieta rica en potasio.'));
+    } else {
+      x.push(e1par('Potasio '+e1n(k,1)+' mmol/L: no requiere tratamiento específico; vigila en oliguria y limita el potasio de la dieta [2][22].'));
+    }
+    if(k>6||(k>5.5&&ecgs)) dial.push('potasio mayor de 6 mmol/L (o mayor de 5,5 a pesar del tratamiento médico)');
+  } else if(ecgs){
+    x.push(e1par('Cambios del ECG por hiperpotasemia: trátalos ya con gluconato de calcio al 10 %, 10 mL (1 g) IV lento, mientras llega el potasio [2][22].'));
+  }
+  if(!isNaN(ph)){
+    if(ph<=7.20&&uci){
+      x.push(e1par('<b>Acidemia grave</b> (pH '+e1n(ph,2)+'): bicarbonato de sodio al 4,2 % IV, 125 a 250 mL en 30 min, hasta un máximo de 1 000 mL en 24 h, para mantener pH mayor de 7,30; el beneficio se vio en LRA estadio 2 o 3, y el estudio global fue neutro [24]. Vigila sodio, calcio y alcalosis [24].'));
+    } else if(ph<=7.20){
+      x.push(e1par('<b>Acidemia grave</b> (pH '+e1n(ph,2)+'): el ensayo de bicarbonato se hizo en cuidados intensivos (pH ≤ 7,20); traslada o consulta con medicina crítica y nefrología [24].'));
+    } else if(ph<7.35){
+      x.push(e1par('pH '+e1n(ph,2)+': acidosis sin criterio de bicarbonato del ensayo; corrige la causa y vigila [24][2].'));
+    }
+    if(ph<7.15) dial.push('pH menor de 7,15');
+  }
+  var v=vo[0];
+  if(v==='sobre'||v==='edema'){
+    var fx=kg>0?Math.min(rd(kg*(diu?1.5:1),0),200):NaN;
+    if(isNaN(fx)){
+      x.push(e1par('<b>Sobrecarga de volumen</b>: escribe el peso para calcular la furosemida (1 mg/kg IV; 1,5 mg/kg si usaba diurético; tope de 200 mg por dosis) [17].'));
+    } else {
+      var t='<b>Sobrecarga de volumen</b>: furosemida '+e1n(fx,0)+' mg IV en dosis única ('+(diu?'1,5':'1')+' mg/kg, tope de 200 mg por dosis) y reevalúa la diuresis [17][1].';
+      if(kg*(diu?1.5:1)>200) t+=' La dosis calculada superaba el tope y se limitó.';
+      t+=' La furosemida solo trata la sobrecarga; no trata la NTA y, si no hay respuesta, no escales: valora diálisis [1][18].';
+      x.push(e1par(t));
+    }
+    if(v==='edema') dial.push('edema pulmonar con hipoxemia por sobrecarga');
+  }
+  if(!isNaN(bun)&&bun>112) dial.push('BUN mayor de 112 mg/dL');
+  if(olig) dial.push('oliguria de más de 72 h');
+  if(dial.length){
+    x.push(e1par('<b>Indicación de iniciar diálisis</b> según los criterios de AKIKI: '+dial.join('; ')+' [20]. Inicio por indicaciones, no por la creatinina; el inicio acelerado no mejoró la supervivencia y aumentó la dependencia de diálisis a 90 días en STARRT-AKI [20][21].'));
+  } else {
+    x.push(e1par('<b>Sin indicación de diálisis por ahora</b>: espera vigilada con control de potasio, pH, volumen y diuresis; la estrategia diferida evitó la diálisis en cerca de la mitad de los pacientes sin empeorar la mortalidad [20][21].'));
+  }
+  if(kg>0){
+    var t2=trr[0],pmin,pmax,lab;
+    if(t2==='hd'){pmin=1.0;pmax=1.5;lab='diálisis intermitente';}
+    else if(t2==='trrc'){pmin=1.0;pmax=1.7;lab='TRRC o hipercatabolismo (hasta 1,7 g/kg/día)';}
+    else {pmin=0.8;pmax=1.0;lab='sin diálisis y no hipercatabólico';}
+    x.push(e1par('<b>Nutrición</b> ('+lab+'): energía '+e1n(kg*20,0)+' a '+e1n(kg*30,0)+' kcal/día (20 a 30 kcal/kg) y proteína '+e1n(kg*pmin,0)+' a '+e1n(kg*pmax,0)+' g/día ('+e1n(pmin,1)+' a '+e1n(pmax,1)+' g/kg); vía enteral preferente; no restrinjas la proteína para evitar la diálisis [1][23].'));
+  }
+  x.push('<span class="cf">Si el potasio baja de 5,5 mmol/L, el pH sube a más de 7,20 y la diuresis se recupera → fase de recuperación: suspende fijadores de potasio y repón agua, potasio y magnesio según las pérdidas [2].</span>');
+  out(dc,x.join(''));
+}
+
+function e2par(s){return '<p>'+s+'</p>';}
+function e2has(a,v){return a.indexOf(v)>=0;}
+function dcE2tx(dc){
+  var c=sel(dc,'cau'),s=sel(dc,'sit'),w=num(dc,'peso');
+  if(!c.length&&isNaN(w)&&!s.length){
+    out(dc,e2par('Elige la causa, escribe el peso y marca la situación. El simulador propone la conducta con la dosis por peso y su tope; no calcula probabilidades.'));return;}
+  var x=[],cau=c[0],shock=e2has(s,'shock'),cong=e2has(s,'cong'),nores=e2has(s,'nores');
+  var okw=!isNaN(w)&&w>=20&&w<=250;
+  if(!isNaN(w)&&!okw) x.push(e2par('El peso debe estar entre 20 y 250 kg: revísalo.'));
+  if(!cau){
+    x.push(e2par('Falta la causa: elige hipovolemia, insuficiencia cardiaca, cirrosis o fármacos para decidir la conducta [2].'));
+    out(dc,x.join(''));return;}
+  var alic=okw?Math.min(rd(w*10),500):null;
+  var alb=okw?Math.min(rd(w*1),100):null;
+  var topeA=okw&&w*10>500?' (tope de 500 mL por alícuota)':'';
+  var topeB=okw&&w*1>100?' (tope de 100 g al día)':'';
+  var CRI='cristaloide balanceado (Ringer lactato) IV, '+(okw?alic+' mL por alícuota ('+'10 mL/kg'+')'+topeA:'10 mL/kg por alícuota, máximo 500 mL')+', con reevaluación de presión, diuresis, yugulares y pulmón tras cada alícuota [1][19]';
+  if(nores){
+    x.push(e2par('<b>Sin respuesta a volumen en 24–72 horas</b>: con la volemia corregida y los fármacos retirados, la creatinina debía volver a su basal; si no lo hace, deja de pensar en prerrenal y busca necrosis tubular (sedimento con cilindros granulosos pigmentados, FENa y FEUrea sin el patrón prerrenal) [2][14].'));
+    x.push(e2par('Detén las alícuotas: más volumen sin respuesta solo aporta sobrecarga. Pasa a «Necrosis tubular» y a los criterios de «Visión de conjunto» [1][2].'));
+    out(dc,x.join(''));return;}
+  if(cau==='hipo'){
+    if(cong) x.push(e2par('Hay congestión pulmonar o sobrecarga: no repongas más volumen hasta aclarar el estado de volumen; evalúa insuficiencia cardiaca y derivación [2].'));
+    else x.push(e2par('<b>Hipovolemia</b>: '+CRI+'. Continúa hasta euvolemia; la salina es la alternativa si no hay balanceado [19].'));
+    if(shock) x.push(e2par('Con shock, añade vasopresor junto con los líquidos para sostener la presión de perfusión [1].'));
+    x.push(e2par('Suspende de forma temporal IECA, ARA-II, AINE y diuréticos mientras dure el déficit [13][60].'));
+  } else if(cau==='ic'){
+    if(cong) x.push(e2par('<b>Insuficiencia cardiaca congestiva</b>: no repongas volumen; el diurético de asa IV (sin dosis fija, según respuesta natriurética) reduce la congestión venosa y puede mejorar la perfusión renal; coordina con cardiología [1][2].'));
+    else x.push(e2par('<b>Insuficiencia cardiaca sin congestión clara</b>: si hay signos de hipoperfusión, repone con cautela una alícuota y reevalúa ('+(okw?alic+' mL = 10 mL/kg'+topeA:'10 mL/kg, máximo 500 mL')+'); si aparece congestión, detén y usa diurético; discute con cardiología [1][2].'));
+    if(shock) x.push(e2par('Con shock cardiogénico el problema es la bomba, no el volumen: derivación urgente y manejo hemodinámico [2].'));
+    x.push(e2par('Revisa IECA, ARA-II y AINE: suspéndelos de forma temporal si hay hipotensión o caída marcada del FG, y no uses AINE [13][60].'));
+  } else if(cau==='cir'){
+    x.push(e2par('<b>Cirrosis</b>: retira diuréticos, nefrotóxicos y AINE y expande con albúmina '+(okw?alb+' g al día ('+'1 g/kg'+')'+topeB:'1 g/kg al día, máximo 100 g')+' por 2 días [61].'));
+    if(cong) x.push(e2par('Con congestión pulmonar, la albúmina aumenta el riesgo de edema pulmonar: reduce o suspende y valora con nefrología [61].'));
+    if(shock) x.push(e2par('Con hipotensión o shock, busca sepsis o hemorragia y añade vasopresor según el cuadro [1].'));
+    x.push(e2par('Si no responde tras 2 días de albúmina, piensa en síndrome hepatorrenal y deriva a hepatología y nefrología [61].'));
+  } else {
+    x.push(e2par('<b>Fármacos hemodinámicos</b>: suspende el IECA, el ARA-II, el AINE y el diurético que bloquean la autorregulación (aferente por prostaglandinas, eferente por angiotensina II); no se dosifican [13][60].'));
+    x.push(e2par('Si además hay hipovolemia: '+CRI+'. Si hay congestión, no repongas [1][2].'));
+    if(shock) x.push(e2par('Con shock, añade vasopresor junto con los líquidos [1].'));
+  }
+  x.push(e2par('Alimentación: rehidratación oral en hipovolemia y sodio sin restringir; en insuficiencia cardiaca o cirrosis, restricción de sodio; sin restricción proteica [2][23][61].'));
+  x.push('<span class="cf">Si la creatinina no vuelve a su basal en 24–72 horas con la volemia corregida → deja de ser prerrenal y se trata como necrosis tubular [2].</span>');
+  out(dc,x.join(''));
+}
+
+function dcE3tx(dc){
+  var c=sel(dc,'causa'),b=sel(dc,'bx'),s=sel(dc,'sit');
+  var d=num(dc,'dias'),p=num(dc,'peso');
+  if(!(c.length||b.length||s.length||!isNaN(d)||!isNaN(p))){
+    out(dc,'<p>Elige la causa, los días desde que se retiró el agente, el peso y si hay biopsia. El simulador propone la conducta; no calcula probabilidades.</p>');return;}
+  var x=[],hv=function(a,v){return a.indexOf(v)>-1;};
+  if(hv(s,'hem')){
+    x.push('<p><b>Hematuria con cilindros eritrocitarios</b>: piensa en glomerulonefritis aguda o rápidamente progresiva y no en NIA; deriva a nefrología sin demora para biopsia [14][2].</p>');
+    x.push('<span class="cf">Si el sedimento mostrara piuria estéril con cilindros leucocitarios y sin cilindros eritrocitarios → NIA y el esquema de abajo [14][8].</span>');
+    out(dc,x.join(''));return;}
+  if(!c.length){out(dc,'<p>Elige la causa para decidir si se retira un agente, se trata una infección o se trata una enfermedad autoinmune.</p>');return;}
+  if(hv(c,'far')||hv(c,'icp')){
+    x.push('<p><b>Retira el agente'+(hv(c,'icp')?' (inhibidor de punto de control)':'')+'</b> y regístralo como alergia: es la medida más eficaz [8][12]'+(hv(c,'icp')?'; el manejo con inmunoterapia lo define nefrología junto con oncología [13]':'')+'.</p>');
+  } else if(hv(c,'inf')){
+    x.push('<p><b>Trata la infección causal</b>; el corticoide no es lo primero en la NIA infecciosa [8].</p>');
+  } else {
+    x.push('<p><b>Trata la enfermedad de fondo</b> (TINU, sarcoidosis o Sjögren) con nefrología; el corticoide suele ser parte del manejo [8][31].</p>');
+  }
+  var pasa=(!isNaN(d)&&d>=14);
+  var esteroide=hv(c,'far')||hv(c,'icp')||hv(c,'aut');
+  if(esteroide){
+    if(hv(s,'mej')&&!hv(s,'gra')){
+      x.push('<p>Mejora la creatinina tras retirar el agente: sigue observando con creatinina seriada; el corticoide queda para la falta de mejoría [8][10].</p>');
+    } else {
+      if(!isNaN(p)&&p>0){
+        x.push('<p><b>Prednisona</b> 0,8 mg/kg/día (dosis inicial media del estudio) = '+rd(0.8*p)+' mg/día VO cada 24 h, dosis alta unas 2 semanas y descenso; sin ventaja con 3 semanas de dosis alta ni con tratamiento mayor de 8 semanas [11]. Las fuentes no fijan tope ni esquema de descenso: lo define nefrología.</p>');
+      } else {
+        x.push('<p>Para calcular la prednisona (0,8 mg/kg/día [11]) escribe el peso.</p>');
+      }
+      if(pasa) x.push('<p>Con 14 o más días desde que se retiró el agente sin mejoría, no demores el corticoide: el retraso se asocia con fibrosis y peor recuperación [10][11].</p>');
+      else if(!isNaN(d)) x.push('<p>Con menos de 14 días desde que se retiró el agente, el corticoide aún está dentro de la ventana en que se ha descrito mejor recuperación [10].</p>');
+    }
+  }
+  if(hv(s,'gra')) x.push('<p><b>Grave</b>: metilprednisolona IV en pulsos, con esquema de nefrología [12], y manejo de hiperpotasemia, acidosis y diálisis según indicaciones comunes [1].</p>');
+  if(hv(b,'si')) x.push('<p>Biopsia con NIA confirmada: fibrosis de más de 50 % anticipa peor recuperación [11].</p>');
+  else if(hv(b,'no')) x.push('<p>Sin biopsia: derívala a nefrología si hay duda diagnóstica, deterioro grave o antes de un corticoide sin causa evidente [8][12].</p>');
+  x.push('<p>Alimentación: sodio moderado, menos azúcares simples, proteína sin restricción y potasio según el sérico [23][33].</p>');
+  x.push('<span class="cf">Si no mejora tras retirar el fármaco → corticoide pronto; si aparece hematuria con cilindros eritrocitarios → glomerulonefritis y nefrología urgente [8][14].</span>');
+  out(dc,x.join(''));
+}
+
+function e4par(t){return '<p>'+t+'</p>';}
+function e4has(a,v){return a.indexOf(v)>-1;}
+function dcE4tx(dc){
+  var n=sel(dc,'niv'),f=sel(dc,'inf'),d=num(dc,'diu');
+  var hayD=!isNaN(d);
+  if(!n.length&&!f.length&&!hayD){
+    out(dc,e4par('Elige el nivel de la obstrucción, si hay fiebre o infección y la diuresis tras desobstruir en mL/h. El simulador propone el drenaje, el manejo de la diuresis posobstructiva y el alfa-bloqueante; no calcula probabilidades.'));return;}
+  var x=[];
+  var inf=e4has(f,'si'),infra=e4has(n,'inf'),ure=e4has(n,'ure');
+  if(hayD&&(d<0||d>2000)){x.push(e4par('La diuresis va de 0 a 2000 mL/h: revisa el dato.'));out(dc,x.join(''));return;}
+  if(infra){
+    x.push(e4par('<b>Obstrucción infravesical o vesical</b>: coloca una sonda vesical transuretral, que confirma y trata a la vez; si no pasa, vía suprapúbica por urología [2]. En la retención por HPB, tamsulosina 0,4 mg VO cada 24 h tras la misma comida antes de la prueba sin sonda; es un antagonista α1A que relaja el músculo liso prostático y baja la resistencia al vaciado, y no reemplaza el sondaje inicial [33][2].'));
+  }
+  if(ure){
+    x.push(e4par('<b>Obstrucción ureteral bilateral o en riñón único</b>: deriva por encima del obstáculo con catéter doble J o nefrostomía percutánea [2][80]. Urología resuelve después la causa (litiasis, tumor pélvico o fibrosis retroperitoneal) [2][81]. En litiasis ureteral distal, la tamsulosina 0,4 mg VO cada 24 h es solo adyuvante con evidencia controvertida, nunca en lugar del drenaje ni con infección [33][2].'));
+  }
+  if(!infra&&!ure&&(f.length||hayD)){
+    x.push(e4par('Elige también el nivel de la obstrucción: define si drenas con sonda vesical, doble J o nefrostomía [2].'));
+  }
+  if(inf){
+    x.push(e4par('<b>Fiebre o infección con obstrucción</b>: es una urgencia de drenaje; cultivos y antibiótico empírico según el protocolo local, pero el antibiótico solo no basta sin desobstruir [2]. No retrases el drenaje para completar estudios.'));
+  } else if(e4has(f,'no')){
+    x.push(e4par('Sin fiebre, el drenaje sigue siendo la conducta, sin la urgencia de la obstrucción infectada; vigila la aparición de fiebre durante el procedimiento [2].'));
+  }
+  if(hayD){
+    if(d>=200){
+      x.push(e4par('<b>Diuresis posobstructiva</b>: una diuresis de '+d+' mL/h, sostenida, cumple la definición de más de 200 mL/h durante 2 horas seguidas [29]. Repón solo una parte de lo perdido con cristaloide isotónico IV, guiado por balance horario, peso y electrolitos; no repongas todo, porque estimulas que la diuresis continúe [29]. Controla sodio, potasio y magnesio con seriación. Si el paciente está alerta, permite agua y sal por vía oral libres y repón potasio y magnesio con alimentos (plátano, papa, aguacate, frijoles; frutos secos y legumbres) [29][23].'));
+    } else if(d===0){
+      x.push(e4par('<b>Sin diuresis tras drenar</b>: revisa que la sonda, el doble J o la nefrostomía estén permeables y bien ubicados; si el drenaje funciona y no hay orina ni mejoría de la creatinina, piensa en lesión tubular asociada: ver «Necrosis tubular» [2][4]. Mientras tanto limita potasio y líquidos según «Visión de conjunto» [23].'));
+    } else {
+      x.push(e4par('<b>Diuresis de '+d+' mL/h</b>: no llega al umbral de diuresis posobstructiva de más de 200 mL/h sostenida [29]. Sigue el balance horario, la creatinina y el potasio, y no restrinjas líquidos sin razón [29][1].'));
+    }
+  }
+  x.push('<span class="cf">Si hay fiebre con la obstrucción → urgencia de drenaje antes que cualquier otro paso; si tras drenar con permeabilidad no hay diuresis ni baja la creatinina → piensa en necrosis tubular; si la diuresis supera 200 mL/h sostenida → diuresis posobstructiva con reposición parcial [2][29].</span>');
+  out(dc,x.join(''));
+}
+
+</script>
