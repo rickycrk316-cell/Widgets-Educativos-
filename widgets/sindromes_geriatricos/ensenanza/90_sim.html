@@ -1,0 +1,281 @@
+<script>
+(function(){
+function e1P(t){return '<p>'+t+'</p>';}
+function e1H(a,v){return a.indexOf(v)>-1;}
+function e1C(n){return String(n).replace('.',',');}
+
+function dcE1d(dc){
+  var f=sel(dc,'fried'),fn=sel(dc,'func'),cx=sel(dc,'ctx');
+  if(!(f.length||fn.length||cx.length)){
+    out(dc,e1P('Marca los criterios de Fried presentes, la función diaria y el contexto. El simulador propone la categoría y la conducta; no calcula probabilidades.'));return;}
+  var n=f.length,x=[],dep=e1H(fn,'dep');
+  var cat=n>=3?'frágil':(n>=1?'prefrágil':'robusto');
+  x.push(e1P('<b>'+n+' de 5 criterios de Fried: '+cat+'</b>. Tres o más definen fragilidad, uno o dos prefragilidad y ninguno robusto [24].'));
+  if(n>=3){
+    x.push(e1P('Conducta: evaluación clínica integral, plan de cuidados que aborde polifarmacia, sarcopenia, causas tratables de pérdida de peso y de agotamiento, y programa multicomponente con resistencia como primera línea [27].'));
+  } else if(n>=1){
+    x.push(e1P('Conducta: evaluación clínica de quienes tamizan positivos para fragilidad o prefragilidad, y programa multicomponente como medida preventiva [27].'));
+  } else if(f.length===0&&!dep){
+    x.push(e1P('Sin criterios no hay fragilidad física; mantén la actividad física y reevalúa de forma periódica [27].'));
+  }
+  if(dep){
+    x.push(e1P('<b>Dependencia en actividades básicas</b>: es discapacidad, desenlace de la fragilidad y no su sinónimo [24]; con la CFS por encima de 6 se considera discapacidad más que fragilidad en sentido estricto [27]. Evalúa de forma integral y deriva a geriatría si la fragilidad es avanzada [27].'));
+  }
+  if(e1H(cx,'agudo')) x.push(e1P('<b>Estresor reciente</b>: una hospitalización puede revelar una reserva baja o añadir un declive agudo; el 35 % de los hospitalizados de 70 años o más empeoró en actividades básicas entre la línea de base y el alta [25]. Pregunta por la función previa al ingreso.'));
+  if(e1H(cx,'peso')) x.push(e1P('<b>Hiporexia con pérdida de peso</b>: busca las causas tratables y considera proteína o calorías junto con el ejercicio [27].'));
+  if(e1H(cx,'sarc')) x.push(e1P('<b>SARC-F de 4 puntos o más</b>: sarcopenia probable; mide la fuerza de prensión o el levantarse de la silla y confirma con la cantidad de músculo [34][3].'));
+  x.push('<span class="cf">Si los criterios fueran dos o menos pero hubiera dependencia en actividades básicas → no rotules fragilidad, evalúa discapacidad y sus causas; si hubiera pérdida de peso con una enfermedad de fondo y anorexia → piensa en desnutrición o caquexia [24][27].</span>');
+  out(dc,x.join(''));
+}
+
+function dcE1t(dc){
+  var c=sel(dc,'cap'),s=sel(dc,'sit'),p=num(dc,'peso'),g=num(dc,'gkg');
+  if(!(c.length||s.length||!isNaN(p)||!isNaN(g))){
+    out(dc,e1P('Elige la capacidad física y la situación, escribe el peso y la proteína que piensas indicar. El simulador propone el ejercicio y la proteína con su tope; las intervenciones son las de la tabla.'));return;}
+  var x=[],enf=e1H(s,'enf'),pes=e1H(s,'pes'),ren=e1H(s,'renal'),vd=e1H(s,'vitd');
+  if(c.length){
+    var t='<b>Ejercicio multicomponente con resistencia</b>: 30 a 45 min por sesión, 3 o más veces por semana durante 3 a 5 meses; resistencia 2 a 3 días por semana, 1 a 3 series de 8 a 12 repeticiones en 8 a 10 grandes grupos, desde 30 a 40 % hasta 70 a 80 % de 1RM según tolerancia [33][27].';
+    if(e1H(c,'silla')) t+=' Como no se levanta de la silla, empieza por fuerza y potencia para levantarse y por equilibrio antes de caminar distancias: caminar sin esa base probablemente fracasa y aumenta el riesgo de caídas [33].';
+    else if(e1H(c,'ayuda')) t+=' Con marcha lenta o asistida, combina fuerza de las piernas, equilibrio y marcha supervisada, y progresa la distancia al final [33].';
+    else t+=' Puede sumar el componente aeróbico y progresar la carga con más rapidez [33].';
+    x.push(e1P(t));
+  } else x.push(e1P('Elige la capacidad física para ajustar el ejercicio; la primera línea es un programa multicomponente con resistencia [27].'));
+  if(ren){
+    x.push(e1P('<b>Proteína</b>: con TFG menor de 30 mL/min/1,73 m² sin diálisis el aporte puede tener que limitarse; no apliques el rango habitual y coordina con el especialista [35].'));
+  } else if(isNaN(p)||p<=0){
+    x.push(e1P('<b>Proteína</b>: escribe el peso en kg para calcular los gramos por día. El rango es de 1,0 a 1,2 g/kg/día y de 1,2 a 1,5 g/kg/día con enfermedad aguda o crónica [35].'));
+  } else {
+    var lo=enf?1.2:1.0,hi=enf?1.5:1.2,tope=1.5;
+    var txt='<b>Proteína</b>: rango de '+e1C(lo)+' a '+e1C(hi)+' g/kg/día, es decir '+rd(p*lo,0)+' a '+rd(p*hi,0)+' g por día para '+rd(p,0)+' kg [35].';
+    if(!isNaN(g)){
+      if(g<=0) txt+=' La cifra que propones debe ser mayor de cero.';
+      else {
+        var gm=Math.min(g,tope);
+        txt+=' Con '+e1C(rd(gm,1))+' g/kg/día indicarías '+rd(p*gm,0)+' g por día.';
+        if(g>tope) txt+=' Pediste '+e1C(rd(g,1))+' g/kg/día: el máximo de la guía para la mayoría de los mayores con enfermedad es '+e1C(tope)+' g/kg/día y se aplicó [35].';
+        else if(g<lo) txt+=' Queda bajo el rango de '+e1C(lo)+' g/kg/día recomendado para tu situación [35].';
+      }
+    }
+    x.push(e1P(txt));
+  }
+  if(pes) x.push(e1P('<b>Pérdida de peso o desnutrición</b>: el ICFSR recomienda considerar proteína o calorías y ofrecerlas junto con la prescripción de ejercicio [27].'));
+  x.push(e1P(vd?'<b>Vitamina D</b>: el déficit confirmado se trata; no hay dosis establecida por el ICFSR para la fragilidad [27].':'<b>Vitamina D</b>: no la indiques para tratar la fragilidad si no hay déficit [27].'));
+  x.push(e1P('<b>Revisión de fármacos</b> y causas tratables de pérdida de peso y agotamiento en todos los casos; sin terapia hormonal [27].'));
+  x.push('<span class="cf">Si el paciente no pudiera levantarse de la silla → el programa pasa de caminar a fuerza y equilibrio primero; si la TFG fuera menor de 30 mL/min/1,73 m² sin diálisis → el rango de proteína deja de aplicarse y se coordina con el especialista [33][35].</span>');
+  out(dc,x.join(''));
+}
+
+window.dcE1d=dcE1d;window.dcE1t=dcE1t;
+})();
+(function(){
+function dcE2tx(dc){
+  function p(t){return '<p>'+t+'</p>';}
+  function h(a,v){return a.indexOf(v)>-1;}
+  var a=sel(dc,'abvd'),b=sel(dc,'bas'),m=sel(dc,'mov'),c=sel(dc,'ctx'),s=sel(dc,'piel');
+  if(!(a.length||b.length||m.length||c.length||s.length)){
+    out(dc,p('Marca las ABVD en las que necesita ayuda, su función dos semanas antes del ingreso, la movilidad actual, las situaciones que cambian la enoxaparina y el estado de la piel. El simulador propone el plan de movilización, la profilaxis de TVP con su posología y el manejo de la piel; no calcula probabilidades.'));return;}
+  var x=[];
+  var lista=a.filter(function(v){return v!=='ning';});
+  var n=lista.length;
+  if(h(a,'ning')&&n>0){
+    x.push(p('Marcaste «ninguna» junto con ABVD que necesitan ayuda: corrige la selección para poder contar el declive [25].'));
+    out(dc,x.join(''));return;
+  }
+  if(n>0){
+    x.push(p('<b>Necesita ayuda en '+n+' de las 5 ABVD</b> (bañarse, vestirse, comer, trasladarse y usar el retrete) [25].'));
+    if(h(b,'aut')) x.push(p('Era autónomo dos semanas antes del ingreso: es un <b>declive funcional asociado a la hospitalización</b> y es potencialmente reversible. De elección: movilización precoz y rehabilitación progresiva con fisioterapia y terapia ocupacional; mide de nuevo las ABVD con la misma escala antes del alta [1][42].'));
+    else if(h(b,'dep')) x.push(p('Ya dependía antes del ingreso: no hay declive nuevo que atribuir a la hospitalización, pero el reposo puede agravar lo que tenía. Mantén la movilización y compara con el basal previo [25].'));
+    else x.push(p('Falta el basal previo: sin la función de las dos semanas anteriores no puedes decir si es un declive nuevo [25].'));
+  } else if(h(a,'ning')){
+    x.push(p('Sin ayuda en ninguna ABVD: no hay pérdida de función básica ahora. Valora las actividades instrumentales con la escala de Lawton y mantén la movilidad para prevenir el declive [13][1].'));
+  }
+  if(h(m,'rest')){
+    if(h(c,'sang')||h(c,'hit')){
+      x.push(p('Movilidad muy restringida, pero con '+(h(c,'sang')&&h(c,'hit')?'sangrado mayor activo y antecedente reciente de trombocitopenia por heparina':(h(c,'sang')?'sangrado mayor activo':'trombocitopenia inmune por heparina en los últimos 100 días'))+': la enoxaparina está contraindicada según su ficha técnica. No la indiques y consulta con el especialista la alternativa de profilaxis [41].'));
+    } else if(h(c,'renal')){
+      x.push(p('Movilidad muy restringida durante la enfermedad aguda, sin contraindicación y con depuración de creatinina menor de 30 mL/min: <b>enoxaparina 30 mg SC cada 24 h</b>, por una duración usual de 6 a 11 días [41]. La dosis de 40 mg disminuyó la tromboembolia venosa frente a placebo en pacientes médicos agudos [40].'));
+    } else {
+      x.push(p('Movilidad muy restringida durante la enfermedad aguda y sin contraindicación: <b>enoxaparina 40 mg SC cada 24 h</b>, por una duración usual de 6 a 11 días [41]. Con 40 mg la tromboembolia venosa fue de 5,5 % frente a 14,9 % con placebo; 20 mg no mostró diferencia [40].'));
+    }
+  } else if(h(m,'lib')){
+    x.push(p('Camina con ayuda: la prioridad es aumentar la movilización diaria y no volver al reposo; la indicación de enoxaparina del estudio y de la ficha se refiere a movilidad muy restringida [40][41].'));
+  } else if(h(c,'renal')||h(c,'sang')||h(c,'hit')){
+    x.push(p('Marcaste una situación para la enoxaparina sin definir la movilidad: la profilaxis se considera solo si la movilidad está muy restringida durante la enfermedad aguda [41].'));
+  }
+  if(h(s,'ok')) x.push(p('Piel sin lesión: continúa la inspección de sacro, talones y caderas en cada turno y el reposicionamiento; repite Braden o Norton si cambia la movilidad [48][5].'));
+  else if(s.length){
+    var d={e1:'<b>Estadio 1</b>: piel intacta con eritema que no palidece',e2:'<b>Estadio 2</b>: pérdida parcial del grosor de la piel con dermis expuesta',e3:'<b>Estadio 3</b>: pérdida total del grosor de la piel con grasa visible',e4:'<b>Estadio 4</b>: pérdida total de piel y tejido con fascia, músculo, tendón, ligamento, cartílago o hueso expuestos'};
+    x.push(p(d[s[0]]+' [43]. Retira la presión del sitio con reposicionamiento y superficies de apoyo y pide valoración del cuidado de la herida; no hay una posología fiable para esta lesión en las fuentes de esta pestaña [43][5].'));
+  }
+  x.push('<span class="cf">Si recupera el traslado y el retrete y vuelve a su basal → pasa de rehabilitación activa a mantener la movilidad y el control en consulta externa [25]; si aparece sangrado mayor activo → se retira la enoxaparina [41].</span>');
+  out(dc,x.join(''));
+}
+
+window.dcE2tx=dcE2tx;
+})();
+(function(){
+function dcE3nut(dc){
+  var mna=num(dc,'mna'),kg=num(dc,'kg'),c=sel(dc,'cond');
+  function has(v){return c.indexOf(v)>-1;}
+  function p(t){return '<p>'+t+'</p>';}
+  function cm(x){return String(x).replace('.',',');}
+  if(isNaN(mna)&&isNaN(kg)&&!c.length){
+    out(dc,p('Escribe el puntaje del MNA-SF (0 a 14) y el peso, y marca lo que tenga la persona. El simulador clasifica el estado nutricional y propone el aporte de energía y proteína por kilo; no calcula probabilidades.'));return;}
+  var x=[],mal=false;
+  if(!isNaN(mna)){
+    if(mna<0||mna>14){x.push(p('El MNA-SF va de 0 a 14 puntos: revisa el puntaje [7].'));}
+    else if(mna<=7){mal=true;x.push(p('MNA-SF de '+mna+': <b>desnutrición</b> (0 a 7 puntos) [7]. Es tamizaje: confirma con los criterios GLIM, un criterio fenotípico y uno etiológico [51].'));}
+    else if(mna<=11){x.push(p('MNA-SF de '+mna+': <b>riesgo de desnutrición</b> (8 a 11 puntos) [7]. Completa el MNA y busca la causa; confirma con GLIM si hay pérdida de peso, IMC bajo o masa muscular reducida [51].'));}
+    else {x.push(p('MNA-SF de '+mna+': <b>estado nutricional normal</b> (12 a 14 puntos) [7]. Repite el tamizaje cada 3 a 12 meses según la salud de la persona [7].'));}
+  }
+  if(!isNaN(kg)){
+    if(kg<=0){x.push(p('Escribe un peso mayor que 0 kg.'));}
+    else {
+      var klo=rd(kg*25),khi=rd(kg*30);
+      var plo=mal?1.2:1.0;
+      var phi=Math.min(1.5,plo+(mal?0.3:0.2));
+      var glo=rd(kg*plo,0),ghi=rd(kg*phi,0);
+      x.push(p('<b>Aporte para '+cm(kg)+' kg</b>: energía de 25 a 30 kcal/kg, es decir '+klo+' a '+khi+' kcal al día; proteína de '+cm(plo)+' a '+cm(phi)+' g/kg, es decir '+glo+' a '+ghi+' g al día (tope de '+cm(1.5)+' g/kg: '+(mal?'rango de la desnutrición o la enfermedad':'rango del envejecimiento sano')+') [49].'));
+      if(has('ede')) x.push(p('<b>Edema</b>: el peso incluye líquido y sobreestima la masa corporal. Estima el peso seco tras la diuresis, o usa el perímetro de pantorrilla en el MNA-SF cuando el IMC no es fiable [7].'));
+    }
+  }
+  if(has('ic')) x.push(p('<b>Insuficiencia cardíaca congestiva</b>: el edema de la pared intestinal contribuye a la baja ingesta. Trata la congestión y no impongas una restricción de sal uniforme: pesa la prioridad entre la desnutrición y los signos de congestión [53].'));
+  if(has('fx')) x.push(p('<b>Fármacos</b>: revisa la lista y retira o ajusta el que reduzca la ingesta o la absorción [49].'));
+  if(has('dep')) x.push(p('<b>Depresión coexistente</b>: trátala, porque reduce la ingesta [49]. Mirtazapina solo si la depresión lo justifica, con la dosis de su ficha como antidepresivo; no hay dosis validada como estimulante del apetito en las fuentes leídas [57][58].'));
+  if(has('rea')) x.push(p('<b>Ingesta casi nula por más de una semana</b>: riesgo de síndrome de realimentación. Mide fósforo, potasio y magnesio antes de subir el aporte, vigila la tiamina y reintroduce las calorías de forma controlada [56].'));
+  x.push(p('<b>No uses megestrol</b> como estimulante del apetito: efecto mínimo sobre el peso y más riesgo de trombosis y posiblemente de muerte [6].'));
+  x.push('<span class="cf">Si el MNA-SF baja de 8–11 a 0–7 → pasa de riesgo a desnutrición y el rango proteico sube a 1,2–1,5 g/kg; si además la ingesta fue casi nula más de una semana → controla fósforo, potasio y magnesio antes de subir el aporte [7][49][56].</span>');
+  out(dc,x.join(''));
+}
+
+window.dcE3nut=dcE3nut;
+})();
+(function(){
+function dcE4tx(dc){
+  var rx=sel(dc,'rx'),fe=sel(dc,'fe'),re=sel(dc,'ren'),si=sel(dc,'sit');
+  function P(t){return '<p>'+t+'</p>';}
+  function H(a,v){return a.indexOf(v)>-1;}
+  if(!rx.length){
+    out(dc,P('Marca los fármacos que toma el paciente y, si la tienes, la fracción de eyección, la función renal y la situación. El simulador señala el hallazgo de Beers o STOPP y la acción de deprescripción con la dosis ajustada; no calcula probabilidades.'));
+    return;
+  }
+  var x=[],r=re[0],a75=H(si,'a75'),ed=H(si,'edema'),hi=H(si,'hipo'),sd=H(si,'sed');
+  if(H(rx,'dil')){
+    if(H(fe,'red')) x.push(P('<b>Diltiazem con FE reducida</b>: Beers recomienda evitar los calcioantagonistas no dihidropiridínicos en IC con FE reducida (recomendación fuerte, calidad moderada) [6]; con FE menor de 0,40 la IC tardía fue más frecuente con diltiazem (21 % frente a 12 %) [20]. Acción: retíralo con cardiología y trata la IC con el esquema de la guía [21]. Contraindicado además si hay bloqueo AV de 2.º o 3.º grado o hipotensión sistólica menor de 90 mm Hg [70].'));
+    else if(H(fe,'con')) x.push(P('<b>Diltiazem con FE conservada</b>: el criterio de Beers se refiere a la FE reducida [6]; mantenerlo o no depende de su indicación. Si hay edema, recuerda que el diltiazem lo produce (2,4 %) [70].'));
+    else x.push(P('<b>Diltiazem con FE desconocida</b>: antes de decidir pide un ecocardiograma; si la FE resulta reducida, el criterio de Beers indica evitarlo [6].'));
+  }
+  if(H(rx,'preg')){
+    var d;
+    if(r==='60') d='Con depuración de creatinina de 60 mL/min o más, dosis diaria total de 150 a 600 mg en 2 o 3 tomas';
+    else if(r==='45'||r==='30') d='Con depuración de creatinina de 30 a 60 mL/min, dosis diaria total de 75 a 300 mg en 2 o 3 tomas';
+    else if(r==='15') d='Con depuración de creatinina de 15 a 30 mL/min, dosis diaria total de 25 a 150 mg en 1 o 2 tomas';
+    else if(r==='0') d='Con depuración de creatinina menor de 15 mL/min, dosis diaria total de 25 a 75 mg en 1 toma';
+    else d='Ajusta la dosis diaria total a la depuración de creatinina (elige la función renal para ver el rango)';
+    x.push(P('<b>Pregabalina</b>: '+d+' [64]. Beers recomienda reducir la dosis con depuración menor de 60 mL/min [6]. Retírala de forma gradual en al menos 1 semana para evitar insomnio, náusea, cefalea, ansiedad, hiperhidrosis y diarrea [64].'+(ed?' Produce edema periférico (6 % frente a 2 %): si el edema cede a medias con diurético, sospecha cascada [64][62].':'')));
+  }
+  if(H(rx,'tram')){
+    var t='<b>Tramadol</b>: no pases de 300 mg al día en mayores de 75 años'+(a75?' (aplica en este caso)':'');
+    if(r==='15'||r==='0') t+='; con depuración menor de 30 mL/min, espacia a cada 12 h con máximo de 200 mg al día [71]';
+    else t+=' [71]';
+    t+='. Beers recomienda reducir la dosis de liberación inmediata con depuración menor de 30 mL/min [6]. No lo suspendas de golpe si hay dependencia física: reduce de forma gradual [71].'+(sd?' Con somnolencia o caídas, es el primer candidato a revisar.':'');
+    x.push(P(t));
+  }
+  if(H(rx,'preg')&&H(rx,'tram')) x.push(P('<b>Hallazgo de Beers</b>: opioide con gabapentinoide; evítalo por el riesgo de sedación grave, depresión respiratoria y muerte (recomendación fuerte, calidad moderada); la excepción es el paso de un opioide a gabapentina o pregabalina [6]. Acción: retira uno de los dos; en Doña Rosa, con dolor lumbar crónico, decide con el médico tratante cuál.'));
+  if(H(rx,'ins')){
+    x.push(P('<b>Insulina NPH</b>: en el estado complejo, la meta de ADA es A1C menor de 8,0 %, glucemia en ayunas de 90 a 150 mg/dL y al acostarse de 100 a 180 mg/dL; en el estado muy complejo, de 100 a 180 y de 110 a 200 mg/dL, sin guiarse por la A1C [73]. La NPH alcanza el efecto máximo a una mediana de 6,5 h [72].'+(hi?' Con hipoglucemia o hiporexia: desintensifica la insulina o cambia a una de menor riesgo [73]; la dosis nocturna fija es la sospechosa.':'')));
+  }
+  if(H(rx,'met')){
+    var m;
+    if(r==='15'||r==='0') m='contraindicada con eGFR menor de 30 mL/min/1,73 m²: suspéndela [74]';
+    else if(r==='30') m='no se recomienda iniciarla con eGFR de 30 a 45; si ya la toma, reevalúa el riesgo y el beneficio y usa dosis menor [74][73]';
+    else if(r==='45'||r==='60') m='la función renal permite continuarla; vigila el eGFR cada 3 a 6 meses si hay riesgo [73]';
+    else m='ajusta según el eGFR (elige la función renal)';
+    x.push(P('<b>Metformina</b>: '+m+'. Suspéndela temporalmente en enfermedad aguda con compromiso renal o hepático y con precaución en IC o hipoperfusión por el riesgo de acidosis láctica [73].'));
+  }
+  if(sd&&!H(rx,'tram')&&!H(rx,'preg')) x.push(P('Hay somnolencia o caídas sin tramadol ni pregabalina en la lista: busca otros fármacos de acción central; Beers recomienda evitar tres o más [6].'));
+  x.push('<span class="cf">Si la FE resulta conservada → el criterio de Beers para diltiazem no aplica; si la depuración de creatinina cae por debajo de 30 mL/min → pregabalina de 25 a 150 mg al día, tramadol cada 12 h con máximo de 200 mg al día y metformina contraindicada [6][64][71][74].</span>');
+  out(dc,x.join(''));
+}
+
+window.dcE4tx=dcE4tx;
+})();
+(function(){
+function dcE5tx(dc){
+  var p=function(t){return '<p>'+t+'</p>';};
+  var h=function(a,v){return a.indexOf(v)>-1;};
+  var c=sel(dc,'cai'),ev=sel(dc,'ev'),st=sel(dc,'sit'),tug=num(dc,'tug');
+  if(!c.length&&!ev.length&&!st.length&&isNaN(tug)){
+    out(dc,p('Elige las caídas del último año, el TUG o los hallazgos de gravedad y la situación. El simulador estratifica el riesgo según las guías mundiales y propone la conducta con su posología; no calcula probabilidades.'));return;}
+  var r=[];
+  var marcha=(!isNaN(tug)&&tug>15)||h(ev,'vel');
+  var grave=h(ev,'lesion')||h(ev,'fra')||h(ev,'suelo')||h(ev,'loc');
+  var alto=h(c,'rec')||(grave&&!h(c,'cero'));
+  var nivel;
+  if(alto) nivel='alto';
+  else if(h(c,'una')&&marcha) nivel='intermedio';
+  else nivel='bajo';
+  if(!c.length&&!grave){
+    r.push(p('Falta la historia de caídas: la clasificación de las guías parte de ella. Pregunta por las caídas de los últimos 12 meses y su gravedad [76].'));
+  } else if(nivel==='alto'){
+    r.push(p('<b>Riesgo alto</b>: '+(h(c,'rec')?'dos o más caídas en 12 meses':'caída con criterio de gravedad')+' [76]. Conducta: evaluación multifactorial (marcha y equilibrio, presión supina y de pie con electrocardiograma, cognición, visión, fármacos, entorno, calzado y miedo a caer) y plan multidominio personalizado [76].'));
+  } else if(nivel==='intermedio'){
+    r.push(p('<b>Riesgo intermedio</b>: una caída no grave con alteración de la marcha (TUG mayor de 15 s o velocidad menor de 0,8 m/s) [76]. Conducta: ejercicio de fuerza y equilibrio [76].'));
+  } else {
+    r.push(p('<b>Riesgo bajo</b>: '+(h(c,'cero')?'sin caídas':'una caída no grave sin alteración de la marcha')+' [76]. Conducta: prevención primaria y reevaluación cada año [76]. El riesgo bajo no es riesgo nulo [76].'));
+    if(h(c,'cero')&&marcha) r.push(p('La marcha lenta no cambia el nivel sin caídas, pero justifica ofrecer ejercicio de equilibrio, que las guías recomiendan a todos los mayores [76].'));
+  }
+  var ex='ejercicio de equilibrio y funcionales (sentarse y pararse, pasos), individualizado y progresivo, tres o más sesiones por semana durante al menos 12 semanas y continuado [76]';
+  if(nivel!=='bajo'||h(c,'cero')) r.push(p('<b>Ejercicio</b>: '+ex+'.'));
+  if(nivel!=='bajo') r.push(p('<b>Hogar</b>: visita con modificación del entorno, mejor por terapia ocupacional [79][76].'));
+  if(h(ev,'loc')) r.push(p('<b>Pérdida de conciencia sospechada</b>: estudia el síncope según la guía local; no basta la prevención de caídas [76].'));
+  if(h(ev,'suelo')) r.push(p('<b>Más de una hora en el suelo</b>: busca deshidratación, alteración de electrolitos, falla renal y rabdomiólisis, que se asocian con la larga permanencia [76].'));
+  if(h(st,'frid')) r.push(p('<b>Fármacos sedantes</b>: revisión estructurada (STOPPFall) con deprescripción; los opioides débiles como el tramadol conviene evitarlos si es posible, porque aumentan el riesgo de caídas [76][81].'));
+  if(h(st,'vitd')) r.push(p('<b>Vitamina D</b>: solo por riesgo de déficit, dosis diaria VO cada 24 h según las guías nacionales de nutrición; no se da a todos para prevenir caídas [76][79].'));
+  if(h(st,'cad')){
+    if(h(st,'fg35')) r.push(p('<b>Fractura de cadera reciente con depuración menor de 35 mL/min</b>: el ácido zoledrónico está contraindicado [84]. Deriva a quien maneje la osteoporosis; mantén ejercicio individualizado iniciado en el hospital [76].'));
+    else r.push(p('<b>Fractura de cadera reciente</b>: ácido zoledrónico 5 mg IV en no menos de 15 minutos, una vez al año; primera infusión dentro de 90 días de la reparación [82][84]. Corrige antes la hipocalcemia y asegura calcio (al menos 1 200 mg) y vitamina D (800–1 000 UI) diarios si la ingesta es insuficiente [84]. Mantén ejercicio individualizado iniciado en el hospital [76].'));
+  } else if(h(st,'fg35')) r.push(p('<b>Función renal baja</b>: recuerda que el ácido zoledrónico está contraindicado con depuración menor de 35 mL/min si luego surge una fractura [84].'));
+  r.push('<span class="cf">Si hay una sola caída sin lesión y el TUG pasa de 15 s o menos a más de 15 s → el riesgo sube de bajo a intermedio y se añade ejercicio supervisado; si hay pérdida de conciencia → piensa en síncope [76].</span>');
+  out(dc,r.join(''));
+}
+
+window.dcE5tx=dcE5tx;
+})();
+(function(){
+function dcVis(dc){
+  function p(t){return '<p>'+t+'</p>';}
+  function h(a,v){return a.indexOf(v)>-1;}
+  var f=sel(dc,'fun'),a=sel(dc,'ant'),v=sel(dc,'val');
+  if(!(f.length||a.length||v.length)){
+    out(dc,p('Elige la función perdida, el antecedente inmediato y el dato de la valoración. El simulador propone el síndrome o los síndromes compatibles, el hallazgo que falta y la conducta inicial; no calcula probabilidades.'));return;}
+  var x=[],n=0;
+  var fra=h(f,'lent')||h(v,'vel');
+  var inm=h(a,'rep')||(h(f,'dep')&&!h(a,'hip'));
+  var des=h(a,'hip')||h(v,'mna');
+  var pol=h(a,'fx');
+  var cai=h(f,'cai')||h(v,'tin');
+  if(pol){n++;
+    x.push(p('<b>Polifarmacia e iatrogenia</b> (la amenaza del grupo): un fármaco nuevo, o un efecto adverso tratado con otro fármaco, es la firma de la cascada de prescripción [2]. Falta la conciliación completa con los criterios de Beers y STOPP/START [6]; en doña Rosa se revisan el diltiazem con insuficiencia cardiaca de FE reducida [20][21] y el edema por pregabalina [22]. Conducta inicial: deprescribir con orden, un fármaco a la vez y con seguimiento, junto con geriatría o farmacología clínica. Detalle en «Polifarmacia».'));
+  }
+  if(fra){n++;
+    x.push(p('<b>Fragilidad</b>: marcha lenta con debilidad y agotamiento indica pérdida de reserva; la velocidad ≤0,8 m/s y el TUG ≥20 s marcan bajo rendimiento físico [3]. Falta aplicar el fenotipo de Fried o la Escala Clínica de Fragilidad al estado basal y descartar depresión con el GDS-15 [16]. Conducta inicial: ejercicio multicomponente y búsqueda de causas reversibles, a cargo de geriatría o medicina familiar. Detalle en «Fragilidad».'));
+  }
+  if(inm){n++;
+    x.push(p('<b>Inmovilidad</b>: los días de reposo con dependencia nueva para el traslado y el aseo son la discapacidad asociada a la hospitalización, que afecta a cerca de un tercio de los mayores de 70 años [1]. Falta el Barthel comparado con el estado previo [9]. Conducta inicial: movilizar desde ya, retirar restricciones y sondas innecesarias, con fisioterapia y enfermería. Detalle en «Inmovilidad».'));
+  }
+  if(des){n++;
+    x.push(p('<b>Desnutrición</b>: la hiporexia con pérdida de peso apunta a ingesta insuficiente; el MNA-SF clasifica 12–14 normal, 8–11 en riesgo y 0–7 desnutrido [7]. Falta buscar la causa de la hiporexia (fármacos, depresión, problemas para tragar o masticar) y completar con los criterios GLIM. Conducta inicial: tratar la causa, enriquecer la dieta y ofrecer suplementos orales con apoyo de nutrición. Detalle en «Desnutrición».'));
+  }
+  if(cai){n++;
+    x.push(p('<b>Caídas</b>: la caída reciente o el equilibrio alterado piden explicar el mecanismo (síncope, mareo, tropiezo) y medir la marcha. Falta el Tinetti (máximo de 28 puntos) y el TUG [8][10], además de revisar los fármacos sedantes [6]. Conducta inicial: descartar fractura, retirar fármacos de riesgo y programar ejercicio de equilibrio. Detalle en «Caídas».'));
+  }
+  if(!n) x.push(p('Los datos elegidos no bastan para sostener un síndrome. Añade la función perdida, el antecedente inmediato o un dato de la valoración.'));
+  if(n>1) x.push(p('Varios síndromes a la vez son lo habitual: se refuerzan entre sí, y se ordena el estudio empezando por la lista de fármacos [6][1].'));
+  x.push('<span class="cf">Si la lista de fármacos mostrara un fármaco nuevo o un efecto tratado con otro fármaco → polifarmacia antes que fragilidad; si la marcha, la fuerza y el peso fueran normales → busca otra causa del declive [6][3].</span>');
+  out(dc,x.join(''));
+}
+
+window.dcVis=dcVis;
+})();
+</script>
