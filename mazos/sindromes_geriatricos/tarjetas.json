@@ -1,0 +1,725 @@
+{
+ "meta": {
+  "caso": "Síndromes geriátricos",
+  "rotacion": "2.ª",
+  "tag_raiz": "SindromesGeriatricos",
+  "prefijo": "Q2R2-GER",
+  "version": "1.0",
+  "fecha": "2026-11-26",
+  "resultado_aprendizaje": "Realiza la valoración geriátrica integral del adulto mayor con patología relacionada con los síndromes geriátricos de acuerdo con evidencia científica.",
+  "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 2.ª rotación, Caso 3 — Síndromes geriátricos (contenidos y trabajo autónomo); delirio y demencia (caso 6) y envejecimiento y escalas (caso 2) quedan fuera por tener mazo propio",
+  "justificacion_exceso": "",
+  "mir_verificados": [],
+  "verificacion": {
+   "total": 44,
+   "verificados": 38,
+   "eliminados": [
+    {
+     "id": "Q2R2-GER-0015",
+     "dato": "Definición del «prescribing cascade» (Rochon y Gurwitz)",
+     "motivo": "PubMed sin resumen legible (Lancet 2017) y sin otra fuente confirmada: tarjeta no redactada"
+    },
+    {
+     "id": "Q2R2-GER-0013",
+     "dato": "Umbrales de hipotensión ortostática (descenso de PAS y PAD en 3 min)",
+     "motivo": "consenso de Freeman 2011 sin resumen disponible: se usó solo la asociación con caídas (Mol 2019)"
+    },
+    {
+     "id": "Q2R2-GER-0029",
+     "dato": "Cuatro habilidades de la capacidad de decidir (Appelbaum 2007)",
+     "motivo": "sin resumen disponible y Consensus agotado: se usó solo Sessums 2011"
+    },
+    {
+     "id": "Q2R2-GER-0022",
+     "dato": "Definición de cada estadio de lesión por presión (estadio 1 eritema no blanqueable, etc.)",
+     "motivo": "el resumen de Edsberg 2016 no las incluye: tarjeta limitada a los cambios documentados"
+    },
+    {
+     "id": "Q2R2-GER-0019",
+     "dato": "Mnemotecnia DIAPPERS y causas transitorias de incontinencia",
+     "motivo": "PubMed sin resultados: no se incluye"
+    },
+    {
+     "id": "Q2R2-GER-0012",
+     "dato": "Riesgo de caídas según número de factores de riesgo (Tinetti 1988)",
+     "motivo": "PubMed sin resultados con los términos usados: no se incluye"
+    }
+   ]
+  },
+  "guia": {
+   "principios": [
+    "La fragilidad es pérdida de reserva homeostática: un estresor menor produce cambios desproporcionados.",
+    "La función, no solo la enfermedad, define el pronóstico: la valoración geriátrica integral busca problemas médicos, mentales y funcionales a la vez.",
+    "El anciano pierde función con la inmovilidad y la hospitalización aunque la enfermedad se cure.",
+    "Una caída es un síndrome multifactorial: se evalúan varios dominios, no solo el desencadenante.",
+    "Contar fármacos no basta: se revisa la indicación de cada uno con criterios explícitos (Beers, STOPP/START) y se deprescribe.",
+    "La prevención de lesiones por presión es de componentes múltiples.",
+    "La capacidad de decidir se valora decisión por decisión."
+   ],
+   "palabras_clave": [
+    "fragilidad",
+    "fenotipo de Fried",
+    "reserva homeostática",
+    "valoración geriátrica integral",
+    "funcionalidad",
+    "inmovilidad",
+    "caídas",
+    "hipotensión ortostática",
+    "polifarmacia",
+    "criterios de Beers",
+    "STOPP/START",
+    "deprescripción",
+    "incontinencia urinaria",
+    "lesión por presión",
+    "GLIM",
+    "sarcopenia",
+    "capacidad de decisión",
+    "alostasis",
+    "carga alostática"
+   ],
+   "imagenes_oclusion": [
+    "Tabla de los cinco criterios del fenotipo de Fried con los rótulos tapados",
+    "Tabla Beers, STOPP y START con la columna «Detecta» tapada",
+    "Esquema fenotípico y etiológico de GLIM con las celdas tapadas"
+   ],
+   "preguntas_cierre": [
+    "Explica en voz alta, sin mirar, por qué un anciano frágil y uno robusto responden distinto al mismo estresor.",
+    "Un anciano de 80 años ingresa por neumonía: ¿qué haces desde el primer día para que no pierda la capacidad de caminar?",
+    "Una mujer de 78 años se cae por tercera vez: ¿qué dominios exploras antes de atribuirlo al tropiezo?",
+    "Tiene 9 fármacos: ¿cómo decides cuáles retirar y qué omisión podrías encontrar?",
+    "Una paciente de 78 años hospitalizada rechaza una cirugía: ¿cómo valoras si puede decidir y por qué la evaluación es específica de esa decisión?"
+   ],
+   "subtemas": {
+    "Fragilidad": "Conceptos de fragilidad e integralidad; fenotipo de Fried (trabajo autónomo)",
+    "ValoracionGeriatrica": "Componentes e instrumentos de la valoración geriátrica integral",
+    "Funcionalidad": "Concepto de funcionalidad, importancia y manera de identificarla",
+    "Dismovilidad": "Dismovilidad e iatrogenia hospitalaria",
+    "Caidas": "Caídas y su tamizaje en el nivel ambulatorio",
+    "Polifarmacia": "Polifarmacia e iatrogenia; controles de patologías crónicas",
+    "Incontinencia": "Incontinencia urinaria",
+    "UlcerasPresion": "Úlceras por presión",
+    "Desnutricion": "Desnutrición",
+    "Bioetica": "Criterios bioéticos",
+    "Conceptos": "Alostasis y carga alostática (trabajo autónomo)"
+   },
+   "fechas": {
+    "apertura": null,
+    "cierre": null,
+    "examen": null
+   },
+   "referencias": [
+    "Clegg A, Young J, Iliffe S, Rikkert MO, Rockwood K. Frailty in elderly people. Lancet. 2013;381(9868):752-62. doi:10.1016/S0140-6736(12)62167-9. PMID: 23395245.",
+    "Fried LP, Tangen CM, Walston J, Newman AB, Hirsch C, Gottdiener J, et al. Frailty in older adults: evidence for a phenotype. J Gerontol A Biol Sci Med Sci. 2001;56(3):M146-56. doi:10.1093/gerona/56.3.m146. PMID: 11253156.",
+    "Ellis G, Gardner M, Tsiachristas A, Langhorne P, Burke O, Harwood RH, et al. Comprehensive geriatric assessment for older adults admitted to hospital. Cochrane Database Syst Rev. 2017;9(9):CD006211. doi:10.1002/14651858.CD006211.pub3. PMID: 28898390.",
+    "Covinsky KE, Pierluissi E, Johnston CB. Hospitalization-associated disability: \"She was probably able to ambulate, but I'm not sure\". JAMA. 2011;306(16):1782-93. doi:10.1001/jama.2011.1556. PMID: 22028354.",
+    "Creditor MC. Hazards of hospitalization of the elderly. Ann Intern Med. 1993;118(3):219-23. doi:10.7326/0003-4819-118-3-199302010-00011. PMID: 8417639.",
+    "Montero-Odasso M, van der Velde N, Martin FC, Petrovic M, Tan MP, Ryg J, et al. World guidelines for falls prevention and management for older adults: a global initiative. Age Ageing. 2022;51(9):afac205. doi:10.1093/ageing/afac205. PMID: 36178003.",
+    "Mol A, Bui Hoang PTS, Sharmin S, Reijnierse EM, van Wezel RJA, Meskers CGM, et al. Orthostatic hypotension and falls in older adults: a systematic review and meta-analysis. J Am Med Dir Assoc. 2019;20(5):589-597.e5. doi:10.1016/j.jamda.2018.11.003. PMID: 30583909.",
+    "Masnoon N, Shakib S, Kalisch-Ellett L, Caughey GE. What is polypharmacy? A systematic review of definitions. BMC Geriatr. 2017;17(1):230. doi:10.1186/s12877-017-0621-2. PMID: 29017448.",
+    "2023 American Geriatrics Society Beers Criteria Update Expert Panel. American Geriatrics Society 2023 updated AGS Beers Criteria for potentially inappropriate medication use in older adults. J Am Geriatr Soc. 2023;71(7):2052-81. doi:10.1111/jgs.18372. PMID: 37139824.",
+    "O'Mahony D, Cherubini A, Guiteras AR, Denkinger M, Beuscart JB, Onder G, et al. STOPP/START criteria for potentially inappropriate prescribing in older people: version 3. Eur Geriatr Med. 2023;14(4):625-32. doi:10.1007/s41999-023-00777-y. PMID: 37256475.",
+    "Zhou D, Chen Z, Tian F. Deprescribing interventions for older patients: a systematic review and meta-analysis. J Am Med Dir Assoc. 2023;24(11):1718-25. doi:10.1016/j.jamda.2023.07.016. PMID: 37582482.",
+    "Qaseem A, Dallas P, Forciea MA, Starkey M, Denberg TD, Shekelle P. Nonsurgical management of urinary incontinence in women: a clinical practice guideline from the American College of Physicians. Ann Intern Med. 2014;161(6):429-40. doi:10.7326/M13-2410. PMID: 25222388.",
+    "Edsberg LE, Black JM, Goldberg M, McNichol L, Moore L, Sieggreen M. Revised National Pressure Ulcer Advisory Panel pressure injury staging system. J Wound Ostomy Continence Nurs. 2016;43(6):585-97. doi:10.1097/WON.0000000000000281. PMID: 27749790.",
+    "Gaspar S, Peralta M, Marques A, Budri A, Gaspar de Matos M. Effectiveness on hospital-acquired pressure ulcers prevention: a systematic review. Int Wound J. 2019;16(5):1087-102. doi:10.1111/iwj.13147. PMID: 31264345.",
+    "Cederholm T, Jensen GL, Correia MITD, Gonzalez MC, Fukushima R, Higashiguchi T, et al. GLIM criteria for the diagnosis of malnutrition: a consensus report from the global clinical nutrition community. Clin Nutr. 2019;38(1):1-9. doi:10.1016/j.clnu.2018.08.002. PMID: 30181091.",
+    "Cruz-Jentoft AJ, Bahat G, Bauer J, Boirie Y, Bruyère O, Cederholm T, et al. Sarcopenia: revised European consensus on definition and diagnosis. Age Ageing. 2019;48(1):16-31. doi:10.1093/ageing/afy169. PMID: 30312372.",
+    "Sessums LL, Zembrzuska H, Jackson JL. Does this patient have medical decision-making capacity? JAMA. 2011;306(4):420-7. doi:10.1001/jama.2011.1023. PMID: 21791691.",
+    "McEwen BS. Allostasis and allostatic load: implications for neuropsychopharmacology. Neuropsychopharmacology. 2000;22(2):108-24. doi:10.1016/S0893-133X(99)00129-3. PMID: 10649824."
+   ]
+  }
+ },
+ "tarjetas": [
+  {
+   "id": "Q2R2-GER-0001",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Fragilidad</span>Un adulto mayor responde con poco cambio a una infección leve y otro, de la misma edad, queda dependiente. ¿Qué lo explica?",
+   "respuesta": "La <span class=\"mec\">reserva homeostática</span>: la fragilidad es vulnerabilidad a una mala resolución de la homeostasis tras un estresor, por declive acumulado en muchos sistemas.",
+   "razonamiento": "Al agotarse la reserva, estresores menores desencadenan cambios desproporcionados en la salud. Por eso la fragilidad orienta la elección de procedimientos y fármacos y el paso a una atención dirigida a metas.<br><span class=\"vs\">Contraste</span> el envejecimiento sin fragilidad conserva reserva y absorbe el estresor.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Clegg 2013, Lancet (PMID 23395245)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Fragilidad",
+    "Nivel::Aplicacion",
+    "Fuente::Clegg2013",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0002",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Fenotipo de Fried</span>La fragilidad se define con {{c1::<span class=\"num\">≥ 3</span>}} de 5 criterios; con {{c2::<span class=\"num\">1–2</span>}} criterios se es prefrágil.",
+   "extra": "Criterios: pérdida de peso involuntaria, agotamiento autorreferido, debilidad (fuerza de prensión), marcha lenta y baja actividad física. El estado intermedio ya confiere riesgo de volverse frágil.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Fried 2001, J Gerontol A Biol Sci Med Sci (PMID 11253156)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Fragilidad",
+    "Nivel::Recuerdo",
+    "Fuente::Fried2001",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-GER-0003",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Fragilidad</span>¿Qué relación guardan la comorbilidad y la discapacidad con la fragilidad?",
+   "respuesta": "Se solapan sin ser sinónimos: la <span class=\"dx\">comorbilidad</span> es un factor de riesgo de fragilidad y la <span class=\"dx\">discapacidad</span> es uno de sus desenlaces.",
+   "razonamiento": "Fried halló que fragilidad, comorbilidad y discapacidad coinciden en parte, pero no de forma concordante. Por eso un anciano con varias enfermedades no es necesariamente frágil ni todo frágil es dependiente.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Concepto</th><th>Papel</th></tr></thead><tbody><tr><th>Comorbilidad</th><td>Factor de riesgo</td></tr><tr><th>Fragilidad</th><td>Síndrome clínico</td></tr><tr><th>Discapacidad</th><td>Desenlace</td></tr></tbody></table>",
+   "fuente": "Fried 2001, J Gerontol A Biol Sci Med Sci (PMID 11253156)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Fragilidad",
+    "Nivel::Aplicacion",
+    "Fuente::Fried2001",
+    "Clase::Contraste",
+    "Bloom::Analizar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0004",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Fragilidad</span>Caso — mujer de 82 años con pérdida de peso involuntaria, agotamiento, marcha lenta y fuerza de prensión baja, sin enfermedad aguda. ¿Qué diagnóstico y qué riesgo implica?",
+   "respuesta": "<span class=\"dx\">Fragilidad</span>, por cumplir 4 de los 5 criterios del fenotipo de Fried.",
+   "razonamiento": "Con 3 o más criterios se define fragilidad. Predice a 3 años caídas, empeoramiento de la movilidad o de las actividades de la vida diaria, hospitalización y muerte, incluso ajustando por enfermedades y factores sociales.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Fried 2001, J Gerontol A Biol Sci Med Sci (PMID 11253156)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Fragilidad",
+    "Nivel::Aplicacion",
+    "Fuente::Fried2001",
+    "Clase::Vineta",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0005",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Valoración geriátrica integral</span>¿Qué distingue a la valoración geriátrica integral de una evaluación médica habitual?",
+   "respuesta": "Es un proceso diagnóstico y terapéutico <span class=\"mec\">multidimensional y multidisciplinario</span> que identifica problemas médicos, mentales y funcionales para construir un plan coordinado de tratamiento y seguimiento.",
+   "razonamiento": "Se dirige a personas mayores con fragilidad, en quienes los problemas se acumulan e interactúan. La enfermedad por sí sola no describe lo que el paciente puede hacer ni dónde vivirá.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Ellis 2017, Cochrane Database Syst Rev (PMID 28898390)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::ValoracionGeriatrica",
+    "Nivel::Aplicacion",
+    "Fuente::Ellis2017",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0006",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Valoración geriátrica integral</span>En un adulto mayor que ingresa al hospital, ¿qué resultado mejora con la valoración geriátrica integral y cuál no cambia?",
+   "respuesta": "Aumenta la probabilidad de estar <span class=\"dx\">vivo y en casa</span> a los 3–12 meses y reduce el ingreso a residencia; la mortalidad no cambia.",
+   "razonamiento": "Es una revisión Cochrane de 29 ensayos con evidencia de certeza alta para esos desenlaces. Su valor está en la autonomía y el destino al alta, no en la supervivencia.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Ellis 2017, Cochrane Database Syst Rev (PMID 28898390)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::ValoracionGeriatrica",
+    "Nivel::Aplicacion",
+    "Fuente::Ellis2017",
+    "Clase::Aplicacion",
+    "Bloom::Evaluar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0007",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Funcionalidad</span>¿Por qué en un anciano hospitalizado se valoran actividades de la vida diaria, movilidad y cognición además de la enfermedad de ingreso?",
+   "respuesta": "Porque la hospitalización es un evento centinela que puede precipitar <span class=\"al\">discapacidad</span> aunque la enfermedad se trate con éxito.",
+   "razonamiento": "Reconocer los problemas funcionales es requisito para prevenirlos y manejarlos. Los factores de riesgo y las intervenciones sobre los procesos hospitalarios permiten actuar antes de que se pierda la independencia.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Covinsky 2011, JAMA (PMID 22028354)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Funcionalidad",
+    "Nivel::Aplicacion",
+    "Fuente::Covinsky2011",
+    "Clase::Relacional",
+    "Bloom::Analizar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0008",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Discapacidad asociada a la hospitalización</span>Ocurre en aproximadamente {{c1::<span class=\"num\">un tercio</span>}} de los pacientes mayores de {{c2::<span class=\"num\">70</span>}} años.",
+   "extra": "Puede aparecer aun cuando la enfermedad que motivó el ingreso se haya tratado con éxito.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Covinsky 2011, JAMA (PMID 22028354)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Funcionalidad",
+    "Nivel::Recuerdo",
+    "Fuente::Covinsky2011",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-GER-0009",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Inmovilidad</span>¿Por qué el reposo en cama de un anciano hospitalizado genera complicaciones ajenas a la enfermedad de ingreso?",
+   "respuesta": "Porque la inmovilización se suma a los cambios de la edad y desencadena una <span class=\"mec\">cascada hacia la dependencia</span>, con menos volumen plasmático, pérdida ósea acelerada y privación sensorial.",
+   "razonamiento": "La edad ya reduce la fuerza muscular y la capacidad aeróbica y causa inestabilidad vasomotora. Sumar encamamiento convierte un cuerpo con poca reserva en uno con declive funcional posiblemente irreversible.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Creditor 1993, Ann Intern Med (PMID 8417639)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Dismovilidad",
+    "Nivel::Aplicacion",
+    "Fuente::Creditor1993",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0010",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Inmovilidad</span>Predice: un anciano ingresa por neumonía y pasa varios días en cama con barandas altas. ¿Qué riesgo corre aunque la neumonía se cure y qué cambios lo previenen?",
+   "respuesta": "<span class=\"al\">Declive funcional</span> que puede ser irreversible; se previene dando menos énfasis al reposo en cama y facilitando la deambulación y la socialización.",
+   "razonamiento": "Creditor propone retirar el peligro de la cama alta con barandas y trabajar de forma interdisciplinaria con objetivos compartidos. El declive es explicable y evitable.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Creditor 1993, Ann Intern Med (PMID 8417639)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Dismovilidad",
+    "Nivel::Aplicacion",
+    "Fuente::Creditor1993",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0011",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Caídas</span>Según la guía mundial, ¿a quién se aconseja sobre caídas y a quién se ofrece una evaluación más profunda?",
+   "respuesta": "A todos los adultos mayores se les aconseja sobre prevención de caídas y actividad física; a los de <span class=\"al\">alto riesgo</span> se les ofrece una evaluación multifactorial integral del riesgo.",
+   "razonamiento": "El riesgo se detecta de forma oportunista en la comunidad. La evaluación sirve para diseñar con el paciente intervenciones personalizadas que actúen en varios dominios a la vez.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Montero-Odasso 2022, Age Ageing (PMID 36178003)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Caidas",
+    "Nivel::Aplicacion",
+    "Fuente::MonteroOdasso2022",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0012",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Caídas</span>Un anciano se cae por un tropiezo evidente. ¿Por qué la guía pide no detenerse en esa causa?",
+   "respuesta": "Porque en quien tiene alto riesgo se recomienda una evaluación <span class=\"mec\">multifactorial</span> que abarque varios dominios y no solo el desencadenante inmediato.",
+   "razonamiento": "Las intervenciones eficaces combinan componentes personalizados. Asumir que el tropiezo explica todo deja sin tratar factores como fármacos o presión arterial.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Montero-Odasso 2022, Age Ageing (PMID 36178003)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Caidas",
+    "Nivel::Aplicacion",
+    "Fuente::MonteroOdasso2022",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0013",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Caídas</span>¿Por qué se mide la presión arterial en decúbito y de pie en un adulto mayor que se cae?",
+   "respuesta": "Porque la <span class=\"dx\">hipotensión ortostática</span> se asocia con caídas (OR <span class=\"num\">1,73</span>), sea cual sea la definición o el método de medida.",
+   "razonamiento": "El metaanálisis incluyó 63 estudios. Subraya la relevancia de buscar la caída ortostática y de investigar si tratarla reduce las caídas, cosa aún no demostrada en esa revisión.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Mol 2019, J Am Med Dir Assoc (PMID 30583909)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Caidas",
+    "Nivel::Aplicacion",
+    "Fuente::Mol2019",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0014",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Polifarmacia</span>La definición numérica más usada es el consumo diario de {{c1::<span class=\"num\">≥ 5</span>}} medicamentos.",
+   "extra": "Las definiciones varían entre 2 o más y 11 o más medicamentos.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Masnoon 2017, BMC Geriatr (PMID 29017448)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Polifarmacia",
+    "Nivel::Recuerdo",
+    "Fuente::Masnoon2017",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-GER-0015",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Polifarmacia</span>¿Por qué contar medicamentos no basta para decidir si hay que retirar alguno?",
+   "respuesta": "Porque la definición numérica no considera las comorbilidades ni distingue la polifarmacia <span class=\"dx\">apropiada</span> de la <span class=\"dx\">inapropiada</span>.",
+   "razonamiento": "La decisión depende de la indicación y el balance de cada fármaco en ese paciente. Solo una minoría de definiciones publicadas hacía esa distinción.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Masnoon 2017, BMC Geriatr (PMID 29017448)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Polifarmacia",
+    "Nivel::Aplicacion",
+    "Fuente::Masnoon2017",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0016",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Criterios de Beers</span>¿Qué son los criterios de Beers 2023 y cómo deben usarse?",
+   "respuesta": "Una lista explícita de <span class=\"al\">medicamentos potencialmente inapropiados</span> que conviene evitar en mayores de 65 años, salvo en cuidados paliativos o final de vida.",
+   "razonamiento": "Se aplican en ámbito ambulatorio, agudo e institucionalizado y apoyan la decisión compartida sin sustituirla. Se diseñaron para EE. UU.; otros países pueden requerir consideraciones propias.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "AGS Beers Criteria 2023, J Am Geriatr Soc (PMID 37139824)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Polifarmacia",
+    "Nivel::Recuerdo",
+    "Fuente::Beers2023",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0017",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Criterios STOPP/START</span>¿Qué detecta START que no detectan ni Beers ni STOPP?",
+   "respuesta": "Las <span class=\"dx\">omisiones potenciales de prescripción</span>: tratamientos indicados que el paciente no recibe.",
+   "razonamiento": "STOPP y Beers señalan medicamentos potencialmente inapropiados; START corrige el error contrario, la infraprescripción. La versión 3 reúne 133 criterios STOPP y 57 START.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Criterio</th><th>Detecta</th></tr></thead><tbody><tr><th>Beers</th><td>Fármacos a evitar</td></tr><tr><th>STOPP</th><td>Fármacos inapropiados</td></tr><tr><th>START</th><td>Omisiones</td></tr></tbody></table>",
+   "fuente": "O'Mahony 2023, Eur Geriatr Med (PMID 37256475)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Polifarmacia",
+    "Nivel::Aplicacion",
+    "Fuente::OMahony2023",
+    "Clase::Contraste",
+    "Bloom::Analizar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0018",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Deprescripción</span>En mayores de 60 años, ¿qué logran las intervenciones de deprescripción en los ensayos?",
+   "respuesta": "Reducen la proporción con <span class=\"al\">medicamentos inapropiados</span> y omisiones de prescripción, y la incidencia de reacciones adversas, y mejoran la adherencia.",
+   "razonamiento": "El metaanálisis reunió 32 ensayos. Reducir la carga farmacológica es una intervención con resultados clínicos, no solo administrativos.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Zhou 2023, J Am Med Dir Assoc (PMID 37582482)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Polifarmacia",
+    "Nivel::Aplicacion",
+    "Fuente::Zhou2023",
+    "Clase::Aplicacion",
+    "Bloom::Evaluar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0019",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Incontinencia urinaria</span>Mujer con incontinencia de esfuerzo, ¿qué tratamiento de primera línea indica la guía del Colegio Americano de Médicos?",
+   "respuesta": "<span class=\"dx\">Entrenamiento de los músculos del piso pélvico</span>; no se recomienda tratamiento farmacológico sistémico.",
+   "razonamiento": "La recomendación es fuerte y con evidencia de alta calidad. Los fármacos sistémicos no ayudan en la incontinencia de esfuerzo.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Qaseem 2014, Ann Intern Med (PMID 25222388)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Incontinencia",
+    "Nivel::Aplicacion",
+    "Fuente::Qaseem2014",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0020",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Incontinencia urinaria</span>¿Cómo cambia la primera línea entre incontinencia de esfuerzo, de urgencia y mixta?",
+   "respuesta": "Esfuerzo: entrenamiento del piso pélvico; urgencia: <span class=\"dx\">entrenamiento vesical</span>; mixta: ambos combinados.",
+   "razonamiento": "En urgencia se pasa al fármaco solo si el entrenamiento vesical fracasa; se elige según tolerabilidad, efectos adversos, facilidad de uso y costo.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Tipo</th><th>Primera línea</th></tr></thead><tbody><tr><th>Esfuerzo</th><td>Piso pélvico</td></tr><tr><th>Urgencia</th><td>Entrenamiento vesical</td></tr><tr><th>Mixta</th><td>Ambos</td></tr></tbody></table>",
+   "fuente": "Qaseem 2014, Ann Intern Med (PMID 25222388)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Incontinencia",
+    "Nivel::Aplicacion",
+    "Fuente::Qaseem2014",
+    "Clase::Contraste",
+    "Bloom::Analizar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0021",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Incontinencia urinaria</span>Mujer obesa con incontinencia urinaria: ¿qué medidas se añaden al tratamiento específico?",
+   "respuesta": "<span class=\"dx\">Pérdida de peso y ejercicio</span>.",
+   "razonamiento": "La guía las recomienda de forma fuerte con evidencia de calidad moderada en mujeres obesas con incontinencia.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Qaseem 2014, Ann Intern Med (PMID 25222388)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Incontinencia",
+    "Nivel::Aplicacion",
+    "Fuente::Qaseem2014",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0022",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Lesión por presión</span>¿Qué cambió en 2016 en la terminología y la numeración de la clasificación?",
+   "respuesta": "«Úlcera» pasó a <span class=\"dx\">lesión por presión</span> y los estadios se numeran con números arábigos; se quitó «sospecha» de la lesión de tejido profundo.",
+   "razonamiento": "La definición revisada habla de lesiones sobre una prominencia ósea o bajo un dispositivo médico. Cada estadio describe la extensión de tejido perdido y las estructuras presentes o ausentes.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Edsberg 2016, J Wound Ostomy Continence Nurs (PMID 27749790)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::UlcerasPresion",
+    "Nivel::Recuerdo",
+    "Fuente::Edsberg2016",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0023",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Lesión por presión</span>¿Qué distinción clínica aclara la definición revisada del estadio 2?",
+   "respuesta": "La que existe entre el daño cutáneo asociado a <span class=\"mec\">humedad</span> y la lesión causada por presión y/o cizallamiento.",
+   "razonamiento": "Evita rotular como lesión por presión lo que es dermatitis por humedad, p. ej. en la zona del pañal o por incontinencia, y por tanto cambia la prevención.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Edsberg 2016, J Wound Ostomy Continence Nurs (PMID 27749790)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::UlcerasPresion",
+    "Nivel::Aplicacion",
+    "Fuente::Edsberg2016",
+    "Clase::Contraste",
+    "Bloom::Analizar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0024",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Lesión por presión</span>¿Por qué un programa con varias medidas previene mejor las lesiones que una sola?",
+   "respuesta": "Porque las intervenciones aisladas, como las <span class=\"mec\">superficies de apoyo</span> o el reposicionamiento, no siempre fueron efectivas, mientras los programas multicomponente sí lo fueron.",
+   "razonamiento": "El reposicionamiento solo funcionó cuando se apoyó en retroalimentación tecnológica del mapa de presiones. Las herramientas de valoración del riesgo, por sí solas, no previenen.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Gaspar 2019, Int Wound J (PMID 31264345)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::UlcerasPresion",
+    "Nivel::Aplicacion",
+    "Fuente::Gaspar2019",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0025",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Desnutrición</span>Tras un tamizaje positivo, ¿qué exige GLIM para diagnosticar desnutrición?",
+   "respuesta": "Al menos <span class=\"num\">un</span> criterio <span class=\"dx\">fenotípico</span> y <span class=\"num\">uno</span> <span class=\"dx\">etiológico</span>.",
+   "razonamiento": "Los fenotípicos son pérdida de peso no voluntaria, IMC bajo y masa muscular reducida. Los etiológicos son ingesta o asimilación reducida e inflamación o carga de enfermedad.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Tipo</th><th>Criterios</th></tr></thead><tbody><tr><th>Fenotípico</th><td>Peso, IMC, músculo</td></tr><tr><th>Etiológico</th><td>Ingesta, inflamación</td></tr></tbody></table>",
+   "fuente": "Cederholm 2019, Clin Nutr (PMID 30181091)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Desnutricion",
+    "Nivel::Recuerdo",
+    "Fuente::Cederholm2019",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0026",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Desnutrición</span>¿Por qué el diagnóstico de desnutrición según GLIM se hace en dos pasos?",
+   "respuesta": "Primero se tamiza con una herramienta validada para identificar el riesgo y después se evalúa para <span class=\"mec\">diagnosticar y graduar</span> la gravedad.",
+   "razonamiento": "Separar ambos pasos evita diagnosticar sin cribar y permite usar las herramientas ya disponibles en cada nivel. Los criterios etiológicos orientan la intervención y el pronóstico esperado.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Cederholm 2019, Clin Nutr (PMID 30181091)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Desnutricion",
+    "Nivel::Aplicacion",
+    "Fuente::Cederholm2019",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0027",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Sarcopenia</span>Según el consenso europeo EWGSOP2, ¿qué característica define la sarcopenia y qué la confirma?",
+   "respuesta": "La <span class=\"dx\">baja fuerza muscular</span> es la característica clave; se confirma con baja cantidad o calidad de músculo.",
+   "razonamiento": "El mal rendimiento físico señala sarcopenia grave. El consenso la concibe como una enfermedad muscular con fallo del músculo, más frecuente en edad avanzada.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Cruz-Jentoft 2019, Age Ageing (PMID 30312372)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Desnutricion",
+    "Nivel::Recuerdo",
+    "Fuente::CruzJentoft2019",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0028",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Desnutrición</span>Caso — anciano con pérdida de peso involuntaria e ingesta reducida desde hace semanas, con tamizaje de riesgo positivo. ¿Cumple criterios GLIM?",
+   "respuesta": "Sí: <span class=\"dx\">desnutrición</span>, por tener un criterio fenotípico (pérdida de peso) y uno etiológico (ingesta reducida).",
+   "razonamiento": "El tamizaje positivo permite pasar a la evaluación diagnóstica. Después se grada la gravedad con los criterios fenotípicos.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Cederholm 2019, Clin Nutr (PMID 30181091)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Desnutricion",
+    "Nivel::Aplicacion",
+    "Fuente::Cederholm2019",
+    "Clase::Vineta",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0029",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Capacidad de decisión</span>¿Por qué la capacidad del paciente se evalúa en cada decisión y no como una condición global?",
+   "respuesta": "Porque la evaluación debe hacerse en el contexto de <span class=\"mec\">decisiones médicas específicas</span> cuando se sospecha incapacidad.",
+   "razonamiento": "La incapacidad es poco frecuente en ancianos sanos (2,8 %) y común en pacientes ingresados (26 %), pero los médicos la reconocen solo en el 42 % de los afectados. Evaluar caso a caso evita presumirla o pasarla por alto.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Sessums 2011, JAMA (PMID 21791691)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Bioetica",
+    "Nivel::Aplicacion",
+    "Fuente::Sessums2011",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0030",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Capacidad de decisión</span>¿Para qué sirve el MMSE al valorar la capacidad de decidir?",
+   "respuesta": "Solo es útil en los extremos: una puntuación <span class=\"num\">< 20</span> aumenta la probabilidad de incapacidad y una <span class=\"num\">> 24</span> la disminuye.",
+   "razonamiento": "Entre 20 y 24 no modifica la probabilidad. El instrumento mejor respaldado para ayudar al juicio clínico es el Aid to Capacity Evaluation (ACE), de uso libre.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Sessums 2011, JAMA (PMID 21791691)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Bioetica",
+    "Nivel::Aplicacion",
+    "Fuente::Sessums2011",
+    "Clase::Aplicacion",
+    "Bloom::Evaluar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2R2-GER-0031",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Alostasis</span>¿Qué distingue la alostasis de la carga alostática?",
+   "respuesta": "La <span class=\"mec\">alostasis</span> es la adaptación a corto plazo mediada por glucocorticoides y catecolaminas; la <span class=\"mec\">carga alostática</span> es el costo a largo plazo que acelera la enfermedad.",
+   "razonamiento": "Los mismos mediadores protegen en lo agudo y dañan si la activación se prolonga. Esa idea ayuda a entender por qué el estrés crónico acumulado se asocia con enfermedad.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "McEwen 2000, Neuropsychopharmacology (PMID 10649824)",
+   "tags": [
+    "Quirurgica2::SindromesGeriatricos::Conceptos",
+    "Nivel::Aplicacion",
+    "Fuente::McEwen2000",
+    "Clase::Contraste",
+    "Bloom::Analizar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  }
+ ]
+}
