@@ -1,0 +1,804 @@
+{
+ "meta": {
+  "caso": "Síndrome confusional y demencia",
+  "rotacion": "2.ª",
+  "tag_raiz": "DeliriumDemencia",
+  "prefijo": "Q2R2-DEL",
+  "version": "1.0",
+  "fecha": "2026-11-26",
+  "resultado_aprendizaje": "Maneja de manera integral a los pacientes con síndrome confusional agudo y demencias de acuerdo con evidencia científica.",
+  "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 2.ª rotación, Caso 6 — Síndrome confusional agudo y demencia (contenidos y trabajo autónomo)",
+  "justificacion_exceso": "",
+  "mir_verificados": [],
+  "verificacion": {
+   "total": 70,
+   "verificados": 62,
+   "eliminados": [
+    {
+     "id": "plan",
+     "dato": "Regla del año para separar demencia con Lewy de demencia en Parkinson",
+     "motivo": "PubMed sin resultados y Consensus agotado en la sesión: no redactado"
+    },
+    {
+     "id": "plan",
+     "dato": "Trastorno neurocognitivo leve frente a mayor según independencia funcional (DSM-5-TR)",
+     "motivo": "DSM-5-TR no consultado: no redactado"
+    },
+    {
+     "id": "plan",
+     "dato": "Cifras de la Comisión Lancet 2024 sobre factores de riesgo modificables",
+     "motivo": "resumen no disponible en PubMed: no redactado"
+    },
+    {
+     "id": "plan",
+     "dato": "Listas de fármacos a evitar en delirium (Beers 2023)",
+     "motivo": "resumen sin la lista: no redactado"
+    },
+    {
+     "id": "plan",
+     "dato": "Puntos de corte del MoCA y 90 % de hipercalcemias por hiperparatiroidismo primario o neoplasia",
+     "motivo": "no explícitos en los resúmenes leídos: reformulado como «la mayoría» (Tonon 2022)"
+    },
+    {
+     "id": "plan",
+     "dato": "QTc corto en hipercalcemia, prevención secundaria vascular (130/80 mmHg), ISRS en frontotemporal y no uso de colinesterásicos en frontotemporal",
+     "motivo": "sin fuente leída en la sesión: eliminado"
+    },
+    {
+     "id": "Q2R2-DEL-0001",
+     "dato": "Atención conservada en la demencia temprana (tabla)",
+     "motivo": "no explícita en los resúmenes leídos: fila eliminada"
+    },
+    {
+     "id": "plan",
+     "dato": "Características del envejecimiento cerebral (trabajo autónomo)",
+     "motivo": "sin fuente verificable en la sesión: no redactado"
+    }
+   ]
+  },
+  "guia": {
+   "principios": [
+    "Delirium es un cerebro vulnerable más un estresor agudo: se busca y se corrige el precipitante antes de sedar.",
+    "El tiempo de instalación separa los síndromes: horas a días con fluctuación es delirium; meses a años de declive es un trastorno neurocognitivo.",
+    "Delirium y demencia coexisten: un empeoramiento brusco en una demencia es delirium sobreañadido hasta demostrar lo contrario.",
+    "El dominio que cae primero orienta la causa de la demencia: memoria (Alzheimer), ejecutivo con signos vasculares, fluctuación y alucinaciones (Lewy), conducta o lenguaje (frontotemporal).",
+    "En Lewy y en Parkinson el sistema dopaminérgico está comprometido: los neurolépticos pueden ser graves o contraindicados."
+   ],
+   "palabras_clave": [
+    "delirium",
+    "CAM",
+    "4AT",
+    "inatención",
+    "hipercalcemia",
+    "MMSE",
+    "MoCA",
+    "Mini-Cog",
+    "Alzheimer",
+    "VASCOG",
+    "cuerpos de Lewy",
+    "MIBG",
+    "demencia frontotemporal",
+    "afasia primaria progresiva"
+   ],
+   "imagenes_oclusion": [
+    "Tabla delirium frente a demencia (inicio, curso, causa) con los rótulos tapados",
+    "Tabla Lewy frente a Alzheimer con las celdas tapadas"
+   ],
+   "preguntas_cierre": [
+    "Un adulto mayor tiene confusión de dos días: ¿cómo distingues delirium, demencia y delirium sobre demencia?",
+    "¿Qué estudios y qué medidas no farmacológicas pides y por qué evitas el haloperidol?",
+    "¿Cómo se diferencian clínicamente las demencias degenerativas y vascular y qué manejo farmacológico tiene cada una?"
+   ],
+   "subtemas": {
+    "DeliriumConcepto": "Definición, factores predisponentes y precipitantes, diagnóstico diferencial (sílabo, Caso 6)",
+    "DeliriumEtiologia": "Causas metabólicas y caso integrador",
+    "DeliriumDiagnostico": "CAM y 4AT",
+    "DeliriumManejo": "Manejo, prevención y pronóstico",
+    "EvaluacionCognitiva": "Evaluación cognitiva en la persona adulta mayor (trabajo autónomo)",
+    "Alzheimer": "Demencia por Alzheimer",
+    "DemenciaTratamiento": "Manejo farmacológico de las demencias",
+    "DemenciaVascular": "Demencia vascular",
+    "CuerposLewy": "Demencia con cuerpos de Lewy y en Parkinson",
+    "Frontotemporal": "Demencia frontotemporal"
+   },
+   "fechas": {
+    "apertura": null,
+    "cierre": null,
+    "examen": null
+   },
+   "referencias": [
+    "Wilson JE, Mart MF, Cunningham C, Shehabi Y, Girard TD, MacLullich AMJ, et al. Delirium. Nat Rev Dis Primers. 2020;6(1):90. PMID: 33184265.",
+    "Inouye SK, van Dyck CH, Alessi CA, Balkin S, Siegal AP, Horwitz RI. Clarifying confusion: the confusion assessment method. A new method for detection of delirium. Ann Intern Med. 1990;113(12):941-8. PMID: 2240918.",
+    "Tieges Z, Maclullich AMJ, Anand A, Brookes C, Cassarino M, O'Connor M, et al. Diagnostic accuracy of the 4AT for delirium detection in older adults: systematic review and meta-analysis. Age Ageing. 2021;50(3):733-43. PMID: 33951145.",
+    "Tonon CR, Silva TAAL, Pereira FWL, Queiroz DAR, Junior ELF, Martins D, et al. A review of current clinical concepts in the pathophysiology, etiology, diagnosis, and management of hypercalcemia. Med Sci Monit. 2022;28:e935821. PMID: 35217631.",
+    "Nikooie R, Neufeld KJ, Oh ES, Wilson LM, Zhang A, Robinson KA, et al. Antipsychotics for treating delirium in hospitalized adults: a systematic review. Ann Intern Med. 2019;171(7):485-95. PMID: 31476770.",
+    "Inouye SK, Bogardus ST Jr, Charpentier PA, Leo-Summers L, Acampora D, Holford TR, et al. A multicomponent intervention to prevent delirium in hospitalized older patients. N Engl J Med. 1999;340(9):669-76. PMID: 10053175.",
+    "Witlox J, Eurelings LSM, de Jonghe JFM, Kalisvaart KJ, Eikelenboom P, van Gool WA. Delirium in elderly patients and the risk of postdischarge mortality, institutionalization, and dementia: a meta-analysis. JAMA. 2010;304(4):443-51. PMID: 20664045.",
+    "McKeith IG, Perry RH, Fairbairn AF, Jabeen S, Perry EK. Operational criteria for senile dementia of Lewy body type (SDLT). Psychol Med. 1992;22(4):911-22. PMID: 1362617.",
+    "McKeith I, Fairbairn A, Perry R, Thompson P, Perry E. Neuroleptic sensitivity in patients with senile dementia of Lewy body type. BMJ. 1992;305(6855):673-8. PMID: 1356550.",
+    "McKeith IG, Boeve BF, Dickson DW, Halliday G, Taylor JP, Weintraub D, et al. Diagnosis and management of dementia with Lewy bodies: fourth consensus report of the DLB Consortium. Neurology. 2017;89(1):88-100. PMID: 28592453.",
+    "McKhann GM, Knopman DS, Chertkow H, Hyman BT, Jack CR Jr, Kawas CH, et al. The diagnosis of dementia due to Alzheimer's disease: recommendations from the National Institute on Aging-Alzheimer's Association workgroups on diagnostic guidelines for Alzheimer's disease. Alzheimers Dement. 2011;7(3):263-9. PMID: 21514250.",
+    "Jack CR Jr, Andrews JS, Beach TG, Buracchio T, Dunn B, Graf A, et al. Revised criteria for diagnosis and staging of Alzheimer's disease: Alzheimer's Association Workgroup. Alzheimers Dement. 2024;20(8):5143-69. PMID: 38934362.",
+    "Didic M, Barbeau EJ, Felician O, Tramoni E, Guedj E, Poncet M, et al. Which memory system is impaired first in Alzheimer's disease? J Alzheimers Dis. 2011;27(1):11-22. PMID: 21799246.",
+    "Perneczky R, Wagenpfeil S, Komossa K, Grimmer T, Diehl J, Kurz A. Mapping scores onto stages: mini-mental state examination and clinical dementia rating. Am J Geriatr Psychiatry. 2006;14(2):139-44. PMID: 16473978.",
+    "Nasreddine ZS, Phillips NA, Bédirian V, Charbonneau S, Whitehead V, Collin I, et al. The Montreal Cognitive Assessment, MoCA: a brief screening tool for mild cognitive impairment. J Am Geriatr Soc. 2005;53(4):695-9. PMID: 15817019.",
+    "Borson S, Scanlan J, Brush M, Vitaliano P, Dokmak A. The mini-cog: a cognitive 'vital signs' measure for dementia screening in multi-lingual elderly. Int J Geriatr Psychiatry. 2000;15(11):1021-7. PMID: 11113982.",
+    "Sachdev P, Kalaria R, O'Brien J, Skoog I, Alladi S, Black SE, et al. Diagnostic criteria for vascular cognitive disorders: a VASCOG statement. Alzheimer Dis Assoc Disord. 2014;28(3):206-18. PMID: 24632990.",
+    "Emre M, Aarsland D, Albanese A, Byrne EJ, Deuschl G, De Deyn PP, et al. Rivastigmine for dementia associated with Parkinson's disease. N Engl J Med. 2004;351(24):2509-18. PMID: 15590953.",
+    "Rascovsky K, Hodges JR, Knopman D, Mendez MF, Kramer JH, Neuhaus J, et al. Sensitivity of revised diagnostic criteria for the behavioural variant of frontotemporal dementia. Brain. 2011;134(Pt 9):2456-77. PMID: 21810890.",
+    "Gorno-Tempini ML, Hillis AE, Weintraub S, Kertesz A, Mendez M, Cappa SF, et al. Classification of primary progressive aphasia and its variants. Neurology. 2011;76(11):1006-14. PMID: 21325651.",
+    "National Institute for Health and Care Excellence. Dementia: assessment, management and support for people living with dementia and their carers (NG97). London: NICE; 2018. Disponible en: https://www.nice.org.uk/guidance/ng97 [citado 2026 nov 26].",
+    "Haloperidol tablet [ficha técnica]. Bethesda (MD): DailyMed, National Library of Medicine; setid 26a590a4-bcbb-a9cd-e063-6394a90a2aac [citado 2026 nov 26].",
+    "Donepezil hydrochloride tablet, film coated [ficha técnica]. Bethesda (MD): DailyMed, National Library of Medicine; setid 12a755c5-1ad9-43d1-832a-eb2ff17bd693 [citado 2026 nov 26]."
+   ]
+  }
+ },
+ "tarjetas": [
+  {
+   "id": "Q2R2-DEL-0001",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Delirium</span>¿Qué define al delirium y lo separa de un trastorno neurocognitivo previo?",
+   "respuesta": "Un <span class=\"dx\">cambio agudo</span> de la atención, la conciencia y la cognición causado por una afección médica y no explicado por un trastorno neurocognitivo preexistente.",
+   "razonamiento": "Es un síndrome con causa orgánica, no un diagnóstico etiológico: siempre hay algo que buscar y corregir.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Wilson 2020, Nat Rev Dis Primers (PMID 33184265)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DeliriumConcepto",
+    "Nivel::Aplicacion",
+    "Fuente::Wilson2020",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0002",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Delirium</span>¿Por qué un mismo estresor desorganiza a un adulto mayor y no a un joven?",
+   "respuesta": "Porque casi todos los pacientes combinan <span class=\"mec\">factores predisponentes</span> (deterioro cognitivo previo) con un <span class=\"mec\">precipitante</span> agudo (infección urinaria).",
+   "razonamiento": "Se implican neuroinflamación, disfunción vascular cerebral, metabolismo alterado, desequilibrio de neurotransmisores y pérdida de conectividad entre redes neuronales: varios procesos, no uno solo.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Wilson 2020, Nat Rev Dis Primers (PMID 33184265)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DeliriumConcepto",
+    "Nivel::Aplicacion",
+    "Fuente::Wilson2020",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0003",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Demencia de base</span>Una persona con demencia conocida empeora de forma brusca en dos días: ¿qué piensas primero?",
+   "respuesta": "En un <span class=\"dx\">delirium sobreañadido</span>, y se busca el precipitante.",
+   "razonamiento": "El trastorno neurocognitivo previo es un factor predisponente, no una explicación del cambio agudo: la definición exige que el cuadro no se explique solo por la demencia.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Wilson 2020, Nat Rev Dis Primers (PMID 33184265)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DeliriumConcepto",
+    "Nivel::Aplicacion",
+    "Fuente::Wilson2020",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0004",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Delirium frente a demencia</span>¿Qué dos datos de la historia separan mejor el delirium de la demencia?",
+   "respuesta": "El <span class=\"al\">inicio agudo</span> y el curso <span class=\"mec\">fluctuante</span> del delirium frente al declive progresivo de la demencia.",
+   "razonamiento": "<span class=\"vs\">Contraste</span> el delirium es de causa médica aguda y reversible si se corrige; la demencia es neurodegenerativa o vascular y avanza.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Rasgo</th><th>Delirium</th><th>Demencia</th></tr></thead><tbody><tr><th>Inicio</th><td>Agudo</td><td>Insidioso</td></tr><tr><th>Curso</th><td>Fluctuante</td><td>Progresivo</td></tr><tr><th>Causa</th><td>Afección médica aguda</td><td>Neurodegeneración o lesión vascular</td></tr></tbody></table>",
+   "fuente": "Inouye 1990, Ann Intern Med (PMID 2240918); McKhann 2011, Alzheimers Dement (PMID 21514250)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DeliriumConcepto",
+    "Nivel::Aplicacion",
+    "Fuente::Inouye1990",
+    "Clase::Contraste",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0005",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Demencia con fluctuación</span>¿Qué demencia comparte con el delirium el curso fluctuante de la cognición?",
+   "respuesta": "La demencia con <span class=\"dx\">cuerpos de Lewy</span>.",
+   "razonamiento": "Su fluctuación cognitiva, con alucinaciones y caídas, supera la de la enfermedad de Alzheimer y puede confundirse con delirium: la atención y la historia con informante deciden.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "McKeith 1992, Psychol Med (PMID 1362617)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DeliriumConcepto",
+    "Nivel::Recuerdo",
+    "Fuente::McKeith1992",
+    "Clase::Contraste",
+    "Bloom::Analizar"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0006",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Caso de Saquisilí</span>Varón mayor que vive solo, «no actúa como él», dos días con conciencia fluctuante, sed, poliuria y estreñimiento: ¿qué síndrome y qué causa metabólica buscas?",
+   "respuesta": "<span class=\"dx\">Delirium</span> con probable <span class=\"mec\">hipercalcemia</span> con deshidratación; se piden calcio, glucosa y electrolitos.",
+   "razonamiento": "La hipercalcemia produce manifestaciones neurológicas, musculares, digestivas y renales (poliuria, estreñimiento), y la deshidratación agrava el cuadro; la hiperglucemia es la otra causa metabólica a descartar.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Tonon 2022, Med Sci Monit (PMID 35217631); Wilson 2020, Nat Rev Dis Primers (PMID 33184265)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DeliriumEtiologia",
+    "Nivel::Aplicacion",
+    "Fuente::Tonon2022",
+    "Clase::Vineta",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0007",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Hipercalcemia</span>Se define por un calcio sérico mayor de {{c1::<span class=\"num\">10,5 mg/dL</span>}} y la mayoría de los casos se debe a {{c2::hiperparatiroidismo primario}} y neoplasias.",
+   "extra": "Se clasifica en leve, moderada y grave según el valor; la mayoría de los pacientes son asintomáticos.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Tonon 2022, Med Sci Monit (PMID 35217631)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DeliriumEtiologia",
+    "Nivel::Recuerdo",
+    "Fuente::Tonon2022",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0008",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Hipercalcemia grave</span>¿Cuál es el tratamiento inicial de una hipercalcemia que causa delirium?",
+   "respuesta": "<span class=\"fx\">Hidratación intravenosa</span> vigorosa y fármacos que reducen la resorción ósea, como <span class=\"fx\">bisfosfonatos</span>.",
+   "razonamiento": "Los bisfosfonatos reducen la resorción ósea; el denosumab se reserva a los casos refractarios; la causa de fondo se trata según la etiología.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Tonon 2022, Med Sci Monit (PMID 35217631)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DeliriumEtiologia",
+    "Nivel::Aplicacion",
+    "Fuente::Tonon2022",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0009",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Delirium con deshidratación</span>En un delirium con deshidratación y trastorno metabólico demostrados, ¿qué pesa más: sedar o corregir la causa, y por qué?",
+   "respuesta": "Corregir la causa, porque el delirium es la expresión de esa causa.",
+   "razonamiento": "Las mejores estrategias son multidominio: tratar los precipitantes, revisar fármacos, manejar el malestar y mantener la orientación; los antipsicóticos no resuelven el proceso de fondo.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Wilson 2020, Nat Rev Dis Primers (PMID 33184265)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DeliriumEtiologia",
+    "Nivel::Aplicacion",
+    "Fuente::Wilson2020",
+    "Clase::Relacional",
+    "Bloom::Evaluar",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0010",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">CAM</span>¿Qué combinación de rasgos diagnostica delirium con la CAM?",
+   "respuesta": "Inicio agudo con curso fluctuante e <span class=\"al\">inatención</span>, más pensamiento desorganizado o nivel de conciencia alterado.",
+   "razonamiento": "El algoritmo es 1 y 2 y (3 o 4). Se validó para que médicos no psiquiatras detecten delirium en menos de 5 minutos.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Inouye 1990, Ann Intern Med (PMID 2240918)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DeliriumDiagnostico",
+    "Nivel::Aplicacion",
+    "Fuente::Inouye1990",
+    "Clase::Escala",
+    "Bloom::Aplicar",
+    "Escala::CAM",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0011",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">CAM</span>La CAM exige {{c1::inicio agudo y curso fluctuante}} e {{c2::inatención}}, y además pensamiento desorganizado o alteración del nivel de conciencia.",
+   "extra": "Algoritmo 1 y 2 y (3 o 4).",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Inouye 1990, Ann Intern Med (PMID 2240918)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DeliriumDiagnostico",
+    "Nivel::Recuerdo",
+    "Fuente::Inouye1990",
+    "Clase::Escala",
+    "Bloom::Recordar",
+    "Escala::CAM"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0012",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">4AT</span>¿Qué instrumento de menos de dos minutos se usa para detectar delirium en mayores de 65 años?",
+   "respuesta": "El <span class=\"dx\">4AT</span>.",
+   "razonamiento": "Su metaanálisis de 17 estudios halló buen rendimiento diagnóstico en medicina aguda, cirugía, residencias y urgencias; es un tamizaje, no el diagnóstico.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Tieges 2021, Age Ageing (PMID 33951145)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DeliriumDiagnostico",
+    "Nivel::Recuerdo",
+    "Fuente::Tieges2021",
+    "Clase::Escala",
+    "Bloom::Recordar",
+    "Escala::4AT"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0013",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Antipsicóticos en delirium</span>¿Acorta el haloperidol el delirium de un adulto hospitalizado?",
+   "respuesta": "No: no hubo diferencia en duración del delirium, estancia ni mortalidad frente a placebo.",
+   "razonamiento": "La revisión incluyó 16 ensayos y 10 estudios observacionales; los efectos cardíacos potencialmente dañinos tendieron a ser más frecuentes. Por eso la base es tratar la causa.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Nikooie 2019, Ann Intern Med (PMID 31476770)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DeliriumManejo",
+    "Nivel::Aplicacion",
+    "Fuente::Nikooie2019",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0014",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Prevención del delirium</span>¿Qué estrategia previene el delirium en adultos mayores hospitalizados y cuánto lo reduce?",
+   "respuesta": "Protocolos para seis factores de riesgo bajaron la incidencia de <span class=\"num\">15,0 %</span> a <span class=\"num\">9,9 %</span> (OR 0,60).",
+   "razonamiento": "Los seis factores son deterioro cognitivo, privación de sueño, inmovilidad, déficit visual, déficit auditivo y deshidratación; redujo los días y los episodios, no la gravedad.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Inouye 1999, N Engl J Med (PMID 10053175)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DeliriumManejo",
+    "Nivel::Aplicacion",
+    "Fuente::Inouye1999",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0015",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Haloperidol y Parkinson</span>Un paciente con enfermedad de Parkinson desarrolla delirium agitado: ¿puedes usar haloperidol?",
+   "respuesta": "No: la ficha lo contraindica en la <span class=\"dx\">enfermedad de Parkinson</span>.",
+   "razonamiento": "Su ficha también lleva una advertencia por mayor mortalidad en ancianos con psicosis relacionada con demencia.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Ficha técnica haloperidol (DailyMed, setid 26a590a4-bcbb-a9cd-e063-6394a90a2aac)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DeliriumManejo",
+    "Nivel::Aplicacion",
+    "Fuente::Haloperidol",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0016",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Pronóstico del delirium</span>¿Por qué se reevalúa la cognición cuando el delirium de un mayor ya cedió?",
+   "respuesta": "Porque el delirium se asocia a <span class=\"al\">muerte</span>, institucionalización y <span class=\"al\">demencia</span> posteriores.",
+   "razonamiento": "En el metaanálisis ajustado: mortalidad HR 1,95, institucionalización OR 2,41 y demencia OR 12,52 (solo 2 estudios, intervalo muy amplio).",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Witlox 2010, JAMA (PMID 20664045)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DeliriumManejo",
+    "Nivel::Aplicacion",
+    "Fuente::Witlox2010",
+    "Clase::Aplicacion",
+    "Bloom::Analizar"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0017",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">MMSE en Alzheimer</span>En la demencia por Alzheimer, el MMSE ubica el estadio: leve {{c1::<span class=\"num\">21–25</span>}}, moderada {{c2::<span class=\"num\">11–20</span>}} y grave {{c3::<span class=\"num\">0–10</span>}}.",
+   "extra": "Son equivalencias frente a la escala CDR, no criterio diagnóstico.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Perneczky 2006, Am J Geriatr Psychiatry (PMID 16473978)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::EvaluacionCognitiva",
+    "Nivel::Recuerdo",
+    "Fuente::Perneczky2006",
+    "Clase::Escala",
+    "Bloom::Recordar",
+    "Escala::MMSE"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0018",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Límite del MMSE</span>¿Qué separa mal el MMSE al estadiar la demencia?",
+   "respuesta": "La ausencia de demencia de la demencia cuestionable (CDR 0 frente a 0,5).",
+   "razonamiento": "Discrimina bien entre los estadios 0,5, 1, 2 y 3: sirve para estadiar, no para detectar los cambios más sutiles.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Perneczky 2006, Am J Geriatr Psychiatry (PMID 16473978)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::EvaluacionCognitiva",
+    "Nivel::Aplicacion",
+    "Fuente::Perneczky2006",
+    "Clase::Escala",
+    "Bloom::Analizar",
+    "Escala::MMSE"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0019",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Tamizaje de deterioro leve</span>¿Qué prueba breve se diseñó como tamizaje del deterioro cognitivo leve?",
+   "respuesta": "El <span class=\"dx\">MoCA</span> (Montreal Cognitive Assessment).",
+   "razonamiento": "Un instrumento breve tamiza, no diagnostica: la historia con informante y la función diaria completan la evaluación.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Nasreddine 2005, J Am Geriatr Soc (PMID 15817019)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::EvaluacionCognitiva",
+    "Nivel::Recuerdo",
+    "Fuente::Nasreddine2005",
+    "Clase::Escala",
+    "Bloom::Recordar",
+    "Escala::MoCA"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0020",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Mini-Cog</span>¿Qué prueba breve se describió como «signos vitales cognitivos» para tamizar demencia en mayores de distintas lenguas?",
+   "respuesta": "El <span class=\"dx\">Mini-Cog</span>.",
+   "razonamiento": "Es una herramienta de tamizaje rápida pensada para poblaciones multilingües; un resultado alterado orienta a evaluar, no establece demencia.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Borson 2000, Int J Geriatr Psychiatry (PMID 11113982)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::EvaluacionCognitiva",
+    "Nivel::Recuerdo",
+    "Fuente::Borson2000",
+    "Clase::Escala",
+    "Bloom::Recordar",
+    "Escala::MiniCog"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0021",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Enfermedad de Alzheimer</span>¿Cómo define la guía actual a la enfermedad de Alzheimer y qué basta para diagnosticarla?",
+   "respuesta": "Como un proceso <span class=\"mec\">biológico</span> que empieza con el cambio neuropatológico antes de los síntomas; un biomarcador alterado del grupo central basta para diagnosticarla.",
+   "razonamiento": "Los biomarcadores centrales incluyen PET de amiloide, líquido cefalorraquídeo y plasma (en especial p-tau217). El síndrome clínico es la expresión tardía del proceso.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Jack 2024, Alzheimers Dement (PMID 38934362)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::Alzheimer",
+    "Nivel::Aplicacion",
+    "Fuente::Jack2024",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0022",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Neuropatología temprana</span>¿Dónde comienza la patología de tau en la enfermedad de Alzheimer?",
+   "respuesta": "En la corteza <span class=\"dx\">transentorrinal y entorrinal</span>, antes del hipocampo.",
+   "razonamiento": "Los ovillos neurofibrilares se correlacionan con los síntomas; por eso las regiones mesiales temporales son el núcleo del fallo mnésico inicial.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Didic 2011, J Alzheimers Dis (PMID 21799246)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::Alzheimer",
+    "Nivel::Recuerdo",
+    "Fuente::Didic2011",
+    "Clase::Aplicacion",
+    "Bloom::Comprender"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0023",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Caso — olvido progresivo</span>Mujer de 74 años con dos años de olvido progresivo de lo reciente y pérdida de autonomía para sus finanzas: ¿qué diagnóstico plantea la práctica general?",
+   "respuesta": "<span class=\"dx\">Demencia probable por Alzheimer</span>, diagnóstico clínico.",
+   "razonamiento": "Los criterios NIA-AA están hechos para que el médico general los use sin neuropsicología ni imagen avanzada; los biomarcadores aumentan la especificidad, pero no son indispensables.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "McKhann 2011, Alzheimers Dement (PMID 21514250)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::Alzheimer",
+    "Nivel::Aplicacion",
+    "Fuente::McKhann2011",
+    "Clase::Vineta",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0024",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Fármacos en Alzheimer</span>¿Qué fármacos usa NICE en la enfermedad de Alzheimer según el grado?",
+   "respuesta": "Leve a moderada: <span class=\"fx\">donepezilo, galantamina o rivastigmina</span>; la <span class=\"fx\">memantina</span> se reserva a la grave o a la moderada con intolerancia a los anteriores.",
+   "razonamiento": "La memantina puede añadirse a un inhibidor de colinesterasa en moderada a grave. Conducta local: el MSP prevalece en el examen.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "NICE 2018, Guía NG97 Demencia (nice.org.uk/guidance/ng97)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DemenciaTratamiento",
+    "Nivel::Aplicacion",
+    "Fuente::NICE2018",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0025",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Efecto adverso de la colinesterasa</span>¿Qué debes valorar antes de iniciar un inhibidor de colinesterasa en un adulto mayor y por qué?",
+   "respuesta": "El <span class=\"al\">ritmo cardíaco</span>, por su efecto vagotónico: bradicardia, bloqueo y síncope.",
+   "razonamiento": "La acetilcolina aumentada actúa sobre los nodos sinusal y auriculoventricular, incluso sin alteración de la conducción previa.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Ficha técnica donepezilo (DailyMed, setid 12a755c5-1ad9-43d1-832a-eb2ff17bd693)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DemenciaTratamiento",
+    "Nivel::Aplicacion",
+    "Fuente::Donepezilo",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0026",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Demencia en Parkinson</span>¿Qué inhibidor de colinesterasa mostró beneficio en la demencia asociada a la enfermedad de Parkinson y a qué costo?",
+   "respuesta": "La <span class=\"fx\">rivastigmina</span>: mejoró 2,1 puntos en la ADAS-cog (placebo empeoró 0,7), con más náusea, vómito y temblor.",
+   "razonamiento": "El ensayo incluyó demencia leve a moderada surgida al menos 2 años después del diagnóstico de Parkinson; el beneficio fue moderado.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Emre 2004, N Engl J Med (PMID 15590953)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DemenciaTratamiento",
+    "Nivel::Aplicacion",
+    "Fuente::Emre2004",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0027",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Antipsicóticos en demencia</span>¿Por qué se evita sedar con haloperidol la agitación de un anciano con demencia?",
+   "respuesta": "Porque la ficha advierte <span class=\"al\">mayor mortalidad</span> en ancianos con psicosis relacionada con demencia.",
+   "razonamiento": "Primero se buscan desencadenantes (dolor, infección, fármacos) y medidas no farmacológicas.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Ficha técnica haloperidol (DailyMed, setid 26a590a4-bcbb-a9cd-e063-6394a90a2aac)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DemenciaTratamiento",
+    "Nivel::Aplicacion",
+    "Fuente::Haloperidol",
+    "Clase::Aplicacion",
+    "Bloom::Comprender"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0028",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Deterioro cognitivo vascular</span>¿Qué dos evidencias exigen los criterios VASCOG para atribuir el déficit a causa vascular?",
+   "respuesta": "Criterios <span class=\"dx\">clínicos</span> y de <span class=\"dx\">neuroimagen</span> de etiología vascular.",
+   "razonamiento": "Sin imagen que muestre la lesión, la causa vascular no puede establecerse con certeza.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Sachdev 2014, Alzheimer Dis Assoc Disord (PMID 24632990)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DemenciaVascular",
+    "Nivel::Aplicacion",
+    "Fuente::Sachdev2014",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0029",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Gradación vascular</span>¿Qué categorías reconoce VASCOG en el continuo del deterioro cognitivo vascular?",
+   "respuesta": "Trastorno cognitivo vascular <span class=\"dx\">leve</span> y trastorno cognitivo vascular <span class=\"dx\">mayor</span> (demencia vascular).",
+   "razonamiento": "Los umbrales diagnósticos están definidos y son compatibles con los criterios del DSM-5.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Sachdev 2014, Alzheimer Dis Assoc Disord (PMID 24632990)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DemenciaVascular",
+    "Nivel::Recuerdo",
+    "Fuente::Sachdev2014",
+    "Clase::Aplicacion",
+    "Bloom::Recordar"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0030",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Demencia mixta</span>¿Qué patología suele coexistir con la causa vascular y qué cambia en el abordaje?",
+   "respuesta": "La patología de <span class=\"dx\">Alzheimer</span>, frecuente en estos casos; el diagnóstico puede ser mixto.",
+   "razonamiento": "Por eso un déficit vascular demostrado no excluye otra causa neurodegenerativa asociada.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Sachdev 2014, Alzheimer Dis Assoc Disord (PMID 24632990)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::DemenciaVascular",
+    "Nivel::Aplicacion",
+    "Fuente::Sachdev2014",
+    "Clase::Aplicacion",
+    "Bloom::Analizar"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0031",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Lewy y neurolépticos</span>¿Por qué se evitan los neurolépticos en la demencia con cuerpos de Lewy?",
+   "respuesta": "Por la <span class=\"al\">sensibilidad grave</span> a los neurolépticos, que puede ser fatal.",
+   "razonamiento": "En autopsias, 13 de 16 pacientes con Lewy que los recibieron reaccionaron mal y 7 de forma grave; solo 1 de 14 con Alzheimer.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "McKeith 1992, BMJ (PMID 1356550)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::CuerposLewy",
+    "Nivel::Aplicacion",
+    "Fuente::McKeith1992",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0032",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Lewy frente a Alzheimer</span>¿Qué rasgos clínicos aparecen con más frecuencia en la demencia con Lewy que en el Alzheimer?",
+   "respuesta": "Fluctuación cognitiva, alucinaciones visuales y auditivas, ideas paranoides, depresión, caídas y pérdidas de conciencia inexplicadas.",
+   "razonamiento": "<span class=\"vs\">Contraste</span> en Alzheimer son menos frecuentes y la sensibilidad grave a neurolépticos es rara.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Rasgo</th><th>Lewy</th><th>Alzheimer</th></tr></thead><tbody><tr><th>Fluctuación</th><td>Frecuente</td><td>Menos</td></tr><tr><th>Alucinaciones</th><td>Frecuentes</td><td>Menos</td></tr><tr><th>Caídas</th><td>Frecuentes</td><td>Menos</td></tr><tr><th>Neurolépticos</th><td><span class=\"al\">Sensibilidad grave</span></td><td>Rara</td></tr></tbody></table>",
+   "fuente": "McKeith 1992, Psychol Med (PMID 1362617)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::CuerposLewy",
+    "Nivel::Aplicacion",
+    "Fuente::McKeith1992",
+    "Clase::Contraste",
+    "Bloom::Analizar"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0033",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Consenso DLB 2017</span>¿Qué dos hallazgos ganaron peso diagnóstico en el consenso de 2017 sobre la demencia con Lewy?",
+   "respuesta": "El <span class=\"dx\">trastorno de conducta del sueño REM</span> y la gammagrafía miocárdica con <span class=\"dx\">MIBG</span>.",
+   "razonamiento": "El consenso separa con claridad los rasgos clínicos de los biomarcadores diagnósticos.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "McKeith 2017, Neurology (PMID 28592453)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::CuerposLewy",
+    "Nivel::Recuerdo",
+    "Fuente::McKeith2017",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0034",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Variante conductual</span>La variante conductual posible exige {{c1::<span class=\"num\">tres de seis</span>}} rasgos y la probable añade {{c2::deterioro funcional}} y neuroimagen característica.",
+   "extra": "Los seis rasgos: desinhibición, apatía o inercia, pérdida de empatía, conductas perseverativas o compulsivas, hiperoralidad y perfil disejecutivo.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Rascovsky 2011, Brain (PMID 21810890)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::Frontotemporal",
+    "Nivel::Recuerdo",
+    "Fuente::Rascovsky2011",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0035",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Caso — cambio de conducta</span>Varón de 58 años, desinhibido, apático, sin empatía y con ingesta compulsiva de dulces: ¿qué diagnóstico y qué categoría?",
+   "respuesta": "<span class=\"dx\">Variante conductual de demencia frontotemporal</span>, al menos posible (cumple tres de seis rasgos).",
+   "razonamiento": "Se llega a «probable» al demostrar deterioro funcional e imagen frontal o temporal anterior; la confirmación definitiva exige histología o mutación patogénica.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Rascovsky 2011, Brain (PMID 21810890)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::Frontotemporal",
+    "Nivel::Aplicacion",
+    "Fuente::Rascovsky2011",
+    "Clase::Vineta",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2R2-DEL-0036",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Afasia primaria progresiva</span>La afasia primaria progresiva se diagnostica primero como tal y luego se divide en variantes: ¿cuántas y cuáles?",
+   "respuesta": "Tres: <span class=\"dx\">no fluente o agramatical</span>, <span class=\"dx\">semántica</span> y <span class=\"dx\">logopénica</span>.",
+   "razonamiento": "La clasificación puede especificarse «con apoyo de imagen» si hay el patrón de atrofia esperado.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Gorno-Tempini 2011, Neurology (PMID 21325651)",
+   "tags": [
+    "Quirurgica2::DeliriumDemencia::Frontotemporal",
+    "Nivel::Recuerdo",
+    "Fuente::GornoTempini2011",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": []
+  }
+ ]
+}
