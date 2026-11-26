@@ -28,19 +28,19 @@ Prefijos retirados: `Q2-TOX` (mazo antiguo de toxicodependencias; el caso usa `Q
 | Prefijo | Carpeta | Tag raíz | ID de mazo | Último ID | Notas | Versión | Fecha |
 |---|---|---|---|---|---|---|---|
 | Q2-OJO | ojo_rojo | OjoRojo | 1762900710001 | Q2-OJO-0045 | 45 | 1.0 | 2026-11-26 |
-| Q2-DISB | — | Disbasia | 1762900710002 | — | 0 | — | — |
-| Q2-ABD | — | AbdomenAgudo | 1762900710003 | — | 0 | — | — |
-| Q2-NEO | — | NeoplasiasGI | 1762900710004 | — | 0 | — | — |
-| Q2-HEM | — | Hematuria | 1762900710005 | — | 0 | — | — |
-| Q2-URI | — | UrinariaBaja | 1762900710006 | — | 0 | — | — |
-| Q2-COMA | — | Coma | 1762900710007 | — | 0 | — | — |
-| Q2-VASC | — | Vascular | 1762900710008 | — | 0 | — | — |
-| Q2R2-AZO | — | Azoados | 1762900710009 | — | 0 | — | — |
-| Q2R2-ENV | — | Envejecimiento | 1762900710010 | — | 0 | — | — |
-| Q2R2-GER | — | SindromesGeriatricos | 1762900710011 | — | 0 | — | — |
+| Q2-DISB | disbasia | Disbasia | 1762900710002 | Q2-DISB-0048 | 48 | 1.0 | 2026-11-26 |
+| Q2-ABD | abdomen_agudo | AbdomenAgudo | 1762900710003 | Q2-ABD-0046 | 45 | 1.0 | 2026-11-26 |
+| Q2-NEO | neoplasias_gi | NeoplasiasGI | 1762900710004 | Q2-NEO-0028 | 28 | 1.0 | 2026-11-26 |
+| Q2-HEM | hematuria | Hematuria | 1762900710005 | Q2-HEM-0034 | 24 | 1.0 | 2026-11-26 |
+| Q2-URI | urinaria_baja | UrinariaBaja | 1762900710006 | Q2-URI-0040 | 40 | 1.0 | 2026-11-26 |
+| Q2-COMA | coma | Coma | 1762900710007 | Q2-COMA-0031 | 31 | 1.0 | 2026-11-26 |
+| Q2-VASC | vascular | Vascular | 1762900710008 | Q2-VASC-0040 | 37 | 1.0 | 2026-11-26 |
+| Q2R2-AZO | azoados | Azoados | 1762900710009 | Q2R2-AZO-0031 | 31 | 1.0 | 2026-11-26 |
+| Q2R2-ENV | envejecimiento | Envejecimiento | 1762900710010 | Q2R2-ENV-0027 | 25 | 1.0 | 2026-11-26 |
+| Q2R2-GER | sindromes_geriatricos | SindromesGeriatricos | 1762900710011 | Q2R2-GER-0031 | 29 | 1.0 | 2026-11-26 |
 | Q2R2-TOX | toxicodependencias | Toxicodependencias | 1762900710012 | Q2R2-TOX-0045 | 45 | 1.0 | 2026-11-13 |
-| Q2R2-ANS | — | AnsiedadPanico | 1762900710013 | — | 0 | — | — |
-| Q2R2-DEL | — | DeliriumDemencia | 1762900710014 | — | 0 | — | — |
-| Q2R2-ANI | — | TrastornosAnimo | 1762900710015 | — | 0 | — | — |
-| Q2R2-DER | — | LesionesDermicas | 1762900710016 | — | 0 | — | — |
+| Q2R2-ANS | ansiedad_panico | AnsiedadPanico | 1762900710013 | Q2R2-ANS-0034 | 34 | 1.0 | 2026-11-26 |
+| Q2R2-DEL | delirium_demencia | DeliriumDemencia | 1762900710014 | Q2R2-DEL-0036 | 36 | 1.0 | 2026-11-26 |
+| Q2R2-ANI | trastornos_animo | TrastornosAnimo | 1762900710015 | Q2R2-ANI-0034 | 34 | 1.0 | 2026-11-26 |
+| Q2R2-DER | lesiones_dermicas | LesionesDermicas | 1762900710016 | Q2R2-DER-0036 | 36 | 1.0 | 2026-11-26 |
 <!-- registro:fin -->

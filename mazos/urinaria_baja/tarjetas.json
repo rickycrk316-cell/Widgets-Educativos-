@@ -1,1037 +1,1107 @@
 {
- "meta": {
-  "caso": "Patología urinaria baja",
-  "rotacion": "1.ª",
-  "tag_raiz": "UrinariaBaja",
-  "prefijo": "Q2-URI",
-  "version": "1.0",
-  "fecha": "2026-11-26",
-  "resultado_aprendizaje": "Evalúa y maneja inicialmente patologías urinarias bajas frecuentes del adulto.",
-  "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 1.ª rotación, CASO PATOLOGÍA URINARIA BAJA (contenidos y trabajo autónomo)",
-  "justificacion_exceso": "",
-  "mir_verificados": [],
-  "verificacion": {
-   "total": 88,
-   "verificados": 62,
-   "eliminados": [
-    {
-     "id": "Q2-URI-0012",
-     "dato": "El PSA es una proteasa del epitelio prostático normal y neoplásico (nota 1791341755682)",
-     "motivo": "no confirmado en las fuentes leídas: la tarjeta pregunta ahora cuándo se pide el PSA (Gravas 2023)"
+  "meta": {
+    "caso": "Patología urinaria baja",
+    "rotacion": "1.ª",
+    "tag_raiz": "UrinariaBaja",
+    "prefijo": "Q2-URI",
+    "version": "1.0",
+    "fecha": "2026-11-26",
+    "resultado_aprendizaje": "Evalúa y maneja inicialmente patologías urinarias bajas frecuentes del adulto.",
+    "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 1.ª rotación, CASO PATOLOGÍA URINARIA BAJA (contenidos y trabajo autónomo)",
+    "justificacion_exceso": "",
+    "mir_verificados": [],
+    "verificacion": {
+      "total": 88,
+      "verificados": 48,
+      "eliminados": [
+        {
+          "id": "Q2-URI-0012",
+          "dato": "El PSA es una proteasa del epitelio prostático normal y neoplásico (nota 1791341755682)",
+          "motivo": "no confirmado en las fuentes leídas: la tarjeta pregunta ahora cuándo se pide el PSA (Gravas 2023)"
+        },
+        {
+          "id": "Q2-URI-0013",
+          "dato": "Política local de tamizaje (MSP Ecuador) y balance sobrediagnóstico/sobretratamiento con incontinencia y disfunción eréctil",
+          "motivo": "no se halló política del MSP ni la cifra de daños en fuentes leídas: se conserva solo la decisión compartida y el riesgo individual (Wei 2023)"
+        },
+        {
+          "id": "Q2-URI-0014",
+          "dato": "Disponibilidad local de la RM y que una RM negativa evita biopsias en bajo riesgo",
+          "motivo": "no confirmados: se conserva la resonancia para evitar biopsias innecesarias y la biopsia combinada (Cornford 2024)"
+        },
+        {
+          "id": "Q2-URI-0016",
+          "dato": "Dosis de dexametasona en la compresión medular",
+          "motivo": "dosis no confirmada: eliminada; se conservan corticoides, RM de columna en 24 h y tratamiento definitivo en 24 h (Dy 2008)"
+        },
+        {
+          "id": "Q2-URI-0022",
+          "dato": "Duración exacta, resistencia local y esquema de la GPC MSP; penetración de fluoroquinolonas y TMP-SMX; focos en cálculos y biopelículas",
+          "motivo": "no confirmados: se conservan las propiedades del antibiótico que penetra la próstata y el tratamiento prolongado (Lipsky 2010)"
+        },
+        {
+          "id": "Q2-URI-0024",
+          "dato": "Elección del antibiótico según resistencia local en cistitis",
+          "motivo": "no confirmado para Ecuador: eliminado de la tarjeta de conducta sobre urocultivo"
+        },
+        {
+          "id": "Q2-URI-0025",
+          "dato": "Resistencia local y GPC MSP; tendinopatía y efectos neurológicos y cardíacos de fluoroquinolonas",
+          "motivo": "no confirmados en las fuentes leídas: eliminados; se conserva el daño colateral y la preferencia por nitrofurantoína y fosfomicina (Gupta 2011)"
+        },
+        {
+          "id": "Q2-URI-0029",
+          "dato": "Esquema vigente y resistencia local del gonococo; esquema del MSP; abstinencia hasta completar tratamiento",
+          "motivo": "esquema y abstinencia no confirmados con el texto de la guía: eliminados; se conserva la cobertura de gonococo y clamidia y la evaluación de parejas (Workowski 2021)"
+        },
+        {
+          "id": "Q2-URI-0032",
+          "dato": "Umbral de residuo posmiccional significativo; indicaciones de ecografía e hidronefrosis",
+          "motivo": "no confirmados: eliminados; la tarjeta se reformuló sobre el diario miccional (Gravas 2023)"
+        },
+        {
+          "id": "1791341755686",
+          "dato": "PSA elevado con prostatitis aguda: tratar y repetir PSA antes de biopsia; intervalo de repetición",
+          "motivo": "no confirmado: nota descartada"
+        },
+        {
+          "id": "1791341755658",
+          "dato": "Residuo posmiccional predispone a ITU, litiasis e hidronefrosis",
+          "motivo": "no confirmado en las fuentes leídas: nota descartada"
+        },
+        {
+          "id": "1791341755666",
+          "dato": "Alfabloqueantes alivian en días-semanas; 5-ARI actúan en meses",
+          "motivo": "tiempos de inicio no confirmados: nota descartada"
+        },
+        {
+          "id": "1791341755684",
+          "dato": "Punto de corte de PSA de 4 ng/mL",
+          "motivo": "no confirmado con fuente leída: cloze descartado"
+        },
+        {
+          "id": "1791341755690",
+          "dato": "PSA y tacto rectal aportan información independiente",
+          "motivo": "no confirmado: nota descartada"
+        },
+        {
+          "id": "1791341755711",
+          "dato": "Características del tacto rectal en HPB, cáncer y prostatitis aguda",
+          "motivo": "no confirmadas con fuente leída en esta sesión: nota descartada"
+        },
+        {
+          "id": "1791341755713",
+          "dato": "Uretra corta de la mujer y E. coli como patógeno típico",
+          "motivo": "no confirmado en las fuentes leídas: nota descartada"
+        },
+        {
+          "id": "1791341755721",
+          "dato": "Cistitis en varón siempre complicada y duración del tratamiento",
+          "motivo": "contradicho: las actualizaciones 2025 ya no lo definen automáticamente como complicada; duración no confirmada"
+        },
+        {
+          "id": "1791341755731",
+          "dato": "La uretritis crónica cicatriza y forma estenosis uretral",
+          "motivo": "no confirmado: nota descartada"
+        },
+        {
+          "id": "1791341755733",
+          "dato": "Etiología de epididimitis según edad (<35 años ITS, >35 enterobacterias)",
+          "motivo": "contradicho: la guía CDC 2021 divide por práctica sexual, no por edad; tarjeta reformulada"
+        },
+        {
+          "id": "1791341755747",
+          "dato": "Uretra bulbar y membranosa: mecanismo de lesión por caída a horcajadas y fractura pélvica",
+          "motivo": "no confirmado: nota descartada"
+        },
+        {
+          "id": "1791341755751",
+          "dato": "Hematoma en mariposa por fascia de Colles",
+          "motivo": "no confirmado: nota descartada"
+        },
+        {
+          "id": "Q2-URI-0037",
+          "dato": "No se sonda a ciegas por convertir lesión parcial en completa",
+          "motivo": "no confirmado en la guía EAU leída: eliminado; se conservan uretrografía y derivación suprapúbica (Lumen 2015)"
+        },
+        {
+          "id": "Q2-URI-0035",
+          "dato": "BAAR, cultivo y PCR en primera orina matutina de días seriados",
+          "motivo": "número de muestras no confirmado: se conservan las pruebas microbiológicas, moleculares e histológicas (Bausch 2024)"
+        },
+        {
+          "id": "Q2-URI-0015",
+          "dato": "Metástasis osteoblásticas y plexo sin válvulas",
+          "motivo": "no confirmados: eliminados; se conserva la vía del plexo de Batson (Nishijima 1992)"
+        },
+        {
+          "id": "Q2-URI-0004",
+          "dato": "Cáncer predomina en zona periférica y es palpable",
+          "motivo": "no confirmado con cita en esta sesión: eliminado; se conserva la zona de transición (Lerner 2021)"
+        },
+        {
+          "id": "Q2-URI-0007",
+          "dato": "Sensibilidad de la tira de nitritos explicada por bacterias reductoras y tiempo en vejiga",
+          "motivo": "no confirmado: tarjeta reformulada (ambos negativos descartan, Devillé 2004)"
+        },
+        {
+          "id": "Q2-URI-0001",
+          "dato": "La HPB es la causa más frecuente de obstrucción en el varón",
+          "motivo": "no confirmado en el resumen de Lerner 2021: eliminado"
+        },
+        {
+          "id": "Q2-URI-0002",
+          "dato": "Vejiga hiperactiva que se contrae con volúmenes bajos por la obstrucción",
+          "motivo": "mecanismo no confirmado en fuente consultada: eliminado; tarjeta reformulada a la guía EAU"
+        },
+        {
+          "id": "Q2-URI-0004",
+          "dato": "La zona de transición rodea la uretra y comprime precozmente; obstruye antes de ser palpable",
+          "motivo": "no confirmado: eliminado; se conserva la definición histológica (Lerner 2021)"
+        },
+        {
+          "id": "Q2-URI-0005",
+          "dato": "Modelo dinámico/estático: alfabloqueante relaja el músculo liso, 5-ARI reduce el volumen; 5-ARI previenen progresión",
+          "motivo": "sin fuente consultada (AUA texto completo no accesible): eliminado; tabla retirada"
+        },
+        {
+          "id": "Q2-URI-0006",
+          "dato": "Volumen >30 g, PSA >1,5 ng/mL o agrandamiento palpable para ofrecer 5-ARI",
+          "motivo": "no confirmado con texto de la guía AUA: eliminado"
+        },
+        {
+          "id": "Q2-URI-0017",
+          "dato": "El degarelix evita el flare sin necesidad de antiandrógeno",
+          "motivo": "inferencia propia: reformulado a lo que dice Klotz 2008"
+        },
+        {
+          "id": "Q2-URI-0023",
+          "dato": "Fiebre, escalofríos, náuseas o dolor lumbar sugieren pielonefritis y se evita la nitrofurantoína",
+          "motivo": "no confirmado en el texto consultado: eliminado"
+        },
+        {
+          "id": "Q2-URI-0028",
+          "dato": "El Gram no detecta clamidia; NAAT en primera orina",
+          "motivo": "reformulado: la guía no afirma lo primero"
+        },
+        {
+          "id": "Q2-URI-0032",
+          "dato": "Separa la poliuria nocturna por diurético tardío de la causa prostática",
+          "motivo": "inferencia propia: eliminado"
+        },
+        {
+          "id": "Q2-URI-0033",
+          "dato": "Piuria con urocultivo negativo: TB genitourinaria o clamidia; urocultivos poco sensibles para clamidia",
+          "motivo": "no confirmado: tarjeta reformulada a la epididimitis crónica (Workowski 2021)"
+        },
+        {
+          "id": "Q2-URI-0035",
+          "dato": "Piuria estéril persistente como punto de partida",
+          "motivo": "no confirmado: premisa retirada"
+        },
+        {
+          "id": "Q2-URI-0038",
+          "dato": "El drenaje vesical se acompaña de derivación a urología",
+          "motivo": "no confirmado: eliminado"
+        },
+        {
+          "id": "Q2-URI-0039",
+          "dato": "Síntomas irritativos con urocultivo negativo sugieren CIS; citología como complemento y que una citología negativa no lo excluye",
+          "motivo": "citología y presentación clínica no confirmadas en el resumen de Babjuk 2022: eliminadas"
+        },
+        {
+          "id": "Q2-URI-0040",
+          "dato": "Excelente pronóstico del cáncer de bajo riesgo; tratamientos activos para los demás con decisión compartida",
+          "motivo": "no confirmado: eliminado"
+        }
+      ]
     },
-    {
-     "id": "Q2-URI-0013",
-     "dato": "Política local de tamizaje (MSP Ecuador) y balance sobrediagnóstico/sobretratamiento con incontinencia y disfunción eréctil",
-     "motivo": "no se halló política del MSP ni la cifra de daños en fuentes leídas: se conserva solo la decisión compartida y el riesgo individual (Wei 2023)"
-    },
-    {
-     "id": "Q2-URI-0014",
-     "dato": "Disponibilidad local de la RM y que una RM negativa evita biopsias en bajo riesgo",
-     "motivo": "no confirmados: se conserva la resonancia para evitar biopsias innecesarias y la biopsia combinada (Cornford 2024)"
-    },
-    {
-     "id": "Q2-URI-0016",
-     "dato": "Dosis de dexametasona en la compresión medular",
-     "motivo": "dosis no confirmada: eliminada; se conservan corticoides, RM de columna en 24 h y tratamiento definitivo en 24 h (Dy 2008)"
-    },
-    {
-     "id": "Q2-URI-0022",
-     "dato": "Duración exacta, resistencia local y esquema de la GPC MSP; penetración de fluoroquinolonas y TMP-SMX; focos en cálculos y biopelículas",
-     "motivo": "no confirmados: se conservan las propiedades del antibiótico que penetra la próstata y el tratamiento prolongado (Lipsky 2010)"
-    },
-    {
-     "id": "Q2-URI-0024",
-     "dato": "Elección del antibiótico según resistencia local en cistitis",
-     "motivo": "no confirmado para Ecuador: eliminado de la tarjeta de conducta sobre urocultivo"
-    },
-    {
-     "id": "Q2-URI-0025",
-     "dato": "Resistencia local y GPC MSP; tendinopatía y efectos neurológicos y cardíacos de fluoroquinolonas",
-     "motivo": "no confirmados en las fuentes leídas: eliminados; se conserva el daño colateral y la preferencia por nitrofurantoína y fosfomicina (Gupta 2011)"
-    },
-    {
-     "id": "Q2-URI-0029",
-     "dato": "Esquema vigente y resistencia local del gonococo; esquema del MSP; abstinencia hasta completar tratamiento",
-     "motivo": "esquema y abstinencia no confirmados con el texto de la guía: eliminados; se conserva la cobertura de gonococo y clamidia y la evaluación de parejas (Workowski 2021)"
-    },
-    {
-     "id": "Q2-URI-0032",
-     "dato": "Umbral de residuo posmiccional significativo; indicaciones de ecografía e hidronefrosis",
-     "motivo": "no confirmados: eliminados; la tarjeta se reformuló sobre el diario miccional (Gravas 2023)"
-    },
-    {
-     "id": "1791341755686",
-     "dato": "PSA elevado con prostatitis aguda: tratar y repetir PSA antes de biopsia; intervalo de repetición",
-     "motivo": "no confirmado: nota descartada"
-    },
-    {
-     "id": "1791341755658",
-     "dato": "Residuo posmiccional predispone a ITU, litiasis e hidronefrosis",
-     "motivo": "no confirmado en las fuentes leídas: nota descartada"
-    },
-    {
-     "id": "1791341755666",
-     "dato": "Alfabloqueantes alivian en días-semanas; 5-ARI actúan en meses",
-     "motivo": "tiempos de inicio no confirmados: nota descartada"
-    },
-    {
-     "id": "1791341755684",
-     "dato": "Punto de corte de PSA de 4 ng/mL",
-     "motivo": "no confirmado con fuente leída: cloze descartado"
-    },
-    {
-     "id": "1791341755690",
-     "dato": "PSA y tacto rectal aportan información independiente",
-     "motivo": "no confirmado: nota descartada"
-    },
-    {
-     "id": "1791341755711",
-     "dato": "Características del tacto rectal en HPB, cáncer y prostatitis aguda",
-     "motivo": "no confirmadas con fuente leída en esta sesión: nota descartada"
-    },
-    {
-     "id": "1791341755713",
-     "dato": "Uretra corta de la mujer y E. coli como patógeno típico",
-     "motivo": "no confirmado en las fuentes leídas: nota descartada"
-    },
-    {
-     "id": "1791341755721",
-     "dato": "Cistitis en varón siempre complicada y duración del tratamiento",
-     "motivo": "contradicho: las actualizaciones 2025 ya no lo definen automáticamente como complicada; duración no confirmada"
-    },
-    {
-     "id": "1791341755731",
-     "dato": "La uretritis crónica cicatriza y forma estenosis uretral",
-     "motivo": "no confirmado: nota descartada"
-    },
-    {
-     "id": "1791341755733",
-     "dato": "Etiología de epididimitis según edad (<35 años ITS, >35 enterobacterias)",
-     "motivo": "contradicho: la guía CDC 2021 divide por práctica sexual, no por edad; tarjeta reformulada"
-    },
-    {
-     "id": "1791341755747",
-     "dato": "Uretra bulbar y membranosa: mecanismo de lesión por caída a horcajadas y fractura pélvica",
-     "motivo": "no confirmado: nota descartada"
-    },
-    {
-     "id": "1791341755751",
-     "dato": "Hematoma en mariposa por fascia de Colles",
-     "motivo": "no confirmado: nota descartada"
-    },
-    {
-     "id": "Q2-URI-0037",
-     "dato": "No se sonda a ciegas por convertir lesión parcial en completa",
-     "motivo": "no confirmado en la guía EAU leída: eliminado; se conservan uretrografía y derivación suprapúbica (Lumen 2015)"
-    },
-    {
-     "id": "Q2-URI-0035",
-     "dato": "BAAR, cultivo y PCR en primera orina matutina de días seriados",
-     "motivo": "número de muestras no confirmado: se conservan las pruebas microbiológicas, moleculares e histológicas (Bausch 2024)"
-    },
-    {
-     "id": "Q2-URI-0015",
-     "dato": "Metástasis osteoblásticas y plexo sin válvulas",
-     "motivo": "no confirmados: eliminados; se conserva la vía del plexo de Batson (Nishijima 1992)"
-    },
-    {
-     "id": "Q2-URI-0004",
-     "dato": "Cáncer predomina en zona periférica y es palpable",
-     "motivo": "no confirmado con cita en esta sesión: eliminado; se conserva la zona de transición (Lerner 2021)"
-    },
-    {
-     "id": "Q2-URI-0007",
-     "dato": "Sensibilidad de la tira de nitritos explicada por bacterias reductoras y tiempo en vejiga",
-     "motivo": "no confirmado: tarjeta reformulada (ambos negativos descartan, Devillé 2004)"
+    "guia": {
+      "principios": [
+        "Una resistencia de salida aumentada obliga al detrusor a trabajar contra obstáculo: de ahí los síntomas de vaciado y, luego, de llenado.",
+        "La HPB nace en la zona de transición y la modificación conductual se ofrece antes o junto al tratamiento.",
+        "El PSA se pide con decisión compartida y adaptada al riesgo; la resonancia evita biopsias innecesarias y el riesgo bajo va a vigilancia activa.",
+        "Antes de tratar una infección urinaria baja se decide si es complicada y se cubre el agente probable: en la cistitis no complicada, nitrofurantoína o fosfomicina; en la uretritis, gonococo y clamidia.",
+        "El carcinoma in situ vesical se confirma con cistoscopia y biopsias múltiples; la tuberculosis genitourinaria, con pruebas microbiológicas, moleculares e histológicas.",
+        "Los fármacos que actúan sobre el tono del cuello vesical o el detrusor pueden precipitar retención en un varón con HPB."
+      ],
+      "palabras_clave": [
+        "resistencia de salida",
+        "zona de transición",
+        "alfabloqueante",
+        "inhibidor de 5-alfa-reductasa",
+        "IPSS",
+        "PSA",
+        "grupo de grado ISUP",
+        "vigilancia activa",
+        "prostatitis",
+        "cistitis no complicada",
+        "bacteriuria asintomática",
+        "uretritis",
+        "uretrografía retrógrada",
+        "diuresis posobstructiva",
+        "carcinoma in situ"
+      ],
+      "imagenes_oclusion": [
+        "Gram de secreción uretral (media/q2-uri-0028-gram-uretral.jpg) señalando los diplococos intracelulares"
+      ],
+      "preguntas_cierre": [
+        "Un varón de 64 años con nicturia y chorro débil: ¿qué datos del examen y del laboratorio separan HPB, prostatitis y cáncer, y qué pides primero?",
+        "Explica por qué la nicturia no siempre es de origen prostático.",
+        "¿Cuándo tratarías una bacteriuria y cuándo una cistitis sin cultivo?",
+        "¿Qué cambia en la conducta si el tacto rectal es doloroso y caliente frente a pétreo?"
+      ],
+      "subtemas": {
+        "Fisiopatologia": "Definición y etiopatogenia de las patologías urinarias bajas",
+        "HPB": "Hiperplasia prostática benigna y su tratamiento",
+        "EscalaIPSS": "Interpretación de la gravedad sintomática",
+        "PSA": "Interpretación de pruebas diagnósticas (PSA)",
+        "CaProstata": "Cáncer de próstata: diagnóstico, estadificación y manejo",
+        "EscalaGleason": "Gradación del cáncer de próstata",
+        "Prostatitis": "Prostatitis aguda y crónica",
+        "Cistitis": "Cistitis y bacteriuria",
+        "Uretritis": "Uretritis y epididimitis",
+        "Estudios": "Pruebas diagnósticas: uroanálisis, imagen y urodinamia",
+        "TBUrinaria": "Tuberculosis renal y vesical como diagnóstico diferencial",
+        "TraumaUretral": "Trauma uretral como diagnóstico diferencial",
+        "Referencia": "Criterios de referencia especializada"
+      },
+      "fechas": {
+        "apertura": null,
+        "cierre": null,
+        "examen": null
+      },
+      "referencias": [
+        "Lerner LB, McVary KT, Barry MJ, Bixler BR, Dahm P, Das AK, et al. Management of lower urinary tract symptoms attributed to benign prostatic hyperplasia: AUA guideline part I—initial work-up and medical management. J Urol. 2021;206(4):806-17. doi:10.1097/JU.0000000000002183.",
+        "Sandhu JS, Bixler BR, Dahm P, Goueli R, Kirkby E, Stoffel JT, et al. Management of lower urinary tract symptoms attributed to benign prostatic hyperplasia (BPH): AUA guideline amendment 2023. J Urol. 2024;211(1):11-9. doi:10.1097/JU.0000000000003698.",
+        "Verhamme KMC, Sturkenboom MCJM, Stricker BHC, Bosch R. Drug-induced urinary retention: incidence, management and prevention. Drug Saf. 2008;31(5):373-88. doi:10.2165/00002018-200831050-00002.",
+        "Oesterling JE, Roy J, Agha A, Shown T, Krarup T, Johansen T, et al. Biologic variability of prostate-specific antigen and its usefulness as a marker for prostate cancer: effects of finasteride. Urology. 1998;51(4A Suppl):58-63. doi:10.1016/s0090-4295(98)00059-4.",
+        "Chang DF, Campbell JR. Intraoperative floppy iris syndrome associated with tamsulosin. J Cataract Refract Surg. 2005;31(4):664-73. doi:10.1016/j.jcrs.2005.02.027.",
+        "Gravas S, Gacci M, Gratzke C, Herrmann TRW, Karavitakis M, Kyriazis I, et al. Summary paper on the 2023 European Association of Urology guidelines on the management of non-neurogenic male lower urinary tract symptoms. Eur Urol. 2023;84(2):207-22. doi:10.1016/j.eururo.2023.04.008.",
+        "Barry MJ, Fowler FJ, O'Leary MP, Bruskewitz RC, Holtgrewe HL, Mebust WK, et al. The American Urological Association symptom index for benign prostatic hyperplasia. J Urol. 1992;148(5):1549-57. doi:10.1016/s0022-5347(17)36966-5.",
+        "Kaplan SA. AUA guidelines and their impact on the management of BPH: an update. Rev Urol. 2004;6(Suppl 9):S46-52. PMID 16985925.",
+        "Wei JT, Barocas D, Carlsson S, Coakley F, Eggener S, Etzioni R, et al. Early detection of prostate cancer: AUA/SUO guideline part I: prostate cancer screening. J Urol. 2023;210(1):46-53. doi:10.1097/JU.0000000000003491.",
+        "Cornford P, van den Bergh RCN, Briers E, Van den Broeck T, Brunckhorst O, Darraugh J, et al. EAU-EANM-ESTRO-ESUR-ISUP-SIOG guidelines on prostate cancer—2024 update. Part I: screening, diagnosis, and local treatment with curative intent. Eur Urol. 2024;86(2):148-63. doi:10.1016/j.eururo.2024.03.027.",
+        "Nishijima Y, Uchida K, Koiso K, Nemoto R. Clinical significance of the vertebral vein in prostate cancer metastasis. Adv Exp Med Biol. 1992;324:93-100. doi:10.1007/978-1-4615-3398-6_9.",
+        "Dy SM, Asch SM, Naeim A, Sanati H, Walling A, Lorenz KA. Evidence-based standards for cancer pain management. J Clin Oncol. 2008;26(23):3879-85. doi:10.1200/JCO.2007.15.9517.",
+        "Vis AN, van der Sluis TM, Al-Itejawi HHM, van Moorselaar RJA, Meuleman EJH. Risk of disease flare with LHRH agonist therapy in men with prostate cancer: myth or fact? Urol Oncol. 2015;33(1):7-15. doi:10.1016/j.urolonc.2014.04.016.",
+        "Klotz L, Boccon-Gibod L, Shore ND, Andreou C, Persson BE, Cantor P, et al. The efficacy and safety of degarelix: a 12-month, comparative, randomized, open-label, parallel-group phase III study in patients with prostate cancer. BJU Int. 2008;102(11):1531-8. doi:10.1111/j.1464-410X.2008.08183.x.",
+        "Epstein JI, Egevad L, Amin MB, Delahunt B, Srigley JR, Humphrey PA. The 2014 International Society of Urological Pathology (ISUP) consensus conference on Gleason grading of prostatic carcinoma: definition of grading patterns and proposal for a new grading system. Am J Surg Pathol. 2016;40(2):244-52. doi:10.1097/PAS.0000000000000530.",
+        "Lipsky BA, Byren I, Hoey CT. Treatment of bacterial prostatitis. Clin Infect Dis. 2010;50(12):1641-52. doi:10.1086/652861.",
+        "Gupta K, Hooton TM, Naber KG, Wullt B, Colgan R, Miller LG, et al. International clinical practice guidelines for the treatment of acute uncomplicated cystitis and pyelonephritis in women: a 2010 update by the Infectious Diseases Society of America and the European Society for Microbiology and Infectious Diseases. Clin Infect Dis. 2011;52(5):e103-20. doi:10.1093/cid/ciq257.",
+        "Colgan R, Williams M. Diagnosis and treatment of acute uncomplicated cystitis. Am Fam Physician. 2011;84(7):771-6.",
+        "Nicolle LE, Gupta K, Bradley SF, Colgan R, DeMuri GP, Drekonja D, et al. Clinical practice guideline for the management of asymptomatic bacteriuria: 2019 update by the Infectious Diseases Society of America. Clin Infect Dis. 2019;68(10):e83-110. doi:10.1093/cid/ciy1121.",
+        "Workowski KA, Bachmann LH, Chan PA, Johnston CM, Muzny CA, Park I, et al. Sexually transmitted infections treatment guidelines, 2021. MMWR Recomm Rep. 2021;70(4):1-187. doi:10.15585/mmwr.rr7004a1.",
+        "Devillé WLJM, Yzermans JC, van Duijn NP, Bezemer PD, van der Windt DAWM, Bouter LM. The urine dipstick test useful to rule out infections. A meta-analysis of the accuracy. BMC Urol. 2004;4:4. doi:10.1186/1471-2490-4-4.",
+        "Bausch K, Mantica G, Smith EJ, Bartoletti R, Bruyère F, Cai T, et al. Genitourinary tuberculosis: a brief manual for urologists on diagnosis and treatment from the European Association of Urology Urological Infections Panel. Eur Urol Focus. 2024;10(1):77-9. doi:10.1016/j.euf.2023.07.006.",
+        "Lumen N, Kuehhas FE, Djakovic N, Kitrey ND, Serafetinidis E, Sharma DM, et al. Review of the current management of lower urinary tract injuries by the EAU Trauma Guidelines Panel. Eur Urol. 2015;67(5):925-9. doi:10.1016/j.eururo.2014.12.035.",
+        "Leuba C, Said C, Stucker F, Zender H, John G. Syndrome de levée d'obstacle (diurèse post-obstructive) par l'interniste. Rev Med Interne. 2023;44(5):253-8. doi:10.1016/j.revmed.2023.01.011.",
+        "Babjuk M, Burger M, Capoun O, Cohen D, Compérat EM, Dominguez Escrig JL, et al. European Association of Urology guidelines on non-muscle-invasive bladder cancer (Ta, T1, and carcinoma in situ). Eur Urol. 2022;81(1):75-94. doi:10.1016/j.eururo.2021.08.010."
+      ]
     }
-   ]
   },
-  "guia": {
-   "principios": [
-    "Una resistencia de salida aumentada obliga al detrusor a trabajar contra obstáculo: de ahí los síntomas de vaciado y, luego, de llenado.",
-    "La HPB nace en la zona de transición; el alfabloqueante trata el componente dinámico y el 5-ARI el volumen.",
-    "El PSA se pide con decisión compartida y adaptada al riesgo; la resonancia evita biopsias innecesarias y el riesgo bajo va a vigilancia activa.",
-    "Antes de tratar una infección urinaria baja se decide si es complicada y se cubre el agente probable: en la cistitis no complicada, nitrofurantoína o fosfomicina; en la uretritis, gonococo y clamidia.",
-    "Los síntomas irritativos persistentes con urocultivo negativo obligan a pensar en carcinoma in situ y tuberculosis genitourinaria.",
-    "Los fármacos que actúan sobre el tono del cuello vesical o el detrusor pueden precipitar retención en un varón con HPB."
-   ],
-   "palabras_clave": [
-    "resistencia de salida",
-    "zona de transición",
-    "alfabloqueante",
-    "inhibidor de 5-alfa-reductasa",
-    "IPSS",
-    "PSA",
-    "grupo de grado ISUP",
-    "vigilancia activa",
-    "prostatitis",
-    "cistitis no complicada",
-    "bacteriuria asintomática",
-    "uretritis",
-    "uretrografía retrógrada",
-    "diuresis posobstructiva",
-    "carcinoma in situ"
-   ],
-   "imagenes_oclusion": [
-    "Tabla alfabloqueante vs 5-ARI con las celdas tapadas",
-    "Gram de secreción uretral (media/q2-uri-0028-gram-uretral.jpg) señalando los diplococos intracelulares"
-   ],
-   "preguntas_cierre": [
-    "Un varón de 64 años con nicturia y chorro débil: ¿qué datos del examen y del laboratorio separan HPB, prostatitis y cáncer, y qué pides primero?",
-    "Explica por qué la nicturia no siempre es de origen prostático.",
-    "¿Cuándo tratarías una bacteriuria y cuándo una cistitis sin cultivo?",
-    "¿Qué cambia en la conducta si el tacto rectal es doloroso y caliente frente a pétreo?"
-   ],
-   "subtemas": {
-    "Fisiopatologia": "Definición y etiopatogenia de las patologías urinarias bajas",
-    "HPB": "Hiperplasia prostática benigna y su tratamiento",
-    "EscalaIPSS": "Interpretación de la gravedad sintomática",
-    "PSA": "Interpretación de pruebas diagnósticas (PSA)",
-    "CaProstata": "Cáncer de próstata: diagnóstico, estadificación y manejo",
-    "EscalaGleason": "Gradación del cáncer de próstata",
-    "Prostatitis": "Prostatitis aguda y crónica",
-    "Cistitis": "Cistitis y bacteriuria",
-    "Uretritis": "Uretritis y epididimitis",
-    "Estudios": "Pruebas diagnósticas: uroanálisis, imagen y urodinamia",
-    "TBUrinaria": "Tuberculosis renal y vesical como diagnóstico diferencial",
-    "TraumaUretral": "Trauma uretral como diagnóstico diferencial",
-    "Referencia": "Criterios de referencia especializada"
-   },
-   "fechas": {
-    "apertura": null,
-    "cierre": null,
-    "examen": null
-   },
-   "referencias": [
-    "Lerner LB, McVary KT, Barry MJ, Bixler BR, Dahm P, Das AK, et al. Management of lower urinary tract symptoms attributed to benign prostatic hyperplasia: AUA guideline part I—initial work-up and medical management. J Urol. 2021;206(4):806-17. doi:10.1097/JU.0000000000002183.",
-    "Sandhu JS, Bixler BR, Dahm P, Goueli R, Kirkby E, Stoffel JT, et al. Management of lower urinary tract symptoms attributed to benign prostatic hyperplasia (BPH): AUA guideline amendment 2023. J Urol. 2024;211(1):11-9. doi:10.1097/JU.0000000000003698.",
-    "Verhamme KMC, Sturkenboom MCJM, Stricker BHC, Bosch R. Drug-induced urinary retention: incidence, management and prevention. Drug Saf. 2008;31(5):373-88. doi:10.2165/00002018-200831050-00002.",
-    "Oesterling JE, Roy J, Agha A, Shown T, Krarup T, Johansen T, et al. Biologic variability of prostate-specific antigen and its usefulness as a marker for prostate cancer: effects of finasteride. Urology. 1998;51(4A Suppl):58-63. doi:10.1016/s0090-4295(98)00059-4.",
-    "Chang DF, Campbell JR. Intraoperative floppy iris syndrome associated with tamsulosin. J Cataract Refract Surg. 2005;31(4):664-73. doi:10.1016/j.jcrs.2005.02.027.",
-    "Gravas S, Gacci M, Gratzke C, Herrmann TRW, Karavitakis M, Kyriazis I, et al. Summary paper on the 2023 European Association of Urology guidelines on the management of non-neurogenic male lower urinary tract symptoms. Eur Urol. 2023;84(2):207-22. doi:10.1016/j.eururo.2023.04.008.",
-    "Barry MJ, Fowler FJ, O'Leary MP, Bruskewitz RC, Holtgrewe HL, Mebust WK, et al. The American Urological Association symptom index for benign prostatic hyperplasia. J Urol. 1992;148(5):1549-57. doi:10.1016/s0022-5347(17)36966-5. Las bandas de gravedad se consultaron en fuentes secundarias.",
-    "Wei JT, Barocas D, Carlsson S, Coakley F, Eggener S, Etzioni R, et al. Early detection of prostate cancer: AUA/SUO guideline part I: prostate cancer screening. J Urol. 2023;210(1):46-53. doi:10.1097/JU.0000000000003491.",
-    "Cornford P, van den Bergh RCN, Briers E, Van den Broeck T, Brunckhorst O, Darraugh J, et al. EAU-EANM-ESTRO-ESUR-ISUP-SIOG guidelines on prostate cancer—2024 update. Part I: screening, diagnosis, and local treatment with curative intent. Eur Urol. 2024;86(2):148-63. doi:10.1016/j.eururo.2024.03.027.",
-    "Nishijima Y, Uchida K, Koiso K, Nemoto R. Clinical significance of the vertebral vein in prostate cancer metastasis. Adv Exp Med Biol. 1992;324:93-100. doi:10.1007/978-1-4615-3398-6_9.",
-    "Dy SM, Asch SM, Naeim A, Sanati H, Walling A, Lorenz KA. Evidence-based standards for cancer pain management. J Clin Oncol. 2008;26(23):3879-85. doi:10.1200/JCO.2007.15.9517.",
-    "Vis AN, van der Sluis TM, Al-Itejawi HHM, van Moorselaar RJA, Meuleman EJH. Risk of disease flare with LHRH agonist therapy in men with prostate cancer: myth or fact? Urol Oncol. 2015;33(1):7-15. doi:10.1016/j.urolonc.2014.04.016.",
-    "Klotz L, Boccon-Gibod L, Shore ND, Andreou C, Persson BE, Cantor P, et al. The efficacy and safety of degarelix: a 12-month, comparative, randomized, open-label, parallel-group phase III study in patients with prostate cancer. BJU Int. 2008;102(11):1531-8. doi:10.1111/j.1464-410X.2008.08183.x.",
-    "Epstein JI, Egevad L, Amin MB, Delahunt B, Srigley JR, Humphrey PA. The 2014 International Society of Urological Pathology (ISUP) consensus conference on Gleason grading of prostatic carcinoma: definition of grading patterns and proposal for a new grading system. Am J Surg Pathol. 2016;40(2):244-52. doi:10.1097/PAS.0000000000000530.",
-    "Lipsky BA, Byren I, Hoey CT. Treatment of bacterial prostatitis. Clin Infect Dis. 2010;50(12):1641-52. doi:10.1086/652861.",
-    "Gupta K, Hooton TM, Naber KG, Wullt B, Colgan R, Miller LG, et al. International clinical practice guidelines for the treatment of acute uncomplicated cystitis and pyelonephritis in women: a 2010 update by the Infectious Diseases Society of America and the European Society for Microbiology and Infectious Diseases. Clin Infect Dis. 2011;52(5):e103-20. doi:10.1093/cid/ciq257.",
-    "Colgan R, Williams M. Diagnosis and treatment of acute uncomplicated cystitis. Am Fam Physician. 2011;84(7):771-6.",
-    "Nicolle LE, Gupta K, Bradley SF, Colgan R, DeMuri GP, Drekonja D, et al. Clinical practice guideline for the management of asymptomatic bacteriuria: 2019 update by the Infectious Diseases Society of America. Clin Infect Dis. 2019;68(10):e83-110. doi:10.1093/cid/ciy1121.",
-    "Workowski KA, Bachmann LH, Chan PA, Johnston CM, Muzny CA, Park I, et al. Sexually transmitted infections treatment guidelines, 2021. MMWR Recomm Rep. 2021;70(4):1-187. doi:10.15585/mmwr.rr7004a1.",
-    "Devillé WLJM, Yzermans JC, van Duijn NP, Bezemer PD, van der Windt DAWM, Bouter LM. The urine dipstick test useful to rule out infections. A meta-analysis of the accuracy. BMC Urol. 2004;4:4. doi:10.1186/1471-2490-4-4.",
-    "Bausch K, Mantica G, Smith EJ, Bartoletti R, Bruyère F, Cai T, et al. Genitourinary tuberculosis: a brief manual for urologists on diagnosis and treatment from the European Association of Urology Urological Infections Panel. Eur Urol Focus. 2024;10(1):77-9. doi:10.1016/j.euf.2023.07.006.",
-    "Lumen N, Kuehhas FE, Djakovic N, Kitrey ND, Serafetinidis E, Sharma DM, et al. Review of the current management of lower urinary tract injuries by the EAU Trauma Guidelines Panel. Eur Urol. 2015;67(5):925-9. doi:10.1016/j.eururo.2014.12.035.",
-    "Leuba C, Said C, Stucker F, Zender H, John G. Syndrome de levée d'obstacle (diurèse post-obstructive) par l'interniste. Rev Med Interne. 2023;44(5):253-8. doi:10.1016/j.revmed.2023.01.011.",
-    "Babjuk M, Burger M, Capoun O, Cohen D, Compérat EM, Dominguez Escrig JL, et al. European Association of Urology guidelines on non-muscle-invasive bladder cancer (Ta, T1, and carcinoma in situ). Eur Urol. 2022;81(1):75-94. doi:10.1016/j.eururo.2021.08.010."
-   ]
-  }
- },
- "tarjetas": [
-  {
-   "id": "Q2-URI-0001",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Obstrucción infravesical</span>¿Por qué una resistencia de salida aumentada produce chorro débil, vacilación y vaciado incompleto?",
-   "respuesta": "Porque el <span class=\"mec\">detrusor debe vencer una mayor resistencia</span>: el flujo cae, tarda en iniciar y la vejiga no se vacía por completo.",
-   "razonamiento": "En el varón la causa más frecuente es la HPB, definida como proliferación de músculo liso y epitelio de la zona de transición.<br>De este principio se derivan los síntomas de vaciado sin memorizarlos como lista.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Lerner 2021, J Urol (PMID 34384237)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::Fisiopatologia",
-    "Nivel::Aplicacion",
-    "Fuente::Lerner2021",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0002",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">HPB</span>Usa el principio de resistencia de salida aumentada para explicar por qué el varón añade urgencia, polaquiuria y nocturia.",
-   "respuesta": "La vejiga que lucha contra la obstrucción se vuelve <span class=\"mec\">hiperactiva</span> y se contrae con volúmenes bajos.",
-   "razonamiento": "Por eso los síntomas de llenado acompañan a los de vaciado.<br>No todo síntoma urinario bajo del varón se explica solo por la próstata.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Lerner 2021, J Urol (PMID 34384237)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::Fisiopatologia",
-    "Nivel::Aplicacion",
-    "Fuente::Lerner2021",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0003",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Caso — retención aguda</span>Varón de 68 años con HPB conocida presenta retención urinaria horas después de tomar un descongestionante y un antihistamínico sedante. ¿Qué mecanismo la explica y qué se hace?",
-   "respuesta": "Fármacos que <span class=\"fx\">agonizan alfa-adrenérgicos</span> o <span class=\"fx\">anticolinérgicos</span> alteran la micción sobre una próstata ya obstructiva; se sonda y se suspende o reduce el fármaco.",
-   "razonamiento": "Los pacientes de edad avanzada con HPB y otros fármacos concomitantes tienen mayor riesgo de retención inducida por fármacos.<br>El tratamiento habitual es el sondaje, sobre todo si es aguda, junto con retirar el fármaco causal.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Verhamme 2008, Drug Saf (PMID 18422378)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::Fisiopatologia",
-    "Nivel::Aplicacion",
-    "Fuente::Verhamme2008",
-    "Clase::Vineta",
-    "Bloom::Analizar",
-    "AltoRendimiento::MIR",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0004",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Próstata</span>¿Dónde se origina la HPB y por qué da síntomas obstructivos precoces?",
-   "respuesta": "En la <span class=\"dx\">zona de transición</span>, que rodea la uretra prostática; al crecer comprime la uretra.",
-   "razonamiento": "La HPB es un diagnóstico histológico de proliferación de células musculares lisas y epiteliales de esa zona.<br>Por eso la HPB obstruye antes de ser palpable como masa.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Lerner 2021, J Urol (PMID 34384237)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::HPB",
-    "Nivel::Aplicacion",
-    "Fuente::Lerner2021",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0005",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">HPB</span>¿Por qué se usan alfabloqueantes e inhibidores de 5-alfa-reductasa y qué componente trata cada familia?",
-   "respuesta": "El <span class=\"fx\">alfabloqueante</span> relaja el tono del músculo liso prostático (componente dinámico); el <span class=\"fx\">inhibidor de 5-alfa-reductasa</span> reduce el volumen glandular (componente estático).",
-   "razonamiento": "Los 5-ARI, solos o con un alfabloqueante, se recomiendan para prevenir la progresión y reducir el riesgo de retención y de cirugía prostática.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Rasgo</th><th>Alfabloq.</th><th>5-ARI</th></tr></thead><tbody><tr><th>Componente</th><td>Dinámico</td><td>Estático</td></tr><tr><th>Actúa sobre</th><td>Músculo liso</td><td>Volumen</td></tr></tbody></table>",
-   "fuente": "Lerner 2021, J Urol (PMID 34384237); Sandhu 2024, J Urol (PMID 37706750)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::HPB",
-    "Nivel::Aplicacion",
-    "Fuente::Lerner2021",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0006",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">HPB sintomática</span>¿Qué perfil de próstata justifica ofrecer un 5-ARI junto con el alfabloqueante?",
-   "respuesta": "Una próstata con aumento demostrable: volumen <span class=\"num\">&gt; 30 g</span> en imagen, PSA <span class=\"num\">&gt; 1,5 ng/mL</span> o agrandamiento palpable al tacto rectal.",
-   "razonamiento": "Con una próstata pequeña el 5-ARI aporta poco, porque actúa sobre el volumen glandular.<br>Es una recomendación fuerte de la guía de la AUA.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Lerner 2021, J Urol (PMID 34384237); Sandhu 2024, J Urol (PMID 37706750)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::HPB",
-    "Nivel::Recuerdo",
-    "Fuente::Lerner2021",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0007",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">PSA y 5-ARI</span>Varón en tratamiento con un inhibidor de 5-alfa-reductasa durante 6 meses: ¿cómo interpretas su PSA?",
-   "respuesta": "Se <span class=\"num\">duplica</span> el valor medido para interpretarlo, porque el fármaco lo reduce.",
-   "razonamiento": "En el estudio con finasterida, duplicar el PSA permitió interpretarlo adecuadamente sin enmascarar la detección de cáncer.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Oesterling 1998, Urology (PMID 9586598)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::HPB",
-    "Nivel::Recuerdo",
-    "Fuente::Oesterling1998",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0008",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Tamsulosina</span>¿Qué complicación oftalmológica obliga a avisar al cirujano antes de una cirugía de catarata?",
-   "respuesta": "El <span class=\"dx\">síndrome de iris flácido intraoperatorio</span>.",
-   "razonamiento": "En una serie de cirugías de catarata se observó en la mayoría de los pacientes que tomaban tamsulosina y en ninguno de los que usaban otros alfabloqueantes.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Chang 2005, J Cataract Refract Surg (PMID 15899440)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::HPB",
-    "Nivel::Recuerdo",
-    "Fuente::Chang2005",
-    "Clase::Irreducible",
-    "Bloom::Recordar",
-    "AltoRendimiento::MIR",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0009",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Caso — HPB</span>Varón de 72 años con HPB cuyos síntomas persisten pese al tratamiento médico: ¿qué conducta corresponde?",
-   "respuesta": "Considerar el <span class=\"dx\">tratamiento quirúrgico</span>: la cirugía se reserva para las indicaciones absolutas y para quienes fallan o prefieren no recibir tratamiento médico.",
-   "razonamiento": "La técnica depende de las características del paciente, sus preferencias y la experiencia del cirujano.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Gravas 2023, Eur Urol (PMID 37202311)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::HPB",
-    "Nivel::Aplicacion",
-    "Fuente::Gravas2023",
-    "Clase::Vineta",
-    "Bloom::Evaluar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0010",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">IPSS</span>La gravedad sintomática es leve con {{c1::<span class=\"num\">0–7</span>}} puntos, moderada con {{c2::<span class=\"num\">8–19</span>}} y grave con {{c3::<span class=\"num\">20–35</span>}}.",
-   "extra": "El índice suma 7 preguntas (frecuencia, nocturia, chorro débil, vacilación, intermitencia, vaciado incompleto y urgencia) y se acompaña de una pregunta de calidad de vida.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Barry 1992, J Urol (PMID 1279218)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::EscalaIPSS",
-    "Nivel::Recuerdo",
-    "Fuente::Barry1992",
-    "Clase::Escala",
-    "Bloom::Recordar",
-    "Escala::IPSS"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2-URI-0011",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">IPSS</span>Varón con puntaje leve: ¿qué conducta es adecuada?",
-   "respuesta": "<span class=\"dx\">Vigilancia</span> con modificación conductual, sin fármacos de entrada.",
-   "razonamiento": "Los varones con síntomas leves son candidatos a vigilancia; la modificación conductual se ofrece antes o junto al tratamiento.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Gravas 2023, Eur Urol (PMID 37202311)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::EscalaIPSS",
-    "Nivel::Aplicacion",
-    "Fuente::Gravas2023",
-    "Clase::Escala",
-    "Bloom::Aplicar",
-    "Escala::IPSS"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0012",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">PSA</span>Varón con síntomas urinarios bajos: ¿cuándo se solicita el PSA?",
-   "respuesta": "Solo si el diagnóstico de <span class=\"dx\">cáncer de próstata</span> cambiaría el plan de tratamiento.",
-   "razonamiento": "El PSA no se pide de rutina por los síntomas: la evaluación base es historia, examen, puntaje de síntomas, uroanálisis, uroflujometría y residuo posmiccional.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Gravas 2023, Eur Urol (PMID 37202311)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::PSA",
-    "Nivel::Aplicacion",
-    "Fuente::Gravas2023",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0013",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Tamizaje de cáncer de próstata</span>¿Por qué el PSA se indica con decisión compartida y adaptado al riesgo?",
-   "respuesta": "Porque la guía recomienda el tamizaje con PSA <span class=\"dx\">junto con decisión compartida</span>, con intervalos y estrategia ajustados al riesgo individual.",
-   "razonamiento": "Se puede apoyar la decisión con calculadoras de riesgo en línea.<br>La guía europea también propone una estrategia adaptada al riesgo y a la esperanza de vida.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Wei 2023, J Urol (PMID 37096582); Cornford 2024, Eur Urol (PMID 38614820)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::CaProstata",
-    "Nivel::Aplicacion",
-    "Fuente::Wei2023",
-    "Clase::Principio",
-    "Bloom::Evaluar",
-    "Principio",
-    "AltoRendimiento::MIR",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0014",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Cáncer de próstata</span>Ante sospecha de cáncer, ¿qué imagen se prefiere antes de biopsiar y qué biopsia sigue?",
-   "respuesta": "La <span class=\"dx\">resonancia multiparamétrica</span>, para evitar biopsias innecesarias; si se biopsia, se combinan cores dirigidos y regionales.",
-   "razonamiento": "Además, la guía europea recomienda la vigilancia activa en el cáncer de bajo riesgo.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Cornford 2024, Eur Urol (PMID 38614820)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::CaProstata",
-    "Nivel::Aplicacion",
-    "Fuente::Cornford2024",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0015",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Cáncer de próstata</span>¿Por qué las metástasis óseas se concentran en el esqueleto axial y la pelvis?",
-   "respuesta": "Por el <span class=\"mec\">plexo venoso vertebral de Batson</span>, por donde pasan las células tumorales hacia la columna.",
-   "razonamiento": "En un estudio con gammagrafía, la distribución de las metástasis óseas prostáticas difirió de la del cáncer de pulmón y se atribuyó a esta vía.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Nishijima 1992, Adv Exp Med Biol (PMID 1492629)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::CaProstata",
-    "Nivel::Aplicacion",
-    "Fuente::Nishijima1992",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0016",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Caso — urgencia oncológica</span>Varón de 70 años con cáncer de próstata, lumbalgia progresiva y debilidad de ambos miembros inferiores: ¿qué se sospecha y cuál es la conducta inicial?",
-   "respuesta": "<span class=\"al\">Compresión medular</span> metastásica: <span class=\"fx\">corticoides</span> y resonancia de toda la columna lo antes posible, dentro de 24 h.",
-   "razonamiento": "El tratamiento definitivo, radioterapia o descompresión quirúrgica, se inicia dentro de 24 h del diagnóstico.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Dy 2008, J Clin Oncol (PMID 18688056)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::CaProstata",
-    "Nivel::Aplicacion",
-    "Fuente::Dy2008",
-    "Clase::Vineta",
-    "Bloom::Evaluar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0017",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Agonista LHRH</span>¿Por qué al iniciar un agonista LHRH se considera un antiandrógeno?",
-   "respuesta": "El agonista produce un <span class=\"mec\">pico transitorio de testosterona</span> en las primeras semanas, y el <span class=\"fx\">antiandrógeno</span> se añade para prevenir sus consecuencias clínicas.",
-   "razonamiento": "<span class=\"vs\">Contraste</span> el antagonista degarelix suprime la testosterona sin necesidad de antiandrógeno para evitar el flare.<br>La evidencia de progresión clínica durante el flare es limitada.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Vis 2015, Urol Oncol (PMID 25159013); Klotz 2008, BJU Int (PMID 19035858)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::CaProstata",
-    "Nivel::Aplicacion",
-    "Fuente::Vis2015",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0018",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">Grupos de grado ISUP</span>Un Gleason 3+4 corresponde al grupo {{c1::<span class=\"num\">2</span>}} y un Gleason 4+3 al grupo {{c2::<span class=\"num\">3</span>}}.",
-   "extra": "Son 5 grupos pronósticos; Gleason 3+3 = 6 corresponde al grupo 1.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Epstein 2016, Am J Surg Pathol (PMID 26492179)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::EscalaGleason",
-    "Nivel::Recuerdo",
-    "Fuente::Epstein2016",
-    "Clase::Escala",
-    "Bloom::Recordar",
-    "Escala::ISUP"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2-URI-0019",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Gleason 3+4 vs 4+3</span>Ambos suman 7: ¿cuál tiene peor pronóstico y por qué importa distinguirlos?",
-   "respuesta": "El <span class=\"dx\">4+3</span>, que tiene peor pronóstico; por eso los grupos de grado los separan.",
-   "razonamiento": "Muchos sistemas trataban el score 7 como uno solo sin distinguir 3+4 de 4+3.<br>El grupo de grado simplifica las categorías y su grado más bajo es 1, no 6.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Epstein 2016, Am J Surg Pathol (PMID 26492179)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::EscalaGleason",
-    "Nivel::Aplicacion",
-    "Fuente::Epstein2016",
-    "Clase::Escala",
-    "Bloom::Analizar",
-    "Escala::ISUP",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0020",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Prostatitis</span>¿Qué proporción de los diagnósticos de prostatitis corresponde a infección bacteriana demostrada?",
-   "respuesta": "Menos del <span class=\"num\">10 %</span>: la mayoría no tiene infección bacteriana demostrada.",
-   "razonamiento": "Las causas de la prostatitis no bacteriana se conocen poco.<br>La bacteriana se debe sobre todo a bacilos gramnegativos.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Lipsky 2010, Clin Infect Dis (PMID 20459324)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::Prostatitis",
-    "Nivel::Aplicacion",
-    "Fuente::Lipsky2010",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0021",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Prostatitis bacteriana</span>¿Cómo se diferencian la forma aguda y la crónica en el diagnóstico y el tratamiento?",
-   "respuesta": "La <span class=\"dx\">aguda</span> se diagnostica por síntomas abruptos, a menudo sistémicos, con bacteriuria, y se trata con antibiótico sistémico; la <span class=\"dx\">crónica</span> cursa con síntomas prolongados o recurrentes y bacteriuria recidivante.",
-   "razonamiento": "<span class=\"vs\">Contraste</span> la crónica requiere tratamiento prolongado con un antibiótico que penetre la próstata.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Rasgo</th><th>Aguda</th><th>Crónica</th></tr></thead><tbody><tr><th>Inicio</th><td>Abrupto</td><td>Prolongado</td></tr><tr><th>Sistémico</th><td>A menudo</td><td>No típico</td></tr><tr><th>Bacteriuria</th><td>Presente</td><td>Recidivante</td></tr><tr><th>Tratamiento</th><td>Antibiótico sistémico</td><td>Prolongado</td></tr></tbody></table>",
-   "fuente": "Lipsky 2010, Clin Infect Dis (PMID 20459324)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::Prostatitis",
-    "Nivel::Aplicacion",
-    "Fuente::Lipsky2010",
-    "Clase::Contraste",
-    "Bloom::Analizar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0022",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Prostatitis crónica bacteriana</span>¿Por qué requiere tratamiento prolongado y un antibiótico específico?",
-   "respuesta": "Porque debe <span class=\"mec\">penetrar la próstata</span>: se necesita un antibiótico con alta liposolubilidad, baja ionización, baja unión a proteínas y tamaño pequeño.",
-   "razonamiento": "Con esas propiedades alcanza concentración tisular durante el tiempo prolongado que exige la forma crónica.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Lipsky 2010, Clin Infect Dis (PMID 20459324)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::Prostatitis",
-    "Nivel::Aplicacion",
-    "Fuente::Lipsky2010",
-    "Clase::Aplicacion",
-    "Bloom::Comprender"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0023",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Cistitis vs pielonefritis</span>¿Qué hallazgos orientan a compromiso del tracto superior y cómo cambia el antibiótico?",
-   "respuesta": "Fiebre, escalofríos, náuseas, vómitos o <span class=\"al\">dolor lumbar</span> sugieren pielonefritis; en ese caso se evita la <span class=\"fx\">nitrofurantoína</span>.",
-   "razonamiento": "La nitrofurantoína no se usa cuando hay síntomas de enfermedad del tracto superior.<br>Ante sospecha de pielonefritis se recomienda urocultivo.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Gupta 2011, Clin Infect Dis (PMID 21292654); Colgan 2011, Am Fam Physician (PMID 22010614)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::Cistitis",
-    "Nivel::Aplicacion",
-    "Fuente::Gupta2011",
-    "Clase::Contraste",
-    "Bloom::Analizar",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0024",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Cistitis no complicada en mujer</span>¿Qué estudio de laboratorio se pide para el diagnóstico y cuándo sí se solicita urocultivo?",
-   "respuesta": "Basta el <span class=\"dx\">uroanálisis</span>; el urocultivo se pide ante sospecha de pielonefritis, síntomas que no resuelven o recurren, o presentación atípica.",
-   "razonamiento": "El diagnóstico se apoya en la clínica: frecuencia y disuria en una mujer sin comorbilidades ni anomalías urológicas.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Colgan 2011, Am Fam Physician (PMID 22010614)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::Cistitis",
-    "Nivel::Aplicacion",
-    "Fuente::Colgan2011",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0025",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Cistitis no complicada</span>¿Por qué no se usan las fluoroquinolonas como primera línea?",
-   "respuesta": "Por el <span class=\"mec\">daño colateral</span> ecológico y la resistencia: se prefieren <span class=\"fx\">nitrofurantoína</span> y <span class=\"fx\">fosfomicina</span>.",
-   "razonamiento": "La guía IDSA/ESCMID considera la prevalencia de resistencia y los efectos ecológicos adversos al ordenar las opciones.<br>El trimetoprima-sulfametoxazol es de primera línea solo donde la resistencia de E. coli es baja.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Gupta 2011, Clin Infect Dis (PMID 21292654); Colgan 2011, Am Fam Physician (PMID 22010614)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::Cistitis",
-    "Nivel::Aplicacion",
-    "Fuente::Gupta2011",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::MIR",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0026",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Bacteriuria asintomática</span>Urocultivo positivo sin síntomas: ¿se trata y cuáles son las excepciones?",
-   "respuesta": "En general <span class=\"dx\">no se trata</span>; se trata en el embarazo y antes de procedimientos urológicos invasivos.",
-   "razonamiento": "Tratarla contribuye al uso inapropiado de antimicrobianos y a la resistencia.<br>No se trata en mujeres sanas, adultos mayores, varones, diabéticos ni portadores de sonda.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Nicolle 2019, Clin Infect Dis (PMID 30895288)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::Cistitis",
-    "Nivel::Aplicacion",
-    "Fuente::Nicolle2019",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::MIR",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0027",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Uretritis masculina</span>¿Qué distingue en el Gram la uretritis gonocócica de la no gonocócica?",
-   "respuesta": "La <span class=\"dx\">gonocócica</span> muestra leucocitos con diplococos gramnegativos intracelulares; la <span class=\"dx\">no gonocócica</span> muestra leucocitos sin ellos.",
-   "razonamiento": "En la no gonocócica el tratamiento de primera línea es doxiciclina; si persiste o recurre se estudian Trichomonas vaginalis y Mycoplasma genitalium.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Workowski 2021, MMWR Recomm Rep (PMID 34292926)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::Uretritis",
-    "Nivel::Aplicacion",
-    "Fuente::Workowski2021",
-    "Clase::Contraste",
-    "Bloom::Analizar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0028",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Uretritis masculina</span>¿Qué hallazgo del Gram de la secreción sugiere gonococo?",
-   "respuesta": "<span class=\"dx\">Diplococos gramnegativos intracelulares</span> dentro de leucocitos polimorfonucleares.",
-   "razonamiento": "El Gram no detecta clamidia: para ambos agentes la muestra preferida del NAAT es la primera orina de la micción.",
-   "mnemotecnia": "",
-   "esquema": "<img src=\"q2-uri-0028-gram-uretral.jpg\" alt=\"Gram de secreción uretral con diplococos gramnegativos dentro de leucocitos\">",
-   "fuente": "Workowski 2021, MMWR Recomm Rep (PMID 34292926)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::Uretritis",
-    "Nivel::Recuerdo",
-    "Fuente::Workowski2021",
-    "Clase::Aplicacion",
-    "Bloom::Recordar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0029",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Uretritis</span>Si no hay microscopía en la consulta, ¿qué cobertura se da y qué se hace con las parejas?",
-   "respuesta": "Se da un esquema eficaz contra <span class=\"dx\">gonococo y clamidia</span> a la vez, y las parejas recientes se refieren para evaluación, prueba y tratamiento presuntivo.",
-   "razonamiento": "Es el enfoque sindrómico: sin un punto de atención diagnóstico se cubren ambos agentes.<br>Se debe estudiar además VIH y sífilis.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Workowski 2021, MMWR Recomm Rep (PMID 34292926)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::Uretritis",
-    "Nivel::Aplicacion",
-    "Fuente::Workowski2021",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0030",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Caso — escroto agudo</span>Varón con dolor escrotal agudo y sospecha de epididimitis: ¿qué diagnóstico urgente se descarta y qué cobertura se usa si se sospecha ITS?",
-   "respuesta": "La <span class=\"al\">torsión testicular</span>, urgencia quirúrgica; si se sospecha clamidia o gonococo se da <span class=\"fx\">ceftriaxona</span> más <span class=\"fx\">doxiciclina</span>.",
-   "razonamiento": "El NAAT en primera orina es la muestra preferida, y se pide VIH y sífilis.<br>Se reevalúa si no hay mejoría en 72 horas.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Workowski 2021, MMWR Recomm Rep (PMID 34292926)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::Uretritis",
-    "Nivel::Aplicacion",
-    "Fuente::Workowski2021",
-    "Clase::Vineta",
-    "Bloom::Analizar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0031",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Urodinamia</span>En el varón con síntomas urinarios bajos, ¿a quién se indica urodinamia?",
-   "respuesta": "Solo a <span class=\"dx\">pacientes seleccionados</span>, no a todos.",
-   "razonamiento": "La evaluación base incluye historia, examen, puntaje de síntomas, uroanálisis, uroflujometría y residuo posmiccional.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Gravas 2023, Eur Urol (PMID 37202311)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::Estudios",
-    "Nivel::Recuerdo",
-    "Fuente::Gravas2023",
-    "Clase::Aplicacion",
-    "Bloom::Comprender"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0032",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Nocturia</span>Varón con nocturia o síntomas de llenado predominantes: ¿qué herramienta de evaluación se añade?",
-   "respuesta": "La <span class=\"dx\">tabla de frecuencia y volumen</span> (diario miccional).",
-   "razonamiento": "Separa la poliuria nocturna, por ejemplo por un diurético tomado tarde, de la causa prostática.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Gravas 2023, Eur Urol (PMID 37202311)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::Estudios",
-    "Nivel::Aplicacion",
-    "Fuente::Gravas2023",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0033",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Piuria</span>Piuria con urocultivo estándar negativo: ¿qué debe considerarse?",
-   "respuesta": "Una infección que no crece en medios habituales, como la <span class=\"dx\">tuberculosis genitourinaria</span> o la <span class=\"dx\">clamidia</span>.",
-   "razonamiento": "La tuberculosis genitourinaria suele ser asintomática o inespecífica y se confunde con otras enfermedades urogenitales.<br>Los urocultivos son poco sensibles para la clamidia.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Bausch 2024, Eur Urol Focus (PMID 37541917); Workowski 2021, MMWR Recomm Rep (PMID 34292926)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::Estudios",
-    "Nivel::Aplicacion",
-    "Fuente::Bausch2024",
-    "Clase::Aplicacion",
-    "Bloom::Analizar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0034",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Tira reactiva de orina</span>¿Qué resultado de la tira permite descartar infección urinaria?",
-   "respuesta": "Nitritos y <span class=\"dx\">esterasa leucocitaria</span> ambos negativos.",
-   "razonamiento": "Un resultado positivo debe confirmarse, y por sí sola la tira sirve poco para confirmar infección.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Devillé 2004, BMC Urol (PMID 15175113)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::Estudios",
-    "Nivel::Aplicacion",
-    "Fuente::Deville2004",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0035",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Tuberculosis urinaria</span>Piuria estéril persistente con sospecha de tuberculosis urinaria: ¿qué estudios confirman el diagnóstico?",
-   "respuesta": "Pruebas <span class=\"dx\">microbiológicas y moleculares</span> en orina, o histología, apoyadas por imagen.",
-   "razonamiento": "El régimen de primera línea es una combinación de 6 meses; con frecuencia se requiere cirugía para las complicaciones.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Bausch 2024, Eur Urol Focus (PMID 37541917)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::TBUrinaria",
-    "Nivel::Recuerdo",
-    "Fuente::Bausch2024",
-    "Clase::Aplicacion",
-    "Bloom::Comprender",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0036",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Tuberculosis urinaria</span>¿Por qué debe incluirse en el diagnóstico diferencial de los síntomas urinarios bajos?",
-   "respuesta": "Porque puede ser <span class=\"al\">asintomática o inespecífica</span> y se confunde con otras enfermedades urogenitales.",
-   "razonamiento": "Puede ser muy destructiva y llevar a la falla de órganos urogenitales.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Bausch 2024, Eur Urol Focus (PMID 37541917)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::TBUrinaria",
-    "Nivel::Aplicacion",
-    "Fuente::Bausch2024",
-    "Clase::Principio",
-    "Bloom::Analizar",
-    "Principio"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0037",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Trauma uretral</span>Sospecha de lesión uretral: ¿qué estudio se prefiere y cómo se deriva la orina si la lesión es posterior?",
-   "respuesta": "<span class=\"dx\">Uretrografía retrógrada</span>; en la lesión posterior contusa se usa <span class=\"mec\">derivación suprapúbica</span> y uretroplastia diferida.",
-   "razonamiento": "La realineación endoscópica inmediata es una opción cuando es factible.<br>Si no se puede, la derivación suprapúbica y la uretroplastia pasados 3 meses.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Lumen 2015, Eur Urol (PMID 25576009)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::TraumaUretral",
-    "Nivel::Aplicacion",
-    "Fuente::Lumen2015",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0038",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Caso — retención crónica</span>Varón de 75 años con retención urinaria, creatinina elevada e hidronefrosis: ¿qué complicación vigilas tras el drenaje?",
-   "respuesta": "La <span class=\"al\">diuresis posobstructiva</span>, que exige corregir el volumen y los electrolitos.",
-   "razonamiento": "Es una poliuria que aparece al liberar la obstrucción y puede ser grave.<br>El drenaje vesical se acompaña de derivación a urología.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Leuba 2023, Rev Med Interne (PMID 36764894)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::Referencia",
-    "Nivel::Aplicacion",
-    "Fuente::Leuba2023",
-    "Clase::Vineta",
-    "Bloom::Evaluar",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0039",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Caso — síntomas irritativos</span>Fumador de 60 años con disuria y urgencia durante meses y urocultivos negativos: ¿qué debe descartarse y con qué estudio?",
-   "respuesta": "<span class=\"dx\">Carcinoma in situ</span> vesical: cistoscopia con citología urinaria, confirmada con biopsias vesicales múltiples.",
-   "razonamiento": "Ninguna prueba reemplaza a la cistoscopia; la citología es un complemento, y una citología negativa no excluye el tumor.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Babjuk 2022, Eur Urol (PMID 34511303)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::Referencia",
-    "Nivel::Aplicacion",
-    "Fuente::Babjuk2022",
-    "Clase::Vineta",
-    "Bloom::Evaluar",
-    "AltoRendimiento::MIR",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-URI-0040",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Cáncer de próstata de bajo riesgo</span>¿Cuál es el manejo apropiado y por qué?",
-   "respuesta": "La <span class=\"dx\">vigilancia activa</span>, porque el cáncer de bajo riesgo tiene excelente pronóstico.",
-   "razonamiento": "Se discute también en riesgo intermedio favorable (grupo de grado 2).<br>Los tratamientos activos se reservan para los demás casos, con decisión compartida sobre sus efectos adversos.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Cornford 2024, Eur Urol (PMID 38614820)",
-   "tags": [
-    "Quirurgica2::UrinariaBaja::CaProstata",
-    "Nivel::Aplicacion",
-    "Fuente::Cornford2024",
-    "Clase::Principio",
-    "Bloom::Evaluar",
-    "Principio",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  }
- ]
+  "tarjetas": [
+    {
+      "id": "Q2-URI-0001",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Obstrucción infravesical</span>¿Por qué una resistencia de salida aumentada produce chorro débil, vacilación y vaciado incompleto?",
+      "respuesta": "Porque el <span class=\"mec\">detrusor debe vencer una mayor resistencia</span>: el flujo cae, tarda en iniciar y la vejiga no se vacía por completo.",
+      "razonamiento": "La HPB es un diagnóstico histológico de proliferación de músculo liso y epitelio de la zona de transición.<br>De este principio se derivan los síntomas de vaciado sin memorizarlos como lista.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Lerner 2021, J Urol (PMID 34384237)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::Fisiopatologia",
+        "Nivel::Aplicacion",
+        "Fuente::Lerner2021",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0002",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">HPB</span>Además de los síntomas de vaciado, ¿qué síntomas de llenado puede presentar el varón con síntomas urinarios bajos?",
+      "respuesta": "Urgencia, polaquiuria y nocturia.",
+      "razonamiento": "La guía europea indica la tabla de frecuencia y volumen cuando predominan la nocturia o los síntomas de llenado.<br>No todo síntoma urinario bajo del varón se explica solo por la próstata.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Gravas 2023, Eur Urol (PMID 37202311)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::Fisiopatologia",
+        "Nivel::Aplicacion",
+        "Fuente::Gravas2023",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0003",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Caso — retención aguda</span>Varón de 68 años con HPB conocida presenta retención urinaria horas después de tomar un descongestionante y un antihistamínico sedante. ¿Qué mecanismo la explica y qué se hace?",
+      "respuesta": "Fármacos que <span class=\"fx\">agonizan alfa-adrenérgicos</span> o <span class=\"fx\">anticolinérgicos</span> alteran la micción sobre una próstata ya obstructiva; se sonda y se suspende o reduce el fármaco.",
+      "razonamiento": "Los pacientes de edad avanzada con HPB y otros fármacos concomitantes tienen mayor riesgo de retención inducida por fármacos.<br>El tratamiento habitual es el sondaje, sobre todo si es aguda, junto con retirar el fármaco causal.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Verhamme 2008, Drug Saf (PMID 18422378)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::Fisiopatologia",
+        "Nivel::Aplicacion",
+        "Fuente::Verhamme2008",
+        "Clase::Vineta",
+        "Bloom::Analizar",
+        "AltoRendimiento::MIR",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0004",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Próstata</span>¿En qué zona de la próstata prolifera la HPB y qué tejidos la componen?",
+      "respuesta": "En la <span class=\"mec\">zona de transición</span>: proliferan células musculares lisas y epiteliales.",
+      "razonamiento": "La HPB es un diagnóstico histológico, no solo el aumento de tamaño de la glándula.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Lerner 2021, J Urol (PMID 34384237)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::HPB",
+        "Nivel::Aplicacion",
+        "Fuente::Lerner2021",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0005",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">HPB</span>Varón con síntomas urinarios bajos: ¿qué se ofrece antes o junto con el tratamiento farmacológico?",
+      "respuesta": "La <span class=\"mec\">modificación conductual</span>.",
+      "razonamiento": "Los varones con síntomas leves son candidatos a vigilancia; la modificación conductual se ofrece antes o junto al tratamiento.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Gravas 2023, Eur Urol (PMID 37202311)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::HPB",
+        "Nivel::Aplicacion",
+        "Fuente::Gravas2023",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0006",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Retención urinaria</span>¿Qué proporción de los episodios de retención urinaria podría atribuirse a fármacos concomitantes?",
+      "respuesta": "Hasta alrededor del <span class=\"num\">10 %</span>, según estudios observacionales.",
+      "razonamiento": "Se han descrito retenciones con fármacos de actividad anticolinérgica, opioides, agonistas alfa-adrenérgicos, benzodiacepinas y AINE.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Verhamme 2008, Drug Saf (PMID 18422378)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::HPB",
+        "Nivel::Recuerdo",
+        "Fuente::Verhamme2008",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0007",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">PSA y 5-ARI</span>Varón en tratamiento con un inhibidor de 5-alfa-reductasa durante 6 meses: ¿cómo interpretas su PSA?",
+      "respuesta": "Se <span class=\"num\">duplica</span> el valor medido para interpretarlo, porque el fármaco lo reduce.",
+      "razonamiento": "En el estudio con finasterida, duplicar el PSA permitió interpretarlo adecuadamente sin enmascarar la detección de cáncer.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Oesterling 1998, Urology (PMID 9586598)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::HPB",
+        "Nivel::Recuerdo",
+        "Fuente::Oesterling1998",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0008",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Tamsulosina</span>¿Qué complicación oftalmológica obliga a avisar al cirujano antes de una cirugía de catarata?",
+      "respuesta": "El <span class=\"dx\">síndrome de iris flácido intraoperatorio</span>.",
+      "razonamiento": "En una serie de cirugías de catarata se observó en la mayoría de los pacientes que tomaban tamsulosina y en ninguno de los que usaban otros alfabloqueantes.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Chang 2005, J Cataract Refract Surg (PMID 15899440)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::HPB",
+        "Nivel::Recuerdo",
+        "Fuente::Chang2005",
+        "Clase::Irreducible",
+        "Bloom::Recordar",
+        "AltoRendimiento::MIR",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0009",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Caso — HPB</span>Varón de 72 años con HPB cuyos síntomas persisten pese al tratamiento médico: ¿qué conducta corresponde?",
+      "respuesta": "Considerar el <span class=\"dx\">tratamiento quirúrgico</span>: la cirugía se reserva para las indicaciones absolutas y para quienes fallan o prefieren no recibir tratamiento médico.",
+      "razonamiento": "La técnica depende de las características del paciente, sus preferencias y la experiencia del cirujano.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Gravas 2023, Eur Urol (PMID 37202311)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::HPB",
+        "Nivel::Aplicacion",
+        "Fuente::Gravas2023",
+        "Clase::Vineta",
+        "Bloom::Evaluar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0010",
+      "tipo": "Cloze",
+      "text": "<span class=\"tema\">IPSS</span>La gravedad sintomática es leve con {{c1::<span class=\"num\">0–7</span>}} puntos, moderada con {{c2::<span class=\"num\">8–19</span>}} y grave con {{c3::<span class=\"num\">20–35</span>}}.",
+      "extra": "El índice suma 7 preguntas (frecuencia, nocturia, chorro débil, vacilación, intermitencia, vaciado incompleto y urgencia) y se acompaña de una pregunta de calidad de vida.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Barry 1992, J Urol (PMID 1279218); Kaplan 2004, Rev Urol (PMID 16985925)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::EscalaIPSS",
+        "Nivel::Recuerdo",
+        "Fuente::Barry1992",
+        "Clase::Escala",
+        "Bloom::Recordar",
+        "Escala::IPSS"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2-URI-0011",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">IPSS</span>Varón con puntaje leve: ¿qué conducta es adecuada?",
+      "respuesta": "<span class=\"dx\">Vigilancia</span> con modificación conductual, sin fármacos de entrada.",
+      "razonamiento": "Los varones con síntomas leves son candidatos a vigilancia; la modificación conductual se ofrece antes o junto al tratamiento.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Gravas 2023, Eur Urol (PMID 37202311)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::EscalaIPSS",
+        "Nivel::Aplicacion",
+        "Fuente::Gravas2023",
+        "Clase::Escala",
+        "Bloom::Aplicar",
+        "Escala::IPSS"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0012",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">PSA</span>Varón con síntomas urinarios bajos: ¿cuándo se solicita el PSA?",
+      "respuesta": "Solo si el diagnóstico de <span class=\"dx\">cáncer de próstata</span> cambiaría el plan de tratamiento.",
+      "razonamiento": "El PSA no se pide de rutina por los síntomas: la evaluación base es historia, examen, puntaje de síntomas, uroanálisis, uroflujometría y residuo posmiccional.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Gravas 2023, Eur Urol (PMID 37202311)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::PSA",
+        "Nivel::Aplicacion",
+        "Fuente::Gravas2023",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0013",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Tamizaje de cáncer de próstata</span>¿Por qué el PSA se indica con decisión compartida y adaptado al riesgo?",
+      "respuesta": "Porque la guía recomienda el tamizaje con PSA <span class=\"dx\">junto con decisión compartida</span>, con intervalos y estrategia ajustados al riesgo individual.",
+      "razonamiento": "Se puede apoyar la decisión con calculadoras de riesgo en línea.<br>La guía europea también propone una estrategia adaptada al riesgo y a la esperanza de vida.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Wei 2023, J Urol (PMID 37096582); Cornford 2024, Eur Urol (PMID 38614820)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::CaProstata",
+        "Nivel::Aplicacion",
+        "Fuente::Wei2023",
+        "Clase::Principio",
+        "Bloom::Evaluar",
+        "Principio",
+        "AltoRendimiento::MIR",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0014",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Cáncer de próstata</span>Ante sospecha de cáncer, ¿qué imagen se prefiere antes de biopsiar y qué biopsia sigue?",
+      "respuesta": "La <span class=\"dx\">resonancia multiparamétrica</span>, para evitar biopsias innecesarias; si se biopsia, se combinan cores dirigidos y regionales.",
+      "razonamiento": "Además, la guía europea recomienda la vigilancia activa en el cáncer de bajo riesgo.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Cornford 2024, Eur Urol (PMID 38614820)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::CaProstata",
+        "Nivel::Aplicacion",
+        "Fuente::Cornford2024",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0015",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Cáncer de próstata</span>¿Por qué las metástasis óseas se concentran en el esqueleto axial y la pelvis?",
+      "respuesta": "Por el <span class=\"mec\">plexo venoso vertebral de Batson</span>, por donde pasan las células tumorales hacia la columna.",
+      "razonamiento": "En un estudio con gammagrafía, la distribución de las metástasis óseas prostáticas difirió de la del cáncer de pulmón y se atribuyó a esta vía.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Nishijima 1992, Adv Exp Med Biol (PMID 1492629)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::CaProstata",
+        "Nivel::Aplicacion",
+        "Fuente::Nishijima1992",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0016",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Caso — urgencia oncológica</span>Varón de 70 años con cáncer de próstata, lumbalgia progresiva y debilidad de ambos miembros inferiores: ¿qué se sospecha y cuál es la conducta inicial?",
+      "respuesta": "<span class=\"al\">Compresión medular</span> metastásica: <span class=\"fx\">corticoides</span> y resonancia de toda la columna lo antes posible, dentro de 24 h.",
+      "razonamiento": "El tratamiento definitivo, radioterapia o descompresión quirúrgica, se inicia dentro de 24 h del diagnóstico.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Dy 2008, J Clin Oncol (PMID 18688056)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::CaProstata",
+        "Nivel::Aplicacion",
+        "Fuente::Dy2008",
+        "Clase::Vineta",
+        "Bloom::Evaluar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0017",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Agonista LHRH</span>¿Por qué al iniciar un agonista LHRH se considera un antiandrógeno?",
+      "respuesta": "El agonista produce un <span class=\"mec\">pico transitorio de testosterona</span> en las primeras semanas, y el <span class=\"fx\">antiandrógeno</span> se añade para prevenir sus consecuencias clínicas.",
+      "razonamiento": "En el ensayo con degarelix, la testosterona fue ≤0,5 ng/mL a los 3 días en cerca del 96 % de los pacientes y en ninguno con leuprolida.<br>La evidencia de progresión clínica durante el flare es limitada.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Vis 2015, Urol Oncol (PMID 25159013); Klotz 2008, BJU Int (PMID 19035858)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::CaProstata",
+        "Nivel::Aplicacion",
+        "Fuente::Vis2015",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0018",
+      "tipo": "Cloze",
+      "text": "<span class=\"tema\">Grupos de grado ISUP</span>Un Gleason 3+4 corresponde al grupo {{c1::<span class=\"num\">2</span>}} y un Gleason 4+3 al grupo {{c2::<span class=\"num\">3</span>}}.",
+      "extra": "Son 5 grupos pronósticos; Gleason 3+3 = 6 corresponde al grupo 1.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Epstein 2016, Am J Surg Pathol (PMID 26492179)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::EscalaGleason",
+        "Nivel::Recuerdo",
+        "Fuente::Epstein2016",
+        "Clase::Escala",
+        "Bloom::Recordar",
+        "Escala::ISUP"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2-URI-0019",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Gleason 3+4 vs 4+3</span>Ambos suman 7: ¿cuál tiene peor pronóstico y por qué importa distinguirlos?",
+      "respuesta": "El <span class=\"dx\">4+3</span>, que tiene peor pronóstico; por eso los grupos de grado los separan.",
+      "razonamiento": "Muchos sistemas trataban el score 7 como uno solo sin distinguir 3+4 de 4+3.<br>El grupo de grado simplifica las categorías y su grado más bajo es 1, no 6.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Epstein 2016, Am J Surg Pathol (PMID 26492179)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::EscalaGleason",
+        "Nivel::Aplicacion",
+        "Fuente::Epstein2016",
+        "Clase::Escala",
+        "Bloom::Analizar",
+        "Escala::ISUP",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0020",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Prostatitis</span>¿Qué proporción de los diagnósticos de prostatitis corresponde a infección bacteriana demostrada?",
+      "respuesta": "Menos del <span class=\"num\">10 %</span>: la mayoría no tiene infección bacteriana demostrada.",
+      "razonamiento": "Las causas de la prostatitis no bacteriana se conocen poco.<br>La bacteriana se debe sobre todo a bacilos gramnegativos.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Lipsky 2010, Clin Infect Dis (PMID 20459324)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::Prostatitis",
+        "Nivel::Aplicacion",
+        "Fuente::Lipsky2010",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0021",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Prostatitis bacteriana</span>¿Cómo se diferencian la forma aguda y la crónica en el diagnóstico y el tratamiento?",
+      "respuesta": "La <span class=\"dx\">aguda</span> se diagnostica por síntomas abruptos, a menudo sistémicos, con bacteriuria, y se trata con antibiótico sistémico; la <span class=\"dx\">crónica</span> cursa con síntomas prolongados o recurrentes y bacteriuria recidivante.",
+      "razonamiento": "<span class=\"vs\">Contraste</span> la crónica requiere tratamiento prolongado con un antibiótico que penetre la próstata.",
+      "mnemotecnia": "",
+      "esquema": "<table><thead><tr><th>Rasgo</th><th>Aguda</th><th>Crónica</th></tr></thead><tbody><tr><th>Inicio</th><td>Abrupto</td><td>Prolongado</td></tr><tr><th>Sistémico</th><td>A menudo</td><td>No típico</td></tr><tr><th>Bacteriuria</th><td>Presente</td><td>Recidivante</td></tr><tr><th>Tratamiento</th><td>Antibiótico sistémico</td><td>Prolongado</td></tr></tbody></table>",
+      "fuente": "Lipsky 2010, Clin Infect Dis (PMID 20459324)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::Prostatitis",
+        "Nivel::Aplicacion",
+        "Fuente::Lipsky2010",
+        "Clase::Contraste",
+        "Bloom::Analizar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0022",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Prostatitis crónica bacteriana</span>¿Por qué requiere tratamiento prolongado y un antibiótico específico?",
+      "respuesta": "Porque debe <span class=\"mec\">penetrar la próstata</span>: se necesita un antibiótico con alta liposolubilidad, baja ionización, baja unión a proteínas y tamaño pequeño.",
+      "razonamiento": "Con esas propiedades alcanza concentración tisular durante el tiempo prolongado que exige la forma crónica.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Lipsky 2010, Clin Infect Dis (PMID 20459324)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::Prostatitis",
+        "Nivel::Aplicacion",
+        "Fuente::Lipsky2010",
+        "Clase::Aplicacion",
+        "Bloom::Comprender"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0023",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Cistitis no complicada</span>¿Cuándo es el trimetoprima-sulfametoxazol de primera línea?",
+      "respuesta": "Solo donde la resistencia de E. coli <span class=\"mec\">no supera el 20 %</span>.",
+      "razonamiento": "Fosfomicina y nitrofurantoína son las otras opciones de primera línea.<br>Los betalactámicos no se recomiendan para el tratamiento inicial por la resistencia.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Colgan 2011, Am Fam Physician (PMID 22010614)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::Cistitis",
+        "Nivel::Aplicacion",
+        "Fuente::Colgan2011",
+        "Clase::Contraste",
+        "Bloom::Analizar",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0024",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Cistitis no complicada en mujer</span>¿Qué estudio de laboratorio se pide para el diagnóstico y cuándo sí se solicita urocultivo?",
+      "respuesta": "Basta el <span class=\"dx\">uroanálisis</span>; el urocultivo se pide ante sospecha de pielonefritis, síntomas que no resuelven o recurren, o presentación atípica.",
+      "razonamiento": "El diagnóstico se apoya en la clínica: frecuencia y disuria en una mujer sin comorbilidades ni anomalías urológicas.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Colgan 2011, Am Fam Physician (PMID 22010614)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::Cistitis",
+        "Nivel::Aplicacion",
+        "Fuente::Colgan2011",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0025",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Cistitis no complicada</span>¿Por qué no se usan las fluoroquinolonas como primera línea?",
+      "respuesta": "Por el <span class=\"mec\">daño colateral</span> ecológico y la resistencia: se prefieren <span class=\"fx\">nitrofurantoína</span> y <span class=\"fx\">fosfomicina</span>.",
+      "razonamiento": "La guía IDSA/ESCMID considera la prevalencia de resistencia y los efectos ecológicos adversos al ordenar las opciones.<br>El trimetoprima-sulfametoxazol es de primera línea donde la resistencia de E. coli no supera el 20 %.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Gupta 2011, Clin Infect Dis (PMID 21292654); Colgan 2011, Am Fam Physician (PMID 22010614)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::Cistitis",
+        "Nivel::Aplicacion",
+        "Fuente::Gupta2011",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::MIR",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0026",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Bacteriuria asintomática</span>Urocultivo positivo sin síntomas: ¿se trata y cuáles son las excepciones?",
+      "respuesta": "En general <span class=\"dx\">no se trata</span>; se trata en el embarazo y antes de procedimientos urológicos invasivos.",
+      "razonamiento": "Tratarla contribuye al uso inapropiado de antimicrobianos y a la resistencia.<br>No se trata en mujeres sanas, mujeres o varones mayores, diabéticos ni portadores de sonda.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Nicolle 2019, Clin Infect Dis (PMID 30895288)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::Cistitis",
+        "Nivel::Aplicacion",
+        "Fuente::Nicolle2019",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::MIR",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0027",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Uretritis masculina</span>¿Qué distingue en el Gram la uretritis gonocócica de la no gonocócica?",
+      "respuesta": "La <span class=\"dx\">gonocócica</span> muestra leucocitos con diplococos gramnegativos intracelulares; la <span class=\"dx\">no gonocócica</span> muestra leucocitos sin ellos.",
+      "razonamiento": "En la no gonocócica el tratamiento de primera línea es doxiciclina; si persiste o recurre se estudian Trichomonas vaginalis y Mycoplasma genitalium.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Workowski 2021, MMWR Recomm Rep (PMID 34292926)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::Uretritis",
+        "Nivel::Aplicacion",
+        "Fuente::Workowski2021",
+        "Clase::Contraste",
+        "Bloom::Analizar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0028",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Uretritis masculina</span>¿Qué hallazgo del Gram de la secreción sugiere gonococo?",
+      "respuesta": "<span class=\"dx\">Diplococos gramnegativos intracelulares</span> dentro de leucocitos polimorfonucleares.",
+      "razonamiento": "Si no hay diplococos, igual se piden NAAT para clamidia y gonococo; en el varón la orina es la muestra preferida.",
+      "mnemotecnia": "",
+      "esquema": "<img src=\"q2-uri-0028-gram-uretral.jpg\" alt=\"Gram de secreción uretral con diplococos gramnegativos dentro de leucocitos\">",
+      "fuente": "Workowski 2021, MMWR Recomm Rep (PMID 34292926)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::Uretritis",
+        "Nivel::Recuerdo",
+        "Fuente::Workowski2021",
+        "Clase::Aplicacion",
+        "Bloom::Recordar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0029",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Uretritis</span>Si no hay microscopía en la consulta, ¿qué cobertura se da y qué se hace con las parejas?",
+      "respuesta": "Se da un esquema eficaz contra <span class=\"dx\">gonococo y clamidia</span> a la vez, y las parejas recientes se refieren para evaluación, prueba y tratamiento presuntivo.",
+      "razonamiento": "Es el enfoque sindrómico: sin un punto de atención diagnóstico se cubren ambos agentes.<br>Se debe estudiar además VIH y sífilis.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Workowski 2021, MMWR Recomm Rep (PMID 34292926)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::Uretritis",
+        "Nivel::Aplicacion",
+        "Fuente::Workowski2021",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0030",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Caso — escroto agudo</span>Varón con dolor escrotal agudo y sospecha de epididimitis: ¿qué diagnóstico urgente se descarta y qué cobertura se usa si se sospecha ITS?",
+      "respuesta": "La <span class=\"al\">torsión testicular</span>, urgencia quirúrgica; si se sospecha clamidia o gonococo se da <span class=\"fx\">ceftriaxona</span> más <span class=\"fx\">doxiciclina</span>.",
+      "razonamiento": "El NAAT en primera orina es la muestra preferida, y se pide VIH y sífilis.<br>Se reevalúa si no hay mejoría en 72 horas.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Workowski 2021, MMWR Recomm Rep (PMID 34292926)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::Uretritis",
+        "Nivel::Aplicacion",
+        "Fuente::Workowski2021",
+        "Clase::Vineta",
+        "Bloom::Analizar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0031",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Urodinamia</span>En el varón con síntomas urinarios bajos, ¿a quién se indica urodinamia?",
+      "respuesta": "Solo a <span class=\"dx\">pacientes seleccionados</span>, no a todos.",
+      "razonamiento": "La evaluación base incluye historia, examen, puntaje de síntomas, uroanálisis, uroflujometría y residuo posmiccional.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Gravas 2023, Eur Urol (PMID 37202311)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::Estudios",
+        "Nivel::Recuerdo",
+        "Fuente::Gravas2023",
+        "Clase::Aplicacion",
+        "Bloom::Comprender"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0032",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Nocturia</span>Varón con nocturia o síntomas de llenado predominantes: ¿qué herramienta de evaluación se añade?",
+      "respuesta": "La <span class=\"dx\">tabla de frecuencia y volumen</span> (diario miccional).",
+      "razonamiento": "La guía europea la indica en nocturia o síntomas de llenado predominantes, junto con la evaluación base.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Gravas 2023, Eur Urol (PMID 37202311)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::Estudios",
+        "Nivel::Aplicacion",
+        "Fuente::Gravas2023",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0033",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Epididimitis crónica</span>Varón con dolor o molestia escrotal de 6 semanas o más y sospecha de granulomas: ¿qué infección se sospecha primero?",
+      "respuesta": "La <span class=\"mec\">tuberculosis</span>, sobre todo si hay antecedente o exposición.",
+      "razonamiento": "La tuberculosis es la enfermedad granulomatosa más común que afecta al epidídimo en la epididimitis crónica.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Workowski 2021, MMWR Recomm Rep (PMID 34292926)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::Estudios",
+        "Nivel::Aplicacion",
+        "Fuente::Workowski2021",
+        "Clase::Aplicacion",
+        "Bloom::Analizar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0034",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Tira reactiva de orina</span>¿Qué resultado de la tira permite descartar infección urinaria?",
+      "respuesta": "Nitritos y <span class=\"dx\">esterasa leucocitaria</span> ambos negativos.",
+      "razonamiento": "Un resultado positivo debe confirmarse, y por sí sola la tira sirve poco para confirmar infección.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Devillé 2004, BMC Urol (PMID 15175113)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::Estudios",
+        "Nivel::Aplicacion",
+        "Fuente::Deville2004",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0035",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Tuberculosis urinaria</span>Ante sospecha de tuberculosis genitourinaria: ¿qué estudios confirman el diagnóstico?",
+      "respuesta": "Pruebas <span class=\"dx\">microbiológicas y moleculares</span> en orina, o histología, apoyadas por imagen.",
+      "razonamiento": "El régimen de primera línea es una combinación de 6 meses; con frecuencia se requiere cirugía para las complicaciones.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Bausch 2024, Eur Urol Focus (PMID 37541917)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::TBUrinaria",
+        "Nivel::Recuerdo",
+        "Fuente::Bausch2024",
+        "Clase::Aplicacion",
+        "Bloom::Comprender",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0036",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Tuberculosis urinaria</span>¿Por qué debe incluirse en el diagnóstico diferencial de los síntomas urinarios bajos?",
+      "respuesta": "Porque puede ser <span class=\"al\">asintomática o inespecífica</span> y se confunde con otras enfermedades urogenitales.",
+      "razonamiento": "Puede ser muy destructiva y llevar a la falla de órganos urogenitales.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Bausch 2024, Eur Urol Focus (PMID 37541917)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::TBUrinaria",
+        "Nivel::Aplicacion",
+        "Fuente::Bausch2024",
+        "Clase::Principio",
+        "Bloom::Analizar",
+        "Principio"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0037",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Trauma uretral</span>Sospecha de lesión uretral: ¿qué estudio se prefiere y cómo se deriva la orina si la lesión es posterior?",
+      "respuesta": "<span class=\"dx\">Uretrografía</span>; en la lesión posterior contusa se usa <span class=\"mec\">derivación suprapúbica</span> y uretroplastia diferida.",
+      "razonamiento": "La realineación endoscópica inmediata es una opción cuando es factible.<br>Si no se puede, la derivación suprapúbica y la uretroplastia pasados 3 meses.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Lumen 2015, Eur Urol (PMID 25576009)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::TraumaUretral",
+        "Nivel::Aplicacion",
+        "Fuente::Lumen2015",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0038",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Caso — retención crónica</span>Varón de 75 años con retención urinaria, creatinina elevada e hidronefrosis: ¿qué complicación vigilas tras el drenaje?",
+      "respuesta": "La <span class=\"al\">diuresis posobstructiva</span>, que exige corregir el volumen y los electrolitos.",
+      "razonamiento": "Es una poliuria que aparece al liberar la obstrucción y puede ser grave.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Leuba 2023, Rev Med Interne (PMID 36764894)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::Referencia",
+        "Nivel::Aplicacion",
+        "Fuente::Leuba2023",
+        "Clase::Vineta",
+        "Bloom::Evaluar",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0039",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Carcinoma in situ vesical</span>¿Cómo se diagnostica el carcinoma in situ vesical?",
+      "respuesta": "Con <span class=\"mec\">cistoscopia</span> y <span class=\"mec\">biopsias vesicales múltiples</span>.",
+      "razonamiento": "En los tumores papilares el diagnóstico exige resección transuretral completa; el carcinoma in situ se confirma con biopsias múltiples.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Babjuk 2022, Eur Urol (PMID 34511303)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::Referencia",
+        "Nivel::Aplicacion",
+        "Fuente::Babjuk2022",
+        "Clase::Vineta",
+        "Bloom::Evaluar",
+        "AltoRendimiento::MIR",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-URI-0040",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Cáncer de próstata de bajo riesgo</span>¿Cuál es el manejo apropiado y por qué?",
+      "respuesta": "La <span class=\"mec\">vigilancia activa</span>, recomendada por la guía europea.",
+      "razonamiento": "La guía europea la acepta también en riesgo intermedio favorable (grupo de grado 2).",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Cornford 2024, Eur Urol (PMID 38614820)",
+      "tags": [
+        "Quirurgica2::UrinariaBaja::CaProstata",
+        "Nivel::Aplicacion",
+        "Fuente::Cornford2024",
+        "Clase::Principio",
+        "Bloom::Evaluar",
+        "Principio",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    }
+  ]
 }

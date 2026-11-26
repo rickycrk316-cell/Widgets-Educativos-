@@ -404,7 +404,7 @@ def main():
     print(f'  mazo {deck_id} «{nombre}» | notas {nn} | tarjetas {nc} | media {med}')
     for mid, (nm, fl, css, tp) in sorted(mods.items()):
         print(f'  modelo {mid} «{nm}» ({"cloze" if tp == 1 else "estándar"}) campos={fl} css={css} B')
-    if nn != info['N'] or sorted(med) != media or {M.QA_ID, M.CLOZE_ID} - set(mods):
+    if nn != info['N'] or sorted(med) != media or {M.QA_ID if c['tipo'] == 'QA' else M.CLOZE_ID for c in datos['tarjetas']} - set(mods):
         sys.exit('RESULTADO: INSPECCIÓN DEL APKG FALLIDA')
     if not a.demo:
         f = filas[pref]
