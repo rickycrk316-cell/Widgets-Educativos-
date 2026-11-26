@@ -7,42 +7,72 @@
   "version": "1.0",
   "fecha": "2026-11-26",
   "resultado_aprendizaje": "Realiza la valoración geriátrica integral del adulto mayor con patología relacionada con los síndromes geriátricos de acuerdo con evidencia científica.",
-  "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 2.ª rotación, Caso 3 — Síndromes geriátricos (contenidos y trabajo autónomo); delirio y demencia (caso 6) y envejecimiento y escalas (caso 2) quedan fuera por tener mazo propio",
+  "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 2.ª rotación, Caso 3 — Síndromes geriátricos (contenidos y trabajo autónomo); delirio y demencia (caso 6) y envejecimiento y escalas (caso 2) quedan fuera por tener mazo propio; la valoración geriátrica integral (VGI), el maltrato y las escalas de valoración se estudian en el mazo Envejecimiento (Q2R2-ENV) para evitar duplicados",
   "justificacion_exceso": "",
   "mir_verificados": [],
   "verificacion": {
-   "total": 44,
-   "verificados": 38,
+   "total": 77,
+   "verificados": 65,
    "eliminados": [
     {
-     "id": "Q2R2-GER-0015",
+     "id": "plan",
      "dato": "Definición del «prescribing cascade» (Rochon y Gurwitz)",
      "motivo": "PubMed sin resumen legible (Lancet 2017) y sin otra fuente confirmada: tarjeta no redactada"
     },
     {
-     "id": "Q2R2-GER-0013",
+     "id": "plan",
      "dato": "Umbrales de hipotensión ortostática (descenso de PAS y PAD en 3 min)",
-     "motivo": "consenso de Freeman 2011 sin resumen disponible: se usó solo la asociación con caídas (Mol 2019)"
+     "motivo": "consenso de Freeman 2011 sin resumen disponible: la tarjeta de hipotensión ortostática usa solo la asociación con caídas (Mol 2019)"
     },
     {
-     "id": "Q2R2-GER-0029",
+     "id": "plan",
      "dato": "Cuatro habilidades de la capacidad de decidir (Appelbaum 2007)",
-     "motivo": "sin resumen disponible y Consensus agotado: se usó solo Sessums 2011"
+     "motivo": "sin resumen disponible: la tarjeta de capacidad de decisión usa solo Sessums 2011"
     },
     {
-     "id": "Q2R2-GER-0022",
+     "id": "plan",
      "dato": "Definición de cada estadio de lesión por presión (estadio 1 eritema no blanqueable, etc.)",
      "motivo": "el resumen de Edsberg 2016 no las incluye: tarjeta limitada a los cambios documentados"
     },
     {
-     "id": "Q2R2-GER-0019",
+     "id": "plan",
      "dato": "Mnemotecnia DIAPPERS y causas transitorias de incontinencia",
      "motivo": "PubMed sin resultados: no se incluye"
     },
     {
-     "id": "Q2R2-GER-0012",
+     "id": "plan",
      "dato": "Riesgo de caídas según número de factores de riesgo (Tinetti 1988)",
      "motivo": "PubMed sin resultados con los términos usados: no se incluye"
+    },
+    {
+     "id": "Q2R2-GER-0003",
+     "dato": "Comorbilidad como factor de riesgo y discapacidad como desenlace de la fragilidad",
+     "motivo": "el resumen de Fried 2001 solo describe superposición sin concordancia: reformulado"
+    },
+    {
+     "id": "Q2R2-GER-0012",
+     "dato": "Las intervenciones eficaces combinan componentes personalizados y asumir el tropiezo deja sin tratar fármacos o presión arterial",
+     "motivo": "inferencia propia no presente en el resumen de Montero-Odasso 2022: reformulado a intervenciones personalizadas y multidominio"
+    },
+    {
+     "id": "Q2R2-GER-0016",
+     "dato": "Excepción de la lista de Beers en «cuidados paliativos»",
+     "motivo": "el resumen dice hospicio y final de vida: reformulado"
+    },
+    {
+     "id": "Q2R2-GER-0023",
+     "dato": "Ejemplos de dermatitis por humedad (zona del pañal, incontinencia) y efecto sobre la prevención",
+     "motivo": "no constan en el resumen de Edsberg 2016: eliminados"
+    },
+    {
+     "id": "Q2R2-GER-0024",
+     "dato": "Todos los programas multicomponente fueron efectivos",
+     "motivo": "el resumen dice «la mayoría»: reformulado"
+    },
+    {
+     "id": "Q2R2-GER-0026",
+     "dato": "Dos pasos evitan diagnosticar sin cribar y permiten usar herramientas disponibles por nivel",
+     "motivo": "inferencia propia: reformulado a lo que dice el consenso GLIM"
     }
    ]
   },
@@ -91,7 +121,6 @@
    ],
    "subtemas": {
     "Fragilidad": "Conceptos de fragilidad e integralidad; fenotipo de Fried (trabajo autónomo)",
-    "ValoracionGeriatrica": "Componentes e instrumentos de la valoración geriátrica integral",
     "Funcionalidad": "Concepto de funcionalidad, importancia y manera de identificarla",
     "Dismovilidad": "Dismovilidad e iatrogenia hospitalaria",
     "Caidas": "Caídas y su tamizaje en el nivel ambulatorio",
@@ -110,7 +139,6 @@
    "referencias": [
     "Clegg A, Young J, Iliffe S, Rikkert MO, Rockwood K. Frailty in elderly people. Lancet. 2013;381(9868):752-62. doi:10.1016/S0140-6736(12)62167-9. PMID: 23395245.",
     "Fried LP, Tangen CM, Walston J, Newman AB, Hirsch C, Gottdiener J, et al. Frailty in older adults: evidence for a phenotype. J Gerontol A Biol Sci Med Sci. 2001;56(3):M146-56. doi:10.1093/gerona/56.3.m146. PMID: 11253156.",
-    "Ellis G, Gardner M, Tsiachristas A, Langhorne P, Burke O, Harwood RH, et al. Comprehensive geriatric assessment for older adults admitted to hospital. Cochrane Database Syst Rev. 2017;9(9):CD006211. doi:10.1002/14651858.CD006211.pub3. PMID: 28898390.",
     "Covinsky KE, Pierluissi E, Johnston CB. Hospitalization-associated disability: \"She was probably able to ambulate, but I'm not sure\". JAMA. 2011;306(16):1782-93. doi:10.1001/jama.2011.1556. PMID: 22028354.",
     "Creditor MC. Hazards of hospitalization of the elderly. Ann Intern Med. 1993;118(3):219-23. doi:10.7326/0003-4819-118-3-199302010-00011. PMID: 8417639.",
     "Montero-Odasso M, van der Velde N, Martin FC, Petrovic M, Tan MP, Ryg J, et al. World guidelines for falls prevention and management for older adults: a global initiative. Age Ageing. 2022;51(9):afac205. doi:10.1093/ageing/afac205. PMID: 36178003.",
@@ -171,10 +199,10 @@
    "id": "Q2R2-GER-0003",
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Fragilidad</span>¿Qué relación guardan la comorbilidad y la discapacidad con la fragilidad?",
-   "respuesta": "Se solapan sin ser sinónimos: la <span class=\"dx\">comorbilidad</span> es un factor de riesgo de fragilidad y la <span class=\"dx\">discapacidad</span> es uno de sus desenlaces.",
-   "razonamiento": "Fried halló que fragilidad, comorbilidad y discapacidad coinciden en parte, pero no de forma concordante. Por eso un anciano con varias enfermedades no es necesariamente frágil ni todo frágil es dependiente.",
+   "respuesta": "Se solapan sin ser sinónimos: la fragilidad se asocia con mayor <span class=\"dx\">comorbilidad</span> y <span class=\"dx\">discapacidad</span>, pero no coincide con ellas.",
+   "razonamiento": "Fried halló superposición pero no concordancia entre fragilidad, comorbilidad y discapacidad. Por eso un anciano con varias enfermedades no es necesariamente frágil ni todo frágil es dependiente.",
    "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Concepto</th><th>Papel</th></tr></thead><tbody><tr><th>Comorbilidad</th><td>Factor de riesgo</td></tr><tr><th>Fragilidad</th><td>Síndrome clínico</td></tr><tr><th>Discapacidad</th><td>Desenlace</td></tr></tbody></table>",
+   "esquema": "",
    "fuente": "Fried 2001, J Gerontol A Biol Sci Med Sci (PMID 11253156)",
    "tags": [
     "Quirurgica2::SindromesGeriatricos::Fragilidad",
@@ -201,45 +229,6 @@
     "Fuente::Fried2001",
     "Clase::Vineta",
     "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-GER-0005",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Valoración geriátrica integral</span>¿Qué distingue a la valoración geriátrica integral de una evaluación médica habitual?",
-   "respuesta": "Es un proceso diagnóstico y terapéutico <span class=\"mec\">multidimensional y multidisciplinario</span> que identifica problemas médicos, mentales y funcionales para construir un plan coordinado de tratamiento y seguimiento.",
-   "razonamiento": "Se dirige a personas mayores con fragilidad, en quienes los problemas se acumulan e interactúan. La enfermedad por sí sola no describe lo que el paciente puede hacer ni dónde vivirá.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Ellis 2017, Cochrane Database Syst Rev (PMID 28898390)",
-   "tags": [
-    "Quirurgica2::SindromesGeriatricos::ValoracionGeriatrica",
-    "Nivel::Aplicacion",
-    "Fuente::Ellis2017",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-GER-0006",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Valoración geriátrica integral</span>En un adulto mayor que ingresa al hospital, ¿qué resultado mejora con la valoración geriátrica integral y cuál no cambia?",
-   "respuesta": "Aumenta la probabilidad de estar <span class=\"dx\">vivo y en casa</span> a los 3–12 meses y reduce el ingreso a residencia; la mortalidad no cambia.",
-   "razonamiento": "Es una revisión Cochrane de 29 ensayos con evidencia de certeza alta para esos desenlaces. Su valor está en la autonomía y el destino al alta, no en la supervivencia.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Ellis 2017, Cochrane Database Syst Rev (PMID 28898390)",
-   "tags": [
-    "Quirurgica2::SindromesGeriatricos::ValoracionGeriatrica",
-    "Nivel::Aplicacion",
-    "Fuente::Ellis2017",
-    "Clase::Aplicacion",
-    "Bloom::Evaluar"
    ],
    "pendientes": [],
    "notas_ejecutor": ""
@@ -343,7 +332,7 @@
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Caídas</span>Un anciano se cae por un tropiezo evidente. ¿Por qué la guía pide no detenerse en esa causa?",
    "respuesta": "Porque en quien tiene alto riesgo se recomienda una evaluación <span class=\"mec\">multifactorial</span> que abarque varios dominios y no solo el desencadenante inmediato.",
-   "razonamiento": "Las intervenciones eficaces combinan componentes personalizados. Asumir que el tropiezo explica todo deja sin tratar factores como fármacos o presión arterial.",
+   "razonamiento": "La guía propone intervenciones personalizadas y multidominio para quien tiene alto riesgo. Fijarse solo en el desencadenante inmediato dejaría fuera los demás dominios.",
    "mnemotecnia": "",
    "esquema": "",
    "fuente": "Montero-Odasso 2022, Age Ageing (PMID 36178003)",
@@ -418,7 +407,7 @@
    "id": "Q2R2-GER-0016",
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Criterios de Beers</span>¿Qué son los criterios de Beers 2023 y cómo deben usarse?",
-   "respuesta": "Una lista explícita de <span class=\"al\">medicamentos potencialmente inapropiados</span> que conviene evitar en mayores de 65 años, salvo en cuidados paliativos o final de vida.",
+   "respuesta": "Una lista explícita de <span class=\"al\">medicamentos potencialmente inapropiados</span> que conviene evitar en mayores de 65 años, salvo en cuidados de hospicio o final de vida.",
    "razonamiento": "Se aplican en ámbito ambulatorio, agudo e institucionalizado y apoyan la decisión compartida sin sustituirla. Se diseñaron para EE. UU.; otros países pueden requerir consideraciones propias.",
    "mnemotecnia": "",
    "esquema": "",
@@ -476,7 +465,7 @@
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Incontinencia urinaria</span>Mujer con incontinencia de esfuerzo, ¿qué tratamiento de primera línea indica la guía del Colegio Americano de Médicos?",
    "respuesta": "<span class=\"dx\">Entrenamiento de los músculos del piso pélvico</span>; no se recomienda tratamiento farmacológico sistémico.",
-   "razonamiento": "La recomendación es fuerte y con evidencia de alta calidad. Los fármacos sistémicos no ayudan en la incontinencia de esfuerzo.",
+   "razonamiento": "La recomendación del entrenamiento es fuerte y con evidencia de alta calidad. La guía recomienda no usar tratamiento farmacológico sistémico en la incontinencia de esfuerzo.",
    "mnemotecnia": "",
    "esquema": "",
    "fuente": "Qaseem 2014, Ann Intern Med (PMID 25222388)",
@@ -552,7 +541,7 @@
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Lesión por presión</span>¿Qué distinción clínica aclara la definición revisada del estadio 2?",
    "respuesta": "La que existe entre el daño cutáneo asociado a <span class=\"mec\">humedad</span> y la lesión causada por presión y/o cizallamiento.",
-   "razonamiento": "Evita rotular como lesión por presión lo que es dermatitis por humedad, p. ej. en la zona del pañal o por incontinencia, y por tanto cambia la prevención.",
+   "razonamiento": "Separar la dermatitis asociada a humedad de la lesión por presión y/o cizallamiento es el objetivo declarado de la definición revisada del estadio 2.",
    "mnemotecnia": "",
    "esquema": "",
    "fuente": "Edsberg 2016, J Wound Ostomy Continence Nurs (PMID 27749790)",
@@ -570,7 +559,7 @@
    "id": "Q2R2-GER-0024",
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Lesión por presión</span>¿Por qué un programa con varias medidas previene mejor las lesiones que una sola?",
-   "respuesta": "Porque las intervenciones aisladas, como las <span class=\"mec\">superficies de apoyo</span> o el reposicionamiento, no siempre fueron efectivas, mientras los programas multicomponente sí lo fueron.",
+   "respuesta": "Porque las intervenciones aisladas, como las <span class=\"mec\">superficies de apoyo</span> o el reposicionamiento, no siempre fueron efectivas, mientras la mayoría de los programas multicomponente sí lo fue.",
    "razonamiento": "El reposicionamiento solo funcionó cuando se apoyó en retroalimentación tecnológica del mapa de presiones. Las herramientas de valoración del riesgo, por sí solas, no previenen.",
    "mnemotecnia": "",
    "esquema": "",
@@ -610,7 +599,7 @@
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Desnutrición</span>¿Por qué el diagnóstico de desnutrición según GLIM se hace en dos pasos?",
    "respuesta": "Primero se tamiza con una herramienta validada para identificar el riesgo y después se evalúa para <span class=\"mec\">diagnosticar y graduar</span> la gravedad.",
-   "razonamiento": "Separar ambos pasos evita diagnosticar sin cribar y permite usar las herramientas ya disponibles en cada nivel. Los criterios etiológicos orientan la intervención y el pronóstico esperado.",
+   "razonamiento": "Cualquier herramienta de tamizaje validada sirve para el primer paso. Los criterios etiológicos se recomiendan para orientar la intervención y el pronóstico esperado.",
    "mnemotecnia": "",
    "esquema": "",
    "fuente": "Cederholm 2019, Clin Nutr (PMID 30181091)",
