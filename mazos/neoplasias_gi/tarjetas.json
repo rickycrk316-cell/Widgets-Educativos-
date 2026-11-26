@@ -1,718 +1,775 @@
 {
- "meta": {
-  "caso": "Neoplasias digestivas",
-  "rotacion": "1.ª",
-  "tag_raiz": "NeoplasiasGI",
-  "prefijo": "Q2-NEO",
-  "version": "1.0",
-  "fecha": "2026-11-26",
-  "resultado_aprendizaje": "Analiza cánceres digestivos y estrategias de diagnóstico temprano.",
-  "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 1.ª rotación, CASO Dolor abdominal y pérdida de peso sin causa aparente (neoplasias gastrointestinales)",
-  "justificacion_exceso": "",
-  "mir_verificados": [],
-  "verificacion": {
-   "total": 60,
-   "verificados": 40,
-   "eliminados": [
-    {
-     "id": "Q2-NEO-0011",
-     "dato": "Prueba inmunoquímica fecal positiva obliga a colonoscopia diagnóstica",
-     "motivo": "no confirmado en la fuente leída: eliminado"
+  "meta": {
+    "caso": "Neoplasias digestivas",
+    "rotacion": "1.ª",
+    "tag_raiz": "NeoplasiasGI",
+    "prefijo": "Q2-NEO",
+    "version": "1.0",
+    "fecha": "2026-11-26",
+    "resultado_aprendizaje": "Analiza cánceres digestivos y estrategias de diagnóstico temprano.",
+    "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 1.ª rotación, CASO Dolor abdominal y pérdida de peso sin causa aparente (neoplasias gastrointestinales)",
+    "justificacion_exceso": "",
+    "mir_verificados": [],
+    "verificacion": {
+      "total": 67,
+      "verificados": 44,
+      "eliminados": [
+        {
+          "id": "Q2-NEO-0011",
+          "dato": "Prueba inmunoquímica fecal positiva obliga a colonoscopia diagnóstica",
+          "motivo": "no confirmado en la fuente leída: eliminado"
+        },
+        {
+          "id": "Q2-NEO-0007",
+          "dato": "La erradicación actúa sobre el tipo intestinal de Lauren; tipo difuso en jóvenes con peor pronóstico",
+          "motivo": "no confirmado: tarjeta de Lauren eliminada"
+        },
+        {
+          "id": "Q2-NEO-0014",
+          "dato": "Tercios esofágicos de cada histología",
+          "motivo": "fuentes consultadas divergen: se conserva solo el factor de riesgo y la epidemiología"
+        },
+        {
+          "id": "Q2-NEO-0015",
+          "dato": "Exploración sistemática de todo el tracto aerodigestivo superior",
+          "motivo": "no confirmado como recomendación: se conserva el concepto de campo de cancerización"
+        },
+        {
+          "id": "Q2-NEO-0016",
+          "dato": "Biopsia del ganglio de Virchow para diagnóstico y estadio; localización izquierda",
+          "motivo": "no confirmado: eliminado"
+        },
+        {
+          "id": "Q2-NEO-0017",
+          "dato": "Endoscopia inmediata ante pérdida de peso en dispepsia sin prueba de IBP",
+          "motivo": "contradicho por la guía ACG/CAG 2017 en menores de 60 años: reformulada"
+        },
+        {
+          "id": "Q2-NEO-0019",
+          "dato": "Cascada de Correa con Lauren y vesícula en porcelana como predisponente",
+          "motivo": "fuentes contradicen o no confirman (porcelana: riesgo bajo en series recientes): eliminado"
+        },
+        {
+          "id": "Q2-NEO-0021",
+          "dato": "Lynch acelera la secuencia adenoma-carcinoma",
+          "motivo": "no confirmado: se conserva intervalo y edad de inicio"
+        },
+        {
+          "id": "Q2-NEO-0022",
+          "dato": "Otros carcinógenos del carcinoma hepatocelular (VHC, aflatoxina)",
+          "motivo": "no verificados en esta pasada: eliminados"
+        },
+        {
+          "id": "Q2-NEO-0004",
+          "dato": "Estadiaje T por profundidad, riesgo ganglionar desde la submucosa; ecoendoscopia vs TC; TNM clínico vs patológico; ganglios mínimos",
+          "motivo": "no confirmados con fuente citable: tarjetas eliminadas"
+        },
+        {
+          "id": "Q2-NEO-0020",
+          "dato": "Neoadyuvancia en recto, resecabilidad pancreática, metástasis hepáticas, vía serrada",
+          "motivo": "fuente no accesible (resumen de guía sin texto): tarjetas eliminadas"
+        },
+        {
+          "id": "Q2-NEO-0010",
+          "dato": "Linitis plástica, Sister Mary Joseph, Klatskin, cáncer de vesícula y duodeno, eritroplasia, Ecuador (GLOBOCAN/SOLCA)",
+          "motivo": "sin fuente confirmada o con marca heredada: eliminados"
+        },
+        {
+          "id": "Q2-NEO-0003",
+          "dato": "Invasión de nervios peripancreáticos como causa del dolor dorsal; dolor y localmente avanzado por localización",
+          "motivo": "no confirmado en la fuente: eliminado"
+        },
+        {
+          "id": "Q2-NEO-0009",
+          "dato": "Pérdida de años de vida ganados por baja adherencia",
+          "motivo": "no confirmado: eliminado"
+        },
+        {
+          "id": "Q2-NEO-0010",
+          "dato": "Edad >50 en varones y posmenopáusicas; sangrado oculto por tumores derechos",
+          "motivo": "fuente (Cleveland Clinic) sin autores: reemplazada por Prichard 1998; dato eliminado"
+        },
+        {
+          "id": "Q2-NEO-0011",
+          "dato": "Luz estrecha, heces sólidas y obstrucción precoz del lado izquierdo",
+          "motivo": "mecanismo no confirmado: eliminado"
+        },
+        {
+          "id": "Q2-NEO-0012",
+          "dato": "Barrett como lesión previa en la fila del esquema; NCI PDQ",
+          "motivo": "NCI PDQ no accesible: sustituido por Xie 2018"
+        },
+        {
+          "id": "Q2-NEO-0007",
+          "dato": "Secuencia gastritis-atrofia-metaplasia-displasia",
+          "motivo": "no confirmado: eliminado"
+        },
+        {
+          "id": "Q2-NEO-0018",
+          "dato": "Deleción de EPCAM; poliposis atenuada <100 pólipos",
+          "motivo": "no confirmado: eliminado"
+        },
+        {
+          "id": "Q2-NEO-0020",
+          "dato": "Vigilancia reduce incidencia y mortalidad",
+          "motivo": "solo la fuente confirma medida preventiva eficaz: reformulado"
+        },
+        {
+          "id": "Q2-NEO-0022",
+          "dato": "Ecografía «con o sin» AFP (AFP opcional)",
+          "motivo": "contradicho por AASLD 2023 (ecografía más AFP): corregido"
+        },
+        {
+          "id": "Q2-NEO-0023",
+          "dato": "Pólipos del fondo gástrico y duodeno; herencia autosómica dominante",
+          "motivo": "no confirmado: reformulado"
+        },
+        {
+          "id": "Q2-NEO-0013",
+          "dato": "Reflujo, obesidad y tabaquismo como factores en la tarjeta de Barrett",
+          "motivo": "reformulado a lo que dice la fuente"
+        }
+      ]
     },
-    {
-     "id": "Q2-NEO-0007",
-     "dato": "La erradicación actúa sobre el tipo intestinal de Lauren; tipo difuso en jóvenes con peor pronóstico",
-     "motivo": "no confirmado: tarjeta de Lauren eliminada"
-    },
-    {
-     "id": "Q2-NEO-0014",
-     "dato": "Tercios esofágicos de cada histología",
-     "motivo": "fuentes consultadas divergen: se conserva solo el factor de riesgo y la epidemiología"
-    },
-    {
-     "id": "Q2-NEO-0015",
-     "dato": "Exploración sistemática de todo el tracto aerodigestivo superior",
-     "motivo": "no confirmado como recomendación: se conserva el concepto de campo de cancerización"
-    },
-    {
-     "id": "Q2-NEO-0016",
-     "dato": "Biopsia del ganglio de Virchow para diagnóstico y estadio; localización izquierda",
-     "motivo": "no confirmado: eliminado"
-    },
-    {
-     "id": "Q2-NEO-0017",
-     "dato": "Endoscopia inmediata ante pérdida de peso en dispepsia sin prueba de IBP",
-     "motivo": "contradicho por la guía ACG/CAG 2017 en menores de 60 años: reformulada"
-    },
-    {
-     "id": "Q2-NEO-0019",
-     "dato": "Cascada de Correa con Lauren y vesícula en porcelana como predisponente",
-     "motivo": "fuentes contradicen o no confirman (porcelana: riesgo bajo en series recientes): eliminado"
-    },
-    {
-     "id": "Q2-NEO-0021",
-     "dato": "Lynch acelera la secuencia adenoma-carcinoma",
-     "motivo": "no confirmado: se conserva intervalo y edad de inicio"
-    },
-    {
-     "id": "Q2-NEO-0022",
-     "dato": "Otros carcinógenos del carcinoma hepatocelular (VHC, aflatoxina)",
-     "motivo": "no verificados en esta pasada: eliminados"
-    },
-    {
-     "id": "Q2-NEO-0004",
-     "dato": "Estadiaje T por profundidad, riesgo ganglionar desde la submucosa; ecoendoscopia vs TC; TNM clínico vs patológico; ganglios mínimos",
-     "motivo": "no confirmados con fuente citable: tarjetas eliminadas"
-    },
-    {
-     "id": "Q2-NEO-0020",
-     "dato": "Neoadyuvancia en recto, resecabilidad pancreática, metástasis hepáticas, vía serrada",
-     "motivo": "fuente no accesible (resumen de guía sin texto): tarjetas eliminadas"
-    },
-    {
-     "id": "Q2-NEO-0010",
-     "dato": "Linitis plástica, Sister Mary Joseph, Klatskin, cáncer de vesícula y duodeno, eritroplasia, Ecuador (GLOBOCAN/SOLCA)",
-     "motivo": "sin fuente confirmada o con marca heredada: eliminados"
+    "guia": {
+      "principios": [
+        "Muchos cánceres digestivos nacen de una lesión precursora: se interviene sobre ella antes de que invada.",
+        "Donde el precursor es inaccesible o los síntomas aparecen tarde (páncreas), no hay cribado poblacional y el diagnóstico llega tarde.",
+        "El segmento afectado y el calibre de la luz determinan cómo debuta el tumor (anemia en colon derecho, obstrucción en el izquierdo, ictericia en la cabeza pancreática).",
+        "Un carcinógeno que actúa sobre todo un epitelio crea un campo de cancerización con riesgo de segundos primarios.",
+        "Los síndromes hereditarios (Lynch, poliposis) requieren vigilancia propia, fuera del cribado de riesgo promedio."
+      ],
+      "palabras_clave": [
+        "lesión precursora",
+        "PanIN",
+        "Barrett",
+        "Helicobacter pylori",
+        "campo de cancerización",
+        "signo de Courvoisier",
+        "ganglio de Virchow",
+        "síndrome de Lynch",
+        "poliposis adenomatosa familiar",
+        "cribado de riesgo promedio",
+        "prueba inmunoquímica fecal",
+        "colonoscopia",
+        "CEA",
+        "CA 19-9",
+        "signo de Leser-Trélat",
+        "síndrome de Trousseau"
+      ],
+      "imagenes_oclusion": [
+        "Tabla de colon derecho vs izquierdo con las celdas tapadas",
+        "Tabla de cabeza vs cuerpo-cola del páncreas con las celdas tapadas"
+      ],
+      "preguntas_cierre": [
+        "¿Qué debe tener un cáncer digestivo para que exista un programa de cribado poblacional, y por qué el páncreas no lo tiene?",
+        "Explica sin mirar por qué un tumor de colon derecho debuta con anemia y uno de sigmoides con obstrucción.",
+        "¿Qué cambia en la vigilancia de un paciente con síndrome de Lynch frente al riesgo promedio?",
+        "Ante una diabetes nueva con pérdida de peso en un adulto mayor, ¿qué diagnóstico no debes olvidar?"
+      ],
+      "subtemas": {
+        "Carcinogenesis": "Carcinogénesis digestiva y lesiones precursoras",
+        "Pancreas": "Cáncer de páncreas: presentación y tamizaje",
+        "Marcadores": "Pruebas diagnósticas: marcadores tumorales",
+        "Gastrico": "Cáncer gástrico y dispepsia",
+        "Tamizaje": "Estrategias de tamizaje y búsqueda activa",
+        "Colon": "Presentación clínica del cáncer colorrectal",
+        "Esofago": "Cáncer de esófago y lesión premaligna",
+        "Campo": "Cáncer de cabeza y cuello y campo de cancerización",
+        "Paraneoplasia": "Manifestaciones paraneoplásicas",
+        "Hereditario": "Síndromes hereditarios",
+        "Hepatobiliar": "Cáncer hepatobiliar"
+      },
+      "fechas": {
+        "apertura": null,
+        "cierre": null,
+        "examen": null
+      },
+      "referencias": [
+        "Kamisawa T, Wood LD, Itoi T, Takaori K. Pancreatic cancer. Lancet. 2016;388(10039):73-85. PMID 26830752. doi:10.1016/S0140-6736(16)00141-0",
+        "Gupta S, Lieberman D, Anderson JC, Burke CA, Dominitz JA, Kaltenbach T, et al. Recommendations for follow-up after colonoscopy and polypectomy: a consensus update by the US Multi-Society Task Force on Colorectal Cancer. Gastroenterology. 2020;158(4):1131-53. PMID 32044092. doi:10.1053/j.gastro.2019.10.026",
+        "US Preventive Services Task Force, Davidson KW, Barry MJ, Mangione CM, Cabana M, Caughey AB, et al. Screening for colorectal cancer: US Preventive Services Task Force recommendation statement. JAMA. 2021;325(19):1965-77. PMID 34003218. doi:10.1001/jama.2021.6238",
+        "Singal AG, Llovet JM, Yarchoan M, Mehta N, Heimbach JK, Dawson LA, et al. AASLD Practice Guidance on prevention, diagnosis, and treatment of hepatocellular carcinoma. Hepatology. 2023;78(6):1922-65. PMID 37199193. doi:10.1097/HEP.0000000000000466",
+        "Wiles R, Thoeni RF, Barbu ST, Vashist YK, Rafaelsen SR, Dewhurst C, et al. Management and follow-up of gallbladder polyps: joint guidelines between ESGAR, EAES, EFISDS and ESGE. Eur Radiol. 2017;27(9):3856-66. PMID 28185005. doi:10.1007/s00330-017-4742-y",
+        "Ford AC, Yuan Y, Moayyedi P. Helicobacter pylori eradication therapy to prevent gastric cancer: systematic review and meta-analysis. Gut. 2020;69(12):2113-21. PMID 32205420. doi:10.1136/gutjnl-2020-320839",
+        "Pennathur A, Gibson MK, Jobe BA, Luketich JD. Oesophageal carcinoma. Lancet. 2013;381(9864):400-12. PMID 23374478. doi:10.1016/S0140-6736(12)60643-6",
+        "Levrero M, Zucman-Rossi J. Mechanisms of HBV-induced hepatocellular carcinoma. J Hepatol. 2016;64(1 Suppl):S84-101. PMID 27084040. doi:10.1016/j.jhep.2016.02.021",
+        "Varki A. Trousseau's syndrome: multiple definitions and multiple mechanisms. Blood. 2007;110(6):1723-9. PMID 17496204. doi:10.1182/blood-2006-10-053736",
+        "Leemans CR, Braakhuis BJM, Brakenhoff RH. The molecular biology of head and neck cancer. Nat Rev Cancer. 2011;11(1):9-22. PMID 21160525. doi:10.1038/nrc2982",
+        "Sharma A, Kandlakunta H, Nagpal SJS, Feng Z, Hoos W, Petersen GM, et al. Model to determine risk of pancreatic cancer in patients with new-onset diabetes. Gastroenterology. 2018;155(3):730-9. PMID 29775599. doi:10.1053/j.gastro.2018.05.023",
+        "Schwartz RA. Sign of Leser-Trélat. J Am Acad Dermatol. 1996;35(1):88-95. PMID 8682971. doi:10.1016/S0190-9622(96)90502-2",
+        "Mizutani M, Nawata S, Hirai I, Murakami G, Kimura W. Anatomy and histology of Virchow's node. Anat Sci Int. 2005;80(4):193-8. PMID 16333915. doi:10.1111/j.1447-073x.2005.00114.x",
+        "Fitzgerald JEF, White MJ, Lobo DN. Courvoisier's gallbladder: law or sign? World J Surg. 2009;33(4):886-91. PMID 19190960. doi:10.1007/s00268-008-9908-y",
+        "Locker GY, Hamilton S, Harris J, Jessup JM, Kemeny N, Macdonald JS, et al. ASCO 2006 update of recommendations for the use of tumor markers in gastrointestinal cancer. J Clin Oncol. 2006;24(33):5313-27. PMID 17060676. doi:10.1200/JCO.2006.08.2644",
+        "Moayyedi P, Lacy BE, Andrews CN, Enns RA, Howden CW, Vakil N. ACG and CAG clinical guideline: management of dyspepsia. Am J Gastroenterol. 2017;112(7):988-1013. PMID 28631728. doi:10.1038/ajg.2017.154",
+        "Idos G, Valle L. Lynch syndrome. En: Adam MP, et al., editores. GeneReviews [Internet]. Seattle: University of Washington; 1993-. NBK1211. PMID 20301390. [citado 2026 nov 26]",
+        "Yen T, Stanich PP, Axell L, Patel SG. APC-associated polyposis conditions. En: GeneReviews [Internet]. Seattle: University of Washington; 1993-. NBK1345. PMID 20301519. [citado 2026 nov 26]",
+        "Freelove R, Walling AD. Pancreatic cancer: diagnosis and management. Am Fam Physician. 2006;73(3):485-92. PMID 16477897",
+        "IARC. Schistosomes, liver flukes and Helicobacter pylori. IARC Monogr Eval Carcinog Risks Hum. 1994;61.",
+        "Shaheen NJ, Falk GW, Iyer PG, Souza RF, Yadlapati RH, Sauer BG, et al. Diagnosis and management of Barrett's esophagus: an updated ACG guideline. Am J Gastroenterol. 2022;117(4):559-87. PMID 35354777. doi:10.14309/ajg.0000000000001680",
+        "Xie SH, Lagergren J. Risk factors for oesophageal cancer. Best Pract Res Clin Gastroenterol. 2018;36-37:3-8. PMID 30551854. doi:10.1016/j.bpg.2018.11.008",
+        "Prichard PJ, Tjandra JJ. Colorectal cancer. Med J Aust. 1998;169(9):493-8. PMID 9847903",
+        "Yang J, Gurudu SR, Koptiuch C, Agrawal D, Buxbaum JL, Abbas Fehmi SM, et al. American Society for Gastrointestinal Endoscopy guideline on the role of endoscopy in familial adenomatous polyposis syndromes. Gastrointest Endosc. 2020;91(5):963-82. PMID 32169282. doi:10.1016/j.gie.2020.01.028"
+      ]
     }
-   ]
   },
-  "guia": {
-   "principios": [
-    "Muchos cánceres digestivos nacen de una lesión precursora: se interviene sobre ella antes de que invada.",
-    "Donde el precursor es inaccesible o los síntomas aparecen tarde (páncreas), no hay cribado poblacional y el diagnóstico llega tarde.",
-    "El segmento afectado y el calibre de la luz determinan cómo debuta el tumor (anemia en colon derecho, obstrucción en el izquierdo, ictericia en la cabeza pancreática).",
-    "Un carcinógeno que actúa sobre todo un epitelio crea un campo de cancerización con riesgo de segundos primarios.",
-    "Los síndromes hereditarios (Lynch, poliposis) requieren vigilancia propia, fuera del cribado de riesgo promedio."
-   ],
-   "palabras_clave": [
-    "lesión precursora",
-    "PanIN",
-    "Barrett",
-    "Helicobacter pylori",
-    "campo de cancerización",
-    "signo de Courvoisier",
-    "ganglio de Virchow",
-    "síndrome de Lynch",
-    "poliposis adenomatosa familiar",
-    "cribado de riesgo promedio",
-    "prueba inmunoquímica fecal",
-    "colonoscopia",
-    "CEA",
-    "CA 19-9",
-    "signo de Leser-Trélat",
-    "síndrome de Trousseau"
-   ],
-   "imagenes_oclusion": [
-    "Tabla de colon derecho vs izquierdo con las celdas tapadas",
-    "Tabla de cabeza vs cuerpo-cola del páncreas con las celdas tapadas"
-   ],
-   "preguntas_cierre": [
-    "¿Qué debe tener un cáncer digestivo para que exista un programa de cribado poblacional, y por qué el páncreas no lo tiene?",
-    "Explica sin mirar por qué un tumor de colon derecho debuta con anemia y uno de sigmoides con obstrucción.",
-    "¿Qué cambia en la vigilancia de un paciente con síndrome de Lynch frente al riesgo promedio?",
-    "Ante una diabetes nueva con pérdida de peso en un adulto mayor, ¿qué diagnóstico no debes olvidar?"
-   ],
-   "subtemas": {
-    "Carcinogenesis": "Carcinogénesis digestiva y lesiones precursoras",
-    "Pancreas": "Cáncer de páncreas: presentación y tamizaje",
-    "Marcadores": "Pruebas diagnósticas: marcadores tumorales",
-    "Gastrico": "Cáncer gástrico y dispepsia",
-    "Tamizaje": "Estrategias de tamizaje y búsqueda activa",
-    "Colon": "Presentación clínica del cáncer colorrectal",
-    "Esofago": "Cáncer de esófago y lesión premaligna",
-    "Campo": "Cáncer de cabeza y cuello y campo de cancerización",
-    "Paraneoplasia": "Manifestaciones paraneoplásicas",
-    "Hereditario": "Síndromes hereditarios",
-    "Hepatobiliar": "Cáncer hepatobiliar"
-   },
-   "fechas": {
-    "apertura": null,
-    "cierre": null,
-    "examen": null
-   },
-   "referencias": [
-    "Kamisawa T, Wood LD, Itoi T, Takaori K. Pancreatic cancer. Lancet. 2016;388(10039):73-85. PMID 26830752. doi:10.1016/S0140-6736(16)00141-0",
-    "Gupta S, Lieberman D, Anderson JC, Burke CA, Dominitz JA, Kaltenbach T, et al. Recommendations for follow-up after colonoscopy and polypectomy: a consensus update by the US Multi-Society Task Force on Colorectal Cancer. Gastroenterology. 2020;158(4):1131-53. PMID 32044092. doi:10.1053/j.gastro.2019.10.026",
-    "US Preventive Services Task Force, Davidson KW, Barry MJ, Mangione CM, Cabana M, Caughey AB, et al. Screening for colorectal cancer: US Preventive Services Task Force recommendation statement. JAMA. 2021;325(19):1965-77. PMID 34003218. doi:10.1001/jama.2021.6238",
-    "Singal AG, Llovet JM, Yarchoan M, Mehta N, Heimbach JK, Dawson LA, et al. AASLD Practice Guidance on prevention, diagnosis, and treatment of hepatocellular carcinoma. Hepatology. 2023;78(6):1922-65. PMID 37199193. doi:10.1097/HEP.0000000000000466",
-    "Wiles R, Thoeni RF, Barbu ST, Vashist YK, Rafaelsen SR, Dewhurst C, et al. Management and follow-up of gallbladder polyps: joint guidelines between ESGAR, EAES, EFISDS and ESGE. Eur Radiol. 2017;27(9):3856-66. PMID 28185005. doi:10.1007/s00330-017-4742-y",
-    "Ford AC, Yuan Y, Moayyedi P. Helicobacter pylori eradication therapy to prevent gastric cancer: systematic review and meta-analysis. Gut. 2020;69(12):2113-21. PMID 32205420. doi:10.1136/gutjnl-2020-320839",
-    "Pennathur A, Gibson MK, Jobe BA, Luketich JD. Oesophageal carcinoma. Lancet. 2013;381(9864):400-12. PMID 23374478. doi:10.1016/S0140-6736(12)60643-6",
-    "Levrero M, Zucman-Rossi J. Mechanisms of HBV-induced hepatocellular carcinoma. J Hepatol. 2016;64(1 Suppl):S84-101. PMID 27084040. doi:10.1016/j.jhep.2016.02.021",
-    "Varki A. Trousseau's syndrome: multiple definitions and multiple mechanisms. Blood. 2007;110(6):1723-9. PMID 17496204. doi:10.1182/blood-2006-10-053736",
-    "Leemans CR, Braakhuis BJM, Brakenhoff RH. The molecular biology of head and neck cancer. Nat Rev Cancer. 2011;11(1):9-22. PMID 21160525. doi:10.1038/nrc2982",
-    "Sharma A, Kandlakunta H, Nagpal SJS, Feng Z, Hoos W, Petersen GM, et al. Model to determine risk of pancreatic cancer in patients with new-onset diabetes. Gastroenterology. 2018;155(3):730-9. PMID 29775599. doi:10.1053/j.gastro.2018.05.023",
-    "Schwartz RA. Sign of Leser-Trélat. J Am Acad Dermatol. 1996;35(1):88-95. PMID 8682971. doi:10.1016/S0190-9622(96)90502-2",
-    "Mizutani M, Nawata S, Hirai I, Murakami G, Kimura W. Anatomy and histology of Virchow's node. Anat Sci Int. 2005;80(4):193-8. PMID 16333915. doi:10.1111/j.1447-073x.2005.00114.x",
-    "Fitzgerald JEF, White MJ, Lobo DN. Courvoisier's gallbladder: law or sign? World J Surg. 2009;33(4):886-91. PMID 19190960. doi:10.1007/s00268-008-9908-y",
-    "Locker GY, Hamilton S, Harris J, Jessup JM, Kemeny N, Macdonald JS, et al. ASCO 2006 update of recommendations for the use of tumor markers in gastrointestinal cancer. J Clin Oncol. 2006;24(33):5313-27. PMID 17060676. doi:10.1200/JCO.2006.08.2644",
-    "ACG and CAG clinical guideline: management of dyspepsia. Am J Gastroenterol. 2017;112(7):988-1013. PMID 28631728",
-    "Lynch syndrome. En: Adam MP, et al., editores. GeneReviews [Internet]. Seattle: University of Washington; 1993-. NBK1211. PMID 20301390. [citado 2026 nov 26]",
-    "APC-associated polyposis conditions. En: GeneReviews [Internet]. Seattle: University of Washington; 1993-. NBK1345. PMID 20301519. [citado 2026 nov 26]",
-    "National Cancer Institute. Esophageal cancer prevention (PDQ): health professional version [Internet]. Bethesda: NCI. [citado 2026 nov 26]",
-    "Pancreatic cancer: diagnosis and management. Am Fam Physician. 2006;73(3):485 [Internet]. [citado 2026 nov 26]",
-    "IARC. A review of human carcinogens. Part B: biological agents. IARC Monographs on the Evaluation of Carcinogenic Risks to Humans, vol. 100B. Lyon: IARC; 2012.",
-    "Cleveland Clinic Consult QD. Detecting colorectal cancer: pearls for primary care physicians [Internet]. [citado 2026 nov 26]"
-   ]
-  }
- },
- "tarjetas": [
-  {
-   "id": "Q2-NEO-0001",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Cánceres digestivos</span>¿Qué principio de su historia natural permite intervenir antes de que exista cáncer invasor?",
-   "respuesta": "Muchos nacen de una <span class=\"mec\">lesión precursora</span> identificable, y se actúa sobre ella antes de que invada.",
-   "razonamiento": "Ejemplos: el pólipo colónico, que se reseca durante la colonoscopia; el <span class=\"dx\">Barrett</span> en el esófago distal; el PanIN microscópico del páncreas.<br>Donde el precursor es inaccesible, el diagnóstico temprano es difícil.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Kamisawa 2016, Lancet (PMID 26830752); Gupta 2020, Gastroenterology (PMID 32044092); NCI PDQ, Esophageal Cancer Prevention",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Carcinogenesis",
-    "Nivel::Aplicacion",
-    "Fuente::Kamisawa2016",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0002",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Cáncer de páncreas</span>¿Por qué no existe un programa de cribado poblacional?",
-   "respuesta": "Porque el precursor (PanIN) es microscópico y la mayoría de los pacientes está <span class=\"mec\">asintomática hasta fase avanzada</span>.",
-   "razonamiento": "Ni siquiera hay un programa estándar para grupos de riesgo alto, como el antecedente familiar o la pancreatitis crónica.<br>Sin precursor accesible ni síntomas tempranos, el diagnóstico llega tarde.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Kamisawa 2016, Lancet (PMID 26830752)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Pancreas",
-    "Nivel::Aplicacion",
-    "Fuente::Kamisawa2016",
-    "Clase::Principio",
-    "Bloom::Aplicar",
-    "Principio",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0003",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Cáncer de páncreas</span>¿Por qué la localización en la glándula condiciona cuándo se diagnostica?",
-   "respuesta": "Los tumores de la <span class=\"dx\">cabeza</span> obstruyen pronto la vía biliar y dan ictericia; los de cuerpo y cola crecen en silencio.",
-   "razonamiento": "Cuerpo y cola no comprimen el colédoco y suelen presentarse con enfermedad localmente avanzada y dolor.<br>La invasión de los nervios peripancreáticos explica el dolor dorsal.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Rasgo</th><th>Cabeza</th><th>Cuerpo-cola</th></tr></thead><tbody><tr><th>Ictericia</th><td><span class=\"al\">Precoz</span></td><td>Infrecuente</td></tr><tr><th>Dolor</th><td>Menos común</td><td>Más común</td></tr><tr><th>Hallazgo</th><td>Más temprano</td><td>Localmente avanzado</td></tr></tbody></table>",
-   "fuente": "AAFP, Pancreatic Cancer: Diagnosis and Management, Am Fam Physician 2006; Kamisawa 2016, Lancet (PMID 26830752)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Pancreas",
-    "Nivel::Aplicacion",
-    "Fuente::AAFP",
-    "Clase::Contraste",
-    "Bloom::Analizar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0004",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Ictericia obstructiva</span>Ictericia indolora con vesícula palpable: ¿qué sugiere y por qué?",
-   "respuesta": "Una obstrucción biliar <span class=\"mec\">progresiva</span> no litiásica, sobre todo maligna (signo de Courvoisier).",
-   "razonamiento": "La litiasis recurrente fibrosa la vesícula, que ya no se distiende; la obstrucción maligna mantiene una presión crónicamente elevada y la dilata.<br>Courvoisier observó que la dilatación rara vez acompaña a la obstrucción por cálculo.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Fitzgerald 2009, World J Surg (PMID 19190960)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Pancreas",
-    "Nivel::Aplicacion",
-    "Fuente::Fitzgerald2009",
-    "Clase::Aplicacion",
-    "Bloom::Comprender",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0005",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Diabetes de inicio reciente</span>Adulto mayor con diabetes nueva y pérdida de peso: ¿por qué hay que pensar en cáncer de páncreas?",
-   "respuesta": "Porque en algunos pacientes la diabetes es la <span class=\"dx\">primera manifestación del tumor</span>, no solo un factor de riesgo.",
-   "razonamiento": "Cerca del <span class=\"num\">1 %</span> de los mayores de 50 años con diabetes de inicio reciente recibe el diagnóstico de cáncer de páncreas en 3 años.<br>Pesan el cambio de peso, el cambio de glucemia y la edad de inicio.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Sharma 2018, Gastroenterology (PMID 29775599)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Pancreas",
-    "Nivel::Aplicacion",
-    "Fuente::Sharma2018",
-    "Clase::Aplicacion",
-    "Bloom::Analizar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0006",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">CEA y CA 19-9</span>¿Para qué se usan y en qué tumor se sigue cada uno?",
-   "respuesta": "Para el <span class=\"mec\">seguimiento</span>: el <span class=\"dx\">CEA</span> en el cáncer colorrectal y el <span class=\"dx\">CA 19-9</span> en el de páncreas avanzado.",
-   "razonamiento": "El CEA posoperatorio se mide cada <span class=\"num\">3 meses</span> en estadios II y III si el paciente aún sería candidato a cirugía o quimioterapia.<br>Un CA 19-9 en ascenso sugiere progresión y se confirma con otros estudios.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Locker 2006, J Clin Oncol (PMID 17060676)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Marcadores",
-    "Nivel::Aplicacion",
-    "Fuente::Locker2006",
-    "Clase::Irreducible",
-    "Bloom::Recordar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0007",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Helicobacter pylori</span>¿Cómo se conecta la infección con la prevención del cáncer gástrico?",
-   "respuesta": "La infección crónica inicia la secuencia de <span class=\"mec\">gastritis, atrofia, metaplasia y displasia</span>, y erradicarla reduce la incidencia de cáncer gástrico.",
-   "razonamiento": "El IARC lo clasifica como carcinógeno del grupo 1.<br>En ensayos aleatorizados la erradicación redujo la incidencia y la mortalidad por cáncer gástrico, con evidencia moderada y sobre todo en Asia oriental.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Ford 2020, Gut (PMID 32205420); IARC Monographs vol. 100B (2012)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Gastrico",
-    "Nivel::Aplicacion",
-    "Fuente::Ford2020",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0008",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Colonoscopia de cribado</span>¿Por qué es a la vez prueba diagnóstica y medida preventiva?",
-   "respuesta": "Porque permite <span class=\"mec\">resecar los pólipos</span> en el mismo acto en que se detectan.",
-   "razonamiento": "El hallazgo de la polipectomía define después el intervalo de vigilancia.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Gupta 2020, Gastroenterology (PMID 32044092)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Tamizaje",
-    "Nivel::Aplicacion",
-    "Fuente::Gupta2020",
-    "Clase::Aplicacion",
-    "Bloom::Comprender",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0009",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Cribado colorrectal</span>El paciente rechaza la colonoscopia: ¿se abandona el cribado?",
-   "respuesta": "No: existen otras estrategias válidas, como la prueba <span class=\"dx\">inmunoquímica fecal</span> anual.",
-   "razonamiento": "La USPSTF avala varias estrategias en riesgo promedio.<br>Su beneficio depende de la adherencia: una prueba anual que se hace cada tres años pierde parte de los años de vida ganados.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Davidson 2021, JAMA (PMID 34003218)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Tamizaje",
-    "Nivel::Aplicacion",
-    "Fuente::USPSTF2021",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0010",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Anemia ferropénica</span>Varón de 60 años con astenia y anemia ferropénica sin causa, sin síntomas digestivos: ¿qué localización sospechas y qué estudio indicas?",
-   "respuesta": "Cáncer de <span class=\"dx\">colon derecho</span>; se estudia con colonoscopia completa.",
-   "razonamiento": "Los tumores derechos tienden a sangrar de forma oculta y a debutar con anemia.<br>La anemia ferropénica en varones mayores de 50 años y en mujeres posmenopáusicas debe hacer sospechar cáncer colorrectal.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Cleveland Clinic Consult QD, Detecting colorectal cancer: pearls for primary care physicians",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Colon",
-    "Nivel::Aplicacion",
-    "Fuente::ClevelandClinic",
-    "Clase::Vineta",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0011",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Cáncer colorrectal</span>Cambio del calibre de las heces con rectorragia: ¿por qué orienta a colon izquierdo y no a derecho?",
-   "respuesta": "Porque en el lado izquierdo la luz es más estrecha, las heces son sólidas y el tumor anular <span class=\"mec\">obstruye pronto</span>.",
-   "razonamiento": "El lado izquierdo da cambio del hábito intestinal y sangre visible; el derecho suele diagnosticarse más tarde por lesiones planas que pasan inadvertidas.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Rasgo</th><th>Derecho</th><th>Izquierdo</th></tr></thead><tbody><tr><th>Luz</th><td>Ancha</td><td>Estrecha</td></tr><tr><th>Debut</th><td>Anemia, sangrado oculto</td><td>Cambio de hábito, sangre roja</td></tr><tr><th>Obstrucción</th><td>Tardía</td><td>Precoz</td></tr></tbody></table>",
-   "fuente": "Cleveland Clinic Consult QD, Detecting colorectal cancer: pearls for primary care physicians",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Colon",
-    "Nivel::Aplicacion",
-    "Fuente::ClevelandClinic",
-    "Clase::Contraste",
-    "Bloom::Analizar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0012",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Cáncer de esófago</span>¿Cómo se distinguen el escamoso y el adenocarcinoma por factores de riesgo?",
-   "respuesta": "El <span class=\"dx\">escamoso</span> se asocia a tabaco y alcohol; el <span class=\"dx\">adenocarcinoma</span>, a reflujo, obesidad y Barrett en el esófago distal.",
-   "razonamiento": "A escala mundial predomina el escamoso, pero en algunos países occidentales el adenocarcinoma ya supera al escamoso.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Rasgo</th><th>Escamoso</th><th>Adenoca.</th></tr></thead><tbody><tr><th>Factor</th><td>Tabaco, alcohol</td><td>Reflujo, obesidad</td></tr><tr><th>Lesión previa</th><td>No específica</td><td>Barrett</td></tr><tr><th>Epidemiología</th><td>Predomina en el mundo</td><td>Supera al escamoso en países occidentales</td></tr></tbody></table>",
-   "fuente": "Pennathur 2013, Lancet (PMID 23374478); NCI PDQ, Esophageal Cancer Prevention",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Esofago",
-    "Nivel::Aplicacion",
-    "Fuente::Pennathur2013",
-    "Clase::Contraste",
-    "Bloom::Analizar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0013",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Esófago de Barrett</span>¿Qué es y por qué se vigila?",
-   "respuesta": "Es la sustitución del epitelio distal por <span class=\"mec\">epitelio columnar metaplásico</span>, precursor del adenocarcinoma esofágico.",
-   "razonamiento": "El reflujo crónico, la obesidad y el tabaquismo son factores establecidos de adenocarcinoma esofágico.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "NCI PDQ, Esophageal Cancer Prevention (Health Professional Version)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Esofago",
-    "Nivel::Aplicacion",
-    "Fuente::PDQ",
-    "Clase::Irreducible",
-    "Bloom::Recordar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0014",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Carcinoma escamoso de cabeza y cuello</span>En un paciente con tabaquismo y alcoholismo, ¿por qué una lesión no agota el riesgo?",
-   "respuesta": "Porque tabaco y alcohol alteran todo el epitelio expuesto: es el <span class=\"mec\">campo de cancerización</span>.",
-   "razonamiento": "Los tumores nacen en campos preneoplásicos de células alteradas.<br>La persistencia del campo tras el tratamiento causa recurrencias locales y segundos primarios.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Leemans 2011, Nat Rev Cancer (PMID 21160525)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Campo",
-    "Nivel::Aplicacion",
-    "Fuente::Leemans2011",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0015",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Síndrome constitucional</span>Ganglio supraclavicular duro: ¿qué nombre recibe y qué sugiere?",
-   "respuesta": "Es el ganglio de <span class=\"dx\">Virchow</span>, metástasis ganglionar de un tumor abdominal avanzado, clásicamente gástrico.",
-   "razonamiento": "Corresponde al nódulo terminal de la cadena del conducto torácico.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Mizutani 2005, Anat Sci Int (PMID 16333915)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Gastrico",
-    "Nivel::Recuerdo",
-    "Fuente::Mizutani2005",
-    "Clase::Irreducible",
-    "Bloom::Recordar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0016",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Dispepsia</span>¿Qué cambia en el abordaje a partir de los 60 años?",
-   "respuesta": "A los <span class=\"num\">60 años</span> o más se sugiere endoscopia; en menores se prueba y trata <span class=\"dx\">H. pylori</span> y después se ensaya un IBP.",
-   "razonamiento": "En menores de 60 años la guía ACG/CAG no sugiere endoscopia por un dato de alarma aislado, como pérdida de peso, anemia o disfagia no progresiva.<br>Un antecedente familiar de cáncer gástrico puede justificar adelantarla.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "ACG/CAG 2017, Am J Gastroenterol (PMID 28631728)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Gastrico",
-    "Nivel::Aplicacion",
-    "Fuente::ACGCAG2017",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0017",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Paraneoplasia cutánea</span>Adulto mayor con aparición brusca de múltiples queratosis seborreicas: ¿qué debes buscar?",
-   "respuesta": "Una <span class=\"al\">neoplasia oculta</span>: es el signo de Leser-Trélat.",
-   "razonamiento": "Se define como la erupción súbita de múltiples queratosis seborreicas causada por una neoplasia; se asocia a acantosis nigricans maligna.<br>Su validez se ha cuestionado porque ambas condiciones son frecuentes en ancianos.",
-   "mnemotecnia": "",
-   "esquema": "<img src=\"q2-neo-0017-leser-trelat.jpg\" alt=\"Múltiples queratosis seborreicas en la espalda, signo de Leser-Trélat\">",
-   "fuente": "Schwartz 1996, J Am Acad Dermatol (PMID 8682971)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Paraneoplasia",
-    "Nivel::Aplicacion",
-    "Fuente::Schwartz1996",
-    "Clase::Vineta",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0018",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Cáncer colorrectal hereditario</span>¿Qué gen hay detrás de la poliposis adenomatosa familiar y cuáles detrás del síndrome de Lynch?",
-   "respuesta": "La poliposis, variantes en <span class=\"dx\">APC</span>; Lynch, variantes en los genes reparadores <span class=\"dx\">MLH1, MSH2, MSH6 o PMS2</span> (o deleción de EPCAM).",
-   "razonamiento": "La forma atenuada de poliposis suele tener menos de 100 pólipos y aparece más tarde.<br>En Lynch, la colectomía profiláctica no se recomienda de rutina porque la colonoscopia con polipectomía previene eficazmente.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "GeneReviews, Lynch Syndrome (NBK1211; PMID 20301390); GeneReviews, APC-Associated Polyposis Conditions (NBK1345; PMID 20301519)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Hereditario",
-    "Nivel::Recuerdo",
-    "Fuente::GeneReviews",
-    "Clase::Contraste",
-    "Bloom::Analizar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0019",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Síndrome de Lynch</span>¿Cómo se sospecha en el tumor y qué lo confirma?",
-   "respuesta": "Con <span class=\"dx\">inmunohistoquímica</span> de proteínas reparadoras o <span class=\"dx\">inestabilidad de microsatélites</span> en el tumor; lo confirma la variante germinal.",
-   "razonamiento": "La pérdida de una o más proteínas reparadoras o un tumor con inestabilidad alta orientan al diagnóstico; se aplica a cánceres colorrectales y endometriales.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "GeneReviews, Lynch Syndrome (NBK1211; PMID 20301390)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Hereditario",
-    "Nivel::Recuerdo",
-    "Fuente::GeneReviews",
-    "Clase::Irreducible",
-    "Bloom::Recordar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0020",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Síndrome de Lynch</span>¿Cómo difiere la colonoscopia de vigilancia de la del riesgo promedio?",
-   "respuesta": "Se hace cada <span class=\"num\">1 a 2 años</span> desde los 20 a 25 años, o 2 a 5 años antes del caso más joven de la familia.",
-   "razonamiento": "La vigilancia con polipectomía reduce la incidencia y la mortalidad por cáncer colorrectal.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "GeneReviews, Lynch Syndrome (NBK1211; PMID 20301390)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Hereditario",
-    "Nivel::Recuerdo",
-    "Fuente::GeneReviews",
-    "Clase::Irreducible",
-    "Bloom::Recordar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0021",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Hepatitis B</span>¿Por qué puede aparecer carcinoma hepatocelular incluso sin cirrosis?",
-   "respuesta": "Porque el virus es <span class=\"mec\">oncogénico por sí mismo</span>: integra su ADN en el genoma del hepatocito.",
-   "razonamiento": "Los tumores por VHB pueden surgir en hígados no cirróticos, además de la inflamación crónica que el virus mantiene.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Levrero 2016, J Hepatol (PMID 27084040)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Hepatobiliar",
-    "Nivel::Aplicacion",
-    "Fuente::Levrero2016",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0022",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Cirrosis</span>¿Qué vigilancia se hace para detectar un carcinoma hepatocelular temprano?",
-   "respuesta": "<span class=\"dx\">Ecografía hepática</span> cada <span class=\"num\">6 meses</span>, con o sin alfafetoproteína.",
-   "razonamiento": "La alfafetoproteína es un complemento opcional de la ecografía.<br>La guía AASLD aplica la vigilancia a los pacientes con cirrosis.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Singal 2023, Hepatology (PMID 37199193)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Hepatobiliar",
-    "Nivel::Aplicacion",
-    "Fuente::Singal2023",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0023",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Poliposis adenomatosa familiar</span>Además del colon, ¿qué otro segmento hay que vigilar?",
-   "respuesta": "El tubo digestivo alto: hay <span class=\"dx\">pólipos del fondo gástrico y del duodeno</span>.",
-   "razonamiento": "Es una enfermedad autosómica dominante por variantes en APC.<br>Entre las manifestaciones extracolónicas están los osteomas, las anomalías dentales y los tumores desmoides.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "GeneReviews, APC-Associated Polyposis Conditions (NBK1345; PMID 20301519)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Hereditario",
-    "Nivel::Recuerdo",
-    "Fuente::GeneReviews",
-    "Clase::Irreducible",
-    "Bloom::Recordar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0024",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Cribado colorrectal</span>¿A quién no se aplican las recomendaciones de cribado de riesgo promedio?",
-   "respuesta": "A quien tiene <span class=\"dx\">Lynch</span>, poliposis, adenomas previos, antecedente de cáncer colorrectal o enfermedad inflamatoria intestinal.",
-   "razonamiento": "Estos pacientes requieren vigilancia propia.<br>La recomendación de la USPSTF se refiere a adultos asintomáticos sin esos antecedentes.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Davidson 2021, JAMA (PMID 34003218)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Tamizaje",
-    "Nivel::Aplicacion",
-    "Fuente::USPSTF2021",
-    "Clase::Aplicacion",
-    "Bloom::Analizar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-NEO-0025",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">Cribado colorrectal en riesgo promedio</span>La USPSTF recomienda iniciarlo a los {{c1::<span class=\"num\">45</span>}} años y mantenerlo hasta los {{c2::<span class=\"num\">75</span>}}.",
-   "extra": "Entre los 76 y los 85 años el cribado se ofrece de forma selectiva.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Davidson 2021, JAMA (PMID 34003218)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Tamizaje",
-    "Nivel::Recuerdo",
-    "Fuente::USPSTF2021",
-    "Clase::Irreducible",
-    "Bloom::Recordar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2-NEO-0026",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">Cribado colorrectal</span>La colonoscopia normal en riesgo promedio se repite cada {{c1::<span class=\"num\">10</span>}} años y la prueba inmunoquímica fecal es {{c2::<span class=\"num\">anual</span>}}.",
-   "extra": "Son dos de las estrategias que lista la USPSTF; las otras tienen intervalos propios.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Davidson 2021, JAMA (PMID 34003218)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Tamizaje",
-    "Nivel::Recuerdo",
-    "Fuente::USPSTF2021",
-    "Clase::Irreducible",
-    "Bloom::Recordar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2-NEO-0027",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">Paraneoplasia</span>La tromboflebitis migratoria como aviso de neoplasia visceral oculta se conoce como síndrome de {{c1::Trousseau}}.",
-   "extra": "Trousseau lo describió en 1865.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Varki 2007, Blood (PMID 17496204)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Paraneoplasia",
-    "Nivel::Recuerdo",
-    "Fuente::Varki2007",
-    "Clase::Irreducible",
-    "Bloom::Recordar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2-NEO-0028",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">Pólipos vesiculares</span>La colecistectomía se recomienda ante pólipos vesiculares mayores de {{c1::<span class=\"num\">10 mm</span>}}.",
-   "extra": "Los menores de 10 mm se manejan según las características del paciente y del pólipo.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Wiles 2017, Eur Radiol (PMID 28185005)",
-   "tags": [
-    "Quirurgica2::NeoplasiasGI::Hepatobiliar",
-    "Nivel::Recuerdo",
-    "Fuente::Wiles2017",
-    "Clase::Irreducible",
-    "Bloom::Recordar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": []
-  }
- ]
+  "tarjetas": [
+    {
+      "id": "Q2-NEO-0001",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Cánceres digestivos</span>¿Qué principio de su historia natural permite intervenir antes de que exista cáncer invasor?",
+      "respuesta": "Muchos nacen de una <span class=\"mec\">lesión precursora</span> identificable, y se actúa sobre ella antes de que invada.",
+      "razonamiento": "Ejemplos: el pólipo colónico, que se reseca durante la colonoscopia; el <span class=\"dx\">Barrett</span> en el esófago distal; el PanIN microscópico del páncreas.<br>Donde el precursor es inaccesible, el diagnóstico temprano es difícil.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Kamisawa 2016, Lancet (PMID 26830752); Gupta 2020, Gastroenterology (PMID 32044092); Shaheen 2022, Am J Gastroenterol (PMID 35354777)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Carcinogenesis",
+        "Nivel::Aplicacion",
+        "Fuente::Kamisawa2016",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0002",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Cáncer de páncreas</span>¿Por qué no existe un programa de cribado poblacional?",
+      "respuesta": "Porque el precursor (PanIN) es microscópico y la mayoría de los pacientes está <span class=\"mec\">asintomática hasta fase avanzada</span>.",
+      "razonamiento": "Ni siquiera hay un programa estándar para grupos de riesgo alto, como el antecedente familiar o la pancreatitis crónica.<br>Sin precursor accesible ni síntomas tempranos, el diagnóstico llega tarde.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Kamisawa 2016, Lancet (PMID 26830752)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Pancreas",
+        "Nivel::Aplicacion",
+        "Fuente::Kamisawa2016",
+        "Clase::Principio",
+        "Bloom::Aplicar",
+        "Principio",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0003",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Cáncer de páncreas</span>¿Por qué la localización en la glándula condiciona cuándo se diagnostica?",
+      "respuesta": "Los tumores de la <span class=\"dx\">cabeza</span> comprimen pronto la vía biliar y dan ictericia obstructiva, que lleva a consultar.",
+      "razonamiento": "Sin ese signo precoz, la mayoría de los pacientes está asintomática hasta una fase avanzada.<br>Más de la mitad ya tiene metástasis a distancia al diagnóstico.",
+      "mnemotecnia": "",
+      "esquema": "<table><thead><tr><th>Rasgo</th><th>Cabeza</th><th>Cuerpo-cola</th></tr></thead><tbody><tr><th>Ictericia</th><td><span class=\"al\">Precoz</span></td><td>Sin compresión biliar temprana</td></tr></tbody></table>",
+      "fuente": "Freelove 2006, Am Fam Physician (PMID 16477897); Kamisawa 2016, Lancet (PMID 26830752)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Pancreas",
+        "Nivel::Aplicacion",
+        "Fuente::AAFP",
+        "Clase::Contraste",
+        "Bloom::Analizar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0004",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Ictericia obstructiva</span>Ictericia indolora con vesícula palpable: ¿qué sugiere y por qué?",
+      "respuesta": "Una obstrucción biliar <span class=\"mec\">progresiva</span> no litiásica, sobre todo maligna (signo de Courvoisier).",
+      "razonamiento": "La litiasis recurrente fibrosa la vesícula, que ya no se distiende; la obstrucción maligna mantiene una presión crónicamente elevada y la dilata.<br>Courvoisier observó que la dilatación rara vez acompaña a la obstrucción por cálculo.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Fitzgerald 2009, World J Surg (PMID 19190960)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Pancreas",
+        "Nivel::Aplicacion",
+        "Fuente::Fitzgerald2009",
+        "Clase::Aplicacion",
+        "Bloom::Comprender",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0005",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Diabetes de inicio reciente</span>Adulto mayor con diabetes nueva y pérdida de peso: ¿por qué hay que pensar en cáncer de páncreas?",
+      "respuesta": "Porque en algunos pacientes la diabetes es la <span class=\"dx\">primera manifestación del tumor</span>, no solo un factor de riesgo.",
+      "razonamiento": "Cerca del <span class=\"num\">1 %</span> de los mayores de 50 años con diabetes de inicio reciente recibe el diagnóstico de cáncer de páncreas en 3 años.<br>Pesan el cambio de peso, el cambio de glucemia y la edad de inicio.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Sharma 2018, Gastroenterology (PMID 29775599)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Pancreas",
+        "Nivel::Aplicacion",
+        "Fuente::Sharma2018",
+        "Clase::Aplicacion",
+        "Bloom::Analizar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0006",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">CEA y CA 19-9</span>¿Para qué se usan y en qué tumor se sigue cada uno?",
+      "respuesta": "Para el <span class=\"mec\">seguimiento</span>: el <span class=\"dx\">CEA</span> en el cáncer colorrectal y el <span class=\"dx\">CA 19-9</span> en el de páncreas avanzado.",
+      "razonamiento": "El CEA posoperatorio se mide cada <span class=\"num\">3 meses</span> en estadios II y III si el paciente aún sería candidato a cirugía o quimioterapia.<br>Un CA 19-9 en ascenso sugiere progresión y se confirma con otros estudios.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Locker 2006, J Clin Oncol (PMID 17060676)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Marcadores",
+        "Nivel::Aplicacion",
+        "Fuente::Locker2006",
+        "Clase::Irreducible",
+        "Bloom::Recordar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0007",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Helicobacter pylori</span>¿Cómo se conecta la infección con la prevención del cáncer gástrico?",
+      "respuesta": "La infección crónica es un carcinógeno humano del grupo 1, y erradicarla reduce la incidencia de cáncer gástrico.",
+      "razonamiento": "En ensayos aleatorizados la erradicación redujo la incidencia y la mortalidad por cáncer gástrico, con evidencia moderada y sobre todo en Asia oriental.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Ford 2020, Gut (PMID 32205420); IARC Monographs vol. 61 (1994)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Gastrico",
+        "Nivel::Aplicacion",
+        "Fuente::Ford2020",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0008",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Colonoscopia de cribado</span>¿Por qué es a la vez prueba diagnóstica y medida preventiva?",
+      "respuesta": "Porque permite <span class=\"mec\">resecar los pólipos</span> en el mismo acto en que se detectan.",
+      "razonamiento": "El hallazgo de la polipectomía define después el intervalo de vigilancia.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Gupta 2020, Gastroenterology (PMID 32044092)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Tamizaje",
+        "Nivel::Aplicacion",
+        "Fuente::Gupta2020",
+        "Clase::Aplicacion",
+        "Bloom::Comprender",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0009",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Cribado colorrectal</span>El paciente rechaza la colonoscopia: ¿se abandona el cribado?",
+      "respuesta": "No: existen otras estrategias válidas, como la prueba <span class=\"dx\">inmunoquímica fecal</span> anual.",
+      "razonamiento": "La USPSTF avala varias estrategias en riesgo promedio, entre ellas la colonoscopia cada 10 años y la prueba inmunoquímica fecal anual.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Davidson 2021, JAMA (PMID 34003218)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Tamizaje",
+        "Nivel::Aplicacion",
+        "Fuente::USPSTF2021",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0010",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Anemia ferropénica</span>Varón de 60 años con astenia y anemia ferropénica sin causa, sin síntomas digestivos: ¿qué localización sospechas y qué estudio indicas?",
+      "respuesta": "Cáncer de <span class=\"dx\">colon derecho</span>; se estudia con colonoscopia completa.",
+      "razonamiento": "La anemia ferropénica es una forma de presentación del cáncer de colon derecho, mientras que el izquierdo suele sangrar de forma visible.<br>Si se sospecha cáncer de colon, se indica colonoscopia.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Prichard 1998, Med J Aust (PMID 9847903)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Colon",
+        "Nivel::Aplicacion",
+        "Fuente::ClevelandClinic",
+        "Clase::Vineta",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0011",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Cáncer colorrectal</span>Rectorragia visible como síntoma principal: ¿qué lado del colon orienta y cuál se asocia a anemia ferropénica?",
+      "respuesta": "La rectorragia orienta al lado izquierdo; la anemia ferropénica, al derecho.",
+      "razonamiento": "Los síntomas de presentación más comunes son la rectorragia en los tumores izquierdos y la anemia ferropénica en los derechos.",
+      "mnemotecnia": "",
+      "esquema": "<table><thead><tr><th>Rasgo</th><th>Derecho</th><th>Izquierdo</th></tr></thead><tbody><tr><th>Debut</th><td>Anemia ferropénica</td><td>Rectorragia</td></tr></tbody></table>",
+      "fuente": "Prichard 1998, Med J Aust (PMID 9847903)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Colon",
+        "Nivel::Aplicacion",
+        "Fuente::ClevelandClinic",
+        "Clase::Contraste",
+        "Bloom::Analizar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0012",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Cáncer de esófago</span>¿Cómo se distinguen el escamoso y el adenocarcinoma por factores de riesgo?",
+      "respuesta": "El escamoso se asocia a tabaco y alcohol; el adenocarcinoma, a reflujo y obesidad.",
+      "razonamiento": "A escala mundial predomina el escamoso, pero en Australia, Reino Unido, EE. UU. y algunos países de Europa occidental el adenocarcinoma ya lo supera.",
+      "mnemotecnia": "",
+      "esquema": "<table><thead><tr><th>Rasgo</th><th>Escamoso</th><th>Adenoca.</th></tr></thead><tbody><tr><th>Factor</th><td>Tabaco, alcohol</td><td>Reflujo, obesidad</td></tr><tr><th>Epidemiología</th><td>Predomina en el mundo</td><td>Supera al escamoso en países occidentales</td></tr></tbody></table>",
+      "fuente": "Pennathur 2013, Lancet (PMID 23374478); Xie 2018, Best Pract Res Clin Gastroenterol (PMID 30551854)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Esofago",
+        "Nivel::Aplicacion",
+        "Fuente::Pennathur2013",
+        "Clase::Contraste",
+        "Bloom::Analizar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0013",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Esófago de Barrett</span>¿Qué es y por qué se vigila?",
+      "respuesta": "Es la sustitución del epitelio escamoso del esófago por epitelio columnar, el único precursor conocido del adenocarcinoma esofágico.",
+      "razonamiento": "Se asocia al reflujo gastroesofágico crónico.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Shaheen 2022, Am J Gastroenterol (PMID 35354777)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Esofago",
+        "Nivel::Aplicacion",
+        "Fuente::PDQ",
+        "Clase::Irreducible",
+        "Bloom::Recordar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0014",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Carcinoma escamoso de cabeza y cuello</span>En un paciente con tabaquismo y alcoholismo, ¿por qué una lesión no agota el riesgo?",
+      "respuesta": "Porque tabaco y alcohol alteran todo el epitelio expuesto: es el <span class=\"mec\">campo de cancerización</span>.",
+      "razonamiento": "Los tumores nacen en campos preneoplásicos de células alteradas.<br>La persistencia del campo tras el tratamiento causa recurrencias locales y segundos primarios.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Leemans 2011, Nat Rev Cancer (PMID 21160525)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Campo",
+        "Nivel::Aplicacion",
+        "Fuente::Leemans2011",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0015",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Síndrome constitucional</span>Ganglio supraclavicular aumentado de tamaño: ¿qué nombre recibe y qué sugiere?",
+      "respuesta": "Es el ganglio de Virchow, donde ocurre clásicamente la metástasis del cáncer gástrico avanzado.",
+      "razonamiento": "Corresponde al nódulo terminal de la cadena del conducto torácico.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Mizutani 2005, Anat Sci Int (PMID 16333915)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Gastrico",
+        "Nivel::Recuerdo",
+        "Fuente::Mizutani2005",
+        "Clase::Irreducible",
+        "Bloom::Recordar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0016",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Dispepsia</span>¿Qué cambia en el abordaje a partir de los 60 años?",
+      "respuesta": "A los <span class=\"num\">60 años</span> o más se sugiere endoscopia; en menores se prueba y trata <span class=\"dx\">H. pylori</span> y después se ensaya un IBP.",
+      "razonamiento": "En menores de 60 años la guía ACG/CAG no sugiere endoscopia por un dato de alarma aislado, como pérdida de peso, anemia o disfagia no progresiva.<br>Un antecedente familiar de cáncer gástrico puede justificar adelantarla.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Moayyedi 2017, Am J Gastroenterol (PMID 28631728)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Gastrico",
+        "Nivel::Aplicacion",
+        "Fuente::ACGCAG2017",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0017",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Paraneoplasia cutánea</span>Adulto mayor con aparición brusca de múltiples queratosis seborreicas: ¿qué debes buscar?",
+      "respuesta": "Una <span class=\"al\">neoplasia oculta</span>: es el signo de Leser-Trélat.",
+      "razonamiento": "Se define como la erupción súbita de múltiples queratosis seborreicas causada por una neoplasia; se asocia a acantosis nigricans maligna.<br>Su validez se ha cuestionado porque ambas condiciones son frecuentes en ancianos.",
+      "mnemotecnia": "",
+      "esquema": "<img src=\"q2-neo-0017-leser-trelat.jpg\" alt=\"Múltiples queratosis seborreicas en la espalda, signo de Leser-Trélat\">",
+      "fuente": "Schwartz 1996, J Am Acad Dermatol (PMID 8682971)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Paraneoplasia",
+        "Nivel::Aplicacion",
+        "Fuente::Schwartz1996",
+        "Clase::Vineta",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0018",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Cáncer colorrectal hereditario</span>¿Qué gen hay detrás de la poliposis adenomatosa familiar y cuáles detrás del síndrome de Lynch?",
+      "respuesta": "La poliposis, variantes en APC; Lynch, variantes en los genes reparadores MLH1, MSH2, MSH6 o PMS2.",
+      "razonamiento": "En Lynch, la colectomía profiláctica no se recomienda de rutina porque la colonoscopia con polipectomía es una medida preventiva eficaz.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Idos 2021, GeneReviews (PMID 20301390); Yen 2022, GeneReviews (PMID 20301519)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Hereditario",
+        "Nivel::Recuerdo",
+        "Fuente::GeneReviews",
+        "Clase::Contraste",
+        "Bloom::Analizar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0019",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Síndrome de Lynch</span>¿Cómo se sospecha en el tumor y qué lo confirma?",
+      "respuesta": "Con <span class=\"dx\">inmunohistoquímica</span> de proteínas reparadoras o <span class=\"dx\">inestabilidad de microsatélites</span> en el tumor; lo confirma la variante germinal.",
+      "razonamiento": "La pérdida de una o más proteínas reparadoras o un tumor con inestabilidad alta orientan al diagnóstico; se aplica a cánceres colorrectales y endometriales.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Idos 2021, GeneReviews (PMID 20301390)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Hereditario",
+        "Nivel::Recuerdo",
+        "Fuente::GeneReviews",
+        "Clase::Irreducible",
+        "Bloom::Recordar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0020",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Síndrome de Lynch</span>¿Cómo difiere la colonoscopia de vigilancia de la del riesgo promedio?",
+      "respuesta": "Se hace cada 1 a 2 años desde los 20 a 25 años, o 2 a 5 años antes del diagnóstico más precoz de la familia, lo que ocurra primero.",
+      "razonamiento": "La colonoscopia con polipectomía es una medida preventiva eficaz en Lynch.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Idos 2021, GeneReviews (PMID 20301390)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Hereditario",
+        "Nivel::Recuerdo",
+        "Fuente::GeneReviews",
+        "Clase::Irreducible",
+        "Bloom::Recordar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0021",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Hepatitis B</span>¿Por qué puede aparecer carcinoma hepatocelular incluso sin cirrosis?",
+      "respuesta": "Porque el virus es <span class=\"mec\">oncogénico por sí mismo</span>: integra su ADN en el genoma del hepatocito.",
+      "razonamiento": "Los tumores por VHB pueden surgir en hígados no cirróticos, además de la inflamación crónica que el virus mantiene.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Levrero 2016, J Hepatol (PMID 27084040)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Hepatobiliar",
+        "Nivel::Aplicacion",
+        "Fuente::Levrero2016",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0022",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Cirrosis</span>¿Qué vigilancia se hace para detectar un carcinoma hepatocelular temprano?",
+      "respuesta": "Ecografía hepática más alfafetoproteína cada 6 meses.",
+      "razonamiento": "La guía AASLD 2023 recomienda la vigilancia semestral con ecografía y alfafetoproteína (recomendación fuerte).<br>No recomienda de rutina la TC o la RM con este fin.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Singal 2023, Hepatology (PMID 37199193)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Hepatobiliar",
+        "Nivel::Aplicacion",
+        "Fuente::Singal2023",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0023",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Poliposis adenomatosa familiar</span>Además del colon, ¿qué otro segmento hay que vigilar?",
+      "respuesta": "El tubo digestivo alto y el intestino delgado: la poliposis conlleva riesgo de neoplasias extracolónicas.",
+      "razonamiento": "Los osteomas, las anomalías dentales y los tumores desmoides orientan a una condición asociada a APC.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Yang 2020, Gastrointest Endosc (PMID 32169282); Yen 2022, GeneReviews (PMID 20301519)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Hereditario",
+        "Nivel::Recuerdo",
+        "Fuente::GeneReviews",
+        "Clase::Irreducible",
+        "Bloom::Recordar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0024",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Cribado colorrectal</span>¿A quién no se aplican las recomendaciones de cribado de riesgo promedio?",
+      "respuesta": "A quien tiene <span class=\"dx\">Lynch</span>, poliposis, adenomas previos, antecedente de cáncer colorrectal o enfermedad inflamatoria intestinal.",
+      "razonamiento": "Estos pacientes requieren vigilancia propia.<br>La recomendación de la USPSTF se refiere a adultos asintomáticos sin esos antecedentes.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Davidson 2021, JAMA (PMID 34003218)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Tamizaje",
+        "Nivel::Aplicacion",
+        "Fuente::USPSTF2021",
+        "Clase::Aplicacion",
+        "Bloom::Analizar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-NEO-0025",
+      "tipo": "Cloze",
+      "text": "<span class=\"tema\">Cribado colorrectal en riesgo promedio</span>La USPSTF recomienda iniciarlo a los {{c1::<span class=\"num\">45</span>}} años y mantenerlo hasta los {{c2::<span class=\"num\">75</span>}}.",
+      "extra": "Entre los 76 y los 85 años el cribado se ofrece de forma selectiva.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Davidson 2021, JAMA (PMID 34003218)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Tamizaje",
+        "Nivel::Recuerdo",
+        "Fuente::USPSTF2021",
+        "Clase::Irreducible",
+        "Bloom::Recordar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2-NEO-0026",
+      "tipo": "Cloze",
+      "text": "<span class=\"tema\">Cribado colorrectal</span>La colonoscopia normal en riesgo promedio se repite cada {{c1::<span class=\"num\">10</span>}} años y la prueba inmunoquímica fecal es {{c2::<span class=\"num\">anual</span>}}.",
+      "extra": "Son dos de las estrategias que lista la USPSTF; las otras tienen intervalos propios.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Davidson 2021, JAMA (PMID 34003218)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Tamizaje",
+        "Nivel::Recuerdo",
+        "Fuente::USPSTF2021",
+        "Clase::Irreducible",
+        "Bloom::Recordar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2-NEO-0027",
+      "tipo": "Cloze",
+      "text": "<span class=\"tema\">Paraneoplasia</span>La tromboflebitis migratoria como aviso de neoplasia visceral oculta se conoce como síndrome de {{c1::Trousseau}}.",
+      "extra": "Trousseau lo describió en 1865.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Varki 2007, Blood (PMID 17496204)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Paraneoplasia",
+        "Nivel::Recuerdo",
+        "Fuente::Varki2007",
+        "Clase::Irreducible",
+        "Bloom::Recordar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2-NEO-0028",
+      "tipo": "Cloze",
+      "text": "<span class=\"tema\">Pólipos vesiculares</span>La colecistectomía se recomienda ante pólipos vesiculares mayores de {{c1::<span class=\"num\">10 mm</span>}}.",
+      "extra": "Los menores de 10 mm se manejan según las características del paciente y del pólipo.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Wiles 2017, Eur Radiol (PMID 28185005)",
+      "tags": [
+        "Quirurgica2::NeoplasiasGI::Hepatobiliar",
+        "Nivel::Recuerdo",
+        "Fuente::Wiles2017",
+        "Clase::Irreducible",
+        "Bloom::Recordar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": []
+    }
+  ]
 }

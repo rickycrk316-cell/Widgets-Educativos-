@@ -1,930 +1,777 @@
 {
- "meta": {
-  "caso": "Hematuria",
-  "rotacion": "1.ª",
-  "tag_raiz": "Hematuria",
-  "prefijo": "Q2-HEM",
-  "version": "1.0",
-  "fecha": "2026-11-26",
-  "resultado_aprendizaje": "Diferencia hematuria renal y de vías urinarias y establece manejo inicial.",
-  "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 1.ª rotación, CASO HEMATURIA (contenidos y trabajo autónomo)",
-  "justificacion_exceso": "",
-  "mir_verificados": [],
-  "verificacion": {
-   "total": 84,
-   "verificados": 53,
-   "eliminados": [
-    {
-     "id": "Q2-HEM-0001",
-     "dato": "Hematíe deformado por gradientes osmóticos tubulares y proteína de Tamm-Horsfall",
-     "motivo": "mecanismo no confirmado: la tarjeta pregunta solo por el significado de la dismorfia (Yuste 2015)"
+  "meta": {
+    "caso": "Hematuria",
+    "rotacion": "1.ª",
+    "tag_raiz": "Hematuria",
+    "prefijo": "Q2-HEM",
+    "version": "1.0",
+    "fecha": "2026-11-26",
+    "resultado_aprendizaje": "Diferencia hematuria renal y de vías urinarias y establece manejo inicial.",
+    "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 1.ª rotación, CASO HEMATURIA (contenidos y trabajo autónomo)",
+    "justificacion_exceso": "",
+    "mir_verificados": [],
+    "verificacion": {
+      "total": 88,
+      "verificados": 47,
+      "eliminados": [
+        {
+          "id": "Q2-HEM-0001",
+          "dato": "Hematíe deformado por gradientes osmóticos tubulares y proteína de Tamm-Horsfall",
+          "motivo": "mecanismo no confirmado: la tarjeta pregunta solo por el significado de la dismorfia (Yuste 2015)"
+        },
+        {
+          "id": "Q2-HEM-0002",
+          "dato": "La urocinasa tubular lisa la fibrina y por eso no hay coágulos en la hematuria glomerular",
+          "motivo": "mecanismo no confirmado en las fuentes leídas: eliminado"
+        },
+        {
+          "id": "Q2-HEM-0004",
+          "dato": "La contracción final del detrusor exprime la mucosa del cuello y explica la hematuria terminal",
+          "motivo": "explicación no confirmada: eliminada; se conserva la heurística de localización"
+        },
+        {
+          "id": "Q2-HEM-0005",
+          "dato": "La tira reactiva detecta peroxidasa y da positivo con hemoglobina libre y mioglobina",
+          "motivo": "no confirmado en las fuentes leídas: se conserva la definición microscópica (AUA 2020)"
+        },
+        {
+          "id": "Q2-HEM-0008",
+          "dato": "La remisión espontánea de la hematuria no baja el riesgo",
+          "motivo": "no confirmado: eliminado"
+        },
+        {
+          "id": "Q2-HEM-0010",
+          "dato": "La citología detecta bien el alto grado y falla en el bajo grado",
+          "motivo": "no confirmado: se conserva la recomendación de la guía AUA/SUFU 2025"
+        },
+        {
+          "id": "Q2-HEM-0012",
+          "dato": "El carcinoma renal sangra solo cuando invade el sistema colector",
+          "motivo": "no confirmado: eliminado"
+        },
+        {
+          "id": "Q2-HEM-0014",
+          "dato": "Mapa de pH urinario y composición del cálculo (ácido úrico y cistina en orina ácida; estruvita y fosfato cálcico en alcalina)",
+          "motivo": "no confirmado en las fuentes leídas: reformulado sobre la alcalinización del cálculo de ácido úrico (EAU)"
+        },
+        {
+          "id": "Q2-HEM-0015",
+          "dato": "Proteus y Klebsiella como gérmenes típicos, orina alcalina, cristales en tapa de ataúd y forma coraliforme",
+          "motivo": "no confirmado en las fuentes leídas: se conserva el origen por ureasa (Papatsoris 2025)"
+        },
+        {
+          "id": "Q2-HEM-0017",
+          "dato": "El calcio intestinal se une al oxalato",
+          "motivo": "mecanismo no confirmado: reformulado con el aumento de oxaluria observado en el ensayo (Borghi 2002)"
+        },
+        {
+          "id": "Q2-HEM-0021",
+          "dato": "Las prostaglandinas dilatan la arteriola aferente y elevan la presión tras el cálculo",
+          "motivo": "mecanismo no confirmado: reformulado sobre la recomendación de la guía EAU"
+        },
+        {
+          "id": "Q2-HEM-0019",
+          "dato": "Recomendación fuerte de TC sin contraste tras la ecografía inicial",
+          "motivo": "la guía consultada indica TC de baja dosis cuando la ecografía no basta: reformulado"
+        },
+        {
+          "id": "descartada",
+          "dato": "Cólico renal vs. apendicitis (dolor visceral sin irritación peritoneal)",
+          "motivo": "no confirmado: nota descartada"
+        },
+        {
+          "id": "descartada",
+          "dato": "Unión ureterovesical como estrechamiento más angosto y sitio más frecuente de impactación",
+          "motivo": "fuentes divergentes sobre el sitio más frecuente: nota descartada"
+        },
+        {
+          "id": "descartada",
+          "dato": "Dolor referido T10–L1 y migración del dolor",
+          "motivo": "no confirmado: nota descartada"
+        },
+        {
+          "id": "descartada",
+          "dato": "Imagen inmediata ante fiebre, riñón único o diagnóstico incierto",
+          "motivo": "no confirmado: nota descartada"
+        },
+        {
+          "id": "Q2-HEM-0024",
+          "dato": "Alfa-bloqueante indicado en cálculos del uréter distal de 5–10 mm",
+          "motivo": "umbral de tamaño no confirmado: reformulado con la advertencia de la guía EAU"
+        },
+        {
+          "id": "descartada",
+          "dato": "Edema e hipertensión de la glomerulonefritis por reabsorción tubular de sodio",
+          "motivo": "mecanismo no confirmado: nota descartada"
+        },
+        {
+          "id": "Q2-HEM-0025",
+          "dato": "Hematuria 1–3 días tras la infección en IgA y 1–3 semanas en la postinfecciosa",
+          "motivo": "intervalos no confirmados: reformulado con el C3 (Welch 2012)"
+        },
+        {
+          "id": "Q2-HEM-0027",
+          "dato": "Si las semilunas se fibrosan la pérdida es irreversible; no esperar la serología",
+          "motivo": "no confirmado: eliminado"
+        },
+        {
+          "id": "descartada",
+          "dato": "IECA o ARA II reducen la presión intraglomerular y la proteinuria",
+          "motivo": "no confirmado: nota descartada"
+        },
+        {
+          "id": "Q2-HEM-0028",
+          "dato": "Hipercalcemia, policitemia y eritropoyetina o PTHrP en el carcinoma renal",
+          "motivo": "no confirmado: eliminado"
+        },
+        {
+          "id": "Q2-HEM-0029",
+          "dato": "El varicocele no colapsa en decúbito y el trombo afecta a la vena renal izquierda",
+          "motivo": "signo de decúbito no confirmado: eliminado"
+        },
+        {
+          "id": "descartada",
+          "dato": "Nefrectomía parcial como cirugía de elección en T1",
+          "motivo": "no confirmado: nota descartada"
+        },
+        {
+          "id": "descartada",
+          "dato": "Cistitis hemorrágica: bacteria, acroleína y radiación destruyen los glucosaminoglucanos",
+          "motivo": "no confirmado: nota descartada"
+        },
+        {
+          "id": "Q2-HEM-0034",
+          "dato": "Carcinoma in situ vesical como diagnóstico alternativo, y baciloscopia seriada",
+          "motivo": "no confirmado: se conserva la tuberculosis urogenital (Figueiredo 2017)"
+        },
+        {
+          "id": "Q2-HEM-0030",
+          "dato": "Cancerización de campo y contacto prolongado de las aminas con la orina",
+          "motivo": "no confirmado: eliminado"
+        },
+        {
+          "id": "descartada",
+          "dato": "La hematuria del carcinoma vesical cede sola porque las papilas coagulan",
+          "motivo": "no confirmado: nota descartada"
+        },
+        {
+          "id": "Q2-HEM-0031",
+          "dato": "Sin detrusor no se puede estadificar la invasión muscular",
+          "motivo": "inferencia no confirmada: reformulado con la indicación de re-RTU (Contieri 2022)"
+        },
+        {
+          "id": "descartada",
+          "dato": "BCG de elección en riesgo intermedio-alto o carcinoma in situ",
+          "motivo": "clasificación de riesgo no confirmada: nota descartada"
+        },
+        {
+          "id": "descartada",
+          "dato": "Secuencia de imagen en el embarazo: ecografía, resonancia y TC de baja dosis",
+          "motivo": "no confirmado: nota descartada"
+        },
+        {
+          "id": "Q2-HEM-0002",
+          "dato": "Coágulos orientan a sangrado no glomerular",
+          "motivo": "solo fuente AMBOSS (resumen de búsqueda): eliminado"
+        },
+        {
+          "id": "Q2-HEM-0004",
+          "dato": "Hematuria inicial, terminal y total localizan el origen",
+          "motivo": "solo fuente AMBOSS: eliminado"
+        },
+        {
+          "id": "Q2-HEM-0006",
+          "dato": "Sangre en el meato y sondaje a ciegas en trauma uretral",
+          "motivo": "solo EAU trauma y MSD Manual desde resúmenes: eliminado"
+        },
+        {
+          "id": "Q2-HEM-0014",
+          "dato": "Alcalinización con pH >7,0 para disolver ácido úrico",
+          "motivo": "solo EAU de bolsillo desde resumen: eliminado"
+        },
+        {
+          "id": "Q2-HEM-0018",
+          "dato": "Ácido úrico radiotransparente",
+          "motivo": "solo EAU de bolsillo: eliminado"
+        },
+        {
+          "id": "Q2-HEM-0022",
+          "dato": "Descompresión urgente en obstrucción infectada",
+          "motivo": "solo EAU de bolsillo: eliminado"
+        },
+        {
+          "id": "Q2-HEM-0023",
+          "dato": "Caso: cólico con escalofríos como obstrucción infectada",
+          "motivo": "solo EAU de bolsillo: eliminado"
+        },
+        {
+          "id": "Q2-HEM-0024",
+          "dato": "Advertencia de la EAU sobre alfa-bloqueantes",
+          "motivo": "solo EAU de bolsillo: eliminado"
+        },
+        {
+          "id": "Q2-HEM-0025",
+          "dato": "C3 bajo en postestreptocócica vs. normal en IgA",
+          "motivo": "Welch 2012 (PMC3228372) no verificable: eliminado"
+        },
+        {
+          "id": "Q2-HEM-0032",
+          "dato": "Cistectomía radical con cisplatino neoadyuvante en músculo-invasivo",
+          "motivo": "EAU MIBC no confirmada: eliminado"
+        }
+      ]
     },
-    {
-     "id": "Q2-HEM-0002",
-     "dato": "La urocinasa tubular lisa la fibrina y por eso no hay coágulos en la hematuria glomerular",
-     "motivo": "mecanismo no confirmado en las fuentes leídas: eliminado"
-    },
-    {
-     "id": "Q2-HEM-0004",
-     "dato": "La contracción final del detrusor exprime la mucosa del cuello y explica la hematuria terminal",
-     "motivo": "explicación no confirmada: eliminada; se conserva la heurística de localización"
-    },
-    {
-     "id": "Q2-HEM-0005",
-     "dato": "La tira reactiva detecta peroxidasa y da positivo con hemoglobina libre y mioglobina",
-     "motivo": "no confirmado en las fuentes leídas: se conserva la definición microscópica (AUA 2020)"
-    },
-    {
-     "id": "Q2-HEM-0008",
-     "dato": "La remisión espontánea de la hematuria no baja el riesgo",
-     "motivo": "no confirmado: eliminado"
-    },
-    {
-     "id": "Q2-HEM-0010",
-     "dato": "La citología detecta bien el alto grado y falla en el bajo grado",
-     "motivo": "no confirmado: se conserva la recomendación de la guía AUA/SUFU 2025"
-    },
-    {
-     "id": "Q2-HEM-0012",
-     "dato": "El carcinoma renal sangra solo cuando invade el sistema colector",
-     "motivo": "no confirmado: eliminado"
-    },
-    {
-     "id": "Q2-HEM-0014",
-     "dato": "Mapa de pH urinario y composición del cálculo (ácido úrico y cistina en orina ácida; estruvita y fosfato cálcico en alcalina)",
-     "motivo": "no confirmado en las fuentes leídas: reformulado sobre la alcalinización del cálculo de ácido úrico (EAU)"
-    },
-    {
-     "id": "Q2-HEM-0015",
-     "dato": "Proteus y Klebsiella como gérmenes típicos, orina alcalina, cristales en tapa de ataúd y forma coraliforme",
-     "motivo": "no confirmado en las fuentes leídas: se conserva el origen por ureasa (Papatsoris 2025)"
-    },
-    {
-     "id": "Q2-HEM-0017",
-     "dato": "El calcio intestinal se une al oxalato",
-     "motivo": "mecanismo no confirmado: reformulado con el aumento de oxaluria observado en el ensayo (Borghi 2002)"
-    },
-    {
-     "id": "Q2-HEM-0021",
-     "dato": "Las prostaglandinas dilatan la arteriola aferente y elevan la presión tras el cálculo",
-     "motivo": "mecanismo no confirmado: reformulado sobre la recomendación de la guía EAU"
-    },
-    {
-     "id": "Q2-HEM-0019",
-     "dato": "Recomendación fuerte de TC sin contraste tras la ecografía inicial",
-     "motivo": "la guía consultada indica TC de baja dosis cuando la ecografía no basta: reformulado"
-    },
-    {
-     "id": "descartada",
-     "dato": "Cólico renal vs. apendicitis (dolor visceral sin irritación peritoneal)",
-     "motivo": "no confirmado: nota descartada"
-    },
-    {
-     "id": "descartada",
-     "dato": "Unión ureterovesical como estrechamiento más angosto y sitio más frecuente de impactación",
-     "motivo": "fuentes divergentes sobre el sitio más frecuente: nota descartada"
-    },
-    {
-     "id": "descartada",
-     "dato": "Dolor referido T10–L1 y migración del dolor",
-     "motivo": "no confirmado: nota descartada"
-    },
-    {
-     "id": "descartada",
-     "dato": "Imagen inmediata ante fiebre, riñón único o diagnóstico incierto",
-     "motivo": "no confirmado: nota descartada"
-    },
-    {
-     "id": "Q2-HEM-0024",
-     "dato": "Alfa-bloqueante indicado en cálculos del uréter distal de 5–10 mm",
-     "motivo": "umbral de tamaño no confirmado: reformulado con la advertencia de la guía EAU"
-    },
-    {
-     "id": "descartada",
-     "dato": "Edema e hipertensión de la glomerulonefritis por reabsorción tubular de sodio",
-     "motivo": "mecanismo no confirmado: nota descartada"
-    },
-    {
-     "id": "Q2-HEM-0025",
-     "dato": "Hematuria 1–3 días tras la infección en IgA y 1–3 semanas en la postinfecciosa",
-     "motivo": "intervalos no confirmados: reformulado con el C3 (Welch 2012)"
-    },
-    {
-     "id": "Q2-HEM-0027",
-     "dato": "Si las semilunas se fibrosan la pérdida es irreversible; no esperar la serología",
-     "motivo": "no confirmado: eliminado"
-    },
-    {
-     "id": "descartada",
-     "dato": "IECA o ARA II reducen la presión intraglomerular y la proteinuria",
-     "motivo": "no confirmado: nota descartada"
-    },
-    {
-     "id": "Q2-HEM-0028",
-     "dato": "Hipercalcemia, policitemia y eritropoyetina o PTHrP en el carcinoma renal",
-     "motivo": "no confirmado: eliminado"
-    },
-    {
-     "id": "Q2-HEM-0029",
-     "dato": "El varicocele no colapsa en decúbito y el trombo afecta a la vena renal izquierda",
-     "motivo": "signo de decúbito no confirmado: eliminado"
-    },
-    {
-     "id": "descartada",
-     "dato": "Nefrectomía parcial como cirugía de elección en T1",
-     "motivo": "no confirmado: nota descartada"
-    },
-    {
-     "id": "descartada",
-     "dato": "Cistitis hemorrágica: bacteria, acroleína y radiación destruyen los glucosaminoglucanos",
-     "motivo": "no confirmado: nota descartada"
-    },
-    {
-     "id": "Q2-HEM-0034",
-     "dato": "Carcinoma in situ vesical como diagnóstico alternativo, y baciloscopia seriada",
-     "motivo": "no confirmado: se conserva la tuberculosis urogenital (Figueiredo 2017)"
-    },
-    {
-     "id": "Q2-HEM-0030",
-     "dato": "Cancerización de campo y contacto prolongado de las aminas con la orina",
-     "motivo": "no confirmado: eliminado"
-    },
-    {
-     "id": "descartada",
-     "dato": "La hematuria del carcinoma vesical cede sola porque las papilas coagulan",
-     "motivo": "no confirmado: nota descartada"
-    },
-    {
-     "id": "Q2-HEM-0031",
-     "dato": "Sin detrusor no se puede estadificar la invasión muscular",
-     "motivo": "inferencia no confirmada: reformulado con la indicación de re-RTU (Contieri 2022)"
-    },
-    {
-     "id": "descartada",
-     "dato": "BCG de elección en riesgo intermedio-alto o carcinoma in situ",
-     "motivo": "clasificación de riesgo no confirmada: nota descartada"
-    },
-    {
-     "id": "descartada",
-     "dato": "Secuencia de imagen en el embarazo: ecografía, resonancia y TC de baja dosis",
-     "motivo": "no confirmado: nota descartada"
+    "guia": {
+      "principios": [
+        "El origen del sangrado se localiza antes de tratar: el sedimento (dismorfia), los coágulos y el momento del chorro orientan a glomérulo o vía excretora.",
+        "El estudio de la microhematuria se escala por riesgo (edad, sexo, tabaco, hematíes, persistencia, hematuria macroscópica previa), no se aplica igual a todos.",
+        "Una causa benigna aparente (infección) no cierra el estudio: se repite el examen de orina tras tratarla.",
+        "La obstrucción urinaria con infección es una urgencia que exige descompresión, no solo antibiótico.",
+        "En el cáncer urológico, la exposición a carcinógenos (tabaco) y la invasión del detrusor definen el pronóstico y la conducta."
+      ],
+      "palabras_clave": [
+        "hematuria glomerular",
+        "hematíe dismórfico",
+        "coágulos",
+        "microhematuria",
+        "cistoscopia",
+        "uro-TC",
+        "cólico renal",
+        "estruvita",
+        "obstrucción infectada",
+        "glomerulonefritis rápidamente progresiva",
+        "carcinoma renal de células claras",
+        "carcinoma vesical",
+        "re-RTU",
+        "tuberculosis urogenital"
+      ],
+      "imagenes_oclusion": [],
+      "preguntas_cierre": [
+        "Ante una hematuria, ¿qué tres datos de la historia y el sedimento te ayudan a decidir entre origen glomerular y de la vía excretora?",
+        "¿Por qué una hematuria que cedió tras un antibiótico no cierra el estudio?",
+        "Explica sin mirar la conducta ante un cólico renal con escalofríos.",
+        "¿Qué estudio indicas a un varón fumador de 65 años con hematuria macroscópica total indolora?"
+      ],
+      "subtemas": {
+        "Localizacion": "Clasificación de la hematuria por origen y evaluación semiológica; trauma uretral",
+        "Riesgo": "Pruebas diagnósticas y estratificación del riesgo oncológico",
+        "LitiasisComposicion": "Litiasis urinaria: composición y prevención",
+        "LitiasisDx": "Litiasis urinaria: diagnóstico por imagen y laboratorio",
+        "LitiasisTx": "Litiasis urinaria: manejo inicial y urgencias",
+        "Glomerulonefritis": "Glomerulonefritis que cursan con hematuria",
+        "CarcinomaRenal": "Cáncer del tracto urinario: riñón",
+        "CarcinomaVesical": "Cáncer del tracto urinario: vejiga",
+        "OtrasCausas": "Tuberculosis urinaria y cistitis hemorrágica inducida por fármacos"
+      },
+      "fechas": {
+        "apertura": null,
+        "cierre": null,
+        "examen": null
+      },
+      "referencias": [
+        "Barocas DA, Boorjian SA, Alvarez RD, Downs TM, Gross CP, Hamilton BD, et al. Microhematuria: AUA/SUFU Guideline. J Urol. 2020;204(4):778-86. PMID 32698717. doi:10.1097/JU.0000000000001297",
+        "Barocas DA, Lotan Y, Matulewicz RS, Raman JD, Westerman ME, Kirkby E, et al. Updates to Microhematuria: AUA/SUFU Guideline (2025). J Urol. 2025;213(5):547-57. PMID 40013563. doi:10.1097/JU.0000000000004490",
+        "Bolenz C, Schröppel B, Eisenhardt A, Schmitz-Dräger BJ, Grimm MO. The investigation of hematuria. Dtsch Arztebl Int. 2018;115(48):801-7. PMID 30642428. doi:10.3238/arztebl.2018.0801",
+        "Yuste C, Gutierrez E, Sevillano AM, Rubio-Navarro A, Amaro-Villalobos JM, Ortiz A, et al. Pathogenesis of glomerular haematuria. World J Nephrol. 2015;4(2):185-95. PMID 25949932. doi:10.5527/wjn.v4.i2.185",
+        "Borghi L, Schianchi T, Meschi T, Guerra A, Allegri F, Maggiore U, et al. Comparison of two diets for the prevention of recurrent stones in idiopathic hypercalciuria. N Engl J Med. 2002;346(2):77-84. PMID 11784873. doi:10.1056/NEJMoa010369",
+        "Smith-Bindman R, Aubin C, Bailitz J, Bengiamin RN, Camargo CA, Corbo J, et al. Ultrasonography versus computed tomography for suspected nephrolithiasis. N Engl J Med. 2014;371(12):1100-10. PMID 25229916. doi:10.1056/NEJMoa1404446",
+        "Kobayashi T, Nishizawa K, Mitsumori K, Ogura K. Impact of date of onset on the absence of hematuria in patients with acute renal colic. J Urol. 2003;170(4 Pt 1):1093-6. PMID 14501699. doi:10.1097/01.ju.0000080709.11253.08",
+        "Ooi SB, Kour NW, Mahadev A. Haematuria in the diagnosis of urinary calculi. Ann Acad Med Singap. 1998;27(2):210-4. PMID 9663312",
+        "Papatsoris A, Geavlete B, Radavoi GD, Alameedee M, Almusafer M, Ather MH, et al. Management of urinary stones by experts in stone disease (ESD 2025). Arch Ital Urol Androl. 2025;97(2):14085. PMID 40583613. doi:10.4081/aiua.2025.14085",
+        "Koirala A, Sharma PD, Jhaveri KD, Jain K, Geetha D. Rapidly progressive glomerulonephritis. Adv Kidney Dis Health. 2024;31(6):485-95. PMID 39577882. doi:10.1053/j.akdh.2024.08.006",
+        "Choueiri TK, Kaelin WG. Targeting the HIF2-VEGF axis in renal cell carcinoma. Nat Med. 2020;26(10):1519-30. PMID 33020645. doi:10.1038/s41591-020-1093-z",
+        "Al-Taan OS, Featherstone JM, Rees AM, Young WT, Stephenson TP. Renal cell carcinoma in a horseshoe kidney presenting as an acute, left sided varicocele. Int Urol Nephrol. 2007;39(2):369-71. PMID 16835726. doi:10.1007/s11255-006-9008-6",
+        "Malaveille C, Hautefeuille A, Pignatelli B, Talaska G, Vineis P, Bartsch H. Dietary phenolics as anti-mutagens and inhibitors of tobacco-related DNA adduction in the urothelium of smokers. Carcinogenesis. 1996;17(10):2193-200. PMID 8895488. doi:10.1093/carcin/17.10.2193",
+        "Dodmane PR, Arnold LL, Pennington KL, Cohen SM. Orally administered nicotine induces urothelial hyperplasia in rats and mice. Toxicology. 2014;315:49-54. PMID 24269753. doi:10.1016/j.tox.2013.11.002",
+        "Contieri R, Lughezzani G, Buffi NM, Taverna G, Giacobbe A, Micheli E, et al. Could we safely avoid a second resection in selected patients with T1 non-muscle-invasive bladder cancer? Front Oncol. 2022;12:879399. PMID 35664755. doi:10.3389/fonc.2022.879399",
+        "Matz EL, Hsieh MH. Review of advances in uroprotective agents for cyclophosphamide- and ifosfamide-induced hemorrhagic cystitis. Urology. 2017;100:16-9. PMID 27566144. doi:10.1016/j.urology.2016.07.030",
+        "Figueiredo AA, Lucon AM, Srougi M. Urogenital tuberculosis. Microbiol Spectr. 2017;5(1). PMID 28087922. doi:10.1128/microbiolspec.TNMI7-0015-2016",
+        "Pathan SA, Mitra B, Cameron PA. A systematic review and meta-analysis comparing the efficacy of nonsteroidal anti-inflammatory drugs, opioids, and paracetamol in the treatment of acute renal colic. Eur Urol. 2018;73(4):583-95. PMID 29174580. doi:10.1016/j.eururo.2017.11.001"
+      ]
     }
-   ]
   },
-  "guia": {
-   "principios": [
-    "El origen del sangrado se localiza antes de tratar: el sedimento (dismorfia), los coágulos y el momento del chorro orientan a glomérulo o vía excretora.",
-    "El estudio de la microhematuria se escala por riesgo (edad, sexo, tabaco, hematíes, persistencia, hematuria macroscópica previa), no se aplica igual a todos.",
-    "Una causa benigna aparente (infección) no cierra el estudio: se repite el examen de orina tras tratarla.",
-    "La obstrucción urinaria con infección es una urgencia que exige descompresión, no solo antibiótico.",
-    "En el cáncer urológico, la exposición a carcinógenos (tabaco) y la invasión del detrusor definen el pronóstico y la conducta."
-   ],
-   "palabras_clave": [
-    "hematuria glomerular",
-    "hematíe dismórfico",
-    "coágulos",
-    "microhematuria",
-    "cistoscopia",
-    "uro-TC",
-    "cólico renal",
-    "estruvita",
-    "obstrucción infectada",
-    "glomerulonefritis rápidamente progresiva",
-    "carcinoma renal de células claras",
-    "carcinoma vesical",
-    "re-RTU",
-    "tuberculosis urogenital"
-   ],
-   "imagenes_oclusion": [],
-   "preguntas_cierre": [
-    "Ante una hematuria, ¿qué tres datos de la historia y el sedimento te ayudan a decidir entre origen glomerular y de la vía excretora?",
-    "¿Por qué una hematuria que cedió tras un antibiótico no cierra el estudio?",
-    "Explica sin mirar la conducta ante un cólico renal con escalofríos.",
-    "¿Qué estudio indicas a un varón fumador de 65 años con hematuria macroscópica total indolora?"
-   ],
-   "subtemas": {
-    "Localizacion": "Clasificación de la hematuria por origen y evaluación semiológica; trauma uretral",
-    "Riesgo": "Pruebas diagnósticas y estratificación del riesgo oncológico",
-    "LitiasisComposicion": "Litiasis urinaria: composición y prevención",
-    "LitiasisDx": "Litiasis urinaria: diagnóstico por imagen y laboratorio",
-    "LitiasisTx": "Litiasis urinaria: manejo inicial y urgencias",
-    "Glomerulonefritis": "Glomerulonefritis que cursan con hematuria",
-    "CarcinomaRenal": "Cáncer del tracto urinario: riñón",
-    "CarcinomaVesical": "Cáncer del tracto urinario: vejiga",
-    "OtrasCausas": "Tuberculosis urinaria y cistitis hemorrágica inducida por fármacos"
-   },
-   "fechas": {
-    "apertura": null,
-    "cierre": null,
-    "examen": null
-   },
-   "referencias": [
-    "Barocas DA, Boorjian SA, Alvarez RD, Downs TM, Gross CP, Hamilton BD, et al. Microhematuria: AUA/SUFU Guideline. J Urol. 2020;204(4):778-86. PMID 32698717. doi:10.1097/JU.0000000000001297",
-    "Barocas DA, Lotan Y, Matulewicz RS, Raman JD, Westerman ME, Kirkby E, et al. Updates to Microhematuria: AUA/SUFU Guideline (2025). J Urol. 2025;213(5):547-57. PMID 40013563. doi:10.1097/JU.0000000000004490",
-    "Bolenz C, Schröppel B, Eisenhardt A, Schmitz-Dräger BJ, Grimm MO. The investigation of hematuria. Dtsch Arztebl Int. 2018;115(48):801-7. PMID 30642428. doi:10.3238/arztebl.2018.0801",
-    "Yuste C, Gutierrez E, Sevillano AM, Rubio-Navarro A, Amaro-Villalobos JM, Ortiz A, et al. Pathogenesis of glomerular haematuria. World J Nephrol. 2015;4(2):185-95. PMID 25949932. doi:10.5527/wjn.v4.i2.185",
-    "Borghi L, Schianchi T, Meschi T, Guerra A, Allegri F, Maggiore U, et al. Comparison of two diets for the prevention of recurrent stones in idiopathic hypercalciuria. N Engl J Med. 2002;346(2):77-84. PMID 11784873. doi:10.1056/NEJMoa010369",
-    "Smith-Bindman R, Aubin C, Bailitz J, Bengiamin RN, Camargo CA, Corbo J, et al. Ultrasonography versus computed tomography for suspected nephrolithiasis. N Engl J Med. 2014;371(12):1100-10. PMID 25229916. doi:10.1056/NEJMoa1404446",
-    "Kobayashi T, Nishizawa K, Mitsumori K, Ogura K. Impact of date of onset on the absence of hematuria in patients with acute renal colic. J Urol. 2003;170(4 Pt 1):1093-6. PMID 14501699. doi:10.1097/01.ju.0000080709.11253.08",
-    "Ooi SB, Kour NW, Mahadev A. Haematuria in the diagnosis of urinary calculi. Ann Acad Med Singap. 1998;27(2):210-4. PMID 9663312",
-    "Papatsoris A, Geavlete B, Radavoi GD, Alameedee M, Almusafer M, Ather MH, et al. Management of urinary stones by experts in stone disease (ESD 2025). Arch Ital Urol Androl. 2025;97(2):14085. PMID 40583613. doi:10.4081/aiua.2025.14085",
-    "European Association of Urology. EAU Guidelines on Urolithiasis (guía de bolsillo 2026) [Internet]. Arnhem: EAU. Disponible en: https://uroweb.org/guidelines/urolithiasis [citado 2026 nov 26]",
-    "European Association of Urology. EAU Guidelines on Urological Trauma [Internet]. Arnhem: EAU. Disponible en: https://uroweb.org/guidelines/urological-trauma [citado 2026 nov 26]",
-    "European Association of Urology. EAU Guidelines on Muscle-invasive and Metastatic Bladder Cancer [Internet]. Arnhem: EAU. Disponible en: https://uroweb.org/guidelines/muscle-invasive-and-metastatic-bladder-cancer [citado 2026 nov 26]",
-    "Welch TR. An approach to the child with acute glomerulonephritis. Int J Pediatr. 2012;2012:426192. PMC3228372. doi:10.1155/2012/426192",
-    "Koirala A, Sharma PD, Jhaveri KD, Jain K, Geetha D. Rapidly progressive glomerulonephritis. Adv Kidney Dis Health. 2024;31(6):485-95. PMID 39577882. doi:10.1053/j.akdh.2024.08.006",
-    "Choueiri TK, Kaelin WG. Targeting the HIF2-VEGF axis in renal cell carcinoma. Nat Med. 2020;26(10):1519-30. PMID 33020645. doi:10.1038/s41591-020-1093-z",
-    "Al-Taan OS, Featherstone JM, Rees AM, Young WT, Stephenson TP. Renal cell carcinoma in a horseshoe kidney presenting as an acute, left sided varicocele. Int Urol Nephrol. 2007;39(2):369-71. PMID 16835726. doi:10.1007/s11255-006-9008-6",
-    "Malaveille C, Hautefeuille A, Pignatelli B, Talaska G, Vineis P, Bartsch H. Dietary phenolics as anti-mutagens and inhibitors of tobacco-related DNA adduction in the urothelium of smokers. Carcinogenesis. 1996;17(10):2193-200. PMID 8895488. doi:10.1093/carcin/17.10.2193",
-    "Dodmane PR, Arnold LL, Pennington KL, Cohen SM. Orally administered nicotine induces urothelial hyperplasia in rats and mice. Toxicology. 2014;315:49-54. PMID 24269753. doi:10.1016/j.tox.2013.11.002",
-    "Contieri R, Lughezzani G, Buffi NM, Taverna G, Giacobbe A, Micheli E, et al. Could we safely avoid a second resection in selected patients with T1 non-muscle-invasive bladder cancer? Front Oncol. 2022;12:879399. PMID 35664755. doi:10.3389/fonc.2022.879399",
-    "Matz EL, Hsieh MH. Review of advances in uroprotective agents for cyclophosphamide- and ifosfamide-induced hemorrhagic cystitis. Urology. 2017;100:16-9. PMID 27566144. doi:10.1016/j.urology.2016.07.030",
-    "Figueiredo AA, Lucon AM, Srougi M. Urogenital tuberculosis. Microbiol Spectr. 2017;5(1). PMID 28087922. doi:10.1128/microbiolspec.TNMI7-0015-2016",
-    "AAFP. Microhematuria: updated guidelines from the American Urological Association. Am Fam Physician. 2026 [Internet]. Disponible en: https://www.aafp.org/afp/2026/0800/practice-guidelines-microhematuria [citado 2026 nov 26]",
-    "AMBOSS. Hematuria [Internet]. Disponible en: https://www.amboss.com/us/knowledge/hematuria [citado 2026 nov 26]",
-    "MSD Manual Professional Edition. Urethral trauma [Internet]. Disponible en: https://www.msdmanuals.com/professional/injuries-poisoning/genitourinary-tract-trauma/urethral-trauma [citado 2026 nov 26]"
-   ]
-  }
- },
- "tarjetas": [
-  {
-   "id": "Q2-HEM-0001",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Hematuria glomerular</span>¿Qué indica que los hematíes del sedimento salgan dismórficos?",
-   "respuesta": "Que los hematíes salieron del capilar al espacio urinario a través de una <span class=\"mec\">barrera de filtración glomerular dañada</span>.",
-   "razonamiento": "La hematuria glomerular es un marcador de disfunción o daño de la barrera de filtración.<br>El sedimento orienta el origen antes de pedir imágenes.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Yuste 2015, World J Nephrol (PMID 25949932)",
-   "tags": [
-    "Quirurgica2::Hematuria::Localizacion",
-    "Nivel::Aplicacion",
-    "Fuente::Yuste2015",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0002",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Hematuria con coágulos</span>¿Qué origen orienta?",
-   "respuesta": "Un sangrado <span class=\"dx\">no glomerular</span>, de la vía urinaria.",
-   "razonamiento": "Los coágulos son característicos del sangrado no glomerular.<br>Es un dato de la historia que orienta el origen; el sedimento lo contrasta.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "AMBOSS, Hematuria (base de conocimiento en línea)",
-   "tags": [
-    "Quirurgica2::Hematuria::Localizacion",
-    "Nivel::Aplicacion",
-    "Fuente::AMBOSS",
-    "Clase::Aplicacion",
-    "Bloom::Comprender",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0003",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Hematuria</span>Glomerular vs. no glomerular: ¿qué cambia en el siguiente paso?",
-   "respuesta": "<span class=\"dx\">Glomerular</span>: evaluación renal y seguimiento. <span class=\"dx\">No glomerular</span> con factores de riesgo: cistoscopia, citología y uro-TC según indicación.",
-   "razonamiento": "<span class=\"vs\">Contraste</span> el hematíe dismórfico orienta al glomérulo; los coágulos, a la vía excretora.<br>El paciente con hematuria glomerular aislada tiene riesgo elevado de enfermedad renal y requiere seguimiento.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Rasgo</th><th>Glomerular</th><th>No glomerular</th></tr></thead><tbody><tr><th>Hematíes</th><td>Dismórficos</td><td>Isomorfos</td></tr><tr><th>Coágulos</th><td>No típicos</td><td>Característicos</td></tr><tr><th>Siguiente paso</th><td>Función renal, seguimiento</td><td>Cistoscopia, imagen</td></tr></tbody></table>",
-   "fuente": "Bolenz 2018, Dtsch Arztebl Int (PMID 30642428)",
-   "tags": [
-    "Quirurgica2::Hematuria::Localizacion",
-    "Nivel::Aplicacion",
-    "Fuente::Bolenz2018",
-    "Clase::Contraste",
-    "Bloom::Analizar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0004",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Hematuria</span>¿Qué localiza el momento del chorro en que aparece la sangre?",
-   "respuesta": "Inicial: uretra; terminal: cuello vesical, próstata o trígono; total: vejiga, uréter o riñón.",
-   "razonamiento": "Es una heurística clínica: orienta, no sustituye al sedimento ni a la imagen.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Momento</th><th>Origen</th></tr></thead><tbody><tr><th>Inicial</th><td>Uretra</td></tr><tr><th>Terminal</th><td>Cuello, próstata, trígono</td></tr><tr><th>Total</th><td>Vejiga, uréter, riñón</td></tr></tbody></table>",
-   "fuente": "AMBOSS, Hematuria (base de conocimiento en línea)",
-   "tags": [
-    "Quirurgica2::Hematuria::Localizacion",
-    "Nivel::Aplicacion",
-    "Fuente::AMBOSS",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0005",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Microhematuria</span>¿Por qué una tira reactiva positiva no basta para iniciar el estudio?",
-   "respuesta": "Porque la microhematuria se define por <span class=\"num\">≥ 3 hematíes por campo de alto poder</span> en el examen microscópico.",
-   "razonamiento": "La confirmación microscópica del sedimento precede al estudio de causas.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Barocas 2020, J Urol (PMID 32698717); Bolenz 2018, Dtsch Arztebl Int (PMID 30642428)",
-   "tags": [
-    "Quirurgica2::Hematuria::Localizacion",
-    "Nivel::Aplicacion",
-    "Fuente::AUA2020",
-    "Clase::Aplicacion",
-    "Bloom::Comprender",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0006",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Trauma uretral</span>¿Por qué la sangre en el meato no se maneja como una hematuria?",
-   "respuesta": "Es sangre por lesión uretral, el signo más importante de trauma de uretra; el sondaje a ciegas puede convertir una rotura parcial en completa.",
-   "razonamiento": "En el varón con sospecha se hace <span class=\"dx\">uretrografía retrógrada</span> antes de cualquier sondaje.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "EAU Guidelines on Urological Trauma (uroweb.org); MSD Manual Professional, Urethral Trauma",
-   "tags": [
-    "Quirurgica2::Hematuria::Localizacion",
-    "Nivel::Aplicacion",
-    "Fuente::EAUTrauma",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0007",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Hematuria con infección urinaria</span>¿Qué haces antes de indicar cistoscopia?",
-   "respuesta": "Tratas la infección y repites el examen de orina; si la hematuria persiste, continúas el estudio.",
-   "razonamiento": "La guía indica repetir el uroanálisis tras resolverse una causa ginecológica o genitourinaria no maligna.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Barocas 2020, J Urol (PMID 32698717)",
-   "tags": [
-    "Quirurgica2::Hematuria::Riesgo",
-    "Nivel::Aplicacion",
-    "Fuente::AUA2020",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0008",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Microhematuria en el adulto</span>¿Qué variables definen el riesgo de cáncer urológico y qué decide?",
-   "respuesta": "Edad, sexo masculino y tabaquismo, más el número de hematíes, su persistencia y la hematuria macroscópica previa: definen riesgo bajo, intermedio o alto.",
-   "razonamiento": "La categoría de riesgo decide si se indican cistoscopia e imagen del tracto superior y con qué intensidad, con decisión compartida.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Barocas 2025, J Urol (PMID 40013563); Bolenz 2018, Dtsch Arztebl Int (PMID 30642428)",
-   "tags": [
-    "Quirurgica2::Hematuria::Riesgo",
-    "Nivel::Aplicacion",
-    "Fuente::AUA2025",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0009",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Caso</span>Mujer de 48 años con hematuria macroscópica que cedió con antibióticos: ¿se cierra el estudio?",
-   "respuesta": "No: tras tratar la infección se repite el examen de orina y se estratifica el riesgo.",
-   "razonamiento": "El antecedente de hematuria macroscópica es uno de los factores que elevan la categoría de riesgo.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Barocas 2020, J Urol (PMID 32698717)",
-   "tags": [
-    "Quirurgica2::Hematuria::Riesgo",
-    "Nivel::Aplicacion",
-    "Fuente::AUA2020",
-    "Clase::Vineta",
-    "Bloom::Evaluar",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0010",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Citología urinaria</span>¿Por qué no se usa de rutina para decidir la cistoscopia?",
-   "respuesta": "Porque la guía <span class=\"dx\">AUA/SUFU 2025</span> desaconseja usar citología o marcadores urinarios de forma rutinaria con ese fin.",
-   "razonamiento": "Solo se ofrecen, tras asesorar, al riesgo intermedio que quiere evitar la cistoscopia y acepta no ver el urotelio, o en alto riesgo con cistoscopia equívoca.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Barocas 2025, J Urol (PMID 40013563)",
-   "tags": [
-    "Quirurgica2::Hematuria::Riesgo",
-    "Nivel::Aplicacion",
-    "Fuente::AUA2025",
-    "Clase::Aplicacion",
-    "Bloom::Evaluar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0011",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Microhematuria</span>Mujer de 35 años sin tabaco ni otros factores: ¿por qué el estudio es menos intensivo que en un varón fumador mayor?",
-   "respuesta": "Porque edad, sexo y ausencia de tabaco la ubican en riesgo bajo; el estudio se escala según el riesgo.",
-   "razonamiento": "La categoría (bajo, intermedio, alto) decide si se indican cistoscopia e imagen y con qué intensidad.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Barocas 2025, J Urol (PMID 40013563)",
-   "tags": [
-    "Quirurgica2::Hematuria::Riesgo",
-    "Nivel::Aplicacion",
-    "Fuente::AUA2025b",
-    "Clase::Aplicacion",
-    "Bloom::Analizar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0012",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Hematuria de alto riesgo</span>Con la cistoscopia normal, ¿qué falta en el estudio?",
-   "respuesta": "La imagen del tracto superior: <span class=\"dx\">uro-TC multifásica</span> en el alto riesgo.",
-   "razonamiento": "El estudio combina cistoscopia e imagen del tracto superior según el riesgo.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Barocas 2025, J Urol (PMID 40013563); AAFP 2026, Microhematuria: Updated Guidelines From the AUA",
-   "tags": [
-    "Quirurgica2::Hematuria::Riesgo",
-    "Nivel::Aplicacion",
-    "Fuente::AAFP2026",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0013",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Caso</span>Varón de 65 años, fumador, con hematuria macroscópica total, indolora y con coágulos: ¿qué origen y qué estudio?",
-   "respuesta": "Origen no glomerular y riesgo alto: cistoscopia más imagen del tracto superior (uro-TC).",
-   "razonamiento": "Los coágulos orientan a sangrado no glomerular; la edad, el sexo masculino y el tabaco elevan el riesgo de cáncer urológico.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Barocas 2025, J Urol (PMID 40013563); Bolenz 2018, Dtsch Arztebl Int (PMID 30642428); AMBOSS, Hematuria (base de conocimiento en línea)",
-   "tags": [
-    "Quirurgica2::Hematuria::Riesgo",
-    "Nivel::Aplicacion",
-    "Fuente::AUA2025c",
-    "Clase::Vineta",
-    "Bloom::Evaluar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0014",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Cálculo de ácido úrico</span>¿Qué se modifica de la orina para disolverlo?",
-   "respuesta": "Se alcaliniza por vía oral: <span class=\"num\">pH urinario > 7,0</span>.",
-   "razonamiento": "Es uno de los cálculos radiotransparentes; la disolución es una opción propia de esta composición.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "EAU Guidelines on Urolithiasis (uroweb.org, bolsillo 2026)",
-   "tags": [
-    "Quirurgica2::Hematuria::LitiasisComposicion",
-    "Nivel::Aplicacion",
-    "Fuente::EAUUro",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0015",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Cálculo de estruvita</span>¿Cuál es su origen y qué exige el tratamiento?",
-   "respuesta": "Una infección urinaria por microorganismos <span class=\"mec\">productores de ureasa</span>; exige extracción completa del cálculo más antibiótico.",
-   "razonamiento": "Se añaden acidificación urinaria (pH < 6,2) y diuresis de al menos 2 L al día.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Papatsoris 2025, Arch Ital Urol Androl (PMID 40583613)",
-   "tags": [
-    "Quirurgica2::Hematuria::LitiasisComposicion",
-    "Nivel::Aplicacion",
-    "Fuente::Papatsoris2025",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0016",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Caso</span>Mujer de 48 años con infecciones urinarias recurrentes y un cálculo en la imagen: ¿qué sospechas y qué conducta?",
-   "respuesta": "<span class=\"dx\">Estruvita</span>: extracción completa del cálculo más antibiótico.",
-   "razonamiento": "Es un cálculo infeccioso por gérmenes ureasa positivos; el análisis del cálculo confirma la composición.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Papatsoris 2025, Arch Ital Urol Androl (PMID 40583613)",
-   "tags": [
-    "Quirurgica2::Hematuria::LitiasisComposicion",
-    "Nivel::Aplicacion",
-    "Fuente::Papatsoris2025b",
-    "Clase::Vineta",
-    "Bloom::Evaluar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0017",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Litiasis cálcica con hipercalciuria</span>En varones con cálculos de oxalato cálcico, ¿por qué no se prefiere una dieta baja en calcio?",
-   "respuesta": "Porque una dieta con calcio normal y baja en proteína animal y sal protegió más contra las recaídas que la dieta baja en calcio.",
-   "razonamiento": "En ese ensayo la dieta baja en calcio aumentó la excreción urinaria de oxalato.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Borghi 2002, N Engl J Med (PMID 11784873)",
-   "tags": [
-    "Quirurgica2::Hematuria::LitiasisComposicion",
-    "Nivel::Aplicacion",
-    "Fuente::Borghi2002",
-    "Clase::Aplicacion",
-    "Bloom::Analizar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0018",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">Cálculo de ácido úrico</span>En la radiografía simple es {{c1::<span class=\"dx\">radiotransparente</span>}}.",
-   "extra": "La guía EAU lo incluye entre los cálculos radiotransparentes.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "EAU Guidelines on Urolithiasis (uroweb.org, bolsillo 2026)",
-   "tags": [
-    "Quirurgica2::Hematuria::LitiasisDx",
-    "Nivel::Recuerdo",
-    "Fuente::EAUUro2",
-    "Clase::Irreducible",
-    "Bloom::Recordar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0019",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Sospecha de cálculo ureteral</span>¿Qué imagen pides primero y cuándo pasas a TC?",
-   "respuesta": "<span class=\"dx\">Ecografía</span> inicial; TC de baja dosis sin contraste cuando la ecografía no basta.",
-   "razonamiento": "En urgencias, la ecografía inicial no varió los desenlaces de alto riesgo frente a la TC y redujo la radiación acumulada.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Smith-Bindman 2014, N Engl J Med (PMID 25229916); EAU Guidelines on Urolithiasis (uroweb.org, bolsillo 2026)",
-   "tags": [
-    "Quirurgica2::Hematuria::LitiasisDx",
-    "Nivel::Aplicacion",
-    "Fuente::SmithBindman2014",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0020",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Cólico renal</span>Con examen de orina sin hematuria, ¿se descarta un cálculo?",
-   "respuesta": "No: en una proporción significativa de ureterolitiasis no hay hematuria.",
-   "razonamiento": "La sensibilidad de las pruebas de hematuria varió con los días desde el inicio del dolor.<br>Con tira negativa se consideran también diagnósticos alternativos.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Kobayashi 2003, J Urol (PMID 14501699); Ooi 1998, Ann Acad Med Singap (PMID 9663312)",
-   "tags": [
-    "Quirurgica2::Hematuria::LitiasisDx",
-    "Nivel::Aplicacion",
-    "Fuente::Kobayashi2003",
-    "Clase::Aplicacion",
-    "Bloom::Analizar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0021",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Cólico renal</span>¿Qué analgésico recomienda con fuerza la guía EAU?",
-   "respuesta": "Los <span class=\"fx\">AINE</span>, superiores a los opioides.",
-   "razonamiento": "Son muy eficaces en el cólico renal.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "EAU Guidelines on Urolithiasis (uroweb.org, bolsillo 2026)",
-   "tags": [
-    "Quirurgica2::Hematuria::LitiasisTx",
-    "Nivel::Aplicacion",
-    "Fuente::EAUUro3",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0022",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Obstrucción urinaria infectada</span>¿Por qué el antibiótico solo no basta?",
-   "respuesta": "Porque es una urgencia urológica que exige <span class=\"al\">descompresión urgente</span> (catéter doble J o nefrostomía) además del antibiótico inmediato.",
-   "razonamiento": "Tras drenar se recoge urocultivo para el antibiograma y el tratamiento definitivo del cálculo se difiere hasta controlar la infección.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "EAU Guidelines on Urolithiasis (uroweb.org, bolsillo 2026)",
-   "tags": [
-    "Quirurgica2::Hematuria::LitiasisTx",
-    "Nivel::Aplicacion",
-    "Fuente::EAUUro4",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0023",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Caso</span>Cólico renal con escalofríos: ¿qué cambia en tu conducta?",
-   "respuesta": "Se trata como obstrucción infectada: antibiótico inmediato, imagen y drenaje urgente con urología.",
-   "razonamiento": "Un riñón obstruido con signos de infección es una urgencia urológica.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "EAU Guidelines on Urolithiasis (uroweb.org, bolsillo 2026)",
-   "tags": [
-    "Quirurgica2::Hematuria::LitiasisTx",
-    "Nivel::Aplicacion",
-    "Fuente::EAUUro5",
-    "Clase::Vineta",
-    "Bloom::Evaluar",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0024",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Expulsión médica del cálculo</span>¿Qué advierte la guía EAU sobre los <span class=\"fx\">alfa-bloqueantes</span>?",
-   "respuesta": "Que su uso es fuera de ficha técnica y que la evidencia a favor es conflictiva.",
-   "razonamiento": "Pueden reducir los episodios de cólico, pero la evidencia no es concluyente.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "EAU Guidelines on Urolithiasis (uroweb.org, bolsillo 2026)",
-   "tags": [
-    "Quirurgica2::Hematuria::LitiasisTx",
-    "Nivel::Aplicacion",
-    "Fuente::EAUUro6",
-    "Clase::Aplicacion",
-    "Bloom::Evaluar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0025",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Hematuria glomerular</span>¿Qué prueba separa la glomerulonefritis postestreptocócica de la nefropatía IgA?",
-   "respuesta": "El complemento: <span class=\"num\">C3 bajo</span> en la postestreptocócica; normal en la nefropatía IgA.",
-   "razonamiento": "<span class=\"vs\">Contraste</span> el C3 bajo de la postestreptocócica es transitorio; si persiste bajo, orienta a un proceso crónico.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Welch 2012, Int J Pediatr (PMC3228372)",
-   "tags": [
-    "Quirurgica2::Hematuria::Glomerulonefritis",
-    "Nivel::Aplicacion",
-    "Fuente::Welch2012",
-    "Clase::Contraste",
-    "Bloom::Analizar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0026",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Hematuria glomerular aislada</span>¿Qué seguimiento requiere aunque no haya síntomas?",
-   "respuesta": "Controles periódicos <span class=\"num\">cada 6 meses</span>, por su riesgo elevado de enfermedad renal.",
-   "razonamiento": "Un cambio en la función o la proteinuria obliga a derivar a nefrología.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Bolenz 2018, Dtsch Arztebl Int (PMID 30642428)",
-   "tags": [
-    "Quirurgica2::Hematuria::Glomerulonefritis",
-    "Nivel::Aplicacion",
-    "Fuente::Bolenz2018b",
-    "Clase::Aplicacion",
-    "Bloom::Comprender"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0027",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Glomerulonefritis con deterioro rápido de la función renal</span>¿Qué sospechas y qué muestra la biopsia?",
-   "respuesta": "<span class=\"dx\">Glomerulonefritis rápidamente progresiva</span>: caída de la función en semanas a meses, con <span class=\"mec\">semilunas</span> extensas.",
-   "razonamiento": "El diagnóstico y tratamiento precoces previenen la enfermedad renal terminal: <span class=\"fx\">glucocorticoides</span> con ciclofosfamida o rituximab, y plasmaféresis en anti-MBG y casos seleccionados de vasculitis ANCA.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Koirala 2024, Adv Kidney Dis Health (PMID 39577882)",
-   "tags": [
-    "Quirurgica2::Hematuria::Glomerulonefritis",
-    "Nivel::Aplicacion",
-    "Fuente::Koirala2024",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0028",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Carcinoma renal de células claras</span>¿Por qué se usan inhibidores de VEGF?",
-   "respuesta": "Porque la inactivación de <span class=\"mec\">VHL</span> activa la vía HIF-VEGF que impulsa el tumor.",
-   "razonamiento": "La inactivación de VHL causa el carcinoma de células claras; varios inhibidores de VEGF están aprobados para tratarlo.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Choueiri 2020, Nat Med (PMID 33020645)",
-   "tags": [
-    "Quirurgica2::Hematuria::CarcinomaRenal",
-    "Nivel::Aplicacion",
-    "Fuente::Choueiri2020",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0029",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Varicocele izquierdo de aparición aguda</span>En el adulto, ¿qué debes descartar?",
-   "respuesta": "<span class=\"dx\">Carcinoma renal</span>: el varicocele es una forma de presentación descrita.",
-   "razonamiento": "Suele deberse a un trombo tumoral que avanza por la vena renal y ocluye la vena testicular.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Al-Taan 2007, Int Urol Nephrol (PMID 16835726)",
-   "tags": [
-    "Quirurgica2::Hematuria::CarcinomaRenal",
-    "Nivel::Aplicacion",
-    "Fuente::AlTaan2007",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0030",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Carcinoma vesical</span>¿Cómo daña el tabaco al urotelio vesical?",
-   "respuesta": "Sus carcinógenos, como las <span class=\"mec\">aminas aromáticas</span>, forman aductos de ADN en el urotelio de los fumadores.",
-   "razonamiento": "Las aminas aromáticas del humo son carcinógenos que reaccionan con el ADN.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Malaveille 1996, Carcinogenesis (PMID 8895488); Dodmane 2014, Toxicology (PMID 24269753)",
-   "tags": [
-    "Quirurgica2::Hematuria::CarcinomaVesical",
-    "Nivel::Aplicacion",
-    "Fuente::Malaveille1996",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0031",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Tumor vesical T1</span>La resección transuretral no incluyó músculo detrusor: ¿qué indica la guía EAU?",
-   "respuesta": "Repetir la resección (<span class=\"dx\">re-RTU</span>).",
-   "razonamiento": "También se repite si la resección inicial fue macroscópicamente incompleta.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Contieri 2022, Front Oncol (PMID 35664755)",
-   "tags": [
-    "Quirurgica2::Hematuria::CarcinomaVesical",
-    "Nivel::Aplicacion",
-    "Fuente::Contieri2022",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0032",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Carcinoma vesical</span>¿Qué cambia en el manejo si el tumor invade el detrusor?",
-   "respuesta": "Se indica <span class=\"dx\">cistectomía radical</span>, con quimioterapia neoadyuvante con <span class=\"fx\">cisplatino</span> si es elegible.",
-   "razonamiento": "El no músculo-invasivo se maneja con resección transuretral y, en T1, BCG tras la resección.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "EAU Guidelines on Muscle-invasive and Metastatic Bladder Cancer (uroweb.org); Contieri 2022, Front Oncol (PMID 35664755)",
-   "tags": [
-    "Quirurgica2::Hematuria::CarcinomaVesical",
-    "Nivel::Aplicacion",
-    "Fuente::EAUMIBC",
-    "Clase::Aplicacion",
-    "Bloom::Evaluar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0033",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Ciclofosfamida e ifosfamida</span>¿Cómo causan cistitis hemorrágica y qué papel tiene la mesna?",
-   "respuesta": "Su metabolito <span class=\"mec\">acroleína</span> lesiona la vejiga; la <span class=\"fx\">mesna</span> es el uroprotector que la neutraliza.",
-   "razonamiento": "La mesna se usa como protección frente a esta complicación.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Matz 2017, Urology (PMID 27566144)",
-   "tags": [
-    "Quirurgica2::Hematuria::OtrasCausas",
-    "Nivel::Aplicacion",
-    "Fuente::Matz2017",
-    "Clase::Aplicacion",
-    "Bloom::Comprender",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-HEM-0034",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Hematuria con piuria estéril</span>Con urocultivos negativos, ¿qué diagnóstico infeccioso no debes olvidar?",
-   "respuesta": "<span class=\"dx\">Tuberculosis urogenital</span>.",
-   "razonamiento": "Hematuria, piuria estéril e infecciones urinarias recurrentes son hallazgos sugestivos; sus síntomas aparecen tarde.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Figueiredo 2017, Microbiol Spectr (PMID 28087922)",
-   "tags": [
-    "Quirurgica2::Hematuria::OtrasCausas",
-    "Nivel::Aplicacion",
-    "Fuente::Figueiredo2017",
-    "Clase::Aplicacion",
-    "Bloom::Analizar",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  }
- ]
+  "tarjetas": [
+    {
+      "id": "Q2-HEM-0001",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Hematuria glomerular</span>¿Qué indica que los hematíes del sedimento salgan dismórficos?",
+      "respuesta": "Que los hematíes salieron del capilar al espacio urinario a través de una <span class=\"mec\">barrera de filtración glomerular dañada</span>.",
+      "razonamiento": "La hematuria glomerular es un marcador de disfunción o daño de la barrera de filtración.<br>El sedimento orienta el origen antes de pedir imágenes.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Yuste 2015, World J Nephrol (PMID 25949932)",
+      "tags": [
+        "Quirurgica2::Hematuria::Localizacion",
+        "Nivel::Aplicacion",
+        "Fuente::Yuste2015",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0003",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Hematuria</span>Glomerular vs. no glomerular: ¿qué cambia en el siguiente paso?",
+      "respuesta": "<span class=\"dx\">Glomerular</span>: evaluación renal y seguimiento. <span class=\"dx\">No glomerular</span> con factores de riesgo: cistoscopia, citología y uro-TC según indicación.",
+      "razonamiento": "<span class=\"vs\">Contraste</span> el hematíe dismórfico orienta al glomérulo; los coágulos, a la vía excretora.<br>El paciente con hematuria glomerular aislada tiene riesgo elevado de enfermedad renal y requiere seguimiento.",
+      "mnemotecnia": "",
+      "esquema": "<table><thead><tr><th>Rasgo</th><th>Glomerular</th><th>No glomerular</th></tr></thead><tbody><tr><th>Hematíes</th><td>Dismórficos</td><td>Isomorfos</td></tr><tr><th>Coágulos</th><td>No típicos</td><td>Característicos</td></tr><tr><th>Siguiente paso</th><td>Función renal, seguimiento</td><td>Cistoscopia, imagen</td></tr></tbody></table>",
+      "fuente": "Bolenz 2018, Dtsch Arztebl Int (PMID 30642428)",
+      "tags": [
+        "Quirurgica2::Hematuria::Localizacion",
+        "Nivel::Aplicacion",
+        "Fuente::Bolenz2018",
+        "Clase::Contraste",
+        "Bloom::Analizar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0005",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Microhematuria</span>¿Por qué una tira reactiva positiva no basta para iniciar el estudio?",
+      "respuesta": "Porque la microhematuria se define por <span class=\"num\">≥ 3 hematíes por campo de alto poder</span> en el examen microscópico.",
+      "razonamiento": "La confirmación microscópica del sedimento precede al estudio de causas.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Barocas 2020, J Urol (PMID 32698717); Bolenz 2018, Dtsch Arztebl Int (PMID 30642428)",
+      "tags": [
+        "Quirurgica2::Hematuria::Localizacion",
+        "Nivel::Aplicacion",
+        "Fuente::AUA2020",
+        "Clase::Aplicacion",
+        "Bloom::Comprender",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0007",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Hematuria con infección urinaria</span>¿Qué haces antes de indicar cistoscopia?",
+      "respuesta": "Tratas la infección y repites el examen de orina; si la hematuria persiste, continúas el estudio.",
+      "razonamiento": "La guía indica repetir el uroanálisis tras resolverse una causa ginecológica o genitourinaria no maligna.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Barocas 2020, J Urol (PMID 32698717)",
+      "tags": [
+        "Quirurgica2::Hematuria::Riesgo",
+        "Nivel::Aplicacion",
+        "Fuente::AUA2020",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0008",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Microhematuria en el adulto</span>¿Qué variables definen el riesgo de cáncer urológico y qué decide?",
+      "respuesta": "Edad, sexo masculino y tabaquismo, más el número de hematíes, su persistencia y la hematuria macroscópica previa: definen riesgo bajo, intermedio o alto.",
+      "razonamiento": "La categoría de riesgo decide si se indican cistoscopia e imagen del tracto superior y con qué intensidad, con decisión compartida.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Barocas 2020, J Urol (PMID 32698717); Barocas 2025, J Urol (PMID 40013563); Bolenz 2018, Dtsch Arztebl Int (PMID 30642428)",
+      "tags": [
+        "Quirurgica2::Hematuria::Riesgo",
+        "Nivel::Aplicacion",
+        "Fuente::AUA2025",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0009",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Caso</span>Mujer de 48 años con hematuria macroscópica que cedió con antibióticos: ¿se cierra el estudio?",
+      "respuesta": "No: tras tratar la infección se repite el examen de orina y se estratifica el riesgo.",
+      "razonamiento": "El antecedente de hematuria macroscópica es uno de los factores que elevan la categoría de riesgo.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Barocas 2020, J Urol (PMID 32698717)",
+      "tags": [
+        "Quirurgica2::Hematuria::Riesgo",
+        "Nivel::Aplicacion",
+        "Fuente::AUA2020",
+        "Clase::Vineta",
+        "Bloom::Evaluar",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0010",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Citología urinaria</span>¿Por qué no se usa de rutina para decidir la cistoscopia?",
+      "respuesta": "Porque la guía <span class=\"dx\">AUA/SUFU 2025</span> desaconseja usar citología o marcadores urinarios de forma rutinaria con ese fin.",
+      "razonamiento": "Solo se ofrecen, tras asesorar, al riesgo intermedio que quiere evitar la cistoscopia y acepta no ver el urotelio, o en alto riesgo con cistoscopia equívoca.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Barocas 2025, J Urol (PMID 40013563)",
+      "tags": [
+        "Quirurgica2::Hematuria::Riesgo",
+        "Nivel::Aplicacion",
+        "Fuente::AUA2025",
+        "Clase::Aplicacion",
+        "Bloom::Evaluar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0011",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Microhematuria</span>Mujer de 35 años sin tabaco ni otros factores: ¿por qué el estudio es menos intensivo que en un varón fumador mayor?",
+      "respuesta": "Porque la edad, el sexo y el tabaquismo entran en la estratificación de riesgo; el estudio se escala según la categoría.",
+      "razonamiento": "La categoría (bajo, intermedio, alto) decide si se indican cistoscopia e imagen y con qué intensidad.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Barocas 2020, J Urol (PMID 32698717); Barocas 2025, J Urol (PMID 40013563)",
+      "tags": [
+        "Quirurgica2::Hematuria::Riesgo",
+        "Nivel::Aplicacion",
+        "Fuente::AUA2025b",
+        "Clase::Aplicacion",
+        "Bloom::Analizar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0012",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Hematuria de alto riesgo</span>Con la cistoscopia normal, ¿qué falta en el estudio?",
+      "respuesta": "La imagen del tracto superior, según el riesgo.",
+      "razonamiento": "El estudio combina cistoscopia e imagen del tracto superior según el riesgo.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Barocas 2020, J Urol (PMID 32698717); Bolenz 2018, Dtsch Arztebl Int (PMID 30642428)",
+      "tags": [
+        "Quirurgica2::Hematuria::Riesgo",
+        "Nivel::Aplicacion",
+        "Fuente::AAFP2026",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0013",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Caso</span>Varón de 65 años, fumador, con hematuria macroscópica total, indolora y con coágulos: ¿qué origen y qué estudio?",
+      "respuesta": "Origen no glomerular y riesgo alto: cistoscopia más imagen del tracto superior (uro-TC).",
+      "razonamiento": "La edad, el sexo masculino y el tabaco elevan el riesgo de cáncer urológico.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Barocas 2020, J Urol (PMID 32698717); Bolenz 2018, Dtsch Arztebl Int (PMID 30642428)",
+      "tags": [
+        "Quirurgica2::Hematuria::Riesgo",
+        "Nivel::Aplicacion",
+        "Fuente::AUA2025c",
+        "Clase::Vineta",
+        "Bloom::Evaluar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0015",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Cálculo de estruvita</span>¿Cuál es su origen y qué exige el tratamiento?",
+      "respuesta": "Una infección urinaria por microorganismos <span class=\"mec\">productores de ureasa</span>; exige extracción completa del cálculo más antibiótico.",
+      "razonamiento": "Se añaden acidificación urinaria (pH < 6,2) y diuresis de al menos 2 L al día.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Papatsoris 2025, Arch Ital Urol Androl (PMID 40583613)",
+      "tags": [
+        "Quirurgica2::Hematuria::LitiasisComposicion",
+        "Nivel::Aplicacion",
+        "Fuente::Papatsoris2025",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0016",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Caso</span>Mujer de 48 años con infecciones urinarias recurrentes y un cálculo en la imagen: ¿qué sospechas y qué conducta?",
+      "respuesta": "<span class=\"dx\">Estruvita</span>: extracción completa del cálculo más antibiótico.",
+      "razonamiento": "Es un cálculo infeccioso por gérmenes ureasa positivos; el análisis del cálculo confirma la composición.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Papatsoris 2025, Arch Ital Urol Androl (PMID 40583613)",
+      "tags": [
+        "Quirurgica2::Hematuria::LitiasisComposicion",
+        "Nivel::Aplicacion",
+        "Fuente::Papatsoris2025b",
+        "Clase::Vineta",
+        "Bloom::Evaluar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0017",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Litiasis cálcica con hipercalciuria</span>En varones con cálculos de oxalato cálcico, ¿por qué no se prefiere una dieta baja en calcio?",
+      "respuesta": "Porque una dieta con calcio normal y baja en proteína animal y sal protegió más contra las recaídas que la dieta baja en calcio.",
+      "razonamiento": "En ese ensayo la dieta baja en calcio aumentó la excreción urinaria de oxalato.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Borghi 2002, N Engl J Med (PMID 11784873)",
+      "tags": [
+        "Quirurgica2::Hematuria::LitiasisComposicion",
+        "Nivel::Aplicacion",
+        "Fuente::Borghi2002",
+        "Clase::Aplicacion",
+        "Bloom::Analizar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0019",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Sospecha de cálculo ureteral</span>¿Qué imagen inicial permite reducir la radiación sin empeorar los desenlaces?",
+      "respuesta": "La ecografía inicial: frente a la TC no varió los desenlaces de alto riesgo y redujo la radiación acumulada.",
+      "razonamiento": "Fue un ensayo aleatorizado en urgencias.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Smith-Bindman 2014, N Engl J Med (PMID 25229916)",
+      "tags": [
+        "Quirurgica2::Hematuria::LitiasisDx",
+        "Nivel::Aplicacion",
+        "Fuente::SmithBindman2014",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0020",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Cólico renal</span>Con examen de orina sin hematuria, ¿se descarta un cálculo?",
+      "respuesta": "No: en una proporción significativa de ureterolitiasis no hay hematuria.",
+      "razonamiento": "La sensibilidad de las pruebas de hematuria varió con los días desde el inicio del dolor.<br>Con tira negativa se consideran también diagnósticos alternativos.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Kobayashi 2003, J Urol (PMID 14501699); Ooi 1998, Ann Acad Med Singap (PMID 9663312)",
+      "tags": [
+        "Quirurgica2::Hematuria::LitiasisDx",
+        "Nivel::Aplicacion",
+        "Fuente::Kobayashi2003",
+        "Clase::Aplicacion",
+        "Bloom::Analizar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0021",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Cólico renal</span>¿Qué analgésico se prefiere y qué ventaja tiene sobre los opioides?",
+      "respuesta": "Los AINE: igual alivio a los 30 minutos, con menos vómitos y menos analgesia de rescate que los opioides.",
+      "razonamiento": "Es una revisión sistemática de 36 ensayos aleatorizados.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Pathan 2018, Eur Urol (PMID 29174580)",
+      "tags": [
+        "Quirurgica2::Hematuria::LitiasisTx",
+        "Nivel::Aplicacion",
+        "Fuente::EAUUro3",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0026",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Hematuria glomerular aislada</span>¿Qué seguimiento requiere aunque no haya síntomas?",
+      "respuesta": "Controles periódicos <span class=\"num\">cada 6 meses</span>, por su riesgo elevado de enfermedad renal.",
+      "razonamiento": "Un cambio en la función o la proteinuria obliga a derivar a nefrología.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Bolenz 2018, Dtsch Arztebl Int (PMID 30642428)",
+      "tags": [
+        "Quirurgica2::Hematuria::Glomerulonefritis",
+        "Nivel::Aplicacion",
+        "Fuente::Bolenz2018b",
+        "Clase::Aplicacion",
+        "Bloom::Comprender"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0027",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Glomerulonefritis con deterioro rápido de la función renal</span>¿Qué sospechas y qué muestra la biopsia?",
+      "respuesta": "<span class=\"dx\">Glomerulonefritis rápidamente progresiva</span>: caída de la función en semanas a meses, con <span class=\"mec\">semilunas</span> extensas.",
+      "razonamiento": "El diagnóstico y tratamiento precoces previenen la enfermedad renal terminal: <span class=\"fx\">glucocorticoides</span> con ciclofosfamida o rituximab, y plasmaféresis en anti-MBG y casos seleccionados de vasculitis ANCA.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Koirala 2024, Adv Kidney Dis Health (PMID 39577882)",
+      "tags": [
+        "Quirurgica2::Hematuria::Glomerulonefritis",
+        "Nivel::Aplicacion",
+        "Fuente::Koirala2024",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0028",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Carcinoma renal de células claras</span>¿Por qué se usan inhibidores de VEGF?",
+      "respuesta": "Porque la inactivación de <span class=\"mec\">VHL</span> activa la vía HIF-VEGF que impulsa el tumor.",
+      "razonamiento": "La inactivación de VHL causa el carcinoma de células claras; varios inhibidores de VEGF están aprobados para tratarlo.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Choueiri 2020, Nat Med (PMID 33020645)",
+      "tags": [
+        "Quirurgica2::Hematuria::CarcinomaRenal",
+        "Nivel::Aplicacion",
+        "Fuente::Choueiri2020",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0029",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Varicocele izquierdo de aparición aguda</span>En el adulto, ¿qué debes descartar?",
+      "respuesta": "<span class=\"dx\">Carcinoma renal</span>: el varicocele es una forma de presentación descrita.",
+      "razonamiento": "Suele deberse a un trombo tumoral que avanza por la vena renal y ocluye la vena testicular.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Al-Taan 2007, Int Urol Nephrol (PMID 16835726)",
+      "tags": [
+        "Quirurgica2::Hematuria::CarcinomaRenal",
+        "Nivel::Aplicacion",
+        "Fuente::AlTaan2007",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0030",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Carcinoma vesical</span>¿Cómo daña el tabaco al urotelio vesical?",
+      "respuesta": "Sus carcinógenos, como las <span class=\"mec\">aminas aromáticas</span>, forman aductos de ADN en el urotelio de los fumadores.",
+      "razonamiento": "Las aminas aromáticas del humo son carcinógenos que reaccionan con el ADN.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Malaveille 1996, Carcinogenesis (PMID 8895488); Dodmane 2014, Toxicology (PMID 24269753)",
+      "tags": [
+        "Quirurgica2::Hematuria::CarcinomaVesical",
+        "Nivel::Aplicacion",
+        "Fuente::Malaveille1996",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0031",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Tumor vesical T1</span>La resección transuretral no incluyó músculo detrusor: ¿qué indica la guía EAU?",
+      "respuesta": "Repetir la resección (<span class=\"dx\">re-RTU</span>).",
+      "razonamiento": "También se repite si la resección inicial fue macroscópicamente incompleta.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Contieri 2022, Front Oncol (PMID 35664755)",
+      "tags": [
+        "Quirurgica2::Hematuria::CarcinomaVesical",
+        "Nivel::Aplicacion",
+        "Fuente::Contieri2022",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0033",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Ciclofosfamida e ifosfamida</span>¿Cómo causan cistitis hemorrágica y qué papel tiene la mesna?",
+      "respuesta": "Su metabolito <span class=\"mec\">acroleína</span> lesiona la vejiga; la <span class=\"fx\">mesna</span> es el uroprotector que la neutraliza.",
+      "razonamiento": "La mesna se usa como protección frente a esta complicación.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Matz 2017, Urology (PMID 27566144)",
+      "tags": [
+        "Quirurgica2::Hematuria::OtrasCausas",
+        "Nivel::Aplicacion",
+        "Fuente::Matz2017",
+        "Clase::Aplicacion",
+        "Bloom::Comprender",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-HEM-0034",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Hematuria con piuria estéril</span>Con urocultivos negativos, ¿qué diagnóstico infeccioso no debes olvidar?",
+      "respuesta": "<span class=\"dx\">Tuberculosis urogenital</span>.",
+      "razonamiento": "Hematuria, piuria estéril e infecciones urinarias recurrentes son hallazgos sugestivos; sus síntomas aparecen tarde.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Figueiredo 2017, Microbiol Spectr (PMID 28087922)",
+      "tags": [
+        "Quirurgica2::Hematuria::OtrasCausas",
+        "Nivel::Aplicacion",
+        "Fuente::Figueiredo2017",
+        "Clase::Aplicacion",
+        "Bloom::Analizar",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    }
+  ]
 }
