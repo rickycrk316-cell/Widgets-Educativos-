@@ -11,8 +11,8 @@
   "justificacion_exceso": "",
   "mir_verificados": [],
   "verificacion": {
-   "total": 108,
-   "verificados": 88,
+   "total": 112,
+   "verificados": 81,
    "eliminados": [
     {
      "id": "Q2-OJO-0011",
@@ -113,6 +113,61 @@
      "id": "Q2-OJO-0043",
      "dato": "Esquema de supresión cortical como mecanismo común de la ambliopía",
      "motivo": "no confirmado en las fuentes leídas: reformulado como trastorno del desarrollo en el periodo crítico"
+    },
+    {
+     "id": "Q2-OJO-0015",
+     "dato": "Tratamiento tópico poco eficaz en la nasofaringe y neumonía por el mismo agente",
+     "motivo": "solo fuentes secundarias en resúmenes de búsqueda: eliminado; tarjeta reformulada sobre macrólido oral y estenosis pilórica (Zikic 2018, Eberly 2015)"
+    },
+    {
+     "id": "Q2-OJO-0015",
+     "dato": "La OMS prefiere azitromicina y el CDC lista eritromicina como régimen principal",
+     "motivo": "no confirmado en fuente primaria accesible: eliminado"
+    },
+    {
+     "id": "Q2-OJO-0015",
+     "dato": "Considerar el tratamiento de los padres",
+     "motivo": "no confirmado: eliminado"
+    },
+    {
+     "id": "Q2-OJO-0031",
+     "dato": "Pupila media del glaucoma agudo por isquemia del esfínter del iris",
+     "motivo": "inferencia no confirmada en fuente primaria: eliminada; se conserva el hallazgo pupilar"
+    },
+    {
+     "id": "Q2-OJO-0039",
+     "dato": "Isquemia del esfínter como razón de la secuencia con pilocarpina",
+     "motivo": "inferencia del ejecutor: eliminada; la tarjeta se reformuló sobre la secuencia acetazolamida/timolol y luego pilocarpina (Airaksinen 1979)"
+    },
+    {
+     "id": "Q2-OJO-0041",
+     "dato": "Viñeta «tras una función de cine» como desencadenante",
+     "motivo": "no verificada: eliminada"
+    },
+    {
+     "id": "Q2-OJO-0042",
+     "dato": "Iridotomía también en el ojo contralateral",
+     "motivo": "no confirmado en Wright 2016: eliminado"
+    },
+    {
+     "id": "Q2-OJO-0008",
+     "dato": "Repetir con estenopeico cuando la AV es 20/40 o peor",
+     "motivo": "umbral no hallado en EyeWiki: eliminado"
+    },
+    {
+     "id": "Q2-OJO-0021",
+     "dato": "Los síntomas de blefaritis recurren al suspender la higiene palpebral",
+     "motivo": "no confirmado en Lindsley 2012: eliminado"
+    },
+    {
+     "id": "Q2-OJO-0044",
+     "dato": "Reflejo rojo en todo recién nacido",
+     "motivo": "no confirmado en las fuentes leídas: eliminado"
+    },
+    {
+     "id": "Q2-OJO-0045",
+     "dato": "Malestar, burlas y estigma por el parche; atropina de eficacia similar en ambliopía moderada con menor impacto psicosocial",
+     "motivo": "no confirmado en Papageorgiou 2019: eliminado; tarjeta reformulada sobre adherencia"
     }
    ]
   },
@@ -196,7 +251,6 @@
     "Chalazion. StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/books/NBK499889/ [citado 2026 nov 26]",
     "Hordeolum (Stye). StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/sites/books/NBK459349/ [citado 2026 nov 26]",
     "Bacterial Conjunctivitis. StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/sites/books/NBK546683/ [citado 2026 nov 26]",
-    "Ophthalmia Neonatorum (Neonatal Conjunctivitis). StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/sites/books/NBK551572/ [citado 2026 nov 26]",
     "Conjunctivitis Overview. StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/sites/books/NBK541034/ [citado 2026 nov 26]",
     "Cavernous Sinus Thrombosis. StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/books/NBK448177/ [citado 2026 nov 26]",
     "Chorioretinitis. StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/books/NBK551705/ [citado 2026 nov 26]",
@@ -213,11 +267,11 @@
     "Blepharitis Preferred Practice Pattern. American Academy of Ophthalmology [Internet]. Disponible en: https://www.aao.org/preferred-practice-pattern/blepharitis-ppp--2013 [citado 2026 nov 26]",
     "Abnormalities Associated With a Closed Angle. American Academy of Ophthalmology [Internet]. Disponible en: https://www.aao.org/education/disease-review/abnormalities-associated-with-closed-angle [citado 2026 nov 26]",
     "Pediatric Cataracts: Overview. American Academy of Ophthalmology [Internet]. Disponible en: https://www.aao.org/education/disease-review/pediatric-cataracts-overview [citado 2026 nov 26]",
-    "Amblyopia Treatment Modalities. American Academy of Ophthalmology [Internet]. Disponible en: https://www.aao.org/education/disease-review/amblyopia-treatment-modalities [citado 2026 nov 26]",
     "Herpes Simplex Virus Keratitis: A Treatment Guideline. American Academy of Ophthalmology [Internet]. Disponible en: https://www.aao.org/assets/6564936e-9929-48b6-93cd-15872a1b388e/635732518522630000/hsv-keratitis-treatment-guideline-harvard-pdf [citado 2026 nov 26]",
     "Management of Uveitic Glaucoma. AAO EyeNet [Internet]. Disponible en: https://www.aao.org/eyenet/article/management-of-uveitic-glaucoma [citado 2026 nov 26]",
     "The Infection That Wouldn't Quit. AAO EyeNet [Internet]. Disponible en: https://www.aao.org/eyenet/article/infection-that-wouldn-t-quit [citado 2026 nov 26]",
-    "Chlamydial Infections. STI Treatment Guidelines. CDC [Internet]. Disponible en: https://www.cdc.gov/std/treatment-guidelines/chlamydia.htm [citado 2026 nov 26]"
+    "Zikic A, Schünemann H, Wi T, Lincetto O, Broutet N, Santesso N. Treatment of neonatal chlamydial conjunctivitis: a systematic review and meta-analysis. J Pediatric Infect Dis Soc. 2018;7(3):e107-15.",
+    "Airaksinen PJ, Saari KM, Tiainen TJ, Jaanio EA. Management of acute closed-angle glaucoma with miotics and timolol. Br J Ophthalmol. 1979;63(12):822-5."
    ]
   }
  },
@@ -373,7 +427,7 @@
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Prueba del agujero estenopeico</span>La agudeza visual disminuida mejora al mirar por él. ¿Qué implica?",
    "respuesta": "Que el déficit es refractivo; si no mejora, sugiere una causa orgánica.",
-   "razonamiento": "Se repite la AV con estenopeico cuando es de 20/40 o peor, también sobre las gafas.<br>Es una maniobra de consulta que evita atribuir a un ojo rojo una baja de AV que solo es refractiva.",
+   "razonamiento": "Se repite la AV con estenopeico cuando está reducida, también sobre las gafas.<br>Es una maniobra de consulta que evita atribuir a un ojo rojo una baja de AV que solo es refractiva.",
    "mnemotecnia": "",
    "esquema": "",
    "fuente": "AAO EyeWiki, On Call Ophthalmology",
@@ -512,12 +566,12 @@
   {
    "id": "Q2-OJO-0015",
    "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Conjuntivitis neonatal por Chlamydia trachomatis</span>¿Por qué se trata con antibiótico sistémico y no solo tópico?",
-   "respuesta": "Porque el tratamiento tópico es poco eficaz, sobre todo en la nasofaringe, y el mismo agente puede causar neumonía; se usa un <span class=\"fx\">macrólido</span> oral.",
-   "razonamiento": "La OMS prefiere azitromicina y el CDC lista la eritromicina como régimen principal: ambos macrólidos se asocian a estenosis hipertrófica del píloro, sobre todo en las primeras dos semanas de vida.<br>Se vigila al lactante y se considera el tratamiento de los padres.",
+   "pregunta": "<span class=\"tema\">Conjuntivitis neonatal por Chlamydia trachomatis</span>¿Qué tratamiento recibe y qué riesgo de seguridad plantea?",
+   "respuesta": "Se trata con un <span class=\"fx\">macrólido</span> oral (eritromicina o azitromicina); ambos se asocian a estenosis hipertrófica del píloro.",
+   "razonamiento": "El riesgo es mayor si la exposición ocurre en las primeras 2 semanas de vida y persiste hasta las 6 semanas.<br>La eritromicina por 14 días logra más curación que la azitromicina, con evidencia de certeza baja a muy baja; se vigila al lactante.",
    "mnemotecnia": "",
    "esquema": "",
-   "fuente": "Eberly 2015, Pediatrics (PMID 25687145); StatPearls, Ophthalmia Neonatorum (NBK551572); CDC, Chlamydial Infections",
+   "fuente": "Zikic 2018, J Pediatric Infect Dis Soc (PMID 30007329); Eberly 2015, Pediatrics (PMID 25687145)",
    "tags": [
     "Quirurgica2::OjoRojo::Conjuntivitis",
     "Nivel::Aplicacion",
@@ -635,7 +689,7 @@
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Blefaritis</span>¿Por qué su tratamiento se plantea como control y no como curación?",
    "respuesta": "Porque es una condición crónica multifactorial sin tratamiento curativo demostrado.",
-   "razonamiento": "Intervienen bacterias del borde palpebral, seborrea y disfunción de las glándulas de Meibomio.<br>La higiene palpebral alivia los síntomas, que recurren al suspenderla; explicarlo mejora la adherencia.",
+   "razonamiento": "Intervienen bacterias del borde palpebral, seborrea y disfunción de las glándulas de Meibomio.<br>La higiene palpebral puede aliviar los síntomas; explicar que se busca control y no curación mejora las expectativas.",
    "mnemotecnia": "",
    "esquema": "",
    "fuente": "Lindsley 2012, Cochrane Database Syst Rev (PMID 22592706); AAO, Blepharitis PPP",
@@ -832,8 +886,8 @@
   {
    "id": "Q2-OJO-0031",
    "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Uveítis anterior vs glaucoma agudo</span>¿Cómo discrimina la pupila y por qué?",
-   "respuesta": "<span class=\"dx\">Uveítis</span>: <span class=\"mec\">miosis</span>. <span class=\"dx\">Glaucoma agudo</span>: pupila media poco reactiva, por isquemia del esfínter del iris con PIO muy elevada.",
+   "pregunta": "<span class=\"tema\">Uveítis anterior vs glaucoma agudo</span>¿Cómo discrimina la pupila?",
+   "respuesta": "<span class=\"dx\">Uveítis</span>: <span class=\"mec\">miosis</span>. <span class=\"dx\">Glaucoma agudo</span>: pupila media poco reactiva, con PIO muy elevada.",
    "razonamiento": "Una pupila anormal en un ojo rojo es signo de alarma.<br>La tonometría y la valoración del ángulo diferencian el glaucoma de la uveítis.",
    "mnemotecnia": "",
    "esquema": "",
@@ -992,16 +1046,16 @@
   {
    "id": "Q2-OJO-0039",
    "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Glaucoma agudo</span>¿Por qué la pilocarpina se usa cuando la PIO ya empezó a bajar y no de inicio?",
-   "respuesta": "Porque con PIO muy elevada el esfínter del iris está isquémico y responde mal; primero se reduce la producción de acuoso y después se usa el <span class=\"fx\">miótico</span>.",
-   "razonamiento": "La pilocarpina busca romper el bloqueo pupilar al contraer la pupila.<br>Los fármacos reducen la PIO de forma temporal; el tratamiento definitivo es la iridotomía.",
+   "pregunta": "<span class=\"tema\">Glaucoma agudo</span>¿En qué orden se usan los fármacos y qué papel tiene la pilocarpina?",
+   "respuesta": "Primero se baja la PIO con <span class=\"fx\">acetazolamida</span> o <span class=\"fx\">timolol</span>; la <span class=\"fx\">pilocarpina</span> se añade después para terminar la crisis.",
+   "razonamiento": "El timolol solo no controló la PIO en la crisis, pero sí cuando se siguió de pilocarpina; una gota de pilocarpina tras acetazolamida o timolol pudo bastar.<br>Los fármacos reducen la PIO de forma temporal; el tratamiento definitivo es la iridotomía.",
    "mnemotecnia": "",
    "esquema": "",
-   "fuente": "StatPearls, Acute Angle-Closure Glaucoma (NBK430857); PubMed 526463, Management of acute closed-angle glaucoma with miotics and timolol",
+   "fuente": "Airaksinen 1979, Br J Ophthalmol (PMID 526463); Wright 2016, Acta Ophthalmol (PMID 26119516)",
    "tags": [
     "Quirurgica2::OjoRojo::GlaucomaAgudo",
     "Nivel::Aplicacion",
-    "Fuente::StatPearlsAAC",
+    "Fuente::Airaksinen1979",
     "Clase::Aplicacion",
     "Bloom::Analizar",
     "AltoRendimiento::MIR"
@@ -1033,7 +1087,7 @@
   {
    "id": "Q2-OJO-0041",
    "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Caso</span>Mujer de 68 años con cefalea intensa, náusea y vómito tras una función de cine; tiene ojo rojo, pupila media poco reactiva y córnea opaca. ¿Qué diagnóstico y qué conducta?",
+   "pregunta": "<span class=\"tema\">Caso</span>Mujer de 68 años con cefalea intensa, náusea y vómito de inicio brusco; tiene ojo rojo, pupila media poco reactiva y córnea opaca. ¿Qué diagnóstico y qué conducta?",
    "respuesta": "<span class=\"dx\">Glaucoma agudo por cierre angular</span>: se reduce la PIO (<span class=\"fx\">acetazolamida</span> y <span class=\"fx\">timolol</span>) y se refiere de urgencia para iridotomía láser.",
    "razonamiento": "La cefalea, la náusea y el vómito acompañan al glaucoma agudo, junto con halos, baja de AV, córnea edematosa y PIO muy alta.<br>La referencia urgente no se retrasa por el tratamiento médico.",
    "mnemotecnia": "",
@@ -1054,8 +1108,8 @@
   {
    "id": "Q2-OJO-0042",
    "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Glaucoma agudo</span>¿Por qué la iridotomía periférica es el tratamiento definitivo y por qué se plantea también en el ojo contralateral?",
-   "respuesta": "Porque crea una vía alternativa para el acuoso y alivia el bloqueo pupilar; el ojo contralateral comparte la anatomía de ángulo estrecho y su riesgo.",
+   "pregunta": "<span class=\"tema\">Glaucoma agudo</span>¿Por qué la iridotomía periférica es el tratamiento definitivo?",
+   "respuesta": "Porque crea una vía alternativa para el acuoso y alivia el bloqueo pupilar, que es el mecanismo de la crisis.",
    "razonamiento": "Se realiza con láser.<br>Los fármacos solo bajan la PIO de forma temporal, sin corregir el mecanismo.",
    "mnemotecnia": "",
    "esquema": "",
@@ -1098,7 +1152,7 @@
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Catarata congénita</span>Usa el principio del periodo crítico para explicar por qué su manejo es urgente.",
    "respuesta": "Porque la privación visual temprana produce una <span class=\"al\">ambliopía profunda</span>; el retraso de la cirugía empeora el resultado visual.",
-   "razonamiento": "Se recomienda operar en las primeras semanas de vida, y el reflejo rojo se evalúa en todo recién nacido.<br>La cirugía temprana tiene sus propios riesgos, como el glaucoma secundario.",
+   "razonamiento": "La cirugía debe hacerse pronto, en las primeras semanas de vida, para limitar la privación visual.<br>La cirugía muy temprana se ha asociado a glaucoma secundario.",
    "mnemotecnia": "",
    "esquema": "",
    "fuente": "AAO, Pediatric Cataracts Overview; Screening, Genetics, Risk Factors, and Treatment of Neonatal Cataracts (PMC9211061)",
@@ -1116,12 +1170,12 @@
   {
    "id": "Q2-OJO-0045",
    "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Ambliopía</span>¿Cómo se conecta la carga psicosocial del parche con el fracaso terapéutico?",
-   "respuesta": "El parche puede generar malestar, burlas y estigma, lo que dificulta la <span class=\"dx\">adherencia</span>; y la adherencia determina el resultado visual.",
-   "razonamiento": "Existe una relación dosis-respuesta entre la adherencia a la oclusión y la AV.<br>La atropina es una alternativa a la oclusión, con eficacia similar en la ambliopía moderada y menor impacto psicosocial.",
+   "pregunta": "<span class=\"tema\">Ambliopía</span>¿Cómo se conecta la adherencia al tratamiento con el resultado visual?",
+   "respuesta": "A mayor <span class=\"dx\">adherencia</span> a la oclusión, mejor agudeza visual (relación dosis-respuesta); el cumplimiento es la dificultad central del tratamiento.",
+   "razonamiento": "La oclusión y la atropina sobre el ojo dominante tienen evidencia significativa de eficacia.<br>Ambas enfrentan problemas de cumplimiento, por lo que explicar el porqué del tratamiento a la familia es parte del manejo.",
    "mnemotecnia": "",
    "esquema": "",
-   "fuente": "Papageorgiou 2019, Graefes Arch Clin Exp Ophthalmol (PMID 30706134); AAO, Amblyopia Treatment Modalities",
+   "fuente": "Papageorgiou 2019, Graefes Arch Clin Exp Ophthalmol (PMID 30706134)",
    "tags": [
     "Quirurgica2::OjoRojo::Ambliopia",
     "Nivel::Aplicacion",

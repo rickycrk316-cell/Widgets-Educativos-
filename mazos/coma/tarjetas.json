@@ -11,8 +11,8 @@
   "justificacion_exceso": "",
   "mir_verificados": [],
   "verificacion": {
-   "total": 62,
-   "verificados": 48,
+   "total": 69,
+   "verificados": 47,
    "eliminados": [
     {
      "id": "Q2-COMA-0001",
@@ -103,6 +103,26 @@
      "id": "Q2-COMA-0004",
      "dato": "Glucemia como paso previo a la neuroimagen en todo coma",
      "motivo": "no confirmado en Edlow 2014: se conserva estabilización primero"
+    },
+    {
+     "id": "Q2-COMA-0013",
+     "dato": "Umbral de PIC de 22 mmHg y 20 mmHg de la tercera edición",
+     "motivo": "no hallado en el texto de la guía: eliminado; el cloze conserva la PPC de 60 a 70 mmHg (nivel IIB)"
+    },
+    {
+     "id": "Q2-COMA-0027",
+     "dato": "ATLS y EAST asocian Glasgow 8 o menos a intubación",
+     "motivo": "no confirmado: eliminado; se conserva el estudio de Hatchimonji 2021"
+    },
+    {
+     "id": "Q2-COMA-0028",
+     "dato": "Corte leve 13 a 15 atribuido a NINDS",
+     "motivo": "no confirmado: corte reemplazado por 14 a 15 (StatPearls) y se señala la divergencia"
+    },
+    {
+     "id": "Q2-COMA-0030",
+     "dato": "Meta inicial de 4 a 6 mEq/L y límite de 8 o 10 mEq/L en 24 h",
+     "motivo": "solo atribuidos a Verbalis 2013 por fuentes secundarias; no en el resumen de PubMed: eliminados, respuesta cualitativa"
     }
    ]
   },
@@ -164,13 +184,13 @@
     "Giacino JT, Katz DI, Schiff ND, Whyte J, Ashman EJ, Ashwal S, et al. Practice guideline update recommendations summary: disorders of consciousness. Neurology. 2018;91(10):450-60. PMID 30089618.",
     "Teasdale G, Maas A, Lecky F, Manley G, Stocchetti N, Murray G. The Glasgow Coma Scale at 40 years: standing the test of time. Lancet Neurol. 2014;13(8):844-54. PMID 25030516.",
     "Verbalis JG, Goldsmith SR, Greenberg A, Korzelius C, Schrier RW, Sterns RH, et al. Diagnosis, evaluation, and treatment of hyponatremia: expert panel recommendations. Am J Med. 2013;126(10 Suppl 1):S1-42. PMID 24074529.",
-    "American Diabetes Association. Standards of Care in Diabetes: classification of hypoglycemia. Diabetes Care. Consultado el 26 de noviembre de 2026.",
     "AAO EyeWiki. Neuro-ophthalmic findings in coma. Consultado el 26 de noviembre de 2026.",
     "StatPearls. Locked-in syndrome (NBK559026) y Cushing reflex (statpearls.com/point-of-care/20176). Consultado el 26 de noviembre de 2026.",
     "Radiopaedia. Uncal herniation y Extradural haemorrhage (radiopaedia.org/articles/40105). Consultado el 26 de noviembre de 2026.",
     "Utah Poison Control Center. Flumazenil. 2022. Consultado el 26 de noviembre de 2026.",
-    "Eur J Trauma Emerg Surg. 2020. doi 10.1007/s00068-020-01383-4 (intubación con GCS 6 a 8). Consultado el 26 de noviembre de 2026.",
-    "NINDS. Clinical symptoms in TBI, days 1-14 (ninds.nih.gov). Consultado el 26 de noviembre de 2026."
+    "American Diabetes Association Professional Practice Committee. 6. Glycemic goals and hypoglycemia: Standards of Care in Diabetes-2025. Diabetes Care. 2025;48(Suppl 1):S128-45. PMID 39651981.",
+    "Hatchimonji JS, Dumas RP, Kaufman EJ, Scantling D, Stoecker JB, Holena DN. Questioning dogma: does a GCS of 8 require intubation? Eur J Trauma Emerg Surg. 2021;47(6):2073-9. PMID 32382780.",
+    "Traumatic Brain Injury. StatPearls [Internet]. Consultado el 26 de noviembre de 2026."
    ]
   }
  },
@@ -425,8 +445,8 @@
   {
    "id": "Q2-COMA-0013",
    "tipo": "Cloze",
-   "text": "<span class=\"tema\">TCE grave · Brain Trauma Foundation</span>Se recomienda tratar la presión intracraneal por encima de {{c1::<span class=\"num\">22 mmHg</span>}}, con una presión de perfusión cerebral objetivo de {{c2::<span class=\"num\">60 a 70 mmHg</span>}}.",
-   "extra": "Cuarta edición, nivel IIB. La tercera edición usaba 20 mmHg: conviene saber qué edición cita cada fuente.",
+   "text": "<span class=\"tema\">TCE grave · Brain Trauma Foundation</span>La presión de perfusión cerebral objetivo es de {{c1::<span class=\"num\">60</span>}} a {{c2::<span class=\"num\">70</span>}} mmHg.",
+   "extra": "Cuarta edición, nivel IIB. Si el mínimo óptimo es 60 o 70 puede depender de la autorregulación del paciente.",
    "mnemotecnia": "",
    "esquema": "",
    "fuente": "Carney 2017, Neurosurgery (PMID 27654000)",
@@ -548,7 +568,7 @@
    "extra": "El nivel 3 es grave y se define por el estado mental o físico alterado que requiere asistencia, no por un valor.",
    "mnemotecnia": "",
    "esquema": "",
-   "fuente": "ADA, Standards of Care in Diabetes (clasificación de la hipoglucemia)",
+   "fuente": "ADA 2025, Diabetes Care (PMID 39651981)",
    "tags": [
     "Quirurgica2::Coma::Hipoglucemia",
     "Nivel::Recuerdo",
@@ -705,12 +725,12 @@
   {
    "id": "Q2-COMA-0027",
    "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Escala de Glasgow</span>¿Qué puntaje se asocia a asegurar la vía aérea y qué matiz tiene?",
-   "respuesta": "Un Glasgow de <span class=\"num\">8 o menos</span>: ATLS y EAST lo asocian a intubación para proteger la vía aérea.",
-   "razonamiento": "Es una convención y se discute: un estudio de 2020 asoció la intubación al ingreso con GCS 6 a 8 con mayor mortalidad y estancia. El juicio clínico manda.",
+   "pregunta": "<span class=\"tema\">Escala de Glasgow</span>¿Qué puntaje se usa como umbral clásico para intubar y qué matiz tiene?",
+   "respuesta": "Un Glasgow de <span class=\"num\">8 o menos</span> se enseña como indicación de intubación para proteger la vía aérea.",
+   "razonamiento": "Es una convención y se discute: en pacientes con GCS 6 a 8, la intubación al ingreso se asoció con mayor mortalidad y estancia. El juicio clínico manda.",
    "mnemotecnia": "",
    "esquema": "",
-   "fuente": "Eur J Trauma Emerg Surg 2020 (doi 10.1007/s00068-020-01383-4)",
+   "fuente": "Hatchimonji 2021, Eur J Trauma Emerg Surg (PMID 32382780)",
    "tags": [
     "Quirurgica2::Coma::EscalaGlasgow",
     "Nivel::Aplicacion",
@@ -726,11 +746,11 @@
   {
    "id": "Q2-COMA-0028",
    "tipo": "Cloze",
-   "text": "<span class=\"tema\">TCE · Glasgow</span>La gravedad se clasifica como leve {{c1::<span class=\"num\">13 a 15</span>}}, moderada {{c2::<span class=\"num\">9 a 12</span>}} y grave {{c3::<span class=\"num\">3 a 8</span>}}.",
-   "extra": "Los cortes varían entre fuentes: StatPearls usa leve 14 a 15 y moderado 9 a 13. Se aplica el de la fuente de la cátedra.",
+   "text": "<span class=\"tema\">TCE · Glasgow</span>La gravedad se clasifica como leve {{c1::<span class=\"num\">14 a 15</span>}}, moderada {{c2::<span class=\"num\">9 a 12</span>}} y grave {{c3::<span class=\"num\">3 a 8</span>}}.",
+   "extra": "Los cortes varían entre fuentes: algunas usan leve 13 a 15 o moderado 9 a 13; el grave de 3 a 8 coincide. Se aplica el de la fuente de la cátedra.",
    "mnemotecnia": "",
    "esquema": "",
-   "fuente": "NINDS, Clinical symptoms in TBI (ninds.nih.gov); StatPearls, Glasgow Coma Scale",
+   "fuente": "StatPearls, Traumatic Brain Injury",
    "tags": [
     "Quirurgica2::Coma::EscalaGlasgow",
     "Nivel::Recuerdo",
@@ -767,9 +787,9 @@
   {
    "id": "Q2-COMA-0030",
    "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Hiponatremia grave</span>Coma o convulsiones por hiponatremia: ¿qué se hace y qué meta inicial se busca?",
-   "respuesta": "Salino hipertónico, buscando una elevación inicial rápida del sodio de <span class=\"num\">4 a 6 mEq/L</span>.",
-   "razonamiento": "Con síntomas graves, el riesgo de edema pesa más que el de la corrección rápida. Después se frena: el límite de corrección en 24 horas varía entre fuentes (8 o 10 mEq/L) y es menor en pacientes de riesgo.",
+   "pregunta": "<span class=\"tema\">Hiponatremia grave</span>Coma o convulsiones por hiponatremia: ¿qué se hace y por qué?",
+   "respuesta": "Salino hipertónico para elevar el sodio de forma rápida al inicio, porque el edema cerebral es el riesgo inmediato.",
+   "razonamiento": "Con síntomas graves, el riesgo de edema pesa más que el de la corrección rápida. Después se frena la velocidad de corrección, porque la corrección excesiva de una hiponatremia crónica causa desmielinización osmótica.",
    "mnemotecnia": "",
    "esquema": "",
    "fuente": "Verbalis 2013, Am J Med (PMID 24074529)",
