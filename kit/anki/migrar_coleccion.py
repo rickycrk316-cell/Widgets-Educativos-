@@ -76,8 +76,9 @@ def migrar(col, json_path):
     mazos_viejos = set()
     reusar = {}
     for c in datos['tarjetas']:   # nid del mapeo o, si no hay, la nota que ya tenga su GUID v7
-        reusar[c['id']] = mig.get(c['id']) or col.db.scalar('select id from notes where guid=?',
-                                                            genanki.guid_for(c['id']))
+        reusar[c['id']] = int(mig[c['id']]) if mig.get(c['id']) else col.db.scalar(
+            'select id from notes where guid=? and mid in (?, ?)', genanki.guid_for(c['id']), M.QA_ID, M.CLOZE_ID)
+    # (los mazos v6 usaban los mismos IDs para sus GUID: solo se reconoce por GUID una nota que ya es v7)
     # 1. cambio de tipo de nota, agrupado por modelo viejo
     por_modelo = {V6_QA: [], V6_CLOZE: []}
     for c in datos['tarjetas']:
@@ -118,7 +119,7 @@ def migrar(col, json_path):
         # tarjetas cloze nuevas que genere el texto quedan en el mazo de destino
         col.set_deck(n.card_ids(), destino)
     # 3. descartadas
-    descart = [nid for nid in mig.get('descartadas', []) if col.db.scalar('select 1 from notes where id=?', nid)]
+    descart = [int(nid) for nid in mig.get('descartadas', []) if col.db.scalar('select 1 from notes where id=?', nid)]
     cids = [cid for nid in descart for cid in col.get_note(nid).card_ids()]
     mazos_viejos |= {col.get_card(cid).did for cid in cids}
     if cids:
@@ -138,6 +139,18 @@ def migrar(col, json_path):
           f'{len(descart)} retiradas (suspendidas), mazos viejos eliminados: {borrados or "ninguno"}')
 
 
+def guids_unicos(col):
+    """Las notas v6 descartadas pueden conservar un GUID igual al de una nota v7: se les da uno nuevo."""
+    from anki.utils import guid64
+    n = 0
+    for (g,) in col.db.all('select guid from notes group by guid having count() > 1'):
+        ids = col.db.list('select id from notes where guid=? order by (mid in (?, ?)) desc', g, M.QA_ID, M.CLOZE_ID)
+        for nid in ids[1:]:
+            col.db.execute('update notes set guid=?, usn=-1, mod=? where id=?', guid64(), int(__import__('time').time()), nid)
+            n += 1
+    print(f'GUID duplicados corregidos: {n}')
+
+
 def main():
     if len(sys.argv) < 4:
         sys.exit(__doc__)
@@ -155,6 +168,7 @@ def main():
         asegurar_modelos(col)
         for j in jsons:
             migrar(col, j)
+        guids_unicos(col)
         assert col.db.scalar('select count() from revlog') == repasos, 'se perdieron repasos'
         print(f'repasos conservados: {repasos}')
         col.export_collection_package(str(salida), include_media=True, legacy=False)
