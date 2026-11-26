@@ -1,0 +1,1225 @@
+{
+ "meta": {
+  "caso": "Disbasia",
+  "rotacion": "1.ª",
+  "tag_raiz": "Disbasia",
+  "prefijo": "Q2-DISB",
+  "version": "1.0",
+  "fecha": "2026-11-26",
+  "resultado_aprendizaje": "Realiza la evaluación integral de los trastornos de la marcha infantil diferenciando causas ortopédicas, neurológicas e infecciosas.",
+  "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 1.ª rotación, CASO DISBASIA (contenidos y trabajo autónomo)",
+  "justificacion_exceso": "El caso nombra unas 20 entidades (disbasia dolorosa, no dolorosa, neurológica, rotacional y del pie) repartidas en cuatro grupos clínicos; con 45 notas no queda 1 tarjeta de principio y 1 de decisión por entidad.",
+  "mir_verificados": [],
+  "verificacion": {
+   "total": 84,
+   "verificados": 58,
+   "eliminados": [
+    {
+     "id": "Q2-DISB-0001",
+     "dato": "Cartílago destruido en horas por proteasas bacterianas",
+     "motivo": "mecanismo y plazo no confirmados: se conserva solo que la artritis séptica es urgencia verdadera (Ryan 2016)"
+    },
+    {
+     "id": "Q2-DISB-0003",
+     "dato": "Dolor referido por inervación compartida (obturador y femoral)",
+     "motivo": "mecanismo no confirmado: se conserva que el dolor puede sentirse solo en muslo o rodilla (Peck 2017)"
+    },
+    {
+     "id": "Q2-DISB-0005",
+     "dato": "La radiografía no altera la densidad en procesos de cartílago, líquido o médula",
+     "motivo": "mecanismo no confirmado: reformulada con el rendimiento medido de la radiografía (Bonhoeffer 2001)"
+    },
+    {
+     "id": "Q2-DISB-0006",
+     "dato": "Cloze de duración 1 a 2 semanas y edad 3 a 8 años",
+     "motivo": "reformulado a 3 a 10 años (StatPearls) y 2 semanas (Asche 2013)"
+    },
+    {
+     "id": "Q2-DISB-0008",
+     "dato": "Predicción por número de criterios de Kocher y conducta con 2 o 4 criterios",
+     "motivo": "conducta por número de criterios no confirmada: se conserva la combinación de predictores"
+    },
+    {
+     "id": "Q2-DISB-0009",
+     "dato": "Alta con antiinflamatorio a las 24–48 h",
+     "motivo": "no confirmado: reformulada sobre seguimiento a seis meses (Asche 2013)"
+    },
+    {
+     "id": "Q2-DISB-0010",
+     "dato": "La presión intraarticular colapsa los vasos retinaculares y causa necrosis avascular",
+     "motivo": "no confirmado: eliminado el mecanismo"
+    },
+    {
+     "id": "Q2-DISB-0011",
+     "dato": "S. aureus como germen más frecuente a cualquier edad en artritis séptica; corte de 4 años",
+     "motivo": "corte confirmado en 5 años (van den Boom 2022); frecuencia por edad no confirmada"
+    },
+    {
+     "id": "Q2-DISB-0012",
+     "dato": "Metáfisis por asas capilares de flujo lento y radiografía normal 10–14 días",
+     "motivo": "no confirmado en fuentes: eliminados"
+    },
+    {
+     "id": "Q2-DISB-0013",
+     "dato": "Infarto óseo previo como terreno para Salmonella",
+     "motivo": "mecanismo no confirmado: se conserva la asociación"
+    },
+    {
+     "id": "Q2-DISB-0015",
+     "dato": "Revascularización espontánea de Perthes",
+     "motivo": "no confirmado: eliminado"
+    },
+    {
+     "id": "Q2-DISB-0016",
+     "dato": "La cabeza usa el acetábulo como molde",
+     "motivo": "no confirmado: se conserva el objetivo de contención (Manig 2013)"
+    },
+    {
+     "id": "Q2-DISB-0020",
+     "dato": "La radiografía AP puede parecer normal por desplazamiento posterior",
+     "motivo": "no confirmado: se conservan las proyecciones recomendadas"
+    },
+    {
+     "id": "Q2-DISB-0021",
+     "dato": "Prohibir el apoyo desde el diagnóstico",
+     "motivo": "no confirmado en las fuentes: reformulada sobre estabilidad (Cazzulino 2021)"
+    },
+    {
+     "id": "Q2-DISB-0022",
+     "dato": "Endocrinopatía obligada en menores de 10 años o de peso normal",
+     "motivo": "corte y peso no confirmados: se conserva la asociación endocrina (Peck 2017)"
+    },
+    {
+     "id": "Q2-DISB-0023",
+     "dato": "Rotación externa obligada al flexionar la cadera",
+     "motivo": "no confirmado: eliminado de la viñeta"
+    },
+    {
+     "id": "Q2-DISB-0024",
+     "dato": "Aparece durante el estirón y deportes de salto",
+     "motivo": "no confirmado: eliminado"
+    },
+    {
+     "id": "Q2-DISB-0027",
+     "dato": "Hemograma con frotis antes de cualquier corticoide",
+     "motivo": "no confirmado: reformulada con el rendimiento de la radiografía (Ito 2022)"
+    },
+    {
+     "id": "Q2-DISB-0030",
+     "dato": "Ecografía antes de los 4–6 meses por cabeza cartilaginosa",
+     "motivo": "corte y mecanismo no confirmados: eliminada"
+    },
+    {
+     "id": "Q2-DISB-0032",
+     "dato": "Pavlik con flexión de 90–100° y abducción",
+     "motivo": "ángulos no confirmados: eliminados"
+    },
+    {
+     "id": "Q2-DISB-0033",
+     "dato": "Compensación de la dismetría con equino, flexión de rodilla y columna",
+     "motivo": "no confirmado: eliminada"
+    },
+    {
+     "id": "Q2-DISB-0034",
+     "dato": "Manchas café con leche como marcador de sobrecrecimiento",
+     "motivo": "solo confirmada la asociación con neurofibromatosis tipo 1"
+    },
+    {
+     "id": "Q2-DISB-0038",
+     "dato": "Presentación como rechazo a caminar y debilidad ascendente arrefléxica",
+     "motivo": "no confirmado en las fuentes: eliminada"
+    },
+    {
+     "id": "Q2-DISB-0039",
+     "dato": "Guillain-Barré vs mielitis transversa por nivel sensitivo y esfínteres",
+     "motivo": "solo reportes de caso: eliminada; disautonomía como criterio de monitorización no confirmada"
+    },
+    {
+     "id": "Q2-DISB-0044",
+     "dato": "In-toeing: localizar el nivel por edad y exploración segmentaria",
+     "motivo": "no confirmado: eliminada"
+    },
+    {
+     "id": "Q2-DISB-0045",
+     "dato": "Test de Jack para pie plano flexible",
+     "motivo": "no confirmado: eliminado"
+    },
+    {
+     "id": "Q2-DISB-0048",
+     "dato": "Férula de abducción como clave para prevenir recidiva",
+     "motivo": "no confirmado: se listan solo los componentes (Ghanem 2021)"
+    }
+   ]
+  },
+  "guia": {
+   "principios": [
+    "La edad es el primer filtro del diagnóstico diferencial de la cadera dolorosa del niño.",
+    "La fiebre con negativa a cargar peso exige descartar infección articular antes que una causa mecánica.",
+    "Ningún predictor aislado separa artritis séptica de sinovitis: se combinan (Kocher) y se apoyan en ecografía.",
+    "El dolor de cadera puede sentirse en muslo o rodilla: se examina la cadera.",
+    "El dolor óseo nocturno es señal de alarma de neoplasia.",
+    "Las variantes fisiológicas tienen una ventana de edad; lo que se sale de ella se estudia."
+   ],
+   "palabras_clave": [
+    "disbasia",
+    "marcha antálgica",
+    "marcha de Trendelenburg",
+    "sinovitis transitoria",
+    "artritis séptica",
+    "criterios de Kocher",
+    "osteomielitis",
+    "enfermedad de Perthes",
+    "epifisiólisis",
+    "Osgood-Schlatter",
+    "displasia del desarrollo de la cadera",
+    "Ortolani y Barlow",
+    "Graf",
+    "dismetría",
+    "signo de Gowers",
+    "Guillain-Barré",
+    "genu varo",
+    "anteversión femoral",
+    "pie plano",
+    "pie cavo",
+    "Ponseti"
+   ],
+   "imagenes_oclusion": [
+    "Tabla de edades de sinovitis, Perthes y epifisiólisis con las celdas tapadas",
+    "Tabla de predictores de Kocher con las celdas tapadas"
+   ],
+   "preguntas_cierre": [
+    "Un niño de 4 años con fiebre no apoya la pierna: ¿qué predictores pesas y qué estudio pides?",
+    "Un adolescente con obesidad y dolor de rodilla tiene la rodilla normal: ¿qué haces?",
+    "¿Por qué una radiografía normal no tranquiliza ante una infección osteoarticular?",
+    "Un niño de 2 años tiene las piernas arqueadas: ¿cuándo es fisiológico y cuándo se estudia?"
+   ],
+   "subtemas": {
+    "Semiologia": "Historia dirigida y semiología de la marcha del niño con disbasia",
+    "SinovitisTransitoria": "Disbasia dolorosa: sinovitis transitoria de cadera",
+    "ArtritisSeptica": "Disbasia dolorosa: artritis séptica",
+    "Osteomielitis": "Disbasia dolorosa: osteomielitis",
+    "Perthes": "Disbasia dolorosa: enfermedad de Perthes",
+    "Epifisiolisis": "Disbasia dolorosa: epifisiólisis de la cabeza femoral",
+    "OsgoodSchlatter": "Disbasia dolorosa: enfermedad de Osgood-Schlatter",
+    "NeoplasiasOseas": "Disbasia dolorosa: neoplasias malignas óseas",
+    "DDC": "Disbasia no dolorosa: displasia del desarrollo de la cadera",
+    "Dismetria": "Disbasia no dolorosa: dismetría de miembros inferiores",
+    "Neuromuscular": "Disbasia no dolorosa: patología neuromuscular",
+    "GuillainBarre": "Síndrome de Guillain-Barré",
+    "Rotacional": "Alteraciones rotacionales y angulares",
+    "Pie": "Alteraciones del pie"
+   },
+   "fechas": {
+    "apertura": null,
+    "cierre": null,
+    "examen": null
+   },
+   "referencias": [
+    "Ryan DD. Differentiating transient synovitis of the hip from more urgent conditions. Pediatr Ann. 2016;45(6):e209-13.",
+    "Peck DM, Voss LM, Voss TT. Slipped capital femoral epiphysis: diagnosis and management. Am Fam Physician. 2017;95(12):779-84.",
+    "Bonhoeffer J, Haeberle B, Schaad UB, Heininger U. Diagnosis of acute haematogenous osteomyelitis and septic arthritis: 20 years experience at the University Children's Hospital Basel. Swiss Med Wkly. 2001;131(39-40):575-81.",
+    "Kocher MS, Zurakowski D, Kasser JR. Differentiating between septic arthritis and transient synovitis of the hip in children: an evidence-based clinical prediction algorithm. J Bone Joint Surg Am. 1999;81(12):1662-70.",
+    "Asche SS, van Rijn RM, Bessems JH, Krul M, Bierma-Zeinstra SM. What is the clinical course of transient synovitis in children: a systematic review of the literature. Chiropr Man Therap. 2013;21(1):39.",
+    "van den Boom M, Lennon DR, Crawford H, Freeman J, Castle J, Mistry R, et al. Microbiology of septic arthritis in young Auckland children. J Paediatr Child Health. 2022;58(2):326-31.",
+    "Thakolkaran N, Shetty AK. Acute hematogenous osteomyelitis in children. Ochsner J. 2019;19(2):116-22.",
+    "Manig M. Legg-Calvé-Perthes disease (LCPD). Principles of diagnosis and treatment. Orthopade. 2013;42(10):891-902.",
+    "Cazzulino A, Wu W, Allahabadi S, Swarup I. Diagnosis and management of unstable slipped capital femoral epiphysis: a critical analysis review. JBJS Rev. 2021;9(7).",
+    "Ito A, Osumi T, Fujimori K, Tomizawa D, Kato M, Tsuji S, et al. Utility of emergent plain X-ray for childhood acute leukemia with bone pain. Pediatr Int. 2022;64(1):e14843.",
+    "Vogt B, Tureck SS, Gosheger G, Frommer A, Laufer A, Tretow H, et al. Early screening for developmental dysplasia of the hip: sonographic reference values, risk factors, and treatment considerations. Int J Neonatal Screen. 2025;11(3).",
+    "Aw AAL, Wong KPL, Lee NKL, Mahadev A. The utility of ultrasound and plain radiographs in the management of developmental dysplasia of the hip. J Pediatr Orthop B. 2024;33(1):9-15.",
+    "Sabharwal S, Kumar A. Methods for assessing leg length discrepancy. Clin Orthop Relat Res. 2008;466(12):2910-22.",
+    "Crawford AH, Schorry EK. Neurofibromatosis in children: the role of the orthopaedist. J Am Acad Orthop Surg. 1999;7(4):217-30.",
+    "Morozova OM, Chang TF, Brown ME. Toe walking: when do we need to worry? Curr Probl Pediatr Adolesc Health Care. 2017;47(7):156-60.",
+    "Nomura K. Treatment of Guillain-Barré syndrome. Brain Nerve. 2015;67(11):1397-410.",
+    "Dare DM, Dodwell ER. Pediatric flatfoot: cause, epidemiology, assessment, and treatment. Curr Opin Pediatr. 2014;26(1):93-100.",
+    "Ghanem I, Rizkallah M. Clubfoot management in the Middle East: a survey-based review. Ann Transl Med. 2021;9(13):1106.",
+    "Apophysitis of the Tibial Tuberosity (Osgood-Schlatter Disease): A Review. PMC5063719. Disponible en: https://pmc.ncbi.nlm.nih.gov/articles/PMC5063719/ [citado 2026 nov 26]",
+    "Instability Testing for Congenital Hip Dislocation: Knee Extension Provokes Hip Dislocation. PMC7292695. Disponible en: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7292695/ [citado 2026 nov 26]",
+    "Transient Synovitis. En: StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing. Disponible en: https://www.ncbi.nlm.nih.gov/sites/books/NBK459181/ [citado 2026 nov 26]",
+    "Legg-Calve-Perthes Disease. En: StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/books/NBK513230/ [citado 2026 nov 26]",
+    "Gait Disturbances. En: StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/sites/books/NBK560610/ [citado 2026 nov 26]",
+    "Trendelenburg Gait. En: StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/books/NBK541094/ [citado 2026 nov 26]",
+    "Ewing Sarcoma. En: StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/books/NBK559183/ [citado 2026 nov 26]",
+    "Developmental Dysplasia of the Hip. En: StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/sites/books/NBK563157/ [citado 2026 nov 26]",
+    "Gower Sign. En: StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/sites/books/NBK540973/ [citado 2026 nov 26]",
+    "Duchenne Muscular Dystrophy. En: StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/sites/books/NBK482346/ [citado 2026 nov 26]",
+    "Guillain-Barre Syndrome. En: StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/books/NBK532254/ [citado 2026 nov 26]",
+    "Vital Capacity. En: StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/sites/books/NBK541099/ [citado 2026 nov 26]",
+    "Genu Valgum. En: StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/sites/books/NBK559244/ [citado 2026 nov 26]",
+    "Blount Disease. En: StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/books/NBK560923/ [citado 2026 nov 26]",
+    "Intoeing. En: StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/sites/books/NBK499993/ [citado 2026 nov 26]",
+    "Pes Cavus. En: StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/books/NBK556016/ [citado 2026 nov 26]",
+    "American Academy of Orthopaedic Surgeons. Bowed Legs (Genu Varum, Blount's Disease). OrthoInfo. Disponible en: https://orthoinfo.aaos.org/en/diseases--conditions/bowed-legs-blounts-disease/ [citado 2026 nov 26]",
+    "American Academy of Orthopaedic Surgeons. Intoeing. OrthoInfo. Disponible en: https://orthoinfo.aaos.org/en/diseases--conditions/intoeing/ [citado 2026 nov 26]"
+   ]
+  }
+ },
+ "tarjetas": [
+  {
+   "id": "Q2-DISB-0001",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Disbasia febril</span>¿Por qué el niño con fiebre que rechaza apoyar el miembro obliga a descartar infección articular antes que una causa mecánica?",
+   "respuesta": "Porque la <span class=\"dx\">artritis séptica</span> es una urgencia verdadera, a diferencia de la sinovitis transitoria, que es un proceso benigno.",
+   "razonamiento": "Ambas pueden presentarse con cadera dolorosa y cojera, pero la conducta es opuesta: la sospecha de infección se resuelve primero con criterios clínicos y ecografía.<br>Por eso la fiebre y la negativa a cargar peso pesan más que cualquier causa mecánica.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Ryan 2016, Pediatr Ann (PMID 27294495)",
+   "tags": [
+    "Quirurgica2::Disbasia::Semiologia",
+    "Nivel::Aplicacion",
+    "Fuente::Ryan2016",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0002",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Disbasia en el niño</span>¿Por qué la edad funciona como primer filtro del diagnóstico diferencial?",
+   "respuesta": "Porque cada causa de cadera dolorosa tiene su ventana de edad: la sinovitis transitoria y la enfermedad de Perthes en el escolar pequeño, y la epifisiólisis en la adolescencia temprana.",
+   "razonamiento": "La edad ordena el diferencial antes de pedir estudios.<br>Una cadera dolorosa a los 12 años no se explica por Perthes ni por sinovitis transitoria.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Causa</th><th>Edad</th></tr></thead><tbody><tr><th>Sinovitis transitoria</th><td><span class=\"num\">3–10 años</span></td></tr><tr><th>Perthes</th><td><span class=\"num\">4–10 años</span></td></tr><tr><th>Epifisiólisis</th><td><span class=\"num\">8–15 años</span></td></tr></tbody></table>",
+   "fuente": "Peck 2017, Am Fam Physician (PMID 28671425); StatPearls, Transient Synovitis (NBK459181); StatPearls, Legg-Calve-Perthes Disease (NBK513230)",
+   "tags": [
+    "Quirurgica2::Disbasia::Semiologia",
+    "Nivel::Aplicacion",
+    "Fuente::Peck2017",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0003",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Dolor de rodilla con cojera en un niño</span>¿Por qué la exploración debe empezar por la cadera?",
+   "respuesta": "Porque la <span class=\"dx\">epifisiólisis</span> puede doler solo en el muslo o la rodilla, con dolor mal localizado.",
+   "razonamiento": "El dolor de la cadera no siempre se queja en la cadera: ingle, muslo o rodilla pueden ser la única referencia.<br>Una rodilla normal con cojera obliga a examinar y radiografiar las caderas.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Peck 2017, Am Fam Physician (PMID 28671425)",
+   "tags": [
+    "Quirurgica2::Disbasia::Semiologia",
+    "Nivel::Aplicacion",
+    "Fuente::Peck2017",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0004",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Marcha antálgica vs de Trendelenburg</span>¿Qué las separa mecánicamente?",
+   "respuesta": "La <span class=\"dx\">antálgica</span> nace del dolor y acorta la fase de apoyo del miembro afecto; la <span class=\"dx\">de Trendelenburg</span> nace de la debilidad de los abductores y deja caer la pelvis hacia el lado sano.",
+   "razonamiento": "Ambas producen cojera, por lo que la causa debe buscarse: dolor en la primera, debilidad de glúteo medio y menor en la segunda.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Rasgo</th><th>Antálgica</th><th>Trendelenburg</th></tr></thead><tbody><tr><th>Causa</th><td>Dolor</td><td>Abductores débiles</td></tr><tr><th>Apoyo</th><td>Fase acortada</td><td>Pelvis cae al lado sano</td></tr><tr><th>Tratamiento</th><td>Causa del dolor</td><td>Fortalecer glúteo medio</td></tr></tbody></table>",
+   "fuente": "StatPearls, Gait Disturbances (NBK560610); StatPearls, Trendelenburg Gait (NBK541094)",
+   "tags": [
+    "Quirurgica2::Disbasia::Semiologia",
+    "Nivel::Aplicacion",
+    "Fuente::StatPearls",
+    "Clase::Contraste",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0005",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Disbasia aguda</span>Con una radiografía simple normal, ¿se descarta una infección osteoarticular?",
+   "respuesta": "No: en una serie pediátrica la radiografía fue diagnóstica solo en <span class=\"num\">59 %</span> de las infecciones osteoarticulares.",
+   "razonamiento": "Se añaden estudios más sensibles: ecografía de cadera, gammagrafía ósea o resonancia magnética.<br>Una radiografía normal no autoriza a retrasar la punción ni el tratamiento si la clínica es de infección.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Bonhoeffer 2001, Swiss Med Wkly (PMID 11775492)",
+   "tags": [
+    "Quirurgica2::Disbasia::Semiologia",
+    "Nivel::Aplicacion",
+    "Fuente::Bonhoeffer2001",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0006",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Sinovitis transitoria de cadera</span>La edad más frecuente de presentación es {{c1::<span class=\"num\">3 a 10 años</span>}} y la mayoría se recupera en {{c2::<span class=\"num\">2 semanas</span>}}.",
+   "extra": "Los síntomas que persisten más de un mes aumentan la probabilidad de otra patología de cadera, como Perthes.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Transient Synovitis (NBK459181); Asche 2013, Chiropr Man Therap (PMID 24229447)",
+   "tags": [
+    "Quirurgica2::Disbasia::SinovitisTransitoria",
+    "Nivel::Recuerdo",
+    "Fuente::Asche2013",
+    "Clase::Irreducible",
+    "Bloom::Recordar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2-DISB-0007",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Sinovitis transitoria vs artritis séptica</span>¿Qué hallazgos clínicos y de laboratorio inclinan hacia la infección?",
+   "respuesta": "Fiebre, negativa a cargar peso, <span class=\"num\">VSG ≥ 40 mm/h</span> y <span class=\"num\">leucocitos > 12 000/mm³</span>: los cuatro predictores independientes de Kocher.",
+   "razonamiento": "Ninguno basta por sí solo: hay mucho solapamiento entre ambos diagnósticos.<br>La sinovitis transitoria es el diagnóstico benigno si faltan estos predictores y el niño tiene buen aspecto.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Predictor</th><th>Favorece séptica</th></tr></thead><tbody><tr><th>Fiebre</th><td>Presente</td></tr><tr><th>Apoyo</th><td>No carga el miembro</td></tr><tr><th>VSG</th><td>≥ 40 mm/h</td></tr><tr><th>Leucocitos</th><td>> 12 000/mm³</td></tr></tbody></table>",
+   "fuente": "Kocher 1999, J Bone Joint Surg Am (PMID 10608376)",
+   "tags": [
+    "Quirurgica2::Disbasia::SinovitisTransitoria",
+    "Nivel::Aplicacion",
+    "Fuente::Kocher1999",
+    "Clase::Contraste",
+    "Bloom::Analizar",
+    "Escala::Kocher",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0008",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Criterios de Kocher</span>¿Por qué se usan combinados y no uno a uno?",
+   "respuesta": "Porque cada variable por separado se solapa mucho entre artritis séptica y sinovitis; la combinación de predictores discrimina mejor.",
+   "razonamiento": "La probabilidad de infección crece a medida que se suman predictores.<br>Son una ayuda para decidir cuándo ampliar el estudio, no sustituyen al juicio clínico ni a la ecografía.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Kocher 1999, J Bone Joint Surg Am (PMID 10608376); Ryan 2016, Pediatr Ann (PMID 27294495)",
+   "tags": [
+    "Quirurgica2::Disbasia::SinovitisTransitoria",
+    "Nivel::Aplicacion",
+    "Fuente::Kocher1999",
+    "Clase::Escala",
+    "Bloom::Comprender",
+    "Escala::Kocher",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0009",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Sinovitis transitoria</span>¿Por qué se mantiene seguimiento aunque el niño mejore?",
+   "respuesta": "Porque los síntomas que se prolongan más de un mes se asocian a otra patología de cadera, como la enfermedad de Perthes.",
+   "razonamiento": "La revisión sistemática recomienda seguir a estos niños al menos seis meses para no omitir Perthes.<br>Casi todos están asintomáticos a las dos semanas.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Asche 2013, Chiropr Man Therap (PMID 24229447)",
+   "tags": [
+    "Quirurgica2::Disbasia::SinovitisTransitoria",
+    "Nivel::Aplicacion",
+    "Fuente::Asche2013",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0010",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Cadera dolorosa en el niño</span>¿Qué estudio de imagen ayuda a separar una artritis séptica de una sinovitis y por qué la distinción es urgente?",
+   "respuesta": "La <span class=\"dx\">ecografía de cadera</span> aporta mucho a la evaluación; la artritis séptica es una verdadera urgencia, mientras que la sinovitis es un proceso mucho más benigno.",
+   "razonamiento": "La ecografía se interpreta junto con los criterios de Kocher.<br>La diferencia entre una y otra cambia el tratamiento: infección y tiempo no se negocian.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Ryan 2016, Pediatr Ann (PMID 27294495)",
+   "tags": [
+    "Quirurgica2::Disbasia::ArtritisSeptica",
+    "Nivel::Aplicacion",
+    "Fuente::Ryan2016",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0011",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Artritis séptica monoarticular</span>En un menor de 5 años la cobertura empírica debe incluir {{c1::<span class=\"dx\">Staphylococcus aureus</span>}} y {{c2::<span class=\"dx\">Kingella kingae</span>}}.",
+   "extra": "Inocular el líquido sinovial en frascos de hemocultivo y usar PCR mejora la detección de K. kingae.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "van den Boom 2022, J Paediatr Child Health (PMID 34463401); Thakolkaran 2019, Ochsner J (PMID 31258423)",
+   "tags": [
+    "Quirurgica2::Disbasia::ArtritisSeptica",
+    "Nivel::Recuerdo",
+    "Fuente::VanDenBoom2022",
+    "Clase::Irreducible",
+    "Bloom::Recordar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2-DISB-0012",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Osteomielitis hematógena aguda</span>¿Qué estudios son de elección para el diagnóstico y qué marcador sirve para el seguimiento?",
+   "respuesta": "Gammagrafía ósea o <span class=\"dx\">resonancia</span> precoz, con hemocultivo y cultivo de tejido; la <span class=\"num\">PCR</span> sirve para el diagnóstico y el seguimiento.",
+   "razonamiento": "El patógeno más frecuente es Staphylococcus aureus.<br>La radiografía simple es poco sensible y no debe tranquilizar si la clínica sugiere infección.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Bonhoeffer 2001, Swiss Med Wkly (PMID 11775492); Thakolkaran 2019, Ochsner J (PMID 31258423)",
+   "tags": [
+    "Quirurgica2::Disbasia::Osteomielitis",
+    "Nivel::Aplicacion",
+    "Fuente::Thakolkaran2019",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0013",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Osteomielitis en la drepanocitosis</span>¿Qué germen se cubre además de Staphylococcus aureus?",
+   "respuesta": "<span class=\"dx\">Salmonella</span>, que causa con frecuencia infecciones osteoarticulares en estos niños.",
+   "razonamiento": "El niño con anemia falciforme y dolor óseo febril tiene un diferencial más amplio que el niño sano.<br>La cobertura empírica debe incluir ambos gérmenes.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Thakolkaran 2019, Ochsner J (PMID 31258423)",
+   "tags": [
+    "Quirurgica2::Disbasia::Osteomielitis",
+    "Nivel::Aplicacion",
+    "Fuente::Thakolkaran2019",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0014",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Osteomielitis por S. aureus sensible a meticilina</span>¿Qué antibióticos se prefieren y qué duración total es adecuada?",
+   "respuesta": "Penicilinas estables a la penicilinasa o <span class=\"fx\">cefalosporinas de primera generación</span>, con un ciclo parenteral corto y vía oral hasta completar <span class=\"num\">3–4 semanas</span>.",
+   "razonamiento": "Si hay sospecha de SARM se usa clindamicina o vancomicina (en enfermedad grave), según la prevalencia local.<br>Los betalactámicos son de elección para K. kingae, estreptococo A y neumococo.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Thakolkaran 2019, Ochsner J (PMID 31258423)",
+   "tags": [
+    "Quirurgica2::Disbasia::Osteomielitis",
+    "Nivel::Aplicacion",
+    "Fuente::Thakolkaran2019",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0015",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Enfermedad de Perthes</span>¿Qué tipo de proceso es y qué cabeza afecta?",
+   "respuesta": "Una <span class=\"mec\">necrosis avascular idiopática</span> de la cabeza femoral en el niño.",
+   "razonamiento": "Al inicio puede haber pocos síntomas; luego aparecen cojera y movilidad limitada de la cadera.<br>Debe considerarse junto con epifisiólisis, sinovitis transitoria y artritis séptica.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Legg-Calve-Perthes Disease (NBK513230)",
+   "tags": [
+    "Quirurgica2::Disbasia::Perthes",
+    "Nivel::Aplicacion",
+    "Fuente::StatPearls",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0016",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Enfermedad de Perthes</span>¿Qué se busca con la contención?",
+   "respuesta": "Mantener la cabeza femoral contenida en el acetábulo para prevenir la deformidad de la cabeza y restaurar la congruencia articular.",
+   "razonamiento": "Es el objetivo de los métodos quirúrgicos de contención y de varios tratamientos no quirúrgicos.<br>El tratamiento se individualiza según el paciente.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Manig 2013, Orthopade (PMID 24081395)",
+   "tags": [
+    "Quirurgica2::Disbasia::Perthes",
+    "Nivel::Aplicacion",
+    "Fuente::Manig2013",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0017",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Enfermedad de Perthes</span>¿Qué factores determinan el pronóstico?",
+   "respuesta": "La <span class=\"num\">edad al inicio</span>, el rango de movimiento y la extensión de la necrosis según Herring y Catterall.",
+   "razonamiento": "Estos factores orientan quién necesita tratamiento más activo.<br>Los niños con edad esquelética de 6 años o menos suelen evolucionar bien con manejo conservador.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Manig 2013, Orthopade (PMID 24081395); StatPearls, Legg-Calve-Perthes Disease (NBK513230)",
+   "tags": [
+    "Quirurgica2::Disbasia::Perthes",
+    "Nivel::Aplicacion",
+    "Fuente::Manig2013",
+    "Clase::Escala",
+    "Bloom::Comprender",
+    "Escala::Herring"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0018",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Enfermedad de Perthes</span>Afecta sobre todo a niños de {{c1::<span class=\"num\">4 a 10 años</span>}} y predomina en {{c2::varones}}.",
+   "extra": "La edad se solapa con la sinovitis transitoria: una sinovitis que no se resuelve obliga a reestudiar.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Legg-Calve-Perthes Disease (NBK513230)",
+   "tags": [
+    "Quirurgica2::Disbasia::Perthes",
+    "Nivel::Recuerdo",
+    "Fuente::StatPearls",
+    "Clase::Irreducible",
+    "Bloom::Recordar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2-DISB-0019",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Perthes vs epifisiólisis de la cabeza femoral</span>¿Qué los separa clínicamente?",
+   "respuesta": "La edad y el contexto: <span class=\"dx\">Perthes</span> aparece a los 4–10 años; la <span class=\"dx\">epifisiólisis</span> entre los 8 y 15 años y se asocia a obesidad y estirón.",
+   "razonamiento": "<span class=\"vs\">Contraste</span> uno es una necrosis avascular; el otro es un deslizamiento de la epífisis.<br>Ambos pueden cursar con cojera y dolor referido.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Rasgo</th><th>Perthes</th><th>Epifisiólisis</th></tr></thead><tbody><tr><th>Edad</th><td>4–10 años</td><td>8–15 años</td></tr><tr><th>Proceso</th><td>Necrosis avascular</td><td>Deslizamiento epifisario</td></tr><tr><th>Asociado</th><td>Varones</td><td>Obesidad, estirón</td></tr></tbody></table>",
+   "fuente": "StatPearls, Legg-Calve-Perthes Disease (NBK513230); Peck 2017, Am Fam Physician (PMID 28671425)",
+   "tags": [
+    "Quirurgica2::Disbasia::Perthes",
+    "Nivel::Aplicacion",
+    "Fuente::Peck2017",
+    "Clase::Contraste",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0020",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Epifisiólisis de la cabeza femoral</span>¿Qué radiografías confirman el diagnóstico?",
+   "respuesta": "Radiografías de ambas caderas: AP y <span class=\"dx\">en rana</span> en la forma estable; AP y <span class=\"dx\">lateral transmesa</span> en la inestable.",
+   "razonamiento": "Siempre se estudian ambas caderas.<br>El tratamiento de la forma estable suele ser la fijación in situ con un tornillo.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Peck 2017, Am Fam Physician (PMID 28671425)",
+   "tags": [
+    "Quirurgica2::Disbasia::Epifisiolisis",
+    "Nivel::Aplicacion",
+    "Fuente::Peck2017",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0021",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Epifisiólisis de la cabeza femoral</span>¿Qué distingue la forma inestable de la estable y qué riesgo conlleva?",
+   "respuesta": "En la forma <span class=\"al\">inestable</span> el niño no puede caminar, ni siquiera con muletas; se asocia a un alto riesgo de osteonecrosis.",
+   "razonamiento": "La forma estable permite caminar, aunque sea con muletas.<br>El objetivo del tratamiento es evitar la progresión del deslizamiento y complicaciones como necrosis avascular y condrólisis.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Cazzulino 2021, JBJS Rev (PMID 34270502); Peck 2017, Am Fam Physician (PMID 28671425)",
+   "tags": [
+    "Quirurgica2::Disbasia::Epifisiolisis",
+    "Nivel::Aplicacion",
+    "Fuente::Cazzulino2021",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0022",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Epifisiólisis de la cabeza femoral</span>Además de la obesidad, ¿qué grupo de enfermedades se asocia ocasionalmente?",
+   "respuesta": "Las <span class=\"dx\">endocrinopatías</span>: hipotiroidismo, hormona de crecimiento exógena, hipogonadismo y panhipopituitarismo.",
+   "razonamiento": "También se asocia a los estirones de crecimiento.<br>Ante un deslizamiento en un niño sin obesidad conviene pensar en estas causas.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Peck 2017, Am Fam Physician (PMID 28671425)",
+   "tags": [
+    "Quirurgica2::Disbasia::Epifisiolisis",
+    "Nivel::Recuerdo",
+    "Fuente::Peck2017",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0023",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Caso — adolescente de 12 años con obesidad</span>Cojera y dolor mal localizado de muslo y rodilla durante semanas, con rodilla normal. ¿Qué diagnóstico y qué conducta?",
+   "respuesta": "Epifisiólisis de la cabeza femoral; radiografías de ambas caderas y, si se confirma, fijación in situ con tornillo.",
+   "razonamiento": "El dolor de cadera puede sentirse solo en el muslo o la rodilla, por eso la rodilla es normal.<br>La edad y la obesidad son el contexto típico.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Peck 2017, Am Fam Physician (PMID 28671425)",
+   "tags": [
+    "Quirurgica2::Disbasia::Epifisiolisis",
+    "Nivel::Aplicacion",
+    "Fuente::Peck2017",
+    "Clase::Vineta",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0024",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Enfermedad de Osgood-Schlatter</span>¿Qué lesión es y dónde duele?",
+   "respuesta": "Una <span class=\"dx\">apofisitis por tracción</span> del tendón rotuliano, con dolor y tumefacción en la <span class=\"num\">tuberosidad tibial</span>.",
+   "razonamiento": "En la radiografía suele verse un osículo sobre la tuberosidad; con el tiempo puede fragmentarse.<br>El tratamiento busca reducir el dolor y la inflamación.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Apophysitis of the Tibial Tuberosity (Osgood-Schlatter Disease): A Review (PMC5063719)",
+   "tags": [
+    "Quirurgica2::Disbasia::OsgoodSchlatter",
+    "Nivel::Aplicacion",
+    "Fuente::OsgoodSchlatterReview",
+    "Clase::Aplicacion",
+    "Bloom::Comprender"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0025",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Osgood-Schlatter vs Sinding-Larsen-Johansson</span>Si ambas son apofisitis por tracción del aparato extensor, ¿qué las diferencia?",
+   "respuesta": "El punto doloroso: <span class=\"dx\">Osgood-Schlatter</span> en la tuberosidad tibial anterior y <span class=\"dx\">Sinding-Larsen-Johansson</span> en el polo inferior de la rótula.",
+   "razonamiento": "<span class=\"vs\">Contraste</span> es un contraste topográfico: el mismo mecanismo de tracción, distinto extremo del tendón rotuliano.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Apophysitis of the Tibial Tuberosity (Osgood-Schlatter Disease): A Review (PMC5063719)",
+   "tags": [
+    "Quirurgica2::Disbasia::OsgoodSchlatter",
+    "Nivel::Aplicacion",
+    "Fuente::OsgoodSchlatterReview",
+    "Clase::Contraste",
+    "Bloom::Analizar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0026",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Disbasia con dolor nocturno</span>¿Por qué el dolor óseo que empeora de noche es una señal de alarma?",
+   "respuesta": "Porque orienta a una <span class=\"al\">neoplasia ósea</span>: en el sarcoma de Ewing, más de la mitad de los pacientes tiene dolor intermitente que empeora de noche.",
+   "razonamiento": "El dolor mecánico mejora con el reposo; el tumoral no sigue ese patrón.<br>No es específico, pero obliga a estudiar con imagen antes de atribuirlo al crecimiento.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Ewing Sarcoma (NBK559183)",
+   "tags": [
+    "Quirurgica2::Disbasia::NeoplasiasOseas",
+    "Nivel::Aplicacion",
+    "Fuente::StatPearls",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0027",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Caso — niño con dolor óseo y cojera sin trauma</span>¿Qué estudio simple puede orientar a leucemia aunque el hemograma sea normal?",
+   "respuesta": "La <span class=\"dx\">radiografía</span> del segmento doloroso: puede sugerir leucemia aguda antes de que se alteren los recuentos de sangre periférica.",
+   "razonamiento": "En una serie de urgencias, seis de diez leucemias confirmadas tenían un hemograma sin alteraciones.<br>Los hallazgos más frecuentes fueron las bandas metafisarias radiolúcidas.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Ito 2022, Pediatr Int (PMID 33998750)",
+   "tags": [
+    "Quirurgica2::Disbasia::NeoplasiasOseas",
+    "Nivel::Aplicacion",
+    "Fuente::Ito2022",
+    "Clase::Vineta",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0028",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Leucemia con debut osteoarticular</span>¿Qué hallazgo radiográfico fue el más frecuente?",
+   "respuesta": "Las <span class=\"dx\">bandas metafisarias radiolúcidas</span>, vistas en siete de doce pacientes con sospecha de leucemia en la radiografía.",
+   "razonamiento": "Su ausencia no descarta la enfermedad, porque no estaban en todos los casos.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Ito 2022, Pediatr Int (PMID 33998750)",
+   "tags": [
+    "Quirurgica2::Disbasia::NeoplasiasOseas",
+    "Nivel::Recuerdo",
+    "Fuente::Ito2022",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0029",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Sarcoma de Ewing</span>¿Por qué puede confundirse con una osteomielitis?",
+   "respuesta": "Porque cursa con dolor óseo, <span class=\"al\">fiebre</span> y leucocitosis, además de dolor mal localizado y masa de partes blandas.",
+   "razonamiento": "Ante un cuadro que se parece a osteomielitis, pero no evoluciona como tal, hay que pensar en tumor.<br>El diagnóstico se apoya en imagen y biopsia.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Ewing Sarcoma (NBK559183)",
+   "tags": [
+    "Quirurgica2::Disbasia::NeoplasiasOseas",
+    "Nivel::Aplicacion",
+    "Fuente::StatPearls",
+    "Clase::Aplicacion",
+    "Bloom::Analizar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0030",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Maniobras de Ortolani y Barlow</span>¿Qué demuestra cada una?",
+   "respuesta": "<span class=\"dx\">Ortolani</span> reduce una cadera luxada; <span class=\"dx\">Barlow</span> luxa una cadera inestable que estaba reducida.",
+   "razonamiento": "Son el tamizaje clínico del recién nacido y del lactante pequeño.<br>Una maniobra positiva obliga a referir al ortopedista.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Developmental Dysplasia of the Hip (NBK563157); Instability Testing for Congenital Hip Dislocation: Knee Extension Provokes Hip Dislocation (PMC7292695)",
+   "tags": [
+    "Quirurgica2::Disbasia::DDC",
+    "Nivel::Aplicacion",
+    "Fuente::StatPearls",
+    "Clase::Contraste",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0031",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Ecografía de cadera, método de Graf</span>Un ángulo alfa de {{c1::<span class=\"num\">60° o más</span>}} corresponde a una cadera tipo I, madura.",
+   "extra": "En un estudio de 3383 neonatos, el ángulo alfa medio fue de 61°; la displasia se definió desde el tipo IIc.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Vogt 2025, Int J Neonatal Screen (PMID 40981311)",
+   "tags": [
+    "Quirurgica2::Disbasia::DDC",
+    "Nivel::Recuerdo",
+    "Fuente::Vogt2025",
+    "Clase::Escala",
+    "Bloom::Recordar",
+    "Escala::Graf"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2-DISB-0032",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Displasia del desarrollo de la cadera</span>¿Qué dispositivo estabiliza la cadera en el lactante menor de 6 meses?",
+   "respuesta": "El <span class=\"fx\">arnés de Pavlik</span>.",
+   "razonamiento": "En una serie de lactantes menores de 6 meses tratados con arnés, las caderas Graf I y IIa a las 12 semanas tenían radiografías normales a los 2 años.<br>Se sigue con ecografía y radiografía.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Aw 2024, J Pediatr Orthop B (PMID 36943691)",
+   "tags": [
+    "Quirurgica2::Disbasia::DDC",
+    "Nivel::Aplicacion",
+    "Fuente::Aw2024",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0033",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Dismetría de miembros inferiores</span>¿Cómo se distingue la verdadera de la aparente en la exploración?",
+   "respuesta": "La longitud <span class=\"dx\">verdadera</span> se mide de la espina ilíaca anterosuperior al maléolo medial; la <span class=\"dx\">aparente</span>, del ombligo al maléolo medial.",
+   "razonamiento": "La cinta métrica es una herramienta de tamizaje: no es tan exacta como la imagen.<br>Para cuantificar se prefiere el escanograma o la radiografía de pie larga.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Sabharwal 2008, Clin Orthop Relat Res (PMID 18836788)",
+   "tags": [
+    "Quirurgica2::Disbasia::Dismetria",
+    "Nivel::Aplicacion",
+    "Fuente::Sabharwal2008",
+    "Clase::Contraste",
+    "Bloom::Analizar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0034",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Niño con dismetría y manchas café con leche</span>¿Qué enfermedad debe plantearse?",
+   "respuesta": "<span class=\"dx\">Neurofibromatosis tipo 1</span>, que puede cursar con desigualdad de miembros, displasia tibial e hipercrecimiento.",
+   "razonamiento": "En una serie de neurofibromatosis, la desigualdad de miembros apareció en el 7,1 % de los niños y la displasia tibial congénita en el 5,7 %.<br>La mayoría de los niños no tiene problemas ortopédicos mayores.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Crawford 1999, J Am Acad Orthop Surg (PMID 10434076)",
+   "tags": [
+    "Quirurgica2::Disbasia::Dismetria",
+    "Nivel::Aplicacion",
+    "Fuente::Crawford1999",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0035",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Signo de Gowers</span>¿Qué indica?",
+   "respuesta": "Debilidad muscular <span class=\"dx\">proximal</span>: el niño se apoya con las manos sobre sus propias piernas para levantarse del suelo.",
+   "razonamiento": "Se asocia a distrofias musculares como la de Duchenne y Becker, a distrofias de cinturas y a la atrofia muscular espinal.<br>En general aparece en fases avanzadas.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Gower Sign (NBK540973)",
+   "tags": [
+    "Quirurgica2::Disbasia::Neuromuscular",
+    "Nivel::Aplicacion",
+    "Fuente::StatPearls",
+    "Clase::Aplicacion",
+    "Bloom::Comprender",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0036",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Varón con signo de Gowers y marcha anadeante</span>¿Qué estudio inicial se pide y qué resultado esperas?",
+   "respuesta": "<span class=\"dx\">Creatina cinasa</span> sérica marcadamente elevada, ante sospecha de distrofia muscular de Duchenne.",
+   "razonamiento": "La CK se eleva antes de que aparezcan los síntomas.<br>Después se confirma con estudio genético o biopsia muscular.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Duchenne Muscular Dystrophy (NBK482346)",
+   "tags": [
+    "Quirurgica2::Disbasia::Neuromuscular",
+    "Nivel::Aplicacion",
+    "Fuente::StatPearls",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0037",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Marcha de puntillas persistente</span>Más allá de los 2–3 años, ¿qué debe evaluarse antes de llamarla idiopática?",
+   "respuesta": "Parálisis cerebral, <span class=\"dx\">distrofia muscular</span> y trastorno del espectro autista, además de una contractura del tendón de Aquiles.",
+   "razonamiento": "La marcha de puntillas idiopática es un diagnóstico de exclusión.<br>Se completa con historia, examen musculoesquelético y neurológico.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Morozova 2017, Curr Probl Pediatr Adolesc Health Care (PMID 28716514)",
+   "tags": [
+    "Quirurgica2::Disbasia::Neuromuscular",
+    "Nivel::Aplicacion",
+    "Fuente::Morozova2017",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0038",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Guillain-Barré</span>El líquido cefalorraquídeo muestra {{c1::<span class=\"dx\">disociación albuminocitológica</span>}}, que se encuentra hasta en el {{c2::<span class=\"num\">66 %</span>}} de los casos que consultan en la primera semana.",
+   "extra": "Proteínas altas con celularidad normal. Por eso un LCR normal no excluye el diagnóstico en la primera semana.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Guillain-Barre Syndrome (NBK532254)",
+   "tags": [
+    "Quirurgica2::Disbasia::GuillainBarre",
+    "Nivel::Recuerdo",
+    "Fuente::StatPearls",
+    "Clase::Irreducible",
+    "Bloom::Recordar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2-DISB-0039",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Guillain-Barré</span>¿Qué función se vigila de forma seriada y por qué?",
+   "respuesta": "La <span class=\"dx\">función respiratoria</span> (capacidad vital): su descenso anuncia insuficiencia ventilatoria.",
+   "razonamiento": "La capacidad vital seriada ayuda a decidir si se requiere monitorización estrecha o apoyo ventilatorio.<br>Esto define el nivel de cuidados.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Vital Capacity (NBK541099)",
+   "tags": [
+    "Quirurgica2::Disbasia::GuillainBarre",
+    "Nivel::Aplicacion",
+    "Fuente::StatPearls",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0040",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Guillain-Barré</span>¿Qué tratamiento inmunomodulador se indica y qué no se usa?",
+   "respuesta": "<span class=\"fx\">Inmunoglobulina intravenosa</span> o <span class=\"fx\">plasmaféresis</span>, que son igual de eficaces; los <span class=\"fx\">corticoides</span> no ayudan y pueden empeorar el curso.",
+   "razonamiento": "La inmunoglobulina suele preferirse por tolerabilidad y facilidad de administración.<br>Un segundo ciclo o combinar ambas no ha demostrado beneficio.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Guillain-Barre Syndrome (NBK532254); Nomura 2015, Brain Nerve (PMID 26560955)",
+   "tags": [
+    "Quirurgica2::Disbasia::GuillainBarre",
+    "Nivel::Aplicacion",
+    "Fuente::StatPearls",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0041",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Deformidades angulares</span>¿Por qué un genu varo a los 18 meses es fisiológico y a los 4 años no?",
+   "respuesta": "Porque existe una trayectoria normal: varo hasta cerca de los <span class=\"num\">2 años</span> y valgo máximo a los <span class=\"num\">3–4 años</span>.",
+   "razonamiento": "El varo fisiológico mejora desde los 18 meses y se corrige hacia los 3–4 años.<br>Un varo que persiste pasados los 3 años obliga a pensar en una causa, como la enfermedad de Blount.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "AAOS OrthoInfo, Bowed Legs (Genu Varum, Blount's Disease); StatPearls, Genu Valgum (NBK559244)",
+   "tags": [
+    "Quirurgica2::Disbasia::Rotacional",
+    "Nivel::Aplicacion",
+    "Fuente::AAOS",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0042",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Alineación fisiológica del miembro inferior</span>El genu varo es normal hasta cerca de los {{c1::<span class=\"num\">2 años</span>}} y el genu valgo alcanza su máximo hacia los {{c2::<span class=\"num\">3 a 4 años</span>}}.",
+   "extra": "Esta ventana permite tranquilizar sin estudiar y decidir cuándo sí estudiar.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Genu Valgum (NBK559244)",
+   "tags": [
+    "Quirurgica2::Disbasia::Rotacional",
+    "Nivel::Recuerdo",
+    "Fuente::StatPearls",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2-DISB-0043",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Genu varo</span>¿Qué criterio lo saca de lo fisiológico y obliga a estudiarlo?",
+   "respuesta": "Que persista más allá de los <span class=\"num\">3 años</span> o sea progresivo, lo que plantea <span class=\"dx\">enfermedad de Blount</span>.",
+   "razonamiento": "En un menor de 2 años puede ser imposible separar la enfermedad de Blount infantil del varo fisiológico.<br>En Blount, la angulación tibial proximal es aguda, no un arqueamiento gradual.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "AAOS OrthoInfo, Bowed Legs (Genu Varum, Blount's Disease); StatPearls, Blount Disease (NBK560923)",
+   "tags": [
+    "Quirurgica2::Disbasia::Rotacional",
+    "Nivel::Aplicacion",
+    "Fuente::AAOS",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0044",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Anteversión femoral aumentada</span>¿Por qué la conducta es observar y no usar zapatos o aparatos correctores?",
+   "respuesta": "Porque suele corregirse sola con el crecimiento, y los zapatos especiales, las ortesis y los ejercicios no han demostrado ayudar.",
+   "razonamiento": "La anteversión baja de unos 30° al nacer a unos 10°–15° en el adulto.<br>Se explica a los padres el curso natural; el dolor, la inflamación o la cojera obligan a evaluar al ortopedista.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "AAOS OrthoInfo, Intoeing; StatPearls, Intoeing (NBK499993)",
+   "tags": [
+    "Quirurgica2::Disbasia::Rotacional",
+    "Nivel::Aplicacion",
+    "Fuente::AAOS",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0045",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Pie plano flexible</span>¿Es una enfermedad y cuándo se trata?",
+   "respuesta": "No: es una <span class=\"dx\">variante normal del crecimiento</span>, indolora; la mayoría de los niños no necesita tratamiento.",
+   "razonamiento": "La evidencia de que las ortesis modifiquen la evolución del pie plano flexible es pobre.<br>Se reserva el tratamiento para el niño sintomático.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Dare 2014, Curr Opin Pediatr (PMID 24346183)",
+   "tags": [
+    "Quirurgica2::Disbasia::Pie",
+    "Nivel::Aplicacion",
+    "Fuente::Dare2014",
+    "Clase::Aplicacion",
+    "Bloom::Comprender"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0046",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Pie plano rígido y doloroso en un adolescente</span>¿Qué diagnóstico obliga a descartar?",
+   "respuesta": "Una <span class=\"dx\">coalición tarsiana</span>, entre otras causas: anomalías del colágeno o enfermedad neurológica.",
+   "razonamiento": "El pie plano rígido o doloroso se aparta de la variante flexible indolora.<br>Una anamnesis y un examen cuidadosos guían los estudios selectivos.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Dare 2014, Curr Opin Pediatr (PMID 24346183)",
+   "tags": [
+    "Quirurgica2::Disbasia::Pie",
+    "Nivel::Aplicacion",
+    "Fuente::Dare2014",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0047",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Pie cavo en el niño</span>¿Qué causa se busca primero y qué se hace si es unilateral?",
+   "respuesta": "Una neuropatía hereditaria, sobre todo <span class=\"dx\">Charcot-Marie-Tooth</span>; si es unilateral sin causa traumática se pide <span class=\"num\">resonancia</span> de cerebro y médula.",
+   "razonamiento": "También se busca escoliosis y signos de disrafismo espinal, como hoyuelos o parches de vello.<br>La resonancia descarta lesiones tratables, como una médula anclada o un tumor.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Pes Cavus (NBK556016)",
+   "tags": [
+    "Quirurgica2::Disbasia::Pie",
+    "Nivel::Aplicacion",
+    "Fuente::StatPearls",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-DISB-0048",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Pie equinovaro congénito</span>¿Cuál es el tratamiento inicial?",
+   "respuesta": "El método de <span class=\"dx\">Ponseti</span>: manipulación seriada con yesos, tenotomía del tendón de Aquiles y férula de abducción.",
+   "razonamiento": "Es el estándar de la mayoría de los cirujanos ortopedistas pediátricos encuestados.<br>Hay discrepancia sobre la edad límite del método.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Ghanem 2021, Ann Transl Med (PMID 34423018)",
+   "tags": [
+    "Quirurgica2::Disbasia::Pie",
+    "Nivel::Aplicacion",
+    "Fuente::Ghanem2021",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  }
+ ]
+}
