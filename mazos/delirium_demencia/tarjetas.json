@@ -12,7 +12,7 @@
   "mir_verificados": [],
   "verificacion": {
    "total": 70,
-   "verificados": 62,
+   "verificados": 53,
    "eliminados": [
     {
      "id": "plan",
@@ -53,6 +53,51 @@
      "id": "plan",
      "dato": "Características del envejecimiento cerebral (trabajo autónomo)",
      "motivo": "sin fuente verificable en la sesión: no redactado"
+    },
+    {
+     "id": "auditoría 1",
+     "dato": "Delirium «reversible si se corrige»",
+     "motivo": "no consta en Wilson 2020: eliminado"
+    },
+    {
+     "id": "auditoría 1",
+     "dato": "Lewy: atención e historia con informante deciden / se confunde con delirium",
+     "motivo": "no consta en McKeith 1992: eliminado"
+    },
+    {
+     "id": "auditoría 1",
+     "dato": "Hiperglucemia como otra causa metabólica",
+     "motivo": "no consta en Tonon 2022: eliminado"
+    },
+    {
+     "id": "auditoría 1",
+     "dato": "Pedir glucosa y electrolitos en el caso",
+     "motivo": "no consta en Tonon 2022: reformulado a calcio sérico"
+    },
+    {
+     "id": "auditoría 1",
+     "dato": "«Casi todos» tienen predisponentes y precipitantes",
+     "motivo": "la fuente dice «la mayoría»: corregido"
+    },
+    {
+     "id": "auditoría 1",
+     "dato": "Contraste adulto mayor frente a joven",
+     "motivo": "Wilson 2020 no compara edades: pregunta reformulada"
+    },
+    {
+     "id": "auditoría 1",
+     "dato": "Regiones mesiales temporales como núcleo del fallo mnésico inicial",
+     "motivo": "Didic 2011 propone memoria sin contexto primero: corregido"
+    },
+    {
+     "id": "auditoría 1",
+     "dato": "NICE: memantina en grave, en moderada con intolerancia y en combinación",
+     "motivo": "NG97 no accesible (HTTP 403): solo se mantiene lo confirmado (3 inhibidores en leve a moderada, TA217)"
+    },
+    {
+     "id": "auditoría 1",
+     "dato": "Sistema dopaminérgico comprometido en Lewy y Parkinson (principio de la guía)",
+     "motivo": "sin fuente: reformulado a sensibilidad a neurolépticos y contraindicación de la ficha"
     }
    ]
   },
@@ -62,7 +107,7 @@
     "El tiempo de instalación separa los síndromes: horas a días con fluctuación es delirium; meses a años de declive es un trastorno neurocognitivo.",
     "Delirium y demencia coexisten: un empeoramiento brusco en una demencia es delirium sobreañadido hasta demostrar lo contrario.",
     "El dominio que cae primero orienta la causa de la demencia: memoria (Alzheimer), ejecutivo con signos vasculares, fluctuación y alucinaciones (Lewy), conducta o lenguaje (frontotemporal).",
-    "En Lewy y en Parkinson el sistema dopaminérgico está comprometido: los neurolépticos pueden ser graves o contraindicados."
+    "En Lewy los neurolépticos pueden causar sensibilidad grave y en el Parkinson el haloperidol está contraindicado."
    ],
    "palabras_clave": [
     "delirium",
@@ -127,9 +172,9 @@
     "Emre M, Aarsland D, Albanese A, Byrne EJ, Deuschl G, De Deyn PP, et al. Rivastigmine for dementia associated with Parkinson's disease. N Engl J Med. 2004;351(24):2509-18. PMID: 15590953.",
     "Rascovsky K, Hodges JR, Knopman D, Mendez MF, Kramer JH, Neuhaus J, et al. Sensitivity of revised diagnostic criteria for the behavioural variant of frontotemporal dementia. Brain. 2011;134(Pt 9):2456-77. PMID: 21810890.",
     "Gorno-Tempini ML, Hillis AE, Weintraub S, Kertesz A, Mendez M, Cappa SF, et al. Classification of primary progressive aphasia and its variants. Neurology. 2011;76(11):1006-14. PMID: 21325651.",
-    "National Institute for Health and Care Excellence. Dementia: assessment, management and support for people living with dementia and their carers (NG97). London: NICE; 2018. Disponible en: https://www.nice.org.uk/guidance/ng97 [citado 2026 nov 26].",
+    "National Institute for Health and Care Excellence. Donepezil, galantamine, rivastigmine and memantine for the treatment of Alzheimer's disease (TA217). London: NICE; 2011. Disponible en: https://www.nice.org.uk/guidance/ta217 [citado 2026 nov 26].",
     "Haloperidol tablet [ficha técnica]. Bethesda (MD): DailyMed, National Library of Medicine; setid 26a590a4-bcbb-a9cd-e063-6394a90a2aac [citado 2026 nov 26].",
-    "Donepezil hydrochloride tablet, film coated [ficha técnica]. Bethesda (MD): DailyMed, National Library of Medicine; setid 12a755c5-1ad9-43d1-832a-eb2ff17bd693 [citado 2026 nov 26]."
+    "Donepezil hydrochloride tablet, film coated, 23 mg [ficha técnica]. Upsher-Smith Laboratories. Bethesda (MD): DailyMed, National Library of Medicine; setid 12a755c5-1ad9-43d1-832a-eb2ff17bd693 [citado 2026 nov 26]."
    ]
   }
  },
@@ -157,8 +202,8 @@
   {
    "id": "Q2R2-DEL-0002",
    "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Delirium</span>¿Por qué un mismo estresor desorganiza a un adulto mayor y no a un joven?",
-   "respuesta": "Porque casi todos los pacientes combinan <span class=\"mec\">factores predisponentes</span> (deterioro cognitivo previo) con un <span class=\"mec\">precipitante</span> agudo (infección urinaria).",
+   "pregunta": "<span class=\"tema\">Delirium</span>¿Por qué un estresor agudo desencadena delirium en unos pacientes y no en otros?",
+   "respuesta": "Porque la mayoría de los pacientes combina <span class=\"mec\">factores predisponentes</span> (deterioro cognitivo previo) con un <span class=\"mec\">precipitante</span> agudo (infección urinaria).",
    "razonamiento": "Se implican neuroinflamación, disfunción vascular cerebral, metabolismo alterado, desequilibrio de neurotransmisores y pérdida de conectividad entre redes neuronales: varios procesos, no uno solo.",
    "mnemotecnia": "",
    "esquema": "",
@@ -197,7 +242,7 @@
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Delirium frente a demencia</span>¿Qué dos datos de la historia separan mejor el delirium de la demencia?",
    "respuesta": "El <span class=\"al\">inicio agudo</span> y el curso <span class=\"mec\">fluctuante</span> del delirium frente al declive progresivo de la demencia.",
-   "razonamiento": "<span class=\"vs\">Contraste</span> el delirium es de causa médica aguda y reversible si se corrige; la demencia es neurodegenerativa o vascular y avanza.",
+   "razonamiento": "<span class=\"vs\">Contraste</span> el delirium es de causa médica aguda; la demencia es neurodegenerativa o vascular y avanza.",
    "mnemotecnia": "",
    "esquema": "<table><thead><tr><th>Rasgo</th><th>Delirium</th><th>Demencia</th></tr></thead><tbody><tr><th>Inicio</th><td>Agudo</td><td>Insidioso</td></tr><tr><th>Curso</th><td>Fluctuante</td><td>Progresivo</td></tr><tr><th>Causa</th><td>Afección médica aguda</td><td>Neurodegeneración o lesión vascular</td></tr></tbody></table>",
    "fuente": "Inouye 1990, Ann Intern Med (PMID 2240918); McKhann 2011, Alzheimers Dement (PMID 21514250)",
@@ -216,7 +261,7 @@
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Demencia con fluctuación</span>¿Qué demencia comparte con el delirium el curso fluctuante de la cognición?",
    "respuesta": "La demencia con <span class=\"dx\">cuerpos de Lewy</span>.",
-   "razonamiento": "Su fluctuación cognitiva, con alucinaciones y caídas, supera la de la enfermedad de Alzheimer y puede confundirse con delirium: la atención y la historia con informante deciden.",
+   "razonamiento": "Su fluctuación cognitiva, con alucinaciones y caídas, aparece más que en la enfermedad de Alzheimer.",
    "mnemotecnia": "",
    "esquema": "",
    "fuente": "McKeith 1992, Psychol Med (PMID 1362617)",
@@ -233,8 +278,8 @@
    "id": "Q2R2-DEL-0006",
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Caso de Saquisilí</span>Varón mayor que vive solo, «no actúa como él», dos días con conciencia fluctuante, sed, poliuria y estreñimiento: ¿qué síndrome y qué causa metabólica buscas?",
-   "respuesta": "<span class=\"dx\">Delirium</span> con probable <span class=\"mec\">hipercalcemia</span> con deshidratación; se piden calcio, glucosa y electrolitos.",
-   "razonamiento": "La hipercalcemia produce manifestaciones neurológicas, musculares, digestivas y renales (poliuria, estreñimiento), y la deshidratación agrava el cuadro; la hiperglucemia es la otra causa metabólica a descartar.",
+   "respuesta": "<span class=\"dx\">Delirium</span> con probable <span class=\"mec\">hipercalcemia</span> con deshidratación; se mide el calcio sérico.",
+   "razonamiento": "La hipercalcemia produce manifestaciones neurológicas (confusión), musculares, digestivas (estreñimiento) y renales (poliuria, deshidratación).",
    "mnemotecnia": "",
    "esquema": "",
    "fuente": "Tonon 2022, Med Sci Monit (PMID 35217631); Wilson 2020, Nat Rev Dis Primers (PMID 33184265)",
@@ -250,7 +295,7 @@
   {
    "id": "Q2R2-DEL-0007",
    "tipo": "Cloze",
-   "text": "<span class=\"tema\">Hipercalcemia</span>Se define por un calcio sérico mayor de {{c1::<span class=\"num\">10,5 mg/dL</span>}} y la mayoría de los casos se debe a {{c2::hiperparatiroidismo primario}} y neoplasias.",
+   "text": "<span class=\"tema\">Hipercalcemia</span>Se define por un calcio sérico (corregido por albúmina) mayor de {{c1::<span class=\"num\">10,5 mg/dL</span>}} y la mayoría de los casos se debe a {{c2::hiperparatiroidismo primario}} y neoplasias.",
    "extra": "Se clasifica en leve, moderada y grave según el valor; la mayoría de los pacientes son asintomáticos.",
    "mnemotecnia": "",
    "esquema": "",
@@ -530,8 +575,8 @@
    "id": "Q2R2-DEL-0022",
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Neuropatología temprana</span>¿Dónde comienza la patología de tau en la enfermedad de Alzheimer?",
-   "respuesta": "En la corteza <span class=\"dx\">transentorrinal y entorrinal</span>, antes del hipocampo.",
-   "razonamiento": "Los ovillos neurofibrilares se correlacionan con los síntomas; por eso las regiones mesiales temporales son el núcleo del fallo mnésico inicial.",
+   "respuesta": "En la corteza <span class=\"dx\">subhipocámpica anterior (perirrinal y entorrinal)</span>, antes del hipocampo.",
+   "razonamiento": "Los ovillos neurofibrilares se correlacionan con los síntomas. Los autores proponen que la memoria de objetos sin contexto podría fallar antes que la episódica.",
    "mnemotecnia": "",
    "esquema": "",
    "fuente": "Didic 2011, J Alzheimers Dis (PMID 21799246)",
@@ -566,16 +611,16 @@
   {
    "id": "Q2R2-DEL-0024",
    "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Fármacos en Alzheimer</span>¿Qué fármacos usa NICE en la enfermedad de Alzheimer según el grado?",
-   "respuesta": "Leve a moderada: <span class=\"fx\">donepezilo, galantamina o rivastigmina</span>; la <span class=\"fx\">memantina</span> se reserva a la grave o a la moderada con intolerancia a los anteriores.",
-   "razonamiento": "La memantina puede añadirse a un inhibidor de colinesterasa en moderada a grave. Conducta local: el MSP prevalece en el examen.",
+   "pregunta": "<span class=\"tema\">Fármacos en Alzheimer</span>¿Qué inhibidores de colinesterasa se recomiendan como monoterapia en la enfermedad de Alzheimer leve a moderada?",
+   "respuesta": "<span class=\"fx\">Donepezilo, galantamina o rivastigmina</span>.",
+   "razonamiento": "La memantina tiene indicaciones propias según la gravedad. Conducta local: el MSP prevalece en el examen.",
    "mnemotecnia": "",
    "esquema": "",
-   "fuente": "NICE 2018, Guía NG97 Demencia (nice.org.uk/guidance/ng97)",
+   "fuente": "NICE 2011, Guía TA217 Alzheimer (nice.org.uk/guidance/ta217)",
    "tags": [
     "Quirurgica2::DeliriumDemencia::DemenciaTratamiento",
     "Nivel::Aplicacion",
-    "Fuente::NICE2018",
+    "Fuente::NICETA217",
     "Clase::Aplicacion",
     "Bloom::Aplicar"
    ],

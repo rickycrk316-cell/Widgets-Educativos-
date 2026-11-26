@@ -12,7 +12,7 @@
   "mir_verificados": [],
   "verificacion": {
    "total": 52,
-   "verificados": 38,
+   "verificados": 25,
    "eliminados": [
     {
      "id": "plan",
@@ -83,6 +83,71 @@
      "id": "plan",
      "dato": "Corteza prefrontal medial y fallo de extinción del miedo en el TEPT (semilla)",
      "motivo": "sin fuente leída: eliminado"
+    },
+    {
+     "id": "auditoría 1",
+     "dato": "Buspirona «no actúa sobre el GABA»",
+     "motivo": "inferencia sin fuente: eliminado; Smith 2014 (estudio animal) sustituido por Sramek 1999"
+    },
+    {
+     "id": "auditoría 1",
+     "dato": "Benzodiacepinas «no abren el canal por sí solas»",
+     "motivo": "no consta en Bianchi 2010: eliminado"
+    },
+    {
+     "id": "auditoría 1",
+     "dato": "Interés por fármacos selectivos de subtipo y sedación acompaña a ansiólisis",
+     "motivo": "inferencia: eliminado"
+    },
+    {
+     "id": "auditoría 1",
+     "dato": "GABA «principal inhibitorio»",
+     "motivo": "no consta en Mishra 2023: eliminado"
+    },
+    {
+     "id": "auditoría 1",
+     "dato": "Fármacos que potencian el GABA reducen los síntomas",
+     "motivo": "inferencia: eliminado"
+    },
+    {
+     "id": "auditoría 1",
+     "dato": "Fila «Mecanismo» barbitúrico = duración de apertura",
+     "motivo": "mezclaba el mecanismo de la benzodiacepina con el efecto del barbitúrico: eliminada"
+    },
+    {
+     "id": "auditoría 1",
+     "dato": "Benzodiacepinas con más remisión que ISRS",
+     "motivo": "solo ranking SUCRA (84,5 % vs 66,4 %), no comparación directa: reformulado"
+    },
+    {
+     "id": "auditoría 1",
+     "dato": "Agorafobia sin pánico y con discapacidad propia",
+     "motivo": "el resumen solo dice «evidencia creciente»: reformulado"
+    },
+    {
+     "id": "auditoría 1",
+     "dato": "Exposición: aprendizaje inhibitorio que compite con el miedo",
+     "motivo": "el resumen solo dice que los modelos se centran en aprendizaje inhibitorio: reformulado"
+    },
+    {
+     "id": "auditoría 1",
+     "dato": "Evitar la relajación «al favorecer» el aprendizaje",
+     "motivo": "causalidad no afirmada: reformulado"
+    },
+    {
+     "id": "auditoría 1",
+     "dato": "Exposición: provocar «ansiedad real»",
+     "motivo": "la fuente dice asco además de ansiedad: corregido"
+    },
+    {
+     "id": "auditoría 1",
+     "dato": "Síntomas somáticos: criterios psicológicos «positivos», no solo falta de explicación",
+     "motivo": "no consta en Löwe 2022: reformulado"
+    },
+    {
+     "id": "auditoría 1",
+     "dato": "Tratar lo psicológico junto al síntoma «fundamentado»",
+     "motivo": "inferencia: eliminado"
     }
    ]
   },
@@ -92,7 +157,7 @@
     "Los trastornos de ansiedad son expresiones de un sistema de respuesta a la amenaza desregulado: por eso comparten comorbilidad y tratamiento.",
     "El patrón temporal decide el diagnóstico: preocupación sostenida (TAG), crisis abruptas inesperadas (pánico), miedo a un objeto o situación (fobias), trauma (estrés).",
     "ISRS/IRSN y TCC son primera línea; las benzodiacepinas alivian pronto pero con riesgo de abuso y dependencia.",
-    "La exposición es un aprendizaje nuevo que compite con el miedo, no su borrado."
+    "Los modelos actuales conciben la exposición como aprendizaje inhibitorio, no como borrado del miedo."
    ],
    "palabras_clave": [
     "ansiedad",
@@ -140,8 +205,8 @@
     "examen": null
    },
    "referencias": [
-    "American Psychiatric Association. Diagnostic and statistical manual of mental disorders. 5th ed, text revision (DSM-5-TR). Washington (DC): American Psychiatric Association Publishing; 2022.",
     "Merck Manual Professional Version. Panic attacks and panic disorder. Kenilworth (NJ): Merck & Co; [citado 2026 nov 26]. Disponible en: https://www.msdmanuals.com/professional/psychiatric-disorders/anxiety-and-trauma-and-stressor-related-disorders/panic-attacks-and-panic-disorder",
+    "Sramek JJ, Hong WW, Hamid S, Nape B, Cutler NR. Meta-analysis of the safety and tolerability of two dose regimens of buspirone in patients with persistent anxiety. Depress Anxiety. 1999;9(3):131-4. PMID: 10356651.",
     "Craske MG, Stein MB. Anxiety. Lancet. 2016;388(10063):3048-59. doi:10.1016/S0140-6736(16)30381-6. PMID: 27349358.",
     "Szuhany KL, Simon NM. Anxiety disorders: a review. JAMA. 2022;328(24):2431-45. doi:10.1001/jama.2022.22744. PMID: 36573969.",
     "Locke AB, Kirst N, Shultz CG. Diagnosis and management of generalized anxiety disorder and panic disorder in adults. Am Fam Physician. 2015;91(9):617-24. PMID: 25955736.",
@@ -159,8 +224,7 @@
     "Spiegel D, Lewis-Fernández R, Lanius R, Vermetten E, Simeon D, Friedman M. Dissociative disorders in DSM-5. Annu Rev Clin Psychol. 2013;9:299-326. doi:10.1146/annurev-clinpsy-050212-185531. PMID: 23394228.",
     "Aschenbrenner DS. Stronger boxed warning for benzodiazepines. Am J Nurs. 2021;121(3):22-3. doi:10.1097/01.NAJ.0000737284.82549.8f. PMID: 33625005.",
     "Bianchi MT. Context dependent benzodiazepine modulation of GABA(A) receptor opening frequency. Curr Neuropharmacol. 2010;8(1):10-7. doi:10.2174/157015910790909467. PMID: 20808542.",
-    "Bandelow B, Reitt M, Röver C, Michaelis S, Görlich Y, Wedekind D. Efficacy of treatments for anxiety disorders: a meta-analysis. Int Clin Psychopharmacol. 2015;30(4):183-92. doi:10.1097/YIC.0000000000000078. PMID: 25932596.",
-    "Smith VM, Iannattone S, Achal S, Jeffers RT, Antle MC. The serotonergic anxiolytic buspirone attenuates circadian responses to light. Eur J Neurosci. 2014;40(10):3512-25. doi:10.1111/ejn.12712. PMID: 25195769."
+    "Bandelow B, Reitt M, Röver C, Michaelis S, Görlich Y, Wedekind D. Efficacy of treatments for anxiety disorders: a meta-analysis. Int Clin Psychopharmacol. 2015;30(4):183-92. doi:10.1097/YIC.0000000000000078. PMID: 25932596."
    ]
   }
  },
@@ -190,7 +254,7 @@
    "id": "Q2R2-ANS-0002",
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Trastornos de ansiedad</span>¿Por qué el trastorno de ansiedad generalizada, el pánico y las fobias comparten comorbilidad y tratamiento pese a verse distintos?",
-   "respuesta": "Porque son expresiones distintas de un <span class=\"mec\">sistema de respuesta a la amenaza desregulado</span>.",
+   "respuesta": "Probablemente porque son expresiones distintas de un <span class=\"mec\">sistema de respuesta a la amenaza desregulado</span>.",
    "razonamiento": "Un GWAS de 122 341 casos halló correlación genética sustancial con depresión y neuroticismo, y señaló la señalización GABAérgica. Por eso comparten tratamiento (ISRS, TCC) y comorbilidad.",
    "mnemotecnia": "",
    "esquema": "",
@@ -285,8 +349,8 @@
    "id": "Q2R2-ANS-0007",
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Neurobiología de la ansiedad</span>¿Qué estructura y qué neurotransmisor se vinculan con la desregulación del miedo en el trastorno de ansiedad generalizada?",
-   "respuesta": "La <span class=\"mec\">amígdala</span>, cuya actividad se desregula por alteración del <span class=\"mec\">GABA</span>, el principal inhibitorio.",
-   "razonamiento": "La amígdala procesa miedo y ansiedad. Esto explica por qué los fármacos que potencian el GABA reducen los síntomas, aunque con otros costes.",
+   "respuesta": "La <span class=\"mec\">amígdala</span>, cuya actividad se desregula por alteración del <span class=\"mec\">GABA</span>.",
+   "razonamiento": "La amígdala procesa el miedo y la ansiedad; el GABA alterado desregula su actividad.",
    "mnemotecnia": "",
    "esquema": "",
    "fuente": "Mishra 2023, Cureus (PMID 37900518)",
@@ -306,7 +370,7 @@
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Benzodiacepinas</span>¿Por qué una benzodiacepina puede ser ansiolítica, hipnótica y anticonvulsivante a la vez?",
    "respuesta": "Porque modula receptores <span class=\"mec\">GABA-A con distintas subunidades α</span>, y cada efecto requiere modular subtipos distintos.",
-   "razonamiento": "Las benzodiacepinas potencian la acción del GABA, no abren el canal por sí solas. Esto explica el interés por fármacos selectivos de subtipo y por qué la sedación acompaña a la ansiólisis.",
+   "razonamiento": "Cada efecto requiere modular subtipos α distintos del receptor GABA-A.",
    "mnemotecnia": "",
    "esquema": "",
    "fuente": "Bianchi 2010, Curr Neuropharmacol (PMID 20808542)",
@@ -328,7 +392,7 @@
    "respuesta": "Las <span class=\"fx\">benzodiacepinas</span> aumentan la frecuencia de apertura; los <span class=\"fx\">barbitúricos</span> prolongan la duración de cada apertura.",
    "razonamiento": "Es una descripción clásica: la frecuencia aumentada de las benzodiacepinas depende del contexto sináptico y se explica por mayor afinidad por GABA.",
    "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Rasgo</th><th>Benzodiacepina</th><th>Barbitúrico</th></tr></thead><tbody><tr><th>Apertura</th><td>Más frecuente</td><td>Más prolongada</td></tr><tr><th>Mecanismo</th><td>Mayor afinidad por GABA</td><td>Duración de apertura</td></tr></tbody></table>",
+   "esquema": "<table><thead><tr><th>Rasgo</th><th>Benzodiacepina</th><th>Barbitúrico</th></tr></thead><tbody><tr><th>Apertura</th><td>Más frecuente</td><td>Más prolongada</td></tr></tbody></table>",
    "fuente": "Bianchi 2010, Curr Neuropharmacol (PMID 20808542)",
    "tags": [
     "Quirurgica2::AnsiedadPanico::Neurobiologia",
@@ -345,14 +409,14 @@
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Buspirona</span>¿Qué mecanismo tiene la buspirona, usada en el trastorno de ansiedad generalizada?",
    "respuesta": "Es un <span class=\"fx\">agonista parcial del receptor 5-HT1A</span>.",
-   "razonamiento": "Actúa sobre el sistema serotoninérgico y no sobre el GABA. Se usa como anti-ansiedad dentro del arsenal del trastorno de ansiedad generalizada.",
+   "razonamiento": "Es una azapirona con eficacia demostrada en el trastorno de ansiedad generalizada; su mecanismo es serotoninérgico, distinto del GABA-A de las benzodiacepinas.",
    "mnemotecnia": "",
    "esquema": "",
-   "fuente": "Smith 2014, Eur J Neurosci (PMID 25195769); Mishra 2023, Cureus (PMID 37900518)",
+   "fuente": "Sramek 1999, Depress Anxiety (PMID 10356651); Mishra 2023, Cureus (PMID 37900518)",
    "tags": [
     "Quirurgica2::AnsiedadPanico::Neurobiologia",
     "Nivel::Aplicacion",
-    "Fuente::Smith2014",
+    "Fuente::Sramek1999",
     "Clase::Aplicacion",
     "Bloom::Comprender"
    ],
@@ -362,15 +426,15 @@
   {
    "id": "Q2R2-ANS-0011",
    "tipo": "Cloze",
-   "text": "<span class=\"tema\">Ataque de pánico · DSM-5-TR</span>Es una oleada abrupta de miedo intenso que alcanza su {{c1::<span class=\"num\">pico en minutos</span>}} y se acompaña de {{c2::<span class=\"num\">≥ 4 de 13</span>}} síntomas.",
+   "text": "<span class=\"tema\">Ataque de pánico · DSM-5</span>Es una oleada abrupta de miedo intenso que alcanza su {{c1::<span class=\"num\">pico en minutos</span>}} y se acompaña de {{c2::<span class=\"num\">≥ 4 de 13</span>}} síntomas.",
    "extra": "Incluye palpitaciones, sudoración, disnea, dolor torácico, mareo, desrealización y miedo a perder el control o a morir. Los síntomas culturales no cuentan entre los cuatro.",
    "mnemotecnia": "",
    "esquema": "",
-   "fuente": "APA, DSM-5-TR 2022; MSD Manual Profesional, Ataques de pánico y trastorno de pánico",
+   "fuente": "MSD Manual Profesional, Ataques de pánico y trastorno de pánico (criterios DSM-5)",
    "tags": [
     "Quirurgica2::AnsiedadPanico::Panico",
     "Nivel::Recuerdo",
-    "Fuente::DSM5TR",
+    "Fuente::MSD",
     "Clase::Irreducible",
     "Bloom::Recordar",
     "AltoRendimiento::USMLE",
@@ -381,16 +445,16 @@
   {
    "id": "Q2R2-ANS-0012",
    "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Panic</span>Una estudiante tuvo un ataque de pánico en un examen y no ha vuelto a tenerlo. ¿Tiene trastorno de pánico?",
+   "pregunta": "<span class=\"tema\">Pánico</span>Una estudiante tuvo un ataque de pánico en un examen y no ha vuelto a tenerlo. ¿Tiene trastorno de pánico?",
    "respuesta": "No: un ataque aislado no basta; el <span class=\"dx\">trastorno de pánico</span> exige ataques recurrentes inesperados.",
    "razonamiento": "Además, tras al menos un ataque debe haber ≥ 1 mes de preocupación persistente por nuevas crisis o un cambio conductual desadaptativo. El ataque de pánico es un hecho; el trastorno, un patrón.",
    "mnemotecnia": "",
    "esquema": "<table><thead><tr><th>Rasgo</th><th>Ataque</th><th>Trastorno</th></tr></thead><tbody><tr><th>Naturaleza</th><td>Episodio</td><td>Diagnóstico</td></tr><tr><th>Recurrencia</th><td>No exigida</td><td>Inesperados y recurrentes</td></tr><tr><th>Tras el ataque</th><td>Sin requisito</td><td>≥ 1 mes de temor o cambio</td></tr></tbody></table>",
-   "fuente": "APA, DSM-5-TR 2022; MSD Manual Profesional, Ataques de pánico y trastorno de pánico",
+   "fuente": "MSD Manual Profesional, Ataques de pánico y trastorno de pánico (criterios DSM-5)",
    "tags": [
     "Quirurgica2::AnsiedadPanico::Panico",
     "Nivel::Aplicacion",
-    "Fuente::DSM5TR",
+    "Fuente::MSD",
     "Clase::Contraste",
     "Bloom::Analizar"
    ],
@@ -400,15 +464,15 @@
   {
    "id": "Q2R2-ANS-0013",
    "tipo": "Cloze",
-   "text": "<span class=\"tema\">Trastorno de pánico · DSM-5-TR</span>Tras al menos un ataque inesperado debe haber {{c1::<span class=\"num\">≥ 1 mes</span>}} de {{c2::preocupación persistente por nuevas crisis o cambio conductual desadaptativo}}.",
+   "text": "<span class=\"tema\">Trastorno de pánico · DSM-5</span>Tras al menos un ataque inesperado debe haber {{c1::<span class=\"num\">≥ 1 mes</span>}} de {{c2::preocupación persistente por nuevas crisis o cambio conductual desadaptativo}}.",
    "extra": "El ataque es inesperado cuando no hay desencadenante evidente; el trastorno exige además la preocupación o el cambio conductual posteriores.",
    "mnemotecnia": "",
    "esquema": "",
-   "fuente": "APA, DSM-5-TR 2022; MSD Manual Profesional, Ataques de pánico y trastorno de pánico",
+   "fuente": "MSD Manual Profesional, Ataques de pánico y trastorno de pánico (criterios DSM-5)",
    "tags": [
     "Quirurgica2::AnsiedadPanico::Panico",
     "Nivel::Recuerdo",
-    "Fuente::DSM5TR",
+    "Fuente::MSD",
     "Clase::Irreducible",
     "Bloom::Recordar"
    ],
@@ -419,7 +483,7 @@
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Agorafobia</span>En el DSM-5, ¿la agorafobia es una variante del trastorno de pánico?",
    "respuesta": "No: se reconoce como <span class=\"dx\">trastorno distinto</span>, aunque pueda coexistir con pánico.",
-   "razonamiento": "La evidencia mostró que la agorafobia se presenta sin pánico y aporta su propia discapacidad. Por eso el DSM-5 la separó.",
+   "razonamiento": "El DSM-5 la reconoció como entidad distinta con base en evidencia creciente, aunque puede coexistir con el pánico.",
    "mnemotecnia": "",
    "esquema": "",
    "fuente": "Park 2020, Adv Exp Med Biol (PMID 32002930)",
@@ -436,7 +500,7 @@
   {
    "id": "Q2R2-ANS-0015",
    "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Trastorno de pánico · tratamiento</span>Las benzodiacepinas logran más remisión que los ISRS en pánico. ¿Por qué no son de primera línea?",
+   "pregunta": "<span class=\"tema\">Trastorno de pánico · tratamiento</span>En el pánico, las benzodiacepinas encabezan el ranking de remisión. ¿Por qué no son de primera línea?",
    "respuesta": "Porque tienen <span class=\"al\">más eventos adversos</span> y riesgo de abuso, mientras los <span class=\"fx\">ISRS</span> dan alta remisión con menos eventos.",
    "razonamiento": "Entre los ISRS, sertralina y escitalopram combinan remisión alta y eventos adversos aceptables. La certeza de la evidencia es de moderada a muy baja.",
    "mnemotecnia": "",
@@ -650,7 +714,7 @@
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Fobia específica</span>¿Cuál es el tratamiento de primera línea de una fobia específica?",
    "respuesta": "La <span class=\"dx\">terapia de exposición</span>.",
-   "razonamiento": "La exposición actúa generando un nuevo aprendizaje, inhibitorio, que compite con el miedo. Los modelos actuales de exposición se centran en este aprendizaje.",
+   "razonamiento": "Los modelos actuales de la exposición se centran en mecanismos de aprendizaje inhibitorio.",
    "mnemotecnia": "",
    "esquema": "",
    "fuente": "Böhnlein 2020, Neurosci Biobehav Rev (PMID 31830494)",
@@ -669,8 +733,8 @@
    "id": "Q2R2-ANS-0027",
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Exposición</span>¿Por qué no conviene que el paciente use relajación durante la exposición?",
-   "respuesta": "Porque <span class=\"mec\">evitar la relajación</span> se asoció con mejores resultados al favorecer el aprendizaje inhibitorio.",
-   "razonamiento": "También ayudan variar el contexto, la motivación previa, el dormir bien y provocar además asco o ansiedad real. Es un resultado de una revisión sistemática, no una regla absoluta.",
+   "respuesta": "Porque <span class=\"mec\">evitar la relajación</span> se asoció con mejores resultados de la exposición.",
+   "razonamiento": "También se asocian a mejor resultado variar el contexto, la motivación previa, el sueño y provocar asco además de ansiedad. Es un resultado de una revisión sistemática, no una regla absoluta.",
    "mnemotecnia": "",
    "esquema": "",
    "fuente": "Böhnlein 2020, Neurosci Biobehav Rev (PMID 31830494)",
@@ -708,7 +772,7 @@
    "id": "Q2R2-ANS-0029",
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Trastorno de síntomas somáticos</span>¿Qué exige el DSM-5 para diagnosticar un trastorno de síntomas somáticos además del síntoma físico?",
-   "respuesta": "<span class=\"dx\">Criterios psicológicos</span> positivos, no solo la falta de explicación médica.",
+   "respuesta": "<span class=\"dx\">Criterios psicológicos</span> (criterio B), no solo el síntoma físico.",
    "razonamiento": "Introducido en 2013, mejora a sus predecesores en fiabilidad y utilidad clínica. Aún se discute cómo concretar los criterios psicológicos del criterio B.",
    "mnemotecnia": "",
    "esquema": "",
@@ -729,7 +793,7 @@
    "tipo": "QA",
    "pregunta": "<span class=\"tema\">Síntomas somáticos · comorbilidad</span>Paciente con múltiples síntomas físicos persistentes y pruebas normales. ¿Qué debes buscar activamente?",
    "respuesta": "<span class=\"dx\">Depresión, ansiedad, ansiedad por la salud y alexitimia</span>.",
-   "razonamiento": "Los pacientes con este trastorno puntúan mucho más alto en depresión, ansiedad, ansiedad por la salud y alexitimia. Esto fundamenta tratar lo psicológico junto con el síntoma.",
+   "razonamiento": "Frente a controles sanos, estos pacientes puntúan mucho más alto en depresión, ansiedad, ansiedad por la salud y alexitimia.",
    "mnemotecnia": "",
    "esquema": "",
    "fuente": "Smakowski 2024, J Psychosom Res (PMID 38365462)",
