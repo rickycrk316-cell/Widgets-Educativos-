@@ -1,752 +1,795 @@
 {
- "meta": {
-  "caso": "Azoados",
-  "rotacion": "2.ª",
-  "tag_raiz": "Azoados",
-  "prefijo": "Q2R2-AZO",
-  "version": "1.0",
-  "fecha": "2026-11-26",
-  "resultado_aprendizaje": "Maneja de manera integral a los pacientes con elevación aguda y crónica de los azoados, según evidencia científica.",
-  "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 2.ª rotación, Caso 1 — Elevación aguda y crónica de los azoados (contenidos y trabajo autónomo)",
-  "justificacion_exceso": "",
-  "mir_verificados": [],
-  "verificacion": {
-   "total": 43,
-   "verificados": 37,
-   "eliminados": [
-    {
-     "id": "Q2R2-AZO-0004",
-     "dato": "Osmolalidad urinaria y cociente urea/creatinina como discriminadores prerrenal vs necrosis tubular",
-     "motivo": "no confirmados en fuente leída: eliminados de la tabla"
+  "meta": {
+    "caso": "Azoados",
+    "rotacion": "2.ª",
+    "tag_raiz": "Azoados",
+    "prefijo": "Q2R2-AZO",
+    "version": "1.0",
+    "fecha": "2026-11-26",
+    "resultado_aprendizaje": "Maneja de manera integral a los pacientes con elevación aguda y crónica de los azoados, según evidencia científica.",
+    "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 2.ª rotación, Caso 1 — Elevación aguda y crónica de los azoados (contenidos y trabajo autónomo)",
+    "justificacion_exceso": "",
+    "mir_verificados": [],
+    "verificacion": {
+      "total": 57,
+      "verificados": 43,
+      "eliminados": [
+        {
+          "id": "Q2R2-AZO-0004",
+          "dato": "Osmolalidad urinaria y cociente urea/creatinina como discriminadores prerrenal vs necrosis tubular",
+          "motivo": "no confirmados en fuente leída: eliminados de la tabla"
+        },
+        {
+          "id": "Q2R2-AZO-0012",
+          "dato": "Mecanismo prostaglandínico del AINE y constricción eferente del IECA con cita directa",
+          "motivo": "el detalle aferente/eferente no figura en los resúmenes: se reformuló a interferencia con la autorregulación (Prieto-García 2016 y 2020)"
+        },
+        {
+          "id": "posrenal",
+          "dato": "Ecografía con hidronefrosis como prueba de elección en la azotemia posrenal",
+          "motivo": "solo un reporte de caso: tarjeta no creada"
+        },
+        {
+          "id": "anemia ERC",
+          "dato": "Déficit de eritropoyetina y anemia de la ERC",
+          "motivo": "sin fuente confirmada: tarjeta no creada"
+        },
+        {
+          "id": "Q2R2-AZO-0004",
+          "dato": "Cilindros «café turbio» y sedimento hialino (MSD Manual)",
+          "motivo": "MSD no accesible desde la sesión: se usa Perazella 2008"
+        },
+        {
+          "id": "Q2R2-AZO-0005",
+          "dato": "Corte de FENa > 2 % (MSD Manual)",
+          "motivo": "solo web: se usa Espinel 1976 (< 1 y > 3)"
+        },
+        {
+          "id": "Q2R2-AZO-0006",
+          "dato": "FENa poco útil con diuréticos y en ERC; fracción de urea (MSD Manual)",
+          "motivo": "solo web: reformulada a Perazella 2012"
+        },
+        {
+          "id": "Q2R2-AZO-0013",
+          "dato": "Investigar hipovolemia o estenosis de arteria renal si la creatinina sube más",
+          "motivo": "no figura en la fuente: eliminado"
+        },
+        {
+          "id": "Q2R2-AZO-0014",
+          "dato": "Reacción sin relación con la dosis",
+          "motivo": "no figura en el resumen: eliminado"
+        },
+        {
+          "id": "Q2R2-AZO-0021",
+          "dato": "Edema pulmonar como límite de la hidratación (Briguori 2023)",
+          "motivo": "no lo afirma la fuente: sustituida por Lameire 2013 Parte 2"
+        },
+        {
+          "id": "Q2R2-AZO-0023",
+          "dato": "Tabla G1–G5 con cortes de TFG y duración > 3 meses (KDIGO 2024)",
+          "motivo": "texto de la guía no accesible (PMID verificado, sin resumen): eliminado"
+        },
+        {
+          "id": "Q2R2-AZO-0024",
+          "dato": "Cortes A1/A2/A3 de albuminuria (KDIGO 2024)",
+          "motivo": "texto de la guía no accesible: se conserva solo TFG < 60 y ACR > 30 (Levey 2011)"
+        },
+        {
+          "id": "Q2R2-AZO-0028",
+          "dato": "Dosis máxima tolerada y categoría A2",
+          "motivo": "no figura en las fuentes: eliminado"
+        },
+        {
+          "id": "Q2R2-AZO-0031",
+          "dato": "Pérdida progresiva de nefronas",
+          "motivo": "reformulado a los dos modos de esclerosis de Hill 2008"
+        }
+      ]
     },
-    {
-     "id": "Q2R2-AZO-0012",
-     "dato": "Mecanismo prostaglandínico del AINE y constricción eferente del IECA con cita directa",
-     "motivo": "los resúmenes de Calvo 2025 y Leete 2022 no los describen en detalle: se conserva como fisiología general del sílabo, sin cifra"
-    },
-    {
-     "id": "glomerulonefritis",
-     "dato": "Sedimento nefrítico (cilindros hemáticos, hematíes dismórficos) y causas de GN",
-     "motivo": "PubMed sin resumen utilizable y Consensus agotado: tarjetas no creadas"
-    },
-    {
-     "id": "posrenal",
-     "dato": "Ecografía con hidronefrosis como prueba de elección en la azotemia posrenal",
-     "motivo": "solo un reporte de caso: tarjeta no creada"
-    },
-    {
-     "id": "dialisis",
-     "dato": "Indicaciones urgentes de diálisis (hiperpotasemia, acidosis, sobrecarga, uremia)",
-     "motivo": "sin fuente confirmada en la sesión: tarjeta no creada"
-    },
-    {
-     "id": "anemia ERC",
-     "dato": "Déficit de eritropoyetina y anemia de la ERC",
-     "motivo": "sin fuente confirmada: tarjeta no creada"
+    "guia": {
+      "principios": [
+        "La elevación aguda de azoados se clasifica por dónde falla la depuración: perfusión, parénquima o vía de salida.",
+        "Prerrenal es funcional y se corrige con volumen; necrosis tubular es estructural y se recupera despacio.",
+        "Ningún índice urinario aislado decide: el FENa se lee con el sedimento y el contexto.",
+        "El tiempo separa lo agudo (hasta 7 días), lo subagudo (hasta 3 meses) y lo crónico (más de 3 meses).",
+        "En la ERC se clasifica por TFG y albuminuria, porque ambas predicen el riesgo.",
+        "El bloqueo del sistema renina-angiotensina y los iSGLT2 protegen más allá de la presión o la glucemia."
+      ],
+      "palabras_clave": [
+        "azotemia prerrenal",
+        "necrosis tubular aguda",
+        "nefritis intersticial aguda",
+        "FENa",
+        "cilindros granulosos",
+        "KDIGO",
+        "triple whammy",
+        "rabdomiólisis",
+        "nefropatía diabética",
+        "nefroesclerosis",
+        "albuminuria",
+        "TFG",
+        "iSGLT2"
+      ],
+      "imagenes_oclusion": [
+        "Tabla de estadios G1–G5 con los intervalos de TFG tapados",
+        "Tabla prerrenal vs necrosis tubular con las celdas tapadas",
+        "Línea de tiempo aguda, subaguda y crónica con las duraciones tapadas"
+      ],
+      "preguntas_cierre": [
+        "Explica sin mirar por qué un IECA, un diurético y un AINE juntos pueden provocar lesión renal aguda.",
+        "Un paciente con creatinina alta tras diarrea: ¿qué buscas en el sedimento y en el FENa y qué te dice cada resultado?",
+        "¿Cómo clasificas a un diabético con TFG 52 y relación albúmina/creatinina de 150 mg/g, y qué fármacos usas?",
+        "¿Por qué la ausencia de fiebre, exantema y eosinofilia no descarta una nefritis intersticial?"
+      ],
+      "subtemas": {
+        "Clasificacion": "Contenido: elevación de azoados aguda y crónica",
+        "Prerrenal": "Contenido: azotemia prerrenal; farmacología de IECA y diuréticos",
+        "NTA": "Contenido: azotemia renal, necrosis tubular aguda",
+        "AKI": "Contenido: elevación aguda de azoados",
+        "NIA": "Contenido: nefritis intersticial",
+        "Rabdomiolisis": "Contenido: azotemia renal por causa muscular",
+        "Contraste": "Contenido: azotemia renal por nefrotóxicos",
+        "ERC": "Contenido: azotemia crónica",
+        "Diabetica": "Contenido: azotemia crónica secundaria a diabetes mellitus",
+        "Hipertensiva": "Contenido: azotemia crónica secundaria a hipertensión arterial"
+      },
+      "fechas": {
+        "apertura": null,
+        "cierre": null,
+        "examen": null
+      },
+      "referencias": [
+        "Khwaja A. KDIGO clinical practice guidelines for acute kidney injury. Nephron Clin Pract. 2012;120(4):c179-84. PMID 22890468.",
+        "Kellum JA, Lameire N; KDIGO AKI Guideline Work Group. Diagnosis, evaluation, and management of acute kidney injury: a KDIGO summary (Part 1). Crit Care. 2013;17(1):204. PMID 23394211.",
+        "Lameire NH, Levin A, Kellum JA, et al. Harmonizing acute and chronic kidney disease definition and classification: report of a KDIGO Consensus Conference. Kidney Int. 2021;100(3):516-26. PMID 34252450.",
+        "Bellomo R, Bagshaw S, Langenberg C, Ronco C. Pre-renal azotemia: a flawed paradigm in critically ill septic patients? Contrib Nephrol. 2007;156:1-9. PMID 17464109.",
+        "Espinel CH. The FENa test. Use in the differential diagnosis of acute renal failure. JAMA. 1976;236(6):579-81. PMID 947239.",
+        "Venkatachalam MA, Weinberg JM, Kriz W, Bidani AK. Failed tubule recovery, AKI-CKD transition, and kidney disease progression. J Am Soc Nephrol. 2015;26(8):1765-76. PMID 25810494.",
+        "Calvo E, et al. Acute kidney injury and morbi-mortality associated with 'triple whammy' combination: systematic review and meta-analysis. Br J Clin Pharmacol. 2025;91:3031-41. PMID 40876867.",
+        "Leete J, et al. Determining risk factors for triple whammy acute kidney injury. Math Biosci. 2022;347:108809. PMID 35390421.",
+        "Bakris GL, Weir MR. Angiotensin-converting enzyme inhibitor-associated elevations in serum creatinine: is this a cause for concern? Arch Intern Med. 2000;160(5):685-93. PMID 10724055.",
+        "Sanchez-Alamo B, Cases-Corona C, Fernandez-Juarez G. Facing the challenge of drug-induced acute interstitial nephritis. Nephron. 2023;147(2):78-90. PMID 35830831.",
+        "Cabral BMI, et al. Rhabdomyolysis. Dis Mon. 2020;66(8):101015. PMID 32532456.",
+        "Petejova N, Martinek A. Acute kidney injury due to rhabdomyolysis and renal replacement therapy: a critical review. Crit Care. 2014;18(3):224. PMID 25043142.",
+        "STARRT-AKI Investigators. Timing of initiation of renal-replacement therapy in acute kidney injury. N Engl J Med. 2020;383(3):240-51. PMID 32668114.",
+        "Gupta S, Dominguez M, Golestaneh L. Diabetic kidney disease: an update. Med Clin North Am. 2023;107(4):689-705. PMID 37258007.",
+        "Lewis EJ, Hunsicker LG, Bain RP, Rohde RD. The effect of angiotensin-converting-enzyme inhibition on diabetic nephropathy. N Engl J Med. 1993;329(20):1456-62. PMID 8413456.",
+        "Brenner BM, Cooper ME, de Zeeuw D, et al. Effects of losartan on renal and cardiovascular outcomes in patients with type 2 diabetes and nephropathy. N Engl J Med. 2001;345(12):861-9. PMID 11565518.",
+        "Heerspink HJL, Stefánsson BV, Correa-Rotter R, et al. Dapagliflozin in patients with chronic kidney disease. N Engl J Med. 2020;383(15):1436-46. PMID 32970396.",
+        "The EMPA-KIDNEY Collaborative Group. Empagliflozin in patients with chronic kidney disease. N Engl J Med. 2023;388(2):117-27. PMID 36331190.",
+        "Hill GS. Hypertensive nephrosclerosis. Curr Opin Nephrol Hypertens. 2008;17(3):266-70. PMID 18408477.",
+        "Miller TR, Anderson RJ, Linas SL, et al. Urinary diagnostic indices in acute renal failure: a prospective study. Ann Intern Med. 1978;89(1):47-50. PMID 666184.",
+        "Perazella MA, Coca SG, Kanbay M, Brewster UC, Parikh CR. Diagnostic value of urine microscopy for differential diagnosis of acute kidney injury in hospitalized patients. Clin J Am Soc Nephrol. 2008;3(6):1615-9. PMID 18784207.",
+        "Perazella MA, Coca SG. Traditional urinary biomarkers in the assessment of hospital-acquired AKI. Clin J Am Soc Nephrol. 2012;7(1):167-74. PMID 22096038.",
+        "Prieto-García L, Pericacho M, Sancho-Martínez SM, et al. Mechanisms of triple whammy acute kidney injury. Pharmacol Ther. 2016;167:132-45. PMID 27490717.",
+        "Prieto-García L, Vicente-Vicente L, Blanco-Gozalo V, et al. Pathophysiological mechanisms underlying a rat model of triple whammy acute kidney injury. Lab Invest. 2020;100(11):1455-64. PMID 32719543.",
+        "Lameire N, Kellum JA; KDIGO AKI Guideline Work Group. Contrast-induced acute kidney injury and renal support for acute kidney injury: a KDIGO summary (Part 2). Crit Care. 2013;17(1):205. PMID 23394215.",
+        "Levey AS, de Jong PE, Coresh J, et al. The definition, classification, and prognosis of chronic kidney disease: a KDIGO Controversies Conference report. Kidney Int. 2011;80(1):17-28. PMID 21150873."
+      ]
     }
-   ]
   },
-  "guia": {
-   "principios": [
-    "La elevación aguda de azoados se clasifica por dónde falla la depuración: perfusión, parénquima o vía de salida.",
-    "Prerrenal es funcional y se corrige con volumen; necrosis tubular es estructural y se recupera despacio.",
-    "Ningún índice urinario aislado decide: el FENa se lee con el sedimento y el contexto.",
-    "El tiempo separa lo agudo (hasta 7 días), lo subagudo (hasta 3 meses) y lo crónico (más de 3 meses).",
-    "En la ERC se clasifica por TFG y albuminuria, porque ambas predicen el riesgo.",
-    "El bloqueo del sistema renina-angiotensina y los iSGLT2 protegen más allá de la presión o la glucemia."
-   ],
-   "palabras_clave": [
-    "azotemia prerrenal",
-    "necrosis tubular aguda",
-    "nefritis intersticial aguda",
-    "FENa",
-    "cilindros granulosos",
-    "KDIGO",
-    "triple whammy",
-    "rabdomiólisis",
-    "nefropatía diabética",
-    "nefroesclerosis",
-    "albuminuria",
-    "TFG",
-    "iSGLT2"
-   ],
-   "imagenes_oclusion": [
-    "Tabla de estadios G1–G5 con los intervalos de TFG tapados",
-    "Tabla prerrenal vs necrosis tubular con las celdas tapadas",
-    "Línea de tiempo aguda, subaguda y crónica con las duraciones tapadas"
-   ],
-   "preguntas_cierre": [
-    "Explica sin mirar por qué un IECA, un diurético y un AINE juntos pueden provocar lesión renal aguda.",
-    "Un paciente con creatinina alta tras diarrea: ¿qué buscas en el sedimento y en el FENa y qué te dice cada resultado?",
-    "¿Cómo clasificas a un diabético con TFG 52 y relación albúmina/creatinina de 150 mg/g, y qué fármacos usas?",
-    "¿Por qué la ausencia de fiebre, exantema y eosinofilia no descarta una nefritis intersticial?"
-   ],
-   "subtemas": {
-    "Clasificacion": "Contenido: elevación de azoados aguda y crónica",
-    "Prerrenal": "Contenido: azotemia prerrenal; farmacología de IECA y diuréticos",
-    "NTA": "Contenido: azotemia renal, necrosis tubular aguda",
-    "AKI": "Contenido: elevación aguda de azoados",
-    "NIA": "Contenido: nefritis intersticial",
-    "Rabdomiolisis": "Contenido: azotemia renal por causa muscular",
-    "Contraste": "Contenido: azotemia renal por nefrotóxicos",
-    "ERC": "Contenido: azotemia crónica",
-    "Diabetica": "Contenido: azotemia crónica secundaria a diabetes mellitus",
-    "Hipertensiva": "Contenido: azotemia crónica secundaria a hipertensión arterial"
-   },
-   "fechas": {
-    "apertura": null,
-    "cierre": null,
-    "examen": null
-   },
-   "referencias": [
-    "Khwaja A. KDIGO clinical practice guidelines for acute kidney injury. Nephron Clin Pract. 2012;120(4):c179-84. PMID 22890468.",
-    "Kellum JA, Lameire N; KDIGO AKI Guideline Work Group. Diagnosis, evaluation, and management of acute kidney injury: a KDIGO summary (Part 1). Crit Care. 2013;17(1):204. PMID 23394211.",
-    "Lameire NH, Levin A, Kellum JA, et al. Harmonizing acute and chronic kidney disease definition and classification: report of a KDIGO Consensus Conference. Kidney Int. 2021;100(3):516-26. PMID 34252450.",
-    "Kidney Disease: Improving Global Outcomes (KDIGO) CKD Work Group. KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease. Kidney Int. 2024;105(4S):S117-S314. PMID 38490803.",
-    "Bellomo R, Bagshaw S, Langenberg C, Ronco C. Pre-renal azotemia: a flawed paradigm in critically ill septic patients? Contrib Nephrol. 2007;156:1-9. PMID 17464109.",
-    "Espinel CH. The FENa test. Use in the differential diagnosis of acute renal failure. JAMA. 1976;236(6):579-81. PMID 947239.",
-    "MSD Manual Professional Edition. Laboratory findings distinguishing acute tubular necrosis from prerenal azotemia (tabla). Disponible en: https://www.msdmanuals.com/professional/multimedia/table/laboratory-findings-distinguishing-acute-tubular-necrosis-from-prerenal-azotemia [citado 2026 nov 26].",
-    "Venkatachalam MA, Weinberg JM, Kriz W, Bidani AK. Failed tubule recovery, AKI-CKD transition, and kidney disease progression. J Am Soc Nephrol. 2015;26(8):1765-76. PMID 25810494.",
-    "Calvo E, et al. Acute kidney injury and morbi-mortality associated with 'triple whammy' combination: systematic review and meta-analysis. Br J Clin Pharmacol. 2025;91:3031-41. PMID 40876867.",
-    "Leete J, et al. Determining risk factors for triple whammy acute kidney injury. Math Biosci. 2022;347:108809. PMID 35390421.",
-    "Bakris GL, Weir MR. Angiotensin-converting enzyme inhibitor-associated elevations in serum creatinine: is this a cause for concern? Arch Intern Med. 2000;160(5):685-93. PMID 10724055.",
-    "Sanchez-Alamo B, Cases-Corona C, Fernandez-Juarez G. Facing the challenge of drug-induced acute interstitial nephritis. Nephron. 2023;147(2):78-90. PMID 35830831.",
-    "Moledina DG, Perazella MA. Drug-induced acute interstitial nephritis. Clin J Am Soc Nephrol. 2017;12(12):2046-9. PMID 28893923.",
-    "Cabral BMI, et al. Rhabdomyolysis. Dis Mon. 2020;66(8):101015. PMID 32532456.",
-    "Petejova N, Martinek A. Acute kidney injury due to rhabdomyolysis and renal replacement therapy: a critical review. Crit Care. 2014;18(3):224. PMID 25043142.",
-    "Briguori C, et al. Intravenous volume expansion to prevent contrast-associated acute kidney injury. J Invasive Cardiol. 2023;35. PMID 37992331.",
-    "STARRT-AKI Investigators. Timing of initiation of renal-replacement therapy in acute kidney injury. N Engl J Med. 2020;383(3):240-51. PMID 32668114.",
-    "Gupta S, Dominguez M, Golestaneh L. Diabetic kidney disease: an update. Med Clin North Am. 2023;107(4):689-705. PMID 37258007.",
-    "Lewis EJ, Hunsicker LG, Bain RP, Rohde RD. The effect of angiotensin-converting-enzyme inhibition on diabetic nephropathy. N Engl J Med. 1993;329(20):1456-62. PMID 8413456.",
-    "Brenner BM, Cooper ME, de Zeeuw D, et al. Effects of losartan on renal and cardiovascular outcomes in patients with type 2 diabetes and nephropathy. N Engl J Med. 2001;345(12):861-9. PMID 11565518.",
-    "Heerspink HJL, Stefánsson BV, Correa-Rotter R, et al. Dapagliflozin in patients with chronic kidney disease. N Engl J Med. 2020;383(15):1436-46. PMID 32970396.",
-    "The EMPA-KIDNEY Collaborative Group. Empagliflozin in patients with chronic kidney disease. N Engl J Med. 2023;388(2):117-27. PMID 36331190.",
-    "Hill GS. Hypertensive nephrosclerosis. Curr Opin Nephrol Hypertens. 2008;17(3):266-70. PMID 18408477."
-   ]
-  }
- },
- "tarjetas": [
-  {
-   "id": "Q2R2-AZO-0001",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Elevación aguda de azoados</span>¿Con qué principio se ordena el diagnóstico diferencial de una elevación aguda de urea y creatinina?",
-   "respuesta": "Por <span class=\"mec\">dónde falla la depuración</span>: la perfusión (prerrenal), el parénquima (renal) o la vía de salida (posrenal).",
-   "razonamiento": "Cada nivel pide una conducta distinta: reponer perfusión, buscar y retirar la causa del daño parenquimatoso, o desobstruir. Por eso el primer paso es ubicar el nivel antes de tratar la cifra.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Nivel</th><th>Falla</th><th>Tipo</th></tr></thead><tbody><tr><th>Prerrenal</th><td>Perfusión</td><td>Funcional</td></tr><tr><th>Renal</th><td>Parénquima</td><td>Estructural</td></tr><tr><th>Posrenal</th><td>Vía de salida</td><td>Obstructivo</td></tr></tbody></table>",
-   "fuente": "Sílabo Q2 2.ª rotación, Caso 1; Bellomo 2007, Contrib Nephrol (PMID 17464109)",
-   "tags": [
-    "Quirurgica2::Azoados::Clasificacion",
-    "Nivel::Aplicacion",
-    "Fuente::Sil",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0002",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Azotemia prerrenal</span>Tras tres días de diarrea, un adulto presenta creatinina elevada respecto a su basal y sedimento sin cilindros. ¿Qué tipo de elevación es y qué la revierte?",
-   "respuesta": "Una <span class=\"dx\">azotemia prerrenal</span>: la filtración cae por hipoperfusión y se corrige al <span class=\"mec\">restituir el volumen circulante</span>.",
-   "razonamiento": "El parénquima está íntegro: la caída del filtrado es funcional. Si no se corrige a tiempo, la hipoperfusión sostenida puede evolucionar a daño tubular.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Sílabo Q2 2.ª rotación, Caso 1; Bellomo 2007, Contrib Nephrol (PMID 17464109)",
-   "tags": [
-    "Quirurgica2::Azoados::Prerrenal",
-    "Nivel::Aplicacion",
-    "Fuente::Bellomo2007",
-    "Clase::Vineta",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0003",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Azotemia prerrenal</span>¿Por qué una elevación prerrenal se considera funcional y no estructural?",
-   "respuesta": "Porque la caída del filtrado se debe a <span class=\"mec\">hipoperfusión</span> sin necrosis tubular, de modo que cede al restablecer el flujo.",
-   "razonamiento": "El término separa el fallo funcional del estructural (necrosis tubular aguda). Esta dicotomía es útil en el paciente con hipovolemia, pero se cuestiona en la lesión renal séptica del crítico.<br><span class=\"vs\">Contraste</span> prerrenal = funcional y reversible con volumen; necrosis tubular = estructural y de recuperación lenta.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Bellomo 2007, Contrib Nephrol (PMID 17464109)",
-   "tags": [
-    "Quirurgica2::Azoados::Prerrenal",
-    "Nivel::Aplicacion",
-    "Fuente::Bellomo2007",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0004",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Prerrenal vs. necrosis tubular</span>Con el mismo aumento de creatinina, ¿qué dos datos del laboratorio urinario inclinan hacia necrosis tubular aguda frente a prerrenal?",
-   "respuesta": "Un <span class=\"num\">FENa alto</span> y un sedimento con <span class=\"al\">cilindros granulosos «café turbio»</span> o células epiteliales tubulares.",
-   "razonamiento": "En la prerrenal el túbulo funciona y retiene sodio, por eso la excreción fraccional es baja y el sedimento es inocuo (normal o con cilindros hialinos). En la necrosis tubular el túbulo lesionado no reabsorbe sodio y descama.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Rasgo</th><th>Prerrenal</th><th>Necrosis tubular</th></tr></thead><tbody><tr><th>Daño</th><td>Funcional</td><td>Estructural</td></tr><tr><th>FENa</th><td>Bajo (&lt; 1 %)</td><td>Alto (&gt; 2 %)</td></tr><tr><th>Sedimento</th><td>Hialino o normal</td><td>Cilindros granulosos</td></tr></tbody></table>",
-   "fuente": "Espinel 1976, JAMA (PMID 947239); MSD Manual Profesional, Laboratory findings distinguishing ATN from prerenal azotemia",
-   "tags": [
-    "Quirurgica2::Azoados::NTA",
-    "Nivel::Aplicacion",
-    "Fuente::Espinel1976",
-    "Clase::Contraste",
-    "Bloom::Analizar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0005",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">FENa en la oliguria aguda</span>Una fracción excretada de sodio menor de {{c1::<span class=\"num\">1 %</span>}} sugiere azotemia prerrenal y mayor de {{c2::<span class=\"num\">2 %</span>}} sugiere necrosis tubular aguda.",
-   "extra": "El estudio original (Espinel 1976) halló menos de 1 en prerrenal y más de 3 en necrosis tubular; las tablas actuales usan 2 como punto de corte. El intervalo 1–2 % no es concluyente.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Espinel 1976, JAMA (PMID 947239); MSD Manual Profesional, Laboratory findings distinguishing ATN from prerenal azotemia",
-   "tags": [
-    "Quirurgica2::Azoados::NTA",
-    "Nivel::Recuerdo",
-    "Fuente::Espinel1976",
-    "Clase::Irreducible",
-    "Bloom::Recordar",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0006",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Límites del FENa</span>¿En qué dos situaciones el FENa deja de discriminar bien la prerrenal de la necrosis tubular?",
-   "respuesta": "Tras el uso reciente de <span class=\"fx\">diuréticos</span> y en la <span class=\"dx\">enfermedad renal crónica</span>.",
-   "razonamiento": "En ambos casos el sodio urinario ya no refleja si el túbulo conserva su función de reabsorción. Con diuréticos se emplea la fracción excretada de urea y siempre se interpreta junto con el sedimento y el contexto clínico.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "MSD Manual Profesional, Laboratory findings distinguishing ATN from prerenal azotemia",
-   "tags": [
-    "Quirurgica2::Azoados::NTA",
-    "Nivel::Aplicacion",
-    "Fuente::MSD",
-    "Clase::Aplicacion",
-    "Bloom::Analizar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0007",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Lesión renal en el crítico</span>Un paciente séptico en UCI con creatinina en ascenso y FENa menor de 1 %: ¿basta eso para tratarlo solo como prerrenal?",
-   "respuesta": "No: en la <span class=\"dx\">lesión renal séptica</span> no hay evidencia de que los índices urinarios separen lo funcional de lo estructural ni de que esa separación cambie el tratamiento.",
-   "razonamiento": "El paradigma «prerrenal vs. necrosis tubular» nació en el paciente hipovolémico simple. En el crítico se valora la evolución y el contexto, no un solo índice.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Bellomo 2007, Contrib Nephrol (PMID 17464109)",
-   "tags": [
-    "Quirurgica2::Azoados::NTA",
-    "Nivel::Aplicacion",
-    "Fuente::Bellomo2007",
-    "Clase::Relacional",
-    "Bloom::Evaluar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0008",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">Lesión renal aguda · KDIGO</span>Se define por un aumento de creatinina ≥ {{c1::<span class=\"num\">0,3 mg/dL</span>}} en {{c2::<span class=\"num\">48 h</span>}}, o ≥ {{c3::<span class=\"num\">1,5 veces</span>}} la basal en 7 días, o diuresis &lt; {{c4::<span class=\"num\">0,5 mL/kg/h</span>}} durante 6 h.",
-   "extra": "Basta cualquiera de los tres criterios. La diuresis conservada no excluye la lesión renal aguda: puede ser no oligúrica.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Khwaja 2012, Nephron Clin Pract (PMID 22890468); KDIGO 2012, Kidney Int Suppl 2(1):19-36",
-   "tags": [
-    "Quirurgica2::Azoados::AKI",
-    "Nivel::Recuerdo",
-    "Fuente::KDIGO2012",
-    "Clase::Irreducible",
-    "Bloom::Recordar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0009",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Aguda vs. crónica</span>Ante una creatinina elevada, ¿qué dato ordena si el problema es lesión aguda, enfermedad renal aguda o enfermedad crónica?",
-   "respuesta": "El <span class=\"mec\">tiempo</span> de evolución de la anomalía de función o estructura renal.",
-   "razonamiento": "La lesión renal aguda es el cuadro más breve (hasta 7 días de aumento de creatinina); la enfermedad renal aguda abarca hasta 3 meses; la crónica exige más de 3 meses. Una lesión aguda puede aparecer sobre una crónica.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Entidad</th><th>Duración</th></tr></thead><tbody><tr><th>Lesión aguda (AKI)</th><td>Hasta 7 días</td></tr><tr><th>Enfermedad renal aguda</th><td>Hasta 3 meses</td></tr><tr><th>Enfermedad renal crónica</th><td>Más de 3 meses</td></tr></tbody></table>",
-   "fuente": "Lameire 2021, Kidney Int (PMID 34252450); KDIGO 2024 CKD, Kidney Int (PMID 38490803)",
-   "tags": [
-    "Quirurgica2::Azoados::Clasificacion",
-    "Nivel::Aplicacion",
-    "Fuente::KDIGO2024",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0010",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">De la lesión aguda a la crónica</span>¿Por qué un episodio de necrosis tubular puede dejar enfermedad renal crónica aunque la creatinina se normalice?",
-   "respuesta": "Porque parte de los túbulos en reparación <span class=\"mec\">no se rediferencian</span>, quedan atróficos y activan fibrosis intersticial.",
-   "razonamiento": "La fibrosis y la pérdida de capilares peritubulares hacen que cada lesión aguda reste parénquima. Por eso se hace seguimiento tras una lesión renal aguda.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Venkatachalam 2015, J Am Soc Nephrol (PMID 25810494)",
-   "tags": [
-    "Quirurgica2::Azoados::Clasificacion",
-    "Nivel::Aplicacion",
-    "Fuente::Venkatachalam2015",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0011",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Necrosis tubular aguda</span>Un paciente con hipotensión prolongada mantiene la creatinina alta pese a reponer volumen. ¿Qué diagnóstico se sospecha y por qué no cede?",
-   "respuesta": "Una <span class=\"dx\">necrosis tubular aguda</span> isquémica: hay daño celular tubular que no se revierte al restituir el flujo.",
-   "razonamiento": "La isquemia sostenida pasa de lesión funcional a estructural; la recuperación depende de la regeneración tubular y tarda días o semanas.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Bellomo 2007, Contrib Nephrol (PMID 17464109); MSD Manual Profesional, Laboratory findings distinguishing ATN from prerenal azotemia",
-   "tags": [
-    "Quirurgica2::Azoados::NTA",
-    "Nivel::Aplicacion",
-    "Fuente::Bellomo2007",
-    "Clase::Vineta",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0012",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Fármacos y perfusión renal</span>¿Qué combinación de tres fármacos aumenta el riesgo de lesión renal aguda aun en riñones sanos y por qué?",
-   "respuesta": "<span class=\"fx\">Diurético</span> + <span class=\"fx\">IECA o ARA-II</span> + <span class=\"fx\">AINE</span> («triple whammy»): sus efectos suman un menor volumen y la pérdida de los mecanismos que sostienen el filtrado.",
-   "razonamiento": "El diurético reduce la volemia, el IECA o ARA-II quita la constricción de la arteriola eferente que mantiene la presión de filtración y el AINE quita la vasodilatación prostaglandínica de la aferente. El metaanálisis halló un riesgo de lesión renal cercano al doble.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Calvo 2025, Br J Clin Pharmacol (PMID 40876867); Leete 2022, Math Biosci (PMID 35390421)",
-   "tags": [
-    "Quirurgica2::Azoados::Prerrenal",
-    "Nivel::Aplicacion",
-    "Fuente::Calvo2025",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0013",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">IECA en enfermedad renal</span>Hipertenso con enfermedad renal inicia un IECA y su creatinina sube un 20 % en dos semanas. ¿Se suspende?",
-   "respuesta": "No de entrada: una subida de hasta <span class=\"num\">30 %</span> que se estabiliza en los primeros 2 meses es esperable y se asocia con protección renal a largo plazo.",
-   "razonamiento": "El IECA reduce la presión de filtración glomerular y por eso baja el filtrado de forma inicial. Se vigilan potasio y creatinina, y se investiga hipovolemia o estenosis de la arteria renal si el aumento es mayor o no se estabiliza.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Bakris 2000, Arch Intern Med (PMID 10724055)",
-   "tags": [
-    "Quirurgica2::Azoados::Prerrenal",
-    "Nivel::Aplicacion",
-    "Fuente::Bakris2000",
-    "Clase::Aplicacion",
-    "Bloom::Evaluar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0014",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Nefritis intersticial aguda</span>¿Por qué mecanismo un fármaco produce nefritis intersticial aguda y por qué importa para el diagnóstico?",
-   "respuesta": "Por una <span class=\"mec\">reacción de hipersensibilidad tipo IV idiosincrásica</span>, sin relación con la dosis y con infiltrado linfocitario intersticial.",
-   "razonamiento": "Casi cualquier fármaco puede causarla; los antibióticos, los AINE y los inhibidores de la bomba de protones aportan la mayoría de los casos. Por ser idiosincrásica, el fármaco culpable es difícil de identificar y se necesita alta sospecha.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Sanchez-Alamo 2023, Nephron (PMID 35830831); Moledina 2017, Clin J Am Soc Nephrol (PMID 28893923)",
-   "tags": [
-    "Quirurgica2::Azoados::NIA",
-    "Nivel::Aplicacion",
-    "Fuente::SanchezAlamo2023",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0015",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Nefritis intersticial aguda</span>Paciente que toma un inhibidor de la bomba de protones presenta creatinina en ascenso sin oliguria y proteinuria no nefrótica de origen tubular. ¿Qué diagnóstico y qué primera medida?",
-   "respuesta": "Una <span class=\"dx\">nefritis intersticial aguda</span> farmacológica; se retira el fármaco sospechoso.",
-   "razonamiento": "La lesión renal aguda no oligúrica con proteinuria tubular es la forma típica. La biopsia renal confirma el diagnóstico; retirar el fármaco es el pilar del tratamiento.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Sanchez-Alamo 2023, Nephron (PMID 35830831)",
-   "tags": [
-    "Quirurgica2::Azoados::NIA",
-    "Nivel::Aplicacion",
-    "Fuente::SanchezAlamo2023",
-    "Clase::Vineta",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0016",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Nefritis intersticial aguda</span>Tras retirar el fármaco culpable no hay recuperación de la función renal. ¿Cuándo y con qué se escala el tratamiento?",
-   "respuesta": "Con <span class=\"fx\">corticoides</span> si no hay recuperación a los <span class=\"num\">5–7 días</span> de retirar el fármaco.",
-   "razonamiento": "Los estudios apoyan que iniciarlos pronto reduce el infiltrado inflamatorio y el riesgo de fibrosis posterior.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Sanchez-Alamo 2023, Nephron (PMID 35830831)",
-   "tags": [
-    "Quirurgica2::Azoados::NIA",
-    "Nivel::Aplicacion",
-    "Fuente::SanchezAlamo2023",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0017",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Nefritis intersticial aguda</span>Un paciente con sospecha de nefritis intersticial no tiene fiebre, exantema ni eosinofilia. ¿Se descarta?",
-   "respuesta": "No: la <span class=\"al\">tríada fiebre, exantema y eosinofilia</span> está presente en una minoría de los casos.",
-   "razonamiento": "La presentación habitual es inespecífica (malestar, náuseas, vómitos). Esperar la tríada retrasaría el diagnóstico.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Sanchez-Alamo 2023, Nephron (PMID 35830831)",
-   "tags": [
-    "Quirurgica2::Azoados::NIA",
-    "Nivel::Aplicacion",
-    "Fuente::SanchezAlamo2023",
-    "Clase::Relacional",
-    "Bloom::Evaluar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0018",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">Rabdomiólisis</span>El diagnóstico se confirma con creatina cinasa sérica &gt; {{c1::<span class=\"num\">1000 U/L</span>}} o al menos {{c2::<span class=\"num\">5 veces</span>}} el límite superior normal.",
-   "extra": "Se complementa con mioglobinuria en el uroanálisis y con creatinina y electrolitos. Una puntuación de McMahon de 6 o más predice lesión renal que requiere diálisis.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Cabral 2020, Dis Mon (PMID 32532456)",
-   "tags": [
-    "Quirurgica2::Azoados::Rabdomiolisis",
-    "Nivel::Recuerdo",
-    "Fuente::Cabral2020",
-    "Clase::Irreducible",
-    "Bloom::Recordar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0019",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Rabdomiólisis</span>¿Qué medida es la base para prevenir y tratar la lesión renal por rabdomiólisis?",
-   "respuesta": "Reponer volumen de forma precoz e intensa con <span class=\"fx\">cristaloides</span> y tratar la causa del daño muscular.",
-   "razonamiento": "No hay beneficio establecido con manitol ni con bicarbonato. Las alteraciones electrolíticas se corrigen con el manejo habitual.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Cabral 2020, Dis Mon (PMID 32532456)",
-   "tags": [
-    "Quirurgica2::Azoados::Rabdomiolisis",
-    "Nivel::Aplicacion",
-    "Fuente::Cabral2020",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0020",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Rabdomiólisis y diálisis</span>¿Se decide iniciar diálisis por la cifra de CK o de mioglobina?",
-   "respuesta": "No: la indicación depende del estado clínico y de la función renal, no de la concentración de mioglobina o de creatina cinasa.",
-   "razonamiento": "La idea de que la mioglobina sola causa la lesión renal es una simplificación excesiva; la fisiopatología es multifactorial.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Petejova 2014, Crit Care (PMID 25043142)",
-   "tags": [
-    "Quirurgica2::Azoados::Rabdomiolisis",
-    "Nivel::Aplicacion",
-    "Fuente::Petejova2014",
-    "Clase::Relacional",
-    "Bloom::Evaluar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0021",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Contraste yodado</span>En un paciente con enfermedad renal crónica que recibirá contraste intravenoso, ¿qué medida preventiva se aplica y qué riesgo la limita?",
-   "respuesta": "Expansión de volumen intravenosa; el riesgo es el <span class=\"al\">edema agudo de pulmón</span>.",
-   "razonamiento": "En una serie de pacientes con enfermedad renal crónica, quienes desarrollaron lesión por contraste (aumento de creatinina ≥ 0,3 mg/dL a las 48 h) recibieron menos volumen, pero también tuvieron más edema pulmonar. La hidratación se ajusta al paciente.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Briguori 2023, J Invasive Cardiol (PMID 37992331)",
-   "tags": [
-    "Quirurgica2::Azoados::Contraste",
-    "Nivel::Aplicacion",
-    "Fuente::Briguori2023",
-    "Clase::Aplicacion",
-    "Bloom::Evaluar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0022",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Diálisis en la lesión aguda</span>En un crítico con lesión renal aguda grave sin indicación urgente, ¿iniciar diálisis de forma precoz mejora la supervivencia?",
-   "respuesta": "No: iniciar <span class=\"fx\">terapia de reemplazo renal</span> en las primeras 12 h no redujo la mortalidad a 90 días frente a la estrategia estándar.",
-   "razonamiento": "La estrategia estándar espera a las indicaciones convencionales o a más de 72 h de lesión persistente, y evita someter a diálisis a pacientes que recuperarían la función.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "STARRT-AKI 2020, N Engl J Med (PMID 32668114)",
-   "tags": [
-    "Quirurgica2::Azoados::AKI",
-    "Nivel::Aplicacion",
-    "Fuente::STARRT2020",
-    "Clase::Aplicacion",
-    "Bloom::Evaluar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0023",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Enfermedad renal crónica</span>¿Cuándo hay enfermedad renal crónica y con qué dos ejes se clasifica?",
-   "respuesta": "Cuando hay alteración de estructura o función renal por <span class=\"num\">más de 3 meses</span>; se clasifica por <span class=\"mec\">TFG (G1–G5)</span> y por <span class=\"mec\">albuminuria (A1–A3)</span>.",
-   "razonamiento": "Combinar ambos ejes estima el riesgo de progresión, de enfermedad cardiovascular y de muerte mejor que la TFG sola.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Categoría</th><th>TFG (mL/min/1,73 m²)</th></tr></thead><tbody><tr><th>G1</th><td>≥ 90</td></tr><tr><th>G2</th><td>60–89</td></tr><tr><th>G3a</th><td>45–59</td></tr><tr><th>G3b</th><td>30–44</td></tr><tr><th>G4</th><td>15–29</td></tr><tr><th>G5</th><td>&lt; 15</td></tr></tbody></table>",
-   "fuente": "KDIGO 2024 CKD, Kidney Int (PMID 38490803)",
-   "tags": [
-    "Quirurgica2::Azoados::ERC",
-    "Nivel::Aplicacion",
-    "Fuente::KDIGO2024",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::MIR",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0024",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">Albuminuria · KDIGO</span>Las categorías de la relación albúmina/creatinina son A1 &lt; {{c1::<span class=\"num\">30</span>}}, A2 {{c2::<span class=\"num\">30–300</span>}} y A3 &gt; {{c3::<span class=\"num\">300</span>}} mg/g.",
-   "extra": "A1 = normal o levemente aumentada; A2 = moderadamente aumentada; A3 = gravemente aumentada. Debe persistir más de 3 meses.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "KDIGO 2024 CKD, Kidney Int (PMID 38490803)",
-   "tags": [
-    "Quirurgica2::Azoados::ERC",
-    "Nivel::Recuerdo",
-    "Fuente::KDIGO2024",
-    "Clase::Irreducible",
-    "Bloom::Recordar",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0025",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Estadificación de la ERC</span>¿Por qué dos pacientes con la misma TFG de 50 mL/min pueden tener un pronóstico distinto?",
-   "respuesta": "Porque la <span class=\"mec\">albuminuria</span> añade riesgo independiente de progresión, de evento cardiovascular y de muerte.",
-   "razonamiento": "Por eso el mapa de riesgo de KDIGO cruza las categorías G y A, y de él depende la frecuencia de seguimiento.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "KDIGO 2024 CKD, Kidney Int (PMID 38490803)",
-   "tags": [
-    "Quirurgica2::Azoados::ERC",
-    "Nivel::Aplicacion",
-    "Fuente::KDIGO2024",
-    "Clase::Relacional",
-    "Bloom::Analizar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0026",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Diabetes y riñón</span>¿Qué lugar ocupa la enfermedad renal diabética entre las causas de ERC y de enfermedad renal terminal?",
-   "respuesta": "Es la <span class=\"dx\">principal causa</span> de enfermedad renal crónica y de enfermedad renal terminal en el mundo.",
-   "razonamiento": "Por eso en todo paciente diabético se busca de forma sistemática albuminuria y se reduce el riesgo con control glucémico, de la presión y fármacos renoprotectores.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Gupta 2023, Med Clin North Am (PMID 37258007)",
-   "tags": [
-    "Quirurgica2::Azoados::Diabetica",
-    "Nivel::Recuerdo",
-    "Fuente::Gupta2023",
-    "Clase::Aplicacion",
-    "Bloom::Recordar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0027",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Nefropatía diabética</span>¿Por qué los IECA y los ARA-II son de elección en la nefropatía diabética con proteinuria?",
-   "respuesta": "Porque frenan la progresión con un <span class=\"mec\">efecto renoprotector que excede la reducción de la presión arterial</span>.",
-   "razonamiento": "El captopril en diabetes tipo 1 redujo en un 48 % el riesgo de duplicar la creatinina y el losartán en diabetes tipo 2 redujo la duplicación y la enfermedad renal terminal, con una disminución de la proteinuria del 35 %.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Lewis 1993, N Engl J Med (PMID 8413456); Brenner 2001, N Engl J Med (PMID 11565518)",
-   "tags": [
-    "Quirurgica2::Azoados::Diabetica",
-    "Nivel::Aplicacion",
-    "Fuente::Brenner2001",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0028",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Nefropatía diabética</span>Diabético tipo 2 con albuminuria persistente en categoría A2 y presión normal-alta: ¿qué fármaco de la familia del sistema renina-angiotensina se prefiere?",
-   "respuesta": "Un <span class=\"fx\">ARA-II o un IECA</span> a dosis máxima tolerada, con vigilancia de creatinina y potasio.",
-   "razonamiento": "La evidencia en tipo 2 con nefropatía es del losartán (RENAAL); la subida inicial de creatinina de hasta 30 % es aceptable y no obliga a suspender.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Brenner 2001, N Engl J Med (PMID 11565518); Bakris 2000, Arch Intern Med (PMID 10724055)",
-   "tags": [
-    "Quirurgica2::Azoados::Diabetica",
-    "Nivel::Aplicacion",
-    "Fuente::Brenner2001",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0029",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">iSGLT2 en la ERC</span>¿El beneficio renal de la dapagliflozina en ERC depende de que el paciente sea diabético?",
-   "respuesta": "No: en DAPA-CKD el efecto fue similar con y sin diabetes tipo 2, con menor riesgo del desenlace renal y cardiovascular compuesto.",
-   "razonamiento": "Se incluyeron pacientes con TFG de 25 a 75 y relación albúmina/creatinina de 200 a 5000. El estudio se detuvo antes de lo previsto por eficacia.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Heerspink 2020, N Engl J Med (PMID 32970396)",
-   "tags": [
-    "Quirurgica2::Azoados::Diabetica",
-    "Nivel::Aplicacion",
-    "Fuente::Heerspink2020",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0030",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">iSGLT2 en la ERC</span>¿Qué confirmó EMPA-KIDNEY frente a DAPA-CKD en cuanto a quién se beneficia?",
-   "respuesta": "Que la <span class=\"fx\">empagliflozina</span> reduce la progresión de la enfermedad renal o la muerte cardiovascular con y sin diabetes, también con TFG menor de 45.",
-   "razonamiento": "Los dos ensayos apoyan el grupo farmacológico y no un fármaco aislado.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "EMPA-KIDNEY 2023, N Engl J Med (PMID 36331190)",
-   "tags": [
-    "Quirurgica2::Azoados::Diabetica",
-    "Nivel::Aplicacion",
-    "Fuente::EMPAKIDNEY2023",
-    "Clase::Contraste",
-    "Bloom::Analizar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-AZO-0031",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Nefroesclerosis hipertensiva</span>¿Qué lesión renal explica la nefroesclerosis hipertensiva y cuál es su consecuencia?",
-   "respuesta": "La <span class=\"mec\">glomeruloesclerosis isquémica</span> por rigidez arterial y pérdida de la autorregulación, que lleva a pérdida progresiva de nefronas.",
-   "razonamiento": "La rigidez arterial transmite el pulso hasta la arteriola aferente y la pérdida de autorregulación expone al glomérulo a hiperfiltración. Las correlaciones entre presión y lesión morfológica son solo moderadas.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Hill 2008, Curr Opin Nephrol Hypertens (PMID 18408477)",
-   "tags": [
-    "Quirurgica2::Azoados::Hipertensiva",
-    "Nivel::Aplicacion",
-    "Fuente::Hill2008",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  }
- ]
+  "tarjetas": [
+    {
+      "id": "Q2R2-AZO-0001",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Elevación aguda de azoados</span>¿Con qué principio se ordena el diagnóstico diferencial de una elevación aguda de urea y creatinina?",
+      "respuesta": "Por <span class=\"mec\">dónde falla la depuración</span>: la perfusión (prerrenal), el parénquima (renal) o la vía de salida (posrenal).",
+      "razonamiento": "Cada nivel pide una conducta distinta: reponer perfusión, buscar y retirar la causa del daño parenquimatoso, o desobstruir. Por eso el primer paso es ubicar el nivel antes de tratar la cifra.",
+      "mnemotecnia": "",
+      "esquema": "<table><thead><tr><th>Nivel</th><th>Falla</th><th>Tipo</th></tr></thead><tbody><tr><th>Prerrenal</th><td>Perfusión</td><td>Funcional</td></tr><tr><th>Renal</th><td>Parénquima</td><td>Estructural</td></tr><tr><th>Posrenal</th><td>Vía de salida</td><td>Obstructivo</td></tr></tbody></table>",
+      "fuente": "Sílabo Q2 2.ª rotación, Caso 1; Bellomo 2007, Contrib Nephrol (PMID 17464109)",
+      "tags": [
+        "Quirurgica2::Azoados::Clasificacion",
+        "Nivel::Aplicacion",
+        "Fuente::Sil",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0002",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Azotemia prerrenal</span>Tras tres días de diarrea, un adulto presenta creatinina elevada respecto a su basal y sedimento sin cilindros. ¿Qué tipo de elevación es y qué la revierte?",
+      "respuesta": "Una <span class=\"dx\">azotemia prerrenal</span>: la filtración cae por hipoperfusión y se corrige al <span class=\"mec\">restituir el volumen circulante</span>.",
+      "razonamiento": "El parénquima está íntegro: la caída del filtrado es funcional. Si no se corrige a tiempo, la hipoperfusión sostenida puede evolucionar a daño tubular.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Sílabo Q2 2.ª rotación, Caso 1; Bellomo 2007, Contrib Nephrol (PMID 17464109)",
+      "tags": [
+        "Quirurgica2::Azoados::Prerrenal",
+        "Nivel::Aplicacion",
+        "Fuente::Bellomo2007",
+        "Clase::Vineta",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0003",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Azotemia prerrenal</span>¿Por qué una elevación prerrenal se considera funcional y no estructural?",
+      "respuesta": "Porque la caída del filtrado se debe a <span class=\"mec\">hipoperfusión</span> sin necrosis tubular, de modo que cede al restablecer el flujo.",
+      "razonamiento": "El término separa el fallo funcional del estructural (necrosis tubular aguda). Esta dicotomía es útil en el paciente con hipovolemia, pero se cuestiona en la lesión renal séptica del crítico.<br><span class=\"vs\">Contraste</span> prerrenal = funcional y reversible con volumen; necrosis tubular = estructural y de recuperación lenta.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Bellomo 2007, Contrib Nephrol (PMID 17464109)",
+      "tags": [
+        "Quirurgica2::Azoados::Prerrenal",
+        "Nivel::Aplicacion",
+        "Fuente::Bellomo2007",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0004",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Prerrenal vs. necrosis tubular</span>Con el mismo aumento de creatinina, ¿qué dos datos del laboratorio urinario inclinan hacia necrosis tubular aguda frente a prerrenal?",
+      "respuesta": "Un <span class=\"num\">FENa alto</span> y un sedimento con <span class=\"al\">cilindros granulosos</span> o células epiteliales tubulares.",
+      "razonamiento": "En la prerrenal el túbulo funciona y retiene sodio, por eso la excreción fraccional es baja. En la necrosis tubular el túbulo lesionado descama células y cilindros que aparecen en el sedimento; su ausencia favorece prerrenal.",
+      "mnemotecnia": "",
+      "esquema": "<table><thead><tr><th>Rasgo</th><th>Prerrenal</th><th>Necrosis tubular</th></tr></thead><tbody><tr><th>Daño</th><td>Funcional</td><td>Estructural</td></tr><tr><th>FENa</th><td>Bajo (&lt; 1 %)</td><td>Alto (&gt; 3 %)</td></tr><tr><th>Sedimento</th><td>Sin cilindros ni células tubulares</td><td>Cilindros granulosos o células tubulares</td></tr></tbody></table>",
+      "fuente": "Espinel 1976, JAMA (PMID 947239); Perazella 2008, Clin J Am Soc Nephrol (PMID 18784207)",
+      "tags": [
+        "Quirurgica2::Azoados::NTA",
+        "Nivel::Aplicacion",
+        "Fuente::Espinel1976",
+        "Clase::Contraste",
+        "Bloom::Analizar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0005",
+      "tipo": "Cloze",
+      "text": "<span class=\"tema\">FENa en la oliguria aguda</span>Una fracción excretada de sodio menor de {{c1::<span class=\"num\">1 %</span>}} sugiere azotemia prerrenal y mayor de {{c2::<span class=\"num\">3 %</span>}} sugiere necrosis tubular aguda.",
+      "extra": "Valores del estudio original en la fase oligúrica. Un número importante de pacientes oligúricos no cae dentro de los límites de los índices urinarios simples, por lo que se interpreta con el sedimento y el contexto.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Espinel 1976, JAMA (PMID 947239); Miller 1978, Ann Intern Med (PMID 666184)",
+      "tags": [
+        "Quirurgica2::Azoados::NTA",
+        "Nivel::Recuerdo",
+        "Fuente::Espinel1976",
+        "Clase::Irreducible",
+        "Bloom::Recordar",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0006",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Límites del FENa</span>¿Por qué un FENa aislado no basta para separar la prerrenal de la necrosis tubular y qué lo complementa?",
+      "respuesta": "Porque los índices químicos urinarios sirven solo en <span class=\"dx\">pacientes seleccionados</span>; el <span class=\"al\">sedimento urinario</span> con células tubulares y cilindros granulosos discrimina mejor.",
+      "razonamiento": "La revisión sobre biomarcadores urinarios tradicionales concluye que la química urinaria tiene un papel limitado y que la microscopía aporta además información pronóstica.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Perazella 2012, Clin J Am Soc Nephrol (PMID 22096038)",
+      "tags": [
+        "Quirurgica2::Azoados::NTA",
+        "Nivel::Aplicacion",
+        "Fuente::Perazella2012",
+        "Clase::Aplicacion",
+        "Bloom::Analizar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0007",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Lesión renal en el crítico</span>Un paciente séptico en UCI con creatinina en ascenso y FENa menor de 1 %: ¿basta eso para tratarlo solo como prerrenal?",
+      "respuesta": "No: en la <span class=\"dx\">lesión renal séptica</span> no hay evidencia de que los índices urinarios separen lo funcional de lo estructural ni de que esa separación cambie el tratamiento.",
+      "razonamiento": "El paradigma «prerrenal vs. necrosis tubular» nació en el paciente hipovolémico simple. En el crítico se valora la evolución y el contexto, no un solo índice.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Bellomo 2007, Contrib Nephrol (PMID 17464109)",
+      "tags": [
+        "Quirurgica2::Azoados::NTA",
+        "Nivel::Aplicacion",
+        "Fuente::Bellomo2007",
+        "Clase::Relacional",
+        "Bloom::Evaluar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0008",
+      "tipo": "Cloze",
+      "text": "<span class=\"tema\">Lesión renal aguda · KDIGO</span>Se define por un aumento de creatinina ≥ {{c1::<span class=\"num\">0,3 mg/dL</span>}} en {{c2::<span class=\"num\">48 h</span>}}, o ≥ {{c3::<span class=\"num\">1,5 veces</span>}} la basal en 7 días, o diuresis &lt; {{c4::<span class=\"num\">0,5 mL/kg/h</span>}} durante 6 h.",
+      "extra": "Basta cualquiera de los tres criterios: se puede diagnosticar solo por creatinina, sin criterio de diuresis.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Kellum 2013, Crit Care (PMID 23394211); Khwaja 2012, Nephron Clin Pract (PMID 22890468)",
+      "tags": [
+        "Quirurgica2::Azoados::AKI",
+        "Nivel::Recuerdo",
+        "Fuente::KDIGO2012",
+        "Clase::Irreducible",
+        "Bloom::Recordar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0009",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Aguda vs. crónica</span>Ante una creatinina elevada, ¿qué dato ordena si el problema es lesión aguda, enfermedad renal aguda o enfermedad crónica?",
+      "respuesta": "El <span class=\"mec\">tiempo</span> de evolución de la anomalía de función o estructura renal.",
+      "razonamiento": "La lesión renal aguda es el cuadro más breve (hasta 7 días de aumento de creatinina); la enfermedad renal aguda abarca hasta 3 meses; la crónica exige más de 3 meses. Una lesión aguda puede aparecer sobre una crónica.",
+      "mnemotecnia": "",
+      "esquema": "<table><thead><tr><th>Entidad</th><th>Duración</th></tr></thead><tbody><tr><th>Lesión aguda (AKI)</th><td>Hasta 7 días</td></tr><tr><th>Enfermedad renal aguda</th><td>Hasta 3 meses</td></tr><tr><th>Enfermedad renal crónica</th><td>Más de 3 meses</td></tr></tbody></table>",
+      "fuente": "Lameire 2021, Kidney Int (PMID 34252450)",
+      "tags": [
+        "Quirurgica2::Azoados::Clasificacion",
+        "Nivel::Aplicacion",
+        "Fuente::Lameire2021",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0010",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">De la lesión aguda a la crónica</span>¿Por qué un episodio de necrosis tubular puede dejar enfermedad renal crónica aunque la creatinina se normalice?",
+      "respuesta": "Porque parte de los túbulos en reparación <span class=\"mec\">no se rediferencian</span>, quedan atróficos y activan fibrosis intersticial.",
+      "razonamiento": "La fibrosis y la pérdida de capilares peritubulares hacen que cada lesión aguda reste parénquima. Por eso se hace seguimiento tras una lesión renal aguda.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Venkatachalam 2015, J Am Soc Nephrol (PMID 25810494)",
+      "tags": [
+        "Quirurgica2::Azoados::Clasificacion",
+        "Nivel::Aplicacion",
+        "Fuente::Venkatachalam2015",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0011",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Necrosis tubular aguda</span>Un paciente con hipotensión prolongada mantiene la creatinina alta pese a reponer volumen. ¿Qué diagnóstico se sospecha y por qué no cede?",
+      "respuesta": "Una <span class=\"dx\">necrosis tubular aguda</span> isquémica: hay daño celular tubular que no se revierte al restituir el flujo.",
+      "razonamiento": "La isquemia sostenida pasa de lesión funcional a estructural; la recuperación depende de la regeneración tubular y tarda días o semanas.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Bellomo 2007, Contrib Nephrol (PMID 17464109)",
+      "tags": [
+        "Quirurgica2::Azoados::NTA",
+        "Nivel::Aplicacion",
+        "Fuente::Bellomo2007",
+        "Clase::Vineta",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0012",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Fármacos y perfusión renal</span>¿Qué combinación de tres fármacos aumenta el riesgo de lesión renal aguda aun en riñones sanos y por qué?",
+      "respuesta": "<span class=\"fx\">Diurético</span> + <span class=\"fx\">IECA o ARA-II</span> + <span class=\"fx\">AINE</span> («triple whammy»): reducen la volemia y la presión de perfusión e interfieren con la autorregulación renal.",
+      "razonamiento": "La lesión es prerrenal y aparece cuando la volemia se compromete bajo el efecto de inhibidores del sistema renina-angiotensina y AINE: la disfunción es mayor que la esperada por la caída de presión. El metaanálisis halló un riesgo de lesión renal cercano al doble.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Prieto-García 2016, Pharmacol Ther (PMID 27490717); Prieto-García 2020, Lab Invest (PMID 32719543); Calvo 2025, Br J Clin Pharmacol (PMID 40876867)",
+      "tags": [
+        "Quirurgica2::Azoados::Prerrenal",
+        "Nivel::Aplicacion",
+        "Fuente::Calvo2025",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0013",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">IECA en enfermedad renal</span>Hipertenso con enfermedad renal inicia un IECA y su creatinina sube un 20 % en dos semanas. ¿Se suspende?",
+      "respuesta": "No de entrada: una subida de hasta <span class=\"num\">30 %</span> que se estabiliza en los primeros 2 meses es esperable y se asocia con protección renal a largo plazo.",
+      "razonamiento": "Bakris recomienda retirar el IECA solo si la creatinina sube más de 30 % en los primeros 2 meses o aparece hiperpotasemia (K ≥ 5,6 mmol/L).",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Bakris 2000, Arch Intern Med (PMID 10724055)",
+      "tags": [
+        "Quirurgica2::Azoados::Prerrenal",
+        "Nivel::Aplicacion",
+        "Fuente::Bakris2000",
+        "Clase::Aplicacion",
+        "Bloom::Evaluar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0014",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Nefritis intersticial aguda</span>¿Por qué mecanismo un fármaco produce nefritis intersticial aguda y por qué importa para el diagnóstico?",
+      "respuesta": "Por una reacción de hipersensibilidad tipo IV retardada e idiosincrásica, con infiltrado intersticial de linfocitos y monocitos.",
+      "razonamiento": "Casi cualquier fármaco puede causarla; los antibióticos, los AINE y los inhibidores de la bomba de protones aportan la mayoría de los casos. Por ser idiosincrásica, el fármaco culpable es difícil de identificar y se necesita alta sospecha.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Sanchez-Alamo 2023, Nephron (PMID 35830831)",
+      "tags": [
+        "Quirurgica2::Azoados::NIA",
+        "Nivel::Aplicacion",
+        "Fuente::SanchezAlamo2023",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0015",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Nefritis intersticial aguda</span>Paciente que toma un inhibidor de la bomba de protones presenta creatinina en ascenso sin oliguria y proteinuria no nefrótica de origen tubular. ¿Qué diagnóstico y qué primera medida?",
+      "respuesta": "Una <span class=\"dx\">nefritis intersticial aguda</span> farmacológica; se retira el fármaco sospechoso.",
+      "razonamiento": "La lesión renal aguda no oligúrica con proteinuria tubular es la forma típica. La biopsia renal confirma el diagnóstico; retirar el fármaco es el pilar del tratamiento.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Sanchez-Alamo 2023, Nephron (PMID 35830831)",
+      "tags": [
+        "Quirurgica2::Azoados::NIA",
+        "Nivel::Aplicacion",
+        "Fuente::SanchezAlamo2023",
+        "Clase::Vineta",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0016",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Nefritis intersticial aguda</span>Tras retirar el fármaco culpable no hay recuperación de la función renal. ¿Cuándo y con qué se escala el tratamiento?",
+      "respuesta": "Con <span class=\"fx\">corticoides</span> si no hay recuperación a los <span class=\"num\">5–7 días</span> de retirar el fármaco.",
+      "razonamiento": "Los estudios apoyan que iniciarlos pronto reduce el infiltrado inflamatorio y el riesgo de fibrosis posterior.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Sanchez-Alamo 2023, Nephron (PMID 35830831)",
+      "tags": [
+        "Quirurgica2::Azoados::NIA",
+        "Nivel::Aplicacion",
+        "Fuente::SanchezAlamo2023",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0017",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Nefritis intersticial aguda</span>Un paciente con sospecha de nefritis intersticial no tiene fiebre, exantema ni eosinofilia. ¿Se descarta?",
+      "respuesta": "No: la <span class=\"al\">tríada fiebre, exantema y eosinofilia</span> está presente en una minoría de los casos.",
+      "razonamiento": "La presentación habitual es inespecífica (malestar, náuseas, vómitos). Esperar la tríada retrasaría el diagnóstico.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Sanchez-Alamo 2023, Nephron (PMID 35830831)",
+      "tags": [
+        "Quirurgica2::Azoados::NIA",
+        "Nivel::Aplicacion",
+        "Fuente::SanchezAlamo2023",
+        "Clase::Relacional",
+        "Bloom::Evaluar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0018",
+      "tipo": "Cloze",
+      "text": "<span class=\"tema\">Rabdomiólisis</span>El diagnóstico se confirma con creatina cinasa sérica &gt; {{c1::<span class=\"num\">1000 U/L</span>}} o al menos {{c2::<span class=\"num\">5 veces</span>}} el límite superior normal.",
+      "extra": "Se complementa con mioglobinuria en el uroanálisis y con creatinina y electrolitos. Una puntuación de McMahon de 6 o más predice lesión renal que requiere diálisis.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Cabral 2020, Dis Mon (PMID 32532456)",
+      "tags": [
+        "Quirurgica2::Azoados::Rabdomiolisis",
+        "Nivel::Recuerdo",
+        "Fuente::Cabral2020",
+        "Clase::Irreducible",
+        "Bloom::Recordar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0019",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Rabdomiólisis</span>¿Qué medida es la base para prevenir y tratar la lesión renal por rabdomiólisis?",
+      "respuesta": "Reponer volumen de forma precoz e intensa con <span class=\"fx\">cristaloides</span> y tratar la causa del daño muscular.",
+      "razonamiento": "No hay beneficio establecido con manitol ni con bicarbonato. Las alteraciones electrolíticas se corrigen con el manejo habitual.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Cabral 2020, Dis Mon (PMID 32532456)",
+      "tags": [
+        "Quirurgica2::Azoados::Rabdomiolisis",
+        "Nivel::Aplicacion",
+        "Fuente::Cabral2020",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0020",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Rabdomiólisis y diálisis</span>¿Se decide iniciar diálisis por la cifra de CK o de mioglobina?",
+      "respuesta": "No: la indicación depende del estado clínico y de la función renal, no de la concentración de mioglobina o de creatina cinasa.",
+      "razonamiento": "La idea de que la mioglobina sola causa la lesión renal es una simplificación excesiva; la fisiopatología es multifactorial.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Petejova 2014, Crit Care (PMID 25043142)",
+      "tags": [
+        "Quirurgica2::Azoados::Rabdomiolisis",
+        "Nivel::Aplicacion",
+        "Fuente::Petejova2014",
+        "Clase::Relacional",
+        "Bloom::Evaluar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0021",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Contraste yodado</span>En un paciente con riesgo de lesión por contraste, ¿qué medida preventiva se recomienda y qué no basta?",
+      "respuesta": "<span class=\"fx\">Expansión de volumen intravenosa</span> con solución salina isotónica o bicarbonato; los líquidos orales solos no se recomiendan.",
+      "razonamiento": "La guía KDIGO recomienda (grado 1A) la expansión intravenosa frente a ninguna y desaconseja (1C) los líquidos orales solos.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Lameire 2013, Crit Care (PMID 23394215)",
+      "tags": [
+        "Quirurgica2::Azoados::Contraste",
+        "Nivel::Aplicacion",
+        "Fuente::Lameire2013",
+        "Clase::Aplicacion",
+        "Bloom::Evaluar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0022",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Diálisis en la lesión aguda</span>En un crítico con lesión renal aguda grave sin indicación urgente, ¿iniciar diálisis de forma precoz mejora la supervivencia?",
+      "respuesta": "No: iniciar <span class=\"fx\">terapia de reemplazo renal</span> en las primeras 12 h no redujo la mortalidad a 90 días frente a la estrategia estándar.",
+      "razonamiento": "La estrategia estándar espera a las indicaciones convencionales o a más de 72 h de lesión persistente, y evita someter a diálisis a pacientes que recuperarían la función.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "STARRT-AKI 2020, N Engl J Med (PMID 32668114)",
+      "tags": [
+        "Quirurgica2::Azoados::AKI",
+        "Nivel::Aplicacion",
+        "Fuente::STARRT2020",
+        "Clase::Aplicacion",
+        "Bloom::Evaluar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0023",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Enfermedad renal crónica</span>¿Cuándo hay enfermedad renal crónica y con qué dos ejes se clasifica?",
+      "respuesta": "Cuando la <span class=\"num\">TFG es menor de 60</span> o la relación albúmina/creatinina es <span class=\"num\">mayor de 30 mg/g</span>; se clasifica por TFG (estadio 3 subdividido) y por albuminuria.",
+      "razonamiento": "Combinar ambos ejes estima el riesgo de mortalidad y de desenlaces renales mejor que la TFG sola.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Levey 2011, Kidney Int (PMID 21150873)",
+      "tags": [
+        "Quirurgica2::Azoados::ERC",
+        "Nivel::Aplicacion",
+        "Fuente::Levey2011",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::MIR",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0024",
+      "tipo": "Cloze",
+      "text": "<span class=\"tema\">Criterios de ERC · KDIGO</span>La enfermedad renal crónica se define por una TFG menor de {{c1::<span class=\"num\">60</span>}} mL/min/1,73 m² o una relación albúmina/creatinina mayor de {{c2::<span class=\"num\">30</span>}} mg/g.",
+      "extra": "La clasificación añade la albuminuria y subdivide el estadio 3.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Levey 2011, Kidney Int (PMID 21150873)",
+      "tags": [
+        "Quirurgica2::Azoados::ERC",
+        "Nivel::Recuerdo",
+        "Fuente::Levey2011",
+        "Clase::Irreducible",
+        "Bloom::Recordar",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0025",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Estadificación de la ERC</span>¿Por qué dos pacientes con la misma TFG de 50 mL/min pueden tener un pronóstico distinto?",
+      "respuesta": "Porque la <span class=\"mec\">albuminuria</span> añade riesgo independiente de progresión, de evento cardiovascular y de muerte.",
+      "razonamiento": "Por eso la clasificación cruza la TFG con la albuminuria y asigna el pronóstico según ambas.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Levey 2011, Kidney Int (PMID 21150873)",
+      "tags": [
+        "Quirurgica2::Azoados::ERC",
+        "Nivel::Aplicacion",
+        "Fuente::Levey2011",
+        "Clase::Relacional",
+        "Bloom::Analizar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0026",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Diabetes y riñón</span>¿Qué lugar ocupa la enfermedad renal diabética entre las causas de ERC y de enfermedad renal terminal?",
+      "respuesta": "Es la <span class=\"dx\">principal causa</span> de enfermedad renal crónica y de enfermedad renal terminal en el mundo.",
+      "razonamiento": "Por eso en todo paciente diabético se busca de forma sistemática albuminuria y se reduce el riesgo con control glucémico, de la presión y fármacos renoprotectores.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Gupta 2023, Med Clin North Am (PMID 37258007)",
+      "tags": [
+        "Quirurgica2::Azoados::Diabetica",
+        "Nivel::Recuerdo",
+        "Fuente::Gupta2023",
+        "Clase::Aplicacion",
+        "Bloom::Recordar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0027",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Nefropatía diabética</span>¿Por qué los IECA y los ARA-II son de elección en la nefropatía diabética con proteinuria?",
+      "respuesta": "Porque frenan la progresión con un <span class=\"mec\">efecto renoprotector que excede la reducción de la presión arterial</span>.",
+      "razonamiento": "El captopril en diabetes tipo 1 redujo en un 48 % el riesgo de duplicar la creatinina y el losartán en diabetes tipo 2 redujo la duplicación y la enfermedad renal terminal, con una disminución de la proteinuria del 35 %.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Lewis 1993, N Engl J Med (PMID 8413456); Brenner 2001, N Engl J Med (PMID 11565518)",
+      "tags": [
+        "Quirurgica2::Azoados::Diabetica",
+        "Nivel::Aplicacion",
+        "Fuente::Brenner2001",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0028",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Nefropatía diabética</span>Diabético tipo 2 con nefropatía y albuminuria persistente: ¿qué fármaco de la familia del sistema renina-angiotensina tiene evidencia de renoprotección?",
+      "respuesta": "Un <span class=\"fx\">ARA-II (losartán en RENAAL)</span> o un IECA, con vigilancia de creatinina y potasio.",
+      "razonamiento": "La evidencia en tipo 2 con nefropatía es del losartán (RENAAL); la subida inicial de creatinina de hasta 30 % es aceptable y no obliga a suspender.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Brenner 2001, N Engl J Med (PMID 11565518); Bakris 2000, Arch Intern Med (PMID 10724055)",
+      "tags": [
+        "Quirurgica2::Azoados::Diabetica",
+        "Nivel::Aplicacion",
+        "Fuente::Brenner2001",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0029",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">iSGLT2 en la ERC</span>¿El beneficio renal de la dapagliflozina en ERC depende de que el paciente sea diabético?",
+      "respuesta": "No: en DAPA-CKD el efecto fue similar con y sin diabetes tipo 2, con menor riesgo del desenlace renal y cardiovascular compuesto.",
+      "razonamiento": "Se incluyeron pacientes con TFG de 25 a 75 y relación albúmina/creatinina de 200 a 5000. El estudio se detuvo antes de lo previsto por eficacia.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Heerspink 2020, N Engl J Med (PMID 32970396)",
+      "tags": [
+        "Quirurgica2::Azoados::Diabetica",
+        "Nivel::Aplicacion",
+        "Fuente::Heerspink2020",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0030",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">iSGLT2 en la ERC</span>¿Qué confirmó EMPA-KIDNEY frente a DAPA-CKD en cuanto a quién se beneficia?",
+      "respuesta": "Que la <span class=\"fx\">empagliflozina</span> reduce la progresión de la enfermedad renal o la muerte cardiovascular con y sin diabetes, también con TFG menor de 45.",
+      "razonamiento": "Los dos ensayos apoyan el grupo farmacológico y no un fármaco aislado.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "EMPA-KIDNEY 2023, N Engl J Med (PMID 36331190)",
+      "tags": [
+        "Quirurgica2::Azoados::Diabetica",
+        "Nivel::Aplicacion",
+        "Fuente::EMPAKIDNEY2023",
+        "Clase::Contraste",
+        "Bloom::Analizar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-AZO-0031",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Nefroesclerosis hipertensiva</span>¿Qué lesión renal explica la nefroesclerosis hipertensiva y cuál es su consecuencia?",
+      "respuesta": "Dos modos de esclerosis glomerular: la <span class=\"mec\">isquémica</span>, por rigidez arterial, y la <span class=\"mec\">hipertrófica</span>, por pérdida de la autorregulación.",
+      "razonamiento": "La rigidez arterial transmite el pulso hasta la arteriola aferente; la isquemia produce hipoxia, atrofia tubular y fibrosis intersticial. La pérdida de autorregulación causa hiperfiltración y glomeruloesclerosis focal y segmentaria. La correlación entre presión y lesión es solo moderada.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Hill 2008, Curr Opin Nephrol Hypertens (PMID 18408477)",
+      "tags": [
+        "Quirurgica2::Azoados::Hipertensiva",
+        "Nivel::Aplicacion",
+        "Fuente::Hill2008",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    }
+  ]
 }

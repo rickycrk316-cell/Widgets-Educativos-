@@ -1,661 +1,636 @@
 {
- "meta": {
-  "caso": "Envejecimiento",
-  "rotacion": "2.ª",
-  "tag_raiz": "Envejecimiento",
-  "prefijo": "Q2R2-ENV",
-  "version": "1.0",
-  "fecha": "2026-11-26",
-  "resultado_aprendizaje": "Realiza la evaluación integral del adulto mayor de acuerdo a evidencia científica.",
-  "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 2.ª rotación, Caso 2 — Envejecimiento (contenidos y trabajo autónomo)",
-  "justificacion_exceso": "",
-  "mir_verificados": [],
-  "verificacion": {
-   "total": 64,
-   "verificados": 58,
-   "eliminados": [
-    {
-     "id": "plan",
-     "dato": "Puntos de corte del MMSE ajustados por escolaridad y bandas del Barthel",
-     "motivo": "sin fuente confirmada en PubMed (Consensus sin cupo): no redactado"
+  "meta": {
+    "caso": "Envejecimiento",
+    "rotacion": "2.ª",
+    "tag_raiz": "Envejecimiento",
+    "prefijo": "Q2R2-ENV",
+    "version": "1.0",
+    "fecha": "2026-11-26",
+    "resultado_aprendizaje": "Realiza la evaluación integral del adulto mayor de acuerdo a evidencia científica.",
+    "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 2.ª rotación, Caso 2 — Envejecimiento (contenidos y trabajo autónomo)",
+    "justificacion_exceso": "",
+    "mir_verificados": [],
+    "verificacion": {
+      "total": 64,
+      "verificados": 56,
+      "eliminados": [
+        {
+          "id": "plan",
+          "dato": "Puntos de corte del MMSE ajustados por escolaridad y bandas del Barthel",
+          "motivo": "sin fuente confirmada en PubMed (Consensus sin cupo): no redactado"
+        },
+        {
+          "id": "plan",
+          "dato": "Corte del TUG y del Tinetti para riesgo de caídas",
+          "motivo": "las cifras varían entre estudios (10-32,6 s en TUG) y no se halló fuente para Tinetti: reformulado de forma cualitativa"
+        },
+        {
+          "id": "plan",
+          "dato": "Velocidad de marcha < 0,8 m/s como corte de fragilidad",
+          "motivo": "no confirmado en el texto leído: no redactado"
+        },
+        {
+          "id": "plan",
+          "dato": "Definición de ageism («viejismo») y teorías evolutivas (soma desechable)",
+          "motivo": "sin fuente confirmada en la sesión: no redactado"
+        },
+        {
+          "id": "plan",
+          "dato": "Indicadores de adultos mayores en América Latina y proyección 2050 en Ecuador",
+          "motivo": "solo en fuente secundaria no verificable: no redactado"
+        },
+        {
+          "id": "plan",
+          "dato": "Definición operativa de ECOG 0-5",
+          "motivo": "el resumen de Oken 1982 no está disponible: no redactado"
+        },
+        {
+          "id": "Q2R2-ENV-0001",
+          "dato": "Edad de 65 años en la Constitución",
+          "motivo": "confirmado por buscador web con texto del art. 36; el art. 37 solo parcialmente: se redujo a «atención gratuita y especializada de salud y medicinas»"
+        },
+        {
+          "id": "Q2R2-ENV-0015",
+          "dato": "Valores de sensibilidad/especificidad de GDS-15",
+          "motivo": "regla P9 y reporte selectivo: reformulado como punto de corte"
+        },
+        {
+          "id": "Q2R2-ENV-0002",
+          "dato": "LOPAM: Registro Oficial Suplemento 484, 9-may-2019 (Cloze)",
+          "motivo": "solo web y Cloze de bajo valor: nota eliminada"
+        },
+        {
+          "id": "Q2R2-ENV-0006",
+          "dato": "Cloze de 12 hallmarks y lista de ejemplos",
+          "motivo": "bajo valor y lista no confirmada en el resumen; el dato de 12 hallmarks queda en ENV-0005"
+        }
+      ]
     },
-    {
-     "id": "plan",
-     "dato": "Corte del TUG y del Tinetti para riesgo de caídas",
-     "motivo": "las cifras varían entre estudios (10-32,6 s en TUG) y no se halló fuente para Tinetti: reformulado de forma cualitativa"
-    },
-    {
-     "id": "plan",
-     "dato": "Velocidad de marcha < 0,8 m/s como corte de fragilidad",
-     "motivo": "no confirmado en el texto leído: no redactado"
-    },
-    {
-     "id": "plan",
-     "dato": "Definición de ageism («viejismo») y teorías evolutivas (soma desechable)",
-     "motivo": "sin fuente confirmada en la sesión: no redactado"
-    },
-    {
-     "id": "plan",
-     "dato": "Indicadores de adultos mayores en América Latina y proyección 2050 en Ecuador",
-     "motivo": "solo en fuente secundaria no verificable: no redactado"
-    },
-    {
-     "id": "plan",
-     "dato": "Definición operativa de ECOG 0-5",
-     "motivo": "el resumen de Oken 1982 no está disponible: no redactado"
-    },
-    {
-     "id": "Q2R2-ENV-0001",
-     "dato": "Edad de 65 años en la Constitución",
-     "motivo": "confirmado por buscador web con texto del art. 36; el art. 37 solo parcialmente: se redujo a «atención gratuita y especializada de salud y medicinas»"
-    },
-    {
-     "id": "Q2R2-ENV-0015",
-     "dato": "Valores de sensibilidad/especificidad de GDS-15",
-     "motivo": "regla P9 y reporte selectivo: reformulado como punto de corte"
+    "guia": {
+      "principios": [
+        "La edad cronológica no equivale a la edad funcional: se mide la función (marcha, actividades diarias, cognición) para pronosticar y decidir.",
+        "La valoración geriátrica integral es multidimensional y multidisciplinaria: su beneficio es mantener a la persona en casa, no cambiar la mortalidad.",
+        "Cada escala responde a un dominio; un resultado normal en una no descarta alteraciones en otro.",
+        "El maltrato es frecuente y a menudo sin lesiones: el psicológico y el financiero superan al físico.",
+        "El envejecimiento tiene hallmarks interconectados: daño molecular y celular que se acentúa con la edad y es potencialmente modificable."
+      ],
+      "palabras_clave": [
+        "valoración geriátrica integral",
+        "velocidad de la marcha",
+        "Barthel",
+        "Katz",
+        "MMSE",
+        "MoCA",
+        "Yesavage GDS-15",
+        "MNA-SF",
+        "Tinetti",
+        "Timed Up and Go",
+        "ECOG",
+        "hallmarks",
+        "senescencia celular",
+        "maltrato financiero",
+        "Ley Orgánica de las Personas Adultas Mayores"
+      ],
+      "imagenes_oclusion": [
+        "Tabla de escalas y dominios con la columna «Dominio» tapada",
+        "Tabla de prevalencia por tipo de maltrato con los porcentajes tapados",
+        "Tabla Harman vs. Hayflick con las celdas tapadas"
+      ],
+      "preguntas_cierre": [
+        "Explica sin mirar por qué dos adultos de 75 años pueden tener supervivencias tan distintas y qué prueba sencilla las separa.",
+        "Un anciano ingresa por neumonía: ¿qué dominios exploras con la valoración geriátrica integral y qué escala usas para cada uno?",
+        "¿Por qué un MMSE normal y un ECOG de 1 no bastan para considerar sano a un anciano?",
+        "Describe cómo buscarías maltrato en una consulta sin lesiones visibles.",
+        "Contrasta la teoría de los radicales libres con el límite replicativo de Hayflick y ubica ambos entre los hallmarks."
+      ],
+      "subtemas": {
+        "Legislacion": "Ley del anciano; Constitución y Ley Orgánica de las Personas Adultas Mayores",
+        "Demografia": "Situación actual de los ancianos en el Ecuador, América Latina y el mundo; indicadores",
+        "TeoriasEnvejecimiento": "Fisiología de los procesos de envejecimiento y sus teorías",
+        "Maltrato": "Abuso y maltrato en el adulto mayor",
+        "EscalasValoracion": "Escalas de evaluación: Barthel, MMSE, Yesavage, MNA, ECOG",
+        "Movilidad": "Velocidad de la marcha, Tinetti y Timed Up and Go",
+        "VGI": "Evaluación integral del adulto mayor (resultado de aprendizaje); grandes síndromes geriátricos como contexto"
+      },
+      "fechas": {
+        "apertura": null,
+        "cierre": null,
+        "examen": null
+      },
+      "referencias": [
+        "Constitución de la República del Ecuador. Quito: Registro Oficial 449; 2008. Arts. 35-37.",
+        "Instituto Nacional de Estadística y Censos (Ecuador). Censo de Población y Vivienda 2022: resultados. Quito: INEC; 2023.",
+        "Studenski S, Perera S, Patel K, Rosano C, Faulkner K, Inzitari M, et al. Gait speed and survival in older adults. JAMA. 2011;305(1):50-8. doi:10.1001/jama.2010.1923. PMID: 21205966.",
+        "López-Otín C, Blasco MA, Partridge L, Serrano M, Kroemer G. Hallmarks of aging: an expanding universe. Cell. 2023;186(2):243-78. doi:10.1016/j.cell.2022.11.001. PMID: 36599349.",
+        "Harman D. Aging: a theory based on free radical and radiation chemistry. J Gerontol. 1956;11(3):298-300. doi:10.1093/geronj/11.3.298. PMID: 13332224.",
+        "Hayflick L. The limited in vitro lifetime of human diploid cell strains. Exp Cell Res. 1965;37:614-36. doi:10.1016/0014-4827(65)90211-9. PMID: 14315085.",
+        "Yon Y, Mikton CR, Gassoumis ZD, Wilber KH. Elder abuse prevalence in community settings: a systematic review and meta-analysis. Lancet Glob Health. 2017;5(2):e147-56. doi:10.1016/S2214-109X(17)30006-2. PMID: 28104184.",
+        "Yon Y, Mikton C, Gassoumis ZD, Wilber KH. The prevalence of self-reported elder abuse among older women in community settings: a systematic review and meta-analysis. Trauma Violence Abuse. 2019;20(2):245-59. doi:10.1177/1524838017697308. PMID: 29333977.",
+        "Hopman-Rock M, van Hirtum H, de Vreede P, Freiberger E. Activities of daily living in older community-dwelling persons: a systematic review of psychometric properties of instruments. Aging Clin Exp Res. 2019;31(7):917-25. doi:10.1007/s40520-018-1034-6. PMID: 30191453.",
+        "Mahoney FI, Barthel DW. Functional evaluation: the Barthel Index. Md State Med J. 1965;14:61-5. PMID: 14258950.",
+        "Folstein MF, Folstein SE, McHugh PR. \"Mini-mental state\": a practical method for grading the cognitive state of patients for the clinician. J Psychiatr Res. 1975;12(3):189-98. doi:10.1016/0022-3956(75)90026-6. PMID: 1202204.",
+        "Ciesielska N, Sokołowski R, Mazur E, Podhorecka M, Polak-Szabela A, Kędziora-Kornatowska K. Is the Montreal Cognitive Assessment (MoCA) test better suited than the Mini-Mental State Examination (MMSE) in mild cognitive impairment (MCI) detection among people aged over 60? Meta-analysis. Psychiatr Pol. 2016;50(5):1039-52. doi:10.12740/PP/45368. PMID: 27992895.",
+        "Yesavage JA, Brink TL, Rose TL, Lum O, Huang V, Adey M, et al. Development and validation of a geriatric depression screening scale: a preliminary report. J Psychiatr Res. 1982;17(1):37-49. doi:10.1016/0022-3956(82)90033-4. PMID: 7183759.",
+        "Pocklington C, Gilbody S, Manea L, McMillan D. The diagnostic accuracy of brief versions of the Geriatric Depression Scale: a systematic review and meta-analysis. Int J Geriatr Psychiatry. 2016;31(8):837-57. doi:10.1002/gps.4407. PMID: 26890937.",
+        "Atchison K, Nazir A, Wu P, Seitz D, Watt JA, Goodarzi Z. Depression detection in dementia: a diagnostic accuracy systematic review and meta analysis update. Health Sci Rep. 2024;7(11):e70058. doi:10.1002/hsr2.70058. PMID: 39530065.",
+        "Kaiser MJ, Bauer JM, Ramsch C, Uter W, Guigoz Y, Cederholm T, et al. Validation of the Mini Nutritional Assessment short-form (MNA-SF): a practical tool for identification of nutritional status. J Nutr Health Aging. 2009;13(9):782-8. doi:10.1007/s12603-009-0214-7. PMID: 19812868.",
+        "Kaiser R, Winning K, Uter W, Lesser S, Stehle P, Sieber CC, et al. Comparison of two different approaches for the application of the mini nutritional assessment in nursing homes: resident interviews versus assessment by nursing staff. J Nutr Health Aging. 2009;13(10):863-9. doi:10.1007/s12603-009-0243-2. PMID: 19924345.",
+        "Oken MM, Creech RH, Tormey DC, Horton J, Davis TE, McFadden ET, et al. Toxicity and response criteria of the Eastern Cooperative Oncology Group. Am J Clin Oncol. 1982;5(6):649-55. PMID: 7165009.",
+        "Guven DC, Martinez-Cannon BA, Testa GD, Martins JC, Velasco RN, Kalsi T, et al. Immunotherapy use in older adults with cancer with frailty: a young SIOG review paper. J Geriatr Oncol. 2024;15(4):101742. doi:10.1016/j.jgo.2024.101742. PMID: 38472009.",
+        "Abellan van Kan G, Rolland Y, Andrieu S, Bauer J, Beauchet O, Bonnefoy M, et al. Gait speed at usual pace as a predictor of adverse outcomes in community-dwelling older people: an International Academy on Nutrition and Aging (IANA) Task Force. J Nutr Health Aging. 2009;13(10):881-9. doi:10.1007/s12603-009-0246-z. PMID: 19924348.",
+        "Beauchet O, Fantino B, Allali G, Muir SW, Montero-Odasso M, Annweiler C. Timed Up and Go test and risk of falls in older adults: a systematic review. J Nutr Health Aging. 2011;15(10):933-8. doi:10.1007/s12603-011-0062-0. PMID: 22159785.",
+        "Tinetti ME. Performance-oriented assessment of mobility problems in elderly patients. J Am Geriatr Soc. 1986;34(2):119-26. doi:10.1111/j.1532-5415.1986.tb05480.x. PMID: 3944402.",
+        "Ellis G, Gardner M, Tsiachristas A, Langhorne P, Burke O, Harwood RH, et al. Comprehensive geriatric assessment for older adults admitted to hospital. Cochrane Database Syst Rev. 2017;9(9):CD006211. doi:10.1002/14651858.CD006211.pub3. PMID: 28898390."
+      ]
     }
-   ]
   },
-  "guia": {
-   "principios": [
-    "La edad cronológica no equivale a la edad funcional: se mide la función (marcha, actividades diarias, cognición) para pronosticar y decidir.",
-    "La valoración geriátrica integral es multidimensional y multidisciplinaria: su beneficio es mantener a la persona en casa, no cambiar la mortalidad.",
-    "Cada escala responde a un dominio; un resultado normal en una no descarta alteraciones en otro.",
-    "El maltrato es frecuente y a menudo sin lesiones: el psicológico y el financiero superan al físico.",
-    "El envejecimiento tiene hallmarks interconectados: daño molecular y celular que se acentúa con la edad y es potencialmente modificable."
-   ],
-   "palabras_clave": [
-    "valoración geriátrica integral",
-    "velocidad de la marcha",
-    "Barthel",
-    "Katz",
-    "MMSE",
-    "MoCA",
-    "Yesavage GDS-15",
-    "MNA-SF",
-    "Tinetti",
-    "Timed Up and Go",
-    "ECOG",
-    "hallmarks",
-    "senescencia celular",
-    "maltrato financiero",
-    "Ley Orgánica de las Personas Adultas Mayores"
-   ],
-   "imagenes_oclusion": [
-    "Tabla de escalas y dominios con la columna «Dominio» tapada",
-    "Tabla de prevalencia por tipo de maltrato con los porcentajes tapados",
-    "Tabla Harman vs. Hayflick con las celdas tapadas"
-   ],
-   "preguntas_cierre": [
-    "Explica sin mirar por qué dos adultos de 75 años pueden tener supervivencias tan distintas y qué prueba sencilla las separa.",
-    "Un anciano ingresa por neumonía: ¿qué dominios exploras con la valoración geriátrica integral y qué escala usas para cada uno?",
-    "¿Por qué un MMSE normal y un ECOG de 1 no bastan para considerar sano a un anciano?",
-    "Describe cómo buscarías maltrato en una consulta sin lesiones visibles.",
-    "Contrasta la teoría de los radicales libres con el límite replicativo de Hayflick y ubica ambos entre los hallmarks."
-   ],
-   "subtemas": {
-    "Legislacion": "Ley del anciano; Constitución y Ley Orgánica de las Personas Adultas Mayores",
-    "Demografia": "Situación actual de los ancianos en el Ecuador, América Latina y el mundo; indicadores",
-    "TeoriasEnvejecimiento": "Fisiología de los procesos de envejecimiento y sus teorías",
-    "Maltrato": "Abuso y maltrato en el adulto mayor",
-    "EscalasValoracion": "Escalas de evaluación: Barthel, MMSE, Yesavage, MNA, ECOG",
-    "Movilidad": "Velocidad de la marcha, Tinetti y Timed Up and Go",
-    "VGI": "Evaluación integral del adulto mayor (resultado de aprendizaje); grandes síndromes geriátricos como contexto"
-   },
-   "fechas": {
-    "apertura": null,
-    "cierre": null,
-    "examen": null
-   },
-   "referencias": [
-    "Constitución de la República del Ecuador. Quito: Registro Oficial 449; 2008. Arts. 35-37.",
-    "Ley Orgánica de las Personas Adultas Mayores. Registro Oficial Suplemento 484; 9 may 2019.",
-    "Instituto Nacional de Estadística y Censos (Ecuador). Censo de Población y Vivienda 2022: resultados. Quito: INEC; 2023.",
-    "Studenski S, Perera S, Patel K, Rosano C, Faulkner K, Inzitari M, et al. Gait speed and survival in older adults. JAMA. 2011;305(1):50-8. doi:10.1001/jama.2010.1923. PMID: 21205966.",
-    "López-Otín C, Blasco MA, Partridge L, Serrano M, Kroemer G. Hallmarks of aging: an expanding universe. Cell. 2023;186(2):243-78. doi:10.1016/j.cell.2022.11.001. PMID: 36599349.",
-    "Harman D. Aging: a theory based on free radical and radiation chemistry. J Gerontol. 1956;11(3):298-300. doi:10.1093/geronj/11.3.298. PMID: 13332224.",
-    "Hayflick L. The limited in vitro lifetime of human diploid cell strains. Exp Cell Res. 1965;37:614-36. doi:10.1016/0014-4827(65)90211-9. PMID: 14315085.",
-    "Yon Y, Mikton CR, Gassoumis ZD, Wilber KH. Elder abuse prevalence in community settings: a systematic review and meta-analysis. Lancet Glob Health. 2017;5(2):e147-56. doi:10.1016/S2214-109X(17)30006-2. PMID: 28104184.",
-    "Yon Y, Mikton C, Gassoumis ZD, Wilber KH. The prevalence of self-reported elder abuse among older women in community settings: a systematic review and meta-analysis. Trauma Violence Abuse. 2019;20(2):245-59. doi:10.1177/1524838017697308. PMID: 29333977.",
-    "Hopman-Rock M, van Hirtum H, de Vreede P, Freiberger E. Activities of daily living in older community-dwelling persons: a systematic review of psychometric properties of instruments. Aging Clin Exp Res. 2019;31(7):917-25. doi:10.1007/s40520-018-1034-6. PMID: 30191453.",
-    "Mahoney FI, Barthel DW. Functional evaluation: the Barthel Index. Md State Med J. 1965;14:61-5. PMID: 14258950.",
-    "Folstein MF, Folstein SE, McHugh PR. \"Mini-mental state\": a practical method for grading the cognitive state of patients for the clinician. J Psychiatr Res. 1975;12(3):189-98. doi:10.1016/0022-3956(75)90026-6. PMID: 1202204.",
-    "Ciesielska N, Sokołowski R, Mazur E, Podhorecka M, Polak-Szabela A, Kędziora-Kornatowska K. Is the Montreal Cognitive Assessment (MoCA) test better suited than the Mini-Mental State Examination (MMSE) in mild cognitive impairment (MCI) detection among people aged over 60? Meta-analysis. Psychiatr Pol. 2016;50(5):1039-52. doi:10.12740/PP/45368. PMID: 27992895.",
-    "Yesavage JA, Brink TL, Rose TL, Lum O, Huang V, Adey M, et al. Development and validation of a geriatric depression screening scale: a preliminary report. J Psychiatr Res. 1982;17(1):37-49. doi:10.1016/0022-3956(82)90033-4. PMID: 7183759.",
-    "Pocklington C, Gilbody S, Manea L, McMillan D. The diagnostic accuracy of brief versions of the Geriatric Depression Scale: a systematic review and meta-analysis. Int J Geriatr Psychiatry. 2016;31(8):837-57. doi:10.1002/gps.4407. PMID: 26890937.",
-    "Atchison K, Nazir A, Wu P, Seitz D, Watt JA, Goodarzi Z. Depression detection in dementia: a diagnostic accuracy systematic review and meta analysis update. Health Sci Rep. 2024;7(11):e70058. doi:10.1002/hsr2.70058. PMID: 39530065.",
-    "Kaiser MJ, Bauer JM, Ramsch C, Uter W, Guigoz Y, Cederholm T, et al. Validation of the Mini Nutritional Assessment short-form (MNA-SF): a practical tool for identification of nutritional status. J Nutr Health Aging. 2009;13(9):782-8. doi:10.1007/s12603-009-0214-7. PMID: 19812868.",
-    "Kaiser R, Winning K, Uter W, Lesser S, Stehle P, Sieber CC, et al. Comparison of two different approaches for the application of the mini nutritional assessment in nursing homes: resident interviews versus assessment by nursing staff. J Nutr Health Aging. 2009;13(10):863-9. doi:10.1007/s12603-009-0243-2. PMID: 19924345.",
-    "Oken MM, Creech RH, Tormey DC, Horton J, Davis TE, McFadden ET, et al. Toxicity and response criteria of the Eastern Cooperative Oncology Group. Am J Clin Oncol. 1982;5(6):649-55. PMID: 7165009.",
-    "Guven DC, Martinez-Cannon BA, Testa GD, Martins JC, Velasco RN, Kalsi T, et al. Immunotherapy use in older adults with cancer with frailty: a young SIOG review paper. J Geriatr Oncol. 2024;15(4):101742. doi:10.1016/j.jgo.2024.101742. PMID: 38472009.",
-    "Abellan van Kan G, Rolland Y, Andrieu S, Bauer J, Beauchet O, Bonnefoy M, et al. Gait speed at usual pace as a predictor of adverse outcomes in community-dwelling older people: an International Academy on Nutrition and Aging (IANA) Task Force. J Nutr Health Aging. 2009;13(10):881-9. doi:10.1007/s12603-009-0246-z. PMID: 19924348.",
-    "Beauchet O, Fantino B, Allali G, Muir SW, Montero-Odasso M, Annweiler C. Timed Up and Go test and risk of falls in older adults: a systematic review. J Nutr Health Aging. 2011;15(10):933-8. doi:10.1007/s12603-011-0062-0. PMID: 22159785.",
-    "Tinetti ME. Performance-oriented assessment of mobility problems in elderly patients. J Am Geriatr Soc. 1986;34(2):119-26. doi:10.1111/j.1532-5415.1986.tb05480.x. PMID: 3944402.",
-    "Ellis G, Gardner M, Tsiachristas A, Langhorne P, Burke O, Harwood RH, et al. Comprehensive geriatric assessment for older adults admitted to hospital. Cochrane Database Syst Rev. 2017;9(9):CD006211. doi:10.1002/14651858.CD006211.pub3. PMID: 28898390."
-   ]
-  }
- },
- "tarjetas": [
-  {
-   "id": "Q2R2-ENV-0001",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Persona adulta mayor</span>¿A partir de qué edad define la Constitución del Ecuador a la persona adulta mayor y qué le garantiza en salud?",
-   "respuesta": "Desde los <span class=\"num\">65 años</span>: atención prioritaria y especializada, pública y privada, con protección frente a la violencia.",
-   "razonamiento": "El artículo 36 fija la edad y la prioridad; el artículo 37 añade garantías concretas, entre ellas la atención gratuita y especializada de salud y el acceso gratuito a medicinas.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Constitución de la República del Ecuador 2008, arts. 36-37",
-   "tags": [
-    "Quirurgica2::Envejecimiento::Legislacion",
-    "Nivel::Recuerdo",
-    "Fuente::ConstitucionEC2008",
-    "Clase::Irreducible",
-    "Bloom::Recordar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0002",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">Ley del anciano</span>La Ley Orgánica de las Personas Adultas Mayores se publicó en el Suplemento del Registro Oficial No. {{c1::<span class=\"num\">484</span>}} del {{c2::<span class=\"num\">9 de mayo de 2019</span>}}.",
-   "extra": "Es la norma que desarrolla los derechos específicos de las personas adultas mayores; la Constitución (arts. 35-37) es su base.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Registro Oficial Suplemento 484, 9 may 2019 (Ley Orgánica de las Personas Adultas Mayores)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::Legislacion",
-    "Nivel::Recuerdo",
-    "Fuente::LOPAM2019",
-    "Clase::Irreducible",
-    "Bloom::Recordar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ENV-0003",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Envejecimiento poblacional</span>¿Qué cambio mostró el Censo 2022 en el peso de las personas de 65 años o más en Ecuador frente a 2010?",
-   "respuesta": "Subió de <span class=\"num\">6,2 %</span> en 2010 a <span class=\"num\">9 %</span> en 2022.",
-   "razonamiento": "El censo registró 1 520 590 personas de 65 años o más. Más adultos mayores implican más enfermedad crónica, dependencia funcional y demanda de cuidados.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "INEC, Censo de Población y Vivienda 2022",
-   "tags": [
-    "Quirurgica2::Envejecimiento::Demografia",
-    "Nivel::Recuerdo",
-    "Fuente::INECCenso2022",
-    "Clase::Aplicacion",
-    "Bloom::Recordar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0004",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Edad y función</span>Dos varones de 75 años tienen pronóstico muy distinto: ¿por qué la edad cronológica sola no basta para estimar su supervivencia?",
-   "respuesta": "Porque a la misma edad la supervivencia a 10 años varía según la <span class=\"mec\">velocidad de la marcha</span>, de 19 % a 87 % en varones de 75 años.",
-   "razonamiento": "Es el principio de la valoración geriátrica: se mide la función, no solo los años. La edad, el sexo y la velocidad de marcha predijeron la supervivencia tan bien como modelos con comorbilidad, tabaquismo y hospitalizaciones.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Studenski 2011, JAMA (PMID 21205966)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::Demografia",
-    "Nivel::Aplicacion",
-    "Fuente::Studenski2011",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0005",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Hallmarks del envejecimiento</span>¿Qué tres condiciones debe cumplir un mecanismo para considerarse un hallmark del envejecimiento?",
-   "respuesta": "Manifestarse con la edad, <span class=\"mec\">acelerar el envejecimiento</span> si se acentúa experimentalmente y poder frenarlo o revertirlo al intervenir sobre él.",
-   "razonamiento": "Con esos criterios se propusieron doce hallmarks interconectados entre sí y con los hallmarks de salud (organización espacial, homeostasis y respuesta al estrés).",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "López-Otín 2023, Cell (PMID 36599349)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::TeoriasEnvejecimiento",
-    "Nivel::Aplicacion",
-    "Fuente::LopezOtin2023",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0006",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">Hallmarks del envejecimiento</span>La propuesta de 2023 de López-Otín y colaboradores reconoce {{c1::<span class=\"num\">12</span>}} hallmarks del envejecimiento.",
-   "extra": "Incluyen inestabilidad genómica, acortamiento de telómeros, senescencia celular, agotamiento de células madre, disfunción mitocondrial, inflamación crónica y disbiosis.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "López-Otín 2023, Cell (PMID 36599349)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::TeoriasEnvejecimiento",
-    "Nivel::Recuerdo",
-    "Fuente::LopezOtin2023",
-    "Clase::Irreducible",
-    "Bloom::Recordar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ENV-0007",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Teorías del envejecimiento</span>¿Qué idea sostienen Harman (1956) y Hayflick (1965) sobre el envejecimiento, y en qué se diferencian?",
-   "respuesta": "Harman lo explica con la <span class=\"mec\">química de los radicales libres</span>; Hayflick mostró que las células diploides humanas tienen una vida in vitro limitada.",
-   "razonamiento": "El primero apunta a una causa química del daño; el segundo, a un límite replicativo de la célula. La senescencia celular y el acortamiento de telómeros figuran hoy entre los hallmarks.<br><span class=\"vs\">Contraste</span> daño por radicales libres frente a límite de divisiones.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Rasgo</th><th>Harman</th><th>Hayflick</th></tr></thead><tbody><tr><th>Año</th><td>1956</td><td>1965</td></tr><tr><th>Idea</th><td>Radicales libres</td><td>Límite de divisiones</td></tr><tr><th>Nivel</th><td>Química del daño</td><td>Célula en cultivo</td></tr></tbody></table>",
-   "fuente": "Harman 1956, J Gerontol (PMID 13332224); Hayflick 1965, Exp Cell Res (PMID 14315085); López-Otín 2023, Cell (PMID 36599349)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::TeoriasEnvejecimiento",
-    "Nivel::Aplicacion",
-    "Fuente::HarmanHayflick",
-    "Clase::Contraste",
-    "Bloom::Analizar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0008",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Maltrato en el adulto mayor</span>¿Qué tan frecuente es el maltrato en adultos mayores que viven en la comunidad y por qué importa buscarlo?",
-   "respuesta": "Afecta a cerca de <span class=\"num\">1 de cada 6</span> (15,7 % en el último año) a escala mundial.",
-   "razonamiento": "Es una prioridad de salud pública desatendida frente a otros tipos de violencia. Por su frecuencia, se pregunta por él en la valoración y no solo cuando hay lesiones.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Yon 2017, Lancet Glob Health (PMID 28104184)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::Maltrato",
-    "Nivel::Aplicacion",
-    "Fuente::Yon2017",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0009",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Tipos de maltrato</span>¿Qué tipo de maltrato es el más frecuente en la comunidad y cuál el menos frecuente?",
-   "respuesta": "El <span class=\"dx\">psicológico</span> (11,6 %) es el más frecuente y el <span class=\"dx\">sexual</span> (0,9 %) el menos frecuente.",
-   "razonamiento": "El maltrato físico (2,6 %) es mucho menos común que el psicológico y el financiero (6,8 %), de modo que la ausencia de lesiones no lo descarta.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Tipo</th><th>Prevalencia</th></tr></thead><tbody><tr><th>Psicológico</th><td>11,6 %</td></tr><tr><th>Financiero</th><td>6,8 %</td></tr><tr><th>Negligencia</th><td>4,2 %</td></tr><tr><th>Físico</th><td>2,6 %</td></tr><tr><th>Sexual</th><td>0,9 %</td></tr></tbody></table>",
-   "fuente": "Yon 2017, Lancet Glob Health (PMID 28104184)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::Maltrato",
-    "Nivel::Recuerdo",
-    "Fuente::Yon2017",
-    "Clase::Irreducible",
-    "Bloom::Recordar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0010",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Maltrato en el adulto mayor</span>Caso — Mujer de 78 años, sin lesiones, cuya hija administra su pensión y su cuenta sin consultarle: ¿qué tipo de maltrato sospechas primero?",
-   "respuesta": "Maltrato <span class=\"dx\">financiero</span>, a menudo acompañado de maltrato psicológico.",
-   "razonamiento": "El financiero es el segundo más frecuente en la comunidad (6,8 %), por encima del físico (2,6 %): que no haya lesiones no lo descarta. Se explora a solas con la paciente y se documenta.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Yon 2017, Lancet Glob Health (PMID 28104184)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::Maltrato",
-    "Nivel::Aplicacion",
-    "Fuente::Yon2017",
-    "Clase::Vineta",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0011",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Maltrato en el adulto mayor</span>¿Qué limita extrapolar a Ecuador la cifra mundial de maltrato de 1 de cada 6?",
-   "respuesta": "Hay pocos estudios robustos en países de ingresos bajos y medios, y la prevalencia varía con el ingreso del país, el método de recogida y el tamaño de la muestra.",
-   "razonamiento": "Por eso la cifra es una referencia y no una estimación local. Un metaanálisis en mujeres de 60 años o más halló una cifra similar (14,1 %).",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Yon 2017, Lancet Glob Health (PMID 28104184); Yon 2019, Trauma Violence Abuse (PMID 29333977)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::Maltrato",
-    "Nivel::Aplicacion",
-    "Fuente::Yon2017",
-    "Clase::Relacional",
-    "Bloom::Analizar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0012",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Escalas del sílabo</span>Una valoración geriátrica cubre función básica, cognición, ánimo, nutrición y marcha: ¿qué escala del sílabo mide cada dominio?",
-   "respuesta": "Barthel (función básica), MMSE (cognición), Yesavage (ánimo), MNA (nutrición) y Tinetti o TUG (marcha y equilibrio).",
-   "razonamiento": "Cada escala responde a un dominio distinto: un resultado normal en una no descarta alteraciones en las otras. El ECOG, de origen oncológico, se usa para el estado funcional en cáncer.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Escala</th><th>Dominio</th></tr></thead><tbody><tr><th>Barthel</th><td>Actividades de la vida diaria</td></tr><tr><th>MMSE</th><td>Cognición</td></tr><tr><th>Yesavage</th><td>Depresión</td></tr><tr><th>MNA</th><td>Nutrición</td></tr><tr><th>Tinetti</th><td>Marcha y equilibrio</td></tr><tr><th>ECOG</th><td>Origen oncológico</td></tr></tbody></table>",
-   "fuente": "Hopman-Rock 2019, Aging Clin Exp Res (PMID 30191453); Folstein 1975, J Psychiatr Res (PMID 1202204); Yesavage 1982, J Psychiatr Res (PMID 7183759); Kaiser 2009, J Nutr Health Aging (PMID 19812868); Tinetti 1986, J Am Geriatr Soc (PMID 3944402); Oken 1982, Am J Clin Oncol (PMID 7165009)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::EscalasValoracion",
-    "Nivel::Aplicacion",
-    "Fuente::EscalasSilabo",
-    "Clase::Contraste",
-    "Bloom::Analizar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0013",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Índice de Barthel</span>¿Qué evalúa el índice de Barthel y con qué otro índice se agrupa entre los instrumentos de mejores propiedades?",
-   "respuesta": "Evalúa las <span class=\"mec\">actividades de la vida diaria</span> y se agrupa con el índice de Katz.",
-   "razonamiento": "Una revisión sistemática de instrumentos de actividades de la vida diaria colocó al Barthel y al Katz de 5 ítems entre los cuatro con mejor desempeño. El Barthel se describió en 1965 en el ámbito de la rehabilitación de enfermedades crónicas.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Hopman-Rock 2019, Aging Clin Exp Res (PMID 30191453); Mahoney 1965, Md State Med J (PMID 14258950)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::EscalasValoracion",
-    "Nivel::Recuerdo",
-    "Fuente::HopmanRock2019",
-    "Clase::Aplicacion",
-    "Bloom::Recordar",
-    "Escala::Barthel"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0014",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">MMSE</span>Un adulto mayor con quejas de memoria obtiene un MMSE normal: ¿por qué eso no descarta deterioro cognitivo leve?",
-   "respuesta": "Porque el MMSE es poco sensible para el <span class=\"dx\">deterioro cognitivo leve</span>; el MoCA lo detecta mejor.",
-   "razonamiento": "En el metaanálisis, el MoCA superó al MMSE en la detección de deterioro cognitivo leve en mayores de 60 años. Un MMSE normal no sustituye a la evaluación clínica ni a una prueba más sensible.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Ciesielska 2016, Psychiatr Pol (PMID 27992895)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::EscalasValoracion",
-    "Nivel::Aplicacion",
-    "Fuente::Ciesielska2016",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "Escala::MMSE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0015",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">Escala de Yesavage</span>En la escala de depresión geriátrica de 15 ítems (GDS-15), el punto de corte recomendado es {{c1::<span class=\"num\">5</span>}}.",
-   "extra": "Una revisión halló posible reporte selectivo de puntos de corte, por lo que el resultado orienta pero no diagnostica; la GDS original tiene 30 preguntas.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Pocklington 2016, Int J Geriatr Psychiatry (PMID 26890937); Yesavage 1982, J Psychiatr Res (PMID 7183759)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::EscalasValoracion",
-    "Nivel::Recuerdo",
-    "Fuente::Pocklington2016",
-    "Clase::Escala",
-    "Bloom::Recordar",
-    "Escala::Yesavage"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ENV-0016",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Depresión en demencia</span>En un paciente con demencia, ¿qué escala tiene más evidencia que la GDS-15 para buscar depresión?",
-   "respuesta": "La <span class=\"dx\">Escala de Cornell para depresión en demencia</span> (CSDD).",
-   "razonamiento": "En la revisión, la CSDD tuvo la mayor evidencia para detectar depresión en demencia y la GDS-15 quedó por detrás. La GDS-15 rinde peor cuando la comunicación del paciente está alterada.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Atchison 2024, Health Sci Rep (PMID 39530065)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::EscalasValoracion",
-    "Nivel::Aplicacion",
-    "Fuente::Atchison2024",
-    "Clase::Contraste",
-    "Bloom::Analizar",
-    "Escala::Yesavage"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0017",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">MNA</span>Un anciano no puede ser pesado ni tallado: ¿qué medida sustituye al IMC en la MNA-SF revisada?",
-   "respuesta": "El <span class=\"mec\">perímetro de la pantorrilla</span>, que rindió igual que el IMC.",
-   "razonamiento": "La MNA-SF revisada clasifica en tres categorías e incluye la de desnutrido; al admitir el perímetro de pantorrilla amplía su uso en la clínica.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Kaiser 2009, J Nutr Health Aging (PMID 19812868)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::EscalasValoracion",
-    "Nivel::Recuerdo",
-    "Fuente::Kaiser2009",
-    "Clase::Aplicacion",
-    "Bloom::Recordar",
-    "Escala::MNA"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0018",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">MNA en residencias</span>En residentes con deterioro cognitivo, ¿quién debe aplicar la MNA y por qué?",
-   "respuesta": "El <span class=\"mec\">personal de enfermería</span>: la aplicó al 94 % de los residentes frente al 69 % de la entrevista directa y predijo mejor la mortalidad.",
-   "razonamiento": "La concordancia entre ambos modos fue baja (kappa 0,31 con la versión corta). El deterioro cognitivo y lingüístico limita la entrevista al residente.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Kaiser 2009, J Nutr Health Aging (PMID 19924345)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::EscalasValoracion",
-    "Nivel::Aplicacion",
-    "Fuente::KaiserR2009",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "Escala::MNA"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0019",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">ECOG</span>En un anciano con cáncer, ¿por qué un ECOG de 2 o más no reemplaza a la valoración geriátrica integral?",
-   "respuesta": "Porque en la práctica se usa como sinónimo de <span class=\"dx\">fragilidad</span> pese a limitaciones importantes.",
-   "razonamiento": "Las organizaciones internacionales recomiendan la valoración geriátrica integral antes de iniciar la terapia oncológica para detectar y tratar la fragilidad. El ECOG nació en oncología en 1982.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Guven 2024, J Geriatr Oncol (PMID 38472009); Oken 1982, Am J Clin Oncol (PMID 7165009)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::EscalasValoracion",
-    "Nivel::Aplicacion",
-    "Fuente::Guven2024",
-    "Clase::Aplicacion",
-    "Bloom::Evaluar",
-    "Escala::ECOG"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0020",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Velocidad de la marcha</span>¿Por qué la velocidad de la marcha funciona como un signo vital funcional?",
-   "respuesta": "Porque por cada <span class=\"num\">0,1 m/s</span> más rápida baja la mortalidad (HR 0,88) y la supervivencia se predice tan bien como con modelos más complejos.",
-   "razonamiento": "La asociación se halló en las nueve cohortes agrupadas (34 485 adultos mayores de la comunidad). Es una prueba barata que resume reserva fisiológica.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Studenski 2011, JAMA (PMID 21205966)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::Movilidad",
-    "Nivel::Aplicacion",
-    "Fuente::Studenski2011",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0021",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Velocidad de la marcha</span>¿En qué población y con qué técnica se recomienda medir la velocidad de la marcha como prueba única?",
-   "respuesta": "En adultos mayores <span class=\"dx\">autónomos de la comunidad</span>, a ritmo habitual sobre <span class=\"num\">4 metros</span>.",
-   "razonamiento": "Es la distancia más usada en la literatura; el grupo de expertos la consideró segura, rápida y fiable.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Abellan van Kan 2009, J Nutr Health Aging (PMID 19924348)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::Movilidad",
-    "Nivel::Recuerdo",
-    "Fuente::AbellanVanKan2009",
-    "Clase::Irreducible",
-    "Bloom::Recordar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0022",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Marcha lenta</span>Caso — Adulto mayor autónomo que camina notoriamente más lento que hace un año: ¿por qué se interpreta como vulnerabilidad y no solo como lentitud?",
-   "respuesta": "Porque la marcha lenta es factor de riesgo de <span class=\"al\">discapacidad, deterioro cognitivo, institucionalización, caídas y mortalidad</span>.",
-   "razonamiento": "Resultó al menos tan sensible como instrumentos compuestos. El hallazgo obliga a buscar causas (fuerza, equilibrio, cognición, fármacos) y a completar la valoración.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Abellan van Kan 2009, J Nutr Health Aging (PMID 19924348)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::Movilidad",
-    "Nivel::Aplicacion",
-    "Fuente::AbellanVanKan2009",
-    "Clase::Vineta",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0023",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Timed Up and Go</span>¿Qué predice bien el TUG y qué predice mal?",
-   "respuesta": "Se asocia con <span class=\"dx\">caídas previas</span>, pero predice débilmente las caídas futuras.",
-   "razonamiento": "El tiempo de corte entre caedores y no caedores varió de 10 a 32,6 s entre estudios. Faltan condiciones estandarizadas de la prueba y control de edad, sexo y comorbilidades.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Beauchet 2011, J Nutr Health Aging (PMID 22159785)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::Movilidad",
-    "Nivel::Aplicacion",
-    "Fuente::Beauchet2011",
-    "Clase::Aplicacion",
-    "Bloom::Analizar",
-    "Escala::TUG"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0024",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Tinetti y TUG</span>¿En qué se diferencia lo que entrega la escala de Tinetti de lo que entrega el TUG?",
-   "respuesta": "La <span class=\"dx\">Tinetti</span> evalúa de forma observada la marcha y el equilibrio; el <span class=\"dx\">TUG</span> entrega un solo tiempo en segundos.",
-   "razonamiento": "Por eso la Tinetti ayuda a localizar el problema (equilibrio o marcha) y el TUG resume la movilidad funcional.<br><span class=\"vs\">Contraste</span> escala observacional frente a prueba cronometrada.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Rasgo</th><th>Tinetti</th><th>TUG</th></tr></thead><tbody><tr><th>Evalúa</th><td>Marcha y equilibrio</td><td>Movilidad funcional</td></tr><tr><th>Resultado</th><td>Observación</td><td>Tiempo en segundos</td></tr></tbody></table>",
-   "fuente": "Tinetti 1986, J Am Geriatr Soc (PMID 3944402); Beauchet 2011, J Nutr Health Aging (PMID 22159785)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::Movilidad",
-    "Nivel::Aplicacion",
-    "Fuente::TinettiTUG",
-    "Clase::Contraste",
-    "Bloom::Analizar",
-    "Escala::Tinetti"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0025",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Valoración geriátrica integral</span>¿Qué distingue a la valoración geriátrica integral de una historia clínica convencional?",
-   "respuesta": "Es un proceso <span class=\"mec\">multidimensional y multidisciplinario</span> que detecta problemas médicos, mentales y funcionales para armar un plan coordinado.",
-   "razonamiento": "El plan integra tratamiento y seguimiento, no solo diagnóstico. Por eso combina escalas de función, cognición, ánimo, nutrición y movilidad.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Ellis 2017, Cochrane Database Syst Rev (PMID 28898390)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::VGI",
-    "Nivel::Aplicacion",
-    "Fuente::Ellis2017",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0026",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Valoración geriátrica integral</span>¿Qué beneficio concreto tiene la valoración geriátrica integral al ingreso hospitalario?",
-   "respuesta": "Más pacientes <span class=\"num\">vivos y en su domicilio</span> a los 3-12 meses (RR 1,06) y menos ingresos a residencia (RR 0,80).",
-   "razonamiento": "La evidencia fue de alta certeza en ambos desenlaces en 29 ensayos con 13 766 participantes.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Ellis 2017, Cochrane Database Syst Rev (PMID 28898390)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::VGI",
-    "Nivel::Aplicacion",
-    "Fuente::Ellis2017",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-ENV-0027",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Valoración geriátrica integral</span>¿Qué desenlaces no cambia la valoración geriátrica integral hospitalaria, pese a sus beneficios?",
-   "respuesta": "No modifica la <span class=\"num\">mortalidad</span> (RR 1,00) ni la dependencia (RR 0,97) a los 3-12 meses.",
-   "razonamiento": "Su valor está en mantener a la persona en casa, no en prolongar la vida. Los costes por participante fueron algo mayores con evidencia de baja certeza.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Ellis 2017, Cochrane Database Syst Rev (PMID 28898390)",
-   "tags": [
-    "Quirurgica2::Envejecimiento::VGI",
-    "Nivel::Aplicacion",
-    "Fuente::Ellis2017",
-    "Clase::Relacional",
-    "Bloom::Evaluar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  }
- ]
+  "tarjetas": [
+    {
+      "id": "Q2R2-ENV-0001",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Persona adulta mayor</span>¿A partir de qué edad define la Constitución del Ecuador a la persona adulta mayor y qué le garantiza en salud?",
+      "respuesta": "Desde los <span class=\"num\">65 años</span>: atención prioritaria y especializada, pública y privada, con protección frente a la violencia.",
+      "razonamiento": "El artículo 36 fija la edad y la prioridad; el artículo 37 añade garantías concretas, entre ellas la atención gratuita y especializada de salud y el acceso gratuito a medicinas.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Constitución de la República del Ecuador 2008, arts. 36-37",
+      "tags": [
+        "Quirurgica2::Envejecimiento::Legislacion",
+        "Nivel::Recuerdo",
+        "Fuente::ConstitucionEC2008",
+        "Clase::Irreducible",
+        "Bloom::Recordar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0003",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Envejecimiento poblacional</span>¿Qué cambio mostró el Censo 2022 en el peso de las personas de 65 años o más en Ecuador frente a 2010?",
+      "respuesta": "Subió de <span class=\"num\">6,2 %</span> en 2010 a <span class=\"num\">9 %</span> en 2022.",
+      "razonamiento": "El censo registró 1 520 590 personas de 65 años o más. Más adultos mayores implican más enfermedad crónica, dependencia funcional y demanda de cuidados.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "INEC, Censo de Población y Vivienda 2022",
+      "tags": [
+        "Quirurgica2::Envejecimiento::Demografia",
+        "Nivel::Recuerdo",
+        "Fuente::INECCenso2022",
+        "Clase::Aplicacion",
+        "Bloom::Recordar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0004",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Edad y función</span>Dos varones de 75 años tienen pronóstico muy distinto: ¿por qué la edad cronológica sola no basta para estimar su supervivencia?",
+      "respuesta": "Porque a la misma edad la supervivencia a 10 años varía según la <span class=\"mec\">velocidad de la marcha</span>, de 19 % a 87 % en varones de 75 años.",
+      "razonamiento": "Es el principio de la valoración geriátrica: se mide la función, no solo los años. La edad, el sexo y la velocidad de marcha predijeron la supervivencia tan bien como modelos con comorbilidad, tabaquismo y hospitalizaciones.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Studenski 2011, JAMA (PMID 21205966)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::Demografia",
+        "Nivel::Aplicacion",
+        "Fuente::Studenski2011",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0005",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Hallmarks del envejecimiento</span>¿Qué tres condiciones debe cumplir un mecanismo para considerarse un hallmark del envejecimiento?",
+      "respuesta": "Manifestarse con la edad, <span class=\"mec\">acelerar el envejecimiento</span> si se acentúa experimentalmente y poder frenarlo o revertirlo al intervenir sobre él.",
+      "razonamiento": "Con esos criterios se propusieron doce hallmarks interconectados entre sí y con los hallmarks de salud (organización espacial, homeostasis y respuesta al estrés).",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "López-Otín 2023, Cell (PMID 36599349)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::TeoriasEnvejecimiento",
+        "Nivel::Aplicacion",
+        "Fuente::LopezOtin2023",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0007",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Teorías del envejecimiento</span>¿Qué idea sostienen Harman (1956) y Hayflick (1965) sobre el envejecimiento, y en qué se diferencian?",
+      "respuesta": "Harman lo explica con la <span class=\"mec\">química de los radicales libres</span>; Hayflick mostró que las células diploides humanas tienen una vida in vitro limitada.",
+      "razonamiento": "El primero apunta a una causa química del daño; el segundo, a un límite replicativo de la célula. La senescencia celular y el acortamiento de telómeros figuran hoy entre los hallmarks.<br><span class=\"vs\">Contraste</span> daño por radicales libres frente a límite de divisiones.",
+      "mnemotecnia": "",
+      "esquema": "<table><thead><tr><th>Rasgo</th><th>Harman</th><th>Hayflick</th></tr></thead><tbody><tr><th>Año</th><td>1956</td><td>1965</td></tr><tr><th>Idea</th><td>Radicales libres</td><td>Límite de divisiones</td></tr><tr><th>Nivel</th><td>Química del daño</td><td>Célula en cultivo</td></tr></tbody></table>",
+      "fuente": "Harman 1956, J Gerontol (PMID 13332224); Hayflick 1965, Exp Cell Res (PMID 14315085); López-Otín 2023, Cell (PMID 36599349)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::TeoriasEnvejecimiento",
+        "Nivel::Aplicacion",
+        "Fuente::HarmanHayflick",
+        "Clase::Contraste",
+        "Bloom::Analizar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0008",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Maltrato en el adulto mayor</span>¿Qué tan frecuente es el maltrato en adultos mayores que viven en la comunidad y por qué importa buscarlo?",
+      "respuesta": "Afecta a cerca de <span class=\"num\">1 de cada 6</span> (15,7 % en el último año) a escala mundial.",
+      "razonamiento": "Es una prioridad de salud pública desatendida frente a otros tipos de violencia. Por su frecuencia, se pregunta por él en la valoración y no solo cuando hay lesiones.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Yon 2017, Lancet Glob Health (PMID 28104184)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::Maltrato",
+        "Nivel::Aplicacion",
+        "Fuente::Yon2017",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0009",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Tipos de maltrato</span>¿Qué tipo de maltrato es el más frecuente en la comunidad y cuál el menos frecuente?",
+      "respuesta": "El <span class=\"dx\">psicológico</span> (11,6 %) es el más frecuente y el <span class=\"dx\">sexual</span> (0,9 %) el menos frecuente.",
+      "razonamiento": "El maltrato físico (2,6 %) es mucho menos común que el psicológico y el financiero (6,8 %), de modo que la ausencia de lesiones no lo descarta.",
+      "mnemotecnia": "",
+      "esquema": "<table><thead><tr><th>Tipo</th><th>Prevalencia</th></tr></thead><tbody><tr><th>Psicológico</th><td>11,6 %</td></tr><tr><th>Financiero</th><td>6,8 %</td></tr><tr><th>Negligencia</th><td>4,2 %</td></tr><tr><th>Físico</th><td>2,6 %</td></tr><tr><th>Sexual</th><td>0,9 %</td></tr></tbody></table>",
+      "fuente": "Yon 2017, Lancet Glob Health (PMID 28104184)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::Maltrato",
+        "Nivel::Recuerdo",
+        "Fuente::Yon2017",
+        "Clase::Irreducible",
+        "Bloom::Recordar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0010",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Maltrato en el adulto mayor</span>Caso — Mujer de 78 años, sin lesiones, cuya hija administra su pensión y su cuenta sin consultarle: ¿qué tipo de maltrato sospechas primero?",
+      "respuesta": "Maltrato <span class=\"dx\">financiero</span>, a menudo acompañado de maltrato psicológico.",
+      "razonamiento": "El financiero es el segundo más frecuente en la comunidad (6,8 %), por encima del físico (2,6 %): que no haya lesiones no lo descarta. Se explora a solas con la paciente y se documenta.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Yon 2017, Lancet Glob Health (PMID 28104184)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::Maltrato",
+        "Nivel::Aplicacion",
+        "Fuente::Yon2017",
+        "Clase::Vineta",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0011",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Maltrato en el adulto mayor</span>¿Qué limita extrapolar a Ecuador la cifra mundial de maltrato de 1 de cada 6?",
+      "respuesta": "Hay pocos estudios robustos en países de ingresos bajos y medios, y la prevalencia varía con el ingreso del país, el método de recogida y el tamaño de la muestra.",
+      "razonamiento": "Por eso la cifra es una referencia y no una estimación local. Un metaanálisis en mujeres de 60 años o más halló una cifra similar (14,1 %).",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Yon 2017, Lancet Glob Health (PMID 28104184); Yon 2019, Trauma Violence Abuse (PMID 29333977)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::Maltrato",
+        "Nivel::Aplicacion",
+        "Fuente::Yon2017",
+        "Clase::Relacional",
+        "Bloom::Analizar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0012",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Escalas del sílabo</span>Una valoración geriátrica cubre función básica, cognición, ánimo, nutrición y marcha: ¿qué escala del sílabo mide cada dominio?",
+      "respuesta": "Barthel (función básica), MMSE (cognición), Yesavage (ánimo), MNA (nutrición) y Tinetti o TUG (marcha y equilibrio).",
+      "razonamiento": "Cada escala responde a un dominio distinto: un resultado normal en una no descarta alteraciones en las otras. El ECOG, de origen oncológico, se usa para el estado funcional en cáncer.",
+      "mnemotecnia": "",
+      "esquema": "<table><thead><tr><th>Escala</th><th>Dominio</th></tr></thead><tbody><tr><th>Barthel</th><td>Actividades de la vida diaria</td></tr><tr><th>MMSE</th><td>Cognición</td></tr><tr><th>Yesavage</th><td>Depresión</td></tr><tr><th>MNA</th><td>Nutrición</td></tr><tr><th>Tinetti</th><td>Marcha y equilibrio</td></tr><tr><th>ECOG</th><td>Origen oncológico</td></tr></tbody></table>",
+      "fuente": "Hopman-Rock 2019, Aging Clin Exp Res (PMID 30191453); Folstein 1975, J Psychiatr Res (PMID 1202204); Yesavage 1982, J Psychiatr Res (PMID 7183759); Kaiser 2009, J Nutr Health Aging (PMID 19812868); Tinetti 1986, J Am Geriatr Soc (PMID 3944402); Oken 1982, Am J Clin Oncol (PMID 7165009)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::EscalasValoracion",
+        "Nivel::Aplicacion",
+        "Fuente::EscalasSilabo",
+        "Clase::Contraste",
+        "Bloom::Analizar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0013",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Índice de Barthel</span>¿Qué evalúa el índice de Barthel y con qué otro índice se agrupa entre los instrumentos de mejores propiedades?",
+      "respuesta": "Evalúa las <span class=\"mec\">actividades de la vida diaria</span> y se agrupa con el índice de Katz.",
+      "razonamiento": "Una revisión sistemática de instrumentos de actividades de la vida diaria colocó al Barthel y al Katz de 5 ítems entre los cuatro con mejor desempeño. El Barthel se describió en 1965 en el ámbito de la rehabilitación de enfermedades crónicas.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Hopman-Rock 2019, Aging Clin Exp Res (PMID 30191453); Mahoney 1965, Md State Med J (PMID 14258950)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::EscalasValoracion",
+        "Nivel::Recuerdo",
+        "Fuente::HopmanRock2019",
+        "Clase::Aplicacion",
+        "Bloom::Recordar",
+        "Escala::Barthel"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0014",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">MMSE</span>Un adulto mayor con quejas de memoria obtiene un MMSE normal: ¿por qué eso no descarta deterioro cognitivo leve?",
+      "respuesta": "Porque el MMSE es poco sensible para el <span class=\"dx\">deterioro cognitivo leve</span>; el MoCA lo detecta mejor.",
+      "razonamiento": "En el metaanálisis, el MoCA superó al MMSE en la detección de deterioro cognitivo leve en mayores de 60 años. Un MMSE normal no sustituye a la evaluación clínica ni a una prueba más sensible.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Ciesielska 2016, Psychiatr Pol (PMID 27992895)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::EscalasValoracion",
+        "Nivel::Aplicacion",
+        "Fuente::Ciesielska2016",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "Escala::MMSE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0015",
+      "tipo": "Cloze",
+      "text": "<span class=\"tema\">Escala de Yesavage</span>En la escala de depresión geriátrica de 15 ítems (GDS-15), el punto de corte recomendado es {{c1::<span class=\"num\">5</span>}}.",
+      "extra": "Una revisión halló posible reporte selectivo de puntos de corte, por lo que el resultado orienta pero no diagnostica; la GDS original tiene 30 preguntas.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Pocklington 2016, Int J Geriatr Psychiatry (PMID 26890937); Yesavage 1982, J Psychiatr Res (PMID 7183759)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::EscalasValoracion",
+        "Nivel::Recuerdo",
+        "Fuente::Pocklington2016",
+        "Clase::Escala",
+        "Bloom::Recordar",
+        "Escala::Yesavage"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ENV-0016",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Depresión en demencia</span>En un paciente con demencia, ¿qué escala tiene más evidencia que la GDS-15 para buscar depresión?",
+      "respuesta": "La <span class=\"dx\">Escala de Cornell para depresión en demencia</span> (CSDD).",
+      "razonamiento": "En la revisión, la CSDD tuvo la mayor evidencia para detectar depresión en demencia y la GDS-15 quedó por detrás. La GDS-15 rinde peor cuando la comunicación del paciente está alterada.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Atchison 2024, Health Sci Rep (PMID 39530065)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::EscalasValoracion",
+        "Nivel::Aplicacion",
+        "Fuente::Atchison2024",
+        "Clase::Contraste",
+        "Bloom::Analizar",
+        "Escala::Yesavage"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0017",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">MNA</span>Un anciano no puede ser pesado ni tallado: ¿qué medida sustituye al IMC en la MNA-SF revisada?",
+      "respuesta": "El <span class=\"mec\">perímetro de la pantorrilla</span>, que rindió igual que el IMC.",
+      "razonamiento": "La MNA-SF revisada clasifica en tres categorías e incluye la de desnutrido; al admitir el perímetro de pantorrilla amplía su uso en la clínica.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Kaiser 2009, J Nutr Health Aging (PMID 19812868)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::EscalasValoracion",
+        "Nivel::Recuerdo",
+        "Fuente::Kaiser2009",
+        "Clase::Aplicacion",
+        "Bloom::Recordar",
+        "Escala::MNA"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0018",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">MNA en residencias</span>En residentes con deterioro cognitivo, ¿quién debe aplicar la MNA y por qué?",
+      "respuesta": "El <span class=\"mec\">personal de enfermería</span>: la aplicó al 94 % de los residentes frente al 69 % de la entrevista directa y predijo mejor la mortalidad.",
+      "razonamiento": "La concordancia entre ambos modos fue baja (kappa 0,31 con la versión corta). El deterioro cognitivo y lingüístico limita la entrevista al residente.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Kaiser 2009, J Nutr Health Aging (PMID 19924345)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::EscalasValoracion",
+        "Nivel::Aplicacion",
+        "Fuente::KaiserR2009",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "Escala::MNA"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0019",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">ECOG</span>En un anciano con cáncer, ¿por qué un ECOG de 2 o más no reemplaza a la valoración geriátrica integral?",
+      "respuesta": "Porque en la práctica se usa como sinónimo de <span class=\"dx\">fragilidad</span> pese a limitaciones importantes.",
+      "razonamiento": "Las organizaciones internacionales recomiendan la valoración geriátrica integral antes de iniciar la terapia oncológica para detectar y tratar la fragilidad. El ECOG nació en oncología en 1982.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Guven 2024, J Geriatr Oncol (PMID 38472009); Oken 1982, Am J Clin Oncol (PMID 7165009)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::EscalasValoracion",
+        "Nivel::Aplicacion",
+        "Fuente::Guven2024",
+        "Clase::Aplicacion",
+        "Bloom::Evaluar",
+        "Escala::ECOG"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0020",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Velocidad de la marcha</span>¿Por qué la velocidad de la marcha funciona como un signo vital funcional?",
+      "respuesta": "Porque por cada <span class=\"num\">0,1 m/s</span> más rápida baja la mortalidad (HR 0,88) y la supervivencia se predice tan bien como con modelos más complejos.",
+      "razonamiento": "La asociación se halló en las nueve cohortes agrupadas (34 485 adultos mayores de la comunidad). Es una prueba barata que resume reserva fisiológica.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Studenski 2011, JAMA (PMID 21205966)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::Movilidad",
+        "Nivel::Aplicacion",
+        "Fuente::Studenski2011",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0021",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Velocidad de la marcha</span>¿En qué población y con qué técnica se recomienda medir la velocidad de la marcha como prueba única?",
+      "respuesta": "En adultos mayores <span class=\"dx\">autónomos de la comunidad</span>, a ritmo habitual sobre <span class=\"num\">4 metros</span>.",
+      "razonamiento": "Es la distancia más usada en la literatura; el grupo de expertos la consideró segura, rápida y fiable.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Abellan van Kan 2009, J Nutr Health Aging (PMID 19924348)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::Movilidad",
+        "Nivel::Recuerdo",
+        "Fuente::AbellanVanKan2009",
+        "Clase::Irreducible",
+        "Bloom::Recordar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0022",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Marcha lenta</span>Caso — Adulto mayor autónomo que camina notoriamente más lento que hace un año: ¿por qué se interpreta como vulnerabilidad y no solo como lentitud?",
+      "respuesta": "Porque la marcha lenta es factor de riesgo de <span class=\"al\">discapacidad, deterioro cognitivo, institucionalización, caídas y mortalidad</span>.",
+      "razonamiento": "Resultó al menos tan sensible como instrumentos compuestos. El hallazgo obliga a buscar causas (fuerza, equilibrio, cognición, fármacos) y a completar la valoración.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Abellan van Kan 2009, J Nutr Health Aging (PMID 19924348)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::Movilidad",
+        "Nivel::Aplicacion",
+        "Fuente::AbellanVanKan2009",
+        "Clase::Vineta",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0023",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Timed Up and Go</span>¿Qué predice bien el TUG y qué predice mal?",
+      "respuesta": "Se asocia con <span class=\"dx\">caídas previas</span>, pero predice débilmente las caídas futuras.",
+      "razonamiento": "El tiempo de corte entre caedores y no caedores varió de 10 a 32,6 s entre estudios. Faltan condiciones estandarizadas de la prueba y control de edad, sexo y comorbilidades.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Beauchet 2011, J Nutr Health Aging (PMID 22159785)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::Movilidad",
+        "Nivel::Aplicacion",
+        "Fuente::Beauchet2011",
+        "Clase::Aplicacion",
+        "Bloom::Analizar",
+        "Escala::TUG"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0024",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Tinetti y TUG</span>¿En qué se diferencia lo que entrega la escala de Tinetti de lo que entrega el TUG?",
+      "respuesta": "La <span class=\"dx\">Tinetti</span> evalúa de forma observada la marcha y el equilibrio; el <span class=\"dx\">TUG</span> entrega un solo tiempo en segundos.",
+      "razonamiento": "Por eso la Tinetti ayuda a localizar el problema (equilibrio o marcha) y el TUG resume la movilidad funcional.<br><span class=\"vs\">Contraste</span> escala observacional frente a prueba cronometrada.",
+      "mnemotecnia": "",
+      "esquema": "<table><thead><tr><th>Rasgo</th><th>Tinetti</th><th>TUG</th></tr></thead><tbody><tr><th>Evalúa</th><td>Marcha y equilibrio</td><td>Movilidad funcional</td></tr><tr><th>Resultado</th><td>Observación</td><td>Tiempo en segundos</td></tr></tbody></table>",
+      "fuente": "Tinetti 1986, J Am Geriatr Soc (PMID 3944402); Beauchet 2011, J Nutr Health Aging (PMID 22159785)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::Movilidad",
+        "Nivel::Aplicacion",
+        "Fuente::TinettiTUG",
+        "Clase::Contraste",
+        "Bloom::Analizar",
+        "Escala::Tinetti"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0025",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Valoración geriátrica integral</span>¿Qué distingue a la valoración geriátrica integral de una historia clínica convencional?",
+      "respuesta": "Es un proceso <span class=\"mec\">multidimensional y multidisciplinario</span> que detecta problemas médicos, mentales y funcionales para armar un plan coordinado.",
+      "razonamiento": "El plan integra tratamiento y seguimiento, no solo diagnóstico. Por eso combina escalas de función, cognición, ánimo, nutrición y movilidad.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Ellis 2017, Cochrane Database Syst Rev (PMID 28898390)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::VGI",
+        "Nivel::Aplicacion",
+        "Fuente::Ellis2017",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0026",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Valoración geriátrica integral</span>¿Qué beneficio concreto tiene la valoración geriátrica integral al ingreso hospitalario?",
+      "respuesta": "Más pacientes <span class=\"num\">vivos y en su domicilio</span> a los 3-12 meses (RR 1,06) y menos ingresos a residencia (RR 0,80).",
+      "razonamiento": "La evidencia fue de alta certeza en ambos desenlaces en 29 ensayos con 13 766 participantes.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Ellis 2017, Cochrane Database Syst Rev (PMID 28898390)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::VGI",
+        "Nivel::Aplicacion",
+        "Fuente::Ellis2017",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-ENV-0027",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Valoración geriátrica integral</span>¿Qué desenlaces no cambia la valoración geriátrica integral hospitalaria, pese a sus beneficios?",
+      "respuesta": "No modifica la <span class=\"num\">mortalidad</span> (RR 1,00) ni la dependencia (RR 0,97) a los 3-12 meses.",
+      "razonamiento": "Su valor está en mantener a la persona en casa, no en prolongar la vida. Los costes por participante fueron algo mayores con evidencia de baja certeza.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Ellis 2017, Cochrane Database Syst Rev (PMID 28898390)",
+      "tags": [
+        "Quirurgica2::Envejecimiento::VGI",
+        "Nivel::Aplicacion",
+        "Fuente::Ellis2017",
+        "Clase::Relacional",
+        "Bloom::Evaluar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    }
+  ]
 }
