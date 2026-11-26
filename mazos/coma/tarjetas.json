@@ -1,0 +1,809 @@
+{
+ "meta": {
+  "caso": "Coma",
+  "rotacion": "1.ª",
+  "tag_raiz": "Coma",
+  "prefijo": "Q2-COMA",
+  "version": "1.0",
+  "fecha": "2026-11-26",
+  "resultado_aprendizaje": "Evalúa el estado de conciencia e identifica causas estructurales y metabólicas de coma.",
+  "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 1.ª rotación, CASO COMA / TRAUMATISMO CRANEOENCEFÁLICO (contenidos y trabajo autónomo)",
+  "justificacion_exceso": "",
+  "mir_verificados": [],
+  "verificacion": {
+   "total": 62,
+   "verificados": 48,
+   "eliminados": [
+    {
+     "id": "Q2-COMA-0001",
+     "dato": "Infarto hemisférico unilateral no causa coma salvo efecto de masa",
+     "motivo": "no confirmado en las fuentes consultadas: tarjeta descartada"
+    },
+    {
+     "id": "Q2-COMA-0001",
+     "dato": "Corteza de ambos hemisferios y SARA en tegmento pontomesencefálico",
+     "motivo": "localización fina no confirmada: se conserva SARA en tronco y corteza como contenido"
+    },
+    {
+     "id": "Q2-COMA-0007",
+     "dato": "Vía del reflejo oculocefálico por el fascículo longitudinal medial",
+     "motivo": "no confirmada: eliminada"
+    },
+    {
+     "id": "Q2-COMA-0009",
+     "dato": "Posturas de decorticación y descerebración como nivel lesional",
+     "motivo": "no confirmado con fuente: tarjeta eliminada"
+    },
+    {
+     "id": "Q2-COMA-0002",
+     "dato": "Descenso rostro-caudal del deterioro, Cheyne-Stokes vs Biot, Kussmaul",
+     "motivo": "patrones respiratorios y secuencia no confirmados: eliminados"
+    },
+    {
+     "id": "Q2-COMA-0019",
+     "dato": "Hipoglucemia que simula ictus por hipoperfusión de territorios previamente lesionados",
+     "motivo": "solo evidencia de casos; mecanismo no confirmado: eliminada"
+    },
+    {
+     "id": "Q2-COMA-0011",
+     "dato": "Aumento exponencial de la PIC al agotarse la compensación",
+     "motivo": "no confirmado: se conserva el enunciado de Monro-Kellie"
+    },
+    {
+     "id": "Q2-COMA-0014",
+     "dato": "Hiperventilación: vasoconstricción y reducción del volumen sanguíneo",
+     "motivo": "mecanismo no confirmado: se conserva la recomendación de la BTF"
+    },
+    {
+     "id": "Q2-COMA-0026",
+     "dato": "Registrar el Glasgow antes de sedar o intubar; caída de 2 puntos",
+     "motivo": "no confirmado: eliminados"
+    },
+    {
+     "id": "Q2-COMA-0026",
+     "dato": "Glasgow motor como componente de mayor rendimiento pronóstico",
+     "motivo": "no confirmado: reformulado con Teasdale 2014"
+    },
+    {
+     "id": "Q2-COMA-0031",
+     "dato": "Cerebro extruye osmolitos en días; lista de factores de riesgo de desmielinización; límite de 8 mEq/L",
+     "motivo": "mecanismo y factores no confirmados en fuente primaria; límite divergente (8 o 10): se muestran ambos"
+    },
+    {
+     "id": "Q2-COMA-0015",
+     "dato": "Hipotermia y sedantes simulan muerte encefálica; umbrales de muerte encefálica",
+     "motivo": "contenido de la guía AAN no confirmado: eliminado"
+    },
+    {
+     "id": "Q2-COMA-0021",
+     "dato": "Tiamina consume reservas residuales con la carga de glucosa; dosis y orden exactos",
+     "motivo": "mecanismo y dosis no confirmados: eliminados"
+    },
+    {
+     "id": "Q2-COMA-0003",
+     "dato": "Encefalopatía urémica (el sílabo dice hiperuricemia), asterixis y mioclonías",
+     "motivo": "término del sílabo ambiguo y rasgos no confirmados: eliminada"
+    },
+    {
+     "id": "Q2-COMA-0022",
+     "dato": "Mnemotecnia «C-O-me-Amigos» para Wernicke",
+     "motivo": "no es una mnemotecnia establecida: eliminada"
+    },
+    {
+     "id": "Q2-COMA-0025",
+     "dato": "Estupor vs coma y coma vs estado vegetativo (definiciones y duración del coma)",
+     "motivo": "no confirmados: reformulado sobre la terminología de la AAN"
+    },
+    {
+     "id": "Q2-COMA-0023",
+     "dato": "Mecanismo de la naloxona como antagonista competitivo de receptores mu",
+     "motivo": "no confirmado en las fuentes consultadas: eliminado"
+    },
+    {
+     "id": "Q2-COMA-0004",
+     "dato": "Glucemia como paso previo a la neuroimagen en todo coma",
+     "motivo": "no confirmado en Edlow 2014: se conserva estabilización primero"
+    }
+   ]
+  },
+  "guia": {
+   "principios": [
+    "La alerta depende del SARA del tronco y el contenido de la corteza: el coma exige lesión del SARA o disfunción neuronal difusa",
+    "La presión intracraneal se rige por la doctrina de Monro-Kellie y la perfusión por PAM menos PIC",
+    "La velocidad de instauración y de corrección del sodio determina el daño cerebral"
+   ],
+   "palabras_clave": [
+    "SARA",
+    "Glasgow",
+    "Cushing",
+    "Monro-Kellie",
+    "Wernicke",
+    "naloxona",
+    "flumazenilo",
+    "hiponatremia",
+    "hematoma epidural",
+    "hematoma subdural"
+   ],
+   "imagenes_oclusion": [],
+   "preguntas_cierre": [
+    "¿Qué estabilizas y qué descartas antes de la imagen en un coma de causa desconocida?",
+    "¿Qué signo de la pupila orienta a causa metabólica y a herniación uncal?",
+    "¿Cuándo no usarías flumazenilo?"
+   ],
+   "subtemas": {
+    "Conciencia": "Definición y fisiopatología del SARA",
+    "Exploracion": "Exploración clínica de la conciencia",
+    "ReflejosTronco": "Exploración del tronco",
+    "Herniacion": "Signos de hipertensión intracraneal",
+    "PIC": "Fisiopatología de la presión intracraneal",
+    "TCE": "Traumatismo craneoencefálico y manejo",
+    "Hematomas": "Neuroimagen y hematomas",
+    "Hipoglucemia": "Causas metabólicas",
+    "Wernicke": "Causas metabólicas y tóxicas",
+    "Toxicos": "Intoxicaciones agudas",
+    "Abordaje": "Pruebas diagnósticas y manejo urgente",
+    "EscalaGlasgow": "Escala de Glasgow",
+    "Hiponatremia": "Trastornos electrolíticos",
+    "Pronostico": "Alteraciones del estado de conciencia"
+   },
+   "fechas": {
+    "apertura": null,
+    "cierre": null,
+    "examen": null
+   },
+   "referencias": [
+    "Edlow BL, Takahashi E, Wu O, Benner T, Dai G, Bu L, et al. Neuroanatomic connectivity of the human ascending arousal system critical to consciousness and its disorders. J Neuropathol Exp Neurol. 2012;71(6):531-46. PMID 22592840.",
+    "Edlow JA, Rabinstein A, Traub SJ, Wijdicks EF. Diagnosis of reversible causes of coma. Lancet. 2014;384(9959):2064-76. PMID 24767707.",
+    "Towne AR, Waterhouse EJ, Boggs JG, Garnett LK, Brown AJ, Smith JR Jr, et al. Prevalence of nonconvulsive status epilepticus in comatose patients. Neurology. 2000;54(2):340-5. PMID 10668693.",
+    "Wilson MH. Monro-Kellie 2.0: the dynamic vascular and venous pathophysiological components of intracranial pressure. J Cereb Blood Flow Metab. 2016;36(8):1338-50. PMID 27174995.",
+    "Chesnut RM, Marshall LF, Klauber MR, Blunt BA, Baldwin N, Eisenberg HM, et al. The role of secondary brain injury in determining outcome from severe head injury. J Trauma. 1993;34(2):216-22. PMID 8459458.",
+    "Carney N, Totten AM, O'Reilly C, Ullman JS, Hawryluk GW, Bell MJ, et al. Guidelines for the management of severe traumatic brain injury, fourth edition. Neurosurgery. 2017;80(1):6-15. PMID 27654000.",
+    "Galvin R, Bråthen G, Ivashynka A, Hillbom M, Tanasescu R, Leone MA. EFNS guidelines for diagnosis, therapy and prevention of Wernicke encephalopathy. Eur J Neurol. 2010;17(12):1408-18. PMID 20642790.",
+    "Sechi G, Serra A. Wernicke's encephalopathy: new clinical settings and recent advances in diagnosis and management. Lancet Neurol. 2007;6(5):442-55. PMID 17434099.",
+    "Boyer EW. Management of opioid analgesic overdose. N Engl J Med. 2012;367(2):146-55. PMID 22784117.",
+    "Giacino JT, Katz DI, Schiff ND, Whyte J, Ashman EJ, Ashwal S, et al. Practice guideline update recommendations summary: disorders of consciousness. Neurology. 2018;91(10):450-60. PMID 30089618.",
+    "Teasdale G, Maas A, Lecky F, Manley G, Stocchetti N, Murray G. The Glasgow Coma Scale at 40 years: standing the test of time. Lancet Neurol. 2014;13(8):844-54. PMID 25030516.",
+    "Verbalis JG, Goldsmith SR, Greenberg A, Korzelius C, Schrier RW, Sterns RH, et al. Diagnosis, evaluation, and treatment of hyponatremia: expert panel recommendations. Am J Med. 2013;126(10 Suppl 1):S1-42. PMID 24074529.",
+    "American Diabetes Association. Standards of Care in Diabetes: classification of hypoglycemia. Diabetes Care. Consultado el 26 de noviembre de 2026.",
+    "AAO EyeWiki. Neuro-ophthalmic findings in coma. Consultado el 26 de noviembre de 2026.",
+    "StatPearls. Locked-in syndrome (NBK559026) y Cushing reflex (statpearls.com/point-of-care/20176). Consultado el 26 de noviembre de 2026.",
+    "Radiopaedia. Uncal herniation y Extradural haemorrhage (radiopaedia.org/articles/40105). Consultado el 26 de noviembre de 2026.",
+    "Utah Poison Control Center. Flumazenil. 2022. Consultado el 26 de noviembre de 2026.",
+    "Eur J Trauma Emerg Surg. 2020. doi 10.1007/s00068-020-01383-4 (intubación con GCS 6 a 8). Consultado el 26 de noviembre de 2026.",
+    "NINDS. Clinical symptoms in TBI, days 1-14 (ninds.nih.gov). Consultado el 26 de noviembre de 2026."
+   ]
+  }
+ },
+ "tarjetas": [
+  {
+   "id": "Q2-COMA-0001",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Conciencia</span>¿Qué dos componentes deben estar íntegros para mantenerla y cuál sostiene la alerta?",
+   "respuesta": "La <span class=\"mec\">alerta</span> depende del sistema reticular activante ascendente (SARA) del tronco encefálico; el contenido depende de la corteza cerebral.",
+   "razonamiento": "Las lesiones del SARA causan coma, el trastorno de conciencia más grave. De este principio se deduce el caso: coma por lesión del SARA o por disfunción neuronal difusa.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Edlow 2012, J Neuropathol Exp Neurol (PMID 22592840)",
+   "tags": [
+    "Quirurgica2::Coma::Conciencia",
+    "Nivel::Aplicacion",
+    "Fuente::Edlow2012",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0002",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Pupilas en el coma</span>¿Por qué la reactividad pupilar ayuda a separar un coma metabólico de uno estructural?",
+   "respuesta": "Porque en el coma <span class=\"dx\">metabólico</span> el reflejo pupilar a la luz suele conservarse aunque se pierdan otras funciones del tronco.",
+   "razonamiento": "Un reflejo pupilar abolido orienta a lesión estructural. <span class=\"al\">Sedantes</span>, hipotermia y anestésicos pueden suprimirlo parcialmente, así que se interpretan con el contexto.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "AAO EyeWiki, Neuro-ophthalmic Findings in Coma",
+   "tags": [
+    "Quirurgica2::Coma::Exploracion",
+    "Nivel::Aplicacion",
+    "Fuente::EyeWikiComa",
+    "Clase::Contraste",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0003",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Coma con TC normal</span>Coma sin focalidad y con tomografía normal: ¿qué queda por descartar?",
+   "respuesta": "Causas <span class=\"dx\">tóxicas</span>, infecciosas, <span class=\"dx\">convulsivas</span> (incluido el estado epiléptico no convulsivo), endocrinas y déficit de tiamina.",
+   "razonamiento": "Si la TC no es diagnóstica se aplica una lista de verificación para decidir si hace falta imagen avanzada o si hay una causa tratable. Es la razón de no detener el estudio tras una TC normal.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Edlow 2014, Lancet (PMID 24767707)",
+   "tags": [
+    "Quirurgica2::Coma::Abordaje",
+    "Nivel::Aplicacion",
+    "Fuente::Edlow2014",
+    "Clase::Relacional",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0004",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Coma de causa desconocida</span>¿Qué se hace antes de pedir imágenes y qué cambia si hay trauma?",
+   "respuesta": "Primero se <span class=\"al\">estabiliza</span> al paciente (amenazas vitales); la imagen se hace de inmediato si el coma es postraumático o si una lesión estructural es probable.",
+   "razonamiento": "Después se usan historia, examen y laboratorio para identificar causas estructurales y tratables. Si no se hace imagen, se reevalúa de forma seriada.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Edlow 2014, Lancet (PMID 24767707)",
+   "tags": [
+    "Quirurgica2::Coma::Abordaje",
+    "Nivel::Aplicacion",
+    "Fuente::Edlow2014",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0005",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Estado epiléptico no convulsivo</span>¿Por qué debe sospecharse en un coma sin explicación?",
+   "respuesta": "Porque es una causa infradiagnosticada de coma sin signos clínicos de crisis y solo el <span class=\"dx\">electroencefalograma</span> la detecta.",
+   "razonamiento": "En una serie de 236 pacientes comatosos sin actividad convulsiva evidente, el EEG la mostró en el 8 %. Por eso el EEG forma parte de la evaluación.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Towne 2000, Neurology (PMID 10668693)",
+   "tags": [
+    "Quirurgica2::Coma::Abordaje",
+    "Nivel::Aplicacion",
+    "Fuente::Towne2000",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0006",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Síndrome de enclaustramiento</span>¿Por qué parece un coma y sin embargo el paciente está consciente?",
+   "respuesta": "Porque la lesión de la <span class=\"mec\">protuberancia ventral</span> deja tetraplejía pero respeta el SARA, que es dorsal, y la conciencia.",
+   "razonamiento": "Conserva los movimientos oculares verticales y el parpadeo: se le pide mirar arriba o parpadear antes de rotularlo como comatoso.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Locked-In Syndrome (NBK559026)",
+   "tags": [
+    "Quirurgica2::Coma::ReflejosTronco",
+    "Nivel::Aplicacion",
+    "Fuente::StatPearlsLIS",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0007",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Reflejo oculocefálico</span>¿Qué informa cuando está presente en un paciente en coma?",
+   "respuesta": "Que el tronco encefálico funciona: los ojos se desvían en sentido opuesto al giro de la cabeza y vuelven suavemente al centro.",
+   "razonamiento": "Si el reflejo es normal, la causa del coma es supranuclear. Su ausencia orienta a lesión de tronco, aunque sedantes o depresión metabólica profunda pueden suprimirlo.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "AAO EyeWiki, Neuro-ophthalmic Findings in Coma",
+   "tags": [
+    "Quirurgica2::Coma::ReflejosTronco",
+    "Nivel::Aplicacion",
+    "Fuente::EyeWikiComa",
+    "Clase::Aplicacion",
+    "Bloom::Comprender"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0008",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Coma y lesión cervical</span>¿Por qué se cambia el reflejo oculocefálico por la prueba calórica?",
+   "respuesta": "Porque el oculocefálico exige una columna estable; la prueba calórica evita mover el cuello.",
+   "razonamiento": "La calórica requiere un <span class=\"al\">tímpano íntegro</span>: si hay dudas se revisa la membrana y, si está comprometida, se pospone la prueba.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Rasgo</th><th>Oculocefálico</th><th>Calórica</th></tr></thead><tbody><tr><th>Requiere</th><td>Columna estable</td><td>Tímpano íntegro</td></tr><tr><th>Sospecha cervical</th><td>No se hace</td><td>Se prefiere</td></tr></tbody></table>",
+   "fuente": "AAO EyeWiki, Neuro-ophthalmic Findings in Coma",
+   "tags": [
+    "Quirurgica2::Coma::ReflejosTronco",
+    "Nivel::Aplicacion",
+    "Fuente::EyeWikiComa",
+    "Clase::Contraste",
+    "Bloom::Analizar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0009",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Herniación uncal</span>Anisocoria con pupila midriática arreactiva en un paciente que se deteriora: ¿cómo la explica la anatomía?",
+   "respuesta": "El uncus comprime el <span class=\"mec\">III par</span> ipsilateral: las fibras parasimpáticas de su superficie ceden primero y la pupila se dilata.",
+   "razonamiento": "La midriasis suele preceder a la ptosis y a la parálisis oculomotora. Con conciencia conservada, una pupila dilatada obliga a buscar otra causa.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Radiopaedia, Uncal herniation",
+   "tags": [
+    "Quirurgica2::Coma::Herniacion",
+    "Nivel::Aplicacion",
+    "Fuente::RadUncal",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0010",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Tríada de Cushing</span>¿Por qué es un signo tardío y no una alarma temprana?",
+   "respuesta": "Porque la hipertensión es compensadora: sube la presión arterial media para sostener la perfusión cerebral cuando la presión intracraneal ya es muy alta.",
+   "razonamiento": "La tríada es hipertensión, <span class=\"al\">bradicardia</span> y respiración irregular. Se ve en fases terminales y puede anunciar herniación; su mecanismo exacto no está del todo establecido. Antes suelen aparecer cefalea, vómitos y alteración de la conciencia.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Cushing Reflex (statpearls.com/point-of-care/20176)",
+   "tags": [
+    "Quirurgica2::Coma::Herniacion",
+    "Nivel::Aplicacion",
+    "Fuente::StatPearlsCushing",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0011",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Doctrina de Monro-Kellie</span>¿Qué predice sobre la presión intracraneal?",
+   "respuesta": "El cráneo es una caja cerrada: un cambio en el volumen de sangre, encéfalo o LCR obliga a cambios recíprocos en los otros dos.",
+   "razonamiento": "Cuando esa compensación no es posible, un aumento adicional de volumen eleva la presión intracraneal. El flujo venoso de salida también influye en la presión.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Wilson 2016, J Cereb Blood Flow Metab (PMID 27174995)",
+   "tags": [
+    "Quirurgica2::Coma::PIC",
+    "Nivel::Aplicacion",
+    "Fuente::Wilson2016",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0012",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">TCE grave</span>Usa PPC = PAM menos PIC para explicar por qué una hipotensión empeora el pronóstico.",
+   "respuesta": "Porque con la PIC elevada una caída de la presión arterial media reduce la perfusión cerebral y suma isquemia a la lesión primaria.",
+   "razonamiento": "En 717 casos de TCE grave, la hipotensión (PAS &lt; 90 mmHg) se asoció con un aumento del 150 % en la mortalidad. Es un insulto secundario evitable.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Chesnut 1993, J Trauma (PMID 8459458)",
+   "tags": [
+    "Quirurgica2::Coma::TCE",
+    "Nivel::Aplicacion",
+    "Fuente::Chesnut1993",
+    "Clase::Principio",
+    "Bloom::Aplicar",
+    "Principio",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0013",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">TCE grave · Brain Trauma Foundation</span>Se recomienda tratar la presión intracraneal por encima de {{c1::<span class=\"num\">22 mmHg</span>}}, con una presión de perfusión cerebral objetivo de {{c2::<span class=\"num\">60 a 70 mmHg</span>}}.",
+   "extra": "Cuarta edición, nivel IIB. La tercera edición usaba 20 mmHg: conviene saber qué edición cita cada fuente.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Carney 2017, Neurosurgery (PMID 27654000)",
+   "tags": [
+    "Quirurgica2::Coma::TCE",
+    "Nivel::Recuerdo",
+    "Fuente::Carney2017",
+    "Clase::Irreducible",
+    "Bloom::Recordar",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2-COMA-0014",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Hiperventilación en TCE grave</span>¿Se usa de forma rutinaria para bajar la presión intracraneal?",
+   "respuesta": "No: la hiperventilación profiláctica prolongada con PaCO2 de <span class=\"num\">25 mmHg o menos</span> no se recomienda.",
+   "razonamiento": "Se considera una medida temporal; si se usa, se recomienda vigilar la oxigenación cerebral (SjO2 o PbtO2). La sección pasó a llamarse «terapias ventilatorias» en la cuarta edición.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Carney 2017, Neurosurgery (PMID 27654000)",
+   "tags": [
+    "Quirurgica2::Coma::TCE",
+    "Nivel::Aplicacion",
+    "Fuente::Carney2017",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0015",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Neuroimagen en el coma</span>¿Cuándo se indica la imagen cerebral inicial?",
+   "respuesta": "De inmediato en el coma <span class=\"al\">postraumático</span> o cuando una lesión estructural es una causa probable o posible.",
+   "razonamiento": "La imagen inicial es una tomografía, rápida y disponible. No debe retrasar la reanimación.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Edlow 2014, Lancet (PMID 24767707)",
+   "tags": [
+    "Quirurgica2::Coma::TCE",
+    "Nivel::Aplicacion",
+    "Fuente::Edlow2014",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0016",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Hematoma epidural</span>¿Por qué el intervalo lúcido obliga a observar al paciente aunque parezca normal?",
+   "respuesta": "Porque es un sangrado arterial, típicamente de la <span class=\"mec\">arteria meníngea media</span>, que se asocia a una fase lúcida seguida de pérdida de conciencia.",
+   "razonamiento": "La normalidad transitoria no descarta la lesión: se mantiene observación neurológica seriada.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Radiopaedia, Extradural haemorrhage (radiopaedia.org/articles/40105)",
+   "tags": [
+    "Quirurgica2::Coma::Hematomas",
+    "Nivel::Aplicacion",
+    "Fuente::RadHematoma",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0017",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Hematoma epidural y subdural</span>En la tomografía, ¿qué morfología tiene cada uno?",
+   "respuesta": "El <span class=\"dx\">epidural</span> es lenticular (biconvexo) y no cruza las suturas; el <span class=\"dx\">subdural</span> es en semiluna y sí las cruza.",
+   "razonamiento": "<span class=\"vs\">Contraste</span> el epidural es arterial; el subdural suele ser venoso, por rotura de venas puente.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Rasgo</th><th>Epidural</th><th>Subdural</th></tr></thead><tbody><tr><th>Forma</th><td>Biconvexo</td><td>Semiluna</td></tr><tr><th>Suturas</th><td>No cruza</td><td>Cruza</td></tr><tr><th>Vaso</th><td>Arteria meníngea media</td><td>Venas puente</td></tr></tbody></table><img src=\"q2-coma-0017-epidural-subdural.jpg\" alt=\"Tomografía: hematoma epidural lenticular a la izquierda y subdural en semiluna a la derecha\">",
+   "fuente": "Radiopaedia, Extradural haemorrhage (radiopaedia.org/articles/40105)",
+   "tags": [
+    "Quirurgica2::Coma::Hematomas",
+    "Nivel::Aplicacion",
+    "Fuente::RadHematoma",
+    "Clase::Contraste",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0018",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Hematoma subdural</span>¿Por qué predomina en ancianos y alcohólicos aun con un traumatismo trivial?",
+   "respuesta": "Porque la atrofia cerebral estira las venas puente, que se rompen con un traumatismo mínimo.",
+   "razonamiento": "El mecanismo puede ser trivial u olvidado: se sospecha ante alteración de la conciencia sin antecedente claro.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Radiopaedia, Extradural haemorrhage (radiopaedia.org/articles/40105)",
+   "tags": [
+    "Quirurgica2::Coma::Hematomas",
+    "Nivel::Aplicacion",
+    "Fuente::RadHematoma",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0019",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Hipoglucemia · clasificación</span>La hipoglucemia de nivel 1 es una glucemia menor de {{c1::<span class=\"num\">70 mg/dL</span>}} y la clínicamente significativa (nivel 2) menor de {{c2::<span class=\"num\">54 mg/dL</span>}}.",
+   "extra": "El nivel 3 es grave y se define por el estado mental o físico alterado que requiere asistencia, no por un valor.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "ADA, Standards of Care in Diabetes (clasificación de la hipoglucemia)",
+   "tags": [
+    "Quirurgica2::Coma::Hipoglucemia",
+    "Nivel::Recuerdo",
+    "Fuente::ADAHipo",
+    "Clase::Irreducible",
+    "Bloom::Recordar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2-COMA-0020",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Encefalopatía de Wernicke</span>La tríada clásica es {{c1::<span class=\"dx\">confusión</span>}}, {{c2::<span class=\"dx\">oftalmoplejía</span>}} y {{c3::<span class=\"dx\">ataxia</span>}}.",
+   "extra": "La tríada no está presente en todos los pacientes: su ausencia no descarta el diagnóstico.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Galvin 2010, Eur J Neurol (PMID 20642790)",
+   "tags": [
+    "Quirurgica2::Coma::Wernicke",
+    "Nivel::Recuerdo",
+    "Fuente::Galvin2010",
+    "Clase::Irreducible",
+    "Bloom::Recordar",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2-COMA-0021",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Coma hipoglucémico</span>En el alcohólico o desnutrido, ¿qué se da junto con la glucosa intravenosa y por qué?",
+   "respuesta": "Se da <span class=\"fx\">tiamina</span> parenteral: las guías europeas la indican antes de cualquier carbohidrato para no precipitar una encefalopatía de Wernicke.",
+   "razonamiento": "La glucosa urgente no debe retrasarse por esperar la tiamina; se administran de forma concurrente o la tiamina inmediatamente antes.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Galvin 2010, Eur J Neurol (PMID 20642790)",
+   "tags": [
+    "Quirurgica2::Coma::Wernicke",
+    "Nivel::Aplicacion",
+    "Fuente::Galvin2010",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0022",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Viñeta · Wernicke</span>Varón alcohólico con confusión, oftalmoplejía con nistagmo y marcha atáxica: ¿qué diagnóstico y qué conducta?",
+   "respuesta": "<span class=\"dx\">Encefalopatía de Wernicke</span>: <span class=\"fx\">tiamina</span> parenteral urgente.",
+   "razonamiento": "Cada signo corresponde a un elemento de la tríada, pero esta no siempre está completa; se trata ante la sospecha, sin esperar la tríada.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Galvin 2010, Eur J Neurol (PMID 20642790); Sechi 2007, Lancet Neurol (PMID 17434099)",
+   "tags": [
+    "Quirurgica2::Coma::Wernicke",
+    "Nivel::Aplicacion",
+    "Fuente::Galvin2010",
+    "Clase::Vineta",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0023",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Viñeta · opioides</span>Hallado inconsciente, con pupilas puntiformes, bradipnea y sin signos focales: ¿qué sospechas y cómo se confirma?",
+   "respuesta": "<span class=\"dx\">Intoxicación por opioides</span>; la reversión con <span class=\"fx\">naloxona</span> de la conciencia y la respiración la apoya y la trata.",
+   "razonamiento": "La miosis sola no basta para el diagnóstico y las pupilas puntiformes también se ven en lesión pontina dorsal. La naloxona dura menos que muchos opioides: puede reaparecer la depresión y hay que vigilar.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Boyer 2012, N Engl J Med (PMID 22784117); AAO EyeWiki, Neuro-ophthalmic Findings in Coma",
+   "tags": [
+    "Quirurgica2::Coma::Toxicos",
+    "Nivel::Aplicacion",
+    "Fuente::Boyer2012",
+    "Clase::Vineta",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0024",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Flumazenilo</span>¿Por qué no se administra de rutina en el coma de causa desconocida?",
+   "respuesta": "Porque puede precipitar <span class=\"al\">convulsiones</span> en pacientes con dependencia a benzodiacepinas o coingesta proconvulsivante.",
+   "razonamiento": "En una sobredosis mixta antagoniza además el efecto anticonvulsivante de la benzodiacepina. En la intoxicación aislada, el soporte suele bastar.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Utah Poison Control Center 2022, Flumazenil; ficha técnica flumazenilo (PDR)",
+   "tags": [
+    "Quirurgica2::Coma::Toxicos",
+    "Nivel::Aplicacion",
+    "Fuente::UtahFlumazenil",
+    "Clase::Aplicacion",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0025",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Estado vegetativo</span>¿Qué término sustituye a «estado vegetativo permanente» y qué debe especificarse?",
+   "respuesta": "Se usa <span class=\"dx\">VS/UWS crónico</span> (síndrome de vigilia sin respuesta), especificando la duración.",
+   "razonamiento": "Las guías de la AAN recomiendan identificar y tratar factores de confusión y hacer evaluaciones seriadas estandarizadas. El estado de conciencia mínima y la etiología traumática se asocian a mejor pronóstico.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Giacino 2018, Neurology (PMID 30089618)",
+   "tags": [
+    "Quirurgica2::Coma::Pronostico",
+    "Nivel::Recuerdo",
+    "Fuente::Giacino2018",
+    "Clase::Irreducible",
+    "Bloom::Recordar",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0026",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Escala de Glasgow</span>¿Por qué un puntaje aislado no distingue coma estructural de metabólico?",
+   "respuesta": "Porque mide la profundidad de la alteración de la conciencia, no su causa ni su nivel anatómico.",
+   "razonamiento": "Los pacientes individuales se describen mejor por sus tres componentes; el total sirve sobre todo para grupos. Los factores de confusión (como la sedación) limitan la interpretación.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Teasdale 2014, Lancet Neurol (PMID 25030516)",
+   "tags": [
+    "Quirurgica2::Coma::EscalaGlasgow",
+    "Nivel::Aplicacion",
+    "Fuente::Teasdale2014",
+    "Clase::Escala",
+    "Bloom::Analizar",
+    "Escala::Glasgow",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0027",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Escala de Glasgow</span>¿Qué puntaje se asocia a asegurar la vía aérea y qué matiz tiene?",
+   "respuesta": "Un Glasgow de <span class=\"num\">8 o menos</span>: ATLS y EAST lo asocian a intubación para proteger la vía aérea.",
+   "razonamiento": "Es una convención y se discute: un estudio de 2020 asoció la intubación al ingreso con GCS 6 a 8 con mayor mortalidad y estancia. El juicio clínico manda.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Eur J Trauma Emerg Surg 2020 (doi 10.1007/s00068-020-01383-4)",
+   "tags": [
+    "Quirurgica2::Coma::EscalaGlasgow",
+    "Nivel::Aplicacion",
+    "Fuente::EJTES2020",
+    "Clase::Escala",
+    "Bloom::Evaluar",
+    "Escala::Glasgow",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0028",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">TCE · Glasgow</span>La gravedad se clasifica como leve {{c1::<span class=\"num\">13 a 15</span>}}, moderada {{c2::<span class=\"num\">9 a 12</span>}} y grave {{c3::<span class=\"num\">3 a 8</span>}}.",
+   "extra": "Los cortes varían entre fuentes: StatPearls usa leve 14 a 15 y moderado 9 a 13. Se aplica el de la fuente de la cátedra.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "NINDS, Clinical symptoms in TBI (ninds.nih.gov); StatPearls, Glasgow Coma Scale",
+   "tags": [
+    "Quirurgica2::Coma::EscalaGlasgow",
+    "Nivel::Recuerdo",
+    "Fuente::NINDSGCS",
+    "Clase::Escala",
+    "Bloom::Recordar",
+    "Escala::Glasgow",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2-COMA-0029",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Hiponatremia</span>¿Cuál es la consecuencia neurológica de la hiponatremia aguda y cuál la de corregir una crónica demasiado rápido?",
+   "respuesta": "La aguda causa <span class=\"mec\">edema cerebral</span> osmótico; la corrección excesivamente rápida de la crónica causa <span class=\"mec\">desmielinización osmótica</span>.",
+   "razonamiento": "Por eso la velocidad de instauración y la de corrección importan tanto como el valor del sodio.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Verbalis 2013, Am J Med (PMID 24074529)",
+   "tags": [
+    "Quirurgica2::Coma::Hiponatremia",
+    "Nivel::Aplicacion",
+    "Fuente::Verbalis2013",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0030",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Hiponatremia grave</span>Coma o convulsiones por hiponatremia: ¿qué se hace y qué meta inicial se busca?",
+   "respuesta": "Salino hipertónico, buscando una elevación inicial rápida del sodio de <span class=\"num\">4 a 6 mEq/L</span>.",
+   "razonamiento": "Con síntomas graves, el riesgo de edema pesa más que el de la corrección rápida. Después se frena: el límite de corrección en 24 horas varía entre fuentes (8 o 10 mEq/L) y es menor en pacientes de riesgo.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Verbalis 2013, Am J Med (PMID 24074529)",
+   "tags": [
+    "Quirurgica2::Coma::Hiponatremia",
+    "Nivel::Aplicacion",
+    "Fuente::Verbalis2013",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-COMA-0031",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Hiponatremia crónica</span>Usa el principio de velocidad para explicar por qué corregirla rápido causa daño.",
+   "respuesta": "Porque la corrección excesivamente rápida de una hiponatremia crónica produce <span class=\"mec\">desmielinización osmótica</span> con deterioro neurológico grave.",
+   "razonamiento": "Por eso se limita el ascenso diario del sodio fuera de la fase inicial de rescate.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Verbalis 2013, Am J Med (PMID 24074529)",
+   "tags": [
+    "Quirurgica2::Coma::Hiponatremia",
+    "Nivel::Aplicacion",
+    "Fuente::Verbalis2013",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  }
+ ]
+}
