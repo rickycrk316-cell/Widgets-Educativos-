@@ -1,0 +1,990 @@
+{
+ "meta": {
+  "caso": "Vasculopatías",
+  "rotacion": "1.ª",
+  "tag_raiz": "Vascular",
+  "prefijo": "Q2-VASC",
+  "version": "1.0",
+  "fecha": "2026-11-26",
+  "resultado_aprendizaje": "Identifica y maneja inicialmente patologías vasculares venosas y arteriales.",
+  "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 1.ª rotación, CASO PATOLOGÍAS VASCULARES FRECUENTES (contenidos y trabajo autónomo)",
+  "justificacion_exceso": "",
+  "mir_verificados": [],
+  "verificacion": {
+   "total": 74,
+   "verificados": 52,
+   "eliminados": [
+    {
+     "id": "Q2-VASC-0010",
+     "dato": "SVT: tratamiento de la lesión corta o lejana con compresión y movilización; fondaparinux 2,5 mg 45 días",
+     "motivo": "dosis no incluida; la pauta del ensayo CALISTO se limita a la inclusión (5 cm o más) y a la exclusión (menos de 3 cm de la unión safenofemoral)"
+    },
+    {
+     "id": "Q2-VASC-0007",
+     "dato": "ITB menor de 0,5 contraindica la compresión; entre 0,5 y 0,8 compresión reducida",
+     "motivo": "no confirmado en las fuentes leídas (ESVS 2022 condiciona la compresión a presión de tobillo adecuada): umbrales eliminados, se conserva el principio"
+    },
+    {
+     "id": "Q2-VASC-0008",
+     "dato": "ITB de 0,45 y umbral de 0,5",
+     "motivo": "umbral no confirmado: caso reformulado con ITB claramente reducido"
+    },
+    {
+     "id": "Q2-VASC-0009",
+     "dato": "La úlcera arterial empeora al elevar la pierna; úlcera neuropática indolora y con halo hiperqueratósico",
+     "motivo": "no confirmado en las fuentes leídas: eliminado; solo se conservan rasgos de localización, borde, exudado y pulsos"
+    },
+    {
+     "id": "Q2-VASC-0023",
+     "dato": "Pauta de ejercicio de 3 sesiones por semana, 30 a 45 minutos, 12 semanas",
+     "motivo": "no confirmada en ACC/AHA 2024 (la guía individualiza frecuencia e intensidad): eliminada; se conserva el beneficio clase 1A"
+    },
+    {
+     "id": "Q2-VASC-0006",
+     "dato": "Las venas ilíacas carecen de válvulas y las del eje femoral son escasas; trombo de los senos del sóleo",
+     "motivo": "anatomía valvular no confirmada en las fuentes consultadas: tarjetas sobre válvulas descartadas"
+    },
+    {
+     "id": "Q2-VASC-0004",
+     "dato": "Flegmasia alba precede a la cerúlea; la alba es pálida sin isquemia",
+     "motivo": "no confirmado: tarjeta de contraste alba/cerúlea descartada"
+    },
+    {
+     "id": "Q2-VASC-0026",
+     "dato": "Presión de dedo, índice dedo-brazo y las arterias digitales escapan a la calcificación medial",
+     "motivo": "mecanismo no confirmado: se conserva la preferencia de la guía global por la presión de dedo"
+    },
+    {
+     "id": "Q2-VASC-0029",
+     "dato": "Rutherford III: reperfusión libera potasio y mioglobina",
+     "motivo": "no confirmado en ESVS 2020: reformulado por irreversibilidad y amputación primaria"
+    },
+    {
+     "id": "Q2-VASC-0027",
+     "dato": "Orden de fallo tisular nervio, músculo, piel y hueso",
+     "motivo": "solo confirmado que el déficit sensitivo precede al motor: reformulado"
+    },
+    {
+     "id": "Q2-VASC-0031",
+     "dato": "Embolia con déficit de límite nítido",
+     "motivo": "no confirmado: eliminado"
+    },
+    {
+     "id": "Q2-VASC-0013",
+     "dato": "Enoxaparina, rivaroxabán, apixabán y heparina no fraccionada: dosis, bolo e infusión",
+     "motivo": "dosis no confirmadas con fuente primaria en esta migración: tarjetas de dosis descartadas"
+    },
+    {
+     "id": "Q2-VASC-0014",
+     "dato": "Heparina no fraccionada: bolo de 80 U/kg e infusión de 18 U/kg/h",
+     "motivo": "dosis no confirmada: eliminada; se conserva el porqué de la elección"
+    },
+    {
+     "id": "Q2-VASC-0016",
+     "dato": "Dosis de cilostazol de 100 mg cada 12 horas y reevaluación a los 3 meses",
+     "motivo": "dosis no incluida; se conserva la contraindicación confirmada en la ficha técnica"
+    },
+    {
+     "id": "Q2-VASC-0015",
+     "dato": "Dabigatrán y rivaroxabán/apixabán: contraste del inicio",
+     "motivo": "solo confirmada la exigencia del edoxabán en la ficha técnica EMA: reformulado"
+    },
+    {
+     "id": "Q2-VASC-0011",
+     "dato": "El dímero D es inespecífico en el posoperatorio; anticoagulación empírica si la ecografía se demora",
+     "motivo": "no confirmado: eliminado"
+    },
+    {
+     "id": "Q2-VASC-0012",
+     "dato": "Con trombo recanalizado se reevalúa cada año; la imagen de control no decide la suspensión",
+     "motivo": "no confirmado: tarjeta descartada"
+    },
+    {
+     "id": "Q2-VASC-0019",
+     "dato": "Femoral profunda como principal colateral; claudicación venosa; celulitis frente a TVP; TVP proximal frente a distal",
+     "motivo": "no confirmados en las fuentes leídas: tarjetas descartadas"
+    },
+    {
+     "id": "Q2-VASC-0039",
+     "dato": "Reflujo de perforantes mayor de 0,5 segundos",
+     "motivo": "las fuentes divergen (0,35 s frente a 0,5 s): eliminado"
+    },
+    {
+     "id": "Q2-VASC-0026",
+     "dato": "Neuropatía diabética agrava el riesgo isquémico por supresión del dolor",
+     "motivo": "no confirmado: tarjeta descartada"
+    },
+    {
+     "id": "Q2-VASC-0034",
+     "dato": "Hemosiderina, extravasación de hematíes y fibrosis en la insuficiencia venosa crónica",
+     "motivo": "no confirmado en ESVS 2022 (resumen): eliminado"
+    },
+    {
+     "id": "Q2-VASC-0013",
+     "dato": "Anticoagulantes orales y warfarina contraindicados en el embarazo",
+     "motivo": "no confirmado en la guía ASH 2018 consultada: tarjeta descartada"
+    }
+   ]
+  },
+  "guia": {
+   "principios": [
+    "La patología venosa daña por presión que se mantiene alta; la arterial, por flujo que deja de llegar.",
+    "La obstrucción venosa masiva puede comprometer la perfusión del miembro (flegmasia cerúlea dolens): anticoagular no basta.",
+    "La duración de la anticoagulación la deciden el desencadenante del evento y el balance entre recurrencia y sangrado.",
+    "En la enfermedad arterial, la reserva de flujo se pierde primero: claudicación con el esfuerzo, dolor de reposo después.",
+    "El ITB puede engañar en diabetes y enfermedad renal por calcificación de la media: se completa con la presión de dedo.",
+    "En la isquemia aguda el reloj gobierna la conducta: el déficit motor obliga a revascularizar sin demora."
+   ],
+   "palabras_clave": [
+    "hipertensión venosa ambulatoria",
+    "flegmasia cerúlea dolens",
+    "síndrome compartimental",
+    "May-Thurner",
+    "síndrome postrombótico",
+    "índice tobillo-brazo",
+    "presión de dedo",
+    "claudicación",
+    "isquemia crónica que amenaza la extremidad",
+    "Rutherford",
+    "angiosoma",
+    "WIfI",
+    "GLASS",
+    "CEAP",
+    "dúplex venoso"
+   ],
+   "imagenes_oclusion": [
+    "Esquema del síndrome de May-Thurner (media/q2-vasc-0006-may-thurner.jpg) con los rótulos tapados",
+    "Tabla de Rutherford I a III con las celdas de sensibilidad, motor y conducta tapadas",
+    "Tabla de úlcera venosa frente a arterial con las celdas tapadas"
+   ],
+   "preguntas_cierre": [
+    "Ante una úlcera de pierna, ¿qué mides antes de comprimir y por qué?",
+    "Explica sin mirar por qué un paciente con flegmasia cerúlea dolens no se resuelve solo con anticoagulación.",
+    "Un diabético con úlcera y ITB de 1,45: ¿qué concluyes y qué estudias?",
+    "¿Qué datos del examen te hacen revascularizar de inmediato una isquemia aguda?"
+   ],
+   "subtemas": {
+    "Hemodinamia": "Fisiopatología de las alteraciones hemodinámicas del sistema vascular",
+    "Flegmasia": "Flegmasia cerúlea dolens: fisiopatología, clínica y manejo urgente",
+    "AnatomiaVenosa": "Etiopatogenia de la trombosis iliofemoral",
+    "Ulceras": "Úlceras venosas y arteriales",
+    "TVP": "Trombosis venosa profunda y superficial y sus complicaciones",
+    "Seguimiento": "Evolución, duración del tratamiento y síndrome postrombótico",
+    "Anticoagulacion": "Manejo inicial de la trombosis y de la isquemia aguda",
+    "AnatomiaArterial": "Clasificación y manifestaciones de la enfermedad arterial",
+    "EAP": "Enfermedad arterial periférica",
+    "PieDiabetico": "Interpretación del ITB y compromiso isquémico tisular",
+    "IsquemiaAguda": "Insuficiencia arterial aguda",
+    "Clasificacion": "Clasificaciones y escalas vasculares",
+    "Diagnostico": "Pruebas diagnósticas vasculares (Doppler, dúplex)",
+    "InsuficienciaVenosa": "Insuficiencia venosa crónica"
+   },
+   "fechas": {
+    "apertura": null,
+    "cierre": null,
+    "examen": null
+   },
+   "referencias": [
+    "De Maeseneer MG, Kakkos SK, Aherne T, et al. European Society for Vascular Surgery (ESVS) 2022 clinical practice guidelines on the management of chronic venous disease of the lower limbs. Eur J Vasc Endovasc Surg. 2022;63(2):184-267. PMID 35027279.",
+    "Kakkos SK, Gohel M, Baekgaard N, et al. European Society for Vascular Surgery (ESVS) 2021 clinical practice guidelines on the management of venous thrombosis. Eur J Vasc Endovasc Surg. 2021;61(1):9-82. PMID 33334670.",
+    "Björck M, Earnshaw JJ, Acosta S, et al. European Society for Vascular Surgery (ESVS) 2020 clinical practice guidelines on the management of acute limb ischaemia. Eur J Vasc Endovasc Surg. 2020;59(2):173-218. PMID 31899099.",
+    "Gornik HL, Aronow HD, Goodney PP, et al. 2024 ACC/AHA/AACVPR/APMA/ABC/SCAI/SVM/SVN/SVS/SIR/VESS guideline for the management of lower extremity peripheral artery disease. Circulation. 2024;149(24):e1313-e1410. PMID 38743805.",
+    "Conte MS, Bradbury AW, Kolh P, et al. Global vascular guidelines on the management of chronic limb-threatening ischemia. J Vasc Surg. 2019;69(6S):3S-125S.e40. PMID 31159978.",
+    "Stevens SM, Woller SC, Baumann Kreuziger L, et al. Antithrombotic therapy for VTE disease: second update of the CHEST guideline and expert panel report. Chest. 2021;160(6):e545-e608. PMID 34352278.",
+    "Dah K, Ogbu IR, Ngwudike C, Tripathi M. Right lower extremity phlegmasia cerulea dolens due to iliotibial vein thrombosis with compartment syndrome and circulatory shock: case report and review. Cureus. 2022;14(12):e32364. PMID 36628047.",
+    "Mousa AY, AbuRahma AF. May-Thurner syndrome: update and review. Ann Vasc Surg. 2013;27(7):984-995. PMID 23850314.",
+    "Decousus H, Prandoni P, Mismetti P, et al. Fondaparinux for the treatment of superficial-vein thrombosis in the legs. N Engl J Med. 2010;363(13):1222-1232. PMID 20860504.",
+    "Wells PS, Anderson DR, Rodger M, et al. Evaluation of D-dimer in the diagnosis of suspected deep-vein thrombosis. N Engl J Med. 2003;349(13):1227-1235. PMID 14507948.",
+    "Rodger MA, Le Gal G, Anderson DR, et al. Validating the HERDOO2 rule to guide treatment duration for women with unprovoked venous thrombosis: multinational prospective cohort management study. BMJ. 2017;356:j1065. PMID 28314711.",
+    "Kahn SR, Partsch H, Vedantham S, Prandoni P, Kearon C. Definition of post-thrombotic syndrome of the leg for use in clinical investigations: a recommendation for standardization. J Thromb Haemost. 2009;7(5):879-883. PMID 19175497.",
+    "Olinic DM, Stanek A, Tătaru DA, Homorodean C, Olinic M. Acute limb ischemia: an update on diagnosis and management. J Clin Med. 2019;8(8):1215. PMID 31416204.",
+    "Attinger CE, Evans KK, Bulan E, Blume P, Cooper P. Angiosomes of the foot and ankle and clinical implications for limb salvage: reconstruction, incisions, and revascularization. Plast Reconstr Surg. 2006;117(7 Suppl):261S-293S. PMID 16799395.",
+    "Kabra A, Suresh KR, Vivekanand V, Vishnu M, Sumanth R, Nekkanti M. Outcomes of angiosome and non-angiosome targeted revascularization in critical lower limb ischemia. J Vasc Surg. 2013;57(1):44-49. PMID 23058724.",
+    "Lurie F, Passman M, Meisner M, et al. The 2020 update of the CEAP classification system and reporting standards. J Vasc Surg Venous Lymphat Disord. 2020;8(3):342-352. PMID 32113854.",
+    "Vasquez MA, Rabe E, McLafferty RB, et al. Revision of the venous clinical severity score: venous outcomes consensus statement. J Vasc Surg. 2010;52(5):1387-1396. PMID 20875713.",
+    "Hinchliffe RJ, Forsythe RO, Apelqvist J, et al. Guidelines on diagnosis, prognosis, and management of peripheral artery disease in patients with foot ulcers and diabetes (IWGDF 2019 update). Diabetes Metab Res Rev. 2020;36(S1):e3276.",
+    "Ficha técnica Lixiana (edoxabán). European Medicines Agency, EPAR product information. Disponible en: https://www.ema.europa.eu/en/documents/product-information/lixiana-epar-product-information_en.pdf [citado 2026 nov 26].",
+    "Ficha técnica cilostazol tablet. DailyMed, setid 50fc64ac-7eb3-4bab-8de2-83cd5404d169. Disponible en: https://dailymed.nlm.nih.gov [citado 2026 nov 26].",
+    "Leriche syndrome. StatPearls. NBK559086. Disponible en: https://www.ncbi.nlm.nih.gov/books/NBK559086 [citado 2026 nov 26].",
+    "Iliofemoral deep vein thrombosis. American College of Cardiology, 2015 nov 23. Disponible en: https://www.acc.org/latest-in-cardiology/articles/2015/11/23/13/39/iliofemoral-deep-vein-thrombosis [citado 2026 nov 26].",
+    "Leaky veins vs blocked arteries: does it impact hard-to-heal leg ulcers? Wounds International. Disponible en: https://woundsinternational.com/journal-articles/leaky-veins-vs-blocked-arteries-does-it-impact-hard-to-heal-leg-ulcers/ [citado 2026 nov 26].",
+    "Superficial venous thrombosis. Merck Manual Professional Version. Disponible en: https://www.merckmanuals.com/en-ca/professional/cardiovascular-disorders/peripheral-venous-disorders/superficial-venous-thrombosis [citado 2026 nov 26].",
+    "Anticoagulation for acute ischaemic limbs. BestBets. Disponible en: https://www.bestbets.org/?p=3771 [citado 2026 nov 26].",
+    "Ultrasound venous insufficiency, lower extremity (protocolo). UT Southwestern Radiology. Disponible en: https://www.utsouthwestern.edu/departments/radiology/protocols/assets/US%20Venous%20Insufficiency,%20Lower%20Extremity.pdf [citado 2026 nov 26]."
+   ]
+  }
+ },
+ "tarjetas": [
+  {
+   "id": "Q2-VASC-0001",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Patología vascular del miembro inferior</span>¿Qué mecanismo separa el daño venoso del arterial?",
+   "respuesta": "El daño venoso nace de una <span class=\"mec\">presión que se mantiene alta</span>; el arterial, de un <span class=\"mec\">flujo que deja de llegar</span>.",
+   "razonamiento": "La presión mantenida deteriora la piel del tobillo con el tiempo; la falta de flujo compromete el tejido distal.<br>Este principio ordena todo el caso, venoso y arterial, sin estudiar cada entidad por separado.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "De Maeseneer 2022, Eur J Vasc Endovasc Surg (PMID 35027279); Gornik 2024, Circulation (PMID 38743805)",
+   "tags": [
+    "Quirurgica2::Vascular::Hemodinamia",
+    "Nivel::Aplicacion",
+    "Fuente::DeMaeseneer2022",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0002",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Edema crónico frente a pie frío</span>Edema unilateral crónico frente a pie frío y sin pulsos de instauración súbita: según presión frente a flujo, ¿cuál admite estudio programado?",
+   "respuesta": "El edema crónico, de mecanismo de presión, admite estudio programado; el pie sin flujo de inicio súbito no, porque el miembro se juega en horas.",
+   "razonamiento": "La enfermedad venosa crónica progresa durante años y su daño es sobre todo cutáneo.<br>En la isquemia aguda el tiempo gobierna la conducta: la categoría <span class=\"al\">Rutherford IIb</span> exige revascularización inmediata.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Björck 2020, Eur J Vasc Endovasc Surg (PMID 31899099)",
+   "tags": [
+    "Quirurgica2::Vascular::Hemodinamia",
+    "Nivel::Aplicacion",
+    "Fuente::Bjorck2020",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0003",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Obstrucción venosa masiva</span>¿Por qué puede terminar comprometiendo el flujo arterial?",
+   "respuesta": "Porque la congestión venosa extrema y el edema bajo la fascia producen <span class=\"mec\">síndrome compartimental</span> e isquemia del miembro.",
+   "razonamiento": "Es el mecanismo de la <span class=\"dx\">flegmasia cerúlea dolens</span>: dolor intenso, edema y cianosis.<br>Un problema venoso se convierte en un problema de perfusión.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Dah 2022, Cureus (PMID 36628047); Kakkos 2021, Eur J Vasc Endovasc Surg (PMID 33334670)",
+   "tags": [
+    "Quirurgica2::Vascular::Flegmasia",
+    "Nivel::Aplicacion",
+    "Fuente::Dah2022",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0004",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Flegmasia cerúlea dolens</span>Usa el principio de la perfusión comprometida para explicar por qué anticoagular no basta.",
+   "respuesta": "Porque el problema ya no es solo el retorno venoso sino la perfusión del miembro, y la anticoagulación sola no desobstruye.",
+   "razonamiento": "Exige desobstrucción urgente con <span class=\"fx\">trombólisis</span> o trombectomía.<br>Si hay síndrome compartimental se añade fasciotomía.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Dah 2022, Cureus (PMID 36628047); Kakkos 2021, Eur J Vasc Endovasc Surg (PMID 33334670)",
+   "tags": [
+    "Quirurgica2::Vascular::Flegmasia",
+    "Nivel::Aplicacion",
+    "Fuente::Dah2022",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0005",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Flegmasia cerúlea dolens</span>Caso — trombosis iliofemoral con miembro cianótico, tenso y muy doloroso. ¿Qué diagnóstico plantea y qué conducta no se demora?",
+   "respuesta": "<span class=\"dx\">Flegmasia cerúlea dolens</span>: anticoagulación inmediata y desobstrucción urgente, con fasciotomía si hay síndrome compartimental.",
+   "razonamiento": "Cianosis y dolor intenso reflejan isquemia por congestión venosa casi total.<br>Es una complicación que amenaza la extremidad y la vida, y afecta con más frecuencia al miembro izquierdo.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Dah 2022, Cureus (PMID 36628047)",
+   "tags": [
+    "Quirurgica2::Vascular::Flegmasia",
+    "Nivel::Aplicacion",
+    "Fuente::Dah2022",
+    "Clase::Vineta",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0006",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Síndrome de May-Thurner</span>¿Qué relación anatómica explica el predominio izquierdo de la trombosis iliofemoral?",
+   "respuesta": "La arteria ilíaca común derecha cruza sobre la vena ilíaca común izquierda y la comprime contra la columna.",
+   "razonamiento": "La compresión crónica y pulsátil favorece la obstrucción y la trombosis del lado izquierdo.<br>Con trombosis extensa se trata con trombólisis y, después, angioplastia con stent de la vena ilíaca.",
+   "mnemotecnia": "",
+   "esquema": "<img src=\"q2-vasc-0006-may-thurner.jpg\" alt=\"Síndrome de May-Thurner: la arteria ilíaca común derecha comprime la vena ilíaca común izquierda\">",
+   "fuente": "Mousa 2013, Ann Vasc Surg (PMID 23850314)",
+   "tags": [
+    "Quirurgica2::Vascular::AnatomiaVenosa",
+    "Nivel::Aplicacion",
+    "Fuente::Mousa2013",
+    "Clase::Aplicacion",
+    "Bloom::Comprender"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0007",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Úlcera de pierna</span>Antes de indicar compresión, ¿qué principio obliga a medir el índice tobillo-brazo (ITB)?",
+   "respuesta": "Que la compresión sobre un componente arterial no reconocido puede agravar la isquemia: se comprime solo con perfusión arterial suficiente.",
+   "razonamiento": "La úlcera mixta, venosa y arterial a la vez, es una trampa frecuente.<br>Las guías ESVS 2022 condicionan la compresión a una presión de tobillo adecuada.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "De Maeseneer 2022, Eur J Vasc Endovasc Surg (PMID 35027279)",
+   "tags": [
+    "Quirurgica2::Vascular::Ulceras",
+    "Nivel::Aplicacion",
+    "Fuente::DeMaeseneer2022",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0008",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Úlcera venosa con ITB bajo</span>Caso — úlcera venosa activa con ITB claramente reducido. ¿Qué conducta corresponde y por qué no la compresión habitual?",
+   "respuesta": "No aplicar la compresión estándar: derivar a cirugía vascular para valorar la perfusión antes de comprimir.",
+   "razonamiento": "Un componente arterial relevante hace insegura la compresión habitual.<br>La úlcera mixta solo admite compresión reducida y bajo supervisión estrecha cuando la perfusión lo permite.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "De Maeseneer 2022, Eur J Vasc Endovasc Surg (PMID 35027279)",
+   "tags": [
+    "Quirurgica2::Vascular::Ulceras",
+    "Nivel::Aplicacion",
+    "Fuente::DeMaeseneer2022",
+    "Clase::Vineta",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0009",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Úlcera venosa frente a arterial</span>¿Qué rasgos separan la úlcera venosa de la arterial?",
+   "respuesta": "La venosa es húmeda, cercana al maléolo y su dolor mejora al elevar la pierna; la arterial es distal, en sacabocado y con pulsos débiles o ausentes.",
+   "razonamiento": "<span class=\"vs\">Contraste</span> la venosa se maneja con compresión; la arterial exige valorar la revascularización.<br>Pueden coexistir en el mismo paciente.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Rasgo</th><th>Venosa</th><th>Arterial</th></tr></thead><tbody><tr><th>Sitio</th><td>Cerca del maléolo</td><td>Dedos, talón, apoyo</td></tr><tr><th>Borde</th><td>Irregular, superficial</td><td>En sacabocado</td></tr><tr><th>Exudado</th><td>Abundante</td><td>Escaso</td></tr><tr><th>Pulsos</th><td>Presentes</td><td>Débiles o ausentes</td></tr></tbody></table>",
+   "fuente": "Wounds International, Leaky veins vs blocked arteries: does it impact hard-to-heal leg ulcers?",
+   "tags": [
+    "Quirurgica2::Vascular::Ulceras",
+    "Nivel::Aplicacion",
+    "Fuente::WoundsInt",
+    "Clase::Contraste",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0010",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Trombosis venosa superficial</span>¿Qué dos datos anatómicos, y no el dolor, orientan a anticoagular?",
+   "respuesta": "La longitud del trombo (<span class=\"num\">5 cm o más</span>) y su cercanía a la unión safenofemoral (<span class=\"num\">menos de 3 cm</span> se trata como TVP).",
+   "razonamiento": "El ensayo CALISTO incluyó trombos de 5 cm o más y excluyó los situados a menos de 3 cm de la unión safenofemoral.<br>Los trombos más cercanos se manejan como trombosis venosa profunda.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Decousus 2010, N Engl J Med (PMID 20860504); Merck Manual Professional, Superficial Venous Thrombosis",
+   "tags": [
+    "Quirurgica2::Vascular::TVP",
+    "Nivel::Recuerdo",
+    "Fuente::Decousus2010",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0011",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Sospecha de TVP</span>Caso — posoperatorio de cirugía mayor con pantorrilla edematosa y dolorosa y Wells probable. ¿Qué estudio solicitas y qué papel tiene el dímero D?",
+   "respuesta": "Ecografía de compresión; con Wells probable, el dímero D no sirve para descartar la trombosis.",
+   "razonamiento": "Con probabilidad clínica alta se va directo a la imagen.<br>El dímero D negativo solo excluye la TVP cuando la probabilidad clínica es baja.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Wells 2003, N Engl J Med (PMID 14507948)",
+   "tags": [
+    "Quirurgica2::Vascular::TVP",
+    "Nivel::Aplicacion",
+    "Fuente::Wells2003",
+    "Clase::Vineta",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0012",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Duración de la anticoagulación</span>¿Qué decide cuánto tiempo se anticoagula tras una TVP?",
+   "respuesta": "El desencadenante del evento y el balance entre riesgo de recurrencia y riesgo de sangrado.",
+   "razonamiento": "CHEST recomienda 3 meses de tratamiento y no extenderlo cuando la TVP fue provocada.<br>En la TVP no provocada se recomienda tratamiento extendido.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Stevens 2021, Chest (PMID 34352278)",
+   "tags": [
+    "Quirurgica2::Vascular::Seguimiento",
+    "Nivel::Aplicacion",
+    "Fuente::Stevens2021",
+    "Clase::Relacional",
+    "Bloom::Evaluar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0013",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Fase extendida</span>¿Qué anticoagulantes orales directos y dosis reducidas se pueden usar en la fase extendida?",
+   "respuesta": "<span class=\"fx\">Apixabán</span> <span class=\"num\">2,5 mg cada 12 horas</span> o <span class=\"fx\">rivaroxabán</span> <span class=\"num\">10 mg cada 24 horas</span>.",
+   "razonamiento": "CHEST los sugiere (recomendación débil) para extender el tratamiento tras los primeros 3 meses.<br>Solo estos dos fármacos se han evaluado a dosis reducida en la prevención secundaria.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Stevens 2021, Chest (PMID 34352278)",
+   "tags": [
+    "Quirurgica2::Vascular::Seguimiento",
+    "Nivel::Recuerdo",
+    "Fuente::Stevens2021",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0014",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Isquemia arterial aguda con falla renal</span>¿Por qué la heparina no fraccionada es la de elección?",
+   "respuesta": "Por su <span class=\"mec\">vida media corta</span>, su antídoto (<span class=\"fx\">protamina</span>) y porque no depende de la depuración renal.",
+   "razonamiento": "La heparina de bajo peso molecular se elimina por vía renal y se acumula si la función está reducida.<br>La reversibilidad es útil cuando el riesgo de sangrado es alto.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Björck 2020, Eur J Vasc Endovasc Surg (PMID 31899099); BestBets, Anticoagulation for acute ischaemic limbs",
+   "tags": [
+    "Quirurgica2::Vascular::Anticoagulacion",
+    "Nivel::Aplicacion",
+    "Fuente::Bjorck2020",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0015",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Edoxabán en TVP aguda</span>¿Qué debe preceder al inicio del edoxabán?",
+   "respuesta": "Al menos <span class=\"num\">5 días</span> de anticoagulante parenteral.",
+   "razonamiento": "El edoxabán y el anticoagulante parenteral inicial no se administran a la vez.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Ficha técnica Lixiana (EMA, EPAR product information)",
+   "tags": [
+    "Quirurgica2::Vascular::Anticoagulacion",
+    "Nivel::Recuerdo",
+    "Fuente::FichaLixiana",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0016",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Cilostazol en claudicación</span>¿En qué situación está contraindicado y por qué?",
+   "respuesta": "En <span class=\"al\">insuficiencia cardíaca de cualquier gravedad</span>, porque es un inhibidor de la <span class=\"mec\">PDE3</span>.",
+   "razonamiento": "Otros inhibidores de la PDE3, como inamrinona y milrinona, redujeron la supervivencia en la insuficiencia cardíaca clase III-IV.<br>La ficha lleva una advertencia en recuadro.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Ficha técnica cilostazol (DailyMed, setid 50fc64ac-7eb3-4bab-8de2-83cd5404d169); Gornik 2024, Circulation (PMID 38743805)",
+   "tags": [
+    "Quirurgica2::Vascular::EAP",
+    "Nivel::Recuerdo",
+    "Fuente::FichaCilostazol",
+    "Clase::Irreducible",
+    "Bloom::Comprender"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0017",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Claudicación de pantorrilla frente a glútea</span>¿Qué principio anatómico explica que el músculo que duele localice la lesión?",
+   "respuesta": "El dolor aparece en el músculo distal a la obstrucción; glúteo y muslo señalan el sector aortoilíaco, y la pantorrilla, el femoropoplíteo.",
+   "razonamiento": "Es una regla clínica de localización que orienta el sector afectado antes de la imagen.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Leriche Syndrome (NBK559086)",
+   "tags": [
+    "Quirurgica2::Vascular::AnatomiaArterial",
+    "Nivel::Aplicacion",
+    "Fuente::StatPearlsLeriche",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0018",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Dolor de glúteo y muslo</span>Caso — dolor en glúteo y muslo al caminar, pulsos femorales ausentes y disfunción eréctil. ¿Qué nivel de obstrucción y qué síndrome?",
+   "respuesta": "Sector aortoilíaco: <span class=\"dx\">síndrome de Leriche</span>.",
+   "razonamiento": "La tríada es claudicación de glúteo y muslo, disfunción eréctil por menor flujo peneano y pulsos femorales ausentes o disminuidos.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Leriche Syndrome (NBK559086)",
+   "tags": [
+    "Quirurgica2::Vascular::AnatomiaArterial",
+    "Nivel::Aplicacion",
+    "Fuente::StatPearlsLeriche",
+    "Clase::Vineta",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0019",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Angiosomas del pie</span>¿Por qué la necrosis isquémica aparece en una zona concreta y no de forma difusa?",
+   "respuesta": "Porque cada arteria nutre un territorio definido, y se afecta el que depende del vaso ocluido.",
+   "razonamiento": "La tibial posterior irriga la planta mediante tres ramas; la peronea, el tobillo anterolateral y el retropié; la tibial anterior, el dorso.<br>Existen conexiones arterio-arteriales entre ellas.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Attinger 2006, Plast Reconstr Surg (PMID 16799395)",
+   "tags": [
+    "Quirurgica2::Vascular::AnatomiaArterial",
+    "Nivel::Aplicacion",
+    "Fuente::Attinger2006",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0020",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Úlcera en el retropié lateral</span>En un pie isquémico, ¿qué arteria se revasculariza primero según el angiosoma?",
+   "respuesta": "La peronea, que nutre el retropié lateral.",
+   "razonamiento": "La revascularización directa del angiosoma mejora la cicatrización.<br>La indirecta, por conexiones arterio-arteriales, da resultados aceptables y no se niega si la directa no es posible.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Kabra 2013, J Vasc Surg (PMID 23058724); Attinger 2006, Plast Reconstr Surg (PMID 16799395)",
+   "tags": [
+    "Quirurgica2::Vascular::AnatomiaArterial",
+    "Nivel::Aplicacion",
+    "Fuente::Kabra2013",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0021",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Estenosis arterial progresiva</span>¿Qué se pierde primero cuando la placa reduce la luz?",
+   "respuesta": "La <span class=\"mec\">reserva de flujo</span>: el aporte alcanza en reposo pero no en el esfuerzo.",
+   "razonamiento": "Por eso la claudicación aparece con el ejercicio y el dolor de reposo marca una etapa más avanzada.<br>La secuencia se deduce sin memorizarla como lista.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Gornik 2024, Circulation (PMID 38743805)",
+   "tags": [
+    "Quirurgica2::Vascular::EAP",
+    "Nivel::Aplicacion",
+    "Fuente::Gornik2024",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0022",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Dolor isquémico de reposo</span>¿Por qué define una etapa distinta a la claudicación?",
+   "respuesta": "Porque el aporte ya no basta ni en reposo: es <span class=\"al\">isquemia crónica que amenaza la extremidad</span>.",
+   "razonamiento": "La guía global define esta entidad como enfermedad arterial con dolor de reposo, gangrena o úlcera de más de 2 semanas.<br>Todo paciente con sospecha se deriva con urgencia a un especialista vascular.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Conte 2019, J Vasc Surg (PMID 31159978)",
+   "tags": [
+    "Quirurgica2::Vascular::EAP",
+    "Nivel::Aplicacion",
+    "Fuente::Conte2019",
+    "Clase::Aplicacion",
+    "Bloom::Comprender",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0023",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Claudicación intermitente</span>¿Qué intervención no invasiva de clase 1 mejora la distancia caminada?",
+   "respuesta": "El <span class=\"dx\">ejercicio supervisado</span>: mejora el rendimiento de marcha, el estado funcional y la calidad de vida.",
+   "razonamiento": "La guía ACC/AHA 2024 lo recomienda con nivel de evidencia A.<br>Incorpora además opciones domiciliarias estructuradas e híbridas.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Gornik 2024, Circulation (PMID 38743805)",
+   "tags": [
+    "Quirurgica2::Vascular::EAP",
+    "Nivel::Recuerdo",
+    "Fuente::Gornik2024",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0024",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Claudicación típica</span>Con síntomas de esfuerzo típicos y un ITB de reposo normal o limítrofe, ¿qué prueba sigue?",
+   "respuesta": "El <span class=\"dx\">ITB posejercicio</span>.",
+   "razonamiento": "La guía ACC/AHA 2024 lo recomienda cuando los síntomas de esfuerzo no coinciden con un ITB de reposo normal o limítrofe.<br>Un ITB de reposo entre 0,91 y 0,99 se considera limítrofe.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Gornik 2024, Circulation (PMID 38743805)",
+   "tags": [
+    "Quirurgica2::Vascular::EAP",
+    "Nivel::Aplicacion",
+    "Fuente::Gornik2024",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0025",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Diabetes y enfermedad renal crónica</span>¿Qué efecto tiene la calcificación de la capa media sobre el diagnóstico de isquemia?",
+   "respuesta": "Vuelve rígida la arteria, de modo que el ITB sale falsamente normal o alto pese a existir isquemia.",
+   "razonamiento": "No es aterosclerosis: es calcio en la media. Un ITB mayor de <span class=\"num\">1,40</span> indica arterias no compresibles, no perfusión normal.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Gornik 2024, Circulation (PMID 38743805); Hinchliffe 2020, IWGDF PAD guideline, Diabetes Metab Res Rev",
+   "tags": [
+    "Quirurgica2::Vascular::PieDiabetico",
+    "Nivel::Aplicacion",
+    "Fuente::Gornik2024",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0026",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Diabético con úlcera</span>Caso — úlcera que no cicatriza, pulsos palpables e ITB de 1,45. ¿Qué conducta corresponde?",
+   "respuesta": "No descartar isquemia: medir la presión de dedo; la presión transcutánea de oxígeno es una alternativa.",
+   "razonamiento": "La guía global prefiere la presión de dedo como medida hemodinámica.<br>Un ITB normal o alto es la trampa clásica de la calcificación medial.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Conte 2019, J Vasc Surg (PMID 31159978)",
+   "tags": [
+    "Quirurgica2::Vascular::PieDiabetico",
+    "Nivel::Aplicacion",
+    "Fuente::Conte2019",
+    "Clase::Vineta",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0027",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Isquemia arterial aguda</span>¿Qué déficit aparece primero y cuál indica una etapa más avanzada?",
+   "respuesta": "Primero el déficit <span class=\"dx\">sensitivo</span>; el déficit <span class=\"al\">motor</span> señala isquemia más avanzada.",
+   "razonamiento": "La clasificación de Rutherford, modificada por la ESVS, se aplica en la cabecera con examen sensitivo, motor y señal Doppler.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Björck 2020, Eur J Vasc Endovasc Surg (PMID 31899099)",
+   "tags": [
+    "Quirurgica2::Vascular::IsquemiaAguda",
+    "Nivel::Aplicacion",
+    "Fuente::Bjorck2020",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0028",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Rutherford IIa frente a IIb</span>¿Qué hallazgo separa la categoría IIa de la IIb y qué cambia en la conducta?",
+   "respuesta": "El déficit <span class=\"al\">motor</span> y la pérdida sensitiva más allá de los dedos de la IIb, que se salva solo con revascularización inmediata.",
+   "razonamiento": "<span class=\"vs\">Contraste</span> en IIa la extremidad es salvable si se trata con prontitud; en IIb no hay margen para demoras.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Cat.</th><th>Sensibilidad</th><th>Motor</th><th>Conducta</th></tr></thead><tbody><tr><th>I</th><td>Normal</td><td>Normal</td><td>Viable</td></tr><tr><th>IIa</th><td>Mínima, dedos</td><td>Normal</td><td>Tratar pronto</td></tr><tr><th>IIb</th><td>Más allá de dedos</td><td>Leve o moderado</td><td>Inmediata</td></tr><tr><th>III</th><td>Profunda</td><td>Parálisis</td><td>Amputación</td></tr></tbody></table>",
+   "fuente": "Björck 2020, Eur J Vasc Endovasc Surg (PMID 31899099)",
+   "tags": [
+    "Quirurgica2::Vascular::IsquemiaAguda",
+    "Nivel::Aplicacion",
+    "Fuente::Bjorck2020",
+    "Clase::Contraste",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0029",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Miembro con anestesia profunda y parálisis</span>Tras isquemia prolongada, ¿por qué no se revasculariza?",
+   "respuesta": "Porque es isquemia irreversible (<span class=\"al\">Rutherford III</span>): no hay miembro salvable y se indica amputación primaria.",
+   "razonamiento": "El daño nervioso permanente es inevitable y las señales Doppler arterial y venosa son inaudibles.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Björck 2020, Eur J Vasc Endovasc Surg (PMID 31899099)",
+   "tags": [
+    "Quirurgica2::Vascular::IsquemiaAguda",
+    "Nivel::Aplicacion",
+    "Fuente::Bjorck2020",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0030",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Isquemia arterial aguda frente a crónica</span>¿Por qué una oclusión equivalente produce cuadros tan distintos?",
+   "respuesta": "Porque la crónica tuvo tiempo para desarrollar circulación colateral y la aguda no.",
+   "razonamiento": "La embolia produce una oclusión completa, sin colaterales, de inicio en segundos o minutos.<br>La trombosis in situ suele ser incompleta, con colaterales, y evoluciona en horas o días.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Olinic 2019, J Clin Med (PMID 31416204)",
+   "tags": [
+    "Quirurgica2::Vascular::IsquemiaAguda",
+    "Nivel::Aplicacion",
+    "Fuente::Olinic2019",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0031",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Isquemia arterial aguda</span>¿Qué datos sugieren embolia en lugar de trombosis sobre placa?",
+   "respuesta": "Inicio súbito e intenso, fuente embólica como la <span class=\"dx\">fibrilación auricular</span> y miembro contralateral normal.",
+   "razonamiento": "La trombosis in situ se asocia a factores de riesgo ateroscleróticos y a pulsos contralaterales anormales.<br>Distinguirlas importa porque el tratamiento agudo y a largo plazo difiere.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Olinic 2019, J Clin Med (PMID 31416204)",
+   "tags": [
+    "Quirurgica2::Vascular::IsquemiaAguda",
+    "Nivel::Aplicacion",
+    "Fuente::Olinic2019",
+    "Clase::Contraste",
+    "Bloom::Analizar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0032",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">WIfI frente a GLASS</span>¿Qué estima cada una?",
+   "respuesta": "WIfI estima la amenaza al miembro según herida, isquemia e infección del pie; GLASS estima la complejidad anatómica de la revascularización.",
+   "razonamiento": "La guía global endosa WIfI para estadificar la amenaza al miembro.<br>La decisión de revascularizar integra además el riesgo del paciente.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Conte 2019, J Vasc Surg (PMID 31159978)",
+   "tags": [
+    "Quirurgica2::Vascular::Clasificacion",
+    "Nivel::Aplicacion",
+    "Fuente::Conte2019",
+    "Clase::Contraste",
+    "Bloom::Analizar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0033",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">CEAP frente a rVCSS</span>¿Qué pregunta responde cada una?",
+   "respuesta": "CEAP clasifica la enfermedad venosa crónica; el rVCSS cuantifica su gravedad y responde al cambio con el tratamiento.",
+   "razonamiento": "CEAP es descriptivo y responde mal al cambio; el VCSS se creó para medir la evolución.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Lurie 2020, J Vasc Surg Venous Lymphat Disord (PMID 32113854); Vasquez 2010, J Vasc Surg (PMID 20875713)",
+   "tags": [
+    "Quirurgica2::Vascular::Clasificacion",
+    "Nivel::Recuerdo",
+    "Fuente::Lurie2020",
+    "Clase::Contraste",
+    "Bloom::Analizar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0034",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Insuficiencia venosa crónica</span>¿Por qué la incompetencia valvular produce edema, cambios cutáneos y úlcera supramaleolar?",
+   "respuesta": "Porque el reflujo mantiene alta la presión venosa al caminar, y esa <span class=\"mec\">hipertensión venosa ambulatoria</span> daña la piel del tobillo.",
+   "razonamiento": "La compresión es parte central del tratamiento porque reduce el edema y la presión transmitida.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "De Maeseneer 2022, Eur J Vasc Endovasc Surg (PMID 35027279)",
+   "tags": [
+    "Quirurgica2::Vascular::InsuficienciaVenosa",
+    "Nivel::Aplicacion",
+    "Fuente::DeMaeseneer2022",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0035",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">TVP iliofemoral</span>¿Qué mecanismo explica el síndrome postrombótico?",
+   "respuesta": "La destrucción de las válvulas venosas y la oclusión de la luz, con reflujo posterior.",
+   "razonamiento": "La inflamación del trombo agudo lesiona las válvulas y la pared venosa.<br>La TVP iliofemoral tiene peor pronóstico que la distal.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "ACC, Iliofemoral Deep Vein Thrombosis (2015)",
+   "tags": [
+    "Quirurgica2::Vascular::TVP",
+    "Nivel::Aplicacion",
+    "Fuente::ACCIliofemoral",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-VASC-0036",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Síndrome postrombótico</span>Se establece con un puntaje de Villalta de {{c1::<span class=\"num\">5</span>}} o más.",
+   "extra": "Consenso ISTH: una sola puntuación, al menos 6 meses después de la TVP aguda.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Kahn 2009, J Thromb Haemost (PMID 19175497)",
+   "tags": [
+    "Quirurgica2::Vascular::Seguimiento",
+    "Nivel::Recuerdo",
+    "Fuente::Kahn2009",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2-VASC-0037",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Enfermedad arterial periférica</span>El ITB diagnóstico es de {{c1::<span class=\"num\">0,90</span>}} o menos.",
+   "extra": "Entre 0,91 y 0,99 es limítrofe; mayor de 1,40 indica arterias no compresibles.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Gornik 2024, Circulation (PMID 38743805)",
+   "tags": [
+    "Quirurgica2::Vascular::Clasificacion",
+    "Nivel::Recuerdo",
+    "Fuente::Gornik2024",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2-VASC-0038",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Sospecha de TVP</span>El puntaje de Wells se considera probable a partir de {{c1::<span class=\"num\">2</span>}} puntos.",
+   "extra": "Con menos de 2 puntos, un dímero D negativo excluye sin imagen; con 2 o más se solicita ecografía.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Wells 2003, N Engl J Med (PMID 14507948)",
+   "tags": [
+    "Quirurgica2::Vascular::TVP",
+    "Nivel::Recuerdo",
+    "Fuente::Wells2003",
+    "Clase::Irreducible",
+    "Bloom::Recordar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2-VASC-0039",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Dúplex venoso</span>El reflujo es patológico cuando dura más de {{c1::<span class=\"num\">0,5 segundos</span>}} en venas superficiales.",
+   "extra": "En las venas femoral y poplítea el umbral es mayor de 1 segundo; el estudio se hace de pie con compresión.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "UT Southwestern Radiology, Protocolo de ecografía de insuficiencia venosa de miembros inferiores",
+   "tags": [
+    "Quirurgica2::Vascular::Diagnostico",
+    "Nivel::Recuerdo",
+    "Fuente::UTSW",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": []
+  },
+  {
+   "id": "Q2-VASC-0040",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">HERDOO2</span>En una mujer con un primer evento no provocado, la regla permite suspender la anticoagulación con {{c1::<span class=\"num\">0 o 1</span>}} criterio.",
+   "extra": "Criterios: signos posflebíticos (hiperpigmentación, edema o enrojecimiento), dímero D de 250 µg/L o más, IMC de 30 o más y edad de 65 años o más. Los varones continúan.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Rodger 2017, BMJ (PMID 28314711)",
+   "tags": [
+    "Quirurgica2::Vascular::Seguimiento",
+    "Nivel::Recuerdo",
+    "Fuente::Rodger2017",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": []
+  }
+ ]
+}
