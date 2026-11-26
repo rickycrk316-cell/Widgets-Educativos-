@@ -2,7 +2,8 @@
 """Migra mazos viejos (modelos v6 «Quirurgica2 QA/Cloze») a v7 DENTRO de una colección de Anki
 (.colpkg), sin perder el historial de repaso.
 
-Para cada mazo pasado como argumento (mazos/<tema>/tarjetas.json) lee `migracion.json` junto al JSON:
+Para cada mazo pasado como argumento (mazos/<tema>/tarjetas.json) lee `migracion.json` junto al JSON
+(opcional: sin él, cada nota se busca por su GUID v7 y, si no está, se crea):
   {"Q2-OJO-0001": <nid viejo | null>, ..., "descartadas": [nid, ...]}
 
 - Nota con nid: se cambia de tipo de nota (v6 → v7, mismas tarjetas y repasos), se reescriben sus
@@ -67,12 +68,16 @@ def migrar(col, json_path):
     import genanki
     base = json_path.parent
     datos = json.loads(json_path.read_text(encoding='utf-8'))
-    mig = json.loads((base / 'migracion.json').read_text(encoding='utf-8'))
+    fm = base / 'migracion.json'   # sin él (mazo nuevo o ya v7) todas las notas se buscan por GUID
+    mig = json.loads(fm.read_text(encoding='utf-8')) if fm.is_file() else {}
     meta = datos['meta']
-    destino = col.decks.id(f'{M.RAIZ_MAZO}::{meta["caso"]}')
+    destino = col.decks.id(M.nombre_mazo(meta))
     retiro = col.decks.id(f'{M.RAIZ_MAZO}::_Retiradas::{meta["caso"]}')
     mazos_viejos = set()
-    reusar = {c['id']: mig.get(c['id']) for c in datos['tarjetas']}
+    reusar = {}
+    for c in datos['tarjetas']:   # nid del mapeo o, si no hay, la nota que ya tenga su GUID v7
+        reusar[c['id']] = mig.get(c['id']) or col.db.scalar('select id from notes where guid=?',
+                                                            genanki.guid_for(c['id']))
     # 1. cambio de tipo de nota, agrupado por modelo viejo
     por_modelo = {V6_QA: [], V6_CLOZE: []}
     for c in datos['tarjetas']:

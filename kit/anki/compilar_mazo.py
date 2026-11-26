@@ -43,7 +43,7 @@ TAG_RE = re.compile(r'[A-Za-z0-9:_\-]+')
 NIVELES = {'Recuerdo', 'Aplicacion'}
 CLASES = {'Principio', 'Aplicacion', 'Vineta', 'Contraste', 'Relacional', 'Irreducible', 'Escala'}
 BLOOM = {'Recordar', 'Comprender', 'Aplicar', 'Analizar', 'Evaluar'}
-META_OBLIG = ('caso', 'tag_raiz', 'prefijo', 'version', 'fecha', 'resultado_aprendizaje', 'fuente_alcance', 'verificacion')
+META_OBLIG = ('caso', 'rotacion', 'tag_raiz', 'prefijo', 'version', 'fecha', 'resultado_aprendizaje', 'fuente_alcance', 'verificacion')
 CLAVES = {'QA': {'id', 'tipo', 'pregunta', 'respuesta', 'razonamiento', 'mnemotecnia', 'esquema', 'fuente', 'tags',
                  'pendientes', 'notas_ejecutor'},
           'Cloze': {'id', 'tipo', 'text', 'extra', 'mnemotecnia', 'esquema', 'fuente', 'tags', 'pendientes',
@@ -298,7 +298,7 @@ def compilar(datos, base, deck_id, salida):
     cl = genanki.Model(M.CLOZE_ID, M.CLOZE_NOMBRE, fields=[{'name': n} for _, n in M.CAMPOS_CLOZE],
                        templates=[{'name': 'Cloze', 'qfmt': M.QFMT_CLOZE, 'afmt': M.AFMT_CLOZE}], css=M.CSS,
                        model_type=genanki.Model.CLOZE)
-    nombre = f'{M.RAIZ_MAZO}::{meta["caso"]}' + (' (demo)' if meta.get('demo') else '')
+    nombre = M.nombre_mazo(meta) + (' (demo)' if meta.get('demo') else '')
     deck = genanki.Deck(deck_id, nombre)
     media = set()
     for c in datos['tarjetas']:

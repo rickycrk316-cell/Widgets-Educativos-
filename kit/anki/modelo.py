@@ -22,6 +22,14 @@ DECK_ID_DEMO = 1762900799999          # solo para --demo; nunca se registra
 DECK_ID_BASE = 1762900710000          # IDs de mazo por prefijo: base + n (los asigna el registro)
 RAIZ_MAZO = 'Quirúrgica2'             # mazo padre histórico; cada caso es un submazo
 
+
+def nombre_mazo(meta):
+    """Quirúrgica2::Rotación <n>::<caso>; meta.rotacion es «1.ª» o «2.ª» (también admite 1 o 2)."""
+    n = str(meta['rotacion']).strip()[:1]
+    if n not in '12' or not n:
+        raise ValueError(f'meta.rotacion debe ser «1.ª» o «2.ª», no {meta["rotacion"]!r}')
+    return f'{RAIZ_MAZO}::Rotación {n}::{meta["caso"]}'
+
 # Campos: (clave en el JSON, nombre del campo en Anki). El orden es el del modelo.
 CAMPOS_QA = [('pregunta', 'Pregunta'), ('respuesta', 'Respuesta'), ('razonamiento', 'Razonamiento'),
              ('mnemotecnia', 'Mnemotecnia'), ('esquema', 'Esquema'), ('fuente', 'Fuente')]
