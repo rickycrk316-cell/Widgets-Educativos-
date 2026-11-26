@@ -1,0 +1,1136 @@
+{
+ "meta": {
+  "caso": "Ojo Rojo",
+  "rotacion": "1.ª",
+  "tag_raiz": "OjoRojo",
+  "prefijo": "Q2-OJO",
+  "version": "1.0",
+  "fecha": "2026-11-26",
+  "resultado_aprendizaje": "Evalúa y diferencia las principales causas de ojo rojo, identificando signos de alarma y estableciendo el manejo inicial y la referencia oportuna.",
+  "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 1.ª rotación, CASO OJO ROJO (contenidos y trabajo autónomo)",
+  "justificacion_exceso": "",
+  "mir_verificados": [],
+  "verificacion": {
+   "total": 108,
+   "verificados": 88,
+   "eliminados": [
+    {
+     "id": "Q2-OJO-0011",
+     "dato": "Tipo de secreción refleja la célula inflamatoria dominante (neutrófilos, linfocitos, mastocitos)",
+     "motivo": "no confirmado en las fuentes leídas: tarjeta reformulada sobre prurito y secreción matinal (Azari 2013)"
+    },
+    {
+     "id": "Q2-OJO-0012",
+     "dato": "Folículos como hiperplasia linfoide sin vaso central; papilas con eje vascular",
+     "motivo": "definición morfológica no confirmada: eliminada, se conserva la orientación etiológica"
+    },
+    {
+     "id": "Q2-OJO-0005",
+     "dato": "El corticoide tópico eleva la PIO y favorece catarata; queratitis fúngica empeora con corticoide",
+     "motivo": "solo confirmada la contraindicación en herpes epitelial y la elevación de PIO en uveítis: resto eliminado"
+    },
+    {
+     "id": "Q2-OJO-0006",
+     "dato": "Riesgo de cicatriz y perforación corneal por la úlcera herpética tratada con dexametasona",
+     "motivo": "solo confirmada la confluencia en úlcera geográfica: perforación eliminada"
+    },
+    {
+     "id": "Q2-OJO-0007",
+     "dato": "El anestésico tópico enmascara la progresión de una queratitis",
+     "motivo": "no confirmado: eliminado; se conserva la toxicidad epitelial (Patel 2013)"
+    },
+    {
+     "id": "Q2-OJO-0008",
+     "dato": "El estenopeico no corrige opacidades ni lesiones retinianas",
+     "motivo": "no confirmado: eliminado"
+    },
+    {
+     "id": "Q2-OJO-0009",
+     "dato": "Mecanismo: la inflamación rompe la barrera hematoacuosa y pasan leucocitos y proteínas",
+     "motivo": "no confirmado en las fuentes leídas: la tarjeta pregunta ahora por los hallazgos (células y flare, escala SUN)"
+    },
+    {
+     "id": "Q2-OJO-0010",
+     "dato": "La presión sobre el globo extruye contenido intraocular",
+     "motivo": "las fuentes solo indican evitar presión y tonometría: reformulado"
+    },
+    {
+     "id": "Q2-OJO-0015",
+     "dato": "Dosis y duración del macrólido oral neonatal; azitromicina preferida por la estenosis pilórica con eritromicina",
+     "motivo": "dosis no incluida; fuentes divergentes (OMS azitromicina, CDC eritromicina) y ambos macrólidos asociados a estenosis pilórica: se muestran ambas posturas"
+    },
+    {
+     "id": "Q2-OJO-0014",
+     "dato": "Ceftriaxona con dosis",
+     "motivo": "dosis eliminada; se conserva ceftriaxona como tratamiento sistémico"
+    },
+    {
+     "id": "Q2-OJO-0019",
+     "dato": "No ocluir con parche y retirar el lente de contacto en la queratitis",
+     "motivo": "no confirmado para queratitis infecciosa: eliminado"
+    },
+    {
+     "id": "Q2-OJO-0020",
+     "dato": "Los infiltrados subepiteliales reducen la AV durante semanas",
+     "motivo": "fuentes: persisten semanas o meses y pueden cicatrizar sobre el eje visual: reformulado"
+    },
+    {
+     "id": "Q2-OJO-0022",
+     "dato": "Collaretes y secreción espesa asociada a rosácea como rasgos de cada tipo de blefaritis",
+     "motivo": "no confirmado como rasgo diferencial: eliminado"
+    },
+    {
+     "id": "Q2-OJO-0023",
+     "dato": "Orzuelo causado por estafilococo; glándulas de Zeis o Moll",
+     "motivo": "fuentes no confirman la etiología estafilocócica ni la glándula: eliminado"
+    },
+    {
+     "id": "Q2-OJO-0029",
+     "dato": "Hemorragia subconjuntival recurrente: investigar presión arterial y coagulopatía",
+     "motivo": "no confirmado: eliminado"
+    },
+    {
+     "id": "Q2-OJO-0033",
+     "dato": "Uveítis de la AIJ crónica y asintomática, sin hiperemia",
+     "motivo": "no confirmado en la guía ACR/AF: reformulado sobre el riesgo y el tamizaje"
+    },
+    {
+     "id": "Q2-OJO-0037",
+     "dato": "Foco blanquecino adyacente a cicatriz pigmentada en la toxoplasmosis ocular",
+     "motivo": "no confirmado: eliminado"
+    },
+    {
+     "id": "plan",
+     "dato": "Rango normal de PIO 10-21 mmHg (cloze) y prueba de linterna para cámara estrecha como tarjeta propia",
+     "motivo": "rango no hallado en fuentes: cloze descartado; la prueba queda solo como comentario cualitativo"
+    },
+    {
+     "id": "Q2-OJO-0041",
+     "dato": "Dosis de acetazolamida y timolol",
+     "motivo": "no confirmadas: eliminadas; se conservan los fármacos"
+    },
+    {
+     "id": "Q2-OJO-0043",
+     "dato": "Esquema de supresión cortical como mecanismo común de la ambliopía",
+     "motivo": "no confirmado en las fuentes leídas: reformulado como trastorno del desarrollo en el periodo crítico"
+    }
+   ]
+  },
+  "guia": {
+   "principios": [
+    "El patrón de hiperemia predice la profundidad: conjuntival = superficie; ciliar = córnea, iris o cuerpo ciliar.",
+    "Los signos de alarma (baja de AV, dolor profundo, fotofobia, pupila anormal) señalan compromiso del eje visual y obligan a referir.",
+    "En primer nivel se evita lo que enmascara o empeora: corticoide tópico y anestésico tópico domiciliarios.",
+    "El septum orbitario separa la celulitis que se maneja en consulta de la que amenaza la visión.",
+    "El bloqueo pupilar explica el glaucoma agudo, sus riesgos con midriáticos y la iridotomía como tratamiento definitivo.",
+    "La ambliopía es un problema del desarrollo visual en el periodo crítico: se previene y trata en la infancia, y la adherencia decide el resultado."
+   ],
+   "palabras_clave": [
+    "hiperemia ciliar",
+    "hiperemia conjuntival",
+    "agudeza visual",
+    "fluoresceína",
+    "lámpara de hendidura",
+    "células y flare",
+    "queratitis herpética",
+    "celulitis preseptal",
+    "celulitis orbitaria",
+    "uveítis anterior",
+    "glaucoma agudo",
+    "bloqueo pupilar",
+    "iridotomía",
+    "ambliopía",
+    "periodo crítico"
+   ],
+   "imagenes_oclusion": [
+    "Esquema del bloqueo pupilar (media/q2-ojo-0038-bloqueo-pupilar.png) con los rótulos tapados",
+    "Tabla de hiperemia ciliar vs conjuntival con las celdas tapadas"
+   ],
+   "preguntas_cierre": [
+    "Ante un ojo rojo, ¿qué tres datos miras antes de decidir si lo tratas o lo refieres, y por qué?",
+    "Explica sin mirar por qué un paciente con dolor, pupila media y córnea opaca no es una migraña.",
+    "¿Qué diferencia la conducta ante una celulitis preseptal y una orbitaria?",
+    "Un niño con parche rechaza el tratamiento: ¿qué estrategias propones y por qué importa la adherencia?"
+   ],
+   "subtemas": {
+    "Hiperemia": "Clasificación semiológica del ojo rojo según el patrón de hiperemia",
+    "SignosAlarma": "Identificación de signos de alarma que requieren referencia urgente",
+    "Farmacologia": "Principios de farmacología oftálmica (trabajo autónomo)",
+    "PruebasDx": "Interpretación de pruebas diagnósticas oftalmológicas",
+    "Conjuntivitis": "Conjuntivitis bacteriana, viral y alérgica",
+    "Queratitis": "Queratoconjuntivitis y queratitis",
+    "Blefaritis": "Blefaritis",
+    "Parpados": "Orzuelo y chalazión",
+    "CelulitisOrbitaria": "Celulitis orbitaria",
+    "HemorragiaSubconj": "Hemorragia subconjuntival",
+    "Uveitis": "Uveítis anterior",
+    "Coroidorretinitis": "Coroidorretinitis",
+    "GlaucomaAgudo": "Glaucoma agudo",
+    "Ambliopia": "Ambliopía y su impacto psicoemocional"
+   },
+   "fechas": {
+    "apertura": null,
+    "cierre": null,
+    "examen": null
+   },
+   "referencias": [
+    "Roy H. The red eye. Compr Ther. 2006;32(1):43-6.",
+    "Azari AA, Barney NP. Conjunctivitis: a systematic review of diagnosis and treatment. JAMA. 2013;310(16):1721-9.",
+    "Jabs DA, Nussenblatt RB, Rosenbaum JT; Standardization of Uveitis Nomenclature (SUN) Working Group. Standardization of uveitis nomenclature for reporting clinical data. Results of the First International Workshop. Am J Ophthalmol. 2005;140(3):509-16.",
+    "Cabrera-Aguas M, Khoo P, Watson SL. Infectious keratitis: a review. Clin Exp Ophthalmol. 2022;50(5):543-62.",
+    "Chang JH, McCluskey PJ, Wakefield D. Acute anterior uveitis and HLA-B27. Surv Ophthalmol. 2005;50(4):364-88.",
+    "Angeles-Han ST, Ringold S, Beukelman T, Lovell D, Cuello CA, Becker ML, et al. 2019 American College of Rheumatology/Arthritis Foundation guideline for the screening, monitoring, and treatment of juvenile idiopathic arthritis-associated uveitis. Arthritis Care Res (Hoboken). 2019;71(6):703-16.",
+    "Wright C, Tawfik MA, Waisbourd M, Katz LJ. Primary angle-closure glaucoma: an update. Acta Ophthalmol. 2016;94(3):217-25.",
+    "Wong SJ, Levi J. Management of pediatric orbital cellulitis: a systematic review. Int J Pediatr Otorhinolaryngol. 2018;110:123-9.",
+    "Bedwell J, Bauman NM. Management of pediatric orbital cellulitis and abscess. Curr Opin Otolaryngol Head Neck Surg. 2011;19(6):467-73.",
+    "Orssaud C. [Amblyopia]. J Fr Ophtalmol. 2014;37(6):486-96.",
+    "Papageorgiou E, Asproudis I, Maconachie G, Tsironi EE, Gottlob I. The treatment of amblyopia: current practice and emerging trends. Graefes Arch Clin Exp Ophthalmol. 2019;257(6):1061-78.",
+    "Patel M, Fraunfelder FW. Toxicity of topical ophthalmic anesthetics. Expert Opin Drug Metab Toxicol. 2013;9(8):983-8.",
+    "Lindsley K, Matsumura S, Hatef E, Akpek EK. Interventions for chronic blepharitis. Cochrane Database Syst Rev. 2012;(5):CD005556.",
+    "Arzbecker M, Bryar PJ, Thyparampil PJ. Sebaceous carcinoma presenting as chronic chalazion. BMJ Case Rep. 2025;18(3):e258895.",
+    "Eberly MD, Eide MB, Thompson JL, Nylund CM. Azithromycin in early infancy and pyloric stenosis. Pediatrics. 2015;135(3):483-8.",
+    "Acute Angle-Closure Glaucoma. StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/books/NBK430857/ [citado 2026 nov 26]",
+    "Uveitis. StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/books/NBK540993/ [citado 2026 nov 26]",
+    "Blunt Eye Trauma. StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/sites/books/NBK470379/ [citado 2026 nov 26]",
+    "Subconjunctival Hemorrhage. StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/books/NBK551666/ [citado 2026 nov 26]",
+    "Chalazion. StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/books/NBK499889/ [citado 2026 nov 26]",
+    "Hordeolum (Stye). StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/sites/books/NBK459349/ [citado 2026 nov 26]",
+    "Bacterial Conjunctivitis. StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/sites/books/NBK546683/ [citado 2026 nov 26]",
+    "Ophthalmia Neonatorum (Neonatal Conjunctivitis). StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/sites/books/NBK551572/ [citado 2026 nov 26]",
+    "Conjunctivitis Overview. StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/sites/books/NBK541034/ [citado 2026 nov 26]",
+    "Cavernous Sinus Thrombosis. StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/books/NBK448177/ [citado 2026 nov 26]",
+    "Chorioretinitis. StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/books/NBK551705/ [citado 2026 nov 26]",
+    "Ocular Manifestations of HIV. StatPearls [Internet]. Disponible en: https://www.ncbi.nlm.nih.gov/books/NBK441926/ [citado 2026 nov 26]",
+    "Adenovirus: ocular manifestations [Internet]. Disponible en: https://pmc.ncbi.nlm.nih.gov/articles/PMC7205173/ [citado 2026 nov 26]",
+    "Conjunctivitis: A Systematic Review [Internet]. Disponible en: https://pmc.ncbi.nlm.nih.gov/articles/PMC7431717/ [citado 2026 nov 26]",
+    "A Systematic Approach to Emergencies in Uveitis [Internet]. Disponible en: https://pmc.ncbi.nlm.nih.gov/articles/PMC4123279/ [citado 2026 nov 26]",
+    "Screening, Genetics, Risk Factors, and Treatment of Neonatal Cataracts [Internet]. Disponible en: https://pmc.ncbi.nlm.nih.gov/articles/PMC9211061/ [citado 2026 nov 26]",
+    "Management of acute closed-angle glaucoma with miotics and timolol [Internet]. Disponible en: https://pubmed.ncbi.nlm.nih.gov/526463/ [citado 2026 nov 26]",
+    "On Call Ophthalmology. AAO EyeWiki [Internet]. Disponible en: https://eyewiki.aao.org/On_Call_Ophthalmology [citado 2026 nov 26]",
+    "Orbital Cellulitis. AAO EyeWiki [Internet]. Disponible en: https://eyewiki.aao.org/Orbital_Cellulitis [citado 2026 nov 26]",
+    "Acute Anterior Uveitis. AAO EyeWiki [Internet]. Disponible en: https://eyewiki.aao.org/Acute_Anterior_Uveitis [citado 2026 nov 26]",
+    "How to Decipher the Red Eye as a First-Year Resident. American Academy of Ophthalmology [Internet]. Disponible en: https://www.aao.org/young-ophthalmologists/yo-info/article/how-to-decipher-red-eye-as-first-year-resident [citado 2026 nov 26]",
+    "Blepharitis Preferred Practice Pattern. American Academy of Ophthalmology [Internet]. Disponible en: https://www.aao.org/preferred-practice-pattern/blepharitis-ppp--2013 [citado 2026 nov 26]",
+    "Abnormalities Associated With a Closed Angle. American Academy of Ophthalmology [Internet]. Disponible en: https://www.aao.org/education/disease-review/abnormalities-associated-with-closed-angle [citado 2026 nov 26]",
+    "Pediatric Cataracts: Overview. American Academy of Ophthalmology [Internet]. Disponible en: https://www.aao.org/education/disease-review/pediatric-cataracts-overview [citado 2026 nov 26]",
+    "Amblyopia Treatment Modalities. American Academy of Ophthalmology [Internet]. Disponible en: https://www.aao.org/education/disease-review/amblyopia-treatment-modalities [citado 2026 nov 26]",
+    "Herpes Simplex Virus Keratitis: A Treatment Guideline. American Academy of Ophthalmology [Internet]. Disponible en: https://www.aao.org/assets/6564936e-9929-48b6-93cd-15872a1b388e/635732518522630000/hsv-keratitis-treatment-guideline-harvard-pdf [citado 2026 nov 26]",
+    "Management of Uveitic Glaucoma. AAO EyeNet [Internet]. Disponible en: https://www.aao.org/eyenet/article/management-of-uveitic-glaucoma [citado 2026 nov 26]",
+    "The Infection That Wouldn't Quit. AAO EyeNet [Internet]. Disponible en: https://www.aao.org/eyenet/article/infection-that-wouldn-t-quit [citado 2026 nov 26]",
+    "Chlamydial Infections. STI Treatment Guidelines. CDC [Internet]. Disponible en: https://www.cdc.gov/std/treatment-guidelines/chlamydia.htm [citado 2026 nov 26]"
+   ]
+  }
+ },
+ "tarjetas": [
+  {
+   "id": "Q2-OJO-0001",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Ojo rojo</span>¿Qué predice el patrón de hiperemia sobre la profundidad del proceso?",
+   "respuesta": "La hiperemia <span class=\"dx\">conjuntival</span> indica un proceso superficial; la <span class=\"dx\">ciliar</span> indica inflamación de córnea, iris o cuerpo ciliar.",
+   "razonamiento": "Los vasos conjuntivales posteriores son superficiales; los ciliares anteriores son profundos y rodean la córnea.<br>De este principio se derivan los signos de alarma sin memorizarlos como lista.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Roy 2006, Compr Ther (PMID 16785582)",
+   "tags": [
+    "Quirurgica2::OjoRojo::Hiperemia",
+    "Nivel::Aplicacion",
+    "Fuente::Roy2006",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0002",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Ojo rojo</span>Hiperemia ciliar vs conjuntival: ¿cómo se distribuye cada una y qué indica?",
+   "respuesta": "La <span class=\"dx\">ciliar</span> forma un anillo alrededor del limbo e indica compromiso profundo; la <span class=\"dx\">conjuntival</span> es más difusa e indica un proceso superficial.",
+   "razonamiento": "<span class=\"vs\">Contraste</span> la conjuntival afecta sobre todo a los vasos conjuntivales posteriores; la ciliar es la dilatación de los vasos ciliares anteriores.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Rasgo</th><th>Ciliar</th><th>Conjuntival</th></tr></thead><tbody><tr><th>Patrón</th><td>Anillo limbar</td><td>Difusa</td></tr><tr><th>Vasos</th><td>Ciliares anteriores</td><td>Conjuntivales posteriores</td></tr><tr><th>Indica</th><td>Córnea, iris, cuerpo ciliar</td><td>Superficie ocular</td></tr></tbody></table>",
+   "fuente": "Roy 2006, Compr Ther (PMID 16785582); AAO, How to Decipher the Red Eye",
+   "tags": [
+    "Quirurgica2::OjoRojo::Hiperemia",
+    "Nivel::Aplicacion",
+    "Fuente::Roy2006",
+    "Clase::Contraste",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0003",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Ojo rojo</span>¿Por qué la disminución de la agudeza visual es el signo de alarma de mayor peso?",
+   "respuesta": "Porque indica compromiso de estructuras profundas del eje visual, no solo de la conjuntiva; es un criterio de <span class=\"al\">referencia urgente</span>.",
+   "razonamiento": "La AV reducida, el dolor intenso, la fotofobia marcada, la úlcera corneal y la PIO elevada son hallazgos que obligan a ampliar el estudio.<br>Una conjuntivitis aislada no explica una caída sostenida de la AV.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "AAO, How to Decipher the Red Eye as a First-Year Resident",
+   "tags": [
+    "Quirurgica2::OjoRojo::SignosAlarma",
+    "Nivel::Aplicacion",
+    "Fuente::AAO",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0004",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Ojo rojo</span>Para decidir la referencia urgente, ¿qué pesa más: la intensidad de la hiperemia o la AV, la pupila y el dolor profundo? ¿Por qué?",
+   "respuesta": "Pesan más la <span class=\"al\">AV</span>, la pupila y el dolor profundo, porque señalan compromiso del segmento anterior o del eje visual; la intensidad de la hiperemia no mide la profundidad.",
+   "razonamiento": "Una hemorragia subconjuntival es llamativa y suele resolverse sin tratamiento.<br>Un ojo menos rojo con baja de AV exige más cautela que uno muy rojo con AV normal.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "AAO, How to Decipher the Red Eye as a First-Year Resident; StatPearls, Blunt Eye Trauma (NBK470379)",
+   "tags": [
+    "Quirurgica2::OjoRojo::SignosAlarma",
+    "Nivel::Aplicacion",
+    "Fuente::AAO",
+    "Clase::Relacional",
+    "Bloom::Evaluar",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0005",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Corticoide tópico ocular</span>¿Por qué el médico de primer nivel no debe iniciarlo en un ojo rojo?",
+   "respuesta": "Porque sin lámpara de hendidura no se descarta una <span class=\"dx\">queratitis herpética</span>, en la que el <span class=\"fx\">corticoide</span> está contraindicado con enfermedad epitelial activa.",
+   "razonamiento": "Es el error iatrogénico clásico del ojo rojo.<br>Su indicación, por ejemplo en la uveítis anterior, la establece oftalmología, que además vigila la PIO.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Cabrera-Aguas 2022, Clin Exp Ophthalmol (PMID 35610943); AAO, HSV Keratitis Treatment Guideline",
+   "tags": [
+    "Quirurgica2::OjoRojo::Farmacologia",
+    "Nivel::Aplicacion",
+    "Fuente::Cabrera2022",
+    "Clase::Principio",
+    "Bloom::Evaluar",
+    "Principio",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0006",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Queratitis herpética epitelial</span>Se trata con colirio de dexametasona. Usa el principio de inmunosupresión local para predecir la evolución.",
+   "respuesta": "Las lesiones dendríticas pueden confluir en una <span class=\"dx\">úlcera geográfica</span> extensa.",
+   "razonamiento": "El tratamiento de la enfermedad epitelial es <span class=\"fx\">antiviral</span> (aciclovir, ganciclovir o trifluridina tópicos); el corticoide tópico queda contraindicado mientras haya epitelio afectado.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Cabrera-Aguas 2022, Clin Exp Ophthalmol (PMID 35610943); AAO, HSV Keratitis Treatment Guideline",
+   "tags": [
+    "Quirurgica2::OjoRojo::Farmacologia",
+    "Nivel::Aplicacion",
+    "Fuente::Cabrera2022",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0007",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Anestésico tópico ocular</span>¿Por qué nunca se prescribe para uso domiciliario?",
+   "respuesta": "Porque su uso repetido es tóxico para el epitelio y el estroma corneales y puede causar <span class=\"al\">defectos epiteliales persistentes</span>.",
+   "razonamiento": "El abuso produce queratitis punteada, infiltrados en anillo y edema corneal, y suele confundirse con queratitis por Acanthamoeba.<br>Se evita con analgesia alternativa.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Patel 2013, Expert Opin Drug Metab Toxicol (PMID 23617273)",
+   "tags": [
+    "Quirurgica2::OjoRojo::Farmacologia",
+    "Nivel::Aplicacion",
+    "Fuente::Patel2013",
+    "Clase::Aplicacion",
+    "Bloom::Comprender",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0008",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Prueba del agujero estenopeico</span>La agudeza visual disminuida mejora al mirar por él. ¿Qué implica?",
+   "respuesta": "Que el déficit es refractivo; si no mejora, sugiere una causa orgánica.",
+   "razonamiento": "Se repite la AV con estenopeico cuando es de 20/40 o peor, también sobre las gafas.<br>Es una maniobra de consulta que evita atribuir a un ojo rojo una baja de AV que solo es refractiva.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "AAO EyeWiki, On Call Ophthalmology",
+   "tags": [
+    "Quirurgica2::OjoRojo::PruebasDx",
+    "Nivel::Aplicacion",
+    "Fuente::EyeWiki",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0009",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Lámpara de hendidura</span>¿Qué hallazgos en la cámara anterior confirman una uveítis anterior?",
+   "respuesta": "<span class=\"dx\">Células</span> y <span class=\"dx\">flare</span> en el humor acuoso.",
+   "razonamiento": "Se gradúan con la escala SUN, que estandariza el grado de células y de flare.<br>Sin lámpara de hendidura no se ven, de ahí la referencia.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Jabs 2005, Am J Ophthalmol (PMID 16196117)",
+   "tags": [
+    "Quirurgica2::OjoRojo::PruebasDx",
+    "Nivel::Aplicacion",
+    "Fuente::Jabs2005",
+    "Clase::Aplicacion",
+    "Bloom::Comprender",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0010",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Tonometría</span>¿Por qué no se realiza ante sospecha de globo abierto?",
+   "respuesta": "Porque la presión sobre un <span class=\"al\">globo abierto</span> puede agravar la lesión.",
+   "razonamiento": "Primero se descarta la lesión penetrante; la PIO se mide después, si procede.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Blunt Eye Trauma (NBK470379); AAO EyeWiki, On Call Ophthalmology",
+   "tags": [
+    "Quirurgica2::OjoRojo::PruebasDx",
+    "Nivel::Aplicacion",
+    "Fuente::StatPearls",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0011",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Conjuntivitis</span>¿Qué dato de la historia orienta a etiología alérgica y cuál a bacteriana?",
+   "respuesta": "El <span class=\"dx\">prurito</span> es el signo más constante de la alérgica; ojos pegados al despertar sin prurito orientan a <span class=\"dx\">bacteriana</span>.",
+   "razonamiento": "Orienta, no confirma: el cuadro completo define la etiología.<br>La viral es la causa infecciosa más frecuente y suele no requerir tratamiento.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Azari 2013, JAMA (PMID 24150468)",
+   "tags": [
+    "Quirurgica2::OjoRojo::Conjuntivitis",
+    "Nivel::Aplicacion",
+    "Fuente::Azari2013",
+    "Clase::Principio",
+    "Bloom::Analizar",
+    "Principio",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0012",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Conjuntiva tarsal</span>¿A qué etiologías orienta una reacción folicular y a cuáles una papilar?",
+   "respuesta": "La folicular orienta a conjuntivitis viral o por Chlamydia; la papilar, a conjuntivitis bacteriana o alérgica.",
+   "razonamiento": "Se observan con eversión palpebral y magnificación.<br>Orientan, no confirman: en la queratoconjuntivitis crónica por adenovirus predominan las papilas.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Reacción</th><th>Orienta a</th></tr></thead><tbody><tr><th>Folicular</th><td>Viral, Chlamydia</td></tr><tr><th>Papilar</th><td>Bacteriana, alérgica</td></tr></tbody></table>",
+   "fuente": "StatPearls, Conjunctivitis Overview (NBK541034); Conjunctivitis: A Systematic Review (PMC7431717)",
+   "tags": [
+    "Quirurgica2::OjoRojo::Conjuntivitis",
+    "Nivel::Aplicacion",
+    "Fuente::ConjOverview",
+    "Clase::Contraste",
+    "Bloom::Analizar",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0013",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Conjuntivitis viral por adenovirus</span>¿Por qué no se prescribe antibiótico y qué medida sí cambia su curso epidemiológico?",
+   "respuesta": "Porque el tratamiento de la viral es de soporte, no antibiótico; lo que limita el contagio es la <span class=\"dx\">higiene de manos</span>.",
+   "razonamiento": "Se indican lágrimas artificiales y compresas frías.<br>Se reevalúa si aparecen dolor, fotofobia o caída de AV, que sugieren compromiso corneal.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Azari 2013, JAMA (PMID 24150468); Adenovirus: ocular manifestations (PMC7205173)",
+   "tags": [
+    "Quirurgica2::OjoRojo::Conjuntivitis",
+    "Nivel::Aplicacion",
+    "Fuente::Azari2013",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0014",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Caso</span>Adulto joven sexualmente activo con ojo rojo de inicio brusco y secreción purulenta copiosa. ¿Qué agente sospechas y por qué no basta el colirio?",
+   "respuesta": "<span class=\"dx\">Neisseria gonorrhoeae</span>: puede perforar la córnea, por lo que se añade tratamiento <span class=\"fx\">sistémico</span> (ceftriaxona) y se refiere de urgencia.",
+   "razonamiento": "La conjuntivitis por gonococo o Chlamydia requiere tratamiento sistémico además del tópico.<br>La secreción purulenta copiosa e hiperaguda la distingue de la bacteriana común.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Azari 2013, JAMA (PMID 24150468); StatPearls, Bacterial Conjunctivitis (NBK546683)",
+   "tags": [
+    "Quirurgica2::OjoRojo::Conjuntivitis",
+    "Nivel::Aplicacion",
+    "Fuente::Azari2013",
+    "Clase::Vineta",
+    "Bloom::Aplicar",
+    "AltoRendimiento::MIR",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0015",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Conjuntivitis neonatal por Chlamydia trachomatis</span>¿Por qué se trata con antibiótico sistémico y no solo tópico?",
+   "respuesta": "Porque el tratamiento tópico es poco eficaz, sobre todo en la nasofaringe, y el mismo agente puede causar neumonía; se usa un <span class=\"fx\">macrólido</span> oral.",
+   "razonamiento": "La OMS prefiere azitromicina y el CDC lista la eritromicina como régimen principal: ambos macrólidos se asocian a estenosis hipertrófica del píloro, sobre todo en las primeras dos semanas de vida.<br>Se vigila al lactante y se considera el tratamiento de los padres.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Eberly 2015, Pediatrics (PMID 25687145); StatPearls, Ophthalmia Neonatorum (NBK551572); CDC, Chlamydial Infections",
+   "tags": [
+    "Quirurgica2::OjoRojo::Conjuntivitis",
+    "Nivel::Aplicacion",
+    "Fuente::Eberly2015",
+    "Clase::Aplicacion",
+    "Bloom::Evaluar",
+    "AltoRendimiento::MIR",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0016",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Conjuntivitis por adenovirus</span>Un signo clínico importante es la {{c1::<span class=\"dx\">adenopatía preauricular</span>}}.",
+   "extra": "El diagnóstico suele ser clínico; la higiene de manos limita el contagio.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Adenovirus: ocular manifestations (PMC7205173)",
+   "tags": [
+    "Quirurgica2::OjoRojo::Conjuntivitis",
+    "Nivel::Recuerdo",
+    "Fuente::Adenovirus",
+    "Clase::Irreducible",
+    "Bloom::Recordar",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0017",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Queratitis vs conjuntivitis</span>Usa el principio del eje visual: ¿qué hallazgos indican compromiso corneal?",
+   "respuesta": "<span class=\"al\">Dolor intenso</span>, <span class=\"al\">fotofobia marcada</span> y <span class=\"al\">baja de AV</span>, porque la córnea es una estructura profunda del eje visual; la conjuntivitis aislada no los explica.",
+   "razonamiento": "Confirmación: defecto epitelial que tiñe con fluoresceína.<br>Conducta: referencia a oftalmología.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "AAO, How to Decipher the Red Eye as a First-Year Resident; Azari 2013, JAMA (PMID 24150468)",
+   "tags": [
+    "Quirurgica2::OjoRojo::Queratitis",
+    "Nivel::Aplicacion",
+    "Fuente::AAO",
+    "Clase::Contraste",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0018",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Tinción con fluoresceína</span>Patrón dendrítico: ¿qué diagnóstico sugiere y qué fármaco queda contraindicado?",
+   "respuesta": "<span class=\"dx\">Queratitis epitelial por virus herpes simple</span>; el <span class=\"fx\">corticoide</span> tópico queda contraindicado.",
+   "razonamiento": "La fluoresceína tiñe donde falta epitelio: bajo luz azul cobalto el defecto brilla en verde.<br>El manejo es antiviral y referencia a oftalmología.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Cabrera-Aguas 2022, Clin Exp Ophthalmol (PMID 35610943); AAO EyeWiki, On Call Ophthalmology",
+   "tags": [
+    "Quirurgica2::OjoRojo::Queratitis",
+    "Nivel::Aplicacion",
+    "Fuente::Cabrera2022",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0019",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Caso</span>Usuario de lentes de contacto con ojo rojo doloroso, fotofobia y úlcera corneal que tiñe con fluoresceína. ¿Qué agentes debes considerar y qué conducta sigue?",
+   "respuesta": "<span class=\"dx\">Pseudomonas aeruginosa</span> y <span class=\"dx\">Acanthamoeba</span>, entre otros; es una urgencia oftalmológica.",
+   "razonamiento": "El uso de lentes de contacto es un factor predisponente de queratitis infecciosa.<br>El retraso diagnóstico o el tratamiento inadecuado pueden causar pérdida visual.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Cabrera-Aguas 2022, Clin Exp Ophthalmol (PMID 35610943)",
+   "tags": [
+    "Quirurgica2::OjoRojo::Queratitis",
+    "Nivel::Aplicacion",
+    "Fuente::Cabrera2022",
+    "Clase::Vineta",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0020",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Queratoconjuntivitis epidémica</span>En una supuesta conjuntivitis viral la AV cae pasadas las primeras semanas. ¿Qué lo explica y qué conducta sigue?",
+   "respuesta": "Infiltrados <span class=\"dx\">subepiteliales</span> por adenovirus; se reevalúa y se refiere si la AV no se recupera.",
+   "razonamiento": "Los infiltrados suelen ser autolimitados, pero pueden persistir semanas o meses y dejar cicatriz si cubren el eje visual.<br>Una conjuntivitis aislada no explica una caída sostenida de la AV.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Adenovirus: ocular manifestations (PMC7205173); AAO EyeNet, The Infection That Wouldn't Quit",
+   "tags": [
+    "Quirurgica2::OjoRojo::Queratitis",
+    "Nivel::Aplicacion",
+    "Fuente::Adenovirus",
+    "Clase::Aplicacion",
+    "Bloom::Analizar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0021",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Blefaritis</span>¿Por qué su tratamiento se plantea como control y no como curación?",
+   "respuesta": "Porque es una condición crónica multifactorial sin tratamiento curativo demostrado.",
+   "razonamiento": "Intervienen bacterias del borde palpebral, seborrea y disfunción de las glándulas de Meibomio.<br>La higiene palpebral alivia los síntomas, que recurren al suspenderla; explicarlo mejora la adherencia.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Lindsley 2012, Cochrane Database Syst Rev (PMID 22592706); AAO, Blepharitis PPP",
+   "tags": [
+    "Quirurgica2::OjoRojo::Blefaritis",
+    "Nivel::Aplicacion",
+    "Fuente::Lindsley2012",
+    "Clase::Aplicacion",
+    "Bloom::Comprender"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0022",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Blefaritis</span>Anterior vs posterior: ¿qué estructura compromete cada una y cómo difiere la higiene clave?",
+   "respuesta": "La <span class=\"dx\">anterior</span> afecta el borde palpebral (estafilocócica o seborreica); la <span class=\"dx\">posterior</span>, las glándulas de Meibomio.",
+   "razonamiento": "Ambas son disfunción del margen palpebral con distinta estructura diana.<br>Los pacientes con blefaritis crónica suelen tener seborrea o rosácea de base.",
+   "mnemotecnia": "",
+   "esquema": "<table><thead><tr><th>Rasgo</th><th>Anterior</th><th>Posterior</th></tr></thead><tbody><tr><th>Diana</th><td>Base de pestañas</td><td>Glándulas de Meibomio</td></tr><tr><th>Causa</th><td>Estafilococo, seborrea</td><td>Disfunción meibomiana</td></tr><tr><th>Higiene</th><td>Limpieza del borde</td><td>Compresas tibias</td></tr></tbody></table>",
+   "fuente": "Lindsley 2012, Cochrane Database Syst Rev (PMID 22592706); AAO, Blepharitis PPP",
+   "tags": [
+    "Quirurgica2::OjoRojo::Blefaritis",
+    "Nivel::Aplicacion",
+    "Fuente::Lindsley2012",
+    "Clase::Contraste",
+    "Bloom::Analizar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0023",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Orzuelo vs chalazión</span>¿Qué mecanismo explica que uno duela y el otro no?",
+   "respuesta": "El <span class=\"dx\">orzuelo</span> es una infección aguda y dolorosa de una glándula o folículo; el <span class=\"dx\">chalazión</span> es una inflamación lipogranulomatosa crónica por obstrucción glandular, habitualmente indolora.",
+   "razonamiento": "Un orzuelo interno puede evolucionar a chalazión.<br>El dolor es el principal rasgo que los separa, aunque a veces se solapan.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Hordeolum (NBK459349); StatPearls, Chalazion (NBK499889)",
+   "tags": [
+    "Quirurgica2::OjoRojo::Parpados",
+    "Nivel::Aplicacion",
+    "Fuente::StatPearlsPalp",
+    "Clase::Contraste",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0024",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Chalazión recurrente</span>Reaparece en el mismo sitio en un adulto mayor: ¿por qué se biopsia?",
+   "respuesta": "Porque puede ser un <span class=\"al\">carcinoma sebáceo</span> que simula un chalazión.",
+   "razonamiento": "Este tumor suele hacerse pasar por blefaritis o chalazión; una blefaritis unilateral crónica que no responde también obliga a sospecharlo.<br>La sospecha temprana evita la pérdida de visión y la diseminación.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Arzbecker 2025, BMJ Case Rep (PMID 40086849); StatPearls, Chalazion (NBK499889)",
+   "tags": [
+    "Quirurgica2::OjoRojo::Parpados",
+    "Nivel::Aplicacion",
+    "Fuente::Arzbecker2025",
+    "Clase::Aplicacion",
+    "Bloom::Evaluar",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0025",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Celulitis periocular</span>¿Por qué el septum orbitario define el pronóstico?",
+   "respuesta": "Porque separa la celulitis <span class=\"dx\">preseptal</span>, sin proptosis ni oftalmoplejía, de la <span class=\"dx\">orbitaria</span>, que amenaza la visión.",
+   "razonamiento": "La preseptal leve y afebril puede manejarse de forma ambulatoria con antibiótico oral.<br>La retroseptal se maneja en hospital con antibiótico intravenoso e imagen con contraste.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Wong 2018, Int J Pediatr Otorhinolaryngol (PMID 29859573); Bedwell 2011, Curr Opin Otolaryngol Head Neck Surg (PMID 22001661)",
+   "tags": [
+    "Quirurgica2::OjoRojo::CelulitisOrbitaria",
+    "Nivel::Aplicacion",
+    "Fuente::Wong2018",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0026",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Caso</span>Niño de 6 años con fiebre y edema palpebral eritematoso que ahora presenta proptosis y dolor al mover el ojo. ¿Qué compromiso sospechas y qué conducta sigue?",
+   "respuesta": "<span class=\"dx\">Celulitis orbitaria</span> (retroseptal): TC de órbitas con contraste y <span class=\"fx\">antibiótico</span> intravenoso en hospital.",
+   "razonamiento": "La proptosis, el dolor o la limitación de los movimientos oculares, la baja de AV y el defecto pupilar aferente relativo indican compromiso orbitario; el edema palpebral aislado no lo hace.<br>Se evalúa cirugía si hay absceso o mala respuesta.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Bedwell 2011, Curr Opin Otolaryngol Head Neck Surg (PMID 22001661); Wong 2018, Int J Pediatr Otorhinolaryngol (PMID 29859573)",
+   "tags": [
+    "Quirurgica2::OjoRojo::CelulitisOrbitaria",
+    "Nivel::Aplicacion",
+    "Fuente::Bedwell2011",
+    "Clase::Vineta",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0027",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Celulitis orbitaria</span>No tratada, ¿por qué puede causar trombosis del seno cavernoso?",
+   "respuesta": "Porque las venas oftálmicas <span class=\"mec\">carecen de válvulas</span> y drenan al seno cavernoso, lo que permite la extensión de la infección.",
+   "razonamiento": "Se sospecha ante ptosis, proptosis, quemosis y parálisis de pares craneales.<br>Es una complicación infrecuente pero muy grave.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "AAO EyeWiki, Orbital Cellulitis; StatPearls, Cavernous Sinus Thrombosis (NBK448177)",
+   "tags": [
+    "Quirurgica2::OjoRojo::CelulitisOrbitaria",
+    "Nivel::Aplicacion",
+    "Fuente::EyeWikiOrb",
+    "Clase::Aplicacion",
+    "Bloom::Analizar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0028",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Celulitis orbitaria</span>Una causa frecuente en el niño es la {{c1::<span class=\"dx\">sinusitis etmoidal</span>}}, que alcanza la órbita por la lámina papirácea.",
+   "extra": "Por eso se buscan síntomas sinusales previos.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "AAO EyeWiki, Orbital Cellulitis; Bedwell 2011, Curr Opin Otolaryngol Head Neck Surg (PMID 22001661)",
+   "tags": [
+    "Quirurgica2::OjoRojo::CelulitisOrbitaria",
+    "Nivel::Recuerdo",
+    "Fuente::EyeWikiOrb",
+    "Clase::Irreducible",
+    "Bloom::Recordar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0029",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Hemorragia subconjuntival</span>¿Por qué no se trata aunque su aspecto sea llamativo?",
+   "respuesta": "Porque suele resolverse sin intervención.",
+   "razonamiento": "Es sangre bajo la conjuntiva, sin inflamación; la intensidad de lo rojo no mide la gravedad.<br>Se confirma que no hay dolor ni baja de AV.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Subconjunctival Hemorrhage (NBK551666); StatPearls, Blunt Eye Trauma (NBK470379)",
+   "tags": [
+    "Quirurgica2::OjoRojo::HemorragiaSubconj",
+    "Nivel::Aplicacion",
+    "Fuente::StatPearlsHSC",
+    "Clase::Aplicacion",
+    "Bloom::Comprender",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0030",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Hemorragia subconjuntival</span>Tras un trauma ocular, ¿qué diagnóstico debe descartarse antes de tranquilizar al paciente?",
+   "respuesta": "<span class=\"al\">Globo abierto</span>, sobre todo si la hemorragia rodea los 360° del limbo.",
+   "razonamiento": "Se protege el ojo con escudo rígido sin presionar y se refiere de urgencia.<br>No se mide la PIO ni se aplican colirios hasta descartarlo.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Blunt Eye Trauma (NBK470379); AAO EyeWiki, On Call Ophthalmology",
+   "tags": [
+    "Quirurgica2::OjoRojo::HemorragiaSubconj",
+    "Nivel::Aplicacion",
+    "Fuente::StatPearls",
+    "Clase::Aplicacion",
+    "Bloom::Evaluar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0031",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Uveítis anterior vs glaucoma agudo</span>¿Cómo discrimina la pupila y por qué?",
+   "respuesta": "<span class=\"dx\">Uveítis</span>: <span class=\"mec\">miosis</span>. <span class=\"dx\">Glaucoma agudo</span>: pupila media poco reactiva, por isquemia del esfínter del iris con PIO muy elevada.",
+   "razonamiento": "Una pupila anormal en un ojo rojo es signo de alarma.<br>La tonometría y la valoración del ángulo diferencian el glaucoma de la uveítis.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Uveitis (NBK540993); StatPearls, Acute Angle-Closure Glaucoma (NBK430857)",
+   "tags": [
+    "Quirurgica2::OjoRojo::Uveitis",
+    "Nivel::Aplicacion",
+    "Fuente::StatPearlsUv",
+    "Clase::Contraste",
+    "Bloom::Analizar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0032",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Uveítis anterior</span>¿Por qué se añade un cicloplégico al corticoide?",
+   "respuesta": "Porque alivia el dolor por espasmo ciliar y previene las <span class=\"mec\">sinequias posteriores</span>.",
+   "razonamiento": "El corticoide trata la inflamación; la dilatación reduce el dolor y evita adherencias entre iris y cristalino.<br>El corticoide puede elevar la PIO, por lo que oftalmología la vigila.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "AAO EyeWiki, Acute Anterior Uveitis; AAO EyeNet, Management of Uveitic Glaucoma",
+   "tags": [
+    "Quirurgica2::OjoRojo::Uveitis",
+    "Nivel::Aplicacion",
+    "Fuente::EyeWikiUv",
+    "Clase::Aplicacion",
+    "Bloom::Comprender",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0033",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Artritis idiopática juvenil</span>¿Por qué un niño con esta enfermedad requiere cribado oftalmológico periódico?",
+   "respuesta": "Por el riesgo de uveítis con complicaciones que amenazan la visión si el control es poco frecuente.",
+   "razonamiento": "La guía ACR/AF recomienda tamizaje regular, con frecuencia según los factores de riesgo individuales.<br>El tratamiento inicial es un corticoide tópico.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Angeles-Han 2019, Arthritis Care Res (PMID 31021540)",
+   "tags": [
+    "Quirurgica2::OjoRojo::Uveitis",
+    "Nivel::Aplicacion",
+    "Fuente::Angeles2019",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0034",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Uveítis anterior</span>Los depósitos celulares sobre el endotelio corneal son los {{c1::<span class=\"dx\">precipitados queráticos</span>}}.",
+   "extra": "Se acompañan de células y flare en la cámara anterior.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Uveitis (NBK540993); Jabs 2005, Am J Ophthalmol (PMID 16196117)",
+   "tags": [
+    "Quirurgica2::OjoRojo::Uveitis",
+    "Nivel::Recuerdo",
+    "Fuente::StatPearlsUv",
+    "Clase::Irreducible",
+    "Bloom::Recordar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0035",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Uveítis anterior aguda recurrente</span>El antígeno que más se asocia es el {{c1::<span class=\"dx\">HLA-B27</span>}}.",
+   "extra": "Se asocia a enfermedades inflamatorias extraoculares: el diagnóstico puede revelar una afección sistémica.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Chang 2005, Surv Ophthalmol (PMID 15967191)",
+   "tags": [
+    "Quirurgica2::OjoRojo::Uveitis",
+    "Nivel::Recuerdo",
+    "Fuente::Chang2005",
+    "Clase::Irreducible",
+    "Bloom::Recordar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0036",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Coroidorretinitis</span>¿Por qué puede cursar con un ojo poco rojo pese a ser grave?",
+   "respuesta": "Porque la uveítis posterior suele ser indolora y poco roja; se manifiesta con <span class=\"al\">miodesopsias</span> y pérdida de visión.",
+   "razonamiento": "El diagnóstico exige fondo de ojo dilatado: los síntomas sutiles retrasan el tratamiento y pueden dejar daño visual permanente.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Uveitis (NBK540993); Systematic Approach to Emergencies in Uveitis (PMC4123279)",
+   "tags": [
+    "Quirurgica2::OjoRojo::Coroidorretinitis",
+    "Nivel::Aplicacion",
+    "Fuente::StatPearlsUv",
+    "Clase::Aplicacion",
+    "Bloom::Comprender"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0037",
+   "tipo": "Cloze",
+   "text": "<span class=\"tema\">Coroidorretinitis infecciosa</span>En inmunocompetentes, la causa más frecuente es {{c1::<span class=\"dx\">Toxoplasma gondii</span>}}.",
+   "extra": "Es la principal causa infecciosa de uveítis posterior; en VIH avanzado (CD4 bajo) el cuadro clásico es la retinitis por citomegalovirus.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Chorioretinitis (NBK551705); StatPearls, Ocular Manifestations of HIV (NBK441926)",
+   "tags": [
+    "Quirurgica2::OjoRojo::Coroidorretinitis",
+    "Nivel::Recuerdo",
+    "Fuente::StatPearlsRet",
+    "Clase::Irreducible",
+    "Bloom::Recordar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0038",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Glaucoma agudo por cierre angular</span>¿Qué mecanismo eleva abruptamente la PIO?",
+   "respuesta": "El <span class=\"mec\">bloqueo pupilar</span>: el acuoso queda retenido detrás del iris, lo empuja hacia delante y cierra el ángulo.",
+   "razonamiento": "Se produce en ojos con cámara anterior estrecha; de este mecanismo derivan el edema corneal, la pupila poco reactiva, el riesgo con midriáticos y la iridotomía como tratamiento definitivo.",
+   "mnemotecnia": "",
+   "esquema": "<img src=\"q2-ojo-0038-bloqueo-pupilar.png\" alt=\"Bloqueo pupilar, iris bombé y cierre del ángulo iridocorneal en el glaucoma agudo\">",
+   "fuente": "Wright 2016, Acta Ophthalmol (PMID 26119516); StatPearls, Acute Angle-Closure Glaucoma (NBK430857)",
+   "tags": [
+    "Quirurgica2::OjoRojo::GlaucomaAgudo",
+    "Nivel::Aplicacion",
+    "Fuente::Wright2016",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0039",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Glaucoma agudo</span>¿Por qué la pilocarpina se usa cuando la PIO ya empezó a bajar y no de inicio?",
+   "respuesta": "Porque con PIO muy elevada el esfínter del iris está isquémico y responde mal; primero se reduce la producción de acuoso y después se usa el <span class=\"fx\">miótico</span>.",
+   "razonamiento": "La pilocarpina busca romper el bloqueo pupilar al contraer la pupila.<br>Los fármacos reducen la PIO de forma temporal; el tratamiento definitivo es la iridotomía.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Acute Angle-Closure Glaucoma (NBK430857); PubMed 526463, Management of acute closed-angle glaucoma with miotics and timolol",
+   "tags": [
+    "Quirurgica2::OjoRojo::GlaucomaAgudo",
+    "Nivel::Aplicacion",
+    "Fuente::StatPearlsAAC",
+    "Clase::Aplicacion",
+    "Bloom::Analizar",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0040",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Fondo de ojo</span>Hipermétrope mayor: ¿qué riesgo específico tiene dilatar la pupila con un midriático?",
+   "respuesta": "Precipitar un <span class=\"al\">cierre angular agudo</span>, porque el ojo hipermétrope tiene la cámara anterior estrecha.",
+   "razonamiento": "Antes de dilatar se estima la profundidad de la cámara anterior, por ejemplo con linterna u oblicua.<br>La prueba es subjetiva e imperfecta: un ángulo estrecho exige cautela adicional.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "AAO, Abnormalities Associated With a Closed Angle; Wright 2016, Acta Ophthalmol (PMID 26119516)",
+   "tags": [
+    "Quirurgica2::OjoRojo::GlaucomaAgudo",
+    "Nivel::Aplicacion",
+    "Fuente::AAOClosed",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0041",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Caso</span>Mujer de 68 años con cefalea intensa, náusea y vómito tras una función de cine; tiene ojo rojo, pupila media poco reactiva y córnea opaca. ¿Qué diagnóstico y qué conducta?",
+   "respuesta": "<span class=\"dx\">Glaucoma agudo por cierre angular</span>: se reduce la PIO (<span class=\"fx\">acetazolamida</span> y <span class=\"fx\">timolol</span>) y se refiere de urgencia para iridotomía láser.",
+   "razonamiento": "La cefalea, la náusea y el vómito acompañan al glaucoma agudo, junto con halos, baja de AV, córnea edematosa y PIO muy alta.<br>La referencia urgente no se retrasa por el tratamiento médico.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "StatPearls, Acute Angle-Closure Glaucoma (NBK430857); Wright 2016, Acta Ophthalmol (PMID 26119516)",
+   "tags": [
+    "Quirurgica2::OjoRojo::GlaucomaAgudo",
+    "Nivel::Aplicacion",
+    "Fuente::StatPearlsAAC",
+    "Clase::Vineta",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0042",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Glaucoma agudo</span>¿Por qué la iridotomía periférica es el tratamiento definitivo y por qué se plantea también en el ojo contralateral?",
+   "respuesta": "Porque crea una vía alternativa para el acuoso y alivia el bloqueo pupilar; el ojo contralateral comparte la anatomía de ángulo estrecho y su riesgo.",
+   "razonamiento": "Se realiza con láser.<br>Los fármacos solo bajan la PIO de forma temporal, sin corregir el mecanismo.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Wright 2016, Acta Ophthalmol (PMID 26119516); StatPearls, Acute Angle-Closure Glaucoma (NBK430857)",
+   "tags": [
+    "Quirurgica2::OjoRojo::GlaucomaAgudo",
+    "Nivel::Aplicacion",
+    "Fuente::Wright2016",
+    "Clase::Aplicacion",
+    "Bloom::Comprender",
+    "AltoRendimiento::USMLE",
+    "AltoRendimiento::MIR"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0043",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Ambliopía</span>¿Qué comparten el estrabismo, la anisometropía y la privación visual como causas?",
+   "respuesta": "En las tres, un ojo recibe una imagen anómala durante el <span class=\"mec\">periodo crítico</span> del desarrollo visual, y se altera todo el sistema visual, no solo el ojo.",
+   "razonamiento": "La ambliopía es un trastorno del desarrollo que afecta al sistema visual, incluida la corteza extraestriada; el ojo suele ser estructuralmente normal.<br>El tratamiento solo es eficaz mientras dura la plasticidad, y mejor cuanto más joven es el niño.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Orssaud 2014, J Fr Ophtalmol (PMID 24703193)",
+   "tags": [
+    "Quirurgica2::OjoRojo::Ambliopia",
+    "Nivel::Aplicacion",
+    "Fuente::Orssaud2014",
+    "Clase::Principio",
+    "Bloom::Comprender",
+    "Principio",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0044",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Catarata congénita</span>Usa el principio del periodo crítico para explicar por qué su manejo es urgente.",
+   "respuesta": "Porque la privación visual temprana produce una <span class=\"al\">ambliopía profunda</span>; el retraso de la cirugía empeora el resultado visual.",
+   "razonamiento": "Se recomienda operar en las primeras semanas de vida, y el reflejo rojo se evalúa en todo recién nacido.<br>La cirugía temprana tiene sus propios riesgos, como el glaucoma secundario.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "AAO, Pediatric Cataracts Overview; Screening, Genetics, Risk Factors, and Treatment of Neonatal Cataracts (PMC9211061)",
+   "tags": [
+    "Quirurgica2::OjoRojo::Ambliopia",
+    "Nivel::Aplicacion",
+    "Fuente::AAOCat",
+    "Clase::Aplicacion",
+    "Bloom::Aplicar",
+    "AltoRendimiento::USMLE"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  },
+  {
+   "id": "Q2-OJO-0045",
+   "tipo": "QA",
+   "pregunta": "<span class=\"tema\">Ambliopía</span>¿Cómo se conecta la carga psicosocial del parche con el fracaso terapéutico?",
+   "respuesta": "El parche puede generar malestar, burlas y estigma, lo que dificulta la <span class=\"dx\">adherencia</span>; y la adherencia determina el resultado visual.",
+   "razonamiento": "Existe una relación dosis-respuesta entre la adherencia a la oclusión y la AV.<br>La atropina es una alternativa a la oclusión, con eficacia similar en la ambliopía moderada y menor impacto psicosocial.",
+   "mnemotecnia": "",
+   "esquema": "",
+   "fuente": "Papageorgiou 2019, Graefes Arch Clin Exp Ophthalmol (PMID 30706134); AAO, Amblyopia Treatment Modalities",
+   "tags": [
+    "Quirurgica2::OjoRojo::Ambliopia",
+    "Nivel::Aplicacion",
+    "Fuente::Papageorgiou2019",
+    "Clase::Relacional",
+    "Bloom::Evaluar"
+   ],
+   "pendientes": [],
+   "notas_ejecutor": ""
+  }
+ ]
+}

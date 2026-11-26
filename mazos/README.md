@@ -27,7 +27,7 @@ Prefijos retirados: `Q2-TOX` (mazo antiguo de toxicodependencias; el caso usa `Q
 <!-- registro:inicio -->
 | Prefijo | Carpeta | Tag raíz | ID de mazo | Último ID | Notas | Versión | Fecha |
 |---|---|---|---|---|---|---|---|
-| Q2-OJO | — | OjoRojo | 1762900710001 | — | 0 | — | — |
+| Q2-OJO | ojo_rojo | OjoRojo | 1762900710001 | Q2-OJO-0045 | 45 | 1.0 | 2026-11-26 |
 | Q2-DISB | — | Disbasia | 1762900710002 | — | 0 | — | — |
 | Q2-ABD | — | AbdomenAgudo | 1762900710003 | — | 0 | — | — |
 | Q2-NEO | — | NeoplasiasGI | 1762900710004 | — | 0 | — | — |
