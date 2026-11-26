@@ -1,743 +1,784 @@
 {
- "meta": {
-  "caso": "Trastornos del estado de ánimo",
-  "rotacion": "2.ª",
-  "tag_raiz": "TrastornosAnimo",
-  "prefijo": "Q2R2-ANI",
-  "version": "1.0",
-  "fecha": "2026-11-26",
-  "resultado_aprendizaje": "Maneja de manera integral a los pacientes con trastornos del ánimo de acuerdo con evidencia científica.",
-  "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 2.ª rotación, Caso 7 — Trastornos del estado de ánimo (contenidos y trabajo autónomo); semilla: nucleo del widget Depresión, bipolar y suicidio",
-  "justificacion_exceso": "",
-  "mir_verificados": [],
-  "verificacion": {
-   "total": 68,
-   "verificados": 61,
-   "eliminados": [
-    {
-     "id": "Q2R2-ANI-0024",
-     "dato": "Fluoxetina o sertralina como primera línea según la GPC del MSP (semilla del widget)",
-     "motivo": "el PDF de la GPC no fue legible en la sesión: eliminado"
+  "meta": {
+    "caso": "Trastornos del estado de ánimo",
+    "rotacion": "2.ª",
+    "tag_raiz": "TrastornosAnimo",
+    "prefijo": "Q2R2-ANI",
+    "version": "1.0",
+    "fecha": "2026-11-26",
+    "resultado_aprendizaje": "Maneja de manera integral a los pacientes con trastornos del ánimo de acuerdo con evidencia científica.",
+    "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 2.ª rotación, Caso 7 — Trastornos del estado de ánimo (contenidos y trabajo autónomo); semilla: nucleo del widget Depresión, bipolar y suicidio",
+    "justificacion_exceso": "",
+    "mir_verificados": [],
+    "verificacion": {
+      "total": 68,
+      "verificados": 61,
+      "eliminados": [
+        {
+          "id": "Q2R2-ANI-0024",
+          "dato": "Fluoxetina o sertralina como primera línea según la GPC del MSP (semilla del widget)",
+          "motivo": "el PDF de la GPC no fue legible en la sesión: eliminado"
+        },
+        {
+          "id": "Q2R2-ANI-0033",
+          "dato": "Primera cita en 24 a 72 h y máximo 7 días tras la crisis o el alta (Lineamientos MSP 2026)",
+          "motivo": "no hallado en fuente consultable: eliminado"
+        },
+        {
+          "id": "Q2R2-ANI-0026",
+          "dato": "El antidepresivo en bipolar «puede inducir viraje» (semilla)",
+          "motivo": "el metanálisis de Sidor 2011 no halló mayor viraje con criterios estrictos: reformulado como ausencia de eficacia y desestabilización"
+        },
+        {
+          "id": "Q2R2-ANI-0017",
+          "dato": "Mecanismo de retención del litio por el sodio y la reabsorción proximal",
+          "motivo": "no confirmado en fuente consultada: eliminado; se dejó eliminación renal y la interacción con tiazidas, AINE e IECA"
+        },
+        {
+          "id": "Q2R2-ANI-0024",
+          "dato": "El ISRS tarda semanas porque depende de la plasticidad (BDNF) y reevaluación a 2 a 4 semanas",
+          "motivo": "no confirmado: sustituido por el criterio de 4 semanas y 20 % de mejoría"
+        },
+        {
+          "id": "Q2R2-ANI-0022",
+          "dato": "Hipotiroidismo (TSH elevada) como imitador de la depresión y dosis de fármacos",
+          "motivo": "sin fuente consultable: eliminado"
+        },
+        {
+          "id": "Q2R2-ANI-0032",
+          "dato": "Plan de seguridad en seis pasos (Stanley y Brown 2012)",
+          "motivo": "no indexado en PubMed: sustituido por Stanley 2018"
+        },
+        {
+          "id": "Q2R2-ANI-0003",
+          "dato": "Hipomanía sin deterioro marcado ni psicosis",
+          "motivo": "no confirmado en fuente accesible: eliminado"
+        },
+        {
+          "id": "Q2R2-ANI-0004",
+          "dato": "No hubo deterioro marcado ni psicosis como criterio de hipomanía",
+          "motivo": "no confirmado: razonamiento reducido a duración y hospitalización"
+        },
+        {
+          "id": "Q2R2-ANI-0022",
+          "dato": "Un cuadro inducido por fármacos o sustancias remite al retirar el agente",
+          "motivo": "no confirmado: eliminado"
+        },
+        {
+          "id": "Q2R2-ANI-0014",
+          "dato": "Se necesitan al menos 3 síntomas (4 si el ánimo es solo irritable)",
+          "motivo": "no confirmado en fuente accesible: eliminado"
+        },
+        {
+          "id": "Q2R2-ANI-0015",
+          "dato": "Peor respuesta al litio; revisa antidepresivos, tiroides y consumo",
+          "motivo": "no confirmado: eliminado"
+        },
+        {
+          "id": "Q2R2-ANI-0017",
+          "dato": "Tiazidas las más intensas, asa mucho menos; litio se elimina casi solo por el riñón",
+          "motivo": "no confirmado (Medsafe lista tiazidas, espironolactona y furosemida sin jerarquía): eliminado; Shionoiri 1993 (ACE inhibidores) sustituido por Finley 2016"
+        },
+        {
+          "id": "Q2R2-ANI-0029",
+          "dato": "Se pregunta sin temor a inducirla (inferencia)",
+          "motivo": "reformulado a lo que dice la fuente"
+        },
+        {
+          "id": "Q2R2-ANI-0033",
+          "dato": "Cita de seguimiento programada antes del alta",
+          "motivo": "se mantiene solo el seguimiento regular de Turecki"
+        }
+      ],
+      "nota": "Criterios DSM-5-TR contrastados con Grunze 2021, Scarff 2019, Consortium 2021 y Miola 2023; PMID de las 16 citas comprobados en PubMed; recuento exacto no completado"
     },
-    {
-     "id": "Q2R2-ANI-0033",
-     "dato": "Primera cita en 24 a 72 h y máximo 7 días tras la crisis o el alta (Lineamientos MSP 2026)",
-     "motivo": "no hallado en fuente consultable: eliminado"
-    },
-    {
-     "id": "Q2R2-ANI-0026",
-     "dato": "El antidepresivo en bipolar «puede inducir viraje» (semilla)",
-     "motivo": "el metanálisis de Sidor 2011 no halló mayor viraje con criterios estrictos: reformulado como ausencia de eficacia y desestabilización"
-    },
-    {
-     "id": "Q2R2-ANI-0017",
-     "dato": "Mecanismo de retención del litio por el sodio y la reabsorción proximal",
-     "motivo": "no confirmado en fuente consultada: eliminado; se dejó eliminación renal y la interacción con tiazidas, AINE e IECA"
-    },
-    {
-     "id": "Q2R2-ANI-0024",
-     "dato": "El ISRS tarda semanas porque depende de la plasticidad (BDNF) y reevaluación a 2 a 4 semanas",
-     "motivo": "no confirmado: sustituido por el criterio de 4 semanas y 20 % de mejoría"
-    },
-    {
-     "id": "Q2R2-ANI-0022",
-     "dato": "Hipotiroidismo (TSH elevada) como imitador de la depresión y dosis de fármacos",
-     "motivo": "sin fuente consultable: eliminado"
-    },
-    {
-     "id": "Q2R2-ANI-0032",
-     "dato": "Plan de seguridad en seis pasos (Stanley y Brown 2012)",
-     "motivo": "no indexado en PubMed: sustituido por Stanley 2018"
+    "guia": {
+      "principios": [
+        "La polaridad decide el capítulo: la depresión unipolar y la bipolar se ven igual en una consulta y se separan por la historia de manía o hipomanía.",
+        "Se pregunta por manía antes de recetar un antidepresivo: en el bipolar manda el estabilizador o un fármaco con perfil bipolar.",
+        "El riesgo suicida se pregunta de forma directa en todo paciente con síntomas del ánimo; las escalas orientan pero no predicen ni deciden el alta.",
+        "El tratamiento se elige por fase y se revalúa con criterios (mejoría ≥ 20 % a las 4 semanas).",
+        "El litio estabiliza y reduce el suicidio, pero su eliminación renal exige vigilar interacciones y litemia."
+      ],
+      "palabras_clave": [
+        "polaridad",
+        "manía",
+        "hipomanía",
+        "criterio E",
+        "PHQ-9",
+        "PHQ-2",
+        "MDQ",
+        "C-SSRS",
+        "litio",
+        "litemia",
+        "lamotrigina",
+        "plan de seguridad",
+        "SIG E CAPS",
+        "DIGFAST"
+      ],
+      "imagenes_oclusion": [
+        "Tabla bipolar I, bipolar II y ciclotímico con las celdas tapadas",
+        "Algoritmo polaridad → fármaco → riesgo suicida con los rótulos tapados"
+      ],
+      "preguntas_cierre": [
+        "Explica sin mirar por qué se pregunta por manía antes de recetar un ISRS.",
+        "Ante un paciente con depresión y plan suicida en primer nivel, dibuja tu secuencia de acciones.",
+        "¿Qué litemia, función renal y fármacos concomitantes revisas antes y durante el litio?"
+      ],
+      "subtemas": {
+        "Clasificacion": "Definición y clasificación",
+        "Fisiopatologia": "Fisiopatología y etiopatogenia",
+        "DepresionMayor": "Características clínicas de los trastornos del ánimo",
+        "Bipolar": "Características clínicas y tratamiento del bipolar",
+        "Evaluacion": "Evaluación diagnóstica e historia clínica psiquiátrica",
+        "Tratamiento": "Tratamiento farmacológico y no farmacológico",
+        "RiesgoSuicida": "Determinación del riesgo suicida",
+        "ManejoSuicida": "Manejo inicial del riesgo suicida"
+      },
+      "fechas": {
+        "apertura": null,
+        "cierre": null,
+        "examen": null
+      },
+      "referencias": [
+        "American Psychiatric Association. Diagnostic and statistical manual of mental disorders. 5th ed., text revision (DSM-5-TR). Washington (DC): American Psychiatric Association Publishing; 2022.",
+        "McEwen BS. Physiology and neurobiology of stress and adaptation: central role of the brain. Physiol Rev. 2007;87(3):873-904. doi:10.1152/physrev.00041.2006. PMID: 17615391.",
+        "Malhi GS, Mann JJ. Depression. Lancet. 2018;392(10161):2299-312. doi:10.1016/S0140-6736(18)31948-2. PMID: 30396512.",
+        "McIntyre RS, Berk M, Brietzke E, Goldstein BI, López-Jaramillo C, Kessing LV, et al. Bipolar disorders. Lancet. 2020;396(10265):1841-56. doi:10.1016/S0140-6736(20)31544-0. PMID: 33278937.",
+        "Kroenke K, Spitzer RL, Williams JB. The PHQ-9: validity of a brief depression severity measure. J Gen Intern Med. 2001;16(9):606-13. doi:10.1046/j.1525-1497.2001.016009606.x. PMID: 11556941.",
+        "Kroenke K, Spitzer RL, Williams JB. The Patient Health Questionnaire-2: validity of a two-item depression screener. Med Care. 2003;41(11):1284-92. doi:10.1097/01.MLR.0000093487.78664.3C. PMID: 14583691.",
+        "Hirschfeld RM, Williams JB, Spitzer RL, Calabrese JR, Flynn L, Keck PE Jr, et al. Development and validation of a screening instrument for bipolar spectrum disorder: the Mood Disorder Questionnaire. Am J Psychiatry. 2000;157(11):1873-5. doi:10.1176/appi.ajp.157.11.1873. PMID: 11058490.",
+        "Lam RW, Kennedy SH, Adams C, Bahji A, Beaulieu S, Bhat V, et al. Canadian Network for Mood and Anxiety Treatments (CANMAT) 2023 update on clinical guidelines for management of major depressive disorder in adults. Can J Psychiatry. 2024;69(9):641-87. doi:10.1177/07067437241245384. PMID: 38711351.",
+        "Yatham LN, Kennedy SH, Parikh SV, Schaffer A, Bond DJ, Frey BN, et al. CANMAT and ISBD 2018 guidelines for the management of patients with bipolar disorder. Bipolar Disord. 2018;20(2):97-170. doi:10.1111/bdi.12609. PMID: 29536616.",
+        "Sidor MM, Macqueen GM. Antidepressants for the acute treatment of bipolar depression: a systematic review and meta-analysis. J Clin Psychiatry. 2011;72(2):156-67. doi:10.4088/JCP.09r05385gre. PMID: 21034686.",
+        "Shionoiri H. Pharmacokinetic drug interactions with ACE inhibitors. Clin Pharmacokinet. 1993;25(1):20-58. doi:10.2165/00003088-199325010-00003. PMID: 8354016.",
+        "Medsafe. Lithium: interacciones farmacológicas y toxicidad. Prescriber Update [Internet]. Wellington: Medsafe; 2017 sep 7 [citado 2026 nov 26]. Disponible en: https://www.medsafe.govt.nz/Profs/PUArticles/September2017/Lithium.htm",
+        "Turecki G, Brent DA. Suicide and suicidal behaviour. Lancet. 2016;387(10024):1227-39. doi:10.1016/S0140-6736(15)00234-2. PMID: 26385066.",
+        "Dazzi T, Gribble R, Wessely S, Fear NT. Does asking about suicide and related behaviours induce suicidal ideation? What is the evidence? Psychol Med. 2014;44(16):3361-3. doi:10.1017/S0033291714001299. PMID: 24998511.",
+        "Posner K, Brown GK, Stanley B, Brent DA, Yershova KV, Oquendo MA, et al. The Columbia-Suicide Severity Rating Scale: initial validity and internal consistency findings from three multisite studies with adolescents and adults. Am J Psychiatry. 2011;168(12):1266-77. doi:10.1176/appi.ajp.2011.10111704. PMID: 22193671.",
+        "Fazel S, Runeson B. Suicide. N Engl J Med. 2020;382(3):266-74. doi:10.1056/NEJMra1902944. PMID: 31940700.",
+        "Stanley B, Brown GK, Brenner LA, Galfalvy HC, Currier GW, Knox KL, et al. Comparison of the Safety Planning Intervention with follow-up vs usual care of suicidal patients treated in the emergency department. JAMA Psychiatry. 2018;75(9):894-900. doi:10.1001/jamapsychiatry.2018.1776. PMID: 29998307.",
+        "Cipriani A, Hawton K, Stockton S, Geddes JR. Lithium in the prevention of suicide in mood disorders: updated systematic review and meta-analysis. BMJ. 2013;346:f3646. doi:10.1136/bmj.f3646. PMID: 23814104."
+      ]
     }
-   ]
   },
-  "guia": {
-   "principios": [
-    "La polaridad decide el capítulo: la depresión unipolar y la bipolar se ven igual en una consulta y se separan por la historia de manía o hipomanía.",
-    "Se pregunta por manía antes de recetar un antidepresivo: en el bipolar manda el estabilizador o un fármaco con perfil bipolar.",
-    "El riesgo suicida se pregunta de forma directa en todo paciente con síntomas del ánimo; las escalas orientan pero no predicen ni deciden el alta.",
-    "El tratamiento se elige por fase y se revalúa con criterios (mejoría ≥ 20 % a las 4 semanas).",
-    "El litio estabiliza y reduce el suicidio, pero su eliminación renal exige vigilar interacciones y litemia."
-   ],
-   "palabras_clave": [
-    "polaridad",
-    "manía",
-    "hipomanía",
-    "criterio E",
-    "PHQ-9",
-    "PHQ-2",
-    "MDQ",
-    "C-SSRS",
-    "litio",
-    "litemia",
-    "lamotrigina",
-    "plan de seguridad",
-    "SIG E CAPS",
-    "DIGFAST"
-   ],
-   "imagenes_oclusion": [
-    "Tabla bipolar I, bipolar II y ciclotímico con las celdas tapadas",
-    "Algoritmo polaridad → fármaco → riesgo suicida con los rótulos tapados"
-   ],
-   "preguntas_cierre": [
-    "Explica sin mirar por qué se pregunta por manía antes de recetar un ISRS.",
-    "Ante un paciente con depresión y plan suicida en primer nivel, dibuja tu secuencia de acciones.",
-    "¿Qué litemia, función renal y fármacos concomitantes revisas antes y durante el litio?"
-   ],
-   "subtemas": {
-    "Clasificacion": "Definición y clasificación",
-    "Fisiopatologia": "Fisiopatología y etiopatogenia",
-    "DepresionMayor": "Características clínicas de los trastornos del ánimo",
-    "Bipolar": "Características clínicas y tratamiento del bipolar",
-    "Evaluacion": "Evaluación diagnóstica e historia clínica psiquiátrica",
-    "Tratamiento": "Tratamiento farmacológico y no farmacológico",
-    "RiesgoSuicida": "Determinación del riesgo suicida",
-    "ManejoSuicida": "Manejo inicial del riesgo suicida"
-   },
-   "fechas": {
-    "apertura": null,
-    "cierre": null,
-    "examen": null
-   },
-   "referencias": [
-    "American Psychiatric Association. Diagnostic and statistical manual of mental disorders. 5th ed., text revision (DSM-5-TR). Washington (DC): American Psychiatric Association Publishing; 2022.",
-    "McEwen BS. Physiology and neurobiology of stress and adaptation: central role of the brain. Physiol Rev. 2007;87(3):873-904. doi:10.1152/physrev.00041.2006. PMID: 17615391.",
-    "Malhi GS, Mann JJ. Depression. Lancet. 2018;392(10161):2299-312. doi:10.1016/S0140-6736(18)31948-2. PMID: 30396512.",
-    "McIntyre RS, Berk M, Brietzke E, Goldstein BI, López-Jaramillo C, Kessing LV, et al. Bipolar disorders. Lancet. 2020;396(10265):1841-56. doi:10.1016/S0140-6736(20)31544-0. PMID: 33278937.",
-    "Kroenke K, Spitzer RL, Williams JB. The PHQ-9: validity of a brief depression severity measure. J Gen Intern Med. 2001;16(9):606-13. doi:10.1046/j.1525-1497.2001.016009606.x. PMID: 11556941.",
-    "Kroenke K, Spitzer RL, Williams JB. The Patient Health Questionnaire-2: validity of a two-item depression screener. Med Care. 2003;41(11):1284-92. doi:10.1097/01.MLR.0000093487.78664.3C. PMID: 14583691.",
-    "Hirschfeld RM, Williams JB, Spitzer RL, Calabrese JR, Flynn L, Keck PE Jr, et al. Development and validation of a screening instrument for bipolar spectrum disorder: the Mood Disorder Questionnaire. Am J Psychiatry. 2000;157(11):1873-5. doi:10.1176/appi.ajp.157.11.1873. PMID: 11058490.",
-    "Lam RW, Kennedy SH, Adams C, Bahji A, Beaulieu S, Bhat V, et al. Canadian Network for Mood and Anxiety Treatments (CANMAT) 2023 update on clinical guidelines for management of major depressive disorder in adults. Can J Psychiatry. 2024;69(9):641-87. doi:10.1177/07067437241245384. PMID: 38711351.",
-    "Yatham LN, Kennedy SH, Parikh SV, Schaffer A, Bond DJ, Frey BN, et al. CANMAT and ISBD 2018 guidelines for the management of patients with bipolar disorder. Bipolar Disord. 2018;20(2):97-170. doi:10.1111/bdi.12609. PMID: 29536616.",
-    "Sidor MM, Macqueen GM. Antidepressants for the acute treatment of bipolar depression: a systematic review and meta-analysis. J Clin Psychiatry. 2011;72(2):156-67. doi:10.4088/JCP.09r05385gre. PMID: 21034686.",
-    "Shionoiri H. Pharmacokinetic drug interactions with ACE inhibitors. Clin Pharmacokinet. 1993;25(1):20-58. doi:10.2165/00003088-199325010-00003. PMID: 8354016.",
-    "Medsafe. Lithium: interacciones farmacológicas y toxicidad. Prescriber Update [Internet]. Wellington: Medsafe; 2017 sep 7 [citado 2026 nov 26]. Disponible en: https://www.medsafe.govt.nz/Profs/PUArticles/September2017/Lithium.htm",
-    "Turecki G, Brent DA. Suicide and suicidal behaviour. Lancet. 2016;387(10024):1227-39. doi:10.1016/S0140-6736(15)00234-2. PMID: 26385066.",
-    "Dazzi T, Gribble R, Wessely S, Fear NT. Does asking about suicide and related behaviours induce suicidal ideation? What is the evidence? Psychol Med. 2014;44(16):3361-3. doi:10.1017/S0033291714001299. PMID: 24998511.",
-    "Posner K, Brown GK, Stanley B, Brent DA, Yershova KV, Oquendo MA, et al. The Columbia-Suicide Severity Rating Scale: initial validity and internal consistency findings from three multisite studies with adolescents and adults. Am J Psychiatry. 2011;168(12):1266-77. doi:10.1176/appi.ajp.2011.10111704. PMID: 22193671.",
-    "Fazel S, Runeson B. Suicide. N Engl J Med. 2020;382(3):266-74. doi:10.1056/NEJMra1902944. PMID: 31940700.",
-    "Stanley B, Brown GK, Brenner LA, Galfalvy HC, Currier GW, Knox KL, et al. Comparison of the Safety Planning Intervention with follow-up vs usual care of suicidal patients treated in the emergency department. JAMA Psychiatry. 2018;75(9):894-900. doi:10.1001/jamapsychiatry.2018.1776. PMID: 29998307.",
-    "Cipriani A, Hawton K, Stockton S, Geddes JR. Lithium in the prevention of suicide in mood disorders: updated systematic review and meta-analysis. BMJ. 2013;346:f3646. doi:10.1136/bmj.f3646. PMID: 23814104."
-   ]
-  }
- },
- "tarjetas": [
-  {
-   "id": "Q2R2-ANI-0001",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Clasificación del ánimo</span>¿Qué dato de la historia decide si una depresión pertenece a los trastornos depresivos o a los bipolares?",
-   "respuesta": "La existencia de <span class=\"al\">manía o hipomanía</span> previa: sin ella es un trastorno depresivo; con ella es bipolar.",
-   "razonamiento": "El episodio depresivo se ve igual en una sola consulta; la polaridad se separa por la historia, no por la exploración. Por eso se pregunta por episodios elevados antes de nombrar la depresión como unipolar.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "APA, DSM-5-TR 2022",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::Clasificacion",
-    "Nivel::Aplicacion",
-    "Fuente::DSM5TR",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0002",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Trastornos bipolares</span>¿Cómo se distinguen bipolar I, bipolar II y ciclotímico?",
-   "respuesta": "El <span class=\"dx\">bipolar I</span> exige al menos una manía; el <span class=\"dx\">bipolar II</span>, hipomanía más depresión mayor sin manía nunca; el ciclotímico, fluctuación crónica que no completa episodios.",
-   "razonamiento": "El bipolar II no es una forma leve: la depresión recurrente pesa más en su morbilidad. Un solo episodio maníaco basta para bipolar I, aunque nunca haya habido depresión.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Trastorno</th><th>Requiere</th><th>Excluye</th></tr></thead><tbody><tr><th>Bipolar I</th><td>≥ 1 manía</td><td>Nada</td></tr><tr><th>Bipolar II</th><td>Hipomanía + depresión mayor</td><td>Manía</td></tr><tr><th>Ciclotímico</th><td>Síntomas subumbral crónicos</td><td>Episodio completo</td></tr></tbody></table>",
-   "fuente": "APA, DSM-5-TR 2022",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::Clasificacion",
-    "Nivel::Aplicacion",
-    "Fuente::DSM5TR",
-    "Clase::Contraste",
-    "Bloom::Analizar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0003",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">Manía e hipomanía · DSM-5-TR</span>La manía exige al menos {{c1::<span class=\"num\">1 semana</span>}} (o cualquier duración si hospitaliza) y la hipomanía al menos {{c2::<span class=\"num\">4 días</span>}} consecutivos.",
-   "extra": "Ambas requieren ánimo elevado o irritable con aumento de energía; la hipomanía no causa deterioro marcado ni psicosis.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "APA, DSM-5-TR 2022",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::Clasificacion",
-    "Nivel::Recuerdo",
-    "Fuente::DSM5TR",
-    "Clase::Irreducible",
-    "Bloom::Recordar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0004",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Caso</span>Mujer de 28 años con depresión mayor actual; hace tres años tuvo 5 días de ánimo expansivo, poco sueño y más actividad, sin hospitalización ni psicosis. ¿Qué diagnóstico corresponde?",
-   "respuesta": "<span class=\"dx\">Trastorno bipolar II</span>: hipomanía previa más episodio depresivo mayor.",
-   "razonamiento": "Los 5 días superan los 4 mínimos de hipomanía y no hubo deterioro marcado, psicosis ni internación, así que no es manía. Si fuera manía, sería bipolar I.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "APA, DSM-5-TR 2022",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::Clasificacion",
-    "Nivel::Aplicacion",
-    "Fuente::DSM5TR",
-    "Clase::Vineta",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0005",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Depresión · estrés</span>¿Qué regiones cerebrales remodela el estrés sostenido y por qué eso explica síntomas depresivos?",
-   "respuesta": "El estrés crónico remodela <span class=\"mec\">hipocampo, amígdala y corteza prefrontal</span>, las regiones que regulan afecto, memoria y respuesta al estrés.",
-   "razonamiento": "El hipocampo fue la primera región, aparte del hipotálamo, reconocida como blanco de los glucocorticoides. El estrés temprano marca la reactividad emocional de por vida, lo que ancla el modelo diátesis-estrés.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "McEwen 2007, Physiol Rev (PMID 17615391)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::Fisiopatologia",
-    "Nivel::Aplicacion",
-    "Fuente::McEwen2007",
-    "Clase::Principio",
-    "Bloom::Comprender"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0006",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Depresión mayor</span>¿Qué dos sistemas biológicos relaciona la revisión de Lancet con la fisiopatología de la depresión mayor?",
-   "respuesta": "El <span class=\"mec\">eje hipotálamo-hipófiso-suprarrenal (cortisol)</span> y el <span class=\"mec\">BDNF con la neuroplasticidad</span>.",
-   "razonamiento": "Ambos se vinculan con la depresión como alteraciones del estrés y de la plasticidad neuronal. Ese es el marco para entender por qué el cuadro es un trastorno de circuitos y no solo de «falta de serotonina».",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Malhi 2018, Lancet (PMID 30396512)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::Fisiopatologia",
-    "Nivel::Aplicacion",
-    "Fuente::Malhi2018",
-    "Clase::Relacional",
-    "Bloom::Analizar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0007",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Trastorno bipolar</span>¿Qué tan heredable es el trastorno bipolar y qué procesos se implican en su patogenia?",
-   "respuesta": "Su heredabilidad ronda <span class=\"num\">70 %</span>; se implican plasticidad neuronal-glial, señalización monoaminérgica, inflamación, metabolismo celular y <span class=\"mec\">función mitocondrial</span>.",
-   "razonamiento": "La patogenia exacta se desconoce. La adversidad en la infancia se asocia con presentaciones más complejas, incluida la suicidalidad.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "McIntyre 2020, Lancet (PMID 33278937)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::Fisiopatologia",
-    "Nivel::Recuerdo",
-    "Fuente::McIntyre2020",
-    "Clase::Irreducible",
-    "Bloom::Recordar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0008",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Bipolar I y bipolar II</span>¿Con qué otro trastorno se asocia genéticamente cada subtipo bipolar?",
-   "respuesta": "El <span class=\"dx\">bipolar I</span> se acerca a la esquizofrenia; el <span class=\"dx\">bipolar II</span>, a la depresión mayor.",
-   "razonamiento": "Eso encaja con la clínica: el bipolar I define su polaridad por la manía (más cercana a lo psicótico) y el bipolar II comparte con la depresión mayor el peso del polo depresivo.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "McIntyre 2020, Lancet (PMID 33278937)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::Fisiopatologia",
-    "Nivel::Aplicacion",
-    "Fuente::McIntyre2020",
-    "Clase::Contraste",
-    "Bloom::Analizar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0009",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Depresión mayor</span>¿Qué debe cumplirse, además de los síntomas, para llamar depresión mayor a un episodio depresivo?",
-   "respuesta": "Deterioro funcional, causa médica o tóxica excluida y <span class=\"al\">nunca manía ni hipomanía</span> (criterio E).",
-   "razonamiento": "El criterio E es el que ancla la polaridad: con una hipomanía o manía previa el diagnóstico pasa al espectro bipolar. Sustancias y afecciones médicas se excluyen aparte (criterio C).",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "APA, DSM-5-TR 2022",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::DepresionMayor",
-    "Nivel::Aplicacion",
-    "Fuente::DSM5TR",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0010",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">Depresión mayor · DSM-5-TR</span>Exige {{c1::<span class=\"num\">5 o más de 9</span>}} síntomas durante las mismas {{c2::<span class=\"num\">2 semanas</span>}}, y uno es ánimo deprimido o anhedonia.",
-   "extra": "Los síntomas deben representar un cambio respecto al funcionamiento previo.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "APA, DSM-5-TR 2022",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::DepresionMayor",
-    "Nivel::Recuerdo",
-    "Fuente::DSM5TR",
-    "Clase::Irreducible",
-    "Bloom::Recordar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0011",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Síntomas de depresión mayor</span>¿Qué mnemotecnia ordena los síntomas de depresión mayor y qué explora cada letra?",
-   "respuesta": "Los síntomas del criterio A: ánimo deprimido más los ocho que recoge <span class=\"dx\">SIG E CAPS</span>.",
-   "razonamiento": "Ánimo deprimido o anhedonia es obligatorio; los demás completan los 5 de 9. La mnemotecnia sirve de lista de control en la entrevista.",
-   "mnemotecnia": "<span class=\"mne\">SIG E CAPS</span> (inglés)<ul><li><b>S</b> Sleep: insomnio o hipersomnia</li><li><b>I</b> Interest: pérdida de interés o placer</li><li><b>G</b> Guilt: culpa o inutilidad</li><li><b>E</b> Energy: fatiga</li><li><b>C</b> Concentration: dificultad para concentrarse</li><li><b>A</b> Appetite: cambio de apetito o peso</li><li><b>P</b> Psychomotor: agitación o enlentecimiento</li><li><b>S</b> Suicidality: ideas de muerte</li></ul>",
-   "esquema": "",
-   "fuente": "APA, DSM-5-TR 2022",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::DepresionMayor",
-    "Nivel::Recuerdo",
-    "Fuente::DSM5TR",
-    "Clase::Irreducible",
-    "Bloom::Recordar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0012",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Depresión mayor</span>¿Cómo se separa un duelo normal de un episodio depresivo mayor?",
-   "respuesta": "En el <span class=\"dx\">duelo</span> predominan la añoranza y las oleadas ligadas al fallecido con autoestima conservada; en la depresión hay ánimo bajo persistente, inutilidad y anhedonia generalizada.",
-   "razonamiento": "El duelo no excluye una depresión mayor concurrente: el juicio clínico decide cuando coexisten.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "APA, DSM-5-TR 2022",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::DepresionMayor",
-    "Nivel::Aplicacion",
-    "Fuente::DSM5TR",
-    "Clase::Contraste",
-    "Bloom::Analizar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0013",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">PHQ-9 · gravedad</span>Los puntajes de {{c1::<span class=\"num\">5</span>}}, {{c2::<span class=\"num\">10</span>}}, {{c3::<span class=\"num\">15</span>}} y {{c4::<span class=\"num\">20</span>}} representan depresión leve, moderada, moderadamente grave y grave.",
-   "extra": "El PHQ-9 gradúa la gravedad y vigila la respuesta; no sustituye a la entrevista con criterios.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Kroenke 2001, J Gen Intern Med (PMID 11556941)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::DepresionMayor",
-    "Nivel::Recuerdo",
-    "Fuente::Kroenke2001",
-    "Clase::Escala",
-    "Bloom::Recordar",
-    "Escala::PHQ9"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0014",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Manía</span>¿Qué mnemotecnia ordena los síntomas acompañantes de la manía?",
-   "respuesta": "Los síntomas acompañantes de la manía que recoge <span class=\"dx\">DIGFAST</span>.",
-   "razonamiento": "En la manía clásica se necesitan al menos 3 de estos síntomas junto con ánimo elevado y aumento de energía (4 si el ánimo es solo irritable).",
-   "mnemotecnia": "<span class=\"mne\">DIGFAST</span> (inglés)<ul><li><b>D</b> Distractibility: distraibilidad</li><li><b>I</b> Indiscretion: conductas de riesgo</li><li><b>G</b> Grandiosity: grandiosidad</li><li><b>F</b> Flight of ideas: fuga de ideas</li><li><b>A</b> Activity increase: más actividad dirigida</li><li><b>S</b> Sleep decrease: menor necesidad de dormir</li><li><b>T</b> Talkativeness: verborrea</li></ul>",
-   "esquema": "",
-   "fuente": "APA, DSM-5-TR 2022",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::Bipolar",
-    "Nivel::Recuerdo",
-    "Fuente::DSM5TR",
-    "Clase::Irreducible",
-    "Bloom::Recordar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0015",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">Ciclación rápida · DSM-5-TR</span>El especificador de ciclación rápida requiere {{c1::<span class=\"num\">4 o más</span>}} episodios en {{c2::<span class=\"num\">12 meses</span>}}.",
-   "extra": "Peor respuesta al litio; revisa antidepresivos, tiroides y consumo.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "APA, DSM-5-TR 2022",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::Bipolar",
-    "Nivel::Recuerdo",
-    "Fuente::DSM5TR",
-    "Clase::Irreducible",
-    "Bloom::Recordar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0016",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Litio</span>¿Por qué el litio se considera el fármaco de referencia del trastorno bipolar?",
-   "respuesta": "Porque tiene efecto <span class=\"fx\">antimaníaco</span>, <span class=\"fx\">antidepresivo</span> y <span class=\"al\">antisuicida</span> en una sola molécula.",
-   "razonamiento": "Eso cubre las tres fases clínicas relevantes. Los antipsicóticos tratan bien la manía pero pocos han probado eficacia en la depresión bipolar.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "McIntyre 2020, Lancet (PMID 33278937)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::Bipolar",
-    "Nivel::Aplicacion",
-    "Fuente::McIntyre2020",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0017",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Litio</span>Paciente con litio inicia un diurético: ¿qué familia sube más la litemia y por qué el litio es sensible a estos cambios?",
-   "respuesta": "Las <span class=\"fx\">tiazidas</span> son las más intensas; el litio se elimina casi solo por el riñón, sin metabolizarse.",
-   "razonamiento": "Los AINE y los IECA también se asocian con toxicidad por litio; los diuréticos de asa interactúan mucho menos. Con cualquiera se vigila la litemia y los signos de toxicidad.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Medsafe 2017, Prescriber Update (interacciones del litio); Shionoiri 1993, Clin Pharmacokinet (PMID 8354016)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::Bipolar",
-    "Nivel::Aplicacion",
-    "Fuente::Medsafe2017",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0018",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Estabilizadores</span>¿Para qué fase sirve cada uno: lamotrigina frente a valproato o carbamazepina?",
-   "respuesta": "La <span class=\"fx\">lamotrigina</span> trata y previene la depresión bipolar; el <span class=\"fx\">valproato</span> y la <span class=\"fx\">carbamazepina</span> tratan la manía aguda.",
-   "razonamiento": "Elegir por fase: la manía aguda pide un antimaníaco; la depresión bipolar pide un fármaco con perfil depresivo, no un antidepresivo en monoterapia.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "McIntyre 2020, Lancet (PMID 33278937)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::Bipolar",
-    "Nivel::Aplicacion",
-    "Fuente::McIntyre2020",
-    "Clase::Contraste",
-    "Bloom::Analizar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0019",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">PHQ-9</span>¿Para qué sirve el PHQ-9 en una consulta de depresión y qué no debe hacerse con él?",
-   "respuesta": "Para <span class=\"num\">graduar la gravedad</span> y seguir la respuesta; no sustituye la entrevista con criterios ni la pregunta por manía.",
-   "razonamiento": "Fue validado como medida breve de gravedad frente a una entrevista estructurada. Un puntaje alto orienta pero no distingue unipolar de bipolar.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Kroenke 2001, J Gen Intern Med (PMID 11556941)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::Evaluacion",
-    "Nivel::Aplicacion",
-    "Fuente::Kroenke2001",
-    "Clase::Escala",
-    "Bloom::Aplicar",
-    "Escala::PHQ9"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0020",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Tamizaje de depresión</span>¿Qué dos síntomas explora el PHQ-2 y con qué puntaje se considera positivo?",
-   "respuesta": "Ánimo deprimido y anhedonia en las últimas 2 semanas; positivo con <span class=\"num\">≥ 3</span>.",
-   "razonamiento": "Cada ítem puntúa de 0 a 3. Un tamizaje positivo obliga a continuar con PHQ-9 y entrevista diagnóstica.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Kroenke 2003, Med Care (PMID 14583691)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::Evaluacion",
-    "Nivel::Recuerdo",
-    "Fuente::Kroenke2003",
-    "Clase::Escala",
-    "Bloom::Recordar",
-    "Escala::PHQ2"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0021",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Cuestionario MDQ</span>¿Qué detecta el Mood Disorder Questionnaire y cómo se interpreta un resultado positivo?",
-   "respuesta": "Detecta <span class=\"dx\">espectro bipolar</span> de forma breve; un positivo exige confirmar con entrevista, no diagnostica.",
-   "razonamiento": "Es un autoinforme de tamizaje validado en consulta psiquiátrica ambulatoria. Sirve para sospechar bipolaridad en quien consulta por depresión.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Hirschfeld 2000, Am J Psychiatry (PMID 11058490)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::Evaluacion",
-    "Nivel::Aplicacion",
-    "Fuente::Hirschfeld2000",
-    "Clase::Escala",
-    "Bloom::Comprender",
-    "Escala::MDQ"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0022",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Diagnóstico diferencial</span>Antes de diagnosticar depresión mayor, ¿qué hay que descartar además de la manía previa?",
-   "respuesta": "Que el episodio se deba a una <span class=\"al\">sustancia</span> o a otra <span class=\"al\">afección médica</span>, y a un trastorno psicótico.",
-   "razonamiento": "Son los criterios C y D del episodio depresivo mayor. Un cuadro idéntico inducido por fármacos o sustancias remite al retirar el agente.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "APA, DSM-5-TR 2022",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::Evaluacion",
-    "Nivel::Aplicacion",
-    "Fuente::DSM5TR",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0023",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Caso</span>Mujer de 24 años con depresión desde hace 3 semanas, primer episodio a los 17 años y madre con trastorno bipolar, pide un antidepresivo. ¿Qué haces primero?",
-   "respuesta": "Preguntar de forma dirigida por <span class=\"al\">manía o hipomanía previas</span> antes de recetar.",
-   "razonamiento": "El inicio temprano, las recurrencias y el familiar bipolar aumentan la sospecha de espectro bipolar. El antecedente familiar y la historia de episodios elevados orientan la elección.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "APA, DSM-5-TR 2022; McIntyre 2020, Lancet (PMID 33278937)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::Evaluacion",
-    "Nivel::Aplicacion",
-    "Fuente::DSM5TR",
-    "Clase::Vineta",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0024",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Antidepresivos</span>A las 4 semanas de un antidepresivo no hay mejoría de al menos 20 %: ¿qué haces?",
-   "respuesta": "Cambiar de antidepresivo o <span class=\"num\">subir la dosis</span>.",
-   "razonamiento": "Sin esa mejoría temprana la probabilidad de respuesta o remisión a las 8 a 12 semanas es baja. Antes se revisa adherencia, dosis y si el diagnóstico es bipolar.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Lam 2024, Can J Psychiatry (PMID 38711351)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::Tratamiento",
-    "Nivel::Aplicacion",
-    "Fuente::Lam2024",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0025",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Depresión mayor</span>¿Qué psicoterapias son de primera línea en la depresión mayor del adulto?",
-   "respuesta": "La <span class=\"dx\">terapia cognitivo-conductual</span>, la <span class=\"dx\">terapia interpersonal</span> y la <span class=\"dx\">activación conductual</span>.",
-   "razonamiento": "Se ofrecen solas o con fármaco según la gravedad y la preferencia del paciente, dentro de un enfoque de decisión compartida.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Lam 2024, Can J Psychiatry (PMID 38711351)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::Tratamiento",
-    "Nivel::Aplicacion",
-    "Fuente::Lam2024",
-    "Clase::Principio",
-    "Bloom::Comprender"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0026",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Antidepresivo en bipolar</span>¿Por qué no se usa un antidepresivo en monoterapia en la depresión bipolar?",
-   "respuesta": "Porque su eficacia no está demostrada y se asocia con <span class=\"al\">desestabilización del ánimo</span>, sobre todo en el mantenimiento.",
-   "razonamiento": "Un metanálisis halló que no superaba a placebo en la depresión bipolar aguda y que el riesgo de viraje solo aumentaba con criterios sensibles de definición. La guía prefiere un estabilizador o antipsicótico con perfil antidepresivo.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "McIntyre 2020, Lancet (PMID 33278937); Sidor 2011, J Clin Psychiatry (PMID 21034686)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::Tratamiento",
-    "Nivel::Aplicacion",
-    "Fuente::McIntyre2020",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0027",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Depresión bipolar</span>¿Qué opciones de primera línea tiene la depresión bipolar I según CANMAT/ISBD?",
-   "respuesta": "La <span class=\"fx\">quetiapina</span>, la <span class=\"fx\">lurasidona</span> con litio o valproato, el <span class=\"fx\">litio</span> y la <span class=\"fx\">lamotrigina</span>.",
-   "razonamiento": "Ninguna es un antidepresivo clásico en monoterapia. Se elige según tolerancia, riesgo metabólico y la fase de mantenimiento prevista.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Yatham 2018, Bipolar Disord (PMID 29536616)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::Tratamiento",
-    "Nivel::Aplicacion",
-    "Fuente::Yatham2018",
-    "Clase::Relacional",
-    "Bloom::Evaluar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0028",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Riesgo suicida</span>¿Puede un algoritmo predecir quién se suicidará y qué se hace entonces con los factores de riesgo?",
-   "respuesta": "No hay un algoritmo eficaz de predicción; los factores clínicos sirven para <span class=\"al\">detectar alto riesgo</span> y elegir tratamiento.",
-   "razonamiento": "El suicidio es heterogéneo según sexo, edad y contexto. Tratar el trastorno mental de base previene con frecuencia la conducta suicida.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Turecki 2016, Lancet (PMID 26385066)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::RiesgoSuicida",
-    "Nivel::Aplicacion",
-    "Fuente::Turecki2016",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0029",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Entrevista del riesgo</span>¿Preguntar directamente por suicidio aumenta la ideación del paciente?",
-   "respuesta": "No: la evidencia revisada no halló aumento significativo de la ideación; incluso puede <span class=\"dx\">reducirla</span>.",
-   "razonamiento": "Por eso se pregunta de forma directa en todo paciente con síntomas del ánimo, sin temor a inducirla.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Dazzi 2014, Psychol Med (PMID 24998511)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::RiesgoSuicida",
-    "Nivel::Aplicacion",
-    "Fuente::Dazzi2014",
-    "Clase::Aplicacion",
-    "Bloom::Comprender"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0030",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">C-SSRS</span>¿Qué niveles de ideación de la C-SSRS predicen mejor un intento posterior?",
-   "respuesta": "Los dos más altos: <span class=\"al\">intención</span> y <span class=\"al\">intención con plan</span>.",
-   "razonamiento": "En adolescentes con intento previo, la ideación más grave de por vida predijo intentos durante el estudio. La escala cuantifica; la decisión sigue siendo clínica.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Posner 2011, Am J Psychiatry (PMID 22193671)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::RiesgoSuicida",
-    "Nivel::Aplicacion",
-    "Fuente::Posner2011",
-    "Clase::Escala",
-    "Bloom::Analizar",
-    "Escala::CSSRS"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0031",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Epidemiología del suicidio</span>¿Cuántas muertes por suicidio hay al año en el mundo y en qué grupo de edad es la primera causa?",
-   "respuesta": "Unas <span class=\"num\">800 000</span> al año (1,5 % de todas las muertes); es la primera causa de muerte entre los <span class=\"num\">15 y 24 años</span>.",
-   "razonamiento": "Es la décima causa de muerte en Norteamérica. Estas cifras sostienen que se pregunte por suicidio en cada consulta.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Fazel 2020, N Engl J Med (PMID 31940700)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::RiesgoSuicida",
-    "Nivel::Recuerdo",
-    "Fuente::Fazel2020",
-    "Clase::Irreducible",
-    "Bloom::Recordar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0032",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Manejo del riesgo suicida</span>Paciente con crisis suicida que no requiere internación: ¿qué intervención breve reduce la conducta suicida posterior?",
-   "respuesta": "El <span class=\"dx\">plan de seguridad</span> con seguimiento telefónico, que se asoció con un 45 % menos de conducta suicida a 6 meses.",
-   "razonamiento": "Además duplicó la probabilidad de acudir a consulta ambulatoria. El estudio fue de cohortes en veteranos, no un ensayo aleatorizado.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Stanley 2018, JAMA Psychiatry (PMID 29998307)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::ManejoSuicida",
-    "Nivel::Aplicacion",
-    "Fuente::Stanley2018",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0033",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Tras un intento</span>¿Qué medida de seguimiento previene nuevas conductas suicidas tras un intento?",
-   "respuesta": "El <span class=\"dx\">seguimiento regular</span> por los servicios de salud mental.",
-   "razonamiento": "El riesgo se concentra después del intento o de la crisis, así que la cita de control se programa antes de salir del servicio.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Turecki 2016, Lancet (PMID 26385066)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::ManejoSuicida",
-    "Nivel::Aplicacion",
-    "Fuente::Turecki2016",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-ANI-0034",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Litio y suicidio</span>¿Qué efecto tiene el litio sobre el suicidio en los trastornos del ánimo y sobre las autolesiones?",
-   "respuesta": "Reduce los <span class=\"dx\">suicidios</span> frente a placebo, pero sin beneficio claro en la autolesión deliberada.",
-   "razonamiento": "Se atribuye a la menor recaída del trastorno, con posible efecto sobre la agresividad e impulsividad. Se indica por el trastorno de base, no solo por el riesgo.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Cipriani 2013, BMJ (PMID 23814104)",
-   "tags": [
-    "Quirurgica2::TrastornosAnimo::ManejoSuicida",
-    "Nivel::Aplicacion",
-    "Fuente::Cipriani2013",
-    "Clase::Relacional",
-    "Bloom::Evaluar"
-   ],
-   "pendientes": []
-  }
- ]
+  "tarjetas": [
+    {
+      "id": "Q2R2-ANI-0001",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Clasificación del ánimo</span>¿Qué dato de la historia decide si una depresión pertenece a los trastornos depresivos o a los bipolares?",
+      "respuesta": "La existencia de <span class=\"al\">manía o hipomanía</span> previa: sin ella es un trastorno depresivo; con ella es bipolar.",
+      "razonamiento": "El episodio depresivo se ve igual en una sola consulta; la polaridad se separa por la historia, no por la exploración. Por eso se pregunta por episodios elevados antes de nombrar la depresión como unipolar.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "APA, DSM-5-TR 2022",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::Clasificacion",
+        "Nivel::Aplicacion",
+        "Fuente::DSM5TR",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0002",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Trastornos bipolares</span>¿Cómo se distinguen bipolar I, bipolar II y ciclotímico?",
+      "respuesta": "El <span class=\"dx\">bipolar I</span> exige al menos una manía; el <span class=\"dx\">bipolar II</span>, hipomanía más depresión mayor sin manía nunca; el ciclotímico, fluctuación crónica que no completa episodios.",
+      "razonamiento": "El bipolar II no es una forma leve: la depresión recurrente pesa más en su morbilidad. Un solo episodio maníaco basta para bipolar I, aunque nunca haya habido depresión.",
+      "mnemotecnia": "",
+      "esquema": "<table><thead><tr><th>Trastorno</th><th>Requiere</th><th>Excluye</th></tr></thead><tbody><tr><th>Bipolar I</th><td>≥ 1 manía</td><td>Nada</td></tr><tr><th>Bipolar II</th><td>Hipomanía + depresión mayor</td><td>Manía</td></tr><tr><th>Ciclotímico</th><td>Síntomas subumbral crónicos</td><td>Episodio completo</td></tr></tbody></table>",
+      "fuente": "APA, DSM-5-TR 2022",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::Clasificacion",
+        "Nivel::Aplicacion",
+        "Fuente::DSM5TR",
+        "Clase::Contraste",
+        "Bloom::Analizar"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0003",
+      "tipo": "Cloze",
+      "text": "<span class=\"tema\">Manía e hipomanía · DSM-5-TR</span>La manía exige al menos {{c1::<span class=\"num\">1 semana</span>}} (o cualquier duración si requiere hospitalización) y la hipomanía al menos {{c2::<span class=\"num\">4 días</span>}} consecutivos.",
+      "extra": "Ambas requieren ánimo elevado o irritable con aumento de energía o de actividad.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "APA, DSM-5-TR 2022; Grunze 2021, Front Psychiatry (PMID 33679488); Machado-Vieira 2017, Am J Psychiatry (PMID 27523498)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::Clasificacion",
+        "Nivel::Recuerdo",
+        "Fuente::DSM5TR",
+        "Clase::Irreducible",
+        "Bloom::Recordar"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0004",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Caso</span>Mujer de 28 años con depresión mayor actual; hace tres años tuvo 5 días de ánimo expansivo, poco sueño y más actividad, sin hospitalización ni psicosis. ¿Qué diagnóstico corresponde?",
+      "respuesta": "<span class=\"dx\">Trastorno bipolar II</span>: hipomanía previa más episodio depresivo mayor.",
+      "razonamiento": "Los 5 días superan los 4 mínimos de la hipomanía y no llegan a 1 semana; sin hospitalización no cumple manía. Si hubiera habido una manía, sería bipolar I.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "APA, DSM-5-TR 2022; Grunze 2021, Front Psychiatry (PMID 33679488)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::Clasificacion",
+        "Nivel::Aplicacion",
+        "Fuente::DSM5TR",
+        "Clase::Vineta",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0005",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Depresión · estrés</span>¿Qué regiones cerebrales remodela el estrés sostenido y por qué eso explica síntomas depresivos?",
+      "respuesta": "El estrés crónico remodela <span class=\"mec\">hipocampo, amígdala y corteza prefrontal</span>, las regiones que regulan afecto, memoria y respuesta al estrés.",
+      "razonamiento": "El hipocampo fue la primera región, aparte del hipotálamo, reconocida como blanco de los glucocorticoides. El estrés temprano marca la reactividad emocional de por vida, lo que ancla el modelo diátesis-estrés.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "McEwen 2007, Physiol Rev (PMID 17615391)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::Fisiopatologia",
+        "Nivel::Aplicacion",
+        "Fuente::McEwen2007",
+        "Clase::Principio",
+        "Bloom::Comprender"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0006",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Depresión mayor</span>¿Qué dos sistemas biológicos relaciona la revisión de Lancet con la fisiopatología de la depresión mayor?",
+      "respuesta": "El <span class=\"mec\">eje hipotálamo-hipófiso-suprarrenal (cortisol)</span> y el <span class=\"mec\">BDNF con la neuroplasticidad</span>.",
+      "razonamiento": "Ambos se vinculan con la depresión como alteraciones del estrés y de la plasticidad neuronal. Ese es el marco para entender por qué el cuadro es un trastorno de circuitos y no solo de «falta de serotonina».",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Malhi 2018, Lancet (PMID 30396512)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::Fisiopatologia",
+        "Nivel::Aplicacion",
+        "Fuente::Malhi2018",
+        "Clase::Relacional",
+        "Bloom::Analizar"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0007",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Trastorno bipolar</span>¿Qué tan heredable es el trastorno bipolar y qué procesos se implican en su patogenia?",
+      "respuesta": "Su heredabilidad ronda <span class=\"num\">70 %</span>; se implican plasticidad neuronal-glial, señalización monoaminérgica, inflamación, metabolismo celular y <span class=\"mec\">función mitocondrial</span>.",
+      "razonamiento": "La patogenia exacta se desconoce. La adversidad en la infancia se asocia con presentaciones más complejas, incluida la suicidalidad.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "McIntyre 2020, Lancet (PMID 33278937)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::Fisiopatologia",
+        "Nivel::Recuerdo",
+        "Fuente::McIntyre2020",
+        "Clase::Irreducible",
+        "Bloom::Recordar"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0008",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Bipolar I y bipolar II</span>¿Con qué otro trastorno se asocia genéticamente cada subtipo bipolar?",
+      "respuesta": "El <span class=\"dx\">bipolar I</span> se acerca a la esquizofrenia; el <span class=\"dx\">bipolar II</span>, a la depresión mayor.",
+      "razonamiento": "Eso encaja con la clínica: el bipolar I define su polaridad por la manía (más cercana a lo psicótico) y el bipolar II comparte con la depresión mayor el peso del polo depresivo.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "McIntyre 2020, Lancet (PMID 33278937)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::Fisiopatologia",
+        "Nivel::Aplicacion",
+        "Fuente::McIntyre2020",
+        "Clase::Contraste",
+        "Bloom::Analizar"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0009",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Depresión mayor</span>¿Qué debe cumplirse, además de los síntomas, para llamar depresión mayor a un episodio depresivo?",
+      "respuesta": "Deterioro funcional, causa médica o tóxica excluida y <span class=\"al\">nunca manía ni hipomanía</span> (criterio E).",
+      "razonamiento": "El criterio E es el que ancla la polaridad: con una hipomanía o manía previa el diagnóstico pasa al espectro bipolar. Sustancias y afecciones médicas se excluyen aparte (criterio C).",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "APA, DSM-5-TR 2022; Scarff 2019, Innov Clin Neurosci (PMID 31440396); Consortium for Spinal Cord Medicine 2021, J Spinal Cord Med (PMID 33630722)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::DepresionMayor",
+        "Nivel::Aplicacion",
+        "Fuente::DSM5TR",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0010",
+      "tipo": "Cloze",
+      "text": "<span class=\"tema\">Depresión mayor · DSM-5-TR</span>Exige {{c1::<span class=\"num\">5 o más de 9</span>}} síntomas durante las mismas {{c2::<span class=\"num\">2 semanas</span>}}, y uno es ánimo deprimido o anhedonia.",
+      "extra": "Los síntomas deben representar un cambio respecto al funcionamiento previo.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "APA, DSM-5-TR 2022; Scarff 2019, Innov Clin Neurosci (PMID 31440396)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::DepresionMayor",
+        "Nivel::Recuerdo",
+        "Fuente::DSM5TR",
+        "Clase::Irreducible",
+        "Bloom::Recordar"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0011",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Síntomas de depresión mayor</span>¿Qué mnemotecnia ordena los síntomas de depresión mayor y qué explora cada letra?",
+      "respuesta": "Los síntomas del criterio A: ánimo deprimido más los ocho que recoge <span class=\"dx\">SIG E CAPS</span>.",
+      "razonamiento": "Ánimo deprimido o anhedonia es obligatorio; los demás completan los 5 de 9. La mnemotecnia sirve de lista de control en la entrevista.",
+      "mnemotecnia": "<span class=\"mne\">SIG E CAPS</span> (inglés)<ul><li><b>S</b> Sleep: insomnio o hipersomnia</li><li><b>I</b> Interest: pérdida de interés o placer</li><li><b>G</b> Guilt: culpa o inutilidad</li><li><b>E</b> Energy: fatiga</li><li><b>C</b> Concentration: dificultad para concentrarse</li><li><b>A</b> Appetite: cambio de apetito o peso</li><li><b>P</b> Psychomotor: agitación o enlentecimiento</li><li><b>S</b> Suicidality: ideas de muerte</li></ul>",
+      "esquema": "",
+      "fuente": "APA, DSM-5-TR 2022",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::DepresionMayor",
+        "Nivel::Recuerdo",
+        "Fuente::DSM5TR",
+        "Clase::Irreducible",
+        "Bloom::Recordar"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0012",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Depresión mayor</span>¿Cómo se separa un duelo normal de un episodio depresivo mayor?",
+      "respuesta": "En el <span class=\"dx\">duelo</span> predominan la añoranza y las oleadas ligadas al fallecido con autoestima conservada; en la depresión hay ánimo bajo persistente, inutilidad y anhedonia generalizada.",
+      "razonamiento": "El duelo no excluye una depresión mayor concurrente: el juicio clínico decide cuando coexisten.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "APA, DSM-5-TR 2022",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::DepresionMayor",
+        "Nivel::Aplicacion",
+        "Fuente::DSM5TR",
+        "Clase::Contraste",
+        "Bloom::Analizar"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0013",
+      "tipo": "Cloze",
+      "text": "<span class=\"tema\">PHQ-9 · gravedad</span>Los puntajes de {{c1::<span class=\"num\">5</span>}}, {{c2::<span class=\"num\">10</span>}}, {{c3::<span class=\"num\">15</span>}} y {{c4::<span class=\"num\">20</span>}} representan depresión leve, moderada, moderadamente grave y grave.",
+      "extra": "El PHQ-9 gradúa la gravedad y vigila la respuesta; no sustituye a la entrevista con criterios.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Kroenke 2001, J Gen Intern Med (PMID 11556941)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::DepresionMayor",
+        "Nivel::Recuerdo",
+        "Fuente::Kroenke2001",
+        "Clase::Escala",
+        "Bloom::Recordar",
+        "Escala::PHQ9"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0014",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Manía</span>¿Qué mnemotecnia ordena los síntomas acompañantes de la manía?",
+      "respuesta": "Los síntomas acompañantes de la manía que recoge <span class=\"dx\">DIGFAST</span>.",
+      "razonamiento": "Acompañan al ánimo elevado o irritable con aumento de energía o de actividad.",
+      "mnemotecnia": "<span class=\"mne\">DIGFAST</span> (inglés)<ul><li><b>D</b> Distractibility: distraibilidad</li><li><b>I</b> Indiscretion: conductas de riesgo</li><li><b>G</b> Grandiosity: grandiosidad</li><li><b>F</b> Flight of ideas: fuga de ideas</li><li><b>A</b> Activity increase: más actividad dirigida</li><li><b>S</b> Sleep decrease: menor necesidad de dormir</li><li><b>T</b> Talkativeness: verborrea</li></ul>",
+      "esquema": "",
+      "fuente": "APA, DSM-5-TR 2022",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::Bipolar",
+        "Nivel::Recuerdo",
+        "Fuente::DSM5TR",
+        "Clase::Irreducible",
+        "Bloom::Recordar"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0015",
+      "tipo": "Cloze",
+      "text": "<span class=\"tema\">Ciclación rápida · DSM-5-TR</span>El especificador de ciclación rápida requiere {{c1::<span class=\"num\">4 o más</span>}} episodios en {{c2::<span class=\"num\">12 meses</span>}}.",
+      "extra": "Los episodios se separan por remisión de al menos 2 meses o por cambio de polaridad.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "APA, DSM-5-TR 2022; Miola 2023, Int J Bipolar Disord (PMID 37271762)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::Bipolar",
+        "Nivel::Recuerdo",
+        "Fuente::DSM5TR",
+        "Clase::Irreducible",
+        "Bloom::Recordar"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0016",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Litio</span>¿Por qué el litio se considera el fármaco de referencia del trastorno bipolar?",
+      "respuesta": "Porque tiene efecto <span class=\"fx\">antimaníaco</span>, <span class=\"fx\">antidepresivo</span> y <span class=\"al\">antisuicida</span> en una sola molécula.",
+      "razonamiento": "Eso cubre las tres fases clínicas relevantes. Los antipsicóticos tratan bien la manía pero pocos han probado eficacia en la depresión bipolar.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "McIntyre 2020, Lancet (PMID 33278937)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::Bipolar",
+        "Nivel::Aplicacion",
+        "Fuente::McIntyre2020",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0017",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Litio</span>Paciente con litio inicia un diurético, un AINE o un IECA: ¿qué se vigila?",
+      "respuesta": "La <span class=\"fx\">litemia</span> y los signos de toxicidad, porque tiazidas, AINE, IECA y ARA-II pueden elevarla.",
+      "razonamiento": "El litio tiene un índice terapéutico estrecho: cambios pequeños de concentración tienen consecuencias clínicas. Medsafe lista también espironolactona y furosemida y rotula varias de estas interacciones como de relevancia incierta, basada en casos.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Medsafe 2017, Prescriber Update, sept (medsafe.govt.nz/profs/PUArticles/September2017/Lithium.htm); Finley 2016, Clin Pharmacokinet (PMID 26936045)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::Bipolar",
+        "Nivel::Aplicacion",
+        "Fuente::Medsafe2017",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0018",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Estabilizadores</span>¿Para qué fase sirve cada uno: lamotrigina frente a valproato o carbamazepina?",
+      "respuesta": "La <span class=\"fx\">lamotrigina</span> trata y previene la depresión bipolar; el <span class=\"fx\">valproato</span> y la <span class=\"fx\">carbamazepina</span> tratan la manía aguda.",
+      "razonamiento": "Elegir por fase: la manía aguda pide un antimaníaco; la depresión bipolar pide un fármaco con perfil depresivo, no un antidepresivo en monoterapia.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "McIntyre 2020, Lancet (PMID 33278937)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::Bipolar",
+        "Nivel::Aplicacion",
+        "Fuente::McIntyre2020",
+        "Clase::Contraste",
+        "Bloom::Analizar"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0019",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">PHQ-9</span>¿Para qué sirve el PHQ-9 en una consulta de depresión y qué no debe hacerse con él?",
+      "respuesta": "Para <span class=\"num\">graduar la gravedad</span> y seguir la respuesta; no sustituye la entrevista con criterios ni la pregunta por manía.",
+      "razonamiento": "Fue validado como medida breve de gravedad frente a una entrevista estructurada. Un puntaje alto orienta pero no distingue unipolar de bipolar.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Kroenke 2001, J Gen Intern Med (PMID 11556941)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::Evaluacion",
+        "Nivel::Aplicacion",
+        "Fuente::Kroenke2001",
+        "Clase::Escala",
+        "Bloom::Aplicar",
+        "Escala::PHQ9"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0020",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Tamizaje de depresión</span>¿Qué dos síntomas explora el PHQ-2 y con qué puntaje se considera positivo?",
+      "respuesta": "Ánimo deprimido y anhedonia en las últimas 2 semanas; positivo con <span class=\"num\">≥ 3</span>.",
+      "razonamiento": "Cada ítem puntúa de 0 a 3. Un tamizaje positivo obliga a continuar con PHQ-9 y entrevista diagnóstica.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Kroenke 2003, Med Care (PMID 14583691)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::Evaluacion",
+        "Nivel::Recuerdo",
+        "Fuente::Kroenke2003",
+        "Clase::Escala",
+        "Bloom::Recordar",
+        "Escala::PHQ2"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0021",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Cuestionario MDQ</span>¿Qué detecta el Mood Disorder Questionnaire y cómo se interpreta un resultado positivo?",
+      "respuesta": "Detecta <span class=\"dx\">espectro bipolar</span> de forma breve; un positivo exige confirmar con entrevista, no diagnostica.",
+      "razonamiento": "Es un autoinforme de tamizaje validado en consulta psiquiátrica ambulatoria. Sirve para sospechar bipolaridad en quien consulta por depresión.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Hirschfeld 2000, Am J Psychiatry (PMID 11058490)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::Evaluacion",
+        "Nivel::Aplicacion",
+        "Fuente::Hirschfeld2000",
+        "Clase::Escala",
+        "Bloom::Comprender",
+        "Escala::MDQ"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0022",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Diagnóstico diferencial</span>Antes de diagnosticar depresión mayor, ¿qué hay que descartar además de la manía previa?",
+      "respuesta": "Que el episodio se deba a una <span class=\"al\">sustancia</span> o a otra <span class=\"al\">afección médica</span>, y a un trastorno psicótico.",
+      "razonamiento": "Son los criterios C y D del episodio depresivo mayor.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "APA, DSM-5-TR 2022; Scarff 2019, Innov Clin Neurosci (PMID 31440396); Consortium for Spinal Cord Medicine 2021, J Spinal Cord Med (PMID 33630722)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::Evaluacion",
+        "Nivel::Aplicacion",
+        "Fuente::DSM5TR",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0023",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Caso</span>Mujer de 24 años con depresión desde hace 3 semanas, primer episodio a los 17 años y madre con trastorno bipolar, pide un antidepresivo. ¿Qué haces primero?",
+      "respuesta": "Preguntar de forma dirigida por <span class=\"al\">manía o hipomanía previas</span> antes de recetar.",
+      "razonamiento": "El inicio temprano, las recurrencias y el familiar bipolar aumentan la sospecha de espectro bipolar. El antecedente familiar y la historia de episodios elevados orientan la elección.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "APA, DSM-5-TR 2022; McIntyre 2020, Lancet (PMID 33278937)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::Evaluacion",
+        "Nivel::Aplicacion",
+        "Fuente::DSM5TR",
+        "Clase::Vineta",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0024",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Antidepresivos</span>A las 4 semanas de un antidepresivo no hay mejoría de al menos 20 %: ¿qué haces?",
+      "respuesta": "Cambiar de antidepresivo o <span class=\"num\">subir la dosis</span>.",
+      "razonamiento": "Sin esa mejoría temprana la probabilidad de respuesta o remisión a las 8 a 12 semanas es baja. Antes se revisa adherencia, dosis y si el diagnóstico es bipolar.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Lam 2024, Can J Psychiatry (PMID 38711351)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::Tratamiento",
+        "Nivel::Aplicacion",
+        "Fuente::Lam2024",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0025",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Depresión mayor</span>¿Qué psicoterapias son de primera línea en la depresión mayor del adulto?",
+      "respuesta": "La <span class=\"dx\">terapia cognitivo-conductual</span>, la <span class=\"dx\">terapia interpersonal</span> y la <span class=\"dx\">activación conductual</span>.",
+      "razonamiento": "Se ofrecen solas o con fármaco según la gravedad y la preferencia del paciente, dentro de un enfoque de decisión compartida.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Lam 2024, Can J Psychiatry (PMID 38711351)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::Tratamiento",
+        "Nivel::Aplicacion",
+        "Fuente::Lam2024",
+        "Clase::Principio",
+        "Bloom::Comprender"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0026",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Antidepresivo en bipolar</span>¿Por qué no se usa un antidepresivo en monoterapia en la depresión bipolar?",
+      "respuesta": "Porque su eficacia no está demostrada y se asocia con <span class=\"al\">desestabilización del ánimo</span>, sobre todo en el mantenimiento.",
+      "razonamiento": "Un metanálisis halló que no superaba a placebo en la depresión bipolar aguda y que el riesgo de viraje solo aumentaba con criterios sensibles de definición. La guía prefiere un estabilizador o antipsicótico con perfil antidepresivo.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "McIntyre 2020, Lancet (PMID 33278937); Sidor 2011, J Clin Psychiatry (PMID 21034686)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::Tratamiento",
+        "Nivel::Aplicacion",
+        "Fuente::McIntyre2020",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0027",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Depresión bipolar</span>¿Qué opciones de primera línea tiene la depresión bipolar I según CANMAT/ISBD?",
+      "respuesta": "La <span class=\"fx\">quetiapina</span>, la <span class=\"fx\">lurasidona</span> con litio o valproato, el <span class=\"fx\">litio</span> y la <span class=\"fx\">lamotrigina</span>.",
+      "razonamiento": "Ninguna es un antidepresivo clásico en monoterapia. Se elige según tolerancia, riesgo metabólico y la fase de mantenimiento prevista.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Yatham 2018, Bipolar Disord (PMID 29536616)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::Tratamiento",
+        "Nivel::Aplicacion",
+        "Fuente::Yatham2018",
+        "Clase::Relacional",
+        "Bloom::Evaluar"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0028",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Riesgo suicida</span>¿Puede un algoritmo predecir quién se suicidará y qué se hace entonces con los factores de riesgo?",
+      "respuesta": "No hay un algoritmo eficaz de predicción; los factores clínicos sirven para <span class=\"al\">detectar alto riesgo</span> y elegir tratamiento.",
+      "razonamiento": "El suicidio es heterogéneo según sexo, edad y contexto. Tratar el trastorno mental de base previene con frecuencia la conducta suicida.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Turecki 2016, Lancet (PMID 26385066)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::RiesgoSuicida",
+        "Nivel::Aplicacion",
+        "Fuente::Turecki2016",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0029",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Entrevista del riesgo</span>¿Preguntar directamente por suicidio aumenta la ideación del paciente?",
+      "respuesta": "No: la revisión no halló aumento significativo de la ideación; sugiere que puede <span class=\"dx\">reducirla</span>.",
+      "razonamiento": "Por eso se pregunta de forma directa. Fuente: revisión breve publicada como editorial.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Dazzi 2014, Psychol Med (PMID 24998511), revisión breve publicada como editorial",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::RiesgoSuicida",
+        "Nivel::Aplicacion",
+        "Fuente::Dazzi2014",
+        "Clase::Aplicacion",
+        "Bloom::Comprender"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0030",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">C-SSRS</span>¿Qué niveles de ideación de la C-SSRS predicen mejor un intento posterior?",
+      "respuesta": "Los dos más altos: <span class=\"al\">intención</span> y <span class=\"al\">intención con plan</span>.",
+      "razonamiento": "En adolescentes con intento previo, la ideación más grave de por vida predijo intentos durante el estudio. La escala cuantifica; la decisión sigue siendo clínica.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Posner 2011, Am J Psychiatry (PMID 22193671)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::RiesgoSuicida",
+        "Nivel::Aplicacion",
+        "Fuente::Posner2011",
+        "Clase::Escala",
+        "Bloom::Analizar",
+        "Escala::CSSRS"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0031",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Epidemiología del suicidio</span>¿Cuántas muertes por suicidio hay al año en el mundo y en qué grupo de edad es la primera causa?",
+      "respuesta": "Unas <span class=\"num\">800 000</span> al año (1,5 % de todas las muertes); es la primera causa de muerte entre los <span class=\"num\">15 y 24 años</span>.",
+      "razonamiento": "Es la décima causa de muerte en Norteamérica. Estas cifras sostienen que se pregunte por suicidio en cada consulta.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Fazel 2020, N Engl J Med (PMID 31940700)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::RiesgoSuicida",
+        "Nivel::Recuerdo",
+        "Fuente::Fazel2020",
+        "Clase::Irreducible",
+        "Bloom::Recordar"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0032",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Manejo del riesgo suicida</span>Paciente con crisis suicida en urgencias que no requiere internación: ¿qué intervención breve se asoció con menos conducta suicida posterior?",
+      "respuesta": "El <span class=\"dx\">plan de seguridad</span> con seguimiento telefónico, asociado con un 45 % menos de conducta suicida a 6 meses.",
+      "razonamiento": "Además se asoció con más del doble de probabilidad de acudir a consulta ambulatoria (OR 2,06). Fue un estudio de cohortes en hospitales de veteranos, no un ensayo aleatorizado.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Stanley 2018, JAMA Psychiatry (PMID 29998307)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::ManejoSuicida",
+        "Nivel::Aplicacion",
+        "Fuente::Stanley2018",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0033",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Tras un intento</span>¿Qué medida de seguimiento previene nuevas conductas suicidas tras un intento?",
+      "respuesta": "El <span class=\"dx\">seguimiento regular</span> por los servicios de salud mental.",
+      "razonamiento": "El riesgo se concentra después del intento o de la crisis.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Turecki 2016, Lancet (PMID 26385066)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::ManejoSuicida",
+        "Nivel::Aplicacion",
+        "Fuente::Turecki2016",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-ANI-0034",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Litio y suicidio</span>¿Qué efecto tiene el litio sobre el suicidio en los trastornos del ánimo y sobre las autolesiones?",
+      "respuesta": "Reduce los <span class=\"dx\">suicidios</span> frente a placebo, pero sin beneficio claro en la autolesión deliberada.",
+      "razonamiento": "Se atribuye a la menor recaída del trastorno, con posible efecto sobre la agresividad e impulsividad. Se indica por el trastorno de base, no solo por el riesgo.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Cipriani 2013, BMJ (PMID 23814104)",
+      "tags": [
+        "Quirurgica2::TrastornosAnimo::ManejoSuicida",
+        "Nivel::Aplicacion",
+        "Fuente::Cipriani2013",
+        "Clase::Relacional",
+        "Bloom::Evaluar"
+      ],
+      "pendientes": []
+    }
+  ]
 }

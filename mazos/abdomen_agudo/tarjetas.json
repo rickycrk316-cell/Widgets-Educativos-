@@ -1,1208 +1,1203 @@
 {
- "meta": {
-  "caso": "Dolor abdominal agudo",
-  "rotacion": "1.ª",
-  "tag_raiz": "AbdomenAgudo",
-  "prefijo": "Q2-ABD",
-  "version": "1.0",
-  "fecha": "2026-11-26",
-  "resultado_aprendizaje": "Evalúa y diferencia las principales causas de dolor abdominal agudo, identificando signos de alarma, criterios de gravedad y de referencia quirúrgica urgente.",
-  "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 1.ª rotación, CASO DOLOR ABDOMINAL AGUDO (contenidos y trabajo autónomo)",
-  "justificacion_exceso": "Caso muy amplio: el sílabo reúne quince entidades médicas, biliopancreáticas y quirúrgicas (pancreatitis, patología biliar, apendicitis, perforación, obstrucción, vólvulo, isquemia mesentérica, aneurisma, porfiria y saturnismo) con escalas pronósticas; cada subtema se mantiene bajo ocho notas.",
-  "mir_verificados": [],
-  "verificacion": {
-   "total": 101,
-   "verificados": 70,
-   "eliminados": [
-    {
-     "id": "Q2-ABD-0001",
-     "dato": "Aferencia visceral bilateral con proyección a la línea media por origen embriológico y dermatoma compartido del peritoneo parietal",
-     "motivo": "no confirmado en las fuentes leídas: se conserva la baja densidad de inervación y la divergencia central"
+  "meta": {
+    "caso": "Dolor abdominal agudo",
+    "rotacion": "1.ª",
+    "tag_raiz": "AbdomenAgudo",
+    "prefijo": "Q2-ABD",
+    "version": "1.0",
+    "fecha": "2026-11-26",
+    "resultado_aprendizaje": "Evalúa y diferencia las principales causas de dolor abdominal agudo, identificando signos de alarma, criterios de gravedad y de referencia quirúrgica urgente.",
+    "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 1.ª rotación, CASO DOLOR ABDOMINAL AGUDO (contenidos y trabajo autónomo)",
+    "justificacion_exceso": "Caso muy amplio: el sílabo reúne quince entidades médicas, biliopancreáticas y quirúrgicas (pancreatitis, patología biliar, apendicitis, perforación, obstrucción, vólvulo, isquemia mesentérica, aneurisma, porfiria y saturnismo) con escalas pronósticas; cada subtema se mantiene bajo ocho notas.",
+    "mir_verificados": [],
+    "verificacion": {
+      "total": 104,
+      "verificados": 70,
+      "eliminados": [
+        {
+          "id": "Q2-ABD-0001",
+          "dato": "Aferencia visceral bilateral con proyección a la línea media por origen embriológico y dermatoma compartido del peritoneo parietal",
+          "motivo": "no confirmado en las fuentes leídas: se conserva la baja densidad de inervación y la divergencia central"
+        },
+        {
+          "id": "Q2-ABD-0002",
+          "dato": "Corticoides y betabloqueadores aplanan la fiebre; hacer la TC antes en el adulto mayor",
+          "motivo": "no confirmado: se conserva que el examen puede ser engañosamente benigno"
+        },
+        {
+          "id": "Q2-ABD-0003",
+          "dato": "El peritoneo parietal está indemne en la isquemia precoz y en las causas médicas; abdomen blando en porfiria, saturnismo e hipocalemia",
+          "motivo": "mecanismo no confirmado: se conserva la regla de asumir isquemia ante dolor desproporcionado y el carácter neurovisceral de las porfirias; hipocalemia sin tarjeta"
+        },
+        {
+          "id": "Q2-ABD-0005",
+          "dato": "Amilasa falsamente baja por lipemia de la hipertrigliceridemia y presentación tardía como causas de amilasa normal",
+          "motivo": "solo confirmado que la amilasa sola no es fiable y que se prefiere la lipasa; sin PMID para la interferencia por triglicéridos"
+        },
+        {
+          "id": "Q2-ABD-0008",
+          "dato": "Ranson de 6 o más con mortalidad muy alta; ausencia de amilasa entre los componentes de Ranson",
+          "motivo": "no confirmado: eliminado"
+        },
+        {
+          "id": "Q2-ABD-0010",
+          "dato": "Superioridad pronóstica o igualdad del BISAP frente a Ranson (valores de AUC)",
+          "motivo": "valores de AUC prohibidos; se conserva la ventaja temporal"
+        },
+        {
+          "id": "Q2-ABD-0012",
+          "dato": "Meta de diuresis de 0,5 a 1 mL/kg/h durante la reanimación",
+          "motivo": "no confirmada en las fuentes leídas: eliminada"
+        },
+        {
+          "id": "Q2-ABD-0013",
+          "dato": "Antibióticos profilácticos seleccionan flora resistente e infección fúngica",
+          "motivo": "no confirmado: eliminado"
+        },
+        {
+          "id": "Q2-ABD-0014",
+          "dato": "Intervención diferida unas 4 semanas y necrosectomía abierta como último recurso",
+          "motivo": "plazo de 4 semanas no confirmado: eliminado"
+        },
+        {
+          "id": "Q2-ABD-0016",
+          "dato": "CPRE precoz si la obstrucción biliar persiste sin colangitis",
+          "motivo": "no confirmado: se conserva solo la indicación con colangitis"
+        },
+        {
+          "id": "Q2-ABD-0017",
+          "dato": "Colédoco obstruido infectado produce colangitis; un solo principio para las cuatro entidades biliares",
+          "motivo": "no confirmado en las fuentes leídas: la tarjeta se limita al cístico obstruido y la colecistitis"
+        },
+        {
+          "id": "Q2-ABD-0020",
+          "dato": "Tríada de Charcot y péntada de Reynolds; mecanismo de bacteriemia por presión intraductal",
+          "motivo": "no confirmados en las fuentes leídas: nota antigua descartada"
+        },
+        {
+          "id": "Q2-ABD-0021",
+          "dato": "Retraso del drenaje como principal determinante de mortalidad; red de referencia local del MSP",
+          "motivo": "no confirmado: eliminado, incluida la marca de verificación"
+        },
+        {
+          "id": "Q2-ABD-0022",
+          "dato": "Umbral de colédoco dilatado y patrón colestásico de laboratorio",
+          "motivo": "no confirmados: eliminados"
+        },
+        {
+          "id": "Q2-ABD-0024",
+          "dato": "Dosis de antibiótico y ceftriaxona con metronidazol en la colecistitis comunitaria",
+          "motivo": "dosis y esquema no confirmados: eliminados"
+        },
+        {
+          "id": "Q2-ABD-0025",
+          "dato": "Alvarado pierde utilidad en la mujer en edad fértil; puntos de corte 3 y 7 con conducta asociada",
+          "motivo": "no confirmados: se conserva que las escalas excluyen y no confirman"
+        },
+        {
+          "id": "Q2-ABD-0026",
+          "dato": "Signos del psoas y del obturador con localización del apéndice",
+          "motivo": "no confirmados en las fuentes leídas: eliminados junto con la imagen"
+        },
+        {
+          "id": "Q2-ABD-0027",
+          "dato": "Mortalidad de la úlcera perforada tras más de 24 horas",
+          "motivo": "solo confirmado que la mortalidad crece con cada hora y que más de 24 horas se asocia a mal pronóstico"
+        },
+        {
+          "id": "Q2-ABD-0027",
+          "dato": "Dolor máximo desde el primer instante por irritación directa del peritoneo; neumoperitoneo en radiografía de tórax; signo de Jobert",
+          "motivo": "no confirmados: tarjetas descartadas"
+        },
+        {
+          "id": "Q2-ABD-0029",
+          "dato": "Observación de 48 a 72 horas en obstrucción por bridas",
+          "motivo": "solo confirmado 72 horas como periodo seguro; 48 horas eliminado"
+        },
+        {
+          "id": "Q2-ABD-0030",
+          "dato": "Volumen de 100 mL de contraste hidrosoluble",
+          "motivo": "no confirmado: eliminado"
+        },
+        {
+          "id": "Q2-ABD-0033",
+          "dato": "Vólvulo de ciego: la colonoscopia rara vez lo destuerce, afecta a pacientes más jóvenes",
+          "motivo": "no confirmado: tarjeta y esquema descartados"
+        },
+        {
+          "id": "Q2-ABD-0034",
+          "dato": "Mecanismo del dolor desproporcionado por isquemia mucosa sin irritación parietal",
+          "motivo": "mecanismo no confirmado: se conserva la regla de la WSES"
+        },
+        {
+          "id": "Q2-ABD-0037",
+          "dato": "Embolia que respeta los primeros centímetros por distancia a la cólica media",
+          "motivo": "reformulado con la cifra de la guía: 3 a 10 cm distal al origen"
+        },
+        {
+          "id": "Q2-ABD-0038",
+          "dato": "Titulabilidad y reversibilidad de la heparina no fraccionada como razón de uso",
+          "motivo": "no confirmado: eliminado"
+        },
+        {
+          "id": "Q2-ABD-0041",
+          "dato": "Crecimiento superior a 1 cm por año como umbral de reparación; diámetro mayor de 3 cm como definición",
+          "motivo": "no confirmados: eliminados"
+        },
+        {
+          "id": "Q2-ABD-0042",
+          "dato": "Ley de Laplace para el riesgo de rotura; ecografía a pie de cama como estudio inicial",
+          "motivo": "no confirmados en las fuentes leídas: eliminados"
+        },
+        {
+          "id": "Q2-ABD-0043",
+          "dato": "Sistólica objetivo de 70 a 90 mmHg y mantener hipotensión mientras el paciente esté consciente",
+          "motivo": "cifra no confirmada: se conserva el concepto de hipotensión permisiva"
+        },
+        {
+          "id": "Q2-ABD-0044",
+          "dato": "La orina se oscurece con la luz y la muestra debe protegerse de ella",
+          "motivo": "no confirmado: eliminado"
+        },
+        {
+          "id": "Q2-ABD-0046",
+          "dato": "ALA elevado con porfobilinógeno normal en el saturnismo; umbrales de plombemia y quelación",
+          "motivo": "no confirmados: eliminados"
+        },
+        {
+          "id": "Q2-ABD-0046",
+          "dato": "Hipocalemia con íleo: infusión máxima de potasio y diferenciación del íleo mecánico",
+          "motivo": "no confirmados: tarjetas descartadas"
+        },
+        {
+          "id": "Q2-ABD-0004",
+          "dato": "Prueba de embarazo antes de imagen o cirugía, citada a política ACEP/AHRQ",
+          "motivo": "contenido de la política no confirmado y sin PMID para AHRQ PSNet: tarjeta eliminada"
+        },
+        {
+          "id": "Q2-ABD-0020",
+          "dato": "Grado I: drenaje si no mejora en 24 h",
+          "motivo": "no confirmado en Kiriyama 2018 (corresponde al flujograma de Miura): eliminado"
+        },
+        {
+          "id": "Q2-ABD-0030",
+          "dato": "Contraste que no llega al colon en 24 h = fracaso muy probable",
+          "motivo": "no confirmado en la lectura: se conserva que llegar al colon indica resolución"
+        }
+      ]
     },
-    {
-     "id": "Q2-ABD-0002",
-     "dato": "Corticoides y betabloqueadores aplanan la fiebre; hacer la TC antes en el adulto mayor",
-     "motivo": "no confirmado: se conserva que el examen puede ser engañosamente benigno"
-    },
-    {
-     "id": "Q2-ABD-0003",
-     "dato": "El peritoneo parietal está indemne en la isquemia precoz y en las causas médicas; abdomen blando en porfiria, saturnismo e hipocalemia",
-     "motivo": "mecanismo no confirmado: se conserva la regla de asumir isquemia ante dolor desproporcionado y el carácter neurovisceral de las porfirias; hipocalemia sin tarjeta"
-    },
-    {
-     "id": "Q2-ABD-0005",
-     "dato": "Amilasa falsamente baja por lipemia de la hipertrigliceridemia y presentación tardía como causas de amilasa normal",
-     "motivo": "solo confirmado que la amilasa sola no es fiable y que se prefiere la lipasa; sin PMID para la interferencia por triglicéridos"
-    },
-    {
-     "id": "Q2-ABD-0008",
-     "dato": "Ranson de 6 o más con mortalidad muy alta; ausencia de amilasa entre los componentes de Ranson",
-     "motivo": "no confirmado: eliminado"
-    },
-    {
-     "id": "Q2-ABD-0010",
-     "dato": "Superioridad pronóstica o igualdad del BISAP frente a Ranson (valores de AUC)",
-     "motivo": "valores de AUC prohibidos; se conserva la ventaja temporal"
-    },
-    {
-     "id": "Q2-ABD-0012",
-     "dato": "Meta de diuresis de 0,5 a 1 mL/kg/h durante la reanimación",
-     "motivo": "no confirmada en las fuentes leídas: eliminada"
-    },
-    {
-     "id": "Q2-ABD-0013",
-     "dato": "Antibióticos profilácticos seleccionan flora resistente e infección fúngica",
-     "motivo": "no confirmado: eliminado"
-    },
-    {
-     "id": "Q2-ABD-0014",
-     "dato": "Intervención diferida unas 4 semanas y necrosectomía abierta como último recurso",
-     "motivo": "plazo de 4 semanas no confirmado: eliminado"
-    },
-    {
-     "id": "Q2-ABD-0016",
-     "dato": "CPRE precoz si la obstrucción biliar persiste sin colangitis",
-     "motivo": "no confirmado: se conserva solo la indicación con colangitis"
-    },
-    {
-     "id": "Q2-ABD-0017",
-     "dato": "Colédoco obstruido infectado produce colangitis; un solo principio para las cuatro entidades biliares",
-     "motivo": "no confirmado en las fuentes leídas: la tarjeta se limita al cístico obstruido y la colecistitis"
-    },
-    {
-     "id": "Q2-ABD-0020",
-     "dato": "Tríada de Charcot y péntada de Reynolds; mecanismo de bacteriemia por presión intraductal",
-     "motivo": "no confirmados en las fuentes leídas: nota antigua descartada"
-    },
-    {
-     "id": "Q2-ABD-0021",
-     "dato": "Retraso del drenaje como principal determinante de mortalidad; red de referencia local del MSP",
-     "motivo": "no confirmado: eliminado, incluida la marca de verificación"
-    },
-    {
-     "id": "Q2-ABD-0022",
-     "dato": "Umbral de colédoco dilatado y patrón colestásico de laboratorio",
-     "motivo": "no confirmados: eliminados"
-    },
-    {
-     "id": "Q2-ABD-0024",
-     "dato": "Dosis de antibiótico y ceftriaxona con metronidazol en la colecistitis comunitaria",
-     "motivo": "dosis y esquema no confirmados: eliminados"
-    },
-    {
-     "id": "Q2-ABD-0025",
-     "dato": "Alvarado pierde utilidad en la mujer en edad fértil; puntos de corte 3 y 7 con conducta asociada",
-     "motivo": "no confirmados: se conserva que las escalas excluyen y no confirman"
-    },
-    {
-     "id": "Q2-ABD-0026",
-     "dato": "Signos del psoas y del obturador con localización del apéndice",
-     "motivo": "no confirmados en las fuentes leídas: eliminados junto con la imagen"
-    },
-    {
-     "id": "Q2-ABD-0027",
-     "dato": "Mortalidad de la úlcera perforada tras más de 24 horas",
-     "motivo": "solo confirmado que la mortalidad crece con cada hora y que más de 24 horas se asocia a mal pronóstico"
-    },
-    {
-     "id": "Q2-ABD-0027",
-     "dato": "Dolor máximo desde el primer instante por irritación directa del peritoneo; neumoperitoneo en radiografía de tórax; signo de Jobert",
-     "motivo": "no confirmados: tarjetas descartadas"
-    },
-    {
-     "id": "Q2-ABD-0029",
-     "dato": "Observación de 48 a 72 horas en obstrucción por bridas",
-     "motivo": "solo confirmado 72 horas como periodo seguro; 48 horas eliminado"
-    },
-    {
-     "id": "Q2-ABD-0030",
-     "dato": "Volumen de 100 mL de contraste hidrosoluble",
-     "motivo": "no confirmado: eliminado"
-    },
-    {
-     "id": "Q2-ABD-0033",
-     "dato": "Vólvulo de ciego: la colonoscopia rara vez lo destuerce, afecta a pacientes más jóvenes",
-     "motivo": "no confirmado: tarjeta y esquema descartados"
-    },
-    {
-     "id": "Q2-ABD-0034",
-     "dato": "Mecanismo del dolor desproporcionado por isquemia mucosa sin irritación parietal",
-     "motivo": "mecanismo no confirmado: se conserva la regla de la WSES"
-    },
-    {
-     "id": "Q2-ABD-0037",
-     "dato": "Embolia que respeta los primeros centímetros por distancia a la cólica media",
-     "motivo": "reformulado con la cifra de la guía: 3 a 10 cm distal al origen"
-    },
-    {
-     "id": "Q2-ABD-0038",
-     "dato": "Titulabilidad y reversibilidad de la heparina no fraccionada como razón de uso",
-     "motivo": "no confirmado: eliminado"
-    },
-    {
-     "id": "Q2-ABD-0041",
-     "dato": "Crecimiento superior a 1 cm por año como umbral de reparación; diámetro mayor de 3 cm como definición",
-     "motivo": "no confirmados: eliminados"
-    },
-    {
-     "id": "Q2-ABD-0042",
-     "dato": "Ley de Laplace para el riesgo de rotura; ecografía a pie de cama como estudio inicial",
-     "motivo": "no confirmados en las fuentes leídas: eliminados"
-    },
-    {
-     "id": "Q2-ABD-0043",
-     "dato": "Sistólica objetivo de 70 a 90 mmHg y mantener hipotensión mientras el paciente esté consciente",
-     "motivo": "cifra no confirmada: se conserva el concepto de hipotensión permisiva"
-    },
-    {
-     "id": "Q2-ABD-0044",
-     "dato": "La orina se oscurece con la luz y la muestra debe protegerse de ella",
-     "motivo": "no confirmado: eliminado"
-    },
-    {
-     "id": "Q2-ABD-0046",
-     "dato": "ALA elevado con porfobilinógeno normal en el saturnismo; umbrales de plombemia y quelación",
-     "motivo": "no confirmados: eliminados"
-    },
-    {
-     "id": "Q2-ABD-0046",
-     "dato": "Hipocalemia con íleo: infusión máxima de potasio y diferenciación del íleo mecánico",
-     "motivo": "no confirmados: tarjetas descartadas"
+    "guia": {
+      "principios": [
+        "El dolor visceral es difuso por la baja densidad de inervación y la divergencia central; el somático se localiza.",
+        "Dolor desproporcionado al examen: se asume isquemia mesentérica hasta demostrar lo contrario.",
+        "La gravedad de la pancreatitis la define la falla orgánica persistente, no la morfología.",
+        "La obstrucción prolongada del cístico produce colecistitis; la colangitis grave exige drenaje urgente.",
+        "La hidratación en pancreatitis se ajusta a la clínica: la pauta agresiva aumentó la sobrecarga sin beneficio.",
+        "Las escalas de apendicitis excluyen, no confirman."
+      ],
+      "palabras_clave": [
+        "abdomen agudo",
+        "pancreatitis",
+        "Atlanta",
+        "Ranson",
+        "BISAP",
+        "colangitis",
+        "TG18",
+        "apendicitis",
+        "obstrucción",
+        "isquemia mesentérica",
+        "aneurisma de aorta",
+        "porfiria",
+        "saturnismo"
+      ],
+      "imagenes_oclusion": [],
+      "preguntas_cierre": [
+        "¿Qué hallazgo del examen te haría sospechar isquemia mesentérica pese a un abdomen blando?",
+        "¿Cómo decides entre drenaje urgente y manejo médico en una infección biliar?",
+        "¿Qué escala usas para excluir apendicitis y cuál es su límite?"
+      ],
+      "subtemas": {
+        "Semiologia": "Evaluación clínica del dolor abdominal y signos de gravedad",
+        "EvaluacionDiagnostica": "Interpretación de pruebas diagnósticas",
+        "PancreatitisDiagnostico": "Pancreatitis aguda: diagnóstico",
+        "PancreatitisGravedad": "Ranson y comparación con otras escalas",
+        "PancreatitisTratamiento": "Pancreatitis aguda: manejo",
+        "Colecistitis": "Patología biliar aguda",
+        "Colangitis": "Patología biliar aguda",
+        "Coledocolitiasis": "Patología biliar aguda",
+        "Apendicitis": "Apendicitis aguda",
+        "Perforacion": "Perforación de víscera hueca",
+        "Obstruccion": "Obstrucción intestinal",
+        "Volvulo": "Obstrucción intestinal baja",
+        "IsquemiaMesenterica": "Isquemia mesentérica",
+        "AAA": "Aneurisma de aorta abdominal",
+        "Porfiria": "Etiologías médicas: porfiria",
+        "Saturnismo": "Etiologías médicas: saturnismo"
+      },
+      "fechas": {
+        "apertura": null,
+        "cierre": null,
+        "examen": null
+      },
+      "referencias": [
+        "Sikandar S, Dickenson AH. Visceral pain: the ins and outs, the ups and downs. Curr Opin Support Palliat Care. 2012;6(1):17-26. PMID 22246042.",
+        "Lyon C, Clark DC. Diagnosis of acute abdominal pain in older patients. Am Fam Physician. 2006;74(9):1537-44. PMID 17111893.",
+        "Bala M, Catena F, Kashuk J, et al. Acute mesenteric ischemia: updated guidelines of the World Society of Emergency Surgery. World J Emerg Surg. 2022;17(1):54. PMID 36261857.",
+        "Anderson KE, Bloomer JR, Bonkovsky HL, et al. Recommendations for the diagnosis and treatment of the acute porphyrias. Ann Intern Med. 2005;142(6):439-50. PMID 15767622.",
+        "Tenner S, Vege SS, Sheth SG, et al. American College of Gastroenterology guidelines: management of acute pancreatitis. Am J Gastroenterol. 2024;119(3):419-37. PMID 38857482.",
+        "Banks PA, Bollen TL, Dervenis C, et al. Classification of acute pancreatitis 2012: revision of the Atlanta classification and definitions by international consensus. Gut. 2013;62(1):102-11. PMID 23100216.",
+        "Yadav J, Yadav SK, Kumar S, et al. Predicting morbidity and mortality in acute pancreatitis in an Indian population: a comparative study of the BISAP score, Ranson's score and CT severity index. Gastroenterol Rep (Oxf). 2016;4(3):216-20. PMID 25733696.",
+        "Wu BU, Johannes RS, Sun X, Tabak Y, Conwell DL, Banks PA. The early prediction of mortality in acute pancreatitis: a large population-based study. Gut. 2008;57(12):1698-703. PMID 18519429.",
+        "de-Madaria E, Buxbaum JL, Maisonneuve P, et al. Aggressive or moderate fluid resuscitation in acute pancreatitis. N Engl J Med. 2022;387(11):989-1000. PMID 36103415.",
+        "van Santvoort HC, Besselink MG, Bakker OJ, et al. A step-up approach or open necrosectomy for necrotizing pancreatitis. N Engl J Med. 2010;362(16):1491-502. PMID 20410514.",
+        "Mou D, Tesfasilassie T, Hirji S, Ashley SW. Advances in the management of acute cholecystitis. Ann Gastroenterol Surg. 2019;3(3):247-53. PMC6524093.",
+        "Yokoe M, Hata J, Takada T, et al. Tokyo Guidelines 2018: diagnostic criteria and severity grading of acute cholecystitis. J Hepatobiliary Pancreat Sci. 2018;25(1):41-54. PMID 29032636.",
+        "Kiriyama S, Kozaka K, Takada T, et al. Tokyo Guidelines 2018: diagnostic criteria and severity grading of acute cholangitis. J Hepatobiliary Pancreat Sci. 2018;25(1):17-30. PMID 29032610.",
+        "ASGE Standards of Practice Committee, Buxbaum JL, Abbas Fehmi SM, et al. ASGE guideline on the role of endoscopy in the evaluation and management of choledocholithiasis. Gastrointest Endosc. 2019;89(6):1075-1105. PMID 30979521.",
+        "Di Saverio S, Podda M, De Simone B, et al. Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines. World J Emerg Surg. 2020;15(1):27. PMID 32295644.",
+        "Flum DR, Davidson GH, Monsell SE, et al. A randomized trial comparing antibiotics with appendectomy for appendicitis. N Engl J Med. 2020;383(20):1907-19. PMID 33017106.",
+        "Tarasconi A, Coccolini F, Biffl WL, et al. Perforated and bleeding peptic ulcer: WSES guidelines. World J Emerg Surg. 2020;15:3. PMID 31921329.",
+        "Ten Broek RPG, Krielen P, Di Saverio S, et al. Bologna guidelines for diagnosis and management of adhesive small bowel obstruction (ASBO): 2017 update of the evidence-based guidelines from the WSES ASBO working group. World J Emerg Surg. 2018;13:24. PMID 29946347.",
+        "Determination of patients requiring elective surgery following successful endoscopic detorsion in sigmoid volvulus. PMC5768858.",
+        "Wanhainen A, Van Herzeele I, Bastos Goncalves F, et al. Editor's Choice: European Society for Vascular Surgery (ESVS) 2024 clinical practice guidelines on the management of abdominal aorto-iliac artery aneurysms. Eur J Vasc Endovasc Surg. 2024;67(2):192-331. PMID 38307694.",
+        "Fonte R, Agosti A, Scafa F, Candura SM. Anaemia and abdominal pain due to occupational lead poisoning. Haematologica. 2007;92(2):e13-4. PMID 17405745.",
+        "American College of Emergency Physicians. Clinical policy: early pregnancy. Ann Emerg Med.",
+        "AHRQ PSNet. Abdominal pain in early pregnancy. Web M&M."
+      ]
     }
-   ]
   },
-  "guia": {
-   "principios": [
-    "El dolor visceral es difuso por la baja densidad de inervación y la divergencia central; el somático se localiza.",
-    "Dolor desproporcionado al examen: se asume isquemia mesentérica hasta demostrar lo contrario.",
-    "La gravedad de la pancreatitis la define la falla orgánica persistente, no la morfología.",
-    "La obstrucción prolongada del cístico produce colecistitis; la colangitis grave exige drenaje urgente.",
-    "La hidratación en pancreatitis se ajusta a la clínica: la pauta agresiva aumentó la sobrecarga sin beneficio.",
-    "Las escalas de apendicitis excluyen, no confirman."
-   ],
-   "palabras_clave": [
-    "abdomen agudo",
-    "pancreatitis",
-    "Atlanta",
-    "Ranson",
-    "BISAP",
-    "colangitis",
-    "TG18",
-    "apendicitis",
-    "obstrucción",
-    "isquemia mesentérica",
-    "aneurisma de aorta",
-    "porfiria",
-    "saturnismo"
-   ],
-   "imagenes_oclusion": [],
-   "preguntas_cierre": [
-    "¿Qué hallazgo del examen te haría sospechar isquemia mesentérica pese a un abdomen blando?",
-    "¿Cómo decides entre drenaje urgente y manejo médico en una infección biliar?",
-    "¿Qué escala usas para excluir apendicitis y cuál es su límite?"
-   ],
-   "subtemas": {
-    "Semiologia": "Evaluación clínica del dolor abdominal y signos de gravedad",
-    "EvaluacionDiagnostica": "Interpretación de pruebas diagnósticas",
-    "PancreatitisDiagnostico": "Pancreatitis aguda: diagnóstico",
-    "PancreatitisGravedad": "Ranson y comparación con otras escalas",
-    "PancreatitisTratamiento": "Pancreatitis aguda: manejo",
-    "Colecistitis": "Patología biliar aguda",
-    "Colangitis": "Patología biliar aguda",
-    "Coledocolitiasis": "Patología biliar aguda",
-    "Apendicitis": "Apendicitis aguda",
-    "Perforacion": "Perforación de víscera hueca",
-    "Obstruccion": "Obstrucción intestinal",
-    "Volvulo": "Obstrucción intestinal baja",
-    "IsquemiaMesenterica": "Isquemia mesentérica",
-    "AAA": "Aneurisma de aorta abdominal",
-    "Porfiria": "Etiologías médicas: porfiria",
-    "Saturnismo": "Etiologías médicas: saturnismo"
-   },
-   "fechas": {
-    "apertura": null,
-    "cierre": null,
-    "examen": null
-   },
-   "referencias": [
-    "Sikandar S, Dickenson AH. Visceral pain: the ins and outs, the ups and downs. Curr Opin Support Palliat Care. 2012;6(1):17-26. PMID 22246042.",
-    "Lyon C, Clark DC. Diagnosis of acute abdominal pain in older patients. Am Fam Physician. 2006;74(9):1537-44. PMID 17111893.",
-    "Bala M, Catena F, Kashuk J, et al. Acute mesenteric ischemia: updated guidelines of the World Society of Emergency Surgery. World J Emerg Surg. 2022;17(1):54. PMID 36261857.",
-    "Anderson KE, Bloomer JR, Bonkovsky HL, et al. Recommendations for the diagnosis and treatment of the acute porphyrias. Ann Intern Med. 2005;142(6):439-50. PMID 15767622.",
-    "Tenner S, Vege SS, Sheth SG, et al. American College of Gastroenterology guidelines: management of acute pancreatitis. Am J Gastroenterol. 2024;119(3):419-37. PMID 38857482.",
-    "Banks PA, Bollen TL, Dervenis C, et al. Classification of acute pancreatitis 2012: revision of the Atlanta classification and definitions by international consensus. Gut. 2013;62(1):102-11. PMID 23100216.",
-    "Yadav J, Yadav SK, Kumar S, et al. Predicting morbidity and mortality in acute pancreatitis in an Indian population: a comparative study of the BISAP score, Ranson's score and CT severity index. Gastroenterol Rep (Oxf). 2016;4(3):216-20. PMID 25733696.",
-    "Wu BU, Johannes RS, Sun X, Tabak Y, Conwell DL, Banks PA. The early prediction of mortality in acute pancreatitis: a large population-based study. Gut. 2008;57(12):1698-703. PMID 18519429.",
-    "de-Madaria E, Buxbaum JL, Maisonneuve P, et al. Aggressive or moderate fluid resuscitation in acute pancreatitis. N Engl J Med. 2022;387(11):989-1000. PMID 36103415.",
-    "van Santvoort HC, Besselink MG, Bakker OJ, et al. A step-up approach or open necrosectomy for necrotizing pancreatitis. N Engl J Med. 2010;362(16):1491-502. PMID 20410514.",
-    "Mou D, Tesfasilassie T, Hirji S, Ashley SW. Advances in the management of acute cholecystitis. Ann Gastroenterol Surg. 2019;3(3):247-53. PMC6524093.",
-    "Yokoe M, Hata J, Takada T, et al. Tokyo Guidelines 2018: diagnostic criteria and severity grading of acute cholecystitis. J Hepatobiliary Pancreat Sci. 2018;25(1):41-54. PMID 29032636.",
-    "Kiriyama S, Kozaka K, Takada T, et al. Tokyo Guidelines 2018: diagnostic criteria and severity grading of acute cholangitis. J Hepatobiliary Pancreat Sci. 2018;25(1):17-30. PMID 29032610.",
-    "ASGE Standards of Practice Committee, Buxbaum JL, Abbas Fehmi SM, et al. ASGE guideline on the role of endoscopy in the evaluation and management of choledocholithiasis. Gastrointest Endosc. 2019;89(6):1075-1105. PMID 30979521.",
-    "Di Saverio S, Podda M, De Simone B, et al. Diagnosis and treatment of acute appendicitis: 2020 update of the WSES Jerusalem guidelines. World J Emerg Surg. 2020;15(1):27. PMID 32295644.",
-    "Flum DR, Davidson GH, Monsell SE, et al. A randomized trial comparing antibiotics with appendectomy for appendicitis. N Engl J Med. 2020;383(20):1907-19. PMID 33017106.",
-    "Tarasconi A, Coccolini F, Biffl WL, et al. Perforated and bleeding peptic ulcer: WSES guidelines. World J Emerg Surg. 2020;15:3. PMID 31921329.",
-    "Ten Broek RPG, Krielen P, Di Saverio S, et al. Bologna guidelines for diagnosis and management of adhesive small bowel obstruction (ASBO): 2017 update of the evidence-based guidelines from the WSES ASBO working group. World J Emerg Surg. 2018;13:24. PMID 29946347.",
-    "Determination of patients requiring elective surgery following successful endoscopic detorsion in sigmoid volvulus. PMC5768858.",
-    "Wanhainen A, Van Herzeele I, Bastos Goncalves F, et al. Editor's Choice: European Society for Vascular Surgery (ESVS) 2024 clinical practice guidelines on the management of abdominal aorto-iliac artery aneurysms. Eur J Vasc Endovasc Surg. 2024;67(2):192-331. PMID 38307694.",
-    "Fonte R, Agosti A, Scafa F, Candura SM. Anaemia and abdominal pain due to occupational lead poisoning. Haematologica. 2007;92(2):e13-4. PMID 17405745.",
-    "American College of Emergency Physicians. Clinical policy: early pregnancy. Ann Emerg Med.",
-    "AHRQ PSNet. Abdominal pain in early pregnancy. Web M&M."
-   ]
-  }
- },
- "tarjetas": [
-  {
-   "id": "Q2-ABD-0001",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Dolor abdominal</span>¿Por qué el dolor visceral es difuso y mal localizado, mientras el del peritoneo parietal se señala con precisión?",
-   "respuesta": "Porque las vísceras tienen <span class=\"mec\">poca densidad de inervación sensitiva</span> con gran divergencia central; el dolor somático, como el parietal, se localiza mejor.",
-   "razonamiento": "La baja densidad de aferentes y la divergencia de la señal en el sistema nervioso central explican la dificultad para ubicar el origen del dolor visceral.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Sikandar 2012, Curr Opin Support Palliat Care (PMID 22246042)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Semiologia",
-    "Nivel::Aplicacion",
-    "Fuente::Sikandar2012",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0002",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Dolor abdominal en el adulto mayor</span>¿Por qué una exploración abdominal poco llamativa no tranquiliza en el adulto mayor?",
-   "respuesta": "Porque la presentación difiere de la del joven y el examen puede ser <span class=\"al\">engañosamente benigno</span> incluso en rotura de aneurisma o isquemia mesentérica.",
-   "razonamiento": "La enfermedad coexistente y los retrasos en consultar complican el cuadro; la morbimortalidad es alta y se requiere hospitalización con valoración quirúrgica pronta.<br>La apendicitis del adulto mayor se diagnostica bien al inicio solo la mitad de las veces y perfora más.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Lyon 2006, Am Fam Physician (PMID 17111893)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Semiologia",
-    "Nivel::Aplicacion",
-    "Fuente::Lyon2006",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0003",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Dolor abdominal</span>Dolor intenso con abdomen blando y sin peritonismo: ¿qué dos grupos diagnósticos no se deben pasar por alto?",
-   "respuesta": "La <span class=\"dx\">isquemia mesentérica</span> y las causas médicas neurovisceral, como la <span class=\"dx\">porfiria aguda</span>.",
-   "razonamiento": "La WSES indica asumir isquemia mesentérica aguda ante dolor desproporcionado al examen hasta demostrar lo contrario.<br>Las porfirias agudas dan síntomas neurovisceral que simulan muchos cuadros agudos médicos y psiquiátricos.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Bala 2022, World J Emerg Surg (PMID 36261857); Anderson 2005, Ann Intern Med (PMID 15767622)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Semiologia",
-    "Nivel::Aplicacion",
-    "Fuente::Bala2022",
-    "Clase::Aplicacion",
-    "Bloom::Analizar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0004",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Dolor abdominal en mujer en edad fértil</span>¿Por qué se descarta el embarazo antes de decidir imagen o cirugía?",
-   "respuesta": "Porque el <span class=\"dx\">embarazo ectópico</span> es la urgencia que no se debe pasar por alto y el resultado condiciona la elección de imagen.",
-   "razonamiento": "La conducta de la ACEP ante dolor con posible embarazo temprano gira en torno a la prueba de embarazo, la ecografía y la gonadotropina sérica.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "ACEP, Clinical Policy: Early Pregnancy; AHRQ PSNet, Abdominal pain in early pregnancy",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::EvaluacionDiagnostica",
-    "Nivel::Aplicacion",
-    "Fuente::ACEP",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0005",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">Pancreatitis aguda · diagnóstico</span>Se diagnostica con {{c1::<span class=\"num\">2 de 3</span>}} criterios: dolor típico, enzima pancreática {{c2::<span class=\"num\">más de 3 veces</span>}} el límite superior normal o imagen característica.",
-   "extra": "Se prefiere la lipasa; la amilasa sola no es fiable. La tomografía o la resonancia no son necesarias para diagnosticar.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Tenner 2024, Am J Gastroenterol (PMID 38857482)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::PancreatitisDiagnostico",
-    "Nivel::Recuerdo",
-    "Fuente::Tenner2024",
-    "Clase::Irreducible",
-    "Bloom::Recordar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2-ABD-0006",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Pancreatitis aguda</span>¿Qué enzima se prefiere para el diagnóstico y por qué la amilasa sola no basta?",
-   "respuesta": "La <span class=\"fx\">lipasa</span>; la amilasa sola no es fiable para diagnosticar ni para excluir.",
-   "razonamiento": "La guía ACG exige 2 de 3 criterios y no requiere imagen de corte para el diagnóstico.<br>Si la clínica es típica y la enzima no orienta, la imagen completa los criterios.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Tenner 2024, Am J Gastroenterol (PMID 38857482)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::PancreatitisDiagnostico",
-    "Nivel::Aplicacion",
-    "Fuente::Tenner2024",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0007",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Pancreatitis aguda</span>¿Qué define la pancreatitis grave en la clasificación de Atlanta revisada?",
-   "respuesta": "La <span class=\"al\">falla orgánica persistente</span> por más de 48 horas.",
-   "razonamiento": "La moderadamente grave tiene falla orgánica transitoria, complicaciones locales o descompensación de una comorbilidad.<br>La leve no tiene falla orgánica ni complicaciones y suele resolverse en la primera semana.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Grado</th><th>Falla orgánica</th><th>Local</th></tr></thead><tbody><tr><th>Leve</th><td>Ausente</td><td>Ausente</td></tr><tr><th>Moderada</th><td>Transitoria</td><td>Puede haber</td></tr><tr><th>Grave</th><td><span class=\"al\">Persistente &gt;48 h</span></td><td>Puede haber</td></tr></tbody></table>",
-   "fuente": "Banks 2013, Gut (PMID 23100216)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::PancreatitisGravedad",
-    "Nivel::Aplicacion",
-    "Fuente::Banks2013",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0008",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Pancreatitis aguda</span>Necrosis extensa en la tomografía pero sin falla orgánica: ¿es una pancreatitis grave?",
-   "respuesta": "No: es <span class=\"dx\">moderadamente grave</span>, porque hay complicación local sin falla orgánica persistente.",
-   "razonamiento": "Atlanta revisada define la gravedad por la falla orgánica persistente (más de 48 horas), no por la morfología.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Banks 2013, Gut (PMID 23100216)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::PancreatitisGravedad",
-    "Nivel::Aplicacion",
-    "Fuente::Banks2013",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0009",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">Ranson · pancreatitis aguda</span>Un puntaje de Ranson de {{c1::<span class=\"num\">3</span>}} o más indica pancreatitis grave y se completa con datos de las primeras {{c2::<span class=\"num\">48 horas</span>}}.",
-   "extra": "Ranson usa 11 signos pronósticos; su límite es que no puede completarse al ingreso.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Yadav 2015, Gastroenterol Rep (PMID 25733696)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::PancreatitisGravedad",
-    "Nivel::Recuerdo",
-    "Fuente::Yadav2015",
-    "Clase::Escala",
-    "Bloom::Recordar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2-ABD-0010",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">BISAP · pancreatitis aguda</span>El BISAP se calcula con datos de las primeras {{c1::<span class=\"num\">24 horas</span>}} y un puntaje de {{c2::<span class=\"num\">3</span>}} o más señala mayor riesgo de mortalidad.",
-   "extra": "Cada componente suma un punto: urea, estado mental, SIRS, edad y derrame pleural.",
-   "mnemotecnia": "<span class=\"mne\">BISAP</span> (inglés)<ul><li><b>B</b> BUN: urea alta</li><li><b>I</b> Impaired mental status: estado mental alterado</li><li><b>S</b> SIRS</li><li><b>A</b> Age: edad mayor de 60</li><li><b>P</b> Pleural effusion: derrame pleural</li></ul>",
-   "esquema": "",
-   "fuente": "Wu 2008, Gut (PMID 18519429); Yadav 2015, Gastroenterol Rep (PMID 25733696)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::PancreatitisGravedad",
-    "Nivel::Recuerdo",
-    "Fuente::Wu2008",
-    "Clase::Escala",
-    "Bloom::Recordar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2-ABD-0011",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Ranson frente a BISAP</span>¿Qué ventaja operativa tiene el BISAP sobre Ranson en urgencias?",
-   "respuesta": "Se calcula con datos de las primeras <span class=\"num\">24 horas</span>; Ranson necesita <span class=\"num\">48 horas</span>.",
-   "razonamiento": "Ranson solo se completa a las 48 horas, cuando ya pasó la fase temprana de la atención.<br>El BISAP usa cinco variables disponibles al ingreso.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Yadav 2015, Gastroenterol Rep (PMID 25733696); Wu 2008, Gut (PMID 18519429)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::PancreatitisGravedad",
-    "Nivel::Aplicacion",
-    "Fuente::Yadav2015",
-    "Clase::Contraste",
-    "Bloom::Analizar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0012",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Pancreatitis aguda</span>¿Por qué hoy se prefiere la hidratación moderada con Ringer lactato sobre la agresiva?",
-   "respuesta": "Porque la pauta <span class=\"al\">agresiva</span> produjo más sobrecarga hídrica sin mejorar los desenlaces clínicos.",
-   "razonamiento": "WATERFALL comparó bolo de 20 mL/kg más 3 mL/kg/h contra bolo de 10 mL/kg solo si había hipovolemia más 1,5 mL/kg/h, con ajuste según la clínica.<br>El ensayo se detuvo por sobrecarga hídrica (20,5 % frente a 6,3 %).",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "de-Madaria 2022, N Engl J Med (PMID 36103415)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::PancreatitisTratamiento",
-    "Nivel::Aplicacion",
-    "Fuente::deMadaria2022",
-    "Clase::Aplicacion",
-    "Bloom::Evaluar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0013",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Necrosis pancreática</span>¿Se indican antibióticos profilácticos en la necrosis estéril?",
-   "respuesta": "No: se reservan para la <span class=\"dx\">necrosis infectada</span>, junto con el desbridamiento.",
-   "razonamiento": "La guía ACG recomienda no usar antibióticos profilácticos en necrosis estéril.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Tenner 2024, Am J Gastroenterol (PMID 38857482)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::PancreatitisTratamiento",
-    "Nivel::Aplicacion",
-    "Fuente::Tenner2024",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0014",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Necrosis pancreática infectada</span>¿Qué estrategia de intervención se prefiere frente a la necrosectomía abierta primaria?",
-   "respuesta": "El abordaje <span class=\"dx\">escalonado</span>: drenaje primero y necrosectomía mínimamente invasiva solo si es necesaria.",
-   "razonamiento": "En el ensayo PANTER, el abordaje escalonado redujo el desenlace compuesto de complicaciones mayores o muerte frente a la necrosectomía abierta (40 % frente a 69 %).<br>La mortalidad aislada no difirió.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "van Santvoort 2010, N Engl J Med (PMID 20410514)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::PancreatitisTratamiento",
-    "Nivel::Aplicacion",
-    "Fuente::vanSantvoort2010",
-    "Clase::Aplicacion",
-    "Bloom::Evaluar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0015",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Pancreatitis biliar leve</span>¿Cuándo se hace la colecistectomía en la pancreatitis biliar leve?",
-   "respuesta": "Pronto, durante el <span class=\"dx\">mismo ingreso</span> y preferiblemente antes del alta.",
-   "razonamiento": "La guía ACG la recomienda para prevenir recurrencias de la pancreatitis biliar.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Tenner 2024, Am J Gastroenterol (PMID 38857482)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::PancreatitisTratamiento",
-    "Nivel::Aplicacion",
-    "Fuente::Tenner2024",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0016",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Pancreatitis biliar</span>¿Cuándo se indica la CPRE en una pancreatitis biliar?",
-   "respuesta": "Cuando coexiste <span class=\"dx\">colangitis</span>; sin colangitis se prefiere el tratamiento médico a la CPRE precoz.",
-   "razonamiento": "La guía ACG sugiere tratamiento médico en lugar de CPRE en las primeras 72 horas de una pancreatitis biliar sin colangitis.<br>La CPRE no es un tratamiento de la pancreatitis en sí.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Tenner 2024, Am J Gastroenterol (PMID 38857482)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::PancreatitisTratamiento",
-    "Nivel::Aplicacion",
-    "Fuente::Tenner2024",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0017",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Colecistitis aguda</span>¿Qué ocurre cuando un cálculo obstruye el conducto cístico de forma prolongada?",
-   "respuesta": "La vesícula se distiende y la obstrucción prolongada produce <span class=\"mec\">inflamación, infección e incluso isquemia</span>.",
-   "razonamiento": "La obstrucción transitoria da cólico biliar; la prolongada origina colecistitis aguda.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Mou 2019, Ann Gastroenterol Surg (PMC6524093)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Colecistitis",
-    "Nivel::Aplicacion",
-    "Fuente::Mou2019",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0018",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Colecistitis aguda</span>Paciente con colecistitis y riesgo quirúrgico prohibitivo: ¿qué alternativa existe y qué limitación tiene?",
-   "respuesta": "La <span class=\"dx\">colecistostomía percutánea</span>: es una medida temporal para pacientes que no son buenos candidatos quirúrgicos.",
-   "razonamiento": "La TG18 considera el drenaje vesicular percutáneo en candidatos de alto riesgo; la colecistectomía queda diferida.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Mou 2019, Ann Gastroenterol Surg (PMC6524093); Yokoe 2018, J Hepatobiliary Pancreat Sci (PMID 29032636)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Colecistitis",
-    "Nivel::Aplicacion",
-    "Fuente::Mou2019",
-    "Clase::Aplicacion",
-    "Bloom::Evaluar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0019",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Colecistitis aguda</span>Si el paciente es candidato quirúrgico, ¿en qué plazo se prefiere la colecistectomía laparoscópica?",
-   "respuesta": "Idealmente dentro de las primeras <span class=\"num\">72 horas</span> desde la presentación.",
-   "razonamiento": "Los datos sugieren que la cirugía temprana da mejores resultados, incluso pasadas 72 horas de síntomas.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Mou 2019, Ann Gastroenterol Surg (PMC6524093)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Colecistitis",
-    "Nivel::Recuerdo",
-    "Fuente::Mou2019",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0020",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Colangitis aguda</span>¿Qué grado de la clasificación TG18 exige drenaje biliar urgente con soporte orgánico?",
-   "respuesta": "El <span class=\"dx\">grado III</span>, definido por disfunción orgánica.",
-   "razonamiento": "En el grado II el drenaje precoz mejora la mortalidad a 30 días; en el grado I la mayoría responde al antibiótico y el drenaje se reserva si no mejora en 24 horas.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Grado</th><th>Criterio</th><th>Drenaje</th></tr></thead><tbody><tr><th>I</th><td>Responde a antibiótico</td><td>Si no mejora en 24 h</td></tr><tr><th>II</th><td>Moderada</td><td>Precoz</td></tr><tr><th>III</th><td><span class=\"al\">Disfunción orgánica</span></td><td>Urgente con soporte</td></tr></tbody></table>",
-   "fuente": "Kiriyama 2018, J Hepatobiliary Pancreat Sci (PMID 29032610)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Colangitis",
-    "Nivel::Aplicacion",
-    "Fuente::Kiriyama2018",
-    "Clase::Escala",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0021",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Colangitis grave</span>Dolor en hipocondrio derecho, fiebre, ictericia, hipotensión y confusión en un hospital sin CPRE: ¿qué se hace?",
-   "respuesta": "Reanimar, dar antibiótico intravenoso y organizar el <span class=\"al\">drenaje biliar urgente</span>, con transferencia si no se puede hacer en el sitio.",
-   "razonamiento": "El cuadro es una colangitis grado III por la disfunción orgánica.<br>El drenaje puede ser endoscópico o transhepático percutáneo.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Kiriyama 2018, J Hepatobiliary Pancreat Sci (PMID 29032610)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Colangitis",
-    "Nivel::Aplicacion",
-    "Fuente::Kiriyama2018",
-    "Clase::Vineta",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0022",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Coledocolitiasis</span>Sospecha de coledocolitiasis de riesgo intermedio: ¿por qué no se va directo a CPRE?",
-   "respuesta": "Porque la CPRE es terapéutica y tiene eventos adversos; en riesgo intermedio se confirma antes con <span class=\"dx\">ecoendoscopia o colangiorresonancia</span>.",
-   "razonamiento": "Los pacientes de alto riesgo van directo a CPRE.<br>La guía ASGE señala eventos adversos de la CPRE en el 6 % al 15 % de los casos.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Buxbaum 2019, Gastrointest Endosc (PMID 30979521)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Coledocolitiasis",
-    "Nivel::Aplicacion",
-    "Fuente::Buxbaum2019",
-    "Clase::Aplicacion",
-    "Bloom::Evaluar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0023",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Apendicitis aguda</span>¿Para qué se usan las escalas Alvarado, AIR y AAS?",
-   "respuesta": "Para <span class=\"dx\">excluir</span> apendicitis en pacientes de bajo riesgo; no sirven para confirmarla.",
-   "razonamiento": "La WSES recomienda las escalas clínicas para excluir y sugiere no usar Alvarado para confirmar.<br>Recomienda AIR y AAS como predictores clínicos.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Di Saverio 2020, World J Emerg Surg (PMID 32295644)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Apendicitis",
-    "Nivel::Aplicacion",
-    "Fuente::DiSaverio2020",
-    "Clase::Escala",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0024",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Apendicitis no complicada</span>¿Qué muestra el ensayo CODA sobre tratar solo con antibióticos?",
-   "respuesta": "Fue no inferior en calidad de vida, pero el <span class=\"num\">29 %</span> fue apendicectomizado a los 90 días.",
-   "razonamiento": "El riesgo fue mayor con apendicolito (41 % frente a 25 %).<br>La WSES plantea el manejo antibiótico en pacientes seleccionados sin apendicolito.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Flum 2020, N Engl J Med (PMID 33017106); Di Saverio 2020, World J Emerg Surg (PMID 32295644)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Apendicitis",
-    "Nivel::Aplicacion",
-    "Fuente::Flum2020",
-    "Clase::Aplicacion",
-    "Bloom::Evaluar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0025",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Apendicitis en el embarazo</span>¿Qué imagen se pide y qué conducta se sugiere frente al manejo antibiótico?",
-   "respuesta": "<span class=\"dx\">Ecografía</span> primero y resonancia si no es concluyente; se sugiere no tratar de forma no operatoria durante el embarazo.",
-   "razonamiento": "La WSES sugiere la ecografía de compresión graduada como imagen inicial y la resonancia tras una ecografía no concluyente.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Di Saverio 2020, World J Emerg Surg (PMID 32295644)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Apendicitis",
-    "Nivel::Aplicacion",
-    "Fuente::DiSaverio2020",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0026",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Plastrón o absceso apendicular</span>¿Cuál es el manejo inicial y la postura sobre la apendicectomía de intervalo?",
-   "respuesta": "Manejo no operatorio inicial; la apendicectomía de intervalo no es de rutina y se reserva para síntomas <span class=\"al\">recurrentes</span>.",
-   "razonamiento": "La WSES considera el manejo no operatorio un tratamiento inicial razonable del flemón o absceso.<br>Si se opera una apendicitis complicada, sugiere la vía laparoscópica.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Di Saverio 2020, World J Emerg Surg (PMID 32295644)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Apendicitis",
-    "Nivel::Aplicacion",
-    "Fuente::DiSaverio2020",
-    "Clase::Aplicacion",
-    "Bloom::Evaluar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0027",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Úlcera péptica perforada</span>¿Por qué importa el tiempo hasta la cirugía?",
-   "respuesta": "Porque la mortalidad <span class=\"al\">aumenta con cada hora</span> de retraso; se recomienda operar lo antes posible.",
-   "razonamiento": "Un retraso de más de 24 horas se asoció a mal pronóstico.<br>El retraso es especialmente relevante en la presentación tardía.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Tarasconi 2020, World J Emerg Surg (PMID 31921329)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Perforacion",
-    "Nivel::Aplicacion",
-    "Fuente::Tarasconi2020",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0028",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Úlcera péptica perforada</span>¿Qué cobertura antimicrobiana se recomienda y por cuánto tiempo?",
-   "respuesta": "Antibiótico de <span class=\"fx\">amplio espectro</span> desde la sospecha; un curso corto de unos <span class=\"num\">3 a 5 días</span>.",
-   "razonamiento": "La WSES lo recomienda de forma fuerte, con evidencia de baja calidad.<br>No sugiere de rutina el parche de epiplón por el mayor tiempo operatorio.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Tarasconi 2020, World J Emerg Surg (PMID 31921329)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Perforacion",
-    "Nivel::Recuerdo",
-    "Fuente::Tarasconi2020",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0029",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Obstrucción adherencial</span>¿Cuál es el manejo inicial sin signos de estrangulación y hasta cuándo?",
-   "respuesta": "Descompresión con sonda y reposición, con prueba de manejo conservador de hasta <span class=\"num\">72 horas</span>.",
-   "razonamiento": "El panel considera seguro un periodo de 72 horas.<br>Peritonitis, estrangulación o isquemia contraindican el manejo no operatorio.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Ten Broek 2018, World J Emerg Surg (PMID 29946347)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Obstruccion",
-    "Nivel::Aplicacion",
-    "Fuente::TenBroek2018",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0030",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Obstrucción adherencial</span>¿Qué predice el contraste hidrosoluble que llega al colon?",
-   "respuesta": "Que la obstrucción se resolverá sin cirugía; si no llega al colon en <span class=\"num\">24 horas</span>, el fracaso del manejo no operatorio es muy probable.",
-   "razonamiento": "Algunos autores atribuyen al contraste además un papel terapéutico que reduce la necesidad de cirugía.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Ten Broek 2018, World J Emerg Surg (PMID 29946347)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Obstruccion",
-    "Nivel::Aplicacion",
-    "Fuente::TenBroek2018",
-    "Clase::Aplicacion",
-    "Bloom::Analizar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0031",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Obstrucción adherencial</span>¿Qué hallazgos de la tomografía indican cirugía sin demora?",
-   "respuesta": "<span class=\"al\">Asa cerrada</span>, isquemia intestinal y líquido libre.",
-   "razonamiento": "La tomografía con contraste hidrosoluble es la imagen preferida en la evaluación inicial.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Ten Broek 2018, World J Emerg Surg (PMID 29946347)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Obstruccion",
-    "Nivel::Aplicacion",
-    "Fuente::TenBroek2018",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0032",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Obstrucción intestinal</span>¿Por qué no basta la exploración física para descartar estrangulación?",
-   "respuesta": "Porque la exploración física es <span class=\"al\">poco fiable</span> para detectar estrangulación, incluso en manos expertas.",
-   "razonamiento": "Ante la duda se recurre a la tomografía en lugar de confiar en la exploración.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Ten Broek 2018, World J Emerg Surg (PMID 29946347)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Obstruccion",
-    "Nivel::Recuerdo",
-    "Fuente::TenBroek2018",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0033",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Vólvulo de sigmoides</span>Sin isquemia ni peritonitis: ¿cuál es el tratamiento inicial y qué se hace después?",
-   "respuesta": "<span class=\"dx\">Destorsión endoscópica</span>, seguida de sigmoidectomía electiva por la alta recurrencia.",
-   "razonamiento": "La cirugía urgente se reserva para gangrena, perforación, peritonitis o destorsión fallida.<br>Las series reportan recurrencias del 30 % al 90 % tras la destorsión endoscópica.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Determination of patients requiring elective surgery following successful endoscopic detorsion in sigmoid volvulus (PMC5768858)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Volvulo",
-    "Nivel::Aplicacion",
-    "Fuente::VolvuloSigmoides",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0034",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Isquemia mesentérica aguda</span>Dolor abdominal desproporcionado al examen físico: ¿qué se asume?",
-   "respuesta": "Se asume <span class=\"dx\">isquemia mesentérica aguda</span> hasta demostrar lo contrario.",
-   "razonamiento": "La WSES indica pedir angiotomografía sin demora ante la sospecha.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Bala 2022, World J Emerg Surg (PMID 36261857)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::IsquemiaMesenterica",
-    "Nivel::Aplicacion",
-    "Fuente::Bala2022",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0035",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Isquemia mesentérica aguda</span>¿Puede el lactato decidir entre isquemia reversible e infarto?",
-   "respuesta": "No: el lactato por sí solo <span class=\"al\">no es fiable</span> para diferenciarlas.",
-   "razonamiento": "Citrulina, I-FABP y D-lactato tampoco fueron lo bastante sensibles ni específicos.<br>La decisión de imagen se basa en la sospecha clínica.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Bala 2022, World J Emerg Surg (PMID 36261857)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::IsquemiaMesenterica",
-    "Nivel::Aplicacion",
-    "Fuente::Bala2022",
-    "Clase::Aplicacion",
-    "Bloom::Analizar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0036",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Isquemia mesentérica aguda</span>¿Cómo se pide la angiotomografía?",
-   "respuesta": "Sin demora y <span class=\"al\">sin contraste oral</span>, que no está indicado y puede ser perjudicial.",
-   "razonamiento": "La WSES recomienda angiotomografía sin demora ante cualquier sospecha.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Bala 2022, World J Emerg Surg (PMID 36261857)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::IsquemiaMesenterica",
-    "Nivel::Aplicacion",
-    "Fuente::Bala2022",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0037",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Arteria mesentérica superior</span>Embolia frente a trombosis: ¿qué diferencia su sitio y perfil?",
-   "respuesta": "La <span class=\"dx\">embolia</span> se impacta distal al origen, en paciente con fibrilación auricular; la <span class=\"dx\">trombosis</span> ocurre en el origen, sobre aterosclerosis.",
-   "razonamiento": "Cerca de la mitad de las embolias ocurre con fibrilación auricular.<br>El émbolo suele respetar el yeyuno proximal y el colon.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Rasgo</th><th>Embolia</th><th>Trombosis</th></tr></thead><tbody><tr><th>Sitio</th><td>3-10 cm tras el origen</td><td>Origen de la arteria</td></tr><tr><th>Perfil</th><td>Fibrilación auricular</td><td>Aterosclerosis crónica</td></tr><tr><th>Yeyuno proximal</th><td>Respetado</td><td>Afectado</td></tr></tbody></table>",
-   "fuente": "Bala 2022, World J Emerg Surg (PMID 36261857)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::IsquemiaMesenterica",
-    "Nivel::Aplicacion",
-    "Fuente::Bala2022",
-    "Clase::Contraste",
-    "Bloom::Analizar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0038",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Trombosis venosa mesentérica</span>¿Cuál es el tratamiento de primera línea?",
-   "respuesta": "La <span class=\"fx\">anticoagulación</span>, con infusión continua de heparina no fraccionada.",
-   "razonamiento": "La WSES indica que a menudo se trata con éxito sin cirugía.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Bala 2022, World J Emerg Surg (PMID 36261857)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::IsquemiaMesenterica",
-    "Nivel::Aplicacion",
-    "Fuente::Bala2022",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0039",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Isquemia mesentérica arterial oclusiva</span>¿Qué se inicia antes de la cirugía y qué se planifica después?",
-   "respuesta": "<span class=\"fx\">Anticoagulación</span> a dosis plena en todos los pacientes antes de operar y reexploración planificada tras restaurar el flujo.",
-   "razonamiento": "La reexploración se hace típicamente dentro de 24 a 48 horas.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Bala 2022, World J Emerg Surg (PMID 36261857)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::IsquemiaMesenterica",
-    "Nivel::Aplicacion",
-    "Fuente::Bala2022",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0040",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Isquemia mesentérica no oclusiva</span>¿Qué se corrige y cuándo se opera?",
-   "respuesta": "La causa de fondo y la perfusión mesentérica; se opera ante <span class=\"al\">peritonitis, perforación o deterioro</span>.",
-   "razonamiento": "Suele deberse a vasoconstricción con bajo flujo esplácnico en el paciente crítico, con insuficiencia cardiaca, sepsis o vasoactivos.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Bala 2022, World J Emerg Surg (PMID 36261857)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::IsquemiaMesenterica",
-    "Nivel::Aplicacion",
-    "Fuente::Bala2022",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0041",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">Aneurisma de aorta abdominal</span>El umbral de reparación electiva es {{c1::<span class=\"num\">55 mm</span>}} en varones y {{c2::<span class=\"num\">50 mm</span>}} en mujeres.",
-   "extra": "Por debajo de esos tamaños la ESVS desaconseja reparar un aneurisma fusiforme degenerativo.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Wanhainen 2024, Eur J Vasc Endovasc Surg (PMID 38307694)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::AAA",
-    "Nivel::Recuerdo",
-    "Fuente::Wanhainen2024",
-    "Clase::Irreducible",
-    "Bloom::Recordar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2-ABD-0042",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Aneurisma de aorta</span>Varón mayor, hipertenso y fumador, con primer «cólico renal», hipotensión y palidez: ¿qué diagnóstico no se debe omitir?",
-   "respuesta": "<span class=\"al\">Aneurisma de aorta abdominal roto</span>; si hay anatomía adecuada, la reparación endovascular es la primera opción.",
-   "razonamiento": "La exploración puede ser engañosamente benigna aun en la rotura aórtica.<br>Un dolor lumbar con inestabilidad hemodinámica exige descartar el aneurisma antes de asumir litiasis.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Wanhainen 2024, Eur J Vasc Endovasc Surg (PMID 38307694); Lyon 2006, Am Fam Physician (PMID 17111893)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::AAA",
-    "Nivel::Aplicacion",
-    "Fuente::Wanhainen2024",
-    "Clase::Vineta",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0043",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Aneurisma roto</span>¿Qué principio de reanimación recoge la guía para el paciente hipotenso?",
-   "respuesta": "La <span class=\"dx\">hipotensión permisiva</span> perioperatoria, abordada por la guía ESVS.",
-   "razonamiento": "La guía trata la hipotensión permisiva y el balón de oclusión aórtica dentro del manejo de la rotura.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Wanhainen 2024, Eur J Vasc Endovasc Surg (PMID 38307694)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::AAA",
-    "Nivel::Aplicacion",
-    "Fuente::Wanhainen2024",
-    "Clase::Aplicacion",
-    "Bloom::Comprender",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0044",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Porfiria aguda</span>¿Qué prueba confirma rápidamente el diagnóstico en la crisis?",
-   "respuesta": "El <span class=\"dx\">porfobilinógeno urinario</span> marcadamente elevado en una muestra aislada.",
-   "razonamiento": "La misma muestra se guarda para cuantificar porfobilinógeno, ácido aminolevulínico y porfirinas totales.<br>Debe sospecharse en dolor abdominal inexplicado.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Anderson 2005, Ann Intern Med (PMID 15767622)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Porfiria",
-    "Nivel::Recuerdo",
-    "Fuente::Anderson2005",
-    "Clase::Irreducible",
-    "Bloom::Recordar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0045",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Porfiria aguda</span>¿Cuál es el tratamiento más eficaz de la crisis y cuándo la glucosa sola?",
-   "respuesta": "<span class=\"fx\">Hemina</span> intravenosa lo antes posible; la glucosa sola solo en crisis leves o mientras llega la hemina.",
-   "razonamiento": "Se eliminan los factores precipitantes y se da tratamiento de soporte y sintomático.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Anderson 2005, Ann Intern Med (PMID 15767622)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Porfiria",
-    "Nivel::Aplicacion",
-    "Fuente::Anderson2005",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2-ABD-0046",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Dolor abdominal por plomo</span>¿Qué rasgos orientan a saturnismo y cómo se confirma?",
-   "respuesta": "Exposición laboral, anemia con <span class=\"dx\">punteado basófilo</span> y encías pigmentadas; se confirma con plomo en sangre.",
-   "razonamiento": "El plomo inhibe la ALA deshidratasa, y en el caso descrito había además polineuropatía y elevación del zinc protoporfirina.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Rasgo</th><th>Porfiria</th><th>Plomo</th></tr></thead><tbody><tr><th>Prueba</th><td>PBG urinario</td><td>Plombemia</td></tr><tr><th>Sospecha</th><td>Dolor inexplicado</td><td>Exposición laboral</td></tr></tbody></table>",
-   "fuente": "Fonte 2007, Haematologica (PMID 17405745)",
-   "tags": [
-    "Quirurgica2::AbdomenAgudo::Saturnismo",
-    "Nivel::Aplicacion",
-    "Fuente::Fonte2007",
-    "Clase::Contraste",
-    "Bloom::Analizar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  }
- ]
+  "tarjetas": [
+    {
+      "id": "Q2-ABD-0001",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Dolor abdominal</span>¿Por qué el dolor visceral es difuso y mal localizado, mientras el del peritoneo parietal se señala con precisión?",
+      "respuesta": "Porque las vísceras tienen <span class=\"mec\">poca densidad de inervación sensitiva</span> con gran divergencia central; el dolor somático, como el parietal, se localiza mejor.",
+      "razonamiento": "La baja densidad de aferentes y la divergencia de la señal en el sistema nervioso central explican la dificultad para ubicar el origen del dolor visceral.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Sikandar 2012, Curr Opin Support Palliat Care (PMID 22246042)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Semiologia",
+        "Nivel::Aplicacion",
+        "Fuente::Sikandar2012",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0002",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Dolor abdominal en el adulto mayor</span>¿Por qué una exploración abdominal poco llamativa no tranquiliza en el adulto mayor?",
+      "respuesta": "Porque la presentación difiere de la del joven y el examen puede ser <span class=\"al\">engañosamente benigno</span> incluso en rotura de aneurisma o isquemia mesentérica.",
+      "razonamiento": "La enfermedad coexistente y los retrasos en consultar complican el cuadro; la morbimortalidad es alta y se requiere hospitalización con valoración quirúrgica pronta.<br>La apendicitis del adulto mayor se diagnostica bien al inicio solo la mitad de las veces y perfora más.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Lyon 2006, Am Fam Physician (PMID 17111893)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Semiologia",
+        "Nivel::Aplicacion",
+        "Fuente::Lyon2006",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0003",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Dolor abdominal</span>Dolor intenso con abdomen blando y sin peritonismo: ¿qué dos grupos diagnósticos no se deben pasar por alto?",
+      "respuesta": "La <span class=\"dx\">isquemia mesentérica</span> y las causas médicas neurovisceral, como la <span class=\"dx\">porfiria aguda</span>.",
+      "razonamiento": "La WSES indica asumir isquemia mesentérica aguda ante dolor desproporcionado al examen hasta demostrar lo contrario.<br>Las porfirias agudas dan síntomas neurovisceral que simulan muchos cuadros agudos médicos y psiquiátricos.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Bala 2022, World J Emerg Surg (PMID 36261857); Anderson 2005, Ann Intern Med (PMID 15767622)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Semiologia",
+        "Nivel::Aplicacion",
+        "Fuente::Bala2022",
+        "Clase::Aplicacion",
+        "Bloom::Analizar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0005",
+      "tipo": "Cloze",
+      "text": "<span class=\"tema\">Pancreatitis aguda · diagnóstico</span>Se diagnostica con {{c1::<span class=\"num\">2 de 3</span>}} criterios: dolor típico, enzima pancreática {{c2::<span class=\"num\">más de 3 veces</span>}} el límite superior normal o imagen característica.",
+      "extra": "Se prefiere la lipasa; la amilasa sola no es fiable. La tomografía o la resonancia no son necesarias para diagnosticar.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Tenner 2024, Am J Gastroenterol (PMID 38857482)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::PancreatitisDiagnostico",
+        "Nivel::Recuerdo",
+        "Fuente::Tenner2024",
+        "Clase::Irreducible",
+        "Bloom::Recordar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2-ABD-0006",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Pancreatitis aguda</span>¿Qué enzima se prefiere para el diagnóstico y por qué la amilasa sola no basta?",
+      "respuesta": "La <span class=\"fx\">lipasa</span>; la amilasa sola no es fiable para diagnosticar ni para excluir.",
+      "razonamiento": "La guía ACG exige 2 de 3 criterios y no requiere imagen de corte para el diagnóstico.<br>Si la clínica es típica y la enzima no orienta, la imagen completa los criterios.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Tenner 2024, Am J Gastroenterol (PMID 38857482)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::PancreatitisDiagnostico",
+        "Nivel::Aplicacion",
+        "Fuente::Tenner2024",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0007",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Pancreatitis aguda</span>¿Qué define la pancreatitis grave en la clasificación de Atlanta revisada?",
+      "respuesta": "La <span class=\"al\">falla orgánica persistente</span> por más de 48 horas.",
+      "razonamiento": "La moderadamente grave tiene falla orgánica transitoria, complicaciones locales o descompensación de una comorbilidad.<br>La leve no tiene falla orgánica ni complicaciones y suele resolverse en la primera semana.",
+      "mnemotecnia": "",
+      "esquema": "<table><thead><tr><th>Grado</th><th>Falla orgánica</th><th>Local</th></tr></thead><tbody><tr><th>Leve</th><td>Ausente</td><td>Ausente</td></tr><tr><th>Moderada</th><td>Transitoria</td><td>Puede haber</td></tr><tr><th>Grave</th><td><span class=\"al\">Persistente &gt;48 h</span></td><td>Puede haber</td></tr></tbody></table>",
+      "fuente": "Banks 2013, Gut (PMID 23100216)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::PancreatitisGravedad",
+        "Nivel::Aplicacion",
+        "Fuente::Banks2013",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0008",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Pancreatitis aguda</span>Necrosis extensa en la tomografía pero sin falla orgánica: ¿es una pancreatitis grave?",
+      "respuesta": "No: es <span class=\"dx\">moderadamente grave</span>, porque hay complicación local sin falla orgánica persistente.",
+      "razonamiento": "Atlanta revisada define la gravedad por la falla orgánica persistente (más de 48 horas), no por la morfología.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Banks 2013, Gut (PMID 23100216)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::PancreatitisGravedad",
+        "Nivel::Aplicacion",
+        "Fuente::Banks2013",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0009",
+      "tipo": "Cloze",
+      "text": "<span class=\"tema\">Ranson · pancreatitis aguda</span>Un puntaje de Ranson de {{c1::<span class=\"num\">3</span>}} o más indica pancreatitis grave y se completa con datos de las primeras {{c2::<span class=\"num\">48 horas</span>}}.",
+      "extra": "Ranson usa 11 signos pronósticos; su límite es que no puede completarse al ingreso.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Yadav 2016, Gastroenterol Rep (PMID 25733696)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::PancreatitisGravedad",
+        "Nivel::Recuerdo",
+        "Fuente::Yadav2016",
+        "Clase::Escala",
+        "Bloom::Recordar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2-ABD-0010",
+      "tipo": "Cloze",
+      "text": "<span class=\"tema\">BISAP · pancreatitis aguda</span>El BISAP se calcula con datos de las primeras {{c1::<span class=\"num\">24 horas</span>}} y un puntaje de {{c2::<span class=\"num\">3</span>}} o más señala mayor riesgo de mortalidad.",
+      "extra": "Cada componente suma un punto: urea, estado mental, SIRS, edad y derrame pleural.",
+      "mnemotecnia": "<span class=\"mne\">BISAP</span> (inglés)<ul><li><b>B</b> BUN: urea alta</li><li><b>I</b> Impaired mental status: estado mental alterado</li><li><b>S</b> SIRS</li><li><b>A</b> Age: edad mayor de 60</li><li><b>P</b> Pleural effusion: derrame pleural</li></ul>",
+      "esquema": "",
+      "fuente": "Wu 2008, Gut (PMID 18519429); Yadav 2016, Gastroenterol Rep (PMID 25733696)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::PancreatitisGravedad",
+        "Nivel::Recuerdo",
+        "Fuente::Wu2008",
+        "Clase::Escala",
+        "Bloom::Recordar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2-ABD-0011",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Ranson frente a BISAP</span>¿Qué ventaja operativa tiene el BISAP sobre Ranson en urgencias?",
+      "respuesta": "Se calcula con datos de las primeras <span class=\"num\">24 horas</span>; Ranson necesita <span class=\"num\">48 horas</span>.",
+      "razonamiento": "Ranson solo se completa a las 48 horas, cuando ya pasó la fase temprana de la atención.<br>El BISAP usa cinco variables disponibles al ingreso.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Yadav 2016, Gastroenterol Rep (PMID 25733696); Wu 2008, Gut (PMID 18519429)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::PancreatitisGravedad",
+        "Nivel::Aplicacion",
+        "Fuente::Yadav2016",
+        "Clase::Contraste",
+        "Bloom::Analizar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0012",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Pancreatitis aguda</span>¿Por qué hoy se prefiere la hidratación moderada con Ringer lactato sobre la agresiva?",
+      "respuesta": "Porque la pauta <span class=\"al\">agresiva</span> produjo más sobrecarga hídrica sin mejorar los desenlaces clínicos.",
+      "razonamiento": "WATERFALL comparó bolo de 20 mL/kg más 3 mL/kg/h contra bolo de 10 mL/kg solo si había hipovolemia más 1,5 mL/kg/h, con ajuste según la clínica.<br>El ensayo se detuvo por sobrecarga hídrica (20,5 % frente a 6,3 %).",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "de-Madaria 2022, N Engl J Med (PMID 36103415)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::PancreatitisTratamiento",
+        "Nivel::Aplicacion",
+        "Fuente::deMadaria2022",
+        "Clase::Aplicacion",
+        "Bloom::Evaluar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0013",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Necrosis pancreática</span>¿Se indican antibióticos profilácticos en la necrosis estéril?",
+      "respuesta": "No: se reservan para la <span class=\"dx\">necrosis infectada</span>, junto con el desbridamiento.",
+      "razonamiento": "La guía ACG recomienda no usar antibióticos profilácticos en necrosis estéril.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Tenner 2024, Am J Gastroenterol (PMID 38857482)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::PancreatitisTratamiento",
+        "Nivel::Aplicacion",
+        "Fuente::Tenner2024",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0014",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Necrosis pancreática infectada</span>¿Qué estrategia de intervención se prefiere frente a la necrosectomía abierta primaria?",
+      "respuesta": "El abordaje <span class=\"dx\">escalonado</span>: drenaje primero y necrosectomía mínimamente invasiva solo si es necesaria.",
+      "razonamiento": "En el ensayo PANTER, el abordaje escalonado redujo el desenlace compuesto de complicaciones mayores o muerte frente a la necrosectomía abierta (40 % frente a 69 %).<br>La mortalidad aislada no difirió.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "van Santvoort 2010, N Engl J Med (PMID 20410514)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::PancreatitisTratamiento",
+        "Nivel::Aplicacion",
+        "Fuente::vanSantvoort2010",
+        "Clase::Aplicacion",
+        "Bloom::Evaluar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0015",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Pancreatitis biliar leve</span>¿Cuándo se hace la colecistectomía en la pancreatitis biliar leve?",
+      "respuesta": "Pronto, durante el <span class=\"dx\">mismo ingreso</span> y preferiblemente antes del alta.",
+      "razonamiento": "La guía ACG la recomienda para prevenir recurrencias de la pancreatitis biliar.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Tenner 2024, Am J Gastroenterol (PMID 38857482)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::PancreatitisTratamiento",
+        "Nivel::Aplicacion",
+        "Fuente::Tenner2024",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0016",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Pancreatitis biliar</span>¿Cuándo se indica la CPRE en una pancreatitis biliar?",
+      "respuesta": "Cuando coexiste <span class=\"dx\">colangitis</span>; sin colangitis se prefiere el tratamiento médico a la CPRE precoz.",
+      "razonamiento": "La guía ACG sugiere tratamiento médico en lugar de CPRE en las primeras 72 horas de una pancreatitis biliar sin colangitis.<br>La CPRE no es un tratamiento de la pancreatitis en sí.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Tenner 2024, Am J Gastroenterol (PMID 38857482)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::PancreatitisTratamiento",
+        "Nivel::Aplicacion",
+        "Fuente::Tenner2024",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0017",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Colecistitis aguda</span>¿Qué ocurre cuando un cálculo obstruye el conducto cístico de forma prolongada?",
+      "respuesta": "La vesícula se distiende y la obstrucción prolongada produce <span class=\"mec\">inflamación, infección e incluso isquemia</span>.",
+      "razonamiento": "La obstrucción transitoria da cólico biliar; la prolongada origina colecistitis aguda.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Mou 2019, Ann Gastroenterol Surg (PMID 31131353)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Colecistitis",
+        "Nivel::Aplicacion",
+        "Fuente::Mou2019",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0018",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Colecistitis aguda</span>Paciente con colecistitis y riesgo quirúrgico prohibitivo: ¿qué alternativa existe y qué limitación tiene?",
+      "respuesta": "La <span class=\"dx\">colecistostomía percutánea</span>: es una medida temporal para pacientes que no son buenos candidatos quirúrgicos.",
+      "razonamiento": "La TG18 considera el drenaje vesicular percutáneo en candidatos de alto riesgo; la colecistectomía queda diferida.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Mou 2019, Ann Gastroenterol Surg (PMID 31131353); Yokoe 2018, J Hepatobiliary Pancreat Sci (PMID 29032636)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Colecistitis",
+        "Nivel::Aplicacion",
+        "Fuente::Mou2019",
+        "Clase::Aplicacion",
+        "Bloom::Evaluar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0019",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Colecistitis aguda</span>Si el paciente es candidato quirúrgico, ¿en qué plazo se prefiere la colecistectomía laparoscópica?",
+      "respuesta": "Idealmente dentro de las primeras <span class=\"num\">72 horas</span> desde la presentación.",
+      "razonamiento": "Los datos sugieren que la cirugía temprana da mejores resultados, incluso pasadas 72 horas de síntomas.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Mou 2019, Ann Gastroenterol Surg (PMID 31131353)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Colecistitis",
+        "Nivel::Recuerdo",
+        "Fuente::Mou2019",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0020",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Colangitis aguda</span>¿Qué grado de la clasificación TG18 exige drenaje biliar urgente con soporte orgánico?",
+      "respuesta": "El <span class=\"dx\">grado III</span>, definido por disfunción orgánica.",
+      "razonamiento": "En el grado II el drenaje precoz mejora la mortalidad a 30 días.",
+      "mnemotecnia": "",
+      "esquema": "<table><thead><tr><th>Grado</th><th>Criterio</th><th>Drenaje</th></tr></thead><tbody><tr><th>I</th><td>Responde a antibiótico</td><td>Si no mejora en 24 h</td></tr><tr><th>II</th><td>Moderada</td><td>Precoz</td></tr><tr><th>III</th><td><span class=\"al\">Disfunción orgánica</span></td><td>Urgente con soporte</td></tr></tbody></table>",
+      "fuente": "Kiriyama 2018, J Hepatobiliary Pancreat Sci (PMID 29032610)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Colangitis",
+        "Nivel::Aplicacion",
+        "Fuente::Kiriyama2018",
+        "Clase::Escala",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0021",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Colangitis grave</span>Dolor en hipocondrio derecho, fiebre, ictericia, hipotensión y confusión en un hospital sin CPRE: ¿qué se hace?",
+      "respuesta": "Reanimar, dar antibiótico intravenoso y organizar el <span class=\"al\">drenaje biliar urgente</span>, con transferencia si no se puede hacer en el sitio.",
+      "razonamiento": "El cuadro es una colangitis grado III por la disfunción orgánica.<br>El drenaje puede ser endoscópico o transhepático percutáneo.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Kiriyama 2018, J Hepatobiliary Pancreat Sci (PMID 29032610)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Colangitis",
+        "Nivel::Aplicacion",
+        "Fuente::Kiriyama2018",
+        "Clase::Vineta",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0022",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Coledocolitiasis</span>Sospecha de coledocolitiasis de riesgo intermedio: ¿por qué no se va directo a CPRE?",
+      "respuesta": "Porque la CPRE es terapéutica y tiene eventos adversos; en riesgo intermedio se confirma antes con <span class=\"dx\">ecoendoscopia o colangiorresonancia</span>.",
+      "razonamiento": "Los pacientes de alto riesgo van directo a CPRE.<br>La guía ASGE señala eventos adversos de la CPRE en el 6 % al 15 % de los casos.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Buxbaum 2019, Gastrointest Endosc (PMID 30979521)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Coledocolitiasis",
+        "Nivel::Aplicacion",
+        "Fuente::Buxbaum2019",
+        "Clase::Aplicacion",
+        "Bloom::Evaluar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0023",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Apendicitis aguda</span>¿Para qué se usan las escalas Alvarado, AIR y AAS?",
+      "respuesta": "Para <span class=\"dx\">excluir</span> apendicitis en pacientes de bajo riesgo; no sirven para confirmarla.",
+      "razonamiento": "La WSES recomienda las escalas clínicas para excluir y sugiere no usar Alvarado para confirmar.<br>Recomienda AIR y AAS como predictores clínicos.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Di Saverio 2020, World J Emerg Surg (PMID 32295644)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Apendicitis",
+        "Nivel::Aplicacion",
+        "Fuente::DiSaverio2020",
+        "Clase::Escala",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0024",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Apendicitis no complicada</span>¿Qué muestra el ensayo CODA sobre tratar solo con antibióticos?",
+      "respuesta": "Fue no inferior en calidad de vida, pero el <span class=\"num\">29 %</span> fue apendicectomizado a los 90 días.",
+      "razonamiento": "El riesgo fue mayor con apendicolito (41 % frente a 25 %).<br>La WSES plantea el manejo antibiótico en pacientes seleccionados sin apendicolito.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Flum 2020, N Engl J Med (PMID 33017106); Di Saverio 2020, World J Emerg Surg (PMID 32295644)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Apendicitis",
+        "Nivel::Aplicacion",
+        "Fuente::Flum2020",
+        "Clase::Aplicacion",
+        "Bloom::Evaluar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0025",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Apendicitis en el embarazo</span>¿Qué imagen se pide y qué conducta se sugiere frente al manejo antibiótico?",
+      "respuesta": "<span class=\"dx\">Ecografía</span> primero y resonancia si no es concluyente; se sugiere no tratar de forma no operatoria durante el embarazo.",
+      "razonamiento": "La WSES sugiere la ecografía de compresión graduada como imagen inicial y la resonancia tras una ecografía no concluyente.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Di Saverio 2020, World J Emerg Surg (PMID 32295644)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Apendicitis",
+        "Nivel::Aplicacion",
+        "Fuente::DiSaverio2020",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0026",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Plastrón o absceso apendicular</span>¿Cuál es el manejo inicial y la postura sobre la apendicectomía de intervalo?",
+      "respuesta": "Manejo no operatorio inicial; la apendicectomía de intervalo no es de rutina y se reserva para síntomas <span class=\"al\">recurrentes</span>.",
+      "razonamiento": "La WSES considera el manejo no operatorio un tratamiento inicial razonable del flemón o absceso.<br>Si se opera una apendicitis complicada, sugiere la vía laparoscópica.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Di Saverio 2020, World J Emerg Surg (PMID 32295644)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Apendicitis",
+        "Nivel::Aplicacion",
+        "Fuente::DiSaverio2020",
+        "Clase::Aplicacion",
+        "Bloom::Evaluar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0027",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Úlcera péptica perforada</span>¿Por qué importa el tiempo hasta la cirugía?",
+      "respuesta": "Porque la mortalidad <span class=\"al\">aumenta con cada hora</span> de retraso; se recomienda operar lo antes posible.",
+      "razonamiento": "Un retraso de más de 24 horas se asoció a mal pronóstico.<br>El retraso es especialmente relevante en la presentación tardía.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Tarasconi 2020, World J Emerg Surg (PMID 31921329)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Perforacion",
+        "Nivel::Aplicacion",
+        "Fuente::Tarasconi2020",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0028",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Úlcera péptica perforada</span>¿Qué cobertura antimicrobiana se recomienda y por cuánto tiempo?",
+      "respuesta": "Antibiótico de <span class=\"fx\">amplio espectro</span> desde la sospecha; un curso corto de unos <span class=\"num\">3 a 5 días</span>.",
+      "razonamiento": "La WSES lo recomienda de forma fuerte, con evidencia de baja calidad.<br>No sugiere de rutina el parche de epiplón por el mayor tiempo operatorio.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Tarasconi 2020, World J Emerg Surg (PMID 31921329)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Perforacion",
+        "Nivel::Recuerdo",
+        "Fuente::Tarasconi2020",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0029",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Obstrucción adherencial</span>¿Cuál es el manejo inicial sin signos de estrangulación y hasta cuándo?",
+      "respuesta": "Descompresión con sonda y reposición, con prueba de manejo conservador de hasta <span class=\"num\">72 horas</span>.",
+      "razonamiento": "El panel considera seguro un periodo de 72 horas.<br>Peritonitis, estrangulación o isquemia contraindican el manejo no operatorio.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Ten Broek 2018, World J Emerg Surg (PMID 29946347)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Obstruccion",
+        "Nivel::Aplicacion",
+        "Fuente::TenBroek2018",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0030",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Obstrucción adherencial</span>¿Qué predice el contraste hidrosoluble que llega al colon?",
+      "respuesta": "Que la obstrucción se resolverá sin cirugía: el contraste que llega al colon indica resolución.",
+      "razonamiento": "Algunos autores atribuyen al contraste además un papel terapéutico que reduce la necesidad de cirugía.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Ten Broek 2018, World J Emerg Surg (PMID 29946347)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Obstruccion",
+        "Nivel::Aplicacion",
+        "Fuente::TenBroek2018",
+        "Clase::Aplicacion",
+        "Bloom::Analizar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0031",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Obstrucción adherencial</span>¿Qué hallazgos de la tomografía indican cirugía sin demora?",
+      "respuesta": "<span class=\"al\">Asa cerrada</span>, isquemia intestinal y líquido libre.",
+      "razonamiento": "La tomografía con contraste hidrosoluble es la imagen preferida en la evaluación inicial.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Ten Broek 2018, World J Emerg Surg (PMID 29946347)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Obstruccion",
+        "Nivel::Aplicacion",
+        "Fuente::TenBroek2018",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0032",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Obstrucción intestinal</span>¿Por qué no basta la exploración física para descartar estrangulación?",
+      "respuesta": "Porque la exploración física es <span class=\"al\">poco fiable</span> para detectar estrangulación, incluso en manos expertas.",
+      "razonamiento": "Ante la duda se recurre a la tomografía en lugar de confiar en la exploración.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Ten Broek 2018, World J Emerg Surg (PMID 29946347)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Obstruccion",
+        "Nivel::Recuerdo",
+        "Fuente::TenBroek2018",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0033",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Vólvulo de sigmoides</span>Sin isquemia ni peritonitis: ¿cuál es el tratamiento inicial y qué se hace después?",
+      "respuesta": "<span class=\"dx\">Destorsión endoscópica</span>, seguida de sigmoidectomía electiva por la alta recurrencia.",
+      "razonamiento": "La cirugía urgente se reserva para gangrena, perforación, peritonitis o destorsión fallida.<br>Las series reportan recurrencias del 30 % al 90 % tras la destorsión endoscópica.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Atamanalp 2017, Pak J Med Sci (PMID 29492092)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Volvulo",
+        "Nivel::Aplicacion",
+        "Fuente::VolvuloSigmoides",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0034",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Isquemia mesentérica aguda</span>Dolor abdominal desproporcionado al examen físico: ¿qué se asume?",
+      "respuesta": "Se asume <span class=\"dx\">isquemia mesentérica aguda</span> hasta demostrar lo contrario.",
+      "razonamiento": "La WSES indica pedir angiotomografía sin demora ante la sospecha.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Bala 2022, World J Emerg Surg (PMID 36261857)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::IsquemiaMesenterica",
+        "Nivel::Aplicacion",
+        "Fuente::Bala2022",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0035",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Isquemia mesentérica aguda</span>¿Puede el lactato decidir entre isquemia reversible e infarto?",
+      "respuesta": "No: el lactato por sí solo <span class=\"al\">no es fiable</span> para diferenciarlas.",
+      "razonamiento": "Citrulina, I-FABP y D-lactato tampoco fueron lo bastante sensibles ni específicos.<br>La decisión de imagen se basa en la sospecha clínica.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Bala 2022, World J Emerg Surg (PMID 36261857)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::IsquemiaMesenterica",
+        "Nivel::Aplicacion",
+        "Fuente::Bala2022",
+        "Clase::Aplicacion",
+        "Bloom::Analizar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0036",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Isquemia mesentérica aguda</span>¿Cómo se pide la angiotomografía?",
+      "respuesta": "Sin demora y <span class=\"al\">sin contraste oral</span>, que no está indicado y puede ser perjudicial.",
+      "razonamiento": "La WSES recomienda angiotomografía sin demora ante cualquier sospecha.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Bala 2022, World J Emerg Surg (PMID 36261857)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::IsquemiaMesenterica",
+        "Nivel::Aplicacion",
+        "Fuente::Bala2022",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0037",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Arteria mesentérica superior</span>Embolia frente a trombosis: ¿qué diferencia su sitio y perfil?",
+      "respuesta": "La <span class=\"dx\">embolia</span> se impacta distal al origen, en paciente con fibrilación auricular; la <span class=\"dx\">trombosis</span> ocurre en el origen, sobre aterosclerosis.",
+      "razonamiento": "Cerca de la mitad de las embolias ocurre con fibrilación auricular.<br>El émbolo suele respetar el yeyuno proximal y el colon.",
+      "mnemotecnia": "",
+      "esquema": "<table><thead><tr><th>Rasgo</th><th>Embolia</th><th>Trombosis</th></tr></thead><tbody><tr><th>Sitio</th><td>3-10 cm tras el origen</td><td>Origen de la arteria</td></tr><tr><th>Perfil</th><td>Fibrilación auricular</td><td>Aterosclerosis crónica</td></tr><tr><th>Yeyuno proximal</th><td>Respetado</td><td>Afectado</td></tr></tbody></table>",
+      "fuente": "Bala 2022, World J Emerg Surg (PMID 36261857)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::IsquemiaMesenterica",
+        "Nivel::Aplicacion",
+        "Fuente::Bala2022",
+        "Clase::Contraste",
+        "Bloom::Analizar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0038",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Trombosis venosa mesentérica</span>¿Cuál es el tratamiento de primera línea?",
+      "respuesta": "La <span class=\"fx\">anticoagulación</span>, con infusión continua de heparina no fraccionada.",
+      "razonamiento": "La WSES indica que a menudo se trata con éxito sin cirugía.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Bala 2022, World J Emerg Surg (PMID 36261857)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::IsquemiaMesenterica",
+        "Nivel::Aplicacion",
+        "Fuente::Bala2022",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0039",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Isquemia mesentérica arterial oclusiva</span>¿Qué se inicia antes de la cirugía y qué se planifica después?",
+      "respuesta": "<span class=\"fx\">Anticoagulación</span> a dosis plena en todos los pacientes antes de operar y reexploración planificada tras restaurar el flujo.",
+      "razonamiento": "La reexploración se hace típicamente dentro de 24 a 48 horas.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Bala 2022, World J Emerg Surg (PMID 36261857)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::IsquemiaMesenterica",
+        "Nivel::Aplicacion",
+        "Fuente::Bala2022",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0040",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Isquemia mesentérica no oclusiva</span>¿Qué se corrige y cuándo se opera?",
+      "respuesta": "La causa de fondo y la perfusión mesentérica; se opera ante <span class=\"al\">peritonitis, perforación o deterioro</span>.",
+      "razonamiento": "Suele deberse a vasoconstricción con bajo flujo esplácnico en el paciente crítico, con insuficiencia cardiaca, sepsis o vasoactivos.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Bala 2022, World J Emerg Surg (PMID 36261857)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::IsquemiaMesenterica",
+        "Nivel::Aplicacion",
+        "Fuente::Bala2022",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0041",
+      "tipo": "Cloze",
+      "text": "<span class=\"tema\">Aneurisma de aorta abdominal</span>El umbral de reparación electiva es {{c1::<span class=\"num\">55 mm</span>}} en varones y {{c2::<span class=\"num\">50 mm</span>}} en mujeres.",
+      "extra": "Por debajo de esos tamaños la ESVS desaconseja reparar un aneurisma fusiforme degenerativo.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Wanhainen 2024, Eur J Vasc Endovasc Surg (PMID 38307694)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::AAA",
+        "Nivel::Recuerdo",
+        "Fuente::Wanhainen2024",
+        "Clase::Irreducible",
+        "Bloom::Recordar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2-ABD-0042",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Aneurisma de aorta</span>Varón mayor, hipertenso y fumador, con primer «cólico renal», hipotensión y palidez: ¿qué diagnóstico no se debe omitir?",
+      "respuesta": "<span class=\"al\">Aneurisma de aorta abdominal roto</span>; si hay anatomía adecuada, la reparación endovascular es la primera opción.",
+      "razonamiento": "La exploración puede ser engañosamente benigna aun en la rotura aórtica.<br>Un dolor lumbar con inestabilidad hemodinámica exige descartar el aneurisma antes de asumir litiasis.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Wanhainen 2024, Eur J Vasc Endovasc Surg (PMID 38307694); Lyon 2006, Am Fam Physician (PMID 17111893)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::AAA",
+        "Nivel::Aplicacion",
+        "Fuente::Wanhainen2024",
+        "Clase::Vineta",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0043",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Aneurisma roto</span>¿Qué principio de reanimación recoge la guía para el paciente hipotenso?",
+      "respuesta": "La <span class=\"dx\">hipotensión permisiva</span> perioperatoria, abordada por la guía ESVS.",
+      "razonamiento": "La guía trata la hipotensión permisiva y el balón de oclusión aórtica dentro del manejo de la rotura.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Wanhainen 2024, Eur J Vasc Endovasc Surg (PMID 38307694)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::AAA",
+        "Nivel::Aplicacion",
+        "Fuente::Wanhainen2024",
+        "Clase::Aplicacion",
+        "Bloom::Comprender",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0044",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Porfiria aguda</span>¿Qué prueba confirma rápidamente el diagnóstico en la crisis?",
+      "respuesta": "El <span class=\"dx\">porfobilinógeno urinario</span> marcadamente elevado en una muestra aislada.",
+      "razonamiento": "La misma muestra se guarda para cuantificar porfobilinógeno, ácido aminolevulínico y porfirinas totales.<br>Debe sospecharse en dolor abdominal inexplicado.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Anderson 2005, Ann Intern Med (PMID 15767622)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Porfiria",
+        "Nivel::Recuerdo",
+        "Fuente::Anderson2005",
+        "Clase::Irreducible",
+        "Bloom::Recordar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0045",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Porfiria aguda</span>¿Cuál es el tratamiento más eficaz de la crisis y cuándo la glucosa sola?",
+      "respuesta": "<span class=\"fx\">Hemina</span> intravenosa lo antes posible; la glucosa sola solo en crisis leves o mientras llega la hemina.",
+      "razonamiento": "Se eliminan los factores precipitantes y se da tratamiento de soporte y sintomático.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Anderson 2005, Ann Intern Med (PMID 15767622)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Porfiria",
+        "Nivel::Aplicacion",
+        "Fuente::Anderson2005",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2-ABD-0046",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Dolor abdominal por plomo</span>¿Qué rasgos orientan a saturnismo y cómo se confirma?",
+      "respuesta": "Exposición laboral, anemia con <span class=\"dx\">punteado basófilo</span> y encías pigmentadas; se confirma con plomo en sangre.",
+      "razonamiento": "El plomo inhibe la ALA deshidratasa, y en el caso descrito había además polineuropatía y elevación del zinc protoporfirina.",
+      "mnemotecnia": "",
+      "esquema": "<table><thead><tr><th>Rasgo</th><th>Porfiria</th><th>Plomo</th></tr></thead><tbody><tr><th>Prueba</th><td>PBG urinario</td><td>Plombemia</td></tr><tr><th>Sospecha</th><td>Dolor inexplicado</td><td>Exposición laboral</td></tr></tbody></table>",
+      "fuente": "Fonte 2007, Haematologica (PMID 17405745)",
+      "tags": [
+        "Quirurgica2::AbdomenAgudo::Saturnismo",
+        "Nivel::Aplicacion",
+        "Fuente::Fonte2007",
+        "Clase::Contraste",
+        "Bloom::Analizar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    }
+  ]
 }

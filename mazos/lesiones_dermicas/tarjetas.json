@@ -1,840 +1,850 @@
 {
- "meta": {
-  "caso": "Lesiones dérmicas",
-  "rotacion": "2.ª",
-  "tag_raiz": "LesionesDermicas",
-  "prefijo": "Q2R2-DER",
-  "version": "1.0",
-  "fecha": "2026-11-26",
-  "resultado_aprendizaje": "Maneja de manera integral a los pacientes con lesiones dérmicas, según evidencia científica.",
-  "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 2.ª rotación, Caso 8 — Lesiones dérmicas (contenidos y trabajo autónomo)",
-  "justificacion_exceso": "",
-  "mir_verificados": [],
-  "verificacion": {
-   "total": 78,
-   "verificados": 72,
-   "eliminados": [
-    {
-     "id": "Q2R2-DER-0002",
-     "dato": "Umbral de 0,5 cm frente a 1 cm entre libros (semilla del widget de definiciones)",
-     "motivo": "no se pudo contrastar Bolognia/Fitzpatrick en la sesión: solo se usa el corte de 1 cm de Emer 2015"
+  "meta": {
+    "caso": "Lesiones dérmicas",
+    "rotacion": "2.ª",
+    "tag_raiz": "LesionesDermicas",
+    "prefijo": "Q2R2-DER",
+    "version": "1.0",
+    "fecha": "2026-11-26",
+    "resultado_aprendizaje": "Maneja de manera integral a los pacientes con lesiones dérmicas, según evidencia científica.",
+    "fuente_alcance": "Sílabo SIH2 Quirúrgica 2, 2.ª rotación, Caso 8 — Lesiones dérmicas (contenidos y trabajo autónomo)",
+    "justificacion_exceso": "",
+    "mir_verificados": [],
+    "verificacion": {
+      "total": 78,
+      "verificados": 72,
+      "eliminados": [
+        {
+          "id": "Q2R2-DER-0002",
+          "dato": "Umbral de 0,5 cm frente a 1 cm entre libros (semilla del widget de definiciones)",
+          "motivo": "no se pudo contrastar Bolognia/Fitzpatrick en la sesión: solo se usa el corte de 1 cm de Emer 2015"
+        },
+        {
+          "id": "Q2R2-DER-0005",
+          "dato": "Signo de Nikolsky y vitropresión (diascopia) como maniobras de exploración",
+          "motivo": "sin fuente que defina ambas maniobras en las búsquedas (PubMed sin resultados): eliminadas, sin tarjeta"
+        },
+        {
+          "id": "Q2R2-DER-0024",
+          "dato": "Signo de Auspitz, escama plateada y localización en superficies extensoras de la psoriasis",
+          "motivo": "PubMed sin resultados con esos términos y Consensus sin cupo: eliminado; la tarjeta describe psoriasis por mecanismo y tratamiento"
+        },
+        {
+          "id": "Q2R2-DER-0010",
+          "dato": "Localización de la dermatitis atópica por edad (cara en lactante, pliegues en escolar)",
+          "motivo": "las fuentes solo confirman que la distribución depende de la edad: se dejó la afirmación cualitativa"
+        },
+        {
+          "id": "Q2R2-DER-0021",
+          "dato": "Porcentaje de pacientes con placa heraldo y prevalencia de HHV-6/7 en pitiriasis rosada",
+          "motivo": "cifra reformulada a cualitativa (no se usan valores no necesarios): eliminada"
+        },
+        {
+          "id": "Q2R2-DER-0009",
+          "dato": "Porcentajes de fobia a corticoides tópicos y de dermatitis irritativa entre las de contacto",
+          "motivo": "no aportan decisión clínica: eliminados"
+        },
+        {
+          "id": "Q2R2-DER-0022",
+          "dato": "Toma de la muestra del borde activo y generalización a toda tiña",
+          "motivo": "la fuente trata la tiña del pie: acotado y borde activo eliminado"
+        },
+        {
+          "id": "Q2R2-DER-0025",
+          "dato": "Tag AltoRendimiento::MIR",
+          "motivo": "sin pregunta MIR verificada: tag eliminado"
+        }
+      ],
+      "nota": "recuento exacto no completado"
     },
-    {
-     "id": "Q2R2-DER-0005",
-     "dato": "Signo de Nikolsky y vitropresión (diascopia) como maniobras de exploración",
-     "motivo": "sin fuente que defina ambas maniobras en las búsquedas (PubMed sin resultados): eliminadas, sin tarjeta"
-    },
-    {
-     "id": "Q2R2-DER-0024",
-     "dato": "Signo de Auspitz, escama plateada y localización en superficies extensoras de la psoriasis",
-     "motivo": "PubMed sin resultados con esos términos y Consensus sin cupo: eliminado; la tarjeta describe psoriasis por mecanismo y tratamiento"
-    },
-    {
-     "id": "Q2R2-DER-0010",
-     "dato": "Localización de la dermatitis atópica por edad (cara en lactante, pliegues en escolar)",
-     "motivo": "las fuentes solo confirman que la distribución depende de la edad: se dejó la afirmación cualitativa"
-    },
-    {
-     "id": "Q2R2-DER-0021",
-     "dato": "Porcentaje de pacientes con placa heraldo y prevalencia de HHV-6/7 en pitiriasis rosada",
-     "motivo": "cifra reformulada a cualitativa (no se usan valores no necesarios): eliminada"
-    },
-    {
-     "id": "Q2R2-DER-0009",
-     "dato": "Porcentajes de fobia a corticoides tópicos y de dermatitis irritativa entre las de contacto",
-     "motivo": "no aportan decisión clínica: eliminados"
+    "guia": {
+      "principios": [
+        "Se describe primero la lesión primaria y luego las secundarias: la primaria es la enfermedad, la secundaria es lo que el rascado, el exudado o el tiempo añaden.",
+        "La dermatitis atópica es una falla doble: barrera alterada e inflamación tipo 2; se trata reparando la barrera y apagando la inflamación.",
+        "Dermatosis descamativa no significa una sola enfermedad: se separan por zona, borde, prueba (KOH, parche) y curso.",
+        "Un corticoide tópico puede enmascarar una tiña: siempre se pregunta qué se aplicó antes.",
+        "En la psoriasis, la proliferación de queratinocitos está dirigida por la vía IL-23/Th17, y por eso los biológicos actúan allí.",
+        "En un niño con dermatosis crónica, el sistema de cuidado es la familia: educación, sueño y miedos a los fármacos cuentan como tratamiento."
+      ],
+      "palabras_clave": [
+        "lesión primaria",
+        "lesión secundaria",
+        "mácula",
+        "mancha",
+        "pápula",
+        "placa",
+        "escama",
+        "costra",
+        "liquenificación",
+        "Koebner",
+        "filagrina",
+        "IL-31",
+        "Malassezia",
+        "prueba de parche",
+        "KOH",
+        "tiña incógnito",
+        "placa heraldo",
+        "psoriasis"
+      ],
+      "imagenes_oclusion": [
+        "Cuadro de lesiones elementales por forma y tamaño (1 cm) con los nombres tapados",
+        "Línea de brote agudo a placa liquenificada en dermatitis atópica con los rótulos tapados",
+        "Tabla de dermatosis descamativas con pista clave y prueba tapadas"
+      ],
+      "preguntas_cierre": [
+        "Describe en voz alta, con lesiones primarias y secundarias, una placa pruriginosa crónica del pliegue del codo de un escolar.",
+        "¿Qué pregunta de la historia evita confundir una tiña con un eccema?",
+        "Una madre rechaza el corticoide tópico: reconstruye tu conversación.",
+        "Explica por qué un anti-IL-17 o anti-IL-23 funciona en psoriasis y por qué eso no explica la dermatitis atópica."
+      ],
+      "subtemas": {
+        "Semiologia": "Conceptos y semiología de lesiones primarias y secundarias de piel",
+        "DermatitisAtopica": "Epidemiología, fisiopatología, clínica y tratamiento de la dermatitis atópica",
+        "DermatitisSeborreica": "Dermatitis seborreica, enfermedad con lesiones descamativas",
+        "DermatitisContacto": "Dermatitis de contacto irritativa y alérgica",
+        "Tinas": "Diagnóstico diferencial con tiñas",
+        "Pitiriasis": "Diagnóstico diferencial con pitiriasis",
+        "Psoriasis": "Diagnóstico diferencial con psoriasis",
+        "DiagnosticoDiferencial": "Enfermedades de piel que generan lesiones descamativas",
+        "RelacionMedicoPaciente": "Relación médico-paciente-familia en problemas crónicos"
+      },
+      "fechas": {
+        "apertura": null,
+        "cierre": null,
+        "examen": null
+      },
+      "referencias": [
+        "Emer J, Sivek R, Marciniak B. Sports dermatology: part 1 of 2. Traumatic or mechanical injuries, inflammatory conditions, and exacerbations of pre-existing conditions. J Clin Aesthet Dermatol. 2015;8(4):31-43. PMID: 26060516.",
+        "Karampinis E, Georgopoulou KE, Goudouras G, Lianou V, Kampra E, Roussaki Schulze AV, et al. Laser-induced Koebner-related skin reactions: a clinical overview. Medicina (Kaunas). 2024;60(7):1177. doi:10.3390/medicina60071177. PMID: 39064606.",
+        "Renkhold L, Wiegmann H, Pfleiderer B, Süer A, Zeidler C, Pereira MP, et al. Scratching increases epidermal neuronal branching and alters psychophysical testing responses in atopic dermatitis and brachioradial pruritus. Front Mol Neurosci. 2023;16:1260345. doi:10.3389/fnmol.2023.1260345. PMID: 37795274.",
+        "Lyons JJ, Milner JD, Stone KD. Atopic dermatitis in children: clinical features, pathophysiology, and treatment. Immunol Allergy Clin North Am. 2015;35(1):161-83. doi:10.1016/j.iac.2014.09.008. PMID: 25459583.",
+        "Furue M, Ulzii D, Vu YH, Tsuji G, Kido-Nakahara M, Nakahara T. Pathogenesis of atopic dermatitis: current paradigm. Iran J Immunol. 2019;16(2):97-107. doi:10.22034/IJI.2019.80253. PMID: 31182684.",
+        "Barrett M, Luu M. Differential diagnosis of atopic dermatitis. Immunol Allergy Clin North Am. 2017;37(1):11-34. doi:10.1016/j.iac.2016.08.009. PMID: 27886900.",
+        "Chu DK, Schneider L, Asiniwasis RN, Boguniewicz M, De Benedetto A, Ellison K, et al. Atopic dermatitis (eczema) guidelines: 2023 AAAAI/ACAAI Joint Task Force on Practice Parameters GRADE- and Institute of Medicine-based recommendations. Ann Allergy Asthma Immunol. 2024;132(3):274-312. doi:10.1016/j.anai.2023.11.009. PMID: 38108679.",
+        "Lee JY, Her Y, Kim CW, Kim SS. Topical corticosteroid phobia among parents of children with atopic eczema in Korea. Ann Dermatol. 2015;27(5):499-506. doi:10.5021/ad.2015.27.5.499. PMID: 26512163.",
+        "Albogami MF, AlJomaie MS, Almarri SS, Al-Malki S, Tamur S, Aljaid M, et al. Topical corticosteroid phobia among parents of children with atopic dermatitis (eczema): a cross-sectional study. Patient Prefer Adherence. 2023;17:2761-72. doi:10.2147/PPA.S431719. PMID: 37936715.",
+        "Borda LJ, Perper M, Keri JE. Treatment of seborrheic dermatitis: a comprehensive review. J Dermatolog Treat. 2019;30(2):158-69. doi:10.1080/09546634.2018.1473554. PMID: 29737895.",
+        "Victoire A, Magin P, Coughlan J, van Driel ML. Interventions for infantile seborrhoeic dermatitis (including cradle cap). Cochrane Database Syst Rev. 2019;3(3):CD011380. doi:10.1002/14651858.CD011380.pub2. PMID: 30828791.",
+        "Bains SN, Nash P, Fonacier L. Irritant contact dermatitis. Clin Rev Allergy Immunol. 2019;56(1):99-109. doi:10.1007/s12016-018-8713-0. PMID: 30293200.",
+        "Nassau S, Fonacier L. Allergic contact dermatitis. Med Clin North Am. 2020;104(1):61-76. doi:10.1016/j.mcna.2019.08.012. PMID: 31757238.",
+        "Li Y, Li L. Contact dermatitis: classifications and management. Clin Rev Allergy Immunol. 2021;61(3):245-81. doi:10.1007/s12016-021-08875-0. PMID: 34264448.",
+        "Kokandi AA. Tinea incognito. Clin Cosmet Investig Dermatol. 2024;17:993-8. doi:10.2147/CCID.S465942. PMID: 38737948.",
+        "Leung AK, Barankin B, Lam JM, Leong KF, Hon KL. Tinea pedis: an updated review. Drugs Context. 2023;12. doi:10.7573/dic.2023-5-1. PMID: 37415917.",
+        "Leung AKC, Hon KL, Leong KF, Barankin B, Lam JM. Tinea capitis: an updated review. Recent Pat Inflamm Allergy Drug Discov. 2020;14(1):58-68. doi:10.2174/1872213X14666200106145624. PMID: 31906842.",
+        "Leung AKC, Lam JM, Leong KF, Hon KL. Pityriasis rosea: an updated review. Curr Pediatr Rev. 2021;17(3):201-11. doi:10.2174/1573396316666200923161330. PMID: 32964824.",
+        "Leung AKC, Barankin B, Lam JM, Leong KF, Hon KL. Tinea versicolor: an updated review. Drugs Context. 2022;11. doi:10.7573/dic.2022-9-2. PMID: 36452877.",
+        "Galluzzo M, D'Adamio S, Bianchi L, Talamonti M. Tildrakizumab for treating psoriasis. Expert Opin Biol Ther. 2017;17(5):645-57. doi:10.1080/14712598.2017.1304537. PMID: 28271735.",
+        "Morita A, Saeki H. Pediatric psoriasis: understanding pathological conditions and advances in treatment. J Dermatol. 2024;51(2):185-95. doi:10.1111/1346-8138.17049. PMID: 38105636.",
+        "Armstrong AW, Read C. Pathophysiology, clinical presentation, and treatment of psoriasis: a review. JAMA. 2020;323(19):1945-60. doi:10.1001/jama.2020.4006. PMID: 32427307.",
+        "Ghafoor R, Patil A, Yamauchi P, Weinberg J, Kircik L, Grabbe S, et al. Treatment of scalp psoriasis. J Drugs Dermatol. 2022;21(8):833-7. doi:10.36849/JDD.6498. PMID: 35946971.",
+        "Mahé E. Childhood psoriasis. Eur J Dermatol. 2016;26(6):537-48. doi:10.1684/ejd.2016.2932. PMID: 27900946.",
+        "Sheern C, Levell NJ, Craig PJ, Jeffrey P, Mistry K, Scorer MJ, et al. Mycosis fungoides: a review. Clin Exp Dermatol. 2025;50(12):2365-75. doi:10.1093/ced/llaf341. PMID: 40721285.",
+        "Yang EJ, Beck KM, Sekhon S, Bhutani T, Koo J. The impact of pediatric atopic dermatitis on families: a review. Pediatr Dermatol. 2019;36(1):66-71. doi:10.1111/pde.13727. PMID: 30556595.",
+        "Barilla S, Felix K, Jorizzo JL. Stressors in atopic dermatitis. Adv Exp Med Biol. 2017;1027:71-7. doi:10.1007/978-3-319-64804-0_7. PMID: 29063432."
+      ]
     }
-   ]
   },
-  "guia": {
-   "principios": [
-    "Se describe primero la lesión primaria y luego las secundarias: la primaria es la enfermedad, la secundaria es lo que el rascado, el exudado o el tiempo añaden.",
-    "La dermatitis atópica es una falla doble: barrera alterada e inflamación tipo 2; se trata reparando la barrera y apagando la inflamación.",
-    "Dermatosis descamativa no significa una sola enfermedad: se separan por zona, borde, prueba (KOH, parche) y curso.",
-    "Un corticoide tópico puede enmascarar una tiña: siempre se pregunta qué se aplicó antes.",
-    "En la psoriasis, la proliferación de queratinocitos está dirigida por la vía IL-23/Th17, y por eso los biológicos actúan allí.",
-    "En un niño con dermatosis crónica, el sistema de cuidado es la familia: educación, sueño y miedos a los fármacos cuentan como tratamiento."
-   ],
-   "palabras_clave": [
-    "lesión primaria",
-    "lesión secundaria",
-    "mácula",
-    "mancha",
-    "pápula",
-    "placa",
-    "escama",
-    "costra",
-    "liquenificación",
-    "Koebner",
-    "filagrina",
-    "IL-31",
-    "Malassezia",
-    "prueba de parche",
-    "KOH",
-    "tiña incógnito",
-    "placa heraldo",
-    "psoriasis"
-   ],
-   "imagenes_oclusion": [
-    "Cuadro de lesiones elementales por forma y tamaño (1 cm) con los nombres tapados",
-    "Línea de brote agudo a placa liquenificada en dermatitis atópica con los rótulos tapados",
-    "Tabla de dermatosis descamativas con pista clave y prueba tapadas"
-   ],
-   "preguntas_cierre": [
-    "Describe en voz alta, con lesiones primarias y secundarias, una placa pruriginosa crónica del pliegue del codo de un escolar.",
-    "¿Qué pregunta de la historia evita confundir una tiña con un eccema?",
-    "Una madre rechaza el corticoide tópico: reconstruye tu conversación.",
-    "Explica por qué un anti-IL-17 o anti-IL-23 funciona en psoriasis y por qué eso no explica la dermatitis atópica."
-   ],
-   "subtemas": {
-    "Semiologia": "Conceptos y semiología de lesiones primarias y secundarias de piel",
-    "DermatitisAtopica": "Epidemiología, fisiopatología, clínica y tratamiento de la dermatitis atópica",
-    "DermatitisSeborreica": "Dermatitis seborreica, enfermedad con lesiones descamativas",
-    "DermatitisContacto": "Dermatitis de contacto irritativa y alérgica",
-    "Tinas": "Diagnóstico diferencial con tiñas",
-    "Pitiriasis": "Diagnóstico diferencial con pitiriasis",
-    "Psoriasis": "Diagnóstico diferencial con psoriasis",
-    "DiagnosticoDiferencial": "Enfermedades de piel que generan lesiones descamativas",
-    "RelacionMedicoPaciente": "Relación médico-paciente-familia en problemas crónicos"
-   },
-   "fechas": {
-    "apertura": null,
-    "cierre": null,
-    "examen": null
-   },
-   "referencias": [
-    "Emer J, Sivek R, Marciniak B. Sports dermatology: part 1 of 2. Traumatic or mechanical injuries, inflammatory conditions, and exacerbations of pre-existing conditions. J Clin Aesthet Dermatol. 2015;8(4):31-43. PMID: 26060516.",
-    "Karampinis E, Georgopoulou KE, Goudouras G, Lianou V, Kampra E, Roussaki Schulze AV, et al. Laser-induced Koebner-related skin reactions: a clinical overview. Medicina (Kaunas). 2024;60(7):1177. doi:10.3390/medicina60071177. PMID: 39064606.",
-    "Renkhold L, Wiegmann H, Pfleiderer B, Süer A, Zeidler C, Pereira MP, et al. Scratching increases epidermal neuronal branching and alters psychophysical testing responses in atopic dermatitis and brachioradial pruritus. Front Mol Neurosci. 2023;16:1260345. doi:10.3389/fnmol.2023.1260345. PMID: 37795274.",
-    "Lyons JJ, Milner JD, Stone KD. Atopic dermatitis in children: clinical features, pathophysiology, and treatment. Immunol Allergy Clin North Am. 2015;35(1):161-83. doi:10.1016/j.iac.2014.09.008. PMID: 25459583.",
-    "Furue M, Ulzii D, Vu YH, Tsuji G, Kido-Nakahara M, Nakahara T. Pathogenesis of atopic dermatitis: current paradigm. Iran J Immunol. 2019;16(2):97-107. doi:10.22034/IJI.2019.80253. PMID: 31182684.",
-    "Barrett M, Luu M. Differential diagnosis of atopic dermatitis. Immunol Allergy Clin North Am. 2017;37(1):11-34. doi:10.1016/j.iac.2016.08.009. PMID: 27886900.",
-    "Chu DK, Schneider L, Asiniwasis RN, Boguniewicz M, De Benedetto A, Ellison K, et al. Atopic dermatitis (eczema) guidelines: 2023 AAAAI/ACAAI Joint Task Force on Practice Parameters GRADE- and Institute of Medicine-based recommendations. Ann Allergy Asthma Immunol. 2024;132(3):274-312. doi:10.1016/j.anai.2023.11.009. PMID: 38108679.",
-    "Lee JY, Her Y, Kim CW, Kim SS. Topical corticosteroid phobia among parents of children with atopic eczema in Korea. Ann Dermatol. 2015;27(5):499-506. doi:10.5021/ad.2015.27.5.499. PMID: 26512163.",
-    "Albogami MF, AlJomaie MS, Almarri SS, Al-Malki S, Tamur S, Aljaid M, et al. Topical corticosteroid phobia among parents of children with atopic dermatitis (eczema): a cross-sectional study. Patient Prefer Adherence. 2023;17:2761-72. doi:10.2147/PPA.S431719. PMID: 37936715.",
-    "Borda LJ, Perper M, Keri JE. Treatment of seborrheic dermatitis: a comprehensive review. J Dermatolog Treat. 2019;30(2):158-69. doi:10.1080/09546634.2018.1473554. PMID: 29737895.",
-    "Victoire A, Magin P, Coughlan J, van Driel ML. Interventions for infantile seborrhoeic dermatitis (including cradle cap). Cochrane Database Syst Rev. 2019;3(3):CD011380. doi:10.1002/14651858.CD011380.pub2. PMID: 30828791.",
-    "Bains SN, Nash P, Fonacier L. Irritant contact dermatitis. Clin Rev Allergy Immunol. 2019;56(1):99-109. doi:10.1007/s12016-018-8713-0. PMID: 30293200.",
-    "Nassau S, Fonacier L. Allergic contact dermatitis. Med Clin North Am. 2020;104(1):61-76. doi:10.1016/j.mcna.2019.08.012. PMID: 31757238.",
-    "Li Y, Li L. Contact dermatitis: classifications and management. Clin Rev Allergy Immunol. 2021;61(3):245-81. doi:10.1007/s12016-021-08875-0. PMID: 34264448.",
-    "Kokandi AA. Tinea incognito. Clin Cosmet Investig Dermatol. 2024;17:993-8. doi:10.2147/CCID.S465942. PMID: 38737948.",
-    "Leung AK, Barankin B, Lam JM, Leong KF, Hon KL. Tinea pedis: an updated review. Drugs Context. 2023;12. doi:10.7573/dic.2023-5-1. PMID: 37415917.",
-    "Leung AKC, Hon KL, Leong KF, Barankin B, Lam JM. Tinea capitis: an updated review. Recent Pat Inflamm Allergy Drug Discov. 2020;14(1):58-68. doi:10.2174/1872213X14666200106145624. PMID: 31906842.",
-    "Leung AKC, Lam JM, Leong KF, Hon KL. Pityriasis rosea: an updated review. Curr Pediatr Rev. 2021;17(3):201-11. doi:10.2174/1573396316666200923161330. PMID: 32964824.",
-    "Leung AKC, Barankin B, Lam JM, Leong KF, Hon KL. Tinea versicolor: an updated review. Drugs Context. 2022;11. doi:10.7573/dic.2022-9-2. PMID: 36452877.",
-    "Galluzzo M, D'Adamio S, Bianchi L, Talamonti M. Tildrakizumab for treating psoriasis. Expert Opin Biol Ther. 2017;17(5):645-57. doi:10.1080/14712598.2017.1304537. PMID: 28271735.",
-    "Morita A, Saeki H. Pediatric psoriasis: understanding pathological conditions and advances in treatment. J Dermatol. 2024;51(2):185-95. doi:10.1111/1346-8138.17049. PMID: 38105636.",
-    "Armstrong AW, Read C. Pathophysiology, clinical presentation, and treatment of psoriasis: a review. JAMA. 2020;323(19):1945-60. doi:10.1001/jama.2020.4006. PMID: 32427307.",
-    "Ghafoor R, Patil A, Yamauchi P, Weinberg J, Kircik L, Grabbe S, et al. Treatment of scalp psoriasis. J Drugs Dermatol. 2022;21(8):833-7. doi:10.36849/JDD.6498. PMID: 35946971.",
-    "Mahé E. Childhood psoriasis. Eur J Dermatol. 2016;26(6):537-48. doi:10.1684/ejd.2016.2932. PMID: 27900946.",
-    "Sheern C, Levell NJ, Craig PJ, Jeffrey P, Mistry K, Scorer MJ, et al. Mycosis fungoides: a review. Clin Exp Dermatol. 2025;50(12):2365-75. doi:10.1093/ced/llaf341. PMID: 40721285.",
-    "Yang EJ, Beck KM, Sekhon S, Bhutani T, Koo J. The impact of pediatric atopic dermatitis on families: a review. Pediatr Dermatol. 2019;36(1):66-71. doi:10.1111/pde.13727. PMID: 30556595.",
-    "Barilla S, Felix K, Jorizzo JL. Stressors in atopic dermatitis. Adv Exp Med Biol. 2017;1027:71-7. doi:10.1007/978-3-319-64804-0_7. PMID: 29063432."
-   ]
-  }
- },
- "tarjetas": [
-  {
-   "id": "Q2R2-DER-0001",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Lesiones elementales</span>¿Qué distingue una lesión primaria de una secundaria y por qué importa al describir una dermatosis?",
-   "respuesta": "La <span class=\"mec\">primaria</span> es la expresión directa del proceso de la enfermedad; la <span class=\"mec\">secundaria</span> son cambios que se añaden después (escama, costra, erosión, úlcera, liquenificación, excoriación, fisura).",
-   "razonamiento": "Describir primero la primaria orienta el diagnóstico; las secundarias informan cronicidad, rascado o exudación. Una placa con escama y costra se describe como placa (primaria) con escama y costra (secundarias).",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Emer 2015, J Clin Aesthet Dermatol (PMID 26060516)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::Semiologia",
-    "Nivel::Aplicacion",
-    "Fuente::Emer2015",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0002",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Lesiones elementales</span>Una lesión plana no palpable de 2 cm y otra elevada, sólida y superficial de 2 cm: ¿cómo se llaman y qué las separa de sus equivalentes menores?",
-   "respuesta": "<span class=\"dx\">Mancha</span> y <span class=\"dx\">placa</span>; el tamaño de corte es <span class=\"num\">1 cm</span> (mácula y pápula son menores).",
-   "razonamiento": "El mismo corte de tamaño separa vesícula de ampolla. Lo que separa pápula de nódulo no es el tamaño sino la profundidad: el nódulo es profundo.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Lesión</th><th>Menor de 1 cm</th><th>Mayor de 1 cm</th></tr></thead><tbody><tr><th>Plana, no palpable</th><td>Mácula</td><td>Mancha</td></tr><tr><th>Sólida, elevada, superficial</th><td>Pápula</td><td>Placa</td></tr><tr><th>Sólida, elevada, profunda</th><td>—</td><td>Nódulo</td></tr><tr><th>Líquido claro, elevada</th><td>Vesícula</td><td>Ampolla</td></tr></tbody></table>",
-   "fuente": "Emer 2015, J Clin Aesthet Dermatol (PMID 26060516)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::Semiologia",
-    "Nivel::Recuerdo",
-    "Fuente::Emer2015",
-    "Clase::Irreducible",
-    "Bloom::Recordar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0003",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Escama y costra</span>¿Cómo se distingue una escama de una costra al examinar la piel?",
-   "respuesta": "La <span class=\"mec\">escama</span> son láminas o escamitas por acumulación de epitelio; la <span class=\"mec\">costra</span> es una cubierta seca de suero, sangre o pus.",
-   "razonamiento": "<span class=\"vs\">Contraste</span> la escama orienta a dermatosis descamativas (el eje de este caso); la costra indica que hubo exudado, p. ej. tras el rascado de una lesión húmeda.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Emer 2015, J Clin Aesthet Dermatol (PMID 26060516)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::Semiologia",
-    "Nivel::Recuerdo",
-    "Fuente::Emer2015",
-    "Clase::Contraste",
-    "Bloom::Comprender"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0004",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Erosión y úlcera</span>¿Qué separa una erosión de una úlcera?",
-   "respuesta": "La profundidad: la <span class=\"dx\">erosión</span> es pérdida superficial de epidermis; la <span class=\"dx\">úlcera</span> es pérdida profunda de epidermis y dermis.",
-   "razonamiento": "La profundidad predice el desenlace: la erosión puede curar sin secuela, mientras que la pérdida dérmica de la úlcera compromete la reparación.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Emer 2015, J Clin Aesthet Dermatol (PMID 26060516)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::Semiologia",
-    "Nivel::Recuerdo",
-    "Fuente::Emer2015",
-    "Clase::Contraste",
-    "Bloom::Comprender"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0005",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Liquenificación</span>¿Qué es la liquenificación y qué mecanismo la produce?",
-   "respuesta": "Es el <span class=\"dx\">engrosamiento de la epidermis</span> con exageración de los pliegues normales de la piel, producto del <span class=\"mec\">rascado y fricción crónicos</span>.",
-   "razonamiento": "El ciclo picor-rascado empeora la barrera cutánea y la inflamación, lo que perpetúa el prurito. Una placa liquenificada dice que el picor lleva semanas o más: es la secundaria típica de la dermatitis atópica crónica.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Emer 2015, J Clin Aesthet Dermatol (PMID 26060516); Renkhold 2023, Front Mol Neurosci (PMID 37795274)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::Semiologia",
-    "Nivel::Aplicacion",
-    "Fuente::Emer2015",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0006",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Excoriación</span>Se observan erosiones lineales sobre una dermatosis: ¿qué te indican y qué síntoma esperas?",
-   "respuesta": "Son <span class=\"dx\">excoriaciones</span>, erosiones causadas por rascado, roce o manipulación; esperas <span class=\"mec\">prurito</span>.",
-   "razonamiento": "La excoriación es secundaria: no te dice la causa del picor, solo que existe. Su presencia junto a liquenificación sugiere prurito crónico.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Emer 2015, J Clin Aesthet Dermatol (PMID 26060516)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::Semiologia",
-    "Nivel::Recuerdo",
-    "Fuente::Emer2015",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0007",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Fenómeno de Koebner</span>¿Qué es el fenómeno de Koebner y en qué se diferencia del pseudo-Koebner?",
-   "respuesta": "Es la aparición, tras un trauma, de lesiones nuevas idénticas clínica e histológicamente a la enfermedad de base (<span class=\"dx\">respuesta isomórfica</span>).",
-   "razonamiento": "<span class=\"vs\">Contraste</span> el pseudo-Koebner ocurre cuando un agente infeccioso se siembra en el sitio del trauma, como las verrugas. Importa porque rascar o lesionar la piel puede extender la dermatosis.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Karampinis 2024, Medicina (PMID 39064606)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::Semiologia",
-    "Nivel::Recuerdo",
-    "Fuente::Karampinis2024",
-    "Clase::Contraste",
-    "Bloom::Comprender"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0008",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Dermatitis atópica</span>¿Qué dos fallas explican la dermatitis atópica y cómo se alimentan entre sí?",
-   "respuesta": "Una <span class=\"mec\">barrera epitelial alterada</span> y una <span class=\"mec\">desregulación inmune</span> en un huésped predispuesto; cada una agrava a la otra.",
-   "razonamiento": "De ahí que el tratamiento combine reparar la barrera (hidratación) y controlar la inflamación. La enfermedad es crónica y recidivante, y se asocia con IgE elevada, eosinofilia y otras enfermedades alérgicas.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Lyons 2015, Immunol Allergy Clin North Am (PMID 25459583)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::DermatitisAtopica",
-    "Nivel::Aplicacion",
-    "Fuente::Lyons2015",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0009",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Dermatitis atópica</span>¿Cómo conecta la inflamación tipo 2 con la pérdida de barrera en la dermatitis atópica?",
-   "respuesta": "<span class=\"mec\">IL-4 e IL-13</span> reducen la expresión de <span class=\"mec\">filagrina</span> en los queratinocitos y agravan la disfunción de la barrera.",
-   "razonamiento": "La barrera dañada libera TSLP, IL-25 e IL-33, que refuerzan la desviación tipo 2: un círculo vicioso. La eficacia de dupilumab (anticuerpo anti-receptor de IL-4) apoya el papel central de IL-4 e IL-13.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Furue 2019, Iran J Immunol (PMID 31182684)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::DermatitisAtopica",
-    "Nivel::Aplicacion",
-    "Fuente::Furue2019",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0010",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Prurito atópico</span>¿Por qué los antihistamínicos controlan mal el prurito de la dermatitis atópica?",
-   "respuesta": "Porque el picor atópico depende sobre todo de citocinas tipo 2, en particular <span class=\"mec\">IL-31</span>, y no de la histamina.",
-   "razonamiento": "Los antihistamínicos han mostrado poca eficacia sobre el prurito atópico. El manejo se centra en la barrera y la inflamación; el picor cede cuando se controla la dermatitis.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Lyons 2015, Immunol Allergy Clin North Am (PMID 25459583); Furue 2019, Iran J Immunol (PMID 31182684)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::DermatitisAtopica",
-    "Nivel::Aplicacion",
-    "Fuente::Lyons2015",
-    "Clase::Aplicacion",
-    "Bloom::Analizar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0011",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Diagnóstico de dermatitis atópica</span>¿En qué se basa el diagnóstico clínico de la dermatitis atópica?",
-   "respuesta": "En la <span class=\"dx\">distribución y morfología según la edad</span>, el curso crónico recidivante y el <span class=\"al\">prurito</span>.",
-   "razonamiento": "No hay prueba confirmatoria: otras dermatosis inflamatorias, infecciosas, neoplásicas y fotodermatosis pueden simularla, por lo que el diagnóstico diferencial pesa.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Barrett 2017, Immunol Allergy Clin North Am (PMID 27886900)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::DermatitisAtopica",
-    "Nivel::Aplicacion",
-    "Fuente::Barrett2017",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0012",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Morfología del eccema</span>¿Cómo cambia la lesión de la dermatitis atópica entre un brote agudo y la enfermedad crónica?",
-   "respuesta": "El brote agudo muestra <span class=\"dx\">pápulas eritematosas exudativas</span>; la fase crónica, <span class=\"dx\">placas liquenificadas</span>.",
-   "razonamiento": "Pasar de lo húmedo a lo liquenificado refleja el rascado sostenido. Esta secuencia permite estimar cuánto tiempo lleva el cuadro.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Barrett 2017, Immunol Allergy Clin North Am (PMID 27886900)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::DermatitisAtopica",
-    "Nivel::Aplicacion",
-    "Fuente::Barrett2017",
-    "Clase::Aplicacion",
-    "Bloom::Analizar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0013",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Tratamiento de dermatitis atópica</span>Escolar con dermatitis atópica en brote moderado y xerosis intensa: ¿qué pilares tópicos usas?",
-   "respuesta": "Hidratación para reparar la barrera y un antiinflamatorio tópico: <span class=\"fx\">corticoide tópico</span> como primera línea o <span class=\"fx\">inhibidor de calcineurina</span>.",
-   "razonamiento": "La guía de práctica incluye hidratantes de barrera, corticoides y calcineurínicos tópicos para controlar y mantener la enfermedad; el corticoide tópico es el agente de primera línea. Los sistémicos y biológicos se reservan para casos mayores.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Chu 2024, Ann Allergy Asthma Immunol (PMID 38108679); Lee 2015, Ann Dermatol (PMID 26512163)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::DermatitisAtopica",
-    "Nivel::Aplicacion",
-    "Fuente::Chu2024",
-    "Clase::Vineta",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0014",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Educación en dermatitis atópica</span>¿Qué componente del manejo es esencial para sostener el control de la dermatitis atópica en el niño?",
-   "respuesta": "La <span class=\"dx\">educación</span> del paciente y la familia sobre los defectos de base, con un plan integral de cuidado de la piel.",
-   "razonamiento": "Sin plan escrito y entendido no hay adherencia; el plan cubre mantenimiento diario y manejo de los brotes.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Lyons 2015, Immunol Allergy Clin North Am (PMID 25459583)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::DermatitisAtopica",
-    "Nivel::Aplicacion",
-    "Fuente::Lyons2015",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0015",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Dermatitis seborreica</span>¿Qué mecanismo explica la dermatitis seborreica y dónde aparece?",
-   "respuesta": "Una <span class=\"mec\">respuesta inflamatoria a especies de Malassezia</span> en zonas seborreicas: cuero cabelludo, cara, tórax, espalda, axilas e ingles.",
-   "razonamiento": "Es crónica y recidivante: máculas o placas eritematosas con escama y prurito.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Borda 2019, J Dermatolog Treat (PMID 29737895)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::DermatitisSeborreica",
-    "Nivel::Aplicacion",
-    "Fuente::Borda2019",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0016",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Tratamiento de dermatitis seborreica</span>Si la dermatitis seborreica combina Malassezia e inflamación, ¿qué dos clases de tópicos esperas usar?",
-   "respuesta": "Un <span class=\"fx\">antifúngico</span> tópico y un <span class=\"fx\">antiinflamatorio</span> tópico; la terapia sistémica queda para formas extensas o refractarias.",
-   "razonamiento": "El objetivo es aclarar las lesiones, aliviar el prurito y mantener la remisión a largo plazo.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Borda 2019, J Dermatolog Treat (PMID 29737895)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::DermatitisSeborreica",
-    "Nivel::Aplicacion",
-    "Fuente::Borda2019",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0017",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Dermatitis seborreica infantil</span>Lactante con escama grasosa y eritema en cuero cabelludo (costra láctea): ¿qué dices a los padres?",
-   "respuesta": "Es benigna y autolimitada, dura semanas a meses y rara vez años; se tranquiliza a la familia.",
-   "razonamiento": "Aunque no daña al niño, angustia a los padres. La evidencia de las intervenciones es de muy baja certeza, por lo que no se justifica escalar tratamientos agresivos.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Victoire 2019, Cochrane Database Syst Rev (PMID 30828791)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::DermatitisSeborreica",
-    "Nivel::Aplicacion",
-    "Fuente::Victoire2019",
-    "Clase::Vineta",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0018",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Dermatitis de contacto</span>¿Cómo distingues clínicamente una dermatitis de contacto irritativa de una alérgica?",
-   "respuesta": "La irritativa produce más <span class=\"al\">ardor y escozor</span> que prurito y es de <span class=\"dx\">bordes bien demarcados</span>; en la alérgica domina el prurito.",
-   "razonamiento": "<span class=\"vs\">Contraste</span> la irritativa se diagnostica por exclusión tras descartar hipersensibilidad tipo I y IV; la alérgica es hipersensibilidad tipo IV y se confirma con pruebas de parche.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Rasgo</th><th>Irritativa</th><th>Alérgica</th></tr></thead><tbody><tr><th>Síntoma</th><td>Ardor, escozor</td><td>Prurito</td></tr><tr><th>Límites</th><td>Bien demarcados</td><td>Menos nítidos</td></tr><tr><th>Diagnóstico</th><td>Por exclusión</td><td>Prueba de parche</td></tr></tbody></table>",
-   "fuente": "Bains 2019, Clin Rev Allergy Immunol (PMID 30293200)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::DermatitisContacto",
-    "Nivel::Aplicacion",
-    "Fuente::Bains2019",
-    "Clase::Contraste",
-    "Bloom::Analizar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0019",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Dermatitis alérgica de contacto</span>¿Qué prueba identifica el alérgeno en la dermatitis alérgica de contacto?",
-   "respuesta": "La <span class=\"dx\">prueba de parche</span>, interpretada junto con la historia clínica y la exploración.",
-   "razonamiento": "El diagnóstico exige historia minuciosa, incluida la ocupacional, que da la lista de sustancias sospechosas. Sin esa lista, el parche no tiene a quién buscar.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Nassau 2020, Med Clin North Am (PMID 31757238); Li 2021, Clin Rev Allergy Immunol (PMID 34264448)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::DermatitisContacto",
-    "Nivel::Aplicacion",
-    "Fuente::Nassau2020",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0020",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Tratamiento de dermatitis de contacto</span>¿Cuál es el pilar del tratamiento de la dermatitis alérgica de contacto y qué papel tiene el corticoide tópico?",
-   "respuesta": "<span class=\"dx\">Evitar el alérgeno</span>; el corticoide tópico sirve en las exacerbaciones, pero no se usa de forma prolongada.",
-   "razonamiento": "En la irritativa el manejo equivale: identificar y evitar el irritante y usar emolientes con regularidad. Quitar al paciente de la exposición es parte del tratamiento.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Nassau 2020, Med Clin North Am (PMID 31757238); Bains 2019, Clin Rev Allergy Immunol (PMID 30293200)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::DermatitisContacto",
-    "Nivel::Aplicacion",
-    "Fuente::Nassau2020",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0021",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Tiña e incógnito</span>Una lesión anular escamosa mejora y luego empeora tras un corticoide tópico: ¿qué sospechas y por qué?",
-   "respuesta": "<span class=\"dx\">Tiña incógnito</span>: el corticoide cambia el aspecto de la dermatofitosis y la enmascara.",
-   "razonamiento": "El esteroide altera la forma de la lesión y dificulta el diagnóstico clínico, que a veces necesita métodos combinados. Se trata con antifúngicos, tópicos o sistémicos según sitio y extensión.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Kokandi 2024, Clin Cosmet Investig Dermatol (PMID 38737948)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::Tinas",
-    "Nivel::Aplicacion",
-    "Fuente::Kokandi2024",
-    "Clase::Principio",
-    "Bloom::Aplicar",
-    "Principio",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0022",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Diagnóstico de tiña</span>Ante una sospecha de tiña, ¿qué prueba rápida haces en el consultorio y de qué zona de la lesión tomas la muestra?",
-   "respuesta": "Un <span class=\"dx\">examen directo con KOH</span> del raspado del <span class=\"mec\">borde activo</span> de la lesión.",
-   "razonamiento": "La precisión del diagnóstico solo clínico es baja, por eso el KOH se recomienda como prueba en el sitio de atención. El cultivo confirma si hace falta. La evidencia citada corresponde a la tiña del pie.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Leung 2023, Drugs Context (PMID 37415917)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::Tinas",
-    "Nivel::Aplicacion",
-    "Fuente::Leung2023",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0023",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Tiña capitis</span>¿Por qué la tiña capitis no se trata solo con antifúngico tópico?",
-   "respuesta": "Porque el tópico <span class=\"mec\">no penetra hasta la raíz del folículo piloso</span>; el tratamiento estándar es <span class=\"fx\">antifúngico oral</span>.",
-   "razonamiento": "El tópico solo reduce la transmisión de esporas o coadyuva. Se desea confirmar con KOH y cultivo antes de iniciar. Los orales usados son terbinafina, griseofulvina, itraconazol y fluconazol.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Leung 2020, Recent Pat Inflamm Allergy Drug Discov (PMID 31906842)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::Tinas",
-    "Nivel::Aplicacion",
-    "Fuente::Leung2020",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0024",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Tiña capitis frente a seborrea</span>Escolar con descamación fina y adherente del cuero cabelludo, como caspa generalizada, con leve pérdida de pelo: ¿qué debes descartar?",
-   "respuesta": "<span class=\"dx\">Tiña capitis</span>: puede simular caspa difusa con pérdida sutil de pelo.",
-   "razonamiento": "Otras formas muestran placas de alopecia con pelos rotos («puntos negros»), y las inflamatorias son querion y favus. Confirma con KOH y cultivo antes de tratar como seborrea.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Leung 2020, Recent Pat Inflamm Allergy Drug Discov (PMID 31906842)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::Tinas",
-    "Nivel::Aplicacion",
-    "Fuente::Leung2020",
-    "Clase::Contraste",
-    "Bloom::Analizar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0025",
-   "tipo": "Cloze",
-   "text": "<span class=\"tema\">Tiña capitis</span>El pico de incidencia de la tiña capitis ocurre entre los {{c1::<span class=\"num\">3 y 7 años</span>}} y los agentes más frecuentes son {{c2::<span class=\"dx\">Trichophyton tonsurans</span> y <span class=\"dx\">Microsporum canis</span>}}.",
-   "extra": "Es una dermatofitosis del cuero cabelludo y del pelo que afecta sobre todo a niños.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Leung 2020, Recent Pat Inflamm Allergy Drug Discov (PMID 31906842)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::Tinas",
-    "Nivel::Recuerdo",
-    "Fuente::Leung2020",
-    "Clase::Irreducible",
-    "Bloom::Recordar",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": []
-  },
-  {
-   "id": "Q2R2-DER-0026",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Pitiriasis rosada</span>Adolescente con una placa oval escamosa en el tronco y, días después, lesiones similares en «árbol de Navidad»: ¿diagnóstico y conducta?",
-   "respuesta": "<span class=\"dx\">Pitiriasis rosada</span>: autolimitada, se tranquiliza y se da tratamiento sintomático.",
-   "razonamiento": "La placa heraldo precede la erupción; las lesiones ovales con collarete de escama siguen las líneas de Langer. El curso típico es de 6 a 8 semanas. Se considera intervención en formas graves o recurrentes y en embarazadas; hay evidencia a favor de aciclovir oral para acortar la enfermedad.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Rasgo</th><th>Hallazgo</th></tr></thead><tbody><tr><th>Primera lesión</th><td>Placa heraldo</td></tr><tr><th>Lesiones</th><td>Ovales, collarete de escama</td></tr><tr><th>Orientación</th><td>Líneas de Langer</td></tr><tr><th>Curso</th><td>Autolimitado</td></tr></tbody></table>",
-   "fuente": "Leung 2021, Curr Pediatr Rev (PMID 32964824)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::Pitiriasis",
-    "Nivel::Aplicacion",
-    "Fuente::Leung2021",
-    "Clase::Vineta",
-    "Bloom::Aplicar",
-    "AltoRendimiento::MIR"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0027",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Pitiriasis versicolor</span>¿Qué hongo causa la pitiriasis versicolor, cómo luce y qué muestra el KOH?",
-   "respuesta": "<span class=\"dx\">Malassezia</span>: manchas escamosas hipo o hiperpigmentadas del tronco superior, cuello y brazos; el KOH muestra <span class=\"mec\">hifas cortas y esporas</span>.",
-   "razonamiento": "El diagnóstico suele ser clínico y el KOH se reserva para dudas. El tratamiento de elección es tópico antifúngico; el oral se guarda para formas extensas, recidivantes o refractarias.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Leung 2022, Drugs Context (PMID 36452877)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::Pitiriasis",
-    "Nivel::Aplicacion",
-    "Fuente::Leung2022",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0028",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Psoriasis</span>¿Por qué la psoriasis produce placas escamosas y cómo explica eso los biológicos?",
-   "respuesta": "La <span class=\"mec\">IL-23 mantiene a los linfocitos Th17</span> y activa la proliferación de queratinocitos; la epidermis crece sin diferenciarse bien.",
-   "razonamiento": "Por eso hay acantosis y escama. Los inhibidores de TNF-alfa, IL-12/23, IL-17 e IL-23 actúan en esa vía y se usan en psoriasis moderada a grave.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Galluzzo 2017, Expert Opin Biol Ther (PMID 28271735); Morita 2024, J Dermatol (PMID 38105636); Armstrong 2020, JAMA (PMID 32427307)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::Psoriasis",
-    "Nivel::Aplicacion",
-    "Fuente::Armstrong2020",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio",
-    "AltoRendimiento::USMLE"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0029",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Psoriasis</span>Paciente con psoriasis en placas: ¿por qué más allá de la piel buscas artritis, riesgo cardiometabólico y depresión?",
-   "respuesta": "Porque la psoriasis en placas se asocia con <span class=\"al\">artritis psoriásica</span>, enfermedad cardiometabólica y trastornos del ánimo.",
-   "razonamiento": "Es una enfermedad inflamatoria con comorbilidades que reducen la calidad de vida; el cribado forma parte del manejo integral.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Armstrong 2020, JAMA (PMID 32427307)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::Psoriasis",
-    "Nivel::Aplicacion",
-    "Fuente::Armstrong2020",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0030",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Tratamiento de psoriasis</span>Psoriasis leve en placas: ¿qué clases de tópicos usas y cuál combinación es la más eficaz en cuero cabelludo?",
-   "respuesta": "<span class=\"fx\">Corticoide</span>, <span class=\"fx\">análogo de vitamina D</span>, <span class=\"fx\">inhibidor de calcineurina</span> y queratolíticos; la mejor combinación en cuero cabelludo es <span class=\"fx\">betametasona más calcipotriol</span>.",
-   "razonamiento": "Los tópicos son el pilar de la psoriasis leve. La psoriasis moderada a grave pasa a biológicos, fototerapia o sistémicos.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Armstrong 2020, JAMA (PMID 32427307); Ghafoor 2022, J Drugs Dermatol (PMID 35946971)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::Psoriasis",
-    "Nivel::Aplicacion",
-    "Fuente::Armstrong2020",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0031",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Psoriasis infantil</span>¿Qué diferencias tiene la psoriasis del niño con la del adulto?",
-   "respuesta": "En el niño son más frecuentes la psoriasis del pañal, la facial y la en gotas; las placas son más pequeñas y la escama más fina y blanda.",
-   "razonamiento": "<span class=\"vs\">Contraste</span> en el lactante con eritema y escama puede confundirse con dermatitis seborreica. Los tópicos son de primera línea y el impacto en la interacción social puede ser grande.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Mahé 2016, Eur J Dermatol (PMID 27900946)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::Psoriasis",
-    "Nivel::Aplicacion",
-    "Fuente::Mahe2016",
-    "Clase::Contraste",
-    "Bloom::Analizar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0032",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Dermatosis descamativas</span>Ante una dermatosis descamativa, ¿qué pista clave y qué prueba separa seborrea, tiña, pitiriasis rosada y versicolor?",
-   "respuesta": "Seborrea: <span class=\"dx\">zonas seborreicas</span>; tiña: <span class=\"dx\">borde activo con KOH</span>; rosada: <span class=\"dx\">placa heraldo</span>; versicolor: <span class=\"dx\">manchas del tronco con hifas cortas</span>.",
-   "razonamiento": "<span class=\"vs\">Contraste</span> la psoriasis se reconoce por su carácter crónico en placas y sus comorbilidades. Revisa siempre qué tratamiento recibió antes: el corticoide tópico enmascara la tiña.",
-   "mnemotecnia": "",
-   "esquema": "<table><thead><tr><th>Entidad</th><th>Pista clave</th><th>Confirma</th></tr></thead><tbody><tr><th>Seborrea</th><td>Zonas seborreicas</td><td>Clínica</td></tr><tr><th>Tiña</th><td>Borde activo</td><td>KOH</td></tr><tr><th>P. rosada</th><td>Placa heraldo</td><td>Clínica</td></tr><tr><th>P. versicolor</th><td>Manchas del tronco</td><td>KOH</td></tr></tbody></table>",
-   "fuente": "Borda 2019, J Dermatolog Treat (PMID 29737895); Leung 2021, Curr Pediatr Rev (PMID 32964824); Leung 2022, Drugs Context (PMID 36452877); Leung 2023, Drugs Context (PMID 37415917)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::DiagnosticoDiferencial",
-    "Nivel::Aplicacion",
-    "Fuente::Leung2021",
-    "Clase::Relacional",
-    "Bloom::Evaluar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0033",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Eccema o psoriasis refractarios</span>Adulto con placas tipo eccema o psoriasis que no responden al tratamiento: ¿qué diagnóstico no debes pasar por alto?",
-   "respuesta": "<span class=\"al\">Micosis fungoide</span>, un linfoma cutáneo de células T que imita el eccema y la psoriasis.",
-   "razonamiento": "Sus estadios son parche, placa y tumor, y el diagnóstico exige correlación clínico-patológica, a veces con varias biopsias en el estadio de parche.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Sheern 2025, Clin Exp Dermatol (PMID 40721285)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::DiagnosticoDiferencial",
-    "Nivel::Aplicacion",
-    "Fuente::Sheern2025",
-    "Clase::Aplicacion",
-    "Bloom::Evaluar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0034",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Familia del niño con dermatosis crónica</span>En una dermatitis atópica pediátrica, ¿por qué se dice que el paciente es también la familia?",
-   "respuesta": "Porque cuidar al niño consume tiempo, altera el sueño de todos, afecta las relaciones y puede reducir la productividad laboral de los cuidadores.",
-   "razonamiento": "Incluye dietas especiales y estrategias de evitación que exigen implicación familiar. Preguntar por sueño, trabajo y finanzas forma parte de la historia clínica.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Yang 2019, Pediatr Dermatol (PMID 30556595)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::RelacionMedicoPaciente",
-    "Nivel::Aplicacion",
-    "Fuente::Yang2019",
-    "Clase::Principio",
-    "Bloom::Comprender",
-    "Principio"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0035",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Miedo a los corticoides tópicos</span>Padres rechazan el corticoide tópico para su hijo con dermatitis atópica: ¿qué problema es y cómo lo abordas?",
-   "respuesta": "Es <span class=\"al\">fobia a los corticoides tópicos</span>, que se aborda con <span class=\"dx\">información fiable y educación</span> del médico.",
-   "razonamiento": "Nace de la desinformación (a menudo de internet) y se asocia con menor adherencia, un motivo de fracaso del tratamiento. Pregunta qué temen exactamente antes de explicar el beneficio frente al riesgo.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Lee 2015, Ann Dermatol (PMID 26512163); Albogami 2023, Patient Prefer Adherence (PMID 37936715)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::RelacionMedicoPaciente",
-    "Nivel::Aplicacion",
-    "Fuente::Lee2015",
-    "Clase::Vineta",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  },
-  {
-   "id": "Q2R2-DER-0036",
-   "tipo": "QA",
-   "pregunta": "<span class=\"tema\">Estrés en dermatitis atópica</span>¿Qué intervenciones de la consulta reducen la carga psicosocial de la dermatitis atópica en el niño y su familia?",
-   "respuesta": "<span class=\"dx\">Consejería</span>, terapias dirigidas al sueño y uso de índices de calidad de vida.",
-   "razonamiento": "El picor y el aspecto de la piel afectan el sueño, la autoestima y las relaciones; el cuidador también sufre. Medir la calidad de vida hace visible lo que no se ve en la piel.",
-   "mnemotecnia": "",
-   "esquema": "",
-   "fuente": "Barilla 2017, Adv Exp Med Biol (PMID 29063432)",
-   "tags": [
-    "Quirurgica2::LesionesDermicas::RelacionMedicoPaciente",
-    "Nivel::Aplicacion",
-    "Fuente::Barilla2017",
-    "Clase::Aplicacion",
-    "Bloom::Aplicar"
-   ],
-   "pendientes": [],
-   "notas_ejecutor": ""
-  }
- ]
+  "tarjetas": [
+    {
+      "id": "Q2R2-DER-0001",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Lesiones elementales</span>¿Qué distingue una lesión primaria de una secundaria y por qué importa al describir una dermatosis?",
+      "respuesta": "La <span class=\"mec\">primaria</span> es la expresión directa del proceso de la enfermedad; la <span class=\"mec\">secundaria</span> son cambios que se añaden después (escama, costra, erosión, úlcera, liquenificación, excoriación, fisura).",
+      "razonamiento": "Describir primero la primaria orienta el diagnóstico; las secundarias informan cronicidad, rascado o exudación. Una placa con escama y costra se describe como placa (primaria) con escama y costra (secundarias).",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Emer 2015, J Clin Aesthet Dermatol (PMID 26060516)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::Semiologia",
+        "Nivel::Aplicacion",
+        "Fuente::Emer2015",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0002",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Lesiones elementales</span>Una lesión plana no palpable de 2 cm y otra elevada, sólida y superficial de 2 cm: ¿cómo se llaman y qué las separa de sus equivalentes menores?",
+      "respuesta": "<span class=\"dx\">Mancha</span> y <span class=\"dx\">placa</span>; el tamaño de corte es <span class=\"num\">1 cm</span> (mácula y pápula son menores).",
+      "razonamiento": "El mismo corte de tamaño separa vesícula de ampolla. Lo que separa pápula de nódulo no es el tamaño sino la profundidad: el nódulo es profundo.",
+      "mnemotecnia": "",
+      "esquema": "<table><thead><tr><th>Lesión</th><th>Menor de 1 cm</th><th>Mayor de 1 cm</th></tr></thead><tbody><tr><th>Plana, no palpable</th><td>Mácula</td><td>Mancha</td></tr><tr><th>Sólida, elevada, superficial</th><td>Pápula</td><td>Placa</td></tr><tr><th>Sólida, elevada, profunda</th><td>—</td><td>Nódulo</td></tr><tr><th>Líquido claro, elevada</th><td>Vesícula</td><td>Ampolla</td></tr></tbody></table>",
+      "fuente": "Emer 2015, J Clin Aesthet Dermatol (PMID 26060516)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::Semiologia",
+        "Nivel::Recuerdo",
+        "Fuente::Emer2015",
+        "Clase::Irreducible",
+        "Bloom::Recordar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0003",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Escama y costra</span>¿Cómo se distingue una escama de una costra al examinar la piel?",
+      "respuesta": "La <span class=\"mec\">escama</span> son láminas o escamitas por acumulación de epitelio; la <span class=\"mec\">costra</span> es una cubierta seca de suero, sangre o pus.",
+      "razonamiento": "<span class=\"vs\">Contraste</span> la escama orienta a dermatosis descamativas (el eje de este caso); la costra indica que hubo exudado, p. ej. tras el rascado de una lesión húmeda.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Emer 2015, J Clin Aesthet Dermatol (PMID 26060516)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::Semiologia",
+        "Nivel::Recuerdo",
+        "Fuente::Emer2015",
+        "Clase::Contraste",
+        "Bloom::Comprender"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0004",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Erosión y úlcera</span>¿Qué separa una erosión de una úlcera?",
+      "respuesta": "La profundidad: la <span class=\"dx\">erosión</span> es pérdida superficial de epidermis; la <span class=\"dx\">úlcera</span> es pérdida profunda de epidermis y dermis.",
+      "razonamiento": "La profundidad predice el desenlace: la erosión puede curar sin secuela, mientras que la pérdida dérmica de la úlcera compromete la reparación.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Emer 2015, J Clin Aesthet Dermatol (PMID 26060516)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::Semiologia",
+        "Nivel::Recuerdo",
+        "Fuente::Emer2015",
+        "Clase::Contraste",
+        "Bloom::Comprender"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0005",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Liquenificación</span>¿Qué es la liquenificación y qué mecanismo la produce?",
+      "respuesta": "Es el <span class=\"dx\">engrosamiento de la epidermis</span> con exageración de los pliegues normales de la piel, producto del <span class=\"mec\">rascado y fricción crónicos</span>.",
+      "razonamiento": "El ciclo picor-rascado empeora la barrera cutánea y la inflamación, lo que perpetúa el prurito. Una placa liquenificada dice que el picor lleva semanas o más: es la secundaria típica de la dermatitis atópica crónica.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Emer 2015, J Clin Aesthet Dermatol (PMID 26060516); Renkhold 2023, Front Mol Neurosci (PMID 37795274)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::Semiologia",
+        "Nivel::Aplicacion",
+        "Fuente::Emer2015",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0006",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Excoriación</span>Se observan erosiones lineales sobre una dermatosis: ¿qué te indican y qué síntoma esperas?",
+      "respuesta": "Son <span class=\"dx\">excoriaciones</span>, erosiones causadas por rascado, roce o manipulación; esperas <span class=\"mec\">prurito</span>.",
+      "razonamiento": "La excoriación es secundaria: no te dice la causa del picor, solo que existe. Su presencia junto a liquenificación sugiere prurito crónico.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Emer 2015, J Clin Aesthet Dermatol (PMID 26060516)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::Semiologia",
+        "Nivel::Recuerdo",
+        "Fuente::Emer2015",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0007",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Fenómeno de Koebner</span>¿Qué es el fenómeno de Koebner y en qué se diferencia del pseudo-Koebner?",
+      "respuesta": "Es la aparición, tras un trauma, de lesiones nuevas idénticas clínica e histológicamente a la enfermedad de base (<span class=\"dx\">respuesta isomórfica</span>).",
+      "razonamiento": "<span class=\"vs\">Contraste</span> el pseudo-Koebner ocurre cuando un agente infeccioso se siembra en el sitio del trauma, como las verrugas. Importa porque rascar o lesionar la piel puede extender la dermatosis.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Karampinis 2024, Medicina (PMID 39064606)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::Semiologia",
+        "Nivel::Recuerdo",
+        "Fuente::Karampinis2024",
+        "Clase::Contraste",
+        "Bloom::Comprender"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0008",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Dermatitis atópica</span>¿Qué dos fallas explican la dermatitis atópica y cómo se alimentan entre sí?",
+      "respuesta": "Una <span class=\"mec\">barrera epitelial alterada</span> y una <span class=\"mec\">desregulación inmune</span> en un huésped predispuesto; cada una agrava a la otra.",
+      "razonamiento": "De ahí que el tratamiento combine reparar la barrera (hidratación) y controlar la inflamación. La enfermedad es crónica y recidivante, y se asocia con IgE elevada, eosinofilia y otras enfermedades alérgicas.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Lyons 2015, Immunol Allergy Clin North Am (PMID 25459583)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::DermatitisAtopica",
+        "Nivel::Aplicacion",
+        "Fuente::Lyons2015",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0009",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Dermatitis atópica</span>¿Cómo conecta la inflamación tipo 2 con la pérdida de barrera en la dermatitis atópica?",
+      "respuesta": "<span class=\"mec\">IL-4 e IL-13</span> reducen la expresión de <span class=\"mec\">filagrina</span> en los queratinocitos y agravan la disfunción de la barrera.",
+      "razonamiento": "La barrera dañada libera TSLP, IL-25 e IL-33, que refuerzan la desviación tipo 2: un círculo vicioso. La eficacia de dupilumab (anticuerpo anti-receptor de IL-4) apoya el papel central de IL-4 e IL-13.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Furue 2019, Iran J Immunol (PMID 31182684)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::DermatitisAtopica",
+        "Nivel::Aplicacion",
+        "Fuente::Furue2019",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0010",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Prurito atópico</span>¿Por qué los antihistamínicos controlan mal el prurito de la dermatitis atópica?",
+      "respuesta": "Porque el picor atópico depende sobre todo de citocinas tipo 2, en particular <span class=\"mec\">IL-31</span>, y no de la histamina.",
+      "razonamiento": "Los antihistamínicos han mostrado poca eficacia sobre el prurito atópico. El manejo se centra en la barrera y la inflamación; el picor cede cuando se controla la dermatitis.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Lyons 2015, Immunol Allergy Clin North Am (PMID 25459583); Furue 2019, Iran J Immunol (PMID 31182684)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::DermatitisAtopica",
+        "Nivel::Aplicacion",
+        "Fuente::Lyons2015",
+        "Clase::Aplicacion",
+        "Bloom::Analizar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0011",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Diagnóstico de dermatitis atópica</span>¿En qué se basa el diagnóstico clínico de la dermatitis atópica?",
+      "respuesta": "En la <span class=\"dx\">distribución y morfología según la edad</span>, el curso crónico recidivante y el <span class=\"al\">prurito</span>.",
+      "razonamiento": "No hay prueba confirmatoria: otras dermatosis inflamatorias, infecciosas, neoplásicas y fotodermatosis pueden simularla, por lo que el diagnóstico diferencial pesa.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Barrett 2017, Immunol Allergy Clin North Am (PMID 27886900)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::DermatitisAtopica",
+        "Nivel::Aplicacion",
+        "Fuente::Barrett2017",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0012",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Morfología del eccema</span>¿Cómo cambia la lesión de la dermatitis atópica entre un brote agudo y la enfermedad crónica?",
+      "respuesta": "El brote agudo muestra <span class=\"dx\">pápulas eritematosas exudativas</span>; la fase crónica, <span class=\"dx\">placas liquenificadas</span>.",
+      "razonamiento": "Pasar de lo húmedo a lo liquenificado refleja el rascado sostenido. Esta secuencia permite estimar cuánto tiempo lleva el cuadro.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Barrett 2017, Immunol Allergy Clin North Am (PMID 27886900)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::DermatitisAtopica",
+        "Nivel::Aplicacion",
+        "Fuente::Barrett2017",
+        "Clase::Aplicacion",
+        "Bloom::Analizar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0013",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Tratamiento de dermatitis atópica</span>Escolar con dermatitis atópica en brote moderado y xerosis intensa: ¿qué pilares tópicos usas?",
+      "respuesta": "Hidratación para reparar la barrera y un antiinflamatorio tópico: <span class=\"fx\">corticoide tópico</span> como primera línea o <span class=\"fx\">inhibidor de calcineurina</span>.",
+      "razonamiento": "La guía de práctica incluye hidratantes de barrera, corticoides y calcineurínicos tópicos para controlar y mantener la enfermedad; el corticoide tópico es el agente de primera línea. Los sistémicos y biológicos se reservan para casos mayores.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Chu 2024, Ann Allergy Asthma Immunol (PMID 38108679); Lee 2015, Ann Dermatol (PMID 26512163)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::DermatitisAtopica",
+        "Nivel::Aplicacion",
+        "Fuente::Chu2024",
+        "Clase::Vineta",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0014",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Educación en dermatitis atópica</span>¿Qué componente del manejo es esencial para sostener el control de la dermatitis atópica en el niño?",
+      "respuesta": "La <span class=\"dx\">educación</span> del paciente y la familia sobre los defectos de base, con un plan integral de cuidado de la piel.",
+      "razonamiento": "Sin plan escrito y entendido no hay adherencia; el plan cubre mantenimiento diario y manejo de los brotes.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Lyons 2015, Immunol Allergy Clin North Am (PMID 25459583)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::DermatitisAtopica",
+        "Nivel::Aplicacion",
+        "Fuente::Lyons2015",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0015",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Dermatitis seborreica</span>¿Qué mecanismo explica la dermatitis seborreica y dónde aparece?",
+      "respuesta": "Una <span class=\"mec\">respuesta inflamatoria a especies de Malassezia</span> en zonas seborreicas: cuero cabelludo, cara, tórax, espalda, axilas e ingles.",
+      "razonamiento": "Es crónica y recidivante: máculas o placas eritematosas con escama y prurito.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Borda 2019, J Dermatolog Treat (PMID 29737895)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::DermatitisSeborreica",
+        "Nivel::Aplicacion",
+        "Fuente::Borda2019",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0016",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Tratamiento de dermatitis seborreica</span>Si la dermatitis seborreica combina Malassezia e inflamación, ¿qué dos clases de tópicos esperas usar?",
+      "respuesta": "Un <span class=\"fx\">antifúngico</span> tópico y un <span class=\"fx\">antiinflamatorio</span> tópico; la terapia sistémica queda para formas extensas o refractarias.",
+      "razonamiento": "El objetivo es aclarar las lesiones, aliviar el prurito y mantener la remisión a largo plazo.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Borda 2019, J Dermatolog Treat (PMID 29737895)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::DermatitisSeborreica",
+        "Nivel::Aplicacion",
+        "Fuente::Borda2019",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0017",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Dermatitis seborreica infantil</span>Lactante con escama grasosa y eritema en cuero cabelludo (costra láctea): ¿qué dices a los padres?",
+      "respuesta": "Es benigna y autolimitada, dura semanas a meses y rara vez años; se tranquiliza a la familia.",
+      "razonamiento": "Aunque no daña al niño, angustia a los padres. La evidencia de las intervenciones es de muy baja certeza, por lo que no se justifica escalar tratamientos agresivos.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Victoire 2019, Cochrane Database Syst Rev (PMID 30828791)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::DermatitisSeborreica",
+        "Nivel::Aplicacion",
+        "Fuente::Victoire2019",
+        "Clase::Vineta",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0018",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Dermatitis de contacto</span>¿Cómo distingues clínicamente una dermatitis de contacto irritativa de una alérgica?",
+      "respuesta": "La irritativa produce más <span class=\"al\">ardor y escozor</span> que prurito y es de <span class=\"dx\">bordes bien demarcados</span>; en la alérgica domina el prurito.",
+      "razonamiento": "<span class=\"vs\">Contraste</span> la irritativa se diagnostica por exclusión tras descartar hipersensibilidad tipo I y IV; la alérgica es hipersensibilidad tipo IV y se confirma con pruebas de parche.",
+      "mnemotecnia": "",
+      "esquema": "<table><thead><tr><th>Rasgo</th><th>Irritativa</th><th>Alérgica</th></tr></thead><tbody><tr><th>Síntoma</th><td>Ardor, escozor</td><td>Prurito</td></tr><tr><th>Límites</th><td>Bien demarcados</td><td>Menos nítidos</td></tr><tr><th>Diagnóstico</th><td>Por exclusión</td><td>Prueba de parche</td></tr></tbody></table>",
+      "fuente": "Bains 2019, Clin Rev Allergy Immunol (PMID 30293200)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::DermatitisContacto",
+        "Nivel::Aplicacion",
+        "Fuente::Bains2019",
+        "Clase::Contraste",
+        "Bloom::Analizar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0019",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Dermatitis alérgica de contacto</span>¿Qué prueba identifica el alérgeno en la dermatitis alérgica de contacto?",
+      "respuesta": "La <span class=\"dx\">prueba de parche</span>, interpretada junto con la historia clínica y la exploración.",
+      "razonamiento": "El diagnóstico exige historia minuciosa, incluida la ocupacional, que da la lista de sustancias sospechosas. Sin esa lista, el parche no tiene a quién buscar.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Nassau 2020, Med Clin North Am (PMID 31757238); Li 2021, Clin Rev Allergy Immunol (PMID 34264448)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::DermatitisContacto",
+        "Nivel::Aplicacion",
+        "Fuente::Nassau2020",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0020",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Tratamiento de dermatitis de contacto</span>¿Cuál es el pilar del tratamiento de la dermatitis alérgica de contacto y qué papel tiene el corticoide tópico?",
+      "respuesta": "<span class=\"dx\">Evitar el alérgeno</span>; el corticoide tópico sirve en las exacerbaciones, pero no se usa de forma prolongada.",
+      "razonamiento": "En la irritativa el manejo equivale: identificar y evitar el irritante y usar emolientes con regularidad. Quitar al paciente de la exposición es parte del tratamiento.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Nassau 2020, Med Clin North Am (PMID 31757238); Bains 2019, Clin Rev Allergy Immunol (PMID 30293200)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::DermatitisContacto",
+        "Nivel::Aplicacion",
+        "Fuente::Nassau2020",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0021",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Tiña e incógnito</span>Una lesión anular escamosa mejora y luego empeora tras un corticoide tópico: ¿qué sospechas y por qué?",
+      "respuesta": "<span class=\"dx\">Tiña incógnito</span>: el corticoide cambia el aspecto de la dermatofitosis y la enmascara.",
+      "razonamiento": "El esteroide altera la forma de la lesión y dificulta el diagnóstico clínico, que a veces necesita métodos combinados. Se trata con antifúngicos, tópicos o sistémicos según sitio y extensión.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Kokandi 2024, Clin Cosmet Investig Dermatol (PMID 38737948)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::Tinas",
+        "Nivel::Aplicacion",
+        "Fuente::Kokandi2024",
+        "Clase::Principio",
+        "Bloom::Aplicar",
+        "Principio",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0022",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Diagnóstico de tiña del pie</span>Ante una sospecha de tiña del pie, ¿qué prueba rápida haces en el consultorio?",
+      "respuesta": "Un <span class=\"dx\">examen directo con KOH</span> del raspado de la lesión.",
+      "razonamiento": "La precisión del diagnóstico solo clínico es baja, por eso el KOH se recomienda como prueba en el sitio de atención. El cultivo confirma si hace falta.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Leung 2023, Drugs Context (PMID 37415917)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::Tinas",
+        "Nivel::Aplicacion",
+        "Fuente::Leung2023",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0023",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Tiña capitis</span>¿Por qué la tiña capitis no se trata solo con antifúngico tópico?",
+      "respuesta": "Porque el tópico <span class=\"mec\">no penetra hasta la raíz del folículo piloso</span>; el tratamiento estándar es <span class=\"fx\">antifúngico oral</span>.",
+      "razonamiento": "El tópico solo reduce la transmisión de esporas o coadyuva. Se desea confirmar con KOH y cultivo antes de iniciar. Los orales usados son terbinafina, griseofulvina, itraconazol y fluconazol.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Leung 2020, Recent Pat Inflamm Allergy Drug Discov (PMID 31906842)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::Tinas",
+        "Nivel::Aplicacion",
+        "Fuente::Leung2020",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0024",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Tiña capitis frente a seborrea</span>Escolar con descamación fina y adherente del cuero cabelludo, como caspa generalizada, con leve pérdida de pelo: ¿qué debes descartar?",
+      "respuesta": "<span class=\"dx\">Tiña capitis</span>: puede simular caspa difusa con pérdida sutil de pelo.",
+      "razonamiento": "Otras formas muestran placas de alopecia con pelos rotos («puntos negros»), y las inflamatorias son querion y favus. Confirma con KOH y cultivo antes de tratar como seborrea.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Leung 2020, Recent Pat Inflamm Allergy Drug Discov (PMID 31906842)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::Tinas",
+        "Nivel::Aplicacion",
+        "Fuente::Leung2020",
+        "Clase::Contraste",
+        "Bloom::Analizar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0025",
+      "tipo": "Cloze",
+      "text": "<span class=\"tema\">Tiña capitis</span>El pico de incidencia de la tiña capitis ocurre entre los {{c1::<span class=\"num\">3 y 7 años</span>}} y los agentes más frecuentes son {{c2::<span class=\"dx\">Trichophyton tonsurans</span> y <span class=\"dx\">Microsporum canis</span>}}.",
+      "extra": "Es una dermatofitosis del cuero cabelludo y del pelo que afecta sobre todo a niños.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Leung 2020, Recent Pat Inflamm Allergy Drug Discov (PMID 31906842)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::Tinas",
+        "Nivel::Recuerdo",
+        "Fuente::Leung2020",
+        "Clase::Irreducible",
+        "Bloom::Recordar"
+      ],
+      "pendientes": []
+    },
+    {
+      "id": "Q2R2-DER-0026",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Pitiriasis rosada</span>Adolescente con una placa oval escamosa en el tronco y, días después, lesiones similares en «árbol de Navidad»: ¿diagnóstico y conducta?",
+      "respuesta": "<span class=\"dx\">Pitiriasis rosada</span>: autolimitada, se tranquiliza y se da tratamiento sintomático.",
+      "razonamiento": "La placa heraldo precede la erupción; las lesiones ovales con collarete de escama siguen las líneas de Langer. El curso típico es de 6 a 8 semanas. Se considera intervención en formas graves o recurrentes y en embarazadas; hay evidencia a favor de aciclovir oral para acortar la enfermedad.",
+      "mnemotecnia": "",
+      "esquema": "<table><thead><tr><th>Rasgo</th><th>Hallazgo</th></tr></thead><tbody><tr><th>Primera lesión</th><td>Placa heraldo</td></tr><tr><th>Lesiones</th><td>Ovales, collarete de escama</td></tr><tr><th>Orientación</th><td>Líneas de Langer</td></tr><tr><th>Curso</th><td>Autolimitado</td></tr></tbody></table>",
+      "fuente": "Leung 2021, Curr Pediatr Rev (PMID 32964824)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::Pitiriasis",
+        "Nivel::Aplicacion",
+        "Fuente::Leung2021",
+        "Clase::Vineta",
+        "Bloom::Aplicar",
+        "AltoRendimiento::MIR"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0027",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Pitiriasis versicolor</span>¿Qué hongo causa la pitiriasis versicolor, cómo luce y qué muestra el KOH?",
+      "respuesta": "<span class=\"dx\">Malassezia</span>: manchas escamosas hipo o hiperpigmentadas del tronco superior, cuello y brazos; el KOH muestra <span class=\"mec\">hifas cortas y esporas</span>.",
+      "razonamiento": "El diagnóstico suele ser clínico y el KOH se reserva para dudas. El tratamiento de elección es tópico antifúngico; el oral se guarda para formas extensas, recidivantes o refractarias.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Leung 2022, Drugs Context (PMID 36452877)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::Pitiriasis",
+        "Nivel::Aplicacion",
+        "Fuente::Leung2022",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0028",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Psoriasis</span>¿Por qué la psoriasis produce placas escamosas y cómo explica eso los biológicos?",
+      "respuesta": "La <span class=\"mec\">IL-23 mantiene a los linfocitos Th17</span> y activa la proliferación de queratinocitos; la epidermis crece sin diferenciarse bien.",
+      "razonamiento": "Por eso hay acantosis y escama. Los inhibidores de TNF-alfa, IL-12/23, IL-17 e IL-23 actúan en esa vía y se usan en psoriasis moderada a grave.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Galluzzo 2017, Expert Opin Biol Ther (PMID 28271735); Morita 2024, J Dermatol (PMID 38105636); Armstrong 2020, JAMA (PMID 32427307)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::Psoriasis",
+        "Nivel::Aplicacion",
+        "Fuente::Armstrong2020",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio",
+        "AltoRendimiento::USMLE"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0029",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Psoriasis</span>Paciente con psoriasis en placas: ¿por qué más allá de la piel buscas artritis, riesgo cardiometabólico y depresión?",
+      "respuesta": "Porque la psoriasis en placas se asocia con <span class=\"al\">artritis psoriásica</span>, enfermedad cardiometabólica y trastornos del ánimo.",
+      "razonamiento": "Es una enfermedad inflamatoria con comorbilidades que reducen la calidad de vida; el cribado forma parte del manejo integral.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Armstrong 2020, JAMA (PMID 32427307)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::Psoriasis",
+        "Nivel::Aplicacion",
+        "Fuente::Armstrong2020",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0030",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Tratamiento de psoriasis</span>Psoriasis leve en placas: ¿qué clases de tópicos usas y cuál combinación es la más eficaz en cuero cabelludo?",
+      "respuesta": "<span class=\"fx\">Corticoide</span>, <span class=\"fx\">análogo de vitamina D</span>, <span class=\"fx\">inhibidor de calcineurina</span> y queratolíticos; la mejor combinación en cuero cabelludo es <span class=\"fx\">betametasona más calcipotriol</span>.",
+      "razonamiento": "Los tópicos son el pilar de la psoriasis leve. La psoriasis moderada a grave pasa a biológicos, fototerapia o sistémicos.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Armstrong 2020, JAMA (PMID 32427307); Ghafoor 2022, J Drugs Dermatol (PMID 35946971)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::Psoriasis",
+        "Nivel::Aplicacion",
+        "Fuente::Armstrong2020",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0031",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Psoriasis infantil</span>¿Qué diferencias tiene la psoriasis del niño con la del adulto?",
+      "respuesta": "En el niño son más frecuentes la psoriasis del pañal, la facial y la en gotas; las placas son más pequeñas y la escama más fina y blanda.",
+      "razonamiento": "<span class=\"vs\">Contraste</span> en el lactante con eritema y escama puede confundirse con dermatitis seborreica. Los tópicos son de primera línea y el impacto en la interacción social puede ser grande.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Mahé 2016, Eur J Dermatol (PMID 27900946)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::Psoriasis",
+        "Nivel::Aplicacion",
+        "Fuente::Mahe2016",
+        "Clase::Contraste",
+        "Bloom::Analizar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0032",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Dermatosis descamativas</span>Ante una dermatosis descamativa, ¿qué pista clave y qué prueba separa seborrea, tiña, pitiriasis rosada y versicolor?",
+      "respuesta": "Seborrea: <span class=\"dx\">zonas seborreicas</span>; tiña: <span class=\"dx\">borde activo con KOH</span>; rosada: <span class=\"dx\">placa heraldo</span>; versicolor: <span class=\"dx\">manchas del tronco con hifas cortas</span>.",
+      "razonamiento": "<span class=\"vs\">Contraste</span> la psoriasis se reconoce por su carácter crónico en placas y sus comorbilidades. Revisa siempre qué tratamiento recibió antes: el corticoide tópico enmascara la tiña.",
+      "mnemotecnia": "",
+      "esquema": "<table><thead><tr><th>Entidad</th><th>Pista clave</th><th>Confirma</th></tr></thead><tbody><tr><th>Seborrea</th><td>Zonas seborreicas</td><td>Clínica</td></tr><tr><th>Tiña</th><td>Borde activo</td><td>KOH</td></tr><tr><th>P. rosada</th><td>Placa heraldo</td><td>Clínica</td></tr><tr><th>P. versicolor</th><td>Manchas del tronco</td><td>KOH</td></tr></tbody></table>",
+      "fuente": "Borda 2019, J Dermatolog Treat (PMID 29737895); Leung 2021, Curr Pediatr Rev (PMID 32964824); Leung 2022, Drugs Context (PMID 36452877); Leung 2023, Drugs Context (PMID 37415917)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::DiagnosticoDiferencial",
+        "Nivel::Aplicacion",
+        "Fuente::Leung2021",
+        "Clase::Relacional",
+        "Bloom::Evaluar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0033",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Eccema o psoriasis refractarios</span>Adulto con placas tipo eccema o psoriasis que no responden al tratamiento: ¿qué diagnóstico no debes pasar por alto?",
+      "respuesta": "<span class=\"al\">Micosis fungoide</span>, un linfoma cutáneo de células T que imita el eccema y la psoriasis.",
+      "razonamiento": "Sus estadios son parche, placa y tumor, y el diagnóstico exige correlación clínico-patológica, a veces con varias biopsias en el estadio de parche.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Sheern 2025, Clin Exp Dermatol (PMID 40721285)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::DiagnosticoDiferencial",
+        "Nivel::Aplicacion",
+        "Fuente::Sheern2025",
+        "Clase::Aplicacion",
+        "Bloom::Evaluar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0034",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Familia del niño con dermatosis crónica</span>En una dermatitis atópica pediátrica, ¿por qué se dice que el paciente es también la familia?",
+      "respuesta": "Porque cuidar al niño consume tiempo, altera el sueño de todos, afecta las relaciones y puede reducir la productividad laboral de los cuidadores.",
+      "razonamiento": "Incluye dietas especiales y estrategias de evitación que exigen implicación familiar. Preguntar por sueño, trabajo y finanzas forma parte de la historia clínica.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Yang 2019, Pediatr Dermatol (PMID 30556595)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::RelacionMedicoPaciente",
+        "Nivel::Aplicacion",
+        "Fuente::Yang2019",
+        "Clase::Principio",
+        "Bloom::Comprender",
+        "Principio"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0035",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Miedo a los corticoides tópicos</span>Padres rechazan el corticoide tópico para su hijo con dermatitis atópica: ¿qué problema es y cómo lo abordas?",
+      "respuesta": "Es <span class=\"al\">fobia a los corticoides tópicos</span>, que se aborda con <span class=\"dx\">información fiable y educación</span> del médico.",
+      "razonamiento": "Nace de la desinformación (a menudo de internet) y se asocia con menor adherencia, un motivo de fracaso del tratamiento. Pregunta qué temen exactamente antes de explicar el beneficio frente al riesgo.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Lee 2015, Ann Dermatol (PMID 26512163); Albogami 2023, Patient Prefer Adherence (PMID 37936715)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::RelacionMedicoPaciente",
+        "Nivel::Aplicacion",
+        "Fuente::Lee2015",
+        "Clase::Vineta",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    },
+    {
+      "id": "Q2R2-DER-0036",
+      "tipo": "QA",
+      "pregunta": "<span class=\"tema\">Estrés en dermatitis atópica</span>¿Qué intervenciones de la consulta reducen la carga psicosocial de la dermatitis atópica en el niño y su familia?",
+      "respuesta": "<span class=\"dx\">Consejería</span>, terapias dirigidas al sueño y uso de índices de calidad de vida.",
+      "razonamiento": "El picor y el aspecto de la piel afectan el sueño, la autoestima y las relaciones; el cuidador también sufre. Medir la calidad de vida hace visible lo que no se ve en la piel.",
+      "mnemotecnia": "",
+      "esquema": "",
+      "fuente": "Barilla 2017, Adv Exp Med Biol (PMID 29063432)",
+      "tags": [
+        "Quirurgica2::LesionesDermicas::RelacionMedicoPaciente",
+        "Nivel::Aplicacion",
+        "Fuente::Barilla2017",
+        "Clase::Aplicacion",
+        "Bloom::Aplicar"
+      ],
+      "pendientes": [],
+      "notas_ejecutor": ""
+    }
+  ]
 }
