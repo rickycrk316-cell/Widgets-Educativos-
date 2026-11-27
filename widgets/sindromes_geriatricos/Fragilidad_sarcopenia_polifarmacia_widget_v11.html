@@ -360,7 +360,31 @@ section.tab p,section.tab dd,section.tab li{max-width:82ch}
 <button type="button" class="tb" data-tab="e4" onclick="show('e4')">Polifarmacia</button>
 <button type="button" class="tb" data-tab="sin" onclick="show('sin')">Errores</button>
 </nav>
-<section class="tab" data-tab="pan"></section>
+<section class="tab" data-tab="pan">
+<div class="hb az"><div class="hb-t">El grupo en una frase</div>
+<p>Un adulto mayor que decae tras un estresor suele tener un ciclo de fragilidad, sarcopenia y malnutrición, con fármacos que lo inician o lo agravan; se busca primero la iatrogenia porque se puede retirar.</p></div>
+<div class="etapa" data-go="vis"><h3>Un ciclo común y los fármacos como causa externa</h3>
+<p class="res">Doña Rosa, de 83 años, ingresó por COVID-19 y salió más débil, con menos apetito y nueve fármacos. Esa presentación es común a todo el grupo: decaimiento con pérdida de fuerza, de peso y de autonomía. Menos ingesta, menos músculo, menos fuerza y menos actividad se refuerzan entre sí, y la reserva baja hace que un estresor menor descompense. Los fármacos son una causa externa que puede iniciar o agravar el ciclo. Se separan por el nivel: reserva global, músculo, nutrición o receta. Se empieza por la iatrogenia, que es lo que se puede retirar.</p>
+<p class="perla">Tres caras de un mismo ciclo; los fármacos se revisan primero.</p>
+<button type="button" class="go" data-go="vis" onclick="show('vis')">Ir a Visión de conjunto →</button></div>
+<div class="etapa" data-go="e1"><h3>Fragilidad, la reserva baja</h3>
+<p class="res">Es el síndrome más amplio del grupo: una vulnerabilidad por declive acumulado de varios sistemas, no una discapacidad ni una comorbilidad. Un estresor menor, como el ingreso de Doña Rosa, produce un declive desproporcionado. El hallazgo que la delata es el fenotipo de Fried: tres o más de pérdida de peso, agotamiento, debilidad, marcha lenta y baja actividad; uno o dos es prefragilidad. La conducta decisiva es un programa multicomponente con ejercicio de resistencia como primera línea, proteína si hay pérdida de peso, revisión de fármacos y vitamina D solo si hay déficit. Sigue el músculo.</p>
+<p class="perla">No hay fármaco para la fragilidad: el tratamiento es el programa multicomponente.</p>
+<button type="button" class="go" data-go="e1" onclick="show('e1')">Ir a Fragilidad →</button></div>
+<div class="etapa" data-go="e2"><h3>Sarcopenia, el músculo que falla</h3>
+<p class="res">Es la enfermedad del músculo que aporta el sustrato medible de la fragilidad. Con la edad se pierden motoneuronas y fibras rápidas, hay resistencia anabólica, inflamación e inactividad, y el músculo queda con menos masa y fuerza. El hallazgo que la delata es la fuerza baja, que es la característica clave: probable con fuerza baja, confirmada si hay poca cantidad o calidad de músculo y grave si además el rendimiento es bajo. La conducta decisiva es ejercicio de resistencia y proteína, sin hormonas ni fármacos. Sigue la nutrición, que alimenta o frena este músculo.</p>
+<p class="perla">La fuerza baja ya autoriza actuar, sin esperar a medir la masa.</p>
+<button type="button" class="go" data-go="e2" onclick="show('e2')">Ir a Sarcopenia →</button></div>
+<div class="etapa" data-go="e3"><h3>Malnutrición, el combustible que falta</h3>
+<p class="res">Es el balance energético y proteico negativo que alimenta la pérdida de masa magra. La anorexia del envejecimiento, con menos hambre y saciedad precoz, se suma a causas añadidas como la congestión intestinal, los fármacos o la depresión. El hallazgo que la delata es la pérdida de peso involuntaria, el IMC bajo o la masa muscular reducida; el edema de la insuficiencia cardíaca puede enmascararla. Se tamiza con el MNA-SF y se confirma con GLIM. La conducta decisiva es tratar la causa y los fármacos, aportar energía y proteína, y evitar el megestrol. Sigue la receta.</p>
+<p class="perla">El MNA-SF tamiza; GLIM confirma con un criterio fenotípico y uno etiológico.</p>
+<button type="button" class="go" data-go="e3" onclick="show('e3')">Ir a Malnutrición →</button></div>
+<div class="etapa" data-go="e4"><h3>Polifarmacia e iatrogenia, la amenaza</h3>
+<p class="res">Es la causa externa que se puede retirar. El envejecimiento prolonga la vida media de los fármacos y aumenta la sensibilidad, y más prescriptores dan más efectos adversos y cascadas. El hallazgo que la delata es un síntoma nuevo tras iniciar o subir un fármaco, tratado con otro: en Doña Rosa, el edema que cede a medias con diurético. La iatrogenia incluye también el daño del ingreso, con reposo, sondas y restricciones. La conducta decisiva es conciliar toda la medicación, aplicar Beers y STOPP/START, deprescribir con vigilancia y movilizar al paciente.</p>
+<p class="perla">Ante un síntoma nuevo, pregunta primero qué fármaco empezó o subió antes.</p>
+<button type="button" class="go" data-go="e4" onclick="show('e4')">Ir a Polifarmacia →</button></div>
+<p class="mini">Esto es el mapa, no el territorio: cada párrafo y cada perla se justifican en su pestaña.</p>
+</section>
 <section class="tab" data-tab="vis">
 <div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
 <ol class="pg">
@@ -382,14 +406,14 @@ section.tab p,section.tab dd,section.tab li{max-width:82ch}
 <div class="tw"><table class="vis"><thead><tr><th>Rasgo</th><th>Fragilidad</th><th>Sarcopenia</th><th>Malnutrición</th><th>Polifarmacia</th></tr></thead>
 <tbody>
 <tr><th><span class="q">¿Cuál es el mecanismo principal que explica la enfermedad?</span><span class="qx">El paso que falla y explica casi todo lo demás.</span></th><td>Pérdida de reserva en varios sistemas; un estresor menor descompensa [1]</td><td>Falla muscular: baja fuerza y baja cantidad o calidad del músculo [4]</td><td>Aporte de energía y proteína menor que el gasto [5]</td><td>Fármacos acumulados o mal indicados dañan a un organismo con menos reserva [8]</td></tr>
-<tr><th><span class="q">¿En qué persona o población es más frecuente?</span><span class="qx">Edad, sexo, antecedente o contexto donde más aparece.</span></th><td>Mayor de edad avanzada con comorbilidad; más en mujeres [11]</td><td>Adulto mayor; puede aparecer antes en la vida [4]</td><td>Mayor de 80 años, hospitalizado o en residencia [5]</td><td>Mayor con multimorbilidad, varios prescriptores e ingresos [12][9]</td></tr>
+<tr><th><span class="q">¿En qué persona o población es más frecuente?</span><span class="qx">Edad, sexo, antecedente o contexto donde más aparece.</span></th><td>Mayor de edad avanzada con comorbilidad; más en mujeres [11]</td><td>Adulto mayor; más en hombres con EWGSOP2 (11 % frente a 2 %) y con cifras que dependen de la definición [34]</td><td>Mayor de 80 años, hospitalizado o en residencia [5]</td><td>Mayor con multimorbilidad, varios prescriptores e ingresos [12][9]</td></tr>
 <tr><th><span class="q">¿Cómo empieza y cómo evoluciona?</span><span class="qx">Rapidez de inicio y curso: agudo, subagudo, crónico o recurrente.</span></th><td>Gradual; un estresor la hace visible de golpe [1]</td><td>Gradual y progresiva; el reposo prolongado la acelera [4][9]</td><td>Gradual con la hiporexia; rápida si hay inflamación [5]</td><td>Aguda tras iniciar o subir un fármaco, o insidiosa por acumulación [7]</td></tr>
 <tr><th><span class="q">¿Qué síntoma comparte con las demás?</span><span class="qx">La queja de entrada común y cómo se presenta en esta entidad.</span></th><td>Decaimiento y pérdida de autonomía tras un evento [11]</td><td>Debilidad para levantarse, cargar o caminar [4]</td><td>Hiporexia y pérdida de peso [5]</td><td>Decaimiento, mareo o caídas atribuidos a la edad [8]</td></tr>
 <tr><th><span class="q">¿Qué hallazgo la delata?</span><span class="qx">El signo o dato clave que la separa de las otras.</span></th><td>Marcha lenta, prensión débil, agotamiento y poca actividad [11]</td><td>Fuerza de prensión baja [4]</td><td>Pérdida de peso involuntaria o IMC bajo con ingesta reducida [10]</td><td>Síntoma nuevo que empezó tras iniciar o subir un fármaco [7]</td></tr>
 <tr><th><span class="q">¿Qué dato negativo la descarta?</span><span class="qx">Lo que debería faltar; si está presente, piensa en otra.</span></th><td>Ningún criterio de Fried: robusto; uno o dos, prefrágil [11]</td><td>Fuerza de prensión normal: la sarcopenia no se sostiene [4]</td><td>Peso estable, ingesta normal y sin inflamación: busca otra causa [10]</td><td>El síntoma persiste tras retirar el fármaco: piensa en enfermedad [7]</td></tr>
-<tr><th><span class="q">¿Qué prueba la confirma?</span><span class="qx">La prueba que decide el diagnóstico, no la de tamizaje.</span></th><td>Fenotipo de Fried: tres o más de cinco criterios [11]</td><td>Fuerza baja más cantidad o calidad muscular baja [4]</td><td>GLIM: un criterio fenotípico y uno etiológico; el MNA-SF solo tamiza [10][13]</td><td>Conciliación de todos los fármacos con Beers y STOPP/START [8][12]</td></tr>
-<tr><th><span class="q">¿Qué haces primero y quién la maneja?</span><span class="qx">Primera conducta y nivel o especialista que se hace cargo.</span></th><td>Ejercicio con resistencia y revisión de fármacos; geriatría [3]</td><td>Ejercicio con resistencia; geriatría con rehabilitación [3]</td><td>Tratar la causa, asesoría dietética y suplementos; nutrición clínica [14]</td><td>Deprescribir un fármaco a la vez; geriatría o farmacia clínica [12]</td></tr>
-<tr><th><span class="q">¿Qué pasa si no la reconoces?</span><span class="qx">La complicación o desenlace grave que se evita al sospecharla.</span></th><td>Caídas, discapacidad, hospitalización y muerte [11]</td><td>Dependencia y otros resultados adversos de salud [4]</td><td>Infecciones, mala cicatrización y mayor dependencia [5]</td><td>Cascadas, caídas y daño iatrogénico durante el ingreso [7][8][9]</td></tr>
+<tr><th><span class="q">¿Qué prueba la confirma?</span><span class="qx">La prueba que decide el diagnóstico, no la de tamizaje.</span></th><td>Fenotipo de Fried: tres o más de cinco criterios [11]</td><td>Fuerza baja y, para confirmar, cantidad o calidad de músculo baja por DXA o BIA [4]</td><td>GLIM: un criterio fenotípico y uno etiológico; el MNA-SF solo tamiza [10][13]</td><td>Conciliación de todos los fármacos con Beers y STOPP/START [8][12]</td></tr>
+<tr><th><span class="q">¿Qué haces primero y quién la maneja?</span><span class="qx">Primera conducta y nivel o especialista que se hace cargo.</span></th><td>Ejercicio con resistencia y revisión de fármacos; geriatría [3]</td><td>Ejercicio de resistencia y proteína; geriatría con rehabilitación [29]</td><td>Tratar la causa, asesoría dietética y suplementos; nutrición clínica [14]</td><td>Deprescribir un fármaco a la vez; geriatría o farmacia clínica [12]</td></tr>
+<tr><th><span class="q">¿Qué pasa si no la reconoces?</span><span class="qx">La complicación o desenlace grave que se evita al sospecharla.</span></th><td>Caídas, discapacidad, hospitalización y muerte [11]</td><td>Caídas, fracturas, hospitalización y mortalidad (HR 2,00) [30]</td><td>Infecciones, mala cicatrización y mayor dependencia [5]</td><td>Cascadas, caídas y daño iatrogénico durante el ingreso [7][8][9]</td></tr>
 </tbody></table></div>
 <aside class="perla" data-ex="puce usmle2 mir enarm"><div class="perla-t">Perla de examen</div><p>La fragilidad no es sinónimo de comorbilidad ni de discapacidad: hay solapamiento, pero la comorbilidad es factor de riesgo y la discapacidad es un desenlace de la fragilidad [11].</p></aside>
 <div class="card"><p><b>Común al grupo</b>: la fragilidad, la sarcopenia y la malnutrición no son tres enfermedades aisladas, sino tres caras de un mismo ciclo, y los fármacos son una causa externa que puede iniciarlo o agravarlo. <span class="rem">↪ La valoración geriátrica integral completa (funcional, cognitiva, afectiva, social) está en el widget «Las 4 I»</span></p>
@@ -436,8 +460,8 @@ section.tab p,section.tab dd,section.tab li{max-width:82ch}
 <div class="out"></div></div>
 </section>
 <section class="tab" data-tab="e1">
-<div class="hb az"><div class="hb-t">Frente a Inmovilidad</div>
-<p>Se confunde con la inmovilidad porque en ambas el adulto mayor pierde fuerza y autonomía tras una hospitalización. Se separa por el origen: la fragilidad es una reserva fisiológica baja que ya estaba ahí y hace más probable el declive; la inmovilidad es el daño que produce el reposo en sí. <span class="rem">↪ Inmovilidad se desarrolla en el widget «Las 4 I»; la diferencia general está en «Visión de conjunto»</span></p></div>
+<div class="hb az"><div class="hb-t">Frente a Sarcopenia</div>
+<p>Se confunde con la sarcopenia porque ambas dejan marcha lenta, poca fuerza y pérdida de autonomía, a menudo tras una hospitalización. Se separa por el nivel: la fragilidad es una reserva fisiológica baja en varios sistemas que hace más probable el declive; la sarcopenia es una enfermedad del músculo que se mide con fuerza, cantidad de músculo y rendimiento. <span class="rem">↪ La sarcopenia se desarrolla en «Sarcopenia»; la inmovilidad, en el widget «Las 4 I»</span></p></div>
 <div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
 <ol class="pg">
 <li>¿Por qué la fragilidad es una pérdida de reserva y no una suma de enfermedades, y en qué se distingue de la discapacidad, de la comorbilidad y de la sarcopenia?</li>
@@ -696,10 +720,10 @@ section.tab p,section.tab dd,section.tab li{max-width:82ch}
 <h2>Epidemiología</h2>
 <div class="tw"><table><thead><tr><th>Dato</th><th>Valor en la fuente</th></tr></thead>
 <tbody>
-<tr><th>Frecuencia</th><td>Entre 6 y 22 % de los adultos mayores según el ICFSR [29]; en el metaanálisis global, 10 a 27 % según la definición, y sarcopenia grave de 2 a 9 % [34]. Cifra específica de Ecuador: no establecida en las fuentes revisadas</td></tr>
-<tr><th>Variación</th><td>La prevalencia cambia mucho con la clasificación y el punto de corte [34]; con EWGSOP2 fue 11 % en hombres frente a 2 % en mujeres [34]</td></tr>
-<tr><th>Pronóstico</th><td>Mortalidad mayor: HR agrupado 2,00 (IC 95 % 1,71 a 2,34) con independencia de la población y de la definición [30]</td></tr>
-<tr><th>Factores clave</th><td>Edad, enfermedad crónica, inactividad y aporte bajo de proteína, que corresponden a los nodos de la cadena [4][32]</td></tr>
+<tr><th>Frecuencia</th><td>Entre 6 y 22 % de los adultos mayores según el ICFSR [29]; en el metaanálisis global, 10 a 27 % según la definición, y sarcopenia grave de 2 a 9 % [34]. La prevalencia cambia mucho con la clasificación y el punto de corte [34]. Cifra específica de Ecuador: no establecida en las fuentes revisadas</td></tr>
+<tr><th>Edad</th><td>Enfermedad del adulto mayor; la edad actúa por la pérdida de motoneuronas y la resistencia anabólica de la cadena [4][32]</td></tr>
+<tr><th>Sexo</th><td>Con EWGSOP2 la prevalencia fue 11 % en hombres frente a 2 % en mujeres [34]</td></tr>
+<tr><th>Factores clave</th><td>Enfermedad crónica, inactividad y aporte bajo de proteína, que corresponden a los nodos de la cadena [4][32]. Pronóstico: mortalidad mayor, HR agrupado 2,00 (IC 95 % 1,71 a 2,34) con independencia de la población y de la definición [30]</td></tr>
 </tbody></table></div>
 
 <h2>Cadena</h2>
@@ -776,11 +800,11 @@ section.tab p,section.tab dd,section.tab li{max-width:82ch}
 <h2>Tratamiento</h2>
 <ol class="steps tg">
 <li data-paso="Ejercicio de resistencia progresivo"><span class="tg">De elección</span>Prescribe ejercicio de resistencia progresivo: es la única intervención con recomendación fuerte del ICFSR para sarcopenia [29]. En ancianos con sarcopenia, resistencia sola o con equilibrio o ejercicio aeróbico, con nutrición o sin ella, fue lo más eficaz para calidad de vida, fuerza y marcha [35]. <span class="rem">↓ En la tabla</span></li>
-<li data-paso="Proteína 1,0 a 1,2 g/kg y más con enfermedad"><span class="tg">Añade</span>Proteína de 1,0 a 1,2 g/kg/día; 1,2 a 1,5 g/kg/día con enfermedad aguda o crónica (recomendación condicional) [27][29]. Añadir nutrición al ejercicio mejoró más la prensión (MD 4,19 kg con resistencia, equilibrio y nutrición) [35].</li>
+<li data-paso="Añadir proteína dietética o suplemento"><span class="tg">Alternativa</span>Añade proteína dietética o suplemento, con más aporte si hay enfermedad aguda o crónica (recomendación condicional) [27][29]. Añadir nutrición al ejercicio mejoró más la prensión (MD 4,19 kg con resistencia, equilibrio y nutrición) [35]. <span class="rem">↓ En la tabla</span></li>
 <li data-paso="Tratar la causa secundaria"><span class="tg">Principio</span>En la sarcopenia secundaria se trata también la enfermedad de base, la inactividad y el aporte insuficiente [4].</li>
-<li data-paso="Vitamina D solo si hay déficit"><span class="tg">Condicional</span>Corrige el déficit documentado de vitamina D; el ICFSR no da recomendación para usarla como tratamiento de la sarcopenia [29].</li>
+<li data-paso="Vitamina D solo si hay déficit"><span class="tg">Sintomático</span>Corrige el déficit documentado de vitamina D; el ICFSR no da recomendación para usarla como tratamiento de la sarcopenia [29]. <span class="rem">↓ En la tabla</span></li>
 <li data-paso="Sin hormonas ni fármacos"><span class="tg">Evita</span>No hay recomendación para hormonas anabólicas y la evidencia de otros fármacos es insuficiente: no se prescriben para sarcopenia [29].</li>
-<li data-paso="Con enfermedad renal avanzada, coordinar proteína"><span class="tg">Especialista</span>Con TFG menor de 30 mL/min/1,73 m² sin diálisis la proteína puede tener que limitarse; coordina con nefrología [27].</li>
+<li data-paso="Con enfermedad renal avanzada, coordinar proteína"><span class="tg">Especialista</span>Con enfermedad renal avanzada sin diálisis la proteína puede tener que limitarse; coordina con nefrología [27]. <span class="rem">↓ En la tabla</span></li>
 </ol>
 <aside class="perla" data-ex="usmle2 mir enarm puce"><div class="perla-t">Perla de examen</div><p>El tratamiento de la sarcopenia es el ejercicio de resistencia más proteína; no hay fármaco recomendado. Recomendación fuerte para resistencia, condicional para proteína, ninguna para vitamina D ni hormonas [29].</p></aside>
 <div class="tw"><table><thead><tr><th>Fármaco o intervención</th><th>Mecanismo de acción</th><th>Dosis</th><th>Vía</th><th>Frecuencia</th><th>Duración</th><th>Notas/ajustes</th><th>Ref.</th></tr></thead>
@@ -1020,9 +1044,8 @@ section.tab p,section.tab dd,section.tab li{max-width:82ch}
 <div class="hb az"><div class="hb-t">Preguntas guía — qué debes poder responder al terminar esta pestaña</div>
 <ol class="pg">
 <li>¿Por qué el mismo fármaco hace más daño a los 83 años que a los 50, y cómo ese daño termina convertido en un síndrome geriátrico (caída, delirium, descompensación)?</li>
-<li>¿Cómo separas un síntoma nuevo que es enfermedad de uno que es efecto adverso, y qué hace que tratar un efecto adverso con otro fármaco (cascada) pase inadvertido?</li>
-<li>¿En qué te apoyas para decidir si retirar, reducir o mantener cada fármaco de Doña Rosa, y qué vigilas después de retirarlo?</li>
-<li>¿Qué daños añade la propia hospitalización (reposo, sondas y catéteres, restricciones físicas, ayuno, infecciones asociadas a la atención) y qué medidas del modelo ACE y del programa HELP los previenen?</li>
+<li>¿Cómo separas un síntoma nuevo que es enfermedad de uno que es efecto adverso, qué hace que la cascada pase inadvertida y qué daños añade la hospitalización (reposo, sondas, restricciones, ayuno)?</li>
+<li>¿En qué te apoyas para decidir si retirar, reducir o mantener cada fármaco de Doña Rosa, qué vigilas después y qué medidas (modelo ACE, programa HELP) previenen la iatrogenia hospitalaria?</li>
 </ol></div>
 <div class="nucleo"><div class="nucleo-t">Núcleo</div><ul>
 <li>Polifarmacia es usar cinco o más fármacos; la definición numérica no distingue lo apropiado de lo inapropiado, y lo que daña es lo inapropiado [44].</li>
@@ -1075,7 +1098,7 @@ section.tab p,section.tab dd,section.tab li{max-width:82ch}
 </ol>
 <aside class="perla" data-ex="usmle2 mir enarm puce"><div class="perla-t">Perla de examen</div><p>Ante un edema o un síntoma nuevo en un adulto mayor, pregunta primero «¿qué fármaco empezó o subió antes?». La posible cascada calcioantagonista–diurético de asa fue más probable con 5 a 7 fármacos (OR 3,75) y a partir de los 85 años (OR 3,89) [46].</p></aside>
 <div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — la olla pequeña</span>
-<p class="fey-b">Con los años el cuerpo es como una olla más pequeña con un colador más lento: la misma cantidad de medicina se queda más tiempo y pega más fuerte. Si además cada médico añade una receta sin ver las otras, es como echar ingredientes a un guiso sin probarlo. Cuando uno de ellos deja mal sabor, alguien añade otro para taparlo. El guiso se complica y nadie recuerda cuál fue el primero que lo estropeó. Y si además el cocinero deja la olla tapada y sin mover, se quema por abajo: así el reposo y las sondas del hospital también dañan.</p>
+<p class="fey-b">Con los años el cuerpo es como una olla más pequeña con un colador más lento: la misma cantidad de medicina se queda más tiempo y pega más fuerte. Si cada médico añade una receta sin ver las otras, es como echar ingredientes a un guiso sin probarlo. Cuando uno deja mal sabor, alguien añade otro para taparlo, y nadie recuerda cuál lo estropeó. Y si el cocinero deja la olla tapada y quieta, se quema: así el reposo del hospital también daña.</p>
 <p class="mini fey-c">En medicina esto se llama… polifarmacia, reacción adversa a medicamentos y cascada de prescripción.</p>
 <p class="mini fey-c">Dónde falla la comparación: en el guiso basta probarlo para corregir; en el paciente el efecto puede tardar semanas y parecerse a otra enfermedad.</p></div>
 
