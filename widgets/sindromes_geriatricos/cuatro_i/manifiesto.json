@@ -1,0 +1,115 @@
+{
+ "titulo": "Síndromes geriátricos · Las 4 I",
+ "salida": "../Sindromes_geriatricos_4I_widget_v11.html",
+ "tipo": "v11",
+ "tema": "geriatria",
+ "modo": "multi",
+ "entidades": {
+  "e1": "Inmovilidad",
+  "e2": "Caídas",
+  "e3": "Incontinencia",
+  "e4": "Deterioro cognitivo",
+  "e5": "Úlceras por presión"
+ },
+ "principal": "e1",
+ "amenaza": "e4",
+ "tabs": [
+  "pan",
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4",
+  "e5",
+  "sin"
+ ],
+ "pg": {
+  "vis": 4,
+  "e1": 3,
+  "e2": 3,
+  "e3": 3,
+  "e4": 3,
+  "e5": 3
+ },
+ "fey": {
+  "e1": 1,
+  "e2": 1,
+  "e3": 1,
+  "e4": 1,
+  "e5": 1
+ },
+ "nodos": {
+  "e1": 7,
+  "e2": 6,
+  "e3": 6,
+  "e4": 6,
+  "e5": 6
+ },
+ "signos": {
+  "e1": 4,
+  "e2": 4,
+  "e3": 4,
+  "e4": 4,
+  "e5": 4
+ },
+ "dc": [
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4",
+  "e5"
+ ],
+ "nucleo": {
+  "vis": [
+   "Eje 1 — Un síndrome geriátrico es una condición frecuente, multifactorial y de morbilidad alta; comparten factores de riesgo (edad, deterioro cognitivo y funcional basal, movilidad alterada) y se potencian entre sí.",
+   "Eje 2 — Las «4 I» son inmovilidad, inestabilidad (caídas), incontinencia y deterioro intelectual (cognitivo); las úlceras por presión nacen del mismo estado de inmovilidad.",
+   "Eje 3 — Amenaza: un cambio agudo de la atención es delirium hasta demostrar lo contrario, y se busca primero porque tiene causa corregible.",
+   "Eje 4 — Diagnóstico: la valoración geriátrica integral explora las esferas funcional, física, mental y social con escalas breves; ninguna escala diagnostica sola.",
+   "Eje 5 — Tratamiento: equipo interdisciplinario, metas centradas en la persona y su función, deprescripción y apoyo al cuidador; en el hospital, la valoración integral aumenta la probabilidad de seguir vivo y en casa."
+  ],
+  "e1": [
+   "Pérdida de masa y fuerza muscular",
+   "Desacondicionamiento cardiovascular y ortostatismo",
+   "Presión sostenida sobre prominencias óseas",
+   "Rigidez articular y contracturas",
+   "Pérdida de ABVD e incontinencia funcional",
+   "Pérdida de ABVD frente al basal previo a la hospitalización",
+   "Basal previo con informante y ABVD actuales"
+  ],
+  "e2": [
+   "Cae la presión cerebral al ponerse de pie",
+   "Se pierde el control postural y la marcha",
+   "Cae y no logra levantarse del suelo",
+   "Caída en el último año con marcha lenta: TUG mayor de 15 s",
+   "Pregunta por caídas del último año y su gravedad",
+   "Ejercicio de equilibrio y fuerza individualizado"
+  ],
+  "e3": [
+   "Contracción involuntaria del detrusor: urgencia",
+   "Cierre uretral insuficiente ante el esfuerzo",
+   "Vaciado incompleto y rebosamiento",
+   "Consecuencias: caídas nocturnas, dermatitis y aislamiento",
+   "Urgencia con escape antes de llegar al retrete",
+   "Historia por tipo y diario miccional",
+   "Conductual: entrenamiento vesical y suelo pélvico"
+  ],
+  "e4": [
+   "Falla de la red atencional y delirium",
+   "Neurodegeneración lenta y deterioro cognitivo leve",
+   "Pérdida de independencia: demencia",
+   "Inatención de inicio agudo (CAM)",
+   "CAM o 4AT si hay cambio agudo, más informante",
+   "Medidas multicomponente tipo HELP"
+  ],
+  "e5": [
+   "Presión y cizallamiento sobre prominencia ósea",
+   "Edema inflamatorio e isquemia capilar",
+   "Muerte del tejido y pérdida de piel",
+   "Infección del lecho y del hueso",
+   "Eritema que no palidece sobre una prominencia ósea",
+   "Inspección completa de la piel y escala Braden",
+   "Reposicionar y usar superficie de apoyo"
+  ]
+ }
+}
