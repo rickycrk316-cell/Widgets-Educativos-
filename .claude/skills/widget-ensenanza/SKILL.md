@@ -1,6 +1,6 @@
 ---
 name: "widget-ensenanza"
-description: "Genera un widget HTML de estudio médico (v11) sobre cualquier tema: modo mono (1–2 entidades) o multi (3–5 con presentación común). Regla 20/80 con núcleo por pestaña, perlas por examen (PUCE, CACES, USMLE, MIR, ENARM), ejercicio de ordenar pasos, diseño tipo app, kit v11 y cero marcas de verificación."
+description: "Genera un widget HTML de estudio médico (v11) sobre cualquier tema: modo mono (1–2 entidades) o multi (3–5 con presentación común; hasta 15 en multi ampliado). Regla 20/80 con núcleo por pestaña, perlas por examen (PUCE, CACES, USMLE, MIR, ENARM), ejercicio de ordenar pasos, diseño tipo app, kit v11 y cero marcas de verificación."
 ---
 
 # Widget de enseñanza médica — v11
@@ -37,7 +37,7 @@ Solo existe la ruta del repo (`kit/` en el directorio de trabajo); si falta, dil
 - Tema = presentación sin entidades («Síndrome confusional en el adulto mayor», «Lesiones dérmicas»): elige 3–5 por frecuencia y letalidad en ese terreno, preferentemente las del sílabo, y decláralas.
 - 1–2 entidades → **mono**. Segunda entidad: si es otra fase de un mismo proceso (TVP/TEP), en la pestaña adicional; si es un diferencial, en «No confundir con…».
 - 3–5 que **comparten una presentación de entrada** ante la que hay que discriminarlas → **multi**; sin presentación común → propone widgets mono separados y **detente**.
-- ≥6 → propone la partición mínima en widgets válidos (mono o multi; pueden ser más de 2), con el porqué, y **detente**.
+- 6–15 → **multi ampliado** en un solo widget cuando el temario (sílabo o docente) los agrupa o Ricardo lo pide: mismas reglas de multi, `tabla.vis` con una columna por entidad, partes `2NN_eK` (p. ej. `201_e1` … `213_e13`) para que el orden alfabético se mantenga, y hasta 3 simuladores diferenciales en `vis` (uno por bloque). Sin ese motivo, propone la partición mínima y **detente**. >15 → partición siempre.
 - `Modo: mono|multi` gana siempre (override), salvo `Modo: multi` con <3 entidades: aplica mono y escribe `Override: rechazado`.
 - **Principal** = `e1`: la más frecuente en el terreno clínico del caso; si es diagnóstico de exclusión, la de conducta más decisiva. Ordena `e2…eN` por el eje del grupo (benigna → grave o proximal → distal), declarado.
 - **Amenaza** = la que, no reconocida, causa antes muerte o secuela irreversible evitable. Si no es `e1`, sus pasos `Alarma` y `Evita` son obligatorios y su bandera abre el `hb ro` de `vis`.
@@ -49,7 +49,7 @@ Solo existe la ruta del repo (`kit/` en el directorio de trabajo); si falta, dil
 
 | Parámetro | mono | multi |
 |---|---|---|
-| Pestañas (orden de barra) | `pan def fis cli dx tx seg` + ≤1 adicional | `pan vis e1 … eN sin` (N 3–5) |
+| Pestañas (orden de barra) | `pan def fis cli dx tx seg` + ≤1 adicional | `pan vis e1 … eN sin` (N 3–5; 6–15 en multi ampliado) |
 | Partes | `01_nav 02_pan 10_def 11_fis 12_cli 13_dx 14_tx 15_seg [16x_clave] 90_sim` | `01_nav 02_pan 05_vis 21_e1 … 2N_eN 80_sin 90_sim` |
 | Ids · enlace | `m-n` · `s-n`: `ir('fis','m-3')` · `ir('cli','s-2')` | `eK-m-n` · `eK-s-n` (desde 1 en cada entidad): `ir('eK','eK-m-3')` |
 | Timeline `ol.tl` | `fis` | cada `eK`, bajo «Cadena» |
@@ -58,9 +58,9 @@ Solo existe la ruta del repo (`kit/` en el directorio de trabajo); si falta, dil
 | `span.rem` posología · S/E | `↪ Posología en «Plan de tratamiento»` · `↪ Propiedades en «Plan diagnóstico»` | `↪ Posología en «Tratamiento»` · `↪ Propiedades en «Diagnóstico»` |
 | Sustrato normal · `Alcance` · Sílabo | `def` | lo común en `vis`; lo propio en «Qué es» |
 | `.acc.refs` | al final de `seg` | al final de `sin` |
-| PG | 3–5 por pestaña de contenido | `vis` 3–5 · `e1` 3–5 · secundarias 3 · `sin` 0 |
+| PG | 3–5 por pestaña de contenido | `vis` 3–5 · `e1` 3–5 · secundarias 3–5 · `sin` 0 |
 | `div.nucleo` | 1 por pestaña de contenido (3–5 `li`) | 1 en `vis`, 1 en cada `eK` (3–5 `li`); `sin` 0 |
-| Feynman | 1 por segmento cardinal; `def` exactamente 1; en `cli` solo si su mecanismo no tiene ya Feynman en `fis`; ≈8 en total | `e1` exactamente 2 (tras «Cadena» y tras «Qué verás») · secundarias exactamente 1 (tras «Cadena») · `vis` y `sin` 0 |
+| Feynman | 1 por segmento cardinal; `def` exactamente 1; en `cli` solo si su mecanismo no tiene ya Feynman en `fis`; ≈8 en total | `e1` exactamente 2 (tras «Cadena» y tras «Qué verás») · secundarias 1–2 (la primera tras «Cadena») · `vis` y `sin` 0 |
 | Simuladores | 1 al final de `dx`, `tx` y `seg` | `vis` 1 (diferencial) · `e1` bajo «Diagnóstico» y «Tratamiento» (+«Seguimiento» opcional) · secundarias ≥1 bajo «Tratamiento» |
 | Ordenar | `ol.tl` de `fis`, `ol.steps.tg` de `dx` y de `tx` | `ol.tl`, dx y tx de cada `eK` (+ dx de `vis`) |
 | Núcleo Anki (`nucleo` del manifiesto) | ≤12 (lista) | `vis` ≤5 (los ejes) + ≤7 por entidad |

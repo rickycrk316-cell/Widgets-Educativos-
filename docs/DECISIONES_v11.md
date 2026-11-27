@@ -33,6 +33,8 @@ El kit muestra las etiquetas como chips y un filtro global por examen (Todos · 
 
 La tabla comparativa usa **filas como preguntas** con una mini explicación de qué hay que responder: `tr>th>(span.q{pregunta}+span.qx{qué se busca, ≤15 palabras})`. Ejemplos: «¿Cuál es el mecanismo principal que explica la enfermedad?» en vez de «Falla central»; «¿En qué persona o población es más frecuente?» en vez de «Terreno típico». Las 9 filas del contrato v10 se mantienen como contenido, reformuladas así.
 
+**Multi ampliado (6–15 entidades en un solo widget).** Cuando el temario del sílabo o del docente agrupa más de 5 entidades y Ricardo lo quiere en un único widget, no se parte: la tabla lleva una columna por entidad, las partes se nombran `2NN_eK` (`201_e1` … `213_e13`), las secundarias admiten 3–5 preguntas guía y 1–2 Feynman, `vis` admite hasta 3 simuladores diferenciales (uno por bloque) y el Panorama crece a ≈110 palabras por etapa. Primer uso: síndromes geriátricos (13 entidades).
+
 ## 5 · Recuerdo activo: ordenar pasos
 
 Sustituye a los modos en blanco. Se activa y desactiva con un botón «Ordenar» en cada bloque elegible:

@@ -26,7 +26,7 @@ def nz(s):
     s = s.replace('º', 'o').replace('°', 'o').casefold()
     s = ''.join(c for c in unicodedata.normalize('NFKD', s) if not unicodedata.combining(c))
     return re.sub(r'[\s.]', '', s)
-IDRE = re.compile(r'^(?:(e[1-5])-)?([ms])-(\d+)$')
+IDRE = re.compile(r'^(?:(e\d{1,2})-)?([ms])-(\d+)$')
 def kind(i):
     m = IDRE.match(i or ''); return m.group(2) if m else None
 # --- ensamblaje: separa kit / partes del LLM
@@ -65,8 +65,8 @@ if MODE == 'mono':
     if [k for k in tbs if k in BASE] != [k for k in BASE if k in tbs]: err('pestañas', f'orden de barra: {" ".join(BASE)} (+1 adicional en su lugar lógico)')
 else:
     exp = ['pan', 'vis'] + [f'e{i}' for i in range(1, N + 1)] + ['sin']
-    if N > 5: err('entidades', f'{N} entidades: máximo 5; propone dividir el tema en dos widgets')
-    if N < 3: err('entidades', f'{N} entidades: multi exige 3–5 (con 1–2 usa mono)')
+    if N > 15: err('entidades', f'{N} entidades: máximo 15 (multi ampliado); propone dividir el tema')
+    if N < 3: err('entidades', f'{N} entidades: multi exige 3–15 (con 1–2 usa mono)')
     if tbs != exp: err('pestañas', f'barra multi debe ser exactamente {" ".join(exp)}; hay {" ".join(map(str, tbs))}')
 CONT = [k for k in tbs if k != 'pan' and k in secs]
 REFTAB = 'sin' if MODE == 'multi' else 'seg'
@@ -112,7 +112,8 @@ if pan:
     else:
         gos = ['vis'] + ENT
         if [e.get('data-go') for e in et] != gos: err('panorama', f'etapas data-go {[e.get("data-go") for e in et]} → deben ser {gos} (eje primero, luego una por entidad)')
-    if words(txt(pan)) > 900: err('panorama', f'{words(txt(pan))} palabras (>900)')
+    lim = max(900, 115 * (len(ENT) + 1))  # multi ampliado: ~110 palabras por etapa
+    if words(txt(pan)) > lim: err('panorama', f'{words(txt(pan))} palabras (>{lim})')
     for i, e in enumerate(et, 1):
         rs, pe = e.select_one('.res'), e.select_one('.perla')
         if not rs or not pe: err('panorama', f'etapa {i}: falta p.res o p.perla'); continue
@@ -183,7 +184,7 @@ if MODE == 'multi':
             for lbl in ('Diagnóstico', 'Tratamiento'):
                 if lbl not in dcs: err('profundidad', f'e1 (principal): falta simulador .dc bajo «{lbl}»')
         else:
-            if len(fy) != 1 or grp(fy[0])[1] != 'Cadena': err('profundidad', f'{k} (secundaria): exactamente 1 Feynman y bajo «Cadena» (hay {len(fy)})')
+            if len(fy) not in (1, 2) or grp(fy[0])[1] != 'Cadena': err('profundidad', f'{k} (secundaria): 1–2 Feynman, el primero bajo «Cadena» (hay {len(fy)})')
             if 'Tratamiento' not in dcs: err('profundidad', f'{k} (secundaria): falta simulador .dc bajo «Tratamiento»')
 # --- preguntas guía, badge, Feynman
 PGR = {}
@@ -192,7 +193,7 @@ for k in CONT:
     if MODE == 'multi' and k == 'sin':
         if pg: err('pg', 'sin: sin preguntas guía')
         continue
-    rng = (3, 3) if (MODE == 'multi' and k in ENT and k != 'e1') else (3, 5)
+    rng = (3, 5)  # secundarias 3–5 desde el multi ampliado
     if len(pg) != 1: err('pg', f'{k}: {len(pg)} listas ol.pg (debe ser 1)')
     else:
         n = len(pg[0].find_all('li', recursive=False))
@@ -238,7 +239,7 @@ if MODE == 'mono':
 else:
     if 'vis' in secs:
         n = len(secs['vis'].select('.dc'))
-        if n != 1: err('simulador', f'vis: {n} simuladores (exactamente 1, diferencial)')
+        if not 1 <= n <= 3: err('simulador', f'vis: {n} simuladores (1–3 diferenciales)')
         elif 'predic' not in txt(secs['vis'].select_one('.dc')).lower(): warn('simulador', 'vis: el rótulo del diferencial debe pedir predecir antes de pulsar')
     if 'sin' in secs and secs['sin'].select('.dc'): err('simulador', 'sin: sin simuladores')
 # --- ids y contrato m↔s

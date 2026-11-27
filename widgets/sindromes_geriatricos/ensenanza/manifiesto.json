@@ -1,6 +1,6 @@
 {
- "titulo": "Síndromes geriátricos · Las 4 I",
- "salida": "../Sindromes_geriatricos_4I_widget_v11.html",
+ "titulo": "Síndromes geriátricos",
+ "salida": "../Sindromes_geriatricos_widget_v11.html",
  "tipo": "v11",
  "tema": "geriatria",
  "modo": "multi",
@@ -9,7 +9,15 @@
   "e2": "Caídas",
   "e3": "Incontinencia",
   "e4": "Deterioro cognitivo",
-  "e5": "Úlceras por presión"
+  "e5": "Fragilidad",
+  "e6": "Sarcopenia",
+  "e7": "Polifarmacia",
+  "e8": "Úlceras por presión",
+  "e9": "Sueño",
+  "e10": "Malnutrición",
+  "e11": "Estreñimiento",
+  "e12": "Aislamiento social",
+  "e13": "Maltrato"
  },
  "principal": "e1",
  "amenaza": "e4",
@@ -21,6 +29,14 @@
   "e3",
   "e4",
   "e5",
+  "e6",
+  "e7",
+  "e8",
+  "e9",
+  "e10",
+  "e11",
+  "e12",
+  "e13",
   "sin"
  ],
  "pg": {
@@ -29,28 +45,60 @@
   "e2": 3,
   "e3": 3,
   "e4": 3,
-  "e5": 3
+  "e5": 5,
+  "e6": 3,
+  "e7": 3,
+  "e8": 3,
+  "e9": 5,
+  "e10": 3,
+  "e11": 3,
+  "e12": 3,
+  "e13": 3
  },
  "fey": {
   "e1": 2,
   "e2": 1,
   "e3": 1,
   "e4": 1,
-  "e5": 1
+  "e5": 2,
+  "e6": 1,
+  "e7": 1,
+  "e8": 1,
+  "e9": 2,
+  "e10": 1,
+  "e11": 1,
+  "e12": 1,
+  "e13": 1
  },
  "nodos": {
   "e1": 7,
   "e2": 6,
   "e3": 6,
   "e4": 6,
-  "e5": 6
+  "e5": 7,
+  "e6": 6,
+  "e7": 7,
+  "e8": 6,
+  "e9": 8,
+  "e10": 6,
+  "e11": 5,
+  "e12": 6,
+  "e13": 6
  },
  "signos": {
   "e1": 4,
   "e2": 4,
   "e3": 4,
   "e4": 4,
-  "e5": 4
+  "e5": 5,
+  "e6": 4,
+  "e7": 5,
+  "e8": 4,
+  "e9": 5,
+  "e10": 4,
+  "e11": 3,
+  "e12": 5,
+  "e13": 5
  },
  "dc": [
   "vis",
@@ -58,7 +106,15 @@
   "e2",
   "e3",
   "e4",
-  "e5"
+  "e5",
+  "e6",
+  "e7",
+  "e8",
+  "e9",
+  "e10",
+  "e11",
+  "e12",
+  "e13"
  ],
  "nucleo": {
   "vis": [
@@ -103,6 +159,30 @@
    "Medidas multicomponente tipo HELP"
   ],
   "e5": [
+   "Pérdida de masa y calidad muscular",
+   "Menor ingesta y menor gasto energético",
+   "Declive funcional con dependencia",
+   "Velocidad de la marcha lenta",
+   "Tamizar con FRAIL o CFS",
+   "Ejercicio multicomponente con resistencia"
+  ],
+  "e6": [
+   "Menos masa y fuerza muscular",
+   "Bajo rendimiento físico",
+   "Fuerza de prensión baja",
+   "Find: SARC-F o sospecha clínica",
+   "Ejercicio de resistencia progresivo"
+  ],
+  "e7": [
+   "Un fármaco causa efecto adverso o interacción",
+   "El efecto adverso se trata con otro fármaco",
+   "Aparece un síndrome geriátrico",
+   "El ingreso añade daño: reposo, sondas y sujeciones",
+   "Síntoma nuevo tras iniciar o subir un fármaco, tratado con otro fármaco",
+   "Concilia toda la medicación con la bolsa de fármacos",
+   "Deprescripción estructurada, un fármaco a la vez"
+  ],
+  "e8": [
    "Presión y cizallamiento sobre prominencia ósea",
    "Edema inflamatorio e isquemia capilar",
    "Muerte del tejido y pérdida de piel",
@@ -110,6 +190,48 @@
    "Eritema que no palidece sobre una prominencia ósea",
    "Inspección completa de la piel y escala Braden",
    "Reposicionar y usar superficie de apoyo"
+  ],
+  "e9": [
+   "Despertar nocturno por nocturia o dolor",
+   "Trastorno específico: apnea, piernas inquietas, REM",
+   "Insomnio crónico con deterioro diurno",
+   "Inversión del ciclo sueño-vigilia en el delirium",
+   "Sueño fragmentado y puntaje alto en el ISI",
+   "Diario de sueño e historia de medicamentos",
+   "TCC-I multicomponente como primera línea"
+  ],
+  "e10": [
+   "Balance energético-proteico negativo",
+   "Pérdida de masa magra",
+   "Edema y albúmina baja enmascaran el balance",
+   "Pérdida de peso involuntaria",
+   "Tamizaje con MNA-SF",
+   "Suplementos orales y aporte por kilo"
+  ],
+  "e11": [
+   "Heces duras y evacuación difícil",
+   "Fecaloma retenido en el recto",
+   "Rebosamiento, delirium y retención urinaria",
+   "Fecaloma al tacto rectal",
+   "Historia, Bristol y lista de fármacos",
+   "Polietilenglicol como primera línea"
+  ],
+  "e12": [
+   "Pérdida de roles, viudez y escasos recursos",
+   "Déficit sensorial y dependencia reducen la salida",
+   "Se encoge la red y el contacto",
+   "Brecha percibida: aparece la soledad",
+   "Depresión y sedentarismo se retroalimentan",
+   "Red social limitada: LSNS-6 menor de 12",
+   "Pregunta por contacto, roles y soledad"
+  ],
+  "e13": [
+   "Cuidador sobrecargado y sin apoyo",
+   "Agresión física o psicológica en una relación de confianza",
+   "Negligencia y explotación financiera",
+   "Hematomas mayores de 5 cm en cara, brazo lateral o tronco posterior",
+   "Entrevista a solas con pregunta directa",
+   "Evaluación por un equipo multidisciplinario"
   ]
  }
 }
