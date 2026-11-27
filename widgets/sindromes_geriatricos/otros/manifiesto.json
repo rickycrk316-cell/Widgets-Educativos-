@@ -1,0 +1,98 @@
+{
+ "titulo": "Sueño, estreñimiento, aislamiento y maltrato",
+ "salida": "../Sueno_estrenimiento_aislamiento_maltrato_widget_v11.html",
+ "tipo": "v11",
+ "tema": "geriatria",
+ "modo": "multi",
+ "entidades": {
+  "e1": "Sueño",
+  "e2": "Estreñimiento",
+  "e3": "Aislamiento social",
+  "e4": "Maltrato"
+ },
+ "principal": "e1",
+ "amenaza": "e4",
+ "tabs": [
+  "pan",
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4",
+  "sin"
+ ],
+ "pg": {
+  "vis": 4,
+  "e1": 5,
+  "e2": 3,
+  "e3": 3,
+  "e4": 3
+ },
+ "fey": {
+  "e1": 2,
+  "e2": 1,
+  "e3": 1,
+  "e4": 1
+ },
+ "nodos": {
+  "e1": 8,
+  "e2": 5,
+  "e3": 6,
+  "e4": 6
+ },
+ "signos": {
+  "e1": 5,
+  "e2": 3,
+  "e3": 5,
+  "e4": 5
+ },
+ "dc": [
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4"
+ ],
+ "nucleo": {
+  "vis": [
+   "Son síndromes que el paciente no refiere: se descubren preguntando, y cada uno se explora dentro de la valoración geriátrica integral (VGI), en sus esferas funcional, mental y social.",
+   "Decaimiento, mal dormir, hiporexia y abandono de actividades obligan a pensar a la vez en depresión, delirium hipoactivo, enfermedad orgánica y fármacos, además de estos cuatro síndromes.",
+   "El tratamiento empieza sin añadir riesgo: terapia cognitivo-conductual para el insomnio (TCC-I) antes que hipnóticos, polietilenglicol y revisión de fármacos en el estreñimiento, y intervención social contra el aislamiento.",
+   "El maltrato es la amenaza que se pierde si no se pregunta: entrevista a solas, documentación y notificación."
+  ],
+  "e1": [
+   "Despertar nocturno por nocturia o dolor",
+   "Trastorno específico: apnea, piernas inquietas, REM",
+   "Insomnio crónico con deterioro diurno",
+   "Inversión del ciclo sueño-vigilia en el delirium",
+   "Sueño fragmentado y puntaje alto en el ISI",
+   "Diario de sueño e historia de medicamentos",
+   "TCC-I multicomponente como primera línea"
+  ],
+  "e2": [
+   "Heces duras y evacuación difícil",
+   "Fecaloma retenido en el recto",
+   "Rebosamiento, delirium y retención urinaria",
+   "Fecaloma al tacto rectal",
+   "Historia, Bristol y lista de fármacos",
+   "Polietilenglicol como primera línea"
+  ],
+  "e3": [
+   "Pérdida de roles, viudez y escasos recursos",
+   "Déficit sensorial y dependencia reducen la salida",
+   "Se encoge la red y el contacto",
+   "Brecha percibida: aparece la soledad",
+   "Depresión y sedentarismo se retroalimentan",
+   "Red social limitada: LSNS-6 menor de 12",
+   "Pregunta por contacto, roles y soledad"
+  ],
+  "e4": [
+   "Cuidador sobrecargado y sin apoyo",
+   "Agresión física o psicológica en una relación de confianza",
+   "Negligencia y explotación financiera",
+   "Hematomas mayores de 5 cm en cara, brazo lateral o tronco posterior",
+   "Entrevista a solas con pregunta directa",
+   "Evaluación por un equipo multidisciplinario"
+  ]
+ }
+}

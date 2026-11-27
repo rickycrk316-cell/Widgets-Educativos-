@@ -1,0 +1,202 @@
+<script>
+(function(){
+function dcE1d(dc){
+  var p=function(t){return '<p>'+t+'</p>';};
+  var h=function(a,v){return a.indexOf(v)>-1;};
+  var sx=sel(dc,'sx'),cur=sel(dc,'cur'),cx=sel(dc,'ctx'),sb=num(dc,'sb'),isi=num(dc,'isi');
+  if(!sx.length&&!cur.length&&!cx.length&&isNaN(sb)&&isNaN(isi)){
+    out(dc,p('Elige lo que cuenta la persona, el curso, el contexto o las escalas. El simulador propone la sospecha principal y el estudio según las guías; no calcula probabilidades.'));return;}
+  var r=[];
+  if(h(cur,'agudo')){
+    r.push(p('<b>Inicio agudo con inatención y curso fluctuante</b>: sospecha delirium, no insomnio crónico. Busca la causa (infección, fármacos, retención urinaria) y evita sedar con hipnóticos, porque no hay evidencia convincente de tratamiento farmacológico eficaz [23].'));
+    r.push('<span class="cf">Si el cuadro lleva al menos tres noches por semana durante tres meses, sin inatención ni fluctuación → pasa a evaluar insomnio crónico [12][13][23].</span>');
+    out(dc,r.join(''));return;}
+  var apnea=h(sx,'ron')||h(sx,'somn')||(!isNaN(sb)&&sb>=3);
+  if(apnea){
+    r.push(p('<b>Sospecha de apnea obstructiva</b>'+(!isNaN(sb)?' (STOP-Bang de '+sb+')':'')+': un STOP-Bang de 3 o más tamiza y descarta (sensibilidad de 93 % para apnea moderada a grave), pero no diagnostica [16]. Los cuestionarios no sustituyen la prueba [18].'));
+    if(h(cx,'opi')||h(cx,'car')) r.push(p('Con opioide crónico o enfermedad cardiorrespiratoria significativa, la AASM prefiere polisomnografía a la prueba domiciliaria [18].'));
+    else r.push(p('Sin complicaciones, polisomnografía o prueba domiciliaria con dispositivo adecuado; si la domiciliaria es negativa o no concluyente, polisomnografía [18].'));
+  }
+  if(h(sx,'pie')) r.push(p('<b>Piernas inquietas</b>: mide ferritina y saturación de transferrina por la mañana; hay indicación de hierro con ferritina de 75 ng/mL o menos o saturación menor de 20 % [21].'));
+  if(h(sx,'rem')) r.push(p('<b>Actúa sus sueños</b>: sospecha trastorno de conducta del sueño REM; asegura el dormitorio (quita objetos peligrosos, acolcha el borde de la cama) y deriva a sueño [22].'));
+  if(h(sx,'noc')) r.push(p('<b>Nocturia</b>: se define como despertar una o más veces para orinar [25]; revisa el horario del diurético y la causa antes de tratar el insomnio.'));
+  if(!isNaN(isi)){
+    r.push(p(isi>=10?'<b>ISI de '+isi+'</b>: alcanza el corte de 10 que detectó casos de insomnio en adultos de la comunidad (sensibilidad de 86,1 %, especificidad de 87,7 %) [15].':'<b>ISI de '+isi+'</b>: no alcanza el corte de 10 [15]; revisa si la queja corresponde a otra causa.'));}
+  if(h(cur,'cron')) r.push(p('<b>Criterios de insomnio crónico</b>: al menos tres noches por semana durante tres meses con deterioro diurno [12][13]. Trata las causas encontradas y ofrece TCC-I como primera línea [19][1].'));
+  else if(!apnea&&!h(sx,'pie')&&!h(sx,'rem')&&!h(sx,'noc')) r.push(p('Falta el curso: confirma si cumple tres noches por semana durante tres meses con deterioro diurno; si no, es insomnio de corta duración o variante normal [12][13][11].'));
+  r.push('<span class="cf">Si el cuadro es agudo con inatención → piensa en delirium; si hay ronquido con pausas y opioide crónico → polisomnografía y no prueba domiciliaria [18][23].</span>');
+  out(dc,r.join(''));
+}
+function dcE1t(dc){
+  var p=function(t){return '<p>'+t+'</p>';};
+  var h=function(a,v){return a.indexOf(v)>-1;};
+  var tc=sel(dc,'tcc'),pt=sel(dc,'pat'),st=sel(dc,'sit');
+  if(!tc.length&&!pt.length&&!st.length){
+    out(dc,p('Elige el punto de partida, qué predomina y la situación. El simulador propone el escalón y el fármaco con su posología, según las guías y las fichas técnicas.'));return;}
+  var r=[];
+  if(h(st,'delir')){
+    r.push(p('<b>Cuadro agudo con inatención</b>: no es insomnio crónico. Trata la causa y reduce los sedantes; el tratamiento farmacológico del delirium no tiene evidencia convincente [23].'));
+    r.push('<span class="cf">Si el cuadro lleva meses, sin inatención → evalúa insomnio crónico y TCC-I [12][19].</span>');
+    out(dc,r.join(''));return;}
+  if(!h(tc,'fallo')){
+    r.push(p('<b>TCC-I multicomponente</b> como tratamiento inicial (recomendación fuerte de la AASM y de la ACP); trata antes las causas de despertar [19][1][14]. No hace falta fármaco todavía.'));
+  } else {
+    r.push(p('<b>TCC-I insuficiente</b>: decide con la persona, tras hablar de beneficios, daños y costos, un fármaco de uso corto [1].'));
+    if(h(pt,'mant')){
+      if(h(st,'glau')) r.push(p('<b>Doxepina</b>: contraindicada con glaucoma de ángulo estrecho sin tratar o retención urinaria grave [20].'));
+      else r.push(p('<b>Doxepina</b> 3 mg VO una vez al día, dentro de 30 minutos antes de acostarse y no en las 3 horas tras comer; puede subir a 6 mg, máximo 6 mg al día'+(h(st,'hep')?'; con insuficiencia hepática se inicia con 3 mg':'')+' [20]. La AASM la sugiere (débil) para insomnio de mantenimiento [26].'));
+      if(h(st,'narc')) r.push(p('<b>Antagonistas de orexina</b>: contraindicados en narcolepsia [27][28].'));
+      else {
+        if(h(st,'dilt')) r.push(p('<b>Suvorexant</b>: con diltiazem (inhibidor moderado de CYP3A) la dosis es 5 mg VO una vez por noche, dentro de 30 minutos antes de acostarse y con al menos 7 horas para dormir; no pasar generalmente de 10 mg [28]. <b>Lemborexant</b>: se evita con inhibidores moderados o fuertes de CYP3A [27].'));
+        else r.push(p('<b>Suvorexant</b> 10 mg VO una vez por noche, dentro de 30 minutos antes de acostarse y con al menos 7 horas para dormir; máximo 20 mg [28]. <b>Lemborexant</b> 5 mg inmediatamente antes de acostarse; máximo 10 mg'+(h(st,'hep')?' (máximo 5 mg con insuficiencia hepática moderada)':'')+' [27]. Ambos aumentan el riesgo de caídas en mayores [27][28].'));
+      }
+    } else if(h(pt,'inicio')){
+      if(h(st,'fluv')) r.push(p('<b>Ramelteon</b>: no se usa con fluvoxamina [30].'));
+      else r.push(p('<b>Ramelteon</b> 8 mg VO una vez, dentro de 30 minutos antes de acostarse y no con comida rica en grasa [30]. Discrepancia: la AASM lo sugiere (débil) para insomnio de inicio [26]; la guía europea no lo recomienda [14].'));
+      r.push(p('<b>Melatonina de liberación prolongada</b> 2 mg VO, 2 horas antes de acostarse; la guía europea la admite hasta 3 meses en mayores de 55 años [31][14], y la AASM sugiere no usar melatonina [26].'));
+    } else r.push(p('Indica si predominan los despertares o la dificultad para conciliar el sueño para elegir el fármaco [26].'));
+  }
+  r.push(p('<b>Evita</b> benzodiacepinas, fármacos Z y antihistamínicos sedantes como la difenhidramina en el mayor [2][26].'));
+  r.push('<span class="cf">Si toma diltiazem → el suvorexant baja a 5 mg y el lemborexant se evita; si hay glaucoma o retención urinaria grave → no uses doxepina [20][27][28].</span>');
+  out(dc,r.join(''));
+}
+
+window.dcE1d=dcE1d;window.dcE1t=dcE1t;
+})();
+(function(){
+function dcE2tx(dc){
+  var p=function(t){return '<p>'+t+'</p>';};
+  var h=function(a,v){return a.indexOf(v)>-1;};
+  var st=sel(dc,'sit'),tx=sel(dc,'tx'),ev=num(dc,'ev');
+  if(!st.length&&!tx.length&&isNaN(ev)){
+    out(dc,p('Elige la situación, el tratamiento previo y las comorbilidades. El simulador propone el laxante y la conducta con su posología, según las guías y las fichas técnicas; no calcula probabilidades.'));return;}
+  var r=[];
+  if(h(st,'obs')){
+    r.push(p('<b>Obstrucción intestinal conocida o sospechada</b>: no uses naloxegol ni metilnaltrexona, y no indiques laxantes hasta descartarla; el cuadro necesita evaluación quirúrgica [37][38].'));
+    r.push('<span class="cf">Si se descarta la obstrucción y hay estreñimiento funcional → polietilenglicol como primera línea [3].</span>');
+    out(dc,r.join(''));return;}
+  if(h(st,'alarma')) r.push(p('<b>Señales de alarma</b>: sangrado rectal, pérdida de peso o inicio reciente después de los 50 años; haz evaluación cuidadosa y colonoscopia antes de rotular estreñimiento funcional [39].'));
+  if(!isNaN(ev)) r.push(p(ev<3?'<b>'+ev+' evacuaciones por semana</b>: cumple el criterio de menos de 3 evacuaciones espontáneas por semana de Roma IV; hacen falta al menos dos criterios en total [32].':'<b>'+ev+' evacuaciones por semana</b>: no cumple por sí solo el criterio de frecuencia de Roma IV; valora esfuerzo y forma de las heces [32].'));
+  if(h(st,'imp')) r.push(p('<b>Fecaloma</b>: desimpacta primero (maniobra digital, enema o supositorio) y luego indica el laxante de mantenimiento [8]. Busca incontinencia por rebosamiento, delirium o retención urinaria [33].'));
+  if(h(st,'opi')&&h(tx,'refrac')){
+    r.push(p('<b>Estreñimiento por opioides refractario a laxantes</b>: la AGA recomienda naldemedine o naloxegol (fuerte) y sugiere metilnaltrexona (condicional) [35]. Suspende antes los laxantes de mantenimiento [37][38].'));
+    var nl=h(tx,'dilt')?'<b>Naloxegol</b> con diltiazem (inhibidor moderado de CYP3A4): evitar; si es inevitable, 12,5 mg VO una vez al día por la mañana con el estómago vacío [37].':(h(tx,'renal')?'<b>Naloxegol</b> 12,5 mg VO una vez al día por la mañana con el estómago vacío (depuración menor de 60 mL/min); puede subirse a 25 mg si lo tolera [37].':'<b>Naloxegol</b> 25 mg VO una vez al día por la mañana con el estómago vacío; 12,5 mg si no lo tolera [37].');
+    r.push(p(nl));
+    r.push(p('<b>Metilnaltrexona</b> '+(h(tx,'renal')?'150 mg VO o 6 mg SC una vez al día (depuración menor de 60 mL/min)':'450 mg VO por la mañana, 30 minutos antes de la primera comida, o 12 mg SC una vez al día')+' [38].'));
+  } else if(h(st,'opi')){
+    r.push(p('<b>Estreñimiento por opioides</b>: laxantes regulares desde el inicio del opioide como primera línea [35]. Si no responde a laxantes de dos clases, evalúa un antagonista opioide periférico [35].'));
+  }
+  if(!h(st,'imp')||h(st,'opi')||h(tx,'dm')||st.length||tx.length){
+    r.push(p('<b>Polietilenglicol 3350</b> 17 g en 120 a 240 mL de bebida VO una vez al día: recomendación fuerte de AGA-ACG; la etiqueta de venta libre limita el uso a 7 días [3][42].'));
+    r.push(p(h(tx,'dm')?'<b>Lactulosa</b> 15 a 30 mL VO una vez al día (hasta 60 mL): con precaución en diabetes por su contenido de galactosa y lactosa; prefiere polietilenglicol [41][3].':'<b>Lactulosa</b> 15 a 30 mL VO una vez al día (hasta 60 mL) como alternativa condicional [41][3].'));
+    r.push(p('<b>Estimulante</b> si no basta: senósidos de 8,6 mg, 2 tabletas VO al inicio una vez al día [43], o bisacodilo de 5 mg, 1 tableta VO al día [44].'));
+  }
+  r.push(p('<b>Evita</b> el aceite mineral oral por el riesgo de aspiración y neumonía lipoidea [40].'));
+  r.push('<span class="cf">Si hay obstrucción intestinal → no uses laxantes ni antagonistas opioides; si toma diltiazem → el naloxegol se evita o baja a 12,5 mg [37].</span>');
+  out(dc,r.join(''));
+}
+
+window.dcE2tx=dcE2tx;
+})();
+(function(){
+function dcE3tx(dc){
+  var p=function(t){return '<p>'+t+'</p>';};
+  var h=function(a,v){return a.indexOf(v)>-1;};
+  var ev=sel(dc,'ev'),con=sel(dc,'con'),gij=num(dc,'gij'),ls=num(dc,'lsns');
+  if(!ev.length&&!con.length&&isNaN(gij)&&isNaN(ls)){
+    out(dc,p('Escribe el total de la escala de Gijón o de la LSNS-6, o elige los hallazgos y la convivencia. El simulador ubica la banda de cada escala y propone la conducta; no calcula probabilidades.'));return;}
+  var r=[];
+  if(!isNaN(gij)){
+    if(gij<5||gij>25) r.push(p('El total de Gijón va de 5 a 25 [52]. Revisa el dato.'));
+    else if(gij>=15) r.push(p('<b>Gijón: problema social</b> (15 o más) [52]. Conducta: trabajo social con prioridad para recursos, vivienda, apoyos y red.'));
+    else if(gij>=10) r.push(p('<b>Gijón: riesgo social</b> (10–14) [52]. Conducta: derivar a trabajo social y reforzar la red antes de que se convierta en problema.'));
+    else r.push(p('<b>Gijón: situación buena o aceptable</b> (5–9) [52]. Conducta: reevaluar si cambia la situación.'));
+  }
+  if(!isNaN(ls)){
+    if(ls<0||ls>30) r.push(p('El total de la LSNS-6 va de 0 a 30 [51]. Revisa el dato.'));
+    else if(ls<12) r.push(p('<b>LSNS-6 menor de 12</b>: red limitada y riesgo de aislamiento [51][58]. Conducta: intervención grupal (diferencia media estandarizada −0,27, certeza moderada) y entrenamiento en internet (−0,22) [54].'));
+    else r.push(p('<b>LSNS-6 de 12 o más</b>: no hay aislamiento objetivo por esta escala [51][58]. Si aun así se siente sola, es soledad sin aislamiento: pregunta qué relación echa de menos [46].'));
+  }
+  if(h(ev,'sola')){
+    if(h(con,'fam')) r.push(p('<b>Se siente sola y vive con su hijo</b>: vivir acompañado no descarta soledad; la relación entre aislamiento objetivo y soledad es modesta [46]. Explora la calidad de la relación y qué actividades perdió.'));
+    else r.push(p('<b>Soledad percibida</b> (UCLA-3 alto) [46]. Ofrece tratamiento grupal o entrenamiento en internet [54].'));
+  }
+  if(h(ev,'dep')) r.push(p('<b>Yesavage positivo</b>: tamiza, no diagnostica; el corte recomendado de 5 tiene sensibilidad 0,89 y especificidad 0,77 [53]. Confirma con evaluación clínica y trata según la guía de depresión [47].'));
+  if(h(ev,'sens')) r.push(p('<b>Déficit sensorial</b>: corrige audición y visión; la pérdida auditiva se asocia con más soledad y aislamiento, aunque no está probado que tratarla reduzca la soledad [48].'));
+  if(h(ev,'forz')) r.push(p('<b>Aislamiento impuesto, lesiones o cambios financieros inexplicables</b>: deja de pensar solo en aislamiento y estudia maltrato; entrevista a solas, documenta y avisa a trabajo social (pestaña «Maltrato»).'));
+  if(h(con,'sola')&&isNaN(ls)&&!h(ev,'sola')) r.push(p('<b>Vive sola</b>: es una circunstancia, no un diagnóstico; se asocia con más mortalidad (razón de momios 1,32) [4]. Mide la red (LSNS-6) y pregunta por soledad.'));
+  r.push('<span class="cf">Si la LSNS-6 pasa de menor de 12 a 12 o más pero sigue refiriendo soledad → el problema deja de ser aislamiento y pasa a soledad subjetiva [46]; si el aislamiento fue impuesto por quien la cuida → la conducta cambia a la de maltrato.</span>');
+  out(dc,r.join(''));
+}
+
+window.dcE3tx=dcE3tx;
+})();
+(function(){
+function dcE4tx(dc){
+  var p=function(t){return '<p>'+t+'</p>';};
+  var h=function(a,v){return a.indexOf(v)>-1;};
+  var ev=sel(dc,'ev'),st=sel(dc,'sit'),zar=num(dc,'zar');
+  if(!ev.length&&!st.length&&isNaN(zar)){
+    out(dc,p('Elige los hallazgos, la situación o el puntaje de Zarit del cuidador. El simulador ordena la conducta según los hallazgos concretos; no calcula probabilidades ni es una escala validada.'));return;}
+  var r=[];
+  var alarma=h(st,'riesgo');
+  var fuerte=h(ev,'sitio')||h(ev,'les')||h(ev,'solo');
+  var n=ev.length;
+  var nivel=(alarma||(fuerte&&n>=2)||n>=3)?'alta':(n>=1?'moderada':'baja');
+  if(alarma) r.push(p('<b>Riesgo inminente</b>: es una emergencia de seguridad. Asegura a la persona antes de completar escalas y no la devuelvas al domicilio sin un plan de seguridad; activa al equipo multidisciplinario y a trabajo social [66].'));
+  if(nivel==='alta') r.push(p('<b>Sospecha alta de maltrato</b> (orientación del simulador, no una escala validada). Conducta: entrevista a solas, examen completo con medición y descripción de cada lesión, documentación y notificación a las instancias de protección según la normativa vigente (en Ecuador, la Ley Orgánica de las Personas Adultas Mayores) [66][61].'));
+  else if(nivel==='moderada') r.push(p('<b>Sospecha moderada</b>: indaga más. Entrevista a solas, pregunta la causa de cada hallazgo, examina piel y nutrición y valora al cuidador; reevalúa pronto con el mismo equipo [65][66].'));
+  else r.push(p('<b>Sin hallazgos de maltrato</b>: sigue atento a los factores de riesgo (deterioro cognitivo, dependencia, cuidador sobrecargado, bajo apoyo social) [63].'));
+  if(h(ev,'sitio')) r.push(p('<b>Hematomas en cara, brazo lateral o tronco posterior</b>: en 67 mayores con sospecha de maltrato físico, el 72 % tenía hematomas, a menudo de más de 5 cm y en esos sitios [65].'));
+  if(h(ev,'ret')) r.push(p('<b>Retraso en consultar o relato incongruente</b>: entrevista a la persona a solas y documenta el relato textual [66].'));
+  if(h(ev,'desn')) r.push(p('<b>Desnutrición o úlceras sin explicación</b>: busca primero causa médica y, si no hay, negligencia; evalúa si el cuidador tiene los medios y acepta ayuda [63][66].'));
+  if(h(ev,'fin')) r.push(p('<b>Cambio financiero</b>: pregunta si alguien intentó obligarla a firmar o a usar su dinero contra su voluntad (EASI) y deriva a trabajo social [5][67].'));
+  if(h(ev,'solo')) r.push(p('<b>El cuidador no deja hablar a solas</b>: es un dato de alarma por sí mismo; reorganiza la consulta para entrevistar a la persona sin él [66].'));
+  if(h(st,'cog')) r.push(p('<b>Deterioro cognitivo</b>: el EASI se validó en personas con MMSE de 24 o más; no lo uses como único filtro. Apóyate en el examen, otros informantes y trabajo social, y recuerda que quien no puede relatar queda con riesgo continuo [5][67].'));
+  else if(ev.length||alarma) r.push(p('<b>EASI</b>: aplícalo a la persona (preguntas 1 a 5) y registra la impresión del médico (pregunta 6); un «sí» en una o más de las preguntas 2 a 6 indica sospecha, pero su sensibilidad es de 0,47, y un EASI negativo no descarta maltrato [5][67].'));
+  if(!isNaN(zar)){
+    if(zar<22||zar>110) r.push(p('El puntaje de Zarit de 22 ítems va de 22 a 110. Revisa el dato.'));
+    else if(zar>=60) r.push(p('<b>Zarit de '+zar+' (60 o más)</b>: sobrecarga alta; en la validación española, los cuidadores con 60 o más fueron los que más se beneficiaron de un programa psicoeducativo [71]. Ofrece apoyo psicoeducativo y psicosocial (tamaño de efecto 0,31 sobre el malestar psicológico, sin efecto significativo sobre la carga) [73]; el respiro solo tuvo evidencia débil [74].'));
+    else if(zar>=57) r.push(p('<b>Zarit de '+zar+'</b>: por encima del corte de 56/57 de la validación española; valora la sobrecarga y ofrece apoyo [71].'));
+    else r.push(p('<b>Zarit de '+zar+'</b>: por debajo del corte de 56/57 de la validación española [71]; no descarta riesgo si hay otros hallazgos. La sobrecarga es un factor de riesgo, no una prueba de maltrato [63].'));
+  }
+  r.push('<span class="cf">Si el EASI es negativo pero hay hematomas en sitios no habituales y el cuidador no permite hablar a solas → la conducta no cambia: mantén la sospecha, documenta y activa al equipo, porque la sensibilidad del EASI es de 0,47 [5][67]; si la persona tiene deterioro cognitivo → deja de depender del EASI [5].</span>');
+  out(dc,r.join(''));
+}
+
+window.dcE4tx=dcE4tx;
+})();
+(function(){
+function vsP(t){return '<p>'+t+'</p>';}
+function vsH(a,v){return a.indexOf(v)>-1;}
+
+function dcVis(dc){
+  var q=sel(dc,'q'),c=sel(dc,'c');
+  if(!(q.length||c.length)){
+    out(dc,vsP('Elige lo que encuentras al preguntar y el contexto. El simulador propone el síndrome compatible, el dato que falta y la conducta inicial; no calcula probabilidades.'));return;}
+  var x=[],n=0;
+  if(vsH(c,'agu')){
+    x.push(vsP('<b>Delirium hipoactivo primero</b>: el inicio agudo con inatención no es un síndrome de este grupo; se busca la causa orgánica o farmacológica antes de rotular sueño, soledad o estreñimiento [8].'));
+  }
+  if(vsH(q,'mal')){n++;
+    x.push(vsP('<b>Abuso o maltrato</b>: lesiones sin explicación coherente o miedo ante el cuidador, más sobrecarga'+(vsH(c,'cui')?' (ya marcada)':'')+', obligan a sospecharlo [6]. Falta la entrevista a solas, con EASI, y documentar las lesiones [5]. Conducta inicial: proteger, documentar y notificar según la normativa vigente, con trabajo social y el equipo [6].'));
+  }
+  if(vsH(q,'sue')){n++;
+    x.push(vsP('<b>Alteración del sueño</b>: la dificultad para dormir es insomnio si tiene consecuencia diurna'+(vsH(c,'dia')?' (somnolencia o caídas, ya marcadas)':'')+' [1]. Falta la historia del sueño con diario y revisar fármacos, dolor y nicturia [8]. Conducta inicial: TCC-I; evita benzodiacepinas y fármacos Z [1][2].'));
+  }
+  if(vsH(q,'est')){n++;
+    x.push(vsP('<b>Estreñimiento</b>: menos de tres evacuaciones por semana, heces duras o esfuerzo orientan al criterio de Roma IV [7]'+(vsH(c,'far')?'; el fármaco marcado puede ser causa [8]':'')+'. Falta el tacto rectal para descartar impactación y signos de alarma [7]. Conducta inicial: polietilenglicol, líquidos y movilización [3].'));
+  }
+  if(vsH(q,'ais')){n++;
+    x.push(vsP('<b>Aislamiento social</b>: pocos contactos y retiro de actividades se asocian a mayor mortalidad [4]. Falta medir soledad y red con UCLA y Lubben [9], y descartar depresión'+(vsH(c,'dep')?' (tristeza persistente ya marcada)':'')+' [8]. Conducta inicial: intervención social con trabajo social y corregir déficit sensoriales [4].'));
+  }
+  if(!n&&!vsH(c,'agu')) x.push(vsP('Los datos elegidos no bastan para sostener un síndrome. Marca lo que encuentras al preguntar por el sueño, las evacuaciones, los contactos o el trato.'));
+  if(n>1) x.push(vsP('Varios hallazgos a la vez son lo habitual: se tratan todos, empezando por el que es más peligroso, el maltrato si existe [8].'));
+  if(vsH(c,'dep')&&!vsH(q,'ais')) x.push(vsP('La tristeza persistente exige descartar depresión mayor antes de atribuir el cuadro a un síndrome del grupo [8].'));
+  x.push('<span class="cf">Si aparecen lesiones sin explicación o miedo ante el cuidador → sospecha maltrato, aunque el motivo de consulta sea mal dormir; si el inicio es agudo con inatención → delirium, no insomnio ni soledad [6][8].</span>');
+  out(dc,x.join(''));
+}
+
+window.dcVis=dcVis;
+})();
+</script>
