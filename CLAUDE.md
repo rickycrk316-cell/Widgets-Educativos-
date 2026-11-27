@@ -2,7 +2,7 @@
 
 Repo solo de estudio médico (Ricardo, Quirúrgica 2 · PUCE, 10.º nivel). Índice de widgets en `README.md`. **Regla de cero marcas** (widgets nuevos y migrados): ningún `[VERIFICAR EN FUENTE]` ni badge «Fuente por verificar» (el dato se confirma o se elimina). Los heredados (v10 congelados y las definiciones de dermatología, consumo de alcohol y ansiedad/pánico) conservan sus marcas hasta que se revisen. Sin contenido de marketing ni de otras marcas.
 
-Fuente de verdad del diseño y del contenido v11: `docs/DECISIONES_v11.md`. Si algo contradice ese documento, se corrige. Skills del repo en `.claude/skills/`: `widget-ensenanza` (v11), `definiciones`, `apertura`, `flashcards` (v7: herramientas en `kit/anki/`, mazos y registro de IDs en `mazos/`) e `impeccable` (revisión, de terceros adaptada).
+Fuente de verdad del diseño y del contenido v11: `docs/DECISIONES_v11.md`. Si algo contradice ese documento, se corrige. Skills del repo en `.claude/skills/`: `widget-ensenanza` (v11), `definiciones`, `apertura`, `flashcards` (v7: herramientas en `kit/anki/`, mazos y registro de IDs en `mazos/`) e `impeccable` (revisión, de terceros adaptada) y `ponytail` (código mínimo en kit, simuladores y scripts; de terceros, MIT).
 
 ## Dónde mirar (ahorra tokens)
 
@@ -35,7 +35,7 @@ Fuente de verdad del diseño y del contenido v11: `docs/DECISIONES_v11.md`. Si a
 | apertura | `p01_nav` `p05_c0` `p10_t1`…`p90_t9` `p91_pb` `p92_jq` `p93_hx` `p95_tg` `p96_js`; términos 10+ como `p90a_t10`, `p90b_t11` (manifiesto: `terminos` `problemas` `hipotesis` `diagramas`) |
 | v11 (multi/mono) | las mismas partes que multi/mono, con `div.nucleo`, `aside.perla`, `th>span.q+span.qx` y `li[data-paso]` (contrato en §10 de las decisiones) |
 
-Reglas del kit (todos): las partes no llevan `<style>`, estilos en línea, recursos remotos, `localStorage` ni `position:fixed`. Cifras con cita Vancouver `[n]`; **cero `[VERIFICAR EN FUENTE]`** en lo nuevo: se agotan PubMed, Consensus, fichas técnicas, GPC del MSP y web, y lo no confirmado se elimina (`fuentes/protocolo_verificacion.md`). Tablas de fármacos con columna «Mecanismo de acción». Sin preguntas de opción múltiple (van en Anki).
+Reglas del kit (todos): las partes no llevan `<style>`, estilos en línea, recursos remotos, `localStorage` ni `position:fixed`. Cifras con cita Vancouver `[n]`; **cero `[VERIFICAR EN FUENTE]`** en lo nuevo: se agotan PubMed, Consensus, fichas técnicas, GPC del MSP y web, y lo no confirmado se elimina (`fuentes/protocolo_verificacion.md`). Tablas de fármacos con columna «Mecanismo de acción». Sin preguntas de opción múltiple (van en Anki). Al escribir JS de simuladores o código del kit, aplica `.claude/skills/ponytail/SKILL.md` (el cambio completo más corto; reutiliza los helpers `sel num out rd` y no dupliques funciones auxiliares entre simuladores).
 
 ## Flujo de revisión
 

@@ -11,24 +11,14 @@ Doña Rosa, 83 años, viuda, vive con su hijo. Antecedentes (primera parte del c
 **Motivo de consulta:** disnea, decaimiento y falta de apetito.
 **Enfermedad actual:** desde hace dos semanas, exacerbación de la disnea que progresó de medianos a pequeños esfuerzos; edema vespertino de miembros inferiores que dificulta la marcha y cede parcialmente con furosemida; toma los medicamentos como se le indicó. Hiporexia, muy decaída, ha dejado de hacer las cosas que antes hacía. Antes de su ingreso hospitalario por COVID-19 era autónoma (preparaba sus alimentos; una empleada se encargaba del orden, la limpieza y la ropa). Ahora necesita ayuda para el traslado cama-silla y para usar el retrete, para ducharse y para ponerse medias y zapatos. Come sola y usa bien los utensilios.
 
-## Router
+## Router (v2, temario del docente para la clase)
 
-`Modo: multi · Entidades: e1=Fragilidad (principal), e2=Inmovilidad, e3=Desnutrición, e4=Polifarmacia, e5=Caídas · Amenaza: e4 · Override: no`
+Temario: generalidades, diagnóstico y tratamiento; las 4 I (inmovilidad, inestabilidad y caídas, incontinencia, deterioro cognitivo); además fragilidad, sarcopenia, polifarmacia, iatrogenia, úlceras por presión, alteraciones del sueño, malnutrición, estreñimiento, aislamiento social, abuso y maltrato. Son 14 entidades: la skill admite 3–5 por widget multi, así que se parten en 3 widgets con un índice común en el artefacto. Generalidades (definición de síndrome geriátrico, valoración geriátrica integral = diagnóstico, principios de tratamiento interdisciplinario) van en `vis` de W1; `vis` de W2 y W3 remiten a W1 para lo común.
 
-- **Presentación común:** adulto mayor con **declive funcional subagudo** (pérdida de actividades básicas de la vida diaria tras una hospitalización), hiporexia y decaimiento.
-- **Eje del grupo:** de la reserva perdida (fragilidad) a sus mecanismos de entrada (reposo, nutrición, fármacos) y al desenlace (caída).
-- **Amenaza = e4 (polifarmacia e iatrogenia):** no reconocida causa descompensación (diltiazem en IC con FE reducida, edema por pregabalina tratado con más diurético = cascada de prescripción), hipoglucemia y caídas.
-- Fuera del grupo (con su widget): delirium y demencia (`trastornos_neurocognitivos`), depresión (`trastornos_animo`): se citan como vecinos en «No confundir con…». Incontinencia y úlceras por presión: dentro de inmovilidad (complicación) o mencionadas en `vis`.
+| Widget | Carpeta | Salida | Entidades (principal · amenaza) |
+|---|---|---|---|
+| W1 Las 4 I | `cuatro_i/` | `Sindromes_geriatricos_4I_widget_v11.html` | e1 Inmovilidad (principal) · e2 Caídas · e3 Incontinencia · e4 Deterioro cognitivo (amenaza: delirium) · e5 Úlceras por presión |
+| W2 Fragilidad | `fragilidad_nutricion/` | `Fragilidad_sarcopenia_polifarmacia_widget_v11.html` | e1 Fragilidad (principal) · e2 Sarcopenia · e3 Malnutrición · e4 Polifarmacia e iatrogenia (amenaza) |
+| W3 Otros | `otros/` | `Sueno_estrenimiento_aislamiento_maltrato_widget_v11.html` | e1 Alteraciones del sueño (principal) · e2 Estreñimiento · e3 Aislamiento social · e4 Abuso y maltrato (amenaza) |
 
-| id | Botón | Parte | Ejecutor | Rango de citas |
-|---|---|---|---|---|
-| vis | Visión de conjunto | 05_vis | sonnet | 501–599 |
-| e1 | Fragilidad | 21_e1 | sonnet | 1–99 |
-| e2 | Inmovilidad | 22_e2 | sonnet | 101–199 |
-| e3 | Desnutrición | 23_e3 | sonnet | 201–299 |
-| e4 | Polifarmacia | 24_e4 | sonnet | 301–399 |
-| e5 | Caídas | 25_e5 | sonnet | 401–499 |
-| sin | Errores | 80_sin | sonnet (con vis) | — |
-| pan | Panorama | 02_pan | al final | reutiliza |
-
-Las referencias se fusionan y renumeran con `kit/renumerar.py` al final.
+Partes reutilizadas del widget v1 (`ensenanza/`, retirado): Inmovilidad, Caídas, Fragilidad, Desnutrición, Polifarmacia, con citas renumeradas a su rango. Rangos de citas por widget: e1 1–99, e2 101–199, e3 201–299, e4 301–399, e5 401–499, vis 501–599.

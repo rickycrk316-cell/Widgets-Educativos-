@@ -289,6 +289,7 @@ No inventes clases. Emmet (`{…}`=texto); todo `button` con `type="button"`; `k
 - Discrepancia `div.hb.vi>div.hb-t{Discrepancia: …}+p{… [n] <b>regla</b>}`
 - Simulador `div.dc[data-fn=dcX]>div.dc-t{Simulador · Decisión clínica — …}+div.dc-g>span.dc-l+(button.chip[data-g][data-v][data-m=1?][onclick="ch(this)"]|input[type=number][data-n][oninput="ch(this)"])` `+div.out`; salida acaba en `span.cf{Si … → …}`
 - `90_sim.html`: un `script`, `function dcX(dc){…}`, dosis por peso con `Math.min`; helpers `sel num out rd`; reservados `show ir tog ch sel num out rd recon tabla`
+- Código mínimo: sigue `.claude/skills/ponytail/SKILL.md`; usa los helpers del kit y no redefinas `p`, `h` o equivalentes en cada función.
 - Figura `figure.fig>img[src="data:image/jpeg;base64,…"][alt]+figcaption`
 - Diagrama `figure.dg>div.dg-t{título}+div.dg-row>(div.dg-n.fr|b|p|ac|s|ro{≤12 palabras}|div.dg-col>div.dg-n…)+div.dg-ar>span.dg-lab{verbo}…` `+figcaption.mini{cómo leerlo}`
 - Par adaptable `div.duo>(p|div.card|div.fey)+(figure.dg|div.tw)`
