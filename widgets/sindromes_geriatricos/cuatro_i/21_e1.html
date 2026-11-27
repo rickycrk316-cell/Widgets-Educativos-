@@ -111,6 +111,11 @@
 <dt>Por qué aparece</dt><dd>Una articulación fija en flexión acorta músculo y cápsula. <button type="button" class="xref" data-ir="e1-m-6" onclick="ir('e1','e1-m-6')">← Rigidez articular y contracturas</button></dd>
 <dt>Qué significa</dt><dd>Anuncia una inmovilidad ya establecida y limita la rehabilitación; pide fisioterapia temprana.</dd></dl></div>
 
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — el termómetro de ayer</span>
+<p class="fey-b">Si hoy el termómetro marca una temperatura, no sabes si hace más frío o más calor que siempre, a menos que recuerdes lo que marcaba ayer. Con una persona mayor pasa lo mismo: decir que hoy necesita ayuda para bañarse no basta. Hay que preguntar cómo se bañaba dos semanas antes de enfermar. Si se bañaba sola, algo le quitó esa capacidad; si ya necesitaba ayuda, no hay cambio nuevo que explicar.</p>
+<p class="mini fey-c">En medicina esto se llama… basal funcional previo, la función de las dos semanas anteriores al ingreso, que se compara con las ABVD actuales.</p>
+<p class="mini fey-c">Dónde falla la comparación: un termómetro marca la temperatura sin que nadie la cuente, mientras que la función se pregunta al paciente o a un informante y su memoria puede fallar.</p></div>
+
 <h2>Diagnóstico</h2>
 <ol class="steps tg">
 <li data-paso="Basal previo con informante y ABVD actuales"><span class="tg">1.º</span>Establece la función de las dos semanas previas al ingreso con el paciente o un informante y mide las ABVD actuales con Barthel o Katz; el declive es la diferencia entre ambas [33][35][36].</li>
@@ -132,6 +137,22 @@
 <tr><th>Presión arterial acostado y de pie</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar hipotensión ortostática</td><td>Caída sostenida de 20 mmHg sistólica o 10 mmHg diastólica dentro de 3 minutos <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Desacondicionamiento cardiovascular y ortostatismo</button></td><td>[42]</td></tr>
 </tbody></table></div>
 <p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos; ABVD: actividades básicas de la vida diaria.</p>
+
+<div class="dc" data-fn="dcE1dx"><div class="dc-t">Simulador · Decisión clínica — predice la interpretación antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Función dos semanas antes del ingreso (informante)</span>
+<button type="button" class="chip" data-g="bas" data-v="aut" onclick="ch(this)">Autónomo en las ABVD</button>
+<button type="button" class="chip" data-g="bas" data-v="dep" onclick="ch(this)">Ya necesitaba ayuda</button>
+<button type="button" class="chip" data-g="bas" data-v="des" onclick="ch(this)">No se sabe</button></div>
+<div class="dc-g"><span class="dc-l">ABVD actuales</span>
+<button type="button" class="chip" data-g="abv" data-v="ayu" onclick="ch(this)">Necesita ayuda en una o más</button>
+<button type="button" class="chip" data-g="abv" data-v="ning" onclick="ch(this)">Ninguna ayuda</button></div>
+<div class="dc-g"><span class="dc-l">Reposo reciente</span>
+<button type="button" class="chip" data-g="rep" data-v="si" onclick="ch(this)">Reposo o hospitalización reciente</button>
+<button type="button" class="chip" data-g="rep" data-v="no" onclick="ch(this)">Sin reposo previo</button></div>
+<div class="dc-g"><span class="dc-l">Ritmo del cambio</span>
+<button type="button" class="chip" data-g="rit" data-v="dias" onclick="ch(this)">En pocos días</button>
+<button type="button" class="chip" data-g="rit" data-v="sem" onclick="ch(this)">En semanas</button></div>
+<div class="out"></div></div>
 
 <h2>Tratamiento</h2>
 <ol class="steps tg">

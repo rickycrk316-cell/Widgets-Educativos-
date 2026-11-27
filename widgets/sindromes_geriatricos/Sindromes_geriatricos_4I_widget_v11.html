@@ -584,6 +584,11 @@ section.tab p,section.tab dd,section.tab li{max-width:82ch}
 <dt>Por qué aparece</dt><dd>Una articulación fija en flexión acorta músculo y cápsula. <button type="button" class="xref" data-ir="e1-m-6" onclick="ir('e1','e1-m-6')">← Rigidez articular y contracturas</button></dd>
 <dt>Qué significa</dt><dd>Anuncia una inmovilidad ya establecida y limita la rehabilitación; pide fisioterapia temprana.</dd></dl></div>
 
+<div class="fey"><span class="fey-t">Explícalo como a un niño de 10 años — el termómetro de ayer</span>
+<p class="fey-b">Si hoy el termómetro marca una temperatura, no sabes si hace más frío o más calor que siempre, a menos que recuerdes lo que marcaba ayer. Con una persona mayor pasa lo mismo: decir que hoy necesita ayuda para bañarse no basta. Hay que preguntar cómo se bañaba dos semanas antes de enfermar. Si se bañaba sola, algo le quitó esa capacidad; si ya necesitaba ayuda, no hay cambio nuevo que explicar.</p>
+<p class="mini fey-c">En medicina esto se llama… basal funcional previo, la función de las dos semanas anteriores al ingreso, que se compara con las ABVD actuales.</p>
+<p class="mini fey-c">Dónde falla la comparación: un termómetro marca la temperatura sin que nadie la cuente, mientras que la función se pregunta al paciente o a un informante y su memoria puede fallar.</p></div>
+
 <h2>Diagnóstico</h2>
 <ol class="steps tg">
 <li data-paso="Basal previo con informante y ABVD actuales"><span class="tg">1.º</span>Establece la función de las dos semanas previas al ingreso con el paciente o un informante y mide las ABVD actuales con Barthel o Katz; el declive es la diferencia entre ambas [33][35][36].</li>
@@ -605,6 +610,22 @@ section.tab p,section.tab dd,section.tab li{max-width:82ch}
 <tr><th>Presión arterial acostado y de pie</th><td>No establecida</td><td>No establecida</td><td>No establecida</td><td>Confirmar hipotensión ortostática</td><td>Caída sostenida de 20 mmHg sistólica o 10 mmHg diastólica dentro de 3 minutos <button type="button" class="xref" data-ir="e1-m-3" onclick="ir('e1','e1-m-3')">← Desacondicionamiento cardiovascular y ortostatismo</button></td><td>[42]</td></tr>
 </tbody></table></div>
 <p class="mini">S: sensibilidad; E: especificidad; VPP/VPN: valores predictivos; ABVD: actividades básicas de la vida diaria.</p>
+
+<div class="dc" data-fn="dcE1dx"><div class="dc-t">Simulador · Decisión clínica — predice la interpretación antes de pulsar</div>
+<div class="dc-g"><span class="dc-l">Función dos semanas antes del ingreso (informante)</span>
+<button type="button" class="chip" data-g="bas" data-v="aut" onclick="ch(this)">Autónomo en las ABVD</button>
+<button type="button" class="chip" data-g="bas" data-v="dep" onclick="ch(this)">Ya necesitaba ayuda</button>
+<button type="button" class="chip" data-g="bas" data-v="des" onclick="ch(this)">No se sabe</button></div>
+<div class="dc-g"><span class="dc-l">ABVD actuales</span>
+<button type="button" class="chip" data-g="abv" data-v="ayu" onclick="ch(this)">Necesita ayuda en una o más</button>
+<button type="button" class="chip" data-g="abv" data-v="ning" onclick="ch(this)">Ninguna ayuda</button></div>
+<div class="dc-g"><span class="dc-l">Reposo reciente</span>
+<button type="button" class="chip" data-g="rep" data-v="si" onclick="ch(this)">Reposo o hospitalización reciente</button>
+<button type="button" class="chip" data-g="rep" data-v="no" onclick="ch(this)">Sin reposo previo</button></div>
+<div class="dc-g"><span class="dc-l">Ritmo del cambio</span>
+<button type="button" class="chip" data-g="rit" data-v="dias" onclick="ch(this)">En pocos días</button>
+<button type="button" class="chip" data-g="rit" data-v="sem" onclick="ch(this)">En semanas</button></div>
+<div class="out"></div></div>
 
 <h2>Tratamiento</h2>
 <ol class="steps tg">
@@ -1814,6 +1835,30 @@ function dcVis(dc){
 }
 
 window.dcVis=dcVis;
+})();
+(function(){
+function dcE1dx(dc){
+  function p(t){return '<p>'+t+'</p>';}
+  var b=sel(dc,'bas'),a=sel(dc,'abv'),r=sel(dc,'rep'),t=sel(dc,'rit');
+  function h(l,v){return l.indexOf(v)>-1;}
+  if(!(b.length&&a.length)){
+    out(dc,p('Marca la función de las dos semanas previas y las ABVD actuales. El simulador propone si es un declive asociado a la hospitalización, una dependencia crónica o un cuadro que obliga a buscar una causa aguda; no calcula probabilidades.'));return;}
+  var x=[];
+  if(h(a,'ning')){
+    x.push(p('Sin ayuda en las ABVD: no hay pérdida de función básica. Valora las instrumentales con Lawton y mantén la movilidad para prevenir el declive [22][33].'));
+  } else if(h(b,'des')){
+    x.push(p('Falta el basal: una puntuación aislada no distingue un declive reciente de una dependencia crónica. Pregunta a un informante cómo estaba dos semanas antes del ingreso [33].'));
+  } else if(h(b,'dep')){
+    x.push(p('<b>Dependencia crónica</b>: ya necesitaba ayuda antes del ingreso, así que no hay declive nuevo que atribuir a la hospitalización. Evita que el reposo la agrave y valora fragilidad y sarcopenia [11][33].'));
+  } else {
+    x.push(p('<b>Declive asociado a la hospitalización</b>: era autónomo y ahora necesita ayuda; la diferencia frente al basal es el hallazgo, medida con Barthel o Katz [33][35][36].'));
+    if(h(r,'no')) x.push(p('No hubo reposo ni hospitalización que lo explique: busca la causa antes de rotularlo inmovilidad [11].'));
+    if(h(t,'dias')) x.push(p('Con un cambio en pocos días, <b>busca una causa aguda tratable</b>: dolor, delirium, fármacos o descompensación de la enfermedad de fondo [11].'));
+  }
+  x.push('<span class="cf">Si el declive es reciente y la causa aguda está tratada → movilización precoz y fisioterapia; si no mejora en semanas → evalúa sarcopenia y fragilidad [11][12].</span>');
+  out(dc,x.join(''));
+}
+window.dcE1dx=dcE1dx;
 })();
 </script>
 <!-- KIT_SCRIPT -->

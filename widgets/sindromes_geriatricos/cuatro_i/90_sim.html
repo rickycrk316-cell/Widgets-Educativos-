@@ -263,4 +263,28 @@ function dcVis(dc){
 
 window.dcVis=dcVis;
 })();
+(function(){
+function dcE1dx(dc){
+  function p(t){return '<p>'+t+'</p>';}
+  var b=sel(dc,'bas'),a=sel(dc,'abv'),r=sel(dc,'rep'),t=sel(dc,'rit');
+  function h(l,v){return l.indexOf(v)>-1;}
+  if(!(b.length&&a.length)){
+    out(dc,p('Marca la función de las dos semanas previas y las ABVD actuales. El simulador propone si es un declive asociado a la hospitalización, una dependencia crónica o un cuadro que obliga a buscar una causa aguda; no calcula probabilidades.'));return;}
+  var x=[];
+  if(h(a,'ning')){
+    x.push(p('Sin ayuda en las ABVD: no hay pérdida de función básica. Valora las instrumentales con Lawton y mantén la movilidad para prevenir el declive [22][33].'));
+  } else if(h(b,'des')){
+    x.push(p('Falta el basal: una puntuación aislada no distingue un declive reciente de una dependencia crónica. Pregunta a un informante cómo estaba dos semanas antes del ingreso [33].'));
+  } else if(h(b,'dep')){
+    x.push(p('<b>Dependencia crónica</b>: ya necesitaba ayuda antes del ingreso, así que no hay declive nuevo que atribuir a la hospitalización. Evita que el reposo la agrave y valora fragilidad y sarcopenia [11][33].'));
+  } else {
+    x.push(p('<b>Declive asociado a la hospitalización</b>: era autónomo y ahora necesita ayuda; la diferencia frente al basal es el hallazgo, medida con Barthel o Katz [33][35][36].'));
+    if(h(r,'no')) x.push(p('No hubo reposo ni hospitalización que lo explique: busca la causa antes de rotularlo inmovilidad [11].'));
+    if(h(t,'dias')) x.push(p('Con un cambio en pocos días, <b>busca una causa aguda tratable</b>: dolor, delirium, fármacos o descompensación de la enfermedad de fondo [11].'));
+  }
+  x.push('<span class="cf">Si el declive es reciente y la causa aguda está tratada → movilización precoz y fisioterapia; si no mejora en semanas → evalúa sarcopenia y fragilidad [11][12].</span>');
+  out(dc,x.join(''));
+}
+window.dcE1dx=dcE1dx;
+})();
 </script>

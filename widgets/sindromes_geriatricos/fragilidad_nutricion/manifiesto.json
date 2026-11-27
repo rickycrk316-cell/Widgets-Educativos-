@@ -1,0 +1,96 @@
+{
+ "titulo": "Fragilidad, sarcopenia y polifarmacia",
+ "salida": "../Fragilidad_sarcopenia_polifarmacia_widget_v11.html",
+ "tipo": "v11",
+ "tema": "geriatria",
+ "modo": "multi",
+ "entidades": {
+  "e1": "Fragilidad",
+  "e2": "Sarcopenia",
+  "e3": "Malnutrición",
+  "e4": "Polifarmacia"
+ },
+ "principal": "e1",
+ "amenaza": "e4",
+ "tabs": [
+  "pan",
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4",
+  "sin"
+ ],
+ "pg": {
+  "vis": 4,
+  "e1": 5,
+  "e2": 3,
+  "e3": 3,
+  "e4": 4
+ },
+ "fey": {
+  "e1": 2,
+  "e2": 1,
+  "e3": 1,
+  "e4": 1
+ },
+ "nodos": {
+  "e1": 7,
+  "e2": 6,
+  "e3": 6,
+  "e4": 7
+ },
+ "signos": {
+  "e1": 5,
+  "e2": 4,
+  "e3": 4,
+  "e4": 5
+ },
+ "dc": [
+  "vis",
+  "e1",
+  "e2",
+  "e3",
+  "e4"
+ ],
+ "nucleo": {
+  "vis": [
+   "Eje 1 — Reserva: la fragilidad es la pérdida de reserva en varios sistemas; un estresor menor, como el ingreso de Doña Rosa por COVID-19, produce un declive desproporcionado, y la discapacidad asociada a la hospitalización afecta a cerca de un tercio de los mayores de 70 años.",
+   "Eje 2 — Ciclo: menos ingesta, menos músculo, menos fuerza y menos actividad se refuerzan entre sí; por eso el plan de la fragilidad incluye la sarcopenia y las causas tratables de pérdida de peso.",
+   "Eje 3 — Fármacos: la polifarmacia se asoció con prefragilidad (OR 2,90) y fragilidad (OR 5,14), y su cascada imita y agrava los otros tres cuadros.",
+   "Eje 4 — Amenaza: la iatrogenia, por fármacos o por el propio ingreso, se busca primero porque es la causa que se puede retirar."
+  ],
+  "e1": [
+   "Pérdida de masa y calidad muscular",
+   "Menor ingesta y menor gasto energético",
+   "Declive funcional con dependencia",
+   "Velocidad de la marcha lenta",
+   "Tamizar con FRAIL o CFS",
+   "Ejercicio multicomponente con resistencia"
+  ],
+  "e2": [
+   "Menos masa y fuerza muscular",
+   "Bajo rendimiento físico",
+   "Fuerza de prensión baja",
+   "Find: SARC-F o sospecha clínica",
+   "Ejercicio de resistencia progresivo"
+  ],
+  "e3": [
+   "Balance energético-proteico negativo",
+   "Pérdida de masa magra",
+   "Edema y albúmina baja enmascaran el balance",
+   "Pérdida de peso involuntaria",
+   "Tamizaje con MNA-SF",
+   "Suplementos orales y aporte por kilo"
+  ],
+  "e4": [
+   "Un fármaco causa efecto adverso o interacción",
+   "El efecto adverso se trata con otro fármaco",
+   "Aparece un síndrome geriátrico",
+   "El ingreso añade daño: reposo, sondas y sujeciones",
+   "Síntoma nuevo tras iniciar o subir un fármaco, tratado con otro fármaco",
+   "Concilia toda la medicación con la bolsa de fármacos",
+   "Deprescripción estructurada, un fármaco a la vez"
+  ]
+ }
+}
